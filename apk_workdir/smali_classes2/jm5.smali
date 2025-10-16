@@ -3,77 +3,52 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvd6;
+.implements Lntf;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ljm5;
 
-.field public final synthetic b:Lo0;
+.field public static final b:Lrhf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo0;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Ljm5;->a:I
+    new-instance v0, Ljm5;
 
-    iput-object p1, p0, Ljm5;->b:Lo0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ljm5;->a:Ljm5;
+
+    new-instance v0, Lim5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lim5;-><init>(I)V
+
+    new-instance v1, Lrhf;
+
+    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
+
+    sput-object v1, Ljm5;->b:Lrhf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(III)Lktf;
+    .locals 0
 
-    iget v0, p0, Ljm5;->a:I
+    sget-object p1, Ljm5;->b:Lrhf;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Throwable;
+    move-result-object p1
 
-    iget-object p1, p0, Ljm5;->b:Lo0;
-
-    invoke-virtual {p1}, Lo0;->a()Z
-
-    sget-object p1, Laxf;->a:Laxf;
+    check-cast p1, Lktf;
 
     return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object p1, p0, Ljm5;->b:Lo0;
-
-    invoke-virtual {p1}, Lo0;->a()Z
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Ljava/lang/Throwable;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Ljm5;->b:Lo0;
-
-    invoke-virtual {p1}, Lo0;->a()Z
-
-    :cond_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

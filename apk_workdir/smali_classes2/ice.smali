@@ -1,112 +1,42 @@
-.class public final Lice;
-.super Ljava/lang/Object;
+.class public final synthetic Lice;
+.super Lb9;
 .source "SourceFile"
 
 # interfaces
-.implements Ljavax/inject/Provider;
+.implements Loh6;
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+# static fields
+.field public static final r0:Lice;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lice;
 
-    iput-object p1, p0, Lice;->a:Ljava/lang/Object;
+    const-class v1, Lo8e;
+
+    const-string v2, "<init>(Lru/ok/tamtam/android/SelfId;Lkotlin/Lazy;Lkotlin/Lazy;Lone/me/settings/usecase/GetCurrentUserProfileDataUseCase;Lone/me/sdk/uikit/qr/GetQrCodeUseCase;Lone/me/settings/ProfileEvents;Lkotlin/Lazy;Lkotlin/Lazy;Landroid/app/Application;Lkotlin/Lazy;Lkotlin/Lazy;Lru/ok/tamtam/android/profile/ProfileRepository;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;)V"
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v1, v2, v3}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lice;->r0:Lice;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lice;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lice;
-
-    iget-object v1, p0, Lice;->a:Ljava/lang/Object;
-
-    iget-object p1, p1, Lice;->a:Ljava/lang/Object;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final get()Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lice;->a:Ljava/lang/Object;
+    new-instance v0, Lo8e;
 
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lice;->a:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SimpleProvider(value="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lice;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0}, Lo8e;-><init>()V
 
     return-object v0
 .end method

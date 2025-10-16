@@ -1,24 +1,24 @@
-.class public final synthetic Lr8g;
+.class public final Lr8g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ls8g;
+.field public final synthetic b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls8g;I)V
+.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;I)V
     .locals 0
 
     iput p2, p0, Lr8g;->a:I
 
-    iput-object p1, p0, Lr8g;->b:Ls8g;
+    iput-object p1, p0, Lr8g;->b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,86 +27,77 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    iget v0, p0, Lr8g;->a:I
+    iget p1, p0, Lr8g;->a:I
 
-    iget-object v1, p0, Lr8g;->b:Ls8g;
+    iget-object v0, p0, Lr8g;->b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    new-instance v0, Landroid/util/Size;
+    sget-object p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Lwq7;
 
-    iget v2, v1, Ls8g;->e:I
+    invoke-virtual {v0}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->C0()Lc9g;
 
-    iget v1, v1, Ls8g;->f:I
+    move-result-object p1
 
-    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
+    iget-object v0, p1, Lc9g;->r0:Llt7;
 
-    return-object v0
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, v1, Ls8g;->h:Lxb6;
+    move-result-object v0
 
-    if-nez v0, :cond_1
+    check-cast v0, Lqkf;
 
-    sget-object v0, Li3g;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    check-cast v0, Losa;
 
-    iget v0, v1, Ls8g;->e:I
+    invoke-virtual {v0}, Losa;->b()Lv44;
 
-    iget v1, v1, Ls8g;->f:I
+    move-result-object v0
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    new-instance v1, Lc2;
+    new-instance v1, Lz8g;
 
     const/4 v2, 0x0
 
-    sget-object v3, Lxb6;->v0:Laa5;
+    invoke-direct {v1, p1, v2}, Lz8g;-><init>(Lc9g;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v1, v2, v3}, Lc2;-><init>(ILjava/lang/Object;)V
+    iget-object v2, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    const v2, 0x7fffffff
+    sget-object v3, Le54;->b:Le54;
 
-    sget-object v3, Lxb6;->b:Lxb6;
+    invoke-static {v2, v0, v3, v1}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
 
-    :goto_0
-    invoke-virtual {v1}, Lc2;->hasNext()Z
+    move-result-object v0
 
-    move-result v4
+    iget-object v1, p1, Lc9g;->A0:Lpzd;
 
-    if-eqz v4, :cond_0
+    sget-object v2, Lc9g;->D0:[Lwq7;
 
-    invoke-virtual {v1}, Lc2;->next()Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v4
+    aget-object v2, v2, v3
 
-    check-cast v4, Lxb6;
+    invoke-virtual {v1, p1, v2, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
 
-    iget v5, v4, Lxb6;->a:I
+    return-void
 
-    sub-int/2addr v5, v0
+    :pswitch_0
+    sget-object p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Lwq7;
 
-    invoke-static {v5}, Ljava/lang/Math;->abs(I)I
+    invoke-virtual {v0}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->C0()Lc9g;
 
-    move-result v5
+    move-result-object p1
 
-    if-ge v5, v2, :cond_0
+    iget-object p1, p1, Lc9g;->x0:Lde5;
 
-    move-object v3, v4
+    invoke-static {}, Leui;->b()Lj7g;
 
-    move v2, v5
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
-    :cond_0
-    move-object v0, v3
-
-    :cond_1
-    return-object v0
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

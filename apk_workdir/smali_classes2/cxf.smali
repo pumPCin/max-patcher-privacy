@@ -1,84 +1,78 @@
-.class public final Lcxf;
+.class public final synthetic Lcxf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lg5b;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lg5b;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lcxf;->a:I
 
-    iput-wide p1, p0, Lcxf;->a:J
+    iput-object p1, p0, Lcxf;->b:Lg5b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcxf;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lcxf;->b:Lg5b;
 
-    :cond_0
-    instance-of v1, p1, Lcxf;
+    check-cast v0, Le5b;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Le5b;->a:Ll5b;
 
-    if-nez v1, :cond_1
+    iget-object v0, v0, Ll5b;->b:Lqh6;
 
-    return v2
+    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lcxf;
+    return-void
 
-    iget-wide v3, p0, Lcxf;->a:J
+    :pswitch_0
+    iget-object v0, p0, Lcxf;->b:Lg5b;
 
-    iget-wide v5, p1, Lcxf;->a:J
+    check-cast v0, Lb5b;
 
-    cmp-long p1, v3, v5
+    iget-object v0, v0, Lb5b;->a:Lqh6;
 
-    if-eqz p1, :cond_2
+    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v2
+    return-void
 
-    :cond_2
-    return v0
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lcxf;->b:Lg5b;
 
-.method public final hashCode()I
-    .locals 2
+    check-cast v0, La5b;
 
-    iget-wide v0, p0, Lcxf;->a:J
+    iget-object v0, v0, La5b;->a:Lqh6;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    return-void
 
-    return v0
-.end method
+    nop
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "UnknownContactState(contactId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lcxf;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

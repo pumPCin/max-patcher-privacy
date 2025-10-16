@@ -1,59 +1,32 @@
 .class public final Ldpg;
-.super La82;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgpg;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
 
-    const/4 v0, 0x1
+# static fields
+.field public static final a:Ldpg;
 
-    if-ne p0, p1, :cond_0
+.field public static final b:Ldpg;
 
-    return v0
 
-    :cond_0
-    instance-of v1, p1, Ldpg;
-
-    if-nez v1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ldpg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
+# direct methods
+.method static synthetic constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x2
+    new-instance v0, Ldpg;
 
-    invoke-static {v0}, Lsw1;->u(I)I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    sput-object v0, Ldpg;->a:Ldpg;
 
-    return v0
-.end method
+    new-instance v0, Ldpg;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "CUSTOM"
+    sput-object v0, Ldpg;->b:Ldpg;
 
-    const-string v1, ")"
-
-    const-string v2, "Folder(source="
-
-    invoke-static {v2, v0, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

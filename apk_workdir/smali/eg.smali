@@ -1,136 +1,145 @@
-.class public final synthetic Leg;
+.class public final Leg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/Choreographer$FrameCallback;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Z
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public b:J
+
+.field public c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+.field public e:Ljava/lang/Object;
+
+.field public f:Ljava/lang/Object;
+
+.field public g:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Leg;->a:I
-
-    iput-object p2, p0, Leg;->b:Ljava/lang/Object;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const-string v0, ""
 
-.method public synthetic constructor <init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
-    .locals 0
+    iput-object v0, p0, Leg;->d:Ljava/lang/Object;
 
-    .line 2
-    const/4 p1, 0x1
+    sget-object v0, Ljw0;->b:Ljw0;
 
-    iput p1, p0, Leg;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Leg;->b:Ljava/lang/Object;
+    iput-object v0, p0, Leg;->e:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final doFrame(J)V
-    .locals 4
+.method public a()I
+    .locals 1
 
-    iget v0, p0, Leg;->a:I
+    iget-object v0, p0, Leg;->c:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lpo0;
 
-    iget-object v0, p0, Leg;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lpo0;->c:Ldsb;
 
-    check-cast v0, Lorg/webrtc/RenderSynchronizer;
-
-    invoke-static {v0, p1, p2}, Lorg/webrtc/RenderSynchronizer;->b(Lorg/webrtc/RenderSynchronizer;J)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Leg;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/content/Context;
-
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x1c
-
-    if-lt p2, v0, :cond_0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lt4;->i(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p2, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    :goto_0
-    new-instance v0, Ljava/util/Random;
-
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
-
-    const/16 v1, 0x3e8
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/util/Random;->nextInt(I)I
+    invoke-virtual {v0}, Ldsb;->B()I
 
     move-result v0
 
-    new-instance v1, Lln;
+    return v0
+.end method
 
-    const/4 v2, 0x4
+.method public b(I)I
+    .locals 1
 
-    invoke-direct {v1, p1, v2}, Lln;-><init>(Landroid/content/Context;I)V
+    iget-object v0, p0, Leg;->c:Ljava/lang/Object;
 
-    add-int/lit16 v0, v0, 0x1388
+    check-cast v0, Lpo0;
 
-    int-to-long v2, v0
+    iget-object v0, v0, Lpo0;->c:Ldsb;
 
-    invoke-virtual {p2, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    iget-object v0, v0, Ldsb;->b:Ljava/lang/Object;
+
+    check-cast v0, Lep3;
+
+    iget-object v0, v0, Lep3;->g:Ljava/lang/Object;
+
+    check-cast v0, [I
+
+    aget p1, v0, p1
+
+    return p1
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget-object v0, p0, Leg;->c:Ljava/lang/Object;
+
+    check-cast v0, Lpo0;
+
+    iget-object v0, v0, Lpo0;->c:Ldsb;
+
+    invoke-virtual {v0}, Ldsb;->C()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public declared-synchronized d()V
+    .locals 5
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Leg;->a:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Leg;->a:Z
+
+    iget-object v0, p0, Leg;->f:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    iget-object v1, p0, Leg;->g:Ljava/lang/Object;
+
+    check-cast v1, Lxe;
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v3, 0x3e8
+
+    invoke-interface {v0, v1, v3, v4, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
 
     return-void
 
-    :pswitch_1
-    iget-object p1, p0, Leg;->b:Ljava/lang/Object;
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

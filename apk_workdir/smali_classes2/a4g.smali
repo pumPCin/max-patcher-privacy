@@ -2,46 +2,91 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lllg;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lhv9;
 
-.field public final b:I
+.field public final b:J
 
-.field public final c:I
+.field public final c:J
 
-.field public final d:I
+.field public final d:Z
 
-.field public final e:Z
+.field public final e:J
 
-.field public final f:I
+.field public final f:Landroid/net/Uri;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:I
+
+.field public final i:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IIIZI)V
-    .locals 0
+.method public constructor <init>(Lhv9;JJZ)V
+    .locals 2
+
+    sub-long v0, p4, p2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La4g;->a:Ljava/lang/String;
+    iput-object p1, p0, La4g;->a:Lhv9;
 
-    iput p2, p0, La4g;->b:I
+    iput-wide p2, p0, La4g;->b:J
 
-    iput p3, p0, La4g;->c:I
+    iput-wide p4, p0, La4g;->c:J
 
-    iput p4, p0, La4g;->d:I
+    iput-boolean p6, p0, La4g;->d:Z
 
-    iput-boolean p5, p0, La4g;->e:Z
+    iput-wide v0, p0, La4g;->e:J
 
-    iput p6, p0, La4g;->f:I
+    iget-object p2, p1, Lhv9;->a:Ljava/lang/String;
+
+    invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p2
+
+    iput-object p2, p0, La4g;->f:Landroid/net/Uri;
+
+    const-string p2, "video/mp4"
+
+    iput-object p2, p0, La4g;->g:Ljava/lang/String;
+
+    iget p2, p1, Lhv9;->b:I
+
+    iput p2, p0, La4g;->h:I
+
+    iget p1, p1, Lhv9;->c:I
+
+    iput p1, p0, La4g;->i:I
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, La4g;->c:J
+
+    return-wide v0
+.end method
+
+.method public final e()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, La4g;->f:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -61,11 +106,11 @@
     :cond_1
     check-cast p1, La4g;
 
-    iget-object v1, p0, La4g;->a:Ljava/lang/String;
+    iget-object v1, p0, La4g;->a:Lhv9;
 
-    iget-object v3, p1, La4g;->a:Ljava/lang/String;
+    iget-object v3, p1, La4g;->a:Lhv9;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -74,60 +119,113 @@
     return v2
 
     :cond_2
-    iget v1, p0, La4g;->b:I
+    iget-wide v3, p0, La4g;->b:J
 
-    iget v3, p1, La4g;->b:I
+    iget-wide v5, p1, La4g;->b:J
 
-    if-eq v1, v3, :cond_3
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
 
     return v2
 
     :cond_3
-    iget v1, p0, La4g;->c:I
+    iget-wide v3, p0, La4g;->c:J
 
-    iget v3, p1, La4g;->c:I
+    iget-wide v5, p1, La4g;->c:J
 
-    if-eq v1, v3, :cond_4
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
 
     return v2
 
     :cond_4
-    iget v1, p0, La4g;->d:I
+    iget-boolean v1, p0, La4g;->d:Z
 
-    iget v3, p1, La4g;->d:I
+    iget-boolean v3, p1, La4g;->d:Z
 
     if-eq v1, v3, :cond_5
 
     return v2
 
     :cond_5
-    iget-boolean v1, p0, La4g;->e:Z
+    iget-wide v3, p0, La4g;->e:J
 
-    iget-boolean v3, p1, La4g;->e:Z
+    iget-wide v5, p1, La4g;->e:J
 
-    if-eq v1, v3, :cond_6
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_6
 
     return v2
 
     :cond_6
-    iget v1, p0, La4g;->f:I
-
-    iget p1, p1, La4g;->f:I
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
     return v0
 .end method
 
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, La4g;->b:J
+
+    return-wide v0
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getContentType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, La4g;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getDuration()J
+    .locals 2
+
+    iget-wide v0, p0, La4g;->e:J
+
+    return-wide v0
+.end method
+
+.method public final getHeight()I
+    .locals 1
+
+    iget v0, p0, La4g;->i:I
+
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, La4g;->h:I
+
+    return v0
+.end method
+
+.method public final h()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
-    iget-object v0, p0, La4g;->a:Ljava/lang/String;
+    iget-object v0, p0, La4g;->a:Lhv9;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Lhv9;->hashCode()I
 
     move-result v0
 
@@ -135,33 +233,27 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, La4g;->b:I
+    iget-wide v2, p0, La4g;->b:J
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, La4g;->c:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
 
     move-result v0
 
-    iget v2, p0, La4g;->d:I
+    iget-wide v2, p0, La4g;->c:J
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, La4g;->e:Z
-
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
 
     move-result v0
 
-    iget v1, p0, La4g;->f:I
+    iget-boolean v2, p0, La4g;->d:Z
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+
+    move-result v0
+
+    iget-wide v1, p0, La4g;->e:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v1
 
@@ -170,44 +262,54 @@
     return v1
 .end method
 
+.method public final i()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", width="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", height="
+    const-string v1, "TrimmedMp4VideoContent(item="
 
-    iget v2, p0, La4g;->b:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "Pattern(image="
+    iget-object v1, p0, La4g;->a:Lhv9;
 
-    iget-object v4, p0, La4g;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v4, v0, v1}, Lsab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", opacity="
-
-    const-string v2, ", isOverlay="
-
-    iget v3, p0, La4g;->c:I
-
-    iget v4, p0, La4g;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget-boolean v1, p0, La4g;->e:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", color="
+    const-string v1, ", startPosition="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, La4g;->f:I
+    iget-wide v1, p0, La4g;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", endPosition="
+
+    const-string v2, ", isMute="
+
+    iget-wide v3, p0, La4g;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-boolean v1, p0, La4g;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", duration="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, La4g;->e:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

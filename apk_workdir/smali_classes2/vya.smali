@@ -1,1053 +1,1153 @@
-.class public final Lvya;
-.super Lb9;
+.class public abstract Lvya;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final A:Ldya;
+# static fields
+.field public static final A:I
 
-.field public final B:Ljava/lang/Object;
+.field public static final A0:I
 
-.field public C:I
+.field public static final A1:I
 
-.field public D:F
+.field public static final A2:I
 
-.field public final E:I
+.field public static final B:I
 
-.field public final F:I
+.field public static final B0:I
 
-.field public final G:F
+.field public static final B1:I
 
-.field public H:I
+.field public static final B2:I
 
-.field public final v:Ljg0;
+.field public static final C:I
 
-.field public final w:Ljava/util/List;
+.field public static final C0:I
 
-.field public final x:Ln4f;
+.field public static final C1:I
 
-.field public final y:Lxmf;
+.field public static final C2:I
 
-.field public final z:Ldya;
+.field public static final D:I
+
+.field public static final D0:I
+
+.field public static final D1:I
+
+.field public static final D2:I
+
+.field public static final E:I
+
+.field public static final E0:I
+
+.field public static final E1:I
+
+.field public static final E2:I
+
+.field public static final F:I
+
+.field public static final F0:I
+
+.field public static final F1:I
+
+.field public static final F2:I
+
+.field public static final G:I
+
+.field public static final G0:I
+
+.field public static final G1:I
+
+.field public static final G2:I
+
+.field public static final H:I
+
+.field public static final H0:I
+
+.field public static final H1:I
+
+.field public static final H2:I
+
+.field public static final I:I
+
+.field public static final I0:I
+
+.field public static final I1:I
+
+.field public static final J:I
+
+.field public static final J0:I
+
+.field public static final J1:I
+
+.field public static final K:I
+
+.field public static final K0:I
+
+.field public static final K1:I
+
+.field public static final L:I
+
+.field public static final L0:I
+
+.field public static final L1:I
+
+.field public static final M:I
+
+.field public static final M0:I
+
+.field public static final M1:I
+
+.field public static final N:I
+
+.field public static final N0:I
+
+.field public static final N1:I
+
+.field public static final O:I
+
+.field public static final O0:I
+
+.field public static final O1:I
+
+.field public static final P:I
+
+.field public static final P0:I
+
+.field public static final P1:I
+
+.field public static final Q:I
+
+.field public static final Q0:I
+
+.field public static final Q1:I
+
+.field public static final R:I
+
+.field public static final R0:I
+
+.field public static final R1:I
+
+.field public static final S:I
+
+.field public static final S0:I
+
+.field public static final S1:I
+
+.field public static final T:I
+
+.field public static final T0:I
+
+.field public static final T1:I
+
+.field public static final U:I
+
+.field public static final U0:I
+
+.field public static final U1:I
+
+.field public static final V:I
+
+.field public static final V0:I
+
+.field public static final V1:I
+
+.field public static final W:I
+
+.field public static final W0:I
+
+.field public static final W1:I
+
+.field public static final X:I
+
+.field public static final X0:I
+
+.field public static final X1:I
+
+.field public static final Y:I
+
+.field public static final Y0:I
+
+.field public static final Y1:I
+
+.field public static final Z:I
+
+.field public static final Z0:I
+
+.field public static final Z1:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final a1:I
+
+.field public static final a2:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final b1:I
+
+.field public static final b2:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final c1:I
+
+.field public static final c2:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final d1:I
+
+.field public static final d2:I
+
+.field public static final e:I
+
+.field public static final e0:I
+
+.field public static final e1:I
+
+.field public static final e2:I
+
+.field public static final f:I
+
+.field public static final f0:I
+
+.field public static final f1:I
+
+.field public static final f2:I
+
+.field public static final g:I
+
+.field public static final g0:I
+
+.field public static final g1:I
+
+.field public static final g2:I
+
+.field public static final h:I
+
+.field public static final h0:I
+
+.field public static final h1:I
+
+.field public static final h2:I
+
+.field public static final i:I
+
+.field public static final i0:I
+
+.field public static final i1:I
+
+.field public static final i2:I
+
+.field public static final j:I
+
+.field public static final j0:I
+
+.field public static final j1:I
+
+.field public static final j2:I
+
+.field public static final k:I
+
+.field public static final k0:I
+
+.field public static final k1:I
+
+.field public static final k2:I
+
+.field public static final l:I
+
+.field public static final l0:I
+
+.field public static final l1:I
+
+.field public static final l2:I
+
+.field public static final m:I
+
+.field public static final m0:I
+
+.field public static final m1:I
+
+.field public static final m2:I
+
+.field public static final n:I
+
+.field public static final n0:I
+
+.field public static final n1:I
+
+.field public static final n2:I
+
+.field public static final o:I
+
+.field public static final o0:I
+
+.field public static final o1:I
+
+.field public static final o2:I
+
+.field public static final p:I
+
+.field public static final p0:I
+
+.field public static final p1:I
+
+.field public static final p2:I
+
+.field public static final q:I
+
+.field public static final q0:I
+
+.field public static final q1:I
+
+.field public static final q2:I
+
+.field public static final r:I
+
+.field public static final r0:I
+
+.field public static final r1:I
+
+.field public static final r2:I
+
+.field public static final s:I
+
+.field public static final s0:I
+
+.field public static final s1:I
+
+.field public static final s2:I
+
+.field public static final t:I
+
+.field public static final t0:I
+
+.field public static final t1:I
+
+.field public static final t2:I
+
+.field public static final u:I
+
+.field public static final u0:I
+
+.field public static final u1:I
+
+.field public static final u2:I
+
+.field public static final v:I
+
+.field public static final v0:I
+
+.field public static final v1:I
+
+.field public static final v2:I
+
+.field public static final w:I
+
+.field public static final w0:I
+
+.field public static final w1:I
+
+.field public static final w2:I
+
+.field public static final x:I
+
+.field public static final x0:I
+
+.field public static final x1:I
+
+.field public static final x2:I
+
+.field public static final y:I
+
+.field public static final y0:I
+
+.field public static final y1:I
+
+.field public static final y2:I
+
+.field public static final z:I
+
+.field public static final z0:I
+
+.field public static final z1:I
+
+.field public static final z2:I
 
 
 # direct methods
-.method public constructor <init>(Lmmf;[ILjg0;La67;Ldya;Ldya;)V
-    .locals 11
-
-    const-wide/16 v6, 0x61a8
-
-    const-wide/16 v8, 0x61a8
-
-    const-wide/16 v4, 0x2710
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v10, p4
-
-    invoke-direct/range {v0 .. v10}, Lb9;-><init>(Lmmf;[ILjg0;JJJLjava/util/List;)V
-
-    iput-object p3, p0, Lvya;->v:Ljg0;
-
-    iput-object p4, p0, Lvya;->w:Ljava/util/List;
-
-    sget-object p1, Ln4f;->a:Ln4f;
-
-    iput-object p1, p0, Lvya;->x:Ln4f;
-
-    sget-object p1, Lxmf;->a:Lxmf;
-
-    iput-object p1, p0, Lvya;->y:Lxmf;
-
-    move-object/from16 p1, p5
-
-    iput-object p1, p0, Lvya;->z:Ldya;
-
-    move-object/from16 p1, p6
-
-    iput-object p1, p0, Lvya;->A:Ldya;
-
-    new-instance p1, Lzva;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p1, p2, p0}, Lzva;-><init>(ILjava/lang/Object;)V
-
-    const/4 p2, 0x3
-
-    invoke-static {p2, p1}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvya;->B:Ljava/lang/Object;
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    iput p1, p0, Lvya;->D:F
-
-    const/16 p1, 0x4ff
-
-    iput p1, p0, Lvya;->E:I
-
-    const/16 p1, 0x2cf
-
-    iput p1, p0, Lvya;->F:I
-
-    const p1, 0x3f333333    # 0.7f
-
-    iput p1, p0, Lvya;->G:F
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()I
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lvya;->C:I
+    sget v0, Lzrc;->Oneme_profile_invite_qr_code:I
 
-    return v0
-.end method
+    sput v0, Lvya;->a:I
 
-.method public final g(JLjava/util/List;)I
-    .locals 9
+    sget v0, Lzrc;->Oneme_profile_invite_share_link:I
 
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    sput v0, Lvya;->b:I
 
-    move-result v0
+    sget v0, Lzrc;->oneme_profile_add_members_action_title:I
 
-    iget-object v1, p0, Lvya;->x:Ln4f;
+    sput v0, Lvya;->c:I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Lzrc;->oneme_profile_add_members_action_title_channel:I
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    sput v0, Lvya;->d:I
 
-    move-result-wide v1
+    sget v0, Lzrc;->oneme_profile_add_members_search_hint:I
 
-    invoke-virtual {p0, v1, v2, p3}, Lb9;->y(JLjava/util/List;)Z
+    sput v0, Lvya;->e:I
 
-    move-result v1
+    sget v0, Lzrc;->oneme_profile_add_members_toolbar_title:I
 
-    if-eqz v1, :cond_5
+    sput v0, Lvya;->f:I
 
-    invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
+    sget v0, Lzrc;->oneme_profile_add_members_toolbar_title_channel:I
 
-    move-result v1
+    sput v0, Lvya;->g:I
 
-    if-eqz v1, :cond_0
+    sget v0, Lzrc;->oneme_profile_add_to_chat:I
 
-    goto :goto_0
+    sput v0, Lvya;->h:I
 
-    :cond_0
-    invoke-static {p3}, Lzc6;->q(Ljava/lang/Iterable;)Ljava/lang/Object;
+    sget v0, Lzrc;->oneme_profile_add_to_contacts:I
 
-    move-result-object v1
+    sput v0, Lvya;->i:I
 
-    check-cast v1, Lgh8;
+    sget v0, Lzrc;->oneme_profile_attachments:I
 
-    :goto_0
-    invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
+    sput v0, Lvya;->j:I
 
-    move-result v1
+    sget v0, Lzrc;->oneme_profile_attachments_descr:I
 
-    const/4 v2, 0x0
+    sput v0, Lvya;->k:I
 
-    if-eqz v1, :cond_1
+    sget v0, Lzrc;->oneme_profile_audio:I
 
-    return v2
+    sput v0, Lvya;->l:I
 
-    :cond_1
-    add-int/lit8 v1, v0, -0x1
+    sget v0, Lzrc;->oneme_profile_description_expand_suffix:I
 
-    invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    sput v0, Lvya;->m:I
 
-    move-result-object v1
+    sget v0, Lzrc;->oneme_profile_edit_chat_type_private:I
 
-    check-cast v1, Lgh8;
+    sput v0, Lvya;->n:I
 
-    iget-wide v3, v1, Lj43;->Z:J
+    sget v0, Lzrc;->oneme_profile_edit_chat_type_public:I
 
-    sub-long/2addr v3, p1
+    sput v0, Lvya;->o:I
 
-    iget v1, p0, Lvya;->D:F
+    sget v0, Lzrc;->oneme_profile_invite_toolbar_title:I
 
-    invoke-static {v1, v3, v4}, Lg3g;->G(FJ)J
+    sput v0, Lvya;->p:I
 
-    move-result-wide v3
+    sget v0, Lzrc;->oneme_profile_more_action_add_to_folder:I
 
-    iget-wide v5, p0, Lb9;->j:J
+    sput v0, Lvya;->q:I
 
-    cmp-long v1, v3, v5
+    sget v0, Lzrc;->oneme_profile_more_action_block:I
 
-    if-gez v1, :cond_2
+    sput v0, Lvya;->r:I
 
-    goto :goto_2
+    sget v0, Lzrc;->oneme_profile_more_action_clear_history:I
 
-    :cond_2
-    iget v1, p0, Lvya;->C:I
+    sput v0, Lvya;->s:I
 
-    iget-object v3, p0, Lek0;->d:[Lw66;
+    sget v0, Lzrc;->oneme_profile_more_action_delete_channel:I
 
-    aget-object v1, v3, v1
+    sput v0, Lvya;->t:I
 
-    :goto_1
-    if-ge v2, v0, :cond_4
+    sget v0, Lzrc;->oneme_profile_more_action_delete_chat:I
 
-    invoke-interface {p3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    sput v0, Lvya;->u:I
 
-    move-result-object v3
+    sget v0, Lzrc;->oneme_profile_more_action_delete_chat_and_suspend_bot:I
 
-    check-cast v3, Lgh8;
+    sput v0, Lvya;->v:I
 
-    iget-object v4, v3, Lj43;->o:Lw66;
+    sget v0, Lzrc;->oneme_profile_more_action_leave_channel:I
 
-    iget-wide v7, v3, Lj43;->Z:J
+    sput v0, Lvya;->w:I
 
-    sub-long/2addr v7, p1
+    sget v0, Lzrc;->oneme_profile_more_action_leave_chat:I
 
-    iget v3, p0, Lvya;->D:F
+    sput v0, Lvya;->x:I
 
-    invoke-static {v3, v7, v8}, Lg3g;->G(FJ)J
+    sget v0, Lzrc;->oneme_profile_more_action_report:I
 
-    move-result-wide v7
+    sput v0, Lvya;->y:I
 
-    cmp-long v3, v7, v5
+    sget v0, Lzrc;->oneme_profile_more_action_suspend_bot:I
 
-    if-ltz v3, :cond_3
+    sput v0, Lvya;->z:I
 
-    iget v3, v4, Lw66;->j:I
+    sget v0, Lzrc;->oneme_profile_more_action_unsubscribe_channel:I
 
-    iget v7, v1, Lw66;->j:I
+    sput v0, Lvya;->A:I
 
-    if-ge v3, v7, :cond_3
+    sget v0, Lzrc;->oneme_profile_notifications:I
 
-    iget v3, v4, Lw66;->v:I
+    sput v0, Lvya;->B:I
 
-    const/4 v7, -0x1
+    sget v0, Lzrc;->oneme_profile_search:I
 
-    if-eq v3, v7, :cond_3
+    sput v0, Lvya;->C:I
 
-    iget v8, p0, Lvya;->F:I
+    sget v0, Lzrc;->oneme_profile_section_admins:I
 
-    if-gt v3, v8, :cond_3
+    sput v0, Lvya;->D:I
 
-    iget v4, v4, Lw66;->u:I
+    sget v0, Lzrc;->oneme_profile_section_chat_link:I
 
-    if-eq v4, v7, :cond_3
+    sput v0, Lvya;->E:I
 
-    iget v7, p0, Lvya;->E:I
+    sget v0, Lzrc;->oneme_profile_section_common_chats:I
 
-    if-gt v4, v7, :cond_3
+    sput v0, Lvya;->F:I
 
-    iget v4, v1, Lw66;->v:I
+    sget v0, Lzrc;->oneme_profile_section_description_bot:I
 
-    if-ge v3, v4, :cond_3
+    sput v0, Lvya;->G:I
 
-    return v2
+    sget v0, Lzrc;->oneme_profile_section_description_bot_official:I
 
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
+    sput v0, Lvya;->H:I
 
-    goto :goto_1
+    sget v0, Lzrc;->oneme_profile_section_description_contact:I
 
-    :cond_4
-    :goto_2
-    return v0
+    sput v0, Lvya;->I:I
 
-    :cond_5
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    sget v0, Lzrc;->oneme_profile_section_members:I
 
-    move-result p1
+    sput v0, Lvya;->J:I
 
-    return p1
-.end method
+    sget v0, Lzrc;->oneme_profile_section_phone:I
 
-.method public final k()I
-    .locals 1
+    sput v0, Lvya;->K:I
 
-    iget v0, p0, Lvya;->H:I
+    sget v0, Lzrc;->oneme_profile_section_rkn:I
 
-    return v0
-.end method
+    sput v0, Lvya;->L:I
 
-.method public final l(F)V
-    .locals 0
+    sget v0, Lzrc;->oneme_profile_section_subscribers:I
 
-    iput p1, p0, Lb9;->q:F
+    sput v0, Lvya;->M:I
 
-    iput p1, p0, Lvya;->D:F
+    sget v0, Lzrc;->oneme_profile_start_bot:I
+
+    sput v0, Lvya;->N:I
+
+    sget v0, Lzrc;->oneme_profile_start_chat:I
+
+    sput v0, Lvya;->O:I
+
+    sget v0, Lzrc;->oneme_profile_unblock:I
+
+    sput v0, Lvya;->P:I
+
+    sget v0, Lzrc;->oneme_profile_video:I
+
+    sput v0, Lvya;->Q:I
+
+    sget v0, Lzrc;->profile_add_admins_tab_chat_members:I
+
+    sput v0, Lvya;->R:I
+
+    sget v0, Lzrc;->profile_add_admins_toolbar:I
+
+    sput v0, Lvya;->S:I
+
+    sget v0, Lzrc;->profile_admins_list_item_added_admin_by_other:I
+
+    sput v0, Lvya;->T:I
+
+    sget v0, Lzrc;->profile_admins_list_item_added_admin_by_you:I
+
+    sput v0, Lvya;->U:I
+
+    sget v0, Lzrc;->profile_block_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->V:I
+
+    sget v0, Lzrc;->profile_block_bottom_sheet_description:I
+
+    sput v0, Lvya;->W:I
+
+    sget v0, Lzrc;->profile_block_bottom_sheet_title:I
+
+    sput v0, Lvya;->X:I
+
+    sget v0, Lzrc;->profile_change_avatar_error:I
+
+    sput v0, Lvya;->Y:I
+
+    sget v0, Lzrc;->profile_change_avatar_success:I
+
+    sput v0, Lvya;->Z:I
+
+    sget v0, Lzrc;->profile_change_avatar_title:I
+
+    sput v0, Lvya;->a0:I
+
+    sget v0, Lzrc;->profile_change_avatar_upload_from_camera:I
+
+    sput v0, Lvya;->b0:I
+
+    sget v0, Lzrc;->profile_change_avatar_upload_from_gallery:I
+
+    sput v0, Lvya;->c0:I
+
+    sget v0, Lzrc;->profile_change_owner_and_leave_snackbar_title:I
+
+    sput v0, Lvya;->d0:I
+
+    sget v0, Lzrc;->profile_change_owner_and_leave_title:I
+
+    sput v0, Lvya;->e0:I
+
+    sget v0, Lzrc;->profile_change_owner_change_action:I
+
+    sput v0, Lvya;->f0:I
+
+    sget v0, Lzrc;->profile_change_owner_channel_description:I
+
+    sput v0, Lvya;->g0:I
+
+    sget v0, Lzrc;->profile_change_owner_chat_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->h0:I
+
+    sget v0, Lzrc;->profile_change_owner_description:I
+
+    sput v0, Lvya;->i0:I
+
+    sget v0, Lzrc;->profile_change_owner_snackbar_title:I
+
+    sput v0, Lvya;->j0:I
+
+    sget v0, Lzrc;->profile_change_owner_title:I
+
+    sput v0, Lvya;->k0:I
+
+    sget v0, Lzrc;->profile_change_owner_toolbar:I
+
+    sput v0, Lvya;->l0:I
+
+    sget v0, Lzrc;->profile_channel_deleted_snackbar_title:I
+
+    sput v0, Lvya;->m0:I
+
+    sget v0, Lzrc;->profile_channel_members_list_toolbar_title:I
+
+    sput v0, Lvya;->n0:I
+
+    sget v0, Lzrc;->profile_chat_deleted_snackbar_title:I
+
+    sput v0, Lvya;->o0:I
+
+    sget v0, Lzrc;->profile_chat_media_empty_tab_title:I
+
+    sput v0, Lvya;->p0:I
+
+    sget v0, Lzrc;->profile_chat_media_tab_audio:I
+
+    sput v0, Lvya;->q0:I
+
+    sget v0, Lzrc;->profile_chat_media_tab_file:I
+
+    sput v0, Lvya;->r0:I
+
+    sget v0, Lzrc;->profile_chat_media_tab_link:I
+
+    sput v0, Lvya;->s0:I
+
+    sget v0, Lzrc;->profile_chat_media_tab_photo_video:I
+
+    sput v0, Lvya;->t0:I
+
+    sget v0, Lzrc;->profile_chat_members_list_toolbar_title:I
+
+    sput v0, Lvya;->u0:I
+
+    sget v0, Lzrc;->profile_clear_channel_history_bottom_sheet_desctiption:I
+
+    sput v0, Lvya;->v0:I
+
+    sget v0, Lzrc;->profile_clear_channel_history_bottom_sheet_title:I
+
+    sput v0, Lvya;->w0:I
+
+    sget v0, Lzrc;->profile_clear_chat_history_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->x0:I
+
+    sget v0, Lzrc;->profile_clear_chat_history_bottom_sheet_title:I
+
+    sput v0, Lvya;->y0:I
+
+    sget v0, Lzrc;->profile_clear_chat_history_snackbar_title:I
+
+    sput v0, Lvya;->z0:I
+
+    sget v0, Lzrc;->profile_clear_dialog_history_bottom_sheet_description:I
+
+    sput v0, Lvya;->A0:I
+
+    sget v0, Lzrc;->profile_clear_multi_chat_history_bottom_sheet_title:I
+
+    sput v0, Lvya;->B0:I
+
+    sget v0, Lzrc;->profile_contact_added_snackbar_title:I
+
+    sput v0, Lvya;->C0:I
+
+    sget v0, Lzrc;->profile_contact_blocked_snackbar_title:I
+
+    sput v0, Lvya;->D0:I
+
+    sget v0, Lzrc;->profile_contact_unblocked_snackbar_title:I
+
+    sput v0, Lvya;->E0:I
+
+    sget v0, Lzrc;->profile_copy_phone_snackbar_title:I
+
+    sput v0, Lvya;->F0:I
+
+    sget v0, Lzrc;->profile_delete_channel_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->G0:I
+
+    sget v0, Lzrc;->profile_delete_channel_bottom_sheet_description:I
+
+    sput v0, Lvya;->H0:I
+
+    sget v0, Lzrc;->profile_delete_channel_bottom_sheet_title:I
+
+    sput v0, Lvya;->I0:I
+
+    sget v0, Lzrc;->profile_delete_chat_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->J0:I
+
+    sget v0, Lzrc;->profile_delete_chat_bottom_sheet_title:I
+
+    sput v0, Lvya;->K0:I
+
+    sget v0, Lzrc;->profile_delete_dialog_bottom_sheet_description:I
+
+    sput v0, Lvya;->L0:I
+
+    sget v0, Lzrc;->profile_delete_multi_chat_bottom_sheet_title:I
+
+    sput v0, Lvya;->M0:I
+
+    sget v0, Lzrc;->profile_invite_channel_copy_link_success:I
+
+    sput v0, Lvya;->N0:I
+
+    sget v0, Lzrc;->profile_invite_channel_link:I
+
+    sput v0, Lvya;->O0:I
+
+    sget v0, Lzrc;->profile_invite_chat_copy_link_success:I
+
+    sput v0, Lvya;->P0:I
+
+    sget v0, Lzrc;->profile_invite_chat_link:I
+
+    sput v0, Lvya;->Q0:I
+
+    sget v0, Lzrc;->profile_invite_chat_link_description:I
+
+    sput v0, Lvya;->R0:I
+
+    sget v0, Lzrc;->profile_invite_chat_link_refresh:I
+
+    sput v0, Lvya;->S0:I
+
+    sget v0, Lzrc;->profile_invite_chat_link_update_action:I
+
+    sput v0, Lvya;->T0:I
+
+    sget v0, Lzrc;->profile_invite_chat_link_update_action_success:I
+
+    sput v0, Lvya;->U0:I
+
+    sget v0, Lzrc;->profile_invite_chat_link_update_confirmation_description:I
+
+    sput v0, Lvya;->V0:I
+
+    sget v0, Lzrc;->profile_invite_chat_link_update_confirmation_title:I
+
+    sput v0, Lvya;->W0:I
+
+    sget v0, Lzrc;->profile_invite_configure_type:I
+
+    sput v0, Lvya;->X0:I
+
+    sget v0, Lzrc;->profile_invite_create_link_error_confirm:I
+
+    sput v0, Lvya;->Y0:I
+
+    sget v0, Lzrc;->profile_invite_create_link_error_no_connection:I
+
+    sput v0, Lvya;->Z0:I
+
+    sget v0, Lzrc;->profile_invite_create_link_error_service_unavailable:I
+
+    sput v0, Lvya;->a1:I
+
+    sget v0, Lzrc;->profile_invite_create_link_error_title:I
+
+    sput v0, Lvya;->b1:I
+
+    sget v0, Lzrc;->profile_invite_private_link:I
+
+    sput v0, Lvya;->c1:I
+
+    sget v0, Lzrc;->profile_leave_channel_admin_bottom_sheet_description:I
+
+    sput v0, Lvya;->d1:I
+
+    sget v0, Lzrc;->profile_leave_channel_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->e1:I
+
+    sget v0, Lzrc;->profile_leave_channel_bottom_sheet_description:I
+
+    sput v0, Lvya;->f1:I
+
+    sget v0, Lzrc;->profile_leave_channel_bottom_sheet_title:I
+
+    sput v0, Lvya;->g1:I
+
+    sget v0, Lzrc;->profile_leave_chat_and_move_rights_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->h1:I
+
+    sget v0, Lzrc;->profile_leave_chat_bottom_sheet_cancel:I
+
+    sput v0, Lvya;->i1:I
+
+    sget v0, Lzrc;->profile_leave_chat_bottom_sheet_confirm:I
+
+    sput v0, Lvya;->j1:I
+
+    sget v0, Lzrc;->profile_leave_chat_bottom_sheet_title:I
+
+    sput v0, Lvya;->k1:I
+
+    sget v0, Lzrc;->profile_link_context_menu_action_copy_mention:I
+
+    sput v0, Lvya;->l1:I
+
+    sget v0, Lzrc;->profile_link_context_menu_action_go_to_mention:I
+
+    sput v0, Lvya;->m1:I
+
+    sget v0, Lzrc;->profile_link_copy_snackbar_title:I
+
+    sput v0, Lvya;->n1:I
+
+    sget v0, Lzrc;->profile_link_mention_copied:I
+
+    sput v0, Lvya;->o1:I
+
+    sget v0, Lzrc;->profile_media_action_copy_link:I
+
+    sput v0, Lvya;->p1:I
+
+    sget v0, Lzrc;->profile_media_action_delete:I
+
+    sput v0, Lvya;->q1:I
+
+    sget v0, Lzrc;->profile_media_action_forward_audio:I
+
+    sput v0, Lvya;->r1:I
+
+    sget v0, Lzrc;->profile_media_action_forward_file:I
+
+    sput v0, Lvya;->s1:I
+
+    sget v0, Lzrc;->profile_media_action_forward_gif:I
+
+    sput v0, Lvya;->t1:I
+
+    sget v0, Lzrc;->profile_media_action_forward_link:I
+
+    sput v0, Lvya;->u1:I
+
+    sget v0, Lzrc;->profile_media_action_forward_photo:I
+
+    sput v0, Lvya;->v1:I
+
+    sget v0, Lzrc;->profile_media_action_forward_video:I
+
+    sput v0, Lvya;->w1:I
+
+    sget v0, Lzrc;->profile_media_action_goto_link:I
+
+    sput v0, Lvya;->x1:I
+
+    sget v0, Lzrc;->profile_media_action_goto_message:I
+
+    sput v0, Lvya;->y1:I
+
+    sget v0, Lzrc;->profile_media_action_save:I
+
+    sput v0, Lvya;->z1:I
+
+    sget v0, Lzrc;->profile_media_action_share_link:I
+
+    sput v0, Lvya;->A1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_all_chat_button:I
+
+    sput v0, Lvya;->B1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_all_dialog_button:I
+
+    sput v0, Lvya;->C1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_audio_description:I
+
+    sput v0, Lvya;->D1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_audio_title:I
+
+    sput v0, Lvya;->E1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_file_description:I
+
+    sput v0, Lvya;->F1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_file_title:I
+
+    sput v0, Lvya;->G1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_link_description:I
+
+    sput v0, Lvya;->H1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_link_title:I
+
+    sput v0, Lvya;->I1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_media_description:I
+
+    sput v0, Lvya;->J1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_media_title:I
+
+    sput v0, Lvya;->K1:I
+
+    sget v0, Lzrc;->profile_media_confirmation_delete_self_button:I
+
+    sput v0, Lvya;->L1:I
+
+    sget v0, Lzrc;->profile_media_content_level_link_subtitle:I
+
+    sput v0, Lvya;->M1:I
+
+    sget v0, Lzrc;->profile_media_content_level_link_title:I
+
+    sput v0, Lvya;->N1:I
+
+    sget v0, Lzrc;->profile_media_content_level_snackbar_text:I
+
+    sput v0, Lvya;->O1:I
+
+    sget v0, Lzrc;->profile_media_save_gif_snackbar_success:I
+
+    sput v0, Lvya;->P1:I
+
+    sget v0, Lzrc;->profile_media_save_image_snackbar_success:I
+
+    sput v0, Lvya;->Q1:I
+
+    sget v0, Lzrc;->profile_media_save_snackbar_error:I
+
+    sput v0, Lvya;->R1:I
+
+    sget v0, Lzrc;->profile_media_save_video_snackbar_success:I
+
+    sput v0, Lvya;->S1:I
+
+    sget v0, Lzrc;->profile_members_list_action_delete_from_admin:I
+
+    sput v0, Lvya;->T1:I
+
+    sget v0, Lzrc;->profile_members_list_action_delete_from_channel:I
+
+    sput v0, Lvya;->U1:I
+
+    sget v0, Lzrc;->profile_members_list_action_delete_from_chat:I
+
+    sput v0, Lvya;->V1:I
+
+    sget v0, Lzrc;->profile_members_list_action_select:I
+
+    sput v0, Lvya;->W1:I
+
+    sget v0, Lzrc;->profile_members_list_add_to_admin_action:I
+
+    sput v0, Lvya;->X1:I
+
+    sget v0, Lzrc;->profile_members_list_add_to_channel_action:I
+
+    sput v0, Lvya;->Y1:I
+
+    sget v0, Lzrc;->profile_members_list_add_to_chat_action:I
+
+    sput v0, Lvya;->Z1:I
+
+    sget v0, Lzrc;->profile_members_list_admin_alias:I
+
+    sput v0, Lvya;->a2:I
+
+    sget v0, Lzrc;->profile_members_list_already_admin_snackbar_title:I
+
+    sput v0, Lvya;->b2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_from_admin_snackbar:I
+
+    sput v0, Lvya;->c2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_from_admin_title:I
+
+    sput v0, Lvya;->d2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_from_chat_btn:I
+
+    sput v0, Lvya;->e2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_from_chat_btn_with_clean:I
+
+    sput v0, Lvya;->f2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_many_from_channel_title:I
+
+    sput v0, Lvya;->g2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_many_from_chat_title:I
+
+    sput v0, Lvya;->h2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_one_from_channel_title:I
+
+    sput v0, Lvya;->i2:I
+
+    sget v0, Lzrc;->profile_members_list_delete_one_from_chat_title:I
+
+    sput v0, Lvya;->j2:I
+
+    sget v0, Lzrc;->profile_members_list_invite_by_link_action:I
+
+    sput v0, Lvya;->k2:I
+
+    sget v0, Lzrc;->profile_members_list_item_added_admin:I
+
+    sput v0, Lvya;->l2:I
+
+    sget v0, Lzrc;->profile_members_list_item_is_self:I
+
+    sput v0, Lvya;->m2:I
+
+    sget v0, Lzrc;->profile_members_list_owner_alias:I
+
+    sput v0, Lvya;->n2:I
+
+    sget v0, Lzrc;->profile_members_list_owner_channel_alias:I
+
+    sput v0, Lvya;->o2:I
+
+    sget v0, Lzrc;->profile_members_list_owner_chat_alias:I
+
+    sput v0, Lvya;->p2:I
+
+    sget v0, Lzrc;->profile_members_list_restore_in_admin_snackbar:I
+
+    sput v0, Lvya;->q2:I
+
+    sget v0, Lzrc;->profile_members_list_toolbar_admin_title:I
+
+    sput v0, Lvya;->r2:I
+
+    sget v0, Lzrc;->profile_notifications_bottom_sheet_title:I
+
+    sput v0, Lvya;->s2:I
+
+    sget v0, Lzrc;->profile_notifications_disable_1_day:I
+
+    sput v0, Lvya;->t2:I
+
+    sget v0, Lzrc;->profile_notifications_disable_1_hour:I
+
+    sput v0, Lvya;->u2:I
+
+    sget v0, Lzrc;->profile_notifications_disable_4_hour:I
+
+    sput v0, Lvya;->v2:I
+
+    sget v0, Lzrc;->profile_notifications_disable_forever:I
+
+    sput v0, Lvya;->w2:I
+
+    sget v0, Lzrc;->profile_notifications_off_snackbar_title:I
+
+    sput v0, Lvya;->x2:I
+
+    sget v0, Lzrc;->profile_notifications_on_snackbar_title:I
+
+    sput v0, Lvya;->y2:I
+
+    sget v0, Lzrc;->profile_phone_number_action_copy:I
+
+    sput v0, Lvya;->z2:I
+
+    sget v0, Lzrc;->profile_phone_number_action_tt_video_call:I
+
+    sput v0, Lvya;->A2:I
+
+    sget v0, Lzrc;->profile_phone_number_action_tt_voice_call:I
+
+    sput v0, Lvya;->B2:I
+
+    sget v0, Lzrc;->profile_phone_number_action_voice_call:I
+
+    sput v0, Lvya;->C2:I
+
+    sget v0, Lzrc;->profile_section_item_action_button_all_members:I
+
+    sput v0, Lvya;->D2:I
+
+    sget v0, Lzrc;->profile_unsubscribe_channel_action_unsubscribe:I
+
+    sput v0, Lvya;->E2:I
+
+    sget v0, Lzrc;->profile_unsubscribe_channel_header:I
+
+    sput v0, Lvya;->F2:I
+
+    sget v0, Lzrc;->rkn_bottom_sheet_subtitle:I
+
+    sput v0, Lvya;->G2:I
+
+    sget v0, Lzrc;->rkn_bottom_sheet_title:I
+
+    sput v0, Lvya;->H2:I
 
     return-void
-.end method
-
-.method public final r(JJJLjava/util/List;[Lih8;)V
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p8
-
-    iget-object v2, v0, Lvya;->x:Ln4f;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    iget v4, v0, Lvya;->C:I
-
-    array-length v5, v1
-
-    const/4 v6, 0x0
-
-    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
-
-    if-ge v4, v5, :cond_0
-
-    aget-object v4, v1, v4
-
-    invoke-interface {v4}, Lih8;->next()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    iget v4, v0, Lvya;->C:I
-
-    aget-object v1, v1, v4
-
-    invoke-interface {v1}, Lih8;->b()J
-
-    move-result-wide v4
-
-    invoke-interface {v1}, Lih8;->a()J
-
-    move-result-wide v9
-
-    :goto_0
-    sub-long/2addr v4, v9
-
-    goto :goto_3
-
-    :cond_0
-    array-length v4, v1
-
-    move v5, v6
-
-    :goto_1
-    if-ge v5, v4, :cond_2
-
-    aget-object v9, v1, v5
-
-    invoke-interface {v9}, Lih8;->next()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_1
-
-    invoke-interface {v9}, Lih8;->b()J
-
-    move-result-wide v4
-
-    invoke-interface {v9}, Lih8;->a()J
-
-    move-result-wide v9
-
-    goto :goto_0
-
-    :cond_1
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface/range {p7 .. p7}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    invoke-static/range {p7 .. p7}, Lzc6;->q(Ljava/lang/Iterable;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgh8;
-
-    iget-wide v4, v1, Lj43;->Z:J
-
-    cmp-long v9, v4, v7
-
-    if-eqz v9, :cond_4
-
-    iget-wide v9, v1, Lj43;->r0:J
-
-    cmp-long v1, v9, v7
-
-    if-eqz v1, :cond_4
-
-    sub-long v4, v9, v4
-
-    goto :goto_3
-
-    :cond_4
-    :goto_2
-    move-wide v4, v7
-
-    :goto_3
-    iget v1, v0, Lvya;->H:I
-
-    iget-object v9, v0, Lvya;->y:Lxmf;
-
-    const/4 v10, -0x1
-
-    if-nez v1, :cond_5
-
-    const/4 v1, 0x1
-
-    iput v1, v0, Lvya;->H:I
-
-    invoke-virtual {v0, v2, v3, v4, v5}, Lvya;->z(JJ)I
-
-    move-result v1
-
-    iput v1, v0, Lvya;->C:I
-
-    goto/16 :goto_9
-
-    :cond_5
-    iget v11, v0, Lvya;->C:I
-
-    invoke-interface/range {p7 .. p7}, Ljava/util/List;->isEmpty()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_6
-
-    move v12, v10
-
-    goto :goto_4
-
-    :cond_6
-    invoke-static/range {p7 .. p7}, Lzc6;->q(Ljava/lang/Iterable;)Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Lgh8;
-
-    iget-object v12, v12, Lj43;->o:Lw66;
-
-    invoke-virtual {v0, v12}, Lek0;->s(Lw66;)I
-
-    move-result v12
-
-    :goto_4
-    if-eq v12, v10, :cond_7
-
-    invoke-static/range {p7 .. p7}, Lzc6;->q(Ljava/lang/Iterable;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgh8;
-
-    iget v1, v1, Lj43;->X:I
-
-    move v11, v12
-
-    :cond_7
-    invoke-virtual {v0, v2, v3, v4, v5}, Lvya;->z(JJ)I
-
-    move-result v12
-
-    if-eq v12, v11, :cond_b
-
-    invoke-virtual {v0, v11, v2, v3}, Lek0;->q(IJ)Z
-
-    move-result v2
-
-    if-nez v2, :cond_b
-
-    iget-object v2, v0, Lek0;->d:[Lw66;
-
-    aget-object v3, v2, v11
-
-    aget-object v2, v2, v12
-
-    cmp-long v13, p5, v7
-
-    const-wide/32 v14, 0x989680
-
-    if-nez v13, :cond_8
-
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_6
-
-    :cond_8
-    cmp-long v7, v4, v7
-
-    if-eqz v7, :cond_9
-
-    sub-long v4, p5, v4
-
-    goto :goto_5
-
-    :cond_9
-    move-wide/from16 v4, p5
-
-    :goto_5
-    long-to-float v4, v4
-
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/high16 v5, 0x3f400000    # 0.75f
-
-    mul-float/2addr v4, v5
-
-    float-to-long v4, v4
-
-    long-to-double v4, v4
-
-    long-to-double v7, v14
-
-    invoke-static {v4, v5, v7, v8}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide v4
-
-    double-to-long v14, v4
-
-    :goto_6
-    iget v2, v2, Lw66;->j:I
-
-    iget v3, v3, Lw66;->j:I
-
-    if-le v2, v3, :cond_a
-
-    cmp-long v4, p3, v14
-
-    if-gez v4, :cond_a
-
-    goto :goto_7
-
-    :cond_a
-    if-ge v2, v3, :cond_b
-
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-wide/32 v2, 0x17d7840
-
-    cmp-long v2, p3, v2
-
-    if-ltz v2, :cond_b
-
-    :goto_7
-    move v12, v11
-
-    :cond_b
-    if-ne v12, v11, :cond_c
-
-    goto :goto_8
-
-    :cond_c
-    const/4 v1, 0x3
-
-    :goto_8
-    iput v1, v0, Lvya;->H:I
-
-    iput v12, v0, Lvya;->C:I
-
-    :goto_9
-    iget-object v1, v0, Lek0;->a:Lmmf;
-
-    iget v1, v1, Lmmf;->c:I
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_d
-
-    return-void
-
-    :cond_d
-    iget-object v1, v0, Lvya;->z:Ldya;
-
-    iget-object v1, v1, Ldya;->b:Lgya;
-
-    iget-object v1, v1, Lsk0;->r:Lc9;
-
-    if-nez v1, :cond_e
-
-    sget-object v1, Lc9;->f:Lc9;
-
-    :cond_e
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v2, v1, Lc9;->a:Lxb6;
-
-    sget-object v3, Lxb6;->b:Lxb6;
-
-    invoke-virtual {v3, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v4
-
-    if-ltz v4, :cond_f
-
-    move-object v2, v3
-
-    :cond_f
-    iget-object v3, v1, Lc9;->b:Lxb6;
-
-    sget-object v4, Lxb6;->t0:Lxb6;
-
-    invoke-virtual {v4, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_10
-
-    move-object v3, v4
-
-    :cond_10
-    iget-object v1, v1, Lc9;->c:Lxb6;
-
-    iget-object v4, v0, Lvya;->B:Ljava/lang/Object;
-
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/util/List;
-
-    iget v5, v0, Lvya;->C:I
-
-    sget-object v7, Lxod;->a:Lw8b;
-
-    iget v7, v0, Lvya;->H:I
-
-    sget-object v8, Lxod;->a:Lw8b;
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    invoke-virtual {v8, v7}, Lw8b;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lwod;
-
-    sget-object v8, Lwod;->a:Lwod;
-
-    if-nez v7, :cond_11
-
-    move-object v7, v8
-
-    :cond_11
-    iget-object v9, v0, Lvya;->A:Ldya;
-
-    if-eqz v9, :cond_12
-
-    invoke-virtual {v9}, Ldya;->invoke()Ljava/lang/Object;
-
-    :cond_12
-    if-ne v7, v8, :cond_13
-
-    goto/16 :goto_f
-
-    :cond_13
-    sget-object v8, Lwod;->b:Lwod;
-
-    if-eq v7, v8, :cond_14
-
-    sget-object v9, Lwod;->o:Lwod;
-
-    :cond_14
-    if-ne v7, v8, :cond_17
-
-    invoke-virtual {v1, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v7
-
-    if-gez v7, :cond_15
-
-    goto :goto_a
-
-    :cond_15
-    invoke-virtual {v1, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v2
-
-    if-lez v2, :cond_16
-
-    move-object v2, v3
-
-    goto :goto_a
-
-    :cond_16
-    move-object v2, v1
-
-    :cond_17
-    :goto_a
-    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lshg;
-
-    iget-object v1, v1, Lv7f;->c:Ljava/lang/Object;
-
-    check-cast v1, Lck8;
-
-    check-cast v1, Ls8g;
-
-    invoke-virtual {v1}, Ls8g;->b()Lxb6;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v1
-
-    if-gez v1, :cond_19
-
-    invoke-static {v4}, Lx83;->H(Ljava/util/List;)I
-
-    move-result v1
-
-    move v5, v6
-
-    :goto_b
-    if-ge v10, v1, :cond_19
-
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lshg;
-
-    iget-object v5, v5, Lv7f;->c:Ljava/lang/Object;
-
-    check-cast v5, Lck8;
-
-    check-cast v5, Ls8g;
-
-    invoke-virtual {v5}, Ls8g;->b()Lxb6;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v5
-
-    if-ltz v5, :cond_18
-
-    move v5, v1
-
-    goto :goto_c
-
-    :cond_18
-    add-int/lit8 v5, v1, -0x1
-
-    move/from16 v16, v5
-
-    move v5, v1
-
-    move/from16 v1, v16
-
-    goto :goto_b
-
-    :cond_19
-    :goto_c
-    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lshg;
-
-    iget-object v1, v1, Lv7f;->c:Ljava/lang/Object;
-
-    check-cast v1, Lck8;
-
-    check-cast v1, Ls8g;
-
-    invoke-virtual {v1}, Ls8g;->b()Lxb6;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v1
-
-    if-lez v1, :cond_1d
-
-    invoke-static {v4}, Lx83;->H(Ljava/util/List;)I
-
-    move-result v1
-
-    invoke-static {v4}, Lx83;->H(Ljava/util/List;)I
-
-    move-result v2
-
-    if-ltz v2, :cond_1c
-
-    :goto_d
-    invoke-interface {v4, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lshg;
-
-    iget-object v1, v1, Lv7f;->c:Ljava/lang/Object;
-
-    check-cast v1, Lck8;
-
-    check-cast v1, Ls8g;
-
-    invoke-virtual {v1}, Ls8g;->b()Lxb6;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v1
-
-    if-gtz v1, :cond_1a
-
-    goto :goto_e
-
-    :cond_1a
-    if-eq v6, v2, :cond_1b
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_d
-
-    :cond_1b
-    :goto_e
-    move v1, v6
-
-    :cond_1c
-    move v5, v1
-
-    :cond_1d
-    :goto_f
-    iput v5, v0, Lvya;->C:I
-
-    return-void
-.end method
-
-.method public final z(JJ)I
-    .locals 7
-
-    iget-object v0, p0, Lvya;->v:Ljg0;
-
-    invoke-interface {v0}, Ljg0;->f()J
-
-    move-result-wide v1
-
-    long-to-float v1, v1
-
-    iget v2, p0, Lvya;->G:F
-
-    mul-float/2addr v1, v2
-
-    float-to-long v1, v1
-
-    invoke-interface {v0}, Ljg0;->b()J
-
-    move-result-wide v3
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, v3, v5
-
-    if-eqz v0, :cond_1
-
-    cmp-long v0, p3, v5
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    long-to-float p3, p3
-
-    iget p4, p0, Lvya;->D:F
-
-    div-float p4, p3, p4
-
-    long-to-float v0, v3
-
-    sub-float/2addr p4, v0
-
-    float-to-double v3, p4
-
-    const-wide/16 v5, 0x0
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->max(DD)D
-
-    move-result-wide v3
-
-    double-to-float p4, v3
-
-    long-to-float v0, v1
-
-    mul-float/2addr v0, p4
-
-    div-float/2addr v0, p3
-
-    float-to-long p3, v0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    long-to-float p3, v1
-
-    iget p4, p0, Lvya;->D:F
-
-    div-float/2addr p3, p4
-
-    float-to-long p3, p3
-
-    :goto_1
-    iget-object v0, p0, Lvya;->w:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    const/4 v1, 0x1
-
-    move v2, v1
-
-    :goto_2
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    sub-int/2addr v3, v1
-
-    if-ge v2, v3, :cond_3
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lz8;
-
-    iget-wide v3, v3, Lz8;->a:J
-
-    cmp-long v3, v3, p3
-
-    if-gez v3, :cond_3
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    add-int/lit8 v1, v2, -0x1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lz8;
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lz8;
-
-    iget-wide v2, v1, Lz8;->a:J
-
-    sub-long/2addr p3, v2
-
-    long-to-float p3, p3
-
-    iget-wide v4, v0, Lz8;->a:J
-
-    sub-long/2addr v4, v2
-
-    long-to-float p4, v4
-
-    div-float/2addr p3, p4
-
-    iget-wide v1, v1, Lz8;->b:J
-
-    iget-wide v3, v0, Lz8;->b:J
-
-    sub-long/2addr v3, v1
-
-    long-to-float p4, v3
-
-    mul-float/2addr p3, p4
-
-    float-to-long p3, p3
-
-    add-long/2addr p3, v1
-
-    :goto_3
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_4
-    iget v2, p0, Lek0;->b:I
-
-    if-ge v0, v2, :cond_7
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v2, p1, v2
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {p0, v0, p1, p2}, Lek0;->q(IJ)Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    :cond_4
-    iget-object v1, p0, Lek0;->d:[Lw66;
-
-    aget-object v1, v1, v0
-
-    iget v1, v1, Lw66;->j:I
-
-    int-to-long v1, v1
-
-    cmp-long v1, v1, p3
-
-    if-gtz v1, :cond_5
-
-    return v0
-
-    :cond_5
-    move v1, v0
-
-    :cond_6
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_4
-
-    :cond_7
-    return v1
 .end method

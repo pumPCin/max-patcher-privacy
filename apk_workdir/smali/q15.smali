@@ -1,63 +1,60 @@
-.class public abstract Lq15;
+.class public final Lq15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt15;
 
-# direct methods
-.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
-    .locals 1
 
-    :try_start_0
-    new-instance v0, Landroid/widget/EdgeEffect;
+# virtual methods
+.method public final a(Lm15;Lsa6;)Li15;
+    .locals 2
 
-    invoke-direct {v0, p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object p1, p2, Lsa6;->r:Lh15;
 
-    return-object v0
+    if-nez p1, :cond_0
 
-    :catchall_0
-    new-instance p1, Landroid/widget/EdgeEffect;
+    const/4 p1, 0x0
 
-    invoke-direct {p1, p0}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+    return-object p1
+
+    :cond_0
+    new-instance p1, Lpd5;
+
+    new-instance p2, Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
+
+    new-instance v0, Landroidx/media3/exoplayer/drm/UnsupportedDrmException;
+
+    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+
+    const/16 v1, 0x1771
+
+    invoke-direct {p2, v1, v0}, Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;-><init>(ILjava/lang/Throwable;)V
+
+    invoke-direct {p1, p2}, Lpd5;-><init>(Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;)V
 
     return-object p1
 .end method
 
-.method public static b(Landroid/widget/EdgeEffect;)F
+.method public final c(Landroid/os/Looper;Letb;)V
     .locals 0
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->getDistance()F
-
-    move-result p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return p0
-
-    :catchall_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public static c(Landroid/widget/EdgeEffect;FF)F
+.method public final d(Lsa6;)I
     .locals 0
 
-    :try_start_0
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPullDistance(FF)F
+    iget-object p1, p1, Lsa6;->r:Lh15;
 
-    move-result p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz p1, :cond_0
 
-    return p0
+    const/4 p1, 0x1
 
-    :catchall_0
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
+    return p1
 
-    const/4 p0, 0x0
+    :cond_0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method

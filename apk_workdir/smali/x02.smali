@@ -1,51 +1,39 @@
 .class public final Lx02;
-.super Ljava/lang/Object;
+.super Lw02;
 .source "SourceFile"
-
-# interfaces
-.implements Lo2d;
-
-
-# instance fields
-.field public final synthetic b:J
-
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lx02;->b:J
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Lx02;->b:J
-
-    return-wide v0
-.end method
-
-.method public final b(Lw02;)Ln2d;
+.method public final f0(Lo5e;)V
     .locals 1
 
-    iget p1, p1, Lw02;->b:I
+    iget-object p1, p1, Lo5e;->a:Ln5e;
 
-    const/4 v0, 0x1
+    invoke-interface {p1}, Ln5e;->a()Ljava/lang/Object;
 
-    if-ne p1, v0, :cond_0
+    move-result-object p1
 
-    sget-object p1, Ln2d;->d:Ln2d;
+    check-cast p1, Landroid/hardware/camera2/params/SessionConfiguration;
 
-    return-object p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_0
-    sget-object p1, Ln2d;->e:Ln2d;
+    :try_start_0
+    iget-object v0, p0, Lhlf;->b:Ljava/lang/Object;
 
-    return-object p1
+    check-cast v0, Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraDevice;->createCaptureSession(Landroid/hardware/camera2/params/SessionConfiguration;)V
+    :try_end_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+
+    invoke-direct {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
+
+    throw v0
 .end method

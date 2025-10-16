@@ -2,298 +2,485 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrga;
+
 
 # static fields
-.field public static final e:Ljava/util/List;
+.field public static final a:Lr80;
 
+.field public static final b:Liq5;
 
-# instance fields
-.field public final a:I
+.field public static final c:Liq5;
 
-.field public final b:I
+.field public static final d:Liq5;
 
-.field public final c:I
+.field public static final e:Liq5;
 
-.field public final d:I
+.field public static final f:Liq5;
+
+.field public static final g:Liq5;
+
+.field public static final h:Liq5;
+
+.field public static final i:Liq5;
+
+.field public static final j:Liq5;
+
+.field public static final k:Liq5;
+
+.field public static final l:Liq5;
+
+.field public static final m:Liq5;
+
+.field public static final n:Liq5;
+
+.field public static final o:Liq5;
+
+.field public static final p:Liq5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 4
 
-    const v0, 0xbb80
+    new-instance v0, Lr80;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    sput-object v0, Lr80;->a:Lr80;
 
-    const v0, 0xac44
+    new-instance v0, Lry;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v1, 0x1
 
-    move-result-object v2
+    invoke-direct {v0, v1}, Lry;-><init>(I)V
 
-    const/16 v0, 0x5622
+    const-class v1, Lfdc;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const/16 v0, 0x2b11
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const/16 v0, 0x1f40
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const/16 v0, 0x12c0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    filled-new-array/range {v1 .. v6}, [Ljava/lang/Integer;
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    const-string v3, "projectNumber"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->b:Liq5;
+
+    new-instance v0, Lry;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Lr80;->e:Ljava/util/List;
+    new-instance v2, Liq5;
 
-    return-void
-.end method
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-.method public constructor <init>(IIII)V
-    .locals 0
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v3, "messageId"
 
-    iput p1, p0, Lr80;->a:I
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    iput p2, p0, Lr80;->b:I
+    sput-object v2, Lr80;->c:Liq5;
 
-    iput p3, p0, Lr80;->c:I
+    new-instance v0, Lry;
 
-    iput p4, p0, Lr80;->d:I
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "instanceId"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->d:Liq5;
+
+    new-instance v0, Lry;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "messageType"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->e:Liq5;
+
+    new-instance v0, Lry;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "sdkPlatform"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->f:Liq5;
+
+    new-instance v0, Lry;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "packageName"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->g:Liq5;
+
+    new-instance v0, Lry;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "collapseKey"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->h:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "priority"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->i:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "ttl"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->j:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "topic"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->k:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "bulkId"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->l:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "event"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->m:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "analyticsLabel"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->n:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "campaignId"
+
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lr80;->o:Liq5;
+
+    new-instance v0, Lry;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
+
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Liq5;
+
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "composerLabel"
+
+    invoke-direct {v1, v2, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lr80;->p:Liq5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 5
-
-    iget v0, p0, Lr80;->c:I
-
-    if-lez v0, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Invalid channel count: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v1}, Lnjg;->f(Ljava/lang/String;Z)V
-
-    iget v1, p0, Lr80;->d:I
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_5
-
-    const/4 v2, 0x3
-
-    if-eq v1, v2, :cond_4
-
-    const/4 v3, 0x4
-
-    if-eq v1, v3, :cond_3
-
-    const/16 v4, 0x15
-
-    if-eq v1, v4, :cond_2
-
-    const/16 v2, 0x16
-
-    if-ne v1, v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v2, "Invalid audio encoding: "
-
-    invoke-static {v1, v2}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    mul-int/2addr v0, v2
-
-    return v0
-
-    :cond_3
-    :goto_1
-    mul-int/2addr v0, v3
-
-    :cond_4
-    return v0
-
-    :cond_5
-    mul-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 
-    const/4 v0, 0x1
+    check-cast p1, Lup9;
 
-    if-ne p1, p0, :cond_0
+    check-cast p2, Lsga;
 
-    return v0
+    sget-object v0, Lr80;->b:Liq5;
 
-    :cond_0
-    instance-of v1, p1, Lr80;
+    iget-wide v1, p1, Lup9;->a:J
 
-    const/4 v2, 0x0
+    invoke-interface {p2, v0, v1, v2}, Lsga;->e(Liq5;J)Lsga;
 
-    if-eqz v1, :cond_1
+    sget-object v0, Lr80;->c:Liq5;
 
-    check-cast p1, Lr80;
+    iget-object v1, p1, Lup9;->b:Ljava/lang/String;
 
-    iget v1, p0, Lr80;->a:I
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    iget v3, p1, Lr80;->a:I
+    sget-object v0, Lr80;->d:Liq5;
 
-    if-ne v1, v3, :cond_1
+    iget-object v1, p1, Lup9;->c:Ljava/lang/String;
 
-    iget v1, p0, Lr80;->b:I
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    iget v3, p1, Lr80;->b:I
+    sget-object v0, Lr80;->e:Liq5;
 
-    if-ne v1, v3, :cond_1
+    iget-object v1, p1, Lup9;->d:Lsp9;
 
-    iget v1, p0, Lr80;->c:I
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    iget v3, p1, Lr80;->c:I
+    sget-object v0, Lr80;->f:Liq5;
 
-    if-ne v1, v3, :cond_1
+    sget-object v1, Ltp9;->b:Ltp9;
 
-    iget v1, p0, Lr80;->d:I
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    iget p1, p1, Lr80;->d:I
+    sget-object v0, Lr80;->g:Liq5;
 
-    if-ne v1, p1, :cond_1
+    iget-object v1, p1, Lup9;->e:Ljava/lang/String;
 
-    return v0
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    :cond_1
-    return v2
-.end method
+    sget-object v0, Lr80;->h:Liq5;
 
-.method public final hashCode()I
-    .locals 3
+    iget-object v1, p1, Lup9;->f:Ljava/lang/String;
 
-    iget v0, p0, Lr80;->a:I
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    const v1, 0xf4243
+    sget-object v0, Lr80;->i:Liq5;
 
-    xor-int/2addr v0, v1
+    const/4 v1, 0x0
 
-    mul-int/2addr v0, v1
+    invoke-interface {p2, v0, v1}, Lsga;->d(Liq5;I)Lsga;
 
-    iget v2, p0, Lr80;->b:I
+    sget-object v0, Lr80;->j:Liq5;
 
-    xor-int/2addr v0, v2
+    iget v1, p1, Lup9;->g:I
 
-    mul-int/2addr v0, v1
+    invoke-interface {p2, v0, v1}, Lsga;->d(Liq5;I)Lsga;
 
-    iget v2, p0, Lr80;->c:I
+    sget-object v0, Lr80;->k:Liq5;
 
-    xor-int/2addr v0, v2
+    iget-object v1, p1, Lup9;->h:Ljava/lang/String;
 
-    mul-int/2addr v0, v1
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    iget v1, p0, Lr80;->d:I
+    sget-object v0, Lr80;->l:Liq5;
 
-    xor-int/2addr v0, v1
+    const-wide/16 v1, 0x0
 
-    return v0
-.end method
+    invoke-interface {p2, v0, v1, v2}, Lsga;->e(Liq5;J)Lsga;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    sget-object v0, Lr80;->m:Liq5;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v3, Lrp9;->b:Lrp9;
 
-    const-string v1, "AudioSettings{audioSource="
+    invoke-interface {p2, v0, v3}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v0, Lr80;->n:Liq5;
 
-    iget v1, p0, Lr80;->a:I
+    iget-object v3, p1, Lup9;->i:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-interface {p2, v0, v3}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    const-string v1, ", sampleRate="
+    sget-object v0, Lr80;->o:Liq5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p2, v0, v1, v2}, Lsga;->e(Liq5;J)Lsga;
 
-    iget v1, p0, Lr80;->b:I
+    sget-object v0, Lr80;->p:Liq5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lup9;->j:Ljava/lang/String;
 
-    const-string v1, ", channelCount="
+    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lr80;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioFormat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lr80;->d:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,89 +1,311 @@
-.class public final enum Ljm;
-.super Ljava/lang/Enum;
+.class public final Ljm;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Ljm;
+# instance fields
+.field public final a:J
 
-.field public static final enum b:Ljm;
+.field public final b:J
 
-.field public static final synthetic c:[Ljm;
+.field public final c:J
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
 
-    new-instance v0, Ljm;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SAME"
+    iput-wide p1, p0, Ljm;->a:J
 
-    const/4 v2, 0x0
+    iput-wide p3, p0, Ljm;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide p5, p0, Ljm;->c:J
 
-    sput-object v0, Ljm;->a:Ljm;
+    iput-object p7, p0, Ljm;->d:Ljava/lang/String;
 
-    new-instance v1, Ljm;
+    iput-object p8, p0, Ljm;->e:Ljava/lang/String;
 
-    const-string v2, "NO_SESSION"
+    iput-object p9, p0, Ljm;->f:Ljava/util/Map;
 
-    const/4 v3, 0x1
+    const/4 p1, 0x0
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-eqz p9, :cond_0
 
-    new-instance v2, Ljm;
+    invoke-interface {p9}, Ljava/util/Map;->size()I
 
-    const-string v3, "ANONYMOUS_SESSION"
+    move-result p2
 
-    const/4 v4, 0x2
+    goto :goto_0
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :cond_0
+    move p2, p1
 
-    sput-object v2, Ljm;->b:Ljm;
+    :goto_0
+    const/16 p3, 0xa
 
-    new-instance v3, Ljm;
+    if-gt p2, p3, :cond_1
 
-    const-string v4, "SESSION"
+    const/4 p1, 0x1
 
-    const/4 v5, 0x3
+    :cond_1
+    if-nez p1, :cond_3
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-eqz p9, :cond_2
 
-    filled-new-array {v0, v1, v2, v3}, [Ljm;
+    invoke-interface {p9}, Ljava/util/Map;->size()I
 
-    move-result-object v0
+    move-result p1
 
-    sput-object v0, Ljm;->c:[Ljm;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "counters size can\'t be greater than limit = 10, current="
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", event="
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_3
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljm;
-    .locals 1
 
-    const-class v0, Ljm;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Ljm;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Ljm;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljm;
+
+    iget-wide v3, p0, Ljm;->a:J
+
+    iget-wide v5, p1, Ljm;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ljm;->b:J
+
+    iget-wide v5, p1, Ljm;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Ljm;->c:J
+
+    iget-wide v5, p1, Ljm;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ljm;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Ljm;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ljm;->e:Ljava/lang/String;
+
+    iget-object v3, p1, Ljm;->e:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Ljm;->f:Ljava/util/Map;
+
+    iget-object p1, p1, Ljm;->f:Ljava/util/Map;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
 .end method
 
-.method public static values()[Ljm;
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    sget-object v0, Ljm;->c:[Ljm;
+    iget-wide v0, p0, Ljm;->a:J
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Ljm;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Ljm;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ljm;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Ljm;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Ljm;->f:Ljava/util/Map;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "ApiLogEntry(time="
+
+    const-string v1, ", userId="
+
+    iget-wide v2, p0, Ljm;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Ljm;
+    iget-wide v1, p0, Ljm;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sessionId="
+
+    const-string v2, ", type="
+
+    iget-wide v3, p0, Ljm;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ", event="
+
+    const-string v2, ", params="
+
+    iget-object v3, p0, Ljm;->d:Ljava/lang/String;
+
+    iget-object v4, p0, Ljm;->e:Ljava/lang/String;
+
+    invoke-static {v0, v3, v1, v4, v2}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljm;->f:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

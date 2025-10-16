@@ -1,172 +1,198 @@
-.class public final synthetic Ltj8;
-.super Ljava/lang/Object;
+.class public final Ltj8;
+.super Lfp4;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lmj8;
+.implements Lkpe;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Lwj8;
+.field public o:Lev4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwj8;I)V
+.method public synthetic constructor <init>(Lcka;I)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Ltj8;->a:I
+    iput p2, p0, Ltj8;->c:I
 
-    iput-object p1, p0, Ltj8;->b:Lwj8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lwj8;Lij9;)V
-    .locals 0
-
-    .line 2
-    const/4 p2, 0x2
-
-    iput p2, p0, Ltj8;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltj8;->b:Lwj8;
+    invoke-direct {p0, p1}, Lfp4;-><init>(Lcka;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public b()V
+    .locals 1
 
-    iget v0, p0, Ltj8;->a:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lfp4;->a:Lcka;
+
+    invoke-interface {v0}, Lcka;->b()V
+
+    return-void
+.end method
+
+.method public final c(Lev4;)V
+    .locals 1
+
+    iget v0, p0, Ltj8;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ltj8;->b:Lwj8;
+    iget-object v0, p0, Ltj8;->o:Lev4;
 
-    iget-object v0, v0, Lwj8;->b:Lvi8;
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v0
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    iput-object p1, p0, Ltj8;->o:Lev4;
 
-    iget-object v2, v0, Lvi8;->X:Landroid/os/Handler;
+    iget-object p1, p0, Lfp4;->a:Lcka;
 
-    invoke-virtual {v2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
+    invoke-interface {p1, p0}, Lcka;->c(Lev4;)V
 
     :cond_0
-    const/4 v1, 0x0
+    return-void
 
-    :goto_0
-    invoke-static {v1}, Lq5h;->k(Z)V
+    :pswitch_0
+    iget-object v0, p0, Ltj8;->o:Lev4;
 
-    iget-object v0, v0, Lvi8;->o:Lti8;
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v0
 
-    new-instance v1, Loud;
+    if-eqz v0, :cond_1
 
-    const/4 v2, -0x6
+    iput-object p1, p0, Ltj8;->o:Lev4;
 
-    invoke-direct {v1, v2}, Loud;-><init>(I)V
+    iget-object p1, p0, Lfp4;->a:Lcka;
 
-    invoke-static {v1}, Lbv0;->y(Ljava/lang/Object;)Lf57;
+    invoke-interface {p1, p0}, Lcka;->c(Lev4;)V
 
-    invoke-interface {v0}, Lti8;->d()V
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Ltj8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lfp4;->g()V
+
+    iget-object v0, p0, Ltj8;->o:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Ltj8;->b:Lwj8;
+    invoke-super {p0}, Lfp4;->g()V
 
-    iget-object v1, v0, Lwj8;->h:Lax0;
+    iget-object v0, p0, Ltj8;->o:Lev4;
 
-    iget-object v1, v1, Lax0;->a:Ljava/lang/Object;
+    invoke-interface {v0}, Lev4;->g()V
 
-    check-cast v1, Lzi8;
+    return-void
 
-    iget-object v1, v1, Lzi8;->e:Lrr8;
+    nop
 
-    invoke-virtual {v1}, Lrr8;->a()Lv07;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object v1
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    if-eqz v1, :cond_1
+    iget v0, p0, Ltj8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lfp4;->a:Lcka;
+
+    invoke-interface {v0, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v0}, Lwj8;->R()V
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lfp4;->a:Lcka;
+
+    invoke-interface {v0, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
 
     :goto_1
     return-void
 
-    :pswitch_1
-    new-instance v0, Lsg8;
-
-    iget-object v1, p0, Ltj8;->b:Lwj8;
-
-    iget-object v2, v1, Lwj8;->a:Landroid/content/Context;
-
-    iget-object v3, v1, Lwj8;->c:Lmvd;
-
-    iget-object v3, v3, Lmvd;->a:Llvd;
-
-    invoke-interface {v3}, Llvd;->b()Landroid/content/ComponentName;
-
-    move-result-object v3
-
-    new-instance v4, Lly7;
-
-    invoke-direct {v4, v1}, Lly7;-><init>(Lwj8;)V
-
-    iget-object v5, v1, Lwj8;->b:Lvi8;
-
-    iget-object v5, v5, Lvi8;->c:Lui8;
-
-    invoke-interface {v5}, Lui8;->J()Landroid/os/Bundle;
-
-    move-result-object v5
-
-    invoke-direct {v0, v2, v3, v4, v5}, Lsg8;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Lly7;Landroid/os/Bundle;)V
-
-    iput-object v0, v1, Lwj8;->i:Lsg8;
-
-    const-string v1, "MediaBrowserCompat"
-
-    const-string v2, "Connecting to a MediaBrowserService."
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, v0, Lsg8;->a:Lpg8;
-
-    iget-object v0, v0, Lpg8;->b:Landroid/media/browse/MediaBrowser;
-
-    invoke-virtual {v0}, Landroid/media/browse/MediaBrowser;->connect()V
-
-    return-void
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

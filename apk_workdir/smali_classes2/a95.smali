@@ -1,56 +1,52 @@
-.class public final La95;
-.super Ljvc;
+.class public final synthetic La95;
+.super Lb9;
 .source "SourceFile"
 
+# interfaces
+.implements Lii6;
 
-# instance fields
-.field public final a:Lw85;
 
-.field public b:I
-
-.field public c:Lz85;
-
-.field public final synthetic d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+# static fields
+.field public static final r0:La95;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lw85;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, La95;
 
-    iput-object p1, p0, La95;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    const-class v1, Ld4g;
 
-    iput-object p2, p0, La95;->a:Lw85;
+    const-string v2, "<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    const/4 p1, 0x1
+    const/4 v3, 0x4
 
-    iput p1, p0, La95;->b:I
+    invoke-direct {v0, v3, v1, v2, v3}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, La95;->r0:La95;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p0, La95;->c:Lz85;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v0, p0, La95;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    check-cast p2, Ljava/util/List;
 
-    if-eqz p1, :cond_0
+    check-cast p3, Ljava/util/List;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    new-instance p1, Lz85;
+    sget-object p4, Lf95;->u0:[Lwq7;
 
-    invoke-direct {p1, p0, p2, p3}, Lz85;-><init>(La95;II)V
+    new-instance p4, Ld4g;
 
-    iput-object p1, p0, La95;->c:Lz85;
+    invoke-direct {p4, p1, p2, p3}, Ld4g;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    return-object p4
 .end method

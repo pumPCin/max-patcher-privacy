@@ -201,7 +201,7 @@
     const-string p4, " does not match any known camera device."
 
     .line 18
-    invoke-static {p3, p2, p4}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p2, p4}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -542,7 +542,7 @@
 
     const-string v0, "Attempted to switch to unknown camera device "
 
-    invoke-static {v0, p2}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -742,7 +742,7 @@
 
     const-string v3, "@"
 
-    invoke-static {v1, p1, v2, p2, v3}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2, p2, v3}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -915,7 +915,7 @@
 
     const-string v3, "@"
 
-    invoke-static {v1, p1, v2, p2, v3}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2, p2, v3}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

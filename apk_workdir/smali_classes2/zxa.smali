@@ -1,212 +1,175 @@
-.class public final Lzxa;
+.class public abstract Lzxa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lznf;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final synthetic a:Laya;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Laya;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lxrc;->oneme_notifications_and_sounds_settings_toolbar_title:I
 
-    iput-object p1, p0, Lzxa;->a:Laya;
+    sput v0, Lzxa;->a:I
 
-    return-void
-.end method
+    sget v0, Lxrc;->oneme_notifications_settings_chat_enable_notifications_button:I
 
+    sput v0, Lzxa;->b:I
 
-# virtual methods
-.method public final c(Lv84;Lc94;Z)V
-    .locals 2
+    sget v0, Lxrc;->oneme_notifications_settings_chat_enabled_section_title:I
 
-    iget-object v0, p0, Lzxa;->a:Laya;
+    sput v0, Lzxa;->c:I
 
-    iget-object v1, v0, Laya;->a:Lxf5;
+    sget v0, Lxrc;->oneme_notifications_settings_chat_settings_button:I
 
-    if-eqz v1, :cond_0
+    sput v0, Lzxa;->d:I
 
-    goto :goto_0
+    sget v0, Lxrc;->oneme_notifications_settings_chat_toolbar_title:I
 
-    :cond_0
-    const/4 v1, 0x0
+    sput v0, Lzxa;->e:I
 
-    :goto_0
-    if-eqz v1, :cond_1
+    sget v0, Lxrc;->oneme_notifications_settings_chat_type_all_button:I
 
-    invoke-interface {v1, p1, p2, p3}, Lznf;->c(Lv84;Lc94;Z)V
+    sput v0, Lzxa;->f:I
 
-    :cond_1
-    iget-object v0, v0, Laya;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget v0, Lxrc;->oneme_notifications_settings_chat_type_pin_reply_button:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    sput v0, Lzxa;->g:I
 
-    move-result-object v0
+    sget v0, Lxrc;->oneme_notifications_settings_default_ringtone_title:I
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sput v0, Lzxa;->h:I
 
-    move-result v1
+    sget v0, Lxrc;->oneme_notifications_settings_dialog_enable_notifications_button:I
 
-    if-eqz v1, :cond_2
+    sput v0, Lzxa;->i:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget v0, Lxrc;->oneme_notifications_settings_dialog_settings_button:I
 
-    move-result-object v1
+    sput v0, Lzxa;->j:I
 
-    check-cast v1, Lznf;
+    sget v0, Lxrc;->oneme_notifications_settings_dialog_toolbar_title:I
 
-    invoke-interface {v1, p1, p2, p3}, Lznf;->c(Lv84;Lc94;Z)V
+    sput v0, Lzxa;->k:I
 
-    goto :goto_1
+    sget v0, Lxrc;->oneme_notifications_settings_enable_all_notifications:I
 
-    :cond_2
-    return-void
-.end method
+    sput v0, Lzxa;->l:I
 
-.method public final d(Lv84;Lc94;ZI)V
-    .locals 2
+    sget v0, Lxrc;->oneme_notifications_settings_open_settings_button_description:I
 
-    iget-object v0, p0, Lzxa;->a:Laya;
+    sput v0, Lzxa;->m:I
 
-    iget-object v1, v0, Laya;->a:Lxf5;
+    sget v0, Lxrc;->oneme_notifications_settings_open_settings_button_ringtone:I
 
-    if-eqz v1, :cond_0
+    sput v0, Lzxa;->n:I
 
-    goto :goto_0
+    sget v0, Lxrc;->oneme_notifications_settings_open_settings_button_title:I
 
-    :cond_0
-    const/4 v1, 0x0
+    sput v0, Lzxa;->o:I
 
-    :goto_0
-    if-eqz v1, :cond_1
+    sget v0, Lxrc;->oneme_notifications_settings_open_settings_call_ringtone_title:I
 
-    invoke-interface {v1, p1, p2, p3, p4}, Lznf;->d(Lv84;Lc94;ZI)V
+    sput v0, Lzxa;->p:I
 
-    :cond_1
-    iget-object v0, v0, Laya;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget v0, Lxrc;->oneme_notifications_settings_open_settings_calls_vibration:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    sput v0, Lzxa;->q:I
 
-    move-result-object v0
+    sget v0, Lxrc;->oneme_notifications_settings_other_new_user_button:I
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sput v0, Lzxa;->r:I
 
-    move-result v1
+    sget v0, Lxrc;->oneme_notifications_settings_other_settings_button:I
 
-    if-eqz v1, :cond_2
+    sput v0, Lzxa;->s:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget v0, Lxrc;->oneme_notifications_settings_other_toolbar_title:I
 
-    move-result-object v1
+    sput v0, Lzxa;->t:I
 
-    check-cast v1, Lznf;
+    sget v0, Lxrc;->oneme_notifications_settings_reset_default_button:I
 
-    invoke-interface {v1, p1, p2, p3, p4}, Lznf;->d(Lv84;Lc94;ZI)V
+    sput v0, Lzxa;->u:I
 
-    goto :goto_1
+    sget v0, Lxrc;->oneme_notifications_settings_reset_settings_button:I
 
-    :cond_2
-    return-void
-.end method
+    sput v0, Lzxa;->v:I
 
-.method public final h(Lv84;Lc94;Z)V
-    .locals 2
+    sget v0, Lxrc;->oneme_notifications_settings_show_content_button:I
 
-    iget-object v0, p0, Lzxa;->a:Laya;
+    sput v0, Lzxa;->w:I
 
-    iget-object v1, v0, Laya;->a:Lxf5;
+    sget v0, Lxrc;->oneme_notifications_settings_toolbar_title:I
 
-    if-eqz v1, :cond_0
+    sput v0, Lzxa;->x:I
 
-    goto :goto_0
+    sget v0, Lxrc;->oneme_notifications_settings_type_off:I
 
-    :cond_0
-    const/4 v1, 0x0
+    sput v0, Lzxa;->y:I
 
-    :goto_0
-    if-eqz v1, :cond_1
+    sget v0, Lxrc;->oneme_notifications_settings_type_on:I
 
-    invoke-interface {v1, p1, p2, p3}, Lznf;->h(Lv84;Lc94;Z)V
+    sput v0, Lzxa;->z:I
 
-    :cond_1
-    iget-object v0, v0, Laya;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget v0, Lxrc;->oneme_notifications_settings_type_reply:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    sput v0, Lzxa;->A:I
 
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lznf;
-
-    invoke-interface {v1, p1, p2, p3}, Lznf;->h(Lv84;Lc94;Z)V
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-.end method
-
-.method public final i(Lv84;Lc94;Z)V
-    .locals 2
-
-    iget-object v0, p0, Lzxa;->a:Laya;
-
-    iget-object v1, v0, Laya;->a:Lxf5;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1, p1, p2, p3}, Lznf;->i(Lv84;Lc94;Z)V
-
-    :cond_1
-    iget-object v0, v0, Laya;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lznf;
-
-    invoke-interface {v1, p1, p2, p3}, Lznf;->i(Lv84;Lc94;Z)V
-
-    goto :goto_1
-
-    :cond_2
     return-void
 .end method

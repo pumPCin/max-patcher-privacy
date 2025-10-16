@@ -1,157 +1,158 @@
-.class public final enum Lpuc;
-.super Ljava/lang/Enum;
+.class public final Lpuc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lpuc;
+# instance fields
+.field public final a:I
 
-.field public static final enum Y:Lpuc;
+.field public final b:Lbk8;
 
-.field public static final enum Z:Lpuc;
-
-.field public static final enum a:Lpuc;
-
-.field public static final enum b:Lpuc;
-
-.field public static final enum c:Lpuc;
-
-.field public static final enum o:Lpuc;
-
-.field public static final enum r0:Lpuc;
-
-.field public static final enum s0:Lpuc;
-
-.field public static final synthetic t0:[Lpuc;
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(ILbk8;Z)V
+    .locals 0
 
-    new-instance v0, Lpuc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "CONFIGURING"
+    iput p1, p0, Lpuc;->a:I
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lpuc;->b:Lbk8;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lpuc;->a:Lpuc;
-
-    new-instance v1, Lpuc;
-
-    const-string v2, "PENDING_RECORDING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lpuc;->b:Lpuc;
-
-    new-instance v2, Lpuc;
-
-    const-string v3, "PENDING_PAUSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lpuc;->c:Lpuc;
-
-    new-instance v3, Lpuc;
-
-    const-string v4, "IDLING"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lpuc;->o:Lpuc;
-
-    new-instance v4, Lpuc;
-
-    const-string v5, "RECORDING"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lpuc;->X:Lpuc;
-
-    new-instance v5, Lpuc;
-
-    const-string v6, "PAUSED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lpuc;->Y:Lpuc;
-
-    new-instance v6, Lpuc;
-
-    const-string v7, "STOPPING"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lpuc;->Z:Lpuc;
-
-    new-instance v7, Lpuc;
-
-    const-string v8, "RESETTING"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lpuc;->r0:Lpuc;
-
-    new-instance v8, Lpuc;
-
-    const-string v9, "ERROR"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lpuc;->s0:Lpuc;
-
-    filled-new-array/range {v0 .. v8}, [Lpuc;
-
-    move-result-object v0
-
-    sput-object v0, Lpuc;->t0:[Lpuc;
+    iput-boolean p3, p0, Lpuc;->c:Z
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpuc;
-    .locals 1
 
-    const-class v0, Lpuc;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    goto :goto_1
 
-    check-cast p0, Lpuc;
+    :cond_0
+    instance-of v0, p1, Lpuc;
 
-    return-object p0
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lpuc;
+
+    iget v0, p0, Lpuc;->a:I
+
+    iget v1, p1, Lpuc;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lpuc;->b:Lbk8;
+
+    iget-object v1, p1, Lpuc;->b:Lbk8;
+
+    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lpuc;->c:Z
+
+    iget-boolean p1, p1, Lpuc;->c:Z
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static values()[Lpuc;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    sget-object v0, Lpuc;->t0:[Lpuc;
+    iget v0, p0, Lpuc;->a:I
 
-    invoke-virtual {v0}, [Lpuc;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Lwx1;->v(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lpuc;->b:Lbk8;
+
+    invoke-virtual {v1}, Lbk8;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lpuc;->c:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NetworkParameters(condition="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lpuc;->a:I
+
+    invoke-static {v1}, Lf67;->u(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", state="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpuc;->b:Lbk8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", preferHardwareVPX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lpuc;->c:Z
+
+    invoke-static {v0, v2, v1}, Lwx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lpuc;
 
     return-object v0
 .end method

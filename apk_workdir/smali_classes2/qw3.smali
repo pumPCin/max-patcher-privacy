@@ -1,49 +1,80 @@
-.class public final Lqw3;
-.super Lwy3;
+.class public final synthetic Lqw3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lrw3;
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final synthetic b:Lsw3;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Lpr3;
 
 
 # direct methods
-.method public constructor <init>(Lrw3;Lwy3;)V
+.method public synthetic constructor <init>(Lsw3;Lpr3;I)V
     .locals 0
 
-    iput-object p1, p0, Lqw3;->X:Lrw3;
+    iput p3, p0, Lqw3;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqw3;->b:Lsw3;
+
+    iput-object p2, p0, Lqw3;->c:Lpr3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    iput-object p1, p0, Lqw3;->o:Ljava/lang/Object;
+    iget p1, p0, Lqw3;->a:I
 
-    iget p1, p0, Lqw3;->Y:I
+    packed-switch p1, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lqw3;->b:Lsw3;
 
-    or-int/2addr p1, v0
+    iget-object p1, p1, Lsw3;->o:Lqh6;
 
-    iput p1, p0, Lqw3;->Y:I
+    new-instance v0, Lph9;
 
-    iget-object p1, p0, Lqw3;->X:Lrw3;
+    iget-object v1, p0, Lqw3;->c:Lpr3;
 
-    const/4 v0, 0x0
+    iget-wide v2, v1, Lpr3;->j:J
 
-    invoke-virtual {p1, v0, v0, p0}, Lrw3;->e(Ljava/util/List;Lfq3;Lwy3;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v3, v1}, Lph9;-><init>(JLs00;)V
 
-    move-result-object p1
+    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lqw3;->b:Lsw3;
+
+    iget-object p1, p1, Lsw3;->o:Lqh6;
+
+    new-instance v0, Loh9;
+
+    iget-object v1, p0, Lqw3;->c:Lpr3;
+
+    iget-wide v2, v1, Lpr3;->j:J
+
+    invoke-direct {v0, v2, v3, v1}, Loh9;-><init>(JLs00;)V
+
+    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

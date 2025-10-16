@@ -1,47 +1,71 @@
-.class public interface abstract Lvh5;
+.class public final synthetic Lvh5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lo84;
+.implements Lw18;
+.implements Ldr3;
+
+
+# instance fields
+.field public final synthetic a:Z
+
+.field public final synthetic b:I
+
+
+# direct methods
+.method public synthetic constructor <init>(IZ)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lvh5;->b:I
+
+    iput-boolean p2, p0, Lvh5;->a:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ZI)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lvh5;->a:Z
+
+    iput p2, p0, Lvh5;->b:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract N(IZ)Z
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
+
+    iget v0, p0, Lvh5;->b:I
+
+    check-cast p1, Lrtb;
+
+    iget-boolean v1, p0, Lvh5;->a:Z
+
+    invoke-virtual {p1, v0, v1}, Lrtb;->e0(IZ)V
+
+    return-void
 .end method
 
-.method public abstract f([BIIZ)Z
-.end method
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
 
-.method public abstract getLength()J
-.end method
+    iget-boolean v0, p0, Lvh5;->a:Z
 
-.method public abstract getPosition()J
-.end method
+    check-cast p1, Lhsb;
 
-.method public abstract i(I[BI)V
-.end method
+    iget v1, p0, Lvh5;->b:I
 
-.method public abstract n([BIIZ)Z
-.end method
+    invoke-interface {p1, v1, v0}, Lhsb;->l(IZ)V
 
-.method public abstract o()J
-.end method
-
-.method public abstract p(I)V
-.end method
-
-.method public abstract readFully([BII)V
-.end method
-
-.method public abstract s(I[BI)I
-.end method
-
-.method public abstract u(I)I
-.end method
-
-.method public abstract x()V
-.end method
-
-.method public abstract y(I)V
+    return-void
 .end method

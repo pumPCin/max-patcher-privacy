@@ -2,230 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc59;
-
 
 # instance fields
-.field public final a:Landroid/text/Layout;
+.field public final a:Leie;
 
-.field public final b:Landroid/text/Layout;
-
-.field public final c:J
-
-.field public final d:Ljava/lang/CharSequence;
-
-.field public final e:Ljava/lang/String;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/Layout;Landroid/text/Layout;JLjava/lang/CharSequence;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lgw0;Lqkf;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly49;->a:Landroid/text/Layout;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Ly49;->b:Landroid/text/Layout;
+    const/4 v1, 0x7
 
-    iput-wide p3, p0, Ly49;->c:J
+    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
 
-    iput-object p5, p0, Ly49;->d:Ljava/lang/CharSequence;
+    move-result-object v0
 
-    iput-object p6, p0, Ly49;->e:Ljava/lang/String;
+    iput-object v0, p0, Ly49;->a:Leie;
+
+    check-cast p2, Losa;
+
+    invoke-virtual {p2}, Losa;->a()Lv44;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ly49;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onChatMembersUpdateEvent(Luo2;)V
+    .locals 5
+    .annotation runtime Lsaf;
+    .end annotation
 
-    const/4 v0, 0x1
+    iget-object v0, p1, Luo2;->b:Ljava/util/List;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p1, Luo2;->c:Lho2;
 
-    return v0
+    iget-wide v2, p1, Luo2;->o:J
 
-    :cond_0
-    instance-of v1, p1, Ly49;
+    iget p1, p1, Luo2;->X:I
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ly49;
-
-    iget-object v1, p0, Ly49;->a:Landroid/text/Layout;
-
-    iget-object v3, p1, Ly49;->a:Landroid/text/Layout;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ly49;->b:Landroid/text/Layout;
-
-    iget-object v3, p1, Ly49;->b:Landroid/text/Layout;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Ly49;->c:J
-
-    iget-wide v5, p1, Ly49;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Ly49;->d:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Ly49;->d:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Ly49;->e:Ljava/lang/String;
-
-    iget-object p1, p1, Ly49;->e:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1}, Lwx1;->v(I)I
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-eqz p1, :cond_1
 
-    return v2
+    const/4 v4, 0x1
 
-    :cond_6
-    return v0
-.end method
+    if-ne p1, v4, :cond_0
 
-.method public final hashCode()I
-    .locals 5
+    new-instance p1, Ls49;
 
-    iget-object v0, p0, Ly49;->a:Landroid/text/Layout;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ly49;->b:Landroid/text/Layout;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-wide v3, p0, Ly49;->c:J
-
-    invoke-static {v2, v1, v3, v4}, Lajf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Ly49;->d:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Lc85;->e(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Ly49;->e:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
+    invoke-direct {p1, v2, v3, v1, v0}, Ls49;-><init>(JLho2;Ljava/util/Collection;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result v1
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Lq49;
+
+    invoke-direct {p1, v2, v3, v1, v0}, Lq49;-><init>(JLho2;Ljava/util/Collection;)V
 
     :goto_0
-    add-int/2addr v0, v1
+    new-instance v0, Lv49;
 
-    return v0
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lv49;-><init>(Ly49;Lt49;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Ly49;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final onEvent(Lqz3;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lw49;
 
-    const-string v1, "Contact(contactTitleLayout="
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, v1}, Lw49;-><init>(Ly49;Lqz3;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Ly49;->a:Landroid/text/Layout;
+    const/4 p1, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Ly49;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v1, ", contactNameLayout="
+    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly49;->b:Landroid/text/Layout;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ly49;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", nameForAbbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly49;->d:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", url="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Ly49;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Ljjd;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

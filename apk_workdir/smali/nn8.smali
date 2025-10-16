@@ -1,11 +1,7 @@
-.class public interface abstract Lnn8;
-.super Ljava/lang/Object;
+.class public abstract Lnn8;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
-# interfaces
-.implements Lbqd;
 
-
-# virtual methods
-.method public abstract c(Lpn8;)V
-.end method
+# static fields
+.field public static final synthetic a:I

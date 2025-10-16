@@ -1,48 +1,77 @@
-.class public abstract Lpfc;
-.super Ljava/lang/Object;
+.class public final Lpfc;
+.super Lcqe;
+.source "SourceFile"
 
 
 # static fields
-.field public static menu_attach_photo:I = 0x7f0f0000
+.field public static final b:Lpfc;
 
-.field public static menu_attach_video:I = 0x7f0f0001
 
-.field public static menu_calls_selected_actions:I = 0x7f0f0002
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static menu_channel_profile:I = 0x7f0f0003
+    new-instance v0, Lpfc;
 
-.field public static menu_channel_settings:I = 0x7f0f0004
+    invoke-direct {v0}, Lcqe;-><init>()V
 
-.field public static menu_chat:I = 0x7f0f0005
+    sput-object v0, Lpfc;->b:Lpfc;
 
-.field public static menu_chat_profile:I = 0x7f0f0006
+    return-void
+.end method
 
-.field public static menu_chat_selected_actions:I = 0x7f0f0007
 
-.field public static menu_constructor:I = 0x7f0f0008
+# virtual methods
+.method public final d(Landroid/os/Bundle;)Lqf4;
+    .locals 3
 
-.field public static menu_contact_profile:I = 0x7f0f0009
+    const-string v0, "can_select_file"
 
-.field public static menu_contacts_selected_actions:I = 0x7f0f000a
+    invoke-static {v0, p1}, Lkxi;->b(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
 
-.field public static menu_empty:I = 0x7f0f000b
+    move-result-object v0
 
-.field public static menu_folder_page:I = 0x7f0f000c
+    if-eqz v0, :cond_0
 
-.field public static menu_left_chat_profile:I = 0x7f0f000d
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-.field public static menu_local_photo:I = 0x7f0f000e
+    move-result v0
 
-.field public static menu_local_video:I = 0x7f0f000f
+    goto :goto_0
 
-.field public static menu_location:I = 0x7f0f0010
+    :cond_0
+    const/4 v0, 0x1
 
-.field public static menu_location_layer:I = 0x7f0f0011
+    :goto_0
+    const-string v1, "source_id"
 
-.field public static menu_profile:I = 0x7f0f0012
+    invoke-static {v1, p1}, Lkxi;->d(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
 
-.field public static menu_search:I = 0x7f0f0013
+    move-result-object p1
 
-.field public static menu_sticker_set:I = 0x7f0f0014
+    new-instance v1, Lpu8;
 
-.field public static menu_tam_crop_image:I = 0x7f0f0015
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, p1, v2}, Lpu8;-><init>(ZLjava/lang/Long;I)V
+
+    return-object v1
+.end method
+
+.method public final e(Lbqe;)V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0xe
+
+    const-string v3, ":qr-scanner"
+
+    invoke-static {p1, v3, v0, v1, v2}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+
+    return-void
+.end method

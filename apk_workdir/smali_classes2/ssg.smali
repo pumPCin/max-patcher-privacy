@@ -1,94 +1,82 @@
-.class public final enum Lssg;
-.super Ljava/lang/Enum;
+.class public final Lssg;
+.super Lvsg;
 .source "SourceFile"
 
-# interfaces
-.implements Ldwg;
 
-
-# static fields
-.field public static final synthetic a:[Lssg;
-
-.field public static final synthetic b:Laa5;
+# instance fields
+.field public final a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Z)V
+    .locals 0
 
-    new-instance v0, Lssg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "CHANGE_SCREEN_BRIGHTNESS"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0}, [Lssg;
-
-    move-result-object v0
-
-    sput-object v0, Lssg;->a:[Lssg;
-
-    new-instance v1, Laa5;
-
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lssg;->b:Laa5;
+    iput-boolean p1, p0, Lssg;->a:Z
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lssg;
-    .locals 1
-
-    const-class v0, Lssg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lssg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lssg;
-    .locals 1
-
-    sget-object v0, Lssg;->a:[Lssg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lssg;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    return-object v0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lssg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lssg;
+
+    iget-boolean v1, p0, Lssg;->a:Z
+
+    iget-boolean p1, p1, Lssg;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public final hashCode()I
     .locals 1
 
-    const-string v0, "WebAppChangeScreenBrightness"
+    iget-boolean v0, p0, Lssg;->a:Z
 
-    return-object v0
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const-string v0, "change_screen_brightness"
+    const-string v0, "FrontCamera(isTimerVisible="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lssg;->a:Z
+
+    invoke-static {v0, v1, v2}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

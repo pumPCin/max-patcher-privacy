@@ -12,16 +12,16 @@
         "Lru/ok/android/externcalls/sdk/stat/connection/PeerConnectionChangedStat;",
         "",
         "Lkotlin/Function0;",
-        "Lp61;",
+        "Lp71;",
         "getEventualStatSender",
         "<init>",
-        "(Ltd6;)V",
+        "(Loh6;)V",
         "Lorg/webrtc/PeerConnection$PeerConnectionState;",
         "state",
-        "Laxf;",
+        "Lzag;",
         "onStateChanged",
         "(Lorg/webrtc/PeerConnection$PeerConnectionState;)V",
-        "Ltd6;",
+        "Loh6;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -35,29 +35,29 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Ltd6;
+.field private final getEventualStatSender:Loh6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ltd6;"
+            "Loh6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ltd6;)V
+.method public constructor <init>(Loh6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ltd6;",
+            "Loh6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/connection/PeerConnectionChangedStat;->getEventualStatSender:Ltd6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/connection/PeerConnectionChangedStat;->getEventualStatSender:Loh6;
 
     return-void
 .end method
@@ -67,13 +67,13 @@
 .method public final onStateChanged(Lorg/webrtc/PeerConnection$PeerConnectionState;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/connection/PeerConnectionChangedStat;->getEventualStatSender:Ltd6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/connection/PeerConnectionChangedStat;->getEventualStatSender:Loh6;
 
-    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lp61;
+    check-cast v0, Lp71;
 
     if-eqz v0, :cond_0
 
@@ -93,13 +93,13 @@
 
     move-result-object p1
 
-    new-instance v2, Ld3b;
+    new-instance v2, Lqbb;
 
     const-string v3, "connection_state"
 
-    invoke-direct {v2, v3, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v2, v3, p1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-direct {v1, v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>(Ld3b;)V
+    invoke-direct {v1, v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>(Lqbb;)V
 
     const/4 p1, 0x2
 
@@ -107,7 +107,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v2, v3, v1, p1}, Lp61;->a(Lp61;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {v0, v2, v3, v1, p1}, Lp71;->a(Lp71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_0
     return-void

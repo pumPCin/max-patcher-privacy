@@ -4,37 +4,116 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ld93;
 
-.field public final b:Landroid/view/Surface;
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(ILandroid/view/Surface;)V
+.method public constructor <init>(Ld93;Ljava/util/HashMap;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lgb0;->a:I
+    iput-object p1, p0, Lgb0;->a:Ld93;
 
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Lgb0;->b:Landroid/view/Surface;
+    iput-object p2, p0, Lgb0;->b:Ljava/util/HashMap;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null surface"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
+.method public final a(Lsxb;JI)J
+    .locals 8
+
+    iget-object v0, p0, Lgb0;->a:Ld93;
+
+    invoke-interface {v0}, Ld93;->l()J
+
+    move-result-wide v0
+
+    sub-long/2addr p2, v0
+
+    iget-object v0, p0, Lgb0;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhb0;
+
+    iget-wide v0, p1, Lhb0;->a:J
+
+    add-int/lit8 p4, p4, -0x1
+
+    const-wide/16 v2, 0x1
+
+    cmp-long v2, v0, v2
+
+    if-lez v2, :cond_0
+
+    move-wide v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v2, 0x2
+
+    :goto_0
+    const-wide v4, 0x40c3880000000000L    # 10000.0
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v4
+
+    int-to-long v6, p4
+
+    mul-long/2addr v2, v6
+
+    long-to-double v2, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v2
+
+    div-double/2addr v4, v2
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(DD)D
+
+    move-result-wide v2
+
+    const-wide/high16 v4, 0x4008000000000000L    # 3.0
+
+    int-to-double v6, p4
+
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v4
+
+    long-to-double v0, v0
+
+    mul-double/2addr v4, v0
+
+    mul-double/2addr v4, v2
+
+    double-to-long v0, v4
+
+    invoke-static {v0, v1, p2, p3}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p2
+
+    iget-wide v0, p1, Lhb0;->b:J
+
+    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
@@ -49,17 +128,21 @@
 
     check-cast p1, Lgb0;
 
-    iget v0, p0, Lgb0;->a:I
+    iget-object v0, p0, Lgb0;->a:Ld93;
 
-    iget v1, p1, Lgb0;->a:I
+    iget-object v1, p1, Lgb0;->a:Ld93;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lgb0;->b:Landroid/view/Surface;
+    move-result v0
 
-    iget-object p1, p1, Lgb0;->b:Landroid/view/Surface;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lgb0;->b:Ljava/util/HashMap;
+
+    iget-object p1, p1, Lgb0;->b:Ljava/util/HashMap;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -79,7 +162,11 @@
 .method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lgb0;->a:I
+    iget-object v0, p0, Lgb0;->a:Ld93;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -87,9 +174,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lgb0;->b:Landroid/view/Surface;
+    iget-object v1, p0, Lgb0;->b:Ljava/util/HashMap;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v1}, Ljava/util/Map;->hashCode()I
 
     move-result v1
 
@@ -103,19 +190,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Result{resultCode="
+    const-string v1, "SchedulerConfig{clock="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lgb0;->a:I
+    iget-object v1, p0, Lgb0;->a:Ld93;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", surface="
+    const-string v1, ", values="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lgb0;->b:Landroid/view/Surface;
+    iget-object v1, p0, Lgb0;->b:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

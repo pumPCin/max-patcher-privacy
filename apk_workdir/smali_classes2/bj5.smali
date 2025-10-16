@@ -1,72 +1,102 @@
 .class public final Lbj5;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lz1g;
+
+
+# instance fields
+.field public final a:Lo6b;
+
+.field public final b:Lid6;
+
+
+# direct methods
+.method public constructor <init>(Lo6b;Lid6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbj5;->a:Lo6b;
+
+    iput-object p2, p0, Lbj5;->b:Lid6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Lqb4;Lxb4;Z)V
+    .locals 6
 
-    check-cast p1, Ln24;
+    iget-object v2, p2, Lxb4;->a:Landroid/net/Uri;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-wide v3, p2, Lxb4;->g:J
 
-    invoke-virtual {p0, p1, p2}, Lbj5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lbj5;->b:Lid6;
 
-    move-result-object p1
+    iget-object v1, p0, Lbj5;->a:Lo6b;
 
-    check-cast p1, Lbj5;
+    move v5, p3
 
-    sget-object p2, Laxf;->a:Laxf;
+    invoke-virtual/range {v0 .. v5}, Lid6;->f(Lo6b;Landroid/net/Uri;JZ)V
 
-    invoke-virtual {p1, p2}, Lbj5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final d(Lqb4;Lxb4;ZI)V
+    .locals 7
 
-    new-instance p1, Lbj5;
+    iget-object v2, p2, Lxb4;->a:Landroid/net/Uri;
 
-    const/4 v0, 0x2
+    iget-wide v3, p2, Lxb4;->g:J
 
-    invoke-direct {p1, v0, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lbj5;->b:Lid6;
 
-    return-object p1
+    iget-object v1, p0, Lbj5;->a:Lo6b;
+
+    move v5, p3
+
+    move v6, p4
+
+    invoke-virtual/range {v0 .. v6}, Lid6;->a(Lo6b;Landroid/net/Uri;JZI)V
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final h(Lqb4;Lxb4;Z)V
+    .locals 6
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v2, p2, Lxb4;->a:Landroid/net/Uri;
 
-    sget-object p1, Lp3h;->a:Lp3h;
+    iget-wide v3, p2, Lxb4;->g:J
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
+    iget-object v0, p0, Lbj5;->b:Lid6;
 
-    move-result-object p1
+    iget-object v1, p0, Lbj5;->a:Lo6b;
 
-    const-class v0, Lcfa;
+    move v5, p3
 
-    invoke-virtual {p1, v0}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v5}, Lid6;->d(Lo6b;Landroid/net/Uri;JZ)V
 
-    move-result-object p1
+    return-void
+.end method
 
-    check-cast p1, Lcfa;
+.method public final i(Lqb4;Lxb4;Z)V
+    .locals 6
 
-    invoke-virtual {p1}, Lcfa;->d()Z
+    iget-object v2, p2, Lxb4;->a:Landroid/net/Uri;
 
-    move-result p1
+    iget-wide v3, p2, Lxb4;->g:J
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v0, p0, Lbj5;->b:Lid6;
 
-    move-result-object p1
+    iget-object v1, p0, Lbj5;->a:Lo6b;
 
-    return-object p1
+    move v5, p3
+
+    invoke-virtual/range {v0 .. v5}, Lid6;->h(Lo6b;Landroid/net/Uri;JZ)V
+
+    return-void
 .end method

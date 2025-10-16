@@ -3,18 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln8a;
+.implements Lrga;
 
 
 # static fields
 .field public static final a:Lg80;
 
-.field public static final b:Ltm5;
+.field public static final b:Liq5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     new-instance v0, Lg80;
 
@@ -22,29 +22,13 @@
 
     sput-object v0, Lg80;->a:Lg80;
 
-    new-instance v0, Ley;
+    const-string v0, "logRequest"
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ley;-><init>(I)V
-
-    const-class v1, Ln4c;
-
-    invoke-static {v1, v0}, Lsw1;->n(Ljava/lang/Class;Ley;)Ljava/util/HashMap;
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
 
     move-result-object v0
 
-    new-instance v1, Ltm5;
-
-    invoke-static {v0}, Lsw1;->o(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "messagingClientEvent"
-
-    invoke-direct {v1, v2, v0}, Ltm5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lg80;->b:Ltm5;
+    sput-object v0, Lg80;->b:Liq5;
 
     return-void
 .end method
@@ -54,15 +38,17 @@
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    check-cast p1, Lli9;
+    check-cast p1, Lbm0;
 
-    check-cast p2, Lo8a;
+    check-cast p2, Lsga;
 
-    sget-object v0, Lg80;->b:Ltm5;
+    check-cast p1, Li90;
 
-    iget-object p1, p1, Lli9;->a:Lki9;
+    iget-object p1, p1, Li90;->a:Ljava/util/ArrayList;
 
-    invoke-interface {p2, v0, p1}, Lo8a;->a(Ltm5;Ljava/lang/Object;)Lo8a;
+    sget-object v0, Lg80;->b:Liq5;
+
+    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
     return-void
 .end method

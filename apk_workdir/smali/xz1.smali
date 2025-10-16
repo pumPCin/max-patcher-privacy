@@ -1,73 +1,33 @@
-.class public final synthetic Lxz1;
-.super Ljava/lang/Object;
+.class public final Lxz1;
+.super Lfwb;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/RejectedExecutionHandler;
-
-
-# instance fields
-.field public final synthetic a:I
-
-
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lxz1;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
+.method public final C(Ljava/util/ArrayList;Lt1e;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
     .locals 1
 
-    iget v0, p0, Lxz1;->a:I
+    iget-object v0, p0, Lfwb;->b:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
 
-    :try_start_0
-    invoke-virtual {p2}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
+    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->captureBurstRequests(Ljava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
 
-    move-result-object p2
+    move-result p1
 
-    invoke-interface {p2, p1}, Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    return p1
+.end method
 
-    goto :goto_0
+.method public final N(Landroid/hardware/camera2/CaptureRequest;Lt1e;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+    .locals 1
 
-    :catch_0
-    move-exception p1
+    iget-object v0, p0, Lfwb;->b:Ljava/lang/Object;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
 
-    move-result-object p2
+    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->setSingleRepeatingRequest(Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
 
-    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
+    move-result p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    const-string p1, "CameraExecutor"
-
-    const-string p2, "A rejected execution occurred in CameraExecutor!"
-
-    invoke-static {p1, p2}, Lnc6;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

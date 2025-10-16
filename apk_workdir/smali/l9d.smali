@@ -1,75 +1,50 @@
-.class public interface abstract Ll9d;
+.class public final Ll9d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Comparable;
+
+
+# instance fields
+.field public final a:Ljava/util/ArrayList;
+
+.field public b:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Ll9d;->b:J
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ll9d;->a:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a()Landroid/view/Surface;
-    .locals 1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    check-cast p1, Ll9d;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    iget-wide v0, p0, Ll9d;->b:J
 
-    throw v0
-.end method
+    iget-wide v2, p1, Ll9d;->b:J
 
-.method public c()I
-    .locals 1
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    move-result p1
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public d(Landroid/graphics/Bitmap;Ljn3;)I
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public e()Lvb4;
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public f()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public h(J)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return p1
 .end method

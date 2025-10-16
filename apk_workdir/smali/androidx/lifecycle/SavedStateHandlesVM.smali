@@ -1,5 +1,5 @@
 .class public final Landroidx/lifecycle/SavedStateHandlesVM;
-.super Lzjg;
+.super Ltyg;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Landroidx/lifecycle/SavedStateHandlesVM;",
-        "Lzjg;",
+        "Ltyg;",
         "<init>",
         "()V",
         "lifecycle-viewmodel-savedstate_release"
@@ -33,7 +33,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lzjg;-><init>()V
+    invoke-direct {p0}, Ltyg;-><init>()V
 
     new-instance v0, Ljava/util/LinkedHashMap;
 

@@ -1,123 +1,48 @@
-.class public final synthetic Lub2;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/BiConsumer;
+.class public final Lub2;
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:Ls3;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(Ls3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lub2;->a:I
+    iput-object p1, p0, Lub2;->Y:Ls3;
 
-    iput-object p1, p0, Lub2;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lub2;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lub2;->a:I
+    iput-object p1, p0, Lub2;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lub2;->X:I
 
-    iget-object v0, p0, Lub2;->c:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Ljava/util/Collection;
+    or-int/2addr p1, v0
 
-    iget-object v1, p0, Lub2;->b:Ljava/lang/Object;
+    iput p1, p0, Lub2;->X:I
 
-    check-cast v1, Lrs;
+    iget-object p1, p0, Lub2;->Y:Ls3;
 
-    check-cast p1, Ljava/lang/Long;
+    const/4 v0, 0x0
 
-    check-cast p2, Lro3;
+    invoke-virtual {p1, v0, p0}, Ls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1, p1, p2}, Lube;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lub2;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Collection;
-
-    iget-object v1, p0, Lub2;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    check-cast p1, Ljava/lang/Long;
-
-    check-cast p2, Lr82;
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lub2;->c:Ljava/lang/Object;
-
-    check-cast v0, Lrr9;
-
-    iget-object v1, p0, Lub2;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    check-cast p1, Ljava/lang/Long;
-
-    check-cast p2, Lr82;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lrr9;->d(J)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -4,5 +4,5 @@
 
 
 # annotations
-.annotation build Lvs4;
+.annotation build Luv4;
 .end annotation

@@ -1,157 +1,114 @@
-.class public final Ldg4;
+.class public final synthetic Ldg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx18;
+
 
 # instance fields
-.field public final a:[B
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/ArrayDeque;
-
-.field public c:I
-
-.field public d:I
-
-.field public e:J
-
-.field public final f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
+.field public final synthetic b:Lnd;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public synthetic constructor <init>(Lnd;I)V
+    .locals 0
 
-    packed-switch p1, :pswitch_data_0
+    .line 1
+    iput p2, p0, Ldg4;->a:I
+
+    iput-object p1, p0, Ldg4;->b:Lnd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 p1, 0x8
+    return-void
+.end method
 
-    new-array p1, p1, [B
+.method public synthetic constructor <init>(Lnd;Lqe4;I)V
+    .locals 0
 
-    iput-object p1, p0, Ldg4;->a:[B
+    .line 2
+    iput p3, p0, Ldg4;->a:I
 
-    new-instance p1, Ljava/util/ArrayDeque;
+    iput-object p1, p0, Ldg4;->b:Lnd;
 
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldg4;->b:Ljava/util/ArrayDeque;
+    return-void
+.end method
 
-    new-instance p1, Lt3g;
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 v1, 0x0
+    iget v0, p0, Ldg4;->a:I
 
-    invoke-direct {p1, v0, v1}, Lt3g;-><init>(IZ)V
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p1, p0, Ldg4;->f:Ljava/lang/Object;
+    iget-object v0, p0, Ldg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->v(Lnd;)V
 
     return-void
 
     :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Ldg4;->b:Lnd;
 
-    const/16 p1, 0x8
+    check-cast p1, Lod;
 
-    new-array p1, p1, [B
+    invoke-interface {p1, v0}, Lod;->R0(Lnd;)V
 
-    iput-object p1, p0, Ldg4;->a:[B
+    return-void
 
-    new-instance p1, Ljava/util/ArrayDeque;
+    :pswitch_1
+    iget-object v0, p0, Ldg4;->b:Lnd;
 
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+    check-cast p1, Lod;
 
-    iput-object p1, p0, Ldg4;->b:Ljava/util/ArrayDeque;
+    invoke-interface {p1, v0}, Lod;->I0(Lnd;)V
 
-    new-instance p1, Lt3g;
+    return-void
 
-    const/4 v0, 0x1
+    :pswitch_2
+    iget-object v0, p0, Ldg4;->b:Lnd;
 
-    const/4 v1, 0x0
+    check-cast p1, Lod;
 
-    invoke-direct {p1, v0, v1}, Lt3g;-><init>(IZ)V
+    invoke-interface {p1, v0}, Lod;->V(Lnd;)V
 
-    iput-object p1, p0, Ldg4;->f:Ljava/lang/Object;
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Ldg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->t0(Lnd;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Ldg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->q0(Lnd;)V
 
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-
-# virtual methods
-.method public a(Luh5;I)J
-    .locals 6
-
-    iget-object v0, p0, Ldg4;->a:[B
-
-    const/4 v1, 0x0
-
-    invoke-interface {p1, v0, v1, p2}, Luh5;->readFully([BII)V
-
-    const-wide/16 v2, 0x0
-
-    :goto_0
-    if-ge v1, p2, :cond_0
-
-    const/16 p1, 0x8
-
-    shl-long/2addr v2, p1
-
-    aget-byte p1, v0, v1
-
-    and-int/lit16 p1, p1, 0xff
-
-    int-to-long v4, p1
-
-    or-long/2addr v2, v4
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-wide v2
-.end method
-
-.method public b(Lvh5;I)J
-    .locals 6
-
-    iget-object v0, p0, Ldg4;->a:[B
-
-    const/4 v1, 0x0
-
-    invoke-interface {p1, v0, v1, p2}, Lvh5;->readFully([BII)V
-
-    const-wide/16 v2, 0x0
-
-    :goto_0
-    if-ge v1, p2, :cond_0
-
-    const/16 p1, 0x8
-
-    shl-long/2addr v2, p1
-
-    aget-byte p1, v0, v1
-
-    and-int/lit16 p1, p1, 0xff
-
-    int-to-long v4, p1
-
-    or-long/2addr v2, v4
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-wide v2
 .end method

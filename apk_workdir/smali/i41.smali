@@ -1,159 +1,260 @@
 .class public final Li41;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lj41;
+.implements Lgi6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:I
 
-.field public final b:Z
-
-.field public final c:Z
+.field public synthetic Y:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(JZZ)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Li41;->X:I
 
-    iput-wide p1, p0, Li41;->a:J
-
-    iput-boolean p3, p0, Li41;->b:Z
-
-    iput-boolean p4, p0, Li41;->c:Z
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-boolean v0, p0, Li41;->b:Z
+    iget v0, p0, Li41;->X:I
 
-    return v0
+    check-cast p1, Lby5;
+
+    check-cast p2, Ljava/lang/Throwable;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Li41;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x5
+
+    invoke-direct {p1, v0, p3, v1}, Li41;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Li41;->Y:Ljava/lang/Throwable;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Li41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_0
+    new-instance p1, Li41;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v0, p3, v1}, Li41;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Li41;->Y:Ljava/lang/Throwable;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Li41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_1
+    new-instance p1, Li41;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x3
+
+    invoke-direct {p1, v0, p3, v1}, Li41;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Li41;->Y:Ljava/lang/Throwable;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Li41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_2
+    new-instance p1, Li41;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, v0, p3, v1}, Li41;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Li41;->Y:Ljava/lang/Throwable;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Li41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_3
+    new-instance p1, Li41;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v0, p3, v1}, Li41;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Li41;->Y:Ljava/lang/Throwable;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Li41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_4
+    new-instance p1, Li41;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, p3, v1}, Li41;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Li41;->Y:Ljava/lang/Throwable;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Li41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Li41;->c:Z
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Li41;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Li41;
-
-    iget-wide v3, p0, Li41;->a:J
-
-    iget-wide v5, p1, Li41;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Li41;->b:Z
-
-    iget-boolean v3, p1, Li41;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Li41;->c:Z
-
-    iget-boolean p1, p1, Li41;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget-wide v0, p0, Li41;->a:J
+    iget v0, p0, Li41;->X:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const-string v1, "fail"
 
-    move-result v0
+    sget-object v2, Lzag;->a:Lzag;
 
-    const/16 v1, 0x1f
+    packed-switch v0, :pswitch_data_0
 
-    mul-int/2addr v0, v1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-boolean v2, p0, Li41;->b:Z
+    iget-object p1, p0, Li41;->Y:Ljava/lang/Throwable;
 
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+    const-string v0, "ViewThemeUtils"
 
-    move-result v0
+    const-string v1, "fail to change theme for spans"
 
-    iget-boolean v1, p0, Li41;->c:Z
+    invoke-static {v0, v1, p1}, Lndi;->x(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    return-object v2
 
-    move-result v1
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    add-int/2addr v1, v0
+    iget-object p1, p0, Li41;->Y:Ljava/lang/Throwable;
 
-    return v1
-.end method
+    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    if-nez v0, :cond_0
 
-    const-string v0, "User(userId="
+    sget-object v0, Lqra;->a:Lqra;
 
-    const-string v1, ", isVideoEnabled="
-
-    iget-wide v2, p0, Li41;->a:J
-
-    iget-boolean v4, p0, Li41;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lnd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lqra;->d()Lye5;
 
     move-result-object v0
 
-    const-string v1, ", isAudioEnabled="
+    invoke-static {v0, p1}, Lye5;->b(Lye5;Ljava/lang/Throwable;)V
 
-    const-string v2, ")"
+    :cond_0
+    return-object v2
 
-    iget-boolean v3, p0, Li41;->c:Z
+    :pswitch_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1, v3, v2}, Lbk7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    iget-object p1, p0, Li41;->Y:Ljava/lang/Throwable;
 
-    move-result-object v0
+    const-string v0, "MiniChatsUpdated"
 
-    return-object v0
+    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :pswitch_2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Li41;->Y:Ljava/lang/Throwable;
+
+    const-string v0, "ChatVM/MissedContactsController"
+
+    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :pswitch_3
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Li41;->Y:Ljava/lang/Throwable;
+
+    const-string v0, "lv2"
+
+    const-string v1, "catch error in chatUpdateFlow"
+
+    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :pswitch_4
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Li41;->Y:Ljava/lang/Throwable;
+
+    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+
+    if-nez v0, :cond_1
+
+    const-string v0, "CallChatRepositoryTag"
+
+    const-string v1, "fail no get chat"
+
+    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

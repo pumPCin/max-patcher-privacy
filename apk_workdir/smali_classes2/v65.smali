@@ -1,48 +1,88 @@
-.class public final Lv65;
+.class public final synthetic Lv65;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lov7;
+.implements Ljava/util/function/IntPredicate;
 
 
-# static fields
-.field public static final a:Lv65;
-
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lv65;
+    iput p1, p0, Lv65;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lv65;->a:Lv65;
-
-    sget v0, Lvoa;->b:I
-
-    sput v0, Lv65;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public final test(I)Z
     .locals 1
 
-    sget v0, Lv65;->b:I
+    iget v0, p0, Lv65;->a:I
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lw65;->a(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/16 v0, 0x200d
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x20e3
+
+    if-ne p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+
+    :pswitch_0
+    invoke-static {p1}, Lw65;->c(I)Z
+
+    move-result p1
+
+    :goto_2
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_1
+    invoke-static {p1}, Lw65;->c(I)Z
+
+    move-result p1
+
+    goto :goto_2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

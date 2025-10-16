@@ -1,160 +1,201 @@
-.class public final synthetic Ljuc;
+.class public abstract Ljuc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lws1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static Capability:[I = null
 
-.field public final synthetic b:Lquc;
+.field public static Capability_queryPatterns:I = 0x0
 
-.field public final synthetic c:Lsa0;
+.field public static Capability_shortcutMatchRequired:I = 0x1
+
+.field public static ColorStateListItem:[I = null
+
+.field public static ColorStateListItem_alpha:I = 0x3
+
+.field public static ColorStateListItem_android_alpha:I = 0x1
+
+.field public static ColorStateListItem_android_color:I = 0x0
+
+.field public static ColorStateListItem_android_lStar:I = 0x2
+
+.field public static ColorStateListItem_lStar:I = 0x4
+
+.field public static FontFamily:[I = null
+
+.field public static FontFamilyFont:[I = null
+
+.field public static FontFamilyFont_android_font:I = 0x0
+
+.field public static FontFamilyFont_android_fontStyle:I = 0x2
+
+.field public static FontFamilyFont_android_fontVariationSettings:I = 0x4
+
+.field public static FontFamilyFont_android_fontWeight:I = 0x1
+
+.field public static FontFamilyFont_android_ttcIndex:I = 0x3
+
+.field public static FontFamilyFont_font:I = 0x5
+
+.field public static FontFamilyFont_fontStyle:I = 0x6
+
+.field public static FontFamilyFont_fontVariationSettings:I = 0x7
+
+.field public static FontFamilyFont_fontWeight:I = 0x8
+
+.field public static FontFamilyFont_ttcIndex:I = 0x9
+
+.field public static FontFamily_fontProviderAuthority:I = 0x0
+
+.field public static FontFamily_fontProviderCerts:I = 0x1
+
+.field public static FontFamily_fontProviderFetchStrategy:I = 0x2
+
+.field public static FontFamily_fontProviderFetchTimeout:I = 0x3
+
+.field public static FontFamily_fontProviderPackage:I = 0x4
+
+.field public static FontFamily_fontProviderQuery:I = 0x5
+
+.field public static FontFamily_fontProviderSystemFontFamily:I = 0x6
+
+.field public static GradientColor:[I = null
+
+.field public static GradientColorItem:[I = null
+
+.field public static GradientColorItem_android_color:I = 0x0
+
+.field public static GradientColorItem_android_offset:I = 0x1
+
+.field public static GradientColor_android_centerColor:I = 0x7
+
+.field public static GradientColor_android_centerX:I = 0x3
+
+.field public static GradientColor_android_centerY:I = 0x4
+
+.field public static GradientColor_android_endColor:I = 0x1
+
+.field public static GradientColor_android_endX:I = 0xa
+
+.field public static GradientColor_android_endY:I = 0xb
+
+.field public static GradientColor_android_gradientRadius:I = 0x5
+
+.field public static GradientColor_android_startColor:I = 0x0
+
+.field public static GradientColor_android_startX:I = 0x8
+
+.field public static GradientColor_android_startY:I = 0x9
+
+.field public static GradientColor_android_tileMode:I = 0x6
+
+.field public static GradientColor_android_type:I = 0x2
 
 
 # direct methods
-.method public synthetic constructor <init>(Lquc;Lsa0;I)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 5
 
-    iput p3, p0, Ljuc;->a:I
+    const v0, 0x7f04070a
 
-    iput-object p1, p0, Ljuc;->b:Lquc;
+    const v1, 0x7f04075c
 
-    iput-object p2, p0, Ljuc;->c:Lsa0;
+    filled-new-array {v0, v1}, [I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
+
+    sput-object v0, Ljuc;->Capability:[I
+
+    const v0, 0x7f04003c
+
+    const v1, 0x7f040589
+
+    const v2, 0x10101a5
+
+    const v3, 0x101031f
+
+    const v4, 0x1010647
+
+    filled-new-array {v2, v3, v4, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Ljuc;->ColorStateListItem:[I
+
+    const/4 v0, 0x7
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ljuc;->FontFamily:[I
+
+    const/16 v0, 0xa
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Ljuc;->FontFamilyFont:[I
+
+    const/16 v0, 0xc
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_2
+
+    sput-object v0, Ljuc;->GradientColor:[I
+
+    const v0, 0x1010514
+
+    filled-new-array {v2, v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Ljuc;->GradientColorItem:[I
 
     return-void
-.end method
 
+    nop
 
-# virtual methods
-.method public final w(Lvs1;)Ljava/lang/String;
-    .locals 9
+    :array_0
+    .array-data 4
+        0x7f0403e2
+        0x7f0403e3
+        0x7f0403e4
+        0x7f0403e5
+        0x7f0403e6
+        0x7f0403e7
+        0x7f0403e8
+    .end array-data
 
-    iget v0, p0, Ljuc;->a:I
+    :array_1
+    .array-data 4
+        0x1010532
+        0x1010533
+        0x101053f
+        0x101056f
+        0x1010570
+        0x7f0403e0
+        0x7f0403e9
+        0x7f0403ea
+        0x7f0403eb
+        0x7f0408c0
+    .end array-data
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ljuc;->b:Lquc;
-
-    iget-object v1, p0, Ljuc;->c:Lsa0;
-
-    new-instance v2, Le12;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v0, v3, p1}, Le12;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object v3, v0, Lquc;->D:Lu50;
-
-    iget-object v4, v0, Lquc;->e:Llqd;
-
-    new-instance v5, Lt8b;
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x0
-
-    invoke-direct {v5, v0, v2, v7, v6}, Lt8b;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-object v6, v3, Lu50;->a:Llqd;
-
-    new-instance v7, Lxi;
-
-    const/4 v8, 0x3
-
-    invoke-direct {v7, v3, v4, v5, v8}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v6, v7}, Llqd;->execute(Ljava/lang/Runnable;)V
-
-    iget-object v3, v0, Lquc;->G:Lg85;
-
-    new-instance v5, Lu16;
-
-    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, v5, Lu16;->o:Ljava/lang/Object;
-
-    iput-object p1, v5, Lu16;->a:Ljava/lang/Object;
-
-    iput-object v2, v5, Lu16;->b:Ljava/lang/Object;
-
-    iput-object v1, v5, Lu16;->c:Ljava/lang/Object;
-
-    iget-object v0, v3, Lg85;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iput-object v5, v3, Lg85;->r:Lr75;
-
-    iput-object v4, v3, Lg85;->s:Ljava/util/concurrent/Executor;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const-string p1, "audioEncodingFuture"
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Ljuc;->b:Lquc;
-
-    iget-object v1, p0, Ljuc;->c:Lsa0;
-
-    iget-object v2, v0, Lquc;->E:Lg85;
-
-    new-instance v3, Lsr8;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v0, p1, v1}, Lsr8;-><init>(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-object p1, v0, Lquc;->e:Llqd;
-
-    iget-object v0, v2, Lg85;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_2
-    iput-object v3, v2, Lg85;->r:Lr75;
-
-    iput-object p1, v2, Lg85;->s:Ljava/util/concurrent/Executor;
-
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    const-string p1, "videoEncodingFuture"
-
-    return-object p1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :array_2
+    .array-data 4
+        0x101019d
+        0x101019e
+        0x10101a1
+        0x10101a2
+        0x10101a3
+        0x10101a4
+        0x1010201
+        0x101020b
+        0x1010510
+        0x1010511
+        0x1010512
+        0x1010513
+    .end array-data
 .end method

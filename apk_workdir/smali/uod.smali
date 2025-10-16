@@ -1,143 +1,86 @@
 .class public final Luod;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ltod;
 
-.field public final synthetic Y:Lx4f;
-
-.field public final synthetic Z:Lcfb;
+.field public final b:Lp87;
 
 
 # direct methods
-.method public constructor <init>(Lx4f;Lcfb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ltod;Lp87;)V
     .locals 0
 
-    iput-object p1, p0, Luod;->Y:Lx4f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Luod;->Z:Lcfb;
+    iput-object p1, p0, Luod;->a:Ltod;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Luod;->b:Lp87;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Luod;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Luod;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Luod;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Luod;
-
-    iget-object v0, p0, Luod;->Y:Lx4f;
-
-    iget-object v1, p0, Luod;->Z:Lcfb;
-
-    invoke-direct {p1, v0, v1, p2}, Luod;-><init>(Lx4f;Lcfb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Luod;->X:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Luod;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    check-cast p1, Luod;
 
-    iget-object p1, p0, Luod;->Y:Lx4f;
+    iget-object v1, p0, Luod;->a:Ltod;
 
-    iget-object p1, p1, Lx4f;->a:Ljava/lang/Object;
+    iget-object v3, p1, Luod;->a:Ltod;
 
-    check-cast p1, Lyn7;
+    if-ne v1, v3, :cond_2
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Luod;->b:Lp87;
 
-    move-result-object p1
+    iget-object p1, p1, Luod;->b:Lp87;
 
-    check-cast p1, Lg13;
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Luod;->Z:Lcfb;
+    move-result p1
 
-    iget-wide v2, v0, Lcfb;->a:J
+    if-eqz p1, :cond_2
 
-    iput v1, p0, Luod;->X:I
+    return v0
 
-    check-cast p1, Lh23;
+    :cond_2
+    return v2
+.end method
 
-    iget-object v0, p1, Lh23;->c:Lyn7;
+.method public final hashCode()I
+    .locals 2
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Luod;->a:Ltod;
+
+    iget-object v1, p0, Luod;->b:Lp87;
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lugd;
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    invoke-virtual {v0}, Lugd;->a()J
+    move-result v0
 
-    move-result-wide v0
-
-    xor-long/2addr v0, v2
-
-    invoke-virtual {p1, v0, v1, p0}, Lh23;->T(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    return v0
 .end method

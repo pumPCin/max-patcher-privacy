@@ -1,483 +1,212 @@
 .class public final Lpk4;
-.super Lfnf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic Y0:I
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final J0:I
+.field public final synthetic a:I
 
-.field public final K0:Z
+.field public final synthetic b:Ljava/util/ArrayList;
 
-.field public final L0:Z
-
-.field public final M0:Z
-
-.field public final N0:Z
-
-.field public final O0:Z
-
-.field public final P0:Z
-
-.field public final Q0:Z
-
-.field public final R0:Z
-
-.field public final S0:Z
-
-.field public final T0:Z
-
-.field public final U0:Z
-
-.field public final V0:Z
-
-.field public final W0:Landroid/util/SparseArray;
-
-.field public final X0:Landroid/util/SparseBooleanArray;
+.field public final synthetic c:Lvk4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lvk4;Ljava/util/ArrayList;I)V
+    .locals 0
 
-    new-instance v0, Lrk4;
+    iput p3, p0, Lpk4;->a:I
 
-    invoke-direct {v0}, Lrk4;-><init>()V
+    iput-object p1, p0, Lpk4;->c:Lvk4;
 
-    return-void
-.end method
+    iput-object p2, p0, Lpk4;->b:Ljava/util/ArrayList;
 
-.method public constructor <init>(Lrk4;)V
-    .locals 1
-
-    invoke-direct {p0, p1}, Lfnf;-><init>(Ldnf;)V
-
-    iget-boolean v0, p1, Lrk4;->z:Z
-
-    iput-boolean v0, p0, Lpk4;->K0:Z
-
-    iget-boolean v0, p1, Lrk4;->A:Z
-
-    iput-boolean v0, p0, Lpk4;->L0:Z
-
-    iget-boolean v0, p1, Lrk4;->B:Z
-
-    iput-boolean v0, p0, Lpk4;->M0:Z
-
-    iget-boolean v0, p1, Lrk4;->C:Z
-
-    iput-boolean v0, p0, Lpk4;->N0:Z
-
-    iget-boolean v0, p1, Lrk4;->D:Z
-
-    iput-boolean v0, p0, Lpk4;->O0:Z
-
-    iget-boolean v0, p1, Lrk4;->E:Z
-
-    iput-boolean v0, p0, Lpk4;->P0:Z
-
-    iget-boolean v0, p1, Lrk4;->F:Z
-
-    iput-boolean v0, p0, Lpk4;->Q0:Z
-
-    iget-boolean v0, p1, Lrk4;->G:Z
-
-    iput-boolean v0, p0, Lpk4;->R0:Z
-
-    iget-boolean v0, p1, Lrk4;->H:Z
-
-    iput-boolean v0, p0, Lpk4;->S0:Z
-
-    iget v0, p1, Lrk4;->I:I
-
-    iput v0, p0, Lpk4;->J0:I
-
-    iget-boolean v0, p1, Lrk4;->J:Z
-
-    iput-boolean v0, p0, Lpk4;->T0:Z
-
-    iget-boolean v0, p1, Lrk4;->K:Z
-
-    iput-boolean v0, p0, Lpk4;->U0:Z
-
-    iget-boolean v0, p1, Lrk4;->L:Z
-
-    iput-boolean v0, p0, Lpk4;->V0:Z
-
-    iget-object v0, p1, Lrk4;->M:Landroid/util/SparseArray;
-
-    iput-object v0, p0, Lpk4;->W0:Landroid/util/SparseArray;
-
-    iget-object p1, p1, Lrk4;->N:Landroid/util/SparseBooleanArray;
-
-    iput-object p1, p0, Lpk4;->X0:Landroid/util/SparseBooleanArray;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 10
+.method public final run()V
+    .locals 12
 
-    const/4 v0, 0x1
+    iget v0, p0, Lpk4;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lpk4;->b:Ljava/util/ArrayList;
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    if-eqz p1, :cond_a
+    move-result-object v1
 
-    const-class v2, Lpk4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto/16 :goto_2
-
-    :cond_1
-    check-cast p1, Lpk4;
-
-    invoke-super {p0, p1}, Lfnf;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_a
+    iget-object v3, p0, Lpk4;->c:Lvk4;
 
-    iget-boolean v2, p0, Lpk4;->K0:Z
+    if-eqz v2, :cond_0
 
-    iget-boolean v3, p1, Lpk4;->K0:Z
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-ne v2, v3, :cond_a
+    move-result-object v2
 
-    iget-boolean v2, p0, Lpk4;->L0:Z
+    check-cast v2, Lj6d;
 
-    iget-boolean v3, p1, Lpk4;->L0:Z
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne v2, v3, :cond_a
+    iget-object v4, v2, Lj6d;->a:Landroid/view/View;
 
-    iget-boolean v2, p0, Lpk4;->M0:Z
-
-    iget-boolean v3, p1, Lpk4;->M0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->N0:Z
-
-    iget-boolean v3, p1, Lpk4;->N0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->O0:Z
-
-    iget-boolean v3, p1, Lpk4;->O0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->P0:Z
-
-    iget-boolean v3, p1, Lpk4;->P0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->Q0:Z
-
-    iget-boolean v3, p1, Lpk4;->Q0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->R0:Z
-
-    iget-boolean v3, p1, Lpk4;->R0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->S0:Z
-
-    iget-boolean v3, p1, Lpk4;->S0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget v2, p0, Lpk4;->J0:I
-
-    iget v3, p1, Lpk4;->J0:I
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->T0:Z
-
-    iget-boolean v3, p1, Lpk4;->T0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->U0:Z
-
-    iget-boolean v3, p1, Lpk4;->U0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lpk4;->V0:Z
-
-    iget-boolean v3, p1, Lpk4;->V0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-object v2, p1, Lpk4;->X0:Landroid/util/SparseBooleanArray;
-
-    iget-object v3, p0, Lpk4;->X0:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v3}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v4
-
-    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v5
-
-    if-eq v5, v4, :cond_2
-
-    goto/16 :goto_2
-
-    :cond_2
-    move v5, v1
-
-    :goto_0
-    if-ge v5, v4, :cond_4
-
-    invoke-virtual {v3, v5}, Landroid/util/SparseBooleanArray;->keyAt(I)I
-
-    move-result v6
-
-    invoke-virtual {v2, v6}, Landroid/util/SparseBooleanArray;->indexOfKey(I)I
-
-    move-result v6
-
-    if-gez v6, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    iget-object p1, p1, Lpk4;->W0:Landroid/util/SparseArray;
-
-    iget-object v2, p0, Lpk4;->W0:Landroid/util/SparseArray;
-
-    invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
-
-    move-result v3
-
-    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
-
-    move-result v4
-
-    if-eq v4, v3, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move v4, v1
-
-    :goto_1
-    if-ge v4, v3, :cond_9
-
-    invoke-virtual {v2, v4}, Landroid/util/SparseArray;->keyAt(I)I
-
-    move-result v5
-
-    invoke-virtual {p1, v5}, Landroid/util/SparseArray;->indexOfKey(I)I
-
-    move-result v5
-
-    if-ltz v5, :cond_a
-
-    invoke-virtual {v2, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/util/Map;
-
-    invoke-virtual {p1, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v5
 
-    check-cast v5, Ljava/util/Map;
+    iget-object v6, v3, Lvk4;->o:Ljava/util/ArrayList;
 
-    invoke-interface {v6}, Ljava/util/Map;->size()I
+    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result v7
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    invoke-interface {v5}, Ljava/util/Map;->size()I
-
-    move-result v8
-
-    if-eq v8, v7, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    invoke-virtual {v5, v6}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v6
 
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-wide v7, v3, Lr5d;->c:J
+
+    invoke-virtual {v6, v7, v8}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v6
 
-    :cond_7
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v7, Lqk4;
 
-    move-result v7
+    invoke-direct {v7, v3, v2, v4, v5}, Lqk4;-><init>(Lvk4;Lj6d;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
 
-    if-eqz v7, :cond_8
+    invoke-virtual {v6, v7}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v7
+    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    check-cast v7, Ljava/util/Map$Entry;
+    goto :goto_0
 
-    invoke-interface {v7}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    move-result-object v8
+    iget-object v1, v3, Lvk4;->l:Ljava/util/ArrayList;
 
-    check-cast v8, Lnmf;
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    invoke-interface {v5, v8}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    return-void
 
-    move-result v9
+    :pswitch_0
+    iget-object v0, p0, Lpk4;->b:Ljava/util/ArrayList;
 
-    if-eqz v9, :cond_a
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v7
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v5, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v2
 
-    move-result-object v8
+    iget-object v4, p0, Lpk4;->c:Lvk4;
 
-    invoke-static {v7, v8}, Le3g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v2, :cond_3
 
-    move-result v7
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-nez v7, :cond_7
+    move-result-object v2
 
-    goto :goto_2
+    check-cast v2, Luk4;
 
-    :cond_8
-    add-int/lit8 v4, v4, 0x1
+    iget-object v5, v2, Luk4;->a:Lj6d;
+
+    iget v3, v2, Luk4;->b:I
+
+    iget v6, v2, Luk4;->c:I
+
+    iget v7, v2, Luk4;->d:I
+
+    iget v2, v2, Luk4;->e:I
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move v8, v7
+
+    iget-object v7, v5, Lj6d;->a:Landroid/view/View;
+
+    sub-int v3, v8, v3
+
+    sub-int v8, v2, v6
+
+    const/4 v2, 0x0
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+
+    :cond_1
+    if-eqz v8, :cond_2
+
+    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+
+    :cond_2
+    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v9
+
+    iget-object v2, v4, Lvk4;->p:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v4}, Lr5d;->f()J
+
+    move-result-wide v10
+
+    invoke-virtual {v9, v10, v11}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v2
+
+    move v6, v3
+
+    new-instance v3, Lrk4;
+
+    invoke-direct/range {v3 .. v9}, Lrk4;-><init>(Lvk4;Lj6d;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
+
+    invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_1
 
-    :cond_9
-    return v0
+    :cond_3
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    :cond_a
-    :goto_2
-    return v1
-.end method
+    iget-object v1, v4, Lvk4;->m:Ljava/util/ArrayList;
 
-.method public final hashCode()I
-    .locals 3
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    invoke-super {p0}, Lfnf;->hashCode()I
+    return-void
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    add-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->K0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->L0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->M0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->N0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->O0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->P0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->Q0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->R0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->S0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lpk4;->J0:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->T0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lpk4;->U0:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lpk4;->V0:Z
-
-    add-int/2addr v0, v1
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

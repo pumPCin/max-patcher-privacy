@@ -1,66 +1,35 @@
-.class public final Lc8h;
-.super Landroid/content/ContextWrapper;
+.class public abstract synthetic Lc8h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljj3;
 
-
-# instance fields
-.field public final a:Lb8h;
-
-.field public final synthetic b:Ld8h;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ld8h;Landroid/content/Context;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lc8h;->b:Ld8h;
+    invoke-static {}, Lb8h;->values()[Lb8h;
 
-    invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+    move-result-object v0
 
-    iget-object p2, p1, Ld8h;->a:Landroid/content/Context;
+    array-length v0, v0
 
-    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    new-array v0, v0, [I
 
-    move-result-object p2
+    const/4 v1, 0x1
 
-    new-instance v0, Lb8h;
+    const/4 v2, 0x0
 
-    invoke-direct {v0, p1, p2}, Lb8h;-><init>(Ld8h;Landroid/content/Context;)V
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v0, p0, Lc8h;->a:Lb8h;
+    :catch_0
+    sput-object v0, Lc8h;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Llj3;
-    .locals 1
-
-    iget-object v0, p0, Lc8h;->b:Ld8h;
-
-    iget-object v0, v0, Ld8h;->a:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Ljj3;
-
-    invoke-interface {v0}, Ljj3;->a()Llj3;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getApplicationContext()Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lc8h;->a:Lb8h;
-
-    return-object v0
 .end method

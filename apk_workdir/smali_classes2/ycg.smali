@@ -1,85 +1,63 @@
 .class public final Lycg;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lzcg;
 
 
 # instance fields
-.field public final a:Lzcg;
+.field public X:J
 
-.field public final b:Landroid/os/Handler;
+.field public Y:J
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lzcg;
+
+.field public final synthetic r0:Lzcg;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Lndg;)V
-    .locals 1
+.method public constructor <init>(Lzcg;Lk14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lycg;->r0:Lzcg;
 
-    iput-object p1, p0, Lycg;->a:Lzcg;
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p1, p0, Lycg;->b:Landroid/os/Handler;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    new-instance v0, Lece;
+    iput-object p1, p0, Lycg;->Z:Ljava/lang/Object;
 
-    const/16 v1, 0x19
+    iget p1, p0, Lycg;->s0:I
 
-    iget-object v2, p0, Lycg;->a:Lzcg;
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0, v1, v2}, Lece;-><init>(ILjava/lang/Object;)V
+    or-int/2addr p1, v0
 
-    iget-object v1, p0, Lycg;->b:Landroid/os/Handler;
+    iput p1, p0, Lycg;->s0:I
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v5, 0x0
 
-    return-void
-.end method
+    const/4 v6, 0x0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v0, p0, Lycg;->r0:Lzcg;
 
-    iget-object v0, p0, Lycg;->a:Lzcg;
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-wide/16 v3, 0x0
 
-    move-result p1
+    move-object v7, p0
 
-    return p1
-.end method
+    invoke-virtual/range {v0 .. v7}, Lzcg;->a(JJLjava/lang/String;Lw10;Lk14;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    iget-object v0, p0, Lycg;->a:Lzcg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method

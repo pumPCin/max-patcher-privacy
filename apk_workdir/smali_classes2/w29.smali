@@ -1,179 +1,159 @@
-.class public final synthetic Lw29;
+.class public final Lw29;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lx29;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lt68;
 
-.field public final synthetic b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+.field public final b:F
+
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+.method public constructor <init>(FJLt68;)V
     .locals 0
 
-    iput p2, p0, Lw29;->a:I
-
-    iput-object p1, p0, Lw29;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p4, p0, Lw29;->a:Lt68;
+
+    iput p1, p0, Lw29;->b:F
+
+    iput-wide p2, p0, Lw29;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lw29;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lw29;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lpl7;
+    :cond_0
+    instance-of v1, p1, Lw29;
 
-    invoke-virtual {v1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0()Lsz8;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Lsz8;->x()Z
+    return v2
+
+    :cond_1
+    check-cast p1, Lw29;
+
+    iget-object v1, p0, Lw29;->a:Lt68;
+
+    iget-object v3, p1, Lw29;->a:Lt68;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lw29;->b:F
+
+    iget v3, p1, Lw29;->b:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lw29;->c:J
+
+    iget-wide v5, p1, Lw29;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lw29;->a:Lt68;
+
+    invoke-virtual {v0}, Lt68;->hashCode()I
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lw29;->b:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lw29;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SendLocation(locationData="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lw29;->a:Lt68;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", zoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lw29;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", livePeriod="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lw29;->c:J
+
+    invoke-static {v0, v2, v3, v1}, Lyy8;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lpl7;
-
-    new-instance v2, Lsz8;
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->I0:Lds;
-
-    sget-object v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lpl7;
-
-    const/4 v4, 0x6
-
-    aget-object v4, v3, v4
-
-    invoke-virtual {v0, v1}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v4
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->J0:Lds;
-
-    const/4 v6, 0x7
-
-    aget-object v6, v3, v6
-
-    invoke-virtual {v0, v1}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->K0:Lds;
-
-    const/16 v8, 0x8
-
-    aget-object v3, v3, v8
-
-    invoke-virtual {v0, v1}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    move-wide v3, v4
-
-    move-wide v5, v6
-
-    move-wide v7, v0
-
-    invoke-direct/range {v2 .. v8}, Lsz8;-><init>(JJJ)V
-
-    return-object v2
-
-    :pswitch_1
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lpl7;
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->L0:Lds;
-
-    sget-object v2, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lpl7;
-
-    const/16 v3, 0x9
-
-    aget-object v4, v2, v3
-
-    invoke-virtual {v0, v1}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Boolean;
-
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    aget-object v2, v2, v3
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1, v2}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Ljz3;->getTargetController()Ljz3;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lmy3;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lmy3;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lmy3;->onDismiss()V
-
-    :cond_1
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

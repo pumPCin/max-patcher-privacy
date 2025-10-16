@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljb8;
+.implements Lqh8;
 
 
 # virtual methods

@@ -1,335 +1,91 @@
 .class public final Lb36;
-.super Ljava/lang/Object;
+.super Lb2;
 .source "SourceFile"
-
-# interfaces
-.implements Lov7;
 
 
 # instance fields
-.field public final X:La36;
+.field public final X:Ljava/lang/Iterable;
 
-.field public final Y:I
-
-.field public final Z:I
-
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final o:Ljava/lang/String;
-
-.field public final r0:J
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;La36;II)V
-    .locals 0
+.method public constructor <init>(Lc36;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-wide p1, p0, Lb36;->a:J
+    iput v0, p0, Lb36;->o:I
 
-    iput-object p3, p0, Lb36;->b:Ljava/lang/String;
+    .line 1
+    iput-object p1, p0, Lb36;->X:Ljava/lang/Iterable;
 
-    iput-object p4, p0, Lb36;->c:Ljava/lang/CharSequence;
+    const/4 p1, 0x0
 
-    iput-object p5, p0, Lb36;->o:Ljava/lang/String;
+    .line 2
+    invoke-direct {p0, p2, p1}, Lb2;-><init>(II)V
 
-    iput-object p6, p0, Lb36;->X:La36;
+    return-void
+.end method
 
-    iput p7, p0, Lb36;->Y:I
+.method public constructor <init>(Lhb7;I)V
+    .locals 1
 
-    iput p8, p0, Lb36;->Z:I
+    const/4 v0, 0x1
 
-    iput-wide p1, p0, Lb36;->r0:J
+    iput v0, p0, Lb36;->o:I
+
+    .line 3
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    invoke-direct {p0, v0, p2}, Lb2;-><init>(II)V
+
+    .line 4
+    iput-object p1, p0, Lb36;->X:Ljava/lang/Iterable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lb36;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lb36;
-
-    iget-wide v0, p0, Lb36;->a:J
-
-    iget-wide v2, p1, Lb36;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lb36;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lb36;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lb36;->c:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lb36;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lb36;->o:Ljava/lang/String;
-
-    iget-object v1, p1, Lb36;->o:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lb36;->X:La36;
-
-    iget-object v1, p1, Lb36;->X:La36;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lb36;->Y:I
-
-    iget v1, p1, Lb36;->Y:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lb36;->Z:I
-
-    iget p1, p1, Lb36;->Z:I
-
-    if-eq v0, p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lb36;->r0:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lb36;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lb36;->b:Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    const/4 v0, 0x0
-
-    iget-object v3, p0, Lb36;->c:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_0
-
-    move v3, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v2, v3
-
-    mul-int/2addr v2, v1
-
-    iget-object v3, p0, Lb36;->o:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v2, v3
-
-    mul-int/2addr v2, v1
-
-    iget-object v3, p0, Lb36;->X:La36;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget v0, p0, Lb36;->Y:I
-
-    invoke-static {v0, v2, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lb36;->Z:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
+.method public final b(I)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lb36;->Z:I
+    iget v0, p0, Lb36;->o:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-object v0, p0, Lb36;->X:Ljava/lang/Iterable;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v0, Lhb7;
 
-    const-string v1, "FolderWidgetItem(id="
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    iget-wide v1, p0, Lb36;->a:J
+    return-object p1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lb36;->X:Ljava/lang/Iterable;
 
-    const-string v1, ", name="
+    check-cast v0, Lc36;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lc36;->a:[Ljava/lang/Iterable;
 
-    iget-object v1, p0, Lb36;->b:Ljava/lang/String;
+    aget-object p1, v0, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    const-string v1, ", description="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    iget-object v1, p0, Lb36;->c:Ljava/lang/CharSequence;
+    nop
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconUrl="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lb36;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", clickAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lb36;->X:La36;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", widgetWidth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lb36;->Y:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", viewType="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lb36;->Z:I
-
-    invoke-static {v0, v1, v3, v2}, Ljl3;->e(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

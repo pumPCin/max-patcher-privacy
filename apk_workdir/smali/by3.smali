@@ -1,89 +1,85 @@
-.class public abstract Lby3;
-.super Ljava/lang/Object;
+.class public final Lby3;
+.super Lj6d;
 .source "SourceFile"
 
 
+# instance fields
+.field public final E0:Lyx3;
+
+.field public final F0:Lzh0;
+
+
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-    .locals 6
+.method public constructor <init>(Landroid/content/Context;Lyx3;)V
+    .locals 3
 
-    and-int/lit8 v0, p5, 0x4
+    sget-object v0, Lsh0;->a:Lsh0;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    if-nez p3, :cond_1
+    move-result-object v0
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    const-class v1, Lzh0;
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p5
+    check-cast v0, Lzh0;
 
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Luta;
 
-    const-string p5, ".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    const/4 v2, 0x0
 
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p1, v2}, Luta;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {p0, v1}, Lj6d;-><init>(Landroid/view/View;)V
 
-    move-result-object p3
+    iput-object p2, p0, Lby3;->E0:Lyx3;
 
-    invoke-static {p0, p3}, Lkv9;->e(Landroid/content/Context;Ljava/lang/String;)I
+    iput-object v0, p0, Lby3;->F0:Lzh0;
 
-    move-result p5
+    new-instance p2, Landroid/view/ViewGroup$LayoutParams;
 
-    if-nez p5, :cond_0
+    const/4 v0, -0x1
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-direct {p2, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    move-result-object p0
+    invoke-virtual {v1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    return-object p0
+    sget p2, Liid;->X:I
 
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    invoke-virtual {v1, p2}, Luta;->setIcon(I)V
 
-    const-string p1, "Permission "
+    sget p2, Lvqc;->banner_big_permit_phone_book_contacts_title:I
 
-    const-string p2, " is required by your application to receive broadcasts, please add it to your manifest"
+    new-instance v0, Ljqf;
 
-    invoke-static {p1, p3, p2}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v0, p2}, Ljqf;-><init>(I)V
+
+    invoke-virtual {v1, v0}, Luta;->setTitle(Loqf;)V
+
+    sget p2, Lvqc;->banner_big_permit_phone_book_contacts_subtitle:I
+
+    new-instance v0, Ljqf;
+
+    invoke-direct {v0, p2}, Ljqf;-><init>(I)V
+
+    invoke-virtual {v1, v0}, Luta;->setSubtitle(Loqf;)V
+
+    sget p2, Lvqc;->banner_big_permit_phone_book_contacts_action_button_text:I
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    new-instance p2, Lm6;
 
-    throw p0
+    const/16 v0, 0x13
 
-    :cond_1
-    and-int/lit8 v5, p5, 0x1
+    invoke-direct {p2, v0, p0}, Lm6;-><init>(ILjava/lang/Object;)V
 
-    move-object v0, p0
+    invoke-virtual {v1, p1, p2}, Luta;->w(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

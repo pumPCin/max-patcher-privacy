@@ -1,51 +1,64 @@
-.class public final Ldma;
-.super Lwy3;
+.class public final synthetic Ldma;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lps9;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lpma;
-
-.field public o:Lpma;
-
-.field public r0:I
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lpma;Lwy3;)V
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Ldma;->Z:Lpma;
+    iput p2, p0, Ldma;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldma;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iput-object p1, p0, Ldma;->Y:Ljava/lang/Object;
+    iget v0, p0, Ldma;->a:I
 
-    iget p1, p0, Ldma;->r0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ldma;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->b(Ljava/lang/String;)V
 
-    iput p1, p0, Ldma;->r0:I
+    return-void
 
-    iget-object p1, p0, Ldma;->Z:Lpma;
+    :pswitch_0
+    iget-object v0, p0, Ldma;->b:Ljava/lang/String;
 
-    invoke-static {p1, p0}, Lpma;->a(Lpma;Lwy3;)Ljava/lang/Object;
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->a(Ljava/lang/String;)V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :pswitch_1
+    iget-object v0, p0, Ldma;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Lru/ok/android/onelog/OneLogImpl;->a(Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

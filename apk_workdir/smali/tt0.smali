@@ -1,73 +1,94 @@
-.class public final enum Ltt0;
-.super Ljava/lang/Enum;
+.class public Ltt0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Ltt0;
+# instance fields
+.field public final a:I
 
-.field public static final enum b:Ltt0;
+.field public final b:I
 
-.field public static final synthetic c:[Ltt0;
+.field public final c:Ljava/util/LinkedList;
+
+.field public d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(III)V
+    .locals 3
 
-    new-instance v0, Ltt0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ACTIVE"
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-lez p1, :cond_0
 
-    sput-object v0, Ltt0;->a:Ltt0;
+    move v2, v1
 
-    new-instance v1, Ltt0;
+    goto :goto_0
 
-    const-string v2, "INACTIVE"
+    :cond_0
+    move v2, v0
 
-    const/4 v3, 0x1
+    :goto_0
+    invoke-static {v2}, Lxti;->f(Z)V
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-ltz p2, :cond_1
 
-    sput-object v1, Ltt0;->b:Ltt0;
+    move v2, v1
 
-    filled-new-array {v0, v1}, [Ltt0;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_1
+    move v2, v0
 
-    sput-object v0, Ltt0;->c:[Ltt0;
+    :goto_1
+    invoke-static {v2}, Lxti;->f(Z)V
+
+    if-ltz p3, :cond_2
+
+    move v0, v1
+
+    :cond_2
+    invoke-static {v0}, Lxti;->f(Z)V
+
+    iput p1, p0, Ltt0;->a:I
+
+    iput p2, p0, Ltt0;->b:I
+
+    new-instance p1, Ljava/util/LinkedList;
+
+    invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object p1, p0, Ltt0;->c:Ljava/util/LinkedList;
+
+    iput p3, p0, Ltt0;->d:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ltt0;
+
+# virtual methods
+.method public a(Ljava/lang/Object;)V
     .locals 1
 
-    const-class v0, Ltt0;
+    iget-object v0, p0, Ltt0;->c:Ljava/util/LinkedList;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p0
-
-    check-cast p0, Ltt0;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Ltt0;
+.method public b()Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Ltt0;->c:[Ltt0;
+    iget-object v0, p0, Ltt0;->c:Ljava/util/LinkedList;
 
-    invoke-virtual {v0}, [Ltt0;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
     move-result-object v0
-
-    check-cast v0, [Ltt0;
 
     return-object v0
 .end method

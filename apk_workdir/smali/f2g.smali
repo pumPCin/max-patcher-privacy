@@ -1,209 +1,209 @@
-.class public interface abstract Lf2g;
+.class public final Lf2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr9f;
-.implements Ly37;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final f0:Le90;
+.field public final b:Ljava/lang/String;
 
-.field public static final g0:Le90;
+.field public final c:Ljava/lang/String;
 
-.field public static final h0:Le90;
-
-.field public static final i0:Le90;
-
-.field public static final j0:Le90;
-
-.field public static final k0:Le90;
-
-.field public static final l0:Le90;
-
-.field public static final m0:Le90;
-
-.field public static final n0:Le90;
-
-.field public static final o0:Le90;
-
-.field public static final p0:Le90;
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Le90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "camerax.core.useCase.defaultSessionConfig"
+    iput p2, p0, Lf2g;->a:I
 
-    const-class v2, Lztd;
+    iput-object p1, p0, Lf2g;->b:Ljava/lang/String;
 
-    const/4 v3, 0x0
+    iput-object p4, p0, Lf2g;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->f0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.defaultCaptureConfig"
-
-    const-class v2, Lt22;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->g0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.sessionConfigUnpacker"
-
-    const-class v2, Lzx1;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->h0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.captureConfigUnpacker"
-
-    const-class v2, Ldx1;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->i0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.surfaceOccupancyPriority"
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->j0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.targetFrameRate"
-
-    const-class v4, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v4, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->k0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.zslDisabled"
-
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v4, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->l0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.highResolutionDisabled"
-
-    invoke-direct {v0, v1, v4, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->m0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.captureType"
-
-    const-class v4, Lh2g;
-
-    invoke-direct {v0, v1, v4, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->n0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.previewStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->o0:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camerax.core.useCase.videoStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lf2g;->p0:Le90;
+    iput p3, p0, Lf2g;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public s()Lh2g;
-    .locals 1
+.method public final a()Lss0;
+    .locals 2
 
-    sget-object v0, Lf2g;->n0:Le90;
+    new-instance v0, Lss0;
 
-    invoke-interface {p0, v0}, Lyoc;->f(Le90;)Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iget v1, p0, Lf2g;->a:I
 
-    check-cast v0, Lh2g;
+    iput v1, v0, Lss0;->a:I
+
+    iget-object v1, p0, Lf2g;->b:Ljava/lang/String;
+
+    iput-object v1, v0, Lss0;->c:Ljava/lang/Object;
+
+    iget-object v1, p0, Lf2g;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Lss0;->d:Ljava/lang/Object;
+
+    iget v1, p0, Lf2g;->d:I
+
+    iput v1, v0, Lss0;->b:I
 
     return-object v0
 .end method
 
-.method public t()I
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    sget-object v1, Lf2g;->p0:Le90;
+    :cond_0
+    instance-of v1, p1, Lf2g;
 
-    invoke-interface {p0, v1, v0}, Lyoc;->d(Le90;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    check-cast v0, Ljava/lang/Integer;
+    return v2
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    :cond_1
+    check-cast p1, Lf2g;
 
-    move-result v0
+    iget v1, p0, Lf2g;->a:I
+
+    iget v3, p1, Lf2g;->a:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lf2g;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lf2g;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lf2g;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lf2g;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Lf2g;->d:I
+
+    iget p1, p1, Lf2g;->d:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lf2g;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lf2g;->b:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lf2g;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_1
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lf2g;->d:I
+
+    add-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public x()I
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v1, "TransformationRequest{outputHeight="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lf2g;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioMimeType=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf2g;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', videoMimeType=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf2g;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', hdrMode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lf2g;->d:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v1, Lf2g;->o0:Le90;
-
-    invoke-interface {p0, v1, v0}, Lyoc;->d(Le90;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

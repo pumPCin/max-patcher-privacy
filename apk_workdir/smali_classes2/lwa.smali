@@ -1,41 +1,19 @@
-.class public interface abstract Llwa;
+.class public abstract Llwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lcu2;
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b()Lme0;
-.end method
 
-.method public abstract c()Ltne;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract d()Lho6;
-.end method
+    sget v0, Lokc;->settings:I
 
-.method public abstract e(I)I
-.end method
+    sput v0, Llwa;->a:I
 
-.method public abstract f()Lo4;
-.end method
-
-.method public abstract g()Lm5g;
-.end method
-
-.method public abstract getIcon()Lg17;
-.end method
-
-.method public abstract getName()Ljava/lang/String;
-.end method
-
-.method public abstract getText()Lobf;
-.end method
-
-.method public abstract h()Lk93;
-.end method
-
-.method public abstract i()Laxe;
+    return-void
 .end method

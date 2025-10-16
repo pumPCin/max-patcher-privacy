@@ -1,682 +1,278 @@
 .class public final Lpl0;
-.super Lvl3;
+.super Lpmi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final Z:[Lol0;
-
-.field public static final r0:[Lol0;
-
-
 # instance fields
-.field public final X:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public Y:J
-
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final c:Ljava/util/concurrent/locks/Lock;
-
-.field public final o:Ljava/util/concurrent/locks/Lock;
+.field public final a:Lf4g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Lol0;
-
-    sput-object v1, Lpl0;->Z:[Lol0;
-
-    new-array v0, v0, [Lol0;
-
-    sput-object v0, Lpl0;->r0:[Lol0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 2
+.method public constructor <init>(Lf4g;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/Lock;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lpl0;->c:Ljava/util/concurrent/locks/Lock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lpl0;->o:Ljava/util/concurrent/locks/Lock;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v1, Lpl0;->Z:[Lol0;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lpl0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lpl0;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lpl0;->X:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lpl0;->a:Lf4g;
 
     return-void
-.end method
-
-.method public static w(Ljava/lang/Object;)Lpl0;
-    .locals 1
-
-    const-string v0, "defaultValue is null"
-
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    new-instance v0, Lpl0;
-
-    invoke-direct {v0, p0}, Lpl0;-><init>(Ljava/lang/Object;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 7
+.method public final b(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 8
 
-    sget-object v0, Lvb5;->a:Lub5;
+    new-instance p1, Ljava/util/ArrayDeque;
 
-    :cond_0
-    iget-object v1, p0, Lpl0;->X:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p1, p2}, Ljava/util/ArrayDeque;-><init>(Ljava/util/Collection;)V
 
-    const/4 v2, 0x0
+    new-instance p2, Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v0, p0, Lpl0;->o:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    iget-wide v1, p0, Lpl0;->Y:J
-
-    const-wide/16 v3, 0x1
-
-    add-long/2addr v1, v3
-
-    iput-wide v1, p0, Lpl0;->Y:J
-
-    iget-object v1, p0, Lpl0;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v2, Lb5a;->a:Lb5a;
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    iget-object v0, p0, Lpl0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v1, Lpl0;->r0:[Lol0;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lol0;
+    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    array-length v1, v0
+    const/4 v0, 0x0
 
-    const/4 v3, 0x0
+    move v1, v0
 
     :goto_0
-    if-ge v3, v1, :cond_2
+    const/16 v2, 0x9
 
-    aget-object v4, v0, v3
+    if-ge v0, v2, :cond_9
 
-    iget-wide v5, p0, Lpl0;->Y:J
+    const/4 v2, 0x1
 
-    invoke-virtual {v4, v5, v6, v2}, Lol0;->a(JLjava/lang/Object;)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    :cond_2
-    return-void
-.end method
-
-.method public final c(Lfs4;)V
-    .locals 1
-
-    iget-object v0, p0, Lpl0;->X:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Lfs4;->f()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e(Ljava/lang/Object;)V
-    .locals 6
-
-    const-string v0, "onNext called with a null value."
-
-    invoke-static {p1, v0}, Lvb5;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lpl0;->X:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lpl0;->o:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    iget-wide v1, p0, Lpl0;->Y:J
-
-    const-wide/16 v3, 0x1
-
-    add-long/2addr v1, v3
-
-    iput-wide v1, p0, Lpl0;->Y:J
-
-    iget-object v1, p0, Lpl0;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    iget-object v0, p0, Lpl0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lol0;
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    iget-wide v4, p0, Lpl0;->Y:J
-
-    invoke-virtual {v3, v4, v5, p1}, Lol0;->a(JLjava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public final o(Lyba;)V
-    .locals 6
-
-    new-instance v0, Lol0;
-
-    invoke-direct {v0, p1, p0}, Lol0;-><init>(Lyba;Lpl0;)V
-
-    invoke-interface {p1, v0}, Lyba;->c(Lfs4;)V
-
-    iget-object v1, p0, Lpl0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    :goto_0
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, [Lol0;
-
-    sget-object v3, Lpl0;->r0:[Lol0;
-
-    if-ne v2, v3, :cond_1
-
-    iget-object v0, p0, Lpl0;->X:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    sget-object v1, Lvb5;->a:Lub5;
-
-    if-ne v0, v1, :cond_0
-
-    invoke-interface {p1}, Lyba;->b()V
-
-    return-void
-
-    :cond_0
-    invoke-interface {p1, v0}, Lyba;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    array-length v3, v2
-
-    add-int/lit8 v4, v3, 0x1
-
-    new-array v4, v4, [Lol0;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    aput-object v0, v4, v3
-
-    :cond_2
-    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_c
-
-    iget-boolean p1, v0, Lol0;->Z:Z
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0, v0}, Lpl0;->y(Lol0;)V
-
-    return-void
-
-    :cond_3
-    iget-boolean p1, v0, Lol0;->Z:Z
-
-    if-eqz p1, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean p1, v0, Lol0;->Z:Z
-
-    if-eqz p1, :cond_5
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_5
-
-    :cond_5
-    iget-boolean p1, v0, Lol0;->c:Z
-
-    if-eqz p1, :cond_6
-
-    monitor-exit v0
-
-    return-void
-
-    :cond_6
-    iget-object p1, v0, Lol0;->b:Lpl0;
-
-    iget-object v1, p1, Lpl0;->c:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    iget-wide v2, p1, Lpl0;->Y:J
-
-    iput-wide v2, v0, Lol0;->r0:J
-
-    iget-object p1, p1, Lpl0;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    const/4 v1, 0x1
-
-    if-eqz p1, :cond_7
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_7
-    move v2, v5
-
-    :goto_1
-    iput-boolean v2, v0, Lol0;->o:Z
-
-    iput-boolean v1, v0, Lol0;->c:Z
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {v0, p1}, Lol0;->test(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    :goto_2
-    iget-boolean p1, v0, Lol0;->Z:Z
-
-    if-eqz p1, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    monitor-enter v0
-
-    :try_start_1
-    iget-object p1, v0, Lol0;->X:Lbc6;
-
-    if-nez p1, :cond_a
-
-    iput-boolean v5, v0, Lol0;->o:Z
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_a
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lol0;->X:Lbc6;
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-virtual {p1, v0}, Lbc6;->H(Lxr;)V
-
-    goto :goto_2
-
-    :goto_3
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw p1
-
-    :cond_b
-    :goto_4
-    return-void
-
-    :goto_5
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-
-    :cond_c
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {p2, v2}, Lxx1;->e(Ljava/util/ArrayList;I)Ljava/lang/Object;
 
     move-result-object v3
 
-    if-eq v3, v2, :cond_2
+    const-string v4, "null cannot be cast to non-null type java.security.cert.X509Certificate"
 
-    goto/16 :goto_0
-.end method
+    if-eqz v3, :cond_8
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 6
+    check-cast v3, Ljava/security/cert/X509Certificate;
 
-    const-string v0, "onError called with a null Throwable."
+    iget-object v5, p0, Lpl0;->a:Lf4g;
 
-    invoke-static {p1, v0}, Lvb5;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-interface {v5, v3}, Lf4g;->a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
 
-    :cond_0
-    iget-object v0, p0, Lpl0;->X:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-object v5
 
-    const/4 v1, 0x0
+    if-eqz v5, :cond_3
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-gt v1, v2, :cond_0
 
-    new-instance v0, Lz4a;
+    invoke-virtual {v3, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, p1}, Lz4a;-><init>(Ljava/lang/Throwable;)V
+    move-result v1
 
-    iget-object p1, p0, Lpl0;->o:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    iget-wide v1, p0, Lpl0;->Y:J
-
-    const-wide/16 v3, 0x1
-
-    add-long/2addr v1, v3
-
-    iput-wide v1, p0, Lpl0;->Y:J
-
-    iget-object v1, p0, Lpl0;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    iget-object p1, p0, Lpl0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v1, Lpl0;->r0:[Lol0;
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lol0;
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, p1, v2
-
-    iget-wide v4, p0, Lpl0;->Y:J
-
-    invoke-virtual {v3, v4, v5, v0}, Lol0;->a(JLjava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final x()Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Lpl0;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lb5a;->a:Lb5a;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
+    if-nez v1, :cond_1
 
     :cond_0
-    instance-of v1, v0, Lz4a;
-
-    if-eqz v1, :cond_1
-
-    :goto_0
-    const/4 v0, 0x0
+    invoke-virtual {p2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    return-object v0
-.end method
-
-.method public final y(Lol0;)V
-    .locals 7
-
-    :goto_0
-    iget-object v0, p0, Lpl0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
 
     move-result-object v1
 
-    check-cast v1, [Lol0;
+    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
 
-    array-length v2, v1
+    move-result-object v3
 
-    if-nez v2, :cond_0
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_4
+    move-result v1
 
-    :cond_0
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_1
-    if-ge v4, v2, :cond_2
-
-    aget-object v5, v1, v4
-
-    if-ne v5, p1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
+    if-nez v1, :cond_2
 
     goto :goto_1
 
     :cond_2
-    const/4 v4, -0x1
+    :try_start_0
+    invoke-virtual {v5}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
 
-    :goto_2
-    if-gez v4, :cond_3
+    move-result-object v1
+
+    invoke-virtual {v5, v1}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_0
+    .catch Ljava/security/GeneralSecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_4
 
-    :cond_3
-    const/4 v5, 0x1
-
-    if-ne v2, v5, :cond_4
-
-    sget-object v2, Lpl0;->Z:[Lol0;
+    :catch_0
+    :goto_1
+    move v1, v2
 
     goto :goto_3
 
+    :cond_3
+    invoke-virtual {p1}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :catch_1
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_5
+
+    check-cast v5, Ljava/security/cert/X509Certificate;
+
+    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
+
+    move-result-object v6
+
+    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_4
+
+    goto :goto_2
+
     :cond_4
-    add-int/lit8 v6, v2, -0x1
+    :try_start_1
+    invoke-virtual {v5}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
 
-    new-array v6, v6, [Lol0;
+    move-result-object v6
 
-    invoke-static {v1, v3, v6, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v3, v6}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_1
+    .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    add-int/lit8 v3, v4, 0x1
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
-    sub-int/2addr v2, v4
+    invoke-virtual {p2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sub-int/2addr v2, v5
-
-    invoke-static {v1, v3, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    move-object v2, v6
-
-    :cond_5
     :goto_3
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    :goto_4
-    return-void
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v1, :cond_5
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_5
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    if-eqz v1, :cond_7
+
+    :goto_4
+    return-object p2
+
+    :cond_7
+    new-instance p1, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "Failed to find a trusted cert that signed "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_8
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_9
+    new-instance p1, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Certificate chain too long: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpl0;
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lpl0;
+
+    iget-object p1, p1, Lpl0;->a:Lf4g;
+
+    iget-object v1, p0, Lpl0;->a:Lf4g;
+
+    invoke-static {p1, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return v0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lpl0;->a:Lf4g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

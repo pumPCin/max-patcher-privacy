@@ -1,84 +1,95 @@
-.class public final Lxe0;
-.super Ljava/lang/Object;
+.class public final enum Lxe0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:[Lxe0;
+
+.field public static final synthetic o:Lfd5;
+
+
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxe0;
 
-    iput p1, p0, Lxe0;->a:I
+    const/4 v1, 0x0
+
+    const-string v2, "Light"
+
+    const-string v3, "LIGHT"
+
+    invoke-direct {v0, v3, v1, v2, v1}, Lxe0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    new-instance v1, Lxe0;
+
+    const/4 v2, 0x1
+
+    const-string v3, "Dark"
+
+    const-string v4, "DARK"
+
+    invoke-direct {v1, v4, v2, v3, v2}, Lxe0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    filled-new-array {v0, v1}, [Lxe0;
+
+    move-result-object v0
+
+    sput-object v0, Lxe0;->c:[Lxe0;
+
+    new-instance v1, Lfd5;
+
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lxe0;->o:Lfd5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Z)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, p1, :cond_0
+    iput-object p3, p0, Lxe0;->a:Ljava/lang/String;
 
-    goto :goto_1
+    iput-boolean p4, p0, Lxe0;->b:Z
 
-    :cond_0
-    instance-of v0, p1, Lxe0;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lxe0;
-
-    iget v0, p0, Lxe0;->a:I
-
-    iget p1, p1, Lxe0;->a:I
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public static valueOf(Ljava/lang/String;)Lxe0;
     .locals 1
 
-    iget v0, p0, Lxe0;->a:I
+    const-class v0, Lxe0;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lxe0;
+
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static values()[Lxe0;
+    .locals 1
 
-    const-string v0, "BackgroundLocalTabBarColors(primary="
+    sget-object v0, Lxe0;->c:[Lxe0;
 
-    const-string v1, ")"
-
-    iget v2, p0, Lxe0;->a:I
-
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lxe0;
 
     return-object v0
 .end method

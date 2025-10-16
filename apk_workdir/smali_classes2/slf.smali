@@ -2,42 +2,61 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmmf;
+
 
 # instance fields
-.field public final a:Lh4f;
-
-.field public final b:Lh4f;
+.field public final synthetic a:Luoe;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Luoe;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lelf;
+    iput-object p1, p0, Lslf;->a:Luoe;
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    invoke-direct {v0, p1, v1}, Lelf;-><init>(Landroid/content/Context;I)V
 
-    new-instance p1, Lh4f;
+# virtual methods
+.method public final e(Lklf;)V
+    .locals 2
 
-    invoke-direct {p1, v0}, Lh4f;-><init>(Ltd6;)V
+    iget-object v0, p0, Lslf;->a:Luoe;
 
-    iput-object p1, p0, Lslf;->a:Lh4f;
+    invoke-virtual {v0}, Luoe;->h()Z
 
-    new-instance p1, Lee;
+    move-result v1
 
-    const/16 v0, 0xd
+    if-nez v1, :cond_0
 
-    invoke-direct {p1, v0, p0}, Lee;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0, p1}, Luoe;->a(Ljava/lang/Object;)V
 
-    new-instance v0, Lh4f;
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v0, p1}, Lh4f;-><init>(Ltd6;)V
+.method public final f(Lukf;)V
+    .locals 2
 
-    iput-object v0, p0, Lslf;->b:Lh4f;
+    iget-object v0, p0, Lslf;->a:Luoe;
 
+    invoke-virtual {v0}, Luoe;->h()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
+
+    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lukf;)V
+
+    invoke-virtual {v0, v1}, Luoe;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
     return-void
 .end method

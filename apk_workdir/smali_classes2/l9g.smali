@@ -1,72 +1,196 @@
-.class public final Ll9g;
+.class public final synthetic Ll9g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lm9g;
+.implements Loh6;
 
 
-# static fields
-.field public static final a:Ll9g;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Lo9g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/content/Context;Lo9g;I)V
+    .locals 0
 
-    new-instance v0, Ll9g;
+    iput p3, p0, Ll9g;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll9g;->b:Landroid/content/Context;
 
-    sput-object v0, Ll9g;->a:Ll9g;
+    iput-object p2, p0, Ll9g;->c:Lo9g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    const/4 p1, 0x0
+    iget v0, p0, Ll9g;->a:I
 
-    return-object p1
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    new-instance v0, Lpn3;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x0
 
-    if-ne p0, p1, :cond_0
+    iget-object v2, p0, Ll9g;->b:Landroid/content/Context;
 
-    return v0
+    invoke-direct {v0, v2, v1}, Lpn3;-><init>(Landroid/content/Context;I)V
 
-    :cond_0
-    instance-of p1, p1, Ll9g;
+    iget-object v1, p0, Ll9g;->c:Lo9g;
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0, v1}, Lpn3;->setListener(Lln3;)V
 
-    const/4 p1, 0x0
+    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    return p1
+    const/4 v3, -0x2
 
-    :cond_1
-    return v0
-.end method
+    invoke-direct {v2, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-.method public final hashCode()I
-    .locals 1
+    const/16 v3, 0x18
 
-    const v0, -0x62c43bf4
+    int-to-float v3, v3
 
-    return v0
-.end method
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object v4
 
-    const-string v0, "NoOp"
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v4
+
+    invoke-static {v3}, Lagi;->d(F)I
+
+    move-result v3
+
+    iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v2, Lkm3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v0, v0, v3}, Lkm3;-><init>(Lpn3;Lpn3;I)V
+
+    invoke-static {v0, v2}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
+
+    new-instance v2, Lwxe;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v2, v3}, Lwxe;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Lpn3;->setKeyboardOpen(Loh6;)V
+
+    const/16 v2, 0x11
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lr4b;
+
+    iget-object v1, p0, Ll9g;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lr4b;-><init>(Landroid/content/Context;)V
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/16 v2, 0x8
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lagi;->d(F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    const/16 v2, 0xc
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lagi;->d(F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v1, Luza;->M:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lr4b;->setBackgroundColorAttr(Ljava/lang/Integer;)V
+
+    sget-object v1, Lp4b;->b:Lp4b;
+
+    invoke-virtual {v0, v1}, Lr4b;->setTypingMode(Lp4b;)V
+
+    new-instance v1, Lk9g;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Ll9g;->c:Lo9g;
+
+    invoke-direct {v1, v3, v2}, Lk9g;-><init>(Lo9g;I)V
+
+    invoke-virtual {v0, v1}, Lr4b;->f(Lqh6;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

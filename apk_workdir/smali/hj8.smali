@@ -1,98 +1,467 @@
-.class public final synthetic Lhj8;
-.super Ljava/lang/Object;
+.class public final Lhj8;
+.super Lsl0;
 .source "SourceFile"
 
 # interfaces
-.implements Loj8;
+.implements Lmj8;
 
 
 # instance fields
-.field public final synthetic a:Lqj8;
+.field public final X:Lcz;
 
-.field public final synthetic b:Ljava/util/List;
+.field public final Y:I
 
-.field public final synthetic c:I
+.field public volatile Z:Z
 
-.field public final synthetic o:J
+.field public final a:Lxaf;
+
+.field public final b:Lai3;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public final o:Ljava/lang/Object;
+
+.field public r0:Z
+
+.field public s0:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqj8;Ljava/util/List;IJ)V
+.method public constructor <init>(Lxaf;ILjj8;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    iput-object p1, p0, Lhj8;->a:Lqj8;
+    iput-object p1, p0, Lhj8;->a:Lxaf;
 
-    iput-object p2, p0, Lhj8;->b:Ljava/util/List;
+    iput p2, p0, Lhj8;->Y:I
 
-    iput p3, p0, Lhj8;->c:I
+    new-instance p1, Lai3;
 
-    iput-wide p4, p0, Lhj8;->o:J
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhj8;->b:Lai3;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object p1, p0, Lhj8;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    new-instance p1, Lcz;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lhj8;->X:Lcz;
+
+    iput-object p3, p0, Lhj8;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lw07;I)V
-    .locals 8
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lhj8;->a:Lqj8;
+    iget-object v0, p0, Lhj8;->o:Ljava/lang/Object;
 
-    iget-object v2, v0, Lqj8;->c:Lak8;
+    invoke-interface {v0, p1}, Lhoe;->offer(Ljava/lang/Object;)Z
 
-    new-instance v4, Lxu0;
+    invoke-virtual {p0}, Lhj8;->g()V
 
-    invoke-static {}, La67;->i()Lx57;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final b()V
+    .locals 2
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lhj8;->o:Ljava/lang/Object;
 
-    :goto_0
-    iget-object v3, p0, Lhj8;->b:Ljava/util/List;
+    sget-object v1, Lcda;->a:Lcda;
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-interface {v0, v1}, Lhoe;->offer(Ljava/lang/Object;)Z
 
-    move-result v5
+    invoke-virtual {p0}, Lhj8;->g()V
 
-    if-ge v1, v5, :cond_0
+    return-void
+.end method
 
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+.method public final c(Lev4;)V
+    .locals 1
 
-    move-result-object v3
+    iget-object v0, p0, Lhj8;->b:Lai3;
 
-    check-cast v3, Lll8;
+    invoke-virtual {v0, p1}, Lai3;->a(Lev4;)Z
 
-    const/4 v5, 0x1
+    return-void
+.end method
 
-    invoke-virtual {v3, v5}, Lll8;->d(Z)Landroid/os/Bundle;
+.method public final cancel()V
+    .locals 1
 
-    move-result-object v3
+    iget-boolean v0, p0, Lhj8;->Z:Z
 
-    invoke-virtual {v0, v3}, Lq57;->a(Ljava/lang/Object;)V
+    if-nez v0, :cond_0
 
-    add-int/lit8 v1, v1, 0x1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lhj8;->Z:Z
+
+    iget-object v0, p0, Lhj8;->b:Lai3;
+
+    invoke-virtual {v0}, Lai3;->g()V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lhj8;->o:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lhoe;->clear()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget-object v0, p0, Lhj8;->o:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lhoe;->clear()V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 11
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto/16 :goto_4
+
+    :cond_0
+    iget-boolean v0, p0, Lhj8;->r0:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lhj8;->a:Lxaf;
+
+    iget-object v2, p0, Lhj8;->o:Ljava/lang/Object;
+
+    move v3, v1
+
+    :cond_1
+    iget-boolean v4, p0, Lhj8;->Z:Z
+
+    if-eqz v4, :cond_2
+
+    invoke-interface {v2}, Lhoe;->clear()V
+
+    return-void
+
+    :cond_2
+    iget-object v4, p0, Lhj8;->X:Lcz;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Throwable;
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v2}, Lhoe;->clear()V
+
+    invoke-interface {v0, v4}, Lxaf;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_3
+    invoke-interface {v2}, Ljj8;->e()I
+
+    move-result v4
+
+    iget v5, p0, Lhj8;->Y:I
+
+    if-ne v4, v5, :cond_4
+
+    move v4, v1
 
     goto :goto_0
 
+    :cond_4
+    const/4 v4, 0x0
+
+    :goto_0
+    invoke-interface {v2}, Lhoe;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    const/4 v5, 0x0
+
+    invoke-interface {v0, v5}, Lxaf;->d(Ljava/lang/Object;)V
+
+    :cond_5
+    if-eqz v4, :cond_6
+
+    invoke-interface {v0}, Lxaf;->b()V
+
+    return-void
+
+    :cond_6
+    neg-int v3, v3
+
+    invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto/16 :goto_4
+
+    :cond_7
+    sget-object v0, Lcda;->a:Lcda;
+
+    iget-object v2, p0, Lhj8;->a:Lxaf;
+
+    iget-object v3, p0, Lhj8;->o:Ljava/lang/Object;
+
+    iget-wide v4, p0, Lhj8;->s0:J
+
+    :cond_8
+    iget-object v6, p0, Lhj8;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v6
+
+    :cond_9
+    :goto_1
+    cmp-long v8, v4, v6
+
+    if-eqz v8, :cond_e
+
+    iget-boolean v9, p0, Lhj8;->Z:Z
+
+    if-eqz v9, :cond_a
+
+    invoke-interface {v3}, Lhoe;->clear()V
+
+    return-void
+
+    :cond_a
+    iget-object v9, p0, Lhj8;->X:Lcz;
+
+    invoke-virtual {v9}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Ljava/lang/Throwable;
+
+    if-eqz v9, :cond_b
+
+    invoke-interface {v3}, Lhoe;->clear()V
+
+    iget-object v0, p0, Lhj8;->X:Lcz;
+
+    iget-object v1, p0, Lhj8;->a:Lxaf;
+
+    invoke-virtual {v0, v1}, Lcz;->e(Lxaf;)V
+
+    return-void
+
+    :cond_b
+    invoke-interface {v3}, Ljj8;->i()I
+
+    move-result v9
+
+    iget v10, p0, Lhj8;->Y:I
+
+    if-ne v9, v10, :cond_c
+
+    invoke-interface {v2}, Lxaf;->b()V
+
+    return-void
+
+    :cond_c
+    invoke-interface {v3}, Lhoe;->poll()Ljava/lang/Object;
+
+    move-result-object v9
+
+    if-nez v9, :cond_d
+
+    goto :goto_2
+
+    :cond_d
+    if-eq v9, v0, :cond_9
+
+    invoke-interface {v2, v9}, Lxaf;->d(Ljava/lang/Object;)V
+
+    const-wide/16 v8, 0x1
+
+    add-long/2addr v4, v8
+
+    goto :goto_1
+
+    :cond_e
+    :goto_2
+    if-nez v8, :cond_11
+
+    iget-object v6, p0, Lhj8;->X:Lcz;
+
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Throwable;
+
+    if-eqz v6, :cond_f
+
+    invoke-interface {v3}, Lhoe;->clear()V
+
+    iget-object v0, p0, Lhj8;->X:Lcz;
+
+    iget-object v1, p0, Lhj8;->a:Lxaf;
+
+    invoke-virtual {v0, v1}, Lcz;->e(Lxaf;)V
+
+    return-void
+
+    :cond_f
+    :goto_3
+    invoke-interface {v3}, Ljj8;->peek()Ljava/lang/Object;
+
+    move-result-object v6
+
+    if-ne v6, v0, :cond_10
+
+    invoke-interface {v3}, Ljj8;->k()V
+
+    goto :goto_3
+
+    :cond_10
+    invoke-interface {v3}, Ljj8;->i()I
+
+    move-result v6
+
+    iget v7, p0, Lhj8;->Y:I
+
+    if-ne v6, v7, :cond_11
+
+    invoke-interface {v2}, Lxaf;->b()V
+
+    return-void
+
+    :cond_11
+    iput-wide v4, p0, Lhj8;->s0:J
+
+    neg-int v1, v1
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    :goto_4
+    return-void
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lhj8;->o:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lhoe;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j(J)V
+    .locals 1
+
+    invoke-static {p1, p2}, Lcbf;->e(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lhj8;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-static {v0, p1, p2}, Leii;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+
+    invoke-virtual {p0}, Lhj8;->g()V
+
     :cond_0
-    invoke-virtual {v0}, Lx57;->h()Lexc;
+    return-void
+.end method
+
+.method public final l(I)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lhj8;->r0:Z
+
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Lhj8;->X:Lcz;
+
+    invoke-virtual {v0, p1}, Lcz;->a(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lhj8;->b:Lai3;
+
+    invoke-virtual {p1}, Lai3;->g()V
+
+    iget-object p1, p0, Lhj8;->o:Ljava/lang/Object;
+
+    sget-object v0, Lcda;->a:Lcda;
+
+    invoke-interface {p1, v0}, Lhoe;->offer(Ljava/lang/Object;)Z
+
+    invoke-virtual {p0}, Lhj8;->g()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 2
+
+    :cond_0
+    iget-object v0, p0, Lhj8;->o:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lhoe;->poll()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {v4, v0}, Lxu0;-><init>(Ljava/util/List;)V
+    sget-object v1, Lcda;->a:Lcda;
 
-    iget v5, p0, Lhj8;->c:I
+    if-eq v0, v1, :cond_0
 
-    iget-wide v6, p0, Lhj8;->o:J
-
-    move-object v1, p1
-
-    move v3, p2
-
-    invoke-interface/range {v1 .. v7}, Lw07;->r(Lq07;ILandroid/os/IBinder;IJ)V
-
-    return-void
+    return-object v0
 .end method

@@ -1,99 +1,100 @@
 .class public final Lbf7;
-.super Lc2f;
+.super Ldd9;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lyn7;
-
-.field public final synthetic Y:Luka;
+.field public a:I
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Luka;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lbf7;->X:Lyn7;
+    invoke-direct {p0}, Ldd9;-><init>()V
 
-    iput-object p2, p0, Lbf7;->Y:Luka;
+    const/4 v0, 0x0
 
-    const/4 p1, 0x2
+    iput v0, p0, Lbf7;->a:I
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v0, -0x1
+
+    iput v0, p0, Ldd9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lbf7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lbf7;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lbf7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final computeSerializedSize()I
     .locals 2
 
-    new-instance p1, Lbf7;
+    iget v0, p0, Lbf7;->a:I
 
-    iget-object v0, p0, Lbf7;->X:Lyn7;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lbf7;->Y:Luka;
+    const/4 v1, 0x1
 
-    invoke-direct {p1, v0, v1, p2}, Lbf7;-><init>(Lyn7;Luka;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v1, v0}, Lca3;->n(II)I
 
-    return-object p1
-.end method
+    move-result v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbf7;->X:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbab;
-
-    iget-object v0, p0, Lbf7;->Y:Luka;
-
-    iget-object v0, v0, Luka;->a:Ljava/lang/String;
-
-    invoke-static {p1, v0}, Lcea;->t(Lbab;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
+    return v0
 
     :cond_0
-    new-instance v0, Lbdf;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
+    return v0
+.end method
 
-    return-object v0
+.method public final mergeFrom(Lba3;)Ldd9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lba3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lbf7;->a:I
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lca3;)V
+    .locals 2
+
+    iget v0, p0, Lbf7;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lca3;->G(II)V
+
+    :cond_0
+    return-void
 .end method

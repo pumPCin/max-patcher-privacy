@@ -2,74 +2,64 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb24;
+
 
 # instance fields
-.field public final a:Lo68;
+.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lo68;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll11;->a:Lo68;
+    iput-object p1, p0, Ll11;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
     return-void
 .end method
 
-.method public static a(Landroid/view/Window;Ljz3;Ljz3;Z)V
-    .locals 2
 
-    instance-of v0, p2, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+# virtual methods
+.method public final a(Lx14;Lx14;Z)V
+    .locals 0
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    if-nez v0, :cond_0
+.method public final b(Lx14;Lx14;Z)V
+    .locals 0
 
-    instance-of v0, p2, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    if-eqz p3, :cond_0
 
-    if-nez v0, :cond_0
+    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Lwq7;
 
-    instance-of v0, p2, Lone/me/calls/ui/ui/call/CallScreen;
+    iget-object p1, p0, Ll11;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->C0()Lu11;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lu11;->r()Ln01;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p2, Li11;
+
+    iget-object p2, p2, Li11;->F0:Lsze;
+
+    invoke-virtual {p2}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lfa;
+
+    invoke-virtual {p1, p2}, Lu11;->s(Lfa;)V
 
     :cond_0
-    instance-of v0, p2, Lsed;
-
-    if-eqz v0, :cond_1
-
-    check-cast p2, Lsed;
-
-    goto :goto_0
-
-    :cond_1
-    move-object p2, v1
-
-    :goto_0
-    if-eqz p2, :cond_2
-
-    invoke-interface {p2, p0}, Lsed;->c(Landroid/view/Window;)V
-
-    :cond_2
-    instance-of p2, p1, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    if-eqz p2, :cond_4
-
-    if-nez p3, :cond_4
-
-    if-eqz p1, :cond_3
-
-    move-object v1, p1
-
-    check-cast v1, Lsed;
-
-    :cond_3
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1, p0}, Lsed;->m(Landroid/view/Window;)V
-
-    :cond_4
     return-void
 .end method

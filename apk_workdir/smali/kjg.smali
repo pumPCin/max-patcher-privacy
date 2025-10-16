@@ -4,22 +4,24 @@
 
 
 # direct methods
-.method public static a(Landroid/view/ViewConfiguration;)I
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledHoverSlop()I
+    const-string v0, "[-_./;:]"
 
-    move-result p0
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    return p0
+    return-void
 .end method
 
-.method public static b(Landroid/view/ViewConfiguration;)Z
-    .locals 0
+.method public static final a()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->shouldShowMenuShortcutsWhenKeyboardPresent()Z
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    move-result p0
+    const-string v1, "Internal error: this code path should never get executed"
 
-    return p0
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

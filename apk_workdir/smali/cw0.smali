@@ -1,171 +1,288 @@
-.class public abstract enum Lcw0;
-.super Ljava/lang/Enum;
+.class public final Lcw0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lgl5;
 
 
 # static fields
-.field public static final synthetic a:[Lcw0;
+.field public static final t0:Lq7;
+
+
+# instance fields
+.field public X:Z
+
+.field public Y:Lsfd;
+
+.field public Z:J
+
+.field public final a:Lcl5;
+
+.field public final b:I
+
+.field public final c:Lqa6;
+
+.field public final o:Landroid/util/SparseArray;
+
+.field public r0:Lmwd;
+
+.field public s0:[Lqa6;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Lq7;
 
-    new-array v0, v0, [Lcw0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcw0;->a:[Lcw0;
+    sput-object v0, Lcw0;->t0:Lq7;
 
     return-void
 .end method
 
-.method public static a(ILjava/nio/ByteBuffer;)V
+.method public constructor <init>(Lcl5;ILqa6;)V
     .locals 0
 
-    if-ltz p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
+    iput-object p1, p0, Lcw0;->a:Lcl5;
 
-    move-result p1
+    iput p2, p0, Lcw0;->b:I
 
-    if-ge p0, p1, :cond_0
+    iput-object p3, p0, Lcw0;->c:Lqa6;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lcw0;->o:Landroid/util/SparseArray;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    invoke-direct {p1, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
-
-    throw p1
 .end method
 
-.method public static b(Ljava/nio/ByteBuffer;II)V
-    .locals 0
 
-    if-ltz p2, :cond_1
+# virtual methods
+.method public final B(II)Ls0g;
+    .locals 5
 
-    if-lez p2, :cond_0
+    iget-object v0, p0, Lcw0;->o:Landroid/util/SparseArray;
 
-    invoke-static {p1, p0}, Lcw0;->a(ILjava/nio/ByteBuffer;)V
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    add-int/2addr p1, p2
+    move-result-object v1
 
-    add-int/lit8 p1, p1, -0x1
+    check-cast v1, Law0;
 
-    invoke-static {p1, p0}, Lcw0;->a(ILjava/nio/ByteBuffer;)V
+    if-nez v1, :cond_4
+
+    iget-object v1, p0, Lcw0;->s0:[Lqa6;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
 
     :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, Lefi;->f(Z)V
+
+    new-instance v1, Law0;
+
+    iget v2, p0, Lcw0;->b:I
+
+    if-ne p2, v2, :cond_1
+
+    iget-object v2, p0, Lcw0;->c:Lqa6;
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v2, 0x0
+
+    :goto_1
+    invoke-direct {v1, p1, p2, v2}, Law0;-><init>(IILqa6;)V
+
+    iget-object v2, p0, Lcw0;->Y:Lsfd;
+
+    iget-wide v3, p0, Lcw0;->Z:J
+
+    if-nez v2, :cond_2
+
+    iget-object p2, v1, Law0;->c:Lz25;
+
+    iput-object p2, v1, Law0;->e:Ls0g;
+
+    goto :goto_2
+
+    :cond_2
+    iput-wide v3, v1, Law0;->f:J
+
+    invoke-virtual {v2, p2}, Lsfd;->x(I)Ls0g;
+
+    move-result-object p2
+
+    iput-object p2, v1, Law0;->e:Ls0g;
+
+    iget-object v2, v1, Law0;->d:Lqa6;
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {p2, v2}, Ls0g;->d(Lqa6;)V
+
+    :cond_3
+    :goto_2
+    invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_4
+    return-object v1
+.end method
+
+.method public final N(Lmwd;)V
+    .locals 0
+
+    iput-object p1, p0, Lcw0;->r0:Lmwd;
+
+    return-void
+.end method
+
+.method public final a(Lsfd;JJ)V
+    .locals 6
+
+    iput-object p1, p0, Lcw0;->Y:Lsfd;
+
+    iput-wide p4, p0, Lcw0;->Z:J
+
+    iget-boolean v0, p0, Lcw0;->X:Z
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v3, 0x0
+
+    iget-object v5, p0, Lcw0;->a:Lcl5;
+
+    if-nez v0, :cond_1
+
+    invoke-interface {v5, p0}, Lcl5;->g(Lgl5;)V
+
+    cmp-long p1, p2, v1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {v5, v3, v4, p2, p3}, Lcl5;->d(JJ)V
+
+    :cond_0
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcw0;->X:Z
+
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    cmp-long v0, p2, v1
 
-    const-string p1, "lengths must be >= 0"
+    if-nez v0, :cond_2
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-wide p2, v3
 
-    throw p0
-.end method
+    :cond_2
+    invoke-interface {v5, v3, v4, p2, p3}, Lcl5;->d(JJ)V
 
-.method public static c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-    .locals 2
+    const/4 p2, 0x0
 
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+    :goto_0
+    iget-object p3, p0, Lcw0;->o:Landroid/util/SparseArray;
+
+    invoke-virtual {p3}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_5
+
+    invoke-virtual {p3, p2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Law0;
+
+    if-nez p1, :cond_3
+
+    iget-object v0, p3, Law0;->c:Lz25;
+
+    iput-object v0, p3, Law0;->e:Ls0g;
+
+    goto :goto_1
+
+    :cond_3
+    iput-wide p4, p3, Law0;->f:J
+
+    iget v0, p3, Law0;->a:I
+
+    invoke-virtual {p1, v0}, Lsfd;->x(I)Ls0g;
 
     move-result-object v0
 
-    sget-object v1, Lh3g;->a:Ljava/nio/ByteOrder;
+    iput-object v0, p3, Law0;->e:Ls0g;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object p3, p3, Law0;->d:Lqa6;
 
-    move-result v0
+    if-eqz p3, :cond_4
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0, p3}, Ls0g;->d(Lqa6;)V
 
-    return-object p0
+    :cond_4
+    :goto_1
+    add-int/lit8 p2, p2, 0x1
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
+    goto :goto_0
 
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(ILjava/nio/ByteBuffer;)I
-    .locals 1
-
-    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    add-int/lit8 p0, p0, 0x1
-
-    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    shl-int/lit8 p0, p0, 0x8
-
-    or-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public static e(Ljava/nio/ByteBuffer;II)V
-    .locals 1
-
-    int-to-byte v0, p2
-
-    invoke-virtual {p0, p1, v0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 p1, p1, 0x1
-
-    ushr-int/lit8 p2, p2, 0x8
-
-    int-to-byte p2, p2
-
-    invoke-virtual {p0, p1, p2}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
+    :cond_5
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcw0;
-    .locals 1
+.method public final w()V
+    .locals 4
 
-    const-class v0, Lcw0;
+    iget-object v0, p0, Lcw0;->o:Landroid/util/SparseArray;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    move-result-object p0
+    move-result v1
 
-    invoke-static {p0}, Lc85;->o(Ljava/lang/Object;)V
+    new-array v1, v1, [Lqa6;
 
-    const/4 p0, 0x0
+    const/4 v2, 0x0
 
-    throw p0
-.end method
+    :goto_0
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-.method public static values()[Lcw0;
-    .locals 1
+    move-result v3
 
-    sget-object v0, Lcw0;->a:[Lcw0;
+    if-ge v2, v3, :cond_0
 
-    invoke-virtual {v0}, [Lcw0;->clone()Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v3
 
-    check-cast v0, [Lcw0;
+    check-cast v3, Law0;
 
-    return-object v0
+    iget-object v3, v3, Law0;->d:Lqa6;
+
+    invoke-static {v3}, Lefi;->g(Ljava/lang/Object;)V
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v1, p0, Lcw0;->s0:[Lqa6;
+
+    return-void
 .end method

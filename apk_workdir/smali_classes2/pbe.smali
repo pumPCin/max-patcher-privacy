@@ -1,129 +1,73 @@
-.class public final Lpbe;
-.super Ljava/lang/Object;
+.class public final enum Lpbe;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lyg1;
+# static fields
+.field public static final enum a:Lpbe;
 
-.field public final b:Ljava/lang/String;
+.field public static final enum b:Lpbe;
+
+.field public static final synthetic c:[Lpbe;
 
 
 # direct methods
-.method public constructor <init>(Lyg1;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpbe;
 
-    iput-object p1, p0, Lpbe;->a:Lyg1;
+    const-string v1, "NONE"
 
-    iput-object p2, p0, Lpbe;->b:Ljava/lang/String;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lpbe;->a:Lpbe;
+
+    new-instance v1, Lpbe;
+
+    const-string v2, "DARK"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lpbe;->b:Lpbe;
+
+    filled-new-array {v0, v1}, [Lpbe;
+
+    move-result-object v0
+
+    sput-object v0, Lpbe;->c:[Lpbe;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lpbe;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-class v0, Lpbe;
 
-    const/4 v0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lpbe;
 
-    :cond_0
-    instance-of v1, p1, Lpbe;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lpbe;
-
-    iget-object v1, p0, Lpbe;->a:Lyg1;
-
-    iget-object v3, p1, Lpbe;->a:Lyg1;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lpbe;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lpbe;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static values()[Lpbe;
+    .locals 1
 
-    iget-object v0, p0, Lpbe;->a:Lyg1;
+    sget-object v0, Lpbe;->c:[Lpbe;
 
-    invoke-virtual {v0}, Lyg1;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lpbe;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SignalingUrlSharingInfo(initiator="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpbe;->a:Lyg1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpbe;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lpbe;
 
     return-object v0
 .end method

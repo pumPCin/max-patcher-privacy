@@ -1,23 +1,68 @@
-.class public abstract Lpug;
-.super Ljava/lang/Throwable;
+.class public interface abstract Lpug;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# virtual methods
+.method public abstract B(Loug;)V
+.end method
 
-.field public final b:I
+.method public abstract N0()J
+.end method
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public O(Limg;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
-
-    iput-object p1, p0, Lpug;->a:Ljava/lang/String;
-
-    iput p2, p0, Lpug;->b:I
-
     return-void
+.end method
+
+.method public abstract Q(Z)V
+.end method
+
+.method public abstract X(Loug;)V
+.end method
+
+.method public abstract a()F
+.end method
+
+.method public abstract a0(Landroid/view/Surface;)V
+.end method
+
+.method public abstract b(F)V
+.end method
+
+.method public abstract clear()V
+.end method
+
+.method public abstract d()Z
+.end method
+
+.method public abstract f()J
+.end method
+
+.method public abstract getDuration()J
+.end method
+
+.method public abstract isIdle()Z
+.end method
+
+.method public abstract pause()V
+.end method
+
+.method public abstract play()V
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract seekTo(J)V
+.end method
+
+.method public abstract stop()V
+.end method
+
+.method public abstract u0(Lllg;I)V
+.end method
+
+.method public abstract y0()Z
 .end method

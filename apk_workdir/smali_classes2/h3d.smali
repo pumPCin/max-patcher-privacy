@@ -1,140 +1,125 @@
-.class public final synthetic Lh3d;
-.super Ljava/lang/Object;
+.class public final Lh3d;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/profile/RknBottomSheet;
+.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/RknBottomSheet;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
     .locals 0
 
-    iput p2, p0, Lh3d;->a:I
+    iput-object p2, p0, Lh3d;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    iput-object p1, p0, Lh3d;->b:Lone/me/profile/RknBottomSheet;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lh3d;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lh3d;->b:Lone/me/profile/RknBottomSheet;
+    invoke-virtual {p0, p1, p2}, Lh3d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget-object v0, Lone/me/profile/RknBottomSheet;->D0:[Lpl7;
+    check-cast p1, Lh3d;
 
-    sget-object v0, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
+    sget-object p2, Lzag;->a:Lzag;
 
-    sget-object v2, Lrw4;->t0:Lss6;
+    invoke-virtual {p1, p2}, Lh3d;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lh3d;
+
+    iget-object v1, p0, Lh3d;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-direct {v0, p2, v1}, Lh3d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+
+    iput-object p1, v0, Lh3d;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lh3d;->X:Ljava/lang/Object;
+
+    check-cast p1, Lq2d;
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
+
+    iget-object v0, p0, Lh3d;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Lss6;->u(Landroid/content/Context;)Lrw4;
+    new-instance v2, Lpd1;
 
-    move-result-object v1
+    const/4 v3, 0x5
 
-    invoke-virtual {v1}, Lrw4;->l()Llwa;
+    invoke-direct {v2, p1, v3, v0}, Lpd1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result-object v1
+    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
 
-    invoke-interface {v1}, Llwa;->d()Lho6;
+    move-result p1
 
-    move-result-object v1
+    if-eqz p1, :cond_0
 
-    iget-object v1, v1, Lho6;->f:Lso6;
-
-    iget-object v1, v1, Lso6;->a:[I
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v3, :cond_0
-
-    aget v5, v1, v4
-
-    const v6, 0x3e23d70a    # 0.16f
-
-    invoke-static {v5, v6}, Li8e;->N(IF)I
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v4, v4, 0x1
+    invoke-virtual {v2}, Lpd1;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lw83;->A0(Ljava/util/List;)[I
+    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
 
-    move-result-object v1
+    move-result p1
 
-    new-instance v2, Landroid/graphics/drawable/GradientDrawable;
+    if-eqz p1, :cond_1
 
-    invoke-direct {v2, v0, v1}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+    invoke-virtual {v1}, Landroid/view/View;->isLayoutRequested()Z
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    move-result p1
 
-    move-result-object v0
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v2}, Lpd1;->invoke()Ljava/lang/Object;
 
-    move-result-object v0
+    goto :goto_0
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    :cond_1
+    new-instance p1, Lrr0;
 
-    const/high16 v1, 0x41c00000    # 24.0f
+    const/16 v0, 0xd
 
-    mul-float/2addr v0, v1
+    invoke-direct {p1, v0, v2}, Lrr0;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v2, v0}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+    invoke-virtual {v1, p1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    return-object v2
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    :pswitch_0
-    sget-object v0, Lone/me/profile/RknBottomSheet;->D0:[Lpl7;
-
-    sget v0, Lv7d;->b:I
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

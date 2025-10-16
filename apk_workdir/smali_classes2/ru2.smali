@@ -1,111 +1,60 @@
-.class public final Lru2;
-.super Lc2f;
+.class public final synthetic Lru2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lqh6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Luu2;
 
-.field public final synthetic Y:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+.method public synthetic constructor <init>(Luu2;JLjava/lang/String;)V
     .locals 0
 
-    iput-object p2, p0, Lru2;->Y:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lru2;->a:Luu2;
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lru2;->b:J
+
+    iput-object p4, p0, Lru2;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    check-cast p1, Lsu2;
+    check-cast p1, Landroid/view/View;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Lru2;->a:Luu2;
 
-    invoke-virtual {p0, p1, p2}, Lru2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p1, Luu2;->b1:Lde5;
 
-    move-result-object p1
+    new-instance v0, Lgt2;
 
-    check-cast p1, Lru2;
+    const-wide/16 v2, 0x0
 
-    sget-object p2, Laxf;->a:Laxf;
+    const/16 v1, 0x9
 
-    invoke-virtual {p1, p2}, Lru2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v4, p0, Lru2;->b:J
 
-    return-object p2
-.end method
+    iget-object v6, p0, Lru2;->c:Ljava/lang/String;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-direct/range {v0 .. v6}, Lgt2;-><init>(IJJLjava/lang/String;)V
 
-    new-instance v0, Lru2;
+    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lru2;->Y:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
-
-    invoke-direct {v0, p2, v1}, Lru2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
-
-    iput-object p1, v0, Lru2;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lru2;->X:Ljava/lang/Object;
-
-    check-cast p1, Lsu2;
-
-    sget-object v0, Lsu2;->a:Lsu2;
-
-    invoke-static {p1, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->z0:[Lpl7;
-
-    iget-object p1, p0, Lru2;->Y:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
-
-    invoke-virtual {p1}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->D0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    new-instance v0, Lrta;
-
-    invoke-direct {v0, p1}, Lrta;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget p1, Lava;->b:I
-
-    new-instance v1, Lxcf;
-
-    invoke-direct {v1, p1}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lrta;->g(Lcdf;)V
-
-    invoke-virtual {v0}, Lrta;->i()Lqta;
-
-    :cond_0
-    sget-object p1, Laxf;->a:Laxf;
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

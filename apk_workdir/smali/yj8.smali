@@ -1,106 +1,109 @@
-.class public final synthetic Lyj8;
-.super Ljava/lang/Object;
+.class public final enum Lyj8;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lzj8;
-.implements Lyr8;
 
+# static fields
+.field public static final enum X:Lyj8;
 
-# instance fields
-.field public final synthetic a:Landroid/app/PendingIntent;
+.field public static final synthetic Y:[Lyj8;
+
+.field public static final enum a:Lyj8;
+
+.field public static final enum b:Lyj8;
+
+.field public static final enum c:Lyj8;
+
+.field public static final enum o:Lyj8;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroid/app/PendingIntent;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyj8;
 
-    iput-object p2, p0, Lyj8;->a:Landroid/app/PendingIntent;
+    const-string v1, "OFF"
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public synthetic constructor <init>(Landroid/app/PendingIntent;)V
-    .locals 0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lyj8;->a:Lyj8;
 
-    iput-object p1, p0, Lyj8;->a:Landroid/app/PendingIntent;
+    new-instance v1, Lyj8;
 
-    return-void
-.end method
+    const-string v2, "ON"
 
+    const/4 v3, 0x1
 
-# virtual methods
-.method public a(Ler8;I)V
-    .locals 1
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lyj8;->a:Landroid/app/PendingIntent;
+    sput-object v1, Lyj8;->b:Lyj8;
 
-    invoke-interface {p1, p2, v0}, Ler8;->c(ILandroid/app/PendingIntent;)V
+    new-instance v2, Lyj8;
 
-    return-void
-.end method
+    const-string v3, "DISABLED"
 
-.method public c(Lqj8;)V
-    .locals 2
+    const/4 v4, 0x2
 
-    invoke-virtual {p1}, Lqj8;->isConnected()Z
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v0
+    sput-object v2, Lyj8;->c:Lyj8;
 
-    if-eqz v0, :cond_2
+    new-instance v3, Lyj8;
 
-    iget-object v0, p1, Lqj8;->o:Landroid/app/PendingIntent;
+    const-string v4, "HIDE"
 
-    iget-object v1, p0, Lyj8;->a:Landroid/app/PendingIntent;
+    const/4 v5, 0x3
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v0
+    sput-object v3, Lyj8;->o:Lyj8;
 
-    if-eqz v0, :cond_0
+    new-instance v4, Lyj8;
 
-    goto :goto_1
+    const-string v5, "UNAVAILABLE"
 
-    :cond_0
-    iput-object v1, p1, Lqj8;->o:Landroid/app/PendingIntent;
+    const/4 v6, 0x4
 
-    iget-object p1, p1, Lqj8;->a:Lvi8;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput-object v4, Lyj8;->X:Lyj8;
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    filled-new-array {v0, v1, v2, v3, v4}, [Lyj8;
 
     move-result-object v0
 
-    iget-object v1, p1, Lvi8;->X:Landroid/os/Handler;
+    sput-object v0, Lyj8;->Y:[Lyj8;
 
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lq5h;->k(Z)V
-
-    iget-object p1, p1, Lvi8;->o:Lti8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_2
-    :goto_1
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lyj8;
+    .locals 1
+
+    const-class v0, Lyj8;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lyj8;
+
+    return-object p0
+.end method
+
+.method public static values()[Lyj8;
+    .locals 1
+
+    sget-object v0, Lyj8;->Y:[Lyj8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lyj8;
+
+    return-object v0
 .end method

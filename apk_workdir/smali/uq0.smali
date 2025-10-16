@@ -1,554 +1,317 @@
 .class public final Luq0;
-.super Ljava/lang/Object;
+.super Lgk0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Landroid/content/Context;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final d:Lvne;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Luq0;->a:I
-
-    iput-object p2, p0, Luq0;->b:Ljava/lang/Object;
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Luq0;->c:Landroid/content/Context;
 
-.method public constructor <init>(Ll8c;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-    .locals 0
+    new-instance p1, Lvne;
 
-    const/4 p2, 0x7
+    const/16 v0, 0x18
 
-    iput p2, p0, Luq0;->a:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    .line 3
-    iput-object p1, p0, Luq0;->b:Ljava/lang/Object;
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "IntrinsicBlur;%d"
+
+    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lvne;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Luq0;->d:Lvne;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.method public final b()Ldy0;
+    .locals 1
 
-    iget p2, p0, Luq0;->a:I
+    iget-object v0, p0, Luq0;->d:Lvne;
 
-    const/4 p3, 0x0
+    return-object v0
+.end method
 
-    const/4 p4, 0x0
+.method public final c(Landroid/graphics/Bitmap;)V
+    .locals 4
 
-    const/4 p5, 0x1
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isMutable()Z
 
-    packed-switch p2, :pswitch_data_0
+    move-result v0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    if-eqz v0, :cond_5
 
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    check-cast p1, Lone/me/webapp/rootscreen/WebAppRootScreen;
+    move-result v0
 
-    sget-object p2, Lone/me/webapp/rootscreen/WebAppRootScreen;->N0:[Lpl7;
+    int-to-float v0, v0
 
-    invoke-virtual {p1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Ljxa;
+    const/high16 v1, 0x45000000    # 2048.0f
 
-    move-result-object p2
+    cmpg-float v0, v0, v1
 
-    invoke-virtual {p2}, Ljxa;->getTitle()Landroid/widget/TextView;
+    const/4 v2, 0x0
 
-    move-result-object p2
+    const/4 v3, 0x1
 
-    invoke-static {p2}, Lmdf;->c(Landroid/widget/TextView;)Z
+    if-gtz v0, :cond_0
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Ljxa;
-
-    move-result-object p1
-
-    invoke-static {p1, p5}, Lone/me/webapp/rootscreen/WebAppRootScreen;->T0(Ljxa;Z)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Luog;
-
-    invoke-virtual {p1}, Luog;->g()V
-
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lc22;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lc22;->resumeWith(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object p2, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljjf;
-
-    const/4 p4, 0x2
-
-    new-array p4, p4, [I
-
-    invoke-virtual {p1, p4}, Landroid/view/View;->getLocationOnScreen([I)V
-
-    aget p3, p4, p3
-
-    iput p3, p2, Ljjf;->U0:I
-
-    iget-object p2, p2, Ljjf;->N0:Landroid/graphics/Rect;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroidx/appcompat/widget/e;
-
-    invoke-virtual {p1}, Landroidx/appcompat/widget/e;->adjustDropDownSizeAndPosition()V
-
-    return-void
-
-    :pswitch_4
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    sget-object p2, Lrw4;->t0:Lss6;
-
-    iget-object p3, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p3, Landroid/widget/LinearLayout;
-
-    invoke-virtual {p2, p3}, Lss6;->v(Landroid/view/View;)Llwa;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0(Landroid/view/View;Llwa;)V
-
-    return-void
-
-    :pswitch_5
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Loc1;
-
-    invoke-virtual {p1}, Loc1;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_6
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    sget-object p2, Lone/me/profile/ProfileScreen;->C0:[Lpl7;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->E0()Ljxa;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljxa;->getTitle()Landroid/widget/TextView;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lmdf;->c(Landroid/widget/TextView;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->E0()Ljxa;
-
-    move-result-object p2
-
-    invoke-static {p1, p2, p5}, Lone/me/profile/ProfileScreen;->B0(Lone/me/profile/ProfileScreen;Ljxa;Z)V
-
-    :cond_1
-    return-void
-
-    :pswitch_7
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljxa;
-
-    invoke-static {p1}, Ljxa;->e(Ljxa;)V
-
-    return-void
-
-    :pswitch_8
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lvsa;
-
-    iget-object p1, p1, Lvsa;->F0:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    return-void
-
-    :pswitch_9
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lvja;
-
-    invoke-virtual {p1}, Lvja;->getEditText()Landroid/widget/EditText;
-
-    move-result-object p2
-
-    iget-object p3, p1, Lvja;->z0:Landroid/graphics/Rect;
-
-    invoke-virtual {p2, p3}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
-
-    iget-object p2, p1, Lvja;->A0:Landroid/graphics/Rect;
-
-    iget-object p3, p1, Lvja;->z0:Landroid/graphics/Rect;
-
-    invoke-virtual {p2, p3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget p3, p2, Landroid/graphics/Rect;->right:I
-
-    iput p3, p2, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
-
-    move-result p1
-
-    iput p1, p2, Landroid/graphics/Rect;->right:I
-
-    return-void
-
-    :pswitch_a
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lwh9;
-
-    iget-object p1, p1, Lwh9;->f:Ljava/lang/String;
-
-    sget-object p2, Lyt3;->n:Lhoa;
-
-    if-nez p2, :cond_2
+    move v0, v3
 
     goto :goto_0
 
-    :cond_2
-    sget-object p3, Lr28;->o:Lr28;
+    :cond_0
+    move v0, v2
 
-    invoke-virtual {p2, p3}, Lhoa;->b(Lr28;)Z
-
-    move-result p5
-
-    if-eqz p5, :cond_3
-
-    iget-object p5, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p5, Lwh9;
-
-    iget-object p5, p5, Lwh9;->b:Lfg9;
-
-    iget-wide p5, p5, Lfg9;->c:J
-
-    const-string p7, "Scroll: Highlighted from args message with id="
-
-    invoke-static {p5, p6, p7}, Ln29;->g(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p5
-
-    invoke-virtual {p2, p3, p1, p5, p4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
     :goto_0
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
+    if-eqz v0, :cond_4
 
-    check-cast p1, Lwh9;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    iget-object p2, p1, Lwh9;->e:Lnc9;
+    move-result v0
 
-    iget-object p1, p1, Lwh9;->b:Lfg9;
+    int-to-float v0, v0
 
-    iget-wide p3, p1, Lfg9;->c:J
+    cmpg-float v0, v0, v1
 
-    iget-object p6, p1, Lfg9;->d:Ljava/util/List;
+    if-gtz v0, :cond_1
 
-    iget-object p2, p2, Lnc9;->o:Lhne;
+    move v2, v3
 
-    :cond_4
-    invoke-virtual {p2}, Lhne;->getValue()Ljava/lang/Object;
+    :cond_1
+    if-eqz v2, :cond_3
 
-    move-result-object p1
+    :try_start_0
+    invoke-static {p1}, Lx8i;->a(Landroid/graphics/Bitmap;)V
+    :try_end_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-object p5, p1
+    return-void
 
-    check-cast p5, Lst6;
+    :catch_0
+    move-exception v0
 
-    new-instance p5, Lst6;
+    const/4 v1, 0x3
 
-    invoke-direct {p5, p3, p4, p6}, Lst6;-><init>(JLjava/util/List;)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {p2, p1, p5}, Lhne;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v1
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p1
 
-    if-eqz p1, :cond_4
-
-    return-void
-
-    :pswitch_b
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Ll8c;
-
-    invoke-virtual {p1}, Ll8c;->getTitleView()Landroid/widget/TextView;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lmdf;->c(Landroid/widget/TextView;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_5
-
-    invoke-static {p1, p5}, Lone/me/sdk/messagewrite/MessageWriteWidget;->P0(Ll8c;Z)V
-
-    :cond_5
-    return-void
-
-    :pswitch_c
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lg59;
-
-    iget-object p2, p1, Lv7f;->b:Ljava/lang/Object;
-
-    check-cast p2, Landroid/view/ViewGroup;
-
-    if-eqz p2, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    move-object p2, p4
-
-    :goto_1
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p2
-
-    const/16 p5, 0xa
-
-    int-to-float p5, p5
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p6
-
-    invoke-virtual {p6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p6
-
-    iget p6, p6, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {p5, p6, p2}, Lc85;->q(FFI)I
-
-    move-result p2
-
-    invoke-virtual {p1}, Lv7f;->I()I
-
-    move-result p5
-
-    sub-int/2addr p2, p5
-
-    if-gez p2, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    move p3, p2
-
-    :goto_2
-    iget-object p2, p1, Lv7f;->b:Ljava/lang/Object;
-
-    check-cast p2, Landroid/view/ViewGroup;
-
-    if-eqz p2, :cond_8
-
-    move-object p4, p2
-
-    :cond_8
-    invoke-virtual {p1}, Lv7f;->N()Landroid/view/View;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-static {p3, p1, p4}, Lq98;->e(ILandroid/view/View;Landroid/view/ViewGroup;)V
+    const/16 v3, 0x18
 
-    return-void
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :pswitch_d
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    move-result-object v3
 
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
+    filled-new-array {v1, v2, p1, v3}, [Ljava/lang/Object;
 
-    check-cast p1, Lone/me/chatscreen/ChatScreen;
+    move-result-object p1
 
-    sget-object p2, Lone/me/chatscreen/ChatScreen;->j1:[Lpl7;
+    const/4 v1, 0x4
 
-    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->d1()Ljxa;
+    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    const-string v2, "OOM: %d iterations on %dx%d with %d radius"
+
+    invoke-static {v1, v2, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Lll5;->a:Lu88;
+
+    const/4 v2, 0x6
+
+    invoke-interface {v1, v2}, Lu88;->h(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    sget-object v1, Lll5;->a:Lu88;
+
+    const-string v2, "IterativeBoxBlurFilter"
+
+    invoke-interface {v1, v2, p1}, Lu88;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    throw v0
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final d(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+    .locals 4
+
+    iget-object v0, p0, Luq0;->c:Landroid/content/Context;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-static {v0}, Landroid/renderscript/RenderScript;->create(Landroid/content/Context;)Landroid/renderscript/RenderScript;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const-string v2, "Required value was null."
+
+    if-eqz v0, :cond_2
+
+    :try_start_1
+    invoke-static {v0}, Landroid/renderscript/Element;->U8_4(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/renderscript/ScriptIntrinsicBlur;->create(Landroid/renderscript/RenderScript;Landroid/renderscript/Element;)Landroid/renderscript/ScriptIntrinsicBlur;
+
+    move-result-object v1
+
+    invoke-static {v0, p2}, Landroid/renderscript/Allocation;->createFromBitmap(Landroid/renderscript/RenderScript;Landroid/graphics/Bitmap;)Landroid/renderscript/Allocation;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Ljxa;->getTitle()Landroid/widget/TextView;
+    if-eqz p2, :cond_1
 
-    move-result-object p2
+    invoke-static {v0, p1}, Landroid/renderscript/Allocation;->createFromBitmap(Landroid/renderscript/RenderScript;Landroid/graphics/Bitmap;)Landroid/renderscript/Allocation;
 
-    invoke-static {p2}, Lmdf;->c(Landroid/widget/TextView;)Z
+    move-result-object v3
 
-    move-result p2
+    if-eqz v3, :cond_0
 
-    if-eqz p2, :cond_9
+    const/16 v2, 0x18
 
-    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->d1()Ljxa;
+    int-to-float v2, v2
 
-    move-result-object p2
+    invoke-virtual {v1, v2}, Landroid/renderscript/ScriptIntrinsicBlur;->setRadius(F)V
 
-    invoke-static {p1, p2, p5}, Lone/me/chatscreen/ChatScreen;->L0(Lone/me/chatscreen/ChatScreen;Ljxa;Z)V
+    invoke-virtual {v1, p2}, Landroid/renderscript/ScriptIntrinsicBlur;->setInput(Landroid/renderscript/Allocation;)V
 
-    :cond_9
-    return-void
+    invoke-virtual {v1, v3}, Landroid/renderscript/ScriptIntrinsicBlur;->forEach(Landroid/renderscript/Allocation;)V
 
-    :pswitch_e
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
+    invoke-virtual {v3, p1}, Landroid/renderscript/Allocation;->copyTo(Landroid/graphics/Bitmap;)V
 
-    check-cast p1, Lsr1;
+    invoke-virtual {v1}, Landroid/renderscript/BaseObj;->destroy()V
 
-    iget-object p2, p1, Lsr1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+    invoke-virtual {p2}, Landroid/renderscript/Allocation;->destroy()V
 
-    if-eqz p2, :cond_a
+    invoke-virtual {v3}, Landroid/renderscript/Allocation;->destroy()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {p1}, Lsr1;->b(Lsr1;)Lt9g;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_a
-
-    iget-object p3, p1, Lsr1;->u0:Lnhg;
-
-    invoke-virtual {p2, p1, p3}, Lt9g;->a(Landroid/view/View;Lnhg;)V
-
-    :cond_a
-    return-void
-
-    :pswitch_f
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lkr1;
-
-    iget-object p2, p1, Lkr1;->f1:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, p2}, Lkr1;->H(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Landroid/renderscript/RenderScript;->destroy()V
 
     return-void
 
-    :pswitch_10
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    :catchall_0
+    move-exception p1
 
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
+    move-object v1, v0
 
-    check-cast p1, Loo1;
+    goto :goto_0
 
-    iget-object p2, p1, Loo1;->O0:Ljava/lang/CharSequence;
+    :cond_0
+    :try_start_2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1, p2}, Loo1;->x(Ljava/lang/CharSequence;)V
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw p1
 
-    :pswitch_11
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p1, p0, Luq0;->b:Ljava/lang/Object;
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Lrl1;
+    throw p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget-object p1, p1, Lrl1;->I0:Lehb;
+    :cond_2
+    :try_start_3
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-eqz p1, :cond_b
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lehb;->c()V
+    throw p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    :cond_b
-    return-void
+    :catchall_1
+    move-exception p1
 
-    :pswitch_12
-    throw p4
+    :goto_0
+    if-eqz v1, :cond_3
 
-    nop
+    invoke-virtual {v1}, Landroid/renderscript/RenderScript;->destroy()V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    throw p1
 .end method

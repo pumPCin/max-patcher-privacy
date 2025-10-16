@@ -1,101 +1,77 @@
-.class public final Lnx6;
+.class public abstract Lnx6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Boolean;
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Boolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
-    iput-object p1, p0, Lnx6;->a:Ljava/lang/Boolean;
+    const-string v1, "0123456789ABCDEF"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lnx6;->a:[B
 
     return-void
 .end method
 
+.method public static a([B)Ljava/lang/String;
+    .locals 6
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    array-length v0, p0
 
-    const/4 v0, 0x1
+    mul-int/lit8 v0, v0, 0x2
 
-    if-ne p0, p1, :cond_0
+    new-array v0, v0, [B
 
-    return v0
+    const/4 v1, 0x0
 
-    :cond_0
-    instance-of v1, p1, Lnx6;
+    :goto_0
+    array-length v2, p0
 
-    const/4 v2, 0x0
+    if-ge v1, v2, :cond_0
 
-    if-nez v1, :cond_1
+    aget-byte v2, p0, v1
 
-    return v2
+    and-int/lit16 v3, v2, 0xff
 
-    :cond_1
-    check-cast p1, Lnx6;
+    mul-int/lit8 v4, v1, 0x2
 
-    iget-object v1, p0, Lnx6;->a:Ljava/lang/Boolean;
+    ushr-int/lit8 v3, v3, 0x4
 
-    iget-object p1, p1, Lnx6;->a:Ljava/lang/Boolean;
+    sget-object v5, Lnx6;->a:[B
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    aget-byte v3, v5, v3
 
-    move-result p1
+    aput-byte v3, v0, v4
 
-    if-nez p1, :cond_2
+    add-int/lit8 v4, v4, 0x1
 
-    return v2
+    and-int/lit8 v2, v2, 0xf
 
-    :cond_2
-    return v0
-.end method
+    aget-byte v2, v5, v2
 
-.method public final hashCode()I
-    .locals 1
+    aput-byte v2, v0, v4
 
-    iget-object v0, p0, Lnx6;->a:Ljava/lang/Boolean;
+    add-int/lit8 v1, v1, 0x1
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    new-instance p0, Ljava/lang/String;
 
-    move-result v0
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    return v0
-.end method
+    invoke-direct {p0, v0, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Selection(isSelected="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lnx6;->a:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

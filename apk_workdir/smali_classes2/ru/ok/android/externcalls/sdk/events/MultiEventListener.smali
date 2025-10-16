@@ -5,7 +5,7 @@
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 .implements Ljava/util/Collection;
-.implements Lfl7;
+.implements Lmq7;
 
 
 # annotations
@@ -16,7 +16,7 @@
         "Ljava/util/Collection<",
         "Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
         ">;",
-        "Lfl7;"
+        "Lmq7;"
     }
 .end annotation
 
@@ -40,7 +40,7 @@
         "elements",
         "addAll",
         "(Ljava/util/Collection;)Z",
-        "Laxf;",
+        "Lzag;",
         "clear",
         "()V",
         "contains",
@@ -70,10 +70,10 @@
         "(Lorg/json/JSONObject;)V",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "id",
-        "Lah1;",
+        "Lbi1;",
         "newState",
         "onStateChanged",
-        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lah1;)V",
+        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbi1;)V",
         "",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "externalIds",
@@ -102,10 +102,10 @@
         "(Lru/ok/android/externcalls/sdk/ConversationParticipant;Z)V",
         "recurring",
         "onRecurringChanged",
-        "Lks9;",
+        "Lj0a;",
         "muteEvent",
         "onMuteStateInitialized",
-        "(Lks9;)V",
+        "(Lj0a;)V",
         "onMuteChanged",
         "isAnonJoinForbidden",
         "onAnonJoinForbiddenChanged",
@@ -1026,7 +1026,7 @@
     return-void
 .end method
 
-.method public onMuteChanged(Lks9;)V
+.method public onMuteChanged(Lj0a;)V
     .locals 2
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1046,7 +1046,7 @@
 
     check-cast v1, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
-    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMuteChanged(Lks9;)V
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMuteChanged(Lj0a;)V
 
     goto :goto_0
 
@@ -1054,7 +1054,7 @@
     return-void
 .end method
 
-.method public onMuteStateInitialized(Lks9;)V
+.method public onMuteStateInitialized(Lj0a;)V
     .locals 2
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1074,7 +1074,7 @@
 
     check-cast v1, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
-    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMuteStateInitialized(Lks9;)V
+    invoke-interface {v1, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onMuteStateInitialized(Lj0a;)V
 
     goto :goto_0
 
@@ -1467,7 +1467,7 @@
     return-void
 .end method
 
-.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lah1;)V
+.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbi1;)V
     .locals 2
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1487,7 +1487,7 @@
 
     check-cast v1, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
-    invoke-interface {v1, p1, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lah1;)V
+    invoke-interface {v1, p1, p2}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbi1;)V
 
     goto :goto_0
 
@@ -1642,7 +1642,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lk84;->G(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, Lm94;->c(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1660,7 +1660,7 @@
     .end annotation
 
     .line 2
-    invoke-static {p0, p1}, Lk84;->H(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lm94;->d(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 

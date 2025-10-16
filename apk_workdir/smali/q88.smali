@@ -1,289 +1,158 @@
-.class public Lq88;
-.super Ljava/lang/Object;
+.class public final Lq88;
+.super Lwxh;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Map$Entry;
-.implements Lel7;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lq88;->a:I
-
-    iput-object p1, p0, Lq88;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lq88;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lq88;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
+.method public final a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    iget v0, p0, Lq88;->a:I
+    iget v0, p0, Lq88;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x3
 
-    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-gt v0, v1, :cond_0
 
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    goto :goto_0
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lq88;->b:Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lq88;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    :goto_2
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lq88;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lq88;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lq88;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lq88;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lq88;->c:Ljava/lang/Object;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lq88;->c:Ljava/lang/Object;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public hashCode()I
-    .locals 3
-
-    iget v0, p0, Lq88;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lq88;->b:Ljava/lang/Object;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    invoke-virtual {p0}, Lq88;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    xor-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget p1, p0, Lq88;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
+.method public final b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
 
-    iget v0, p0, Lq88;->a:I
+    iget v0, p0, Lq88;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x3
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    if-gt v0, v1, :cond_0
 
-    move-result-object v0
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    return-object v0
+    :cond_0
+    return-void
+.end method
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final c(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget v0, p0, Lq88;->d:I
 
-    iget-object v1, p0, Lq88;->b:Ljava/lang/Object;
+    const/4 v1, 0x6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-gt v0, v1, :cond_0
 
-    const/16 v1, 0x3d
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {p0}, Lq88;->getValue()Ljava/lang/Object;
+.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 2
 
-    move-result-object v1
+    iget v0, p0, Lq88;->d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x6
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-gt v0, v1, :cond_0
 
-    move-result-object v0
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    return-object v0
+    :cond_0
+    return-void
+.end method
 
-    nop
+.method public final g(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget v0, p0, Lq88;->d:I
+
+    const/4 v1, 0x4
+
+    if-gt v0, v1, :cond_0
+
+    invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    .locals 2
+
+    iget v0, p0, Lq88;->d:I
+
+    const/4 v1, 0x4
+
+    if-gt v0, v1, :cond_0
+
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final l(Ljava/lang/String;)V
+    .locals 2
+
+    iget v0, p0, Lq88;->d:I
+
+    const/4 v1, 0x2
+
+    if-gt v0, v1, :cond_0
+
+    const-string v0, "Rescheduling alarm that keeps track of force-stops."
+
+    invoke-static {p1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final m(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    iget v0, p0, Lq88;->d:I
+
+    const/4 v1, 0x5
+
+    if-gt v0, v1, :cond_0
+
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/RuntimeException;)V
+    .locals 2
+
+    iget v0, p0, Lq88;->d:I
+
+    const/4 v1, 0x5
+
+    if-gt v0, v1, :cond_0
+
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    return-void
 .end method

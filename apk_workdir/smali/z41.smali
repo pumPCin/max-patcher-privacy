@@ -1,177 +1,142 @@
-.class public final Lz41;
+.class public final synthetic Lz41;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld51;
+.implements Lqh6;
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public final synthetic X:Lc51;
 
-.field public final b:I
+.field public final synthetic Y:Lyu1;
 
-.field public final c:I
+.field public final synthetic Z:Lww0;
 
-.field public final d:I
+.field public final synthetic a:Loq1;
 
-.field public final e:Lxcf;
+.field public final synthetic b:Lorg/json/JSONObject;
 
-.field public final f:Lxcf;
+.field public final synthetic c:J
+
+.field public final synthetic o:Lmxe;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
-    .locals 1
+.method public synthetic constructor <init>(Loq1;Lorg/json/JSONObject;JLmxe;Lc51;Lyu1;Lww0;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz41;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iput-object p1, p0, Lz41;->a:Loq1;
 
-    sget p1, Leia;->E:I
+    iput-object p2, p0, Lz41;->b:Lorg/json/JSONObject;
 
-    iput p1, p0, Lz41;->b:I
+    iput-wide p3, p0, Lz41;->c:J
 
-    sget p1, Ldia;->l0:I
+    iput-object p5, p0, Lz41;->o:Lmxe;
 
-    iput p1, p0, Lz41;->c:I
+    iput-object p6, p0, Lz41;->X:Lc51;
 
-    sget p1, Ldia;->w0:I
+    iput-object p7, p0, Lz41;->Y:Lyu1;
 
-    iput p1, p0, Lz41;->d:I
-
-    sget p1, Lhia;->v2:I
-
-    new-instance v0, Lxcf;
-
-    invoke-direct {v0, p1}, Lxcf;-><init>(I)V
-
-    iput-object v0, p0, Lz41;->e:Lxcf;
-
-    iput-object v0, p0, Lz41;->f:Lxcf;
+    iput-object p8, p0, Lz41;->Z:Lww0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    iget v0, p0, Lz41;->c:I
-
-    return v0
-.end method
-
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
-
-    iget-object v0, p0, Lz41;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lz41;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lz41;
-
-    iget-object v1, p0, Lz41;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    iget-object p1, p1, Lz41;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getContentDescription()Lcdf;
-    .locals 1
-
-    iget-object v0, p0, Lz41;->f:Lxcf;
-
-    return-object v0
-.end method
-
-.method public final getIcon()I
-    .locals 1
-
-    iget v0, p0, Lz41;->d:I
-
-    return v0
-.end method
-
-.method public final getId()I
-    .locals 1
-
-    iget v0, p0, Lz41;->b:I
-
-    return v0
-.end method
-
-.method public final getTitle()Lcdf;
-    .locals 1
-
-    iget-object v0, p0, Lz41;->e:Lxcf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lz41;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
 
-    const-string v1, "Earpiece(device="
+    iget-object v0, p0, Lz41;->a:Loq1;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v0, v0, Loq1;->a:J
 
-    iget-object v1, p0, Lz41;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Lqcb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lz41;->b:Lorg/json/JSONObject;
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->setWatchTogetherEnabledForAll(Z)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    move-result-object p1
+
+    iget-wide v0, p0, Lz41;->c:J
+
+    invoke-static {v0, v1}, Lqcb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    iget-object v0, p0, Lz41;->o:Lmxe;
+
+    iget-boolean v0, v0, Lmxe;->b:Z
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    iget-object v0, p0, Lz41;->X:Lc51;
+
+    iget-object v0, v0, Lc51;->b:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfw1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    iget-object v0, p0, Lz41;->Y:Lyu1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lqh6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    iget-object v0, p0, Lz41;->Z:Lww0;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lqh6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+
+    move-result-object p1
+
+    return-object p1
 .end method

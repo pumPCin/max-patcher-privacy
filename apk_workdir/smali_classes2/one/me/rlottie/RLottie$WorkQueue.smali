@@ -22,7 +22,7 @@
         "",
         "Ljava/lang/Runnable;",
         "action",
-        "Laxf;",
+        "Lzag;",
         "post",
         "(Ljava/lang/Runnable;)V",
         "",

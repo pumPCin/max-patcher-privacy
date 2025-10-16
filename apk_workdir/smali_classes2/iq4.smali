@@ -1,163 +1,130 @@
-.class public abstract Liq4;
+.class public final Liq4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/HashMap;
-
-.field public static final b:Ljava/util/regex/Pattern;
+# instance fields
+.field public final a:Llt7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Llt7;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "px"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "dip"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "sp"
-
-    const/4 v3, 0x2
-
-    const-string v4, "dp"
-
-    invoke-static {v0, v4, v1, v3, v2}, Lxw1;->q(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
-
-    const-string v1, "in"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-string v4, "pt"
-
-    invoke-static {v3, v0, v4, v2, v1}, Lxw1;->n(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
-
-    const/4 v1, 0x5
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "mm"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sput-object v0, Liq4;->a:Ljava/util/HashMap;
-
-    const-string v0, "^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)\\s*$"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Liq4;->b:Ljava/util/regex/Pattern;
+    iput-object p1, p0, Liq4;->a:Llt7;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)F
-    .locals 2
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+# virtual methods
+.method public final a(JJLjava/util/List;Z)V
+    .locals 18
 
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    sget-object v0, Liq4;->b:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-interface/range {p5 .. p5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    if-eqz v1, :cond_3
 
-    move-result v0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v1, 0x3
+    move-result-object v1
 
-    invoke-virtual {p1, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    check-cast v1, Ljava/lang/Number;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
 
-    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    move-result-wide v1
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    move-object/from16 v3, p0
 
-    move-result-object p1
+    iget-object v4, v3, Liq4;->a:Llt7;
 
-    sget-object v1, Liq4;->a:Ljava/util/HashMap;
+    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object p1
+    check-cast v4, Lll;
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-static {v1, v2}, Lmb3;->e(J)Ljava/util/List;
 
-    if-eqz p1, :cond_0
+    move-result-object v13
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    if-eqz p6, :cond_0
 
-    move-result p1
+    const/4 v1, -0x1
 
-    invoke-static {p1, v0, p0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+    :goto_1
+    move/from16 v16, v1
 
-    move-result p0
-
-    return p0
+    goto :goto_2
 
     :cond_0
-    new-instance p0, Ljava/lang/NumberFormatException;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
+    goto :goto_1
 
-    throw p0
+    :goto_2
+    check-cast v4, Lkma;
+
+    move-wide/from16 v8, p1
+
+    invoke-virtual {v4, v8, v9}, Lkma;->n(J)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    new-instance p0, Ljava/lang/NumberFormatException;
+    new-instance v5, Lso2;
 
-    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
+    invoke-virtual {v4}, Lkma;->x()Ljwb;
 
-    throw p0
+    move-result-object v1
+
+    check-cast v1, Llwb;
+
+    iget-object v1, v1, Llwb;->a:Lg68;
+
+    invoke-virtual {v1}, Lgsd;->k()J
+
+    move-result-wide v6
+
+    const/4 v15, 0x1
+
+    const/16 v17, 0x0
+
+    const/4 v12, 0x2
+
+    sget-object v14, Lho2;->b:Lho2;
+
+    move-wide/from16 v10, p3
+
+    invoke-direct/range {v5 .. v17}, Lso2;-><init>(JJJILjava/util/List;Lho2;ZII)V
+
+    if-nez v16, :cond_2
+
+    invoke-static {v4, v5}, Lkma;->v(Lkma;Lxm;)J
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v4, v5}, Lkma;->u(Lkma;Lxm;)J
+
+    goto :goto_0
+
+    :cond_3
+    move-object/from16 v3, p0
+
+    return-void
 .end method

@@ -1,114 +1,134 @@
-.class public final Lha9;
+.class public final synthetic Lha9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loa9;
+.implements Loh6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lb4a;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lb4a;I)V
     .locals 0
+
+    .line 1
+    iput p2, p0, Lha9;->a:I
+
+    iput-object p1, p0, Lha9;->b:Lb4a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lha9;->a:J
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Lb4a;)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Lha9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lha9;->b:Lb4a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    iget v0, p0, Lha9;->a:I
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    sget-object v2, Lzag;->a:Lzag;
 
-    const/4 v0, 0x1
+    iget-object v3, p0, Lha9;->b:Lb4a;
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
-    :cond_0
-    instance-of v1, p1, Lha9;
+    sget-object v0, Llj9;->c:Llj9;
 
-    if-nez v1, :cond_1
+    check-cast v3, Lm7b;
 
-    goto :goto_0
+    iget-object v3, v3, Lm7b;->d:Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Lha9;
-
-    iget-wide v1, p0, Lha9;->a:J
-
-    iget-wide v3, p1, Lha9;->a:J
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lha9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lha9;->a:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OnUnsupportedAttachButtonCLick(messageId="
-
-    const-string v1, ", isSkippableForMultiSelect=true)"
-
-    iget-wide v2, p0, Lha9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lqci;->q0()Llf4;
 
     move-result-object v0
 
-    return-object v0
+    const-string v4, ":call-join-link?link="
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3, v1}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-object v2
+
+    :pswitch_0
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
+
+    sget-object v0, Llj9;->c:Llj9;
+
+    check-cast v3, Ly7b;
+
+    iget-wide v4, v3, Ly7b;->b:J
+
+    iget-boolean v3, v3, Ly7b;->c:Z
+
+    invoke-virtual {v0}, Lqci;->q0()Llf4;
+
+    move-result-object v0
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, ":call-user?opponent_id="
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v4, "&video_enabled="
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3, v1}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Lwq7;
+
+    sget-object v0, Llj9;->c:Llj9;
+
+    check-cast v3, Lhf4;
+
+    invoke-virtual {v0, v3}, Lqci;->t0(Lhf4;)V
+
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

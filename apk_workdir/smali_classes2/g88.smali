@@ -1,82 +1,1009 @@
 .class public final Lg88;
-.super Lc2f;
+.super Lv14;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final b:Lg88;
 
 
 # instance fields
-.field public final synthetic X:Lcl6;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lcl6;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lg88;
+
+    invoke-direct {v0}, Lg88;-><init>()V
+
+    sput-object v0, Lg88;->b:Lg88;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lg88;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lg88;->X:Lcl6;
+    const/4 p1, 0x1
 
-    const/4 p1, 0x2
+    iput p1, p0, Lg88;->a:I
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a(Lx14;Lc24;Ld24;)V
+    .locals 3
 
-    check-cast p1, Ln24;
+    iget p2, p0, Lg88;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p2, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lg88;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lg88;
+    sget-object p2, Lndi;->a:Lkwa;
 
-    sget-object p2, Laxf;->a:Laxf;
+    if-nez p2, :cond_0
 
-    invoke-virtual {p1, p2}, Lg88;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_0
 
-    return-object p2
+    :cond_0
+    sget-object v0, Lf88;->c:Lf88;
+
+    invoke-virtual {p2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "onChangeEnd, changeType="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "lifecycle: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, p1, p3, v1}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lg88;
-
-    iget-object v0, p0, Lg88;->X:Lcl6;
-
-    invoke-direct {p1, v0, p2}, Lg88;-><init>(Lcl6;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public b(Lx14;Lc24;Ld24;)V
     .locals 3
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget p2, p0, Lg88;->a:I
 
-    sget-object p1, Lnpb;->s0:Lnpb;
+    packed-switch p2, :pswitch_data_0
 
-    iget-object p1, p1, Lnpb;->Y:Lwq7;
+    return-void
 
-    new-instance v0, Lvuc;
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
 
-    iget-object v1, p0, Lg88;->X:Lcl6;
+    move-result-object p1
 
-    const/4 v2, 0x6
+    sget-object p2, Lndi;->a:Lkwa;
 
-    invoke-direct {v0, v2, v1}, Lvuc;-><init>(ILjava/lang/Object;)V
+    if-nez p2, :cond_0
 
-    invoke-virtual {p1, v0}, Lwq7;->a(Lqq7;)V
+    goto :goto_0
 
-    sget-object p1, Laxf;->a:Laxf;
+    :cond_0
+    sget-object v0, Lf88;->c:Lf88;
 
-    return-object p1
+    invoke-virtual {p2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "onChangeStart, changeType="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "lifecycle: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, p1, p3, v1}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(Lx14;Landroid/os/Bundle;)V
+    .locals 3
+
+    iget p2, p0, Lg88;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object p2, Lndi;->a:Lkwa;
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lf88;->c:Lf88;
+
+    invoke-virtual {p2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "lifecycle: onRestoreInstanceState"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v0, p1, v1, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public d(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: onRestoreViewState"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e(Lx14;Landroid/os/Bundle;)V
+    .locals 3
+
+    iget p2, p0, Lg88;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object p2, Lndi;->a:Lkwa;
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lf88;->c:Lf88;
+
+    invoke-virtual {p2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "lifecycle: onSaveInstanceState"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v0, p1, v1, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: onSaveViewState"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public g(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: postAttach"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: postContextAvailable"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public i(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: postContextUnavailable"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j(Lx14;Landroid/view/View;)V
+    .locals 3
+
+    iget p2, p0, Lg88;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object p2, Lndi;->a:Lkwa;
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lf88;->c:Lf88;
+
+    invoke-virtual {p2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "lifecycle: postCreateView"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v0, p1, v1, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final k(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object p1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->Y:[Lwq7;
+
+    sget-object p1, Lbg3;->c:Lbg3;
+
+    invoke-virtual {p1}, Lqci;->q0()Llf4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Llf4;->d()Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: postDestroy"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public l(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: postDestroyView"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public m(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: postDetach"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public n(Lx14;Landroid/view/View;)V
+    .locals 3
+
+    iget p2, p0, Lg88;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object p2, Lndi;->a:Lkwa;
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lf88;->c:Lf88;
+
+    invoke-virtual {p2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "lifecycle: preAttach"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v0, p1, v1, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public o(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: preContextAvailable"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public p(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: preContextUnavailable"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public q(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: preCreateView"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public r(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: preDestroy"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public s(Lx14;Landroid/view/View;)V
+    .locals 3
+
+    iget p2, p0, Lg88;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object p2, Lndi;->a:Lkwa;
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lf88;->c:Lf88;
+
+    invoke-virtual {p2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "lifecycle: preDestroyView"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, v0, p1, v1, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public t(Lx14;)V
+    .locals 4
+
+    iget v0, p0, Lg88;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lsdi;->b(Lx14;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->c:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "lifecycle: preDetach"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

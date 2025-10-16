@@ -1,92 +1,132 @@
 .class public final Lhtd;
-.super Lasd;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final b:J
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Litd;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Litd;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhtd;->Y:Litd;
 
-    iput-wide p1, p0, Lhtd;->b:J
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final w()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lasd;->b()Lzb2;
+    check-cast p1, Lxx6;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0, p1, p2}, Lhtd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v2, "storeChatFromCache chatId = "
+    check-cast p1, Lhtd;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-wide v2, p0, Lhtd;->b:J
+    invoke-virtual {p1, p2}, Lhtd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    return-object p2
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v1
+    new-instance v0, Lhtd;
 
-    const-string v4, "zb2"
+    iget-object v1, p0, Lhtd;->Y:Litd;
 
-    invoke-static {v4, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p2}, Lhtd;-><init>(Litd;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v2, v3}, Lzb2;->A(J)Lvc2;
+    iput-object p1, v0, Lhtd;->X:Ljava/lang/Object;
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    if-nez v1, :cond_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "storeChatFromCache, chatId = "
+    iget-object p1, p0, Lhtd;->X:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lxx6;
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v0, p1, Lxx6;->b:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Lhtd;->Y:Litd;
 
-    move-result-object v0
+    iget-object v2, p1, Litd;->r0:Lde5;
 
-    const/4 v1, 0x0
+    sget-object v3, Lqtd;->c:Lqtd;
 
-    invoke-static {v4, v0, v1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-wide v4, p1, Litd;->b:J
 
-    return-void
+    iget-object p1, p1, Litd;->c:Lie2;
+
+    sget-object v6, Lie2;->b:Lie2;
+
+    if-ne p1, v6, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    iget-object v1, v1, Lvc2;->b:Luc2;
+    const/4 p1, 0x0
 
-    iget-object v0, v0, Lzb2;->k:Lys4;
+    :goto_0
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    move-result-object v0
+    const-string p1, "local"
 
-    check-cast v0, Lf94;
+    goto :goto_1
 
-    check-cast v0, Lm84;
+    :cond_1
+    const-string p1, "server"
 
-    iget-object v0, v0, Lm84;->b:Lz3d;
+    :goto_1
+    const-string v3, ":chats?id="
 
-    invoke-virtual {v0, v2, v3, v1}, Lz3d;->h(JLuc2;)V
+    const-string v6, "&type="
 
-    return-void
+    invoke-static {v3, v4, v5, v6, p1}, Lf67;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string v3, "&message_id="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v2}, Lwc0;->l(Ljava/lang/String;Lde5;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

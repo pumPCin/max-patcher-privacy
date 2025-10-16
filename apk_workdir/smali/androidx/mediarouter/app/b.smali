@@ -60,9 +60,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lr1b;
+    check-cast v2, Laab;
 
-    iget-boolean v3, v2, Lr1b;->j:Z
+    iget-boolean v3, v2, Laab;->j:Z
 
     if-nez v3, :cond_0
 
@@ -70,18 +70,18 @@
 
     move-result-wide v3
 
-    iput-wide v3, v2, Lr1b;->i:J
+    iput-wide v3, v2, Laab;->i:J
 
     const/4 v3, 0x1
 
-    iput-boolean v3, v2, Lr1b;->j:Z
+    iput-boolean v3, v2, Laab;->j:Z
 
     goto :goto_0
 
     :cond_1
     iget-object v0, p1, Landroidx/mediarouter/app/d;->N0:Landroidx/mediarouter/app/OverlayListView;
 
-    iget-object v1, p1, Landroidx/mediarouter/app/d;->x1:Lum7;
+    iget-object v1, p1, Landroidx/mediarouter/app/d;->x1:Lgs7;
 
     iget p1, p1, Landroidx/mediarouter/app/d;->q1:I
 

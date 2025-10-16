@@ -3,46 +3,109 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/os/Handler;
+# static fields
+.field public static final e:Lo50;
 
-.field public final b:Lpe5;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/os/Handler;Lpe5;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lo50;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1, v1}, Lo50;-><init>(III)V
+
+    sput-object v0, Lo50;->e:Lo50;
+
+    return-void
+.end method
+
+.method public constructor <init>(III)V
     .locals 0
 
-    iput-object p1, p0, Lo50;->a:Landroid/os/Handler;
-
-    iput-object p2, p0, Lo50;->b:Lpe5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lo50;->a:I
+
+    iput p2, p0, Lo50;->b:I
+
+    iput p3, p0, Lo50;->c:I
+
+    invoke-static {p3}, Lhhg;->z(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p3, p2}, Lhhg;->u(II)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    iput p1, p0, Lo50;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ltb4;)V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    monitor-enter p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    monitor-exit p1
+    const/16 v1, 0x53
 
-    iget-object v0, p0, Lo50;->a:Landroid/os/Handler;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    if-eqz v0, :cond_0
+    const-string v1, "AudioFormat[sampleRate="
 
-    new-instance v1, Lpd;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x8
+    iget v1, p0, Lo50;->a:I
 
-    invoke-direct {v1, p0, v2, p1}, Lpd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const-string v1, ", channelCount="
 
-    :cond_0
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lo50;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", encoding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lo50;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

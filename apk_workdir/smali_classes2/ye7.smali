@@ -1,418 +1,241 @@
 .class public final Lye7;
-.super Lc2f;
+.super Ldd9;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+.field public a:[Lxe7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p2, p0, Lye7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    invoke-direct {p0}, Ldd9;-><init>()V
 
-    const/4 p2, 0x2
+    sget-object v0, Lxe7;->f:[Lxe7;
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-nez v0, :cond_1
+
+    sget-object v0, Lmi7;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lxe7;->f:[Lxe7;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lxe7;
+
+    sput-object v1, Lxe7;->f:[Lxe7;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    goto :goto_2
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_2
+    sget-object v0, Lxe7;->f:[Lxe7;
+
+    iput-object v0, p0, Lye7;->a:[Lxe7;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Ldd9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final computeSerializedSize()I
+    .locals 4
 
-    check-cast p1, Lse7;
+    iget-object v0, p0, Lye7;->a:[Lxe7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lye7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_2
 
-    move-result-object p1
+    array-length v0, v0
 
-    check-cast p1, Lye7;
+    if-lez v0, :cond_2
 
-    sget-object p2, Laxf;->a:Laxf;
+    move v0, v1
 
-    invoke-virtual {p1, p2}, Lye7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    iget-object v2, p0, Lye7;->a:[Lxe7;
 
-    return-object p2
-.end method
+    array-length v3, v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    if-ge v1, v3, :cond_1
 
-    new-instance v0, Lye7;
+    aget-object v2, v2, v1
 
-    iget-object v1, p0, Lye7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    if-eqz v2, :cond_0
 
-    invoke-direct {v0, p2, v1}, Lye7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    const/4 v3, 0x1
 
-    iput-object p1, v0, Lye7;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lye7;->X:Ljava/lang/Object;
-
-    check-cast v1, Lse7;
-
-    sget-object v2, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->A0:[Lpl7;
-
-    iget-object v2, v0, Lye7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
-
-    invoke-virtual {v2}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->C0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v3, v5}, Landroid/view/View;->setClickable(Z)V
-
-    instance-of v3, v1, Loe7;
-
-    if-eqz v3, :cond_0
-
-    check-cast v1, Loe7;
-
-    iget-object v1, v1, Loe7;->a:Lcdf;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0(Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;Ljava/lang/CharSequence;)V
-
-    goto/16 :goto_5
-
-    :cond_0
-    instance-of v3, v1, Lpe7;
-
-    if-eqz v3, :cond_3
-
-    check-cast v1, Lpe7;
-
-    iget-object v3, v1, Lpe7;->a:Lxcf;
-
-    iget-object v1, v1, Lpe7;->b:Lxcf;
-
-    iget-object v6, v2, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->a:Lss6;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-virtual {v3, v6}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    if-nez v3, :cond_1
-
-    goto/16 :goto_5
-
-    :cond_1
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-virtual {v1, v6}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    new-instance v6, Lrta;
-
-    invoke-direct {v6, v2}, Lrta;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v6, v3}, Lrta;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v6, v1}, Lrta;->b(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lzta;
-
-    invoke-virtual {v2}, Ljz3;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    invoke-static {v2}, Lov9;->I(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v3, v2}, Lca3;->i(ILdd9;)I
 
     move-result v2
 
+    add-int/2addr v2, v0
+
+    move v0, v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
     goto :goto_0
 
+    :cond_1
+    return v0
+
     :cond_2
-    move v2, v4
+    return v1
+.end method
 
+.method public final mergeFrom(Lba3;)Ldd9;
+    .locals 5
+
+    :cond_0
     :goto_0
-    const/4 v3, 0x4
+    invoke-virtual {p1}, Lba3;->s()I
 
-    invoke-direct {v1, v5, v2, v4, v3}, Lzta;-><init>(IIII)V
+    move-result v0
 
-    invoke-virtual {v6, v1}, Lrta;->c(Lzta;)V
+    if-eqz v0, :cond_5
 
-    invoke-virtual {v6}, Lrta;->i()Lqta;
+    const/16 v1, 0xa
 
-    goto/16 :goto_5
+    if-eq v0, v1, :cond_1
 
-    :cond_3
-    instance-of v3, v1, Lqe7;
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
 
-    const-string v6, "BottomSheetWidget"
+    move-result v0
 
-    const/4 v7, 0x6
-
-    const/4 v8, 0x0
-
-    if-eqz v3, :cond_7
-
-    sget-object v1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lpl7;
-
-    sget v1, Lona;->c:I
-
-    invoke-static {v1, v8, v8, v7}, Lsw1;->e(ILandroid/os/Bundle;Lmdd;I)Lil3;
-
-    move-result-object v1
-
-    sget v3, Lona;->b:I
-
-    new-instance v7, Lxcf;
-
-    invoke-direct {v7, v3}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v1, v7}, Lil3;->f(Lcdf;)V
-
-    sget v3, Lmna;->b:I
-
-    sget v7, Ln7d;->v0:I
-
-    new-instance v9, Lxcf;
-
-    invoke-direct {v9, v7}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v1, v3, v9}, Lil3;->d(ILcdf;)V
-
-    sget v3, Lmna;->a:I
-
-    sget v7, Lona;->a:I
-
-    new-instance v9, Lxcf;
-
-    invoke-direct {v9, v7}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v1, v3, v9}, Lil3;->d(ILcdf;)V
-
-    invoke-virtual {v1}, Lil3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v2}, Ljz3;->setTargetController(Ljz3;)V
-
-    invoke-virtual {v11, v2}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object v1, v2
-
-    :goto_1
-    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :cond_4
-    instance-of v3, v1, Lt6d;
-
-    if-eqz v3, :cond_5
-
-    check-cast v1, Lt6d;
-
-    goto :goto_2
-
-    :cond_5
-    move-object v1, v8
-
-    :goto_2
-    if-eqz v1, :cond_6
-
-    invoke-interface {v1}, Lt6d;->f0()Ln6d;
-
-    move-result-object v8
-
-    :cond_6
-    invoke-virtual {v11, v2}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v8, :cond_c
-
-    new-instance v10, Lq6d;
-
-    const/4 v15, 0x0
-
-    const/16 v16, -0x1
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    invoke-direct/range {v10 .. v16}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
-
-    invoke-static {v4, v10, v5, v6}, Lsw1;->t(ZLq6d;ZLjava/lang/String;)V
-
-    invoke-virtual {v8, v10}, Ln6d;->H(Lq6d;)V
-
-    goto :goto_5
-
-    :cond_7
-    instance-of v3, v1, Lre7;
-
-    if-eqz v3, :cond_b
-
-    sget-object v1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lpl7;
-
-    sget v1, Lmra;->c:I
-
-    invoke-static {v1, v8, v8, v7}, Lsw1;->e(ILandroid/os/Bundle;Lmdd;I)Lil3;
-
-    move-result-object v1
-
-    sget v3, Lmra;->b:I
-
-    new-instance v7, Lxcf;
-
-    invoke-direct {v7, v3}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v1, v7}, Lil3;->f(Lcdf;)V
-
-    sget v3, Llra;->d:I
-
-    sget v7, Lmra;->a:I
-
-    new-instance v9, Lxcf;
-
-    invoke-direct {v9, v7}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v1, v3, v9}, Lil3;->d(ILcdf;)V
-
-    invoke-virtual {v1}, Lil3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v2}, Ljz3;->setTargetController(Ljz3;)V
-
-    invoke-virtual {v11, v2}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object v1, v2
-
-    :goto_3
-    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_8
-
-    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
-
-    move-result-object v1
+    if-nez v0, :cond_0
 
     goto :goto_3
 
-    :cond_8
-    instance-of v3, v1, Lt6d;
+    :cond_1
+    invoke-static {p1, v1}, Lyai;->c(Lba3;I)I
 
-    if-eqz v3, :cond_9
+    move-result v0
 
-    check-cast v1, Lt6d;
+    iget-object v1, p0, Lye7;->a:[Lxe7;
 
-    goto :goto_4
+    const/4 v2, 0x0
 
-    :cond_9
-    move-object v1, v8
+    if-nez v1, :cond_2
 
-    :goto_4
-    if-eqz v1, :cond_a
+    move v3, v2
 
-    invoke-interface {v1}, Lt6d;->f0()Ln6d;
+    goto :goto_1
 
-    move-result-object v8
+    :cond_2
+    array-length v3, v1
 
-    :cond_a
-    invoke-virtual {v11, v2}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
+    :goto_1
+    add-int/2addr v0, v3
 
-    if-eqz v8, :cond_c
+    new-array v4, v0, [Lxe7;
 
-    new-instance v10, Lq6d;
+    if-eqz v3, :cond_3
 
-    const/4 v15, 0x0
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const/16 v16, -0x1
+    :cond_3
+    :goto_2
+    add-int/lit8 v1, v0, -0x1
 
-    const/4 v12, 0x0
+    if-ge v3, v1, :cond_4
 
-    const/4 v13, 0x0
+    new-instance v1, Lxe7;
 
-    const/4 v14, 0x0
+    invoke-direct {v1}, Lxe7;-><init>()V
 
-    invoke-direct/range {v10 .. v16}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
+    aput-object v1, v4, v3
 
-    invoke-static {v4, v10, v5, v6}, Lsw1;->t(ZLq6d;ZLjava/lang/String;)V
+    invoke-virtual {p1, v1}, Lba3;->j(Ldd9;)V
 
-    invoke-virtual {v8, v10}, Ln6d;->H(Lq6d;)V
+    invoke-virtual {p1}, Lba3;->s()I
 
-    goto :goto_5
+    add-int/lit8 v3, v3, 0x1
 
-    :cond_b
-    if-nez v1, :cond_d
+    goto :goto_2
 
-    invoke-static {v2, v8}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0(Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;Ljava/lang/CharSequence;)V
+    :cond_4
+    new-instance v0, Lxe7;
 
-    :cond_c
-    :goto_5
-    sget-object v1, Laxf;->a:Laxf;
+    invoke-direct {v0}, Lxe7;-><init>()V
 
-    return-object v1
+    aput-object v0, v4, v3
 
-    :cond_d
-    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {p1, v0}, Lba3;->j(Ldd9;)V
 
-    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iput-object v4, p0, Lye7;->a:[Lxe7;
 
-    throw v1
+    goto :goto_0
+
+    :cond_5
+    :goto_3
+    return-object p0
+.end method
+
+.method public final writeTo(Lca3;)V
+    .locals 3
+
+    iget-object v0, p0, Lye7;->a:[Lxe7;
+
+    if-eqz v0, :cond_1
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lye7;->a:[Lxe7;
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_1
+
+    aget-object v1, v1, v0
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Lca3;->y(ILdd9;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

@@ -1,61 +1,114 @@
 .class public final Lzqa;
-.super Ldra;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljy6;
 
-# static fields
-.field public static final a:Lzqa;
+
+# instance fields
+.field public final b:J
+
+.field public final c:Llt7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llt7;J)V
+    .locals 0
 
-    new-instance v0, Lzqa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p2, p0, Lzqa;->b:J
 
-    sput-object v0, Lzqa;->a:Lzqa;
+    iput-object p1, p0, Lzqa;->c:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final g()J
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lyqa;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    invoke-direct {v0, p0, v1}, Lyqa;-><init>(Lzqa;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    instance-of p1, p1, Lzqa;
+    sget-object v1, Lm95;->a:Lm95;
 
-    if-nez p1, :cond_1
+    invoke-static {v1, v0}, Lrji;->f(Lt44;Lei6;)Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    check-cast v0, Lda2;
 
-    :cond_1
-    return v0
+    iget-object v0, v0, Lda2;->b:Lfe2;
+
+    iget-wide v0, v0, Lfe2;->x:J
+
+    return-wide v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final h()J
+    .locals 2
 
-    const v0, 0xa9e2037
+    new-instance v0, Lyqa;
 
-    return v0
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lyqa;-><init>(Lzqa;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v1, Lm95;->a:Lm95;
+
+    invoke-static {v1, v0}, Lrji;->f(Lt44;Lei6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lda2;
+
+    iget-object v0, v0, Lda2;->b:Lfe2;
+
+    iget-wide v0, v0, Lfe2;->j:J
+
+    return-wide v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final i()J
+    .locals 2
 
-    const-string v0, "Large"
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final j()Ljava/util/List;
+    .locals 2
+
+    new-instance v0, Lyqa;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lyqa;-><init>(Lzqa;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v1, Lm95;->a:Lm95;
+
+    invoke-static {v1, v0}, Lrji;->f(Lt44;Lei6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lda2;
+
+    iget-object v0, v0, Lda2;->b:Lfe2;
+
+    iget-object v0, v0, Lfe2;->n:Lzd2;
+
+    sget-object v1, Lpp4;->X:Lpp4;
+
+    invoke-virtual {v0, v1}, Lzd2;->d(Lpp4;)Ljava/util/ArrayList;
+
+    move-result-object v0
 
     return-object v0
 .end method

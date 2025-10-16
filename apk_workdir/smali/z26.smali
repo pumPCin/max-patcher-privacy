@@ -1,89 +1,94 @@
 .class public final Lz26;
-.super Ljava/lang/Object;
+.super Lgp4;
 .source "SourceFile"
 
 # interfaces
-.implements La36;
+.implements Lw26;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public c:Lzaf;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+# virtual methods
+.method public final b()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lgp4;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lz26;->a:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lgp4;->g(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lz26;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lz26;
-
-    iget-object v1, p0, Lz26;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lz26;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final cancel()V
     .locals 1
 
-    iget-object v0, p0, Lz26;->a:Ljava/lang/String;
+    const/4 v0, 0x4
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lgp4;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lz26;->c:Lzaf;
+
+    invoke-interface {v0}, Lzaf;->cancel()V
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lgp4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Collection;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Lzaf;)V
+    .locals 2
+
+    iget-object v0, p0, Lz26;->c:Lzaf;
+
+    invoke-static {v0, p1}, Lcbf;->g(Lzaf;Lzaf;)Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lz26;->c:Lzaf;
+
+    iget-object v0, p0, Lgp4;->a:Lxaf;
+
+    invoke-interface {v0, p0}, Lxaf;->f(Lzaf;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lzaf;->j(J)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    const-string v0, "OpenUrl(url="
+    const/4 v0, 0x0
 
-    const-string v1, ")"
+    iput-object v0, p0, Lgp4;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lz26;->a:Ljava/lang/String;
+    iget-object v0, p0, Lgp4;->a:Lxaf;
 
-    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lxaf;->onError(Ljava/lang/Throwable;)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

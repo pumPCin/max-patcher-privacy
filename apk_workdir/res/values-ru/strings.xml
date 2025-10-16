@@ -32,6 +32,7 @@
     <string name="attach_contact_reply">"Контакт:
 %s"</string>
     <string name="attach_file">Файл</string>
+    <string name="attach_gallery">Галерея</string>
     <string name="audio_record_error_common">Не удалось записать аудиосообщение</string>
     <string name="audio_record_error_limit">Достигнута максимальная длина записи</string>
     <string name="audio_record_hold_to_start">Удерживайте для записи</string>
@@ -173,7 +174,6 @@
     <string name="map_type_satellite">Спутник</string>
     <string name="markdown_add_link">Ссылка</string>
     <string name="markdown_bold">Жирный</string>
-    <string name="markdown_code">Красный</string>
     <string name="markdown_heading">Заголовок</string>
     <string name="markdown_italic">Курсив</string>
     <string name="markdown_mono">Моно</string>
@@ -213,10 +213,10 @@
     <string name="media_caching_time_option_month">Месяц</string>
     <string name="media_caching_time_option_six_month">6 месяцев</string>
     <string name="media_caching_time_option_week">Неделю</string>
+    <string name="media_files">Файлы</string>
     <string name="media_photo_video">Фото и видео</string>
     <string name="media_settings_always">Всегда</string>
     <string name="media_settings_audio_autoload">Автозагрузка аудио</string>
-    <string name="media_settings_audio_setting">Аудио</string>
     <string name="media_settings_auto_load">Автозагрузка</string>
     <string name="media_settings_auto_play">Автовоспроизведение</string>
     <string name="media_settings_auto_play_never">Выключено</string>

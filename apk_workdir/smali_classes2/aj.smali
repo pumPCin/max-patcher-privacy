@@ -1,11 +1,22 @@
-.class public abstract Laj;
-.super Lef1;
+.class public final Laj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcj;
 
-# virtual methods
-.method public abstract e(J)V
-.end method
 
-.method public abstract f(III)V
+# instance fields
+.field public final a:Landroid/graphics/drawable/Drawable;
+
+
+# direct methods
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Laj;->a:Landroid/graphics/drawable/Drawable;
+
+    return-void
 .end method

@@ -1,117 +1,109 @@
 .class public final Lyu6;
-.super Lh43;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public t0:[B
+.field public final a:Lt0g;
 
-.field public volatile u0:Z
+.field public final b:Z
 
-.field public v0:[B
+.field public final c:Z
+
+.field public final d:Landroid/util/SparseArray;
+
+.field public final e:Landroid/util/SparseArray;
+
+.field public final f:Lm52;
+
+.field public g:[B
+
+.field public h:I
+
+.field public i:I
+
+.field public j:J
+
+.field public k:Z
+
+.field public l:J
+
+.field public m:Lwu6;
+
+.field public n:Lwu6;
+
+.field public o:Z
+
+.field public p:J
+
+.field public q:J
+
+.field public r:Z
+
+.field public s:Z
 
 
-# virtual methods
-.method public final b()V
+# direct methods
+.method public constructor <init>(Lt0g;ZZ)V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v0, p0, Lyu6;->u0:Z
+    iput-object p1, p0, Lyu6;->a:Lt0g;
 
-    return-void
-.end method
+    iput-boolean p2, p0, Lyu6;->b:Z
 
-.method public final load()V
-    .locals 6
+    iput-boolean p3, p0, Lyu6;->c:Z
 
-    :try_start_0
-    iget-object v0, p0, Lh43;->s0:Ljoe;
+    new-instance p1, Landroid/util/SparseArray;
 
-    iget-object v1, p0, Lh43;->b:Lb94;
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljoe;->P(Lb94;)J
+    iput-object p1, p0, Lyu6;->d:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lyu6;->e:Landroid/util/SparseArray;
+
+    new-instance p1, Lwu6;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyu6;->m:Lwu6;
+
+    new-instance p1, Lwu6;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyu6;->n:Lwu6;
+
+    const/16 p1, 0x80
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Lyu6;->g:[B
+
+    new-instance p2, Lm52;
+
+    const/4 p3, 0x5
 
     const/4 v0, 0x0
 
-    move v1, v0
+    invoke-direct {p2, v0, v0, p3, p1}, Lm52;-><init>(III[B)V
 
-    :cond_0
-    :goto_0
-    const/4 v2, -0x1
+    iput-object p2, p0, Lyu6;->f:Lm52;
 
-    if-eq v0, v2, :cond_2
+    iput-boolean v0, p0, Lyu6;->k:Z
 
-    iget-boolean v0, p0, Lyu6;->u0:Z
+    iput-boolean v0, p0, Lyu6;->o:Z
 
-    if-nez v0, :cond_2
+    iget-object p1, p0, Lyu6;->n:Lwu6;
 
-    iget-object v0, p0, Lyu6;->t0:[B
+    iput-boolean v0, p1, Lwu6;->b:Z
 
-    array-length v3, v0
-
-    add-int/lit16 v4, v1, 0x4000
-
-    const/16 v5, 0x4000
-
-    if-ge v3, v4, :cond_1
-
-    array-length v3, v0
-
-    add-int/2addr v3, v5
-
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyu6;->t0:[B
-
-    :cond_1
-    iget-object v0, p0, Lh43;->s0:Ljoe;
-
-    iget-object v3, p0, Lyu6;->t0:[B
-
-    invoke-virtual {v0, v3, v1, v5}, Ljoe;->read([BII)I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_0
-
-    add-int/2addr v1, v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_2
-    iget-boolean v0, p0, Lyu6;->u0:Z
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lyu6;->t0:[B
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyu6;->v0:[B
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_3
-    iget-object v0, p0, Lh43;->s0:Ljoe;
-
-    invoke-static {v0}, Ltvf;->n(Lt84;)V
+    iput-boolean v0, p1, Lwu6;->a:Z
 
     return-void
-
-    :goto_1
-    iget-object v1, p0, Lh43;->s0:Ljoe;
-
-    invoke-static {v1}, Ltvf;->n(Lt84;)V
-
-    throw v0
 .end method

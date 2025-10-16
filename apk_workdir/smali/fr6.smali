@@ -1,215 +1,626 @@
 .class public final Lfr6;
-.super Ljava/lang/Object;
+.super Lgr6;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/RunnableScheduledFuture;
 
+# static fields
+.field public static final c:Ljava/lang/Object;
 
-# instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/Callable;
-
-.field public final o:Lys1;
+.field public static final d:Lfr6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;JLjava/util/concurrent/Callable;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lfr6;->c:Ljava/lang/Object;
+
+    new-instance v0, Lfr6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lfr6;->d:Lfr6;
+
+    return-void
+.end method
+
+.method public static e(Landroid/app/Activity;ILbuh;Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v1, Landroid/util/TypedValue;
+
+    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v2
+
+    const v3, 0x1010309
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v3, v1, v4}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    iget v1, v1, Landroid/util/TypedValue;->resourceId:I
+
+    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Theme.Dialog.Alert"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+
+    :cond_1
+    if-nez v0, :cond_2
+
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    :cond_2
+    invoke-static {p0, p1}, Lrth;->c(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    if-eqz p3, :cond_3
+
+    invoke-virtual {v0, p3}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
+
+    :cond_3
+    invoke-static {p0, p1}, Lrth;->b(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_4
+
+    invoke-virtual {v0, p3, p2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    :cond_4
+    invoke-static {p0, p1}, Lrth;->d(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_5
+
+    invoke-virtual {v0, p0}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    :cond_5
+    const-string p0, "Creating dialog for Google Play services availability issue. ConnectionResult="
+
+    invoke-static {p1, p0}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    const-string p2, "GoogleApiAvailability"
+
+    invoke-static {p2, p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Landroid/app/Activity;Landroid/app/AlertDialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V
+    .locals 3
+
+    const-string v0, "Cannot display null dialog"
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    :try_start_0
+    instance-of v2, p0, Landroidx/fragment/app/b;
+    :try_end_0
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v0, p0, Lfr6;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    if-eqz v2, :cond_1
 
-    iput-wide p2, p0, Lfr6;->b:J
+    check-cast p0, Landroidx/fragment/app/b;
 
-    iput-object p4, p0, Lfr6;->c:Ljava/util/concurrent/Callable;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lde6;
 
-    new-instance p2, Lp35;
+    move-result-object p0
 
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+    new-instance v2, Lcom/google/android/gms/common/SupportErrorDialogFragment;
 
-    iput-object p0, p2, Lp35;->c:Ljava/lang/Object;
+    invoke-direct {v2}, Lcom/google/android/gms/common/SupportErrorDialogFragment;-><init>()V
 
-    iput-object p1, p2, Lp35;->a:Ljava/lang/Object;
+    invoke-static {p1, v0}, Lbi3;->j(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p4, p2, Lp35;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    invoke-static {p2}, Lggh;->s(Lws1;)Lys1;
+    invoke-virtual {p1, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    move-result-object p1
+    iput-object p1, v2, Lcom/google/android/gms/common/SupportErrorDialogFragment;->y1:Landroid/app/Dialog;
 
-    iput-object p1, p0, Lfr6;->o:Lys1;
+    if-eqz p3, :cond_0
+
+    iput-object p3, v2, Lcom/google/android/gms/common/SupportErrorDialogFragment;->z1:Landroid/content/DialogInterface$OnCancelListener;
+
+    :cond_0
+    invoke-virtual {v2, p0, p2}, Landroidx/fragment/app/DialogFragment;->F0(Landroidx/fragment/app/c;Ljava/lang/String;)V
+
+    return-void
+
+    :catch_0
+    :cond_1
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object p0
+
+    new-instance v2, Lhd5;
+
+    invoke-direct {v2}, Landroid/app/DialogFragment;-><init>()V
+
+    invoke-static {p1, v0}, Lbi3;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+
+    invoke-virtual {p1, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    iput-object p1, v2, Lhd5;->a:Landroid/app/Dialog;
+
+    if-eqz p3, :cond_2
+
+    iput-object p3, v2, Lhd5;->b:Landroid/content/DialogInterface$OnCancelListener;
+
+    :cond_2
+    invoke-virtual {v2, p0, p2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel(Z)Z
-    .locals 1
+.method public final d(Lcom/google/android/gms/common/api/GoogleApiActivity;ILcom/google/android/gms/common/api/GoogleApiActivity;)V
+    .locals 3
 
-    iget-object v0, p0, Lfr6;->o:Lys1;
+    const-string v0, "d"
 
-    invoke-virtual {v0, p1}, Lys1;->cancel(Z)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 5
-
-    check-cast p1, Ljava/util/concurrent/Delayed;
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p0, v0}, Lfr6;->getDelay(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v1
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v3
-
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Long;->compare(JJ)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfr6;->o:Lys1;
-
-    .line 2
-    iget-object v0, v0, Lys1;->b:Lxs1;
-
-    .line 3
-    invoke-virtual {v0}, Ld4;->get()Ljava/lang/Object;
+    invoke-super {p0, p2, p1, v0}, Lgr6;->b(ILandroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lbuh;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, p1, v2}, Lbuh;-><init>(Landroid/content/Intent;Ljava/lang/Object;I)V
+
+    invoke-static {p1, p2, v1, p3}, Lfr6;->e(Landroid/app/Activity;ILbuh;Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string v0, "GooglePlayServicesErrorDialog"
+
+    invoke-static {p1, p2, v0, p3}, Lfr6;->f(Landroid/app/Activity;Landroid/app/AlertDialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V
+
+    return-void
 .end method
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
+.method public final g(Landroid/content/Context;ILandroid/app/PendingIntent;)V
+    .locals 8
 
-    .line 4
-    iget-object v0, p0, Lfr6;->o:Lys1;
+    const-string v0, "GMS core API Availability. ConnectionResult="
 
-    .line 5
-    iget-object v0, v0, Lys1;->b:Lxs1;
+    const-string v1, ", tag=null"
 
-    .line 6
-    invoke-virtual {v0, p1, p2, p3}, Ld4;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-static {p2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
-.end method
+    new-instance v1, Ljava/lang/IllegalArgumentException;
 
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 4
+    invoke-direct {v1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    iget-wide v0, p0, Lfr6;->b:J
+    const-string v2, "GoogleApiAvailability"
+
+    invoke-static {v2, v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/16 v0, 0x12
+
+    const/4 v1, 0x1
+
+    if-ne p2, v0, :cond_0
+
+    new-instance p2, Leuh;
+
+    invoke-direct {p2, p0, p1}, Leuh;-><init>(Lfr6;Landroid/content/Context;)V
+
+    const-wide/32 v2, 0x1d4c0
+
+    invoke-virtual {p2, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x6
+
+    if-nez p3, :cond_2
+
+    if-ne p2, v0, :cond_1
+
+    const-string p1, "GoogleApiAvailability"
+
+    const-string p2, "Missing resolution for ConnectionResult.RESOLUTION_REQUIRED. Call GoogleApiAvailability#showErrorNotification(Context, ConnectionResult) instead."
+
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    return-void
+
+    :cond_2
+    if-ne p2, v0, :cond_3
+
+    const-string v2, "common_google_play_services_resolution_required_title"
+
+    invoke-static {p1, v2}, Lrth;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {p1, p2}, Lrth;->d(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_0
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lftc;->common_google_play_services_notification_ticker:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_4
+    if-eq p2, v0, :cond_6
+
+    const/16 v0, 0x13
+
+    if-ne p2, v0, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    invoke-static {p1, p2}, Lrth;->c(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_6
+    :goto_1
+    invoke-static {p1}, Lrth;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "common_google_play_services_resolution_required_text"
+
+    invoke-static {p1, v3, v0}, Lrth;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const-string v4, "notification"
+
+    invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lbi3;->i(Ljava/lang/Object;)V
+
+    check-cast v4, Landroid/app/NotificationManager;
+
+    new-instance v5, Lwba;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, p1, v6}, Lwba;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iput-boolean v1, v5, Lwba;->u:Z
+
+    const/16 v6, 0x10
+
+    invoke-virtual {v5, v6, v1}, Lwba;->e(IZ)V
+
+    invoke-static {v2}, Lwba;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    iput-object v2, v5, Lwba;->e:Ljava/lang/CharSequence;
+
+    new-instance v2, Luba;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v2, v6}, Luba;-><init>(I)V
+
+    invoke-static {v0}, Lwba;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    iput-object v6, v2, Luba;->f:Ljava/lang/Object;
+
+    invoke-virtual {v5, v2}, Lwba;->h(Lkca;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    sget-object v6, Lvxi;->a:Ljava/lang/Boolean;
+
+    if-nez v6, :cond_7
+
+    const-string v6, "android.hardware.type.watch"
+
+    invoke-virtual {v2, v6}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    sput-object v2, Lvxi;->a:Ljava/lang/Boolean;
+
+    :cond_7
+    sget-object v2, Lvxi;->a:Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    const/4 v6, 0x2
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/pm/ApplicationInfo;->icon:I
+
+    iget-object v2, v5, Lwba;->F:Landroid/app/Notification;
+
+    iput v0, v2, Landroid/app/Notification;->icon:I
+
+    iput v6, v5, Lwba;->k:I
+
+    invoke-static {p1}, Lvxi;->b(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    sget v0, Lilc;->common_full_open_on_phone:I
+
+    sget v2, Lftc;->common_open_on_phone:I
+
+    invoke-virtual {v3, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, v5, Lwba;->b:Ljava/util/ArrayList;
+
+    new-instance v7, Liba;
+
+    invoke-direct {v7, v0, v2, p3}, Liba;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+
+    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_8
+    iput-object p3, v5, Lwba;->g:Landroid/app/PendingIntent;
+
+    goto :goto_3
+
+    :cond_9
+    const v2, 0x108008a
+
+    iget-object v7, v5, Lwba;->F:Landroid/app/Notification;
+
+    iput v2, v7, Landroid/app/Notification;->icon:I
+
+    sget v2, Lftc;->common_google_play_services_notification_ticker:I
+
+    invoke-virtual {v3, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, v5, Lwba;->F:Landroid/app/Notification;
+
+    invoke-static {v2}, Lwba;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    iput-object v2, v3, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    sub-long/2addr v0, v2
+    iget-object v7, v5, Lwba;->F:Landroid/app/Notification;
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-wide v2, v7, Landroid/app/Notification;->when:J
 
-    invoke-virtual {p1, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    iput-object p3, v5, Lwba;->g:Landroid/app/PendingIntent;
 
-    move-result-wide v0
+    invoke-virtual {v5, v0}, Lwba;->c(Ljava/lang/CharSequence;)V
 
-    return-wide v0
-.end method
+    :goto_3
+    sget-object p3, Lfr6;->c:Ljava/lang/Object;
 
-.method public final isCancelled()Z
-    .locals 1
+    monitor-enter p3
 
-    iget-object v0, p0, Lfr6;->o:Lys1;
+    :try_start_0
+    monitor-exit p3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0}, Lys1;->isCancelled()Z
+    const-string p3, "com.google.android.gms.availability"
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    iget-object v0, p0, Lfr6;->o:Lys1;
-
-    iget-object v0, v0, Lys1;->b:Lxs1;
-
-    invoke-virtual {v0}, Ld4;->isDone()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isPeriodic()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final run()V
-    .locals 2
-
-    iget-object v0, p0, Lfr6;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, p3}, Landroid/app/NotificationManager;->getNotificationChannel(Ljava/lang/String;)Landroid/app/NotificationChannel;
 
     move-result-object v0
 
-    check-cast v0, Lvs1;
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    :try_start_0
-    iget-object v1, p0, Lfr6;->c:Ljava/util/concurrent/Callable;
+    sget v2, Lftc;->common_google_play_services_notification_channel_name:I
 
-    invoke-interface {v1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+    invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lvs1;->b(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v0, :cond_a
+
+    new-instance v0, Landroid/app/NotificationChannel;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, p3, p1, v2}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+
+    invoke-virtual {v4, v0}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
+
+    goto :goto_4
+
+    :cond_a
+    invoke-virtual {v0}, Landroid/app/NotificationChannel;->getName()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_b
+
+    invoke-virtual {v0, p1}, Landroid/app/NotificationChannel;->setName(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v4, v0}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
+
+    :cond_b
+    :goto_4
+    iput-object p3, v5, Lwba;->z:Ljava/lang/String;
+
+    invoke-virtual {v5}, Lwba;->a()Landroid/app/Notification;
+
+    move-result-object p1
+
+    if-eq p2, v1, :cond_c
+
+    if-eq p2, v6, :cond_c
+
+    const/4 p3, 0x3
+
+    if-eq p2, p3, :cond_c
+
+    const p2, 0x9b6d
+
+    goto :goto_5
+
+    :cond_c
+    sget-object p2, Lur6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    const/16 p2, 0x28c4
+
+    :goto_5
+    invoke-virtual {v4, p2, p1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     return-void
 
-    :catch_0
-    move-exception v1
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {v0, v1}, Lvs1;->d(Ljava/lang/Throwable;)Z
+    :try_start_1
+    monitor-exit p3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final h(Landroid/app/Activity;Lbw7;ILandroid/content/DialogInterface$OnCancelListener;)V
+    .locals 3
+
+    const-string v0, "d"
+
+    invoke-super {p0, p3, p1, v0}, Lgr6;->b(ILandroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    new-instance v1, Lbuh;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, p2, v2}, Lbuh;-><init>(Landroid/content/Intent;Ljava/lang/Object;I)V
+
+    invoke-static {p1, p3, v1, p4}, Lfr6;->e(Landroid/app/Activity;ILbuh;Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    return-void
 
     :cond_0
+    const-string p3, "GooglePlayServicesErrorDialog"
+
+    invoke-static {p1, p2, p3, p4}, Lfr6;->f(Landroid/app/Activity;Landroid/app/AlertDialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V
+
     return-void
 .end method

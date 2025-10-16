@@ -1,21 +1,23 @@
 .class public final Lbo5;
-.super Lrp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lbo5;
+# instance fields
+.field public final a:Ljava/util/List;
+
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lbo5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lrp;-><init>()V
+    iput-object p3, p0, Lbo5;->a:Ljava/util/List;
 
-    sput-object v0, Lbo5;->a:Lbo5;
+    iput-wide p1, p0, Lbo5;->b:J
 
     return-void
 .end method

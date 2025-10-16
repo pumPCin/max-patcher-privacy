@@ -1,61 +1,129 @@
-.class public abstract Ltka;
+.class public final Ltka;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Luka;
+# instance fields
+.field public final a:Lem;
 
-.field public static final b:Luka;
+.field public final b:Lzl;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lem;Lzl;)V
+    .locals 0
 
-    new-instance v0, Luka;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Ln7d;->i:I
+    iput-object p1, p0, Ltka;->a:Lem;
 
-    new-instance v2, Lxcf;
-
-    invoke-direct {v2, v1}, Lxcf;-><init>(I)V
-
-    sget v1, Ll7d;->x0:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v3, "BY"
-
-    const/16 v4, 0x177
-
-    invoke-direct {v0, v3, v4, v2, v1}, Luka;-><init>(Ljava/lang/String;ILxcf;Ljava/lang/Integer;)V
-
-    sput-object v0, Ltka;->a:Luka;
-
-    new-instance v0, Luka;
-
-    sget v1, Ln7d;->y0:I
-
-    new-instance v2, Lxcf;
-
-    invoke-direct {v2, v1}, Lxcf;-><init>(I)V
-
-    sget v1, Ll7d;->y0:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v3, "RU"
-
-    const/4 v4, 0x7
-
-    invoke-direct {v0, v3, v4, v2, v1}, Luka;-><init>(Ljava/lang/String;ILxcf;Ljava/lang/Integer;)V
-
-    sput-object v0, Ltka;->b:Luka;
+    iput-object p2, p0, Ltka;->b:Lzl;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ltka;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ltka;
+
+    iget-object v1, p0, Ltka;->a:Lem;
+
+    iget-object v3, p1, Ltka;->a:Lem;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ltka;->b:Lzl;
+
+    iget-object p1, p1, Ltka;->b:Lzl;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ltka;->a:Lem;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ltka;->b:Lzl;
+
+    invoke-virtual {v1}, Lzl;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OkApiRequest(request="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ltka;->a:Lem;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", config="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltka;->b:Lzl;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

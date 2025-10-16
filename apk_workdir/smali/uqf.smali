@@ -1,55 +1,77 @@
-.class public final Luqf;
+.class public abstract Luqf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:F
-
-.field public final c:F
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:F
-
-.field public final g:F
-
-.field public final h:I
-
-.field public final i:F
-
-.field public final j:I
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;FFIIFFIFI)V
+.method public static a(Landroid/widget/TextView;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/widget/TextView;->getBreakStrategy()I
 
-    iput-object p1, p0, Luqf;->a:Ljava/lang/String;
+    move-result p0
 
-    iput p2, p0, Luqf;->b:F
+    return p0
+.end method
 
-    iput p3, p0, Luqf;->c:F
+.method public static b(Landroid/widget/TextView;)Landroid/content/res/ColorStateList;
+    .locals 0
 
-    iput p4, p0, Luqf;->d:I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintList()Landroid/content/res/ColorStateList;
 
-    iput p5, p0, Luqf;->e:I
+    move-result-object p0
 
-    iput p6, p0, Luqf;->f:F
+    return-object p0
+.end method
 
-    iput p7, p0, Luqf;->g:F
+.method public static c(Landroid/widget/TextView;)Landroid/graphics/PorterDuff$Mode;
+    .locals 0
 
-    iput p8, p0, Luqf;->h:I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintMode()Landroid/graphics/PorterDuff$Mode;
 
-    iput p9, p0, Luqf;->i:F
+    move-result-object p0
 
-    iput p10, p0, Luqf;->j:I
+    return-object p0
+.end method
+
+.method public static d(Landroid/widget/TextView;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getHyphenationFrequency()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static e(Landroid/widget/TextView;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setBreakStrategy(I)V
+
+    return-void
+.end method
+
+.method public static f(Landroid/widget/TextView;Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public static g(Landroid/widget/TextView;Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintMode(Landroid/graphics/PorterDuff$Mode;)V
+
+    return-void
+.end method
+
+.method public static h(Landroid/widget/TextView;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setHyphenationFrequency(I)V
 
     return-void
 .end method

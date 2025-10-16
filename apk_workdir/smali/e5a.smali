@@ -3,139 +3,119 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/lang/String;
+
+
 # direct methods
-.method public static a(Landroid/app/NotificationManager;Landroid/app/NotificationChannel;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
+    const-string v0, "NetworkStateTracker"
 
-    return-void
-.end method
+    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
 
-.method public static b(Landroid/app/NotificationManager;Landroid/app/NotificationChannelGroup;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->createNotificationChannelGroup(Landroid/app/NotificationChannelGroup;)V
+    sput-object v0, Le5a;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static c(Landroid/app/NotificationManager;Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/NotificationManager;",
-            "Ljava/util/List<",
-            "Landroid/app/NotificationChannelGroup;",
-            ">;)V"
-        }
-    .end annotation
+.method public static final a(Landroid/net/ConnectivityManager;)Lc5a;
+    .locals 8
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->createNotificationChannelGroups(Ljava/util/List;)V
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public static d(Landroid/app/NotificationManager;Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/NotificationManager;",
-            "Ljava/util/List<",
-            "Landroid/app/NotificationChannel;",
-            ">;)V"
-        }
-    .end annotation
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->createNotificationChannels(Ljava/util/List;)V
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public static e(Landroid/app/NotificationManager;Ljava/lang/String;)V
-    .locals 0
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->deleteNotificationChannel(Ljava/lang/String;)V
+    move-result v3
 
-    return-void
-.end method
+    if-eqz v3, :cond_0
 
-.method public static f(Landroid/app/NotificationManager;Ljava/lang/String;)V
-    .locals 0
+    move v3, v1
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->deleteNotificationChannelGroup(Ljava/lang/String;)V
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_0
+    move v3, v2
 
-.method public static g(Landroid/app/NotificationChannel;)Ljava/lang/String;
-    .locals 0
+    :goto_0
+    :try_start_0
+    invoke-static {p0}, Lu4a;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object p0
+    invoke-static {p0, v4}, Lt4a;->a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
 
-    return-object p0
-.end method
+    move-result-object v4
 
-.method public static h(Landroid/app/NotificationChannelGroup;)Ljava/lang/String;
-    .locals 0
+    if-eqz v4, :cond_1
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannelGroup;->getId()Ljava/lang/String;
+    const/16 v5, 0x10
 
-    move-result-object p0
+    invoke-static {v4, v5}, Lt4a;->b(Landroid/net/NetworkCapabilities;I)Z
 
-    return-object p0
-.end method
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public static i(Landroid/app/NotificationManager;Ljava/lang/String;)Landroid/app/NotificationChannel;
-    .locals 0
+    goto :goto_3
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->getNotificationChannel(Ljava/lang/String;)Landroid/app/NotificationChannel;
+    :catch_0
+    move-exception v4
 
-    move-result-object p0
+    goto :goto_2
 
-    return-object p0
-.end method
+    :cond_1
+    :goto_1
+    move v4, v2
 
-.method public static j(Landroid/app/NotificationManager;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/NotificationManager;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/app/NotificationChannelGroup;",
-            ">;"
-        }
-    .end annotation
+    goto :goto_3
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getNotificationChannelGroups()Ljava/util/List;
+    :goto_2
+    invoke-static {}, Lwxh;->f()Lwxh;
 
-    move-result-object p0
+    move-result-object v5
 
-    return-object p0
-.end method
+    sget-object v6, Le5a;->a:Ljava/lang/String;
 
-.method public static k(Landroid/app/NotificationManager;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/NotificationManager;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/app/NotificationChannel;",
-            ">;"
-        }
-    .end annotation
+    const-string v7, "Unable to validate active network"
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getNotificationChannels()Ljava/util/List;
+    invoke-virtual {v5, v6, v7, v4}, Lwxh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object p0
+    goto :goto_1
 
-    return-object p0
+    :goto_3
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+
+    move-result p0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isRoaming()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    move v1, v2
+
+    :goto_4
+    new-instance v0, Lc5a;
+
+    invoke-direct {v0, v3, v4, p0, v1}, Lc5a;-><init>(ZZZZ)V
+
+    return-object v0
 .end method

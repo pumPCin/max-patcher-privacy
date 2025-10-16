@@ -1,24 +1,21 @@
-.class public final synthetic Lnc5;
-.super Ljava/lang/Object;
+.class public final Lnc5;
+.super Lre;
 .source "SourceFile"
-
-# interfaces
-.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic b:I
 
-.field public final synthetic b:Ljava/lang/Runnable;
+.field public final synthetic c:Landroid/graphics/drawable/Drawable$Callback;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable$Callback;I)V
     .locals 0
 
-    iput p2, p0, Lnc5;->a:I
+    iput p2, p0, Lnc5;->b:I
 
-    iput-object p1, p0, Lnc5;->b:Ljava/lang/Runnable;
+    iput-object p1, p0, Lnc5;->c:Landroid/graphics/drawable/Drawable$Callback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,49 +24,86 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final a(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    iget v0, p0, Lnc5;->a:I
+    iget v0, p0, Lnc5;->b:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lnc5;->b:Ljava/lang/Runnable;
+    iget-object v0, p0, Lnc5;->c:Landroid/graphics/drawable/Drawable$Callback;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    check-cast v0, Lwh8;
 
-    :goto_0
-    sget-object v0, Laxf;->a:Laxf;
+    iget-object v0, v0, Lwh8;->B0:Landroid/content/res/ColorStateList;
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    invoke-static {p1, v0}, Lc05;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    :cond_0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lnc5;->b:Ljava/lang/Runnable;
+    iget-object p1, p0, Lnc5;->c:Landroid/graphics/drawable/Drawable$Callback;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    check-cast p1, Loc5;
 
-    goto :goto_0
+    invoke-virtual {p1}, Loc5;->a()V
 
-    :pswitch_1
-    iget-object v0, p0, Lnc5;->b:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lnc5;->b:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(Landroid/graphics/drawable/Drawable;)V
+    .locals 3
+
+    iget v0, p0, Lnc5;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lnc5;->c:Landroid/graphics/drawable/Drawable$Callback;
+
+    check-cast v0, Lwh8;
+
+    iget-object v1, v0, Lwh8;->B0:Landroid/content/res/ColorStateList;
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lwh8;->F0:[I
+
+    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Lc05;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lnc5;->c:Landroid/graphics/drawable/Drawable$Callback;
+
+    check-cast p1, Loc5;
+
+    invoke-virtual {p1}, Loc5;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

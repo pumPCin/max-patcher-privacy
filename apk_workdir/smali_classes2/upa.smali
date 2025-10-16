@@ -1,39 +1,25 @@
-.class public abstract Lupa;
-.super Ljava/lang/Object;
+.class public final Lupa;
+.super Luac;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# virtual methods
+.method public final A(Lb18;)V
+    .locals 3
 
-.field public static final b:J
+    check-cast p1, La7c;
 
-.field public static final c:J
+    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
 
-.field public static final synthetic d:I
+    check-cast v0, Ltpa;
 
+    iget-object v1, p1, La7c;->a:Ljava/util/List;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    iget-object v2, p1, La7c;->b:Ljava/util/List;
 
-    sget v0, Lddc;->oneme_notifications_settings_open_settings_call_ringtone_title:I
+    iget-boolean p1, p1, La7c;->c:Z
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lupa;->a:J
-
-    sget v0, Lddc;->oneme_notifications_settings_open_settings_calls_ringtone:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lupa;->b:J
-
-    sget v0, Lddc;->oneme_notifications_settings_open_settings_calls_vibration:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lupa;->c:J
+    invoke-virtual {v0, v1, v2, p1}, Ltpa;->b(Ljava/util/List;Ljava/util/List;Z)V
 
     return-void
 .end method

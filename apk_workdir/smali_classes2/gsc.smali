@@ -1,112 +1,54 @@
-.class public final Lgsc;
+.class public abstract Lgsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lisc;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static audio_record_active_call_error_snackbar_title:I = 0x7f130088
 
-.field public final b:Z
+.field public static audio_record_confirm_exit_accept:I = 0x7f13008b
 
+.field public static audio_record_confirm_exit_description:I = 0x7f13008c
 
-# direct methods
-.method public constructor <init>(ZZ)V
-    .locals 0
+.field public static audio_record_confirm_exit_title:I = 0x7f13008d
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static audio_record_error_common:I = 0x7f130090
 
-    iput-boolean p1, p0, Lgsc;->a:Z
+.field public static audio_record_error_limit:I = 0x7f130091
 
-    iput-boolean p2, p0, Lgsc;->b:Z
+.field public static audio_record_error_short:I = 0x7f130092
 
-    return-void
-.end method
+.field public static audio_record_hold_to_start:I = 0x7f130093
 
+.field public static channel_input_hint:I = 0x7f1302c5
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.field public static chat_input_hint:I = 0x7f130320
 
-    const/4 v0, 0x1
+.field public static messagewrite_edit_quote_title:I = 0x7f1306e9
 
-    if-ne p0, p1, :cond_0
+.field public static reply_quote_self:I = 0x7f130c7f
 
-    return v0
+.field public static reply_quote_to_somebody:I = 0x7f130c80
 
-    :cond_0
-    instance-of v1, p1, Lgsc;
+.field public static video_message_record_error_common:I = 0x7f130e53
 
-    const/4 v2, 0x0
+.field public static video_message_record_error_no_camera:I = 0x7f130e54
 
-    if-nez v1, :cond_1
+.field public static video_record_active_call_error_snackbar_title:I = 0x7f130e5f
 
-    return v2
+.field public static writebar__add_link_button:I = 0x7f130e82
 
-    :cond_1
-    check-cast p1, Lgsc;
+.field public static writebar__add_link_error_has_space:I = 0x7f130e83
 
-    iget-boolean v1, p0, Lgsc;->a:Z
+.field public static writebar__add_link_error_not_valid_link:I = 0x7f130e84
 
-    iget-boolean v3, p1, Lgsc;->a:Z
+.field public static writebar__add_link_error_not_valid_scheme:I = 0x7f130e85
 
-    if-eq v1, v3, :cond_2
+.field public static writebar__add_link_error_short_link:I = 0x7f130e86
 
-    return v2
+.field public static writebar__add_link_title:I = 0x7f130e87
 
-    :cond_2
-    iget-boolean v1, p0, Lgsc;->b:Z
+.field public static writebar_commands_not_found:I = 0x7f130e88
 
-    iget-boolean p1, p1, Lgsc;->b:Z
+.field public static writebar_mentions_not_found:I = 0x7f130e89
 
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lgsc;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lgsc;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", isLocked="
-
-    const-string v1, ")"
-
-    const-string v2, "Recording(afterPause="
-
-    iget-boolean v3, p0, Lgsc;->a:Z
-
-    iget-boolean v4, p0, Lgsc;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static writebar_mentions_title:I = 0x7f130e8a

@@ -1,340 +1,255 @@
 .class public final Lnv7;
-.super Ljava/lang/Object;
+.super Lu02;
 .source "SourceFile"
-
-# interfaces
-.implements Lbw7;
 
 
 # instance fields
-.field public final X:Lys1;
-
-.field public Y:Lvs1;
-
-.field public a:Ljava/util/ArrayList;
-
-.field public b:Ljava/util/ArrayList;
-
-.field public final c:Z
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/ArrayList;ZLtq4;)V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnv7;->a:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lnv7;->b:Ljava/util/ArrayList;
-
-    iput-boolean p2, p0, Lnv7;->c:Z
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p2, p0, Lnv7;->o:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance p1, Ld7;
-
-    const/16 p2, 0x13
-
-    invoke-direct {p1, p2, p0}, Ld7;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1}, Lggh;->s(Lws1;)Lys1;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnv7;->X:Lys1;
-
-    new-instance p1, Lum7;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2, p0}, Lum7;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lpr0;->k()Ltq4;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Lnv7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    iget-object p1, p0, Lnv7;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lnv7;->Y:Lvs1;
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    iget-object p3, p0, Lnv7;->b:Ljava/util/ArrayList;
-
-    invoke-direct {p2, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {p1, p2}, Lvs1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    move p2, p1
-
-    :goto_0
-    iget-object v0, p0, Lnv7;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p2, v0, :cond_1
-
-    iget-object v0, p0, Lnv7;->b:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p2, p0, Lnv7;->a:Ljava/util/ArrayList;
-
-    :goto_1
-    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_2
-
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbw7;
-
-    new-instance v1, Lbp;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p0, p1, v0, v2}, Lbp;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
-
-    invoke-interface {v0, v1, p3}, Lbw7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-.end method
+.field public H:Liw7;
 
 
 # virtual methods
-.method public final cancel(Z)Z
-    .locals 2
+.method public final q()Lmv7;
+    .locals 7
 
-    iget-object v0, p0, Lnv7;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lnv7;->H:Liw7;
 
-    if-eqz v0, :cond_0
+    const-string v1, "CamLifecycleController"
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-string v0, "Lifecycle is not set."
 
-    move-result v1
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbw7;
-
-    invoke-interface {v1, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    goto :goto_0
+    return-object v2
 
     :cond_0
-    iget-object v0, p0, Lnv7;->X:Lys1;
+    iget-object v0, p0, Lu02;->q:Ldyb;
 
-    invoke-virtual {v0, p1}, Lys1;->cancel(Z)Z
+    if-nez v0, :cond_1
 
-    move-result p1
+    const-string v0, "CameraProvider is not ready."
 
-    return p1
-.end method
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 1
+    return-object v2
 
-    iget-object v0, p0, Lnv7;->X:Lys1;
-
-    iget-object v0, v0, Lys1;->b:Lxs1;
-
-    invoke-virtual {v0, p1, p2}, Ld4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    return-void
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 3
-
-    .line 5
-    iget-object v0, p0, Lnv7;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_2
-
-    .line 6
-    invoke-virtual {p0}, Lnv7;->isDone()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 7
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbw7;
-
-    .line 8
     :cond_1
+    invoke-virtual {p0}, Lu02;->j()Z
+
+    move-result v0
+
+    const-string v1, "CameraController"
+
+    if-nez v0, :cond_2
+
+    const-string v0, "Camera not initialized."
+
+    invoke-static {v1, v0}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
     :goto_0
-    invoke-interface {v1}, Ljava/util/concurrent/Future;->isDone()Z
+    move-object v0, v2
 
-    move-result v2
+    goto/16 :goto_5
 
-    if-nez v2, :cond_0
+    :cond_2
+    iget-object v0, p0, Lu02;->s:Lbxb;
 
-    .line 9
-    :try_start_0
-    invoke-interface {v1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v0, :cond_7
 
-    goto :goto_0
+    iget-object v0, p0, Lu02;->r:Lxzg;
 
-    .line 10
-    :catchall_0
-    iget-boolean v2, p0, Lnv7;->c:Z
+    if-eqz v0, :cond_7
 
-    if-eqz v2, :cond_1
+    new-instance v0, Lmgg;
+
+    invoke-direct {v0}, Lmgg;-><init>()V
+
+    iget-object v1, p0, Lu02;->c:Lcxb;
+
+    invoke-virtual {v0, v1}, Lmgg;->a(Lfgg;)V
+
+    invoke-static {}, Ltwc;->a()V
+
+    iget v1, p0, Lu02;->b:I
+
+    const/4 v3, 0x1
+
+    and-int/2addr v1, v3
+
+    const/4 v4, 0x0
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lu02;->e:Lq87;
+
+    invoke-virtual {v0, v1}, Lmgg;->a(Lfgg;)V
 
     goto :goto_1
+
+    :cond_3
+    iget-object v1, p0, Lu02;->q:Ldyb;
+
+    iget-object v5, p0, Lu02;->e:Lq87;
+
+    new-array v6, v3, [Lfgg;
+
+    aput-object v5, v6, v4
+
+    invoke-virtual {v1, v6}, Ldyb;->a([Lfgg;)V
+
+    :goto_1
+    invoke-static {}, Ltwc;->a()V
+
+    iget v1, p0, Lu02;->b:I
+
+    and-int/lit8 v1, v1, 0x2
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lu02;->h:Ly77;
+
+    invoke-virtual {v0, v1}, Lmgg;->a(Lfgg;)V
+
+    goto :goto_2
+
+    :cond_4
+    iget-object v1, p0, Lu02;->q:Ldyb;
+
+    iget-object v5, p0, Lu02;->h:Ly77;
+
+    new-array v6, v3, [Lfgg;
+
+    aput-object v5, v6, v4
+
+    invoke-virtual {v1, v6}, Ldyb;->a([Lfgg;)V
+
+    :goto_2
+    invoke-static {}, Ltwc;->a()V
+
+    iget v1, p0, Lu02;->b:I
+
+    and-int/lit8 v1, v1, 0x4
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, p0, Lu02;->i:Lukg;
+
+    invoke-virtual {v0, v1}, Lmgg;->a(Lfgg;)V
+
+    goto :goto_3
+
+    :cond_5
+    iget-object v1, p0, Lu02;->q:Ldyb;
+
+    iget-object v5, p0, Lu02;->i:Lukg;
+
+    new-array v3, v3, [Lfgg;
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v1, v3}, Ldyb;->a([Lfgg;)V
+
+    :goto_3
+    iget-object v1, p0, Lu02;->r:Lxzg;
+
+    iput-object v1, v0, Lmgg;->a:Lxzg;
+
+    iget-object v1, p0, Lu02;->D:Ljava/util/HashSet;
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lrog;
+
+    iget-object v4, v0, Lmgg;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v0}, Lmgg;->b()Lq8c;
+
+    move-result-object v0
+
+    goto :goto_5
+
+    :cond_7
+    const-string v0, "PreviewView not attached to CameraController."
+
+    invoke-static {v1, v0}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :goto_5
+    if-nez v0, :cond_8
+
+    return-object v2
+
+    :cond_8
+    :try_start_0
+    iget-object v1, p0, Lu02;->q:Ldyb;
+
+    iget-object v2, p0, Lnv7;->H:Liw7;
+
+    iget-object v3, p0, Lu02;->a:Ld22;
+
+    iget-object v1, v1, Ldyb;->a:Lcyb;
+
+    invoke-virtual {v1, v2, v3, v0}, Lcyb;->c(Liw7;Ld22;Lq8c;)Lmv7;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
 
     :catch_0
     move-exception v0
 
-    .line 11
-    throw v0
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    :catch_1
-    move-exception v0
+    const-string v2, "The selected camera does not support the enabled use cases. Please disable use case and/or select a different camera. e.g. #setVideoCaptureEnabled(false)"
 
-    .line 12
-    throw v0
+    invoke-direct {v1, v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 13
-    :cond_2
-    :goto_1
-    iget-object v0, p0, Lnv7;->X:Lys1;
-
-    .line 14
-    iget-object v0, v0, Lys1;->b:Lxs1;
-
-    .line 15
-    invoke-virtual {v0}, Ld4;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 16
-    check-cast v0, Ljava/util/List;
-
-    return-object v0
+    throw v1
 .end method
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+.method public final w()V
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lnv7;->X:Lys1;
+    invoke-static {}, Ltwc;->a()V
 
-    .line 2
-    iget-object v0, v0, Lys1;->b:Lxs1;
+    const/4 v0, 0x0
 
-    .line 3
-    invoke-virtual {v0, p1, p2, p3}, Ld4;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    iput-object v0, p0, Lnv7;->H:Liw7;
 
-    move-result-object p1
+    iput-object v0, p0, Lu02;->p:Lmv7;
 
-    .line 4
-    check-cast p1, Ljava/util/List;
+    iget-object v0, p0, Lu02;->q:Ldyb;
 
-    return-object p1
-.end method
+    if-eqz v0, :cond_0
 
-.method public final isCancelled()Z
-    .locals 1
+    iget-object v0, v0, Ldyb;->a:Lcyb;
 
-    iget-object v0, p0, Lnv7;->X:Lys1;
+    invoke-virtual {v0}, Lcyb;->f()V
 
-    invoke-virtual {v0}, Lys1;->isCancelled()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    iget-object v0, p0, Lnv7;->X:Lys1;
-
-    iget-object v0, v0, Lys1;->b:Lxs1;
-
-    invoke-virtual {v0}, Ld4;->isDone()Z
-
-    move-result v0
-
-    return v0
+    :cond_0
+    return-void
 .end method

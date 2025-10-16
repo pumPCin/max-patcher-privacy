@@ -39,7 +39,7 @@
 .method public final X(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    sget p3, Lmfc;->frg_tam_crop_image:I
+    sget p3, Llpc;->frg_tam_crop_image:I
 
     const/4 v0, 0x0
 
@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->x1:Lone/me/image/crop/view/ImageCropView;
 
-    invoke-virtual {v0}, Lone/me/image/crop/view/ImageCropView;->getCropState()Lk44;
+    invoke-virtual {v0}, Lone/me/image/crop/view/ImageCropView;->getCropState()Ly64;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 .method public final n0(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 11
 
-    sget v0, Lpec;->frg_tam_crop_image__iv_crop:I
+    sget v0, Looc;->frg_tam_crop_image__iv_crop:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -99,19 +99,19 @@
 
     iget-object v0, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->x1:Lone/me/image/crop/view/ImageCropView;
 
-    iget-object v3, p0, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lw4d;
+    iget-object v3, p0, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lsfd;
 
-    iget-object v3, v3, Lw4d;->b:Ljava/lang/Object;
+    iget-object v3, v3, Lsfd;->b:Ljava/lang/Object;
 
-    check-cast v3, Ljg3;
+    check-cast v3, Lri3;
 
-    check-cast v3, Lnja;
+    check-cast v3, Lqra;
 
-    invoke-virtual {v3}, Lnja;->j()Lpnb;
+    invoke-virtual {v3}, Lqra;->j()Llwb;
 
     move-result-object v3
 
-    iget-object v3, v3, Lpnb;->b:Lhlb;
+    iget-object v3, v3, Llwb;->b:Lbub;
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -121,7 +121,7 @@
 
     int-to-long v5, v5
 
-    invoke-virtual {v3, v4, v5, v6}, Lohd;->m(Ljava/lang/Enum;J)J
+    invoke-virtual {v3, v4, v5, v6}, Lpsd;->m(Ljava/lang/Enum;J)J
 
     move-result-wide v3
 
@@ -131,7 +131,7 @@
 
     invoke-virtual {v0, v3}, Lone/me/image/crop/view/ImageCropView;->setMinImageSize(F)V
 
-    sget v0, Lpec;->frg_tam_crop_image__rotate:I
+    sget v0, Looc;->frg_tam_crop_image__rotate:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
 
     iput-object v0, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->y1:Landroid/widget/ImageButton;
 
-    sget v0, Lpec;->frg_tam_crop_image__flip:I
+    sget v0, Looc;->frg_tam_crop_image__flip:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -151,7 +151,7 @@
 
     iput-object v0, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->z1:Landroid/widget/ImageButton;
 
-    sget v0, Lpec;->frg_tam_crop_image__btn_clear:I
+    sget v0, Looc;->frg_tam_crop_image__btn_clear:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -161,7 +161,7 @@
 
     iput-object v0, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->C1:Landroid/widget/TextView;
 
-    sget v0, Lpec;->frg_tam_crop_image__btn_done:I
+    sget v0, Looc;->frg_tam_crop_image__btn_done:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -171,7 +171,7 @@
 
     iput-object v0, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->A1:Landroid/widget/ImageButton;
 
-    sget v0, Lpec;->frg_tam_crop_image__btn_close:I
+    sget v0, Looc;->frg_tam_crop_image__btn_close:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     const-string v0, "onViewCreated:\nsourceUri: %s\nresultUri: %s"
 
-    invoke-static {v10, v0, p1}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v10, v0, p1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const-string p1, "ru.ok.tamtam.extra.CROP_STATE"
 
@@ -231,7 +231,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lk44;
+    check-cast p1, Ly64;
 
     goto :goto_0
 
@@ -250,7 +250,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lk44;
+    check-cast p1, Ly64;
 
     goto :goto_0
 
@@ -261,9 +261,9 @@
     :try_start_0
     iget-object p2, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->x1:Lone/me/image/crop/view/ImageCropView;
 
-    iget-object p2, p2, Lone/me/image/crop/view/ImageCropView;->a:Lgj6;
+    iget-object p2, p2, Lone/me/image/crop/view/ImageCropView;->a:Ldn6;
 
-    invoke-virtual {p2}, Ldof;->getMaxBitmapSize()I
+    invoke-virtual {p2}, Ld2g;->getMaxBitmapSize()I
 
     move-result v7
 
@@ -271,17 +271,15 @@
 
     move-result-object v4
 
-    new-instance v9, Lkuc;
+    new-instance v9, Lhbf;
 
-    const/16 v0, 0x8
+    invoke-direct {v9, p2}, Lhbf;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v9, v0, p2}, Lkuc;-><init>(ILjava/lang/Object;)V
-
-    new-instance v3, Lco0;
+    new-instance v3, Lzo0;
 
     move v8, v7
 
-    invoke-direct/range {v3 .. v9}, Lco0;-><init>(Landroid/content/Context;Landroid/net/Uri;Landroid/net/Uri;IILkuc;)V
+    invoke-direct/range {v3 .. v9}, Lzo0;-><init>(Landroid/content/Context;Landroid/net/Uri;Landroid/net/Uri;IILhbf;)V
 
     sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
@@ -289,7 +287,7 @@
 
     invoke-virtual {v3, v0, v4}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    iput-object p1, p2, Lvc7;->G0:Lk44;
+    iput-object p1, p2, Lhi7;->G0:Ly64;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -302,9 +300,9 @@
 
     const-string p2, "fail to setImageUri"
 
-    invoke-static {v10, p2, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v10, p2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->D0()Lb6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->D0()Lh6;
 
     move-result-object p1
 
@@ -315,70 +313,68 @@
     :cond_2
     invoke-virtual {p1, v2}, Landroid/app/Activity;->setResult(I)V
 
-    sget p2, Lz7d;->E:I
-
-    sget-object v0, Lfn7;->g:Landroid/os/Handler;
+    sget p2, Lwid;->F:I
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {v2, p1, p2}, Lfn7;->O(ILandroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v2, p1, p2}, Lhyg;->z(ILandroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->B0()V
 
     :goto_1
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->y1:Landroid/widget/ImageButton;
 
-    new-instance p2, Ljd6;
+    new-instance p2, Ldh6;
 
-    invoke-direct {p2, p0, v2}, Ljd6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+    invoke-direct {p2, p0, v2}, Ldh6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
 
-    invoke-static {p1, p2}, Lxff;->k(Landroid/view/View;Ll6;)V
+    invoke-static {p1, p2}, Lhxi;->a(Landroid/view/View;Lr6;)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->z1:Landroid/widget/ImageButton;
 
-    new-instance p2, Ljd6;
+    new-instance p2, Ldh6;
 
-    invoke-direct {p2, p0, v1}, Ljd6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+    invoke-direct {p2, p0, v1}, Ldh6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
 
-    invoke-static {p1, p2}, Lxff;->k(Landroid/view/View;Ll6;)V
+    invoke-static {p1, p2}, Lhxi;->a(Landroid/view/View;Lr6;)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->C1:Landroid/widget/TextView;
 
-    new-instance p2, Ljd6;
+    new-instance p2, Ldh6;
 
     const/4 v0, 0x2
 
-    invoke-direct {p2, p0, v0}, Ljd6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+    invoke-direct {p2, p0, v0}, Ldh6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
 
-    invoke-static {p1, p2}, Lxff;->k(Landroid/view/View;Ll6;)V
+    invoke-static {p1, p2}, Lhxi;->a(Landroid/view/View;Lr6;)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->B1:Landroid/widget/ImageButton;
 
-    new-instance p2, Ljd6;
+    new-instance p2, Ldh6;
 
     const/4 v0, 0x3
 
-    invoke-direct {p2, p0, v0}, Ljd6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+    invoke-direct {p2, p0, v0}, Ldh6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
 
-    invoke-static {p1, p2}, Lxff;->k(Landroid/view/View;Ll6;)V
+    invoke-static {p1, p2}, Lhxi;->a(Landroid/view/View;Lr6;)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->A1:Landroid/widget/ImageButton;
 
-    new-instance p2, Ljd6;
+    new-instance p2, Ldh6;
 
     const/4 v0, 0x4
 
-    invoke-direct {p2, p0, v0}, Ljd6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+    invoke-direct {p2, p0, v0}, Ldh6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
 
-    invoke-static {p1, p2}, Lxff;->k(Landroid/view/View;Ll6;)V
+    invoke-static {p1, p2}, Lhxi;->a(Landroid/view/View;Lr6;)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->y1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    invoke-virtual {p2}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {p2}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object p2
 
@@ -386,9 +382,9 @@
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->z1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    invoke-virtual {p2}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {p2}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object p2
 
@@ -396,11 +392,11 @@
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->C1:Landroid/widget/TextView;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    iget p2, p2, Lh9f;->i:I
+    iget p2, p2, Ltmf;->i:I
 
-    invoke-static {v2, p2}, Lwee;->x(II)Landroid/graphics/drawable/RippleDrawable;
+    invoke-static {v2, p2}, Lz84;->c(II)Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object p2
 
@@ -408,9 +404,9 @@
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->A1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    invoke-virtual {p2}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {p2}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object p2
 
@@ -418,9 +414,9 @@
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->B1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    invoke-virtual {p2}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {p2}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object p2
 
@@ -428,43 +424,43 @@
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->y1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    iget p2, p2, Lh9f;->w:I
+    iget p2, p2, Ltmf;->w:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->z1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    iget p2, p2, Lh9f;->w:I
+    iget p2, p2, Ltmf;->w:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->A1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    iget p2, p2, Lh9f;->k:I
+    iget p2, p2, Ltmf;->k:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->B1:Landroid/widget/ImageButton;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    iget p2, p2, Lh9f;->w:I
+    iget p2, p2, Ltmf;->w:I
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     iget-object p1, p0, Lru/ok/messages/media/crop/FrgTamCropImage;->C1:Landroid/widget/TextView;
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    iget v0, p2, Lh9f;->w:I
+    iget v0, p2, Ltmf;->w:I
 
-    iget p2, p2, Lh9f;->M:I
+    iget p2, p2, Ltmf;->M:I
 
     const v1, -0x101009e
 

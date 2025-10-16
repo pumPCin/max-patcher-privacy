@@ -1,85 +1,23 @@
-.class public final La1;
-.super Ljava/lang/Throwable;
+.class public abstract La1;
+.super Ll16;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ll16;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method public constructor <init>(Ll16;)V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, La1;->a:I
+    const-string v0, "source is null"
 
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    .line 2
-    iput p2, p0, La1;->a:I
-
-    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, La1;->b:Ll16;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
-    .locals 1
-
-    iget v0, p0, La1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_1
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_2
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_3
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

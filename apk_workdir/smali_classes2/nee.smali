@@ -1,80 +1,39 @@
 .class public final Lnee;
-.super Lc2f;
+.super Lof4;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
+# static fields
+.field public static final b:Lnee;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Loee;
+.field public static final c:Ljf4;
 
 
 # direct methods
-.method public constructor <init>(Loee;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lnee;->Y:Loee;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lqz;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnee;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lnee;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lnee;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
     new-instance v0, Lnee;
 
-    iget-object v1, p0, Lnee;->Y:Loee;
+    invoke-direct {v0}, Lof4;-><init>()V
 
-    invoke-direct {v0, v1, p2}, Lnee;-><init>(Loee;Lkotlin/coroutines/Continuation;)V
+    sput-object v0, Lnee;->b:Lnee;
 
-    iput-object p1, v0, Lnee;->X:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    new-array v1, v1, [Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const/4 v2, 0x0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const/16 v3, 0xe
 
-    iget-object p1, p0, Lnee;->X:Ljava/lang/Object;
+    const-string v4, ":settings/ringtone"
 
-    check-cast p1, Lqz;
+    invoke-static {v0, v4, v1, v2, v3}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    iget-object v0, p0, Lnee;->Y:Loee;
+    move-result-object v0
 
-    invoke-static {v0, p1}, Loee;->A(Loee;Lqz;)V
+    sput-object v0, Lnee;->c:Ljf4;
 
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-void
 .end method

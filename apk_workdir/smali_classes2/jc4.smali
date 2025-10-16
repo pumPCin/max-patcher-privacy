@@ -4,8 +4,11 @@
 
 
 # virtual methods
-.method public abstract a()Lrc4;
+.method public abstract h(Ljava/lang/CharSequence;Z)V
 .end method
 
-.method public abstract b(Ljava/lang/String;Lmc4;Landroid/os/Bundle;)Luc4;
+.method public abstract setCountView(Ljava/lang/CharSequence;)V
+.end method
+
+.method public abstract setDateViewStatus(Lc0h;)V
 .end method

@@ -1,49 +1,48 @@
-.class public final synthetic Li8c;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/IntSupplier;
+.class public final Li8c;
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/ref/WeakReference;
+.field public X:I
+
+.field public final synthetic Y:Lj8c;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/ref/WeakReference;)V
+.method public constructor <init>(Lj8c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Li8c;->Y:Lj8c;
 
-    iput-object p1, p0, Li8c;->a:Ljava/lang/ref/WeakReference;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getAsInt()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Li8c;->a:Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Li8c;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget p1, p0, Li8c;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Landroid/view/View;
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Li8c;->X:I
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    iget-object p1, p0, Li8c;->Y:Lj8c;
 
-    move-result v0
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    return v0
+    invoke-virtual {p1, v0, p0}, Lj8c;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

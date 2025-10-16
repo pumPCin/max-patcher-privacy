@@ -1,49 +1,46 @@
-.class public final Lioe;
+.class public final synthetic Lioe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
+
 
 # instance fields
-.field public final a:Lc4d;
+.field public final synthetic a:Lkoe;
 
-.field public final b:Lvh;
-
-.field public final c:Lu3d;
-
-.field public final d:Lu3d;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public synthetic constructor <init>(Lkoe;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lioe;->a:Lc4d;
+    iput-object p1, p0, Lioe;->a:Lkoe;
 
-    new-instance v0, Lvh;
+    iput p2, p0, Lioe;->b:I
 
-    const/16 v1, 0x18
+    return-void
+.end method
 
-    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
 
-    iput-object v0, p0, Lioe;->b:Lvh;
+# virtual methods
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 2
 
-    new-instance v0, Lu3d;
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
-    const/4 v1, 0x5
+    iget-object p1, p0, Lioe;->a:Lkoe;
 
-    invoke-direct {v0, p1, v1}, Lu3d;-><init>(Lc4d;I)V
+    iget-object p1, p1, Lkoe;->X:Ly30;
 
-    iput-object v0, p0, Lioe;->c:Lu3d;
+    const/4 v0, 0x2
 
-    new-instance v0, Lu3d;
+    iget v1, p0, Lioe;->b:I
 
-    const/4 v1, 0x6
-
-    invoke-direct {v0, p1, v1}, Lu3d;-><init>(Lc4d;I)V
-
-    iput-object v0, p0, Lioe;->d:Lu3d;
+    invoke-virtual {p1, v1, v0}, Ly30;->d(II)V
 
     return-void
 .end method

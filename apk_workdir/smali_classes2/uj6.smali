@@ -1,624 +1,339 @@
 .class public final Luj6;
-.super Ljava/lang/Object;
+.super Lu08;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lyn7;
-
-.field public final b:Lyn7;
-
-.field public final c:Lyn7;
-
-.field public final d:Lyn7;
-
-.field public final e:Lyn7;
-
-.field public final f:Lyn7;
-
-.field public final g:Lyn7;
+.field public final X:Lfm6;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
-    .locals 0
+.method public constructor <init>(Lfm6;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lyc4;->c:Lyc4;
 
-    iput-object p1, p0, Luj6;->a:Lyn7;
+    invoke-direct {p0, v0}, Lu08;-><init>(Lzxi;)V
 
-    iput-object p6, p0, Luj6;->b:Lyn7;
-
-    iput-object p7, p0, Luj6;->c:Lyn7;
-
-    iput-object p2, p0, Luj6;->d:Lyn7;
-
-    iput-object p3, p0, Luj6;->e:Lyn7;
-
-    iput-object p4, p0, Luj6;->f:Lyn7;
-
-    iput-object p5, p0, Luj6;->g:Lyn7;
+    iput-object p1, p0, Luj6;->X:Lfm6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Lwy3;)Ljava/lang/Object;
-    .locals 24
+.method public final l(I)I
+    .locals 0
 
-    move-object/from16 v1, p0
+    invoke-virtual {p0, p1}, Lu08;->C(I)Ljava/lang/Object;
 
-    move-object/from16 v2, p1
+    move-result-object p1
 
-    move-object/from16 v0, p2
+    check-cast p1, Lbl6;
 
-    sget-object v3, Lpj6;->a:Lpj6;
+    if-eqz p1, :cond_0
 
-    instance-of v4, v0, Ltj6;
+    iget p1, p1, Lbl6;->a:I
 
-    if-eqz v4, :cond_0
+    return p1
 
-    move-object v4, v0
+    :cond_0
+    const/4 p1, 0x0
 
-    check-cast v4, Ltj6;
+    return p1
+.end method
 
-    iget v5, v4, Ltj6;->s0:I
+.method public final r(Lj6d;I)V
+    .locals 13
 
-    const/high16 v6, -0x80000000
+    check-cast p1, Lgl6;
 
-    and-int v7, v5, v6
+    invoke-virtual {p0, p2}, Lu08;->C(I)Ljava/lang/Object;
 
-    if-eqz v7, :cond_0
+    move-result-object v0
 
-    sub-int/2addr v5, v6
+    check-cast v0, Lbl6;
 
-    iput v5, v4, Ltj6;->s0:I
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    instance-of v1, p1, Lfl6;
+
+    if-eqz v1, :cond_a
+
+    instance-of v1, v0, Lal6;
+
+    if-eqz v1, :cond_a
+
+    move-object v1, p1
+
+    check-cast v1, Lfl6;
+
+    move-object v2, v0
+
+    check-cast v2, Lal6;
+
+    iget-object v3, v2, Lal6;->c:Lm58;
+
+    iget-object v4, v1, Lfl6;->H0:Lone/me/sdk/gallery/view/VideoInfoTextView;
+
+    iget-object v5, v3, Lm58;->v0:Ll58;
+
+    sget-object v6, Ll58;->o:Ll58;
+
+    const/4 v7, 0x0
+
+    sget-object v8, Ll58;->c:Ll58;
+
+    if-ne v5, v8, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v4, Ltj6;
-
-    invoke-direct {v4, v1, v0}, Ltj6;-><init>(Luj6;Lwy3;)V
+    :cond_1
+    if-ne v5, v6, :cond_2
 
     :goto_0
-    iget-object v0, v4, Ltj6;->Z:Ljava/lang/Object;
-
-    iget v5, v4, Ltj6;->s0:I
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x3
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x2
-
-    const/4 v10, 0x1
-
-    sget-object v11, Lo24;->a:Lo24;
-
-    if-eqz v5, :cond_4
-
-    if-eq v5, v10, :cond_3
-
-    if-eq v5, v9, :cond_2
-
-    if-ne v5, v7, :cond_1
-
-    iget-object v2, v4, Ltj6;->X:Ljava/lang/Comparable;
-
-    check-cast v2, Lr82;
-
-    iget-object v4, v4, Ltj6;->o:Ljava/lang/Object;
-
-    check-cast v4, Ljava/lang/String;
-
-    :try_start_0
-    invoke-static {v0}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
-
-    move-object/from16 v23, v4
-
-    move-object v4, v2
-
-    move-object/from16 v2, v23
-
-    goto/16 :goto_6
-
-    :catch_0
-    move-exception v0
-
-    move-object v2, v4
-
-    goto/16 :goto_9
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    iget-object v2, v4, Ltj6;->Y:Lq19;
-
-    iget-object v5, v4, Ltj6;->X:Ljava/lang/Comparable;
-
-    check-cast v5, Ljava/lang/String;
-
-    iget-object v9, v4, Ltj6;->o:Ljava/lang/Object;
-
-    check-cast v9, Luj6;
-
-    :try_start_1
-    invoke-static {v0}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_1
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
-
-    move-object/from16 v16, v5
-
-    move-object v5, v2
-
-    move-object/from16 v2, v16
-
-    move/from16 v16, v7
-
-    goto/16 :goto_4
-
-    :catch_1
-    move-exception v0
-
-    move-object v2, v5
-
-    goto/16 :goto_9
-
-    :cond_3
-    iget-object v2, v4, Ltj6;->X:Ljava/lang/Comparable;
-
-    check-cast v2, Ljava/lang/String;
-
-    iget-object v5, v4, Ltj6;->o:Ljava/lang/Object;
-
-    check-cast v5, Luj6;
-
-    :try_start_2
-    invoke-static {v0}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_2
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
+    move v5, v7
 
     goto :goto_1
 
-    :catch_2
-    move-exception v0
-
-    goto/16 :goto_9
-
-    :cond_4
-    invoke-static {v0}, Lcea;->z(Ljava/lang/Object;)V
-
-    :try_start_3
-    iget-object v0, v1, Luj6;->a:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcl;
-
-    new-instance v5, Lwr7;
-
-    invoke-direct {v5, v2, v8}, Lwr7;-><init>(Ljava/lang/String;Z)V
-
-    iput-object v1, v4, Ltj6;->o:Ljava/lang/Object;
-
-    iput-object v2, v4, Ltj6;->X:Ljava/lang/Comparable;
-
-    iput v10, v4, Ltj6;->s0:I
-
-    check-cast v0, Lgea;
-
-    invoke-virtual {v0, v5, v4}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-ne v0, v11, :cond_5
-
-    goto/16 :goto_5
-
-    :cond_5
-    move-object v5, v1
+    :cond_2
+    const/16 v5, 0x8
 
     :goto_1
-    check-cast v0, Lxr7;
+    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v10, v0, Lxr7;->c:Ls82;
+    iget-object v3, v3, Lm58;->v0:Ll58;
 
-    iget-object v0, v0, Lxr7;->X:Lq19;
-    :try_end_3
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
+    const/4 v5, 0x1
 
-    if-nez v10, :cond_6
+    const/4 v9, 0x0
 
-    goto/16 :goto_8
+    if-ne v3, v8, :cond_3
 
-    :cond_6
-    :try_start_4
-    iget-object v12, v5, Luj6;->g:Lyn7;
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-interface {v12}, Lyn7;->getValue()Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object v12
+    sget v6, Lwid;->k1:I
 
-    check-cast v12, Lgl9;
+    invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v12, v10}, Lgl9;->N(Ls82;)V
-    :try_end_4
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_4 .. :try_end_4} :catch_3
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
+    move-result-object v3
 
-    :catch_3
-    :try_start_5
-    iget-object v12, v5, Luj6;->e:Lyn7;
+    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-interface {v12}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v4, v9, v9, v9, v9}, Landroidx/appcompat/widget/AppCompatTextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object v12
+    invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
 
-    check-cast v12, Lzb2;
+    goto :goto_3
 
-    invoke-static {v10}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    :cond_3
+    if-ne v3, v6, :cond_6
 
-    move-result-object v10
+    iget-wide v10, v2, Lal6;->m:J
 
-    invoke-virtual {v12, v10}, Lzb2;->Z(Ljava/util/List;)Lrr9;
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v10
+    move-result-object v3
 
-    invoke-virtual {v10}, Lrr9;->i()Z
+    sget v6, Lsid;->V0:I
 
-    move-result v12
+    invoke-virtual {v4}, Landroid/view/View;->isInEditMode()Z
 
-    if-eqz v12, :cond_7
+    move-result v8
 
-    goto/16 :goto_8
+    if-eqz v8, :cond_4
 
-    :cond_7
-    iget-object v12, v5, Luj6;->d:Lyn7;
+    sget-object v8, Lcn4;->e0:Lcn4;
 
-    invoke-interface {v12}, Lyn7;->getValue()Ljava/lang/Object;
+    goto :goto_2
 
-    move-result-object v12
+    :cond_4
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    check-cast v12, Lg13;
+    move-result-object v8
 
-    iget-object v13, v10, Lrr9;->b:[J
+    sget-object v12, Ltmf;->a0:Lrhf;
 
-    iget-object v10, v10, Lrr9;->a:[J
+    invoke-static {v8}, Lnw3;->g(Landroid/content/Context;)Ltmf;
 
-    array-length v14, v10
-
-    sub-int/2addr v14, v9
-
-    if-ltz v14, :cond_11
-
-    move/from16 v16, v7
-
-    move v15, v8
+    move-result-object v8
 
     :goto_2
-    aget-wide v7, v10, v15
+    iget v8, v8, Ltmf;->t:I
 
-    move-object/from16 p1, v10
+    invoke-static {v6, v8, v3}, Lgma;->f(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
-    not-long v9, v7
+    move-result-object v3
 
-    const/16 v18, 0x7
+    invoke-virtual {v4, v3, v9, v9, v9}, Landroidx/appcompat/widget/AppCompatTextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    shl-long v9, v9, v18
+    instance-of v6, v3, Landroid/graphics/drawable/AnimationDrawable;
 
-    and-long/2addr v9, v7
+    if-eqz v6, :cond_5
 
-    const-wide v18, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    new-instance v6, Lle9;
 
-    and-long v9, v9, v18
+    invoke-direct {v6, v3, v5}, Lle9;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
-    cmp-long v9, v9, v18
+    invoke-virtual {v4, v6}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    if-eqz v9, :cond_10
+    :cond_5
+    sget-object v3, Lirf;->b:[Ljava/lang/String;
 
-    sub-int v9, v15, v14
+    invoke-static {v10, v11}, Ldx9;->a(J)Ljava/lang/String;
 
-    not-int v9, v9
+    move-result-object v3
 
-    ushr-int/lit8 v9, v9, 0x1f
+    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const/16 v10, 0x8
+    invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
 
-    rsub-int/lit8 v9, v9, 0x8
-
-    move/from16 v18, v10
-
-    const/4 v10, 0x0
-
+    :cond_6
     :goto_3
-    if-ge v10, v9, :cond_f
+    iget-object v3, v1, Lfl6;->G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    const-wide/16 v19, 0xff
+    iget-object v4, v1, Lj6d;->a:Landroid/view/View;
 
-    and-long v19, v7, v19
-
-    const-wide/16 v21, 0x80
-
-    cmp-long v19, v19, v21
-
-    if-gez v19, :cond_e
-
-    shl-int/lit8 v7, v15, 0x3
-
-    add-int/2addr v7, v10
-
-    aget-wide v7, v13, v7
-
-    iput-object v5, v4, Ltj6;->o:Ljava/lang/Object;
-
-    iput-object v2, v4, Ltj6;->X:Ljava/lang/Comparable;
-
-    iput-object v0, v4, Ltj6;->Y:Lq19;
-
-    const/4 v9, 0x2
-
-    iput v9, v4, Ltj6;->s0:I
-
-    invoke-interface {v12, v7, v8, v4}, Lg13;->p(JLwy3;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    if-ne v7, v11, :cond_8
-
-    goto :goto_5
-
-    :cond_8
-    move-object v9, v5
-
-    move-object v5, v0
-
-    move-object v0, v7
-
-    :goto_4
-    check-cast v0, Lr82;
-
-    invoke-virtual {v0}, Lr82;->B()Z
-
-    move-result v7
-    :try_end_5
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
-
-    iget-wide v12, v0, Lr82;->a:J
-
-    if-eqz v7, :cond_12
-
-    :try_start_6
-    invoke-virtual {v0}, Lr82;->H()Z
-
-    move-result v7
-
-    if-nez v7, :cond_9
-
-    goto/16 :goto_8
-
-    :cond_9
-    iget-object v7, v9, Luj6;->c:Lyn7;
-
-    invoke-interface {v7}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lzl5;
-
-    check-cast v7, Lbm5;
-
-    invoke-virtual {v7}, Lbm5;->o()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    iget-object v7, v9, Luj6;->b:Lyn7;
-
-    invoke-interface {v7}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lgq;
-
-    check-cast v7, Lz2g;
-
-    invoke-virtual {v7}, Lz2g;->u()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    iget-object v7, v0, Lr82;->b:Luc2;
-
-    iget-object v7, v7, Luc2;->G:Ljc2;
-
-    iget-boolean v7, v7, Ljc2;->j:Z
-
-    if-eqz v7, :cond_a
-
-    invoke-virtual {v0}, Lr82;->c0()Z
-
-    move-result v7
-
-    if-nez v7, :cond_a
-
-    sget-object v0, Lpj6;->c:Lpj6;
-
-    return-object v0
-
-    :cond_a
-    if-nez v5, :cond_b
-
-    new-instance v0, Lqj6;
-
-    invoke-direct {v0, v12, v13}, Lqj6;-><init>(J)V
-
-    return-object v0
-
-    :cond_b
-    iget-object v7, v9, Luj6;->f:Lyn7;
-
-    invoke-interface {v7}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lbh9;
-
-    iput-object v2, v4, Ltj6;->o:Ljava/lang/Object;
-
-    iput-object v0, v4, Ltj6;->X:Ljava/lang/Comparable;
-
-    iput-object v6, v4, Ltj6;->Y:Lq19;
-
-    move/from16 v8, v16
-
-    iput v8, v4, Ltj6;->s0:I
-
-    invoke-virtual {v7, v12, v13, v5, v4}, Lbh9;->a(JLq19;Lwy3;)Ljava/lang/Object;
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    if-ne v4, v11, :cond_c
+    iget-object v6, v2, Lal6;->g:Landroid/net/Uri;
 
-    :goto_5
-    return-object v11
+    iget-object v8, v2, Lal6;->l:Landroid/net/Uri;
 
-    :cond_c
-    move-object/from16 v23, v4
+    invoke-static {v8}, Lea7;->d(Landroid/net/Uri;)Lea7;
 
-    move-object v4, v0
+    move-result-object v8
 
-    move-object/from16 v0, v23
+    iput-boolean v7, v8, Lea7;->h:Z
 
-    :goto_6
-    check-cast v0, Le39;
+    sget-object v10, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    if-nez v0, :cond_d
+    iput-object v10, v8, Lea7;->l:Ljava/lang/Boolean;
 
-    new-instance v0, Lqj6;
+    iget-object v10, v2, Lal6;->d:Lobd;
 
-    iget-wide v4, v4, Lr82;->a:J
+    iput-object v10, v8, Lea7;->d:Lobd;
 
-    invoke-direct {v0, v4, v5}, Lqj6;-><init>(J)V
+    iget v10, v2, Lal6;->k:I
 
-    return-object v0
+    if-eqz v10, :cond_7
 
-    :cond_d
-    new-instance v7, Lrj6;
+    new-instance v11, Lxjb;
 
-    iget-wide v8, v4, Lr82;->a:J
+    invoke-direct {v11, v10, v5}, Lxjb;-><init>(II)V
 
-    iget-wide v10, v0, Le39;->c:J
+    iput-object v11, v8, Lea7;->k:Lnvb;
 
-    iget-wide v12, v0, Lqi0;->a:J
+    :cond_7
+    if-eqz v6, :cond_8
 
-    invoke-direct/range {v7 .. v13}, Lrj6;-><init>(JJJ)V
+    new-instance v10, Lcab;
 
-    return-object v7
+    invoke-direct {v10, v4, v6}, Lcab;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
-    :cond_e
-    const/16 v17, 0x2
+    iput-object v10, v8, Lea7;->k:Lnvb;
 
-    shr-long v7, v7, v18
+    :cond_8
+    invoke-virtual {v8}, Lea7;->a()Lda7;
 
-    add-int/lit8 v10, v10, 0x1
+    move-result-object v4
 
-    goto/16 :goto_3
+    sget v6, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
 
-    :cond_f
-    move/from16 v7, v18
+    invoke-virtual {v3, v4, v9}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lda7;Lda7;)V
 
-    const/16 v17, 0x2
+    iget-object v3, v1, Lfl6;->F0:Lone/me/sdk/gallery/view/NumericCheckButton;
 
-    if-ne v9, v7, :cond_11
+    if-eqz v3, :cond_a
 
-    goto :goto_7
+    iget-boolean v4, v2, Lal6;->i:Z
 
-    :cond_10
-    const/16 v17, 0x2
+    if-eqz v4, :cond_9
 
-    :goto_7
-    if-eq v15, v14, :cond_11
+    invoke-virtual {v3, v5}, Lone/me/sdk/gallery/view/NumericCheckButton;->setEnabled(Z)V
 
-    add-int/lit8 v15, v15, 0x1
+    iget v2, v2, Lal6;->h:I
 
-    move-object/from16 v10, p1
+    invoke-virtual {v3, v2}, Lone/me/sdk/gallery/view/NumericCheckButton;->setNumber(I)V
 
-    move/from16 v9, v17
+    goto :goto_4
 
-    goto/16 :goto_2
+    :cond_9
+    invoke-virtual {v3, v7}, Lone/me/sdk/gallery/view/NumericCheckButton;->setNumber(I)V
 
-    :cond_11
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {v3, v7}, Lone/me/sdk/gallery/view/NumericCheckButton;->setEnabled(Z)V
 
-    const-string v4, "The LongSet is empty"
+    :goto_4
+    new-instance v2, Lz66;
 
-    invoke-direct {v0, v4}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    const/4 v4, 0x5
 
-    throw v0
-    :try_end_6
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_6 .. :try_end_6} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
+    invoke-direct {v2, v4, v1}, Lz66;-><init>(ILjava/lang/Object;)V
 
-    :catch_4
-    :cond_12
-    :goto_8
-    return-object v3
+    invoke-static {v3, v2}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    :goto_9
-    iget-object v0, v0, Lru/ok/tamtam/errors/TamErrorException;->a:Li7f;
+    :cond_a
+    iget-object p1, p1, Lj6d;->a:Landroid/view/View;
 
-    if-eqz v0, :cond_13
+    new-instance v1, Lc73;
 
-    iget-object v6, v0, Li7f;->b:Ljava/lang/String;
+    const/4 v2, 0x2
 
-    :cond_13
-    if-nez v6, :cond_14
+    invoke-direct {v1, p0, p2, v0, v2}, Lc73;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
 
-    const-string v6, ""
+    invoke-static {p1, v1}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    :cond_14
-    const-string v0, "/c/"
+    return-void
+.end method
 
-    const/4 v4, 0x0
+.method public final t(Landroid/view/ViewGroup;I)Lj6d;
+    .locals 3
 
-    invoke-static {v2, v0, v4}, Lpwe;->p0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result v0
+    move-result-object v0
 
-    const-string v2, "link.not.found"
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    invoke-virtual {v2, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v2
+    const/4 v1, 0x5
 
-    if-eqz v2, :cond_15
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_15
+    if-ne p2, v1, :cond_0
 
-    sget-object v3, Lpj6;->b:Lpj6;
+    sget p2, Lf0b;->b:I
 
-    :cond_15
-    return-object v3
+    invoke-virtual {v0, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    new-instance p2, Ldl6;
+
+    invoke-direct {p2, p1}, Lj6d;-><init>(Landroid/view/View;)V
+
+    return-object p2
+
+    :cond_0
+    sget p2, Lf0b;->c:I
+
+    invoke-virtual {v0, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    new-instance p2, Lfl6;
+
+    iget-object v0, p0, Luj6;->X:Lfm6;
+
+    invoke-direct {p2, p1, v0}, Lfl6;-><init>(Landroid/view/View;Lfm6;)V
+
+    return-object p2
 .end method

@@ -1,8 +1,21 @@
-.class public interface abstract Lpo1;
-.super Ljava/lang/Object;
+.class public final Lpo1;
+.super Lcq;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract p()V
+# static fields
+.field public static final a:Lpo1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lpo1;
+
+    invoke-direct {v0}, Lcq;-><init>()V
+
+    sput-object v0, Lpo1;->a:Lpo1;
+
+    return-void
 .end method

@@ -1,85 +1,139 @@
 .class public final La29;
-.super Ld3;
+.super Ltmf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Lb29;
+# static fields
+.field public static final e0:La29;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lb29;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 42
 
-    iput p3, p0, La29;->c:I
+    new-instance v0, La29;
 
-    iput-object p2, p0, La29;->o:Lb29;
+    const-wide v1, 0xff697cffL
 
-    const/16 p2, 0x9
+    long-to-int v4, v1
 
-    invoke-direct {p0, p2, p1}, Ld3;-><init>(ILjava/lang/Object;)V
+    const-wide v1, 0xff23232fL
+
+    long-to-int v1, v1
+
+    const-wide v2, 0xff333333L
+
+    long-to-int v9, v2
+
+    const-wide v2, 0xffff3f3fL
+
+    long-to-int v2, v2
+
+    const-wide v5, 0xff75757bL
+
+    long-to-int v3, v5
+
+    sget-object v5, Lcn4;->e0:Lcn4;
+
+    iget v14, v5, Ltmf;->u:I
+
+    iget v6, v5, Ltmf;->C:I
+
+    iget v5, v5, Ltmf;->E:I
+
+    move/from16 v32, v3
+
+    new-instance v3, Lxb3;
+
+    const/high16 v40, -0x1000000
+
+    const/16 v41, 0x200
+
+    move/from16 v24, v5
+
+    const/4 v5, -0x1
+
+    move/from16 v22, v6
+
+    const/high16 v6, -0x1000000
+
+    const/high16 v7, -0x1000000
+
+    const/high16 v8, -0x1000000
+
+    const/high16 v10, -0x1000000
+
+    const/high16 v11, -0x1000000
+
+    const/high16 v12, -0x1000000
+
+    const/4 v13, -0x1
+
+    const/high16 v15, -0x1000000
+
+    const/16 v16, -0x1
+
+    const/high16 v17, -0x1000000
+
+    const/high16 v19, -0x1000000
+
+    const/high16 v21, -0x1000000
+
+    const/high16 v23, -0x1000000
+
+    const/16 v25, -0x1
+
+    const/high16 v26, -0x1000000
+
+    const/high16 v27, -0x1000000
+
+    const/high16 v28, -0x1000000
+
+    const/16 v29, -0x1
+
+    const/high16 v31, -0x1000000
+
+    const/high16 v33, -0x1000000
+
+    const/high16 v34, -0x1000000
+
+    const/high16 v35, -0x1000000
+
+    const/16 v36, -0x1
+
+    const/high16 v37, -0x1000000
+
+    const/high16 v38, -0x1000000
+
+    const/high16 v39, -0x1000000
+
+    move/from16 v30, v9
+
+    move/from16 v20, v1
+
+    move/from16 v18, v2
+
+    invoke-direct/range {v3 .. v41}, Lxb3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
+
+    sget-object v7, Ly45;->o:Lmt0;
+
+    sget-object v8, Ly45;->c:Lmt0;
+
+    const-string v1, "Media"
+
+    const-string v2, "TamTam Team"
+
+    move-object v6, v3
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x1
+
+    const-string v5, "media"
+
+    invoke-direct/range {v0 .. v8}, Ltmf;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lxb3;Lmt0;Lmt0;)V
+
+    sput-object v0, La29;->e0:La29;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, La29;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    check-cast p2, [I
-
-    check-cast p1, [I
-
-    iget-object p1, p0, La29;->o:Lb29;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p1, p2, v0}, Lb29;->e([ILandroid/graphics/Rect;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    check-cast p2, [I
-
-    check-cast p1, [I
-
-    iget-object p1, p0, La29;->o:Lb29;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p1, p2, v0}, Lb29;->d([ILandroid/graphics/Rect;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

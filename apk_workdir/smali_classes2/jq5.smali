@@ -1,67 +1,74 @@
 .class public final Ljq5;
-.super Lwy3;
+.super Ldz;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lkif;
+.field public final X:J
 
-.field public Y:Llzf;
+.field public final Y:Ljava/lang/String;
 
-.field public Z:Ljava/nio/channels/AsynchronousFileChannel;
+.field public final Z:Ldz;
 
-.field public o:Lmq5;
+.field public final o:J
 
-.field public r0:Lje6;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lmq5;
-
-.field public u0:I
+.field public final r0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmq5;Lwy3;)V
-    .locals 0
+.method public constructor <init>(JJLjava/lang/String;Ldz;ZLjava/lang/String;Z)V
+    .locals 1
 
-    iput-object p1, p0, Ljq5;->t0:Lmq5;
+    sget-object v0, Lz00;->u0:Lz00;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0, p7, p9}, Ldz;-><init>(Lz00;ZZ)V
+
+    iput-wide p1, p0, Ljq5;->o:J
+
+    iput-wide p3, p0, Ljq5;->X:J
+
+    iput-object p5, p0, Ljq5;->Y:Ljava/lang/String;
+
+    iput-object p6, p0, Ljq5;->Z:Ldz;
+
+    iput-object p8, p0, Ljq5;->r0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a()Ljava/util/HashMap;
+    .locals 3
 
-    iput-object p1, p0, Ljq5;->s0:Ljava/lang/Object;
+    invoke-super {p0}, Ldz;->a()Ljava/util/HashMap;
 
-    iget p1, p0, Ljq5;->u0:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    iget-object v1, p0, Ljq5;->r0:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    invoke-static {v1}, Lke8;->c(Ljava/lang/CharSequence;)Z
 
-    iput p1, p0, Ljq5;->u0:I
+    move-result v2
 
-    const/4 v3, 0x0
+    if-nez v2, :cond_0
 
-    const/4 v4, 0x0
+    const-string v2, "token"
 
-    iget-object v0, p0, Ljq5;->t0:Lmq5;
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    return-object v0
 
-    const/4 v2, 0x0
+    :cond_0
+    iget-wide v1, p0, Ljq5;->o:J
 
-    move-object v5, p0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static/range {v0 .. v5}, Lmq5;->a(Lmq5;Lkif;Llzf;Ljava/nio/channels/AsynchronousFileChannel;Leq5;Lwy3;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    const-string v2, "fileId"
 
-    return-object p1
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
 .end method

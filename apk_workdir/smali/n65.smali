@@ -3,113 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/ListIterator;
-.implements Lel7;
+.implements Lm65;
 
 
-# static fields
-.field public static final a:Ln65;
+# instance fields
+.field public a:Ljava/io/File;
+
+.field public b:Ljava/io/FileInputStream;
+
+.field public c:Ljava/nio/channels/FileChannel;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final a(JLjava/nio/ByteBuffer;)I
     .locals 1
 
-    new-instance v0, Ln65;
+    iget-object v0, p0, Ln65;->c:Ljava/nio/channels/FileChannel;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, p3, p1, p2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;J)I
 
-    sput-object v0, Ln65;->a:Ln65;
+    move-result p1
+
+    return p1
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Ln65;->b:Ljava/io/FileInputStream;
+
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final bridge synthetic add(Ljava/lang/Object;)V
+.method public final isOpen()Z
     .locals 1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Ln65;->c:Ljava/nio/channels/FileChannel;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->isOpen()Z
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    const/4 v0, 0x0
+    move-result v0
 
     return v0
 .end method
 
-.method public final hasPrevious()Z
+.method public final read(Ljava/nio/ByteBuffer;)I
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ln65;->c:Ljava/nio/channels/FileChannel;
 
-    return v0
+    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final next()Ljava/lang/Object;
+.method public final write(Ljava/nio/ByteBuffer;)I
     .locals 1
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    iget-object v0, p0, Ln65;->c:Ljava/nio/channels/FileChannel;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
 
-    throw v0
-.end method
+    move-result p1
 
-.method public final nextIndex()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final bridge synthetic set(Ljava/lang/Object;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return p1
 .end method

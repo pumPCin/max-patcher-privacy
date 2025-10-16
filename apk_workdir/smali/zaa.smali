@@ -1,63 +1,53 @@
 .class public final Lzaa;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lfs4;
 
 
 # instance fields
-.field public final a:Lcba;
+.field public X:Lda2;
 
-.field public final b:Lyba;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public c:Ljava/io/Serializable;
+.field public final synthetic Z:Lcba;
 
-.field public volatile o:Z
+.field public o:Lcba;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lcba;Lyba;)V
+.method public constructor <init>(Lcba;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    iput-object p1, p0, Lzaa;->Z:Lcba;
 
-    iput-object p1, p0, Lzaa;->a:Lcba;
-
-    iput-object p2, p0, Lzaa;->b:Lyba;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-boolean v0, p0, Lzaa;->o:Z
+    iput-object p1, p0, Lzaa;->Y:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    iget p1, p0, Lzaa;->r0:I
 
-    const/4 v0, 0x1
+    const/high16 v0, -0x80000000
 
-    iput-boolean v0, p0, Lzaa;->o:Z
+    or-int/2addr p1, v0
 
-    iget-object v0, p0, Lzaa;->a:Lcba;
+    iput p1, p0, Lzaa;->r0:I
 
-    invoke-virtual {v0, p0}, Lcba;->a(Lzaa;)V
+    iget-object p1, p0, Lzaa;->Z:Lcba;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lzaa;->c:Ljava/io/Serializable;
+    invoke-virtual {p1, v0, p0}, Lcba;->f(Lda2;Lk14;)Ljava/lang/Object;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object p1
 
-.method public final g()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lzaa;->o:Z
-
-    return v0
+    return-object p1
 .end method

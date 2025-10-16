@@ -1,97 +1,263 @@
-.class public final enum Ll2g;
-.super Ljava/lang/Enum;
+.class public final synthetic Ll2g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lula;
 
-# static fields
-.field public static final synthetic X:[Ll2g;
 
-.field public static final enum a:Ll2g;
+# instance fields
+.field public final synthetic a:Lm2g;
 
-.field public static final enum b:Ll2g;
+.field public final synthetic b:I
 
-.field public static final enum c:Ll2g;
-
-.field public static final enum o:Ll2g;
+.field public final synthetic c:Lys6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lm2g;ILys6;)V
+    .locals 0
 
-    new-instance v0, Ll2g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ENABLED"
+    iput-object p1, p0, Ll2g;->a:Lm2g;
 
-    const/4 v2, 0x0
+    iput p2, p0, Ll2g;->b:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ll2g;->a:Ll2g;
-
-    new-instance v1, Ll2g;
-
-    const-string v2, "DISABLED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ll2g;->b:Ll2g;
-
-    new-instance v2, Ll2g;
-
-    const-string v3, "USER_IGNORED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ll2g;->c:Ll2g;
-
-    new-instance v3, Ll2g;
-
-    const-string v4, "UNKNOWN"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ll2g;->o:Ll2g;
-
-    filled-new-array {v0, v1, v2, v3}, [Ll2g;
-
-    move-result-object v0
-
-    sput-object v0, Ll2g;->X:[Ll2g;
+    iput-object p3, p0, Ll2g;->c:Lys6;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll2g;
-    .locals 1
 
-    const-class v0, Ll2g;
+# virtual methods
+.method public final a(Lo55;JLsa6;Z)V
+    .locals 11
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Ll2g;->a:Lm2g;
 
-    move-result-object p0
+    iget v1, p0, Ll2g;->b:I
 
-    check-cast p0, Ll2g;
+    iget-object v2, p0, Ll2g;->c:Lys6;
 
-    return-object p0
-.end method
+    iget-object v3, v0, Lm2g;->u0:Ln2g;
 
-.method public static values()[Ll2g;
-    .locals 1
+    iget-boolean v4, v3, Ln2g;->c:Z
 
-    sget-object v0, Ll2g;->X:[Ll2g;
+    if-nez v4, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :goto_0
+    move-object v3, p1
 
-    move-result-object v0
+    move-wide v4, p2
 
-    check-cast v0, [Ll2g;
+    move-object v6, p4
 
-    return-object v0
+    move/from16 v7, p5
+
+    goto/16 :goto_5
+
+    :cond_0
+    iget-object v3, v3, Ln2g;->l:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-object v4, v0, Lm2g;->u0:Ln2g;
+
+    iget-object v4, v4, Ln2g;->m:Liif;
+
+    iget v5, v0, Lm2g;->a:I
+
+    iget-object v4, v4, Liif;->b:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lk2g;
+
+    iget-object v4, v4, Lk2g;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
+
+    move-result v4
+
+    const/4 v5, 0x1
+
+    if-le v4, v5, :cond_1
+
+    const/4 v4, 0x2
+
+    if-ne v1, v4, :cond_1
+
+    monitor-exit v3
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    goto/16 :goto_7
+
+    :cond_1
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v1, v0, Lm2g;->c:Lqi3;
+
+    iget-object v1, v1, Lqi3;->a:Lhb7;
+
+    iget v3, v0, Lm2g;->a:I
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp55;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v1, p2, v3
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_2
+
+    move v1, v5
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v3
+
+    :goto_1
+    const-string v4, "MediaItem duration required for sequence looping could not be extracted."
+
+    invoke-static {v4, v1}, Lgfi;->f(Ljava/lang/Object;Z)V
+
+    iget-wide v6, v0, Lm2g;->t0:J
+
+    add-long/2addr v6, p2
+
+    iput-wide v6, v0, Lm2g;->t0:J
+
+    iget-object v1, v0, Lm2g;->u0:Ln2g;
+
+    iget-object v1, v1, Ln2g;->q:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    if-eqz p5, :cond_3
+
+    :try_start_1
+    iget-object v4, v0, Lm2g;->u0:Ln2g;
+
+    iget v6, v4, Ln2g;->z:I
+
+    sub-int/2addr v6, v5
+
+    iput v6, v4, Ln2g;->z:I
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_6
+
+    :cond_3
+    :goto_2
+    iget-object v4, v0, Lm2g;->u0:Ln2g;
+
+    iget v6, v4, Ln2g;->z:I
+
+    if-nez v6, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move v5, v3
+
+    :goto_3
+    iget-wide v6, v0, Lm2g;->t0:J
+
+    iget-wide v8, v4, Ln2g;->y:J
+
+    cmp-long v10, v6, v8
+
+    if-gtz v10, :cond_5
+
+    if-eqz v5, :cond_6
+
+    :cond_5
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v5
+
+    iput-wide v5, v4, Ln2g;->y:J
+
+    :goto_4
+    iget-object v4, v0, Lm2g;->u0:Ln2g;
+
+    iget-object v4, v4, Ln2g;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_6
+
+    iget-object v4, v0, Lm2g;->u0:Ln2g;
+
+    iget-object v4, v4, Ln2g;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lh1e;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto/16 :goto_0
+
+    :goto_5
+    invoke-interface/range {v2 .. v7}, Lula;->a(Lo55;JLsa6;Z)V
+
+    return-void
+
+    :goto_6
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+
+    :goto_7
+    :try_start_3
+    monitor-exit v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
 .end method

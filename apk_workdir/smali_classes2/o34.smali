@@ -1,48 +1,34 @@
-.class public final Lo34;
+.class public final synthetic Lo34;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lilf;
+.implements Ltyf;
 
 
 # instance fields
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:I
+.field public final synthetic a:Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;
 
 
 # direct methods
-.method public constructor <init>(Li7a;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lvlf;->a()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lo34;->a:Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lo34;->b:Z
-
-    const/16 p1, 0xa
-
-    iput p1, p0, Lo34;->c:I
+    iput-object p1, p0, Lo34;->a:Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()La2e;
+.method public final a(Loyf;)V
     .locals 1
 
-    sget-object v0, Lrkc;->a:La2e;
+    iget-object v0, p0, Lo34;->a:Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->onServerTopologyRequested(Lpyf;)V
+
+    return-void
 .end method

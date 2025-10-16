@@ -1,251 +1,275 @@
 .class public final Litb;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Z
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Z
 
-.field public final synthetic Z:Lktb;
+.field public final c:Z
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
 
 
 # direct methods
-.method public constructor <init>(Lktb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lc3e;)V
+    .locals 11
 
-    iput-object p1, p0, Litb;->Z:Lktb;
+    sget-object v0, Lf88;->o:Lf88;
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-class v1, Litb;
 
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    check-cast p1, Lpsd;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->player-load-control:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v2, v3}, Lpsd;->t(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v2, Lndi;->a:Lkwa;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "Server player control params="
+
+    invoke-static {v4, p1}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v0, v1, v4, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    if-eqz p1, :cond_2
+
+    :try_start_0
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    const-string v2, "Failed to parse player control params"
+
+    invoke-static {v1, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    move-object v2, v3
+
+    :goto_1
+    const/4 p1, 0x4
+
+    const/4 v4, 0x1
+
+    const/16 v5, 0x1f4
+
+    const/16 v6, 0x32c8
+
+    const/16 v7, 0x1388
+
+    const/16 v8, 0xbb8
+
+    const/4 v9, 0x0
+
+    if-eqz v2, :cond_3
+
+    const-string v10, "mp_autoplay_enabled"
+
+    invoke-virtual {v2, v10, v9}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v10
+
+    iput-boolean v10, p0, Litb;->a:Z
+
+    const-string v10, "time_over_size"
+
+    invoke-virtual {v2, v10, v9}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v9
+
+    iput-boolean v9, p0, Litb;->c:Z
+
+    const-string v9, "buffer_after_rebuffer_ms"
+
+    invoke-virtual {v2, v9, v8}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v8
+
+    iput v8, p0, Litb;->d:I
+
+    const-string v8, "min_buffer_ms"
+
+    invoke-virtual {v2, v8, v7}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v7
+
+    iput v7, p0, Litb;->e:I
+
+    const-string v7, "max_buffer_ms"
+
+    invoke-virtual {v2, v7, v6}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v6
+
+    iput v6, p0, Litb;->f:I
+
+    const-string v6, "buffer_ms"
+
+    invoke-virtual {v2, v6, v5}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v5
+
+    iput v5, p0, Litb;->g:I
+
+    const-string v5, "use_min_size_lc"
+
+    invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    iput-boolean v4, p0, Litb;->b:Z
+
+    const-string v4, "min_size_lc_fmt_mis_sf"
+
+    invoke-virtual {v2, v4, p1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    iput p1, p0, Litb;->h:I
+
+    goto :goto_2
+
+    :cond_3
+    iput-boolean v9, p0, Litb;->a:Z
+
+    iput-boolean v9, p0, Litb;->c:Z
+
+    iput v8, p0, Litb;->d:I
+
+    iput v7, p0, Litb;->e:I
+
+    iput v6, p0, Litb;->f:I
+
+    iput v5, p0, Litb;->g:I
+
+    iput-boolean v4, p0, Litb;->b:Z
+
+    iput p1, p0, Litb;->h:I
+
+    :goto_2
+    sget-object p1, Lndi;->a:Lkwa;
+
+    if-nez p1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {p1, v0}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {p0}, Litb;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    check-cast p1, Ln24;
+    const-string v0, "\n        isMinSizeLoadControlRequested="
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "\n        isPlaybackPrioritizeTimeOverSize="
 
-    invoke-virtual {p0, p1, p2}, Litb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "PlayerControl(\n        isAutoPlayEnabledDuringMediaProcessing="
 
-    move-result-object p1
+    iget-boolean v3, p0, Litb;->a:Z
 
-    check-cast p1, Litb;
+    iget-boolean v4, p0, Litb;->b:Z
 
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Litb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Litb;
-
-    iget-object v1, p0, Litb;->Z:Lktb;
-
-    invoke-direct {v0, v1, p2}, Litb;-><init>(Lktb;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Litb;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Litb;->Z:Lktb;
-
-    iget-object v1, v0, Lktb;->r0:Lya5;
-
-    iget v2, p0, Litb;->X:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Litb;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    new-instance p1, Lltf;
-
-    invoke-direct {p1, v3}, Lltf;-><init>(Z)V
-
-    invoke-static {v1, p1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, v0, Lktb;->o:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcl;
-
-    new-instance v2, Lun9;
-
-    invoke-direct {v2}, Lun9;-><init>()V
-
-    iput v3, p0, Litb;->X:I
-
-    check-cast p1, Lgea;
-
-    invoke-virtual {p1, v2, p0}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v2, Lo24;->a:Lo24;
-
-    if-ne p1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Ldyc;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_2
-
-    :goto_1
-    new-instance v2, Lb2d;
-
-    invoke-direct {v2, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v2
-
-    :goto_2
-    invoke-static {p1}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v2
-
-    const/4 v4, 0x0
-
-    sget-object v5, Laxf;->a:Laxf;
-
-    const/4 v6, 0x0
-
-    if-eqz v2, :cond_3
-
-    iget-object p1, v0, Lktb;->b:Ljava/lang/String;
-
-    const-string v0, "Can\'t get info about profile deletion"
-
-    invoke-static {p1, v0, v6}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance p1, Lktf;
-
-    invoke-static {v2}, Lbbh;->l(Ljava/lang/Throwable;)Lcdf;
+    invoke-static {v2, v3, v0, v4, v1}, Lf67;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const/4 v2, 0x6
+    iget-boolean v1, p0, Litb;->c:Z
 
-    invoke-direct {p1, v4, v2, v0}, Lktf;-><init>(IILcdf;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    const-string v1, "\n        playbackMinBufferMs="
 
-    return-object v5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    new-instance v2, Lltf;
+    iget v1, p0, Litb;->e:I
 
-    invoke-direct {v2, v4}, Lltf;-><init>(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    const-string v1, "\n        playbackMaxBufferMs="
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ldyc;
+    const-string v1, "\n        playbackBufferMs="
 
-    iget-wide v1, p1, Ldyc;->c:J
+    const-string v2, "\n        playbackBufferAfterRebufferMs="
 
-    iget-object p1, v0, Lktb;->c:Lyn7;
+    iget v3, p0, Litb;->f:I
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    iget v4, p0, Litb;->g:I
 
-    move-result-object p1
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    check-cast p1, Lm63;
+    const-string v1, "\n        formatMaxInputSizeScaleUpFactor="
 
-    invoke-static {v1, v2, p1}, Lggh;->k(JLm63;)I
+    const-string v2, "\n        )\n        "
 
-    move-result p1
+    iget v3, p0, Litb;->d:I
 
-    iget-object v0, v0, Lktb;->Y:Lhne;
+    iget v4, p0, Litb;->h:I
 
-    new-instance v1, Lhtb;
+    invoke-static {v0, v3, v1, v4, v2}, Lwc0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    sget v2, Lvfc;->oneme_settings_twofa_delete_user_days_left_description:I
+    move-result-object v0
 
-    new-instance v4, Ljava/lang/Integer;
-
-    invoke-direct {v4, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    filled-new-array {v4}, [Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v4, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v3
-
-    new-instance v4, Lvcf;
-
-    invoke-static {v3}, Lvs;->V([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-direct {v4, v3, v2, p1}, Lvcf;-><init>(Ljava/util/List;II)V
-
-    invoke-direct {v1, v4}, Lhtb;-><init>(Lvcf;)V
-
-    invoke-virtual {v0, v6, v1}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-object v5
+    return-object v0
 .end method

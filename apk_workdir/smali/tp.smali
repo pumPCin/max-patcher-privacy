@@ -1,56 +1,31 @@
 .class public final Ltp;
-.super Ljava/lang/Object;
+.super Lsp;
 .source "SourceFile"
-
-# interfaces
-.implements Loi9;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
+.field public final synthetic X:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltp;->X:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iput p1, p0, Ltp;->a:I
-
-    iput-object p2, p0, Ltp;->b:Ljava/lang/String;
+    invoke-direct {p0, p1}, Lsp;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final g(IF)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ltp;->X:Landroidx/appcompat/widget/AppCompatTextView;
 
-    const-string v1, "Ait(controlCode="
+    invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ltp;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ",url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltp;->b:Ljava/lang/String;
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

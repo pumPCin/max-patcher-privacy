@@ -1,268 +1,64 @@
 .class public final Lrq5;
-.super Lkv9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lsq5;
+
+
+# static fields
+.field public static final c:Lrq5;
 
 
 # instance fields
-.field public final c:Ljava/io/File;
+.field public final a:Ljava/lang/String;
 
-.field public final d:Lfv8;
-
-.field public final e:J
-
-.field public final f:Llud;
-
-.field public final g:La07;
-
-.field public final h:I
+.field public final b:Lkq5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Lfv8;JLlud;La07;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lrq5;
+
+    const-string v1, "file"
+
+    invoke-direct {v0, v1}, Lrq5;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lrq5;->c:Lrq5;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p7, p0, Lrq5;->h:I
+    iput-object p1, p0, Lrq5;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lrq5;->c:Ljava/io/File;
+    sget-object p1, Lkq5;->Y:Lkq5;
 
-    iput-object p2, p0, Lrq5;->d:Lfv8;
-
-    iput-wide p3, p0, Lrq5;->e:J
-
-    iput-object p5, p0, Lrq5;->f:Llud;
-
-    iput-object p6, p0, Lrq5;->g:La07;
+    iput-object p1, p0, Lrq5;->b:Lkq5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final M(Lku0;)V
-    .locals 14
-
-    iget-object v0, p0, Lrq5;->c:Ljava/io/File;
-
-    sget-object v1, Lxca;->a:Ljava/util/logging/Logger;
-
-    new-instance v1, Ljava/io/FileInputStream;
-
-    invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    new-instance v0, Lox;
-
-    new-instance v2, Ldhf;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v3, v2}, Lox;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v1, Ldpc;
-
-    invoke-direct {v1, v0}, Ldpc;-><init>(Lphe;)V
-
-    :try_start_0
-    iget-wide v4, p0, Lrq5;->e:J
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v0, v4, v6
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {v1, v4, v5}, Ldpc;->skip(J)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto/16 :goto_4
-
-    :cond_0
-    :goto_0
-    iget v0, p0, Lrq5;->h:I
-
-    new-array v0, v0, [B
-
-    :goto_1
-    new-instance v2, Lat0;
-
-    invoke-direct {v2, v1, v3}, Lat0;-><init>(Llu0;I)V
-
-    iget v8, p0, Lrq5;->h:I
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v2, v0, v9, v8}, Lat0;->read([BII)I
-
-    move-result v2
-
-    const/4 v8, -0x1
-
-    if-eq v2, v8, :cond_6
-
-    invoke-interface {p1, v2, v0}, Lku0;->D(I[B)Lku0;
-
-    int-to-long v8, v2
-
-    add-long/2addr v4, v8
-
-    iget-object v8, p0, Lrq5;->f:Llud;
-
-    iget v9, v8, Llud;->b:I
-
-    add-int/2addr v9, v2
-
-    iput v9, v8, Llud;->b:I
-
-    iget-object v2, p0, Lrq5;->c:Ljava/io/File;
-
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    iget-object v2, p0, Lrq5;->c:Ljava/io/File;
-
-    invoke-virtual {v2}, Ljava/io/File;->length()J
-
-    move-result-wide v11
-
-    cmp-long v2, v11, v6
-
-    if-eqz v2, :cond_4
-
-    long-to-float v2, v4
-
-    const/high16 v8, 0x42c80000    # 100.0f
-
-    mul-float/2addr v2, v8
-
-    long-to-float v9, v11
-
-    div-float/2addr v2, v9
-
-    cmpl-float v9, v2, v8
-
-    if-lez v9, :cond_1
-
-    :goto_2
-    move v10, v8
-
-    goto :goto_3
-
-    :cond_1
-    const/4 v8, 0x0
-
-    cmpg-float v9, v2, v8
-
-    if-gez v9, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move v10, v2
-
-    :goto_3
-    iget-object v9, p0, Lrq5;->g:La07;
-
-    iget-object v2, v9, La07;->r0:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v2, v9, La07;->Y:Lncd;
-
-    new-instance v8, Ljz6;
-
-    const/4 v13, 0x1
-
-    invoke-direct/range {v8 .. v13}, Ljz6;-><init>(Lfs4;FJI)V
-
-    invoke-virtual {v2, v8}, Lncd;->b(Ljava/lang/Runnable;)Lfs4;
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p1, Ljava/io/IOException;
-
-    const-string v0, "FILE_ZERO_LENGTH"
-
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_5
-    new-instance p1, Ljava/io/FileNotFoundException;
-
-    iget-object v0, p0, Lrq5;->c:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_6
-    invoke-virtual {v1}, Ldpc;->close()V
-
-    return-void
-
-    :goto_4
-    :try_start_1
-    invoke-virtual {v1}, Ldpc;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_5
-
-    :catchall_1
-    move-exception v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_5
-    throw p1
-.end method
-
-.method public final i()J
-    .locals 4
-
-    iget-object v0, p0, Lrq5;->c:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->length()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lrq5;->e:J
-
-    sub-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final j()Lfv8;
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lrq5;->d:Lfv8;
+    iget-object v0, p0, Lrq5;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final b()Lkq5;
+    .locals 1
+
+    iget-object v0, p0, Lrq5;->b:Lkq5;
 
     return-object v0
 .end method

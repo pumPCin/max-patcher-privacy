@@ -156,7 +156,7 @@
 
     const/4 v13, 0x0
 
-    invoke-direct/range {v1 .. v15}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLtd6;Ltd6;Ltd6;Ltd6;Ltd6;Ltd6;ILaf4;)V
+    invoke-direct/range {v1 .. v15}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLoh6;Loh6;Loh6;Loh6;Loh6;Loh6;ILvh4;)V
 
     return-object v1
 .end method

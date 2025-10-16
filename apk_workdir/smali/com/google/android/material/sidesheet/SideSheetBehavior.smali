@@ -1,9 +1,9 @@
 .class public Lcom/google/android/material/sidesheet/SideSheetBehavior;
-.super Li14;
+.super Lw34;
 .source "SourceFile"
 
 # interfaces
-.implements Lab8;
+.implements Lhh8;
 
 
 # annotations
@@ -18,8 +18,8 @@
         "<V:",
         "Landroid/view/View;",
         ">",
-        "Li14;",
-        "Lab8;"
+        "Lw34;",
+        "Lhh8;"
     }
 .end annotation
 
@@ -31,15 +31,15 @@
 
 
 # instance fields
-.field public a:Lov9;
+.field public a:Lbu7;
 
-.field public final b:Lub8;
+.field public final b:Lbi8;
 
 .field public final c:Landroid/content/res/ColorStateList;
 
-.field public final d:Lk4e;
+.field public final d:Lvfe;
 
-.field public final e:Lhr0;
+.field public final e:Les0;
 
 .field public final f:F
 
@@ -47,7 +47,7 @@
 
 .field public h:I
 
-.field public i:Lmjg;
+.field public i:Lgyg;
 
 .field public j:Z
 
@@ -69,24 +69,24 @@
 
 .field public s:Landroid/view/VelocityTracker;
 
-.field public t:Lac8;
+.field public t:Lhi8;
 
 .field public u:I
 
 .field public final v:Ljava/util/LinkedHashSet;
 
-.field public final w:Lfr0;
+.field public final w:Lcs0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lqgc;->side_sheet_accessibility_pane_title:I
+    sget v0, Lqqc;->side_sheet_accessibility_pane_title:I
 
     sput v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->x:I
 
-    sget v0, Lkjc;->Widget_Material3_SideSheet:I
+    sget v0, Lltc;->Widget_Material3_SideSheet:I
 
     sput v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->y:I
 
@@ -100,11 +100,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lhr0;
+    new-instance v0, Les0;
 
-    invoke-direct {v0, p0}, Lhr0;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;)V
+    invoke-direct {v0, p0}, Les0;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->e:Lhr0;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->e:Les0;
 
     const/4 v0, 0x1
 
@@ -134,13 +134,13 @@
     iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->v:Ljava/util/LinkedHashSet;
 
     .line 8
-    new-instance v0, Lfr0;
+    new-instance v0, Lcs0;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lfr0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lcs0;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->w:Lfr0;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->w:Lcs0;
 
     return-void
 .end method
@@ -152,11 +152,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 10
-    new-instance v0, Lhr0;
+    new-instance v0, Les0;
 
-    invoke-direct {v0, p0}, Lhr0;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;)V
+    invoke-direct {v0, p0}, Les0;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->e:Lhr0;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->e:Les0;
 
     const/4 v0, 0x1
 
@@ -186,21 +186,21 @@
     iput-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->v:Ljava/util/LinkedHashSet;
 
     .line 16
-    new-instance v2, Lfr0;
+    new-instance v2, Lcs0;
 
-    invoke-direct {v2, v0, p0}, Lfr0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v0, p0}, Lcs0;-><init>(ILjava/lang/Object;)V
 
-    iput-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->w:Lfr0;
+    iput-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->w:Lcs0;
 
     .line 17
-    sget-object v2, Lxjc;->SideSheetBehavior_Layout:[I
+    sget-object v2, Lytc;->SideSheetBehavior_Layout:[I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
     .line 18
-    sget v3, Lxjc;->SideSheetBehavior_Layout_backgroundTint:I
+    sget v3, Lytc;->SideSheetBehavior_Layout_backgroundTint:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -209,10 +209,10 @@
     if-eqz v3, :cond_0
 
     .line 19
-    sget v3, Lxjc;->SideSheetBehavior_Layout_backgroundTint:I
+    sget v3, Lytc;->SideSheetBehavior_Layout_backgroundTint:I
 
     .line 20
-    invoke-static {p1, v2, v3}, Lx2d;->p(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v2, v3}, Lwfi;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
@@ -220,7 +220,7 @@
 
     .line 21
     :cond_0
-    sget v3, Lxjc;->SideSheetBehavior_Layout_shapeAppearance:I
+    sget v3, Lytc;->SideSheetBehavior_Layout_shapeAppearance:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -234,19 +234,19 @@
     sget v4, Lcom/google/android/material/sidesheet/SideSheetBehavior;->y:I
 
     .line 23
-    invoke-static {p1, p2, v3, v4}, Lk4e;->b(Landroid/content/Context;Landroid/util/AttributeSet;II)Lq8h;
+    invoke-static {p1, p2, v3, v4}, Lvfe;->b(Landroid/content/Context;Landroid/util/AttributeSet;II)Lioh;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lq8h;->g()Lk4e;
+    invoke-virtual {p2}, Lioh;->g()Lvfe;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->d:Lk4e;
+    iput-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->d:Lvfe;
 
     .line 24
     :cond_1
-    sget p2, Lxjc;->SideSheetBehavior_Layout_coplanarSiblingViewId:I
+    sget p2, Lytc;->SideSheetBehavior_Layout_coplanarSiblingViewId:I
 
     invoke-virtual {v2, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -255,7 +255,7 @@
     if-eqz p2, :cond_3
 
     .line 25
-    sget p2, Lxjc;->SideSheetBehavior_Layout_coplanarSiblingViewId:I
+    sget p2, Lytc;->SideSheetBehavior_Layout_coplanarSiblingViewId:I
 
     .line 26
     invoke-virtual {v2, p2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -294,7 +294,7 @@
     if-eq p2, v1, :cond_3
 
     .line 33
-    sget-object p2, Lijg;->a:Ljava/util/WeakHashMap;
+    sget-object p2, Lcyg;->a:Ljava/util/WeakHashMap;
 
     .line 34
     invoke-virtual {v3}, Landroid/view/View;->isLaidOut()Z
@@ -308,7 +308,7 @@
 
     .line 36
     :cond_3
-    iget-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->d:Lk4e;
+    iget-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->d:Lvfe;
 
     if-nez p2, :cond_4
 
@@ -316,14 +316,14 @@
 
     .line 37
     :cond_4
-    new-instance v1, Lub8;
+    new-instance v1, Lbi8;
 
-    invoke-direct {v1, p2}, Lub8;-><init>(Lk4e;)V
+    invoke-direct {v1, p2}, Lbi8;-><init>(Lvfe;)V
 
-    iput-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lub8;
+    iput-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lbi8;
 
     .line 38
-    invoke-virtual {v1, p1}, Lub8;->i(Landroid/content/Context;)V
+    invoke-virtual {v1, p1}, Lbi8;->i(Landroid/content/Context;)V
 
     .line 39
     iget-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->c:Landroid/content/res/ColorStateList;
@@ -331,9 +331,9 @@
     if-eqz p2, :cond_5
 
     .line 40
-    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lub8;
+    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lbi8;
 
-    invoke-virtual {v1, p2}, Lub8;->k(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v1, p2}, Lbi8;->k(Landroid/content/res/ColorStateList;)V
 
     goto :goto_0
 
@@ -353,15 +353,15 @@
     invoke-virtual {v1, v3, p2, v0}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
     .line 43
-    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lub8;
+    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lbi8;
 
     iget p2, p2, Landroid/util/TypedValue;->data:I
 
-    invoke-virtual {v1, p2}, Lub8;->setTint(I)V
+    invoke-virtual {v1, p2}, Lbi8;->setTint(I)V
 
     .line 44
     :goto_0
-    sget p2, Lxjc;->SideSheetBehavior_Layout_android_elevation:I
+    sget p2, Lytc;->SideSheetBehavior_Layout_android_elevation:I
 
     const/high16 v1, -0x40800000    # -1.0f
 
@@ -372,7 +372,7 @@
     iput p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->f:F
 
     .line 45
-    sget p2, Lxjc;->SideSheetBehavior_Layout_behavior_draggable:I
+    sget p2, Lytc;->SideSheetBehavior_Layout_behavior_draggable:I
 
     invoke-virtual {v2, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -408,9 +408,9 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {v0}, Lov9;->z()I
+    invoke-virtual {v0}, Lbu7;->b()I
 
     move-result v0
 
@@ -421,7 +421,7 @@
 
     const-string p3, "Invalid state to get outer edge offset: "
 
-    invoke-static {p1, p3}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p3}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -430,14 +430,14 @@
     throw p2
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {v0}, Lov9;->x()I
+    invoke-virtual {v0}, Lbu7;->a()I
 
     move-result v0
 
     :goto_0
-    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
     if-eqz v1, :cond_3
 
@@ -447,7 +447,7 @@
 
     move-result p2
 
-    invoke-virtual {v1, v0, p2}, Lmjg;->o(II)Z
+    invoke-virtual {v1, v0, p2}, Lgyg;->o(II)Z
 
     move-result p2
 
@@ -460,7 +460,7 @@
 
     move-result p3
 
-    invoke-virtual {v1, p2, v0, p3}, Lmjg;->q(Landroid/view/View;II)Z
+    invoke-virtual {v1, p2, v0, p3}, Lgyg;->q(Landroid/view/View;II)Z
 
     move-result p2
 
@@ -471,9 +471,9 @@
 
     invoke-virtual {p0, p2}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->y(I)V
 
-    iget-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->e:Lhr0;
+    iget-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->e:Les0;
 
-    invoke-virtual {p2, p1}, Lhr0;->f(I)V
+    invoke-virtual {p2, p1}, Les0;->f(I)V
 
     return-void
 
@@ -506,17 +506,17 @@
     :cond_1
     const/high16 v1, 0x40000
 
-    invoke-static {v0, v1}, Lijg;->k(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lcyg;->k(Landroid/view/View;I)V
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lijg;->h(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lcyg;->h(Landroid/view/View;I)V
 
     const/high16 v2, 0x100000
 
-    invoke-static {v0, v2}, Lijg;->k(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lcyg;->k(Landroid/view/View;I)V
 
-    invoke-static {v0, v1}, Lijg;->h(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lcyg;->h(Landroid/view/View;I)V
 
     iget v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->h:I
 
@@ -524,15 +524,15 @@
 
     if-eq v1, v2, :cond_2
 
-    sget-object v1, Ly4;->j:Ly4;
+    sget-object v1, La5;->j:La5;
 
-    new-instance v3, Lmc0;
+    new-instance v3, Lyc0;
 
-    const/16 v4, 0xb
+    const/16 v4, 0xd
 
-    invoke-direct {v3, p0, v2, v4}, Lmc0;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v3, p0, v2, v4}, Lyc0;-><init>(Ljava/lang/Object;II)V
 
-    invoke-static {v0, v1, v3}, Lijg;->l(Landroid/view/View;Ly4;Ln5;)V
+    invoke-static {v0, v1, v3}, Lcyg;->l(Landroid/view/View;La5;Lq5;)V
 
     :cond_2
     iget v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->h:I
@@ -541,15 +541,15 @@
 
     if-eq v1, v2, :cond_3
 
-    sget-object v1, Ly4;->h:Ly4;
+    sget-object v1, La5;->h:La5;
 
-    new-instance v3, Lmc0;
+    new-instance v3, Lyc0;
 
-    const/16 v4, 0xb
+    const/16 v4, 0xd
 
-    invoke-direct {v3, p0, v2, v4}, Lmc0;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v3, p0, v2, v4}, Lyc0;-><init>(Ljava/lang/Object;II)V
 
-    invoke-static {v0, v1, v3}, Lijg;->l(Landroid/view/View;Ly4;Ln5;)V
+    invoke-static {v0, v1, v3}, Lcyg;->l(Landroid/view/View;La5;Lq5;)V
 
     :cond_3
     :goto_0
@@ -559,18 +559,18 @@
 .method public final a()V
     .locals 13
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lac8;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lhi8;
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v1, v0, Lza8;->f:Lfe0;
+    iget-object v1, v0, Lgh8;->f:Lpe0;
 
     const/4 v2, 0x0
 
-    iput-object v2, v0, Lza8;->f:Lfe0;
+    iput-object v2, v0, Lgh8;->f:Lpe0;
 
     const/4 v3, 0x5
 
@@ -582,16 +582,16 @@
 
     if-ge v4, v5, :cond_1
 
-    goto/16 :goto_6
+    goto/16 :goto_7
 
     :cond_1
-    iget-object v4, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v4, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
     const/4 v5, 0x3
 
     if-eqz v4, :cond_3
 
-    invoke-virtual {v4}, Lov9;->H()I
+    invoke-virtual {v4}, Lbu7;->e()I
 
     move-result v4
 
@@ -604,11 +604,11 @@
 
     :cond_3
     :goto_0
-    new-instance v4, Lo6;
+    new-instance v4, Lu6;
 
     const/16 v6, 0x8
 
-    invoke-direct {v4, v6, p0}, Lo6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, v6, p0}, Lu6;-><init>(ILjava/lang/Object;)V
 
     iget-object v6, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->q:Ljava/lang/ref/WeakReference;
 
@@ -628,7 +628,7 @@
     :goto_1
     if-nez v6, :cond_5
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_5
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -639,25 +639,33 @@
 
     if-nez v7, :cond_6
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_6
-    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {v2, v7}, Lov9;->w(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    iget v2, v2, Lbu7;->a:I
 
-    move-result v2
+    packed-switch v2, :pswitch_data_0
 
-    new-instance v8, Lkae;
+    iget v2, v7, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    invoke-direct {v8, p0, v7, v2, v6}, Lkae;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;Landroid/view/ViewGroup$MarginLayoutParams;ILandroid/view/View;)V
+    goto :goto_2
+
+    :pswitch_0
+    iget v2, v7, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    :goto_2
+    new-instance v8, Lwle;
+
+    invoke-direct {v8, p0, v7, v2, v6}, Lwle;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;Landroid/view/ViewGroup$MarginLayoutParams;ILandroid/view/View;)V
 
     move-object v2, v8
 
-    :goto_2
-    iget-object v6, v0, Lza8;->b:Landroid/view/View;
+    :goto_3
+    iget-object v6, v0, Lgh8;->b:Landroid/view/View;
 
-    iget v7, v1, Lfe0;->d:I
+    iget v7, v1, Lpe0;->d:I
 
     const/4 v8, 0x1
 
@@ -667,13 +675,13 @@
 
     move v7, v8
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_7
     move v7, v9
 
-    :goto_3
-    sget-object v10, Lijg;->a:Ljava/util/WeakHashMap;
+    :goto_4
+    sget-object v10, Lcyg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {v6}, Landroid/view/View;->getLayoutDirection()I
 
@@ -689,12 +697,12 @@
 
     move v5, v8
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_8
     move v5, v9
 
-    :goto_4
+    :goto_5
     invoke-virtual {v6}, Landroid/view/View;->getWidth()I
 
     move-result v10
@@ -721,17 +729,17 @@
 
     iget v10, v10, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_9
     iget v10, v10, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_a
     move v10, v9
 
-    :goto_5
+    :goto_6
     int-to-float v10, v10
 
     add-float/2addr v11, v10
@@ -756,19 +764,19 @@
     invoke-virtual {v5, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     :cond_c
-    new-instance v2, Lhj5;
+    new-instance v2, Lsm5;
 
-    invoke-direct {v2}, Lhj5;-><init>()V
+    invoke-direct {v2}, Lsm5;-><init>()V
 
     invoke-virtual {v5, v2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget v2, v0, Lza8;->c:I
+    iget v2, v0, Lgh8;->c:I
 
-    iget v6, v0, Lza8;->d:I
+    iget v6, v0, Lgh8;->d:I
 
-    iget v1, v1, Lfe0;->c:F
+    iget v1, v1, Lpe0;->c:F
 
-    invoke-static {v2, v1, v6}, Lmg;->c(IFI)I
+    invoke-static {v2, v1, v6}, Lvg;->c(IFI)I
 
     move-result v1
 
@@ -776,9 +784,9 @@
 
     invoke-virtual {v5, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    new-instance v1, Lzb8;
+    new-instance v1, Lgi8;
 
-    invoke-direct {v1, v0, v7, v3}, Lzb8;-><init>(Lac8;ZI)V
+    invoke-direct {v1, v0, v7, v3}, Lgi8;-><init>(Lhi8;ZI)V
 
     invoke-virtual {v5, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -789,27 +797,32 @@
     return-void
 
     :cond_d
-    :goto_6
+    :goto_7
     invoke-virtual {p0, v3}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->x(I)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b(Lfe0;)V
+.method public final b(Lpe0;)V
     .locals 4
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lac8;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lhi8;
 
     if-nez v0, :cond_0
 
     goto/16 :goto_5
 
     :cond_0
-    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lov9;->H()I
+    invoke-virtual {v1}, Lbu7;->e()I
 
     move-result v1
 
@@ -827,7 +840,7 @@
     const/4 v1, 0x5
 
     :goto_1
-    iget-object v2, v0, Lza8;->f:Lfe0;
+    iget-object v2, v0, Lgh8;->f:Lpe0;
 
     if-nez v2, :cond_3
 
@@ -838,16 +851,16 @@
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    iget-object v2, v0, Lza8;->f:Lfe0;
+    iget-object v2, v0, Lgh8;->f:Lpe0;
 
-    iput-object p1, v0, Lza8;->f:Lfe0;
+    iput-object p1, v0, Lgh8;->f:Lpe0;
 
     if-nez v2, :cond_4
 
     goto :goto_3
 
     :cond_4
-    iget v2, p1, Lfe0;->d:I
+    iget v2, p1, Lpe0;->d:I
 
     if-nez v2, :cond_5
 
@@ -859,9 +872,9 @@
     const/4 v2, 0x0
 
     :goto_2
-    iget p1, p1, Lfe0;->c:F
+    iget p1, p1, Lpe0;->c:F
 
-    invoke-virtual {v0, p1, v2, v1}, Lac8;->a(FZI)V
+    invoke-virtual {v0, p1, v2, v1}, Lhi8;->a(FZI)V
 
     :goto_3
     iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
@@ -935,9 +948,9 @@
 
     float-to-int p1, p1
 
-    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {v2, v1, p1}, Lov9;->m0(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-virtual {v2, v1, p1}, Lbu7;->f(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
@@ -946,17 +959,17 @@
     return-void
 .end method
 
-.method public final c(Lfe0;)V
+.method public final c(Lpe0;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lac8;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lhi8;
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    iput-object p1, v0, Lza8;->f:Lfe0;
+    iput-object p1, v0, Lgh8;->f:Lpe0;
 
     return-void
 .end method
@@ -964,16 +977,16 @@
 .method public final d()V
     .locals 10
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lac8;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lhi8;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, v0, Lza8;->b:Landroid/view/View;
+    iget-object v1, v0, Lgh8;->b:Landroid/view/View;
 
-    iget-object v2, v0, Lza8;->f:Lfe0;
+    iget-object v2, v0, Lgh8;->f:Lpe0;
 
     if-nez v2, :cond_1
 
@@ -984,11 +997,11 @@
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    iget-object v2, v0, Lza8;->f:Lfe0;
+    iget-object v2, v0, Lgh8;->f:Lpe0;
 
     const/4 v3, 0x0
 
-    iput-object v3, v0, Lza8;->f:Lfe0;
+    iput-object v3, v0, Lgh8;->f:Lpe0;
 
     if-nez v2, :cond_2
 
@@ -1076,7 +1089,7 @@
     goto :goto_1
 
     :cond_3
-    iget v0, v0, Lza8;->e:I
+    iget v0, v0, Lgh8;->e:I
 
     int-to-long v0, v0
 
@@ -1087,16 +1100,16 @@
     return-void
 .end method
 
-.method public final g(Ll14;)V
+.method public final g(Lz34;)V
     .locals 0
 
     const/4 p1, 0x0
 
     iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
 
-    iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
-    iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lac8;
+    iput-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lhi8;
 
     return-void
 .end method
@@ -1108,9 +1121,9 @@
 
     iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lac8;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lhi8;
 
     return-void
 .end method
@@ -1128,7 +1141,7 @@
 
     if-nez p1, :cond_0
 
-    invoke-static {p2}, Lijg;->e(Landroid/view/View;)Ljava/lang/CharSequence;
+    invoke-static {p2}, Lcyg;->e(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -1205,11 +1218,11 @@
 
     if-nez p1, :cond_6
 
-    iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iget-object p1, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p1, p3}, Lmjg;->p(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p1, p3}, Lgyg;->p(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -1229,7 +1242,7 @@
 .method public final l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 10
 
-    sget-object v0, Lijg;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lcyg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p1}, Landroid/view/View;->getFitsSystemWindows()Z
 
@@ -1250,7 +1263,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
 
-    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lub8;
+    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->b:Lbi8;
 
     const/4 v3, 0x5
 
@@ -1264,11 +1277,11 @@
 
     iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
 
-    new-instance v0, Lac8;
+    new-instance v0, Lhi8;
 
-    invoke-direct {v0, p2}, Lac8;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p2}, Lhi8;-><init>(Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lac8;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->t:Lhi8;
 
     if-eqz v2, :cond_2
 
@@ -1282,12 +1295,12 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {p2}, Lwig;->i(Landroid/view/View;)F
+    invoke-static {p2}, Lqxg;->i(Landroid/view/View;)F
 
     move-result v5
 
     :cond_1
-    invoke-virtual {v2, v5}, Lub8;->j(F)V
+    invoke-virtual {v2, v5}, Lbi8;->j(F)V
 
     goto :goto_0
 
@@ -1296,7 +1309,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {p2, v0}, Lwig;->q(Landroid/view/View;Landroid/content/res/ColorStateList;)V
+    invoke-static {p2, v0}, Lqxg;->q(Landroid/view/View;Landroid/content/res/ColorStateList;)V
 
     :cond_3
     :goto_0
@@ -1332,7 +1345,7 @@
     invoke-virtual {p2, v1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     :cond_6
-    invoke-static {p2}, Lijg;->e(Landroid/view/View;)Ljava/lang/CharSequence;
+    invoke-static {p2}, Lcyg;->e(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -1348,16 +1361,16 @@
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Lijg;->o(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p2, v0}, Lcyg;->o(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     :cond_7
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Ll14;
+    check-cast v0, Lz34;
 
-    iget v0, v0, Ll14;->c:I
+    iget v0, v0, Lz34;->c:I
 
     invoke-static {v0, p3}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
 
@@ -1375,11 +1388,11 @@
     move v0, v4
 
     :goto_2
-    iget-object v6, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v6, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
     if-eqz v6, :cond_9
 
-    invoke-virtual {v6}, Lov9;->H()I
+    invoke-virtual {v6}, Lbu7;->e()I
 
     move-result v6
 
@@ -1390,15 +1403,15 @@
 
     const/4 v7, 0x0
 
-    iget-object v8, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->d:Lk4e;
+    iget-object v8, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->d:Lvfe;
 
     if-nez v0, :cond_c
 
-    new-instance v0, Loo7;
+    new-instance v0, Lbu7;
 
-    invoke-direct {v0, p0, v1}, Loo7;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
+    invoke-direct {v0, p0, v1}, Lbu7;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
     if-eqz v8, :cond_f
 
@@ -1418,7 +1431,7 @@
 
     move-result-object v9
 
-    instance-of v9, v9, Ll14;
+    instance-of v9, v9, Lz34;
 
     if-eqz v9, :cond_a
 
@@ -1428,7 +1441,7 @@
 
     move-object v6, v0
 
-    check-cast v6, Ll14;
+    check-cast v6, Lz34;
 
     :cond_a
     if-eqz v6, :cond_b
@@ -1440,40 +1453,40 @@
     goto :goto_3
 
     :cond_b
-    invoke-virtual {v8}, Lk4e;->e()Lq8h;
+    invoke-virtual {v8}, Lvfe;->e()Lioh;
 
     move-result-object v0
 
-    new-instance v6, Lg0;
+    new-instance v6, Lh0;
 
-    invoke-direct {v6, v7}, Lg0;-><init>(F)V
+    invoke-direct {v6, v7}, Lh0;-><init>(F)V
 
-    iput-object v6, v0, Lq8h;->f:Ljava/lang/Object;
+    iput-object v6, v0, Lioh;->f:Ljava/lang/Object;
 
-    new-instance v6, Lg0;
+    new-instance v6, Lh0;
 
-    invoke-direct {v6, v7}, Lg0;-><init>(F)V
+    invoke-direct {v6, v7}, Lh0;-><init>(F)V
 
-    iput-object v6, v0, Lq8h;->g:Ljava/lang/Object;
+    iput-object v6, v0, Lioh;->g:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lq8h;->g()Lk4e;
+    invoke-virtual {v0}, Lioh;->g()Lvfe;
 
     move-result-object v0
 
     if-eqz v2, :cond_f
 
-    invoke-virtual {v2, v0}, Lub8;->setShapeAppearanceModel(Lk4e;)V
+    invoke-virtual {v2, v0}, Lbi8;->setShapeAppearanceModel(Lvfe;)V
 
     goto :goto_3
 
     :cond_c
     if-ne v0, v1, :cond_18
 
-    new-instance v0, Loo7;
+    new-instance v0, Lbu7;
 
-    invoke-direct {v0, p0, v4}, Loo7;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
+    invoke-direct {v0, p0, v4}, Lbu7;-><init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
     if-eqz v8, :cond_f
 
@@ -1493,7 +1506,7 @@
 
     move-result-object v9
 
-    instance-of v9, v9, Ll14;
+    instance-of v9, v9, Lz34;
 
     if-eqz v9, :cond_d
 
@@ -1503,7 +1516,7 @@
 
     move-object v6, v0
 
-    check-cast v6, Ll14;
+    check-cast v6, Lz34;
 
     :cond_d
     if-eqz v6, :cond_e
@@ -1515,52 +1528,52 @@
     goto :goto_3
 
     :cond_e
-    invoke-virtual {v8}, Lk4e;->e()Lq8h;
+    invoke-virtual {v8}, Lvfe;->e()Lioh;
 
     move-result-object v0
 
-    new-instance v6, Lg0;
+    new-instance v6, Lh0;
 
-    invoke-direct {v6, v7}, Lg0;-><init>(F)V
+    invoke-direct {v6, v7}, Lh0;-><init>(F)V
 
-    iput-object v6, v0, Lq8h;->e:Ljava/lang/Object;
+    iput-object v6, v0, Lioh;->e:Ljava/lang/Object;
 
-    new-instance v6, Lg0;
+    new-instance v6, Lh0;
 
-    invoke-direct {v6, v7}, Lg0;-><init>(F)V
+    invoke-direct {v6, v7}, Lh0;-><init>(F)V
 
-    iput-object v6, v0, Lq8h;->h:Ljava/lang/Object;
+    iput-object v6, v0, Lioh;->h:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lq8h;->g()Lk4e;
+    invoke-virtual {v0}, Lioh;->g()Lvfe;
 
     move-result-object v0
 
     if-eqz v2, :cond_f
 
-    invoke-virtual {v2, v0}, Lub8;->setShapeAppearanceModel(Lk4e;)V
+    invoke-virtual {v2, v0}, Lbi8;->setShapeAppearanceModel(Lvfe;)V
 
     :cond_f
     :goto_3
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
     if-nez v0, :cond_10
 
-    new-instance v0, Lmjg;
+    new-instance v0, Lgyg;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget-object v6, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->w:Lfr0;
+    iget-object v6, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->w:Lcs0;
 
-    invoke-direct {v0, v2, p1, v6}, Lmjg;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lkv9;)V
+    invoke-direct {v0, v2, p1, v6}, Lgyg;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lobi;)V
 
-    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iput-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
     :cond_10
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {v0, p2}, Lov9;->F(Landroid/view/View;)I
+    invoke-virtual {v0, p2}, Lbu7;->d(Landroid/view/View;)I
 
     move-result v0
 
@@ -1572,12 +1585,24 @@
 
     iput p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
 
-    iget-object p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {p3, p1}, Lov9;->G(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)I
+    iget p3, p3, Lbu7;->a:I
+
+    packed-switch p3, :pswitch_data_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result p3
 
+    goto :goto_4
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p3
+
+    :goto_4
     iput p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->n:I
 
     invoke-virtual {p2}, Landroid/view/View;->getWidth()I
@@ -1594,18 +1619,25 @@
 
     if-eqz p3, :cond_11
 
-    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object v2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {v2, p3}, Lov9;->i(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    iget v2, v2, Lbu7;->a:I
 
-    move-result p3
+    packed-switch v2, :pswitch_data_1
 
-    goto :goto_4
+    iget p3, p3, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    goto :goto_5
+
+    :pswitch_1
+    iget p3, p3, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    goto :goto_5
 
     :cond_11
     move p3, v4
 
-    :goto_4
+    :goto_5
     iput p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
 
     iget p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->h:I
@@ -1620,13 +1652,13 @@
 
     if-ne p3, v3, :cond_12
 
-    iget-object p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {p3}, Lov9;->z()I
+    invoke-virtual {p3}, Lbu7;->b()I
 
     move-result v4
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_12
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -1650,16 +1682,16 @@
     throw p1
 
     :cond_13
-    iget-object p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lov9;
+    iget-object p3, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Lbu7;
 
-    invoke-virtual {p3, p2}, Lov9;->F(Landroid/view/View;)I
+    invoke-virtual {p3, p2}, Lbu7;->d(Landroid/view/View;)I
 
     move-result p3
 
     sub-int v4, v0, p3
 
     :cond_14
-    :goto_5
+    :goto_6
     invoke-virtual {p2, v4}, Landroid/view/View;->offsetLeftAndRight(I)V
 
     iget-object p2, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->q:Ljava/lang/ref/WeakReference;
@@ -1691,7 +1723,7 @@
 
     move-result-object p1
 
-    :goto_6
+    :goto_7
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p2
@@ -1704,7 +1736,7 @@
 
     if-nez p2, :cond_16
 
-    goto :goto_6
+    goto :goto_7
 
     :cond_16
     new-instance p1, Ljava/lang/ClassCastException;
@@ -1723,13 +1755,25 @@
 
     const-string p3, ". Must be 0 or 1."
 
-    invoke-static {v0, p2, p3}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2, p3}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method public final m(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;III)Z
@@ -1869,9 +1913,9 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
-    invoke-virtual {v0, p3}, Lmjg;->j(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p3}, Lgyg;->j(Landroid/view/MotionEvent;)V
 
     :cond_2
     if-nez p1, :cond_3
@@ -1939,9 +1983,9 @@
 
     move-result p1
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
-    iget v2, v0, Lmjg;->b:I
+    iget v2, v0, Lgyg;->b:I
 
     int-to-float v2, v2
 
@@ -1957,7 +2001,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p2, p1}, Lmjg;->b(Landroid/view/View;I)V
+    invoke-virtual {v0, p2, p1}, Lgyg;->b(Landroid/view/View;I)V
 
     :cond_6
     :goto_0
@@ -2003,11 +2047,11 @@
 
     check-cast v0, Landroid/view/View;
 
-    new-instance v1, Lf30;
+    new-instance v1, Ls30;
 
     const/16 v2, 0x10
 
-    invoke-direct {v1, p0, p1, v2}, Lf30;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v1, p0, p1, v2}, Ls30;-><init>(Ljava/lang/Object;II)V
 
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -2021,7 +2065,7 @@
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Lijg;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lcyg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
@@ -2034,7 +2078,7 @@
     return-void
 
     :cond_2
-    invoke-virtual {v1}, Lf30;->run()V
+    invoke-virtual {v1}, Ls30;->run()V
 
     return-void
 
@@ -2066,7 +2110,7 @@
     :goto_2
     const-string v0, " should not be set externally."
 
-    invoke-static {v2, p1, v0}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2148,7 +2192,7 @@
     return-void
 
     :cond_5
-    invoke-static {p1}, Lc85;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
+    invoke-static {p1}, Ld15;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
@@ -2158,7 +2202,7 @@
 .method public final z()Z
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lmjg;
+    iget-object v0, p0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->i:Lgyg;
 
     if-eqz v0, :cond_1
 

@@ -1,170 +1,66 @@
-.class public interface abstract Lq65;
+.class public final Lq65;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loya;
+
+# instance fields
+.field public final a:D
+
+.field public volatile b:D
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, 0x3fd3333333333333L    # 0.3
+
+    .line 5
+    iput-wide v0, p0, Lq65;->a:D
+
+    return-void
+.end method
+
+.method public constructor <init>(D)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+
+    .line 2
+    iput-wide v0, p0, Lq65;->a:D
+
+    .line 3
+    iput-wide p1, p0, Lq65;->b:D
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public A(Lqya;IIF)V
-    .locals 0
+.method public final a(D)V
+    .locals 6
 
-    return-void
-.end method
+    iget-wide v0, p0, Lq65;->b:D
 
-.method public a(Lqya;)V
-    .locals 0
+    iget-wide v2, p0, Lq65;->a:D
 
-    return-void
-.end method
+    mul-double/2addr p1, v2
 
-.method public b(Lqya;)V
-    .locals 0
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    return-void
-.end method
+    sub-double/2addr v4, v2
 
-.method public c(Lqya;)V
-    .locals 0
+    mul-double/2addr v4, v0
 
-    return-void
-.end method
+    add-double/2addr v4, p1
 
-.method public d(Lgya;Ledf;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public e(Lone/video/exo/error/OneVideoExoPlaybackException;Lmhg;Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g(Lqya;F)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public h(Lgya;Ledf;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i(Lgya;Lshg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public j(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public k(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public l(Lgya;Lshg;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m(Lgya;Lc60;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(Lqya;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(Lqya;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(Lgya;Lc60;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(Lqya;Lnya;Lw02;Lw02;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public u(Lsk0;II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public v(Lqya;J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public w(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public x(Lqya;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public y(Lqya;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public z(Lqya;I)V
-    .locals 0
+    iput-wide v4, p0, Lq65;->b:D
 
     return-void
 .end method

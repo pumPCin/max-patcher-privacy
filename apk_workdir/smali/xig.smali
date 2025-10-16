@@ -3,60 +3,23 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/util/Map;
+
+
 # direct methods
-.method public static a(Landroid/view/View;)Ld7h;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-static {v1, v0}, Ld7h;->h(Landroid/view/View;Landroid/view/WindowInsets;)Ld7h;
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    iget-object v1, v0, Ld7h;->a:Lb7h;
-
-    invoke-virtual {v1, v0}, Lb7h;->q(Ld7h;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Lb7h;->d(Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/view/View;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->getScrollIndicators()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Landroid/view/View;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setScrollIndicators(I)V
-
-    return-void
-.end method
-
-.method public static d(Landroid/view/View;II)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setScrollIndicators(II)V
+    sput-object v0, Lxig;->a:Ljava/util/Map;
 
     return-void
 .end method

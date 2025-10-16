@@ -1,221 +1,168 @@
 .class public final Lub3;
-.super Ljava/lang/Object;
+.super Lj6d;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# static fields
+.field public static final G0:Landroid/view/animation/OvershootInterpolator;
 
 
 # instance fields
-.field public final a:I
+.field public final E0:Lrb3;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
+.field public final F0:Landroid/view/GestureDetector;
 
 
 # direct methods
-.method public constructor <init>(IIIIII)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/view/animation/OvershootInterpolator;
 
-    iput p1, p0, Lub3;->a:I
+    invoke-direct {v0}, Landroid/view/animation/OvershootInterpolator;-><init>()V
 
-    iput p2, p0, Lub3;->b:I
+    sput-object v0, Lub3;->G0:Landroid/view/animation/OvershootInterpolator;
 
-    iput p3, p0, Lub3;->c:I
+    return-void
+.end method
 
-    iput p4, p0, Lub3;->d:I
+.method public constructor <init>(Landroid/widget/FrameLayout;Lrb3;Lsb3;)V
+    .locals 3
 
-    iput p5, p0, Lub3;->e:I
+    invoke-direct {p0, p1}, Lj6d;-><init>(Landroid/view/View;)V
 
-    iput p6, p0, Lub3;->f:I
+    iput-object p2, p0, Lub3;->E0:Lrb3;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    new-instance v0, Landroid/view/GestureDetector;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v1, Ltb3;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p3, v2, p2}, Ltb3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+
+    iput-object v0, p0, Lub3;->F0:Landroid/view/GestureDetector;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 6
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lub3;->F0:Landroid/view/GestureDetector;
+
+    invoke-virtual {p1, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    sget-object v0, Lub3;->G0:Landroid/view/animation/OvershootInterpolator;
+
+    const-wide/16 v1, 0x7d
+
+    iget-object v3, p0, Lj6d;->a:Landroid/view/View;
+
+    const/4 v4, 0x1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result p1
+
+    const/4 v5, 0x5
+
+    if-ne p1, v5, :cond_0
 
     goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Lub3;
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    if-nez v0, :cond_1
+    move-result p1
+
+    const/4 v5, 0x3
+
+    if-eq p1, v5, :cond_2
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    if-eq p1, v4, :cond_2
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result p1
+
+    const/4 p2, 0x6
+
+    if-ne p1, p2, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lub3;
-
-    iget v0, p0, Lub3;->a:I
-
-    iget v1, p1, Lub3;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
+    return v4
 
     :cond_2
-    iget v0, p0, Lub3;->b:I
+    :goto_0
+    invoke-virtual {v3}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    iget v1, p1, Lub3;->b:I
+    move-result-object p1
 
-    if-eq v0, v1, :cond_3
+    const/high16 p2, 0x3f800000    # 1.0f
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+
+    return v4
 
     :cond_3
-    iget v0, p0, Lub3;->c:I
-
-    iget v1, p1, Lub3;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lub3;->d:I
-
-    iget v1, p1, Lub3;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lub3;->e:I
-
-    iget v1, p1, Lub3;->e:I
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lub3;->f:I
-
-    iget p1, p1, Lub3;->f:I
-
-    if-eq v0, p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_7
     :goto_1
-    const/4 p1, 0x1
+    invoke-virtual {v3}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 3
+    const p2, 0x3f99999a    # 1.2f
 
-    iget v0, p0, Lub3;->a:I
+    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    move-result-object p1
 
-    move-result v0
+    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
-    const/16 v1, 0x1f
+    move-result-object p1
 
-    mul-int/2addr v0, v1
+    invoke-virtual {p1, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    iget v2, p0, Lub3;->b:I
+    move-result-object p1
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    move-result v0
-
-    const/4 v2, -0x1
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lub3;->c:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lub3;->d:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lub3;->e:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lub3;->f:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", accentContrast="
-
-    const-string v1, ", capsule=-1, contrastStatic=-1, negative="
-
-    const-string v2, "CommonIconColors(accent="
-
-    iget v3, p0, Lub3;->a:I
-
-    iget v4, p0, Lub3;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", secondary="
-
-    const-string v2, ", themed="
-
-    iget v3, p0, Lub3;->c:I
-
-    iget v4, p0, Lub3;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", verificationCapsule="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lub3;->e:I
-
-    iget v4, p0, Lub3;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lnd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v4
 .end method

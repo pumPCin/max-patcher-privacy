@@ -3,59 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwkc;
+.implements Lx61;
 
 
-# virtual methods
-.method public final log(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+# instance fields
+.field public final a:Ljava/util/Set;
 
-    sget-object v0, Lyt3;->n:Lhoa;
 
-    if-nez v0, :cond_0
+# direct methods
+.method public constructor <init>(Ljava/util/Set;)V
+    .locals 0
 
-    goto :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
-    sget-object v1, Lr28;->o:Lr28;
+    iput-object p1, p0, Lv61;->a:Ljava/util/Set;
 
-    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "["
-
-    const-string v3, "] "
-
-    invoke-static {v2, p1, v3, p2}, Lnd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const-string v2, "CallsSdk"
-
-    invoke-virtual {v0, v1, v2, p1, p2}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
-.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lv61;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lv61;
+
+    iget-object v1, p0, Lv61;->a:Ljava/util/Set;
+
+    iget-object p1, p1, Lv61;->a:Ljava/util/Set;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    const-string v0, "[%s] %s"
+    iget-object v0, p0, Lv61;->a:Ljava/util/Set;
 
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object p1
+    move-result v0
 
-    const-string p2, "CallsSdk"
+    return v0
+.end method
 
-    invoke-static {p2, p3, v0, p1}, Lyt3;->n(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-void
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UpdateContacts(contactIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lv61;->a:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

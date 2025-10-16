@@ -1,64 +1,127 @@
 .class public final Lbs6;
-.super Landroid/text/style/ClickableSpan;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:Lbu7;
-
-.field public c:I
+.field public final synthetic a:Lcs6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Lcs6;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    iput-object p1, p0, Lbs6;->a:Lcs6;
 
-    iput-object p1, p0, Lbs6;->a:Ljava/lang/String;
-
-    iput p2, p0, Lbs6;->c:I
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-    iget-object v0, p0, Lbs6;->b:Lbu7;
+    const-string p1, "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    iget-object v1, v0, Lbu7;->a:Lgu7;
+    move-result-object v0
 
-    iget-object v0, v0, Lbu7;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    sget-object v2, Lhu7;->b:Lhu7;
+    move-result p1
 
-    check-cast v0, Landroid/text/style/ClickableSpan;
+    if-nez p1, :cond_0
 
-    iget-object v3, p0, Lbs6;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p1, v3, v2, v0}, Lgu7;->b(Landroid/view/View;Ljava/lang/String;Lhu7;Landroid/text/style/ClickableSpan;)V
+    return-void
 
     :cond_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_1
+
+    const-string v0, "com.google.android.gms.auth.api.phone.EXTRA_STATUS"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/common/api/Status;
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, p2
+
+    :goto_0
+    iget-object v1, p0, Lbs6;->a:Lcs6;
+
+    if-eqz v0, :cond_2
+
+    iget v2, v0, Lcom/google/android/gms/common/api/Status;->a:I
+
+    if-nez v2, :cond_2
+
+    iget-object v0, v1, Lcs6;->d:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v2, Las6;
+
+    invoke-direct {v2, v1, p1, p2}, Las6;-><init>(Lcs6;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v0, p2, p2, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
     return-void
-.end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    :cond_2
+    iget-object v1, v1, Lcs6;->e:Ljava/lang/String;
 
-    iget v0, p0, Lbs6;->c:I
+    new-instance v2, Lh54;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    if-eqz p1, :cond_3
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_3
+    move-object p1, p2
+
+    :goto_1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "onMessageReceived: error; status = "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    invoke-static {v1, v2, p2, p1}, Lndi;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method

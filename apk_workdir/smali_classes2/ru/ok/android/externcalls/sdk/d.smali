@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Loh6;
 
 
 # instance fields

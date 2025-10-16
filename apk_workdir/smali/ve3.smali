@@ -1,134 +1,71 @@
 .class public final Lve3;
-.super Ljava/lang/Object;
+.super Lxe3;
 .source "SourceFile"
-
-# interfaces
-.implements Lkotlin/coroutines/Continuation;
-
-
-# static fields
-.field public static final b:Lve3;
-
-.field public static final c:Lve3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic Y:I
+
+.field public final synthetic Z:Lze3;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lve3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lve3;-><init>(I)V
-
-    sput-object v0, Lve3;->b:Lve3;
-
-    new-instance v0, Lve3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lve3;-><init>(I)V
-
-    sput-object v0, Lve3;->c:Lve3;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lze3;I)V
     .locals 0
 
-    iput p1, p0, Lve3;->a:I
+    iput p2, p0, Lve3;->Y:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lve3;->Z:Lze3;
 
-    return-void
-.end method
-
-.method private final a(Ljava/lang/Object;)V
-    .locals 0
+    invoke-direct {p0, p1}, Lxe3;-><init>(Lze3;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getContext()Lf24;
+.method public final a(I)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lve3;->a:I
+    iget v0, p0, Lve3;->Y:I
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Li65;->a:Li65;
+    iget-object v0, p0, Lve3;->Z:Lze3;
 
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This continuation is already complete"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final resumeWith(Ljava/lang/Object;)V
-    .locals 1
-
-    iget p1, p0, Lve3;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "This continuation is already complete"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 1
-
-    iget v0, p0, Lve3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lze3;->j()[Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    aget-object p1, v0, p1
+
+    return-object p1
 
     :pswitch_0
-    const-string v0, "This continuation is already complete"
+    new-instance v0, Lye3;
+
+    iget-object v1, p0, Lve3;->Z:Lze3;
+
+    invoke-direct {v0, v1, p1}, Lye3;-><init>(Lze3;I)V
 
     return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lve3;->Z:Lze3;
+
+    invoke-virtual {v0}, Lze3;->i()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

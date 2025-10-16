@@ -4,142 +4,110 @@
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
+.field public final a:Llt7;
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(Llt7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lgxa;->a:I
-
-    iput p2, p0, Lgxa;->b:I
-
-    iput p3, p0, Lgxa;->c:I
+    iput-object p1, p0, Lgxa;->a:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(JLk14;Ljava/util/List;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    instance-of v0, p3, Lfxa;
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    move-object v0, p3
+
+    check-cast v0, Lfxa;
+
+    iget v1, v0, Lfxa;->Y:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lfxa;->Y:I
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lgxa;
+    new-instance v0, Lfxa;
 
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lgxa;
-
-    iget v1, p0, Lgxa;->a:I
-
-    iget v2, p1, Lgxa;->a:I
-
-    if-eq v1, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v1, p0, Lgxa;->b:I
-
-    iget v2, p1, Lgxa;->b:I
-
-    if-eq v1, v2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v1, p0, Lgxa;->c:I
-
-    iget p1, p1, Lgxa;->c:I
-
-    if-eq v1, p1, :cond_4
+    invoke-direct {v0, p0, p3}, Lfxa;-><init>(Lgxa;Lk14;)V
 
     :goto_0
-    const/4 p1, 0x0
+    iget-object p3, v0, Lfxa;->o:Ljava/lang/Object;
 
-    return p1
+    iget v1, v0, Lfxa;->Y:I
 
-    :cond_4
-    return v0
-.end method
+    const/4 v2, 0x1
 
-.method public final hashCode()I
-    .locals 3
+    if-eqz v1, :cond_2
 
-    iget v0, p0, Lgxa;->a:I
+    if-ne v1, v2, :cond_1
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {p3}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result v0
+    goto :goto_1
 
-    const/16 v1, 0x1f
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    mul-int/2addr v0, v1
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget v2, p0, Lgxa;->b:I
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    throw p1
 
-    move-result v0
+    :cond_2
+    invoke-static {p3}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget v2, p0, Lgxa;->c:I
+    iget-object p3, p0, Lgxa;->a:Llt7;
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-interface {p3}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object p3
 
-    const/4 v1, 0x0
+    check-cast p3, Lpmf;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    new-instance v1, Lqv9;
 
-    move-result v1
+    const/4 v3, 0x4
 
-    add-int/2addr v1, v0
+    invoke-direct {v1, v3, p1, p2, p4}, Lqv9;-><init>(IJLjava/util/List;)V
 
-    return v1
-.end method
+    iput v2, v0, Lfxa;->Y:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    invoke-virtual {p3, v1, v0}, Lpmf;->e(Lhlf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v0, ", titleRes="
+    move-result-object p3
 
-    const-string v1, ", iconRes="
+    sget-object p1, Lc54;->a:Lc54;
 
-    const-string v2, "MenuItem(id="
+    if-ne p3, p1, :cond_3
 
-    iget v3, p0, Lgxa;->a:I
+    return-object p1
 
-    iget v4, p0, Lgxa;->b:I
+    :cond_3
+    :goto_1
+    check-cast p3, Lbw9;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p3, Lbw9;->o:Ljava/util/List;
 
-    move-result-object v0
-
-    const-string v1, ", isDisabled=false)"
-
-    iget v2, p0, Lgxa;->c:I
-
-    invoke-static {v0, v2, v1}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

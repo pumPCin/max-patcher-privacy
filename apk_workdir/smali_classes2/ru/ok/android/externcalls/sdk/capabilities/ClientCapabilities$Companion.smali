@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Laf4;)V
+.method public synthetic constructor <init>(Lvh4;)V
     .locals 0
 
     .line 1
@@ -105,13 +105,13 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lzvd;->V([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {v1}, Ln7e;->f([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Laf4;)V
+    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lvh4;)V
 
     return-object v0
 .end method
@@ -121,11 +121,11 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
 
-    sget-object v1, Ly65;->a:Ly65;
+    sget-object v1, Lca5;->a:Lca5;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Laf4;)V
+    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lvh4;)V
 
     return-object v0
 .end method
@@ -137,29 +137,29 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->getEntries()Lz95;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->getEntries()Led5;
 
     move-result-object v1
 
-    check-cast v1, Lf2;
+    check-cast v1, Li2;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lc2;
+    new-instance v2, Lf2;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v3, v1}, Lc2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lf2;-><init>(ILjava/lang/Object;)V
 
     :cond_0
     :goto_0
-    invoke-virtual {v2}, Lc2;->hasNext()Z
+    invoke-virtual {v2}, Lf2;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v2}, Lc2;->next()Ljava/lang/Object;
+    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -186,7 +186,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Laf4;)V
+    invoke-direct {p1, v0, v1}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;-><init>(Ljava/util/Set;Lvh4;)V
 
     return-object p1
 .end method

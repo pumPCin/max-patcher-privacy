@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:[Landroid/view/View;
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>([Landroid/view/View;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
     iput p2, p0, Lbm8;->a:I
 
-    iput-object p1, p0, Lbm8;->b:[Landroid/view/View;
+    iput-object p1, p0, Lbm8;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lbm8;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,59 +31,62 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
 
-    iget v0, p0, Lbm8;->a:I
+    iget p1, p0, Lbm8;->a:I
 
-    sget-object v1, Laxf;->a:Laxf;
+    iget-object p2, p0, Lbm8;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    iget-object p3, p0, Lbm8;->b:Ljava/lang/Object;
 
-    iget-object v3, p0, Lbm8;->b:[Landroid/view/View;
+    packed-switch p1, :pswitch_data_0
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p3, Landroid/os/Handler;
 
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    check-cast p2, Lr6d;
 
-    array-length v0, v3
+    const/4 p1, 0x0
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    invoke-virtual {p3, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    aget-object v4, v3, v2
+    iget-object p1, p2, Lr6d;->a:Ljava/lang/Object;
 
-    const/16 v5, 0x8
+    check-cast p1, Ljava/lang/Runnable;
 
-    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
+    const-wide/16 p4, 0x12c
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {p3, p1, p4, p5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    goto :goto_0
-
-    :cond_0
-    return-object v1
+    return-void
 
     :pswitch_0
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    check-cast p3, Ldvb;
 
-    array-length v0, v3
+    check-cast p2, Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    move v4, v2
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lwq7;
 
-    :goto_1
-    if-ge v4, v0, :cond_1
+    if-eq p5, p9, :cond_0
 
-    aget-object v5, v3, v4
+    invoke-virtual {p3}, Ldvb;->getCallback()Lxub;
 
-    invoke-virtual {v5, v2}, Landroid/view/View;->setVisibility(I)V
+    move-result-object p1
 
-    add-int/lit8 v4, v4, 0x1
+    if-eqz p1, :cond_0
 
-    goto :goto_1
+    invoke-virtual {p2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->J0()Landroid/widget/LinearLayout;
 
-    :cond_1
-    return-object v1
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lxub;->m(I)V
+
+    :cond_0
+    return-void
 
     nop
 

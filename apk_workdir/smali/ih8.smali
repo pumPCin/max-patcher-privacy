@@ -1,32 +1,87 @@
-.class public interface abstract Lih8;
+.class public Lih8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final L:Lf0a;
+# instance fields
+.field public a:Landroid/window/OnBackInvokedCallback;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public a(Lhh8;)Landroid/window/OnBackInvokedCallback;
+    .locals 2
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lfo;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p1}, Lfo;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public b(Lhh8;Landroid/view/View;Z)V
     .locals 1
 
-    new-instance v0, Lf0a;
+    iget-object v0, p0, Lih8;->a:Landroid/window/OnBackInvokedCallback;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-eqz v0, :cond_0
 
-    sput-object v0, Lih8;->L:Lf0a;
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p2}, Ly4;->o(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
+
+    move-result-object p2
+
+    if-nez p2, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lih8;->a(Lhh8;)Landroid/window/OnBackInvokedCallback;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lih8;->a:Landroid/window/OnBackInvokedCallback;
+
+    if-eqz p3, :cond_2
+
+    const p3, 0xf4240
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p3, 0x0
+
+    :goto_1
+    invoke-static {p2, p3, p1}, Ly4;->y(Landroid/window/OnBackInvokedDispatcher;ILandroid/window/OnBackInvokedCallback;)V
 
     return-void
 .end method
 
+.method public c(Landroid/view/View;)V
+    .locals 1
 
-# virtual methods
-.method public abstract a()J
-.end method
+    invoke-static {p1}, Ly4;->o(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
 
-.method public abstract b()J
-.end method
+    move-result-object p1
 
-.method public abstract next()Z
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lih8;->a:Landroid/window/OnBackInvokedCallback;
+
+    invoke-static {p1, v0}, Ly4;->A(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lih8;->a:Landroid/window/OnBackInvokedCallback;
+
+    return-void
 .end method

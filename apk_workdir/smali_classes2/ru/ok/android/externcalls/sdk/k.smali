@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lno3;
+.implements Ler3;
 
 
 # instance fields
@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Loo3;)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Lfr3;)V
     .locals 1
 
     .line 1
@@ -58,13 +58,13 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/k;->b:Ljava/lang/Object;
 
-    check-cast v0, Loo3;
+    check-cast v0, Lfr3;
 
     check-cast p1, Ljava/lang/Boolean;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/k;->c:Ljava/lang/Runnable;
 
-    invoke-static {v1, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Ljava/lang/Runnable;Loo3;Ljava/lang/Boolean;)V
+    invoke-static {v1, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Ljava/lang/Runnable;Lfr3;Ljava/lang/Boolean;)V
 
     return-void
 
@@ -77,7 +77,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->j(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->l(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -90,7 +90,7 @@
 
     check-cast p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->g(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->h(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
 
     return-void
 

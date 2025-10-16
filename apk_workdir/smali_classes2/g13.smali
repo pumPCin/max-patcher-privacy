@@ -1,27 +1,46 @@
-.class public interface abstract Lg13;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lg13;
+.super Lk14;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lc13;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lc13;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lg13;->Y:Lc13;
+
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public p(JLwy3;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    move-object v0, p0
+    iput-object p1, p0, Lg13;->o:Ljava/lang/Object;
 
-    check-cast v0, Lh23;
+    iget p1, p0, Lg13;->X:I
 
-    invoke-virtual {v0, p1, p2}, Lh23;->N(J)Lbpc;
+    const/high16 v0, -0x80000000
 
-    move-result-object p1
+    or-int/2addr p1, v0
 
-    new-instance p2, La13;
+    iput p1, p0, Lg13;->X:I
 
-    const/16 v0, 0x9
+    iget-object p1, p0, Lg13;->Y:Lc13;
 
-    invoke-direct {p2, p1, v0}, La13;-><init>(Liu5;I)V
+    const/4 v0, 0x0
 
-    invoke-static {p2, p3}, Luce;->C(Liu5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lc13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

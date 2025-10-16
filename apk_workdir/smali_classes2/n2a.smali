@@ -1,75 +1,124 @@
-.class public final Ln2a;
+.class public final synthetic Ln2a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic c:[Lpl7;
-
-.field public static final d:Ljava/lang/String;
+# interfaces
+.implements Lr6;
 
 
 # instance fields
-.field public final a:Lys4;
+.field public final synthetic a:I
 
-.field public final b:Lys4;
+.field public final synthetic b:Lo2a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lo2a;I)V
+    .locals 0
 
-    new-instance v0, Lf4c;
+    iput p2, p0, Ln2a;->a:I
 
-    const-class v1, Ln2a;
+    iput-object p1, p0, Ln2a;->b:Lo2a;
 
-    const-string v2, "chats"
-
-    const-string v3, "getChats()Lru/ok/tamtam/chats/ChatController;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Lewc;->a:Lfwc;
-
-    const-string v3, "messages"
-
-    const-string v5, "getMessages()Lru/ok/tamtam/messages/MessageController;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Lpl7;
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v3, v0
-
-    sput-object v3, Ln2a;->c:[Lpl7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ln2a;->d:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lys4;Lys4;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Ln2a;->a:Lys4;
+    iget v0, p0, Ln2a;->a:I
 
-    iput-object p2, p0, Ln2a;->b:Lys4;
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lm2a;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lm2a;-><init>(I)V
+
+    iget-object v1, p0, Ln2a;->b:Lo2a;
+
+    invoke-virtual {v1, v0}, Lf3;->m(Lhr3;)V
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Lm2a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lm2a;-><init>(I)V
+
+    iget-object v1, p0, Ln2a;->b:Lo2a;
+
+    invoke-virtual {v1, v0}, Lf3;->m(Lhr3;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lm2a;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lm2a;-><init>(I)V
+
+    iget-object v1, p0, Ln2a;->b:Lo2a;
+
+    invoke-virtual {v1, v0}, Lf3;->m(Lhr3;)V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Lm2a;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lm2a;-><init>(I)V
+
+    iget-object v1, p0, Ln2a;->b:Lo2a;
+
+    invoke-virtual {v1, v0}, Lf3;->m(Lhr3;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lm2a;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lm2a;-><init>(I)V
+
+    iget-object v1, p0, Ln2a;->b:Lo2a;
+
+    invoke-virtual {v1, v0}, Lf3;->m(Lhr3;)V
+
+    return-void
+
+    :pswitch_4
+    new-instance v0, Lm2a;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lm2a;-><init>(I)V
+
+    iget-object v1, p0, Ln2a;->b:Lo2a;
+
+    invoke-virtual {v1, v0}, Lf3;->m(Lhr3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

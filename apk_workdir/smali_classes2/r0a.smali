@@ -1,118 +1,57 @@
 .class public final Lr0a;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public final synthetic Y:Lt0a;
+.field public final b:Ljava/nio/ByteBuffer;
 
-.field public final synthetic Z:Lrr9;
+.field public final c:Landroid/media/MediaCodec$BufferInfo;
 
 
 # direct methods
-.method public constructor <init>(Lt0a;Lrr9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+    .locals 6
 
-    iput-object p1, p0, Lr0a;->Y:Lt0a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lr0a;->Z:Lrr9;
+    iput p1, p0, Lr0a;->a:I
 
-    const/4 p1, 0x2
+    invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result p1
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lr0a;->b:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    new-instance v0, Landroid/media/MediaCodec$BufferInfo;
+
+    invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
+
+    iput-object v0, p0, Lr0a;->c:Landroid/media/MediaCodec$BufferInfo;
+
+    iget v1, p3, Landroid/media/MediaCodec$BufferInfo;->offset:I
+
+    iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    iget-wide v3, p3, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+
+    iget v5, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
+
+    invoke-virtual/range {v0 .. v5}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lr0a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lr0a;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lr0a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lr0a;
-
-    iget-object v0, p0, Lr0a;->Y:Lt0a;
-
-    iget-object v1, p0, Lr0a;->Z:Lrr9;
-
-    invoke-direct {p1, v0, v1, p2}, Lr0a;-><init>(Lt0a;Lrr9;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lr0a;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iput v1, p0, Lr0a;->X:I
-
-    iget-object p1, p0, Lr0a;->Y:Lt0a;
-
-    iget-object v0, p0, Lr0a;->Z:Lrr9;
-
-    invoke-virtual {p1, v0, p0}, Lv0a;->c(Lrr9;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements La8c;
+.implements Lzhc;
 
 
 # static fields
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {p0}, Lsw1;->u(I)I
+    invoke-static {p0}, Lwx1;->v(I)I
 
     move-result p0
 

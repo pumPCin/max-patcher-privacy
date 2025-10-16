@@ -1,226 +1,270 @@
-.class public final synthetic Laf9;
-.super Ljava/lang/Object;
+.class public abstract Laf9;
+.super Lpoe;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lov2;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final E0:I
 
-.field public final synthetic b:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final F0:I
 
-.field public final synthetic c:Ljava/util/List;
+.field public G0:Lbf9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 3
 
-    iput p3, p0, Laf9;->a:I
+    invoke-direct {p0, p1}, Lj6d;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Laf9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+    const/4 v0, 0x6
 
-    iput-object p2, p0, Laf9;->c:Ljava/util/List;
+    int-to-float v0, v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lagi;->d(F)I
+
+    move-result v0
+
+    iput v0, p0, Laf9;->E0:I
+
+    const/4 v0, 0x2
+
+    int-to-float v0, v0
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lagi;->d(F)I
+
+    move-result v0
+
+    iput v0, p0, Laf9;->F0:I
+
+    new-instance v0, Ljd0;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, p0, p1, v1, v2}, Ljd0;-><init>(Lpoe;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v0, p1}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final A(Lb18;)V
+    .locals 1
 
-    iget v0, p0, Laf9;->a:I
+    check-cast p1, Lone/me/messages/list/loader/MessageModel;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v0, Ls95;->a:Ls95;
 
-    iget-object v0, p0, Laf9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-virtual {p0, p1, v0}, Laf9;->G(Lone/me/messages/list/loader/MessageModel;Ljava/util/List;)V
 
-    iget-object v1, p0, Laf9;->c:Ljava/util/List;
+    return-void
+.end method
 
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+.method public abstract G(Lone/me/messages/list/loader/MessageModel;Ljava/util/List;)V
+.end method
 
-    sget-object v2, Lyt3;->n:Lhoa;
+.method public final H(Lone/me/messages/list/loader/MessageModel;Landroid/view/View;)V
+    .locals 9
 
-    if-nez v2, :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    instance-of v3, v0, Lp99;
+
+    if-eqz v3, :cond_0
+
+    move-object v4, v0
+
+    check-cast v4, Lp99;
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Lr28;->o:Lr28;
-
-    invoke-virtual {v2, v3}, Lhoa;->b(Lr28;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const-string v4, "New messages submitted, size="
-
-    invoke-static {v1, v4}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
     const/4 v4, 0x0
 
-    invoke-virtual {v2, v3, v0, v1, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
     :goto_0
-    return-void
+    if-eqz v4, :cond_1
 
-    :pswitch_0
-    iget-object v0, p0, Laf9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, p0, Laf9;->c:Ljava/util/List;
-
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v2, Lyt3;->n:Lhoa;
-
-    if-nez v2, :cond_2
+    iget-boolean v4, v4, Lp99;->a:Z
 
     goto :goto_1
 
+    :cond_1
+    const/4 v4, 0x1
+
+    :goto_1
+    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->K0:I
+
+    const/high16 v5, 0x7c000000
+
+    and-int/2addr v5, p1
+
+    const/high16 v6, 0x8000000
+
+    and-int/2addr v6, p1
+
+    iget v7, p0, Laf9;->E0:I
+
+    if-eqz v6, :cond_2
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
     :cond_2
-    sget-object v3, Lr28;->o:Lr28;
+    const/high16 v6, 0x10000000
 
-    invoke-virtual {v2, v3}, Lhoa;->b(Lr28;)Z
+    and-int/2addr v6, p1
 
-    move-result v4
+    iget v8, p0, Laf9;->F0:I
 
-    if-eqz v4, :cond_3
+    if-eqz v6, :cond_3
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    move-result v1
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    const-string v4, "New messages submitted (lifecycle scope), size="
-
-    invoke-static {v1, v4}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v0, v1, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_2
 
     :cond_3
-    :goto_1
-    return-void
+    const/high16 v6, 0x20000000
 
-    :pswitch_1
-    iget-object v0, p0, Laf9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+    and-int/2addr v6, p1
 
-    iget-object v1, p0, Laf9;->c:Ljava/util/List;
+    if-eqz v6, :cond_4
 
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    sget-object v2, Lyt3;->n:Lhoa;
-
-    if-nez v2, :cond_4
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     goto :goto_2
 
     :cond_4
-    sget-object v3, Lr28;->Y:Lr28;
+    const/high16 v6, 0x40000000    # 2.0f
 
-    invoke-virtual {v2, v3}, Lhoa;->b(Lr28;)Z
+    and-int/2addr v6, p1
 
-    move-result v4
+    if-eqz v6, :cond_5
 
-    if-eqz v4, :cond_5
+    iput v8, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    move-result v1
-
-    const-string v4, "WARNING! Can\'t set new messages, size="
-
-    invoke-static {v1, v4}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v0, v1, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_2
 
     :cond_5
+    if-nez p1, :cond_6
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
+    :cond_6
+    invoke-static {p1}, Lbf9;->e(I)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    iput v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    :cond_7
     :goto_2
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Laf9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, p0, Laf9;->c:Ljava/util/List;
-
-    iget-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lsb9;
-
-    new-instance v3, Laf9;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v3, v0, v1, v4}, Laf9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
-
-    invoke-virtual {v2, v1, v3}, Lsb9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Laf9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, p0, Laf9;->c:Ljava/util/List;
-
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v2, Lyt3;->n:Lhoa;
-
-    if-nez v2, :cond_6
+    if-nez p1, :cond_8
 
     goto :goto_3
 
-    :cond_6
-    sget-object v3, Lr28;->o:Lr28;
+    :cond_8
+    invoke-static {p1}, Lbf9;->e(I)Z
 
-    invoke-virtual {v2, v3}, Lhoa;->b(Lr28;)Z
+    move-result p1
 
-    move-result v4
+    if-nez p1, :cond_9
 
-    if-eqz v4, :cond_7
+    if-eqz v3, :cond_9
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    move-object p1, v0
 
-    move-result v1
+    check-cast p1, Lp99;
 
-    const-string v4, "New messages submitted (rv null), size="
+    invoke-static {v5}, Lrt0;->a(I)Z
 
-    invoke-static {v1, v4}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+    move-result v5
 
-    move-result-object v1
+    iput-boolean v5, p1, Lp99;->a:Z
 
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v0, v1, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
+    :cond_9
     :goto_3
+    iget p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    if-ne v1, p1, :cond_b
+
+    iget p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    if-ne v2, p1, :cond_b
+
+    if-eqz v3, :cond_a
+
+    move-object p1, v0
+
+    check-cast p1, Lp99;
+
+    iget-boolean p1, p1, Lp99;->a:Z
+
+    if-eq v4, p1, :cond_a
+
+    goto :goto_4
+
+    :cond_a
     return-void
 
-    nop
+    :cond_b
+    :goto_4
+    invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,180 +1,167 @@
 .class public final Lzzf;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
+# static fields
+.field public static final a:Lzzf;
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public static volatile b:Lyzf;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lzzf;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+    new-instance v0, Lzzf;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lzzf;->a:Lzzf;
+
+    sget-object v0, Lvda;->Y:Lvda;
+
+    sput-object v0, Lzzf;->b:Lyzf;
 
     return-void
 .end method
 
+.method public static varargs a(Ljava/lang/String;J[Lqbb;)V
+    .locals 9
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    check-cast p1, Ln24;
+    sget-object v1, Lkag;->$EnumSwitchMapping$0:[I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p0, p1, p2}, Lzzf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    aget v0, v1, v0
 
-    check-cast p1, Lzzf;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p2, Laxf;->a:Laxf;
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-virtual {p1, p2}, Lzzf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    move-result-object p1
+    throw p0
 
-    return-object p1
-.end method
+    :pswitch_0
+    const-string v0, "d"
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lzzf;
-
-    iget-object v0, p0, Lzzf;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
-
-    invoke-direct {p1, v0, p2}, Lzzf;-><init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    const-string v0, "storeDraftUpload: finish store upload = "
-
-    iget v1, p0, Lzzf;->X:I
-
-    const-string v2, "UploadDraftMediaWorker"
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lzzf;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
+    :goto_0
+    move-object v7, v0
 
     goto :goto_1
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :pswitch_1
+    const-string v0, "h"
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    goto :goto_0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_2
+    const-string v0, "min"
 
-    throw p1
+    goto :goto_0
 
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :pswitch_3
+    const-string v0, "s"
 
-    :try_start_1
-    iget-object p1, v4, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->b:Lh4f;
+    goto :goto_0
 
-    invoke-virtual {p1}, Lh4f;->getValue()Ljava/lang/Object;
+    :pswitch_4
+    const-string v0, "ms"
 
-    move-result-object p1
+    goto :goto_0
 
-    check-cast p1, Lvw4;
+    :pswitch_5
+    const-string v0, "us"
 
-    invoke-virtual {v4}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lmw4;
+    goto :goto_0
 
-    move-result-object v1
+    :pswitch_6
+    const-string v0, "ns"
 
-    invoke-virtual {p1}, Lvw4;->a()Lbde;
-
-    move-result-object p1
-
-    new-instance v5, Lfk2;
-
-    const/4 v6, 0x7
-
-    invoke-direct {v5, v6, v1}, Lfk2;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Lde3;
-
-    const/4 v6, 0x2
-
-    invoke-direct {v1, p1, v6, v5}, Lde3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput v3, p0, Lzzf;->X:I
-
-    invoke-static {v1, p0}, Lshd;->b(Lce3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v1, Lo24;->a:Lo24;
-
-    if-ne p1, v1, :cond_2
-
-    return-object v1
-
-    :cond_2
-    :goto_0
-    :try_start_2
-    invoke-virtual {v4}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lmw4;
-
-    move-result-object p1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_2
+    goto :goto_0
 
     :goto_1
-    const-string v0, "storeDraftUpload: failed"
+    array-length v0, p3
 
-    invoke-static {v2, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    :goto_2
-    sget-object p1, Laxf;->a:Laxf;
+    move-result-object p3
 
-    return-object p1
+    check-cast p3, [Lqbb;
+
+    invoke-static {p3}, Lyf8;->f([Lqbb;)Ljava/util/Map;
+
+    move-result-object v8
+
+    sget-object p3, Lzzf;->b:Lyzf;
+
+    sget-object v0, Lvda;->Y:Lvda;
+
+    invoke-virtual {p3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, Ln8a;->X:Ln8a;
+
+    invoke-virtual {p3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance v1, Lmfb;
+
+    sget-wide v2, Lvvb;->a:J
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+
+    move-result-wide v4
+
+    add-long/2addr v4, v2
+
+    sget-wide v2, Lvvb;->b:J
+
+    sub-long v2, v4, v2
+
+    move-object v4, p0
+
+    move-wide v5, p1
+
+    invoke-direct/range {v1 .. v8}, Lmfb;-><init>(JLjava/lang/String;JLjava/lang/String;Ljava/util/Map;)V
+
+    new-instance p0, Lqie;
+
+    const/16 p1, 0x14
+
+    invoke-direct {p0, p1, v1}, Lqie;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p0}, Lc0g;->a(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

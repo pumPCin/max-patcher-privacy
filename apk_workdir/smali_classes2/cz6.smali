@@ -1,15 +1,52 @@
-.class public final Lcz6;
-.super Ljava/util/zip/GZIPOutputStream;
+.class public final synthetic Lcz6;
+.super Lti6;
 .source "SourceFile"
+
+# interfaces
+.implements Lqh6;
+
+
+# static fields
+.field public static final a:Lcz6;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lcz6;
+
+    const-string v4, "getTime()J"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lmy6;
+
+    const-string v3, "getTime"
+
+    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lcz6;->a:Lcz6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final m()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Ljava/util/zip/GZIPOutputStream;->def:Ljava/util/zip/Deflater;
+    check-cast p1, Lmy6;
 
-    invoke-virtual {v0}, Ljava/util/zip/Deflater;->end()V
+    invoke-interface {p1}, Lmy6;->l()J
 
-    return-void
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 .end method

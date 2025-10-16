@@ -1,69 +1,68 @@
 .class public final Ljg2;
-.super Ljava/lang/Object;
+.super Lklf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lh4f;
-
-.field public final b:Lh4f;
+.field public c:Lea2;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Loe9;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lu92;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lu92;-><init>(I)V
-
-    new-instance v1, Lh4f;
-
-    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
-
-    iput-object v1, p0, Ljg2;->a:Lh4f;
-
-    new-instance v0, Lu92;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lu92;-><init>(I)V
-
-    new-instance v1, Lh4f;
-
-    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
-
-    iput-object v1, p0, Ljg2;->b:Lh4f;
+    invoke-direct {p0, p1}, Lklf;-><init>(Loe9;)V
 
     return-void
 .end method
 
-.method public static a(I)Lhy3;
-    .locals 6
 
-    new-instance v0, Lhy3;
+# virtual methods
+.method public final d(Loe9;Ljava/lang/String;)V
+    .locals 1
 
-    sget v1, Loqa;->a0:I
+    const-string v0, "chat"
 
-    new-instance v2, Lxcf;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, p0}, Lxcf;-><init>(I)V
+    move-result p2
 
-    sget p0, Lpra;->h:I
+    if-eqz p2, :cond_0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Lea2;->a(Loe9;)Lea2;
 
-    move-result-object v3
+    move-result-object p1
 
-    const/4 v4, 0x0
+    iput-object p1, p0, Ljg2;->c:Lea2;
 
-    const/16 v5, 0x14
+    return-void
 
-    invoke-direct/range {v0 .. v5}, Lhy3;-><init>(ILcdf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+    :cond_0
+    invoke-virtual {p1}, Loe9;->y()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ljg2;->c:Lea2;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{chat="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

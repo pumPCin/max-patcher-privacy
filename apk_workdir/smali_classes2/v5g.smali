@@ -1,24 +1,24 @@
 .class public final Lv5g;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:La6g;
+.field public final synthetic X:Lx5g;
 
 
 # direct methods
-.method public constructor <init>(La6g;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lx5g;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lv5g;->X:La6g;
+    iput-object p1, p0, Lv5g;->X:Lx5g;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Laxf;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +38,7 @@
 
     check-cast p1, Lv5g;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lv5g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,67 +50,58 @@
 
     new-instance p1, Lv5g;
 
-    iget-object v0, p0, Lv5g;->X:La6g;
+    iget-object v0, p0, Lv5g;->X:Lx5g;
 
-    invoke-direct {p1, v0, p2}, Lv5g;-><init>(La6g;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lv5g;-><init>(Lx5g;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 4
 
-    sget-object v0, Laxf;->a:Laxf;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object p1, p0, Lv5g;->X:Lx5g;
 
-    iget-object p1, p0, Lv5g;->X:La6g;
+    iget-object p1, p1, Lx5g;->w0:Lsze;
 
-    iget-object v1, p1, La6g;->f:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    goto :goto_1
+    check-cast v0, Lj9g;
 
-    :cond_0
-    iget-object p1, p1, La6g;->e:Ljava/lang/String;
+    instance-of v1, v0, Le9g;
 
-    sget-object v2, Lyt3;->n:Lhoa;
+    sget-object v2, Lzag;->a:Lzag;
 
-    if-nez v2, :cond_1
+    if-eqz v1, :cond_1
+
+    check-cast v0, Le9g;
+
+    iget-object v1, v0, Le9g;->c:Lh9g;
+
+    iget-object v3, v1, Lh9g;->c:Loqf;
+
+    if-nez v3, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    const/4 v3, 0x0
+
+    invoke-static {v1, v3}, Lh9g;->a(Lh9g;Loqf;)Lh9g;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Le9g;->c(Le9g;Lh9g;)Le9g;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v3, v0}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
     :cond_1
-    sget-object v3, Lr28;->o:Lr28;
-
-    invoke-virtual {v2, v3}, Lhoa;->b(Lr28;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    const-string v4, "Player autoplay. Handle fetch event for video message, try start autoplay."
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, p1, v4, v5}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
     :goto_0
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getScrollState()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    iget-object p1, p0, Lv5g;->X:La6g;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2}, La6g;->e(Landroidx/recyclerview/widget/RecyclerView;Z)V
-
-    :cond_3
-    :goto_1
-    return-object v0
+    return-object v2
 .end method

@@ -1,48 +1,23 @@
 .class public final Lo2f;
-.super Lwy3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public a:J
 
-.field public final synthetic Y:Lly8;
+.field public b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Ljava/lang/String;
 
+.field public d:J
 
-# direct methods
-.method public constructor <init>(Lly8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public e:J
 
-    iput-object p1, p0, Lo2f;->Y:Lly8;
+.field public f:J
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public g:Ljava/lang/String;
 
-    return-void
-.end method
+.field public h:Ljava/util/List;
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lo2f;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lo2f;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lo2f;->X:I
-
-    iget-object p1, p0, Lo2f;->Y:Lly8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lly8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
+.field public i:Z

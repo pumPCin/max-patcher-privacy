@@ -1,209 +1,164 @@
 .class public final Lykd;
-.super Ljava/lang/Object;
+.super Lri0;
 .source "SourceFile"
-
-# interfaces
-.implements Lald;
 
 
 # instance fields
-.field public final a:Lxcf;
+.field public final synthetic a:Lr0;
 
-.field public final b:I
+.field public final synthetic b:Lg32;
+
+.field public final synthetic c:Lzkd;
+
+.field public final synthetic d:Z
+
+.field public final synthetic e:Z
 
 
 # direct methods
-.method public constructor <init>(Lxcf;)V
-    .locals 1
-
-    sget v0, Lgta;->f:I
+.method public constructor <init>(Lr0;Lg32;Lzkd;ZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lykd;->a:Lxcf;
+    iput-object p1, p0, Lykd;->a:Lr0;
 
-    sget p1, Lfta;->d:I
+    iput-object p2, p0, Lykd;->b:Lg32;
 
-    iput p1, p0, Lykd;->b:I
+    iput-object p3, p0, Lykd;->c:Lzkd;
+
+    iput-boolean p4, p0, Lykd;->d:Z
+
+    iput-boolean p5, p0, Lykd;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final d()V
     .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lykd;->b:Lg32;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Lg32;->r()Z
 
-    return v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/Throwable;
+
+    const-string v2, "Cancelled with fresco pipeline"
+
+    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lg32;->h(Ljava/lang/Throwable;)Z
 
     :cond_0
-    instance-of v1, p1, Lykd;
+    return-void
+.end method
 
-    if-nez v1, :cond_1
+.method public final e(Lr0;)V
+    .locals 1
 
-    goto :goto_0
+    iget-object p1, p0, Lykd;->b:Lg32;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final g(Landroid/graphics/Bitmap;)V
+    .locals 6
+
+    iget-object v0, p0, Lykd;->a:Lr0;
+
+    invoke-virtual {v0}, Lr0;->h()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lykd;->b:Lg32;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {v2, v1}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    invoke-virtual {v2, v1}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    return-void
 
     :cond_1
-    check-cast p1, Lykd;
+    new-instance v0, Lpp0;
 
-    iget-object v1, p0, Lykd;->a:Lxcf;
+    iget-boolean v1, p0, Lykd;->d:Z
 
-    iget-object p1, p1, Lykd;->a:Lxcf;
+    iget-object v3, p0, Lykd;->c:Lzkd;
 
-    invoke-virtual {v1, p1}, Lxcf;->equals(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_2
 
-    move-result p1
+    iget-object v4, v3, Lzkd;->c:Laeb;
 
-    if-nez p1, :cond_2
+    iget-object v4, v4, Laeb;->a:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v4
+
+    sget-object v5, Laeb;->b:Ljava/lang/String;
+
+    invoke-static {v4, v5}, Lwx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
 
     goto :goto_0
 
     :cond_2
-    sget-wide v1, Lgta;->d:J
-
-    cmp-long p1, v1, v1
-
-    if-eqz p1, :cond_3
+    sget-object v4, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
 
     :goto_0
-    const/4 p1, 0x0
+    invoke-direct {v0, v4, p1}, Lpp0;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    return p1
+    iget-object p1, v3, Lzkd;->a:Llod;
+
+    iget-boolean v3, p0, Lykd;->e:Z
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {p1, v3}, Llod;->f(Z)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p1, v0, v1}, Llod;->b(Lmod;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    goto :goto_1
 
     :cond_3
-    return v0
-.end method
+    invoke-interface {p1, v3}, Llod;->f(Z)Ljava/lang/String;
 
-.method public final f()I
-    .locals 1
+    move-result-object v1
 
-    const/4 v0, 0x4
+    invoke-interface {p1, v0, v1}, Llod;->a(Lmod;Ljava/lang/String;)Landroid/net/Uri;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final g()Z
-    .locals 1
+    :goto_1
+    invoke-virtual {v2, p1}, Lg32;->resumeWith(Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Lgta;->d:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lcdf;
-    .locals 1
-
-    iget-object v0, p0, Lykd;->a:Lxcf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lykd;->a:Lxcf;
-
-    iget v0, v0, Lxcf;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x1
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    sget-wide v2, Lgta;->d:J
-
-    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Lsw1;->u(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lykd;->b:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-wide v0, Lgta;->d:J
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Header(title="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lykd;->a:Lxcf;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", sectionId=1, itemId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", sectionItemType="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, Ljjd;->o(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

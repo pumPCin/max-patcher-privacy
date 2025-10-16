@@ -1,55 +1,27 @@
-.class public final synthetic Lxl3;
+.class public abstract Lxl3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyl3;
-
-
-# instance fields
-.field public final synthetic a:Lzrd;
-
-.field public final synthetic b:Lfr8;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lzrd;Lfr8;Ljjb;)V
+.method public static a(Landroid/content/res/Configuration;)Landroid/os/LocaleList;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
-    iput-object p1, p0, Lxl3;->a:Lzrd;
+    move-result-object p0
 
-    iput-object p2, p0, Lxl3;->b:Lfr8;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/content/res/Configuration;Ln68;)V
+    .locals 0
 
-# virtual methods
-.method public final run()Lbw7;
-    .locals 2
+    iget-object p1, p1, Ln68;->a:Lo68;
 
-    iget-object v0, p0, Lxl3;->a:Lzrd;
+    iget-object p1, p1, Lo68;->a:Landroid/os/LocaleList;
 
-    iget-object v0, v0, Lzrd;->X:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
 
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzr8;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lxl3;->b:Lfr8;
-
-    invoke-virtual {v0, v1}, Lzr8;->o(Lfr8;)V
-
-    :cond_0
-    sget-object v0, Lf57;->b:Lf57;
-
-    return-object v0
+    return-void
 .end method

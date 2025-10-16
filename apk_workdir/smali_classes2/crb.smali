@@ -1,51 +1,57 @@
 .class public final Lcrb;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lv98;
+.field public a:Landroid/util/Size;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public b:Landroid/util/Size;
 
-.field public final synthetic Z:Lv98;
+.field public final c:[F
 
-.field public o:Lv98;
+.field public final d:[F
 
-.field public r0:I
+.field public final e:Luq6;
+
+.field public f:Ldoe;
 
 
 # direct methods
-.method public constructor <init>(Lv98;Lwy3;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
-    iput-object p1, p0, Lcrb;->Z:Lv98;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v0, 0x10
+
+    new-array v1, v0, [F
+
+    iput-object v1, p0, Lcrb;->c:[F
+
+    new-array v0, v0, [F
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+
+    iput-object v0, p0, Lcrb;->d:[F
+
+    new-instance v0, Luq6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ldg8;
+
+    sget-object v2, Luq6;->c:[F
+
+    sget-object v3, Luq6;->o:[F
+
+    invoke-direct {v1, v2, v3}, Ldg8;-><init>([F[F)V
+
+    iput-object v1, v0, Luq6;->a:Ljava/lang/Object;
+
+    iput-object v0, p0, Lcrb;->e:Luq6;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lcrb;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Lcrb;->r0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcrb;->r0:I
-
-    iget-object p1, p0, Lcrb;->Z:Lv98;
-
-    invoke-virtual {p1, p0}, Lv98;->a(Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

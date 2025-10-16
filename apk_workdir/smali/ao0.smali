@@ -1,20 +1,23 @@
-.class public interface abstract Lao0;
+.class public final Lao0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract c()V
-.end method
+# instance fields
+.field public final a:Lj3e;
 
-.method public abstract e(III)Lm73;
-.end method
+.field public final b:I
 
-.method public abstract f()V
-.end method
 
-.method public abstract g(Lme4;Lzn0;Ltn0;I)V
-.end method
+# direct methods
+.method public constructor <init>(Lj3e;I)V
+    .locals 0
 
-.method public abstract h(II)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lao0;->a:Lj3e;
+
+    iput p2, p0, Lao0;->b:I
+
+    return-void
 .end method

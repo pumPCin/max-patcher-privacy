@@ -1,64 +1,81 @@
-.class public final Ln09;
+.class public final synthetic Ln09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/MenuItem$OnActionExpandListener;
+.implements Lt09;
 
 
 # instance fields
-.field public final a:Landroid/view/MenuItem$OnActionExpandListener;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lo09;
+.field public final synthetic b:Lt09;
 
 
 # direct methods
-.method public constructor <init>(Lo09;Landroid/view/MenuItem$OnActionExpandListener;)V
+.method public synthetic constructor <init>(Lt09;I)V
     .locals 0
 
+    iput p2, p0, Ln09;->a:I
+
+    iput-object p1, p0, Ln09;->b:Lt09;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ln09;->b:Lo09;
-
-    iput-object p2, p0, Ln09;->a:Landroid/view/MenuItem$OnActionExpandListener;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
-    .locals 1
+.method public final m(Liz8;Loy8;I)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Ln09;->b:Lo09;
+    iget v0, p0, Ln09;->a:I
 
-    invoke-virtual {v0, p1}, Lv7f;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    new-instance v0, Lmy1;
 
-    iget-object v0, p0, Ln09;->a:Landroid/view/MenuItem$OnActionExpandListener;
+    const/16 v1, 0x8
 
-    invoke-interface {v0, p1}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
+    invoke-direct {v0, p1, p2, p3, v1}, Lmy1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
 
-    move-result p1
+    iget-object v1, p0, Ln09;->b:Lt09;
 
-    return p1
-.end method
-
-.method public final onMenuItemActionExpand(Landroid/view/MenuItem;)Z
-    .locals 1
-
-    iget-object v0, p0, Ln09;->b:Lo09;
-
-    invoke-virtual {v0, p1}, Lv7f;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    invoke-static {p1, p2, p3, v1, v0}, Lu09;->W(Liz8;Loy8;ILt09;Ldr3;)Lo18;
 
     move-result-object p1
 
-    iget-object v0, p0, Ln09;->a:Landroid/view/MenuItem$OnActionExpandListener;
+    return-object p1
 
-    invoke-interface {v0, p1}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionExpand(Landroid/view/MenuItem;)Z
+    :pswitch_0
+    if-nez p1, :cond_0
 
-    move-result p1
+    new-instance p1, Lyc0;
 
-    return p1
+    const/16 v0, 0xb
+
+    invoke-direct {p1, p2, p3, v0}, Lyc0;-><init>(Ljava/lang/Object;II)V
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Ln09;->b:Lt09;
+
+    invoke-static {v0, p2, p3, v1, p1}, Lu09;->W(Liz8;Loy8;ILt09;Ldr3;)Lo18;
+
+    throw v0
+
+    :cond_0
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

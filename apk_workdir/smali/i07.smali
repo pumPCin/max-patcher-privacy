@@ -1,33 +1,35 @@
-.class public abstract Li07;
+.class public final Li07;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+# instance fields
+.field public final a:J
 
-.field public static final b:Ljava/util/regex/Pattern;
+.field public final b:Z
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(JZJJZ)V
+    .locals 0
 
-    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+    iput-wide p1, p0, Li07;->a:J
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-boolean p3, p0, Li07;->b:Z
 
-    move-result-object v0
+    iput-wide p4, p0, Li07;->c:J
 
-    sput-object v0, Li07;->a:Ljava/util/regex/Pattern;
+    iput-wide p6, p0, Li07;->d:J
 
-    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
+    iput-boolean p8, p0, Li07;->e:Z
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Li07;->b:Ljava/util/regex/Pattern;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

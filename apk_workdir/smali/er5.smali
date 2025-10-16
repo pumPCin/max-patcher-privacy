@@ -1,42 +1,40 @@
-.class public final Ler5;
+.class public abstract Ler5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxpd;
-
-
-# instance fields
-.field public final a:Lxpd;
-
-.field public final b:Z
-
-.field public final c:Lvd6;
-
 
 # direct methods
-.method public constructor <init>(Lxpd;ZLvd6;)V
+.method public static synthetic a(Ljava/lang/Throwable;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Ler5;->b(Ljava/lang/Throwable;)Z
 
-    iput-object p1, p0, Ler5;->a:Lxpd;
+    move-result p0
 
-    iput-boolean p2, p0, Ler5;->b:Z
-
-    iput-object p3, p0, Ler5;->c:Lvd6;
-
-    return-void
+    return p0
 .end method
 
-
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method private static b(Ljava/lang/Throwable;)Z
     .locals 1
 
-    new-instance v0, Ldr5;
+    instance-of v0, p0, Landroid/system/ErrnoException;
 
-    invoke-direct {v0, p0}, Ldr5;-><init>(Ler5;)V
+    if-eqz v0, :cond_0
 
-    return-object v0
+    check-cast p0, Landroid/system/ErrnoException;
+
+    iget p0, p0, Landroid/system/ErrnoException;->errno:I
+
+    sget v0, Landroid/system/OsConstants;->EACCES:I
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

@@ -1,90 +1,73 @@
-.class public final Lxf0;
-.super Ljava/lang/Object;
+.class public final enum Lxf0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Liu5;
 
+# static fields
+.field public static final enum a:Lxf0;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lxf0;
 
-.field public final synthetic b:Luu5;
+.field public static final synthetic c:[Lxf0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luu5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lxf0;->a:I
+    new-instance v0, Lxf0;
 
-    iput-object p1, p0, Lxf0;->b:Luu5;
+    const-string v1, "EXPONENTIAL"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lxf0;->a:Lxf0;
+
+    new-instance v1, Lxf0;
+
+    const-string v2, "LINEAR"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lxf0;->b:Lxf0;
+
+    filled-new-array {v0, v1}, [Lxf0;
+
+    move-result-object v0
+
+    sput-object v0, Lxf0;->c:[Lxf0;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lxf0;
+    .locals 1
 
-# virtual methods
-.method public final d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+    const-class v0, Lxf0;
 
-    iget v0, p0, Lxf0;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    new-instance v0, Lmz9;
+    check-cast p0, Lxf0;
 
-    const/16 v1, 0x13
+    return-object p0
+.end method
 
-    invoke-direct {v0, p1, v1}, Lmz9;-><init>(Lku5;I)V
+.method public static values()[Lxf0;
+    .locals 1
 
-    iget-object p1, p0, Lxf0;->b:Luu5;
+    sget-object v0, Lxf0;->c:[Lxf0;
 
-    invoke-virtual {p1, v0, p2}, Luu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    sget-object p2, Lo24;->a:Lo24;
+    check-cast v0, [Lxf0;
 
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lwf0;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lwf0;-><init>(Lku5;I)V
-
-    iget-object p1, p0, Lxf0;->b:Luu5;
-
-    invoke-virtual {p1, v0, p2}, Luu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lo24;->a:Lo24;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Laxf;->a:Laxf;
-
-    :goto_1
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

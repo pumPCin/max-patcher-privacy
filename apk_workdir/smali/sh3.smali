@@ -1,97 +1,76 @@
-.class public final enum Lsh3;
-.super Ljava/lang/Enum;
+.class public interface abstract Lsh3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lsh3;
+# virtual methods
+.method public a(Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
 
-.field public static final enum a:Lsh3;
+    invoke-static {p1}, Ldgc;->a(Ljava/lang/Class;)Ldgc;
 
-.field public static final enum b:Lsh3;
+    move-result-object p1
 
-.field public static final enum c:Lsh3;
+    invoke-interface {p0, p1}, Lsh3;->f(Ldgc;)Ljava/lang/Object;
 
-.field public static final enum o:Lsh3;
+    move-result-object p1
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lsh3;
-
-    const-string v1, "ALWAYS_OVERRIDE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lsh3;->a:Lsh3;
-
-    new-instance v1, Lsh3;
-
-    const-string v2, "HIGH_PRIORITY_REQUIRED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsh3;->b:Lsh3;
-
-    new-instance v2, Lsh3;
-
-    const-string v3, "REQUIRED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lsh3;->c:Lsh3;
-
-    new-instance v3, Lsh3;
-
-    const-string v4, "OPTIONAL"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lsh3;->o:Lsh3;
-
-    filled-new-array {v0, v1, v2, v3}, [Lsh3;
-
-    move-result-object v0
-
-    sput-object v0, Lsh3;->X:[Lsh3;
-
-    return-void
+    return-object p1
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsh3;
-    .locals 1
+.method public b(Ldgc;)Ljava/util/Set;
+    .locals 0
 
-    const-class v0, Lsh3;
+    invoke-interface {p0, p1}, Lsh3;->d(Ldgc;)Lvdc;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result-object p1
 
-    move-result-object p0
+    invoke-interface {p1}, Lvdc;->get()Ljava/lang/Object;
 
-    check-cast p0, Lsh3;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Ljava/util/Set;
+
+    return-object p1
 .end method
 
-.method public static values()[Lsh3;
-    .locals 1
+.method public c(Ljava/lang/Class;)Lvdc;
+    .locals 0
 
-    sget-object v0, Lsh3;->X:[Lsh3;
+    invoke-static {p1}, Ldgc;->a(Ljava/lang/Class;)Ldgc;
 
-    invoke-virtual {v0}, [Lsh3;->clone()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-interface {p0, p1}, Lsh3;->e(Ldgc;)Lvdc;
 
-    check-cast v0, [Lsh3;
+    move-result-object p1
 
-    return-object v0
+    return-object p1
+.end method
+
+.method public abstract d(Ldgc;)Lvdc;
+.end method
+
+.method public abstract e(Ldgc;)Lvdc;
+.end method
+
+.method public f(Ldgc;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-interface {p0, p1}, Lsh3;->e(Ldgc;)Lvdc;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    invoke-interface {p1}, Lvdc;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx97;
+.implements Lif7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lx97;"
+        "Lif7;"
     }
 .end annotation
 
@@ -45,13 +45,13 @@
 
     move-result-object v0
 
-    new-instance v1, Leg;
+    new-instance v1, Lng;
 
-    invoke-direct {v1, p0, p1}, Leg;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
+    invoke-direct {v1, p0, p1}, Lng;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
 
     invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
-    new-instance p1, Lw15;
+    new-instance p1, Leh2;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 

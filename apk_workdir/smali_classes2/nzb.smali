@@ -1,96 +1,85 @@
 .class public final Lnzb;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lpzb;
 
 
 # instance fields
-.field public final synthetic X:Lxzb;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lxzb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lnzb;->X:Lxzb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lnzb;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ln24;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lnzb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lnzb;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lnzb;
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget v1, p0, Lnzb;->a:I
 
-    invoke-virtual {p1, p2}, Lnzb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p1, p1, Lnzb;->a:I
 
-    return-object p2
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 1
 
-    new-instance p1, Lnzb;
+    iget v0, p0, Lnzb;->a:I
 
-    iget-object v0, p0, Lnzb;->X:Lxzb;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-direct {p1, v0, p2}, Lnzb;-><init>(Lxzb;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const-string v0, "SetMainPhoto(index="
 
-    iget-object p1, p0, Lnzb;->X:Lxzb;
+    const-string v1, ")"
 
-    iget-object p1, p1, Lxzb;->Y:Lyn7;
+    iget v2, p0, Lnzb;->a:I
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lrta;
-
-    sget v0, Lnqa;->r1:I
-
-    new-instance v1, Lxcf;
-
-    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lrta;->g(Lcdf;)V
-
-    new-instance v0, Lfua;
-
-    sget v1, Ll7d;->I:I
-
-    invoke-direct {v0, v1}, Lfua;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lrta;->e(Ljua;)V
-
-    invoke-virtual {p1}, Lrta;->i()Lqta;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-object v0
 .end method

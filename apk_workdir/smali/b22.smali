@@ -1,26 +1,51 @@
-.class public interface abstract Lb22;
+.class public final Lb22;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkotlin/coroutines/Continuation;
+.implements Lkdd;
+
+
+# instance fields
+.field public final synthetic b:J
+
+
+# direct methods
+.method public constructor <init>(J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lb22;->b:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract d(Lh24;)V
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Lb22;->b:J
+
+    return-wide v0
 .end method
 
-.method public abstract e(Lvd6;)V
-.end method
+.method public final b(La22;)Ljdd;
+    .locals 1
 
-.method public abstract f(Ljava/lang/Object;Lle6;)V
-.end method
+    iget p1, p1, La22;->b:I
 
-.method public abstract isCancelled()Z
-.end method
+    const/4 v0, 0x1
 
-.method public abstract j(Ljava/lang/Object;Lle6;)Lkotlinx/coroutines/internal/Symbol;
-.end method
+    if-ne p1, v0, :cond_0
 
-.method public abstract l(Ljava/lang/Object;)V
+    sget-object p1, Ljdd;->d:Ljdd;
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Ljdd;->e:Ljdd;
+
+    return-object p1
 .end method

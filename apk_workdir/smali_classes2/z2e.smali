@@ -1,21 +1,41 @@
 .class public final Lz2e;
-.super Lrp;
+.super Luvb;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lz2e;
+# instance fields
+.field public a:I
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final a()[B
+    .locals 2
 
-    new-instance v0, Lz2e;
+    const/4 v0, 0x6
 
-    invoke-direct {v0}, Lrp;-><init>()V
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    sput-object v0, Lz2e;->a:Lz2e;
+    move-result-object v0
 
-    return-void
+    sget-object v1, Lhwf;->Y:Lhwf;
+
+    iget-short v1, v1, Lhwf;->a:S
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget v1, p0, Lz2e;->a:I
+
+    int-to-short v1, v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v0
+
+    return-object v0
 .end method

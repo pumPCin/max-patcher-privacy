@@ -1,61 +1,208 @@
-.class public final Lzfd;
-.super Lds3;
+.class public final synthetic Lzfd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final a:Lzfd;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:F
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Landroid/view/View;F)V
     .locals 1
 
-    new-instance v0, Lzfd;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lzfd;->a:I
 
-    sput-object v0, Lzfd;->a:Lzfd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p2, p0, Lzfd;->c:F
+
+    iput-object p1, p0, Lzfd;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
+    .locals 0
+
+    .line 2
+    iput p3, p0, Lzfd;->a:I
+
+    iput-object p1, p0, Lzfd;->b:Ljava/lang/Object;
+
+    iput p2, p0, Lzfd;->c:F
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lzfd;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget v1, p0, Lzfd;->c:F
 
-    return v0
+    iget-object v2, p0, Lzfd;->b:Ljava/lang/Object;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast v2, Lz64;
+
+    iget v0, v2, Lz64;->p:F
+
+    sub-float/2addr v0, v1
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    sub-float/2addr v0, p1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    iget v0, v2, Lz64;->p:F
+
+    add-float/2addr v0, p1
+
+    iput v0, v2, Lz64;->p:F
+
+    iget-object v0, v2, Lxo4;->k:Landroid/graphics/Matrix;
+
+    iget-object v1, v2, Lxo4;->g:Landroid/graphics/RectF;
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v3
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v1
+
+    invoke-virtual {v0, p1, v3, v1}, Landroid/graphics/Matrix;->postRotate(FFF)Z
+
+    iget-object p1, v2, Lxo4;->j:Landroid/graphics/Matrix;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    iget-object p1, v2, Lxo4;->b:Lqqh;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, v0}, Lmqh;->a(Landroid/graphics/Matrix;)V
 
     :cond_0
-    instance-of p1, p1, Lzfd;
+    return-void
 
-    if-nez p1, :cond_1
+    :pswitch_0
+    check-cast v2, Landroid/view/View;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return p1
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    const/4 v0, 0x0
+
+    cmpg-float v3, v1, v0
+
+    if-nez v3, :cond_1
+
+    move v1, v0
 
     :cond_1
-    return v0
-.end method
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-.method public final hashCode()I
-    .locals 1
+    move-result v0
 
-    const v0, 0x44a1b2ef
+    cmpl-float v0, v0, v1
 
-    return v0
-.end method
+    if-ltz v0, :cond_2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    const-string v0, "ScrollToTop"
+    move-result p1
 
-    return-object v0
+    invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_2
+    return-void
+
+    :pswitch_1
+    check-cast v2, Landroid/view/View;
+
+    sget-object v0, Lone/me/android/root/RootController;->s0:[Lwq7;
+
+    const-string v0, "topMarginProp"
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->getAnimatedValue(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of v0, p1, Ljava/lang/Float;
+
+    if-eqz v0, :cond_3
+
+    check-cast p1, Ljava/lang/Float;
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
+
+    :cond_4
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    float-to-int v0, v1
+
+    iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

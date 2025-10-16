@@ -1,112 +1,128 @@
-.class public abstract Lrhc;
+.class public final synthetic Lrhc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# static fields
-.field public static oneme_login_confirm_description:I = 0x7f130863
+# instance fields
+.field public final synthetic X:F
 
-.field public static oneme_login_confirm_info_loading_1:I = 0x7f130864
+.field public final synthetic Y:Landroid/view/View;
 
-.field public static oneme_login_confirm_info_loading_2:I = 0x7f130865
+.field public final synthetic a:I
 
-.field public static oneme_login_confirm_info_loading_3:I = 0x7f130866
+.field public final synthetic b:F
 
-.field public static oneme_login_confirm_resend:I = 0x7f130867
+.field public final synthetic c:F
 
-.field public static oneme_login_confirm_timer:I = 0x7f130868
+.field public final synthetic o:F
 
-.field public static oneme_login_confirm_title:I = 0x7f130869
 
-.field public static oneme_login_error_connection_description:I = 0x7f13086a
+# direct methods
+.method public synthetic constructor <init>(Landroid/view/View;FFFFI)V
+    .locals 0
 
-.field public static oneme_login_error_connection_title:I = 0x7f13086b
+    iput p6, p0, Lrhc;->a:I
 
-.field public static oneme_login_input_continue:I = 0x7f13086c
+    iput-object p1, p0, Lrhc;->Y:Landroid/view/View;
 
-.field public static oneme_login_input_default_phone_hint:I = 0x7f13086d
+    iput p2, p0, Lrhc;->b:F
 
-.field public static oneme_login_input_description:I = 0x7f13086e
+    iput p3, p0, Lrhc;->c:F
 
-.field public static oneme_login_input_is_not_valid_phone_error:I = 0x7f13086f
+    iput p4, p0, Lrhc;->o:F
 
-.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f130870
+    iput p5, p0, Lrhc;->X:F
 
-.field public static oneme_login_input_name_confirmation_description:I = 0x7f130871
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_login_input_name_confirmation_return:I = 0x7f130872
+    return-void
+.end method
 
-.field public static oneme_login_input_name_confirmation_title:I = 0x7f130873
 
-.field public static oneme_login_input_name_contact_permission_description:I = 0x7f130874
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 7
 
-.field public static oneme_login_input_name_contact_permission_title:I = 0x7f130875
+    iget v0, p0, Lrhc;->a:I
 
-.field public static oneme_login_input_name_continue_button_active:I = 0x7f130876
+    packed-switch v0, :pswitch_data_0
 
-.field public static oneme_login_input_name_continue_button_disabled:I = 0x7f130877
+    iget-object v0, p0, Lrhc;->Y:Landroid/view/View;
 
-.field public static oneme_login_input_name_description:I = 0x7f130878
+    check-cast v0, Lkpg;
 
-.field public static oneme_login_input_name_hint_name:I = 0x7f130879
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-.field public static oneme_login_input_name_hint_surname:I = 0x7f13087a
+    move-result p1
 
-.field public static oneme_login_input_name_hint_surname_short:I = 0x7f13087b
+    iget v1, p0, Lrhc;->c:F
 
-.field public static oneme_login_input_name_surname_placeholder:I = 0x7f13087c
+    iget v2, p0, Lrhc;->b:F
 
-.field public static oneme_login_input_name_title:I = 0x7f13087d
+    invoke-static {v1, v2, p1, v2}, Llfb;->h(FFFF)F
 
-.field public static oneme_login_input_need_help:I = 0x7f13087e
+    move-result v1
 
-.field public static oneme_login_input_need_help_email_title:I = 0x7f13087f
+    iput v1, v0, Lkpg;->G0:F
 
-.field public static oneme_login_input_title:I = 0x7f130880
+    iget v1, p0, Lrhc;->X:F
 
-.field public static oneme_login_neuro_avatars_bottomsheet_title:I = 0x7f130881
+    iget v2, p0, Lrhc;->o:F
 
-.field public static oneme_login_neuro_avatars_continue_button:I = 0x7f130882
+    invoke-static {v1, v2, p1, v2}, Llfb;->h(FFFF)F
 
-.field public static oneme_login_neuro_avatars_continue_without_avatar_button:I = 0x7f130883
+    move-result p1
 
-.field public static oneme_login_neuro_avatars_description:I = 0x7f130884
+    iput p1, v0, Lkpg;->F0:F
 
-.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f130885
+    iget-object v1, v0, Lkpg;->u0:Landroid/graphics/Paint;
 
-.field public static oneme_login_neuro_avatars_profile_description:I = 0x7f130886
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-.field public static oneme_login_neuro_avatars_profile_title:I = 0x7f130887
+    iget-object p1, v0, Lkpg;->o:Landroid/graphics/Paint;
 
-.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f130888
+    iget v1, v0, Lkpg;->F0:F
 
-.field public static oneme_login_neuro_avatars_save_button:I = 0x7f130889
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f13088a
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-.field public static oneme_login_neuro_avatars_title:I = 0x7f13088b
+    return-void
 
-.field public static oneme_login_sms_count_exceeded_description:I = 0x7f13088c
+    :pswitch_0
+    iget-object v0, p0, Lrhc;->Y:Landroid/view/View;
 
-.field public static oneme_login_sms_count_exceeded_title:I = 0x7f13088d
+    move-object v1, v0
 
-.field public static oneme_login_welcome_continue_btn:I = 0x7f13088e
+    check-cast v1, Lvhc;
 
-.field public static oneme_login_welcome_description:I = 0x7f13088f
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-.field public static oneme_login_welcome_privacy_policy_clickable_part:I = 0x7f130890
+    move-result-object p1
 
-.field public static oneme_login_welcome_switch_btn:I = 0x7f130891
+    check-cast p1, Ljava/lang/Float;
 
-.field public static oneme_login_welcome_terms:I = 0x7f130892
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-.field public static oneme_login_welcome_title:I = 0x7f130893
+    move-result v6
 
-.field public static oneme_login_welcome_user_agreement_clickable_part:I = 0x7f130894
+    iget v2, p0, Lrhc;->b:F
 
-.field public static oneme_registration_neuro_avatars_change_photo:I = 0x7f130950
+    iget v3, p0, Lrhc;->c:F
 
-.field public static oneme_registration_neuro_avatars_choose_avatar:I = 0x7f130951
+    iget v4, p0, Lrhc;->o:F
 
-.field public static oneme_registration_neuro_avatars_choose_photo:I = 0x7f130952
+    iget v5, p0, Lrhc;->X:F
 
-.field public static oneme_registration_neuro_avatars_or:I = 0x7f130953
+    invoke-static/range {v1 .. v6}, Lvhc;->c(Lvhc;FFFFF)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

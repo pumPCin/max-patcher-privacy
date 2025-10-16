@@ -1,100 +1,127 @@
 .class public final Lrd9;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lwe9;
+.field public final a:J
+
+.field public final b:Lwwc;
 
 
 # direct methods
-.method public constructor <init>(Lwe9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLwwc;)V
     .locals 0
 
-    iput-object p1, p0, Lrd9;->X:Lwe9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lrd9;->a:J
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lrd9;->b:Lwwc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Ln24;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lrd9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lrd9;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lrd9;
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget-wide v3, p0, Lrd9;->a:J
 
-    invoke-virtual {p1, p2}, Lrd9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v5, p1, Lrd9;->a:J
 
-    return-object p2
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lrd9;->b:Lwwc;
+
+    iget-object p1, p1, Lrd9;->b:Lwwc;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lrd9;
+    iget-wide v0, p0, Lrd9;->a:J
 
-    iget-object v0, p0, Lrd9;->X:Lwe9;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {p1, v0, p2}, Lrd9;-><init>(Lwe9;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lrd9;->b:Lwwc;
+
+    invoke-virtual {v1}, Lwwc;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p1, Lwe9;->O1:[Lpl7;
+    const-string v1, "MessageReactionEntryData(userId="
 
-    iget-object p1, p0, Lrd9;->X:Lwe9;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p1, Lwe9;->J0:Lyn7;
+    iget-wide v1, p0, Lrd9;->a:J
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", reaction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrd9;->b:Lwwc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lrta;
-
-    new-instance v1, Lfua;
-
-    sget v2, Ll7d;->O1:I
-
-    invoke-direct {v1, v2}, Lfua;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lrta;->e(Ljua;)V
-
-    sget v1, Lgpa;->y0:I
-
-    new-instance v2, Lxcf;
-
-    invoke-direct {v2, v1}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lrta;->g(Lcdf;)V
-
-    invoke-virtual {p1, v0}, Lwe9;->M(Lrta;)V
-
-    invoke-virtual {v0}, Lrta;->i()Lqta;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-object v0
 .end method

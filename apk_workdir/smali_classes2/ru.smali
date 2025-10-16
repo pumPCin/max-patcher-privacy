@@ -1,75 +1,61 @@
 .class public final Lru;
-.super Lti0;
+.super Llj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final b:I
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(IJLjava/util/List;)V
     .locals 0
 
-    .line 1
+    invoke-direct {p0, p2, p3}, Llj0;-><init>(J)V
+
     iput p1, p0, Lru;->b:I
 
-    invoke-direct {p0}, Lti0;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(JI)V
-    .locals 0
-
-    .line 2
-    iput p3, p0, Lru;->b:I
-
-    invoke-direct {p0, p1, p2}, Lti0;-><init>(J)V
+    iput-object p4, p0, Lru;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lru;->b:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sparse-switch v0, :sswitch_data_0
+    const-string v1, "AssetsGetByIdsEvent{type="
 
-    invoke-super {p0}, Lti0;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lru;->b:I
+
+    invoke-static {v1}, Lwx1;->w(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", ids="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lru;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :sswitch_0
-    const-string v0, "PhonesSortEvent"
-
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "ContactSortEvent"
-
-    return-object v0
-
-    :sswitch_2
-    const-string v0, "AudioRecordLimitEvent{}"
-
-    return-object v0
-
-    :sswitch_3
-    const-string v0, "AssetsUpdateEvent{chatId=0}"
-
-    return-object v0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x0 -> :sswitch_3
-        0x1 -> :sswitch_2
-        0x2 -> :sswitch_1
-        0x8 -> :sswitch_0
-    .end sparse-switch
 .end method

@@ -1,139 +1,532 @@
-.class public abstract Lwha;
+.class public final Lwha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcka;
+.implements Lev4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final X:Ljava/lang/Object;
 
-.field public static final c:I
+.field public final synthetic a:I
 
-.field public static final d:I
+.field public b:Lev4;
 
-.field public static final e:I
+.field public c:J
 
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    sget v0, Lwgc;->call_history_call_create_banner_permission_denied_subtitle:I
+    .line 1
+    iput p1, p0, Lwha;->a:I
 
-    sput v0, Lwha;->a:I
+    iput-object p2, p0, Lwha;->X:Ljava/lang/Object;
 
-    sget v0, Lwgc;->call_history_call_create_banner_permission_denied_title:I
-
-    sput v0, Lwha;->b:I
-
-    sget v0, Lwgc;->call_history_call_create_banner_subtitle:I
-
-    sput v0, Lwha;->c:I
-
-    sget v0, Lwgc;->call_history_call_create_banner_title:I
-
-    sput v0, Lwha;->d:I
-
-    sget v0, Lwgc;->call_history_info_copy_link:I
-
-    sput v0, Lwha;->e:I
-
-    sget v0, Lwgc;->call_history_info_create_failed:I
-
-    sput v0, Lwha;->f:I
-
-    sget v0, Lwgc;->call_history_info_creating:I
-
-    sput v0, Lwha;->g:I
-
-    sget v0, Lwgc;->call_history_info_join_call:I
-
-    sput v0, Lwha;->h:I
-
-    sget v0, Lwgc;->call_history_info_open_call_chat_title:I
-
-    sput v0, Lwha;->i:I
-
-    sget v0, Lwgc;->call_history_info_share:I
-
-    sput v0, Lwha;->j:I
-
-    sget v0, Lwgc;->call_history_info_start_call:I
-
-    sput v0, Lwha;->k:I
-
-    sget v0, Lwgc;->call_history_info_title:I
-
-    sput v0, Lwha;->l:I
-
-    sget v0, Lwgc;->call_history_info_try_load_link_again:I
-
-    sput v0, Lwha;->m:I
-
-    sget v0, Lwgc;->call_history_item_call_count_no_users:I
-
-    sput v0, Lwha;->n:I
-
-    sget v0, Lwgc;->call_history_item_call_link_call_description:I
-
-    sput v0, Lwha;->o:I
-
-    sget v0, Lwgc;->call_history_link_action_error:I
-
-    sput v0, Lwha;->p:I
-
-    sget v0, Lwgc;->call_history_link_coped:I
-
-    sput v0, Lwha;->q:I
-
-    sget v0, Lwgc;->call_history_link_send_title:I
-
-    sput v0, Lwha;->r:I
-
-    sget v0, Lwgc;->call_presettings_call_save_changes:I
-
-    sput v0, Lwha;->s:I
-
-    sget v0, Lwgc;->call_presettings_change_call_name_empty_error:I
-
-    sput v0, Lwha;->t:I
-
-    sget v0, Lwgc;->call_presettings_change_call_name_title:I
-
-    sput v0, Lwha;->u:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public constructor <init>(Lcka;J)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lwha;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lwha;->X:Ljava/lang/Object;
+
+    .line 4
+    iput-wide p2, p0, Lwha;->c:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 2
+
+    iget v0, p0, Lwha;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lcka;
+
+    invoke-interface {v0}, Lcka;->b()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lkpe;
+
+    new-instance v1, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v1}, Ljava/util/NoSuchElementException;-><init>()V
+
+    invoke-interface {v0, v1}, Lkpe;->onError(Ljava/lang/Throwable;)V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lmj8;
+
+    invoke-interface {v0}, Lmj8;->b()V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Lev4;)V
+    .locals 5
+
+    iget v0, p0, Lwha;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lcka;
+
+    iget-object v1, p0, Lwha;->b:Lev4;
+
+    invoke-static {v1, p1}, Liv4;->j(Lev4;Lev4;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iput-object p1, p0, Lwha;->b:Lev4;
+
+    iget-wide v1, p0, Lwha;->c:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lwha;->o:Z
+
+    invoke-interface {p1}, Lev4;->g()V
+
+    invoke-static {v0}, Ln95;->a(Lcka;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v0, p0}, Lcka;->c(Lev4;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iput-object p1, p0, Lwha;->b:Lev4;
+
+    iget-object p1, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast p1, Lkpe;
+
+    invoke-interface {p1, p0}, Lkpe;->c(Lev4;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iput-object p1, p0, Lwha;->b:Lev4;
+
+    iget-object p1, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast p1, Lmj8;
+
+    invoke-interface {p1, p0}, Lmj8;->c(Lev4;)V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 6
+
+    iget v0, p0, Lwha;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-nez v0, :cond_1
+
+    iget-wide v0, p0, Lwha;->c:J
+
+    const-wide/16 v2, 0x1
+
+    sub-long v2, v0, v2
+
+    iput-wide v2, p0, Lwha;->c:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v0, v4
+
+    if-lez v0, :cond_1
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v1, Lcka;
+
+    invoke-interface {v1, p1}, Lcka;->d(Ljava/lang/Object;)V
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lwha;->b()V
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-eqz v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-wide v0, p0, Lwha;->c:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_3
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lkpe;
+
+    invoke-interface {v0, p1}, Lkpe;->a(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_3
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lwha;->c:J
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-eqz v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    iget-wide v0, p0, Lwha;->c:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_5
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lmj8;
+
+    invoke-interface {v0, p1}, Lmj8;->a(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_5
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lwha;->c:J
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Lwha;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Lwha;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_1
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lwha;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->b:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lcka;
+
+    invoke-interface {v0, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lkpe;
+
+    invoke-interface {v0, p1}, Lkpe;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-boolean v0, p0, Lwha;->o:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lwha;->o:Z
+
+    iget-object v0, p0, Lwha;->X:Ljava/lang/Object;
+
+    check-cast v0, Lmj8;
+
+    invoke-interface {v0, p1}, Lmj8;->onError(Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

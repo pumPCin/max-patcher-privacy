@@ -1,137 +1,97 @@
-.class public final enum Lzt4;
-.super Ljava/lang/Enum;
+.class public abstract Lzt4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Lzt4;
-
-.field public static final enum Y:Lzt4;
-
-.field public static final synthetic Z:[Lzt4;
-
-.field public static final enum a:Lzt4;
-
-.field public static final enum b:Lzt4;
-
-.field public static final enum c:Lzt4;
-
-.field public static final enum o:Lzt4;
-
-.field public static final synthetic r0:Laa5;
+.field public static final a:Lrhb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 8
 
-    new-instance v0, Lzt4;
+    new-instance v0, Lqbb;
 
-    const-string v1, "SHARE_VIDEO"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v1
 
-    sput-object v0, Lzt4;->a:Lzt4;
+    sget-object v2, Lv6b;->a:Lv6b;
 
-    new-instance v1, Lzt4;
+    invoke-direct {v0, v1, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v2, "DOWNLOAD_VIDEO"
+    new-instance v1, Lqbb;
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput-object v1, Lzt4;->b:Lzt4;
+    move-result-object v2
 
-    new-instance v2, Lzt4;
+    sget-object v3, Lv6b;->b:Lv6b;
 
-    const-string v3, "SHARE_PHOTO"
+    invoke-direct {v1, v2, v3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const/4 v4, 0x2
+    new-instance v2, Lqbb;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v3, 0x2
 
-    sput-object v2, Lzt4;->c:Lzt4;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v3, Lzt4;
+    move-result-object v3
 
-    const-string v4, "DOWNLOAD_PHOTO"
+    sget-object v4, Lv6b;->c:Lv6b;
 
-    const/4 v5, 0x3
+    invoke-direct {v2, v3, v4}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v3, Lqbb;
 
-    new-instance v4, Lzt4;
+    const/4 v4, 0x3
 
-    const-string v5, "SHARE_GIF"
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v6, 0x4
+    move-result-object v4
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v5, Lv6b;->o:Lv6b;
 
-    sput-object v4, Lzt4;->o:Lzt4;
+    invoke-direct {v3, v4, v5}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v5, Lzt4;
+    new-instance v4, Lqbb;
 
-    const-string v6, "DOWNLOAD_GIF"
+    const/4 v5, 0x4
 
-    const/4 v7, 0x5
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v5
 
-    sput-object v5, Lzt4;->X:Lzt4;
+    sget-object v6, Lv6b;->X:Lv6b;
 
-    new-instance v6, Lzt4;
+    invoke-direct {v4, v5, v6}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v7, "SHARE_FILE"
+    new-instance v5, Lqbb;
 
-    const/4 v8, 0x6
+    const/4 v6, 0x5
 
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput-object v6, Lzt4;->Y:Lzt4;
+    move-result-object v6
 
-    filled-new-array/range {v0 .. v6}, [Lzt4;
+    sget-object v7, Lv6b;->Y:Lv6b;
+
+    invoke-direct {v5, v6, v7}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array/range {v0 .. v5}, [Lqbb;
 
     move-result-object v0
 
-    sput-object v0, Lzt4;->Z:[Lzt4;
+    invoke-static {v0}, Lvzi;->b([Lqbb;)Lrhb;
 
-    new-instance v1, Laa5;
+    move-result-object v0
 
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lzt4;->r0:Laa5;
+    sput-object v0, Lzt4;->a:Lrhb;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lzt4;
-    .locals 1
-
-    const-class v0, Lzt4;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lzt4;
-
-    return-object p0
-.end method
-
-.method public static values()[Lzt4;
-    .locals 1
-
-    sget-object v0, Lzt4;->Z:[Lzt4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lzt4;
-
-    return-object v0
 .end method

@@ -1,87 +1,126 @@
-.class public final enum Lls;
-.super Ljava/lang/Enum;
+.class public final Lls;
+.super Late;
 .source "SourceFile"
 
 # interfaces
-.implements Lj0f;
-.implements Lke6;
+.implements Lc5d;
 
 
-# static fields
-.field public static final enum a:Lls;
+# instance fields
+.field public final a:I
 
-.field public static final synthetic b:[Lls;
+.field public b:Lwt4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
 
-    new-instance v0, Lls;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INSTANCE"
+    iput p2, p0, Lls;->a:I
 
-    const/4 v2, 0x0
+    new-instance v0, Lwt4;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v1, Ljava/io/File;
 
-    sput-object v0, Lls;->a:Lls;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    filled-new-array {v0}, [Lls;
+    move-result-object p1
 
-    move-result-object v0
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    sput-object v0, Lls;->b:[Lls;
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v0, v1, p2}, Lwt4;-><init>(Ljava/io/File;I)V
+
+    iput-object v0, p0, Lls;->b:Lwt4;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lls;
-    .locals 1
 
-    const-class v0, Lls;
+# virtual methods
+.method public final a(Landroid/content/Context;)Late;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lwt4;
 
-    move-result-object p0
+    new-instance v1, Ljava/io/File;
 
-    check-cast p0, Lls;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    iget p1, p0, Lls;->a:I
+
+    or-int/lit8 p1, p1, 0x1
+
+    invoke-direct {v0, v1, p1}, Lwt4;-><init>(Ljava/io/File;I)V
+
+    iput-object v0, p0, Lls;->b:Lwt4;
 
     return-object p0
 .end method
 
-.method public static values()[Lls;
-    .locals 1
-
-    sget-object v0, Lls;->b:[Lls;
-
-    invoke-virtual {v0}, [Lls;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lls;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Ljava/lang/String;
     .locals 0
 
-    new-instance p1, Ljava/util/ArrayList;
+    const/4 p0, 0x0
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    return-object p1
+    throw p0
 .end method
 
-.method public final get()Ljava/lang/Object;
+.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
     .locals 1
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lls;->b:Lwt4;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0, p1, p2, p3}, Lwt4;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d(I)V
+    .locals 0
+
+    iget-object p1, p0, Lls;->b:Lwt4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ApplicationSoSource["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lls;->b:Lwt4;
+
+    invoke-virtual {v1}, Lwt4;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

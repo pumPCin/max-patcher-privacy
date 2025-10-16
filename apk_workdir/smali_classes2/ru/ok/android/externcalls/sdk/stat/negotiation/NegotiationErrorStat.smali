@@ -19,25 +19,25 @@
         "Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;",
         "",
         "Lkotlin/Function0;",
-        "Lp61;",
+        "Lp71;",
         "getEventualStatSender",
         "<init>",
-        "(Ltd6;)V",
+        "(Loh6;)V",
         "Lorg/webrtc/SessionDescription;",
         "sdp",
         "Lorg/json/JSONObject;",
         "sdpJson",
         "(Lorg/webrtc/SessionDescription;)Lorg/json/JSONObject;",
-        "Lkw9;",
+        "Li4a;",
         "",
         "toStatName",
-        "(Lkw9;)Ljava/lang/String;",
-        "Llw9;",
+        "(Li4a;)Ljava/lang/String;",
+        "Lj4a;",
         "error",
-        "Laxf;",
+        "Lzag;",
         "onError",
-        "(Llw9;)V",
-        "Ltd6;",
+        "(Lj4a;)V",
+        "Loh6;",
         "Companion",
         "calls-sdk_release"
     }
@@ -61,10 +61,10 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Ltd6;
+.field private final getEventualStatSender:Loh6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ltd6;"
+            "Loh6;"
         }
     .end annotation
 .end field
@@ -78,26 +78,26 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat$Companion;-><init>(Laf4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat$Companion;-><init>(Lvh4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->Companion:Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Ltd6;)V
+.method public constructor <init>(Loh6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ltd6;",
+            "Loh6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->getEventualStatSender:Ltd6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->getEventualStatSender:Loh6;
 
     return-void
 .end method
@@ -124,7 +124,7 @@
     return-object v0
 .end method
 
-.method private final toStatName(Lkw9;)Ljava/lang/String;
+.method private final toStatName(Li4a;)Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat$WhenMappings;->$EnumSwitchMapping$0:[I
@@ -212,7 +212,7 @@
 
 
 # virtual methods
-.method public final onError(Llw9;)V
+.method public final onError(Lj4a;)V
     .locals 4
 
     new-instance v0, Lorg/json/JSONObject;
@@ -221,11 +221,11 @@
 
     const-string v1, "error"
 
-    iget-object v2, p1, Llw9;->b:Ljava/lang/String;
+    iget-object v2, p1, Lj4a;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object v1, p1, Llw9;->c:Lorg/webrtc/SessionDescription;
+    iget-object v1, p1, Lj4a;->c:Lorg/webrtc/SessionDescription;
 
     if-eqz v1, :cond_0
 
@@ -238,7 +238,7 @@
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_0
-    iget-object v1, p1, Llw9;->d:Lorg/webrtc/SessionDescription;
+    iget-object v1, p1, Lj4a;->d:Lorg/webrtc/SessionDescription;
 
     if-eqz v1, :cond_1
 
@@ -251,19 +251,19 @@
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_1
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->getEventualStatSender:Ltd6;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->getEventualStatSender:Loh6;
 
-    invoke-interface {v1}, Ltd6;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Loh6;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lp61;
+    check-cast v1, Lp71;
 
     if-eqz v1, :cond_2
 
-    iget-object p1, p1, Llw9;->a:Lkw9;
+    iget-object p1, p1, Lj4a;->a:Li4a;
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->toStatName(Lkw9;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/negotiation/NegotiationErrorStat;->toStatName(Li4a;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -279,7 +279,7 @@
 
     const/4 v3, 0x4
 
-    invoke-static {v1, p1, v0, v2, v3}, Lp61;->a(Lp61;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {v1, p1, v0, v2, v3}, Lp71;->a(Lp71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_2
     return-void

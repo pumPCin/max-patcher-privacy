@@ -1,31 +1,15 @@
-.class public final Lj05;
+.class public abstract Lj05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Z
-
-.field public final c:[B
-
-.field public final d:[B
-
-
 # direct methods
-.method public constructor <init>(IZ[B[B)V
+.method public static a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Insets;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getOpticalInsets()Landroid/graphics/Insets;
 
-    iput p1, p0, Lj05;->a:I
+    move-result-object p0
 
-    iput-boolean p2, p0, Lj05;->b:Z
-
-    iput-object p3, p0, Lj05;->c:[B
-
-    iput-object p4, p0, Lj05;->d:[B
-
-    return-void
+    return-object p0
 .end method

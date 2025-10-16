@@ -1,130 +1,58 @@
-.class public final Lnj4;
+.class public abstract Lnj4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
 
-
-# instance fields
-.field public final synthetic a:Llie;
-
-.field public final synthetic b:Landroid/view/ViewGroup;
-
-.field public final synthetic c:Landroid/view/View;
-
-.field public final synthetic d:Loj4;
+# static fields
+.field public static final a:Lkp4;
 
 
 # direct methods
-.method public constructor <init>(Llie;Landroid/view/ViewGroup;Landroid/view/View;Loj4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "kotlinx.coroutines.main.delay"
 
-    iput-object p1, p0, Lnj4;->a:Llie;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lnj4;->b:Landroid/view/ViewGroup;
+    invoke-static {v0, v1}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;Z)Z
 
-    iput-object p3, p0, Lnj4;->c:Landroid/view/View;
+    move-result v0
 
-    iput-object p4, p0, Lnj4;->d:Loj4;
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    sget-object v0, Lmj4;->r0:Lmj4;
 
-
-# virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 4
-
-    new-instance p1, Lxi;
-
-    const/16 v0, 0x16
-
-    iget-object v1, p0, Lnj4;->b:Landroid/view/ViewGroup;
-
-    iget-object v2, p0, Lnj4;->c:Landroid/view/View;
-
-    iget-object v3, p0, Lnj4;->d:Loj4;
-
-    invoke-direct {p1, v1, v2, v3, v0}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    const/4 p1, 0x2
-
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Animation from operation "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lnj4;->a:Llie;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " has ended."
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "FragmentManager"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_1
 
     :cond_0
-    return-void
-.end method
+    sget-object v0, Lvu4;->a:Lem4;
 
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lfd8;
 
-    return-void
-.end method
+    invoke-static {v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->isMissing(Lfd8;)Z
 
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 1
+    move-result v1
 
-    const/4 p1, 0x2
+    if-nez v1, :cond_2
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+    instance-of v1, v0, Lkp4;
 
-    move-result p1
+    if-nez v1, :cond_1
 
-    if-eqz p1, :cond_0
+    goto :goto_0
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    :cond_1
+    check-cast v0, Lkp4;
 
-    const-string v0, "Animation from operation "
+    goto :goto_1
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_2
+    :goto_0
+    sget-object v0, Lmj4;->r0:Lmj4;
 
-    iget-object v0, p0, Lnj4;->a:Llie;
+    :goto_1
+    sput-object v0, Lnj4;->a:Lkp4;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " has reached onAnimationStart."
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "FragmentManager"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
     return-void
 .end method

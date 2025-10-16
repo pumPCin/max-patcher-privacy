@@ -3,125 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lu3d;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final a:J
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Lv3d;
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Lv3d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(J[B)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls3d;->o:Lv3d;
+    iput-wide p1, p0, Ls3d;->a:J
 
-    iput-object p2, p0, Ls3d;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Ls3d;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Ls3d;->c:Ljava/lang/String;
+    iput-object p3, p0, Ls3d;->b:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Ls3d;->o:Lv3d;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lv3d;->h:Lu3d;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    invoke-virtual {v1}, Le3;->a()Llc6;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Ls3d;->a:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Lw0f;->f(ILjava/lang/String;)V
-
-    const/4 v3, 0x2
-
-    iget-object v4, p0, Ls3d;->b:Ljava/lang/String;
-
-    if-nez v4, :cond_0
-
-    invoke-interface {v2, v3}, Lw0f;->Q(I)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-interface {v2, v3, v4}, Lw0f;->f(ILjava/lang/String;)V
+    instance-of v1, p1, Ls3d;
 
-    :goto_0
-    const/4 v3, 0x3
+    const/4 v2, 0x0
 
-    iget-object v4, p0, Ls3d;->c:Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    if-nez v4, :cond_1
-
-    invoke-interface {v2, v3}, Lw0f;->Q(I)V
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    invoke-interface {v2, v3, v4}, Lw0f;->f(ILjava/lang/String;)V
+    check-cast p1, Ls3d;
 
-    :goto_1
-    :try_start_0
-    invoke-virtual {v0}, Lc4d;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-wide v3, p0, Ls3d;->a:J
 
-    :try_start_1
-    invoke-virtual {v2}, Llc6;->n()I
+    iget-wide v5, p1, Ls3d;->a:J
 
-    invoke-virtual {v0}, Lc4d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    cmp-long v1, v3, v5
 
-    :try_start_2
-    invoke-virtual {v0}, Lc4d;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+    return v2
 
-    sget-object v0, Laxf;->a:Laxf;
+    :cond_2
+    iget-object v1, p0, Ls3d;->b:[B
+
+    iget-object p1, p1, Ls3d;->b:[B
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ls3d;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ls3d;->b:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Ls3d;->b:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "AudioMsg(duration="
+
+    const-string v2, ", wave="
+
+    iget-wide v3, p0, Ls3d;->a:J
+
+    invoke-static {v1, v3, v4, v2, v0}, Lf67;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v3
-
-    :try_start_3
-    invoke-virtual {v0}, Lc4d;->k()V
-
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_2
-    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
-
-    throw v0
 .end method

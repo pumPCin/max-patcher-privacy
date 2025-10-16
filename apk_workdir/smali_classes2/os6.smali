@@ -1,112 +1,111 @@
 .class public final Los6;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lqs6;
+.field public final a:I
 
-.field public final synthetic Y:Ljava/io/File;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lqs6;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Los6;->X:Lqs6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Los6;->Y:Ljava/io/File;
+    iput p1, p0, Los6;->a:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Los6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Los6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Los6;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Los6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance p1, Los6;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Los6;->X:Lqs6;
+    goto :goto_1
 
-    iget-object v1, p0, Los6;->Y:Ljava/io/File;
+    :cond_0
+    instance-of v0, p1, Los6;
 
-    invoke-direct {p1, v0, v1, p2}, Los6;-><init>(Lqs6;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+    if-nez v0, :cond_1
 
-    return-object p1
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Los6;
+
+    iget v0, p0, Los6;->a:I
+
+    iget v1, p1, Los6;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Los6;->b:I
+
+    iget p1, p1, Los6;->b:I
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget v0, p0, Los6;->a:I
 
-    iget-object p1, p0, Los6;->X:Lqs6;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object p1, p1, Lqs6;->d:Lyn7;
+    move-result v0
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object p1
+    iget v1, p0, Los6;->b:I
 
-    check-cast p1, Lrta;
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    const-string v0, "\u0414\u0430\u043c\u043f \u043f\u0430\u043c\u044f\u0442\u0438 \u0437\u0430\u043a\u043e\u043d\u0447\u0438\u043b\u0441\u044f"
+    move-result v1
 
-    invoke-virtual {p1, v0}, Lrta;->h(Ljava/lang/CharSequence;)V
+    add-int/2addr v1, v0
 
-    iget-object v0, p0, Los6;->Y:Ljava/io/File;
+    return v1
+.end method
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", transparent="
+
+    const-string v1, ")"
+
+    const-string v2, "GradientsLoadingIconNegativeColors(filled="
+
+    iget v3, p0, Los6;->a:I
+
+    iget v4, p0, Los6;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "\u0415\u0441\u043b\u0438 \u0447\u0442\u043e \u0444\u0430\u0439\u043b \u043c\u043e\u0436\u043d\u043e \u0431\u0443\u0434\u0435\u0442 \u043d\u0430\u0439\u0442\u0438 \u043f\u043e \u044d\u0442\u043e\u043c\u0443 \u043f\u0443\u0442\u0438: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lrta;->b(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Lrta;->i()Lqta;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

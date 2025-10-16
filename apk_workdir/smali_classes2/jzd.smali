@@ -2,71 +2,32 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyzd;
+
+# instance fields
+.field public final a:Lg58;
+
+.field public b:Lwlg;
+
+.field public c:Lvjb;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Z
+
+.field public f:Z
 
 
-# virtual methods
-.method public final a()Lcdf;
+# direct methods
+.method public constructor <init>(Lg58;)V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
-.end method
+    const/4 v0, 0x1
 
-.method public final b()Lnzd;
-    .locals 1
+    iput-boolean v0, p0, Ljzd;->f:Z
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Ljzd;->a:Lg58;
 
-    return-object v0
-.end method
-
-.method public final c()Lcdf;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final d()Lvzd;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final e()Lio7;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lcdf;
-    .locals 1
-
-    sget-object v0, Lcdf;->a:Lbdf;
-
-    return-object v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

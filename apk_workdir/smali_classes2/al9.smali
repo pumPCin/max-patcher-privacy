@@ -1,30 +1,30 @@
 .class public final Lal9;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
 .field public X:I
 
-.field public final synthetic Y:Lgl9;
+.field public final synthetic Y:Lim9;
 
-.field public final synthetic Z:Ljava/lang/Object;
+.field public final synthetic Z:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lgl9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lim9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lal9;->Y:Lgl9;
+    iput-object p1, p0, Lal9;->Y:Lim9;
 
-    iput-object p2, p0, Lal9;->Z:Ljava/lang/Object;
+    iput-object p2, p0, Lal9;->Z:Ljava/util/List;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ln24;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +44,7 @@
 
     check-cast p1, Lal9;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lal9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -58,17 +58,17 @@
 
     new-instance p1, Lal9;
 
-    iget-object v0, p0, Lal9;->Y:Lgl9;
+    iget-object v0, p0, Lal9;->Y:Lim9;
 
-    iget-object v1, p0, Lal9;->Z:Ljava/lang/Object;
+    iget-object v1, p0, Lal9;->Z:Ljava/util/List;
 
-    invoke-direct {p1, v0, v1, p2}, Lal9;-><init>(Lgl9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Lal9;-><init>(Lim9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 2
 
     iget v0, p0, Lal9;->X:I
 
@@ -78,9 +78,9 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    return-object p1
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -92,34 +92,35 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    sget p1, Lyz4;->o:I
+    iget-object p1, p0, Lal9;->Y:Lim9;
 
-    const/4 p1, 0x3
+    iget-object p1, p1, Lim9;->M0:Llt7;
 
-    sget-object v0, Ld05;->o:Ld05;
-
-    invoke-static {p1, v0}, Lx2d;->M(ILd05;)J
-
-    move-result-wide v2
-
-    iput v1, p0, Lal9;->X:I
-
-    iget-object p1, p0, Lal9;->Y:Lgl9;
-
-    iget-object v0, p0, Lal9;->Z:Ljava/lang/Object;
-
-    invoke-virtual {p1, v2, v3, p0, v0}, Lgl9;->M(JLwy3;Ljava/util/List;)Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lo24;->a:Lo24;
+    check-cast p1, Lsa9;
+
+    iput v1, p0, Lal9;->X:I
+
+    iget-object v0, p0, Lal9;->Z:Ljava/util/List;
+
+    invoke-virtual {p1, p0, v0, v1}, Lsa9;->a(Lk14;Ljava/util/List;Z)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
 
     if-ne p1, v0, :cond_2
 
     return-object v0
 
     :cond_2
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
+
     return-object p1
 .end method

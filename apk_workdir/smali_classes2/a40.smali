@@ -1,98 +1,64 @@
-.class public final La40;
-.super Lb40;
+.class public final synthetic La40;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lxcf;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
 
 # direct methods
-.method public constructor <init>(Lxcf;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, La40;->a:I
 
-    iput-object p1, p0, La40;->a:Lxcf;
+    iput-object p1, p0, La40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, La40;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, La40;
+    iget-object v0, p0, La40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    if-nez v0, :cond_1
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->d(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
 
-    goto :goto_0
+    return-void
 
-    :cond_1
-    check-cast p1, La40;
+    :pswitch_0
+    iget-object v0, p0, La40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    iget-object v0, p0, La40;->a:Lxcf;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->b(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
 
-    iget-object p1, p1, La40;->a:Lxcf;
+    return-void
 
-    invoke-virtual {v0, p1}, Lxcf;->equals(Ljava/lang/Object;)Z
+    :pswitch_1
+    iget-object v0, p0, La40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    move-result p1
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->c(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
 
-    if-nez p1, :cond_2
+    return-void
 
-    :goto_0
-    const/4 p1, 0x0
+    nop
 
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, La40;->a:Lxcf;
-
-    iget v0, v0, Lxcf;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowTooltipEvent(textSource="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, La40;->a:Lxcf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

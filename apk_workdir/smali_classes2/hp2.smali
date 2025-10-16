@@ -1,51 +1,148 @@
 .class public final Lhp2;
-.super Lwy3;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Lll;
 
-.field public final synthetic Y:Lop2;
+.field public Y:I
 
-.field public Z:I
-
-.field public o:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final synthetic Z:Lip2;
 
 
 # direct methods
-.method public constructor <init>(Lop2;Lwy3;)V
+.method public constructor <init>(Lip2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lhp2;->Y:Lop2;
+    iput-object p1, p0, Lhp2;->Z:Lip2;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lhp2;->X:Ljava/lang/Object;
+    check-cast p1, Lb54;
 
-    iget p1, p0, Lhp2;->Z:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lhp2;->Z:I
-
-    iget-object p1, p0, Lhp2;->Y:Lop2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lop2;->c(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lhp2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Lhp2;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lhp2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lhp2;
+
+    iget-object v0, p0, Lhp2;->Z:Lip2;
+
+    invoke-direct {p1, v0, p2}, Lhp2;-><init>(Lip2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lhp2;->Y:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lhp2;->X:Lll;
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lhp2;->Z:Lip2;
+
+    iget-object v0, p1, Lip2;->b:Lll;
+
+    iput-object v0, p0, Lhp2;->X:Lll;
+
+    iput v1, p0, Lhp2;->Y:I
+
+    iget-object p1, p1, Lip2;->a:Lpa2;
+
+    invoke-static {p1, p0}, Ly1j;->o(Lzx5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lc54;->a:Lc54;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    check-cast v0, Lkma;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Lqw9;
+
+    invoke-virtual {v0}, Lkma;->x()Ljwb;
+
+    move-result-object v3
+
+    check-cast v3, Llwb;
+
+    iget-object v3, v3, Llwb;->a:Lg68;
+
+    invoke-virtual {v3}, Lgsd;->k()J
+
+    move-result-wide v3
+
+    invoke-direct {p1, v3, v4, v1, v2}, Lqw9;-><init>(JJ)V
+
+    invoke-static {v0, p1}, Lkma;->u(Lkma;Lxm;)J
+
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

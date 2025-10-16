@@ -1,26 +1,28 @@
 .class public final Lmn0;
-.super Lej7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqn0;
+.implements Lz63;
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public a:Z
 
-.field public final d:Ljava/lang/String;
+.field public final synthetic b:Lnn0;
+
+.field public final synthetic c:Lone/me/sdk/arch/Widget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lnn0;Lone/me/sdk/arch/Widget;)V
     .locals 0
 
-    invoke-direct {p0}, Lej7;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmn0;->c:Ljava/lang/String;
+    iput-object p1, p0, Lmn0;->b:Lnn0;
 
-    iput-object p2, p0, Lmn0;->d:Ljava/lang/String;
+    iput-object p2, p0, Lmn0;->c:Lone/me/sdk/arch/Widget;
 
     return-void
 .end method

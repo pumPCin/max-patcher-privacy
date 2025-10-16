@@ -1,19 +1,21 @@
 .class public final Ltb1;
-.super Lub1;
+.super Lgd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:La3g;
+.field public final b:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(La3g;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Ltb1;->a:La3g;
+    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
+
+    iput-object p1, p0, Ltb1;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -41,11 +43,11 @@
     :cond_1
     check-cast p1, Ltb1;
 
-    iget-object v1, p0, Ltb1;->a:La3g;
+    iget-object v1, p0, Ltb1;->b:Ljava/lang/CharSequence;
 
-    iget-object p1, p1, Ltb1;->a:La3g;
+    iget-object p1, p1, Ltb1;->b:Ljava/lang/CharSequence;
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -60,16 +62,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ltb1;->a:La3g;
+    iget-object v0, p0, Ltb1;->b:Ljava/lang/CharSequence;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, La3g;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -81,11 +76,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "VideoState(participant="
+    const-string v1, "SendToChatLink(link="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltb1;->a:La3g;
+    iget-object v1, p0, Ltb1;->b:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,3 +1,6 @@
-.class public interface abstract Locd;
+.class public final Locd;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpec;

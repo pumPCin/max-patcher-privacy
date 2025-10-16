@@ -1,60 +1,53 @@
-.class public final synthetic Ls04;
+.class public interface abstract Ls04;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loo3;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;I)V
-    .locals 0
-
-    iput p2, p0, Ls04;->a:I
-
-    iput-object p1, p0, Ls04;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public abstract b()Ls04;
+.end method
 
-    iget v0, p0, Ls04;->a:I
+.method public abstract build()Lt04;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract c()Ls04;
+.end method
 
-    iget-object v0, p0, Ls04;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+.method public abstract d(Landroid/graphics/Rect;F)Ls04;
+.end method
 
-    check-cast p1, Ljava/lang/Throwable;
+.method public h()Ls04;
+    .locals 0
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->e(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Ljava/lang/Throwable;)V
+    return-object p0
+.end method
 
-    return-void
+.method public abstract i(Ljava/util/Collection;)Ls04;
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ls04;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+.method public k(FF)Ls04;
+    .locals 0
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    return-object p0
+.end method
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->q(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+.method public abstract m(F)Ls04;
+.end method
 
-    return-void
+.method public abstract o(Landroid/os/Bundle;)Ls04;
+.end method
 
-    nop
+.method public q()Ls04;
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
+.end method
+
+.method public abstract t(Landroid/view/View;)Ls04;
+.end method
+
+.method public abstract u()Ls04;
+.end method
+
+.method public abstract v(Loqf;)Ls04;
 .end method

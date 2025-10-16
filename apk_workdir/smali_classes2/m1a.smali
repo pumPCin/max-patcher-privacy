@@ -1,39 +1,50 @@
-.class public final Lm1a;
+.class public final synthetic Lm1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhr3;
+
 
 # instance fields
-.field public final a:Lys4;
-
-.field public final b:Lys4;
-
-.field public final c:Liv0;
-
-.field public final d:Lys4;
-
-.field public final e:Lys4;
-
-.field public final f:Lys4;
+.field public final synthetic a:Z
 
 
 # direct methods
-.method public constructor <init>(Lys4;Lys4;Liv0;Lys4;Lys4;Lys4;)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm1a;->a:Lys4;
+    iput-boolean p1, p0, Lm1a;->a:Z
 
-    iput-object p2, p0, Lm1a;->b:Lys4;
+    return-void
+.end method
 
-    iput-object p3, p0, Lm1a;->c:Liv0;
 
-    iput-object p4, p0, Lm1a;->d:Lys4;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iput-object p5, p0, Lm1a;->e:Lys4;
+    check-cast p1, La78;
 
-    iput-object p6, p0, Lm1a;->f:Lys4;
+    iget-boolean v0, p0, Lm1a;->a:Z
+
+    iput-boolean v0, p1, La78;->b:Z
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p1, La78;->m:Z
+
+    iput-boolean v0, p1, La78;->n:Z
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p1, La78;->p:J
+
+    iput-wide v1, p1, La78;->q:J
+
+    iput-boolean v0, p1, La78;->r:Z
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class final synthetic Lkotlinx/coroutines/internal/LockFreeLinkedListNode$toString$1;
-.super Le4c;
+.super Lwcc;
 .source "SourceFile"
 
 
@@ -32,7 +32,7 @@
 
     const/4 v5, 0x1
 
-    const-class v2, Lzvd;
+    const-class v2, Lde4;
 
     const-string v3, "classSimpleName"
 
@@ -40,7 +40,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lg4c;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lycc;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 .method public get()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lps1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lst1;->receiver:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

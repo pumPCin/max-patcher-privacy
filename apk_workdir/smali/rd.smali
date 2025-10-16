@@ -1,92 +1,115 @@
-.class public abstract Lrd;
-.super Ljava/lang/Object;
+.class public final Lrd;
+.super Lpmi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+# instance fields
+.field public final a:Ljavax/net/ssl/X509TrustManager;
 
-.field public static final b:Ljava/util/Map;
+.field public final b:Landroid/net/http/X509TrustManagerExtensions;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-object p1, p0, Lrd;->a:Ljavax/net/ssl/X509TrustManager;
 
-    sput-object v0, Lrd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p2, p0, Lrd;->b:Landroid/net/http/X509TrustManagerExtensions;
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const-class v1, Lsca;
+# virtual methods
+.method public final b(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 2
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+    const/4 v0, 0x0
 
-    move-result-object v2
+    new-array v0, v0, [Ljava/security/cert/X509Certificate;
 
-    if-eqz v2, :cond_0
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/lang/Package;->getName()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object v2
+    if-eqz p2, :cond_0
 
-    goto :goto_0
+    check-cast p2, [Ljava/security/cert/X509Certificate;
 
-    :cond_0
-    const/4 v2, 0x0
+    :try_start_0
+    iget-object v0, p0, Lrd;->b:Landroid/net/http/X509TrustManagerExtensions;
 
-    :goto_0
-    if-eqz v2, :cond_1
+    const-string v1, "RSA"
 
-    const-string v3, "OkHttp"
+    invoke-virtual {v0, p2, v1, p1}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    return-object p1
 
-    move-result-object v1
+    :catch_0
+    move-exception p1
 
-    const-string v2, "okhttp.OkHttpClient"
+    new-instance p2, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-class v1, Lky6;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "okhttp.Http2"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-class v1, Lvaf;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "okhttp.TaskRunner"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "okhttp3.mockwebserver.MockWebServer"
-
-    const-string v2, "okhttp.MockWebServer"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v0}, Lr98;->J(Ljava/util/Map;)Ljava/util/Map;
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lrd;->b:Ljava/util/Map;
+    invoke-direct {p2, v0}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw p2
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lrd;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lrd;
+
+    iget-object p1, p1, Lrd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    iget-object v0, p0, Lrd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lrd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

@@ -1,85 +1,107 @@
-.class public final enum Lk93;
-.super Ljava/lang/Enum;
+.class public final Lk93;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu32;
 
-# static fields
-.field public static final enum a:Lk93;
 
-.field public static final enum b:Lk93;
+# instance fields
+.field public final a:I
 
-.field public static final enum c:Lk93;
-
-.field public static final synthetic o:[Lk93;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/io/InputStream;)V
+    .locals 3
 
-    new-instance v0, Lk93;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "LIGHT"
+    invoke-static {p1}, Loai;->e(Ljava/io/InputStream;)I
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Loai;->e(Ljava/io/InputStream;)I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result v0
 
-    sput-object v0, Lk93;->a:Lk93;
+    new-array v1, v0, [B
 
-    new-instance v1, Lk93;
+    invoke-static {p1, v1, v0}, Lv0j;->c(Ljava/io/InputStream;[BI)I
 
-    const-string v2, "DARK"
+    move-result p1
 
-    const/4 v3, 0x1
+    if-ne p1, v0, :cond_0
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    sput-object v1, Lk93;->b:Lk93;
+    move-result-object p1
 
-    new-instance v2, Lk93;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
-    const-string v3, "UNIVERSAL"
+    move-result v0
 
-    const/4 v4, 0x2
+    iput v0, p0, Lk93;->a:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v0, Ljava/lang/String;
 
-    sput-object v2, Lk93;->c:Lk93;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
-    filled-new-array {v0, v1, v2}, [Lk93;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    sput-object v0, Lk93;->o:[Lk93;
+    move-result v2
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result p1
+
+    invoke-direct {v0, v1, v2, p1}, Ljava/lang/String;-><init>([BII)V
+
+    iput-object v0, p0, Lk93;->b:Ljava/lang/String;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/io/EOFException;
+
+    const-string v0, "Unexpected end of stream"
+
+    invoke-direct {p1, v0}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lk93;
-    .locals 1
 
-    const-class v0, Lk93;
+# virtual methods
+.method public final getType()J
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const-wide/16 v0, 0x2843
 
-    move-result-object p0
-
-    check-cast p0, Lk93;
-
-    return-object p0
+    return-wide v0
 .end method
 
-.method public static values()[Lk93;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object v0, Lk93;->o:[Lk93;
+    iget v0, p0, Lk93;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    check-cast v0, [Lk93;
+    iget-object v1, p0, Lk93;->b:Ljava/lang/String;
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "CloseWebtransportSessionCapsule[%d,%s]"
+
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

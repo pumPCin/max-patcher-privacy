@@ -1,109 +1,49 @@
-.class public final enum Lpf0;
-.super Ljava/lang/Enum;
+.class public final Lpf0;
+.super Lk14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lpf0;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final synthetic Y:[Lpf0;
+.field public final synthetic Y:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-.field public static final enum a:Lpf0;
+.field public Z:I
 
-.field public static final enum b:Lpf0;
-
-.field public static final enum c:Lpf0;
-
-.field public static final enum o:Lpf0;
+.field public o:Lru/ok/tamtam/workmanager/BacklogWorker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lk14;)V
+    .locals 0
 
-    new-instance v0, Lpf0;
+    iput-object p1, p0, Lpf0;->Y:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    const-string v1, "REMOTE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lpf0;->a:Lpf0;
-
-    new-instance v1, Lpf0;
-
-    const-string v2, "LOCAL_RTT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lpf0;->b:Lpf0;
-
-    new-instance v2, Lpf0;
-
-    const-string v3, "LOCAL_LOSS"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lpf0;->c:Lpf0;
-
-    new-instance v3, Lpf0;
-
-    const-string v4, "REMOTE_RTT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lpf0;->o:Lpf0;
-
-    new-instance v4, Lpf0;
-
-    const-string v5, "REMOTE_LOSS"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lpf0;->X:Lpf0;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lpf0;
-
-    move-result-object v0
-
-    sput-object v0, Lpf0;->Y:[Lpf0;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpf0;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lpf0;
+    iput-object p1, p0, Lpf0;->X:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lpf0;->Z:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Lpf0;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lpf0;->Z:I
 
-.method public static values()[Lpf0;
-    .locals 1
+    iget-object p1, p0, Lpf0;->Y:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    sget-object v0, Lpf0;->Y:[Lpf0;
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, [Lpf0;->clone()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
-
-    check-cast v0, [Lpf0;
-
-    return-object v0
+    return-object p1
 .end method

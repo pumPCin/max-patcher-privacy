@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract c(Lql;)Lql;
+.method public abstract a(Lem;)Ljava/lang/Object;
 .end method

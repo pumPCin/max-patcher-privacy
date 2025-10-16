@@ -1,48 +1,99 @@
 .class public final Lrzb;
-.super Lwy3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lszb;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lszb;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Lnqf;
 
 
 # direct methods
-.method public constructor <init>(Lszb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lnqf;)V
     .locals 0
 
-    iput-object p1, p0, Lrzb;->Y:Lszb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrzb;->a:Lnqf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lrzb;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Lrzb;->X:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Lrzb;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Lrzb;->X:I
+    goto :goto_0
 
-    iget-object p1, p0, Lrzb;->Y:Lszb;
+    :cond_1
+    check-cast p1, Lrzb;
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lrzb;->a:Lnqf;
 
-    invoke-virtual {p1, v0, p0}, Lszb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object p1, p1, Lrzb;->a:Lnqf;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lnqf;->equals(Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lrzb;->a:Lnqf;
+
+    invoke-virtual {v0}, Lnqf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Text(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrzb;->a:Lnqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

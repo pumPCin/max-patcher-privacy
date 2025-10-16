@@ -1,19 +1,37 @@
-.class public abstract Lvha;
-.super Ljava/lang/Object;
+.class public final Lvha;
+.super Lg3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lg3;Z)V
+    .locals 0
 
-    sget v0, Lyfc;->call_history_item_call_count_users:I
+    invoke-direct {p0, p1}, Lg3;-><init>(Lsja;)V
 
-    sput v0, Lvha;->a:I
+    iput-boolean p2, p0, Lvha;->b:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final o(Lcka;)V
+    .locals 2
+
+    new-instance v0, Luha;
+
+    iget-boolean v1, p0, Lvha;->b:Z
+
+    invoke-direct {v0, p1, v1}, Luha;-><init>(Lcka;Z)V
+
+    iget-object p1, p0, Lg3;->a:Lsja;
+
+    invoke-interface {p1, v0}, Lsja;->a(Lcka;)V
 
     return-void
 .end method

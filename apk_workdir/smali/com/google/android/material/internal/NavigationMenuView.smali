@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz09;
+.implements Lk89;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final b(Lg09;)V
+.method public final b(Lr79;)V
     .locals 0
 
     return-void

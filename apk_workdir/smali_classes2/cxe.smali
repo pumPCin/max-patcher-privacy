@@ -1,168 +1,85 @@
-.class public final Lcxe;
+.class public abstract synthetic Lcxe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbxe;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final b:Ldxe;
-
-.field public final c:Lexe;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lbxe;Ldxe;Lexe;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcxe;->a:Lbxe;
-
-    iput-object p2, p0, Lcxe;->b:Ldxe;
-
-    iput-object p3, p0, Lcxe;->c:Lexe;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method static constructor <clinit>()V
     .locals 4
 
-    const/4 v0, 0x1
+    const/4 v0, 0x2
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0}, Lwx1;->y(I)[I
 
-    return v0
+    move-result-object v1
 
-    :cond_0
-    instance-of v1, p1, Lcxe;
+    array-length v1, v1
 
-    const/4 v2, 0x0
+    new-array v1, v1, [I
 
-    if-nez v1, :cond_1
+    const/4 v2, 0x1
 
-    return v2
+    const/4 v3, 0x0
 
-    :cond_1
-    check-cast p1, Lcxe;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v1, p0, Lcxe;->a:Lbxe;
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v3, p1, Lcxe;->a:Lbxe;
+    :catch_1
+    sput-object v1, Lcxe;->$EnumSwitchMapping$0:[I
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {}, Lz10;->values()[Lz10;
 
-    move-result v1
+    move-result-object v1
 
-    if-nez v1, :cond_2
+    array-length v1, v1
 
-    return v2
+    new-array v1, v1, [I
 
-    :cond_2
-    iget-object v1, p0, Lcxe;->b:Ldxe;
+    :try_start_2
+    aput v2, v1, v0
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object v3, p1, Lcxe;->b:Ldxe;
+    :catch_2
+    const/4 v2, 0x3
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :try_start_3
+    aput v0, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-result v1
+    :catch_3
+    const/4 v0, 0x4
 
-    if-nez v1, :cond_3
+    :try_start_4
+    aput v2, v1, v0
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    return v2
+    :catch_4
+    const/16 v2, 0x9
 
-    :cond_3
-    iget-object v1, p0, Lcxe;->c:Lexe;
+    :try_start_5
+    aput v0, v1, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    iget-object p1, p1, Lcxe;->c:Lexe;
+    :catch_5
+    sput-object v1, Lcxe;->$EnumSwitchMapping$1:[I
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lcxe;->a:Lbxe;
-
-    iget v0, v0, Lbxe;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lcxe;->b:Ldxe;
-
-    iget v2, v2, Ldxe;->a:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcxe;->c:Lexe;
-
-    iget v1, v1, Lexe;->a:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StrokeLocalColors(carver="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcxe;->a:Lbxe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tabBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcxe;->b:Ldxe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", topBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcxe;->c:Lexe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

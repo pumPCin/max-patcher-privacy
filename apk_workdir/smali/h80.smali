@@ -3,11 +3,15 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln8a;
+.implements Lrga;
 
 
 # static fields
 .field public static final a:Lh80;
+
+.field public static final b:Liq5;
+
+.field public static final c:Liq5;
 
 
 # direct methods
@@ -20,9 +24,21 @@
 
     sput-object v0, Lh80;->a:Lh80;
 
-    const-string v0, "messagingClientEventExtension"
+    const-string v0, "clientType"
 
-    invoke-static {v0}, Ltm5;->a(Ljava/lang/String;)Ltm5;
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Lh80;->b:Liq5;
+
+    const-string v0, "androidClientInfo"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Lh80;->c:Liq5;
 
     return-void
 .end method
@@ -30,13 +46,27 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    .locals 2
+
+    check-cast p1, Li83;
+
+    check-cast p2, Lsga;
+
+    check-cast p1, Lp90;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p1, Ljava/lang/ClassCastException;
+    sget-object v0, Lh83;->a:Lh83;
 
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+    sget-object v1, Lh80;->b:Liq5;
 
-    throw p1
+    invoke-interface {p2, v1, v0}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object v0, Lh80;->c:Liq5;
+
+    iget-object p1, p1, Lp90;->a:La90;
+
+    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    return-void
 .end method

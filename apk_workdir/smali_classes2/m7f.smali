@@ -1,24 +1,25 @@
 .class public final Lm7f;
-.super Ljava/lang/Object;
+.super Lo5d;
 .source "SourceFile"
-
-# interfaces
-.implements Lrc7;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ln7f;
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln7f;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
     iput p2, p0, Lm7f;->a:I
 
-    iput-object p1, p0, Lm7f;->b:Ln7f;
+    iput-object p1, p0, Lm7f;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lm7f;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,422 +28,73 @@
 
 
 # virtual methods
-.method public final a(Llpc;)Lj1d;
-    .locals 10
+.method public a()V
+    .locals 1
 
     iget v0, p0, Lm7f;->a:I
 
-    const-string v1, "ClassCastException"
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "n7f"
+    return-void
 
-    const-string v3, "Host"
+    :pswitch_0
+    iget-object v0, p0, Lm7f;->b:Ljava/lang/Object;
+
+    check-cast v0, Lo7f;
+
+    invoke-static {v0}, Lo7f;->i(Lo7f;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b(II)V
+    .locals 0
+
+    iget p1, p0, Lm7f;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lm7f;->b:Ljava/lang/Object;
+
+    check-cast p1, Lo7f;
+
+    invoke-static {p1}, Lo7f;->i(Lo7f;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(IILjava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lm7f;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    const v0, 0xf00d
+    invoke-super {p0, p1, p2, p3}, Lo5d;->c(IILjava/lang/Object;)V
 
-    invoke-static {v0}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
-
-    iget-object v0, p1, Llpc;->i:Ljava/lang/Object;
-
-    check-cast v0, Lwzc;
-
-    invoke-virtual {v0}, Lwzc;->a()Lm26;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lm7f;->b:Ln7f;
-
-    iget-object v5, v5, Ln7f;->g:Ljava/lang/String;
-
-    iget-object v6, v4, Lm26;->c:Ljava/lang/Object;
-
-    check-cast v6, Lt55;
-
-    const-string v7, "User-Agent"
-
-    invoke-virtual {v6, v7, v5}, Lt55;->B(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v5, v0, Lwzc;->b:Lc07;
-
-    iget-object v6, v5, Lc07;->e:Ljava/lang/String;
-
-    iget-object v7, p0, Lm7f;->b:Ln7f;
-
-    iget-boolean v7, v7, Ln7f;->c:Z
-
-    if-eqz v7, :cond_2
-
-    iget-object v7, p0, Lm7f;->b:Ln7f;
-
-    invoke-virtual {v7, v6}, Ln7f;->d(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_0
-
-    new-instance v7, Lru/ok/tamtam/util/HandledException;
-
-    invoke-virtual {v5}, Lc07;->b()Ljava/lang/String;
-
-    move-result-object v8
-
-    filled-new-array {v6, v8}, [Ljava/lang/Object;
-
-    move-result-object v8
-
-    const-string v9, "Http request behind the proxy. Host = %s, path = %s"
-
-    invoke-direct {v7, v9, v8}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v8, p0, Lm7f;->b:Ln7f;
-
-    iget-object v8, v8, Ln7f;->b:Ltb5;
-
-    check-cast v8, Lsla;
-
-    invoke-virtual {v8, v7}, Lsla;->c(Ljava/lang/Throwable;)V
-
-    :cond_0
-    iget-object v7, p0, Lm7f;->b:Ln7f;
-
-    iget-object v7, v7, Ln7f;->e:Ljava/lang/String;
-
-    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    new-instance v7, Lru/ok/tamtam/util/HandledException;
-
-    invoke-virtual {v5}, Lc07;->b()Ljava/lang/String;
-
-    move-result-object v8
-
-    filled-new-array {v6, v8}, [Ljava/lang/Object;
-
-    move-result-object v8
-
-    const-string v9, "Http request with direct proxy Host = %s, path = %s"
-
-    invoke-direct {v7, v9, v8}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v8, p0, Lm7f;->b:Ln7f;
-
-    iget-object v8, v8, Ln7f;->b:Ltb5;
-
-    check-cast v8, Lsla;
-
-    invoke-virtual {v8, v7}, Lsla;->c(Ljava/lang/Throwable;)V
-
-    :cond_1
-    iget-object v7, p0, Lm7f;->b:Ln7f;
-
-    invoke-virtual {v5}, Lc07;->f()Ltg3;
-
-    move-result-object v5
-
-    iget-object v0, v0, Lwzc;->b:Lc07;
-
-    iget-boolean v0, v0, Lc07;->a:Z
-
-    invoke-static {v7, v5, v0}, Ln7f;->c(Ln7f;Ltg3;Z)V
-
-    invoke-virtual {v5}, Ltg3;->b()Lc07;
-
-    move-result-object v0
-
-    iget-object v5, v4, Lm26;->c:Ljava/lang/Object;
-
-    check-cast v5, Lt55;
-
-    invoke-virtual {v5, v3, v6}, Lt55;->B(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v0, v4, Lm26;->b:Ljava/lang/Object;
-
-    :cond_2
-    :try_start_0
-    invoke-virtual {v4}, Lm26;->c()Lwzc;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Llpc;->d(Lwzc;)Lj1d;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "Http request failed"
-
-    invoke-static {v2, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v1, Lru/ok/messages/http/UnknownOkhttpException;
-
-    invoke-direct {v1, v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_1
-    new-instance p1, Ljava/io/IOException;
-
-    invoke-direct {p1, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 
     :pswitch_0
-    iget-object v0, p1, Llpc;->i:Ljava/lang/Object;
+    iget-object p1, p0, Lm7f;->b:Ljava/lang/Object;
 
-    check-cast v0, Lwzc;
+    check-cast p1, Lo7f;
 
-    iget-object v4, v0, Lwzc;->b:Lc07;
+    invoke-static {p1}, Lo7f;->i(Lo7f;)V
 
-    iget-object v5, p0, Lm7f;->b:Ln7f;
-
-    iget-boolean v5, v5, Ln7f;->c:Z
-
-    const-string v6, "TAM_TAM_ORIGINAL_HOST"
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v4, v6}, Lc07;->g(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Ld40;->A(Ljava/lang/CharSequence;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_3
-
-    invoke-virtual {v4}, Lc07;->f()Ltg3;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v6}, Ltg3;->l(Ljava/lang/String;)V
-
-    invoke-virtual {v4}, Ltg3;->b()Lc07;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lwzc;->a()Lm26;
-
-    move-result-object v0
-
-    iget-object v7, v0, Lm26;->c:Ljava/lang/Object;
-
-    check-cast v7, Lt55;
-
-    invoke-virtual {v7, v3, v5}, Lt55;->B(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v4, v0, Lm26;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lm26;->c()Lwzc;
-
-    move-result-object v0
-
-    :cond_3
-    :try_start_1
-    invoke-virtual {p1, v0}, Llpc;->d(Lwzc;)Lj1d;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_4
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_3
-
-    iget-object v1, p0, Lm7f;->b:Ln7f;
-
-    iget-boolean v1, v1, Ln7f;->c:Z
-
-    if-eqz v1, :cond_a
-
-    iget v1, p1, Lj1d;->o:I
-
-    const/16 v3, 0x133
-
-    if-eq v1, v3, :cond_4
-
-    const/16 v3, 0x134
-
-    if-eq v1, v3, :cond_4
-
-    packed-switch v1, :pswitch_data_1
-
-    goto/16 :goto_2
-
-    :cond_4
-    :pswitch_1
-    iget-object v1, p1, Lj1d;->Y:Lks6;
-
-    const-string v3, "Location"
-
-    invoke-virtual {v1, v3}, Lks6;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    if-eqz v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move-object v1, v4
-
-    :goto_0
-    invoke-static {v1}, Ld40;->A(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_6
-
-    const-string v0, "Redirect, but Location is empty"
-
-    invoke-static {v2, v0, v4}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_6
-    :try_start_2
-    new-instance v5, Ltg3;
-
-    invoke-direct {v5}, Ltg3;-><init>()V
-
-    invoke-virtual {v5, v4, v1}, Ltg3;->j(Lc07;Ljava/lang/String;)V
-
-    invoke-virtual {v5}, Ltg3;->b()Lc07;
-
-    move-result-object v5
-    :try_end_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
-
-    goto :goto_1
-
-    :catch_2
-    move-object v5, v4
-
-    :goto_1
-    if-nez v5, :cond_7
-
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v3, "Can\'t parse location "
-
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, v4}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_7
-    iget-object v1, v5, Lc07;->e:Ljava/lang/String;
-
-    iget-object v2, p0, Lm7f;->b:Ln7f;
-
-    invoke-virtual {v5}, Lc07;->f()Ltg3;
-
-    move-result-object v5
-
-    iget-object v0, v0, Lwzc;->b:Lc07;
-
-    iget-boolean v0, v0, Lc07;->a:Z
-
-    invoke-static {v2, v5, v0}, Ln7f;->c(Ln7f;Ltg3;Z)V
-
-    invoke-virtual {v5, v6}, Ltg3;->l(Ljava/lang/String;)V
-
-    iget-object v0, v5, Ltg3;->d:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_8
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, v5, Ltg3;->d:Ljava/util/ArrayList;
-
-    :cond_8
-    iget-object v0, v5, Ltg3;->d:Ljava/util/ArrayList;
-
-    const/4 v2, 0x0
-
-    const-string v7, " !\"#$&\'(),/:;<=>?@[]\\^`{|}~"
-
-    const/16 v8, 0xdb
-
-    invoke-static {v6, v2, v2, v7, v8}, Lr78;->d(Ljava/lang/String;IILjava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, v5, Ltg3;->d:Ljava/util/ArrayList;
-
-    if-eqz v1, :cond_9
-
-    invoke-static {v1, v2, v2, v7, v8}, Lr78;->d(Ljava/lang/String;IILjava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    :cond_9
-    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v5}, Ltg3;->b()Lc07;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lj1d;->n()Li1d;
-
-    move-result-object p1
-
-    iget-object v0, v0, Lc07;->i:Ljava/lang/String;
-
-    iget-object v1, p1, Li1d;->f:Lt55;
-
-    invoke-virtual {v1, v3, v0}, Lt55;->B(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Li1d;->a()Lj1d;
-
-    move-result-object p1
-
-    :cond_a
-    :goto_2
-    return-object p1
-
-    :catch_3
-    move-exception p1
-
-    const-string v0, "Http redirect failed"
-
-    invoke-static {v2, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v1, Lru/ok/messages/http/UnknownOkhttpException;
-
-    invoke-direct {v1, v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_4
-    new-instance p1, Ljava/io/IOException;
-
-    invoke-direct {p1, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 
     nop
 
@@ -450,12 +102,183 @@
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
+.end method
 
-    :pswitch_data_1
-    .packed-switch 0x12c
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
+.method public final d(II)V
+    .locals 5
+
+    iget v0, p0, Lm7f;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lm7f;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->G0:Lo66;
+
+    invoke-virtual {p2, p1}, Lo66;->J(I)Lw5a;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->G0()Ll7a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll7a;->w()V
+
+    iget-object p1, p0, Lm7f;->c:Ljava/lang/Object;
+
+    check-cast p1, Lm5d;
+
+    invoke-virtual {p1, p0}, Lm5d;->B(Lo5d;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lf88;->o:Lf88;
+
+    const-class p2, Lm7f;
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lm7f;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v2, Lndi;->a:Lkwa;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v2, p1}, Lkwa;->b(Lf88;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v1
+
+    const-string v4, "onItemRangeInserted start. isComputingLayout:"
+
+    invoke-static {v4, v1}, Lyy8;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, p1, v0, v1, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    iget-object v0, p0, Lm7f;->b:Ljava/lang/Object;
+
+    check-cast v0, Lo7f;
+
+    invoke-static {v0}, Lo7f;->i(Lo7f;)V
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lm7f;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v1, Lndi;->a:Lkwa;
+
+    if-nez v1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v1, p1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v0
+
+    const-string v2, "onItemRangeInserted end. isComputingLayout:"
+
+    invoke-static {v2, v0}, Lyy8;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p1, p2, v0, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e(II)V
+    .locals 0
+
+    iget p1, p0, Lm7f;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lm7f;->b:Ljava/lang/Object;
+
+    check-cast p1, Lo7f;
+
+    invoke-static {p1}, Lo7f;->i(Lo7f;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(II)V
+    .locals 0
+
+    iget p1, p0, Lm7f;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lm7f;->b:Ljava/lang/Object;
+
+    check-cast p1, Lo7f;
+
+    invoke-static {p1}, Lo7f;->i(Lo7f;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
     .end packed-switch
 .end method

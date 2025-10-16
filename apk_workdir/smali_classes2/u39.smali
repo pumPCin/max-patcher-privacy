@@ -2,15 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements La49;
+
+# instance fields
+.field public final a:Lc3e;
 
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+# direct methods
+.method public constructor <init>(Lc3e;)V
+    .locals 0
 
-    const-string v0, "ChatUpdate"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iput-object p1, p0, Lu39;->a:Lc3e;
+
+    return-void
 .end method

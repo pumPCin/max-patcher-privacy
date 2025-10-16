@@ -56,7 +56,7 @@
 
     iget-object v4, p0, Lone/me/sdk/transfer/exceptions/UnexpectedResponseBodyException;->a:Ljava/lang/String;
 
-    invoke-static {v3, v0, v1, v4, v2}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0, v1, v4, v2}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

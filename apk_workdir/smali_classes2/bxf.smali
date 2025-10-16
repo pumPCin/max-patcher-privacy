@@ -1,15 +1,8 @@
-.class public final Lbxf;
-.super Lqy;
+.class public interface abstract Lbxf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>(ZZ)V
-    .locals 1
-
-    sget-object v0, Lm00;->b:Lm00;
-
-    invoke-direct {p0, v0, p1, p2}, Lqy;-><init>(Lm00;ZZ)V
-
-    return-void
+# virtual methods
+.method public abstract o()Lr5e;
 .end method

@@ -1,3 +1,3 @@
-.class public final Lswc;
-.super Lda5;
+.class public abstract Lswc;
+.super Ljava/lang/Object;
 .source "SourceFile"

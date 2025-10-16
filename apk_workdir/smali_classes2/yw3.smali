@@ -1,98 +1,130 @@
 .class public final Lyw3;
-.super Lc2f;
+.super Llj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lzw3;
+.field public final synthetic b:I
 
-.field public final synthetic Y:Ljava/lang/String;
-
-.field public final synthetic Z:I
+.field public final c:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(Lzw3;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(JLjava/io/Serializable;I)V
     .locals 0
 
-    iput-object p1, p0, Lyw3;->X:Lzw3;
+    .line 1
+    iput p4, p0, Lyw3;->b:I
 
-    iput-object p2, p0, Lyw3;->Y:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Llj0;-><init>(J)V
 
-    iput p3, p0, Lyw3;->Z:I
+    iput-object p3, p0, Lyw3;->c:Ljava/io/Serializable;
 
-    const/4 p1, 0x2
+    return-void
+.end method
 
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lyw3;->b:I
+
+    .line 2
+    invoke-direct {p0}, Llj0;-><init>()V
+
+    .line 3
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+
+    iput-object v0, p0, Lyw3;->c:Ljava/io/Serializable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Ln24;
+    iget v0, p0, Lyw3;->b:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lyw3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "SharePreviewEvent{attaches="
 
-    check-cast p1, Lyw3;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget-object v1, p0, Lyw3;->c:Ljava/io/Serializable;
 
-    invoke-virtual {p1, p2}, Lyw3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Lyz;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    const/16 v1, 0x7d
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    new-instance p1, Lyw3;
-
-    iget-object v0, p0, Lyw3;->Y:Ljava/lang/String;
-
-    iget v1, p0, Lyw3;->Z:I
-
-    iget-object v2, p0, Lyw3;->X:Lzw3;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lyw3;-><init>(Lzw3;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyw3;->X:Lzw3;
-
-    iget-object v0, p1, Lzw3;->c:La2e;
-
-    sget-object v1, Lo65;->a:Lo65;
-
-    iget-object v2, p1, Lzw3;->e:Lxm3;
-
-    iget-object v3, p0, Lyw3;->Y:Ljava/lang/String;
-
-    iget v4, p0, Lyw3;->Z:I
-
-    invoke-virtual {v0, v3, v4, v1, v2}, La2e;->e(Ljava/lang/String;ILjava/util/List;Ldze;)Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ProfileEvent{contactInfo="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyw3;->c:Ljava/io/Serializable;
+
+    check-cast v1, Ldu3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactNotFoundEvent{contactServerIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyw3;->c:Ljava/io/Serializable;
+
+    check-cast v1, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

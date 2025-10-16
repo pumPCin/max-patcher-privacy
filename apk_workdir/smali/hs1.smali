@@ -1,24 +1,24 @@
-.class public final Lhs1;
+.class public final synthetic Lhs1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lr3f;
+.field public final synthetic b:Lms1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr3f;Lr3f;I)V
+.method public synthetic constructor <init>(Lms1;I)V
     .locals 0
 
-    iput p3, p0, Lhs1;->a:I
+    iput p2, p0, Lhs1;->a:I
 
-    iput-object p2, p0, Lhs1;->b:Lr3f;
+    iput-object p1, p0, Lhs1;->b:Lms1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,31 +27,50 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget v0, p0, Lhs1;->a:I
+    iget p1, p0, Lhs1;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lhs1;->b:Lr3f;
+    iget-object p1, p0, Lhs1;->b:Lms1;
 
-    invoke-virtual {v0}, Lr3f;->d()V
+    iget-object v0, p1, Lms1;->b1:Ljs1;
 
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lms1;->h1:Lei1;
+
+    invoke-interface {v0, p1}, Ljs1;->q(Lei1;)V
+
+    :cond_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lhs1;->b:Lr3f;
+    iget-object p1, p0, Lhs1;->b:Lms1;
 
-    invoke-virtual {v0}, Lr3f;->d()V
+    iget-object p1, p1, Lms1;->b1:Ljs1;
 
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Ljs1;->L()V
+
+    :cond_1
     return-void
 
     :pswitch_1
-    iget-object v0, p0, Lhs1;->b:Lr3f;
+    iget-object p1, p0, Lhs1;->b:Lms1;
 
-    invoke-virtual {v0}, Lr3f;->d()V
+    iget-object v0, p1, Lms1;->b1:Ljs1;
 
+    if-eqz v0, :cond_2
+
+    iget-object p1, p1, Lms1;->h1:Lei1;
+
+    invoke-interface {v0, p1}, Ljs1;->s(Lei1;)V
+
+    :cond_2
     return-void
 
     nop

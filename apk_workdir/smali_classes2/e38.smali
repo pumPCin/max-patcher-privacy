@@ -1,235 +1,168 @@
 .class public final Le38;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lf38;
-
-.field public final synthetic Z:Lh38;
 
 
 # direct methods
-.method public constructor <init>(Lf38;Lh38;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a(Lvnh;Z)V
+    .locals 15
 
-    iput-object p1, p0, Le38;->Y:Lf38;
+    const-string v0, "start"
 
-    iput-object p2, p0, Le38;->Z:Lh38;
+    const-string v1, "LoadEmojiFontWorker"
 
-    const/4 p1, 0x2
+    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Lg6b;
 
-    return-void
-.end method
+    const-class v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
+    invoke-direct {v0, v2}, Lg6b;-><init>(Ljava/lang/Class;)V
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-wide/16 v2, 0x2710
 
-    check-cast p1, Ln24;
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v5, Lxf0;->a:Lxf0;
 
-    invoke-virtual {p0, p1, p2}, Le38;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0, v5, v2, v3, v4}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Lxf0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Le38;
+    check-cast v0, Lg6b;
 
-    sget-object p2, Laxf;->a:Laxf;
+    new-instance v2, Ljava/util/LinkedHashSet;
 
-    invoke-virtual {p1, p2}, Le38;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    move-result-object p1
+    if-eqz p1, :cond_0
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Le38;
-
-    iget-object v0, p0, Le38;->Y:Lf38;
-
-    iget-object v1, p0, Le38;->Z:Lh38;
-
-    invoke-direct {p1, v0, v1, p2}, Le38;-><init>(Lf38;Lh38;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    iget v1, p0, Le38;->X:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-object v10, p0
-
-    goto/16 :goto_5
-
-    :catchall_0
-    move-object v10, p0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object v10, p0
-
-    goto :goto_4
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, p0, Le38;->Y:Lf38;
-
-    iget-object p1, p1, Lnm;->c:Lom;
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v2
+    const/4 v3, 0x2
 
     :goto_0
-    iget-object p1, p1, Lom;->j:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v4, p1
-
-    check-cast v4, Lz38;
-
-    iget-object p1, p0, Le38;->Y:Lf38;
-
-    iget-wide v5, p1, Lnm;->a:J
-
-    iget-object v7, p0, Le38;->Z:Lh38;
-
-    iget-wide v8, p1, Lf38;->X:J
-
-    iput v3, p0, Le38;->X:I
-    :try_end_1
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1 .. :try_end_1} :catch_2
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move-object v10, p0
-
-    :try_start_2
-    invoke-virtual/range {v4 .. v10}, Lz38;->e(JLh38;JLwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_2
-    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    if-ne p1, v0, :cond_5
-
-    return-object v0
-
-    :catch_1
-    move-exception v0
-
-    :goto_1
-    move-object p1, v0
-
-    goto :goto_4
-
-    :catch_2
-    move-exception v0
-
-    move-object v10, p0
+    move v5, v3
 
     goto :goto_1
 
-    :catchall_1
-    :goto_2
-    iget-object p1, v10, Le38;->Y:Lf38;
+    :cond_0
+    const/4 v3, 0x3
 
-    iget-object p1, p1, Lf38;->v0:Ljava/lang/String;
+    goto :goto_0
 
-    sget-object v0, Lyt3;->n:Lhoa;
+    :goto_1
+    invoke-static {v2}, Lab3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    if-nez v0, :cond_3
+    move-result-object v14
 
-    goto :goto_3
+    new-instance v4, Lzq3;
 
-    :cond_3
-    sget-object v1, Lr28;->Z:Lr28;
+    const/4 v6, 0x0
 
-    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
+    const/4 v7, 0x0
 
-    move-result v3
+    const/4 v8, 0x0
 
-    if-eqz v3, :cond_4
+    const/4 v9, 0x0
 
-    const-string v3, "beans.loginLogic.onLogin fail"
+    const-wide/16 v10, -0x1
 
-    invoke-virtual {v0, v1, p1, v3, v2}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-wide/16 v12, -0x1
 
-    :cond_4
-    :goto_3
-    sget-object p1, Ld48;->i:Ld48;
+    invoke-direct/range {v4 .. v14}, Lzq3;-><init>(IZZZZJJLjava/util/Set;)V
 
-    sget-object v0, Lc48;->r0:Lc48;
+    invoke-virtual {v0, v4}, Landroidx/work/WorkRequest$Builder;->setConstraints(Lzq3;)Landroidx/work/WorkRequest$Builder;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    invoke-static {v0}, Ld48;->d(Lc48;)V
+    check-cast v0, Lg6b;
 
-    goto :goto_5
+    sget-object v2, Lf9b;->a:Lf9b;
 
-    :goto_4
-    iget-object v0, v10, Le38;->Y:Lf38;
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setExpedited(Lf9b;)Landroidx/work/WorkRequest$Builder;
 
-    iget-object p1, p1, Lru/ok/tamtam/errors/TamErrorException;->a:Li7f;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lf38;->g(Li7f;)V
+    check-cast v0, Lg6b;
 
-    :cond_5
-    :goto_5
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, Lg6b;
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    new-instance v3, Lqbb;
+
+    const-string v4, "waiting_for_wifi"
+
+    invoke-direct {v3, v4, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v3}, [Lqbb;
+
+    move-result-object v2
+
+    new-instance v3, Lwoe;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v3, v4}, Lwoe;-><init>(I)V
+
+    const/4 v4, 0x0
+
+    aget-object v2, v2, v4
+
+    iget-object v4, v2, Lqbb;->a:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/String;
+
+    iget-object v2, v2, Lqbb;->b:Ljava/lang/Object;
+
+    invoke-virtual {v3, v2, v4}, Lwoe;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Lwoe;->j()Lya4;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setInputData(Lya4;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lg6b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object v0
+
+    check-cast v0, Lh6b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "work "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lug5;->b:Lug5;
+
+    invoke-virtual {p0, v1, v2, v0}, Lvnh;->b(Ljava/lang/String;Lug5;Lh6b;)Lqw7;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lqw7;->c()Lzj3;
+
+    return-void
 .end method

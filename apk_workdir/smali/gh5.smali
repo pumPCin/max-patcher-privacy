@@ -4,177 +4,325 @@
 
 
 # instance fields
-.field public final a:Liv0;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Lt6e;
+.field public b:Lyhf;
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final c:Lodf;
 
-.field public final d:Ljava/lang/Long;
+.field public d:Lodf;
+
+.field public e:Lodf;
+
+.field public f:Lodf;
+
+.field public g:Lodf;
+
+.field public final h:Lbg5;
+
+.field public i:Landroid/os/Looper;
+
+.field public final j:I
+
+.field public final k:Lr20;
+
+.field public final l:I
+
+.field public final m:Z
+
+.field public final n:Lpwd;
+
+.field public final o:Lgrd;
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:J
+
+.field public s:Lzk4;
+
+.field public final t:J
+
+.field public u:J
+
+.field public v:Z
+
+.field public w:Ll5a;
+
+.field public x:Z
+
+.field public final y:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Le7f;Liv0;JLxc2;Lyn7;)V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    .line 1
+    new-instance v0, Lr30;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p1, v1}, Lr30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v1, Lr30;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, p1, v2}, Lr30;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, p1, v0, v1}, Lgh5;-><init>(Landroid/content/Context;Lodf;Lodf;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lk9d;)V
     .locals 2
 
+    .line 2
+    new-instance v0, Lfl4;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p2}, Lfl4;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lr30;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, p1, v1}, Lr30;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, p1, v0, p2}, Lgh5;-><init>(Landroid/content/Context;Lodf;Lodf;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lodf;Lodf;)V
+    .locals 6
+
+    .line 3
+    new-instance v0, Lr30;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p1, v1}, Lr30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v1, Lrb4;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2}, Lrb4;-><init>(I)V
+
+    new-instance v2, Lr30;
+
+    const/4 v3, 0x7
+
+    invoke-direct {v2, p1, v3}, Lr30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v3, Lbg5;
+
+    const/4 v4, 0x4
+
+    invoke-direct {v3, v4}, Lbg5;-><init>(I)V
+
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lgh5;->a:Liv0;
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x7
+    .line 6
+    iput-object p1, p0, Lgh5;->a:Landroid/content/Context;
 
-    const/4 v1, 0x0
+    .line 7
+    iput-object p2, p0, Lgh5;->c:Lodf;
 
-    invoke-static {v1, v1, v0}, Lu6e;->b(III)Lt6e;
+    .line 8
+    iput-object p3, p0, Lgh5;->d:Lodf;
 
-    move-result-object v0
+    .line 9
+    iput-object v0, p0, Lgh5;->e:Lodf;
 
-    iput-object v0, p0, Lgh5;->b:Lt6e;
+    .line 10
+    iput-object v1, p0, Lgh5;->f:Lodf;
 
-    check-cast p1, Lmka;
+    .line 11
+    iput-object v2, p0, Lgh5;->g:Lodf;
 
-    invoke-virtual {p1}, Lmka;->c()Lz68;
+    .line 12
+    iput-object v3, p0, Lgh5;->h:Lbg5;
+
+    .line 13
+    invoke-static {}, Ljhg;->z()Landroid/os/Looper;
 
     move-result-object p1
 
-    invoke-static {p1}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+    iput-object p1, p0, Lgh5;->i:Landroid/os/Looper;
 
-    move-result-object p1
+    .line 14
+    sget-object p1, Lr20;->h:Lr20;
 
-    iput-object p1, p0, Lgh5;->c:Lkotlinx/coroutines/internal/ContextScope;
+    iput-object p1, p0, Lgh5;->k:Lr20;
 
-    invoke-virtual {p2, p0}, Liv0;->d(Ljava/lang/Object;)V
+    const/4 p1, 0x1
 
-    invoke-virtual {p5}, Ljava/lang/Enum;->ordinal()I
+    .line 15
+    iput p1, p0, Lgh5;->l:I
 
-    move-result p1
+    .line 16
+    iput-boolean p1, p0, Lgh5;->m:Z
 
-    const/4 p2, 0x1
+    .line 17
+    sget-object p2, Lpwd;->c:Lpwd;
 
-    if-eqz p1, :cond_1
+    iput-object p2, p0, Lgh5;->n:Lpwd;
 
-    if-ne p1, p2, :cond_0
+    const-wide/16 p2, 0x1388
 
-    const/4 p1, 0x2
+    .line 18
+    iput-wide p2, p0, Lgh5;->p:J
 
-    goto :goto_0
+    const-wide/16 p2, 0x3a98
+
+    .line 19
+    iput-wide p2, p0, Lgh5;->q:J
+
+    const-wide/16 p2, 0xbb8
+
+    .line 20
+    iput-wide p2, p0, Lgh5;->r:J
+
+    .line 21
+    sget-object p2, Lgrd;->b:Lgrd;
+
+    iput-object p2, p0, Lgh5;->o:Lgrd;
+
+    const-wide/16 p2, 0x14
+
+    .line 22
+    invoke-static {p2, p3}, Ljhg;->U(J)J
+
+    move-result-wide v2
+
+    const-wide/16 p2, 0x1f4
+
+    .line 23
+    invoke-static {p2, p3}, Ljhg;->U(J)J
+
+    move-result-wide v4
+
+    .line 24
+    new-instance v0, Lzk4;
+
+    const/4 v1, 0x1
+
+    invoke-direct/range {v0 .. v5}, Lzk4;-><init>(IJJ)V
+
+    .line 25
+    iput-object v0, p0, Lgh5;->s:Lzk4;
+
+    .line 26
+    sget-object v0, Lyhf;->a:Lyhf;
+
+    iput-object v0, p0, Lgh5;->b:Lyhf;
+
+    .line 27
+    iput-wide p2, p0, Lgh5;->t:J
+
+    const-wide/16 p2, 0x7d0
+
+    .line 28
+    iput-wide p2, p0, Lgh5;->u:J
+
+    .line 29
+    iput-boolean p1, p0, Lgh5;->v:Z
+
+    .line 30
+    const-string p1, ""
+
+    iput-object p1, p0, Lgh5;->y:Ljava/lang/String;
+
+    const/16 p1, -0x3e8
+
+    .line 31
+    iput p1, p0, Lgh5;->j:I
+
+    .line 32
+    new-instance p1, Ly45;
+
+    .line 33
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p2, 0x23
+
+    if-lt p1, p2, :cond_0
+
+    .line 34
+    new-instance p1, Lum4;
 
     :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    move p1, p2
-
-    :goto_0
-    invoke-interface {p6}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p5
-
-    check-cast p5, Lg13;
-
-    invoke-virtual {p5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lsw1;->u(I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    if-ne p1, p2, :cond_2
-
-    check-cast p5, Lh23;
-
-    invoke-virtual {p5, p3, p4}, Lh23;->O(J)Lbpc;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_3
-    check-cast p5, Lh23;
-
-    invoke-virtual {p5, p3, p4}, Lh23;->N(J)Lbpc;
-
-    move-result-object p1
-
-    :goto_1
-    iget-object p1, p1, Lbpc;->a:Lane;
-
-    invoke-interface {p1}, Lane;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr82;
-
-    if-eqz p1, :cond_4
-
-    iget-wide p1, p1, Lr82;->a:J
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_4
-    const/4 p1, 0x0
-
-    :goto_2
-    iput-object p1, p0, Lgh5;->d:Ljava/lang/Long;
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lwxc;)V
-    .locals 4
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final a()Ldi5;
+    .locals 2
 
-    iget-wide v0, p1, Lwxc;->b:J
+    iget-boolean v0, p0, Lgh5;->x:Z
 
-    iget-object p1, p0, Lgh5;->d:Ljava/lang/Long;
+    const/4 v1, 0x1
 
-    if-nez p1, :cond_0
+    xor-int/2addr v0, v1
 
-    goto :goto_0
+    invoke-static {v0}, Lgfi;->g(Z)V
 
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    iput-boolean v1, p0, Lgh5;->x:Z
 
-    move-result-wide v2
+    new-instance v0, Ldi5;
 
-    cmp-long p1, v0, v2
+    invoke-direct {v0, p0}, Ldi5;-><init>(Lgh5;)V
 
-    if-eqz p1, :cond_1
+    return-object v0
+.end method
 
-    :goto_0
+.method public final b(Lb38;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lgh5;->x:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lgfi;->g(Z)V
+
+    new-instance v0, Lfl4;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, p1}, Lfl4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lgh5;->f:Lodf;
+
     return-void
+.end method
 
-    :cond_1
-    new-instance p1, Lfh5;
+.method public final c(Lao4;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lgh5;->x:Z
 
-    invoke-direct {p1, p0, v0}, Lfh5;-><init>(Lgh5;Lkotlin/coroutines/Continuation;)V
+    xor-int/lit8 v0, v0, 0x1
 
-    const/4 v1, 0x3
+    invoke-static {v0}, Lgfi;->g(Z)V
 
-    iget-object v2, p0, Lgh5;->c:Lkotlinx/coroutines/internal/ContextScope;
+    new-instance v0, Lfl4;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1, p1}, Lfl4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lgh5;->e:Lodf;
 
     return-void
 .end method

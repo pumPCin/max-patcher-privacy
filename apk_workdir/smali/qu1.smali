@@ -1,21 +1,48 @@
-.class public interface abstract Lqu1;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lqu1;
+.super Lk14;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lxn1;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(Lqu1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
+.method public constructor <init>(Lxn1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    check-cast p0, Lw61;
+    iput-object p1, p0, Lqu1;->Y:Lxn1;
 
-    iget-object p0, p0, Lw61;->b:Lh4f;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0}, Lh4f;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p0
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationFactory;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-object p0
+    iput-object p1, p0, Lqu1;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lqu1;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqu1;->X:I
+
+    iget-object p1, p0, Lqu1;->Y:Lxn1;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lxn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

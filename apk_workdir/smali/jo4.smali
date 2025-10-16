@@ -1,39 +1,51 @@
-.class public final Ljo4;
-.super Lx2d;
+.class public final synthetic Ljo4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzp6;
+.implements Lhng;
 
-# virtual methods
-.method public final I(Ljava/lang/Object;F)V
-    .locals 1
 
-    check-cast p1, Lko4;
+# instance fields
+.field public final synthetic a:I
 
-    const v0, 0x461c4000    # 10000.0f
+.field public final synthetic b:Llng;
 
-    div-float/2addr p2, v0
 
-    iget-object v0, p1, Lko4;->y0:Lxx4;
+# direct methods
+.method public synthetic constructor <init>(Llng;I)V
+    .locals 0
 
-    iput p2, v0, Lxx4;->b:F
+    iput p2, p0, Ljo4;->a:I
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    iput-object p1, p0, Ljo4;->b:Llng;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final v(Ljava/lang/Object;)F
+
+# virtual methods
+.method public final c(Landroidx/media3/common/VideoFrameProcessingException;)V
     .locals 1
 
-    check-cast p1, Lko4;
+    iget v0, p0, Ljo4;->a:I
 
-    iget-object p1, p1, Lko4;->y0:Lxx4;
+    packed-switch v0, :pswitch_data_0
 
-    iget p1, p1, Lxx4;->b:F
+    :pswitch_0
+    iget-object v0, p0, Ljo4;->b:Llng;
 
-    const v0, 0x461c4000    # 10000.0f
+    invoke-interface {v0, p1}, Llng;->c(Landroidx/media3/common/VideoFrameProcessingException;)V
 
-    mul-float/2addr p1, v0
+    return-void
 
-    return p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,213 +1,131 @@
 .class public final Le98;
-.super Ljava/lang/Object;
+.super Lf98;
 .source "SourceFile"
-
-# interfaces
-.implements Lf98;
-.implements Lg98;
-
-
-# static fields
-.field public static final synthetic h:[Lpl7;
 
 
 # instance fields
-.field public final a:Lr82;
+.field public final d:Loqf;
 
-.field public final b:Lwmb;
-
-.field public final c:I
-
-.field public final d:Lf8;
-
-.field public final e:Lf8;
-
-.field public final f:Lf8;
-
-.field public final g:Lf8;
+.field public final e:Loqf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Loqf;Loqf;)V
+    .locals 1
 
-    new-instance v0, Lds9;
+    const/4 v0, 0x0
 
-    const-string v1, "messageDb"
+    invoke-direct {p0, p1, v0}, Lf98;-><init>(Loqf;Ljava/lang/Throwable;)V
 
-    const-string v2, "getMessageDb()Lru/ok/tamtam/messages/MessageDb;"
+    iput-object p1, p0, Le98;->d:Loqf;
 
-    const-class v3, Le98;
-
-    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lewc;->a:Lfwc;
-
-    const-string v2, "messageModel"
-
-    const-string v4, "getMessageModel()Lone/me/messages/list/loader/MessageModel;"
-
-    invoke-static {v1, v3, v2, v4}, Lc85;->g(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lds9;
-
-    move-result-object v1
-
-    new-instance v2, Lds9;
-
-    const-string v4, "senderContact"
-
-    const-string v5, "getSenderContact()Lru/ok/tamtam/contacts/Contact;"
-
-    invoke-direct {v2, v3, v4, v5}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v4, Lds9;
-
-    const-string v5, "messageModels"
-
-    const-string v6, "getMessageModels()Ljava/util/List;"
-
-    invoke-direct {v4, v3, v5, v6}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v3, 0x4
-
-    new-array v3, v3, [Lpl7;
-
-    const/4 v5, 0x0
-
-    aput-object v0, v3, v5
-
-    const/4 v0, 0x1
-
-    aput-object v1, v3, v0
-
-    const/4 v0, 0x2
-
-    aput-object v2, v3, v0
-
-    const/4 v0, 0x3
-
-    aput-object v4, v3, v0
-
-    sput-object v3, Le98;->h:[Lpl7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lr82;Lwmb;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Le98;->a:Lr82;
-
-    iput-object p2, p0, Le98;->b:Lwmb;
-
-    iput p3, p0, Le98;->c:I
-
-    new-instance p1, Lf8;
-
-    invoke-direct {p1}, Lf8;-><init>()V
-
-    iput-object p1, p0, Le98;->d:Lf8;
-
-    new-instance p1, Lf8;
-
-    invoke-direct {p1}, Lf8;-><init>()V
-
-    iput-object p1, p0, Le98;->e:Lf8;
-
-    new-instance p1, Lf8;
-
-    invoke-direct {p1}, Lf8;-><init>()V
-
-    iput-object p1, p0, Le98;->f:Lf8;
-
-    new-instance p1, Lf8;
-
-    invoke-direct {p1}, Lf8;-><init>()V
-
-    iput-object p1, p0, Le98;->g:Lf8;
+    iput-object p2, p0, Le98;->e:Loqf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Le39;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Le98;->h:[Lpl7;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    aget-object v0, v0, v1
+    return v0
 
-    iget-object v1, p0, Le98;->d:Lf8;
+    :cond_0
+    instance-of v1, p1, Le98;
 
-    invoke-virtual {v1, p0, v0}, Lf8;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    check-cast v0, Le39;
+    return v2
 
-    return-object v0
+    :cond_1
+    check-cast p1, Le98;
+
+    iget-object v1, p0, Le98;->d:Loqf;
+
+    iget-object v3, p1, Le98;->d:Loqf;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Le98;->e:Loqf;
+
+    iget-object p1, p1, Le98;->e:Loqf;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final b()Lone/me/messages/list/loader/MessageModel;
+.method public final hashCode()I
     .locals 2
 
-    sget-object v0, Le98;->h:[Lpl7;
+    iget-object v0, p0, Le98;->d:Loqf;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    aget-object v0, v0, v1
+    move-result v0
 
-    iget-object v1, p0, Le98;->e:Lf8;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v1, p0, v0}, Lf8;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    iget-object v1, p0, Le98;->e:Loqf;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    check-cast v0, Lone/me/messages/list/loader/MessageModel;
+    move-result v1
 
-    return-object v0
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final c()Ljava/util/List;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Le98;->h:[Lpl7;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x3
+    const-string v1, "SmsCountExceeded(title="
 
-    aget-object v0, v0, v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Le98;->g:Lf8;
+    iget-object v1, p0, Le98;->d:Loqf;
 
-    invoke-virtual {v1, p0, v0}, Lf8;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", description="
 
-    check-cast v0, Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    iget-object v1, p0, Le98;->e:Loqf;
 
-.method public final d()Lro3;
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Le98;->h:[Lpl7;
+    const-string v1, ")"
 
-    const/4 v1, 0x2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Le98;->f:Lf8;
-
-    invoke-virtual {v1, p0, v0}, Lf8;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, Lro3;
 
     return-object v0
 .end method

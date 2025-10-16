@@ -1,72 +1,51 @@
-.class public final synthetic Llvf;
-.super Ljava/lang/Object;
+.class public final Llvf;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lvd6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ll0a;
 
-.field public final synthetic b:Lovf;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvvf;
+
+.field public o:Lvvf;
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lovf;I)V
+.method public constructor <init>(Lvvf;Lk14;)V
     .locals 0
 
-    iput p2, p0, Llvf;->a:I
+    iput-object p1, p0, Llvf;->Z:Lvvf;
 
-    iput-object p1, p0, Llvf;->b:Lovf;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Llvf;->a:I
+    iput-object p1, p0, Llvf;->Y:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/CharSequence;
+    iget p1, p0, Llvf;->r0:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Llvf;->b:Lovf;
+    or-int/2addr p1, v0
 
-    iget-object p1, p1, Lovf;->w0:Lnvf;
+    iput p1, p0, Llvf;->r0:I
 
-    if-eqz p1, :cond_0
+    iget-object p1, p0, Llvf;->Z:Lvvf;
 
-    invoke-interface {p1}, Lnvf;->r()V
+    invoke-virtual {p1, p0}, Lvvf;->f(Lk14;)Ljava/lang/Object;
 
-    :cond_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object p1, p0, Llvf;->b:Lovf;
-
-    iget-object p1, p1, Lovf;->w0:Lnvf;
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lnvf;->x()V
-
-    :cond_1
-    sget-object p1, Laxf;->a:Laxf;
+    move-result-object p1
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

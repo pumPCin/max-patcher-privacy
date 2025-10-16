@@ -1,199 +1,117 @@
-.class public final enum Lq6c;
-.super Ljava/lang/Enum;
+.class public final Lq6c;
+.super Llff;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lq6c;
-
-.field public static final enum Y:Lq6c;
-
-.field public static final enum Z:Lq6c;
-
-.field public static final enum b:Lq6c;
-
-.field public static final enum c:Lq6c;
-
-.field public static final enum o:Lq6c;
-
-.field public static final enum r0:Lq6c;
-
-.field public static final enum s0:Lq6c;
-
-.field public static final enum t0:Lq6c;
-
-.field public static final synthetic u0:[Lq6c;
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lz6c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
-
-    new-instance v0, Lq6c;
-
-    const/4 v1, 0x0
-
-    const-string v2, "MOBILE"
-
-    const-string v3, "_144p"
-
-    invoke-direct {v0, v3, v1, v2}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lq6c;->b:Lq6c;
-
-    new-instance v1, Lq6c;
-
-    const/4 v2, 0x1
-
-    const-string v3, "LOWEST"
-
-    const-string v4, "_240p"
-
-    invoke-direct {v1, v4, v2, v3}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lq6c;->c:Lq6c;
-
-    new-instance v2, Lq6c;
-
-    const/4 v3, 0x2
-
-    const-string v4, "LOW"
-
-    const-string v5, "_360p"
-
-    invoke-direct {v2, v5, v3, v4}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lq6c;->o:Lq6c;
-
-    new-instance v3, Lq6c;
-
-    const/4 v4, 0x3
-
-    const-string v5, "MEDIUM"
-
-    const-string v6, "_480p"
-
-    invoke-direct {v3, v6, v4, v5}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lq6c;->X:Lq6c;
-
-    new-instance v4, Lq6c;
-
-    const/4 v5, 0x4
-
-    const-string v6, "HIGH"
-
-    const-string v7, "_720p"
-
-    invoke-direct {v4, v7, v5, v6}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lq6c;->Y:Lq6c;
-
-    new-instance v5, Lq6c;
-
-    const/4 v6, 0x5
-
-    const-string v7, "FULLHD"
-
-    const-string v8, "_1080p"
-
-    invoke-direct {v5, v8, v6, v7}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lq6c;->Z:Lq6c;
-
-    new-instance v6, Lq6c;
-
-    const/4 v7, 0x6
-
-    const-string v8, "QUADHD"
-
-    const-string v9, "_1440p"
-
-    invoke-direct {v6, v9, v7, v8}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lq6c;->r0:Lq6c;
-
-    new-instance v7, Lq6c;
-
-    const/4 v8, 0x7
-
-    const-string v9, "ULTRAHD"
-
-    const-string v10, "_2160p"
-
-    invoke-direct {v7, v10, v8, v9}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lq6c;->s0:Lq6c;
-
-    new-instance v8, Lq6c;
-
-    const/16 v9, 0x8
-
-    const-string v10, "ULTRAHD8K"
-
-    const-string v11, "_4320p"
-
-    invoke-direct {v8, v11, v9, v10}, Lq6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v8, Lq6c;->t0:Lq6c;
-
-    filled-new-array/range {v0 .. v8}, [Lq6c;
-
-    move-result-object v0
-
-    sput-object v0, Lq6c;->u0:[Lq6c;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lz6c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lq6c;->Y:Lz6c;
 
-    iput-object p3, p0, Lq6c;->a:Ljava/lang/String;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lq6c;
-    .locals 1
-
-    const-class v0, Lq6c;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lq6c;
-
-    return-object p0
-.end method
-
-.method public static values()[Lq6c;
-    .locals 1
-
-    sget-object v0, Lq6c;->u0:[Lq6c;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lq6c;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lq6c;->a:Ljava/lang/String;
+    check-cast p1, Lv5c;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lq6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lq6c;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lq6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lq6c;
+
+    iget-object v1, p0, Lq6c;->Y:Lz6c;
+
+    invoke-direct {v0, v1, p2}, Lq6c;-><init>(Lz6c;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lq6c;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lq6c;->X:Ljava/lang/Object;
+
+    check-cast p1, Lv5c;
+
+    instance-of v0, p1, Lt5c;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lt5c;
+
+    iget-object p1, p1, Lt5c;->a:Ljava/lang/Long;
+
+    iget-object v0, p0, Lq6c;->Y:Lz6c;
+
+    iget-object v1, v0, Lz6c;->z0:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v1
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    cmp-long p1, v3, v1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, v0, Lz6c;->F0:Lde5;
+
+    new-instance v0, Lf6c;
+
+    sget v1, Lvya;->U0:I
+
+    new-instance v2, Ljqf;
+
+    invoke-direct {v2, v1}, Ljqf;-><init>(I)V
+
+    sget v1, Liid;->z:I
+
+    invoke-direct {v0, v1, v2}, Lf6c;-><init>(ILjqf;)V
+
+    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

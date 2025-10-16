@@ -192,7 +192,7 @@
 
 
 # virtual methods
-.method public final b()Z
+.method public final c()Z
     .locals 3
 
     invoke-static {}, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedWhenVideoCaptureIsBoundQuirk;->e()Z

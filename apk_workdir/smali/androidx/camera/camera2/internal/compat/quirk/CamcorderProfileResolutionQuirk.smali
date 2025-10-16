@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements La8c;
+.implements Lzhc;
 
 
 # instance fields
-.field public final a:Ls8h;
+.field public final a:Lq8c;
 
 .field public b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lcz1;)V
+.method public constructor <init>(Lg02;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -22,11 +22,11 @@
 
     iput-object v0, p0, Landroidx/camera/camera2/internal/compat/quirk/CamcorderProfileResolutionQuirk;->b:Ljava/util/List;
 
-    invoke-virtual {p1}, Lcz1;->b()Ls8h;
+    invoke-virtual {p1}, Lg02;->b()Lq8c;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/compat/quirk/CamcorderProfileResolutionQuirk;->a:Ls8h;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/compat/quirk/CamcorderProfileResolutionQuirk;->a:Lq8c;
 
     return-void
 .end method

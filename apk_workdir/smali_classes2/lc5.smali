@@ -1,61 +1,107 @@
-.class public final synthetic Llc5;
-.super Ljava/lang/Object;
+.class public final Llc5;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrc5;
-
-.field public final synthetic c:J
+.field public final synthetic a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrc5;JI)V
+.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
     .locals 0
 
-    iput p4, p0, Llc5;->a:I
+    iput-object p1, p0, Llc5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    iput-object p1, p0, Llc5;->b:Lrc5;
-
-    iput-wide p2, p0, Llc5;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    iget v0, p0, Llc5;->a:I
+    iget-object p1, p0, Llc5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
 
-    iget-object v0, p0, Llc5;->b:Lrc5;
+    move-result-object v0
 
-    iget-wide v1, p0, Llc5;->c:J
+    invoke-static {v0}, Lbb3;->e(Ljava/util/List;)I
 
-    invoke-virtual {v0, v1, v2}, Lrc5;->f(J)V
+    move-result v0
 
-    return-wide v1
+    if-ltz v0, :cond_1
 
-    :pswitch_0
-    iget-object v0, p0, Llc5;->b:Lrc5;
+    const/4 v1, 0x0
 
-    iget-wide v1, p0, Llc5;->c:J
+    :goto_0
+    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1, v2}, Lrc5;->f(J)V
+    move-result-object v2
 
-    return-wide v1
+    invoke-static {v1, v2}, Lab3;->E(ILjava/util/List;)Ljava/lang/Object;
 
-    nop
+    move-result-object v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    check-cast v2, Lre;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, p1}, Lre;->a(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    if-eq v1, v0, :cond_1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget-object p1, p0, Llc5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbb3;->e(Ljava/util/List;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lab3;->E(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lre;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, p1}, Lre;->b(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    if-eq v1, v0, :cond_1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

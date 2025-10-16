@@ -2,104 +2,101 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lamb;
+
 
 # instance fields
-.field public final a:Lyn7;
-
-.field public final b:Lyn7;
-
-.field public final c:Lyn7;
-
-.field public final d:Lyn7;
-
-.field public final e:Lyn7;
-
-.field public final f:Lyn7;
+.field public final synthetic a:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxmb;->a:Lyn7;
-
-    iput-object p2, p0, Lxmb;->b:Lyn7;
-
-    iput-object p3, p0, Lxmb;->c:Lyn7;
-
-    iput-object p4, p0, Lxmb;->d:Lyn7;
-
-    iput-object p5, p0, Lxmb;->e:Lyn7;
-
-    iput-object p6, p0, Lxmb;->f:Lyn7;
+    iput-object p1, p0, Lxmb;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr82;Le39;)Lwmb;
-    .locals 7
+.method public final Y(Lwnb;Z)Z
+    .locals 4
 
-    new-instance v0, Lwmb;
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0:[Lwq7;
 
-    iget-object v1, p0, Lxmb;->a:Lyn7;
+    iget-object v0, p0, Lxmb;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->X:Lqs;
+
+    sget-object v2, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0:[Lwq7;
+
+    const/4 v3, 0x2
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lapa;
+    check-cast v1, Ljava/lang/Boolean;
 
-    iget-object v2, p0, Lxmb;->b:Lyn7;
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v2
+    if-eqz v1, :cond_0
 
-    check-cast v2, Lvp3;
+    const/4 p1, 0x0
 
-    iget-object v3, p0, Lxmb;->c:Lyn7;
+    return p1
 
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+    :cond_0
+    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->Y:Lqh6;
 
-    move-result-object v3
+    if-eqz v1, :cond_1
 
-    check-cast v3, Lnnb;
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    iget-object v4, p0, Lxmb;->d:Lyn7;
+    invoke-interface {v1, v2}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+    :cond_1
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lhmb;
 
-    move-result-object v4
+    move-result-object v1
 
-    check-cast v4, Lxo4;
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Ljf2;
 
-    iget-object v4, p0, Lxmb;->e:Lyn7;
+    move-result-object v0
 
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object v4
+    invoke-virtual {v1, p1, p2, v0, v2}, Lhmb;->r(Lwnb;ZLjf2;Z)V
 
-    check-cast v4, Ltb5;
+    return v2
+.end method
 
-    iget-object v4, p0, Lxmb;->f:Lyn7;
+.method public final j0(Lwnb;Z)V
+    .locals 3
 
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0:[Lwq7;
 
-    move-result-object v4
+    iget-object v0, p0, Lxmb;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    move-object v6, v4
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lhmb;
 
-    check-cast v6, Lck;
+    move-result-object v1
 
-    move-object v5, p1
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Ljf2;
 
-    move-object v4, p2
+    move-result-object v0
 
-    invoke-direct/range {v0 .. v6}, Lwmb;-><init>(Lapa;Lvp3;Lnnb;Le39;Lr82;Lck;)V
+    const/4 v2, 0x1
 
-    return-object v0
+    invoke-virtual {v1, p1, p2, v0, v2}, Lhmb;->r(Lwnb;ZLjf2;Z)V
+
+    return-void
 .end method

@@ -1,48 +1,94 @@
 .class public final Ly48;
-.super Lwy3;
+.super Ldf6;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final f:Lim0;
 
-.field public final synthetic Y:Lz48;
+.field public g:Lws7;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final h:Landroid/media/MediaMetadataRetriever;
+
+.field public final i:I
+
+.field public volatile j:J
 
 
 # direct methods
-.method public constructor <init>(Lz48;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ly48;->Y:Lz48;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lllf;Lye5;Lzr4;)V
     .locals 1
 
-    iput-object p1, p0, Ly48;->o:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Ldf6;-><init>(Lllf;Lye5;)V
 
-    iget p1, p0, Ly48;->X:I
+    new-instance p1, Lim0;
 
-    const/high16 v0, -0x80000000
+    const/4 p2, 0x0
 
-    or-int/2addr p1, v0
+    invoke-direct {p1, p2}, Lim0;-><init>(Ljava/lang/Object;)V
 
-    iput p1, p0, Ly48;->X:I
+    iput-object p1, p0, Ly48;->f:Lim0;
 
-    iget-object p1, p0, Ly48;->Y:Lz48;
+    new-instance p1, Landroid/media/MediaMetadataRetriever;
 
-    const/4 v0, 0x0
+    invoke-direct {p1}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    invoke-virtual {p1, v0, p0}, Lz48;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput-object p1, p0, Ly48;->h:Landroid/media/MediaMetadataRetriever;
+
+    invoke-virtual {p3}, Lxr4;->b()Lbs4;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 p3, 0x1
+
+    if-eq p2, p3, :cond_1
+
+    const/4 p3, 0x2
+
+    if-ne p2, p3, :cond_0
+
+    const/16 p1, 0x14
+
+    iput p1, p0, Ly48;->i:I
+
+    return-void
+
+    :cond_0
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    const-string v0, "unknown performance class "
+
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_1
+    const/16 p1, 0xa
+
+    iput p1, p0, Ly48;->i:I
+
+    return-void
+
+    :cond_2
+    const/4 p1, 0x5
+
+    iput p1, p0, Ly48;->i:I
+
+    return-void
 .end method

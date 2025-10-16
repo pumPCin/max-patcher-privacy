@@ -1,64 +1,23 @@
-.class public final Lb04;
+.class public interface abstract Lb04;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld04;
-
-
-# static fields
-.field public static final a:Lb04;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lb04;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lb04;->a:Lb04;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lb04;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+.method public abstract b()Landroid/content/ClipData;
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0xd8bf9f2
-
-    return v0
+.method public abstract f()Landroid/net/Uri;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract g()Landroid/view/ContentInfo;
+.end method
 
-    const-string v0, "StartSeekPlayerProgress"
+.method public abstract getExtras()Landroid/os/Bundle;
+.end method
 
-    return-object v0
+.method public abstract getFlags()I
+.end method
+
+.method public abstract h()I
 .end method

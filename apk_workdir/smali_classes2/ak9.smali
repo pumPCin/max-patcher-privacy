@@ -1,48 +1,66 @@
-.class public final Lak9;
-.super Lwy3;
+.class public final synthetic Lak9;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loh6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lim9;
 
-.field public final synthetic Y:Lz48;
+.field public final synthetic b:Ls00;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:J
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lz48;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lim9;Ls00;JLjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lak9;->Y:Lz48;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lak9;->a:Lim9;
+
+    iput-object p2, p0, Lak9;->b:Ls00;
+
+    iput-wide p3, p0, Lak9;->c:J
+
+    iput-object p5, p0, Lak9;->o:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    iput-object p1, p0, Lak9;->o:Ljava/lang/Object;
+    iget-object v2, p0, Lak9;->a:Lim9;
 
-    iget p1, p0, Lak9;->X:I
+    iget-object v7, v2, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    const/high16 v0, -0x80000000
+    iget-object v8, v2, Lim9;->C0:Lv44;
 
-    or-int/2addr p1, v0
+    new-instance v0, Lwk9;
 
-    iput p1, p0, Lak9;->X:I
+    const/4 v6, 0x0
 
-    iget-object p1, p0, Lak9;->Y:Lz48;
+    iget-object v1, p0, Lak9;->b:Ls00;
 
-    const/4 v0, 0x0
+    iget-wide v3, p0, Lak9;->c:J
 
-    invoke-virtual {p1, v0, p0}, Lz48;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v5, p0, Lak9;->o:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-direct/range {v0 .. v6}, Lwk9;-><init>(Ls00;Lim9;JLjava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    return-object p1
+    sget-object v1, Le54;->b:Le54;
+
+    invoke-static {v7, v8, v1, v0}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
+
+    move-result-object v0
+
+    return-object v0
 .end method

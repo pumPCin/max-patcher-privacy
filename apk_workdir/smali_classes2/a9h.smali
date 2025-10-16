@@ -1,349 +1,148 @@
 .class public final La9h;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic h:I
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public X:I
 
-.field public final b:Lyn7;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Lyn7;
+.field public final synthetic Z:Lb9h;
 
-.field public final d:Lyn7;
-
-.field public final e:Lyn7;
-
-.field public final f:Lyn7;
-
-.field public final g:Lyn7;
+.field public final synthetic r0:Le9h;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
+.method public constructor <init>(Lb9h;Le9h;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La9h;->Z:Lb9h;
 
-    iput-object p1, p0, La9h;->a:Lyn7;
+    iput-object p2, p0, La9h;->r0:Le9h;
 
-    iput-object p2, p0, La9h;->b:Lyn7;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, La9h;->c:Lyn7;
-
-    iput-object p4, p0, La9h;->d:Lyn7;
-
-    iput-object p5, p0, La9h;->e:Lyn7;
-
-    iput-object p6, p0, La9h;->f:Lyn7;
-
-    iput-object p7, p0, La9h;->g:Lyn7;
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, La9h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, La9h;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, La9h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    invoke-interface {p1}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+    new-instance v0, La9h;
 
-    move-result v0
+    iget-object v1, p0, La9h;->Z:Lb9h;
 
-    if-nez v0, :cond_1
+    iget-object v2, p0, La9h;->r0:Le9h;
 
-    invoke-interface {p1}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+    invoke-direct {v0, v1, v2, p2}, La9h;-><init>(Lb9h;Le9h;Lkotlin/coroutines/Continuation;)V
 
-    move-result v0
+    iput-object p1, v0, La9h;->Y:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, La9h;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    :goto_0
-    invoke-interface {p1}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result v0
+    iget-object p1, p0, La9h;->Y:Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result p1
+    iget-object v0, p0, La9h;->Z:Lb9h;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0, p1}, Lb9h;->e(Lb9h;Ljava/lang/Throwable;)Lwo7;
 
-    const-string v2, "WARNING! "
+    move-result-object v4
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, v0, Lb9h;->c:Llt7;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " has broken state. isShutdown: "
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p2, ", isTerminated: "
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string p2, "a9h"
+    move-object v2, p1
 
-    const/4 v0, 0x0
+    check-cast v2, Lbe3;
 
-    invoke-static {p2, p1, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v3, v0, Lb9h;->e:Ldv0;
 
-    iget-object p2, p0, La9h;->b:Lyn7;
+    iget-object p1, p0, La9h;->r0:Le9h;
 
-    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
+    iget-object v6, p1, Le9h;->a:Ljava/lang/String;
 
-    move-result-object p2
+    iput v1, p0, La9h;->X:I
 
-    check-cast p2, Ltb5;
+    sget-object v5, Lr8h;->a:Lr8h;
 
-    new-instance v1, Lru/ok/tamtam/ExceptionHandler$HandledException;
+    move-object v7, p0
 
-    const-string v2, "ONEME-17687"
-
-    invoke-direct {v1, p1, v2, v0}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-interface {p2, v1}, Ltb5;->a(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final b(Lasd;)V
-    .locals 7
-
-    const-string v0, "execute task = %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "a9h"
-
-    invoke-static {v2, v0, v1}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance v0, Lz8h;
-
-    iget-object v1, p0, La9h;->b:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ltb5;
-
-    iget-object v4, p0, La9h;->a:Lyn7;
-
-    iget-object v5, p0, La9h;->f:Lyn7;
-
-    invoke-direct {v0, p1, v4, v3, v5}, Lz8h;-><init>(Lasd;Lyn7;Ltb5;Lyn7;)V
-
-    instance-of v3, p1, Lltd;
-
-    iget-object v4, p0, La9h;->c:Lyn7;
-
-    if-eqz v3, :cond_0
-
-    const-string p1, "execute ServiceTaskTransmitTamTasks"
-
-    invoke-static {v2, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual/range {v2 .. v7}, Lbe3;->a(Le82;Lwo7;Lkbh;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lzla;
+    sget-object v0, Lc54;->a:Lc54;
 
-    iget-object v1, p1, Lzla;->k:Lcc5;
+    if-ne p1, v0, :cond_2
 
-    sget-object v2, Lzla;->p:[Lpl7;
-
-    const/4 v3, 0x5
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {p1, v1}, Lzla;->e(Lcc5;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p1
-
-    const-string v1, "SingleTransmitExecutor"
-
-    invoke-virtual {p0, p1, v1}, La9h;->a(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)V
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lasd;->u()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    const-string v3, "execute task with own executor"
-
-    invoke-static {v2, v3}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lbsd;
-
-    iget-object v3, v3, Lbsd;->C:Lyn7;
-
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lzla;
-
-    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lbsd;
-
-    iget-object v5, v5, Lbsd;->d:Lyn7;
-
-    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lxo4;
-
-    invoke-virtual {v5}, Lxo4;->b()Lcp4;
-
-    move-result-object v5
-
-    invoke-virtual {p1, v3, v5}, Lasd;->j(Lzla;Lcp4;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v3, p1}, La9h;->a(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)V
-
-    invoke-interface {v3, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v5, "Got null executor for task "
-
-    invoke-virtual {v5, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v3, v5}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ltb5;
-
-    new-instance v2, Lru/ok/tamtam/ExceptionHandler$HandledException;
-
-    const-string v6, "ONEME-17687"
-
-    invoke-direct {v2, v3, v6, v5}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-interface {v1, v2}, Ltb5;->a(Ljava/lang/Throwable;)V
+    return-object v0
 
     :cond_2
-    new-instance v1, Ljava/lang/StringBuilder;
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    const-string v2, "normal executor will run "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "WorkerService"
-
-    invoke-static {v1, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzla;
-
-    invoke-virtual {p1}, Lzla;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p1
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final c(Lasd;)J
-    .locals 4
-
-    iget-object v0, p0, La9h;->a:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltaf;
-
-    check-cast p1, Lu8b;
-
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, p1, v1, v2, v3}, Ltaf;->g(Lu8b;JI)V
-
-    invoke-static {p0}, Lltd;->x(La9h;)V
-
-    invoke-interface {p1}, Lu8b;->getId()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return-object p1
 .end method

@@ -3,139 +3,97 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a()V
-    .locals 2
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    new-instance v0, Lrp0;
 
-    const/4 v1, 0x1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-virtual {p0, v0}, Lce3;->h(Lme3;)V
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-virtual {v0}, Lrp0;->d()Ljava/lang/Object;
+    move-result-wide v1
 
-    return-void
-.end method
+    long-to-int v1, v1
 
-.method public final e(Lce3;)Lde3;
-    .locals 2
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    const-string v0, "other is null"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    new-instance v0, Lde3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1, p1}, Lde3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public final f(Ll6;)Lpe3;
-    .locals 2
-
-    sget-object v0, Lnjg;->o:Lwgd;
-
-    new-instance v1, Lpe3;
-
-    invoke-direct {v1, p0, v0, p1}, Lpe3;-><init>(Lce3;Lno3;Ll6;)V
-
-    return-object v1
-.end method
-
-.method public final g(Lno3;)Lpe3;
-    .locals 2
-
-    sget-object v0, Lnjg;->c:Laf6;
-
-    new-instance v1, Lpe3;
-
-    invoke-direct {v1, p0, p1, v0}, Lpe3;-><init>(Lce3;Lno3;Ll6;)V
-
-    return-object v1
-.end method
-
-.method public final h(Lme3;)V
-    .locals 2
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lce3;->i(Lme3;)V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sput-object v0, Lce3;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Loq0;->t(Ljava/lang/Throwable;)V
-
-    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "Actually not, but can\'t pass out an exception otherwise..."
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    throw v0
-
-    :catch_0
-    move-exception p1
-
-    throw p1
 .end method
 
-.method public abstract i(Lme3;)V
-.end method
+.method public static a(Landroid/content/res/Resources;I)Z
+    .locals 5
 
-.method public final j(Lpcd;)Lle3;
-    .locals 2
+    const-string v0, "FirebaseMessaging"
 
-    const-string v0, "scheduler is null"
+    const-string v1, "Adaptive icons cannot be used in notifications. Ignoring icon id: "
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    new-instance v0, Lle3;
+    const/16 v3, 0x1a
 
-    const/4 v1, 0x1
+    const/4 v4, 0x1
 
-    invoke-direct {v0, p0, p1, v1}, Lle3;-><init>(Lce3;Lpcd;I)V
+    if-eq v2, v3, :cond_0
 
-    return-object v0
-.end method
-
-.method public final k()Ls8a;
-    .locals 2
-
-    instance-of v0, p0, Lgf6;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Lgf6;
-
-    invoke-interface {v0}, Lgf6;->d()Ls8a;
-
-    move-result-object v0
-
-    return-object v0
+    return v4
 
     :cond_0
-    new-instance v0, Lse3;
+    const/4 v2, 0x0
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, p0}, Lse3;-><init>(ILjava/lang/Object;)V
+    :try_start_0
+    invoke-virtual {p0, p1, v2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
-    return-object v0
+    move-result-object p0
+
+    instance-of p0, p0, Landroid/graphics/drawable/AdaptiveIconDrawable;
+
+    if-eqz p0, :cond_1
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v3
+
+    :cond_1
+    return v4
+
+    :catch_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Couldn\'t find resource "
+
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", treating it as an invalid icon"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v3
 .end method

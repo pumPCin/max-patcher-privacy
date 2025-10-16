@@ -1,44 +1,14 @@
-.class public final Linc;
+.class public abstract Linc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static oneme_bottom_sheet_popup:I = 0x7f0a0603
 
+.field public static oneme_bottom_sheet_popup_card:I = 0x7f0a0604
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.field public static oneme_bottom_sheet_popup_top_anchor:I = 0x7f0a0605
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_bottom_sheet_toolbar:I = 0x7f0a0606
 
-    iput-object p1, p0, Linc;->a:Landroid/content/Context;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 2
-
-    iget-object v0, p0, Linc;->a:Landroid/content/Context;
-
-    invoke-static {v0}, Lu64;->r(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/16 v1, 0x168
-
-    if-lt v0, v1, :cond_0
-
-    const/16 v0, 0x20
-
-    return v0
-
-    :cond_0
-    const/16 v0, 0x1c
-
-    return v0
-.end method
+.field public static oneme_too_many_requests_bottomsheet_positive_button:I = 0x7f0a08a7

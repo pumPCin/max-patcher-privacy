@@ -1,40 +1,74 @@
-.class public final Lycf;
+.class public final synthetic Lycf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Lei6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lddf;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lddf;I)V
+    .locals 0
+
+    iput p2, p0, Lycf;->a:I
+
+    iput-object p1, p0, Lycf;->b:Lddf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lzcf;
+    iget v0, p0, Lycf;->a:I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    check-cast p1, Landroid/view/View;
 
-    move-result v1
+    check-cast p2, Lwcf;
 
-    const-class v2, Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    iget-object v0, p0, Lycf;->b:Lddf;
 
-    move-result-object v2
+    iget-object v0, v0, Lddf;->S0:Llu3;
 
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    invoke-virtual {v0, p1, p2}, Llu3;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p1}, Lzcf;-><init>(ILjava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p1, p1, [Lzcf;
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lycf;->b:Lddf;
+
+    iget-object v0, v0, Lddf;->S0:Llu3;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1, p2}, Llu3;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

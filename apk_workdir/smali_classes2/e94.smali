@@ -1,156 +1,172 @@
-.class public abstract Le94;
+.class public final Le94;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
 
 # static fields
-.field public static final a:Lw8b;
+.field public static final X:Landroid/util/SparseIntArray;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 5
 
-    new-instance v0, Ld3b;
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sput-object v0, Le94;->X:Landroid/util/SparseIntArray;
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    sget-object v2, Lmya;->a:Lmya;
+    const/16 v2, 0xa
 
-    invoke-direct {v0, v1, v2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    new-instance v1, Ld3b;
+    const/4 v1, 0x2
 
-    const/4 v2, 0x1
+    const/16 v3, 0x10
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    move-result-object v2
+    const/4 v1, 0x3
 
-    sget-object v3, Lmya;->b:Lmya;
+    const/16 v4, 0xd
 
-    invoke-direct {v1, v2, v3}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    new-instance v2, Ld3b;
+    const/4 v1, 0x4
 
-    const/4 v3, 0x2
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v1, 0x5
 
-    move-result-object v3
+    const/4 v3, 0x0
 
-    sget-object v4, Lmya;->c:Lmya;
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    invoke-direct {v2, v3, v4}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v1, 0x6
 
-    new-instance v3, Ld3b;
+    const/4 v3, -0x2
 
-    const/4 v4, 0x3
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v1, 0x7
 
-    move-result-object v4
+    const/4 v3, -0x4
 
-    sget-object v5, Lmya;->o:Lmya;
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    invoke-direct {v3, v4, v5}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/16 v1, 0x8
 
-    new-instance v4, Ld3b;
+    const/4 v3, -0x6
 
-    const/4 v5, 0x4
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/16 v1, 0x9
 
-    move-result-object v5
+    const/4 v3, -0x5
 
-    sget-object v6, Lmya;->X:Lmya;
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    invoke-direct {v4, v5, v6}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v1, -0x8
 
-    new-instance v5, Ld3b;
-
-    const/4 v6, 0x5
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget-object v7, Lmya;->Y:Lmya;
-
-    invoke-direct {v5, v6, v7}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v6, Ld3b;
-
-    const/4 v7, 0x6
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    sget-object v8, Lmya;->Z:Lmya;
-
-    invoke-direct {v6, v7, v8}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v7, Ld3b;
-
-    const/4 v8, 0x7
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    sget-object v9, Lmya;->r0:Lmya;
-
-    invoke-direct {v7, v8, v9}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v8, Ld3b;
-
-    const/16 v9, 0x2710
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    sget-object v10, Lmya;->s0:Lmya;
-
-    invoke-direct {v8, v9, v10}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array/range {v0 .. v8}, [Ld3b;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lyt3;->D([Ld3b;)Lw8b;
-
-    move-result-object v0
-
-    sput-object v0, Le94;->a:Lw8b;
+    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
 
     return-void
 .end method
 
-.method public static a(I)Lmya;
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 3
 
-    sget-object v0, Le94;->a:Lw8b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p0}, Lw8b;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    move-result-object p0
+    iput-object v0, p0, Le94;->o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    check-cast p0, Lmya;
+    const/16 v0, 0x9
 
-    if-nez p0, :cond_0
+    iput v0, p0, Le94;->a:I
 
-    sget-object p0, Lmya;->a:Lmya;
+    sget-object v2, Le94;->X:Landroid/util/SparseIntArray;
 
-    :cond_0
-    return-object p0
+    invoke-virtual {v2, v0, v1}, Landroid/util/SparseIntArray;->get(II)I
+
+    move-result v0
+
+    iput v0, p0, Le94;->b:I
+
+    iput-object p1, p0, Le94;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
+
+    new-instance v0, Ljx1;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p0, v1, p1}, Ljx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ljava/lang/Thread;
+
+    invoke-direct {p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    :try_start_0
+    iget v0, p0, Le94;->a:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setPriority(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Le94;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "-"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Le94;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    return-object p1
 .end method

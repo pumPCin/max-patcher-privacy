@@ -1,23 +1,19 @@
 .class public final Lki;
-.super Ljava/lang/Object;
+.super Lli;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final a:[F
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>([F)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lki;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, p0, Lki;->a:[F
 
     return-void
 .end method

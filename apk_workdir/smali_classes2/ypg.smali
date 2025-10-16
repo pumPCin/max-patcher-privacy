@@ -1,126 +1,168 @@
 .class public final Lypg;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic X:Lvqg;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcqg;
 
 
 # direct methods
-.method public constructor <init>(Lvqg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lcqg;I)V
     .locals 0
 
-    iput-object p1, p0, Lypg;->X:Lvqg;
+    iput p2, p0, Lypg;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lypg;->b:Lcqg;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lypg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lypg;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lypg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    new-instance p1, Lypg;
+    iget p1, p0, Lypg;->a:I
 
-    iget-object v0, p0, Lypg;->X:Lvqg;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Lypg;-><init>(Lvqg;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lypg;->b:Lcqg;
 
-    return-object p1
-.end method
+    invoke-static {p1}, Lcqg;->f(Lcqg;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    return-void
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object p1, p0, Lypg;->b:Lcqg;
 
-    iget-object p1, p0, Lypg;->X:Lvqg;
-
-    iget-object p1, p1, Lvqg;->l:Lej7;
-
-    instance-of v0, p1, Lln0;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lln0;
-
-    new-instance v0, Larg;
-
-    sget-object v1, Llrg;->X:Llrg;
-
-    invoke-direct {v0, v1}, Larg;-><init>(Llrg;)V
-
-    invoke-virtual {p1, v0}, Lej7;->b(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lpn0;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lpn0;
-
-    new-instance v0, Larg;
-
-    sget-object v1, Llrg;->Y:Llrg;
-
-    invoke-direct {v0, v1}, Larg;-><init>(Llrg;)V
-
-    invoke-virtual {p1, v0}, Lej7;->b(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_1
-    instance-of v0, p1, Lmn0;
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Lmn0;
-
-    new-instance v0, Lxqg;
-
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-virtual {p1, v0}, Lej7;->b(Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    iget-object p1, p0, Lypg;->X:Lvqg;
+    iget-object p1, p1, Lcqg;->r0:Ljmg;
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Lvqg;->l:Lej7;
+    invoke-virtual {p1, v0}, Ljmg;->b(Z)V
 
-    sget-object p1, Laxf;->a:Laxf;
+    return-void
 
-    return-object p1
+    :pswitch_1
+    iget-object p1, p0, Lypg;->b:Lcqg;
+
+    iget-object p1, p1, Lcqg;->r0:Ljmg;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljmg;->b(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget p1, p0, Lypg;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lypg;->b:Lcqg;
+
+    invoke-static {p1}, Lcqg;->f(Lcqg;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lypg;->b:Lcqg;
+
+    iget-object p1, p1, Lcqg;->r0:Ljmg;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljmg;->b(Z)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lypg;->b:Lcqg;
+
+    iget-object p1, p1, Lcqg;->r0:Ljmg;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljmg;->b(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lypg;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lypg;->a:I
+
+    return-void
 .end method

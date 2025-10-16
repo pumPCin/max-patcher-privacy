@@ -1,268 +1,325 @@
 .class public final Ltba;
-.super Ljava/util/concurrent/atomic/AtomicLong;
+.super Lkca;
 .source "SourceFile"
-
-# interfaces
-.implements Lyba;
-.implements Lfs4;
-.implements Luba;
 
 
 # instance fields
-.field public final X:Le22;
+.field public e:Landroidx/core/graphics/drawable/IconCompat;
 
-.field public final Y:Ljava/util/concurrent/atomic/AtomicReference;
+.field public f:Landroidx/core/graphics/drawable/IconCompat;
 
-.field public final a:Lyba;
-
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/TimeUnit;
-
-.field public final o:Lncd;
-
-
-# direct methods
-.method public constructor <init>(Lyba;JLncd;)V
-    .locals 1
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p1, p0, Ltba;->a:Lyba;
-
-    iput-wide p2, p0, Ltba;->b:J
-
-    iput-object v0, p0, Ltba;->c:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p4, p0, Ltba;->o:Lncd;
-
-    new-instance p1, Le22;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p1, p2}, Le22;-><init>(I)V
-
-    iput-object p1, p0, Ltba;->X:Le22;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Ltba;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    return-void
-.end method
+.field public g:Z
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 2
+.method public final b(Lj3e;)V
+    .locals 16
 
-    const-wide v0, 0x7fffffffffffffffL
+    move-object/from16 v0, p0
 
-    invoke-virtual {p0, p1, p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
+    move-object/from16 v1, p1
 
-    move-result p1
+    iget-object v2, v1, Lj3e;->c:Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    check-cast v2, Landroid/app/Notification$Builder;
 
-    iget-object p1, p0, Ltba;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v1, v1, Lj3e;->b:Ljava/lang/Object;
 
-    invoke-static {p1}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    check-cast v1, Landroid/content/Context;
 
-    new-instance p1, Ljava/util/concurrent/TimeoutException;
+    new-instance v3, Landroid/app/Notification$BigPictureStyle;
 
-    iget-wide v0, p0, Ltba;->b:J
+    invoke-direct {v3, v2}, Landroid/app/Notification$BigPictureStyle;-><init>(Landroid/app/Notification$Builder;)V
 
-    iget-object p2, p0, Ltba;->c:Ljava/util/concurrent/TimeUnit;
+    iget-object v2, v0, Lkca;->c:Ljava/lang/Object;
 
-    invoke-static {v0, v1, p2}, Lvb5;->e(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
+    check-cast v2, Ljava/lang/CharSequence;
 
-    move-result-object p2
+    invoke-virtual {v3, v2}, Landroid/app/Notification$BigPictureStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    iget-object p2, p0, Ltba;->a:Lyba;
+    iget-object v3, v0, Ltba;->e:Landroidx/core/graphics/drawable/IconCompat;
 
-    invoke-interface {p2, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
+    const/4 v4, 0x0
 
-    iget-object p1, p0, Ltba;->o:Lncd;
+    const/4 v5, 0x0
 
-    invoke-interface {p1}, Lfs4;->f()V
+    const/16 v6, 0x1f
 
-    :cond_0
-    return-void
-.end method
+    if-eqz v3, :cond_6
 
-.method public final b()V
-    .locals 4
+    sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-wide v0, 0x7fffffffffffffffL
+    if-lt v7, v6, :cond_0
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+    invoke-static {v3, v1}, Li67;->g(Landroidx/core/graphics/drawable/IconCompat;Landroid/content/Context;)Landroid/graphics/drawable/Icon;
 
-    move-result-wide v2
+    move-result-object v3
 
-    cmp-long v0, v2, v0
+    invoke-static {v2, v3}, Lsba;->a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ltba;->X:Le22;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Ltba;->a:Lyba;
-
-    invoke-interface {v0}, Lyba;->b()V
-
-    iget-object v0, p0, Ltba;->o:Lncd;
-
-    invoke-interface {v0}, Lfs4;->f()V
+    goto/16 :goto_1
 
     :cond_0
-    return-void
-.end method
+    iget v7, v3, Landroidx/core/graphics/drawable/IconCompat;->a:I
 
-.method public final c(Lfs4;)V
-    .locals 1
+    const/4 v8, -0x1
 
-    iget-object v0, p0, Ltba;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    if-ne v7, v8, :cond_1
 
-    invoke-static {v0, p1}, Ljs4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+    iget-object v3, v3, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    return-void
-.end method
+    invoke-static {v3}, Li67;->d(Ljava/lang/Object;)I
 
-.method public final e(Ljava/lang/Object;)V
-    .locals 5
+    move-result v7
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    :cond_1
+    const/4 v3, 0x1
 
-    move-result-wide v0
+    if-ne v7, v3, :cond_6
 
-    const-wide v2, 0x7fffffffffffffffL
+    iget-object v7, v0, Ltba;->e:Landroidx/core/graphics/drawable/IconCompat;
 
-    cmp-long v2, v0, v2
+    iget v9, v7, Landroidx/core/graphics/drawable/IconCompat;->a:I
 
-    if-eqz v2, :cond_1
+    if-ne v9, v8, :cond_3
 
-    const-wide/16 v2, 0x1
+    iget-object v3, v7, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    add-long/2addr v2, v0
+    instance-of v7, v3, Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
+    if-eqz v7, :cond_2
 
-    move-result v0
+    check-cast v3, Landroid/graphics/Bitmap;
 
-    if-nez v0, :cond_0
+    goto/16 :goto_0
 
-    goto :goto_0
+    :cond_2
+    move-object v3, v5
 
-    :cond_0
-    iget-object v0, p0, Ltba;->X:Le22;
+    goto/16 :goto_0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    :cond_3
+    if-ne v9, v3, :cond_4
+
+    iget-object v3, v7, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    check-cast v3, Landroid/graphics/Bitmap;
+
+    goto/16 :goto_0
+
+    :cond_4
+    const/4 v3, 0x5
+
+    if-ne v9, v3, :cond_5
+
+    iget-object v3, v7, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    check-cast v3, Landroid/graphics/Bitmap;
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v7
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v8
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->min(II)I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    const v8, 0x3f2aaaab
+
+    mul-float/2addr v7, v8
+
+    float-to-int v7, v7
+
+    sget-object v8, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v7, v7, v8}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v8
+
+    new-instance v9, Landroid/graphics/Canvas;
+
+    invoke-direct {v9, v8}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    new-instance v10, Landroid/graphics/Paint;
+
+    const/4 v11, 0x3
+
+    invoke-direct {v10, v11}, Landroid/graphics/Paint;-><init>(I)V
+
+    int-to-float v11, v7
+
+    const/high16 v12, 0x3f000000    # 0.5f
+
+    mul-float/2addr v12, v11
+
+    const v13, 0x3f6aaaab
+
+    mul-float/2addr v13, v12
+
+    const v14, 0x3c2aaaab
+
+    mul-float/2addr v14, v11
+
+    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setColor(I)V
+
+    const v15, 0x3caaaaab
+
+    mul-float/2addr v11, v15
+
+    const/high16 v15, 0x3d000000    # 0.03125f
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v10, v14, v4, v11, v15}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+
+    invoke-virtual {v9, v12, v12, v13, v10}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    const/high16 v11, 0x1e000000
+
+    invoke-virtual {v10, v14, v4, v4, v11}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+
+    invoke-virtual {v9, v12, v12, v13, v10}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    invoke-virtual {v10}, Landroid/graphics/Paint;->clearShadowLayer()V
+
+    const/high16 v4, -0x1000000
+
+    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setColor(I)V
+
+    new-instance v4, Landroid/graphics/BitmapShader;
+
+    sget-object v11, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    invoke-direct {v4, v3, v11, v11}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
+
+    new-instance v11, Landroid/graphics/Matrix;
+
+    invoke-direct {v11}, Landroid/graphics/Matrix;-><init>()V
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v14
+
+    sub-int/2addr v14, v7
+
+    neg-int v14, v14
+
+    int-to-float v14, v14
+
+    const/high16 v15, 0x40000000    # 2.0f
+
+    div-float/2addr v14, v15
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v3
+
+    sub-int/2addr v3, v7
+
+    neg-int v3, v3
+
+    int-to-float v3, v3
+
+    div-float/2addr v3, v15
+
+    invoke-virtual {v11, v14, v3}, Landroid/graphics/Matrix;->setTranslate(FF)V
+
+    invoke-virtual {v4, v11}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
+
+    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    invoke-virtual {v9, v12, v12, v13, v10}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    invoke-virtual {v9, v5}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
+
+    move-object v3, v8
+
+    :goto_0
+    invoke-virtual {v2, v3}, Landroid/app/Notification$BigPictureStyle;->bigPicture(Landroid/graphics/Bitmap;)Landroid/app/Notification$BigPictureStyle;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    :cond_5
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "called getBitmap() on "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_6
+    :goto_1
+    iget-boolean v3, v0, Ltba;->g:Z
+
+    if-eqz v3, :cond_8
+
+    iget-object v3, v0, Ltba;->f:Landroidx/core/graphics/drawable/IconCompat;
+
+    if-nez v3, :cond_7
+
+    invoke-virtual {v2, v5}, Landroid/app/Notification$BigPictureStyle;->bigLargeIcon(Landroid/graphics/Bitmap;)Landroid/app/Notification$BigPictureStyle;
+
+    goto :goto_2
+
+    :cond_7
+    invoke-static {v3, v1}, Li67;->g(Landroidx/core/graphics/drawable/IconCompat;Landroid/content/Context;)Landroid/graphics/drawable/Icon;
 
     move-result-object v1
 
-    check-cast v1, Lfs4;
+    invoke-static {v2, v1}, Lrba;->a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
 
-    invoke-interface {v1}, Lfs4;->f()V
+    :cond_8
+    :goto_2
+    iget-boolean v1, v0, Lkca;->a:Z
 
-    iget-object v1, p0, Ltba;->a:Lyba;
+    if-eqz v1, :cond_9
 
-    invoke-interface {v1, p1}, Lyba;->e(Ljava/lang/Object;)V
+    iget-object v1, v0, Lkca;->d:Ljava/lang/Object;
 
-    new-instance p1, Lyy5;
+    check-cast v1, Ljava/lang/CharSequence;
 
-    invoke-direct {p1, v2, v3, p0}, Lyy5;-><init>(JLuba;)V
+    invoke-virtual {v2, v1}, Landroid/app/Notification$BigPictureStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
 
-    iget-wide v1, p0, Ltba;->b:J
+    :cond_9
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object v3, p0, Ltba;->c:Ljava/util/concurrent/TimeUnit;
+    if-lt v1, v6, :cond_a
 
-    iget-object v4, p0, Ltba;->o:Lncd;
+    const/4 v1, 0x0
 
-    invoke-virtual {v4, p1, v1, v2, v3}, Lncd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
+    invoke-static {v2, v1}, Lsba;->c(Landroid/app/Notification$BigPictureStyle;Z)V
 
-    move-result-object p1
+    invoke-static {v2, v5}, Lsba;->b(Landroid/app/Notification$BigPictureStyle;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
-
-    :cond_1
-    :goto_0
+    :cond_a
     return-void
 .end method
 
-.method public final f()V
+.method public final c()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Ltba;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    const-string v0, "androidx.core.app.NotificationCompat$BigPictureStyle"
 
-    invoke-static {v0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Ltba;->o:Lncd;
-
-    invoke-interface {v0}, Lfs4;->f()V
-
-    return-void
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget-object v0, p0, Ltba;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfs4;
-
-    invoke-static {v0}, Ljs4;->b(Lfs4;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ltba;->X:Le22;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Ltba;->a:Lyba;
-
-    invoke-interface {v0, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Ltba;->o:Lncd;
-
-    invoke-interface {p1}, Lfs4;->f()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

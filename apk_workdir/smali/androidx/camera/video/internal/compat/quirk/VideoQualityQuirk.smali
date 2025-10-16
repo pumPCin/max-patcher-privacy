@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements La8c;
+.implements Lzhc;
 
 
 # virtual methods
-.method public abstract a(Lf02;Lra0;)Z
+.method public abstract a(Lj12;Ldb0;)Z
 .end method

@@ -1,51 +1,127 @@
-.class public final Lwo;
-.super Landroid/view/View$BaseSavedState;
+.class public abstract Lwo;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lwo;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public a:Z
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static a(Landroid/view/DragEvent;Landroid/widget/TextView;Landroid/app/Activity;)Z
     .locals 2
 
-    new-instance v0, Lb8;
+    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getX()F
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getY()F
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->beginBatchEdit()V
+
+    :try_start_0
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/text/Spannable;
+
+    invoke-static {v0, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+
+    move-result-object p0
+
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1f
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1}, Lb8;-><init>(I)V
+    if-lt p2, v0, :cond_0
 
-    sput-object v0, Lwo;->CREATOR:Landroid/os/Parcelable$Creator;
+    new-instance p2, Luq6;
 
-    return-void
+    invoke-direct {p2, p0, v1}, Luq6;-><init>(Landroid/content/ClipData;I)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p2, La04;
+
+    invoke-direct {p2}, La04;-><init>()V
+
+    iput-object p0, p2, La04;->b:Landroid/content/ClipData;
+
+    iput v1, p2, La04;->c:I
+
+    :goto_0
+    invoke-interface {p2}, Lzz3;->build()Lc04;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lcyg;->j(Landroid/view/View;Lc04;)Lc04;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
+
+    throw p0
 .end method
 
+.method public static b(Landroid/view/DragEvent;Landroid/view/View;Landroid/app/Activity;)Z
+    .locals 2
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
 
-    iget-boolean p2, p0, Lwo;->a:Z
+    move-result-object p0
 
-    int-to-byte p2, p2
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    const/16 v0, 0x1f
 
-    return-void
+    const/4 v1, 0x3
+
+    if-lt p2, v0, :cond_0
+
+    new-instance p2, Luq6;
+
+    invoke-direct {p2, p0, v1}, Luq6;-><init>(Landroid/content/ClipData;I)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p2, La04;
+
+    invoke-direct {p2}, La04;-><init>()V
+
+    iput-object p0, p2, La04;->b:Landroid/content/ClipData;
+
+    iput v1, p2, La04;->c:I
+
+    :goto_0
+    invoke-interface {p2}, Lzz3;->build()Lc04;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lcyg;->j(Landroid/view/View;Lc04;)Lc04;
+
+    const/4 p0, 0x1
+
+    return p0
 .end method

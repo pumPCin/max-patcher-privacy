@@ -1,296 +1,138 @@
 .class public final Lx4c;
-.super Ls59;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lgi6;
 
 
 # instance fields
-.field public a:F
+.field public final synthetic X:I
 
-.field public b:F
+.field public synthetic Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public c:F
-
-.field public d:F
+.field public synthetic Z:Lu4b;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ls59;-><init>()V
+    iput p3, p0, Lx4c;->X:I
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lx4c;->a:F
-
-    iput v0, p0, Lx4c;->b:F
-
-    iput v0, p0, Lx4c;->c:F
-
-    iput v0, p0, Lx4c;->d:F
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Ls59;->cachedSize:I
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 4
-
-    iget v0, p0, Lx4c;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ly73;->e(I)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v2, p0, Lx4c;->b:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_1
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Ly73;->e(I)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    :cond_1
-    iget v2, p0, Lx4c;->c:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_2
-
-    const/4 v2, 0x3
-
-    invoke-static {v2}, Ly73;->e(I)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    :cond_2
-    iget v2, p0, Lx4c;->d:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Ly73;->e(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final mergeFrom(Lx73;)Ls59;
-    .locals 2
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lx73;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const/16 v1, 0xd
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x15
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x1d
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x25
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lx73;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lx73;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lx4c;->d:F
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lx73;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lx4c;->c:F
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Lx73;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lx4c;->b:F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lx73;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lx4c;->a:F
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Ly73;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lx4c;->a:F
+    iget v0, p0, Lx4c;->X:I
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    move-result v0
+    check-cast p2, Lu4b;
 
-    const/4 v1, 0x0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v2
+    new-instance v0, Lx4c;
 
-    if-eq v0, v2, :cond_0
+    const/4 v1, 0x3
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    iget v2, p0, Lx4c;->a:F
+    invoke-direct {v0, v1, p3, v2}, Lx4c;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {p1, v0, v2}, Ly73;->v(IF)V
+    iput-object p1, v0, Lx4c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    :cond_0
-    iget v0, p0, Lx4c;->b:F
+    iput-object p2, v0, Lx4c;->Z:Lu4b;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    sget-object p1, Lzag;->a:Lzag;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lx4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    return-object p1
 
-    move-result v2
+    :pswitch_0
+    new-instance v0, Lx4c;
 
-    if-eq v0, v2, :cond_1
+    const/4 v1, 0x3
 
-    const/4 v0, 0x2
+    const/4 v2, 0x0
 
-    iget v2, p0, Lx4c;->b:F
+    invoke-direct {v0, v1, p3, v2}, Lx4c;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {p1, v0, v2}, Ly73;->v(IF)V
+    iput-object p1, v0, Lx4c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    :cond_1
-    iget v0, p0, Lx4c;->c:F
+    iput-object p2, v0, Lx4c;->Z:Lu4b;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    sget-object p1, Lzag;->a:Lzag;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lx4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    return-object p1
 
-    move-result v2
+    nop
 
-    if-eq v0, v2, :cond_2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const/4 v0, 0x3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v2, p0, Lx4c;->c:F
+    iget v0, p0, Lx4c;->X:I
 
-    invoke-virtual {p1, v0, v2}, Ly73;->v(IF)V
+    packed-switch v0, :pswitch_data_0
 
-    :cond_2
-    iget v0, p0, Lx4c;->d:F
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-object p1, p0, Lx4c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    move-result v0
+    iget-object v0, p0, Lx4c;->Z:Lu4b;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-interface {v0}, Lu4b;->b()Lwe0;
 
-    move-result v1
+    move-result-object v0
 
-    if-eq v0, v1, :cond_3
+    iget v0, v0, Lwe0;->k:I
 
-    const/4 v0, 0x4
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget v1, p0, Lx4c;->d:F
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-virtual {p1, v0, v1}, Ly73;->v(IF)V
+    return-object p1
 
-    :cond_3
-    return-void
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lx4c;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v0, p0, Lx4c;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->b()Lwe0;
+
+    move-result-object v0
+
+    iget v0, v0, Lwe0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

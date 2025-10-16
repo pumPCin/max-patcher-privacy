@@ -20,9 +20,23 @@
 
 .field public final h:I
 
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
+
+.field public final o:I
+
 
 # direct methods
-.method public constructor <init>(IIIIIIII)V
+.method public constructor <init>(IIIIIIIIIIIIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +57,20 @@
 
     iput p8, p0, Loc3;->h:I
 
+    iput p9, p0, Loc3;->i:I
+
+    iput p10, p0, Loc3;->j:I
+
+    iput p11, p0, Loc3;->k:I
+
+    iput p12, p0, Loc3;->l:I
+
+    iput p13, p0, Loc3;->m:I
+
+    iput p14, p0, Loc3;->n:I
+
+    iput p15, p0, Loc3;->o:I
+
     return-void
 .end method
 
@@ -53,14 +81,14 @@
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_0
     instance-of v0, p1, Loc3;
 
     if-nez v0, :cond_1
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_1
     check-cast p1, Loc3;
@@ -71,7 +99,7 @@
 
     if-eq v0, v1, :cond_2
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_2
     iget v0, p0, Loc3;->b:I
@@ -80,7 +108,7 @@
 
     if-eq v0, v1, :cond_3
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_3
     iget v0, p0, Loc3;->c:I
@@ -130,16 +158,79 @@
     :cond_8
     iget v0, p0, Loc3;->h:I
 
-    iget p1, p1, Loc3;->h:I
+    iget v1, p1, Loc3;->h:I
 
-    if-eq v0, p1, :cond_9
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget v0, p0, Loc3;->i:I
+
+    iget v1, p1, Loc3;->i:I
+
+    if-eq v0, v1, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    iget v0, p0, Loc3;->j:I
+
+    iget v1, p1, Loc3;->j:I
+
+    if-eq v0, v1, :cond_b
+
+    goto :goto_0
+
+    :cond_b
+    iget v0, p0, Loc3;->k:I
+
+    iget v1, p1, Loc3;->k:I
+
+    if-eq v0, v1, :cond_c
+
+    goto :goto_0
+
+    :cond_c
+    iget v0, p0, Loc3;->l:I
+
+    iget v1, p1, Loc3;->l:I
+
+    if-eq v0, v1, :cond_d
+
+    goto :goto_0
+
+    :cond_d
+    iget v0, p0, Loc3;->m:I
+
+    iget v1, p1, Loc3;->m:I
+
+    if-eq v0, v1, :cond_e
+
+    goto :goto_0
+
+    :cond_e
+    iget v0, p0, Loc3;->n:I
+
+    iget v1, p1, Loc3;->n:I
+
+    if-eq v0, v1, :cond_f
+
+    goto :goto_0
+
+    :cond_f
+    iget v0, p0, Loc3;->o:I
+
+    iget p1, p1, Loc3;->o:I
+
+    if-eq v0, p1, :cond_10
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_9
+    :cond_10
     :goto_1
     const/4 p1, 0x1
 
@@ -161,53 +252,83 @@
 
     iget v2, p0, Loc3;->b:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
     iget v2, p0, Loc3;->c:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    const/4 v2, -0x1
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    const v2, -0x1f000001
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
     iget v2, p0, Loc3;->d:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
     iget v2, p0, Loc3;->e:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
     iget v2, p0, Loc3;->f:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
     iget v2, p0, Loc3;->g:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
-    iget v1, p0, Loc3;->h:I
+    iget v2, p0, Loc3;->h:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Loc3;->i:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Loc3;->j:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Loc3;->k:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Loc3;->l:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Loc3;->m:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Loc3;->n:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Loc3;->o:I
 
     invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -221,49 +342,85 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", capsuleSecondary="
+    const-string v0, ", additionalStep2="
 
-    const-string v1, ", contrast="
+    const-string v1, ", additionalStep3="
 
-    const-string v2, "CommonTextColors(capsule="
+    const-string v2, "CommonBackgroundChatBackgroundColors(additionalStep1="
 
     iget v3, p0, Loc3;->a:I
 
     iget v4, p0, Loc3;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", contrastStatic=-1, fileType=-520093697, negative="
+    const-string v1, ", additionalStep4="
 
-    const-string v2, ", primary="
+    const-string v2, ", additionalStep5="
 
     iget v3, p0, Loc3;->c:I
 
     iget v4, p0, Loc3;->d:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    const-string v1, ", secondary="
+    const-string v1, ", additionalStep6="
 
-    const-string v2, ", tertiary="
+    const-string v2, ", backgroundStep1="
 
     iget v3, p0, Loc3;->e:I
 
     iget v4, p0, Loc3;->f:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    const-string v1, ", themed="
+    const-string v1, ", backgroundStep2="
 
-    const-string v2, ")"
+    const-string v2, ", patternColor="
 
     iget v3, p0, Loc3;->g:I
 
     iget v4, p0, Loc3;->h:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lnd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", patternStep1="
+
+    const-string v2, ", patternStep2="
+
+    iget v3, p0, Loc3;->i:I
+
+    iget v4, p0, Loc3;->j:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", patternStep3="
+
+    const-string v2, ", patternStep4="
+
+    iget v3, p0, Loc3;->k:I
+
+    iget v4, p0, Loc3;->l:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", patternStep5="
+
+    const-string v2, ", patternStep6="
+
+    iget v3, p0, Loc3;->m:I
+
+    iget v4, p0, Loc3;->n:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ")"
+
+    iget v2, p0, Loc3;->o:I
+
+    invoke-static {v0, v2, v1}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

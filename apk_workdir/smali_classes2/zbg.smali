@@ -1,42 +1,36 @@
 .class public final Lzbg;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
-.field public X:Lgcg;
+.field public X:Ljava/lang/Throwable;
 
-.field public Y:Lkv7;
+.field public Y:I
 
-.field public Z:Lkv7;
+.field public final synthetic Z:Lhcg;
 
-.field public r0:Lps9;
+.field public final synthetic r0:J
 
-.field public s0:I
-
-.field public final synthetic t0:Lgcg;
-
-.field public final synthetic u0:Lqzf;
-
-.field public final synthetic v0:Ljava/io/File;
+.field public final synthetic s0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lgcg;Lqzf;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lhcg;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lzbg;->t0:Lgcg;
+    iput-object p1, p0, Lzbg;->Z:Lhcg;
 
-    iput-object p2, p0, Lzbg;->u0:Lqzf;
+    iput-wide p2, p0, Lzbg;->r0:J
 
-    iput-object p3, p0, Lzbg;->v0:Ljava/io/File;
+    iput-object p4, p0, Lzbg;->s0:Ljava/util/List;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p5}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -46,7 +40,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ln24;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -56,7 +50,7 @@
 
     check-cast p1, Lzbg;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lzbg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -66,397 +60,330 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 6
 
-    new-instance p1, Lzbg;
+    new-instance v0, Lzbg;
 
-    iget-object v0, p0, Lzbg;->u0:Lqzf;
+    iget-wide v2, p0, Lzbg;->r0:J
 
-    iget-object v1, p0, Lzbg;->v0:Ljava/io/File;
+    iget-object v4, p0, Lzbg;->s0:Ljava/util/List;
 
-    iget-object v2, p0, Lzbg;->t0:Lgcg;
+    iget-object v1, p0, Lzbg;->Z:Lhcg;
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lzbg;-><init>(Lgcg;Lqzf;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+    move-object v5, p2
 
-    return-object p1
+    invoke-direct/range {v0 .. v5}, Lzbg;-><init>(Lhcg;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    .locals 17
 
-    sget-object v0, Laxf;->a:Laxf;
+    move-object/from16 v1, p0
 
-    sget-object v1, Lo24;->a:Lo24;
+    sget-object v2, Lc54;->a:Lc54;
 
-    iget v2, p0, Lzbg;->s0:I
+    iget v0, v1, Lzbg;->Y:I
 
-    const/4 v3, 0x3
+    const-string v3, " msgListChunk:"
 
-    const/4 v4, 0x2
+    const/4 v4, 0x5
 
-    const/4 v5, 0x1
+    const/4 v5, 0x4
 
-    if-eqz v2, :cond_3
+    const/4 v6, 0x3
 
-    if-eq v2, v5, :cond_2
+    const/4 v7, 0x2
 
-    if-eq v2, v4, :cond_1
+    const/4 v8, 0x1
 
-    if-ne v2, v3, :cond_0
+    const-string v9, "processMessageChunk for chat: "
 
-    iget-object v1, p0, Lzbg;->r0:Lps9;
+    if-eqz v0, :cond_4
 
-    iget-object v2, p0, Lzbg;->Z:Lkv7;
+    if-eq v0, v8, :cond_3
 
-    iget-object v3, p0, Lzbg;->Y:Lkv7;
+    if-eq v0, v7, :cond_2
 
-    iget-object v4, p0, Lzbg;->X:Lgcg;
+    if-eq v0, v6, :cond_1
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    if-eq v0, v5, :cond_1
 
-    goto :goto_3
+    if-eq v0, v4, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, v1, Lzbg;->X:Ljava/lang/Throwable;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto/16 :goto_6
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    goto :goto_1
+    goto/16 :goto_4
 
     :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzbg;->t0:Lgcg;
-
-    iget-object v2, p1, Lgcg;->i:Ljava/lang/String;
-
-    iget-object p1, p1, Lgcg;->f:Lfs;
-
-    iget p1, p1, Lfs;->c:I
-
-    const-string v6, "Start merging files. Count of fragments = "
-
-    invoke-static {p1, v6, v2}, Ljl3;->h(ILjava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lzbg;->t0:Lgcg;
-
-    iget-object p1, p1, Lgcg;->h:Loke;
-
-    if-eqz p1, :cond_4
-
-    iput v5, p0, Lzbg;->s0:I
-
-    invoke-virtual {p1, p0}, Lgi7;->join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_0
-    iget-object p1, p0, Lzbg;->t0:Lgcg;
-
-    iput v4, p0, Lzbg;->s0:I
-
-    invoke-static {p1, p0}, Lgcg;->a(Lgcg;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v1, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    iget-object v4, p0, Lzbg;->t0:Lgcg;
-
-    invoke-static {}, Lshd;->l()Lkv7;
-
-    move-result-object v2
-
-    iget-object p1, v4, Lgcg;->e:Lps9;
-
-    iput-object v4, p0, Lzbg;->X:Lgcg;
-
-    iput-object v2, p0, Lzbg;->Y:Lkv7;
-
-    iput-object v2, p0, Lzbg;->Z:Lkv7;
-
-    iput-object p1, p0, Lzbg;->r0:Lps9;
-
-    iput v3, p0, Lzbg;->s0:I
-
-    invoke-virtual {p1, p0}, Lps9;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, v1, :cond_6
-
-    :goto_2
-    return-object v1
-
-    :cond_6
-    move-object v1, p1
-
-    move-object v3, v2
-
-    :goto_3
-    const/4 p1, 0x0
-
     :try_start_0
-    iget-object v6, v4, Lgcg;->g:Landroid/net/Uri;
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    if-eqz v6, :cond_7
-
-    invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_4
+    goto :goto_1
 
     :catchall_0
     move-exception v0
 
-    goto/16 :goto_9
+    goto/16 :goto_3
 
-    :cond_7
-    :goto_4
-    iget-object v6, v4, Lgcg;->f:Lfs;
-
-    invoke-static {v6}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v6
-
-    new-instance v7, Ljava/util/ArrayList;
-
-    const/16 v8, 0xa
-
-    invoke-static {v6, v8}, Ly83;->O(Ljava/lang/Iterable;I)I
-
-    move-result v8
-
-    invoke-direct {v7, v8}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :goto_5
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_8
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lubg;
-
-    iget-object v8, v8, Lubg;->a:Landroid/net/Uri;
-
-    invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_5
-
-    :cond_8
-    invoke-interface {v2, v7}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v2, v4, Lgcg;->f:Lfs;
-
-    invoke-virtual {v2}, Lfs;->clear()V
+    :cond_3
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1, p1}, Lps9;->f(Ljava/lang/Object;)V
+    move-object/from16 v0, p1
 
-    invoke-static {v3}, Lshd;->e(Ljava/util/List;)Lkv7;
+    goto :goto_0
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lkv7;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_b
-
-    iget-object v1, p0, Lzbg;->t0:Lgcg;
-
-    iget-object v1, v1, Lgcg;->i:Ljava/lang/String;
-
-    sget-object v2, Lyt3;->n:Lhoa;
-
-    if-nez v2, :cond_9
-
-    goto :goto_6
-
-    :cond_9
-    sget-object v4, Lr28;->Z:Lr28;
-
-    invoke-virtual {v2, v4}, Lhoa;->b(Lr28;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_a
-
-    const-string v5, "mergeFiles failed. We don\'t have files for merging"
-
-    invoke-virtual {v2, v4, v1, v5, p1}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_a
-    :goto_6
-    iget-object p1, p0, Lzbg;->u0:Lqzf;
-
-    invoke-virtual {p1, v3}, Lqzf;->b(Z)V
-
-    return-object v0
-
-    :cond_b
-    iget p1, v1, Lkv7;->b:I
-
-    if-ne p1, v5, :cond_c
-
-    invoke-static {v1}, Lw83;->e0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/Uri;
-
-    invoke-static {p1}, Lvu0;->G(Landroid/net/Uri;)Ljava/io/File;
-
-    move-result-object p1
+    :cond_4
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
 
     :try_start_1
-    invoke-virtual {p1}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    iget-object v0, v1, Lzbg;->Z:Lhcg;
 
-    move-result-object p1
+    iget-object v0, v0, Lhcg;->d:Llt7;
 
-    iget-object v1, p0, Lzbg;->v0:Ljava/io/File;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+    move-result-object v0
 
-    move-result-object v1
+    check-cast v0, Lll;
 
-    new-array v2, v5, [Ljava/nio/file/CopyOption;
+    new-instance v10, Lqv9;
 
-    sget-object v4, Ljava/nio/file/StandardCopyOption;->REPLACE_EXISTING:Ljava/nio/file/StandardCopyOption;
+    iget-wide v11, v1, Lzbg;->r0:J
 
-    aput-object v4, v2, v3
+    iget-object v13, v1, Lzbg;->s0:Ljava/util/List;
 
-    invoke-static {p1, v1, v2}, Ljava/nio/file/Files;->move(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+    const/4 v14, 0x4
+
+    invoke-direct {v10, v14, v11, v12, v13}, Lqv9;-><init>(IJLjava/util/List;)V
+
+    iput v8, v1, Lzbg;->Y:I
+
+    check-cast v0, Lkma;
+
+    invoke-virtual {v0, v10, v1}, Lkma;->I(Lhlf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v2, :cond_5
+
+    goto/16 :goto_5
+
+    :cond_5
+    :goto_0
+    move-object v11, v0
+
+    check-cast v11, Lbw9;
+
+    iget-object v0, v1, Lzbg;->Z:Lhcg;
+
+    iget-object v0, v0, Lhcg;->f:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v10, v0
+
+    check-cast v10, Lhw9;
+
+    iget-wide v12, v1, Lzbg;->r0:J
+
+    iget-object v14, v1, Lzbg;->s0:Ljava/util/List;
+
+    const-wide/16 v15, -0x1
+
+    invoke-virtual/range {v10 .. v16}, Lhw9;->a(Lbw9;JLjava/util/List;J)V
+
+    iget-object v0, v1, Lzbg;->Z:Lhcg;
+
+    iput v7, v1, Lzbg;->Y:I
+
+    invoke-virtual {v0, v11, v1}, Lhcg;->f(Lbw9;Lk14;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v2, :cond_6
+
+    goto/16 :goto_5
+
+    :cond_6
+    :goto_1
+    iget-object v0, v1, Lzbg;->Z:Lhcg;
+
+    iget-object v0, v0, Lhcg;->j:Ljava/lang/String;
+
+    iget-wide v7, v1, Lzbg;->r0:J
+
+    iget-object v10, v1, Lzbg;->s0:Ljava/util/List;
+
+    sget-object v11, Lndi;->a:Lkwa;
+
+    if-nez v11, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    sget-object v12, Lf88;->o:Lf88;
+
+    invoke-virtual {v11, v12}, Lkwa;->b(Lf88;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_8
+
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    invoke-direct {v13, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v13, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v7, " success"
+
+    invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v11, v12, v0, v7, v8}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_8
+    :cond_8
+    :goto_2
+    iget-object v0, v1, Lzbg;->Z:Lhcg;
 
-    :catch_0
-    move-exception p1
+    iget-wide v3, v1, Lzbg;->r0:J
 
-    iget-object v1, p0, Lzbg;->t0:Lgcg;
+    iget-object v5, v1, Lzbg;->s0:Ljava/util/List;
 
-    iget-object v1, v1, Lgcg;->i:Ljava/lang/String;
+    invoke-static {v5}, Lab3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v2
+    iput v6, v1, Lzbg;->Y:I
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v4, v5, v1}, Lhcg;->a(Lhcg;JLjava/util/Set;Lk14;)Ljava/lang/Object;
 
-    const-string v5, "mergeFiles failed because of moving file in output. "
+    move-result-object v0
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ne v0, v2, :cond_9
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_5
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    move v5, v3
-
-    goto :goto_8
-
-    :cond_c
-    iget-object p1, p0, Lzbg;->t0:Lgcg;
-
-    iget-object v2, p0, Lzbg;->v0:Ljava/io/File;
-
-    invoke-virtual {p1, v1, v2, v5}, Lgcg;->d(Ljava/util/List;Ljava/io/File;Z)Ljava/io/Serializable;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v6
-
-    if-nez v6, :cond_d
-
-    goto :goto_7
-
-    :cond_d
+    :goto_3
     :try_start_2
-    invoke-virtual {p1, v1, v2, v3}, Lgcg;->d(Ljava/util/List;Ljava/io/File;Z)Ljava/io/Serializable;
+    iget-object v6, v1, Lzbg;->Z:Lhcg;
 
-    move-result-object p1
+    iget-object v6, v6, Lhcg;->j:Ljava/lang/String;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-wide v7, v1, Lzbg;->r0:J
 
-    check-cast p1, Ljava/lang/String;
+    iget-object v10, v1, Lzbg;->s0:Ljava/util/List;
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, " failed with "
+
+    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v6, v3, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    move-object v4, p1
+    iget-object v0, v1, Lzbg;->Z:Lhcg;
 
-    goto :goto_7
+    iget-wide v3, v1, Lzbg;->r0:J
 
-    :catchall_1
-    move-exception p1
+    iget-object v6, v1, Lzbg;->s0:Ljava/util/List;
 
-    new-instance v1, Lb2d;
+    invoke-static {v6}, Lab3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    invoke-direct {v1, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
+    move-result-object v6
 
-    move-object v4, v1
+    iput v5, v1, Lzbg;->Y:I
 
-    :goto_7
-    instance-of p1, v4, Lb2d;
+    invoke-static {v0, v3, v4, v6, v1}, Lhcg;->a(Lhcg;JLjava/util/Set;Lk14;)Ljava/lang/Object;
 
-    xor-int/2addr v5, p1
+    move-result-object v0
 
-    :goto_8
-    iget-object p1, p0, Lzbg;->t0:Lgcg;
+    if-ne v0, v2, :cond_9
 
-    iget-object p1, p1, Lgcg;->i:Ljava/lang/String;
+    goto :goto_5
 
-    const-string v1, "End merging files with success - "
-
-    invoke-static {v1, p1, v5}, Lbk7;->q(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    iget-object p1, p0, Lzbg;->u0:Lqzf;
-
-    invoke-virtual {p1, v5}, Lqzf;->b(Z)V
+    :cond_9
+    :goto_4
+    sget-object v0, Lzag;->a:Lzag;
 
     return-object v0
 
-    :goto_9
-    invoke-virtual {v1, p1}, Lps9;->f(Ljava/lang/Object;)V
+    :catchall_1
+    move-exception v0
 
+    iget-object v3, v1, Lzbg;->Z:Lhcg;
+
+    iget-wide v5, v1, Lzbg;->r0:J
+
+    iget-object v7, v1, Lzbg;->s0:Ljava/util/List;
+
+    invoke-static {v7}, Lab3;->c0(Ljava/lang/Iterable;)Ljava/util/Set;
+
+    move-result-object v7
+
+    iput-object v0, v1, Lzbg;->X:Ljava/lang/Throwable;
+
+    iput v4, v1, Lzbg;->Y:I
+
+    invoke-static {v3, v5, v6, v7, v1}, Lhcg;->a(Lhcg;JLjava/util/Set;Lk14;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-ne v3, v2, :cond_a
+
+    :goto_5
+    return-object v2
+
+    :cond_a
+    :goto_6
     throw v0
 .end method

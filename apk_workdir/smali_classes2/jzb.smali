@@ -1,200 +1,117 @@
 .class public final Ljzb;
-.super Ltbe;
+.super Llj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ltbe;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Llj0;-><init>()V
 
-    iput-object p2, p0, Ljzb;->X:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
+    iput-wide p1, p0, Ljzb;->b:J
+
+    iput-wide p3, p0, Ljzb;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Lqce;I)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lhwb;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Ljzb;->J(Lhwb;I)V
+    if-ne p0, p1, :cond_0
 
-    return-void
-.end method
-
-.method public final J(Lhwb;I)V
-    .locals 9
-
-    invoke-virtual {p0, p2}, Lhv7;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lov7;
-
-    check-cast p2, Lbvb;
-
-    invoke-virtual {p1, p2}, Lqce;->A(Lov7;)V
-
-    instance-of p2, p2, Lw6;
-
-    if-eqz p2, :cond_1
-
-    instance-of p2, p1, Lu6;
-
-    if-eqz p2, :cond_0
-
-    check-cast p1, Lu6;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Ljzb;
 
-    :goto_0
-    if-eqz p1, :cond_1
+    const/4 v2, 0x0
 
-    new-instance v0, Lwia;
+    if-nez v1, :cond_1
 
-    const/4 v6, 0x0
-
-    const/16 v7, 0x9
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Ljzb;->X:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
-
-    const-class v3, Lizb;
-
-    const-string v4, "onChecked"
-
-    const-string v5, "onChecked(JZ)V"
-
-    invoke-direct/range {v0 .. v7}, Lwia;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v1, Ld99;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0xb
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Ljzb;->X:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
-
-    const-class v4, Lizb;
-
-    const-string v5, "onDisabledClick"
-
-    const-string v6, "onDisabledClick(J)V"
-
-    invoke-direct/range {v1 .. v8}, Ld99;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    iget-object p1, p1, Luvc;->a:Landroid/view/View;
-
-    check-cast p1, Lh0e;
-
-    new-instance p2, Lvn4;
-
-    invoke-direct {p2, v0, v1}, Lvn4;-><init>(Lje6;Lvd6;)V
-
-    invoke-virtual {p1, p2}, Lh0e;->setOnSwitchListener(Le0e;)V
+    return v2
 
     :cond_1
-    return-void
+    check-cast p1, Ljzb;
+
+    iget-wide v3, p0, Ljzb;->b:J
+
+    iget-wide v5, p1, Ljzb;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ljzb;->c:J
+
+    iget-wide v5, p1, Ljzb;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final l(I)I
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    invoke-virtual {p0, p1}, Lhv7;->C(I)Ljava/lang/Object;
+    iget-wide v0, p0, Ljzb;->b:J
 
-    move-result-object p1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    check-cast p1, Lov7;
+    move-result v0
 
-    check-cast p1, Lbvb;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-interface {p1}, Lov7;->m()I
+    iget-wide v1, p0, Ljzb;->c:J
 
-    move-result p1
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    return p1
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final bridge synthetic r(Luvc;I)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast p1, Lhwb;
+    const-string v0, "ProfileAvatarUpdatedEvent(requestId="
 
-    invoke-virtual {p0, p1, p2}, Ljzb;->J(Lhwb;I)V
+    const-string v1, ", photoId="
 
-    return-void
-.end method
+    iget-wide v2, p0, Ljzb;->b:J
 
-.method public final t(Landroid/view/ViewGroup;I)Luvc;
-    .locals 2
+    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v0, 0x1fffffff
+    move-result-object v0
 
-    and-int/2addr v0, p2
+    const-string v1, ")"
 
-    const/16 v1, 0x400
+    iget-wide v2, p0, Ljzb;->c:J
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0, v2, v3, v1}, Lyy8;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    new-instance p2, Lu6;
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lu6;-><init>(Landroid/content/Context;)V
-
-    return-object p2
-
-    :cond_0
-    const/16 v1, 0x800
-
-    if-ne v0, v1, :cond_1
-
-    new-instance p2, Lzhb;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lzhb;-><init>(Landroid/content/Context;)V
-
-    return-object p2
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "unknown item viewType: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

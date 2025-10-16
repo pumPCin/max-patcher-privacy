@@ -1,112 +1,84 @@
 .class public final Lo67;
-.super Lw1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln67;
+
+# instance fields
+.field public final a:I
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lo67;->a:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final e()I
-    .locals 1
-
-    const/4 v0, 0x5
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Lo3g;
-
-    const/4 v1, 0x0
+    instance-of v0, p1, Lo67;
 
     if-nez v0, :cond_1
 
-    return v1
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lo3g;
-
-    check-cast p1, Lx1;
-
-    invoke-interface {p1}, Lo3g;->e()I
-
-    move-result v0
-
-    const/4 v2, 0x5
-
-    if-ne v0, v2, :cond_3
-
-    instance-of v0, p1, Lo67;
-
-    iget-object v1, p0, Lw1;->a:[B
-
-    if-eqz v0, :cond_2
-
     check-cast p1, Lo67;
 
-    iget-object p1, p1, Lw1;->a:[B
+    iget v0, p0, Lo67;->a:I
 
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    iget p1, p1, Lo67;->a:I
 
-    move-result p1
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
 
     return p1
 
     :cond_2
-    invoke-interface {p1}, Lo3g;->m()Ln67;
-
-    move-result-object p1
-
-    check-cast p1, Lw1;
-
-    iget-object p1, p1, Lw1;->a:[B
-
-    array-length v0, p1
-
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
+    :goto_1
+    const/4 p1, 0x1
 
     return p1
-
-    :cond_3
-    return v1
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lw1;->a:[B
+    iget v0, p0, Lo67;->a:I
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final m()Ln67;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    return-object p0
-.end method
+    const-string v0, "IconLocalPromoColors(accent="
 
-.method public final p()Ln67;
-    .locals 0
+    const-string v1, ")"
 
-    return-object p0
+    iget v2, p0, Lo67;->a:I
+
+    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

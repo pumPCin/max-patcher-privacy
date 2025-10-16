@@ -1,287 +1,81 @@
-.class public final Lzm3;
+.class public final synthetic Lzm3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loh6;
+
 
 # instance fields
-.field public final a:Lw01;
+.field public final synthetic a:I
 
-.field public final b:Lwkc;
-
-.field public final c:Lym3;
-
-.field public final d:Lap0;
-
-.field public e:D
-
-.field public final f:Ly58;
-
-.field public g:D
-
-.field public final h:Lawd;
-
-.field public volatile i:Z
-
-.field public volatile j:Z
+.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
 
 # direct methods
-.method public constructor <init>(Lw01;Lwkc;Lym3;)V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lzm3;->a:I
+
+    iput-object p1, p0, Lzm3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzm3;->a:Lw01;
-
-    iput-object p2, p0, Lzm3;->b:Lwkc;
-
-    iput-object p3, p0, Lzm3;->c:Lym3;
-
-    new-instance p1, Lap0;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lap0;-><init>(I)V
-
-    iput-object p1, p0, Lzm3;->d:Lap0;
-
-    new-instance p1, Ly58;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzm3;->f:Ly58;
-
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
-
-    iput-wide v0, p0, Lzm3;->g:D
-
-    new-instance p1, Lawd;
-
-    const/16 v0, 0x1a
-
-    invoke-direct {p1, v0}, Lawd;-><init>(I)V
-
-    iput-object p1, p0, Lzm3;->h:Lawd;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Configuration: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p3, "CallAnalyticsLoggerConnectivityTracker"
-
-    invoke-interface {p2, p3, p1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final invoke()Ljava/lang/Object;
     .locals 5
 
-    iget-boolean v0, p0, Lzm3;->i:Z
+    iget v0, p0, Lzm3;->a:I
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lzm3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    iget-boolean v0, p0, Lzm3;->j:Z
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_2
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lwq7;
 
-    iget-wide v0, p0, Lzm3;->g:D
+    new-instance v0, Lgn3;
 
-    iget-object v2, p0, Lzm3;->c:Lym3;
+    iget-object v2, v1, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->a:Lqs;
 
-    iget-wide v3, v2, Lym3;->b:D
+    sget-object v3, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lwq7;
 
-    cmpg-double v0, v0, v3
+    const/4 v4, 0x0
 
-    if-gtz v0, :cond_2
+    aget-object v3, v3, v4
 
-    iget-wide v0, p0, Lzm3;->e:D
+    invoke-virtual {v2, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    iget-wide v2, v2, Lym3;->c:D
+    move-result-object v1
 
-    cmpl-double v0, v0, v2
+    check-cast v1, Ljava/lang/String;
 
-    if-ltz v0, :cond_2
+    invoke-direct {v0, v1}, Lgn3;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lzm3;->a:Lw01;
+    return-object v0
 
-    iget-boolean v0, v0, Lw01;->c:Z
+    :pswitch_0
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lwq7;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1}, Lx14;->getOnBackPressedDispatcher()Lnla;
 
-    const-string v0, "Enable upload analytics"
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lzm3;->b(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    invoke-virtual {v0}, Lnla;->d()V
 
     :cond_0
-    const-string v0, "Already enabled"
+    sget-object v0, Lzag;->a:Lzag;
 
-    invoke-virtual {p0, v0}, Lzm3;->b(Ljava/lang/String;)V
+    return-object v0
 
-    :goto_0
-    iget-object v0, p0, Lzm3;->a:Lw01;
-
-    iget-boolean v1, v0, Lw01;->c:Z
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    iput-boolean v2, v0, Lw01;->c:Z
-
-    iget-object v0, v0, Lw01;->e:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
-
-    invoke-virtual {v0, v2}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->setIdle(Z)V
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lzm3;->a:Lw01;
-
-    iget-boolean v0, v0, Lw01;->c:Z
-
-    if-eqz v0, :cond_3
-
-    const-string v0, "Disable upload analytics"
-
-    invoke-virtual {p0, v0}, Lzm3;->b(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_3
-    const-string v0, "Already disabled"
-
-    invoke-virtual {p0, v0}, Lzm3;->b(Ljava/lang/String;)V
-
-    :goto_1
-    iget-object v0, p0, Lzm3;->a:Lw01;
-
-    iget-boolean v1, v0, Lw01;->c:Z
-
-    if-nez v1, :cond_4
-
-    :goto_2
-    return-void
-
-    :cond_4
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lw01;->c:Z
-
-    iget-object v1, v0, Lw01;->e:Ljava/lang/Object;
-
-    check-cast v1, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
-
-    iget-boolean v0, v0, Lw01;->b:Z
-
-    invoke-virtual {v1, v0}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->setIdle(Z)V
-
-    return-void
-.end method
-
-.method public final b(Ljava/lang/String;)V
-    .locals 8
-
-    iget-object v0, p0, Lzm3;->b:Lwkc;
-
-    iget-boolean v1, p0, Lzm3;->i:Z
-
-    iget-boolean v2, p0, Lzm3;->j:Z
-
-    iget-wide v3, p0, Lzm3;->e:D
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    filled-new-array {v3}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    invoke-static {v3, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v5, "%.2f"
-
-    invoke-static {v5, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-wide v6, p0, Lzm3;->g:D
-
-    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v6
-
-    filled-new-array {v6}, [Ljava/lang/Object;
-
-    move-result-object v6
-
-    invoke-static {v6, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v5, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ": signaling_connected="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", pc_connected="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", bitrate="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", loss="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "CallAnalyticsLoggerConnectivityTracker"
-
-    invoke-interface {v0, v1, p1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

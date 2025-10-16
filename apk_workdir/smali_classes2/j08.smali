@@ -1,45 +1,29 @@
 .class public final Lj08;
-.super Ljava/lang/Object;
+.super Lq08;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lorg/webrtc/PeerConnectionFactory;
+.field public final X:Ljava/lang/String;
 
-.field public b:Lc40;
 
-.field public c:Ljava/util/concurrent/Executor;
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 9
 
-.field public d:Landroid/content/Context;
+    const-wide/16 v5, 0x0
 
-.field public e:Ljava/lang/String;
+    const-wide/16 v7, 0x0
 
-.field public f:Ljava/lang/String;
+    const-wide/16 v1, 0x0
 
-.field public g:Ljava/lang/String;
+    const-wide/16 v3, 0x0
 
-.field public h:Lwkc;
+    move-object v0, p0
 
-.field public i:Lorg/webrtc/EglBase$Context;
+    invoke-direct/range {v0 .. v8}, Lq08;-><init>(JJJJ)V
 
-.field public j:Ll08;
+    iput-object p1, v0, Lj08;->X:Ljava/lang/String;
 
-.field public k:Z
-
-.field public l:Z
-
-.field public m:Lr5d;
-
-.field public n:Ljgf;
-
-.field public o:Z
-
-.field public p:Z
-
-.field public q:La08;
-
-.field public r:Lexd;
-
-.field public s:Ljava/lang/Integer;
-
-.field public t:Z
+    return-void
+.end method

@@ -1,48 +1,43 @@
-.class public final synthetic Lqid;
-.super Lv8;
+.class public abstract Lqid;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lle6;
 
 
 # static fields
-.field public static final r0:Lqid;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Lqid;
+    sget v0, Lmjc;->accent:I
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    sput v0, Lqid;->a:I
 
-    const/4 v2, 0x4
+    sget v0, Lmjc;->gray_66:I
 
-    const/4 v3, 0x3
+    sput v0, Lqid;->b:I
 
-    const-class v4, Ld3b;
+    sget v0, Lmjc;->range_seek_bar_border_shadow_color:I
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lv8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+    sput v0, Lqid;->c:I
 
-    sput-object v0, Lqid;->r0:Lqid;
+    sget v0, Lmjc;->white:I
+
+    sput v0, Lqid;->d:I
+
+    sget v0, Lmjc;->white_50:I
+
+    sput v0, Lqid;->e:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/String;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p3, Ld3b;
-
-    invoke-direct {p3, p1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p3
 .end method

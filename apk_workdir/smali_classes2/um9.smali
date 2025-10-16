@@ -2,95 +2,68 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lti9;
+
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
+
+.field public final synthetic b:Lxqd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
+.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Lxqd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lum9;->a:Ljava/util/ArrayList;
+    iput-object p1, p0, Lum9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iput-object p2, p0, Lum9;->b:Lxqd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lum9;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lum9;
-
-    iget-object v0, p0, Lum9;->a:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lum9;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lum9;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final b()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
-    const-string v1, "MovieStateUpdates(updates="
+    iget-object v0, p0, Lum9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
-    iget-object v1, p0, Lum9;->a:Ljava/util/ArrayList;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/a;->w()I
 
-    const-string v1, ")"
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lum9;->b:Lxqd;
+
+    invoke-static {v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->E0(Lone/me/messages/list/ui/MessagesListWidget;Lxqd;)V
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
     move-result-object v0
+
+    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lf0a;
+
+    invoke-virtual {v0, p0}, Lf0a;->h(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final getTag()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ScrollButton"
 
     return-object v0
 .end method

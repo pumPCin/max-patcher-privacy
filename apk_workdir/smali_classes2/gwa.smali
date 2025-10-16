@@ -1,73 +1,113 @@
-.class public final enum Lgwa;
-.super Ljava/lang/Enum;
+.class public final Lgwa;
+.super Llff;
 .source "SourceFile"
 
+# interfaces
+.implements Lei6;
 
-# static fields
-.field public static final enum a:Lgwa;
 
-.field public static final enum b:Lgwa;
+# instance fields
+.field public synthetic X:Z
 
-.field public static final synthetic c:[Lgwa;
+.field public final synthetic Y:Lkwa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkwa;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lgwa;
+    iput-object p1, p0, Lgwa;->Y:Lkwa;
 
-    const-string v1, "DEFAULT"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lgwa;->a:Lgwa;
-
-    new-instance v1, Lgwa;
-
-    const-string v2, "PASSWORD"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lgwa;->b:Lgwa;
-
-    filled-new-array {v0, v1}, [Lgwa;
-
-    move-result-object v0
-
-    sput-object v0, Lgwa;->c:[Lgwa;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgwa;
-    .locals 1
 
-    const-class v0, Lgwa;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-object p0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    check-cast p0, Lgwa;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    invoke-virtual {p0, p1, p2}, Lgwa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lgwa;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lgwa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lgwa;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lgwa;->c:[Lgwa;
+    new-instance v0, Lgwa;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lgwa;->Y:Lkwa;
 
-    move-result-object v0
+    invoke-direct {v0, v1, p2}, Lgwa;-><init>(Lkwa;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lgwa;
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, v0, Lgwa;->X:Z
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Lgwa;->X:Z
+
+    iget-object v0, p0, Lgwa;->Y:Lkwa;
+
+    iget-object v0, v0, Lkwa;->b:Ljava/lang/String;
+
+    sget-object v1, Lndi;->a:Lkwa;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Lf88;->X:Lf88;
+
+    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "allowSensitive="
+
+    invoke-static {v3, p1}, Lyy8;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, p1, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

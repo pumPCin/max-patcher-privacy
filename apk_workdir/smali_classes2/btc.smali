@@ -1,323 +1,528 @@
-.class public final Lbtc;
-.super Lc2f;
-.source "SourceFile"
+.class public abstract Lbtc;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lje6;
 
+# static fields
+.field public static app_host:I = 0x7f130067
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static app_host_1:I = 0x7f130068
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static app_host_2:I = 0x7f130069
 
-.field public final synthetic Z:Landroid/view/View;
+.field public static app_host_3:I = 0x7f13006a
 
+.field public static app_host_prod:I = 0x7f13006b
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Landroid/view/View;)V
-    .locals 0
+.field public static app_host_prod_port:I = 0x7f13006c
 
-    iput-object p2, p0, Lbtc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static app_host_redirects:I = 0x7f13006d
 
-    iput-object p3, p0, Lbtc;->Z:Landroid/view/View;
+.field public static app_scheme:I = 0x7f130071
 
-    const/4 p2, 0x2
+.field public static attach_description_union:I = 0x7f13007e
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static feedback_subject:I = 0x7f1304f5
 
-    return-void
-.end method
+.field public static feedback_subject_auth:I = 0x7f1304f6
 
+.field public static feedback_user_info:I = 0x7f1304f8
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static file_downloading_no_progress:I = 0x7f1304fc
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static file_downloading_progress_media:I = 0x7f1304fd
 
-    invoke-virtual {p0, p1, p2}, Lbtc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static file_downloading_progress_photo:I = 0x7f1304fe
 
-    move-result-object p1
+.field public static file_downloading_progress_single_photo:I = 0x7f1304ff
 
-    check-cast p1, Lbtc;
+.field public static file_downloading_progress_single_video:I = 0x7f130500
 
-    sget-object p2, Laxf;->a:Laxf;
+.field public static file_downloading_progress_video:I = 0x7f130501
 
-    invoke-virtual {p1, p2}, Lbtc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static folder_path:I = 0x7f13053f
 
-    return-object p2
-.end method
+.field public static link_call_join_path:I = 0x7f1305b6
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.field public static link_chat_join_path:I = 0x7f1305b7
 
-    new-instance v0, Lbtc;
+.field public static link_chat_path:I = 0x7f1305b8
 
-    iget-object v1, p0, Lbtc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static link_context_menu_action_copy_link:I = 0x7f1305b9
 
-    iget-object v2, p0, Lbtc;->Z:Landroid/view/View;
+.field public static link_context_menu_action_copy_mail_link:I = 0x7f1305ba
 
-    invoke-direct {v0, p2, v1, v2}, Lbtc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Landroid/view/View;)V
+.field public static link_context_menu_action_copy_phone_link:I = 0x7f1305bb
 
-    iput-object p1, v0, Lbtc;->X:Ljava/lang/Object;
+.field public static link_context_menu_action_open_link:I = 0x7f1305bc
 
-    return-object v0
-.end method
+.field public static link_context_menu_action_open_mail_link:I = 0x7f1305bd
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.field public static link_context_menu_action_open_phone_link:I = 0x7f1305be
 
-    iget-object v0, p0, Lbtc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static link_copied:I = 0x7f1305bf
 
-    iget-object v1, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->o:Lyn7;
+.field public static link_host_api:I = 0x7f1305c0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+.field public static link_private_channel_path:I = 0x7f1305c7
 
-    iget-object p1, p0, Lbtc;->X:Ljava/lang/Object;
+.field public static link_private_contact_path:I = 0x7f1305c8
 
-    check-cast p1, Ldsc;
+.field public static link_startwebapp_path:I = 0x7f1305cb
 
-    sget-object v2, Lbsc;->a:Lbsc;
+.field public static link_stickerset_path:I = 0x7f1305cc
 
-    invoke-static {p1, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static mail_copied:I = 0x7f1305f2
 
-    move-result v2
+.field public static noncontact_presence:I = 0x7f13076d
 
-    const/4 v3, 0x1
+.field public static oneme_unsupported_attach_message:I = 0x7f130a8b
 
-    if-eqz v2, :cond_1
+.field public static oneme_video_message:I = 0x7f130a8d
 
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+.field public static phone_copied:I = 0x7f130ae3
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+.field public static presence_unknown_date:I = 0x7f130b3a
 
-    move-result-object p1
+.field public static reply_quote_content_level_body:I = 0x7f130c7e
 
-    check-cast p1, Lr8b;
+.field public static saved_messages:I = 0x7f130c90
 
-    sget-object v6, Lr8b;->h:[Ljava/lang/String;
+.field public static saved_messages_description:I = 0x7f130c91
 
-    invoke-virtual {p1, v6}, Lr8b;->c([Ljava/lang/String;)Z
+.field public static tt_active_live_location:I = 0x7f130d4c
 
-    move-result p1
+.field public static tt_active_live_location_in_chat:I = 0x7f130d4d
 
-    if-nez p1, :cond_0
+.field public static tt_active_live_location_in_chat_dialog:I = 0x7f130d4e
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+.field public static tt_active_live_location_many:I = 0x7f130d4f
 
-    move-result-object p1
+.field public static tt_admin_list_add:I = 0x7f130d50
 
-    move-object v4, p1
+.field public static tt_admin_list_add_f:I = 0x7f130d51
 
-    check-cast v4, Lr8b;
+.field public static tt_admin_list_add_m:I = 0x7f130d52
 
-    new-instance v5, Lp5h;
+.field public static tt_admin_list_you_added:I = 0x7f130d53
 
-    invoke-direct {v5, v0, v3}, Lp5h;-><init>(Lone/me/sdk/arch/Widget;I)V
+.field public static tt_and:I = 0x7f130d54
 
-    sget v8, Lfsa;->c:I
+.field public static tt_at:I = 0x7f130d59
 
-    sget v9, Lgic;->permissions_audio_title:I
+.field public static tt_attach_sent:I = 0x7f130d5a
 
-    const/16 v7, 0xa0
+.field public static tt_attach_sent_f:I = 0x7f130d5b
 
-    invoke-virtual/range {v4 .. v9}, Lr8b;->k(Lp5h;[Ljava/lang/String;III)V
+.field public static tt_attach_sent_m:I = 0x7f130d5c
 
-    :cond_0
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+.field public static tt_attach_sent_you:I = 0x7f130d5d
 
-    move-result-object p1
+.field public static tt_audio:I = 0x7f130d5e
 
-    check-cast p1, Lr8b;
+.field public static tt_audio_message:I = 0x7f130d5f
 
-    sget-object v2, Lr8b;->m:[Ljava/lang/String;
+.field public static tt_audio_with_duration:I = 0x7f130d60
 
-    invoke-virtual {p1, v2}, Lr8b;->c([Ljava/lang/String;)Z
+.field public static tt_blocked_user:I = 0x7f130d61
 
-    move-result p1
+.field public static tt_bot_control_welcome_message:I = 0x7f130d62
 
-    if-nez p1, :cond_6
+.field public static tt_bot_official_control_welcome_message:I = 0x7f130d63
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+.field public static tt_call_incoming_audio:I = 0x7f130d64
 
-    move-result-object p1
+.field public static tt_call_incoming_audio_cap:I = 0x7f130d65
 
-    check-cast p1, Lr8b;
+.field public static tt_call_incoming_video:I = 0x7f130d66
 
-    new-instance v1, Lp5h;
+.field public static tt_call_incoming_video_cap:I = 0x7f130d67
 
-    invoke-direct {v1, v0, v3}, Lp5h;-><init>(Lone/me/sdk/arch/Widget;I)V
+.field public static tt_call_missed_audio:I = 0x7f130d68
 
-    invoke-virtual {p1, v1}, Lr8b;->j(Lp5h;)V
+.field public static tt_call_missed_audio_cap:I = 0x7f130d69
 
-    goto/16 :goto_2
+.field public static tt_call_missed_call:I = 0x7f130d6a
 
-    :cond_1
-    sget-object v1, Lcsc;->a:Lcsc;
+.field public static tt_call_missed_video:I = 0x7f130d6b
 
-    invoke-static {p1, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static tt_call_missed_video_cap:I = 0x7f130d6c
 
-    move-result v1
+.field public static tt_call_outgoing_audio:I = 0x7f130d6d
 
-    if-eqz v1, :cond_5
+.field public static tt_call_outgoing_audio_cap:I = 0x7f130d6e
 
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+.field public static tt_call_outgoing_canceled_audio:I = 0x7f130d6f
 
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lpl7;
+.field public static tt_call_outgoing_canceled_audio_cap:I = 0x7f130d70
 
-    sget p1, Ldsa;->d:I
+.field public static tt_call_outgoing_canceled_video:I = 0x7f130d71
 
-    const/4 v1, 0x6
+.field public static tt_call_outgoing_canceled_video_cap:I = 0x7f130d72
 
-    const/4 v2, 0x0
+.field public static tt_call_outgoing_video:I = 0x7f130d73
 
-    invoke-static {p1, v2, v2, v1}, Lsw1;->e(ILandroid/os/Bundle;Lmdd;I)Lil3;
+.field public static tt_call_outgoing_video_cap:I = 0x7f130d74
 
-    move-result-object p1
+.field public static tt_chat_admin_group_name_subtitle:I = 0x7f130d75
 
-    sget v1, Ldsa;->c:I
+.field public static tt_chat_group_name_subtitle:I = 0x7f130d76
 
-    new-instance v4, Lxcf;
+.field public static tt_chat_group_subtitle:I = 0x7f130d77
 
-    invoke-direct {v4, v1}, Lxcf;-><init>(I)V
+.field public static tt_chat_participants_empty__subtitle:I = 0x7f130d78
 
-    invoke-virtual {p1, v4}, Lil3;->f(Lcdf;)V
+.field public static tt_chat_participants_empty__title:I = 0x7f130d79
 
-    new-instance v1, Lkl3;
+.field public static tt_contact:I = 0x7f130d7a
 
-    sget v4, Ldsa;->b:I
+.field public static tt_contact_account_type:I = 0x7f130d7b
 
-    new-instance v5, Lxcf;
+.field public static tt_contact_mimetype:I = 0x7f130d7c
 
-    invoke-direct {v5, v4}, Lxcf;-><init>(I)V
+.field public static tt_contact_name_unknown:I = 0x7f130d7d
 
-    const/4 v4, 0x3
+.field public static tt_contact_status_online:I = 0x7f130d7e
 
-    const/16 v6, 0x38
+.field public static tt_contact_with_name:I = 0x7f130d7f
 
-    invoke-direct {v1, v3, v5, v4, v6}, Lkl3;-><init>(ILcdf;II)V
+.field public static tt_control_change_icon:I = 0x7f130d80
 
-    filled-new-array {v1}, [Lkl3;
+.field public static tt_control_change_icon_admin:I = 0x7f130d81
 
-    move-result-object v1
+.field public static tt_control_change_icon_f:I = 0x7f130d82
 
-    invoke-virtual {p1, v1}, Lil3;->a([Lkl3;)V
+.field public static tt_control_change_icon_m:I = 0x7f130d83
 
-    new-instance v1, Lkl3;
+.field public static tt_control_change_icon_you:I = 0x7f130d84
 
-    sget v4, Lz7d;->p:I
+.field public static tt_control_change_title:I = 0x7f130d85
 
-    new-instance v5, Lxcf;
+.field public static tt_control_change_title_admin:I = 0x7f130d86
 
-    invoke-direct {v5, v4}, Lxcf;-><init>(I)V
+.field public static tt_control_change_title_f:I = 0x7f130d87
 
-    const/4 v4, 0x2
+.field public static tt_control_change_title_m:I = 0x7f130d88
 
-    invoke-direct {v1, v4, v5, v4, v6}, Lkl3;-><init>(ILcdf;II)V
+.field public static tt_control_change_title_you:I = 0x7f130d89
 
-    filled-new-array {v1}, [Lkl3;
+.field public static tt_control_create_chat:I = 0x7f130d8a
 
-    move-result-object v1
+.field public static tt_control_create_chat_admin:I = 0x7f130d8b
 
-    invoke-virtual {p1, v1}, Lil3;->a([Lkl3;)V
+.field public static tt_control_create_chat_f:I = 0x7f130d8c
 
-    invoke-virtual {p1}, Lil3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+.field public static tt_control_create_chat_m:I = 0x7f130d8d
 
-    move-result-object v5
+.field public static tt_control_create_chat_you:I = 0x7f130d8e
 
-    invoke-virtual {v5, v0}, Ljz3;->setTargetController(Ljz3;)V
+.field public static tt_control_join_by_link:I = 0x7f130d8f
 
-    invoke-virtual {v5, v0}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+.field public static tt_control_join_by_link_f:I = 0x7f130d90
 
-    move-object p1, v0
+.field public static tt_control_join_by_link_m:I = 0x7f130d91
 
-    :goto_0
-    invoke-virtual {p1}, Ljz3;->getParentController()Ljz3;
+.field public static tt_control_join_by_link_you:I = 0x7f130d92
 
-    move-result-object v1
+.field public static tt_control_leave_chat:I = 0x7f130d93
 
-    if-eqz v1, :cond_2
+.field public static tt_control_leave_chat_f:I = 0x7f130d94
 
-    invoke-virtual {p1}, Ljz3;->getParentController()Ljz3;
+.field public static tt_control_leave_chat_m:I = 0x7f130d95
 
-    move-result-object p1
+.field public static tt_control_leave_chat_you:I = 0x7f130d96
 
-    goto :goto_0
+.field public static tt_control_remove_icon:I = 0x7f130d97
 
-    :cond_2
-    instance-of v1, p1, Lt6d;
+.field public static tt_control_remove_icon_admin:I = 0x7f130d98
 
-    if-eqz v1, :cond_3
+.field public static tt_control_remove_icon_f:I = 0x7f130d99
 
-    check-cast p1, Lt6d;
+.field public static tt_control_remove_icon_m:I = 0x7f130d9a
 
-    goto :goto_1
+.field public static tt_control_remove_icon_you:I = 0x7f130d9b
 
-    :cond_3
-    move-object p1, v2
+.field public static tt_control_remove_title:I = 0x7f130d9c
 
-    :goto_1
-    if-eqz p1, :cond_4
+.field public static tt_control_remove_title_admin:I = 0x7f130d9d
 
-    invoke-interface {p1}, Lt6d;->f0()Ln6d;
+.field public static tt_control_remove_title_f:I = 0x7f130d9e
 
-    move-result-object v2
+.field public static tt_control_remove_title_m:I = 0x7f130d9f
 
-    :cond_4
-    invoke-virtual {v5, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
+.field public static tt_control_remove_title_you:I = 0x7f130da0
 
-    if-eqz v2, :cond_6
+.field public static tt_control_user_add:I = 0x7f130da1
 
-    new-instance v4, Lq6d;
+.field public static tt_control_user_add_f:I = 0x7f130da2
 
-    const/4 v9, 0x0
+.field public static tt_control_user_add_m:I = 0x7f130da3
 
-    const/4 v10, -0x1
+.field public static tt_control_user_add_you:I = 0x7f130da4
 
-    const/4 v6, 0x0
+.field public static tt_control_user_add_you_f:I = 0x7f130da5
 
-    const/4 v7, 0x0
+.field public static tt_control_user_add_you_m:I = 0x7f130da6
 
-    const/4 v8, 0x0
+.field public static tt_control_user_remove:I = 0x7f130da7
 
-    invoke-direct/range {v4 .. v10}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
+.field public static tt_control_user_remove_f:I = 0x7f130da8
 
-    const/4 p1, 0x0
+.field public static tt_control_user_remove_m:I = 0x7f130da9
 
-    const-string v0, "BottomSheetWidget"
+.field public static tt_control_user_remove_you_f:I = 0x7f130daa
 
-    invoke-static {p1, v4, v3, v0}, Lsw1;->t(ZLq6d;ZLjava/lang/String;)V
+.field public static tt_control_user_remove_you_m:I = 0x7f130dab
 
-    invoke-virtual {v2, v4}, Ln6d;->H(Lq6d;)V
+.field public static tt_control_you:I = 0x7f130dac
 
-    goto :goto_2
+.field public static tt_control_you_add_user:I = 0x7f130dad
 
-    :cond_5
-    sget-object v0, Lasc;->a:Lasc;
+.field public static tt_control_you_remove_user:I = 0x7f130dae
 
-    invoke-static {p1, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static tt_dates_day_before_yesterday:I = 0x7f130daf
 
-    move-result p1
+.field public static tt_dates_days_last_seen:I = 0x7f130db0
 
-    if-eqz p1, :cond_7
+.field public static tt_dates_full_last_seen_f:I = 0x7f130db1
 
-    iget-object p1, p0, Lbtc;->Z:Landroid/view/View;
+.field public static tt_dates_full_last_seen_m:I = 0x7f130db2
 
-    sget-object v0, Ltr6;->c:Ltr6;
+.field public static tt_dates_full_last_seen_u:I = 0x7f130db3
 
-    invoke-static {p1, v0}, Lwy8;->t(Landroid/view/View;Lur6;)Z
+.field public static tt_dates_full_last_update:I = 0x7f130db4
 
-    :cond_6
-    :goto_2
-    sget-object p1, Laxf;->a:Laxf;
+.field public static tt_dates_full_live_location_end:I = 0x7f130db5
 
-    return-object p1
+.field public static tt_dates_hours_last_seen:I = 0x7f130db6
 
-    :cond_7
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+.field public static tt_dates_minutes_last_seen:I = 0x7f130db7
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+.field public static tt_dates_months_last_seen:I = 0x7f130db8
 
-    throw p1
-.end method
+.field public static tt_dates_right_now:I = 0x7f130db9
+
+.field public static tt_dates_right_now_last_seen_f:I = 0x7f130dba
+
+.field public static tt_dates_right_now_last_seen_m:I = 0x7f130dbb
+
+.field public static tt_dates_right_now_last_seen_u:I = 0x7f130dbc
+
+.field public static tt_dates_right_now_last_update:I = 0x7f130dbd
+
+.field public static tt_dates_right_now_live_location_end:I = 0x7f130dbe
+
+.field public static tt_dates_today:I = 0x7f130dbf
+
+.field public static tt_dates_today_at:I = 0x7f130dc0
+
+.field public static tt_dates_weeks_last_seen:I = 0x7f130dc1
+
+.field public static tt_dates_yesterday:I = 0x7f130dc2
+
+.field public static tt_dates_yesterday_at:I = 0x7f130dc3
+
+.field public static tt_dates_yesterday_at_last_seen_f:I = 0x7f130dc4
+
+.field public static tt_dates_yesterday_at_last_seen_m:I = 0x7f130dc5
+
+.field public static tt_dates_yesterday_at_last_seen_no_time:I = 0x7f130dc6
+
+.field public static tt_dates_yesterday_at_last_seen_u:I = 0x7f130dc7
+
+.field public static tt_dates_yesterday_format:I = 0x7f130dc8
+
+.field public static tt_dates_yesterday_last_update:I = 0x7f130dc9
+
+.field public static tt_dates_yesterday_live_location_end:I = 0x7f130dca
+
+.field public static tt_direct_reply_message_sent:I = 0x7f130dcb
+
+.field public static tt_email_invite_body:I = 0x7f130dcc
+
+.field public static tt_email_invite_subject:I = 0x7f130dcd
+
+.field public static tt_file:I = 0x7f130dce
+
+.field public static tt_file_size_unit_b:I = 0x7f130dcf
+
+.field public static tt_file_size_unit_gb:I = 0x7f130dd0
+
+.field public static tt_file_size_unit_kb:I = 0x7f130dd1
+
+.field public static tt_file_size_unit_mb:I = 0x7f130dd2
+
+.field public static tt_file_size_unit_tb:I = 0x7f130dd3
+
+.field public static tt_forwarded_message:I = 0x7f130dd4
+
+.field public static tt_forwarded_message_patten:I = 0x7f130dd5
+
+.field public static tt_game:I = 0x7f130dd6
+
+.field public static tt_gif:I = 0x7f130dd7
+
+.field public static tt_in_chat:I = 0x7f130dd8
+
+.field public static tt_keyboard:I = 0x7f130dd9
+
+.field public static tt_less_minute_left:I = 0x7f130dda
+
+.field public static tt_link:I = 0x7f130ddb
+
+.field public static tt_link_acs:I = 0x7f130ddc
+
+.field public static tt_live_location:I = 0x7f130ddd
+
+.field public static tt_live_location_another_device:I = 0x7f130dde
+
+.field public static tt_live_location_restart:I = 0x7f130ddf
+
+.field public static tt_live_location_sharing:I = 0x7f130de0
+
+.field public static tt_live_location_sharing_dialog:I = 0x7f130de1
+
+.field public static tt_live_location_updating:I = 0x7f130de2
+
+.field public static tt_location:I = 0x7f130de3
+
+.field public static tt_location_max_timeout:I = 0x7f130de4
+
+.field public static tt_location_no_permission_notification:I = 0x7f130de5
+
+.field public static tt_mark_as_read:I = 0x7f130de6
+
+.field public static tt_mentioned_message_patten:I = 0x7f130de7
+
+.field public static tt_message_send_error:I = 0x7f130de8
+
+.field public static tt_message_sent_chat:I = 0x7f130de9
+
+.field public static tt_message_sent_chat_f:I = 0x7f130dea
+
+.field public static tt_message_sent_chat_m:I = 0x7f130deb
+
+.field public static tt_message_sent_dialog:I = 0x7f130dec
+
+.field public static tt_message_sent_dialog_f:I = 0x7f130ded
+
+.field public static tt_message_sent_dialog_m:I = 0x7f130dee
+
+.field public static tt_music:I = 0x7f130def
+
+.field public static tt_new_message:I = 0x7f130df0
+
+.field public static tt_no_subscribers:I = 0x7f130df1
+
+.field public static tt_notif_category_active_calls:I = 0x7f130df2
+
+.field public static tt_notif_category_bg_data_restricted_notif:I = 0x7f130df3
+
+.field public static tt_notif_category_chats:I = 0x7f130df4
+
+.field public static tt_notif_category_dialogs:I = 0x7f130df5
+
+.field public static tt_notif_category_drafts:I = 0x7f130df6
+
+.field public static tt_notif_category_events:I = 0x7f130df7
+
+.field public static tt_notif_category_file_loading:I = 0x7f130df8
+
+.field public static tt_notif_category_group_calls:I = 0x7f130df9
+
+.field public static tt_notif_category_group_chats:I = 0x7f130dfa
+
+.field public static tt_notif_category_group_other:I = 0x7f130dfb
+
+.field public static tt_notif_category_inapp:I = 0x7f130dfc
+
+.field public static tt_notif_category_incoming_calls:I = 0x7f130dfd
+
+.field public static tt_notif_category_live_location:I = 0x7f130dfe
+
+.field public static tt_notif_category_media:I = 0x7f130dff
+
+.field public static tt_notif_category_misc:I = 0x7f130e00
+
+.field public static tt_notif_category_silent:I = 0x7f130e01
+
+.field public static tt_notif_category_video:I = 0x7f130e02
+
+.field public static tt_notification_file_downloading_title:I = 0x7f130e03
+
+.field public static tt_notification_file_uploading_title:I = 0x7f130e04
+
+.field public static tt_notification_text_when_bg_data_restricted:I = 0x7f130e05
+
+.field public static tt_of:I = 0x7f130e06
+
+.field public static tt_off:I = 0x7f130e07
+
+.field public static tt_ok_ru_group:I = 0x7f130e08
+
+.field public static tt_photo:I = 0x7f130e09
+
+.field public static tt_photo_and_video:I = 0x7f130e0a
+
+.field public static tt_pin_lock_always:I = 0x7f130e0b
+
+.field public static tt_present:I = 0x7f130e0c
+
+.field public static tt_present_accepted:I = 0x7f130e0d
+
+.field public static tt_privacy_restricted_dialog:I = 0x7f130e0e
+
+.field public static tt_replied_message_patten:I = 0x7f130e0f
+
+.field public static tt_reply:I = 0x7f130e10
+
+.field public static tt_scheduled_message_send_failure:I = 0x7f130e11
+
+.field public static tt_scheduled_message_send_success:I = 0x7f130e12
+
+.field public static tt_smile:I = 0x7f130e13
+
+.field public static tt_smiles:I = 0x7f130e14
+
+.field public static tt_sms_invite_text:I = 0x7f130e15
+
+.field public static tt_sticker:I = 0x7f130e16
+
+.field public static tt_stop_live_location:I = 0x7f130e17
+
+.field public static tt_typing:I = 0x7f130e18
+
+.field public static tt_typing_and:I = 0x7f130e19
+
+.field public static tt_typing_audio:I = 0x7f130e1a
+
+.field public static tt_typing_file:I = 0x7f130e1b
+
+.field public static tt_typing_photo:I = 0x7f130e1c
+
+.field public static tt_typing_sticker:I = 0x7f130e1d
+
+.field public static tt_typing_video:I = 0x7f130e1e
+
+.field public static tt_typing_video_message:I = 0x7f130e1f
+
+.field public static tt_unbind_ok_deleted_user:I = 0x7f130e20
+
+.field public static tt_video:I = 0x7f130e21
+
+.field public static tt_warning_low_storage_space:I = 0x7f130e22
+
+.field public static tt_worker_attach_upload:I = 0x7f130e23
+
+.field public static tt_worker_cancel:I = 0x7f130e24
+
+.field public static tt_worker_draft_sync:I = 0x7f130e25
+
+.field public static tt_worker_gif_upload:I = 0x7f130e26
+
+.field public static tt_you:I = 0x7f130e27
+
+.field public static tt_you_in_subtitle:I = 0x7f130e28
+
+.field public static tt_you_send_message:I = 0x7f130e29
+
+.field public static web_scheme:I = 0x7f130e80

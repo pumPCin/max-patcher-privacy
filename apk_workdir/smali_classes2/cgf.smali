@@ -1,79 +1,50 @@
-.class public abstract Lcgf;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lcgf;
+.super Lk14;
 
 
-# static fields
-.field public static final a:Lh4f;
+# instance fields
+.field public X:I
 
-.field public static final b:Lh4f;
+.field public Y:Lby5;
+
+.field public final synthetic Z:Ldgf;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ldgf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lqoe;
+    iput-object p1, p0, Lcgf;->Z:Ldgf;
 
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lqoe;-><init>(I)V
-
-    new-instance v1, Lh4f;
-
-    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
-
-    sput-object v1, Lcgf;->a:Lh4f;
-
-    new-instance v0, Lqoe;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lqoe;-><init>(I)V
-
-    new-instance v1, Lh4f;
-
-    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
-
-    sput-object v1, Lcgf;->b:Lh4f;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
-    .locals 3
 
-    const/16 v0, 0x100
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    iput-object p1, p0, Lcgf;->o:Ljava/lang/Object;
 
-    invoke-static {v0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    iget p1, p0, Lcgf;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    new-instance v1, Landroid/graphics/Canvas;
+    or-int/2addr p1, v0
 
-    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    iput p1, p0, Lcgf;->X:I
 
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    iget-object p1, p0, Lcgf;->Z:Ldgf;
 
-    move-result p0
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, p0}, Landroid/graphics/Canvas;->drawColor(I)V
+    invoke-virtual {p1, v0, p0}, Ldgf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    new-instance p0, Ljava/io/ByteArrayOutputStream;
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
-
-    move-result v1
-
-    invoke-direct {p0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
-
-    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
-
-    const/16 v2, 0x64
-
-    invoke-virtual {v0, v1, v2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    return-object p0
+    return-object p1
 .end method

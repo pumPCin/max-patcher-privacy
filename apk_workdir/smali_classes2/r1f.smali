@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzvb;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lorg/webrtc/SurfaceTextureHelper;
+.field public final synthetic b:Ljava/lang/Long;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+.method public synthetic constructor <init>(Ljava/lang/Long;I)V
     .locals 0
 
     iput p2, p0, Lr1f;->a:I
 
-    iput-object p1, p0, Lr1f;->b:Lorg/webrtc/SurfaceTextureHelper;
+    iput-object p1, p0, Lr1f;->b:Ljava/lang/Long;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,46 +27,66 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final test(Ljava/lang/Object;)Z
+    .locals 4
 
     iget v0, p0, Lr1f;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lr1f;->b:Lorg/webrtc/SurfaceTextureHelper;
+    check-cast p1, Lv2f;
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->g(Lorg/webrtc/SurfaceTextureHelper;)V
+    iget-wide v0, p1, Lv2f;->a:J
 
-    return-void
+    iget-object p1, p0, Lr1f;->b:Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
 
     :pswitch_0
-    iget-object v0, p0, Lr1f;->b:Lorg/webrtc/SurfaceTextureHelper;
+    check-cast p1, Li1f;
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->a(Lorg/webrtc/SurfaceTextureHelper;)V
+    iget-wide v0, p1, Li1f;->a:J
 
-    return-void
+    iget-object p1, p0, Lr1f;->b:Ljava/lang/Long;
 
-    :pswitch_1
-    iget-object v0, p0, Lr1f;->b:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->b(Lorg/webrtc/SurfaceTextureHelper;)V
+    move-result-wide v2
 
-    return-void
+    cmp-long p1, v0, v2
 
-    :pswitch_2
-    iget-object v0, p0, Lr1f;->b:Lorg/webrtc/SurfaceTextureHelper;
+    if-nez p1, :cond_1
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->c(Lorg/webrtc/SurfaceTextureHelper;)V
+    const/4 p1, 0x1
 
-    return-void
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

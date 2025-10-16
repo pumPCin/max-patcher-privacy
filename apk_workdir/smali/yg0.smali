@@ -2,166 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzg0;
+
 
 # instance fields
-.field public final a:Landroid/app/Application;
-
-.field public final b:Lt6e;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Lq8b;
-
-.field public final e:Lq8b;
-
-.field public final f:Lpg0;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Liv0;Le7f;)V
-    .locals 1
+.method public constructor <init>(Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyg0;->a:Landroid/app/Application;
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x7
-
-    invoke-static {p1, p1, v0}, Lu6e;->b(III)Lt6e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyg0;->b:Lt6e;
-
-    check-cast p3, Lmka;
-
-    invoke-virtual {p3}, Lmka;->c()Lz68;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lz68;->getImmediate()Lz68;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyg0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Lq8b;
-
-    sget-object p3, Lr8b;->f:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Lq8b;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lyg0;->d:Lq8b;
-
-    new-instance p1, Lq8b;
-
-    sget-object p3, Lr8b;->l:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Lq8b;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lyg0;->e:Lq8b;
-
-    new-instance p1, Lpg0;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p3, p0}, Lpg0;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lyg0;->f:Lpg0;
-
-    invoke-virtual {p2, p0}, Liv0;->d(Ljava/lang/Object;)V
+    iput-boolean p1, p0, Lyg0;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lbx3;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
 
-    .line 3
-    new-instance p1, Lsg0;
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, p0, v0}, Lsg0;-><init>(Lyg0;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lyg0;
 
-    iget-object v2, p0, Lyg0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x0
 
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lyg0;
+
+    iget-boolean v1, p0, Lyg0;->a:Z
+
+    iget-boolean p1, p1, Lyg0;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final onEvent(Loyf;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final hashCode()I
+    .locals 1
 
-    .line 4
-    new-instance p1, Ltg0;
+    iget-boolean v0, p0, Lyg0;->a:Z
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-direct {p1, p0, v0}, Ltg0;-><init>(Lyg0;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lyg0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    return-void
+    return v0
 .end method
 
-.method public final onEvent(Lr38;)V
+.method public final toString()Ljava/lang/String;
     .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
 
-    .line 1
-    new-instance p1, Lqg0;
+    const-string v0, "NotificationsPermissionChange(isGranted="
 
-    const/4 v0, 0x0
+    const-string v1, ")"
 
-    invoke-direct {p1, p0, v0}, Lqg0;-><init>(Lyg0;Lkotlin/coroutines/Continuation;)V
+    iget-boolean v2, p0, Lyg0;->a:Z
 
-    const/4 v1, 0x3
+    invoke-static {v0, v1, v2}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    iget-object v2, p0, Lyg0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    move-result-object v0
 
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    return-void
-.end method
-
-.method public final onEvent(Lvab;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
-
-    .line 2
-    new-instance p1, Lrg0;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lrg0;-><init>(Lyg0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lyg0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    return-void
+    return-object v0
 .end method

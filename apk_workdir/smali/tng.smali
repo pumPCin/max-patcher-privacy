@@ -1,308 +1,175 @@
-.class public final synthetic Ltng;
+.class public final Ltng;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Landroid/view/Choreographer$FrameCallback;
+.implements Landroid/os/Handler$Callback;
+
+
+# static fields
+.field public static final X:Ltng;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public volatile a:J
 
-.field public final synthetic b:Lung;
+.field public final b:Landroid/os/Handler;
+
+.field public c:Landroid/view/Choreographer;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lung;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Ltng;->a:I
+    new-instance v0, Ltng;
 
-    iput-object p1, p0, Ltng;->b:Lung;
+    invoke-direct {v0}, Ltng;-><init>()V
+
+    sput-object v0, Ltng;->X:Ltng;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Ltng;->a:J
+
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "ExoPlayer:FrameReleaseChoreographer"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-direct {v1, v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object v1, p0, Ltng;->b:Landroid/os/Handler;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 14
+.method public final doFrame(J)V
+    .locals 2
 
-    iget v0, p0, Ltng;->a:I
+    iput-wide p1, p0, Ltng;->a:J
 
-    const/16 v1, 0x8
+    iget-object p1, p0, Ltng;->c:Landroid/view/Choreographer;
 
-    const/4 v2, 0x1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v3, 0x0
+    const-wide/16 v0, 0x1f4
 
-    const/4 v4, 0x2
+    invoke-virtual {p1, p0, v0, v1}, Landroid/view/Choreographer;->postFrameCallbackDelayed(Landroid/view/Choreographer$FrameCallback;J)V
 
-    const/16 v5, 0x28
+    return-void
+.end method
 
-    sget-object v6, Lrw4;->t0:Lss6;
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 3
 
-    iget-object v7, p0, Ltng;->b:Lung;
+    iget p1, p1, Landroid/os/Message;->what:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x1
 
-    iget-object v0, v7, Lung;->a:Landroid/content/Context;
+    if-eq p1, v0, :cond_4
 
-    sget v7, Ldia;->c0:I
+    const/4 v1, 0x2
 
-    invoke-static {v0, v7}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    if-eq p1, v1, :cond_2
 
-    move-result-object v7
+    const/4 v1, 0x3
 
-    invoke-virtual {v7}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    if-eq p1, v1, :cond_0
 
-    move-result-object v7
+    const/4 p1, 0x0
 
-    invoke-virtual {v6, v0}, Lss6;->w(Landroid/content/Context;)Lzma;
+    return p1
 
-    move-result-object v0
+    :cond_0
+    iget-object p1, p0, Ltng;->c:Landroid/view/Choreographer;
 
-    iget-object v0, v0, Lzma;->c:Llwa;
+    if-eqz p1, :cond_1
 
-    invoke-interface {v0}, Llwa;->getIcon()Lg17;
+    iget v1, p0, Ltng;->o:I
 
-    move-result-object v0
+    sub-int/2addr v1, v0
 
-    iget v0, v0, Lg17;->c:I
+    iput v1, p0, Ltng;->o:I
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    if-nez v1, :cond_1
 
-    move-result-object v0
+    invoke-virtual {p1, p0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
-    invoke-virtual {v7, v0}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+    iput-wide v1, p0, Ltng;->a:J
 
-    new-instance v6, Landroid/graphics/drawable/shapes/OvalShape;
+    :cond_1
+    return v0
 
-    invoke-direct {v6}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+    :cond_2
+    iget-object p1, p0, Ltng;->c:Landroid/view/Choreographer;
 
-    invoke-direct {v0, v6}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+    iget v1, p0, Ltng;->o:I
 
-    move-result-object v6
+    add-int/2addr v1, v0
 
-    invoke-virtual {v6, v5}, Landroid/graphics/Paint;->setAlpha(I)V
+    iput v1, p0, Ltng;->o:I
 
-    new-instance v8, Landroid/graphics/drawable/LayerDrawable;
+    if-ne v1, v0, :cond_3
 
-    new-array v4, v4, [Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
-    aput-object v0, v4, v3
+    :cond_3
+    return v0
 
-    aput-object v7, v4, v2
+    :cond_4
+    :try_start_0
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
-    invoke-direct {v8, v4}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+    move-result-object p1
 
-    int-to-float v0, v1
+    iput-object p1, p0, Ltng;->c:Landroid/view/Choreographer;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    goto :goto_0
 
-    move-result-object v1
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const-string v1, "VideoFrameReleaseHelper"
 
-    move-result-object v1
+    const-string v2, "Vsync sampling disabled due to platform error"
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    invoke-static {v1, v2, p1}, Ltxh;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v10
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v11
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v12
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Li8e;->I(F)I
-
-    move-result v13
-
-    const/4 v9, 0x1
-
-    invoke-virtual/range {v8 .. v13}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
-
-    return-object v8
-
-    :pswitch_0
-    iget-object v0, v7, Lung;->a:Landroid/content/Context;
-
-    sget v7, Ldia;->w:I
-
-    invoke-static {v0, v7}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v0}, Lss6;->w(Landroid/content/Context;)Lzma;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lzma;->c:Llwa;
-
-    invoke-interface {v0}, Llwa;->getIcon()Lg17;
-
-    move-result-object v0
-
-    iget v0, v0, Lg17;->e:I
-
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    invoke-virtual {v7, v0}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
-
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v6, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v6}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v6}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v5}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    new-instance v8, Landroid/graphics/drawable/LayerDrawable;
-
-    new-array v4, v4, [Landroid/graphics/drawable/Drawable;
-
-    aput-object v0, v4, v3
-
-    aput-object v7, v4, v2
-
-    invoke-direct {v8, v4}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    int-to-float v0, v1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v10
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v11
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v12
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Li8e;->I(F)I
-
-    move-result v13
-
-    const/4 v9, 0x1
-
-    invoke-virtual/range {v8 .. v13}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
-
-    return-object v8
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    return v0
 .end method

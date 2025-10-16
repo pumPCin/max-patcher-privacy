@@ -1,46 +1,72 @@
 .class public final Lpl9;
-.super Landroid/text/style/TypefaceSpan;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lda8;
+.implements Lei6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lim9;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lim9;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-string v0, "monospace"
+    iput-object p1, p0, Lpl9;->X:Lim9;
 
-    invoke-direct {p0, v0}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x2
 
-    const/4 v0, 0x5
-
-    iput v0, p0, Lpl9;->a:I
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final copy()Lo14;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lpl9;
+    check-cast p1, Lb54;
 
-    invoke-direct {v0}, Lpl9;-><init>()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object v0
+    invoke-virtual {p0, p1, p2}, Lpl9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lpl9;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lpl9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final getType()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Lpl9;->a:I
+    new-instance p1, Lpl9;
 
-    return v0
+    iget-object v0, p0, Lpl9;->X:Lim9;
+
+    invoke-direct {p1, v0, p2}, Lpl9;-><init>(Lim9;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpl9;->X:Lim9;
+
+    invoke-static {p1}, Lim9;->v(Lim9;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

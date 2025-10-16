@@ -27,16 +27,16 @@
     .end annotation
 .end field
 
-.field public final reason:Lpr6;
+.field public final reason:Lsv6;
 
 
 # direct methods
-.method public constructor <init>(Lpr6;Ljava/util/Set;Ljava/lang/String;)V
+.method public constructor <init>(Lsv6;Ljava/util/Set;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lpr6;",
+            "Lsv6;",
             "Ljava/util/Set<",
             "Lru/ok/android/externcalls/sdk/events/HangupHint;",
             ">;",
@@ -47,7 +47,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;->reason:Lpr6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;->reason:Lsv6;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener$CallEndInfo;->hints:Ljava/util/Set;
 

@@ -1,74 +1,48 @@
-.class public final synthetic Li13;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ltd6;
+.class public final Li13;
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Le7f;
+.field public final synthetic Y:Lc13;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Le7f;I)V
+.method public constructor <init>(Lc13;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Li13;->a:I
+    iput-object p1, p0, Li13;->Y:Lc13;
 
-    iput-object p1, p0, Li13;->b:Le7f;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Li13;->a:I
+    iput-object p1, p0, Li13;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Li13;->X:I
 
-    new-instance v0, Lan6;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Li13;->b:Le7f;
+    or-int/2addr p1, v0
 
-    check-cast v1, Lmka;
+    iput p1, p0, Li13;->X:I
 
-    invoke-virtual {v1}, Lmka;->a()Lh24;
+    iget-object p1, p0, Li13;->Y:Lc13;
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p1, v0, p0}, Lc13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Lan6;-><init>(Lkotlinx/coroutines/internal/ContextScope;)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Li13;->b:Le7f;
-
-    check-cast v0, Lmka;
-
-    invoke-virtual {v0}, Lmka;->b()Lh24;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

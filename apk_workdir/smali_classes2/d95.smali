@@ -4,68 +4,47 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:I
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:I
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:I
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ljava/lang/String;
-
-.field public final l:Ljava/lang/String;
-
-.field public final m:Ljava/lang/String;
-
-.field public final n:Ljava/util/Locale;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
-    .locals 0
+.method public constructor <init>(IIII)V
+    .locals 2
 
+    and-int/lit8 v0, p4, 0x1
+
+    if-eqz v0, :cond_0
+
+    const/high16 p1, -0x80000000
+
+    :cond_0
+    and-int/lit8 v0, p4, 0x2
+
+    const/4 v1, -0x1
+
+    if-eqz v0, :cond_1
+
+    move p2, v1
+
+    :cond_1
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_2
+
+    move p3, v1
+
+    :cond_2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ld95;->a:Ljava/lang/String;
+    iput p1, p0, Ld95;->a:I
 
-    iput-object p2, p0, Ld95;->b:Ljava/lang/String;
+    iput p2, p0, Ld95;->b:I
 
-    iput-object p3, p0, Ld95;->c:Ljava/lang/String;
-
-    iput p4, p0, Ld95;->d:I
-
-    iput-object p5, p0, Ld95;->e:Ljava/lang/String;
-
-    iput-object p6, p0, Ld95;->f:Ljava/lang/String;
-
-    iput-object p7, p0, Ld95;->g:Ljava/lang/String;
-
-    iput p8, p0, Ld95;->h:I
-
-    iput-object p9, p0, Ld95;->i:Ljava/lang/String;
-
-    iput-object p10, p0, Ld95;->j:Ljava/lang/Integer;
-
-    iput-object p11, p0, Ld95;->k:Ljava/lang/String;
-
-    iput-object p12, p0, Ld95;->l:Ljava/lang/String;
-
-    iput-object p13, p0, Ld95;->m:Ljava/lang/String;
-
-    iput-object p14, p0, Ld95;->n:Ljava/util/Locale;
+    iput p3, p0, Ld95;->c:I
 
     return-void
 .end method

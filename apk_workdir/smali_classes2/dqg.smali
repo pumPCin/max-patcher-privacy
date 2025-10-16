@@ -1,53 +1,52 @@
 .class public final Ldqg;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:Lln0;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lvqg;
-
-.field public o:Lvqg;
-
-.field public r0:I
+# interfaces
+.implements Ln18;
 
 
-# direct methods
-.method public constructor <init>(Lvqg;Lwy3;)V
+# virtual methods
+.method public final a()V
     .locals 0
-
-    iput-object p1, p0, Ldqg;->Z:Lvqg;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public final b(Ljava/lang/Long;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
+
+.method public final c()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d()Lzx5;
     .locals 1
 
-    iput-object p1, p0, Ldqg;->Y:Ljava/lang/Object;
+    sget-object v0, Lq95;->a:Lq95;
 
-    iget p1, p0, Ldqg;->r0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final e()V
+    .locals 0
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Ldqg;->r0:I
+.method public final release()V
+    .locals 0
 
-    iget-object p1, p0, Ldqg;->Z:Lvqg;
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public final seekTo(J)V
+    .locals 0
 
-    invoke-static {p1, v0, p0}, Lvqg;->a(Lvqg;Lln0;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

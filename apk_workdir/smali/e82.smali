@@ -1,39 +1,23 @@
-.class public final Le82;
-.super Lc82;
+.class public interface abstract Le82;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lh0e;
+.implements Lb0d;
 
 
 # static fields
-.field public static final a:Le82;
+.field public static final l:Ld82;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Le82;
+    sget-object v0, Ld82;->a:Ld82;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Le82;->a:Le82;
+    sput-object v0, Le82;->l:Ld82;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(C)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CharMatcher.none()"
-
-    return-object v0
 .end method

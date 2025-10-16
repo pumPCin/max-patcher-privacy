@@ -40,7 +40,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lyg1;",
+            "Lzh1;",
             ">;",
             "Ljava/lang/Runnable;",
             "Ljava/lang/Runnable;",
@@ -55,13 +55,13 @@
     return-void
 .end method
 
-.method public withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Loo3;Ljava/lang/Runnable;)V
+.method public withInternalId(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/lang/Runnable;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Loo3;",
+            "Lfr3;",
             "Ljava/lang/Runnable;",
             ")V"
         }
@@ -69,7 +69,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$5;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->x0(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;Loo3;Ljava/lang/Runnable;)V
+    invoke-static {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/ConversationImpl;->x0(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lfr3;Ljava/lang/Runnable;)V
 
     return-void
 .end method

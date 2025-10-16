@@ -1,84 +1,86 @@
 .class public final Lagd;
-.super Llw2;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:Lnm1;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Lone/me/android/root/RootController;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lnm1;ZLone/me/android/root/RootController;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lagd;->a:Lnm1;
 
-    iput-boolean p1, p0, Lagd;->a:Z
+    iput-boolean p2, p0, Lagd;->b:Z
+
+    iput-object p3, p0, Lagd;->c:Lone/me/android/root/RootController;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    sget-object p1, Lone/me/android/root/RootController;->s0:[Lwq7;
 
-    goto :goto_1
+    iget-object p1, p0, Lagd;->c:Lone/me/android/root/RootController;
 
-    :cond_0
-    instance-of v0, p1, Lagd;
+    iget-boolean v0, p0, Lagd;->b:Z
 
-    if-nez v0, :cond_1
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->H0(Z)V
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lagd;
-
-    iget-boolean v0, p0, Lagd;->a:Z
-
-    iget-boolean p1, p1, Lagd;->a:Z
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-boolean v0, p0, Lagd;->a:Z
+    sget-object p1, Lone/me/android/root/RootController;->s0:[Lwq7;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object p1, p0, Lagd;->c:Lone/me/android/root/RootController;
 
-    move-result v0
+    iget-boolean v0, p0, Lagd;->b:Z
 
-    return v0
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->H0(Z)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 3
 
-    const-string v0, "ScrollToTop(afterPin="
+    iget-boolean p1, p0, Lagd;->b:Z
 
-    const-string v1, ")"
+    iget-object v0, p0, Lagd;->a:Lnm1;
 
-    iget-boolean v2, p0, Lagd;->a:Z
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lnm1;->b(Z)V
 
-    move-result-object v0
+    :cond_0
+    sget-object v0, Lone/me/android/root/RootController;->s0:[Lwq7;
 
-    return-object v0
+    iget-object v0, p0, Lagd;->c:Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->J0()Lw62;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
+
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->L0(Z)V
+
+    return-void
 .end method

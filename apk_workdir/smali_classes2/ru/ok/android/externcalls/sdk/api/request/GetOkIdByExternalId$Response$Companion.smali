@@ -22,16 +22,16 @@
         "",
         "<init>",
         "()V",
-        "Lrk7;",
+        "Lyp7;",
         "reader",
         "Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;",
         "parse",
-        "(Lrk7;)Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;",
-        "Llk7;",
+        "(Lyp7;)Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;",
+        "Lsp7;",
         "PARSER",
-        "Llk7;",
+        "Lsp7;",
         "getPARSER",
-        "()Llk7;",
+        "()Lsp7;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Laf4;)V
+.method public synthetic constructor <init>(Lvh4;)V
     .locals 0
 
     .line 1
@@ -65,26 +65,26 @@
 
 
 # virtual methods
-.method public final getPARSER()Llk7;
+.method public final getPARSER()Lsp7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Llk7;"
+            "Lsp7;"
         }
     .end annotation
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->access$getPARSER$cp()Llk7;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->access$getPARSER$cp()Lsp7;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final parse(Lrk7;)Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;
+.method public final parse(Lyp7;)Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;
     .locals 7
 
-    invoke-interface {p1}, Lrk7;->s()V
+    invoke-interface {p1}, Lyp7;->s()V
 
     const-wide/16 v0, 0x0
 
@@ -93,13 +93,13 @@
     move-object v3, v2
 
     :goto_0
-    invoke-interface {p1}, Lrk7;->hasNext()Z
+    invoke-interface {p1}, Lyp7;->hasNext()Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    invoke-interface {p1}, Lrk7;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lyp7;->name()Ljava/lang/String;
 
     move-result-object v4
 
@@ -133,7 +133,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-interface {p1}, Lrk7;->w()J
+    invoke-interface {p1}, Lyp7;->w()J
 
     move-result-wide v0
 
@@ -151,7 +151,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
+    invoke-interface {p1}, Lyp7;->B()Ljava/lang/String;
 
     move-result-object v3
 
@@ -167,19 +167,19 @@
     if-nez v4, :cond_5
 
     :goto_1
-    invoke-interface {p1}, Lrk7;->y()V
+    invoke-interface {p1}, Lyp7;->y()V
 
     goto :goto_0
 
     :cond_5
-    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
+    invoke-interface {p1}, Lyp7;->B()Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_0
 
     :cond_6
-    invoke-interface {p1}, Lrk7;->q()V
+    invoke-interface {p1}, Lyp7;->q()V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;
 

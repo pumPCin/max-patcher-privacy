@@ -1,63 +1,78 @@
 .class public final Lbn6;
-.super Ldw9;
+.super Landroid/view/GestureDetector$SimpleOnGestureListener;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lbn6;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Loh6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILoh6;)V
+    .locals 0
 
-    new-instance v0, Lbn6;
+    iput p1, p0, Lbn6;->a:I
 
-    sget-object v1, Laxf;->a:Laxf;
+    iput-object p2, p0, Lbn6;->b:Loh6;
 
-    invoke-direct {v0, v1}, Ldw9;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Lbn6;->b:Lbn6;
+    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onDown(Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p1, p0, Lbn6;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lbn6;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
+    const/4 p1, 0x1
 
     return p1
 
-    :cond_1
-    return v0
+    :pswitch_0
+    const/4 p1, 0x1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    const v0, -0x71daff9a
+    iget p1, p0, Lbn6;->a:I
 
-    return v0
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-object p1, p0, Lbn6;->b:Loh6;
 
-    const-string v0, "GoToAppUpdate"
+    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
 
-    return-object v0
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :pswitch_0
+    iget-object p1, p0, Lbn6;->b:Loh6;
+
+    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

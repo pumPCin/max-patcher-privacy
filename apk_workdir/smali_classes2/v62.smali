@@ -1,135 +1,78 @@
 .class public final Lv62;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lxb9;
+.implements Lei6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lqh6;
 
 
 # direct methods
-.method public static b(Lcdf;Lxcf;Lr82;)Ljava/util/List;
-    .locals 7
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lqh6;)V
+    .locals 0
 
-    new-instance v0, Led2;
+    iput-object p2, p0, Lv62;->Y:Lqh6;
 
-    sget-object v1, Ljk0;->b:Ljk0;
+    const/4 p2, 0x2
 
-    sget-object v2, Lik0;->a:Lik0;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p2, v1, v2}, Lr82;->g(Ljk0;Lik0;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p2}, Lr82;->l0()V
-
-    iget-object v4, p2, Lr82;->w0:Ljava/lang/CharSequence;
-
-    invoke-virtual {p2}, Lr82;->f()J
-
-    move-result-wide v5
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    invoke-direct/range {v0 .. v6}, Led2;-><init>(Lcdf;Lxcf;Ljava/lang/String;Ljava/lang/CharSequence;J)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr82;)Ljava/util/List;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-eqz p1, :cond_2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Lr82;->H()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_2
-
-    invoke-virtual {p1}, Lr82;->b0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget v0, Lgpa;->L0:I
-
-    new-instance v1, Lxcf;
-
-    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
-
-    sget v0, Lgpa;->K0:I
-
-    new-instance v2, Lxcf;
-
-    invoke-direct {v2, v0}, Lxcf;-><init>(I)V
-
-    invoke-static {v1, v2, p1}, Lv62;->b(Lcdf;Lxcf;Lr82;)Ljava/util/List;
+    invoke-virtual {p0, p1, p2}, Lv62;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lv62;
 
-    :cond_0
-    invoke-virtual {p1}, Lr82;->Z()Z
+    sget-object p2, Lzag;->a:Lzag;
 
-    move-result v0
+    invoke-virtual {p1, p2}, Lv62;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    return-object p2
+.end method
 
-    invoke-virtual {p1}, Lr82;->q()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Lv62;
 
-    new-instance v1, Lbdf;
+    iget-object v1, p0, Lv62;->Y:Lqh6;
 
-    invoke-direct {v1, v0}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
+    invoke-direct {v0, p2, v1}, Lv62;-><init>(Lkotlin/coroutines/Continuation;Lqh6;)V
 
-    sget v0, Lgpa;->M0:I
+    iput-object p1, v0, Lv62;->X:Ljava/lang/Object;
 
-    new-instance v2, Lxcf;
+    return-object v0
+.end method
 
-    invoke-direct {v2, v0}, Lxcf;-><init>(I)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {v1, v2, p1}, Lv62;->b(Lcdf;Lxcf;Lr82;)Ljava/util/List;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
+    iget-object p1, p0, Lv62;->X:Ljava/lang/Object;
 
-    return-object p1
+    check-cast p1, Lb4a;
 
-    :cond_1
-    invoke-virtual {p1}, Lr82;->q()Ljava/lang/String;
+    iget-object v0, p0, Lv62;->Y:Lqh6;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lbdf;
-
-    invoke-direct {v1, v0}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
-
-    sget v0, Lgpa;->N0:I
-
-    new-instance v2, Lxcf;
-
-    invoke-direct {v2, v0}, Lxcf;-><init>(I)V
-
-    invoke-static {v1, v2, p1}, Lv62;->b(Lcdf;Lxcf;Lr82;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    sget-object p1, Lo65;->a:Lo65;
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

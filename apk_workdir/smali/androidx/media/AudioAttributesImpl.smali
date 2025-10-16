@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf5g;
+.implements Lnjg;
 
 
 # virtual methods

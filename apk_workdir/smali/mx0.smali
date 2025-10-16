@@ -2,144 +2,70 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
 
+# static fields
+.field public static final a:Ljava/util/UUID;
 
-# instance fields
-.field public final X:Ljava/io/File;
+.field public static final b:Ljava/util/UUID;
 
-.field public final Y:J
+.field public static final c:Ljava/util/UUID;
 
-.field public final a:Ljava/lang/String;
+.field public static final d:Ljava/util/UUID;
 
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:Z
+.field public static final e:Ljava/util/UUID;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJJLjava/io/File;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/UUID;
 
-    iput-object p1, p0, Lmx0;->a:Ljava/lang/String;
+    const-wide/16 v1, 0x0
 
-    iput-wide p2, p0, Lmx0;->b:J
+    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
 
-    iput-wide p4, p0, Lmx0;->c:J
+    sput-object v0, Lmx0;->a:Ljava/util/UUID;
 
-    if-eqz p8, :cond_0
+    new-instance v0, Ljava/util/UUID;
 
-    const/4 p1, 0x1
+    const-wide v1, 0x1077efecc0b24d02L
 
-    goto :goto_0
+    const-wide v3, -0x531cc3e1ad1d04b5L    # -1.8442503140481377E-92
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
 
-    :goto_0
-    iput-boolean p1, p0, Lmx0;->o:Z
+    sput-object v0, Lmx0;->b:Ljava/util/UUID;
 
-    iput-object p8, p0, Lmx0;->X:Ljava/io/File;
+    new-instance v0, Ljava/util/UUID;
 
-    iput-wide p6, p0, Lmx0;->Y:J
+    const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
+
+    const-wide v3, 0x781ab030af78d30eL    # 3.524813189889319E270
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+
+    sput-object v0, Lmx0;->c:Ljava/util/UUID;
+
+    new-instance v0, Ljava/util/UUID;
+
+    const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
+
+    const-wide v3, -0x5c37d8232ae2de13L
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+
+    sput-object v0, Lmx0;->d:Ljava/util/UUID;
+
+    new-instance v0, Ljava/util/UUID;
+
+    const-wide v1, -0x65fb0f8667bfbd7aL
+
+    const-wide v3, -0x546d19a41f77a06bL    # -8.640911267670052E-99
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+
+    sput-object v0, Lmx0;->e:Ljava/util/UUID;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lmx0;)I
-    .locals 4
-
-    iget-object v0, p1, Lmx0;->a:Ljava/lang/String;
-
-    iget-object v1, p0, Lmx0;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p1, p1, Lmx0;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    iget-wide v0, p0, Lmx0;->b:J
-
-    iget-wide v2, p1, Lmx0;->b:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    if-gez p1, :cond_2
-
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Lmx0;
-
-    invoke-virtual {p0, p1}, Lmx0;->a(Lmx0;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lmx0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lmx0;->c:J
-
-    const-string v3, "]"
-
-    invoke-static {v0, v1, v2, v3}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

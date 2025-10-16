@@ -1,73 +1,206 @@
-.class public abstract Lsha;
+.class public final Lsha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcka;
+.implements Lev4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public X:Lev4;
 
-.field public static final c:I
+.field public Y:Z
 
-.field public static final d:I
+.field public final a:Lcka;
 
-.field public static final e:I
+.field public final b:Ler3;
 
-.field public static final f:I
+.field public final c:Ler3;
 
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final o:Lr6;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lcka;Ler3;Ler3;Lr6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsha;->a:Lcka;
+
+    iput-object p2, p0, Lsha;->b:Ler3;
+
+    iput-object p3, p0, Lsha;->c:Ler3;
+
+    iput-object p4, p0, Lsha;->o:Lr6;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
     .locals 1
 
-    sget v0, Lhac;->ic_call_24:I
+    iget-boolean v0, p0, Lsha;->Y:Z
 
-    sput v0, Lsha;->a:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lhac;->ic_call_contact_20:I
+    return-void
 
-    sput v0, Lsha;->b:I
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lsha;->o:Lr6;
 
-    sget v0, Lhac;->ic_call_link_preview_36:I
+    invoke-interface {v0}, Lr6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Lsha;->c:I
+    const/4 v0, 0x1
 
-    sget v0, Lhac;->ic_copy_20:I
+    iput-boolean v0, p0, Lsha;->Y:Z
 
-    sput v0, Lsha;->d:I
+    iget-object v0, p0, Lsha;->a:Lcka;
 
-    sget v0, Lhac;->ic_copy_28:I
+    invoke-interface {v0}, Lcka;->b()V
 
-    sput v0, Lsha;->e:I
+    return-void
 
-    sget v0, Lhac;->ic_link_22:I
+    :catchall_0
+    move-exception v0
 
-    sput v0, Lsha;->f:I
+    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
 
-    sget v0, Lhac;->ic_loading_16:I
+    invoke-virtual {p0, v0}, Lsha;->onError(Ljava/lang/Throwable;)V
 
-    sput v0, Lsha;->g:I
+    return-void
+.end method
 
-    sget v0, Lhac;->ic_open_call_chat_24:I
+.method public final c(Lev4;)V
+    .locals 1
 
-    sput v0, Lsha;->h:I
+    iget-object v0, p0, Lsha;->X:Lev4;
 
-    sget v0, Lhac;->ic_send_link_22:I
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
 
-    sput v0, Lsha;->i:I
+    move-result v0
 
-    sget v0, Lhac;->ic_share_link_20:I
+    if-eqz v0, :cond_0
 
-    sput v0, Lsha;->j:I
+    iput-object p1, p0, Lsha;->X:Lev4;
+
+    iget-object p1, p0, Lsha;->a:Lcka;
+
+    invoke-interface {p1, p0}, Lcka;->c(Lev4;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lsha;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lsha;->b:Ler3;
+
+    invoke-interface {v0, p1}, Ler3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lsha;->a:Lcka;
+
+    invoke-interface {v0, p1}, Lcka;->d(Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lnzi;->b(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lsha;->X:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    invoke-virtual {p0, p1}, Lsha;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Lsha;->X:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Lsha;->X:Lev4;
+
+    invoke-interface {v0}, Lev4;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lsha;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lsha;->Y:Z
+
+    :try_start_0
+    iget-object v0, p0, Lsha;->c:Ler3;
+
+    invoke-interface {v0, p1}, Ler3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    move-object p1, v1
+
+    :goto_0
+    iget-object v0, p0, Lsha;->a:Lcka;
+
+    invoke-interface {v0, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

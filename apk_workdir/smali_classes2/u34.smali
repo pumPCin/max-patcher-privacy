@@ -2,119 +2,200 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv34;
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
+# static fields
+.field public static final a:Lhu7;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhu7;
 
-    iput-wide p1, p0, Lu34;->a:J
+    const/16 v1, 0x8
 
-    iput-wide p3, p0, Lu34;->b:J
+    invoke-direct {v0, v1}, Lhu7;-><init>(I)V
+
+    sput-object v0, Lu34;->a:Lhu7;
 
     return-void
 .end method
 
+.method public static a(Lkt;)V
+    .locals 4
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/4 v0, 0x1
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0}, Lkt;->iterator()Ljava/util/Iterator;
 
-    return v0
+    move-result-object p0
 
     :cond_0
-    instance-of v1, p1, Lu34;
+    :goto_0
+    move-object v1, p0
 
-    const/4 v2, 0x0
+    check-cast v1, Lf2;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1}, Lf2;->hasNext()Z
 
-    return v2
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ln47;
+
+    const-string v3, "Set-Cookie"
+
+    iget-object v2, v2, Ln47;->a:Ljava/lang/String;
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lu34;
+    new-instance p0, Ljava/util/ArrayList;
 
-    iget-wide v3, p0, Lu34;->a:J
+    const/16 v1, 0xa
 
-    iget-wide v5, p1, Lu34;->a:J
+    invoke-static {v0, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
 
-    cmp-long v1, v3, v5
+    move-result v2
 
-    if-eqz v1, :cond_2
+    invoke-direct {p0, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    return v2
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ln47;
+
+    iget-object v2, v2, Ln47;->b:Ljava/lang/String;
+
+    :try_start_0
+    invoke-static {v2}, Ljava/net/HttpCookie;->parse(Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    sget-object v2, Ls95;->a:Ls95;
+
+    :goto_2
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
 
     :cond_2
-    iget-wide v3, p0, Lu34;->b:J
+    invoke-static {p0}, Lcb3;->m(Ljava/util/Collection;)Ljava/util/ArrayList;
 
-    iget-wide v5, p1, Lu34;->b:J
+    move-result-object p0
 
-    cmp-long p1, v3, v5
+    new-instance v0, Ljava/util/ArrayList;
 
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lu34;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lu34;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {p0, v1}, Lcb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    return v1
-.end method
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result-object p0
 
-    const-string v0, "Success(requestId="
+    :goto_3
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v1, ", chatId="
+    move-result v1
 
-    iget-wide v2, p0, Lu34;->a:J
+    if-eqz v1, :cond_3
 
-    invoke-static {v2, v3, v0, v1}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/net/HttpCookie;
+
+    invoke-virtual {v1}, Ljava/net/HttpCookie;->toString()Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_4
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ")"
+    move-object v1, v0
 
-    iget-wide v2, p0, Lu34;->b:J
+    check-cast v1, Ljava/net/HttpCookie;
 
-    invoke-static {v0, v2, v3, v1}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    const-string v2, "vdt"
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/net/HttpCookie;->getName()Ljava/lang/String;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    goto :goto_4
+
+    :cond_5
+    const/4 v0, 0x0
+
+    :goto_4
+    check-cast v0, Ljava/net/HttpCookie;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0}, Ljava/net/HttpCookie;->getName()Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/net/HttpCookie;->getValue()Ljava/lang/String;
+
+    :cond_6
+    return-void
 .end method

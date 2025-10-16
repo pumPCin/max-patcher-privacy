@@ -1,57 +1,71 @@
 .class public final Lzk6;
-.super Ljava/lang/Object;
+.super Lbl6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lyn7;
+# static fields
+.field public static final b:Lzk6;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzk6;
 
-    iput-object p1, p0, Lzk6;->a:Lyn7;
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lbl6;-><init>(I)V
+
+    sput-object v0, Lzk6;->b:Lzk6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lc2f;)Ljava/lang/Object;
-    .locals 2
+.method public final a()Ljava/lang/Long;
+    .locals 1
 
-    new-instance v0, Lc22;
+    const/4 v0, 0x0
 
-    invoke-static {p1}, Lk84;->v(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    invoke-direct {v0, v1, p1}, Lc22;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Lc22;->o()V
+    return v0
 
-    iget-object p1, p0, Lzk6;->a:Lyn7;
+    :cond_0
+    instance-of p1, p1, Lzk6;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    check-cast p1, Lu18;
+    return p1
 
-    new-instance v1, Lyk6;
+    :cond_1
+    return v0
+.end method
 
-    invoke-direct {v1, v0}, Lyk6;-><init>(Lc22;)V
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p1, v1}, Lu18;->a(Lr18;)V
+    const v0, -0x41cf7668
 
-    invoke-virtual {v0}, Lc22;->n()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-object p1
+    const-string v0, "Camera"
+
+    return-object v0
 .end method

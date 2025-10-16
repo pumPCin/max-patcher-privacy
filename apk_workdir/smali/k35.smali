@@ -2,319 +2,255 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Li35;
-
 
 # instance fields
-.field public X:Z
+.field public final a:I
 
-.field public Y:J
+.field public final b:I
 
-.field public a:Ljava/io/InputStream;
+.field public final c:I
 
-.field public final b:Ljava/util/zip/ZipEntry;
+.field public final d:I
 
-.field public final c:Ljava/util/zip/ZipFile;
+.field public final e:I
 
-.field public final o:J
+.field public final f:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)V
-    .locals 2
+.method public synthetic constructor <init>(IIIIII)V
+    .locals 0
+
+    iput p1, p0, Lk35;->a:I
+
+    iput p2, p0, Lk35;->b:I
+
+    iput p3, p0, Lk35;->c:I
+
+    iput p4, p0, Lk35;->d:I
+
+    iput p5, p0, Lk35;->e:I
+
+    iput p6, p0, Lk35;->f:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lk35;->c:Ljava/util/zip/ZipFile;
-
-    iput-object p2, p0, Lk35;->b:Ljava/util/zip/ZipEntry;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lk35;->X:Z
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lk35;->Y:J
-
-    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getSize()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lk35;->o:J
-
-    invoke-virtual {p1, p2}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lk35;->a:Ljava/io/InputStream;
-
-    if-eqz p1, :cond_0
-
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/io/IOException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "\'s InputStream is null"
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
+.method public static a(Ljava/lang/String;)Lk35;
+    .locals 10
 
-# virtual methods
-.method public final a(JLjava/nio/ByteBuffer;)I
-    .locals 9
+    const-string v0, "Format:"
 
-    iget-object v0, p0, Lk35;->a:Ljava/io/InputStream;
-
-    if-eqz v0, :cond_8
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    iget-wide v1, p0, Lk35;->o:J
+    invoke-static {v0}, Lgfi;->b(Z)V
 
-    sub-long v3, v1, p1
+    const/4 v0, 0x7
 
-    const-wide/16 v5, 0x0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    cmp-long v5, v3, v5
+    move-result-object p0
 
-    if-gtz v5, :cond_0
+    const-string v0, ","
 
-    const/4 p1, -0x1
+    invoke-static {p0, v0}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
-    return p1
+    move-result-object p0
+
+    const/4 v0, -0x1
+
+    const/4 v1, 0x0
+
+    move v4, v0
+
+    move v5, v4
+
+    move v6, v5
+
+    move v7, v6
+
+    move v8, v7
+
+    move v2, v1
+
+    :goto_0
+    array-length v3, p0
+
+    if-ge v2, v3, :cond_5
+
+    aget-object v3, p0, v2
+
+    invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lyf8;->i(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v9
+
+    sparse-switch v9, :sswitch_data_0
+
+    :goto_1
+    move v3, v0
+
+    goto :goto_2
+
+    :sswitch_0
+    const-string v9, "style"
+
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    long-to-int v3, v3
+    const/4 v3, 0x4
 
-    if-le v0, v3, :cond_1
+    goto :goto_2
 
-    move v0, v3
+    :sswitch_1
+    const-string v9, "start"
+
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    iget-object v3, p0, Lk35;->a:Ljava/io/InputStream;
+    const/4 v3, 0x3
 
-    const-string v4, "\'s InputStream is null"
+    goto :goto_2
 
-    iget-object v5, p0, Lk35;->b:Ljava/util/zip/ZipEntry;
+    :sswitch_2
+    const-string v9, "layer"
 
-    if-eqz v3, :cond_7
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-wide v6, p0, Lk35;->Y:J
+    move-result v3
 
-    cmp-long v8, p1, v6
-
-    if-nez v8, :cond_2
+    if-nez v3, :cond_2
 
     goto :goto_1
 
     :cond_2
-    cmp-long v8, p1, v1
-
-    if-lez v8, :cond_3
-
-    move-wide p1, v1
-
-    :cond_3
-    cmp-long v1, p1, v6
-
-    if-ltz v1, :cond_4
-
-    sub-long v1, p1, v6
-
-    invoke-virtual {v3, v1, v2}, Ljava/io/InputStream;->skip(J)J
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-
-    iget-object v1, p0, Lk35;->c:Ljava/util/zip/ZipFile;
-
-    invoke-virtual {v1, v5}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lk35;->a:Ljava/io/InputStream;
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {v1, p1, p2}, Ljava/io/InputStream;->skip(J)J
-
-    :goto_0
-    iput-wide p1, p0, Lk35;->Y:J
-
-    :goto_1
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->hasArray()Z
-
-    move-result p1
-
-    const/4 p2, 0x0
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Lk35;->a:Ljava/io/InputStream;
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, p2, v0}, Ljava/io/InputStream;->read([BII)I
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->position()I
-
-    move-result p1
-
-    add-int/2addr p1, v0
-
-    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    const/4 v3, 0x2
 
     goto :goto_2
 
-    :cond_5
-    new-array p1, v0, [B
+    :sswitch_3
+    const-string v9, "text"
 
-    iget-object v1, p0, Lk35;->a:Ljava/io/InputStream;
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, p1, p2, v0}, Ljava/io/InputStream;->read([BII)I
+    move-result v3
 
-    invoke-virtual {p3, p1, p2, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+    if-nez v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v3, 0x1
+
+    goto :goto_2
+
+    :sswitch_4
+    const-string v9, "end"
+
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v3, v1
 
     :goto_2
-    iget-wide p1, p0, Lk35;->Y:J
+    packed-switch v3, :pswitch_data_0
 
-    int-to-long v1, v0
+    goto :goto_3
 
-    add-long/2addr p1, v1
+    :pswitch_0
+    move v7, v2
 
-    iput-wide p1, p0, Lk35;->Y:J
+    goto :goto_3
 
-    return v0
+    :pswitch_1
+    move v5, v2
+
+    goto :goto_3
+
+    :pswitch_2
+    move v4, v2
+
+    goto :goto_3
+
+    :pswitch_3
+    move v8, v2
+
+    goto :goto_3
+
+    :pswitch_4
+    move v6, v2
+
+    :goto_3
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_5
+    if-eq v5, v0, :cond_6
+
+    if-eq v6, v0, :cond_6
+
+    if-eq v8, v0, :cond_6
+
+    new-instance v3, Lk35;
+
+    array-length v9, p0
+
+    invoke-direct/range {v3 .. v9}, Lk35;-><init>(IIIIII)V
+
+    return-object v3
 
     :cond_6
-    new-instance p1, Ljava/io/IOException;
+    const/4 p0, 0x0
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    return-object p0
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    :sswitch_data_0
+    .sparse-switch
+        0x188db -> :sswitch_4
+        0x36452d -> :sswitch_3
+        0x61fd551 -> :sswitch_2
+        0x68ac462 -> :sswitch_1
+        0x68b1db1 -> :sswitch_0
+    .end sparse-switch
 
-    invoke-virtual {v5}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_7
-    new-instance p1, Ljava/io/IOException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_8
-    new-instance p1, Ljava/io/IOException;
-
-    const-string p2, "InputStream is null"
-
-    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lk35;->a:Ljava/io/InputStream;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lk35;->X:Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final isOpen()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lk35;->X:Z
-
-    return v0
-.end method
-
-.method public final read(Ljava/nio/ByteBuffer;)I
-    .locals 2
-
-    iget-wide v0, p0, Lk35;->Y:J
-
-    invoke-virtual {p0, v0, v1, p1}, Lk35;->a(JLjava/nio/ByteBuffer;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final write(Ljava/nio/ByteBuffer;)I
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "ElfZipFileChannel doesn\'t support write"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

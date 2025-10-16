@@ -3,17 +3,15 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
-
-
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
-    .locals 0
+.method public static a(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    iput-object p1, p0, Ldzf;->a:Ljava/util/ArrayList;
+    const-string v0, "Trace"
+
+    invoke-static {v0, p0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

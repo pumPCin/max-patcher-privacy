@@ -1,374 +1,294 @@
-.class public Lo22;
-.super Le4;
+.class public final Lo22;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldnf;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lo22;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final X:Lq90;
+
+.field public static final Y:Lq90;
+
+.field public static final Z:Lq90;
+
+.field public static final b:Lq90;
+
+.field public static final c:Lq90;
+
+.field public static final o:Lq90;
+
+.field public static final r0:Lq90;
+
+.field public static final s0:Lq90;
+
+.field public static final t0:Lq90;
+
+.field public static final u0:Lq90;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Lwn0;
-
-.field public final c:Ljava/lang/Float;
+.field public final a:Lq8b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ltfh;
+    new-instance v0, Lq90;
 
-    const/4 v1, 0x1
+    const-string v1, "camerax.core.appConfig.cameraFactoryProvider"
 
-    invoke-direct {v0, v1}, Ltfh;-><init>(I)V
+    const-class v2, Lzy1;
 
-    sput-object v0, Lo22;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->b:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.deviceSurfaceManagerProvider"
+
+    const-class v2, Laz1;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->c:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.useCaseConfigFactoryProvider"
+
+    const-class v2, Lbz1;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->o:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.cameraExecutor"
+
+    const-class v2, Ljava/util/concurrent/Executor;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->X:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.schedulerHandler"
+
+    const-class v2, Landroid/os/Handler;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->Y:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.minimumLoggingLevel"
+
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->Z:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.availableCamerasLimiter"
+
+    const-class v2, Ld22;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->r0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.cameraOpenRetryMaxTimeoutInMillisWhileResuming"
+
+    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->s0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.cameraProviderInitRetryPolicy"
+
+    const-class v2, Lkdd;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->t0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.appConfig.quirksSettings"
+
+    const-class v2, Laic;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lo22;->u0:Lq90;
 
     return-void
 .end method
 
-.method public constructor <init>(ILwn0;Ljava/lang/Float;)V
-    .locals 4
+.method public constructor <init>(Lq8b;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    cmpl-float v2, v2, v3
-
-    if-lez v2, :cond_0
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    const/4 v3, 0x3
-
-    if-ne p1, v3, :cond_2
-
-    if-eqz p2, :cond_1
-
-    if-eqz v2, :cond_1
-
-    :goto_1
-    move p1, v3
-
-    goto :goto_2
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Invalid Cap: type="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, " bitmapDescriptor="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " bitmapRefWidth="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Luce;->h(Ljava/lang/String;Z)V
-
-    iput p1, p0, Lo22;->a:I
-
-    iput-object p2, p0, Lo22;->b:Lwn0;
-
-    iput-object p3, p0, Lo22;->c:Ljava/lang/Float;
+    iput-object p1, p0, Lo22;->a:Lq8b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lo22;
-    .locals 5
+.method public final a()Ld22;
+    .locals 2
 
-    iget v0, p0, Lo22;->a:I
+    iget-object v0, p0, Lo22;->a:Lq8b;
 
-    if-eqz v0, :cond_5
+    sget-object v1, Lo22;->r0:Lq90;
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_4
-
-    if-eq v0, v2, :cond_3
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Unknown Cap type: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_start_0
+    invoke-virtual {v0, v1}, Lq8b;->h(Lq90;)Ljava/lang/Object;
 
     move-result-object v0
-
-    const-string v1, "o22"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object p0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lo22;->b:Lwn0;
-
-    if-eqz v1, :cond_1
-
-    move v2, v3
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    move v2, v0
+    :catch_0
+    const/4 v0, 0x0
 
     :goto_0
-    const-string v4, "bitmapDescriptor must not be null"
-
-    invoke-static {v4, v2}, Luce;->r(Ljava/lang/String;Z)V
-
-    iget-object v2, p0, Lo22;->c:Ljava/lang/Float;
-
-    if-eqz v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v3, v0
-
-    :goto_1
-    const-string v0, "bitmapRefWidth must not be null"
-
-    invoke-static {v0, v3}, Luce;->r(Ljava/lang/String;Z)V
-
-    new-instance v0, Lf64;
-
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Lf64;-><init>(Lwn0;F)V
-
-    return-object v0
-
-    :cond_3
-    new-instance v0, Ljv0;
-
-    invoke-direct {v0, v2, v1, v1, v3}, Ljv0;-><init>(ILwn0;Ljava/lang/Float;I)V
-
-    return-object v0
-
-    :cond_4
-    new-instance v0, Ljv0;
-
-    invoke-direct {v0, v3, v1, v1, v2}, Ljv0;-><init>(ILwn0;Ljava/lang/Float;I)V
-
-    return-object v0
-
-    :cond_5
-    new-instance v0, Ljv0;
-
-    invoke-direct {v0}, Ljv0;-><init>()V
+    check-cast v0, Ld22;
 
     return-object v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final c()Lzy1;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lo22;->a:Lq8b;
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Lo22;->b:Lq90;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lo22;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lo22;
-
-    iget v1, p0, Lo22;->a:I
-
-    iget v3, p1, Lo22;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lo22;->b:Lwn0;
-
-    iget-object v3, p1, Lo22;->b:Lwn0;
-
-    invoke-static {v1, v3}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lo22;->c:Ljava/lang/Float;
-
-    iget-object p1, p1, Lo22;->c:Ljava/lang/Float;
-
-    invoke-static {v1, p1}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lo22;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :try_start_0
+    invoke-virtual {v0, v1}, Lq8b;->h(Lq90;)Ljava/lang/Object;
 
     move-result-object v0
-
-    iget-object v1, p0, Lo22;->b:Lwn0;
-
-    iget-object v2, p0, Lo22;->c:Ljava/lang/Float;
-
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "[Cap: type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lo22;->a:I
-
-    const-string v2, "]"
-
-    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Lnjg;->S(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x4
-
-    invoke-static {p1, v0, v1}, Lnjg;->U(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Lo22;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v0, p0, Lo22;->b:Lwn0;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    iget-object v0, v0, Lwn0;->a:Ld17;
-
-    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v0
+    :catch_0
+    const/4 v0, 0x0
 
     :goto_0
-    const/4 v2, 0x3
+    check-cast v0, Lzy1;
 
-    invoke-static {p1, v2, v0}, Lnjg;->N(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lo22;->c:Ljava/lang/Float;
+.method public final d()J
+    .locals 3
 
-    invoke-static {p1, v1, v0}, Lnjg;->M(Landroid/os/Parcel;ILjava/lang/Float;)V
+    sget-object v0, Lo22;->s0:Lq90;
 
-    invoke-static {p1, p2}, Lnjg;->T(Landroid/os/Parcel;I)V
+    const-wide/16 v1, -0x1
 
-    return-void
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lo22;->a:Lq8b;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    invoke-virtual {v2, v0}, Lq8b;->h(Lq90;)Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    check-cast v1, Ljava/lang/Long;
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final g()Laz1;
+    .locals 2
+
+    iget-object v0, p0, Lo22;->a:Lq8b;
+
+    sget-object v1, Lo22;->c:Lq90;
+
+    :try_start_0
+    invoke-virtual {v0, v1}, Lq8b;->h(Lq90;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    :goto_0
+    check-cast v0, Laz1;
+
+    return-object v0
+.end method
+
+.method public final getConfig()Lck3;
+    .locals 1
+
+    iget-object v0, p0, Lo22;->a:Lq8b;
+
+    return-object v0
+.end method
+
+.method public final k()Lbz1;
+    .locals 2
+
+    iget-object v0, p0, Lo22;->a:Lq8b;
+
+    sget-object v1, Lo22;->o:Lq90;
+
+    :try_start_0
+    invoke-virtual {v0, v1}, Lq8b;->h(Lq90;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    :goto_0
+    check-cast v0, Lbz1;
+
+    return-object v0
 .end method

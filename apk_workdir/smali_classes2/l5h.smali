@@ -1,72 +1,53 @@
 .class public final Ll5h;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lyn7;
 
 
 # instance fields
-.field public a:Lyjg;
+.field public X:Lko0;
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/lang/Class;
+.field public final synthetic Z:Lq5h;
+
+.field public o:Ljava/lang/Object;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/arch/Widget;Ljava/lang/Class;)V
+.method public constructor <init>(Lq5h;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll5h;->Z:Lq5h;
 
-    iput-object p1, p0, Ll5h;->b:Lone/me/sdk/arch/Widget;
-
-    iput-object p2, p0, Ll5h;->c:Ljava/lang/Class;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Ll5h;->a:Lyjg;
+    iput-object p1, p0, Ll5h;->Y:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Ll5h;->r0:I
 
-    const/4 v0, 0x1
+    const/high16 v0, -0x80000000
 
-    return v0
+    or-int/2addr p1, v0
 
-    :cond_0
+    iput p1, p0, Ll5h;->r0:I
+
+    iget-object p1, p0, Ll5h;->Z:Lq5h;
+
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Lq5h;->k(Lko0;Lk14;)Ljava/lang/Object;
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 2
+    move-result-object p1
 
-    iget-object v0, p0, Ll5h;->a:Lyjg;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ll5h;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewModelStore$arch_release()Lb6h;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ll5h;->c:Ljava/lang/Class;
-
-    invoke-virtual {v0, v1}, Lb6h;->a(Ljava/lang/Class;)Lyjg;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ll5h;->a:Lyjg;
-
-    :cond_0
-    return-object v0
+    return-object p1
 .end method

@@ -1,9 +1,3 @@
 .class public final Lybh;
-.super Ljava/lang/Object;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
-
-
-# instance fields
-.field public a:I
-
-.field public b:D

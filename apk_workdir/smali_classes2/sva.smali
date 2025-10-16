@@ -1,95 +1,79 @@
-.class public final Lsva;
-.super Lwy3;
+.class public abstract Lsva;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public A0:[B
+# static fields
+.field public static final a:I
 
-.field public B0:Ljava/util/Iterator;
+.field public static final b:I
 
-.field public C0:Z
+.field public static final c:I
 
-.field public D0:J
+.field public static final d:I
 
-.field public E0:I
+.field public static final e:I
 
-.field public synthetic F0:Ljava/lang/Object;
+.field public static final f:I
 
-.field public final synthetic G0:Luva;
+.field public static final g:I
 
-.field public H0:I
+.field public static final h:I
 
-.field public X:Lj1d;
+.field public static final i:I
 
-.field public Y:Lnva;
+.field public static final j:I
 
-.field public Z:Ljava/io/File;
-
-.field public o:Luva;
-
-.field public r0:Ljava/io/Serializable;
-
-.field public s0:Ljava/lang/Object;
-
-.field public t0:Lcwc;
-
-.field public u0:Lcwc;
-
-.field public v0:Ljava/io/File;
-
-.field public w0:Ljava/io/Closeable;
-
-.field public x0:Ljava/io/InputStream;
-
-.field public y0:Ljava/io/Closeable;
-
-.field public z0:Ljava/io/OutputStream;
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Luva;Lwy3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lsva;->G0:Luva;
+    sget v0, Lorc;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    sput v0, Lsva;->a:I
+
+    sget v0, Lorc;->oneme_contact_not_found_bottom_sheet_subtitle:I
+
+    sput v0, Lsva;->b:I
+
+    sget v0, Lorc;->oneme_contact_not_found_bottom_sheet_title:I
+
+    sput v0, Lsva;->c:I
+
+    sget v0, Lorc;->oneme_found_contact_is_self_error:I
+
+    sput v0, Lsva;->d:I
+
+    sget v0, Lorc;->oneme_invite_by_link_action:I
+
+    sput v0, Lsva;->e:I
+
+    sget v0, Lorc;->oneme_invite_by_phone_action:I
+
+    sput v0, Lsva;->f:I
+
+    sget v0, Lorc;->oneme_invite_by_phone_continue_button:I
+
+    sput v0, Lsva;->g:I
+
+    sget v0, Lorc;->oneme_invite_by_phone_description:I
+
+    sput v0, Lsva;->h:I
+
+    sget v0, Lorc;->oneme_invite_by_phone_hint_default:I
+
+    sput v0, Lsva;->i:I
+
+    sget v0, Lorc;->oneme_invite_by_phone_title:I
+
+    sput v0, Lsva;->j:I
+
+    sget v0, Lorc;->oneme_invite_friends_to_max_bottom_sheet_title:I
+
+    sput v0, Lsva;->k:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iput-object p1, p0, Lsva;->F0:Ljava/lang/Object;
-
-    iget p1, p0, Lsva;->H0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lsva;->H0:I
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lsva;->G0:Luva;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Luva;->h(Lj1d;Lnva;Ljava/io/File;Ljava/io/File;ZLwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,150 +1,207 @@
 .class public final Ln45;
-.super Lw35;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final r0:[I
+
+.field public static final s0:[I
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public X:Landroid/opengl/EGLContext;
 
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public Y:Landroid/opengl/EGLSurface;
+
+.field public Z:Landroid/graphics/SurfaceTexture;
+
+.field public final synthetic a:I
+
+.field public final b:Landroid/os/Handler;
+
+.field public final c:[I
+
+.field public o:Landroid/opengl/EGLDisplay;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lo45;)V
-    .locals 1
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    const/16 v0, 0x11
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Ln45;->r0:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Ln45;->s0:[I
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3040
+        0x4
+        0x3024
+        0x8
+        0x3023
+        0x8
+        0x3022
+        0x8
+        0x3021
+        0x8
+        0x3025
+        0x0
+        0x3027
+        0x3038
+        0x3033
+        0x4
+        0x3038
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3040
+        0x4
+        0x3024
+        0x8
+        0x3023
+        0x8
+        0x3022
+        0x8
+        0x3021
+        0x8
+        0x3025
+        0x0
+        0x3027
+        0x3038
+        0x3033
+        0x4
+        0x3038
+    .end array-data
+.end method
+
+.method public constructor <init>(Landroid/os/Handler;I)V
+    .locals 0
+
+    iput p2, p0, Ln45;->a:I
+
+    packed-switch p2, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Ln45;->b:Landroid/os/Handler;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    const/4 p1, 0x1
 
-    iput-object v0, p0, Ln45;->a:Ljava/lang/ref/WeakReference;
+    new-array p1, p1, [I
 
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Ln45;->b:Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Ln45;->c:[I
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ln45;->b:Landroid/os/Handler;
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Ln45;->c:[I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final i()V
-    .locals 5
+.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
+    .locals 0
 
-    iget-object v0, p0, Ln45;->a:Ljava/lang/ref/WeakReference;
+    iget p1, p0, Ln45;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v0
+    iget-object p1, p0, Ln45;->b:Landroid/os/Handler;
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v1, p0, Ln45;->b:Ljava/lang/ref/WeakReference;
+    return-void
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    :pswitch_0
+    iget-object p1, p0, Ln45;->b:Landroid/os/Handler;
 
-    move-result-object v1
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    check-cast v1, Landroid/text/InputFilter;
+    return-void
 
-    if-eqz v1, :cond_6
+    nop
 
-    if-nez v0, :cond_0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    goto :goto_1
+.method public final run()V
+    .locals 1
 
+    iget v0, p0, Ln45;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ln45;->Z:Landroid/graphics/SurfaceTexture;
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
     :cond_0
-    invoke-virtual {v0}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
+    return-void
 
-    move-result-object v2
+    :pswitch_0
+    iget-object v0, p0, Ln45;->Z:Landroid/graphics/SurfaceTexture;
 
-    if-nez v2, :cond_1
+    if-eqz v0, :cond_1
 
-    goto :goto_1
+    :try_start_1
+    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
 
+    :catch_1
     :cond_1
-    const/4 v3, 0x0
-
-    :goto_0
-    array-length v4, v2
-
-    if-ge v3, v4, :cond_6
-
-    aget-object v4, v2, v3
-
-    if-ne v4, v1, :cond_5
-
-    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-static {}, Ly35;->a()Ly35;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ly35;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
-
-    move-result v1
-
-    invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
-
-    move-result v3
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    instance-of v0, v2, Landroid/text/Spannable;
-
-    if-eqz v0, :cond_6
-
-    check-cast v2, Landroid/text/Spannable;
-
-    if-ltz v1, :cond_3
-
-    if-ltz v3, :cond_3
-
-    invoke-static {v2, v1, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
-
     return-void
 
-    :cond_3
-    if-ltz v1, :cond_4
+    nop
 
-    invoke-static {v2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_4
-    if-ltz v3, :cond_6
-
-    invoke-static {v2, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_5
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_6
-    :goto_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

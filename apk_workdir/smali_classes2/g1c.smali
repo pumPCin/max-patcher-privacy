@@ -1,103 +1,131 @@
 .class public final Lg1c;
-.super Lc2f;
+.super Li1c;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:J
 
-.field public final synthetic Y:Lone/me/profile/ProfileScreen;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/ProfileScreen;)V
+.method public constructor <init>(JI)V
     .locals 0
 
-    iput-object p2, p0, Lg1c;->Y:Lone/me/profile/ProfileScreen;
+    invoke-direct {p0}, Li1c;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lg1c;->b:J
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Lg1c;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lg1c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    move-result-object p1
+    :cond_0
+    instance-of v0, p1, Lg1c;
 
-    check-cast p1, Lg1c;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lg1c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lg1c;
-
-    iget-object v1, p0, Lg1c;->Y:Lone/me/profile/ProfileScreen;
-
-    invoke-direct {v0, p2, v1}, Lg1c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/ProfileScreen;)V
-
-    iput-object p1, v0, Lg1c;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lg1c;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    sget-object v0, Lone/me/profile/ProfileScreen;->C0:[Lpl7;
-
-    iget-object v0, p0, Lg1c;->Y:Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {v0}, Lone/me/profile/ProfileScreen;->F0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lxuc;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lo1c;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lo1c;
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
+    :cond_1
+    check-cast p1, Lg1c;
+
+    iget-wide v0, p0, Lg1c;->b:J
+
+    iget-wide v2, p1, Lg1c;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lg1c;->c:I
+
+    iget p1, p1, Lg1c;->c:I
+
+    if-eq v0, p1, :cond_3
 
     :goto_0
-    if-eqz v0, :cond_1
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Lhv7;->E(Ljava/util/List;)V
+    return p1
 
-    :cond_1
-    sget-object p1, Laxf;->a:Laxf;
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lg1c;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const v1, 0x2e9358
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lg1c;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowQrCode(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lg1c;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type=chat, qrCodeHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lg1c;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,156 +1,492 @@
 .class public final Lkfd;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lvd6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:Lcfd;
+.field public X:Lmfd;
 
-.field public final synthetic a:Landroid/view/View;
+.field public Y:Ljava/util/Collection;
 
-.field public final synthetic b:Lmfd;
+.field public Z:Ljava/util/Iterator;
 
-.field public final synthetic c:Lgfd;
+.field public r0:Ljava/util/Collection;
 
-.field public final synthetic o:Lmfd;
+.field public s0:I
+
+.field public final synthetic t0:Lpp4;
+
+.field public final synthetic u0:Lmfd;
+
+.field public final synthetic v0:J
+
+.field public final synthetic w0:J
+
+.field public final synthetic x0:J
+
+.field public final synthetic y0:I
+
+.field public final synthetic z0:Z
 
 
 # direct methods
-.method public constructor <init>(Lcfd;Lmfd;Lgfd;Lmfd;Lcfd;)V
+.method public constructor <init>(Lpp4;Lmfd;JJJIZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkfd;->t0:Lpp4;
 
-    iput-object p1, p0, Lkfd;->a:Landroid/view/View;
+    iput-object p2, p0, Lkfd;->u0:Lmfd;
 
-    iput-object p2, p0, Lkfd;->b:Lmfd;
+    iput-wide p3, p0, Lkfd;->v0:J
 
-    iput-object p3, p0, Lkfd;->c:Lgfd;
+    iput-wide p5, p0, Lkfd;->w0:J
 
-    iput-object p4, p0, Lkfd;->o:Lmfd;
+    iput-wide p7, p0, Lkfd;->x0:J
 
-    iput-object p5, p0, Lkfd;->X:Lcfd;
+    iput p9, p0, Lkfd;->y0:I
+
+    iput-boolean p10, p0, Lkfd;->z0:Z
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p11}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Landroid/animation/ValueAnimator;
+    check-cast p1, Lb54;
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    int-to-float v1, v0
+    invoke-virtual {p0, p1, p2}, Lkfd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lkfd;->a:Landroid/view/View;
+    move-result-object p1
 
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
+    check-cast p1, Lkfd;
 
-    move-result v3
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p1, p2}, Lkfd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 12
+
+    new-instance v0, Lkfd;
+
+    iget v9, p0, Lkfd;->y0:I
+
+    iget-boolean v10, p0, Lkfd;->z0:Z
+
+    iget-object v1, p0, Lkfd;->t0:Lpp4;
+
+    iget-object v2, p0, Lkfd;->u0:Lmfd;
+
+    iget-wide v3, p0, Lkfd;->v0:J
+
+    iget-wide v5, p0, Lkfd;->w0:J
+
+    iget-wide v7, p0, Lkfd;->x0:J
+
+    move-object v11, p2
+
+    invoke-direct/range {v0 .. v11}, Lkfd;-><init>(Lpp4;Lmfd;JJJIZLkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 18
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lkfd;->s0:I
+
+    iget-object v3, v0, Lkfd;->u0:Lmfd;
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x1
+
+    sget-object v7, Lc54;->a:Lc54;
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v6, :cond_2
+
+    if-eq v1, v5, :cond_1
+
+    if-ne v1, v4, :cond_0
+
+    iget-object v1, v0, Lkfd;->r0:Ljava/util/Collection;
+
+    iget-object v2, v0, Lkfd;->Z:Ljava/util/Iterator;
+
+    iget-object v3, v0, Lkfd;->Y:Ljava/util/Collection;
+
+    iget-object v5, v0, Lkfd;->X:Lmfd;
+
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    move-object v6, v5
+
+    move v5, v4
+
+    move-object/from16 v4, p1
+
+    goto/16 :goto_7
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    move-object/from16 v1, p1
+
+    goto/16 :goto_1
+
+    :cond_2
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    move-object/from16 v1, p1
+
+    goto/16 :goto_3
+
+    :cond_3
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lkfd;->t0:Lpp4;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v8, 0x5
+
+    iget-boolean v10, v0, Lkfd;->z0:Z
+
+    iget v11, v0, Lkfd;->y0:I
+
+    iget-wide v12, v0, Lkfd;->x0:J
+
+    iget-wide v14, v0, Lkfd;->w0:J
+
+    move/from16 v16, v10
+
+    iget-wide v9, v0, Lkfd;->v0:J
+
+    if-eqz v1, :cond_7
+
+    if-ne v1, v6, :cond_6
+
+    invoke-virtual {v3}, Lmfd;->d()Lhi9;
+
+    move-result-object v1
+
+    iput v5, v0, Lkfd;->s0:I
+
+    iget-object v2, v1, Lhi9;->a:Lyed;
+
+    if-eqz v16, :cond_4
+
+    const-string v4, "SELECT * FROM messages WHERE chat_id = ? AND delayed_attrs_time_to_fire >= ? AND delayed_attrs_time_to_fire <= ? AND inserted_from_msg_link = 0 AND status <> ? AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL ORDER BY delayed_attrs_time_to_fire ASC LIMIT ?"
+
+    invoke-static {v8, v4}, Lpfd;->c(ILjava/lang/String;)Lpfd;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v4, v6, v9, v10}, Lpfd;->k(IJ)V
 
-    move-result-object v4
+    invoke-virtual {v4, v5, v14, v15}, Lpfd;->k(IJ)V
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    const/4 v5, 0x3
 
-    const/high16 v5, 0x40800000    # 4.0f
+    invoke-static {v4, v5, v12, v13, v1}, Lyy8;->h(Lpfd;IJLhi9;)V
 
-    mul-float/2addr v4, v5
+    const/16 v5, 0xa
 
-    div-float/2addr v3, v4
+    int-to-long v9, v5
 
-    sub-float/2addr v1, v3
+    const/4 v5, 0x4
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v4, v5, v9, v10}, Lpfd;->k(IJ)V
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+    int-to-long v5, v11
 
-    move-result p1
+    invoke-virtual {v4, v8, v5, v6}, Lpfd;->k(IJ)V
+
+    new-instance v5, Landroid/os/CancellationSignal;
+
+    invoke-direct {v5}, Landroid/os/CancellationSignal;-><init>()V
+
+    new-instance v6, Lfi9;
+
+    const/4 v8, 0x5
+
+    invoke-direct {v6, v1, v4, v8}, Lfi9;-><init>(Lhi9;Lpfd;I)V
+
+    invoke-static {v2, v5, v6, v0}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
+    :cond_4
+    const-string v4, "SELECT * FROM messages WHERE chat_id = ? AND delayed_attrs_time_to_fire >= ? AND delayed_attrs_time_to_fire <= ? AND inserted_from_msg_link = 0 AND status <> ? AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL ORDER BY delayed_attrs_time_to_fire DESC LIMIT ?"
+
+    invoke-static {v8, v4}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v6, v9, v10}, Lpfd;->k(IJ)V
+
+    invoke-virtual {v4, v5, v14, v15}, Lpfd;->k(IJ)V
+
+    const/4 v5, 0x3
+
+    invoke-static {v4, v5, v12, v13, v1}, Lyy8;->h(Lpfd;IJLhi9;)V
+
+    const/16 v5, 0xa
+
+    int-to-long v9, v5
+
+    const/4 v5, 0x4
+
+    invoke-virtual {v4, v5, v9, v10}, Lpfd;->k(IJ)V
+
+    int-to-long v5, v11
+
+    invoke-virtual {v4, v8, v5, v6}, Lpfd;->k(IJ)V
+
+    new-instance v5, Landroid/os/CancellationSignal;
+
+    invoke-direct {v5}, Landroid/os/CancellationSignal;-><init>()V
+
+    new-instance v6, Lfi9;
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v1, v4, v8}, Lfi9;-><init>(Lhi9;Lpfd;I)V
+
+    invoke-static {v2, v5, v6, v0}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
 
     :goto_0
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
+    if-ne v1, v7, :cond_5
 
-    move-result v2
+    goto/16 :goto_6
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    :cond_5
+    :goto_1
+    check-cast v1, Ljava/util/List;
 
-    move-result-object v3
+    goto :goto_4
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    :cond_6
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object v3
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    throw v1
 
-    mul-float/2addr v3, v5
+    :cond_7
+    invoke-virtual {v3}, Lmfd;->d()Lhi9;
 
-    const/4 v4, 0x2
+    move-result-object v1
 
-    new-array v4, v4, [F
+    iput v6, v0, Lkfd;->s0:I
 
-    const/4 v5, 0x0
+    iget-object v2, v1, Lhi9;->a:Lyed;
 
-    aput v2, v4, v5
+    if-eqz v16, :cond_8
 
-    aput v3, v4, v0
+    const-string v4, "SELECT * FROM messages WHERE chat_id = ? AND time >= ? AND time <= ? AND inserted_from_msg_link = 0 AND status <> ? AND delayed_attrs_time_to_fire IS NULL AND delayed_attrs_notify_sender IS NULL ORDER BY time DESC, time_local DESC LIMIT ?"
 
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    invoke-static {v8, v4}, Lpfd;->c(ILjava/lang/String;)Lpfd;
 
-    move-result-object v0
+    move-result-object v4
 
-    const-wide/16 v2, 0xc8
+    invoke-virtual {v4, v6, v9, v10}, Lpfd;->k(IJ)V
 
-    long-to-float v2, v2
+    invoke-virtual {v4, v5, v14, v15}, Lpfd;->k(IJ)V
 
-    mul-float/2addr v2, v1
+    const/4 v5, 0x3
 
-    float-to-long v1, v2
+    invoke-static {v4, v5, v12, v13, v1}, Lyy8;->h(Lpfd;IJLhi9;)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    const/16 v5, 0xa
 
-    sget-object v1, Lmfd;->w0:Landroid/view/animation/AccelerateDecelerateInterpolator;
+    int-to-long v9, v5
 
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    const/4 v5, 0x4
 
-    new-instance v2, Lifd;
+    invoke-virtual {v4, v5, v9, v10}, Lpfd;->k(IJ)V
 
-    iget-object v6, p0, Lkfd;->o:Lmfd;
+    int-to-long v5, v11
 
-    iget-object v7, p0, Lkfd;->X:Lcfd;
+    invoke-virtual {v4, v8, v5, v6}, Lpfd;->k(IJ)V
 
-    iget-object v3, p0, Lkfd;->a:Landroid/view/View;
+    new-instance v5, Landroid/os/CancellationSignal;
 
-    iget-object v4, p0, Lkfd;->b:Lmfd;
+    invoke-direct {v5}, Landroid/os/CancellationSignal;-><init>()V
 
-    iget-object v5, p0, Lkfd;->c:Lgfd;
+    new-instance v6, Lfi9;
 
-    invoke-direct/range {v2 .. v7}, Lifd;-><init>(Landroid/view/View;Lmfd;Lgfd;Lmfd;Lcfd;)V
+    const/4 v8, 0x4
 
-    invoke-virtual {v0, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-direct {v6, v1, v4, v8}, Lfi9;-><init>(Lhi9;Lpfd;I)V
 
-    new-instance v1, Ljfd;
+    invoke-static {v2, v5, v6, v0}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct {v1, v3, p1}, Ljfd;-><init>(Landroid/view/View;F)V
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    goto :goto_2
 
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+    :cond_8
+    const-string v4, "SELECT * FROM messages WHERE chat_id = ? AND time >= ? AND time <= ? AND inserted_from_msg_link = 0 AND status <> ? AND delayed_attrs_time_to_fire IS NULL AND delayed_attrs_notify_sender IS NULL ORDER BY time ASC, time_local ASC LIMIT ?"
 
-    return-object v0
+    invoke-static {v8, v4}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v6, v9, v10}, Lpfd;->k(IJ)V
+
+    invoke-virtual {v4, v5, v14, v15}, Lpfd;->k(IJ)V
+
+    const/4 v5, 0x3
+
+    invoke-static {v4, v5, v12, v13, v1}, Lyy8;->h(Lpfd;IJLhi9;)V
+
+    const/16 v5, 0xa
+
+    int-to-long v9, v5
+
+    const/4 v5, 0x4
+
+    invoke-virtual {v4, v5, v9, v10}, Lpfd;->k(IJ)V
+
+    int-to-long v5, v11
+
+    invoke-virtual {v4, v8, v5, v6}, Lpfd;->k(IJ)V
+
+    new-instance v5, Landroid/os/CancellationSignal;
+
+    invoke-direct {v5}, Landroid/os/CancellationSignal;-><init>()V
+
+    new-instance v6, Lfi9;
+
+    const/4 v8, 0x3
+
+    invoke-direct {v6, v1, v4, v8}, Lfi9;-><init>(Lhi9;Lpfd;I)V
+
+    invoke-static {v2, v5, v6, v0}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    :goto_2
+    if-ne v1, v7, :cond_9
+
+    goto :goto_6
+
+    :cond_9
+    :goto_3
+    check-cast v1, Ljava/util/List;
+
+    :goto_4
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/16 v5, 0xa
+
+    invoke-static {v1, v5}, Lcb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v4
+
+    invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    move-object/from16 v17, v2
+
+    move-object v2, v1
+
+    move-object/from16 v1, v17
+
+    :goto_5
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_b
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcb9;
+
+    iput-object v3, v0, Lkfd;->X:Lmfd;
+
+    iput-object v1, v0, Lkfd;->Y:Ljava/util/Collection;
+
+    iput-object v2, v0, Lkfd;->Z:Ljava/util/Iterator;
+
+    iput-object v1, v0, Lkfd;->r0:Ljava/util/Collection;
+
+    const/4 v5, 0x3
+
+    iput v5, v0, Lkfd;->s0:I
+
+    invoke-virtual {v3, v4, v0}, Lmfd;->h(Lcb9;Lk14;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-ne v4, v7, :cond_a
+
+    :goto_6
+    return-object v7
+
+    :cond_a
+    move-object v6, v3
+
+    move-object v3, v1
+
+    :goto_7
+    check-cast v4, Loa9;
+
+    invoke-interface {v1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    move-object v1, v3
+
+    move-object v3, v6
+
+    goto :goto_5
+
+    :cond_b
+    check-cast v1, Ljava/util/List;
+
+    return-object v1
 .end method

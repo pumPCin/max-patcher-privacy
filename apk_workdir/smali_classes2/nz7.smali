@@ -1,53 +1,99 @@
 .class public final Lnz7;
-.super Lwy3;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
+
+# interfaces
+.implements Lkg8;
 
 
 # instance fields
-.field public X:I
+.field public a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Z:Lpz7;
+.field public c:Lmz7;
 
-.field public o:Lpz7;
-
-.field public r0:I
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lpz7;Lwy3;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lnz7;->Z:Lpz7;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lnz7;->a:I
+
+    invoke-static {p1}, Ls9f;->b0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnz7;->b:Ljava/lang/String;
+
+    const/4 p1, 0x6
+
+    iput p1, p0, Lnz7;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final copy()Lc44;
+    .locals 3
+
+    new-instance v0, Lnz7;
+
+    iget-object v1, p0, Lnz7;->b:Ljava/lang/String;
+
+    iget v2, p0, Lnz7;->a:I
+
+    invoke-direct {v0, v1, v2}, Lnz7;-><init>(Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lnz7;->o:I
+
+    return v0
+.end method
+
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    iput-object p1, p0, Lnz7;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lnz7;->c:Lmz7;
 
-    iget p1, p0, Lnz7;->r0:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    iget-object v1, p0, Lnz7;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    invoke-interface {v0, p1, v1}, Lmz7;->b(Landroid/view/View;Ljava/lang/String;)V
 
-    iput p1, p0, Lnz7;->r0:I
+    :cond_0
+    return-void
+.end method
 
-    iget-object p1, p0, Lnz7;->Z:Lpz7;
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    const-wide/16 v0, 0x0
+    iget v0, p0, Lnz7;->a:I
 
-    invoke-virtual {p1, v0, v1, p0}, Lpz7;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result-object p1
+    iget v0, p0, Lnz7;->a:I
 
-    return-object p1
+    iput v0, p1, Landroid/text/TextPaint;->linkColor:I
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
+    return-void
 .end method

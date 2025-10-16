@@ -3,84 +3,86 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzba;
-.implements Lve6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lk;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ln12;
 
 
 # direct methods
-.method public constructor <init>(Lk;)V
+.method public synthetic constructor <init>(Ln12;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lm12;->a:I
 
-    iput-object p1, p0, Lm12;->a:Lk;
+    iput-object p1, p0, Lm12;->b:Ln12;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lm12;->a:Lk;
+    iget v0, p0, Lm12;->a:I
 
-    invoke-virtual {v0, p1}, Lk;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lm12;->b:Ln12;
+
+    iget-object v0, v0, Ln12;->a:Lkw7;
+
+    sget-object v1, Ljv7;->ON_PAUSE:Ljv7;
+
+    invoke-virtual {v0, v1}, Lkw7;->d(Ljv7;)V
 
     return-void
-.end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lm12;->b:Ln12;
 
-    instance-of v0, p1, Lzba;
+    iget-object v0, v0, Ln12;->a:Lkw7;
 
-    if-eqz v0, :cond_0
+    sget-object v1, Ljv7;->ON_STOP:Ljv7;
 
-    instance-of v0, p1, Lve6;
+    invoke-virtual {v0, v1}, Lkw7;->d(Ljv7;)V
 
-    if-eqz v0, :cond_0
+    return-void
 
-    check-cast p1, Lve6;
+    :pswitch_1
+    iget-object v0, p0, Lm12;->b:Ln12;
 
-    invoke-interface {p1}, Lve6;->getFunctionDelegate()Loe6;
+    iget-object v0, v0, Ln12;->a:Lkw7;
 
-    move-result-object p1
+    sget-object v1, Ljv7;->ON_DESTROY:Ljv7;
 
-    iget-object v0, p0, Lm12;->a:Lk;
+    invoke-virtual {v0, v1}, Lkw7;->d(Ljv7;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    return-void
 
-    move-result p1
+    :pswitch_2
+    iget-object v0, p0, Lm12;->b:Ln12;
 
-    return p1
+    iget-object v0, v0, Ln12;->a:Lkw7;
 
-    :cond_0
-    const/4 p1, 0x0
+    sget-object v1, Ljv7;->ON_RESUME:Ljv7;
 
-    return p1
-.end method
+    invoke-virtual {v0, v1}, Lkw7;->d(Ljv7;)V
 
-.method public final getFunctionDelegate()Loe6;
-    .locals 1
+    return-void
 
-    iget-object v0, p0, Lm12;->a:Lk;
+    nop
 
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lm12;->a:Lk;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

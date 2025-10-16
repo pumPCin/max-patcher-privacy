@@ -1,70 +1,57 @@
 .class public final Llfa;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:J
 
-.field public final synthetic b:Lrfa;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lsfa;
+
+.field public o:J
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrfa;I)V
+.method public constructor <init>(Lsfa;Lk14;)V
     .locals 0
 
-    iput p2, p0, Llfa;->a:I
+    iput-object p1, p0, Llfa;->Z:Lsfa;
 
-    iput-object p1, p0, Llfa;->b:Lrfa;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Llfa;->a:I
+    iput-object p1, p0, Llfa;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Llfa;->r0:I
 
-    iget-object v0, p0, Llfa;->b:Lrfa;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, v0, Lrfa;->C0:Ltd6;
+    or-int/2addr p1, v0
 
-    if-eqz v1, :cond_0
+    iput p1, p0, Llfa;->r0:I
 
-    invoke-interface {v1}, Ltd6;->invoke()Ljava/lang/Object;
+    const-wide/16 v1, 0x0
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    const-wide/16 v3, 0x0
 
-    return-void
+    iget-object v0, p0, Llfa;->Z:Lsfa;
 
-    :pswitch_0
-    iget-object v0, p0, Llfa;->b:Lrfa;
+    move-object v5, p0
 
-    iget-object v1, v0, Lrfa;->C0:Ltd6;
+    invoke-static/range {v0 .. v5}, Lsfa;->b(Lsfa;JJLk14;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    move-result-object p1
 
-    invoke-interface {v1}, Ltd6;->invoke()Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz12;
+.implements Ld32;
 
 
 # instance fields

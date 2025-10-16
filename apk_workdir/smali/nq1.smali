@@ -1,75 +1,125 @@
-.class public final synthetic Lnq1;
-.super Ljava/lang/Object;
+.class public final Lnq1;
+.super Lkli;
 .source "SourceFile"
-
-# interfaces
-.implements Lvd6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lxq1;
-
-.field public final synthetic c:Ljava/lang/CharSequence;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxq1;Ljava/lang/CharSequence;I)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    iput p3, p0, Lnq1;->a:I
-
-    iput-object p1, p0, Lnq1;->b:Lxq1;
-
-    iput-object p2, p0, Lnq1;->c:Ljava/lang/CharSequence;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnq1;->a:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lnq1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lnq1;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Ljava/lang/Boolean;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v0
 
-    iget-object p1, p0, Lnq1;->b:Lxq1;
+    :cond_0
+    instance-of v1, p1, Lnq1;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lnq1;->c:Ljava/lang/CharSequence;
+    if-nez v1, :cond_1
 
-    invoke-static {p1, v0}, Lxq1;->H(Lxq1;Ljava/lang/CharSequence;)V
+    return v2
 
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    :cond_1
+    check-cast p1, Lnq1;
 
-    return-object p1
+    iget-object v1, p0, Lnq1;->a:Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Lnq1;->c:Ljava/lang/CharSequence;
+    iget-object v3, p1, Lnq1;->a:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lxq1;->x(Lxq1;Ljava/lang/CharSequence;)V
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
 
-    :pswitch_1
-    iget-object v0, p0, Lnq1;->c:Ljava/lang/CharSequence;
+    if-nez v1, :cond_2
 
-    invoke-static {p1, v0}, Lxq1;->K(Lxq1;Ljava/lang/CharSequence;)V
+    return v2
 
-    goto :goto_0
+    :cond_2
+    iget-boolean v1, p0, Lnq1;->b:Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-boolean p1, p1, Lnq1;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lnq1;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lnq1;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Link(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnq1;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isJoinByExistLink="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lnq1;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,132 +1,97 @@
 .class public final Lb4b;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lorg/webrtc/VideoSink;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public A0:[B
 
-.field public b:J
+.field public B0:Ljava/util/Iterator;
 
-.field public final synthetic c:Lc4b;
+.field public C0:Z
+
+.field public D0:J
+
+.field public E0:J
+
+.field public F0:I
+
+.field public synthetic G0:Ljava/lang/Object;
+
+.field public final synthetic H0:Ld4b;
+
+.field public I0:I
+
+.field public X:Ldcd;
+
+.field public Y:Lw3b;
+
+.field public Z:Ljava/io/File;
+
+.field public o:Ld4b;
+
+.field public r0:Ljava/io/Serializable;
+
+.field public s0:Ljava/lang/Object;
+
+.field public t0:Lq6d;
+
+.field public u0:Lq6d;
+
+.field public v0:Ljava/io/File;
+
+.field public w0:Ljava/io/Closeable;
+
+.field public x0:Ljava/io/InputStream;
+
+.field public y0:Ljava/io/Closeable;
+
+.field public z0:Ljava/io/OutputStream;
 
 
 # direct methods
-.method public constructor <init>(Lc4b;Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(Ld4b;Lk14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb4b;->H0:Ld4b;
 
-    iput-object p1, p0, Lb4b;->c:Lc4b;
-
-    const-wide/16 v0, -0x1
-
-    iput-wide v0, p0, Lb4b;->b:J
-
-    iput-object p2, p0, Lb4b;->a:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
+    iput-object p1, p0, Lb4b;->G0:Ljava/lang/Object;
 
-    move-result-object p1
+    iget p1, p0, Lb4b;->I0:I
 
-    const-wide/16 v0, -0x1
+    const/high16 v0, -0x80000000
 
-    if-nez p1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput p1, p0, Lb4b;->I0:I
 
-    move-result-object p1
+    const/4 v4, 0x0
 
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    const/4 v5, 0x0
 
-    move-result-wide v2
+    iget-object v0, p0, Lb4b;->H0:Ld4b;
 
-    iget-wide v4, p0, Lb4b;->b:J
+    const/4 v1, 0x0
 
-    cmp-long v2, v2, v4
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_3
+    const/4 v3, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    move-object v6, p0
 
-    move-result-wide v2
-
-    iput-wide v2, p0, Lb4b;->b:J
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    :cond_1
-    iget-object v0, p0, Lb4b;->c:Lc4b;
-
-    iget-object v1, v0, Lc4b;->k:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v2, v0, Lc4b;->l:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v3, p0, Lb4b;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lpr1;
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    iget-object v0, v0, Lco3;->e:Ljava/lang/Object;
-
-    check-cast v0, Lho4;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    long-to-int p1, v4
-
-    iget-object v0, v0, Lho4;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual/range {v0 .. v6}, Ld4b;->i(Ldcd;Lw3b;Ljava/io/File;Ljava/io/File;ZLk14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpr1;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v1, v3, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v2, p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    return-void
+    return-object p1
 .end method

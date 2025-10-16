@@ -1,60 +1,41 @@
 .class public final Lckh;
-.super Ldn6;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Liq;
 
 
 # static fields
-.field public static final w0:Lvn4;
+.field public static final c:Lhue;
 
 
 # instance fields
-.field public final u0:Landroid/content/Context;
+.field public final a:Lekh;
 
-.field public final v0:Lfn6;
+.field public final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lu5a;
+    new-instance v0, Lhue;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x3
 
-    new-instance v1, Ljdh;
+    invoke-direct {v0, v1}, Lhue;-><init>(I)V
 
-    const/4 v2, 0x7
-
-    invoke-direct {v1, v2}, Ljdh;-><init>(I)V
-
-    new-instance v2, Lvn4;
-
-    const-string v3, "AppSet.API"
-
-    invoke-direct {v2, v3, v1, v0}, Lvn4;-><init>(Ljava/lang/String;Lov9;Lu5a;)V
-
-    sput-object v2, Lckh;->w0:Lvn4;
+    sput-object v0, Lckh;->c:Lhue;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lfn6;)V
-    .locals 3
+.method public constructor <init>(Lekh;I)V
+    .locals 0
 
-    sget-object v0, Lal;->d:Lzk;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lcn6;->c:Lcn6;
+    iput-object p1, p0, Lckh;->a:Lekh;
 
-    sget-object v2, Lckh;->w0:Lvn4;
-
-    invoke-direct {p0, p1, v2, v0, v1}, Ldn6;-><init>(Landroid/content/Context;Lvn4;Lal;Lcn6;)V
-
-    iput-object p1, p0, Lckh;->u0:Landroid/content/Context;
-
-    iput-object p2, p0, Lckh;->v0:Lfn6;
+    iput p2, p0, Lckh;->b:I
 
     return-void
 .end method

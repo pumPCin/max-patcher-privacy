@@ -1,180 +1,131 @@
-.class public abstract Lujg;
+.class public final Lujg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ltjg;
+# instance fields
+.field public final a:Lrjg;
 
-.field public static final b:Z
+.field public final b:Lvjg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lrjg;Lvjg;)V
+    .locals 0
 
-    new-instance v0, Ltjg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lujg;->a:Lrjg;
 
-    sput-object v0, Lujg;->a:Ltjg;
-
-    const-string v0, "shared.ViewLifecycle"
-
-    const/4 v1, 0x3
-
-    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    sput-boolean v0, Lujg;->b:Z
+    iput-object p2, p0, Lujg;->b:Lvjg;
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;)Luq7;
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    sget-object v0, Lce0;->I0:Lce0;
+    const/4 v0, 0x1
 
-    if-nez p0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    sget-object v0, Lx65;->a:Lx65;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance v1, Lqs4;
+    instance-of v1, p1, Lujg;
 
-    new-instance v2, Lhcd;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x2
+    if-nez v1, :cond_1
 
-    invoke-direct {v2, v3, p0}, Lhcd;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v1, v2, v0}, Lqs4;-><init>(Ltd6;Lvd6;)V
-
-    move-object v0, v1
-
-    :goto_0
-    sget-object v1, Lce0;->J0:Lce0;
-
-    invoke-static {v0, v1}, Lgqd;->b0(Lxpd;Lvd6;)Ler5;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lgqd;->Z(Lxpd;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Luq7;
-
-    if-nez v0, :cond_4
-
-    sget v0, Luec;->view_custom_attach_lifecycle_owner:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lrq7;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lrq7;
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    const/4 v0, 0x0
+    check-cast p1, Lujg;
 
-    :goto_1
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lujg;->a:Lrjg;
 
-    iget-object v1, v0, Lrq7;->a:Lwq7;
+    iget-object v3, p1, Lujg;->a:Lrjg;
 
-    if-eqz v1, :cond_2
-
-    iget-object v1, v1, Lwq7;->d:Lwp7;
-
-    if-eqz v1, :cond_2
-
-    sget-object v2, Lwp7;->c:Lwp7;
-
-    invoke-virtual {v1, v2}, Lwp7;->a(Lwp7;)Z
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, 0x1
+    if-nez v1, :cond_2
 
-    if-ne v1, v2, :cond_2
-
-    goto :goto_2
+    return v2
 
     :cond_2
-    new-instance v0, Lrq7;
+    iget-object v1, p0, Lujg;->b:Lvjg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p1, Lujg;->b:Lvjg;
 
-    new-instance v1, Lwq7;
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v1, v0}, Lwq7;-><init>(Luq7;)V
+    move-result p1
 
-    iput-object v1, v0, Lrq7;->a:Lwq7;
+    if-nez p1, :cond_3
 
-    sget-object v2, Lvp7;->ON_CREATE:Lvp7;
+    return v2
 
-    invoke-virtual {v1, v2}, Lwq7;->d(Lvp7;)V
+    :cond_3
+    return v0
+.end method
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+    iget-object v0, p0, Lujg;->a:Lrjg;
+
+    invoke-virtual {v0}, Lrjg;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lujg;->b:Lvjg;
+
+    iget-object v1, v1, Lvjg;->a:Lwjg;
+
+    invoke-virtual {v1}, Lwjg;->hashCode()I
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    add-int/2addr v1, v0
 
-    invoke-virtual {v0, p0}, Lrq7;->onViewAttachedToWindow(Landroid/view/View;)V
-
-    :cond_3
-    sget v1, Luec;->view_custom_attach_lifecycle_owner:I
-
-    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    :cond_4
-    :goto_2
-    sget-boolean p0, Lujg;->b:Z
-
-    if-eqz p0, :cond_5
-
-    invoke-interface {v0}, Luq7;->x()Lwq7;
-
-    move-result-object p0
-
-    sget-object v1, Lujg;->a:Ltjg;
-
-    invoke-virtual {p0, v1}, Lwq7;->f(Lqq7;)V
-
-    invoke-interface {v0}, Luq7;->x()Lwq7;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Lwq7;->a(Lqq7;)V
-
-    :cond_5
-    return-object v0
+    return v1
 .end method
 
-.method public static final b(Landroid/view/View;)Liq7;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p0}, Lujg;->a(Landroid/view/View;)Luq7;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, "VfxColors(buttonIconOverlayPlain="
 
-    invoke-static {p0}, Ljgh;->n(Luq7;)Liq7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-object v1, p0, Lujg;->a:Lrjg;
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", emptyBlock="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lujg;->b:Lvjg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

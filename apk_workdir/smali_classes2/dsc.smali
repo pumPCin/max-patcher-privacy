@@ -1,3 +1,6 @@
-.class public interface abstract Ldsc;
+.class public abstract Ldsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+
+# static fields
+.field public static ya_key:I = 0x7f130e8d

@@ -1,98 +1,140 @@
 .class public final Lcf0;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Ls55;
 
 
 # instance fields
-.field public final synthetic X:Ldwc;
+.field public final a:Landroid/graphics/drawable/Drawable;
 
-.field public final synthetic Y:Ljava/util/List;
+.field public final b:Landroid/graphics/Rect;
+
+.field public c:I
+
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Ldwc;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    iput-object p1, p0, Lcf0;->X:Ldwc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcf0;->Y:Ljava/util/List;
+    new-instance v0, Landroid/graphics/Rect;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lcf0;->b:Landroid/graphics/Rect;
+
+    iput-object p1, p0, Lcf0;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    iput v0, p0, Lcf0;->c:I
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result p1
+
+    iput p1, p0, Lcf0;->d:I
+
+    return-void
+.end method
+
+.method public static a(Lcf0;IILandroid/graphics/Rect;)V
+    .locals 4
+
+    int-to-float v0, p1
+
+    iget v1, p0, Lcf0;->d:I
+
+    int-to-float v2, v1
+
+    iget p0, p0, Lcf0;->c:I
+
+    int-to-float v3, p0
+
+    div-float/2addr v2, v3
+
+    mul-float/2addr v2, v0
+
+    float-to-int v0, v2
+
+    if-le v0, p2, :cond_0
+
+    int-to-float v0, p2
+
+    int-to-float p0, p0
+
+    int-to-float v1, v1
+
+    div-float/2addr p0, v1
+
+    mul-float/2addr p0, v0
+
+    float-to-int p0, p0
+
+    move v0, p2
+
+    goto :goto_0
+
+    :cond_0
+    move p0, p1
+
+    :goto_0
+    sub-int/2addr p2, v0
+
+    int-to-float p2, p2
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    div-float/2addr p2, v1
+
+    float-to-int p2, p2
+
+    sub-int/2addr p1, p0
+
+    int-to-float p1, p1
+
+    div-float/2addr p1, v1
+
+    float-to-int p1, p1
+
+    add-int/2addr p0, p1
+
+    add-int/2addr v0, p2
+
+    invoke-virtual {p3, p1, p2, p0, v0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
 
-    check-cast p1, Ln24;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lcf0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
-    move-result-object p1
+    move-result v1
 
-    check-cast p1, Lcf0;
+    iget-object v2, p0, Lcf0;->b:Landroid/graphics/Rect;
 
-    sget-object p2, Laxf;->a:Laxf;
+    invoke-static {p0, v0, v1, v2}, Lcf0;->a(Lcf0;IILandroid/graphics/Rect;)V
 
-    invoke-virtual {p1, p2}, Lcf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lcf0;->a:Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    return-object p1
-.end method
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lcf0;
-
-    iget-object v0, p0, Lcf0;->X:Ldwc;
-
-    iget-object v1, p0, Lcf0;->Y:Ljava/util/List;
-
-    invoke-direct {p1, v0, v1, p2}, Lcf0;-><init>(Ldwc;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcf0;->X:Ldwc;
-
-    iget-object p1, p1, Ldwc;->a:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/workmanager/BacklogWorker;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Ld8h;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ld8h;->g()Landroidx/work/impl/model/WorkersQueueDao;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lcf0;->Y:Ljava/util/List;
-
-    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->contains(Ljava/util/List;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

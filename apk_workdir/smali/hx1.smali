@@ -1,92 +1,98 @@
-.class public final Lhx1;
+.class public final synthetic Lhx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lky1;
+.implements Liv;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final synthetic X:I
 
-.field public final b:Lmx1;
+.field public final synthetic a:Lox1;
 
-.field public final c:I
+.field public final synthetic b:Ljava/util/ArrayList;
+
+.field public final synthetic c:I
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lmx1;Llqd;I)V
+.method public synthetic constructor <init>(Lox1;Ljava/util/ArrayList;III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhx1;->b:Lmx1;
+    iput-object p1, p0, Lhx1;->a:Lox1;
 
-    iput-object p2, p0, Lhx1;->a:Ljava/util/concurrent/Executor;
+    iput-object p2, p0, Lhx1;->b:Ljava/util/ArrayList;
 
     iput p3, p0, Lhx1;->c:I
+
+    iput p4, p0, Lhx1;->o:I
+
+    iput p5, p0, Lhx1;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lbw7;
-    .locals 4
+.method public final apply(Ljava/lang/Object;)Lo18;
+    .locals 5
 
-    const-string v0, "Camera2CapturePipeline"
+    check-cast p1, Ljava/lang/Void;
 
-    const-string v1, "invokePreCapture"
+    iget-object p1, p0, Lhx1;->a:Lox1;
 
-    invoke-static {v0, v1}, Lnc6;->i(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object p1, p1, Lox1;->n:Ld40;
 
-    iget-object v0, p0, Lhx1;->b:Lmx1;
+    iget v0, p0, Lhx1;->c:I
 
-    iget v1, p0, Lhx1;->c:I
+    iget v1, p0, Lhx1;->o:I
 
-    invoke-virtual {v0, v1}, Lmx1;->a(I)Lbw7;
+    iget v2, p0, Lhx1;->X:I
+
+    invoke-virtual {p1, v0, v1, v2}, Ld40;->f(III)Lpy1;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Lpy1;->a(I)Lo18;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkf6;->a(Lbw7;)Lkf6;
+    invoke-static {v0}, Lfj6;->a(Lo18;)Lfj6;
 
     move-result-object v0
 
-    new-instance v1, Lex1;
+    new-instance v2, Lmy1;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {v1, v2}, Lex1;-><init>(I)V
+    iget-object v4, p0, Lhx1;->b:Ljava/util/ArrayList;
+
+    invoke-direct {v2, p1, v4, v1, v3}, Lmy1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    iget-object v1, p1, Lpy1;->b:Ljava/util/concurrent/Executor;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lwka;
-
-    const/16 v3, 0x11
-
-    invoke-direct {v2, v3, v1}, Lwka;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lhx1;->a:Ljava/util/concurrent/Executor;
-
-    invoke-static {v0, v2, v1}, Lq5h;->L(Lbw7;Lvu;Ljava/util/concurrent/Executor;)Ly42;
+    invoke-static {v0, v2, v1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    new-instance v2, Lsx1;
 
-.method public final b()Lbw7;
-    .locals 2
+    const/4 v3, 0x2
 
-    new-instance v0, Lm6d;
+    invoke-direct {v2, v3, p1}, Lsx1;-><init>(ILjava/lang/Object;)V
 
-    const/16 v1, 0x19
+    invoke-virtual {v0, v2, v1}, Lfj6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    invoke-direct {v0, v1, p0}, Lm6d;-><init>(ILjava/lang/Object;)V
+    invoke-static {v0}, Lt9g;->n(Lo18;)Lo18;
 
-    invoke-static {v0}, Lggh;->s(Lws1;)Lys1;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

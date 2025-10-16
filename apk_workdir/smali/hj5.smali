@@ -1,238 +1,1560 @@
-.class public final Lhj5;
-.super Lx58;
+.class public abstract Lhj5;
+.super Lt4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:[F
+.field public static final n:Landroid/graphics/Rect;
+
+.field public static final o:Lsnd;
+
+.field public static final p:Lynd;
+
+
+# instance fields
+.field public final d:Landroid/graphics/Rect;
+
+.field public final e:Landroid/graphics/Rect;
+
+.field public final f:Landroid/graphics/Rect;
+
+.field public final g:[I
+
+.field public final h:Landroid/view/accessibility/AccessibilityManager;
+
+.field public final i:Landroid/view/View;
+
+.field public j:Lgj5;
+
+.field public k:I
+
+.field public l:I
+
+.field public m:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const/16 v0, 0xc9
+    new-instance v0, Landroid/graphics/Rect;
 
-    new-array v0, v0, [F
+    const v1, 0x7fffffff
 
-    fill-array-data v0, :array_0
+    const/high16 v2, -0x80000000
 
-    sput-object v0, Lhj5;->c:[F
+    invoke-direct {v0, v1, v1, v2, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    sput-object v0, Lhj5;->n:Landroid/graphics/Rect;
+
+    new-instance v0, Lsnd;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lhj5;->o:Lsnd;
+
+    new-instance v0, Lynd;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lhj5;->p:Lynd;
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x38d1b717    # 1.0E-4f
-        0x3951b717    # 2.0E-4f
-        0x3a03126f    # 5.0E-4f
-        0x3a6bedfa    # 9.0E-4f
-        0x3ab78034    # 0.0014f
-        0x3b03126f    # 0.002f
-        0x3b30f27c    # 0.0027f
-        0x3b6bedfa    # 0.0036f
-        0x3b96bb99    # 0.0046f
-        0x3bbe0ded    # 0.0058f
-        0x3be8a71e    # 0.0071f
-        0x3c0b4396    # 0.0085f
-        0x3c257a78    # 0.0101f
-        0x3c4154ca    # 0.0118f
-        0x3c6075f7    # 0.0137f
-        0x3c816f00    # 0.0158f
-        0x3c9374bc    # 0.018f
-        0x3ca7ef9e    # 0.0205f
-        0x3cbd3c36    # 0.0231f
-        0x3cd42c3d    # 0.0259f
-        0x3cecbfb1    # 0.0289f
-        0x3d037b4a
-        0x3d116873    # 0.0355f
-        0x3d202752    # 0.0391f
-        0x3d3020c5    # 0.043f
-        0x3d40ebee    # 0.0471f
-        0x3d5288ce    # 0.0514f
-        0x3d656042    # 0.056f
-        0x3d79096c    # 0.0608f
-        0x3d872b02    # 0.066f
-        0x3d923a2a    # 0.0714f
-        0x3d9de69b    # 0.0771f
-        0x3da9fbe7    # 0.083f
-        0x3db6e2eb    # 0.0893f
-        0x3dc46738    # 0.0959f
-        0x3dd2bd3c    # 0.1029f
-        0x3de17c1c    # 0.1101f
-        0x3df10cb3    # 0.1177f
-        0x3e00b780    # 0.1257f
-        0x3e091d15    # 0.1339f
-        0x3e1205bc    # 0.1426f
-        0x3e1b3d08    # 0.1516f
-        0x3e24dd2f    # 0.161f
-        0x3e2ecbfb    # 0.1707f
-        0x3e3923a3    # 0.1808f
-        0x3e43e426    # 0.1913f
-        0x3e4ef34d    # 0.2021f
-        0x3e5a6b51    # 0.2133f
-        0x3e6631f9    # 0.2248f
-        0x3e724745    # 0.2366f
-        0x3e7eab36    # 0.2487f
-        0x3e85aee6    # 0.2611f
-        0x3e8c2f83    # 0.2738f
-        0x3e92ca58    # 0.2867f
-        0x3e997f63    # 0.2998f
-        0x3ea04ea5    # 0.3131f
-        0x3ea72b02    # 0.3265f
-        0x3eae147b    # 0.34f
-        0x3eb50b0f    # 0.3536f
-        0x3ebc0ebf    # 0.3673f
-        0x3ec3126f    # 0.381f
-        0x3eca0903    # 0.3946f
-        0x3ed0ff97    # 0.4082f
-        0x3ed7e910    # 0.4217f
-        0x3eded289    # 0.4352f
-        0x3ee5a1cb    # 0.4485f
-        0x3eec56d6    # 0.4616f
-        0x3ef2fec5    # 0.4746f
-        0x3ef98c7e    # 0.4874f
-        0x3f000000    # 0.5f
-        0x3f032ca5    # 0.5124f
-        0x3f064c30    # 0.5246f
-        0x3f095810    # 0.5365f
-        0x3f0c56d6    # 0.5482f
-        0x3f0f4880    # 0.5597f
-        0x3f122d0e    # 0.571f
-        0x3f14fdf4    # 0.582f
-        0x3f17c1be    # 0.5928f
-        0x3f1a71de    # 0.6033f
-        0x3f1d14e4    # 0.6136f
-        0x3f1faace    # 0.6237f
-        0x3f222d0e    # 0.6335f
-        0x3f24a234    # 0.6431f
-        0x3f270a3d    # 0.6525f
-        0x3f295e9e    # 0.6616f
-        0x3f2bac71    # 0.6706f
-        0x3f2de69b    # 0.6793f
-        0x3f3013a9    # 0.6878f
-        0x3f32339c    # 0.6961f
-        0x3f344d01    # 0.7043f
-        0x3f3652bd    # 0.7122f
-        0x3f384b5e    # 0.7199f
-        0x3f3a3d71    # 0.7275f
-        0x3f3c2268    # 0.7349f
-        0x3f3dfa44    # 0.7421f
-        0x3f3fc505    # 0.7491f
-        0x3f4182aa    # 0.7559f
-        0x3f4339c1    # 0.7626f
-        0x3f44ea4b    # 0.7692f
-        0x3f468db9    # 0.7756f
-        0x3f48240b    # 0.7818f
-        0x3f49b3d0    # 0.7879f
-        0x3f4b367a    # 0.7938f
-        0x3f4cb296    # 0.7996f
-        0x3f4e2824    # 0.8053f
-        0x3f4f9097    # 0.8108f
-        0x3f50f27c    # 0.8162f
-        0x3f524dd3    # 0.8215f
-        0x3f539c0f    # 0.8266f
-        0x3f54ea4b    # 0.8317f
-        0x3f562b6b    # 0.8366f
-        0x3f5765fe    # 0.8414f
-        0x3f589a02    # 0.8461f
-        0x3f59c77a    # 0.8507f
-        0x3f5ae7d5    # 0.8551f
-        0x3f5c0831    # 0.8595f
-        0x3f5d21ff    # 0.8638f
-        0x3f5e2eb2    # 0.8679f
-        0x3f5f3b64    # 0.872f
-        0x3f604189    # 0.876f
-        0x3f613a93    # 0.8798f
-        0x3f62339c    # 0.8836f
-        0x3f632618    # 0.8873f
-        0x3f641206    # 0.8909f
-        0x3f64fdf4    # 0.8945f
-        0x3f65dcc6    # 0.8979f
-        0x3f66bb99    # 0.9013f
-        0x3f6793de    # 0.9046f
-        0x3f686595    # 0.9078f
-        0x3f6930be    # 0.9109f
-        0x3f69f55a    # 0.9139f
-        0x3f6ab9f5    # 0.9169f
-        0x3f6b7803    # 0.9198f
-        0x3f6c3611    # 0.9227f
-        0x3f6ce704    # 0.9254f
-        0x3f6d97f6    # 0.9281f
-        0x3f6e425b    # 0.9307f
-        0x3f6eecc0    # 0.9333f
-        0x3f6f9097    # 0.9358f
-        0x3f702de0    # 0.9382f
-        0x3f70cb29    # 0.9406f
-        0x3f7161e5    # 0.9429f
-        0x3f71f8a1    # 0.9452f
-        0x3f7288ce    # 0.9474f
-        0x3f73126f    # 0.9495f
-        0x3f739c0f    # 0.9516f
-        0x3f741f21    # 0.9536f
-        0x3f74a234    # 0.9556f
-        0x3f751eb8    # 0.9575f
-        0x3f759b3d    # 0.9594f
-        0x3f761134    # 0.9612f
-        0x3f76809d    # 0.9629f
-        0x3f76f007    # 0.9646f
-        0x3f775f70    # 0.9663f
-        0x3f77c84b    # 0.9679f
-        0x3f783127    # 0.9695f
-        0x3f789375    # 0.971f
-        0x3f78f5c3    # 0.9725f
-        0x3f795183    # 0.9739f
-        0x3f79ad43    # 0.9753f
-        0x3f7a0275    # 0.9766f
-        0x3f7a57a8    # 0.9779f
-        0x3f7aa64c    # 0.9791f
-        0x3f7af4f1    # 0.9803f
-        0x3f7b4396    # 0.9815f
-        0x3f7b8bac    # 0.9826f
-        0x3f7bd3c3    # 0.9837f
-        0x3f7c1bda    # 0.9848f
-        0x3f7c5d64    # 0.9858f
-        0x3f7c985f    # 0.9867f
-        0x3f7cd9e8    # 0.9877f
-        0x3f7d0e56    # 0.9885f
-        0x3f7d4952    # 0.9894f
-        0x3f7d7dbf    # 0.9902f
-        0x3f7db22d    # 0.991f
-        0x3f7de00d    # 0.9917f
-        0x3f7e0ded    # 0.9924f
-        0x3f7e3bcd    # 0.9931f
-        0x3f7e6320    # 0.9937f
-        0x3f7e9100    # 0.9944f
-        0x3f7eb1c4    # 0.9949f
-        0x3f7ed917    # 0.9955f
-        0x3f7ef9db    # 0.996f
-        0x3f7f1412    # 0.9964f
-        0x3f7f34d7    # 0.9969f
-        0x3f7f4f0e    # 0.9973f
-        0x3f7f6944    # 0.9977f
-        0x3f7f7cee    # 0.998f
-        0x3f7f9724    # 0.9984f
-        0x3f7fa440    # 0.9986f
-        0x3f7fb7e9    # 0.9989f
-        0x3f7fc505    # 0.9991f
-        0x3f7fd220    # 0.9993f
-        0x3f7fdf3b    # 0.9995f
-        0x3f7fec57    # 0.9997f
-        0x3f7ff2e5    # 0.9998f
-        0x3f7ff972    # 0.9999f
-        0x3f7ff972    # 0.9999f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 2
 
-    sget-object v0, Lhj5;->c:[F
+    invoke-direct {p0}, Lt4;-><init>()V
 
-    invoke-direct {p0, v0}, Lx58;-><init>([F)V
+    new-instance v0, Landroid/graphics/Rect;
 
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lhj5;->d:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lhj5;->e:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lhj5;->f:Landroid/graphics/Rect;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Lhj5;->g:[I
+
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Lhj5;->k:I
+
+    iput v0, p0, Lhj5;->l:I
+
+    iput v0, p0, Lhj5;->m:I
+
+    iput-object p1, p0, Lhj5;->i:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "accessibility"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/accessibility/AccessibilityManager;
+
+    iput-object v0, p0, Lhj5;->h:Landroid/view/accessibility/AccessibilityManager;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setFocusable(Z)V
+
+    sget-object v1, Lcyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1}, Landroid/view/View;->getImportantForAccessibility()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setImportantForAccessibility(I)V
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Landroid/view/View;)Li5;
+    .locals 0
+
+    iget-object p1, p0, Lhj5;->j:Lgj5;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lgj5;
+
+    invoke-direct {p1, p0}, Lgj5;-><init>(Lhj5;)V
+
+    iput-object p1, p0, Lhj5;->j:Lgj5;
+
+    :cond_0
+    iget-object p1, p0, Lhj5;->j:Lgj5;
+
+    return-object p1
+.end method
+
+.method public final d(Landroid/view/View;Lg5;)V
+    .locals 2
+
+    iget-object v0, p0, Lt4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    iget-object v1, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    invoke-virtual {p0, p2}, Lhj5;->t(Lg5;)V
+
+    return-void
+.end method
+
+.method public final j(I)Z
+    .locals 2
+
+    iget v0, p0, Lhj5;->l:I
+
+    const/4 v1, 0x0
+
+    if-eq v0, p1, :cond_0
+
+    return v1
+
+    :cond_0
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Lhj5;->l:I
+
+    invoke-virtual {p0, p1, v1}, Lhj5;->v(IZ)V
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, p1, v0}, Lhj5;->x(II)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final k(II)Landroid/view/accessibility/AccessibilityEvent;
+    .locals 4
+
+    const/4 v0, -0x1
+
+    iget-object v1, p0, Lhj5;->i:Landroid/view/View;
+
+    if-eq p1, v0, :cond_2
+
+    invoke-static {p2}, Landroid/view/accessibility/AccessibilityEvent;->obtain(I)Landroid/view/accessibility/AccessibilityEvent;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1}, Lhj5;->r(I)Lg5;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lg5;->g()Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, v0, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContentDescription()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {p2, v2}, Landroid/view/accessibility/AccessibilityRecord;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isScrollable()Z
+
+    move-result v2
+
+    invoke-virtual {p2, v2}, Landroid/view/accessibility/AccessibilityRecord;->setScrollable(Z)V
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isPassword()Z
+
+    move-result v2
+
+    invoke-virtual {p2, v2}, Landroid/view/accessibility/AccessibilityRecord;->setPassword(Z)V
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isEnabled()Z
+
+    move-result v2
+
+    invoke-virtual {p2, v2}, Landroid/view/accessibility/AccessibilityRecord;->setEnabled(Z)V
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isChecked()Z
+
+    move-result v2
+
+    invoke-virtual {p2, v2}, Landroid/view/accessibility/AccessibilityRecord;->setChecked(Z)V
+
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityRecord;->getContentDescription()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string p2, "Callbacks must add text or a content description in populateEventForVirtualViewId()"
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getClassName()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p2, v1, p1}, Landroid/view/accessibility/AccessibilityRecord;->setSource(Landroid/view/View;I)V
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityEvent;->setPackageName(Ljava/lang/CharSequence;)V
+
+    return-object p2
+
+    :cond_2
+    invoke-static {p2}, Landroid/view/accessibility/AccessibilityEvent;->obtain(I)Landroid/view/accessibility/AccessibilityEvent;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-object p1
+.end method
+
+.method public final l(I)Lg5;
+    .locals 9
+
+    invoke-static {}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain()Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object v0
+
+    new-instance v1, Lg5;
+
+    invoke-direct {v1, v0}, Lg5;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
+
+    invoke-virtual {v0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setFocusable(Z)V
+
+    const-string v3, "android.view.View"
+
+    invoke-virtual {v1, v3}, Lg5;->h(Ljava/lang/CharSequence;)V
+
+    sget-object v3, Lhj5;->n:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInParent(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInScreen(Landroid/graphics/Rect;)V
+
+    iget-object v4, p0, Lhj5;->i:Landroid/view/View;
+
+    invoke-virtual {v0, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setParent(Landroid/view/View;)V
+
+    invoke-virtual {p0, p1, v1}, Lhj5;->u(ILg5;)V
+
+    invoke-virtual {v1}, Lg5;->g()Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    if-nez v5, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContentDescription()Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "Callbacks must add text or a content description in populateNodeForVirtualViewId()"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    iget-object v5, p0, Lhj5;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v1, v5}, Lg5;->f(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v5, v3}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_e
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getActions()I
+
+    move-result v5
+
+    and-int/lit8 v6, v5, 0x40
+
+    if-nez v6, :cond_d
+
+    const/16 v6, 0x80
+
+    and-int/2addr v5, v6
+
+    if-nez v5, :cond_c
+
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setPackageName(Ljava/lang/CharSequence;)V
+
+    iput p1, v1, Lg5;->b:I
+
+    invoke-virtual {v0, v4, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setSource(Landroid/view/View;I)V
+
+    iget v5, p0, Lhj5;->k:I
+
+    const/4 v7, 0x0
+
+    if-ne v5, p1, :cond_2
+
+    invoke-virtual {v0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setAccessibilityFocused(Z)V
+
+    invoke-virtual {v1, v6}, Lg5;->a(I)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setAccessibilityFocused(Z)V
+
+    const/16 v5, 0x40
+
+    invoke-virtual {v1, v5}, Lg5;->a(I)V
+
+    :goto_1
+    iget v5, p0, Lhj5;->l:I
+
+    if-ne v5, p1, :cond_3
+
+    move p1, v2
+
+    goto :goto_2
+
+    :cond_3
+    move p1, v7
+
+    :goto_2
+    if-eqz p1, :cond_4
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v1, v5}, Lg5;->a(I)V
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isFocusable()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    invoke-virtual {v1, v2}, Lg5;->a(I)V
+
+    :cond_5
+    :goto_3
+    invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setFocused(Z)V
+
+    iget-object p1, p0, Lhj5;->g:[I
+
+    invoke-virtual {v4, p1}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    iget-object v5, p0, Lhj5;->d:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v5, v3}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    invoke-virtual {v1, v5}, Lg5;->f(Landroid/graphics/Rect;)V
+
+    aget v3, p1, v7
+
+    invoke-virtual {v4}, Landroid/view/View;->getScrollX()I
+
+    move-result v6
+
+    sub-int/2addr v3, v6
+
+    aget v6, p1, v2
+
+    invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
+
+    move-result v8
+
+    sub-int/2addr v6, v8
+
+    invoke-virtual {v5, v3, v6}, Landroid/graphics/Rect;->offset(II)V
+
+    :cond_6
+    iget-object v3, p0, Lhj5;->f:Landroid/graphics/Rect;
+
+    invoke-virtual {v4, v3}, Landroid/view/View;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_b
+
+    aget v6, p1, v7
+
+    invoke-virtual {v4}, Landroid/view/View;->getScrollX()I
+
+    move-result v7
+
+    sub-int/2addr v6, v7
+
+    aget p1, p1, v2
+
+    invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
+
+    move-result v7
+
+    sub-int/2addr p1, v7
+
+    invoke-virtual {v3, v6, p1}, Landroid/graphics/Rect;->offset(II)V
+
+    invoke-virtual {v5, v3}, Landroid/graphics/Rect;->intersect(Landroid/graphics/Rect;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_b
+
+    invoke-virtual {v0, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInScreen(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v5}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v4}, Landroid/view/View;->getWindowVisibility()I
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    :goto_4
+    instance-of v3, p1, Landroid/view/View;
+
+    if-eqz v3, :cond_a
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    cmpg-float v3, v3, v4
+
+    if-lez v3, :cond_b
+
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result v3
+
+    if-eqz v3, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    goto :goto_4
+
+    :cond_a
+    if-eqz p1, :cond_b
+
+    invoke-virtual {v0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setVisibleToUser(Z)V
+
+    :cond_b
+    :goto_5
+    return-object v1
+
+    :cond_c
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "Callbacks must not add ACTION_CLEAR_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_d
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "Callbacks must not add ACTION_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_e
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "Callbacks must set parent bounds in populateNodeForVirtualViewId()"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final m(Landroid/view/MotionEvent;)Z
+    .locals 6
+
+    iget-object v0, p0, Lhj5;->h:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v1, 0x7
+
+    const/16 v2, 0x100
+
+    const/16 v3, 0x80
+
+    const/4 v4, 0x1
+
+    const/high16 v5, -0x80000000
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x9
+
+    if-eq v0, v1, :cond_3
+
+    const/16 p1, 0xa
+
+    if-eq v0, p1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    iget p1, p0, Lhj5;->m:I
+
+    if-eq p1, v5, :cond_5
+
+    if-ne p1, v5, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iput v5, p0, Lhj5;->m:I
+
+    invoke-virtual {p0, v5, v3}, Lhj5;->x(II)V
+
+    invoke-virtual {p0, p1, v2}, Lhj5;->x(II)V
+
+    return v4
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p1
+
+    invoke-virtual {p0, v0, p1}, Lhj5;->n(FF)I
+
+    move-result p1
+
+    iget v0, p0, Lhj5;->m:I
+
+    if-ne v0, p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iput p1, p0, Lhj5;->m:I
+
+    invoke-virtual {p0, p1, v3}, Lhj5;->x(II)V
+
+    invoke-virtual {p0, v0, v2}, Lhj5;->x(II)V
+
+    :goto_0
+    if-eq p1, v5, :cond_5
+
+    :goto_1
+    return v4
+
+    :cond_5
+    :goto_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract n(FF)I
+.end method
+
+.method public abstract o(Ljava/util/ArrayList;)V
+.end method
+
+.method public final p(I)V
+    .locals 3
+
+    const/high16 v0, -0x80000000
+
+    if-eq p1, v0, :cond_0
+
+    iget-object v0, p0, Lhj5;->h:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lhj5;->i:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v2, 0x800
+
+    invoke-virtual {p0, p1, v2}, Lhj5;->k(II)Landroid/view/accessibility/AccessibilityEvent;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V
+
+    invoke-interface {v1, v0, p1}, Landroid/view/ViewParent;->requestSendAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final q(ILandroid/graphics/Rect;)Z
+    .locals 18
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v0, v3}, Lhj5;->o(Ljava/util/ArrayList;)V
+
+    new-instance v4, Llue;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5}, Llue;-><init>(I)V
+
+    move v6, v5
+
+    :goto_0
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v7
+
+    if-ge v6, v7, :cond_0
+
+    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Integer;
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v7
+
+    invoke-virtual {v0, v7}, Lhj5;->l(I)Lg5;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/Integer;
+
+    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
+
+    invoke-virtual {v4, v8, v7}, Llue;->c(ILjava/lang/Object;)V
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iget v3, v0, Lhj5;->l:I
+
+    const/high16 v7, -0x80000000
+
+    if-ne v3, v7, :cond_1
+
+    const/4 v3, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v4, v3}, Llue;->b(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lg5;
+
+    :goto_1
+    sget-object v8, Lhj5;->o:Lsnd;
+
+    sget-object v9, Lhj5;->p:Lynd;
+
+    iget-object v10, v0, Lhj5;->i:Landroid/view/View;
+
+    const/4 v11, 0x2
+
+    const/4 v13, 0x1
+
+    if-eq v1, v13, :cond_15
+
+    if-eq v1, v11, :cond_15
+
+    const/16 v11, 0x82
+
+    const/16 v14, 0x42
+
+    const/16 v15, 0x21
+
+    const/16 v6, 0x11
+
+    if-eq v1, v6, :cond_2
+
+    if-eq v1, v15, :cond_2
+
+    if-eq v1, v14, :cond_2
+
+    if-ne v1, v11, :cond_3
+
+    :cond_2
+    move/from16 v17, v13
+
+    goto :goto_2
+
+    :cond_3
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "direction must be one of {FOCUS_FORWARD, FOCUS_BACKWARD, FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}."
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :goto_2
+    new-instance v13, Landroid/graphics/Rect;
+
+    invoke-direct {v13}, Landroid/graphics/Rect;-><init>()V
+
+    iget v5, v0, Lhj5;->l:I
+
+    const-string v12, "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}."
+
+    if-eq v5, v7, :cond_4
+
+    invoke-virtual {v0, v5}, Lhj5;->r(I)Lg5;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v13}, Lg5;->f(Landroid/graphics/Rect;)V
+
+    :goto_3
+    const/4 v10, -0x1
+
+    goto :goto_4
+
+    :cond_4
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v13, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v10}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual {v10}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    if-eq v1, v6, :cond_9
+
+    if-eq v1, v15, :cond_8
+
+    if-eq v1, v14, :cond_7
+
+    if-ne v1, v11, :cond_6
+
+    const/4 v5, 0x0
+
+    const/4 v10, -0x1
+
+    invoke-virtual {v13, v5, v10, v2, v10}, Landroid/graphics/Rect;->set(IIII)V
+
+    goto :goto_4
+
+    :cond_6
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v1, v12}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_7
+    const/4 v2, 0x0
+
+    const/4 v10, -0x1
+
+    invoke-virtual {v13, v10, v2, v10, v5}, Landroid/graphics/Rect;->set(IIII)V
+
+    goto :goto_4
+
+    :cond_8
+    const/4 v7, 0x0
+
+    const/4 v10, -0x1
+
+    invoke-virtual {v13, v7, v5, v2, v5}, Landroid/graphics/Rect;->set(IIII)V
+
+    goto :goto_4
+
+    :cond_9
+    const/4 v7, 0x0
+
+    const/4 v10, -0x1
+
+    invoke-virtual {v13, v2, v7, v2, v5}, Landroid/graphics/Rect;->set(IIII)V
+
+    :goto_4
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-direct {v2, v13}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    if-eq v1, v6, :cond_d
+
+    if-eq v1, v15, :cond_c
+
+    if-eq v1, v14, :cond_b
+
+    if-ne v1, v11, :cond_a
+
+    invoke-virtual {v13}, Landroid/graphics/Rect;->height()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    neg-int v5, v5
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v2, v7, v5}, Landroid/graphics/Rect;->offset(II)V
+
+    goto :goto_5
+
+    :cond_a
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v1, v12}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_b
+    const/4 v7, 0x0
+
+    invoke-virtual {v13}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    neg-int v5, v5
+
+    invoke-virtual {v2, v5, v7}, Landroid/graphics/Rect;->offset(II)V
+
+    goto :goto_5
+
+    :cond_c
+    const/4 v7, 0x0
+
+    invoke-virtual {v13}, Landroid/graphics/Rect;->height()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    invoke-virtual {v2, v7, v5}, Landroid/graphics/Rect;->offset(II)V
+
+    goto :goto_5
+
+    :cond_d
+    const/4 v7, 0x0
+
+    invoke-virtual {v13}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    invoke-virtual {v2, v5, v7}, Landroid/graphics/Rect;->offset(II)V
+
+    :goto_5
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v5, v4, Llue;->c:I
+
+    new-instance v6, Landroid/graphics/Rect;
+
+    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+
+    move v9, v7
+
+    const/16 v16, 0x0
+
+    :goto_6
+    if-ge v9, v5, :cond_14
+
+    iget-object v11, v4, Llue;->b:[Ljava/lang/Object;
+
+    aget-object v11, v11, v9
+
+    check-cast v11, Lg5;
+
+    if-ne v11, v3, :cond_e
+
+    goto :goto_8
+
+    :cond_e
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v11, v6}, Lg5;->f(Landroid/graphics/Rect;)V
+
+    invoke-static {v1, v13, v6}, Llr0;->e(ILandroid/graphics/Rect;Landroid/graphics/Rect;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_f
+
+    goto :goto_8
+
+    :cond_f
+    invoke-static {v1, v13, v2}, Llr0;->e(ILandroid/graphics/Rect;Landroid/graphics/Rect;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_10
+
+    goto :goto_7
+
+    :cond_10
+    invoke-static {v1, v13, v6, v2}, Llr0;->a(ILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_11
+
+    goto :goto_7
+
+    :cond_11
+    invoke-static {v1, v13, v2, v6}, Llr0;->a(ILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_12
+
+    goto :goto_8
+
+    :cond_12
+    invoke-static {v1, v13, v6}, Llr0;->f(ILandroid/graphics/Rect;Landroid/graphics/Rect;)I
+
+    move-result v12
+
+    invoke-static {v1, v13, v6}, Llr0;->g(ILandroid/graphics/Rect;Landroid/graphics/Rect;)I
+
+    move-result v14
+
+    mul-int/lit8 v15, v12, 0xd
+
+    mul-int/2addr v15, v12
+
+    mul-int/2addr v14, v14
+
+    add-int/2addr v14, v15
+
+    invoke-static {v1, v13, v2}, Llr0;->f(ILandroid/graphics/Rect;Landroid/graphics/Rect;)I
+
+    move-result v12
+
+    invoke-static {v1, v13, v2}, Llr0;->g(ILandroid/graphics/Rect;Landroid/graphics/Rect;)I
+
+    move-result v15
+
+    mul-int/lit8 v17, v12, 0xd
+
+    mul-int v17, v17, v12
+
+    mul-int/2addr v15, v15
+
+    add-int v15, v15, v17
+
+    if-ge v14, v15, :cond_13
+
+    :goto_7
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    move-object/from16 v16, v11
+
+    :cond_13
+    :goto_8
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_6
+
+    :cond_14
+    move v2, v10
+
+    :goto_9
+    move-object/from16 v1, v16
+
+    goto/16 :goto_10
+
+    :cond_15
+    move v7, v5
+
+    move/from16 v17, v13
+
+    const/4 v2, -0x1
+
+    sget-object v5, Lcyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v10}, Landroid/view/View;->getLayoutDirection()I
+
+    move-result v5
+
+    move/from16 v6, v17
+
+    if-ne v5, v6, :cond_16
+
+    const/4 v5, 0x1
+
+    goto :goto_a
+
+    :cond_16
+    move v5, v7
+
+    :goto_a
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v6, v4, Llue;->c:I
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9, v6}, Ljava/util/ArrayList;-><init>(I)V
+
+    move v10, v7
+
+    :goto_b
+    if-ge v10, v6, :cond_17
+
+    iget-object v12, v4, Llue;->b:[Ljava/lang/Object;
+
+    aget-object v12, v12, v10
+
+    check-cast v12, Lg5;
+
+    invoke-virtual {v9, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_b
+
+    :cond_17
+    new-instance v6, Ln36;
+
+    invoke-direct {v6, v5, v8}, Ln36;-><init>(ZLsnd;)V
+
+    invoke-static {v9, v6}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    const/4 v6, 0x1
+
+    if-eq v1, v6, :cond_1b
+
+    if-ne v1, v11, :cond_1a
+
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-nez v3, :cond_18
+
+    move v10, v2
+
+    goto :goto_c
+
+    :cond_18
+    invoke-virtual {v9, v3}, Ljava/util/ArrayList;->lastIndexOf(Ljava/lang/Object;)I
+
+    move-result v10
+
+    :goto_c
+    add-int/2addr v10, v6
+
+    if-ge v10, v1, :cond_19
+
+    invoke-virtual {v9, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    goto :goto_f
+
+    :cond_19
+    const/4 v6, 0x0
+
+    goto :goto_f
+
+    :cond_1a
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "direction must be one of {FOCUS_FORWARD, FOCUS_BACKWARD}."
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1b
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-nez v3, :cond_1c
+
+    :goto_d
+    const/16 v17, 0x1
+
+    goto :goto_e
+
+    :cond_1c
+    invoke-virtual {v9, v3}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+
+    goto :goto_d
+
+    :goto_e
+    add-int/lit8 v1, v1, -0x1
+
+    if-ltz v1, :cond_19
+
+    invoke-virtual {v9, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    :goto_f
+    move-object/from16 v16, v6
+
+    check-cast v16, Lg5;
+
+    goto :goto_9
+
+    :goto_10
+    if-nez v1, :cond_1d
+
+    const/high16 v7, -0x80000000
+
+    goto :goto_13
+
+    :cond_1d
+    iget v3, v4, Llue;->c:I
+
+    move v5, v7
+
+    :goto_11
+    if-ge v5, v3, :cond_1f
+
+    iget-object v6, v4, Llue;->b:[Ljava/lang/Object;
+
+    aget-object v6, v6, v5
+
+    if-ne v6, v1, :cond_1e
+
+    move v12, v5
+
+    goto :goto_12
+
+    :cond_1e
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_11
+
+    :cond_1f
+    move v12, v2
+
+    :goto_12
+    iget-object v1, v4, Llue;->a:[I
+
+    aget v7, v1, v12
+
+    :goto_13
+    invoke-virtual {v0, v7}, Lhj5;->w(I)Z
+
+    move-result v1
+
+    return v1
+.end method
+
+.method public final r(I)Lg5;
+    .locals 6
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_3
+
+    iget-object p1, p0, Lhj5;->i:Landroid/view/View;
+
+    invoke-static {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object v0
+
+    new-instance v1, Lg5;
+
+    invoke-direct {v1, v0}, Lg5;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    sget-object v2, Lcyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p0, v2}, Lhj5;->o(Ljava/util/ArrayList;)V
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string v0, "Views cannot have both real and virtual children"
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v3, 0x0
+
+    :goto_1
+    if-ge v3, v0, :cond_2
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Integer;
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    iget-object v5, v1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v5, p1, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->addChild(Landroid/view/View;I)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    return-object v1
+
+    :cond_3
+    invoke-virtual {p0, p1}, Lhj5;->l(I)Lg5;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract s(IILandroid/os/Bundle;)Z
+.end method
+
+.method public t(Lg5;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract u(ILg5;)V
+.end method
+
+.method public v(IZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final w(I)Z
+    .locals 2
+
+    iget-object v0, p0, Lhj5;->i:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->isFocused()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Lhj5;->l:I
+
+    if-ne v0, p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_2
+
+    invoke-virtual {p0, v0}, Lhj5;->j(I)Z
+
+    :cond_2
+    if-ne p1, v1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    iput p1, p0, Lhj5;->l:I
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lhj5;->v(IZ)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {p0, p1, v1}, Lhj5;->x(II)V
+
+    return v0
+.end method
+
+.method public final x(II)V
+    .locals 2
+
+    const/high16 v0, -0x80000000
+
+    if-eq p1, v0, :cond_2
+
+    iget-object v0, p0, Lhj5;->h:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lhj5;->i:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0, p1, p2}, Lhj5;->k(II)Landroid/view/accessibility/AccessibilityEvent;
+
+    move-result-object p1
+
+    invoke-interface {v1, v0, p1}, Landroid/view/ViewParent;->requestSendAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    :cond_2
+    :goto_0
     return-void
 .end method

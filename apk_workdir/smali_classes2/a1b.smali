@@ -1,67 +1,35 @@
-.class public final La1b;
+.class public interface abstract La1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:J
-
-.field public final c:J
-
-
-# direct methods
-.method public constructor <init>(IJJ)V
+# virtual methods
+.method public O(Ljava/lang/CharSequence;)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, La1b;->a:I
-
-    iput-wide p2, p0, La1b;->b:J
-
-    iput-wide p4, p0, La1b;->c:J
 
     return-void
 .end method
 
+.method public g0()V
+    .locals 0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    return-void
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public i()V
+    .locals 0
 
-    const-string v1, "OutgoingMessageLink{type="
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public m()V
+    .locals 0
 
-    iget v1, p0, La1b;->a:I
+    return-void
+.end method
 
-    invoke-static {v1}, Ln29;->l(I)Ljava/lang/String;
+.method public o()V
+    .locals 0
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, La1b;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageId="
-
-    const-string v2, "}"
-
-    iget-wide v3, p0, La1b;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lc85;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

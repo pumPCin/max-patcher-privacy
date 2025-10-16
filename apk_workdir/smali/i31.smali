@@ -1,30 +1,30 @@
 .class public final Li31;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lp31;
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-.field public final synthetic Z:Z
+.field public final synthetic Z:Lv21;
 
 
 # direct methods
-.method public constructor <init>(Lp31;ZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lv21;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Li31;->Y:Lp31;
+    iput-object p1, p0, Li31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    iput-boolean p2, p0, Li31;->Z:Z
+    iput-object p2, p0, Li31;->Z:Lv21;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lr82;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +44,7 @@
 
     check-cast p1, Li31;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Li31;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -56,11 +56,11 @@
 
     new-instance v0, Li31;
 
-    iget-object v1, p0, Li31;->Y:Lp31;
+    iget-object v1, p0, Li31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    iget-boolean v2, p0, Li31;->Z:Z
+    iget-object v2, p0, Li31;->Z:Lv21;
 
-    invoke-direct {v0, v1, v2, p2}, Li31;-><init>(Lp31;ZLkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2, p2}, Li31;-><init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lv21;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Li31;->X:Ljava/lang/Object;
 
@@ -68,108 +68,51 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 15
+    .locals 9
 
-    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Li31;->X:Ljava/lang/Object;
+    iget-object p1, p0, Li31;->X:Ljava/lang/Object;
 
-    check-cast v1, Lr82;
+    check-cast p1, Lb54;
 
-    iget-object v2, p0, Li31;->Y:Lp31;
+    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lwq7;
 
-    iget-object v2, v2, Lp31;->i:Lhne;
+    iget-object v0, p0, Li31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    iget-boolean v3, p0, Li31;->Z:Z
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->D0()Lh31;
 
-    :goto_0
-    invoke-virtual {v2}, Lhne;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v4
+    iget-object v0, v0, Lh31;->v0:Lzx5;
 
-    move-object v5, v4
+    new-instance v1, Lmr0;
 
-    check-cast v5, La31;
+    const/4 v7, 0x4
 
-    invoke-virtual {v1}, Lr82;->k0()V
+    const/4 v8, 0x3
 
-    iget-object v9, v1, Lr82;->t0:Ljava/lang/CharSequence;
+    const/4 v2, 0x2
 
-    if-nez v3, :cond_0
+    iget-object v3, p0, Li31;->Z:Lv21;
 
-    const-string v6, ""
+    const-class v4, Lv21;
 
-    :goto_1
-    move-object v12, v6
+    const-string v5, "setVolumeMicrophone"
 
-    goto :goto_2
+    const-string v6, "setVolumeMicrophone(F)V"
 
-    :cond_0
-    invoke-virtual {v1}, Lr82;->l0()V
+    invoke-direct/range {v1 .. v8}, Lmr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    iget-object v6, v1, Lr82;->w0:Ljava/lang/CharSequence;
+    new-instance v2, Lh06;
 
-    goto :goto_1
+    const/4 v3, 0x1
 
-    :goto_2
-    iget-wide v6, v1, Lr82;->a:J
+    invoke-direct {v2, v0, v1, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    sget-object v8, Ljk0;->o:Ljk0;
+    invoke-static {v2, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    sget-object v10, Lik0;->a:Lik0;
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-virtual {v1, v8, v10}, Lr82;->g(Ljk0;Lik0;)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v1}, Lr82;->f()J
-
-    move-result-wide v13
-
-    xor-int/lit8 v8, v3, 0x1
-
-    iget-object v11, v1, Lr82;->b:Luc2;
-
-    move-object/from16 p1, v1
-
-    iget-wide v0, v11, Luc2;->a:J
-
-    new-instance v11, Ljava/lang/Long;
-
-    invoke-direct {v11, v6, v7}, Ljava/lang/Long;-><init>(J)V
-
-    move v6, v8
-
-    new-instance v8, Ljava/lang/Long;
-
-    invoke-direct {v8, v0, v1}, Ljava/lang/Long;-><init>(J)V
-
-    move-object v7, v11
-
-    new-instance v11, Ljava/lang/Long;
-
-    invoke-direct {v11, v13, v14}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move v13, v6
-
-    new-instance v6, La31;
-
-    invoke-direct/range {v6 .. v13}, La31;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;Z)V
-
-    invoke-virtual {v2, v4, v6}, Lhne;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :cond_1
-    move-object/from16 v1, p1
-
-    goto :goto_0
+    return-object p1
 .end method

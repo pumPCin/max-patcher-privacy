@@ -1,90 +1,57 @@
 .class public final Lqmd;
-.super Lf8d;
+.super Ls0;
 .source "SourceFile"
 
-
-# instance fields
-.field public final r0:Lpmd;
-
-.field public final s0:Lww0;
-
-.field public final t0:Lomd;
-
-.field public final u0:[B
-
-.field public final v0:Lrx0;
-
-
-# direct methods
-.method public constructor <init>(Lpmd;Lww0;Lomd;[B)V
-    .locals 1
-
-    invoke-direct {p0}, Lf8d;-><init>()V
-
-    iput-object p1, p0, Lqmd;->r0:Lpmd;
-
-    iput-object p2, p0, Lqmd;->s0:Lww0;
-
-    iput-object p3, p0, Lqmd;->t0:Lomd;
-
-    iput-object p4, p0, Lqmd;->u0:[B
-
-    new-instance v0, Lrx0;
-
-    iget-object p1, p1, Lpmd;->b:Lc94;
-
-    invoke-direct {v0, p2, p1, p4, p3}, Lrx0;-><init>(Lww0;Lc94;[BLqx0;)V
-
-    iput-object v0, p0, Lqmd;->v0:Lrx0;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final call()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lqmd;->v0:Lrx0;
+    sget-object v0, Ls0;->o:Ljava/util/concurrent/FutureTask;
 
-    const/4 v1, 0x1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    iput-boolean v1, v0, Lrx0;->j:Z
+    move-result-object v1
 
-    return-void
-.end method
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
 
-.method public final c()Ljava/lang/Object;
-    .locals 8
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lqmd;->v0:Lrx0;
+    :try_start_0
+    iget-object v2, p0, Ls0;->a:Ljava/lang/Runnable;
 
-    invoke-virtual {v0}, Lrx0;->a()V
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    iget-object v0, p0, Lqmd;->t0:Lomd;
+    :try_start_1
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
 
-    iget v1, v0, Lomd;->X:I
+    return-object v1
 
-    add-int/lit8 v1, v1, 0x1
+    :catchall_0
+    move-exception v0
 
-    iput v1, v0, Lomd;->X:I
+    goto :goto_0
 
-    iget-object v2, v0, Lomd;->a:Ltv4;
+    :catchall_1
+    move-exception v2
 
-    iget-wide v4, v0, Lomd;->b:J
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    iget-wide v6, v0, Lomd;->o:J
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
 
-    invoke-virtual {v0}, Lomd;->b()F
+    throw v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result v3
+    :goto_0
+    invoke-static {v0}, Lgxi;->a(Ljava/lang/Throwable;)V
 
-    invoke-virtual/range {v2 .. v7}, Ltv4;->b(FJJ)V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
+    throw v0
 .end method

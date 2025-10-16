@@ -4,24 +4,72 @@
 
 
 # instance fields
-.field public final a:Lgya;
+.field public final a:Lyed;
 
-.field public final b:Lw98;
+.field public final b:Lei;
 
-.field public final c:Landroid/os/Handler;
+.field public final c:Ldi9;
 
 
 # direct methods
-.method public constructor <init>(Lgya;Lw98;Landroid/os/Handler;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljyc;->a:Lgya;
+    iput-object p1, p0, Ljyc;->a:Lyed;
 
-    iput-object p2, p0, Ljyc;->b:Lw98;
+    new-instance v0, Lei;
 
-    iput-object p3, p0, Ljyc;->c:Landroid/os/Handler;
+    const/16 v1, 0x13
+
+    invoke-direct {v0, p1, v1}, Lei;-><init>(Lyed;I)V
+
+    iput-object v0, p0, Ljyc;->b:Lei;
+
+    new-instance v0, Ldi9;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, p1, v1}, Ldi9;-><init>(Lyed;I)V
+
+    iput-object v0, p0, Ljyc;->c:Ldi9;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lk14;)Ljava/lang/Object;
+    .locals 4
+
+    const/4 v0, 0x1
+
+    const-string v1, "SELECT * FROM reactions_section WHERE id = ?"
+
+    invoke-static {v0, v1}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+
+    move-result-object v1
+
+    const-string v2, "POPULAR"
+
+    invoke-virtual {v1, v0, v2}, Lpfd;->f(ILjava/lang/String;)V
+
+    new-instance v0, Landroid/os/CancellationSignal;
+
+    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
+
+    new-instance v2, Lgi;
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v2, p0, v3, v1}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v1, p0, Ljyc;->a:Lyed;
+
+    invoke-static {v1, v0, v2, p1}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

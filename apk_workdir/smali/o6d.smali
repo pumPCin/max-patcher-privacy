@@ -1,8 +1,24 @@
-.class public interface abstract Lo6d;
+.class public final Lo6d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field public a:Z
+
 
 # virtual methods
-.method public abstract a()V
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-boolean v0, p0, Lo6d;->a:Z
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

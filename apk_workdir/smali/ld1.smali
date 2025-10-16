@@ -1,32 +1,24 @@
-.class public final Lld1;
+.class public final synthetic Lld1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Lone/me/sdk/arch/Widget;
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Lone/me/sdk/arch/Widget;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
     .locals 0
 
-    iput p4, p0, Lld1;->a:I
+    iput p2, p0, Lld1;->a:I
 
-    iput-object p1, p0, Lld1;->b:Landroid/view/View;
-
-    iput-object p2, p0, Lld1;->c:Lone/me/sdk/arch/Widget;
-
-    iput-object p3, p0, Lld1;->d:Ljava/lang/Object;
+    iput-object p1, p0, Lld1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,192 +27,72 @@
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+.method public final onClick(Landroid/view/View;)V
     .locals 8
 
-    iget p2, p0, Lld1;->a:I
+    iget p1, p0, Lld1;->a:I
 
-    packed-switch p2, :pswitch_data_0
+    iget-object v0, p0, Lld1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p1, 0x2
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lwq7;
 
-    new-array p2, p1, [I
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lid1;
 
-    iget-object p3, p0, Lld1;->b:Landroid/view/View;
+    move-result-object p1
 
-    check-cast p3, Lnk9;
+    iget-object v0, p1, Lid1;->w0:Lsze;
 
-    invoke-virtual {p3}, Lnk9;->getTooltipAnchor()Landroid/view/View;
+    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2, p2}, Landroid/view/View;->getLocationOnScreen([I)V
+    check-cast v0, Lbd1;
 
-    iget-object p3, p0, Lld1;->c:Lone/me/sdk/arch/Widget;
+    iget-object v1, p1, Lid1;->z0:Lde5;
 
-    check-cast p3, Lone/me/pinbars/PinBarsWidget;
+    new-instance v2, Lrb1;
 
-    invoke-virtual {p3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object p1, p1, Lid1;->b:Ljava/lang/String;
 
-    move-result-object p4
-
-    invoke-static {p4}, Lzvd;->x(Landroid/content/Context;)I
-
-    move-result p4
-
-    const/4 p5, 0x0
-
-    aget p5, p2, p5
-
-    sub-int/2addr p4, p5
-
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
-
-    move-result p5
-
-    div-int/2addr p5, p1
-
-    sub-int/2addr p4, p5
-
-    const/16 p1, 0x12
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p5
-
-    invoke-virtual {p5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p5
-
-    iget p5, p5, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {p1, p5, p4}, Lc85;->q(FFI)I
-
-    move-result p1
-
-    const/4 p4, 0x1
-
-    aget p2, p2, p4
-
-    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
-
-    move-result p5
-
-    add-int/2addr p5, p2
-
-    new-instance p2, Landroid/graphics/Point;
-
-    invoke-direct {p2, p1, p5}, Landroid/graphics/Point;-><init>(II)V
-
-    iget-object p1, p3, Lone/me/pinbars/PinBarsWidget;->a:Lojf;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result p1
-
-    if-ne p1, p4, :cond_0
-
-    iget-object p1, p3, Lone/me/pinbars/PinBarsWidget;->a:Lojf;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lojf;->dismiss()V
-
-    :cond_0
-    new-instance v0, Lojf;
-
-    invoke-virtual {p3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    new-instance v3, Lmg8;
-
-    const/16 p1, 0x18
-
-    invoke-direct {v3, p1, p3}, Lmg8;-><init>(ILjava/lang/Object;)V
-
-    const/4 v6, 0x3
-
-    const/16 v7, 0x8
+    iget-object v3, v0, Lbd1;->c:Lyj8;
 
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    invoke-direct/range {v0 .. v7}, Lojf;-><init>(Landroid/content/Context;Landroid/view/View;Ltd6;Ll;III)V
+    sget-object v6, Lyj8;->b:Lyj8;
 
-    iget-object p1, p0, Lld1;->d:Ljava/lang/Object;
+    if-ne v3, v6, :cond_0
 
-    check-cast p1, Lxcf;
+    move v3, v5
 
-    invoke-virtual {v0, p1}, Lojf;->c(Lcdf;)V
+    goto :goto_0
 
-    const p1, 0x800035
+    :cond_0
+    move v3, v4
 
-    const-wide/16 p4, 0xbb8
+    :goto_0
+    iget-object v7, v0, Lbd1;->b:Lyj8;
 
-    invoke-virtual {v0, p2, p1, p4, p5}, Lojf;->d(Landroid/graphics/Point;IJ)V
+    if-ne v7, v6, :cond_1
 
-    new-instance p1, Lq09;
+    move v4, v5
 
-    const/4 p2, 0x1
+    :cond_1
+    iget-boolean v0, v0, Lbd1;->d:Z
 
-    invoke-direct {p1, p2, p3}, Lq09;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, p1, v3, v4, v0}, Lrb1;-><init>(Ljava/lang/String;ZZZ)V
 
-    invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
-
-    iput-object v0, p3, Lone/me/pinbars/PinBarsWidget;->a:Lojf;
+    invoke-static {v1, v2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     return-void
 
     :pswitch_0
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lwq7;
 
-    iget-object p1, p0, Lld1;->b:Landroid/view/View;
-
-    check-cast p1, Landroid/widget/TextView;
-
-    iget-object p2, p0, Lld1;->c:Lone/me/sdk/arch/Widget;
-
-    check-cast p2, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
-
-    iget-object p3, p0, Lld1;->d:Ljava/lang/Object;
-
-    check-cast p3, Led1;
-
-    iget-object p3, p3, Led1;->d:Ldd1;
-
-    invoke-interface {p3}, Ldd1;->getText()Lcdf;
-
-    move-result-object p3
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p4
-
-    invoke-virtual {p3, p4}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p3
-
-    invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Landroid/view/View;->getWidth()I
-
-    move-result p4
-
-    invoke-static {p2, p3, p1, p4}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;Ljava/lang/CharSequence;Landroid/widget/TextView;I)Ljava/lang/CharSequence;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->H0()V
 
     return-void
 

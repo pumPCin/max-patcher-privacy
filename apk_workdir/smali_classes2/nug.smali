@@ -1,65 +1,454 @@
 .class public final Lnug;
-.super Lpug;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lnug;
+# instance fields
+.field public final a:Lkug;
+
+.field public volatile b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lkug;)V
+    .locals 2
 
-    new-instance v0, Lnug;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "invalid_notification_type"
+    iput-object p1, p0, Lnug;->a:Lkug;
 
-    const/4 v2, 0x2
+    const-wide/16 v0, -0x1
 
-    invoke-direct {v0, v1, v2}, Lpug;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lnug;->c:Lnug;
+    iput-wide v0, p0, Lnug;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onEvent(Ldw9;)V
+    .locals 4
+    .annotation runtime Lsaf;
+    .end annotation
 
-    const/4 v0, 0x1
+    .line 72
+    iget-wide v0, p1, Llj0;->a:J
 
-    if-ne p0, p1, :cond_0
+    iget-wide v2, p0, Lnug;->b:J
 
-    return v0
+    cmp-long v0, v0, v2
 
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 73
     :cond_0
-    instance-of p1, p1, Lnug;
+    iget-object v0, p0, Lnug;->a:Lkug;
 
-    if-nez p1, :cond_1
+    .line 74
+    invoke-virtual {v0}, Lxm;->l()Lgw0;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    .line 75
+    invoke-virtual {v0, p0}, Lgw0;->f(Ljava/lang/Object;)V
 
+    .line 76
+    iget-object v0, p0, Lnug;->a:Lkug;
+
+    .line 77
+    invoke-virtual {v0}, Lxm;->l()Lgw0;
+
+    move-result-object v0
+
+    .line 78
+    new-instance v1, Lkj0;
+
+    iget-object v2, p0, Lnug;->a:Lkug;
+
+    iget-wide v2, v2, Lxm;->a:J
+
+    iget-object p1, p1, Lkj0;->b:Lukf;
+
+    invoke-direct {v1, v2, v3, p1}, Lkj0;-><init>(JLukf;)V
+
+    invoke-virtual {v0, v1}, Lgw0;->c(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lew9;)V
+    .locals 21
+    .annotation runtime Lsaf;
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    .line 1
+    iget-wide v1, v1, Llj0;->a:J
+
+    iget-wide v3, v0, Lnug;->b:J
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-object v1, v0, Lnug;->a:Lkug;
+
+    .line 3
+    invoke-virtual {v1}, Lxm;->l()Lgw0;
+
+    move-result-object v1
+
+    .line 4
+    invoke-virtual {v1, v0}, Lgw0;->f(Ljava/lang/Object;)V
+
+    .line 5
+    iget-object v1, v0, Lnug;->a:Lkug;
+
+    invoke-virtual {v1}, Lxm;->m()Lkd2;
+
+    move-result-object v1
+
+    .line 6
+    iget-object v2, v0, Lnug;->a:Lkug;
+
+    iget-wide v2, v2, Lkug;->X:J
+
+    invoke-virtual {v1, v2, v3}, Lkd2;->z(J)Lda2;
+
+    move-result-object v1
+
+    .line 7
+    const-string v2, "attachment.token.expired"
+
+    const/4 v3, 0x0
+
+    if-nez v1, :cond_1
+
+    .line 8
+    iget-object v1, v0, Lnug;->a:Lkug;
+
+    .line 9
+    invoke-virtual {v1}, Lxm;->l()Lgw0;
+
+    move-result-object v1
+
+    .line 10
+    new-instance v4, Lkj0;
+
+    .line 11
+    iget-object v5, v0, Lnug;->a:Lkug;
+
+    iget-wide v5, v5, Lxm;->a:J
+
+    new-instance v7, Lukf;
+
+    .line 12
+    const-string v8, "chat deleted"
+
+    .line 13
+    invoke-direct {v7, v2, v8, v3}, Lukf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    invoke-direct {v4, v5, v6, v7}, Lkj0;-><init>(JLukf;)V
+
+    .line 15
+    invoke-virtual {v1, v4}, Lgw0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    .line 16
     :cond_1
-    return v0
-.end method
+    iget-object v4, v0, Lnug;->a:Lkug;
 
-.method public final hashCode()I
-    .locals 1
+    .line 17
+    invoke-virtual {v4}, Lxm;->o()Lma9;
 
-    const v0, -0x1f6a3120
+    move-result-object v4
 
-    return v0
-.end method
+    .line 18
+    iget-wide v5, v1, Lda2;->a:J
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    .line 19
+    iget-object v1, v0, Lnug;->a:Lkug;
 
-    const-string v0, "InvalidNotificationType"
+    iget-wide v7, v1, Lkug;->Y:J
 
-    return-object v0
+    .line 20
+    invoke-virtual {v4, v5, v6, v7, v8}, Lma9;->j(JJ)Loa9;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_9
+
+    .line 21
+    iget-object v4, v1, Loa9;->t0:Lde9;
+
+    sget-object v5, Lde9;->c:Lde9;
+
+    if-ne v4, v5, :cond_2
+
+    goto/16 :goto_3
+
+    .line 22
+    :cond_2
+    iget-object v4, v1, Loa9;->x0:Lk68;
+
+    if-nez v4, :cond_3
+
+    .line 23
+    iget-object v4, v0, Lnug;->a:Lkug;
+
+    .line 24
+    invoke-virtual {v4}, Lxm;->l()Lgw0;
+
+    move-result-object v4
+
+    .line 25
+    new-instance v5, Lkj0;
+
+    .line 26
+    iget-object v6, v0, Lnug;->a:Lkug;
+
+    iget-wide v6, v6, Lxm;->a:J
+
+    new-instance v8, Lukf;
+
+    .line 27
+    const-string v9, "attaches not found"
+
+    .line 28
+    invoke-direct {v8, v2, v9, v3}, Lukf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 29
+    invoke-direct {v5, v6, v7, v8}, Lkj0;-><init>(JLukf;)V
+
+    .line 30
+    invoke-virtual {v4, v5}, Lgw0;->c(Ljava/lang/Object;)V
+
+    .line 31
+    :cond_3
+    iget-object v4, v0, Lnug;->a:Lkug;
+
+    iget-wide v4, v4, Lkug;->o:J
+
+    .line 32
+    iget-object v6, v1, Loa9;->x0:Lk68;
+
+    if-nez v6, :cond_4
+
+    move-object v7, v3
+
+    goto :goto_1
+
+    .line 33
+    :cond_4
+    iget-object v6, v6, Lk68;->b:Ljava/lang/Object;
+
+    check-cast v6, Ljava/util/List;
+
+    .line 34
+    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :cond_5
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    move-object v8, v7
+
+    check-cast v8, Ld20;
+
+    .line 35
+    iget-object v8, v8, Ld20;->d:Lc20;
+
+    .line 36
+    iget-wide v8, v8, Lc20;->a:J
+
+    cmp-long v8, v8, v4
+
+    if-nez v8, :cond_5
+
+    goto :goto_0
+
+    :cond_6
+    move-object v7, v3
+
+    .line 37
+    :goto_0
+    check-cast v7, Ld20;
+
+    :goto_1
+    if-nez v7, :cond_7
+
+    .line 38
+    iget-object v1, v0, Lnug;->a:Lkug;
+
+    .line 39
+    invoke-virtual {v1}, Lxm;->l()Lgw0;
+
+    move-result-object v1
+
+    .line 40
+    new-instance v4, Lkj0;
+
+    .line 41
+    iget-object v5, v0, Lnug;->a:Lkug;
+
+    iget-wide v5, v5, Lxm;->a:J
+
+    new-instance v7, Lukf;
+
+    .line 42
+    const-string v8, "video deleted"
+
+    .line 43
+    invoke-direct {v7, v2, v8, v3}, Lukf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 44
+    invoke-direct {v4, v5, v6, v7}, Lkj0;-><init>(JLukf;)V
+
+    .line 45
+    invoke-virtual {v1, v4}, Lgw0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    .line 46
+    :cond_7
+    iget-object v2, v7, Ld20;->d:Lc20;
+
+    .line 47
+    iget-object v4, v0, Lnug;->a:Lkug;
+
+    iget-wide v14, v1, Lij0;->a:J
+
+    .line 48
+    iget-object v1, v2, Lc20;->m:Ljava/lang/String;
+
+    .line 49
+    new-instance v5, Lkug;
+
+    .line 50
+    iget-wide v6, v4, Lxm;->a:J
+
+    .line 51
+    iget-wide v8, v4, Lkug;->o:J
+
+    .line 52
+    iget-wide v10, v4, Lkug;->X:J
+
+    .line 53
+    iget-wide v12, v4, Lkug;->Y:J
+
+    .line 54
+    iget-object v2, v4, Lkug;->r0:Ljava/lang/String;
+
+    .line 55
+    iget-boolean v3, v4, Lkug;->s0:Z
+
+    .line 56
+    iget-boolean v4, v4, Lkug;->t0:Z
+
+    const/16 v20, 0x1
+
+    move-object/from16 v19, v1
+
+    move-object/from16 v16, v2
+
+    move/from16 v17, v3
+
+    move/from16 v18, v4
+
+    .line 57
+    invoke-direct/range {v5 .. v20}, Lkug;-><init>(JJJJJLjava/lang/String;ZZLjava/lang/String;Z)V
+
+    .line 58
+    iget-object v1, v0, Lnug;->a:Lkug;
+
+    .line 59
+    iget-object v1, v1, Lxm;->c:Lym;
+
+    if-eqz v1, :cond_8
+
+    move-object v3, v1
+
+    goto :goto_2
+
+    :cond_8
+    const/4 v3, 0x0
+
+    .line 60
+    :goto_2
+    iget-object v1, v3, Lym;->P:Llt7;
+
+    .line 61
+    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lolf;
+
+    .line 62
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    .line 63
+    check-cast v1, Lulf;
+
+    invoke-virtual {v1, v5, v5, v2}, Lulf;->c(Lxm;Lmmf;Z)J
+
+    return-void
+
+    .line 64
+    :cond_9
+    :goto_3
+    iget-object v1, v0, Lnug;->a:Lkug;
+
+    .line 65
+    invoke-virtual {v1}, Lxm;->l()Lgw0;
+
+    move-result-object v1
+
+    .line 66
+    new-instance v3, Lkj0;
+
+    .line 67
+    iget-object v4, v0, Lnug;->a:Lkug;
+
+    iget-wide v4, v4, Lxm;->a:J
+
+    new-instance v6, Lukf;
+
+    .line 68
+    const-string v7, "message deleted"
+
+    const/4 v8, 0x0
+
+    .line 69
+    invoke-direct {v6, v2, v7, v8}, Lukf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 70
+    invoke-direct {v3, v4, v5, v6}, Lkj0;-><init>(JLukf;)V
+
+    .line 71
+    invoke-virtual {v1, v3}, Lgw0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

@@ -13,13 +13,13 @@
         "",
         "",
         "delay",
-        "Lkj9;",
+        "Luq9;",
         "callback",
-        "Laxf;",
+        "Lzag;",
         "registerAudioSampleCallback",
-        "(JLkj9;)V",
+        "(JLuq9;)V",
         "removeAudioSampleCallback",
-        "(Lkj9;)V",
+        "(Luq9;)V",
         "",
         "isMicEnabled",
         "()Z",
@@ -41,10 +41,10 @@
 .method public abstract isMicEnabled()Z
 .end method
 
-.method public abstract registerAudioSampleCallback(JLkj9;)V
+.method public abstract registerAudioSampleCallback(JLuq9;)V
 .end method
 
-.method public abstract removeAudioSampleCallback(Lkj9;)V
+.method public abstract removeAudioSampleCallback(Luq9;)V
 .end method
 
 .method public abstract setMicEnabled(Z)V

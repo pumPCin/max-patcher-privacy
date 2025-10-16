@@ -1,278 +1,354 @@
-.class public final Lgr6;
-.super Ljava/util/concurrent/AbstractExecutorService;
+.class public Lgr6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Landroid/os/Handler;
+.field public static final b:Lgr6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lgv0;
+    sget v0, Lur6;->e:I
 
-    const/16 v1, 0x8
+    const v0, 0xbdfcb8
 
-    invoke-direct {v0, v1}, Lgv0;-><init>(I)V
+    sput v0, Lgr6;->a:I
+
+    new-instance v0, Lgr6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lgr6;->b:Lgr6;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Handler;)V
-    .locals 0
+.method public static a(Landroid/content/Context;)I
+    .locals 2
 
-    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+    sget v0, Lur6;->e:I
 
-    iput-object p1, p0, Lgr6;->a:Landroid/os/Handler;
+    const/4 v0, 0x0
 
-    return-void
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const-string v1, "com.google.android.gms"
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    return p0
+
+    :catch_0
+    const-string p0, "GooglePlayServicesUtil"
+
+    const-string v1, "Google Play services is missing."
+
+    invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v0
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 0
+.method public b(ILandroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+    .locals 3
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    const/4 v0, 0x1
 
-    const-class p2, Lgr6;
+    const-string v1, "com.google.android.gms"
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    if-eq p1, v0, :cond_1
 
-    move-result-object p2
+    const/4 v0, 0x2
 
-    const-string p3, " cannot be shut down. Use Looper.quitSafely()."
+    if-eq p1, v0, :cond_1
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const/4 p2, 0x3
 
-    move-result-object p2
+    const/4 p3, 0x0
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-eq p1, p2, :cond_0
 
-    throw p1
-.end method
-
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 2
-
-    iget-object v0, p0, Lgr6;->a:Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    return-void
+    return-object p3
 
     :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
+    const-string p1, "package"
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " is shutting down"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final isShutdown()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isTerminated()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lig4;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p1}, Lig4;-><init>(ILjava/lang/Object;)V
-
-    .line 2
-    invoke-virtual {p0, v0, p2, p3, p4}, Lgr6;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    invoke-static {p1, v1, p3}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    new-instance p2, Landroid/content/Intent;
 
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 3
+    const-string p3, "android.settings.APPLICATION_DETAILS_SETTINGS"
 
-    .line 3
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    invoke-direct {p2, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result-wide v0
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    return-object p2
 
-    invoke-virtual {v2, p2, p3, p4}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    :cond_1
+    if-eqz p2, :cond_3
 
-    move-result-wide p2
-
-    add-long/2addr p2, v0
-
-    .line 4
-    new-instance p4, Lfr6;
-
-    iget-object v0, p0, Lgr6;->a:Landroid/os/Handler;
-
-    invoke-direct {p4, v0, p2, p3, p1}, Lfr6;-><init>(Landroid/os/Handler;JLjava/util/concurrent/Callable;)V
-
-    .line 5
-    invoke-virtual {v0, p4, p2, p3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
+    invoke-static {p2}, Lvxi;->b(Landroid/content/Context;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_2
 
-    return-object p4
+    goto :goto_0
 
-    .line 6
-    :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
+    :cond_2
+    new-instance p1, Landroid/content/Intent;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const-string p2, "com.google.android.clockwork.home.UPDATE_ANDROID_WEAR_ACTION"
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string p2, "com.google.android.wearable.app"
 
-    const-string p3, " is shutting down"
+    invoke-virtual {p1, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_3
+    :goto_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "gcore_"
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget v0, Lgr6;->a:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "-"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_4
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_5
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_6
+
+    :try_start_0
+    invoke-static {p2}, Laph;->a(Landroid/content/Context;)Le64;
+
+    move-result-object p3
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+    iget-object p3, p3, Le64;->a:Landroid/content/Context;
 
-    .line 7
-    new-instance p2, Ld57;
+    invoke-virtual {p3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    const/4 p3, 0x1
+    move-result-object p3
 
-    .line 8
-    invoke-direct {p2, p3, p1}, Le57;-><init>(ILjava/lang/Object;)V
+    const/4 v0, 0x0
+
+    invoke-virtual {p3, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_6
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Landroid/content/Intent;
+
+    const-string p3, "android.intent.action.VIEW"
+
+    invoke-direct {p2, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string p3, "market://details"
+
+    invoke-static {p3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object p3
+
+    const-string v0, "id"
+
+    invoke-virtual {p3, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p3
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const-string v0, "pcampaignid"
+
+    invoke-virtual {p3, v0, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_7
+    invoke-virtual {p3}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    const-string p1, "com.android.vending"
+
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/high16 p1, 0x80000
+
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     return-object p2
 .end method
 
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 0
+.method public c(Landroid/content/Context;I)I
+    .locals 4
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-static {p1, p2}, Lur6;->a(Landroid/content/Context;I)I
 
-    const-class p2, Lgr6;
+    move-result p2
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const/4 v0, 0x1
 
-    move-result-object p2
+    const/16 v1, 0x12
 
-    const-string p3, " does not yet support fixed-rate scheduling."
+    if-ne p2, v1, :cond_0
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object p2
+    :cond_0
+    if-ne p2, v0, :cond_3
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    throw p1
-.end method
+    move-result-object v0
 
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 0
+    invoke-virtual {v0}, Landroid/content/pm/PackageManager;->getPackageInstaller()Landroid/content/pm/PackageInstaller;
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    move-result-object v0
 
-    const-class p2, Lgr6;
+    invoke-virtual {v0}, Landroid/content/pm/PackageInstaller;->getAllSessions()Ljava/util/List;
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p2
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    const-string p3, " does not yet support fixed-delay scheduling."
+    move-result-object v0
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p2
+    move-result v2
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    const-string v3, "com.google.android.gms"
 
-    throw p1
-.end method
+    if-eqz v2, :cond_2
 
-.method public final shutdown()V
-    .locals 3
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    move-result-object v2
 
-    const-class v1, Lgr6;
+    check-cast v2, Landroid/content/pm/PackageInstaller$SessionInfo;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/pm/PackageInstaller$SessionInfo;->getAppPackageName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v2, " cannot be shut down. Use Looper.quitSafely()."
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move-result v2
 
-    move-result-object v1
+    if-eqz v2, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x1
 
-    throw v0
-.end method
+    :goto_0
+    move v0, p1
 
-.method public final shutdownNow()Ljava/util/List;
-    .locals 3
+    goto :goto_1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    :cond_2
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    const-class v1, Lgr6;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const/16 v0, 0x2000
 
-    move-result-object v1
+    :try_start_1
+    invoke-virtual {p1, v3, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
-    const-string v2, " cannot be shut down. Use Looper.quitSafely()."
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-boolean p1, p1, Landroid/content/pm/ApplicationInfo;->enabled:Z
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :catch_0
+    const/4 p1, 0x0
 
-    throw v0
+    goto :goto_0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    :goto_1
+    if-eqz v0, :cond_4
+
+    return v1
+
+    :cond_4
+    return p2
 .end method

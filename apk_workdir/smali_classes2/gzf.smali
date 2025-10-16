@@ -2,192 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+
 
 # instance fields
-.field public final a:J
+.field public final a:Lw6e;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/List;
-
-.field public final d:Lr69;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;Lr69;)V
+.method public constructor <init>(Lw6e;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lgzf;->a:J
-
-    iput-object p3, p0, Lgzf;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lgzf;->c:Ljava/util/List;
-
-    iput-object p5, p0, Lgzf;->d:Lr69;
+    iput-object p1, p0, Lgzf;->a:Lw6e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 1
+
+    iget p1, p0, Lgzf;->b:I
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    sub-int/2addr p1, v0
 
-    return v0
+    iput p1, p0, Lgzf;->b:I
 
-    :cond_0
-    instance-of v1, p1, Lgzf;
+    if-nez p1, :cond_0
 
-    const/4 v2, 0x0
+    iget-object p1, p0, Lgzf;->a:Lw6e;
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lgzf;
-
-    iget-wide v3, p0, Lgzf;->a:J
-
-    iget-wide v5, p1, Lgzf;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lgzf;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lgzf;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lgzf;->c:Ljava/util/List;
-
-    iget-object v3, p1, Lgzf;->c:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lgzf;->d:Lr69;
-
-    iget-object p1, p1, Lgzf;->d:Lr69;
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lgzf;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lgzf;->b:Ljava/lang/String;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
+    invoke-virtual {p1, v0}, Lw6e;->e(Z)V
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lgzf;->c:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Ljjd;->f(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lgzf;->d:Lr69;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 1
 
-    const-string v0, "UpdateTextEntity(id="
+    iget p1, p0, Lgzf;->b:I
 
-    const-string v1, ", text="
+    if-nez p1, :cond_0
 
-    iget-wide v2, p0, Lgzf;->a:J
+    iget-object p1, p0, Lgzf;->a:Lw6e;
 
-    iget-object v4, p0, Lgzf;->b:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    invoke-static {v0, v2, v3, v1, v4}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Lw6e;->e(Z)V
 
-    move-result-object v0
+    :cond_0
+    iget p1, p0, Lgzf;->b:I
 
-    const-string v1, ", elements="
+    add-int/lit8 p1, p1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lgzf;->b:I
 
-    iget-object v1, p0, Lgzf;->c:Ljava/util/List;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    const-string v1, ", status="
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
 
-    iget-object v1, p0, Lgzf;->d:Lr69;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
 
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

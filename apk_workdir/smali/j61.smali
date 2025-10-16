@@ -1,48 +1,72 @@
 .class public final Lj61;
-.super Lwy3;
+.super Ls1h;
+.source "SourceFile"
+
+# interfaces
+.implements Ll61;
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lwf0;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final c:Lj61;
 
 
 # direct methods
-.method public constructor <init>(Lwf0;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lj61;->Y:Lwf0;
+    new-instance v0, Lj61;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget v1, Lbrc;->call_screen_connection_restored:I
+
+    const-wide/16 v2, 0x3e8
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2, v1}, Ls1h;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Lj61;->c:Lj61;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lj61;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lj61;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lj61;
 
-    iput p1, p0, Lj61;->X:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Lj61;->Y:Lwf0;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lwf0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, 0x426150a3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Restored"
+
+    return-object v0
 .end method

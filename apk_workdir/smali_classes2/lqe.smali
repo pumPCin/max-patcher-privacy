@@ -1,85 +1,80 @@
 .class public final Llqe;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lnqe;
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lmqe;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lmqe;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llqe;->Y:Lmqe;
 
-    iput-boolean p1, p0, Llqe;->a:Z
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ld00;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Llqe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Llqe;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Llqe;
 
-    iget-boolean v1, p0, Llqe;->a:Z
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-boolean p1, p1, Llqe;->a:Z
+    invoke-virtual {p1, p2}, Llqe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-boolean v0, p0, Llqe;->a:Z
+    new-instance v0, Llqe;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v1, p0, Llqe;->Y:Lmqe;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Llqe;-><init>(Lmqe;Lkotlin/coroutines/Continuation;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "SetSelection(selected="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Llqe;->a:Z
-
-    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Llqe;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llqe;->X:Ljava/lang/Object;
+
+    check-cast p1, Ld00;
+
+    iget-object v0, p0, Llqe;->Y:Lmqe;
+
+    invoke-static {v0, p1}, Lmqe;->x(Lmqe;Ld00;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

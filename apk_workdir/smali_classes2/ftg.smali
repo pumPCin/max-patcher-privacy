@@ -1,86 +1,73 @@
 .class public final Lftg;
-.super Lej7;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lgi6;
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public synthetic X:J
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Lej7;-><init>()V
-
-    iput-object p1, p0, Lftg;->c:Ljava/lang/String;
-
-    return-void
-.end method
+.field public synthetic Y:Z
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Number;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    return v0
+    move-result-wide v0
 
-    :cond_0
-    instance-of v1, p1, Lftg;
+    check-cast p2, Ljava/lang/Boolean;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lftg;
-
-    iget-object v1, p0, Lftg;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lftg;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    return v2
+    new-instance p2, Lftg;
 
-    :cond_2
-    return v0
+    const/4 v2, 0x3
+
+    invoke-direct {p2, v2, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-wide v0, p2, Lftg;->X:J
+
+    iput-boolean p1, p2, Lftg;->Y:Z
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {p2, p1}, Lftg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lftg;->c:Ljava/lang/String;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-wide v0, p0, Lftg;->X:J
 
-    move-result v0
+    iget-boolean p1, p0, Lftg;->Y:Z
 
-    return v0
-.end method
+    if-eqz p1, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    new-instance p1, Ljava/lang/Long;
 
-    const-string v0, "RequestDownloadFile(fileName="
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
-    const-string v1, ")"
+    return-object p1
 
-    iget-object v2, p0, Lftg;->c:Ljava/lang/String;
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

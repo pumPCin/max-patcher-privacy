@@ -1,90 +1,47 @@
 .class public final Licb;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Ljcb;
+.field public final a:Lzh1;
+
+.field public final b:Lwbb;
+
+.field public final c:Lwbb;
+
+.field public final d:Lwbb;
+
+.field public final e:Lwbb;
+
+.field public final f:Lwbb;
+
+.field public final g:Lwbb;
+
+.field public final h:Lwbb;
 
 
 # direct methods
-.method public constructor <init>(Ljcb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lzh1;Lwbb;Lwbb;Lwbb;Lwbb;Lwbb;Lwbb;Lwbb;)V
     .locals 0
 
-    iput-object p1, p0, Licb;->X:Ljcb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Licb;->a:Lzh1;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Licb;->b:Lwbb;
+
+    iput-object p3, p0, Licb;->c:Lwbb;
+
+    iput-object p4, p0, Licb;->d:Lwbb;
+
+    iput-object p5, p0, Licb;->e:Lwbb;
+
+    iput-object p6, p0, Licb;->f:Lwbb;
+
+    iput-object p7, p0, Licb;->g:Lwbb;
+
+    iput-object p8, p0, Licb;->h:Lwbb;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Licb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Licb;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Licb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Licb;
-
-    iget-object v0, p0, Licb;->X:Ljcb;
-
-    invoke-direct {p1, v0, p2}, Licb;-><init>(Ljcb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Licb;->X:Ljcb;
-
-    iget-object p1, p1, Ljcb;->Y:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lrta;
-
-    sget v0, Lqhc;->oneme_location_map_location_error:I
-
-    new-instance v1, Lxcf;
-
-    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lrta;->g(Lcdf;)V
-
-    invoke-virtual {p1}, Lrta;->i()Lqta;
-
-    move-result-object p1
-
-    return-object p1
 .end method

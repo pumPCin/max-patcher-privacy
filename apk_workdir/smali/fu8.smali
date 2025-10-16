@@ -1,116 +1,32 @@
-.class public final synthetic Lfu8;
+.class public interface abstract Lfu8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic X:Lhm8;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Lgu8;
-
-.field public final synthetic c:Landroid/util/Pair;
-
-.field public final synthetic o:Lzx7;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lgu8;Landroid/util/Pair;Lzx7;Lhm8;I)V
-    .locals 0
-
-    iput p5, p0, Lfu8;->a:I
-
-    iput-object p1, p0, Lfu8;->b:Lgu8;
-
-    iput-object p2, p0, Lfu8;->c:Landroid/util/Pair;
-
-    iput-object p3, p0, Lfu8;->o:Lzx7;
-
-    iput-object p4, p0, Lfu8;->X:Lhm8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Ll1e;
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public abstract f()V
+.end method
 
-    iget v0, p0, Lfu8;->a:I
+.method public abstract g(J)J
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract j()J
+.end method
 
-    iget-object v0, p0, Lfu8;->b:Lgu8;
+.method public abstract k()Ln0g;
+.end method
 
-    iget-object v0, v0, Lgu8;->b:Llu8;
+.method public abstract o(JLowd;)J
+.end method
 
-    iget-object v0, v0, Llu8;->j:Ljava/lang/Object;
+.method public abstract p(J)V
+.end method
 
-    check-cast v0, Lsd4;
+.method public abstract t(Ldu8;J)V
+.end method
 
-    iget-object v1, p0, Lfu8;->c:Landroid/util/Pair;
-
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v1, Lot8;
-
-    iget-object v3, p0, Lfu8;->o:Lzx7;
-
-    iget-object v4, p0, Lfu8;->X:Lhm8;
-
-    invoke-virtual {v0, v2, v1, v3, v4}, Lsd4;->u(ILot8;Lzx7;Lhm8;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lfu8;->b:Lgu8;
-
-    iget-object v0, v0, Lgu8;->b:Llu8;
-
-    iget-object v0, v0, Llu8;->j:Ljava/lang/Object;
-
-    check-cast v0, Lsd4;
-
-    iget-object v1, p0, Lfu8;->c:Landroid/util/Pair;
-
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v1, Lot8;
-
-    iget-object v3, p0, Lfu8;->o:Lzx7;
-
-    iget-object v4, p0, Lfu8;->X:Lhm8;
-
-    invoke-virtual {v0, v2, v1, v3, v4}, Lsd4;->d(ILot8;Lzx7;Lhm8;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract v([Lzi5;[Z[Lpkd;[ZJ)J
 .end method

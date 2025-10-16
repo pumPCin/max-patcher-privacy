@@ -1,39 +1,57 @@
-.class public final Lbi9;
-.super Lrc4;
+.class public abstract Lbi9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Lbi9;
+.field public static final a:Llt7;
 
-.field public static final c:Lmc4;
+.field public static final b:Llt7;
+
+.field public static final c:Llt7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 3
 
-    new-instance v0, Lbi9;
+    sget-object v0, Lci9;->a:Lci9;
 
-    invoke-direct {v0}, Lrc4;-><init>()V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    sput-object v0, Lbi9;->b:Lbi9;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const-class v2, Lcr;
 
-    new-array v1, v1, [Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    const/16 v3, 0xe
+    sput-object v1, Lbi9;->a:Llt7;
 
-    const-string v4, ":settings/messages"
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-static {v0, v4, v1, v2, v3}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+    move-result-object v1
+
+    const-class v2, Lhcg;
+
+    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+
+    move-result-object v1
+
+    sput-object v1, Lbi9;->b:Llt7;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    sput-object v0, Lbi9;->c:Lmc4;
+    const-class v1, Lbw8;
+
+    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+
+    move-result-object v0
+
+    sput-object v0, Lbi9;->c:Llt7;
 
     return-void
 .end method

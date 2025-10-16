@@ -1,143 +1,53 @@
-.class public abstract Lco9;
-.super Ljava/lang/Object;
+.class public final Lco9;
+.super Lk14;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ljo9;
+
+.field public o:Ljo9;
+
+.field public r0:I
+
+
 # direct methods
-.method public static a([B)Ldo9;
-    .locals 21
+.method public constructor <init>(Ljo9;Lk14;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;
+    iput-object p1, p0, Lco9;->Z:Ljo9;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    move-object/from16 v1, p0
+    return-void
+.end method
 
-    :try_start_0
-    invoke-static {v0, v1}, Ls59;->mergeFrom(Ls59;[B)Ls59;
 
-    move-result-object v0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p1, p0, Lco9;->Y:Ljava/lang/Object;
 
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldAttaches:Lru/ok/tamtam/nano/Protos$Attaches;
+    iget p1, p0, Lco9;->r0:I
 
-    const/4 v2, 0x0
+    const/high16 v0, -0x80000000
 
-    if-eqz v1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-static {v1}, Lru/ok/tamtam/nano/b;->e(Lru/ok/tamtam/nano/Protos$Attaches;)Lljh;
+    iput p1, p0, Lco9;->r0:I
 
-    move-result-object v1
+    iget-object p1, p0, Lco9;->Z:Ljo9;
 
-    iget-object v1, v1, Lljh;->a:Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    check-cast v1, Ljava/util/List;
+    invoke-virtual {p1, v0, v1, p0}, Ljo9;->C(JLk14;)Ljava/lang/Object;
 
-    move-object/from16 v17, v1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_0
-    move-object/from16 v17, v2
-
-    :goto_0
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v1, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
-
-    invoke-static {v1}, Lp39;->a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    :cond_1
-    move-object/from16 v18, v2
-
-    new-instance v3, Ldo9;
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->requestId:J
-
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatId:J
-
-    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageId:J
-
-    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatServerId:J
-
-    iget-wide v12, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageServerId:J
-
-    iget-object v14, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->text:Ljava/lang/String;
-
-    iget-object v15, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldText:Ljava/lang/String;
-
-    iget v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldStatus:I
-
-    invoke-static {}, Lr69;->values()[Lr69;
-
-    move-result-object v2
-
-    move-object/from16 p0, v3
-
-    array-length v3, v2
-
-    const/16 v16, 0x0
-
-    move-object/from16 v19, v2
-
-    move/from16 v2, v16
-
-    :goto_1
-    if-ge v2, v3, :cond_3
-
-    move/from16 v16, v2
-
-    aget-object v2, v19, v16
-
-    move/from16 v20, v3
-
-    iget v3, v2, Lr69;->a:I
-
-    if-ne v3, v1, :cond_2
-
-    iget-boolean v0, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->editAttaches:Z
-
-    move-object/from16 v3, p0
-
-    move/from16 v19, v0
-
-    move-object/from16 v16, v2
-
-    invoke-direct/range {v3 .. v19}, Ldo9;-><init>(JJJJJLjava/lang/String;Ljava/lang/String;Lr69;Ljava/util/List;Ljava/util/List;Z)V
-
-    return-object v3
-
-    :cond_2
-    move-object/from16 v3, p0
-
-    add-int/lit8 v2, v16, 0x1
-
-    move/from16 v3, v20
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    const-string v1, "Array contains no element matching the predicate."
-
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object p1
 .end method

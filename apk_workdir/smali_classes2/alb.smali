@@ -1,202 +1,104 @@
-.class public Lalb;
-.super Ljava/lang/Object;
+.class public final Lalb;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic X:Ldlb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Iterable;)V
-    .locals 1
+.method public constructor <init>(Ldlb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lalb;->X:Ldlb;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const/4 p1, 0x2
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {v0, p1}, Lc93;->T(Ljava/util/Collection;Ljava/lang/Iterable;)V
-
-    iput-object v0, p0, Lalb;->a:Ljava/util/ArrayList;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Lmhg;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lalb;->a:Ljava/util/ArrayList;
+    check-cast p1, Lb54;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v1
-
-    if-ge p1, v1, :cond_0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lalb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lmhg;
-
-    return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    instance-of v0, p1, Lalb;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Lalb;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
     check-cast p1, Lalb;
 
-    iget-object v3, p1, Lalb;->a:Ljava/util/ArrayList;
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p1, p2}, Lalb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v3
-
-    if-eq v2, v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    move v3, v1
-
-    :goto_0
-    if-ge v3, v2, :cond_4
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    iget-object v5, p1, Lalb;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    :goto_1
-    return v1
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    :goto_2
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lalb;->a:Ljava/util/ArrayList;
+    new-instance p1, Lalb;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lalb;->X:Ldlb;
+
+    invoke-direct {p1, v0, p2}, Lalb;-><init>(Ldlb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lalb;->X:Ldlb;
+
+    iget-object p1, p1, Ldlb;->Z:Lsze;
+
+    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Lvkb;
+
+    const/4 v8, 0x1
+
+    const/16 v9, 0x3f
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v1 .. v9}, Lvkb;->a(Lvkb;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljqf;Ljava/lang/String;ZI)Lvkb;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1, v1, v0}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v2
+    sget-object p1, Lzag;->a:Lzag;
 
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lmhg;
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-virtual {v2}, Lmhg;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    iget-object v0, p0, Lalb;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-
-    new-instance v4, Lcz9;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v4, v1}, Lcz9;-><init>(I)V
-
-    const/16 v5, 0x18
-
-    const-string v1, ", "
-
-    const-string v2, " ["
-
-    const-string v3, "]"
-
-    invoke-static/range {v0 .. v5}, Lw83;->l0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd6;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Playlist size: "
-
-    invoke-static {v6, v1, v0}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

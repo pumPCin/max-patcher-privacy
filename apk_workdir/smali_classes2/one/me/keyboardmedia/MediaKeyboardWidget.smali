@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfef;
+.implements Lrrf;
 
 
 # annotations
@@ -20,19 +20,19 @@
     d2 = {
         "Lone/me/keyboardmedia/MediaKeyboardWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lfef;",
+        "Lrrf;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lidd;",
+        "Ljod;",
         "scopeId",
         "",
         "chatId",
         "",
         "onlyEmoji",
-        "(Ljava/lang/String;JZLaf4;)V",
-        "cm8",
+        "(Ljava/lang/String;JZLvh4;)V",
+        "ps8",
         "keyboard-media_release"
     }
     k = 0x1
@@ -46,39 +46,39 @@
 
 
 # static fields
-.field public static final synthetic B0:[Lpl7;
+.field public static final synthetic B0:[Lwq7;
 
 
 # instance fields
 .field public A0:Landroid/animation/AnimatorSet;
 
-.field public final X:Lvoc;
+.field public final X:Lazc;
 
-.field public final Y:Lvoc;
+.field public final Y:Lazc;
 
-.field public final Z:Lvoc;
+.field public final Z:Lazc;
 
-.field public final a:Lds;
+.field public final a:Lqs;
 
-.field public final b:Lds;
+.field public final b:Lqs;
 
-.field public final c:Lyn7;
+.field public final c:Llt7;
 
-.field public o:Le68;
+.field public o:Lzb8;
 
-.field public final r0:Lvoc;
+.field public final r0:Lazc;
 
-.field public final s0:Lvoc;
+.field public final s0:Lazc;
 
-.field public final t0:Lvoc;
+.field public final t0:Lazc;
 
-.field public u0:Lmz3;
+.field public u0:La24;
 
-.field public final v0:Lwm7;
+.field public final v0:Lis7;
 
-.field public w0:Lri2;
+.field public w0:Lek2;
 
-.field public x0:Lqh0;
+.field public x0:Lbi0;
 
 .field public final y0:Ljava/util/EnumMap;
 
@@ -89,7 +89,7 @@
 .method static constructor <clinit>()V
     .locals 12
 
-    new-instance v0, Lf4c;
+    new-instance v0, Lxcc;
 
     const-class v1, Lone/me/keyboardmedia/MediaKeyboardWidget;
 
@@ -99,69 +99,69 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lewc;->a:Lfwc;
+    sget-object v2, Ls6d;->a:Lt6d;
 
     const-string v3, "onlyEmoji"
 
     const-string v5, "getOnlyEmoji()Z"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
+    invoke-static {v2, v1, v3, v5, v4}, Lf67;->d(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lxcc;
 
     move-result-object v2
 
-    new-instance v3, Lf4c;
+    new-instance v3, Lxcc;
 
     const-string v5, "bottomPanelView"
 
     const-string v6, "getBottomPanelView()Landroid/view/View;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lf4c;
+    new-instance v5, Lxcc;
 
     const-string v6, "keyboardBottomTabs"
 
     const-string v7, "getKeyboardBottomTabs()Lone/me/keyboardmedia/tablayout/KeyboardTabLayout;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Lf4c;
+    new-instance v6, Lxcc;
 
     const-string v7, "keyboardViewPager"
 
     const-string v8, "getKeyboardViewPager()Landroidx/viewpager2/widget/ViewPager2;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Lf4c;
+    new-instance v7, Lxcc;
 
     const-string v8, "settingsButton"
 
     const-string v9, "getSettingsButton()Landroid/view/View;"
 
-    invoke-direct {v7, v1, v8, v9, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Lf4c;
+    new-instance v8, Lxcc;
 
     const-string v9, "removeButton"
 
     const-string v10, "getRemoveButton()Landroid/view/View;"
 
-    invoke-direct {v8, v1, v9, v10, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Lf4c;
+    new-instance v9, Lxcc;
 
     const-string v10, "showcaseButton"
 
     const-string v11, "getShowcaseButton()Landroid/view/View;"
 
-    invoke-direct {v9, v1, v10, v11, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/16 v1, 0x8
 
-    new-array v1, v1, [Lpl7;
+    new-array v1, v1, [Lwq7;
 
     aput-object v0, v1, v4
 
@@ -193,7 +193,7 @@
 
     aput-object v9, v1, v0
 
-    sput-object v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    sput-object v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lwq7;
 
     return-void
 .end method
@@ -208,7 +208,7 @@
     const/4 v2, 0x0
 
     .line 10
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
 
     const-wide/16 v0, 0x0
 
@@ -218,38 +218,38 @@
     move-result-object v0
 
     .line 12
-    new-instance v1, Lds;
+    new-instance v1, Lqs;
 
     const-class v3, Ljava/lang/Long;
 
     const-string v4, "arg_key_chat_id"
 
-    invoke-direct {v1, v3, v0, v4}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v0, v4}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
-    iput-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->a:Lds;
+    iput-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->a:Lqs;
 
     .line 14
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 15
-    new-instance v1, Lds;
+    new-instance v1, Lqs;
 
     const-class v3, Ljava/lang/Boolean;
 
     const-string v4, "arg_key_only_emoji"
 
-    invoke-direct {v1, v3, v0, v4}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v0, v4}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
-    iput-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->b:Lds;
+    iput-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->b:Lqs;
 
     .line 17
     const-string v0, "arg_key_scope_id"
 
-    const-class v1, Lidd;
+    const-class v1, Ljod;
 
-    invoke-static {p1, v0, v1}, Lb19;->j(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1, v0, v1}, Lyji;->b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -257,94 +257,94 @@
 
     check-cast p1, Landroid/os/Parcelable;
 
-    check-cast p1, Lidd;
+    check-cast p1, Ljod;
 
     .line 18
-    iget-object p1, p1, Lidd;->a:Ljava/lang/String;
+    iget-object p1, p1, Ljod;->a:Ljava/lang/String;
 
     .line 19
-    const-class v0, Lul8;
+    const-class v0, Lhs8;
 
     .line 20
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object p1
 
     .line 21
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->c:Lyn7;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->c:Llt7;
 
     .line 22
-    sget p1, Lqna;->a:I
+    sget p1, Luva;->a:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->X:Lvoc;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->X:Lazc;
 
     .line 23
-    sget p1, Lqna;->p:I
+    sget p1, Luva;->p:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Y:Lvoc;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Y:Lazc;
 
     .line 24
-    sget p1, Lqna;->f:I
+    sget p1, Luva;->f:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Z:Lvoc;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Z:Lazc;
 
     .line 25
-    sget p1, Lqna;->j:I
+    sget p1, Luva;->j:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->r0:Lvoc;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->r0:Lazc;
 
     .line 26
-    sget p1, Lqna;->i:I
+    sget p1, Luva;->i:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->s0:Lvoc;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->s0:Lazc;
 
     .line 27
-    sget p1, Lqna;->k:I
+    sget p1, Luva;->k:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->t0:Lvoc;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->t0:Lazc;
 
     .line 28
-    new-instance p1, Lwm7;
+    new-instance p1, Lis7;
 
     .line 29
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     .line 30
-    sget-object v0, Lo65;->a:Lo65;
+    sget-object v0, Ls95;->a:Ls95;
 
-    iput-object v0, p1, Lwm7;->a:Ljava/util/List;
+    iput-object v0, p1, Lis7;->a:Ljava/util/List;
 
     .line 31
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lwm7;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lis7;
 
     .line 32
     new-instance p1, Ljava/util/EnumMap;
 
-    const-class v0, Lrm7;
+    const-class v0, Lds7;
 
     invoke-direct {p1, v0}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
@@ -363,7 +363,7 @@
     const-string v1, " in bundle"
 
     .line 34
-    invoke-static {v0, p1, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -379,7 +379,7 @@
     throw v0
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;JZILaf4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;JZILvh4;)V
     .locals 6
 
     and-int/lit8 p6, p5, 0x2
@@ -407,25 +407,25 @@
     move-object v1, p1
 
     .line 41
-    invoke-direct/range {v0 .. v5}, Lone/me/keyboardmedia/MediaKeyboardWidget;-><init>(Ljava/lang/String;JZLaf4;)V
+    invoke-direct/range {v0 .. v5}, Lone/me/keyboardmedia/MediaKeyboardWidget;-><init>(Ljava/lang/String;JZLvh4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;JZLaf4;)V
+.method public constructor <init>(Ljava/lang/String;JZLvh4;)V
     .locals 1
 
     .line 1
-    new-instance p5, Lidd;
+    new-instance p5, Ljod;
 
-    invoke-direct {p5, p1}, Lidd;-><init>(Ljava/lang/String;)V
+    invoke-direct {p5, p1}, Ljod;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Ld3b;
+    new-instance p1, Lqbb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p5}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p5}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -433,11 +433,11 @@
     move-result-object p2
 
     .line 4
-    new-instance p3, Ld3b;
+    new-instance p3, Lqbb;
 
     const-string p5, "arg_key_chat_id"
 
-    invoke-direct {p3, p5, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p5, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 5
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -445,19 +445,19 @@
     move-result-object p2
 
     .line 6
-    new-instance p4, Ld3b;
+    new-instance p4, Lqbb;
 
     const-string p5, "arg_key_only_emoji"
 
-    invoke-direct {p4, p5, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p4, p5, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 7
-    filled-new-array {p1, p3, p4}, [Ld3b;
+    filled-new-array {p1, p3, p4}, [Lqbb;
 
     move-result-object p1
 
     .line 8
-    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
+    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -469,10 +469,10 @@
 
 
 # virtual methods
-.method public final B0()V
+.method public final C0()V
     .locals 3
 
-    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lx14;->getView()Landroid/view/View;
 
     move-result-object v0
 
@@ -481,11 +481,11 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lwm7;
+    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lis7;
 
-    iget-object v0, v0, Lwm7;->a:Ljava/util/List;
+    iget-object v0, v0, Lis7;->a:Ljava/util/List;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v1
 
@@ -495,7 +495,7 @@
 
     if-ltz v1, :cond_3
 
-    invoke-static {v0}, Lx83;->H(Ljava/util/List;)I
+    invoke-static {v0}, Lbb3;->e(Ljava/util/List;)I
 
     move-result v2
 
@@ -505,7 +505,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lrm7;
+    check-cast v0, Lds7;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -521,11 +521,11 @@
     return-void
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v1
 
-    sget v2, Lqna;->c:I
+    sget v2, Luva;->c:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -533,16 +533,16 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/keyboardmedia/MediaKeyboardWidget;->F0(Lrm7;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p0, v0, v1}, Lone/me/keyboardmedia/MediaKeyboardWidget;->G0(Lds7;Landroidx/recyclerview/widget/RecyclerView;)V
 
     return-void
 
     :cond_2
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v1
 
-    sget v2, Lqna;->n:I
+    sget v2, Luva;->n:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -550,24 +550,24 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/keyboardmedia/MediaKeyboardWidget;->F0(Lrm7;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p0, v0, v1}, Lone/me/keyboardmedia/MediaKeyboardWidget;->G0(Lds7;Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_3
     return-void
 .end method
 
-.method public final C0()Landroid/view/View;
+.method public final D0()Landroid/view/View;
     .locals 2
 
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lwq7;
 
     const/4 v1, 0x2
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->X:Lvoc;
+    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->X:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -576,18 +576,18 @@
     return-object v0
 .end method
 
-.method public final D0()Landroidx/viewpager2/widget/ViewPager2;
+.method public final E0()Landroidx/viewpager2/widget/ViewPager2;
     .locals 2
 
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lwq7;
 
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Z:Lvoc;
+    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Z:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -596,18 +596,18 @@
     return-object v0
 .end method
 
-.method public final E0()Z
+.method public final F0()Z
     .locals 2
 
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lwq7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->b:Lds;
+    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->b:Lqs;
 
-    invoke-virtual {v0, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -620,7 +620,7 @@
     return v0
 .end method
 
-.method public final F0(Lrm7;Landroidx/recyclerview/widget/RecyclerView;)V
+.method public final G0(Lds7;Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 13
 
     move-object v8, p2
@@ -638,13 +638,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance v10, Lcm8;
+    new-instance v10, Lps8;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v11
 
-    new-instance v0, Lr71;
+    new-instance v0, Ls81;
 
     const/4 v6, 0x0
 
@@ -660,11 +660,11 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v7}, Lr71;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Ls81;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
     move-object v12, v0
 
-    new-instance v0, Lr71;
+    new-instance v0, Ls81;
 
     const/16 v7, 0x15
 
@@ -674,11 +674,11 @@
 
     const-string v5, "hideBottomPanel()V"
 
-    invoke-direct/range {v0 .. v7}, Lr71;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Ls81;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-direct {v10, v11, v12, v0}, Lcm8;-><init>(Landroid/content/Context;Lr71;Lr71;)V
+    invoke-direct {v10, v11, v12, v0}, Lps8;-><init>(Landroid/content/Context;Ls81;Ls81;)V
 
-    invoke-virtual {p2, v10}, Landroidx/recyclerview/widget/RecyclerView;->m(Ljvc;)V
+    invoke-virtual {p2, v10}, Landroidx/recyclerview/widget/RecyclerView;->m(Ly5d;)V
 
     invoke-virtual {v9, p1, v10}, Ljava/util/EnumMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -698,7 +698,7 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance p2, Ldm8;
+    new-instance p2, Lqs8;
 
     const/4 p3, 0x3
 
@@ -706,17 +706,17 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p2, p3, v0, v1}, Ldm8;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p2, p3, v0, v1}, Lqs8;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p2, p1}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {p2, p1}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
-    sget p2, Llm7;->a:I
+    sget p2, Lxr7;->a:I
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-static {p2}, Llm7;->a(Landroid/content/Context;)I
+    invoke-static {p2}, Lxr7;->a(Landroid/content/Context;)I
 
     move-result p2
 
@@ -736,7 +736,7 @@
 
     invoke-direct {p2, v2}, Landroidx/viewpager2/widget/ViewPager2;-><init>(Landroid/content/Context;)V
 
-    sget v2, Lqna;->f:I
+    sget v2, Luva;->f:I
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setId(I)V
 
@@ -754,7 +754,7 @@
 
     invoke-virtual {p2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {p2}, Lomc;->o(Landroidx/viewpager2/widget/ViewPager2;)V
+    invoke-static {p2}, Laci;->b(Landroidx/viewpager2/widget/ViewPager2;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -766,7 +766,7 @@
 
     invoke-direct {p2, v5}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v5, Lqna;->a:I
+    sget v5, Luva;->a:I
 
     invoke-virtual {p2, v5}, Landroid/view/View;->setId(I)V
 
@@ -776,7 +776,7 @@
 
     int-to-float v7, v6
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -788,7 +788,7 @@
 
     mul-float/2addr v7, v8
 
-    invoke-static {v7}, Li8e;->I(F)I
+    invoke-static {v7}, Lagi;->d(F)I
 
     move-result v7
 
@@ -800,11 +800,11 @@
 
     invoke-virtual {p2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v5, Ldm8;
+    new-instance v5, Lqs8;
 
-    invoke-direct {v5, p3, v0, v2}, Ldm8;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v5, p3, v0, v2}, Lqs8;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v5, p2}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v5, p2}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setClickable(Z)V
 
@@ -818,7 +818,7 @@
 
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -834,7 +834,7 @@
 
     mul-double/2addr v8, v10
 
-    invoke-static {v8, v9}, Li8e;->H(D)I
+    invoke-static {v8, v9}, Lagi;->c(D)I
 
     move-result v8
 
@@ -844,11 +844,11 @@
 
     invoke-virtual {v5, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v3, Lkw3;
+    new-instance v3, Lzy3;
 
-    invoke-direct {v3, p3, v0, v1}, Lkw3;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v3, p3, v0, v1}, Lzy3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v3, v5}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v3, v5}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
     invoke-virtual {p2, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -856,7 +856,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -868,7 +868,7 @@
 
     mul-float/2addr v3, v5
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v3}, Lagi;->d(F)I
 
     move-result v3
 
@@ -880,7 +880,7 @@
 
     invoke-direct {v5, v6, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v6, Lqna;->j:I
+    sget v6, Luva;->j:I
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setId(I)V
 
@@ -896,7 +896,7 @@
 
     int-to-float v7, v7
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -908,7 +908,7 @@
 
     mul-float/2addr v8, v7
 
-    invoke-static {v8}, Li8e;->I(F)I
+    invoke-static {v8}, Lagi;->d(F)I
 
     move-result v8
 
@@ -920,17 +920,17 @@
 
     invoke-virtual {v5, v6, v6, v6, v6}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance v8, Lo32;
+    new-instance v8, Lt42;
 
-    invoke-direct {v8, p3, v0, v1}, Lo32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v8, p3, v0, v1}, Lt42;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v8, v5}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v8, v5}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
-    new-instance v8, Lu81;
+    new-instance v8, Lv91;
 
-    invoke-direct {v8, v1}, Lu81;-><init>(I)V
+    invoke-direct {v8, v1}, Lv91;-><init>(I)V
 
-    invoke-static {v5, v8}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v5, v8}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p2, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -942,7 +942,7 @@
 
     invoke-direct {v5, v8, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v8, Lqna;->k:I
+    sget v8, Luva;->k:I
 
     invoke-virtual {v5, v8}, Landroid/view/View;->setId(I)V
 
@@ -954,7 +954,7 @@
 
     iput v9, v8, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -966,7 +966,7 @@
 
     mul-float/2addr v10, v7
 
-    invoke-static {v10}, Li8e;->I(F)I
+    invoke-static {v10}, Lagi;->d(F)I
 
     move-result v10
 
@@ -976,17 +976,17 @@
 
     invoke-virtual {v5, v6, v6, v6, v6}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance v8, Lo32;
+    new-instance v8, Lt42;
 
-    invoke-direct {v8, p3, v0, v4}, Lo32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v8, p3, v0, v4}, Lt42;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v8, v5}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v8, v5}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
-    new-instance v4, Lam8;
+    new-instance v4, Lns8;
 
-    invoke-direct {v4, p0, v2}, Lam8;-><init>(Lone/me/keyboardmedia/MediaKeyboardWidget;I)V
+    invoke-direct {v4, p0, v2}, Lns8;-><init>(Lone/me/keyboardmedia/MediaKeyboardWidget;I)V
 
-    invoke-static {v5, v4}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v5, v4}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p2, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -998,7 +998,7 @@
 
     invoke-direct {v4, v5, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v5, Lqna;->i:I
+    sget v5, Luva;->i:I
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setId(I)V
 
@@ -1008,7 +1008,7 @@
 
     iput v9, v5, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1020,7 +1020,7 @@
 
     mul-float/2addr v7, v3
 
-    invoke-static {v7}, Li8e;->I(F)I
+    invoke-static {v7}, Lagi;->d(F)I
 
     move-result v3
 
@@ -1030,29 +1030,29 @@
 
     invoke-virtual {v4, v6, v6, v6, v6}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance v3, Lo32;
+    new-instance v3, Lt42;
 
-    invoke-direct {v3, p3, v0, p3}, Lo32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v3, p3, v0, p3}, Lt42;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v3, v4}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v3, v4}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
-    new-instance p3, Lam8;
+    new-instance p3, Lns8;
 
-    invoke-direct {p3, p0, v1}, Lam8;-><init>(Lone/me/keyboardmedia/MediaKeyboardWidget;I)V
+    invoke-direct {p3, p0, v1}, Lns8;-><init>(Lone/me/keyboardmedia/MediaKeyboardWidget;I)V
 
     invoke-virtual {v4, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p2, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p3, Lvm7;
+    new-instance p3, Lhs7;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-direct {p3, v0}, Lvm7;-><init>(Landroid/content/Context;)V
+    invoke-direct {p3, v0}, Lhs7;-><init>(Landroid/content/Context;)V
 
-    sget v0, Lqna;->p:I
+    sget v0, Luva;->p:I
 
     invoke-virtual {p3, v0}, Landroid/view/View;->setId(I)V
 
@@ -1070,7 +1070,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1082,7 +1082,7 @@
 
     mul-float/2addr v1, v3
 
-    invoke-static {v1}, Li8e;->I(F)I
+    invoke-static {v1}, Lagi;->d(F)I
 
     move-result v1
 
@@ -1110,15 +1110,15 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 3
 
-    iget-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->c:Lyn7;
+    iget-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->c:Llt7;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lul8;
+    check-cast p1, Lhs8;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v0
 
@@ -1126,9 +1126,9 @@
 
     move-result v0
 
-    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lwm7;
+    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lis7;
 
-    iget-object v1, v1, Lwm7;->a:Ljava/util/List;
+    iget-object v1, v1, Lis7;->a:Ljava/util/List;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1144,27 +1144,27 @@
 
     move-result-object v0
 
-    check-cast v0, Lrm7;
+    check-cast v0, Lds7;
 
-    iget-object p1, p1, Lul8;->c:Lyn7;
+    iget-object p1, p1, Lhs8;->c:Llt7;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lgq;
+    check-cast p1, Lrq;
 
-    iget v0, v0, Lrm7;->b:I
+    iget v0, v0, Lds7;->b:I
 
-    invoke-static {v0}, Lbk7;->c(I)J
+    invoke-static {v0}, Lf67;->c(I)J
 
     move-result-wide v0
 
-    check-cast p1, Lhgd;
+    check-cast p1, Lird;
 
     const-string v2, "app.last.media_keyboard.page.id"
 
-    invoke-virtual {p1, v0, v1, v2}, Lv3;->h(JLjava/lang/String;)V
+    invoke-virtual {p1, v0, v1, v2}, Lw3;->h(JLjava/lang/String;)V
 
     :cond_0
     iget-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->z0:Landroid/animation/ObjectAnimator;
@@ -1187,27 +1187,27 @@
     :cond_2
     iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->A0:Landroid/animation/AnimatorSet;
 
-    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->u0:Lmz3;
+    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->u0:La24;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lmz3;->c()V
+    invoke-virtual {v0}, La24;->c()V
 
     :cond_3
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->u0:Lmz3;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->u0:La24;
 
-    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->x0:Lqh0;
+    iget-object v0, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->x0:Lbi0;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroidx/viewpager2/widget/ViewPager2;->g(Lvkg;)V
+    invoke-virtual {v1, v0}, Landroidx/viewpager2/widget/ViewPager2;->g(Lrzg;)V
 
     :cond_4
-    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->x0:Lqh0;
+    iput-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->x0:Lbi0;
 
     iget-object p1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->y0:Ljava/util/EnumMap;
 
@@ -1216,24 +1216,24 @@
     return-void
 .end method
 
-.method public final onThemeChanged(Llwa;)V
+.method public final onThemeChanged(Lu4b;)V
     .locals 2
 
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lwq7;
 
     const/4 v1, 0x3
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Y:Lvoc;
+    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->Y:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvm7;
+    check-cast v0, Lhs7;
 
-    invoke-virtual {v0, p1}, Lvm7;->onThemeChanged(Llwa;)V
+    invoke-virtual {v0, p1}, Lhs7;->onThemeChanged(Lu4b;)V
 
     return-void
 .end method
@@ -1241,19 +1241,19 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 12
 
-    new-instance v0, Lri2;
+    new-instance v0, Lek2;
 
-    iget-object v2, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->o:Le68;
+    iget-object v2, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->o:Lzb8;
 
-    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lpl7;
+    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lwq7;
 
     const/4 v6, 0x0
 
     aget-object v1, p1, v6
 
-    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->a:Lds;
+    iget-object v1, p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->a:Lqs;
 
-    invoke-virtual {v1, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1263,15 +1263,15 @@
 
     move-result-wide v3
 
-    invoke-virtual {p0}, Ljz3;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lx14;->getArgs()Landroid/os/Bundle;
 
     move-result-object v1
 
     const-string v5, "arg_key_scope_id"
 
-    const-class v7, Lidd;
+    const-class v7, Ljod;
 
-    invoke-static {v1, v5, v7}, Lb19;->j(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v1, v5, v7}, Lyji;->b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1279,73 +1279,71 @@
 
     check-cast v1, Landroid/os/Parcelable;
 
-    check-cast v1, Lidd;
+    check-cast v1, Ljod;
 
-    iget-object v5, v1, Lidd;->a:Ljava/lang/String;
+    iget-object v5, v1, Ljod;->a:Ljava/lang/String;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lri2;-><init>(Lone/me/keyboardmedia/MediaKeyboardWidget;Le68;JLjava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lek2;-><init>(Lone/me/keyboardmedia/MediaKeyboardWidget;Lzb8;JLjava/lang/String;)V
 
-    iput-object v0, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lri2;
+    iput-object v0, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lek2;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
-
-    move-result-object v0
-
-    iget-object v2, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lri2;
-
-    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lxuc;)V
-
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v0
 
-    new-instance v2, Lqh0;
+    iget-object v2, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lek2;
+
+    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lm5d;)V
+
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
+
+    move-result-object v0
+
+    new-instance v2, Lbi0;
 
     const/16 v3, 0x8
 
-    invoke-direct {v2, v3, p0}, Lqh0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, p0}, Lbi0;-><init>(ILjava/lang/Object;)V
 
-    iput-object v2, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->x0:Lqh0;
+    iput-object v2, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->x0:Lbi0;
 
-    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->b(Lvkg;)V
+    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->b(Lrzg;)V
 
     const/4 v0, 0x3
 
     aget-object v0, p1, v0
 
-    iget-object v2, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->Y:Lvoc;
+    iget-object v2, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->Y:Lazc;
 
-    invoke-interface {v2, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvm7;
+    check-cast v0, Lhs7;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v2
 
-    iget-object v4, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lwm7;
+    iget-object v4, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Lis7;
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v5, Lmz3;
+    new-instance v5, La24;
 
-    new-instance v7, Lkl;
+    new-instance v7, Ltl;
 
-    const/16 v8, 0x9
+    invoke-direct {v7, v0, v4, v2, v3}, Ltl;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-direct {v7, v0, v4, v2, v8}, Lkl;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v5, v0, v2, v7}, La24;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroidx/viewpager2/widget/ViewPager2;Lqjf;)V
 
-    invoke-direct {v5, v0, v2, v7}, Lmz3;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroidx/viewpager2/widget/ViewPager2;Le6f;)V
+    invoke-virtual {v5}, La24;->a()V
 
-    invoke-virtual {v5}, Lmz3;->a()V
+    iput-object v5, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->u0:La24;
 
-    iput-object v5, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->u0:Lmz3;
-
-    invoke-virtual {p0}, Ljz3;->getOnBackPressedDispatcher()Lida;
+    invoke-virtual {p0}, Lx14;->getOnBackPressedDispatcher()Lnla;
 
     move-result-object v0
 
@@ -1353,42 +1351,44 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Z
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->F0()Z
 
     move-result v7
 
     xor-int/2addr v7, v2
 
-    new-instance v9, Lam7;
+    new-instance v8, Lmr7;
 
-    invoke-direct {v9, v8, p0}, Lam7;-><init>(ILjava/lang/Object;)V
+    const/16 v9, 0x9
 
-    new-instance v8, Lgz3;
+    invoke-direct {v8, v9, p0}, Lmr7;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v8, v7, v9}, Lgz3;-><init>(ZLvd6;)V
+    new-instance v9, Lu14;
+
+    invoke-direct {v9, v7, v8}, Lu14;-><init>(ZLqh6;)V
 
     if-eqz v5, :cond_0
 
-    invoke-virtual {v0, v5, v8}, Lida;->a(Luq7;Lada;)V
+    invoke-virtual {v0, v5, v9}, Lnla;->a(Liw7;Lfla;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, v8}, Lida;->b(Lada;)Lhda;
+    invoke-virtual {v0, v9}, Lnla;->b(Lfla;)Lmla;
 
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Z
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->F0()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lrm7;->Z:Lrm7;
+    sget-object v0, Lds7;->Z:Lds7;
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1397,20 +1397,20 @@
     goto :goto_1
 
     :cond_2
-    sget-object v0, Lrm7;->o:Ljde;
+    sget-object v0, Lds7;->o:Leh2;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lrm7;->X:Ljava/util/List;
+    sget-object v0, Lds7;->X:Ljava/util/List;
 
     :goto_1
-    iput-object v0, v4, Lwm7;->a:Ljava/util/List;
+    iput-object v0, v4, Lis7;->a:Ljava/util/List;
 
-    iget-object v4, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lri2;
+    iget-object v4, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lek2;
 
     if-eqz v4, :cond_4
 
-    iget-object v5, v4, Lri2;->x0:Ljava/util/List;
+    iget-object v5, v4, Lek2;->x0:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
 
@@ -1424,40 +1424,40 @@
 
     if-nez v5, :cond_3
 
-    iput-object v0, v4, Lri2;->x0:Ljava/util/List;
+    iput-object v0, v4, Lek2;->x0:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v5
 
-    invoke-virtual {v4, v6, v5}, Lxuc;->p(II)V
+    invoke-virtual {v4, v6, v5}, Lm5d;->p(II)V
 
     goto :goto_2
 
     :cond_3
-    new-instance v5, Lg81;
+    new-instance v5, Lh91;
 
-    iget-object v7, v4, Lri2;->x0:Ljava/util/List;
+    iget-object v7, v4, Lek2;->x0:Ljava/util/List;
 
     const/4 v8, 0x2
 
-    invoke-direct {v5, v8, v7, v0}, Lg81;-><init>(ILjava/util/List;Ljava/util/List;)V
+    invoke-direct {v5, v8, v7, v0}, Lh91;-><init>(ILjava/util/List;Ljava/util/List;)V
 
-    invoke-static {v5}, Lr5b;->h(Lnc6;)Lbq4;
+    invoke-static {v5}, Lrs7;->b(Lyxi;)Lat4;
 
     move-result-object v5
 
-    iput-object v0, v4, Lri2;->x0:Ljava/util/List;
+    iput-object v0, v4, Lek2;->x0:Ljava/util/List;
 
-    new-instance v7, Lk5d;
+    new-instance v7, Lr22;
 
-    invoke-direct {v7, v8, v4}, Lk5d;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v7, v8, v4}, Lr22;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v5, v7}, Lbq4;->a(Lxv7;)V
+    invoke-virtual {v5, v7}, Lat4;->a(Lk18;)V
 
     :cond_4
     :goto_2
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v4
 
@@ -1481,16 +1481,16 @@
     :goto_3
     if-eqz v5, :cond_6
 
-    invoke-virtual {v5, v8}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lcvc;)V
+    invoke-virtual {v5, v8}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lr5d;)V
 
     invoke-virtual {v5, v2}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
     :cond_6
-    iget-object v5, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lri2;
+    iget-object v5, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->w0:Lek2;
 
     if-eqz v5, :cond_7
 
-    iget-object v5, v5, Lri2;->x0:Ljava/util/List;
+    iget-object v5, v5, Lek2;->x0:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -1508,15 +1508,15 @@
 
     aget-object v5, p1, v5
 
-    iget-object v7, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->s0:Lvoc;
+    iget-object v7, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->s0:Lazc;
 
-    invoke-interface {v7, p0, v5}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v7, p0, v5}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/view/View;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Z
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->F0()Z
 
     move-result v7
 
@@ -1536,15 +1536,15 @@
 
     aget-object v5, p1, v5
 
-    iget-object v7, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->r0:Lvoc;
+    iget-object v7, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->r0:Lazc;
 
-    invoke-interface {v7, p0, v5}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v7, p0, v5}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/view/View;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Z
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->F0()Z
 
     move-result v7
 
@@ -1564,15 +1564,15 @@
 
     aget-object p1, p1, v5
 
-    iget-object v5, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->t0:Lvoc;
+    iget-object v5, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->t0:Lazc;
 
-    invoke-interface {v5, p0, p1}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v5, p0, p1}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/View;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->E0()Z
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->F0()Z
 
     move-result v5
 
@@ -1583,13 +1583,13 @@
     :cond_a
     invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p1, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->c:Lyn7;
+    iget-object p1, v1, Lone/me/keyboardmedia/MediaKeyboardWidget;->c:Llt7;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lul8;
+    check-cast p1, Lhs8;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1610,31 +1610,31 @@
 
     move-result-object v5
 
-    check-cast v5, Lrm7;
+    check-cast v5, Lds7;
 
-    iget v5, v5, Lrm7;->b:I
+    iget v5, v5, Lds7;->b:I
 
-    invoke-static {v5}, Lbk7;->c(I)J
+    invoke-static {v5}, Lf67;->c(I)J
 
     move-result-wide v7
 
-    iget-object v5, p1, Lul8;->c:Lyn7;
+    iget-object v5, p1, Lhs8;->c:Llt7;
 
-    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lgq;
+    check-cast v5, Lrq;
 
-    check-cast v5, Lhgd;
+    check-cast v5, Lird;
 
     const-wide/16 v9, 0x0
 
-    iget-object v5, v5, Lv3;->h:Lbo7;
+    iget-object v5, v5, Lw3;->h:Lot7;
 
     const-string v11, "app.last.media_keyboard.page.id"
 
-    invoke-virtual {v5, v11, v9, v10}, Lbo7;->getLong(Ljava/lang/String;J)J
+    invoke-virtual {v5, v11, v9, v10}, Lot7;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v9
 
@@ -1663,13 +1663,13 @@
     :goto_9
     invoke-virtual {v4, v6, v2}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
 
-    sget p1, Llm7;->a:I
+    sget p1, Lxr7;->a:I
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Llm7;->a(Landroid/content/Context;)I
+    invoke-static {p1}, Lxr7;->a(Landroid/content/Context;)I
 
     move-result p1
 
@@ -1701,7 +1701,7 @@
 
     invoke-virtual {v4, v0, p1}, Landroid/view/View;->measure(II)V
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0()V
+    invoke-virtual {p0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->C0()V
 
     :cond_e
     return-void
@@ -1717,7 +1717,7 @@
 
     const-string v2, " in bundle"
 
-    invoke-static {v0, p1, v2}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v2}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,37 +1,17 @@
-.class public abstract Lfja;
+.class public interface abstract Lfja;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public static final b:I
+.method public abstract b(Ljava/lang/Object;)V
+.end method
 
-.field public static final c:I
+.method public abstract d(Ldja;)V
+.end method
 
-.field public static final d:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lbgc;->picker_chats_list_forward_messages:I
-
-    sput v0, Lfja;->a:I
-
-    sget v0, Lbgc;->picker_chats_list_share_files:I
-
-    sput v0, Lfja;->b:I
-
-    sget v0, Lbgc;->picker_chats_list_share_images:I
-
-    sput v0, Lfja;->c:I
-
-    sget v0, Lbgc;->picker_chats_list_share_videos:I
-
-    sput v0, Lfja;->d:I
-
-    return-void
+.method public abstract e(Ljava/lang/Throwable;)V
 .end method

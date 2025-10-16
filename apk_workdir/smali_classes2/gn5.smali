@@ -1,48 +1,92 @@
-.class public final Lgn5;
-.super Lwy3;
+.class public final synthetic Lgn5;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ler3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ly03;
+.field public final synthetic b:Lnn5;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ly03;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lnn5;Ljava/util/List;I)V
     .locals 0
 
-    iput-object p1, p0, Lgn5;->Y:Ly03;
+    iput p3, p0, Lgn5;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgn5;->b:Lnn5;
+
+    iput-object p2, p0, Lgn5;->c:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    iput-object p1, p0, Lgn5;->o:Ljava/lang/Object;
+    iget v0, p0, Lgn5;->a:I
 
-    iget p1, p0, Lgn5;->X:I
+    const-string v1, "nn5"
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lgn5;->c:Ljava/util/List;
 
-    or-int/2addr p1, v0
+    iget-object v3, p0, Lgn5;->b:Lnn5;
 
-    iput p1, p0, Lgn5;->X:I
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object p1, p0, Lgn5;->Y:Ly03;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-virtual {p1, v0, p0}, Ly03;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v4, "onListUpdated: failed to store sticker sets=%s"
 
-    move-result-object p1
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lnn5;->J()V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onNotifRemoved: failed to remove sticker sets %s from cache"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lnn5;->J()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

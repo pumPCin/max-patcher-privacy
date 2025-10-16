@@ -4,20 +4,24 @@
 
 
 # instance fields
-.field public final a:Lv8b;
+.field public final a:I
 
 .field public final b:I
 
+.field public final c:I
+
 
 # direct methods
-.method public constructor <init>(Lv8b;I)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Liaf;->a:Lv8b;
+    iput p1, p0, Liaf;->a:I
 
     iput p2, p0, Liaf;->b:I
+
+    iput p3, p0, Liaf;->c:I
 
     return-void
 .end method
@@ -25,59 +29,78 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Liaf;
+    instance-of v0, p1, Liaf;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Liaf;
 
-    iget-object v1, p0, Liaf;->a:Lv8b;
+    iget v0, p0, Liaf;->a:I
 
-    iget-object v3, p1, Liaf;->a:Lv8b;
+    iget v1, p1, Liaf;->a:I
 
-    if-eq v1, v3, :cond_2
+    if-eq v0, v1, :cond_2
 
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget v1, p0, Liaf;->b:I
+    iget v0, p0, Liaf;->b:I
 
-    iget p1, p1, Liaf;->b:I
+    iget v1, p1, Liaf;->b:I
 
-    if-eq v1, p1, :cond_3
+    if-eq v0, v1, :cond_3
 
-    return v2
+    goto :goto_0
 
     :cond_3
-    return v0
+    iget v0, p0, Liaf;->c:I
+
+    iget p1, p1, Liaf;->c:I
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Liaf;->a:Lv8b;
+    iget v0, p0, Liaf;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget v1, p0, Liaf;->b:I
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Liaf;->b:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Liaf;->c:I
 
     invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -89,31 +112,27 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, ", primary="
 
-    const-string v1, "TaskCountByType(type="
+    const-string v1, ", secondary="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "StrokeSeparatorColors(contrast="
 
-    iget-object v1, p0, Liaf;->a:Lv8b;
+    iget v3, p0, Liaf;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v4, p0, Liaf;->b:I
 
-    const-string v1, ", count="
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Liaf;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Liaf;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,40 +1,14 @@
-.class public final Ljcf;
-.super Lc2f;
+.class public interface abstract Ljcf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lle6;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Llwa;
-
-    check-cast p2, Lz05;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Ljcf;
-
-    const/4 p2, 0x3
-
-    invoke-direct {p1, p2, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Ljcf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+.method public abstract d()Ljava/util/List;
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public abstract g(Ljava/lang/String;)Ljava/util/List;
+.end method
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+.method public abstract m(Ljava/util/LinkedHashSet;)Ljava/util/List;
 .end method

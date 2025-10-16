@@ -1,136 +1,227 @@
 .class public final Lyn;
-.super Landroidx/appcompat/widget/ContentFrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final synthetic v0:Lao;
+.field public X:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lao;Lsy3;)V
-    .locals 0
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lgof;Ltui;Lrnf;)V
+    .locals 1
 
-    iput-object p1, p0, Lyn;->v0:Lao;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x0
+    iput v0, p0, Lyn;->a:I
 
-    invoke-direct {p0, p2, p1}, Landroidx/appcompat/widget/ContentFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyn;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lyn;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lyn;->o:Ljava/lang/Object;
+
+    iput-object p4, p0, Lyn;->X:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lst4;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lyn;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lyn;->b:Ljava/lang/Object;
+
+    .line 4
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lyn;->c:Ljava/lang/Object;
+
+    .line 5
+    iput-object p1, p0, Lyn;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 1
+.method public a()V
+    .locals 3
 
-    iget-object v0, p0, Lyn;->v0:Lao;
+    iget-object v0, p0, Lyn;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lao;->u(Landroid/view/KeyEvent;)Z
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lyn;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Runnable;
+
+    iput-object v1, p0, Lyn;->X:Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lyn;->o:Ljava/lang/Object;
+
+    check-cast v2, Lst4;
+
+    invoke-virtual {v2, v1}, Lst4;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 4
+
+    iget v0, p0, Lyn;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyn;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/Executor;
+
+    :try_start_0
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    iget-object v0, p0, Lyn;->c:Ljava/lang/Object;
+
+    check-cast v0, Lgof;
+
+    iget-object v0, v0, Lgof;->a:Ljava/lang/Object;
+
+    check-cast v0, Ld1j;
+
+    invoke-virtual {v0}, Ld1j;->g()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    iget-object v0, p0, Lyn;->o:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v0, Ltui;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Ltui;->l()V
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Lyn;->X:Ljava/lang/Object;
 
-    return p1
+    check-cast v0, Lrnf;
 
-    :cond_1
+    invoke-virtual {v0, p1}, Lrnf;->a(Ljava/lang/Exception;)V
+
     :goto_0
-    const/4 p1, 0x1
+    throw p1
 
-    return p1
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lyn;->b:Ljava/lang/Object;
 
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
+    monitor-enter v0
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    :try_start_1
+    iget-object v1, p0, Lyn;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v1, Ljava/util/ArrayDeque;
 
-    if-nez v0, :cond_1
+    new-instance v2, Lzd;
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    const/4 v3, 0x3
 
-    move-result v0
+    invoke-direct {v2, p0, v3, p1}, Lzd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    float-to-int v0, v0
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+    iget-object p1, p0, Lyn;->X:Ljava/lang/Object;
 
-    move-result v1
+    check-cast p1, Ljava/lang/Runnable;
 
-    float-to-int v1, v1
+    if-nez p1, :cond_1
 
-    const/4 v2, -0x5
+    invoke-virtual {p0}, Lyn;->a()V
 
-    if-lt v0, v2, :cond_0
+    goto :goto_1
 
-    if-lt v1, v2, :cond_0
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x5
-
-    if-gt v0, v2, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x5
-
-    if-le v1, v0, :cond_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iget-object v0, p0, Lyn;->v0:Lao;
-
-    invoke-virtual {v0, p1}, Lao;->z(I)Lzn;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Lao;->s(Lzn;Z)V
-
-    return v1
+    goto :goto_2
 
     :cond_1
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final setBackgroundResource(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lrkc;->K(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    :goto_1
+    monitor-exit v0
 
     return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

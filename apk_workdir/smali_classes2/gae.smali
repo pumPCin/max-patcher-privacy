@@ -1,50 +1,36 @@
-.class public final synthetic Lgae;
-.super Lv8;
+.class public final Lgae;
+.super Lpoe;
 .source "SourceFile"
-
-# interfaces
-.implements Lle6;
-
-
-# static fields
-.field public static final r0:Lgae;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lgae;
-
-    const-string v1, "<init>(Ljava/util/List;Ljava/util/List;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Leae;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lv8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lgae;->r0:Lgae;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final A(Lb18;)V
+    .locals 4
 
-    check-cast p1, Ljava/util/List;
+    instance-of v0, p1, Lyp0;
 
-    check-cast p2, Ljava/util/List;
+    if-nez v0, :cond_0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    return-void
 
-    new-instance p3, Leae;
+    :cond_0
+    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
 
-    invoke-direct {p3, p1, p2}, Leae;-><init>(Ljava/util/List;Ljava/util/List;)V
+    check-cast v0, Ltqa;
 
-    return-object p3
+    check-cast p1, Lyp0;
+
+    iget-object v1, p1, Lyp0;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ltqa;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-wide v1, p1, Lyp0;->a:J
+
+    iget-object v3, p1, Lyp0;->o:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lyp0;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2, v3, p1}, Ltqa;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    return-void
 .end method

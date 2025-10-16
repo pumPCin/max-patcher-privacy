@@ -1,9 +1,9 @@
 .class public final Lkotlinx/coroutines/android/AndroidExceptionPreHandler;
-.super Lm0;
+.super Lp0;
 .source "SourceFile"
 
 # interfaces
-.implements Li24;
+.implements Lw44;
 
 
 # annotations
@@ -13,8 +13,8 @@
     }
     d2 = {
         "Lkotlinx/coroutines/android/AndroidExceptionPreHandler;",
-        "Lm0;",
-        "Li24;",
+        "Lp0;",
+        "Lw44;",
         "<init>",
         "()V",
         "",
@@ -40,9 +40,9 @@
 .method public constructor <init>()V
     .locals 1
 
-    sget-object v0, Lsf2;->c:Lsf2;
+    sget-object v0, Lvda;->c:Lvda;
 
-    invoke-direct {p0, v0}, Lm0;-><init>(Le24;)V
+    invoke-direct {p0, v0}, Lp0;-><init>(Ls44;)V
 
     iput-object p0, p0, Lkotlinx/coroutines/android/AndroidExceptionPreHandler;->_preHandler:Ljava/lang/Object;
 
@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public final i(Lf24;Ljava/lang/Throwable;)V
+.method public final i(Lt44;Ljava/lang/Throwable;)V
     .locals 2
 
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I

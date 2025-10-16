@@ -1,397 +1,394 @@
-.class public abstract Lgja;
-.super Ljava/lang/Object;
+.class public final Lgja;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lcka;
+.implements Lev4;
 
 
 # static fields
-.field public static final A:I
+.field public static final Y:[Ldja;
 
-.field public static final B:I
+.field public static final Z:[Ldja;
 
-.field public static final C:I
 
-.field public static final D:I
+# instance fields
+.field public final X:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static final E:I
+.field public final a:Lfja;
 
-.field public static final F:I
+.field public b:Z
 
-.field public static final G:I
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget v0, Lehc;->cancel:I
+    const/4 v0, 0x0
 
-    sput v0, Lgja;->a:I
+    new-array v1, v0, [Ldja;
 
-    sget v0, Lehc;->channel_close_title:I
+    sput-object v1, Lgja;->Y:[Ldja;
 
-    sput v0, Lgja;->b:I
+    new-array v0, v0, [Ldja;
 
-    sget v0, Lehc;->channel_delete_for_all:I
+    sput-object v0, Lgja;->Z:[Ldja;
 
-    sput v0, Lgja;->c:I
+    return-void
+.end method
 
-    sget v0, Lehc;->channel_delete_title:I
+.method public constructor <init>(Lfja;Ljava/util/concurrent/atomic/AtomicReference;)V
+    .locals 0
 
-    sput v0, Lgja;->d:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sget v0, Lehc;->channel_leave_title:I
+    iput-object p1, p0, Lgja;->a:Lfja;
 
-    sput v0, Lgja;->e:I
+    iput-object p2, p0, Lgja;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lehc;->channel_move_rights_and_leave:I
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Lgja;->f:I
+    sget-object p2, Lgja;->Y:[Ldja;
 
-    sget v0, Lehc;->chat_clear_history_snackbar_title:I
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    sput v0, Lgja;->g:I
+    iput-object p1, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lehc;->chat_delete_confirm:I
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    sput v0, Lgja;->h:I
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    sget v0, Lehc;->chat_delete_for_all:I
+    iput-object p1, p0, Lgja;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    sput v0, Lgja;->i:I
+    return-void
+.end method
 
-    sget v0, Lehc;->chat_delete_for_all_title:I
 
-    sput v0, Lgja;->j:I
+# virtual methods
+.method public final a(Ldja;)V
+    .locals 7
 
-    sget v0, Lehc;->chat_delete_for_both:I
+    :goto_0
+    iget-object v0, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Lgja;->k:I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sget v0, Lehc;->chat_delete_for_self:I
+    move-result-object v1
 
-    sput v0, Lgja;->l:I
+    check-cast v1, [Ldja;
 
-    sget v0, Lehc;->chat_delete_title:I
+    array-length v2, v1
 
-    sput v0, Lgja;->m:I
+    if-nez v2, :cond_0
 
-    sget v0, Lehc;->chat_leave_cancel:I
+    goto :goto_4
 
-    sput v0, Lgja;->n:I
+    :cond_0
+    const/4 v3, 0x0
 
-    sget v0, Lehc;->chat_leave_title:I
+    move v4, v3
 
-    sput v0, Lgja;->o:I
+    :goto_1
+    if-ge v4, v2, :cond_2
 
-    sget v0, Lehc;->chat_list_toolbar_title:I
+    aget-object v5, v1, v4
 
-    sput v0, Lgja;->p:I
+    invoke-virtual {v5, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    sget v0, Lehc;->chat_list_toolbar_transition_name:I
+    move-result v5
 
-    sput v0, Lgja;->q:I
+    if-eqz v5, :cond_1
 
-    sget v0, Lehc;->chat_move_rights_and_leave:I
+    goto :goto_2
 
-    sput v0, Lgja;->r:I
+    :cond_1
+    add-int/lit8 v4, v4, 0x1
 
-    sget v0, Lehc;->chats_list_search_clear_recent_dialog_confirm_text:I
+    goto :goto_1
 
-    sput v0, Lgja;->s:I
+    :cond_2
+    const/4 v4, -0x1
 
-    sget v0, Lehc;->chats_list_search_clear_recent_dialog_title:I
+    :goto_2
+    if-gez v4, :cond_3
 
-    sput v0, Lgja;->t:I
+    goto :goto_4
 
-    sget v0, Lehc;->chats_list_search_contacts_header:I
+    :cond_3
+    const/4 v5, 0x1
 
-    sput v0, Lgja;->u:I
+    if-ne v2, v5, :cond_4
 
-    sget v0, Lehc;->chats_list_search_hint:I
+    sget-object v2, Lgja;->Y:[Ldja;
 
-    sput v0, Lgja;->v:I
+    goto :goto_3
 
-    sget v0, Lehc;->chats_list_search_messages_header:I
+    :cond_4
+    add-int/lit8 v6, v2, -0x1
 
-    sput v0, Lgja;->w:I
+    new-array v6, v6, [Ldja;
 
-    sget v0, Lehc;->confirmation_block:I
+    invoke-static {v1, v3, v6, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sput v0, Lgja;->x:I
+    add-int/lit8 v3, v4, 0x1
 
-    sget v0, Lehc;->confirmation_close_channel:I
+    sub-int/2addr v2, v4
 
-    sput v0, Lgja;->y:I
+    sub-int/2addr v2, v5
 
-    sget v0, Lehc;->confirmation_leave_channel:I
+    invoke-static {v1, v3, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sput v0, Lgja;->z:I
+    move-object v2, v6
 
-    sget v0, Lehc;->confirmation_leave_chat:I
+    :cond_5
+    :goto_3
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sput v0, Lgja;->A:I
+    move-result v3
 
-    sget v0, Lehc;->contact_block_title:I
+    if-eqz v3, :cond_6
 
-    sput v0, Lgja;->B:I
+    :goto_4
+    return-void
 
-    sget v0, Lehc;->contact_blocked_snackbar_title:I
+    :cond_6
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sput v0, Lgja;->C:I
+    move-result-object v3
 
-    sget v0, Lehc;->contact_empty_last_seen:I
+    if-eq v3, v1, :cond_5
 
-    sput v0, Lgja;->D:I
+    goto :goto_0
+.end method
 
-    sget v0, Lehc;->contacts_picker_search_hint:I
+.method public final b()V
+    .locals 5
 
-    sput v0, Lgja;->E:I
+    iget-boolean v0, p0, Lgja;->b:Z
 
-    sget v0, Lehc;->contacts_picker_send_btn_title:I
+    if-nez v0, :cond_0
 
-    sput v0, Lgja;->F:I
+    const/4 v0, 0x1
 
-    sget v0, Lehc;->contacts_picker_toolbar_title:I
+    iput-boolean v0, p0, Lgja;->b:Z
 
-    sput v0, Lgja;->G:I
+    iget-object v0, p0, Lgja;->a:Lfja;
 
-    sget v0, Lehc;->dialog_delete_title:I
+    invoke-interface {v0}, Lfja;->a()V
 
-    sput v0, Lgja;->H:I
+    iget-object v1, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lehc;->notifications_1_day:I
+    sget-object v2, Lgja;->Z:[Ldja;
 
-    sput v0, Lgja;->I:I
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget v0, Lehc;->notifications_1_hour:I
+    move-result-object v1
 
-    sput v0, Lgja;->J:I
+    check-cast v1, [Ldja;
 
-    sget v0, Lehc;->notifications_4_hour:I
+    array-length v2, v1
 
-    sput v0, Lgja;->K:I
+    const/4 v3, 0x0
 
-    sget v0, Lehc;->notifications_disable:I
+    :goto_0
+    if-ge v3, v2, :cond_0
 
-    sput v0, Lgja;->L:I
+    aget-object v4, v1, v3
 
-    sget v0, Lehc;->notifications_infinite:I
+    invoke-interface {v0, v4}, Lfja;->d(Ldja;)V
 
-    sput v0, Lgja;->M:I
+    add-int/lit8 v3, v3, 0x1
 
-    sget v0, Lehc;->picker_chats_add_button:I
+    goto :goto_0
 
-    sput v0, Lgja;->N:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lehc;->picker_chats_adding_disabled_bot:I
+.method public final c(Lev4;)V
+    .locals 4
 
-    sput v0, Lgja;->O:I
+    invoke-static {p0, p1}, Liv4;->i(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
 
-    sget v0, Lehc;->picker_chats_adding_disabled_bot_official:I
+    move-result p1
 
-    sput v0, Lgja;->P:I
+    if-eqz p1, :cond_0
 
-    sget v0, Lehc;->picker_chats_adding_disabled_default:I
+    iget-object p1, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Lgja;->Q:I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sget v0, Lehc;->picker_chats_adding_disabled_to_channel_bot:I
+    move-result-object p1
 
-    sput v0, Lgja;->R:I
+    check-cast p1, [Ldja;
 
-    sget v0, Lehc;->picker_chats_adding_disabled_to_channel_bot_official:I
+    array-length v0, p1
 
-    sput v0, Lgja;->S:I
+    const/4 v1, 0x0
 
-    sget v0, Lehc;->picker_chats_adding_disabled_to_channel_default:I
+    :goto_0
+    if-ge v1, v0, :cond_0
 
-    sput v0, Lgja;->T:I
+    aget-object v2, p1, v1
 
-    sget v0, Lehc;->picker_chats_creating_disabled_bot:I
+    iget-object v3, p0, Lgja;->a:Lfja;
 
-    sput v0, Lgja;->U:I
+    invoke-interface {v3, v2}, Lfja;->d(Ldja;)V
 
-    sget v0, Lehc;->picker_chats_creating_disabled_bot_official:I
+    add-int/lit8 v1, v1, 0x1
 
-    sput v0, Lgja;->V:I
+    goto :goto_0
 
-    sget v0, Lehc;->picker_chats_creating_disabled_channel_bot:I
+    :cond_0
+    return-void
+.end method
 
-    sput v0, Lgja;->W:I
+.method public final d(Ljava/lang/Object;)V
+    .locals 4
 
-    sget v0, Lehc;->picker_chats_creating_disabled_channel_bot_official:I
+    iget-boolean v0, p0, Lgja;->b:Z
 
-    sput v0, Lgja;->X:I
+    if-nez v0, :cond_0
 
-    sget v0, Lehc;->picker_chats_creating_disabled_channel_default:I
+    iget-object v0, p0, Lgja;->a:Lfja;
 
-    sput v0, Lgja;->Y:I
+    invoke-interface {v0, p1}, Lfja;->b(Ljava/lang/Object;)V
 
-    sget v0, Lehc;->picker_chats_creating_disabled_default:I
+    iget-object p1, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Lgja;->Z:I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sget v0, Lehc;->picker_chats_forward_disabled_bot:I
+    move-result-object p1
 
-    sput v0, Lgja;->a0:I
+    check-cast p1, [Ldja;
 
-    sget v0, Lehc;->picker_chats_forward_disabled_bot_official:I
+    array-length v1, p1
 
-    sput v0, Lgja;->b0:I
+    const/4 v2, 0x0
 
-    sget v0, Lehc;->picker_chats_forward_disabled_channel:I
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    sput v0, Lgja;->c0:I
+    aget-object v3, p1, v2
 
-    sget v0, Lehc;->picker_chats_forward_disabled_default:I
+    invoke-interface {v0, v3}, Lfja;->d(Ldja;)V
 
-    sput v0, Lgja;->d0:I
+    add-int/lit8 v2, v2, 0x1
 
-    sget v0, Lehc;->picker_chats_forward_from_self:I
+    goto :goto_0
 
-    sput v0, Lgja;->e0:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lehc;->picker_chats_forward_from_somebody:I
+.method public final g()V
+    .locals 2
 
-    sput v0, Lgja;->f0:I
+    iget-object v0, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lehc;->picker_chats_forward_quote_title:I
+    sget-object v1, Lgja;->Z:[Ldja;
 
-    sput v0, Lgja;->g0:I
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    sget v0, Lehc;->picker_chats_forward_title:I
+    :cond_0
+    iget-object v0, p0, Lgja;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Lgja;->h0:I
+    const/4 v1, 0x0
 
-    sget v0, Lehc;->picker_chats_list_share_contact:I
+    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sput v0, Lgja;->i0:I
+    move-result v1
 
-    sget v0, Lehc;->picker_chats_list_share_link:I
+    if-eqz v1, :cond_1
 
-    sput v0, Lgja;->j0:I
+    goto :goto_0
 
-    sget v0, Lehc;->picker_chats_search_hint:I
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sput v0, Lgja;->k0:I
+    move-result-object v0
 
-    sget v0, Lehc;->picker_chats_toolbar_title:I
+    if-eq v0, p0, :cond_0
 
-    sput v0, Lgja;->l0:I
+    :goto_0
+    invoke-static {p0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 2
+
+    iget-object v0, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lgja;->Z:[Ldja;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
+
+    iget-boolean v0, p0, Lgja;->b:Z
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lgja;->b:Z
+
+    iget-object v0, p0, Lgja;->a:Lfja;
+
+    invoke-interface {v0, p1}, Lfja;->e(Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lgja;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v1, Lgja;->Z:[Ldja;
+
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ldja;
+
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, p1, v2
+
+    invoke-interface {v0, v3}, Lfja;->d(Ldja;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

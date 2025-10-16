@@ -1,49 +1,39 @@
 .class public final Lns4;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic X:Lu30;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lu30;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroidx/fragment/app/DialogFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lns4;->X:Lu30;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lns4;->a:Landroidx/fragment/app/DialogFragment;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iput-object p1, p0, Lns4;->o:Ljava/lang/Object;
+    iget-object p1, p0, Lns4;->a:Landroidx/fragment/app/DialogFragment;
 
-    iget p1, p0, Lns4;->Y:I
+    iget-object v0, p1, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
 
-    const/high16 v0, -0x80000000
+    if-eqz v0, :cond_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, v0}, Landroidx/fragment/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V
 
-    iput p1, p0, Lns4;->Y:I
-
-    iget-object p1, p0, Lns4;->X:Lu30;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lu30;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

@@ -1,242 +1,106 @@
-.class public abstract Lhu0;
+.class public final synthetic Lhu0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzt1;
 
-# static fields
-.field public static final a:Lt72;
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final e:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final f:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final g:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final h:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final i:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final j:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final k:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final l:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final m:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final n:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final o:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final p:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final q:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final r:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final s:Lkotlinx/coroutines/internal/Symbol;
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+    .locals 0
 
-    new-instance v0, Lt72;
+    iput p2, p0, Lhu0;->a:I
 
-    const/4 v4, 0x0
+    iput-object p1, p0, Lhu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 v5, 0x0
-
-    const-wide/16 v1, -0x1
-
-    const/4 v3, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lt72;-><init>(JLt72;Lfu0;I)V
-
-    sput-object v0, Lhu0;->a:Lt72;
-
-    const/16 v5, 0xc
-
-    const/4 v6, 0x0
-
-    const-string v1, "kotlinx.coroutines.bufferedChannel.segmentSize"
-
-    const/16 v2, 0x20
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
-
-    move-result v0
-
-    sput v0, Lhu0;->b:I
-
-    const-string v1, "kotlinx.coroutines.bufferedChannel.expandBufferCompletionWaitIterations"
-
-    const/16 v2, 0x2710
-
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
-
-    move-result v0
-
-    sput v0, Lhu0;->c:I
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "BUFFERED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->d:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "SHOULD_BUFFER"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->e:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "S_RESUMING_BY_RCV"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->f:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "RESUMING_BY_EB"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->g:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "POISONED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->h:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "DONE_RCV"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->i:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "INTERRUPTED_SEND"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->j:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "INTERRUPTED_RCV"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->k:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CHANNEL_CLOSED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->l:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "SUSPEND"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->m:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "SUSPEND_NO_WAITER"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->n:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "FAILED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->o:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "NO_RECEIVE_RESULT"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->p:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CLOSE_HANDLER_CLOSED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->q:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CLOSE_HANDLER_INVOKED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->r:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "NO_CLOSE_CAUSE"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lhu0;->s:Lkotlinx/coroutines/internal/Symbol;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Lb22;Ljava/lang/Object;Lle6;)Z
-    .locals 0
 
-    invoke-interface {p0, p1, p2}, Lb22;->j(Ljava/lang/Object;Lle6;)Lkotlinx/coroutines/internal/Symbol;
+# virtual methods
+.method public final k(Lyt1;)Ljava/lang/String;
+    .locals 2
 
-    move-result-object p1
+    iget v0, p0, Lhu0;->a:I
 
-    if-eqz p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0, p1}, Lb22;->l(Ljava/lang/Object;)V
+    iget-object v0, p0, Lhu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 p0, 0x1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    return p0
+    const-string p1, "Terminate InputBuffer"
 
-    :cond_0
-    const/4 p0, 0x0
+    return-object p1
 
-    return p0
+    :pswitch_0
+    iget-object v0, p0, Lhu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "mReleasedFuture"
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lhu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "acquireInputBuffer"
+
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lhu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "Data closed"
+
+    return-object p1
+
+    :pswitch_3
+    new-instance v0, Luy1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p1}, Luy1;-><init>(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lhu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "OnScreenFlashUiApplied"
+
+    return-object p1
+
+    :pswitch_4
+    iget-object v0, p0, Lhu0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const-string p1, "Data closed"
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

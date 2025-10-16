@@ -3,62 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp49;
+.implements Linb;
 
 
-# static fields
-.field public static final a:Lo49;
+# instance fields
+.field public final a:Llt7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llt7;)V
+    .locals 0
 
-    new-instance v0, Lo49;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lo49;->a:Lo49;
+    iput-object p1, p0, Lo49;->a:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final c(J)Lzx5;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lo49;->a:Llt7;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of p1, p1, Lo49;
+    check-cast v0, Lgz3;
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0, p1, p2}, Lgz3;->c(J)Lgzc;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    new-instance v1, Ln23;
 
-    :cond_1
-    return v0
-.end method
+    const/16 v2, 0x9
 
-.method public final hashCode()I
-    .locals 1
+    invoke-direct {v1, v0, v2}, Ln23;-><init>(Lzx5;I)V
 
-    const v0, -0x15cdca80
+    new-instance v0, Ln49;
 
-    return v0
-.end method
+    const/4 v2, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p1, p2, v2}, Ln49;-><init>(JLkotlin/coroutines/Continuation;)V
 
-    const-string v0, "DoneWithDisable"
+    invoke-static {v1, v0}, Ly1j;->v(Lzx5;Lei6;)Lw82;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

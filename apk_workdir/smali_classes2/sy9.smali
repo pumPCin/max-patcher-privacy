@@ -1,104 +1,118 @@
-.class public final synthetic Lsy9;
+.class public final Lsy9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgy9;
-.implements Lve6;
+.implements Lqy9;
 
 
 # instance fields
-.field public final synthetic a:Lnz9;
+.field public final synthetic a:Lmy9;
 
 
 # direct methods
-.method public constructor <init>(Lnz9;)V
+.method public constructor <init>(Lmy9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsy9;->a:Lnz9;
+    iput-object p1, p0, Lsy9;->a:Lmy9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lyx9;)V
-    .locals 1
-
-    iget-object v0, p0, Lsy9;->a:Lnz9;
-
-    invoke-virtual {v0, p1}, Lnz9;->x(Lyx9;)V
+.method public final a(JLzr8;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final b(JLzr8;)V
+    .locals 0
 
-    instance-of v0, p1, Lgy9;
+    iget-object p1, p0, Lsy9;->a:Lmy9;
 
-    if-eqz v0, :cond_0
+    invoke-interface {p1}, Lmy9;->t()V
 
-    instance-of v0, p1, Lve6;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lsy9;->getFunctionDelegate()Loe6;
-
-    move-result-object v0
-
-    check-cast p1, Lve6;
-
-    invoke-interface {p1}, Lve6;->getFunctionDelegate()Loe6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final getFunctionDelegate()Loe6;
-    .locals 7
+.method public final c(JLzr8;JLzr8;)V
+    .locals 0
 
-    new-instance v0, Lye6;
+    iget-object p1, p0, Lsy9;->a:Lmy9;
 
-    const-string v6, "selectAvatar(Lone/me/login/common/avatars/NeuroAvatarModel;)V"
+    invoke-interface {p1}, Lmy9;->G()V
 
-    const/4 v2, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v3, Lnz9;
-
-    iget-object v4, p0, Lsy9;->a:Lnz9;
-
-    const-string v5, "selectAvatar"
-
-    invoke-direct/range {v0 .. v6}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final d(JLzr8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final e(JLzr8;J)V
+    .locals 0
+
+    iget-object p1, p0, Lsy9;->a:Lmy9;
+
+    invoke-interface {p1}, Lmy9;->e()V
+
+    return-void
+.end method
+
+.method public final f(JLzr8;)V
+    .locals 0
+
+    iget-object p3, p0, Lsy9;->a:Lmy9;
+
+    invoke-interface {p3, p1, p2}, Lmy9;->w(J)V
+
+    return-void
+.end method
+
+.method public final g(JLzr8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final h(JLzr8;)V
+    .locals 0
+
+    iget-object p1, p0, Lsy9;->a:Lmy9;
+
+    invoke-interface {p1}, Lmy9;->I()V
+
+    return-void
+.end method
+
+.method public final i(JLzr8;)V
+    .locals 0
+
+    iget-object p1, p0, Lsy9;->a:Lmy9;
+
+    invoke-interface {p1}, Lmy9;->m()V
+
+    return-void
+.end method
+
+.method public final j(JLzr8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final p()V
     .locals 1
 
-    invoke-virtual {p0}, Lsy9;->getFunctionDelegate()Loe6;
+    iget-object v0, p0, Lsy9;->a:Lmy9;
 
-    move-result-object v0
+    invoke-interface {v0}, Lmy9;->p()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

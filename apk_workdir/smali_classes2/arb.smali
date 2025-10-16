@@ -1,102 +1,186 @@
 .class public final Larb;
-.super Lk64;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lx3c;
 
 
 # instance fields
-.field public v0:Ljava/util/List;
+.field public final a:Ljqf;
 
 
-# virtual methods
-.method public final E(Ln6d;I)V
-    .locals 7
+# direct methods
+.method public constructor <init>(Ljqf;)V
+    .locals 0
 
-    iget-object v0, p0, Larb;->v0:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p2, v0}, Lw83;->h0(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Loqb;
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
-
-    invoke-direct {v1, p2}, Lone/me/profile/screens/avatars/ProfileAvatarWidget;-><init>(Loqb;)V
-
-    new-instance v0, Lq6d;
-
-    const/4 v5, 0x0
-
-    const/4 v6, -0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
-
-    invoke-virtual {p1, v0}, Ln6d;->S(Lq6d;)V
+    iput-object p1, p0, Larb;->a:Ljqf;
 
     return-void
 .end method
 
-.method public final j()I
-    .locals 1
 
-    iget-object v0, p0, Larb;->v0:Ljava/util/List;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Larb;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Larb;
+
+    iget-object v1, p0, Larb;->a:Ljqf;
+
+    iget-object p1, p1, Larb;->a:Ljqf;
+
+    invoke-virtual {v1, p1}, Ljqf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/high16 v0, 0x10000
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lb18;)Z
+    .locals 4
+
+    const/high16 v0, 0x10000
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lb18;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Larb;->a:Ljqf;
+
+    iget v0, v0, Ljqf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/high16 v1, -0x7fff0000
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final k(Lb18;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p1, Lpje;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lp4c;
+
+    check-cast p1, Lpje;
+
+    iget-object p1, p1, Lpje;->a:Lyyi;
+
+    invoke-direct {v0, p1}, Lp4c;-><init>(Lyyi;)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/high16 v0, -0x7fff0000
 
     return v0
 .end method
 
-.method public final k(I)J
-    .locals 2
+.method public final q(Lb18;)Z
+    .locals 0
 
-    iget-object v0, p0, Larb;->v0:Ljava/util/List;
-
-    invoke-static {p1, v0}, Lw83;->h0(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Loqb;
-
-    if-eqz p1, :cond_0
-
-    iget-wide v0, p1, Loqb;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0, p1}, Larb;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    goto :goto_1
+    return p1
+.end method
 
-    :cond_1
-    const/4 p1, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :goto_1
-    int-to-long v0, p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-wide v0
+    const-string v1, "PlaceholderItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Larb;->a:Ljqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", viewType=-2147418112)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

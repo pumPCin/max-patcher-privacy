@@ -1,202 +1,128 @@
 .class public final Lrzd;
-.super Lvzd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lrzd;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Lcdf;
-
-.field public final b:Ljava/lang/Integer;
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lpzd;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
-
-    sput-object v0, Lrzd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcdf;Ljava/lang/Integer;)V
-    .locals 0
+.method public constructor <init>(Lpzd;Lhl7;Lmi4;)V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrzd;->a:Lcdf;
+    iget-object p2, p2, Lhl7;->a:Lv44;
 
-    iput-object p2, p0, Lrzd;->b:Ljava/lang/Integer;
+    sget-object v0, Ls8a;->a:Ls8a;
+
+    invoke-virtual {p2, v0}, Lp0;->plus(Lt44;)Lt44;
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lrzd;->a:Ljava/util/LinkedHashMap;
+
+    const-string v0, "SELECT * FROM selected_mentions"
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lpzd;->b:Ljava/lang/Object;
+
+    check-cast v1, Lyed;
+
+    const-string v2, "selected_mentions"
+
+    filled-new-array {v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ln0d;
+
+    const/4 v4, 0x5
+
+    invoke-direct {v3, p1, v4, v0}, Ln0d;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ll54;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v1, v2, v3, v0}, Ll54;-><init>(Lyed;[Ljava/lang/String;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Ltjd;
+
+    invoke-direct {v1, p1}, Ltjd;-><init>(Lei6;)V
+
+    invoke-static {v1, p2}, Ly1j;->t(Lzx5;Lt44;)Lzx5;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ly1j;->l(Lzx5;)Lzx5;
+
+    move-result-object p1
+
+    iget-object p2, p3, Lmi4;->a:Lv44;
+
+    invoke-static {p1, p2}, Ly1j;->t(Lzx5;Lt44;)Lzx5;
+
+    move-result-object p1
+
+    new-instance p3, Lqzd;
+
+    invoke-direct {p3, p0, v0}, Lqzd;-><init>(Lrzd;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v0, Lh06;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, p3, v1}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final a(J)I
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lrzd;->a:Ljava/util/LinkedHashMap;
 
-    return v0
-.end method
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    move-result-object p1
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    return v0
+    check-cast p1, Lozd;
 
-    :cond_0
-    instance-of v1, p1, Lrzd;
+    if-eqz p1, :cond_1
 
-    const/4 v2, 0x0
+    iget p1, p1, Lozd;->b:I
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lrzd;
-
-    iget-object v1, p0, Lrzd;->a:Lcdf;
-
-    iget-object v3, p1, Lrzd;->a:Lcdf;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lrzd;->b:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lrzd;->b:Ljava/lang/Integer;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lrzd;->a:Lcdf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lrzd;->b:Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    return p1
 
-    move-result v1
-
+    :cond_1
     :goto_0
-    add-int/2addr v0, v1
+    const/4 p1, 0x1
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Property(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lrzd;->a:Lcdf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrzd;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lrzd;->a:Lcdf;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object p2, p0, Lrzd;->b:Ljava/lang/Integer;
-
-    if-nez p2, :cond_0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return p1
 .end method

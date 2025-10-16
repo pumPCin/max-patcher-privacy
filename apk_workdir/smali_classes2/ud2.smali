@@ -3,233 +3,95 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final l:Lud2;
+
+
 # instance fields
-.field public final a:J
+.field public final a:Z
 
-.field public final b:J
+.field public final b:Z
 
-.field public final c:Luc2;
+.field public final c:Z
 
-.field public final d:J
+.field public final d:Z
 
-.field public final e:J
+.field public final e:Z
 
-.field public final f:J
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(JJLuc2;JJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lud2;
 
-    iput-wide p1, p0, Lud2;->a:J
+    const/4 v10, 0x0
 
-    iput-wide p3, p0, Lud2;->b:J
+    const/4 v11, 0x0
 
-    iput-object p5, p0, Lud2;->c:Luc2;
+    const/4 v1, 0x0
 
-    iput-wide p6, p0, Lud2;->d:J
+    const/4 v2, 0x0
 
-    iput-wide p8, p0, Lud2;->e:J
+    const/4 v3, 0x0
 
-    iput-wide p10, p0, Lud2;->f:J
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v0 .. v11}, Lud2;-><init>(ZZZZZZZZZZZ)V
+
+    sput-object v0, Lud2;->l:Lud2;
 
     return-void
 .end method
 
+.method public constructor <init>(ZZZZZZZZZZZ)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-boolean p1, p0, Lud2;->a:Z
 
-    if-ne p0, p1, :cond_0
+    iput-boolean p2, p0, Lud2;->b:Z
 
-    return v0
+    iput-boolean p3, p0, Lud2;->c:Z
 
-    :cond_0
-    instance-of v1, p1, Lud2;
+    iput-boolean p4, p0, Lud2;->d:Z
 
-    const/4 v2, 0x0
+    iput-boolean p5, p0, Lud2;->e:Z
 
-    if-nez v1, :cond_1
+    iput-boolean p6, p0, Lud2;->f:Z
 
-    return v2
+    iput-boolean p7, p0, Lud2;->g:Z
 
-    :cond_1
-    check-cast p1, Lud2;
+    iput-boolean p8, p0, Lud2;->h:Z
 
-    iget-wide v3, p0, Lud2;->a:J
+    iput-boolean p9, p0, Lud2;->i:Z
 
-    iget-wide v5, p1, Lud2;->a:J
+    iput-boolean p10, p0, Lud2;->j:Z
 
-    cmp-long v1, v3, v5
+    iput-boolean p11, p0, Lud2;->k:Z
 
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lud2;->b:J
-
-    iget-wide v5, p1, Lud2;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lud2;->c:Luc2;
-
-    iget-object v3, p1, Lud2;->c:Luc2;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-wide v3, p0, Lud2;->d:J
-
-    iget-wide v5, p1, Lud2;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-wide v3, p0, Lud2;->e:J
-
-    iget-wide v5, p1, Lud2;->e:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-wide v3, p0, Lud2;->f:J
-
-    iget-wide v5, p1, Lud2;->f:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-wide v0, p0, Lud2;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lud2;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lud2;->c:Luc2;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-wide v3, p0, Lud2;->d:J
-
-    invoke-static {v2, v1, v3, v4}, Lajf;->m(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lud2;->e:J
-
-    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Lud2;->f:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ChatEntity(id="
-
-    const-string v1, ", serverId="
-
-    iget-wide v2, p0, Lud2;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lud2;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lud2;->c:Luc2;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", favouriteIndex="
-
-    const-string v2, ", sortTime="
-
-    iget-wide v3, p0, Lud2;->d:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lsw1;->q(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget-wide v1, p0, Lud2;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cid="
-
-    const-string v2, ")"
-
-    iget-wide v3, p0, Lud2;->f:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lc85;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

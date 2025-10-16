@@ -1,177 +1,172 @@
 .class public final Lfx9;
-.super Lco3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lga7;
 
 
 # instance fields
-.field public final f:Landroid/net/ConnectivityManager;
-
-.field public final g:Ljm3;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ldv8;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lco3;-><init>(Landroid/content/Context;Ldv8;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Lco3;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/content/Context;
-
-    const-string p2, "connectivity"
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/ConnectivityManager;
-
-    iput-object p1, p0, Lfx9;->f:Landroid/net/ConnectivityManager;
-
-    new-instance p1, Ljm3;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2, p0}, Ljm3;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lfx9;->g:Ljm3;
+    iput p1, p0, Lfx9;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i()Ljava/lang/Object;
-    .locals 1
+.method public final createImageTranscoder(Ly87;Z)Lfa7;
+    .locals 5
 
-    iget-object v0, p0, Lfx9;->f:Landroid/net/ConnectivityManager;
+    iget v0, p0, Lfx9;->a:I
 
-    invoke-static {v0}, Lgx9;->a(Landroid/net/ConnectivityManager;)Lex9;
+    const-string v1, "Dependency \':native-imagetranscoder\' is needed to use the default native image transcoder."
+
+    :try_start_0
+    const-class v2, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoderFactory;
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v3, v4, v4}, [Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-.method public final r()V
-    .locals 4
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    const-string v0, "Received exception while registering network callback"
+    filled-new-array {v0, v3, v4}, [Ljava/lang/Object;
 
-    :try_start_0
-    invoke-static {}, Ldt;->r()Ldt;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v2, Lgx9;->a:Ljava/lang/String;
+    move-result-object v0
 
-    const-string v3, "Registering network callback"
-
-    invoke-virtual {v1, v2, v3}, Ldt;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfx9;->f:Landroid/net/ConnectivityManager;
-
-    iget-object v2, p0, Lfx9;->g:Ljm3;
-
-    invoke-static {v1, v2}, Lxw9;->a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    check-cast v0, Lga7;
     :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_6
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    invoke-interface {v0, p1, p2}, Lga7;->createImageTranscoder(Ly87;Z)Lfa7;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lzi3;
+
+    iget v0, p0, Lfx9;->a:I
+
+    invoke-direct {p1, p2, v0}, Lzi3;-><init>(ZI)V
+
+    :cond_0
+    return-object p1
 
     :catch_0
-    move-exception v1
+    move-exception p1
 
     goto :goto_0
 
     :catch_1
-    move-exception v1
+    move-exception p1
 
     goto :goto_1
 
-    :goto_0
-    invoke-static {}, Ldt;->r()Ldt;
-
-    move-result-object v2
-
-    sget-object v3, Lgx9;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v0, v1}, Ldt;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :catch_2
+    move-exception p1
 
     goto :goto_2
 
-    :goto_1
-    invoke-static {}, Ldt;->r()Ldt;
+    :catch_3
+    move-exception p1
 
-    move-result-object v2
+    goto :goto_3
 
-    sget-object v3, Lgx9;->a:Ljava/lang/String;
+    :catch_4
+    move-exception p1
 
-    invoke-virtual {v2, v3, v0, v1}, Ldt;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_4
 
-    :goto_2
-    return-void
-.end method
+    :catch_5
+    move-exception p1
 
-.method public final s()V
-    .locals 4
+    goto :goto_5
 
-    const-string v0, "Received exception while unregistering network callback"
+    :catch_6
+    move-exception p1
 
-    :try_start_0
-    invoke-static {}, Ldt;->r()Ldt;
-
-    move-result-object v1
-
-    sget-object v2, Lgx9;->a:Ljava/lang/String;
-
-    const-string v3, "Unregistering network callback"
-
-    invoke-virtual {v1, v2, v3}, Ldt;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfx9;->f:Landroid/net/ConnectivityManager;
-
-    iget-object v2, p0, Lfx9;->g:Ljm3;
-
-    invoke-static {v1, v2}, Lvw9;->c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_1
+    goto :goto_6
 
     :goto_0
-    invoke-static {}, Ldt;->r()Ldt;
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    move-result-object v2
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget-object v3, Lgx9;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v0, v1}, Ldt;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
+    throw p2
 
     :goto_1
-    invoke-static {}, Ldt;->r()Ldt;
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    move-result-object v2
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget-object v3, Lgx9;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v0, v1}, Ldt;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p2
 
     :goto_2
-    return-void
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_3
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_4
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_5
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_6
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

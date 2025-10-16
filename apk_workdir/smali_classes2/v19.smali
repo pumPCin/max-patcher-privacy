@@ -1,53 +1,55 @@
 .class public final Lv19;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
+.field public final a:Lr50;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public b:J
 
-.field public final synthetic Z:Ly19;
+.field public final c:Lzu2;
 
-.field public o:Ly19;
+.field public final d:Lzu2;
 
-.field public r0:I
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
+
+.field public i:J
+
+.field public j:J
 
 
 # direct methods
-.method public constructor <init>(Ly19;Lwy3;)V
-    .locals 0
-
-    iput-object p1, p0, Lv19;->Z:Ly19;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>()V
     .locals 2
 
-    iput-object p1, p0, Lv19;->Y:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lv19;->r0:I
+    new-instance v0, Lr50;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0}, Lr50;-><init>()V
 
-    or-int/2addr p1, v0
+    iput-object v0, p0, Lv19;->a:Lr50;
 
-    iput p1, p0, Lv19;->r0:I
+    new-instance v0, Lzu2;
 
-    iget-object p1, p0, Lv19;->Z:Ly19;
+    const/4 v1, 0x5
 
-    const-wide/16 v0, 0x0
+    invoke-direct {v0, v1}, Lzu2;-><init>(I)V
 
-    invoke-virtual {p1, v0, v1, p0}, Ly19;->c(JLwy3;)Ljava/io/Serializable;
+    iput-object v0, p0, Lv19;->c:Lzu2;
 
-    move-result-object p1
+    new-instance v0, Lzu2;
 
-    return-object p1
+    invoke-direct {v0, v1}, Lzu2;-><init>(I)V
+
+    iput-object v0, p0, Lv19;->d:Lzu2;
+
+    return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmda;
+.implements Lrla;
 
 
 # instance fields

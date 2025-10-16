@@ -1,29 +1,31 @@
 .class public final Lt6f;
-.super Ljava/lang/RuntimeException;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final a:Loqf;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Loqf;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
 
-    iput-object p2, p0, Lt6f;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lt6f;->a:Loqf;
+
+    iput-object p2, p0, Lt6f;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lt6f;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lt6f;->d:Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final getLocalizedMessage()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lt6f;->a:Ljava/lang/String;
-
-    return-object v0
 .end method

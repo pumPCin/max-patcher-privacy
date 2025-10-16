@@ -8,62 +8,62 @@
     value = 0x13
 .end annotation
 
-.annotation build Lws4;
+.annotation build Lvv4;
 .end annotation
 
 
 # instance fields
-.field public final c:Lrt5;
+.field public final c:Lix5;
 
 
 # direct methods
-.method public constructor <init>(Lrt5;)V
+.method public constructor <init>(Lix5;)V
     .locals 0
-    .annotation build Lws4;
+    .annotation build Lvv4;
     .end annotation
 
     invoke-direct {p0}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;-><init>()V
 
-    iput-object p1, p0, Lcom/facebook/imagepipeline/platform/KitKatPurgeableDecoder;->c:Lrt5;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/platform/KitKatPurgeableDecoder;->c:Lix5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm73;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method public final c(Lq93;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 4
 
-    invoke-virtual {p1}, Lm73;->X()Ljava/lang/Object;
+    invoke-virtual {p1}, Lq93;->Z()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lyz8;
+    check-cast p1, Lj79;
 
-    invoke-virtual {p1}, Lyz8;->O()I
+    invoke-virtual {p1}, Lj79;->Q()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/facebook/imagepipeline/platform/KitKatPurgeableDecoder;->c:Lrt5;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/platform/KitKatPurgeableDecoder;->c:Lix5;
 
-    iget-object v2, v1, Lrt5;->b:Lqt5;
+    iget-object v2, v1, Lix5;->b:Lhx5;
 
-    invoke-virtual {v2, v0}, Lmj0;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Lfk0;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, [B
 
-    iget-object v1, v1, Lrt5;->a:Lhjb;
+    iget-object v1, v1, Lix5;->a:Lzsa;
 
-    sget-object v3, Lm73;->Y:Le49;
+    sget-object v3, Lq93;->Y:Lzw3;
 
-    invoke-static {v2, v1, v3}, Lm73;->h0(Ljava/lang/Object;La1d;Ll73;)Lxe4;
+    invoke-static {v2, v1, v3}, Lq93;->k0(Ljava/lang/Object;Lubd;Lp93;)Lsh4;
 
     move-result-object v1
 
     :try_start_0
-    invoke-virtual {v1}, Lm73;->X()Ljava/lang/Object;
+    invoke-virtual {v1}, Lq93;->Z()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -71,7 +71,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p1, v3, v3, v0, v2}, Lyz8;->N(III[B)V
+    invoke-virtual {p1, v3, v3, v0, v2}, Lj79;->P(III[B)V
 
     invoke-static {v2, v3, v0, p2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -79,26 +79,26 @@
 
     const-string p2, "BitmapFactory returned null"
 
-    invoke-static {p1, p2}, Li8e;->j(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lxti;->e(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1}, Lm73;->close()V
+    invoke-virtual {v1}, Lq93;->close()V
 
     return-object p1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {v1}, Lm73;->N(Lm73;)V
+    invoke-static {v1}, Lq93;->P(Lq93;)V
 
     throw p1
 .end method
 
-.method public final b(Lm73;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method public final d(Lq93;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 6
 
-    invoke-static {p2, p1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->e(ILm73;)Z
+    invoke-static {p2, p1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->e(ILq93;)Z
 
     move-result v0
 
@@ -112,13 +112,13 @@
     sget-object v0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->b:[B
 
     :goto_0
-    invoke-virtual {p1}, Lm73;->X()Ljava/lang/Object;
+    invoke-virtual {p1}, Lq93;->Z()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lyz8;
+    check-cast p1, Lj79;
 
-    invoke-virtual {p1}, Lyz8;->O()I
+    invoke-virtual {p1}, Lj79;->Q()I
 
     move-result v1
 
@@ -138,32 +138,32 @@
 
     add-int/lit8 v1, p2, 0x2
 
-    iget-object v3, p0, Lcom/facebook/imagepipeline/platform/KitKatPurgeableDecoder;->c:Lrt5;
+    iget-object v3, p0, Lcom/facebook/imagepipeline/platform/KitKatPurgeableDecoder;->c:Lix5;
 
-    iget-object v4, v3, Lrt5;->b:Lqt5;
+    iget-object v4, v3, Lix5;->b:Lhx5;
 
-    invoke-virtual {v4, v1}, Lmj0;->get(I)Ljava/lang/Object;
+    invoke-virtual {v4, v1}, Lfk0;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, [B
 
-    iget-object v3, v3, Lrt5;->a:Lhjb;
+    iget-object v3, v3, Lix5;->a:Lzsa;
 
-    sget-object v5, Lm73;->Y:Le49;
+    sget-object v5, Lq93;->Y:Lzw3;
 
-    invoke-static {v4, v3, v5}, Lm73;->h0(Ljava/lang/Object;La1d;Ll73;)Lxe4;
+    invoke-static {v4, v3, v5}, Lq93;->k0(Ljava/lang/Object;Lubd;Lp93;)Lsh4;
 
     move-result-object v3
 
     :try_start_0
-    invoke-virtual {v3}, Lm73;->X()Ljava/lang/Object;
+    invoke-virtual {v3}, Lq93;->Z()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, [B
 
-    invoke-virtual {p1, v2, v2, p2, v4}, Lyz8;->N(III[B)V
+    invoke-virtual {p1, v2, v2, p2, v4}, Lj79;->P(III[B)V
 
     if-eqz v0, :cond_2
 
@@ -186,18 +186,18 @@
 
     const-string p2, "BitmapFactory returned null"
 
-    invoke-static {p1, p2}, Li8e;->j(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lxti;->e(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v3}, Lm73;->close()V
+    invoke-virtual {v3}, Lq93;->close()V
 
     return-object p1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {v3}, Lm73;->N(Lm73;)V
+    invoke-static {v3}, Lq93;->P(Lq93;)V
 
     throw p1
 

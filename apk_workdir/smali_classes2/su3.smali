@@ -1,3 +1,3 @@
-.class public interface abstract Lsu3;
-.super Ljava/lang/Object;
+.class public abstract Lsu3;
+.super Lzd5;
 .source "SourceFile"

@@ -4,12 +4,12 @@
 
 
 # direct methods
-.method public static final a(Liv0;Le7f;)Lru/ok/tamtam/logout/a;
+.method public static final a(Lgw0;Lqkf;)Lru/ok/tamtam/logout/a;
     .locals 1
 
     new-instance v0, Lru/ok/tamtam/logout/LogoutEventsByBus;
 
-    invoke-direct {v0, p0, p1}, Lru/ok/tamtam/logout/LogoutEventsByBus;-><init>(Liv0;Le7f;)V
+    invoke-direct {v0, p0, p1}, Lru/ok/tamtam/logout/LogoutEventsByBus;-><init>(Lgw0;Lqkf;)V
 
     return-object v0
 .end method

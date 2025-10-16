@@ -22,7 +22,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;",
         "event",
-        "Laxf;",
+        "Lzag;",
         "onRoomUpdated",
         "(Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;)V",
         "onProposedRoomChanged",

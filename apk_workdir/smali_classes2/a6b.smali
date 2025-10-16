@@ -1,131 +1,91 @@
-.class public final synthetic La6b;
+.class public abstract La6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lo6b;
+.field public static final c:I
 
-.field public final synthetic c:Ljava/lang/String;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo6b;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, La6b;->a:I
+    sget v0, Ljoc;->web_app_root_choose_media_bottomsheet_camera:I
 
-    iput-object p1, p0, La6b;->b:Lo6b;
+    sput v0, La6b;->a:I
 
-    iput-object p2, p0, La6b;->c:Ljava/lang/String;
+    sget v0, Ljoc;->web_app_root_choose_media_bottomsheet_file_manager:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, La6b;->b:I
 
-    return-void
-.end method
+    sget v0, Ljoc;->web_app_root_choose_media_bottomsheet_gallery:I
 
+    sput v0, La6b;->c:I
 
-# virtual methods
-.method public final run()V
-    .locals 4
+    sget v0, Ljoc;->webapp_root_content_container:I
 
-    iget v0, p0, La6b;->a:I
+    sput v0, La6b;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    sget v0, Ljoc;->webapp_root_error_container:I
 
-    iget-object v0, p0, La6b;->b:Lo6b;
+    sput v0, La6b;->e:I
 
-    iget-object v1, v0, Lo6b;->N:Ln6b;
+    sget v0, Ljoc;->webapp_root_frame:I
 
-    if-eqz v1, :cond_0
+    sput v0, La6b;->f:I
 
-    iget-object v2, p0, La6b;->c:Ljava/lang/String;
+    sget v0, Ljoc;->webapp_root_progressbar:I
 
-    invoke-interface {v1, v0, v2}, Ln6b;->f(Lo6b;Ljava/lang/String;)V
+    sput v0, La6b;->g:I
 
-    :cond_0
-    return-void
+    sget v0, Ljoc;->webapp_root_settings_header:I
 
-    :pswitch_0
-    iget-object v0, p0, La6b;->b:Lo6b;
+    sput v0, La6b;->h:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Ljoc;->webapp_root_settings_sections_recycler:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sput v0, La6b;->i:I
 
-    const-string v2, "create sdp error "
+    sget v0, Ljoc;->webapp_root_settings_switcher:I
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sput v0, La6b;->j:I
 
-    iget-object v2, p0, La6b;->c:Ljava/lang/String;
+    sget v0, Ljoc;->webapp_root_settings_transition:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput v0, La6b;->k:I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget v0, Ljoc;->webapp_root_toolbar:I
 
-    move-result-object v1
+    sput v0, La6b;->l:I
 
-    const-string v2, "create.sdp2"
+    sget v0, Ljoc;->webapp_root_webview:I
 
-    invoke-virtual {v0, v1, v2}, Lo6b;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Lo6b;->x:Lzkc;
-
-    const-string v1, "onCreateSDPFailed"
-
-    const/4 v2, 0x0
-
-    sget-object v3, Lvme;->c:Lvme;
-
-    invoke-virtual {v0, v3, v1, v2}, Lzkc;->log(Lvme;Ljava/lang/String;Ljava/lang/String;)V
+    sput v0, La6b;->m:I
 
     return-void
-
-    :pswitch_1
-    iget-object v0, p0, La6b;->b:Lo6b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "set sdp error "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, La6b;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "set.sdp2"
-
-    invoke-virtual {v0, v1, v2}, Lo6b;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Lo6b;->x:Lzkc;
-
-    const-string v1, "setSdpFailed"
-
-    const/4 v2, 0x0
-
-    sget-object v3, Lvme;->c:Lvme;
-
-    invoke-virtual {v0, v3, v1, v2}, Lzkc;->log(Lvme;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

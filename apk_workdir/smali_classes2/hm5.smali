@@ -1,51 +1,42 @@
 .class public final Lhm5;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb18;
 
-# instance fields
-.field public X:Z
 
-.field public Y:Z
+# static fields
+.field public static final a:Lhm5;
 
-.field public synthetic Z:Ljava/lang/Object;
 
-.field public o:Lx47;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public r0:I
+    new-instance v0, Lhm5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lhm5;->a:Lhm5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final getItemId()J
+    .locals 2
 
-    iput-object p1, p0, Lhm5;->Z:Ljava/lang/Object;
+    const-wide/high16 v0, -0x8000000000000000L
 
-    iget p1, p0, Lhm5;->r0:I
+    return-wide v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final m()I
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget v0, Luva;->r:I
 
-    iput p1, p0, Lhm5;->r0:I
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v7, p0
-
-    invoke-static/range {v0 .. v7}, Lzvd;->o(Lk47;Lx47;JLjava/lang/Object;ZZLwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

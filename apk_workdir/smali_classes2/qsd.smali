@@ -1,225 +1,93 @@
-.class public final Lqsd;
-.super Lasd;
+.class public final synthetic Lqsd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static c:J
-
-.field public static final synthetic o:I
+# interfaces
+.implements Lqh6;
 
 
 # instance fields
-.field public final b:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzx3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Lyz4;->o:I
-
-    const-wide/16 v0, 0x0
-
-    sput-wide v0, Lqsd;->c:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
+.method public synthetic constructor <init>(Lzx3;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqsd;->a:I
 
-    iput-boolean p1, p0, Lqsd;->b:Z
+    iput-object p1, p0, Lqsd;->b:Lzx3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j(Lzla;Lcp4;)Ljava/util/concurrent/ExecutorService;
-    .locals 2
-
-    const/16 p2, 0xa
-
-    invoke-virtual {p1}, Lzla;->b()Lvla;
-
-    move-result-object v0
-
-    const-string v1, "logout"
-
-    invoke-virtual {v0, p2, v1}, Lvla;->a(ILjava/lang/String;)Lir5;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2, v1}, Lzla;->i(Lir5;Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p1
-
-    new-instance p2, Lhc;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p2, v0}, Lhc;-><init>(I)V
-
-    invoke-interface {p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-
-    return-object p1
-.end method
-
-.method public final u()Z
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lqsd;->a:I
 
-    return v0
-.end method
+    check-cast p1, Lptd;
 
-.method public final w()V
-    .locals 9
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lr28;->o:Lr28;
+    iget-object v0, p0, Lqsd;->b:Lzx3;
 
-    const-class v1, Lqsd;
+    iget-object v0, v0, Lzx3;->Y:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
 
-    move-result-object v2
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->E0(Lptd;)V
 
-    sget-object v3, Lyt3;->n:Lhoa;
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    const/4 v4, 0x0
+    return-object p1
 
-    if-nez v3, :cond_0
+    :pswitch_0
+    iget-object v0, p0, Lqsd;->b:Lzx3;
+
+    iget-object v0, v0, Lzx3;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->E0(Lptd;)V
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v3, v0}, Lhoa;->b(Lr28;)Z
+    :pswitch_1
+    iget-object v0, p0, Lqsd;->b:Lzx3;
 
-    move-result v5
+    iget-object v0, v0, Lzx3;->Y:Ljava/lang/Object;
 
-    if-eqz v5, :cond_1
+    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
 
-    sget v5, Lyz4;->o:I
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->E0(Lptd;)V
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    goto :goto_0
 
-    move-result-wide v5
+    :pswitch_2
+    iget-object v0, p0, Lqsd;->b:Lzx3;
 
-    sget-object v7, Ld05;->b:Ld05;
+    iget-object v0, v0, Lzx3;->Y:Ljava/lang/Object;
 
-    invoke-static {v5, v6, v7}, Lx2d;->N(JLd05;)J
+    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
 
-    move-result-wide v5
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->E0(Lptd;)V
 
-    sget-wide v7, Lqsd;->c:J
+    goto :goto_0
 
-    invoke-static {v5, v6, v7, v8}, Lyz4;->g(JJ)J
+    nop
 
-    move-result-wide v5
-
-    invoke-static {v5, v6}, Lyz4;->j(J)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "process "
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v0, v2, v5, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    sget v2, Lyz4;->o:I
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v2
-
-    sget-object v5, Ld05;->b:Ld05;
-
-    invoke-static {v2, v3, v5}, Lx2d;->N(JLd05;)J
-
-    move-result-wide v2
-
-    iget-object v6, p0, Lasd;->a:Lbsd;
-
-    if-eqz v6, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move-object v6, v4
-
-    :goto_1
-    iget-object v6, v6, Lbsd;->F:Lyn7;
-
-    invoke-interface {v6}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lk48;
-
-    iget-boolean v7, p0, Lqsd;->b:Z
-
-    invoke-virtual {v6, v7}, Lk48;->a(Z)V
-
-    invoke-virtual {p0}, Lasd;->s()Liv0;
-
-    move-result-object v6
-
-    new-instance v7, Ln48;
-
-    invoke-direct {v7}, Lti0;-><init>()V
-
-    invoke-virtual {v6, v7}, Liv0;->c(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v6, Lyt3;->n:Lhoa;
-
-    if-nez v6, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v6, v0}, Lhoa;->b(Lr28;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v7
-
-    invoke-static {v7, v8, v5}, Lx2d;->N(JLd05;)J
-
-    move-result-wide v7
-
-    invoke-static {v7, v8, v2, v3}, Lyz4;->g(JJ)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Lyz4;->j(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "process finish "
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v6, v0, v1, v2, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

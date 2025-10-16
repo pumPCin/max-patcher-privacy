@@ -1,244 +1,136 @@
 .class public final Layc;
-.super Lnm;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La9f;
-.implements Lu8b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final o:J
+.field public final synthetic X:Lwwc;
+
+.field public final synthetic Y:J
+
+.field public final synthetic a:Landroid/view/View;
+
+.field public final synthetic b:Ldyc;
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic o:Lzxc;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Landroid/view/View;Ldyc;Landroid/view/View;Lzxc;Lwwc;J)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lnm;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Layc;->o:J
+    iput-object p1, p0, Layc;->a:Landroid/view/View;
+
+    iput-object p2, p0, Layc;->b:Ldyc;
+
+    iput-object p3, p0, Layc;->c:Landroid/view/View;
+
+    iput-object p4, p0, Layc;->o:Lzxc;
+
+    iput-object p5, p0, Layc;->X:Lwwc;
+
+    iput-wide p6, p0, Layc;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 1
+.method public final run()V
+    .locals 10
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Layc;->b:Ldyc;
 
-    return v0
-.end method
+    iget-object v1, p0, Layc;->c:Landroid/view/View;
 
-.method public final d(Ly7f;)V
-    .locals 5
+    iget-object v0, v0, Ldyc;->c:Lsn7;
 
-    check-cast p1, Lbyc;
+    iget-object v0, v0, Lsn7;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lnm;->q()Lnnb;
+    check-cast v0, Landroid/view/View;
 
-    move-result-object v0
+    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
-    check-cast v0, Lpnb;
+    const/4 v2, 0x0
 
-    iget-object v0, v0, Lpnb;->a:Lt08;
+    if-nez v1, :cond_0
 
-    iget-object v1, v0, Lfhd;->w:Lzrd;
+    move-object v0, v2
 
-    sget-object v2, Lfhd;->h0:[Lpl7;
-
-    const/16 v3, 0xb
-
-    aget-object v2, v2, v3
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v0, v2, v3}, Lzrd;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lnm;->c:Lom;
-
-    if-eqz v0, :cond_0
-
-    move-object v3, v0
+    goto :goto_0
 
     :cond_0
-    iget-object v0, v3, Lom;->U:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-static {v1, v0}, Lo0h;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    check-cast v0, La1c;
-
-    iget-object v1, p1, Lbyc;->c:Liqb;
-
-    invoke-virtual {v0, v1}, La1c;->b(Liqb;)V
-
-    invoke-virtual {p0}, Lnm;->l()Liv0;
-
-    move-result-object v0
-
-    new-instance v1, Lju3;
-
-    iget-object p1, p1, Lbyc;->c:Liqb;
-
-    iget-object p1, p1, Liqb;->a:Lor3;
-
-    const/4 v2, 0x1
-
-    iget-wide v3, p0, Lnm;->a:J
-
-    invoke-direct {v1, v3, v4, p1, v2}, Lju3;-><init>(JLjava/io/Serializable;I)V
-
-    invoke-virtual {v0, v1}, Liv0;->c(Ljava/lang/Object;)V
+    :goto_0
+    if-nez v0, :cond_1
 
     return-void
-.end method
 
-.method public final e()V
-    .locals 8
+    :cond_1
+    iget-object v1, p0, Layc;->b:Ldyc;
 
-    invoke-virtual {p0}, Lnm;->q()Lnnb;
+    iget-object v1, v1, Ldyc;->d:Ljava/lang/String;
 
-    move-result-object v0
+    sget-object v3, Lndi;->a:Lkwa;
 
-    check-cast v0, Lpnb;
+    if-nez v3, :cond_2
 
-    iget-object v0, v0, Lpnb;->a:Lt08;
+    goto :goto_1
 
-    invoke-virtual {v0}, Lfhd;->s()J
+    :cond_2
+    sget-object v4, Lf88;->o:Lf88;
 
-    move-result-wide v0
+    invoke-virtual {v3, v4}, Lkwa;->b(Lf88;)Z
 
-    const-wide/16 v2, 0x0
+    move-result v5
 
-    cmp-long v2, v0, v2
+    if-eqz v5, :cond_3
 
-    if-lez v2, :cond_0
+    iget-object v5, p0, Layc;->X:Lwwc;
 
-    invoke-virtual {p0}, Lnm;->j()Lcl;
+    iget-wide v6, p0, Layc;->Y:J
 
-    move-result-object v2
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    check-cast v2, Lgea;
+    const-string v9, "Play reaction effect without pending, reaction:"
 
-    new-instance v3, Lpr3;
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lgea;->x()Lnnb;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    const-string v5, ", l:"
 
-    check-cast v4, Lpnb;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, v4, Lpnb;->a:Lt08;
+    invoke-virtual {v8, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Lfhd;->k()J
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-wide v4
+    move-result-object v5
 
-    const/4 v6, 0x1
+    invoke-virtual {v3, v4, v1, v5, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-array v6, v6, [J
+    :cond_3
+    :goto_1
+    iget-object v1, p0, Layc;->b:Ldyc;
 
-    const/4 v7, 0x0
+    iget-object v2, p0, Layc;->o:Lzxc;
 
-    aput-wide v0, v6, v7
+    iget-object v3, v2, Lzxc;->b:Ljava/lang/String;
 
-    invoke-direct {v3, v4, v5, v6, v7}, Lpr3;-><init>(JLjava/lang/Object;I)V
+    iget-wide v4, v2, Lzxc;->a:J
 
-    invoke-static {v2, v3}, Lgea;->u(Lgea;Lnm;)J
-
-    :cond_0
-    invoke-virtual {p0}, Lnm;->s()Ltaf;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lnm;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ltaf;->d(J)V
+    invoke-static {v1, v3, v4, v5, v0}, Ldyc;->c(Ldyc;Ljava/lang/String;JLandroid/graphics/Rect;)V
 
     return-void
-.end method
-
-.method public final f()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;-><init>()V
-
-    iget-wide v1, p0, Lnm;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;->requestId:J
-
-    iget-wide v1, p0, Layc;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;->photoId:J
-
-    invoke-static {v0}, Ls59;->toByteArray(Ls59;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final g(Li7f;)V
-    .locals 4
-
-    iget-object v0, p1, Li7f;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lte0;->h(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Layc;->e()V
-
-    :cond_0
-    invoke-virtual {p0}, Lnm;->l()Liv0;
-
-    move-result-object v0
-
-    new-instance v1, Lsi0;
-
-    iget-wide v2, p0, Lnm;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Lsi0;-><init>(JLi7f;)V
-
-    invoke-virtual {v0, v1}, Liv0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lnm;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Lv8b;
-    .locals 1
-
-    sget-object v0, Lv8b;->G0:Lv8b;
-
-    return-object v0
-.end method
-
-.method public final i()Lv7f;
-    .locals 4
-
-    new-instance v0, Lun9;
-
-    iget-wide v1, p0, Layc;->o:J
-
-    const/16 v3, 0x14
-
-    invoke-direct {v0, v1, v2, v3}, Lun9;-><init>(JI)V
-
-    return-object v0
 .end method

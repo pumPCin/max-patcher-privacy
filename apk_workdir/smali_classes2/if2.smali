@@ -1,77 +1,135 @@
 .class public final Lif2;
-.super Le2c;
+.super Lgj2;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final A(Lov7;)V
-    .locals 6
+# static fields
+.field public static final synthetic G0:[Lwq7;
 
-    check-cast p1, Lmyb;
 
-    iget-object v0, p0, Luvc;->a:Landroid/view/View;
+# instance fields
+.field public E0:Ld00;
 
-    check-cast v0, Lgf2;
+.field public final F0:Lpzd;
 
-    iget-object p1, p1, Lmyb;->a:Lxe2;
 
-    iget-object v1, p1, Lxe2;->e:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-virtual {v0, v1}, Lgf2;->setLink(Ljava/lang/String;)V
+    new-instance v0, Lc0a;
 
-    iget-boolean v1, p1, Lxe2;->f:Z
+    const-string v1, "updateJob"
 
-    invoke-virtual {v0, v1}, Lgf2;->setLoading(Z)V
+    const-string v2, "getUpdateJob()Lkotlinx/coroutines/Job;"
 
-    iget-object v1, p1, Lxe2;->d:Ljava/lang/String;
+    const-class v3, Lif2;
 
-    invoke-virtual {v0, v1}, Lgf2;->setChatTitle(Ljava/lang/String;)V
+    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-wide v1, p1, Lxe2;->b:J
+    sget-object v1, Ls6d;->a:Lt6d;
 
-    iget-object v3, p1, Lxe2;->a:Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v4, p1, Lxe2;->c:Ljava/lang/CharSequence;
+    const/4 v1, 0x1
 
-    iget-object v5, v0, Lgf2;->H0:Lrfa;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v5, v3, v1, v4}, Lrfa;->n(Lrfa;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
-
-    iget-boolean v1, p1, Lxe2;->g:Z
+    new-array v1, v1, [Lwq7;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    aput-object v0, v1, v2
 
-    iget-boolean p1, p1, Lxe2;->h:Z
+    sput-object v1, Lif2;->G0:[Lwq7;
 
-    if-eqz p1, :cond_0
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    new-instance v0, Lcj2;
+
+    invoke-direct {v0, p1}, Lcj2;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, v0}, Lj6d;-><init>(Landroid/view/View;)V
+
+    invoke-static {}, Lnvi;->a()Lpzd;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lif2;->F0:Lpzd;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic A(Lb18;)V
+    .locals 0
+
+    check-cast p1, Lo39;
+
+    invoke-virtual {p0, p1}, Lif2;->H(Lo39;)V
+
+    return-void
+.end method
+
+.method public final G(Ls39;Lqh6;Lei6;)V
+    .locals 0
+
+    check-cast p1, Lo39;
+
+    invoke-virtual {p0, p1}, Lif2;->H(Lo39;)V
+
+    invoke-super {p0, p1, p2, p3}, Lgj2;->G(Ls39;Lqh6;Lei6;)V
+
+    return-void
+.end method
+
+.method public final H(Lo39;)V
+    .locals 4
+
+    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
+
+    check-cast v0, Lcj2;
+
+    iget-wide v1, p1, Lo39;->a:J
+
+    long-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    iget-object v1, p1, Lo39;->X:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcj2;->setTitle(Ljava/lang/CharSequence;)V
+
+    invoke-static {v0}, Loyg;->b(Landroid/view/View;)Lwv7;
+
+    move-result-object v1
+
+    new-instance v2, Lhf2;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, p0, v0, v3}, Lhf2;-><init>(Lo39;Lif2;Lcj2;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x1
 
-    goto :goto_0
+    sget-object v0, Le54;->b:Le54;
 
-    :cond_0
-    move p1, v2
+    invoke-static {v1, v3, v0, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    :goto_0
-    iget-object v1, v0, Lgf2;->K0:Landroid/widget/ImageView;
+    move-result-object p1
 
-    if-eqz p1, :cond_1
+    sget-object v0, Lif2;->G0:[Lwq7;
 
-    goto :goto_1
+    const/4 v1, 0x0
 
-    :cond_1
-    const/16 v2, 0x8
+    aget-object v0, v0, v1
 
-    :goto_1
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    iget-object v1, p0, Lif2;->F0:Lpzd;
 
-    invoke-virtual {v0}, Lgf2;->v()V
+    invoke-virtual {v1, p0, v0, p1}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
 
     return-void
 .end method

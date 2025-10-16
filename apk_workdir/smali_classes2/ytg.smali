@@ -1,179 +1,86 @@
-.class public final synthetic Lytg;
-.super Ljava/lang/Object;
+.class public final Lytg;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lri6;
+.implements Lei6;
 
 
-# static fields
-.field public static final a:Lytg;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field private static final descriptor:Lmqd;
+.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    .locals 0
 
-    new-instance v0, Lytg;
+    iput-object p2, p0, Lytg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lytg;->a:Lytg;
-
-    new-instance v1, Lflb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.download.WebAppDownloadFileResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "status"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lytg;->descriptor:Lmqd;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx8;)Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lytg;->descriptor:Lmqd;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v5, v1
-
-    move v6, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
-
-    new-instance p1, Laug;
-
-    invoke-direct {p1, v6, v3, v4}, Laug;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lmz3;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Laug;
-
-    sget-object v0, Lytg;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
+    invoke-virtual {p0, p1, p2}, Lytg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object v1, p2, Laug;->a:Ljava/lang/String;
+    check-cast p1, Lytg;
 
-    const/4 v2, 0x0
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-virtual {p1, v0, v2, v1}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
+    invoke-virtual {p1, p2}, Lytg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x1
-
-    iget-object p2, p2, Laug;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lmz3;->m()V
-
-    return-void
+    return-object p2
 .end method
 
-.method public final c()[Lql7;
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x2
+    new-instance v0, Lytg;
 
-    new-array v0, v0, [Lql7;
+    iget-object v1, p0, Lytg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    sget-object v1, Llwe;->a:Llwe;
+    invoke-direct {v0, p2, v1}, Lytg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
 
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
+    iput-object p1, v0, Lytg;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final d()Lmqd;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Lytg;->descriptor:Lmqd;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    iget-object p1, p0, Lytg;->X:Ljava/lang/Object;
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    iget-object v0, p0, Lytg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->A0:Llbd;
+
+    invoke-virtual {v0}, Llbd;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmsg;
+
+    invoke-virtual {v0, p1}, Lmsg;->setFramesListBitmap(Landroid/graphics/Bitmap;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

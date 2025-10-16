@@ -1,16 +1,8 @@
-.class public final synthetic Ltoc;
+.class public abstract Ltoc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lpo3;
 
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 0
+# static fields
+.field public static text_change_is_programmatic_tag:I = 0x7f0a0bfe
 
-    check-cast p1, Lec2;
-
-    return-void
-.end method
+.field public static view_custom_attach_lifecycle_owner:I = 0x7f0a0c98

@@ -1,94 +1,178 @@
 .class public final Lc00;
-.super Ld08;
+.super Ld00;
 .source "SourceFile"
 
 
 # instance fields
-.field public Y:Lkke;
+.field public final a:J
+
+.field public final b:F
+
+.field public final c:Lnqf;
 
 
-# virtual methods
-.method public final a()V
-    .locals 1
+# direct methods
+.method public constructor <init>(JFLnqf;)V
+    .locals 0
 
-    invoke-super {p0}, Ld08;->a()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lc00;->Y:Lkke;
+    iput-wide p1, p0, Lc00;->a:J
 
-    if-eqz v0, :cond_0
+    iput p3, p0, Lc00;->b:F
 
-    iget-object v0, v0, Lkke;->b:Ljava/lang/Object;
-
-    check-cast v0, Lkn7;
-
-    invoke-static {v0}, Lo8d;->b(Lfs4;)V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lc00;->Y:Lkke;
+    iput-object p4, p0, Lc00;->c:Lnqf;
 
     return-void
 .end method
 
-.method public final c()V
-    .locals 5
 
-    iget-object v0, p0, Ld08;->b:Lgod;
+# virtual methods
+.method public final a()J
+    .locals 2
 
-    iget-object v1, p0, Ld08;->X:Ltz7;
+    iget-wide v0, p0, Lc00;->a:J
 
-    invoke-virtual {v0, v1}, Lgod;->e(Ltz7;)Lcbb;
+    return-wide v0
+.end method
 
-    move-result-object v0
+.method public final b()Loqf;
+    .locals 1
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lc00;->c:Lnqf;
 
-    iget-object v2, v1, Ltz7;->o:Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result-object v2
+    if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    iget-object v2, v0, Lcbb;->b:Landroid/net/Uri;
+    instance-of v0, p1, Lc00;
 
-    if-eqz v2, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object v2, v0, Lcbb;->a:Landroid/net/Uri;
+    check-cast p1, Lc00;
 
-    if-eqz v2, :cond_2
+    iget-wide v0, p0, Lc00;->a:J
+
+    iget-wide v2, p1, Lc00;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget-object v2, v1, Ltz7;->o:Ljava/lang/String;
+    iget v0, p0, Lc00;->b:F
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iget v1, p1, Lc00;->b:F
 
-    move-result-object v2
+    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
 
-    :goto_0
+    move-result v0
+
     if-eqz v0, :cond_3
 
-    iget-object v0, v0, Lcbb;->X:Landroid/net/Uri;
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_3
-    const/4 v0, 0x0
+    iget-object v0, p0, Lc00;->c:Lnqf;
 
+    iget-object p1, p1, Lc00;->c:Lnqf;
+
+    invoke-virtual {v0, p1}, Lnqf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
     :goto_1
-    iget-object v3, p0, Ld08;->a:Lr08;
+    const/4 p1, 0x1
 
-    const/4 v4, 0x0
+    return p1
+.end method
 
-    invoke-interface {v3, v1, v2, v4, v0}, Lr08;->v(Ltz7;Landroid/net/Uri;ILandroid/net/Uri;)V
+.method public final hashCode()I
+    .locals 3
 
-    return-void
+    iget-wide v0, p0, Lc00;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lc00;->b:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget-object v1, p0, Lc00;->c:Lnqf;
+
+    invoke-virtual {v1}, Lnqf;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Uploading(messageId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lc00;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", progress="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lc00;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textSize="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc00;->c:Lnqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

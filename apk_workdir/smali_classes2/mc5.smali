@@ -1,67 +1,54 @@
-.class public final synthetic Lmc5;
+.class public final Lmc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/graphics/drawable/Drawable$Callback;
+
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrc5;
+.field public final synthetic a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrc5;I)V
+.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
     .locals 0
 
-    iput p2, p0, Lmc5;->a:I
-
-    iput-object p1, p0, Lmc5;->b:Lrc5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmc5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 2
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    iget v0, p0, Lmc5;->a:I
+    iget-object p1, p0, Lmc5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    const-wide/16 v0, -0x1
-
-    cmp-long v0, p1, v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmc5;->b:Lrc5;
-
-    invoke-virtual {v0, p1, p2}, Lrc5;->a(J)V
-
-    :cond_0
     return-void
+.end method
 
-    :pswitch_0
-    const-wide/16 v0, -0x1
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 0
 
-    cmp-long v0, p1, v0
+    iget-object p1, p0, Lmc5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
-    iget-object v0, p0, Lmc5;->b:Lrc5;
-
-    invoke-virtual {v0, p1, p2}, Lrc5;->a(J)V
-
-    :cond_1
     return-void
+.end method
 
-    nop
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p1, p0, Lmc5;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

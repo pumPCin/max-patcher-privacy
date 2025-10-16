@@ -1,48 +1,62 @@
-.class public final Ly3e;
-.super Lwy3;
+.class public final synthetic Ly3e;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lr6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lly8;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lz3e;
 
 
 # direct methods
-.method public constructor <init>(Lly8;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lz3e;I)V
     .locals 0
 
-    iput-object p1, p0, Ly3e;->Y:Lly8;
+    iput p2, p0, Ly3e;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ly3e;->b:Lz3e;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    iput-object p1, p0, Ly3e;->o:Ljava/lang/Object;
+    iget v0, p0, Ly3e;->a:I
 
-    iget p1, p0, Ly3e;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ly3e;->b:Lz3e;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Lz3e;->x()V
 
-    iput p1, p0, Ly3e;->X:I
+    return-void
 
-    iget-object p1, p0, Ly3e;->Y:Lly8;
+    :pswitch_0
+    iget-object v0, p0, Ly3e;->b:Lz3e;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lk3e;->q()Lfof;
 
-    invoke-virtual {p1, v0, p0}, Lly8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    iget-wide v2, v0, Lz3e;->b:J
 
-    return-object p1
+    invoke-virtual {v1, v2, v3}, Lfof;->c(J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

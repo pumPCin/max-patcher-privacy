@@ -1,51 +1,53 @@
 .class public final Ll5g;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Ljava/lang/Object;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lx5g;
+
+.field public o:Lx5g;
+
+.field public r0:I
+
+
+# direct methods
+.method public constructor <init>(Lx5g;Lk14;)V
+    .locals 0
+
+    iput-object p1, p0, Ll5g;->Z:Lx5g;
+
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ll5g;
-
-    if-nez v1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ll5g;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/high16 v0, 0x29000000
+    iput-object p1, p0, Ll5g;->Y:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget p1, p0, Ll5g;->r0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iput p1, p0, Ll5g;->r0:I
 
-    const-string v0, "VfxButtonIconOverlayPlainElevation2Colors(color=687865856)"
+    iget-object p1, p0, Ll5g;->Z:Lx5g;
 
-    return-object v0
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Lx5g;->r(Lx5g;Ljava/lang/CharSequence;Ljava/lang/String;Lk14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

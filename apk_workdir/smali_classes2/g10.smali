@@ -1,85 +1,141 @@
-.class public final enum Lg10;
-.super Ljava/lang/Enum;
+.class public final Lg10;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lg10;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final enum b:Lg10;
+.field public final b:Ljava/lang/String;
 
-.field public static final enum c:Lg10;
+.field public final c:I
 
-.field public static final synthetic o:[Lg10;
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:Ljava/util/List;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Lg10;
-
-    const-string v1, "DEFAULT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lg10;->a:Lg10;
-
-    new-instance v1, Lg10;
-
-    const-string v2, "PROCESSING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lg10;->b:Lg10;
-
-    new-instance v2, Lg10;
-
-    const-string v3, "PROCESSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lg10;->c:Lg10;
-
-    filled-new-array {v0, v1, v2}, [Lg10;
-
-    move-result-object v0
-
-    sput-object v0, Lg10;->o:[Lg10;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lg10;
-    .locals 1
+.method public constructor <init>(Lf10;)V
+    .locals 2
 
-    const-class v0, Lg10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p1, Lf10;->a:Ljava/io/Serializable;
 
-    move-result-object p0
+    check-cast v0, Ljava/lang/String;
 
-    check-cast p0, Lg10;
+    iput-object v0, p0, Lg10;->a:Ljava/lang/String;
 
-    return-object p0
+    iget-object v0, p1, Lf10;->c:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lg10;->b:Ljava/lang/String;
+
+    iget v0, p1, Lf10;->d:I
+
+    iput v0, p0, Lg10;->c:I
+
+    iget v0, p1, Lf10;->f:I
+
+    iput v0, p0, Lg10;->d:I
+
+    iget-wide v0, p1, Lf10;->b:J
+
+    iput-wide v0, p0, Lg10;->e:J
+
+    iget-object p1, p1, Lf10;->e:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iput-object p1, p0, Lg10;->f:Ljava/util/List;
+
+    return-void
 .end method
 
-.method public static values()[Lg10;
-    .locals 1
 
-    sget-object v0, Lg10;->o:[Lg10;
+# virtual methods
+.method public final a()Z
+    .locals 2
 
-    invoke-virtual {v0}, [Lg10;->clone()Ljava/lang/Object;
+    iget v0, p0, Lg10;->d:I
 
-    move-result-object v0
+    const/4 v1, 0x3
 
-    check-cast v0, [Lg10;
+    if-ne v0, v1, :cond_0
 
-    return-object v0
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    const/4 v0, 0x5
+
+    iget v1, p0, Lg10;->d:I
+
+    if-ne v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lg10;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-ne v1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_2
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    iget v0, p0, Lg10;->c:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

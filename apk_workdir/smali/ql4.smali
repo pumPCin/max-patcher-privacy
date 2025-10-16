@@ -1,278 +1,134 @@
-.class public final synthetic Lql4;
+.class public final Lql4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lnwd;
 
 
 # instance fields
-.field public final synthetic X:Z
-
-.field public final synthetic Y:Lbw1;
-
-.field public final synthetic Z:Ljava/util/concurrent/Executor;
-
 .field public final synthetic a:Lrl4;
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lfx0;
-
-.field public final synthetic o:Lh93;
-
-.field public final synthetic r0:Lb9g;
-
-.field public final synthetic s0:Lyl6;
-
-.field public final synthetic t0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrl4;Landroid/content/Context;Lfx0;Lh93;ZLbw1;Ljava/util/concurrent/Executor;Lb9g;Lyl6;Z)V
+.method public constructor <init>(Lrl4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lql4;->a:Lrl4;
 
-    iput-object p2, p0, Lql4;->b:Landroid/content/Context;
-
-    iput-object p3, p0, Lql4;->c:Lfx0;
-
-    iput-object p4, p0, Lql4;->o:Lh93;
-
-    iput-boolean p5, p0, Lql4;->X:Z
-
-    iput-object p6, p0, Lql4;->Y:Lbw1;
-
-    iput-object p7, p0, Lql4;->Z:Ljava/util/concurrent/Executor;
-
-    iput-object p8, p0, Lql4;->r0:Lb9g;
-
-    iput-object p9, p0, Lql4;->s0:Lyl6;
-
-    iput-boolean p10, p0, Lql4;->t0:Z
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 23
+.method public final c()Z
+    .locals 1
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    iget-object v3, v0, Lql4;->s0:Lyl6;
+    return v0
+.end method
 
-    iget-object v1, v0, Lql4;->a:Lrl4;
+.method public final e(J)Llwd;
+    .locals 13
 
-    iget-object v13, v1, Lrl4;->d:Lgm6;
+    iget-object v0, p0, Lql4;->a:Lrl4;
 
-    iget v14, v1, Lrl4;->e:I
+    iget-object v1, v0, Lrl4;->w0:Ljava/lang/Object;
 
-    iget-boolean v8, v1, Lrl4;->a:Z
+    check-cast v1, Lu8f;
 
-    iget-boolean v9, v1, Lrl4;->f:Z
+    iget v1, v1, Lu8f;->f:I
 
-    iget-boolean v10, v1, Lrl4;->g:Z
+    int-to-long v1, v1
 
-    sget v1, Ltl4;->v:I
+    mul-long/2addr v1, p1
 
-    invoke-static {}, Labh;->y()Landroid/opengl/EGLDisplay;
+    const-wide/32 v3, 0xf4240
 
-    move-result-object v11
+    div-long/2addr v1, v3
 
-    iget-object v12, v0, Lql4;->o:Lh93;
+    iget-wide v3, v0, Lrl4;->b:J
 
-    invoke-static {v12}, Lh93;->g(Lh93;)Z
+    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    move-result v1
+    move-result-object v1
 
-    if-eqz v1, :cond_0
+    iget-wide v5, v0, Lrl4;->c:J
 
-    sget-object v1, Labh;->b:[I
+    sub-long v7, v5, v3
 
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Labh;->a:[I
-
-    :goto_0
-    const/4 v2, 0x3
-
-    :try_start_0
-    invoke-interface {v3, v11, v2, v1}, Lyl6;->h(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v2
 
-    invoke-interface {v3, v2, v11}, Lyl6;->l(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
-
-    move-result-object v4
-
-    invoke-static {v2, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v1
-    :try_end_0
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_1
-    move-object v15, v1
-
-    goto :goto_2
-
-    :catch_0
-    const/4 v2, 0x2
-
-    invoke-interface {v3, v11, v2, v1}, Lyl6;->h(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
     move-result-object v1
 
-    invoke-interface {v3, v1, v11}, Lyl6;->l(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
+    iget-wide v7, v0, Lrl4;->X:J
+
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
     move-result-object v1
 
-    goto :goto_1
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
 
-    :goto_2
-    invoke-virtual {v12}, Lh93;->a()Lf93;
+    move-result-wide v1
 
-    move-result-object v1
+    add-long/2addr v1, v3
 
-    const/4 v2, 0x1
+    const-wide/16 v3, 0x7530
 
-    iput v2, v1, Lf93;->c:I
+    sub-long v7, v1, v3
 
-    const/4 v2, 0x0
+    iget-wide v9, v0, Lrl4;->b:J
 
-    iput-object v2, v1, Lf93;->d:[B
+    const-wide/16 v0, 0x1
 
-    new-instance v16, Lh93;
+    sub-long v11, v5, v0
 
-    iget v2, v1, Lf93;->a:I
+    invoke-static/range {v7 .. v12}, Ljhg;->j(JJJ)J
 
-    iget v4, v1, Lf93;->b:I
+    move-result-wide v0
 
-    iget v5, v1, Lf93;->c:I
+    new-instance v2, Llwd;
 
-    iget-object v6, v1, Lf93;->d:[B
+    new-instance v3, Lrwd;
 
-    iget v7, v1, Lf93;->e:I
+    invoke-direct {v3, p1, p2, v0, v1}, Lrwd;-><init>(JJ)V
 
-    iget v1, v1, Lf93;->f:I
+    invoke-direct {v2, v3, v3}, Llwd;-><init>(Lrwd;Lrwd;)V
 
-    move/from16 v21, v1
+    return-object v2
+.end method
 
-    move/from16 v17, v2
+.method public final f()J
+    .locals 6
 
-    move/from16 v18, v4
+    iget-object v0, p0, Lql4;->a:Lrl4;
 
-    move/from16 v19, v5
+    iget-object v1, v0, Lrl4;->w0:Ljava/lang/Object;
 
-    move-object/from16 v22, v6
+    check-cast v1, Lu8f;
 
-    move/from16 v20, v7
+    iget-wide v2, v0, Lrl4;->X:J
 
-    invoke-direct/range {v16 .. v22}, Lh93;-><init>(IIIII[B)V
+    const-wide/32 v4, 0xf4240
 
-    invoke-static {v12}, Lh93;->g(Lh93;)Z
+    mul-long/2addr v2, v4
 
-    move-result v1
+    iget v0, v1, Lu8f;->f:I
 
-    if-eqz v1, :cond_1
+    int-to-long v0, v0
 
-    goto :goto_3
+    div-long/2addr v2, v0
 
-    :cond_1
-    move-object/from16 v16, v12
-
-    :goto_3
-    new-instance v1, Lr20;
-
-    new-instance v7, Lml4;
-
-    const/4 v2, 0x0
-
-    move-object/from16 v17, v12
-
-    iget-object v12, v0, Lql4;->r0:Lb9g;
-
-    invoke-direct {v7, v12, v2}, Lml4;-><init>(Lb9g;I)V
-
-    iget-object v2, v0, Lql4;->b:Landroid/content/Context;
-
-    iget-object v5, v0, Lql4;->Y:Lbw1;
-
-    iget-object v6, v0, Lql4;->Z:Ljava/util/concurrent/Executor;
-
-    move-object v4, v3
-
-    move-object/from16 v3, v16
-
-    invoke-direct/range {v1 .. v10}, Lr20;-><init>(Landroid/content/Context;Lh93;Lyl6;Lbw1;Ljava/util/concurrent/Executor;Lml4;ZZZ)V
-
-    move-object v3, v4
-
-    new-instance v4, Lgr5;
-
-    iget-object v7, v15, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v7, Landroid/opengl/EGLContext;
-
-    iget-object v8, v15, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v8, Landroid/opengl/EGLSurface;
-
-    iget-boolean v15, v0, Lql4;->X:Z
-
-    move-object v9, v11
-
-    move-object v11, v6
-
-    move-object v6, v9
-
-    move-object v10, v5
-
-    move-object/from16 v9, v17
-
-    move-object v5, v2
-
-    invoke-direct/range {v4 .. v15}, Lgr5;-><init>(Landroid/content/Context;Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;Landroid/opengl/EGLSurface;Lh93;Lbw1;Ljava/util/concurrent/Executor;Lb9g;Lgm6;IZ)V
-
-    move-object v5, v6
-
-    move-object v7, v10
-
-    move-object v6, v11
-
-    move-object v8, v12
-
-    move-object v9, v1
-
-    new-instance v1, Ltl4;
-
-    move-object v10, v4
-
-    iget-boolean v4, v0, Lql4;->t0:Z
-
-    iget-object v13, v0, Lql4;->c:Lfx0;
-
-    move-object v11, v9
-
-    move-object v9, v6
-
-    move-object v6, v11
-
-    move v11, v15
-
-    move-object/from16 v12, v17
-
-    invoke-direct/range {v1 .. v13}, Ltl4;-><init>(Landroid/content/Context;Lyl6;ZLandroid/opengl/EGLDisplay;Lr20;Lbw1;Lb9g;Ljava/util/concurrent/Executor;Lgr5;ZLh93;Lfx0;)V
-
-    return-object v1
+    return-wide v2
 .end method

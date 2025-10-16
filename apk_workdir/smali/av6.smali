@@ -1,95 +1,90 @@
 .class public final Lav6;
-.super Lzi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public a:J
 
-.field public final Y:J
+.field public b:Z
+
+.field public c:I
+
+.field public d:J
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:J
+
+.field public k:J
+
+.field public l:Z
+
+.field public final m:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 7
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    iput-object p1, p0, Lav6;->m:Ljava/lang/Object;
 
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    int-to-long v5, v0
-
-    const/4 v2, 0x0
-
-    const-wide/16 v3, 0x0
-
-    move-object v1, p0
-
-    invoke-direct/range {v1 .. v6}, Lzi0;-><init>(IJJ)V
-
-    iput-wide p1, v1, Lav6;->Y:J
-
-    iput-object p3, v1, Lav6;->X:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 4
+.method public a(I)V
+    .locals 9
 
-    invoke-virtual {p0}, Lzi0;->c()V
+    iget-wide v1, p0, Lav6;->k:J
 
-    iget-wide v0, p0, Lzi0;->o:J
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    long-to-int v0, v0
+    cmp-long v0, v1, v3
 
-    iget-object v1, p0, Lav6;->X:Ljava/util/List;
+    if-eqz v0, :cond_1
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-wide v3, p0, Lav6;->a:J
 
-    move-result-object v0
+    iget-wide v5, p0, Lav6;->j:J
 
-    check-cast v0, Lvv6;
+    cmp-long v0, v3, v5
 
-    iget-wide v0, v0, Lvv6;->X:J
+    if-nez v0, :cond_0
 
-    iget-wide v2, p0, Lav6;->Y:J
+    goto :goto_0
 
-    add-long/2addr v2, v0
+    :cond_0
+    move-wide v7, v3
 
-    return-wide v2
-.end method
+    iget-boolean v3, p0, Lav6;->l:Z
 
-.method public final b()J
-    .locals 5
+    sub-long v4, v7, v5
 
-    invoke-virtual {p0}, Lzi0;->c()V
+    long-to-int v4, v4
 
-    iget-wide v0, p0, Lzi0;->o:J
+    iget-object v0, p0, Lav6;->m:Ljava/lang/Object;
 
-    long-to-int v0, v0
+    check-cast v0, Lt0g;
 
-    iget-object v1, p0, Lav6;->X:Ljava/util/List;
+    const/4 v6, 0x0
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move v5, p1
 
-    move-result-object v0
+    invoke-interface/range {v0 .. v6}, Lt0g;->a(JIIILr0g;)V
 
-    check-cast v0, Lvv6;
-
-    iget-wide v1, p0, Lav6;->Y:J
-
-    iget-wide v3, v0, Lvv6;->X:J
-
-    add-long/2addr v1, v3
-
-    iget-wide v3, v0, Lvv6;->c:J
-
-    add-long/2addr v1, v3
-
-    return-wide v1
+    :cond_1
+    :goto_0
+    return-void
 .end method

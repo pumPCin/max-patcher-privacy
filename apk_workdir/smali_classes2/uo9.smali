@@ -1,108 +1,53 @@
 .class public final Luo9;
-.super Lnm;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements La9f;
 
 
 # instance fields
-.field public final o:J
+.field public X:Lda2;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lgp9;
+
+.field public o:Lgp9;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Lgp9;Lk14;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lnm;-><init>(J)V
+    iput-object p1, p0, Luo9;->Z:Lgp9;
 
-    iput-wide p3, p0, Luo9;->o:J
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ly7f;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Luo9;->Y:Ljava/lang/Object;
 
-.method public final g(Li7f;)V
-    .locals 0
+    iget p1, p0, Luo9;->r0:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public final i()Lv7f;
-    .locals 8
+    or-int/2addr p1, v0
 
-    iget-wide v0, p0, Luo9;->o:J
+    iput p1, p0, Luo9;->r0:I
 
-    const-wide/16 v2, 0x0
+    iget-object p1, p0, Luo9;->Z:Lgp9;
 
-    cmp-long v4, v0, v2
+    const/4 v0, 0x0
 
-    const/16 v5, 0xa
+    invoke-virtual {p1, v0, p0}, Lgp9;->c(Lda2;Lk14;)Ljava/lang/Object;
 
-    if-nez v4, :cond_0
+    move-result-object p1
 
-    new-instance v0, Lun9;
-
-    invoke-direct {v0, v2, v3, v5}, Lun9;-><init>(JI)V
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Lnm;->m()Lzb2;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0, v1}, Lzb2;->C(J)Lr82;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, v0, Lr82;->b:Luc2;
-
-    iget-wide v6, v1, Luc2;->a:J
-
-    cmp-long v2, v6, v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {p0}, Lnm;->m()Lzb2;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lzb2;->N(Lr82;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lun9;
-
-    iget-wide v1, v1, Luc2;->a:J
-
-    invoke-direct {v0, v1, v2, v5}, Lun9;-><init>(JI)V
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    const-string v0, "uo9"
-
-    const-string v1, "createRequest: No chat or serverId == 0. return null"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
+    return-object p1
 .end method

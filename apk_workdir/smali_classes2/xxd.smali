@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyxd;
+.implements Layd;
 
 
 # instance fields
-.field public final a:Ltvd;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ltvd;)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxxd;->a:Ltvd;
+    iput p1, p0, Lxxd;->a:I
 
     return-void
 .end method
@@ -44,15 +44,11 @@
     :cond_1
     check-cast p1, Lxxd;
 
-    iget-object v1, p0, Lxxd;->a:Ltvd;
+    iget v1, p0, Lxxd;->a:I
 
-    iget-object p1, p1, Lxxd;->a:Ltvd;
+    iget p1, p1, Lxxd;->a:I
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
@@ -63,9 +59,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lxxd;->a:Ltvd;
+    iget v0, p0, Lxxd;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
@@ -73,23 +69,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SessionsInfo(event="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lxxd;->a:Ltvd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "AlbumHeightChanged(height="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lxxd;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

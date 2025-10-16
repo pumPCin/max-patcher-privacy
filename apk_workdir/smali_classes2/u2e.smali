@@ -1,9 +1,9 @@
 .class public final Lu2e;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
@@ -11,20 +11,20 @@
 
 .field public final synthetic Y:Lv2e;
 
-.field public final synthetic Z:I
+.field public final synthetic Z:Lx9a;
 
 
 # direct methods
-.method public constructor <init>(Lv2e;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lv2e;Lx9a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
     iput-object p1, p0, Lu2e;->Y:Lv2e;
 
-    iput p2, p0, Lu2e;->Z:I
+    iput-object p2, p0, Lu2e;->Z:Lx9a;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ln24;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +44,7 @@
 
     check-cast p1, Lu2e;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lu2e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,9 +60,9 @@
 
     iget-object v0, p0, Lu2e;->Y:Lv2e;
 
-    iget v1, p0, Lu2e;->Z:I
+    iget-object v1, p0, Lu2e;->Z:Lx9a;
 
-    invoke-direct {p1, v0, v1, p2}, Lu2e;-><init>(Lv2e;ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Lu2e;-><init>(Lv2e;Lx9a;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
@@ -72,25 +72,15 @@
 
     iget v0, p0, Lu2e;->X:I
 
-    sget-object v1, Laxf;->a:Laxf;
+    const/4 v1, 0x1
 
-    iget-object v2, p0, Lu2e;->Y:Lv2e;
+    if-eqz v0, :cond_1
 
-    const/4 v3, 0x2
+    if-ne v0, v1, :cond_0
 
-    const/4 v4, 0x1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    sget-object v5, Lo24;->a:Lo24;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v4, :cond_1
-
-    if-ne v0, v3, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    return-object v1
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -102,74 +92,45 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    goto :goto_1
+    iget-object p1, p0, Lu2e;->Y:Lv2e;
+
+    iget-object p1, p1, Lv2e;->q:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v2, p1
+
+    check-cast v2, Lx86;
+
+    iget-object p1, p0, Lu2e;->Z:Lx9a;
+
+    iget-wide v3, p1, Lx9a;->c:J
+
+    iget-object v5, p1, Lx9a;->o:Lzz9;
+
+    iget-object v6, p1, Lx9a;->X:Ljava/util/List;
+
+    iput v1, p0, Lu2e;->X:I
+
+    move-object v7, p0
+
+    invoke-interface/range {v2 .. v7}, Lx86;->o(JLzz9;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, v2, Lv2e;->v0:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwyf;
-
-    iput v4, p0, Lu2e;->X:I
-
-    iget-object v0, p1, Lwyf;->c:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Le7f;
-
-    check-cast v0, Lmka;
-
-    invoke-virtual {v0}, Lmka;->b()Lh24;
-
-    move-result-object v0
-
-    new-instance v4, Lvyf;
-
-    const/4 v6, 0x0
-
-    iget v7, p0, Lu2e;->Z:I
-
-    invoke-direct {v4, p1, v7, v6}, Lvyf;-><init>(Lwyf;ILkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v4, p0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move-object p1, v1
-
     :goto_0
-    if-ne p1, v5, :cond_4
+    sget-object p1, Lzag;->a:Lzag;
 
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    iput v3, p0, Lu2e;->X:I
-
-    invoke-static {v2, p0}, Lv2e;->s(Lv2e;Lc2f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_5
-
-    :goto_2
-    return-object v5
-
-    :cond_5
-    return-object v1
+    return-object p1
 .end method

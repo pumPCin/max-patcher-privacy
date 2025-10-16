@@ -1,157 +1,144 @@
 .class public final Lygb;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lzgb;
+.implements Lgi6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:I
 
-.field public final b:Lbdf;
+.field public synthetic Y:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field public final c:Z
+.field public synthetic Z:Lu4b;
 
 
 # direct methods
-.method public constructor <init>(JLbdf;Z)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lygb;->X:I
 
-    iput-wide p1, p0, Lygb;->a:J
-
-    iput-object p3, p0, Lygb;->b:Lbdf;
-
-    iput-boolean p4, p0, Lygb;->c:Z
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lygb;->X:I
 
-    goto :goto_1
+    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
 
-    :cond_0
-    instance-of v0, p1, Lygb;
+    check-cast p2, Lu4b;
 
-    if-nez v0, :cond_1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_1
-    check-cast p1, Lygb;
+    new-instance v0, Lygb;
 
-    iget-wide v0, p0, Lygb;->a:J
+    const/4 v1, 0x3
 
-    iget-wide v2, p1, Lygb;->a:J
+    const/4 v2, 0x1
 
-    cmp-long v0, v0, v2
+    invoke-direct {v0, v1, p3, v2}, Lygb;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    if-eqz v0, :cond_2
+    iput-object p1, v0, Lygb;->Y:Landroidx/appcompat/widget/AppCompatImageView;
 
-    goto :goto_0
+    iput-object p2, v0, Lygb;->Z:Lu4b;
 
-    :cond_2
-    iget-object v0, p0, Lygb;->b:Lbdf;
+    sget-object p1, Lzag;->a:Lzag;
 
-    iget-object v1, p1, Lygb;->b:Lbdf;
+    invoke-virtual {v0, p1}, Lygb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lbdf;->equals(Ljava/lang/Object;)Z
+    return-object p1
 
-    move-result v0
+    :pswitch_0
+    new-instance v0, Lygb;
 
-    if-nez v0, :cond_3
+    const/4 v1, 0x3
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_3
-    iget-boolean v0, p0, Lygb;->c:Z
+    invoke-direct {v0, v1, p3, v2}, Lygb;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    iget-boolean p1, p1, Lygb;->c:Z
+    iput-object p1, v0, Lygb;->Y:Landroidx/appcompat/widget/AppCompatImageView;
 
-    if-eq v0, p1, :cond_4
+    iput-object p2, v0, Lygb;->Z:Lu4b;
 
-    :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lzag;->a:Lzag;
 
-    return p1
+    invoke-virtual {v0, p1}, Lygb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
+    return-object p1
 
-    return p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Lygb;->a:J
+    iget v0, p0, Lygb;->X:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p0, Lygb;->Y:Landroidx/appcompat/widget/AppCompatImageView;
 
-    iget-object v1, p0, Lygb;->b:Lbdf;
+    iget-object v0, p0, Lygb;->Z:Lu4b;
 
-    invoke-virtual {v1}, Lbdf;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lygb;->c:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "State(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lygb;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lygb;->b:Lbdf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", canClose="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lygb;->c:Z
-
-    invoke-static {v0, v1, v3, v2}, Lbk7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Lh67;->j:I
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lygb;->Y:Landroidx/appcompat/widget/AppCompatImageView;
+
+    iget-object v0, p0, Lygb;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->b()Lwe0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lwe0;->a:Lve0;
+
+    iget v0, v0, Lve0;->n:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

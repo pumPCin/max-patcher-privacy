@@ -1,193 +1,95 @@
 .class public final Lj3f;
-.super Loz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final o:Lyb8;
+.field public final a:Lzed;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Loza;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-direct {p0, v0}, Lj3f;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
-
-    .line 2
-    new-instance p1, Lyb8;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lyb8;-><init>(I)V
-
-    .line 3
-    invoke-direct {p0}, Loz3;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lj3f;->o:Lyb8;
-
-    .line 5
-    const-class p1, Lj3f;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 6
-    iput-object p1, p0, Lj3f;->X:Ljava/lang/String;
+    iput-object p1, p0, Lj3f;->a:Lzed;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final a([J)Lcj8;
+    .locals 3
 
-    iget-object v0, p0, Lj3f;->o:Lyb8;
+    iget-object v0, p0, Lj3f;->a:Lzed;
 
-    invoke-virtual {v0}, Ldh;->a()V
+    invoke-virtual {v0}, Lzed;->n()Lrja;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final f(Loz3;Ljz3;)V
-    .locals 1
+    new-instance v1, Li3f;
 
-    iget-object v0, p0, Lj3f;->o:Lyb8;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, p1, p2}, Ldh;->f(Loz3;Ljz3;)V
+    invoke-direct {v1, v2}, Li3f;-><init>(I)V
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Lqoe;->h(Lfi6;)Lape;
 
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLmz3;)V
-    .locals 12
+    move-result-object v0
 
-    sget-object v0, Lr28;->o:Lr28;
+    new-instance v1, Lx0d;
 
-    const/4 v1, 0x0
+    const/16 v2, 0x18
 
-    if-nez p2, :cond_2
+    invoke-direct {v1, v2, p1}, Lx0d;-><init>(ILjava/lang/Object;)V
 
-    if-nez p4, :cond_2
+    new-instance p1, Lcj8;
 
-    iget-object p1, p0, Lj3f;->X:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    sget-object p2, Lyt3;->n:Lhoa;
+    invoke-direct {p1, v0, v1, v2}, Lcj8;-><init>(Ljava/lang/Object;Lfi6;I)V
 
-    if-nez p2, :cond_0
+    new-instance v0, Lzu9;
 
-    goto :goto_0
+    const/4 v1, 0x5
 
-    :cond_0
-    invoke-virtual {p2, v0}, Lhoa;->b(Lr28;)Z
+    invoke-direct {v0, v1}, Lzu9;-><init>(I)V
 
-    move-result p3
+    new-instance v1, Lbj8;
 
-    if-eqz p3, :cond_1
+    const/4 v2, 0x0
 
-    const-string p3, "Already swiped controller manually, skip performChange"
+    invoke-direct {v1, p1, v0, v2}, Lbj8;-><init>(Ljava/lang/Object;Lfi6;I)V
 
-    invoke-virtual {p2, v0, p1, p3, v1}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    new-instance p1, Li3f;
 
-    :cond_1
-    :goto_0
-    invoke-virtual/range {p5 .. p5}, Lmz3;->n()V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-direct {p1, v0}, Li3f;-><init>(I)V
 
-    :cond_2
-    if-nez p2, :cond_5
+    new-instance v0, Lpha;
 
-    if-eqz p4, :cond_5
+    const/4 v2, 0x5
 
-    iget-object v2, p0, Lj3f;->X:Ljava/lang/String;
+    invoke-direct {v0, v1, p1, v2}, Lpha;-><init>(Lwga;Lfi6;I)V
 
-    sget-object v3, Lyt3;->n:Lhoa;
+    invoke-virtual {v0}, Lwga;->s()Laha;
 
-    if-nez v3, :cond_3
+    move-result-object p1
 
-    goto :goto_1
+    new-instance v0, Li3f;
 
-    :cond_3
-    invoke-virtual {v3, v0}, Lhoa;->b(Lr28;)Z
+    const/4 v1, 0x1
 
-    move-result v4
+    invoke-direct {v0, v1}, Li3f;-><init>(I)V
 
-    if-eqz v4, :cond_4
+    new-instance v1, Lcj8;
 
-    const-string v4, "Showing controller without animation"
+    const/4 v2, 0x1
 
-    invoke-virtual {v3, v0, v2, v4, v1}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, p1, v0, v2}, Lcj8;-><init>(Ljava/lang/Object;Lfi6;I)V
 
-    :cond_4
-    :goto_1
-    new-instance v5, Lpce;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v5, v0}, Lpce;-><init>(Z)V
-
-    move-object v6, p1
-
-    move-object v7, p2
-
-    move-object v8, p3
-
-    move/from16 v9, p4
-
-    move-object/from16 v10, p5
-
-    invoke-virtual/range {v5 .. v10}, Lpce;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLmz3;)V
-
-    return-void
-
-    :cond_5
-    iget-object v6, p0, Lj3f;->o:Lyb8;
-
-    move-object v7, p1
-
-    move-object v8, p2
-
-    move-object v9, p3
-
-    move/from16 v10, p4
-
-    move-object/from16 v11, p5
-
-    invoke-virtual/range {v6 .. v11}, Ldh;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLmz3;)V
-
-    return-void
-.end method
-
-.method public final h(Landroid/os/Bundle;)V
-    .locals 1
-
-    iget-object v0, p0, Lj3f;->o:Lyb8;
-
-    invoke-virtual {v0, p1}, Ldh;->h(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public final i(Landroid/os/Bundle;)V
-    .locals 1
-
-    iget-object v0, p0, Lj3f;->o:Lyb8;
-
-    invoke-virtual {v0, p1}, Ldh;->i(Landroid/os/Bundle;)V
-
-    return-void
+    return-object v1
 .end method

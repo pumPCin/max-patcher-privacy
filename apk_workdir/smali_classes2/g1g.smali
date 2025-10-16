@@ -1,93 +1,77 @@
-.class public abstract synthetic Lg1g;
+.class public abstract Lg1g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 3
 
-    const/16 v0, 0x9
+    new-instance v0, Lvf6;
 
-    invoke-static {v0}, Lsw1;->y(I)[I
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v1, 0x3
-
-    const/16 v3, 0x8
-
-    :try_start_2
-    aput v1, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
     const/4 v1, 0x4
 
-    const/4 v4, 0x6
+    invoke-direct {v0, v1}, Lvf6;-><init>(I)V
 
-    :try_start_3
-    aput v1, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    const v1, 0x9c40
 
-    :catch_3
-    const/4 v5, 0x5
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :try_start_4
-    aput v5, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result-object v1
 
-    :catch_4
-    :try_start_5
-    aput v4, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    sget-object v2, Lpf6;->b:Lpf6;
 
-    :catch_5
-    const/4 v1, 0x7
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
 
-    :try_start_6
-    aput v1, v0, v5
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    sget-object v2, Lpf6;->c:Lpf6;
 
-    :catch_6
-    :try_start_7
-    aput v3, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
 
-    :catch_7
-    sput-object v0, Lg1g;->$EnumSwitchMapping$0:[I
+    sget-object v2, Lpf6;->o:Lpf6;
+
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
+
+    const v1, 0x26160
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lpf6;->X:Lpf6;
+
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
+
+    sget-object v2, Lpf6;->Y:Lpf6;
+
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
+
+    const v1, 0x493e0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lpf6;->Z:Lpf6;
+
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
+
+    sget-object v2, Lpf6;->r0:Lpf6;
+
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
+
+    sget-object v2, Lpf6;->s0:Lpf6;
+
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
+
+    sget-object v2, Lpf6;->t0:Lpf6;
+
+    invoke-virtual {v0, v2, v1}, Lvf6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lvf6;
+
+    invoke-virtual {v0}, Lvf6;->C()Llb7;
 
     return-void
 .end method

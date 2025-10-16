@@ -1,81 +1,83 @@
-.class public final enum Lb62;
-.super Ljava/lang/Enum;
+.class public final Lb62;
+.super Lnv6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lb62;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum b:Lb62;
+.field public b:[B
 
-.field public static final synthetic c:[Lb62;
-
-.field public static final synthetic o:Laa5;
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lb62;
+    iput p1, p0, Lb62;->a:I
 
-    const-string v1, "PUBLIC"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lb62;->a:Lb62;
-
-    new-instance v1, Lb62;
-
-    const-string v2, "PRIVATE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lb62;->b:Lb62;
-
-    filled-new-array {v0, v1}, [Lb62;
-
-    move-result-object v0
-
-    sput-object v0, Lb62;->c:[Lb62;
-
-    new-instance v1, Laa5;
-
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lb62;->o:Laa5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lb62;
+
+# virtual methods
+.method public final a()[B
     .locals 1
 
-    const-class v0, Lb62;
+    iget v0, p0, Lb62;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Lb62;->c:Ljava/lang/Object;
 
-    check-cast p0, Lb62;
-
-    return-object p0
-.end method
-
-.method public static values()[Lb62;
-    .locals 1
-
-    sget-object v0, Lb62;->c:[Lb62;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lb62;
+    check-cast v0, [B
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lb62;->b:[B
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lb62;->b:[B
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Liwf;
+    .locals 1
+
+    iget v0, p0, Lb62;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Liwf;->s0:Liwf;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Liwf;->X:Liwf;
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Liwf;->Z:Liwf;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

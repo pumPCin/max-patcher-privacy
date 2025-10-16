@@ -1,21 +1,37 @@
-.class public final Lsza;
-.super Luc0;
+.class public abstract Lsza;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Landroid/net/Uri;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0xc
+    sget v0, Linc;->oneme_bottom_sheet_popup:I
 
-    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+    sput v0, Lsza;->a:I
 
-    iput-object p1, p0, Lsza;->b:Landroid/net/Uri;
+    sget v0, Linc;->oneme_bottom_sheet_popup_card:I
+
+    sput v0, Lsza;->b:I
+
+    sget v0, Linc;->oneme_bottom_sheet_toolbar:I
+
+    sput v0, Lsza;->c:I
+
+    sget v0, Linc;->oneme_too_many_requests_bottomsheet_positive_button:I
+
+    sput v0, Lsza;->d:I
 
     return-void
 .end method

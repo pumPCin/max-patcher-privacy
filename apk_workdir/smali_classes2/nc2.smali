@@ -1,97 +1,100 @@
-.class public final Lnc2;
+.class public final synthetic Lnc2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-.implements Li43;
+.implements Ler3;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Lde2;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 3
+.method public synthetic constructor <init>(Lde2;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lnc2;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lnc2;->a:J
+    iput-object p1, p0, Lnc2;->b:Lde2;
 
-    iput-wide p3, p0, Lnc2;->b:J
+    return-void
+.end method
 
-    const-wide/16 v0, -0x1
+.method public synthetic constructor <init>(Lkd2;Lde2;)V
+    .locals 0
 
-    cmp-long p1, p1, v0
+    .line 1
+    const/4 p1, 0x0
 
-    const-string p2, ""
+    iput p1, p0, Lnc2;->a:I
 
-    const-string v2, "Chunk"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez p1, :cond_0
+    iput-object p2, p0, Lnc2;->b:Lde2;
 
-    const-string p1, "start time is -1"
-
-    invoke-static {p1, v2, p2}, Lxw1;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    cmp-long p1, p3, v0
-
-    if-nez p1, :cond_1
-
-    const-string p1, "end time is -1"
-
-    invoke-static {p1, v2, p2}, Lxw1;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final accept(Ljava/lang/Object;)V
     .locals 2
 
-    iget-wide v0, p0, Lnc2;->a:J
+    iget v0, p0, Lnc2;->a:I
 
-    return-wide v0
-.end method
+    check-cast p1, Lpd2;
 
-.method public final c()J
-    .locals 2
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v0, p0, Lnc2;->b:J
+    iget-object v0, p0, Lnc2;->b:Lde2;
 
-    return-wide v0
-.end method
+    iput-object v0, p1, Lpd2;->c:Lde2;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    sget-object v1, Lde2;->o:Lde2;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-eq v0, v1, :cond_0
 
-    const-string v1, "Chunk(startTime="
+    sget-object v1, Lde2;->b:Lde2;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ne v0, v1, :cond_1
 
-    iget-wide v1, p0, Lnc2;->a:J
+    :cond_0
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput-wide v0, p1, Lpd2;->x:J
 
-    const-string v1, ", endTime="
+    :cond_1
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lnc2;->b:Lde2;
 
-    iget-wide v1, p0, Lnc2;->b:J
+    iput-object v0, p1, Lpd2;->c:Lde2;
 
-    const/16 v3, 0x29
+    invoke-static {p1}, Lkd2;->q(Lpd2;)V
 
-    invoke-static {v0, v1, v2, v3}, Lsab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    iput-wide v0, p1, Lpd2;->x:J
 
-    return-object v0
+    const/4 v0, 0x0
+
+    iput v0, p1, Lpd2;->m:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

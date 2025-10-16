@@ -1,97 +1,105 @@
-.class public final Lfzb;
+.class public abstract Lfzb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhzb;
-
-
-# instance fields
-.field public final a:Lcdf;
-
 
 # direct methods
-.method public constructor <init>(Lcdf;)V
-    .locals 0
+.method public static a([B)Lgzb;
+    .locals 14
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
 
-    iput-object p1, p0, Lfzb;->a:Lcdf;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
 
-    return-void
-.end method
+    :try_start_0
+    invoke-static {v0, p0}, Ldd9;->mergeFrom(Ldd9;[B)Ldd9;
 
+    move-result-object p0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    new-instance v1, Lu10;
+
+    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+
+    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    const/4 v6, 0x2
+
+    invoke-direct/range {v1 .. v6}, Lu10;-><init>(FFFFI)V
+
+    :goto_0
+    move-object v10, v1
+
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lfzb;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    goto :goto_0
 
-    if-nez v1, :cond_1
+    :goto_1
+    new-instance v2, Lgzb;
 
-    return v2
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
+
+    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
+
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
+
+    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
+
+    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
+
+    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
+
+    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
+
+    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
+
+    const-string v0, "PRESET_AVATAR"
+
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    :goto_2
+    move v13, p0
+
+    goto :goto_3
 
     :cond_1
-    check-cast p1, Lfzb;
+    const/4 p0, 0x2
 
-    iget-object v1, p0, Lfzb;->a:Lcdf;
+    goto :goto_2
 
-    iget-object p1, p1, Lfzb;->a:Lcdf;
+    :goto_3
+    invoke-direct/range {v2 .. v13}, Lgzb;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLu10;Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v2
 
-    move-result p1
+    :catch_0
+    move-exception v0
 
-    if-nez p1, :cond_2
+    move-object p0, v0
 
-    return v2
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-    :cond_2
-    return v0
-.end method
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lfzb;->a:Lcdf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowRestoreMembersSnackbar(caption="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfzb;->a:Lcdf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw v0
 .end method

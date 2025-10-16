@@ -1,53 +1,78 @@
-.class public final Lf2a;
-.super Lwy3;
+.class public final synthetic Lf2a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lj2a;
-
-.field public o:Lj2a;
-
-.field public r0:I
+.field public final synthetic b:Lg2a;
 
 
 # direct methods
-.method public constructor <init>(Lj2a;Lwy3;)V
+.method public synthetic constructor <init>(Lg2a;I)V
     .locals 0
 
-    iput-object p1, p0, Lf2a;->Z:Lj2a;
+    iput p2, p0, Lf2a;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lf2a;->b:Lg2a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 2
 
-    iput-object p1, p0, Lf2a;->Y:Ljava/lang/Object;
+    iget v0, p0, Lf2a;->a:I
 
-    iget p1, p0, Lf2a;->r0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lf2a;->b:Lg2a;
 
-    or-int/2addr p1, v0
+    iget-object v1, v0, Lg2a;->r0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iput p1, p0, Lf2a;->r0:I
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
-    iget-object p1, p0, Lf2a;->Z:Lj2a;
+    iget-object v1, v0, Lg2a;->s0:Landroid/widget/ProgressBar;
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
-    invoke-virtual {p1, v0, v1, p0}, Lj2a;->b(JLwy3;)Ljava/lang/Object;
+    iget-object v1, v0, Lg2a;->Z:Landroid/widget/FrameLayout;
 
-    move-result-object p1
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
-    return-object p1
+    iget-object v1, v0, Lg2a;->t0:Landroidx/appcompat/widget/AppCompatImageButton;
+
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+
+    iget-object v0, v0, Lg2a;->v0:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lf2a;->b:Lg2a;
+
+    iget-object v0, v0, Lf3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

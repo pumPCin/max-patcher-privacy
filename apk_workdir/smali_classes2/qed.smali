@@ -1,101 +1,213 @@
-.class public final synthetic Lqed;
-.super Ljava/lang/Object;
+.class public final Lqed;
+.super Lf3;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Integer;
-
-.field public final synthetic b:Landroid/view/ViewGroup;
-
-.field public final synthetic c:Ljava/lang/Integer;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Integer;Landroid/view/ViewGroup;Ljava/lang/Integer;Lsed;)V
+.method public synthetic constructor <init>(Lyed;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqed;->o:I
 
-    iput-object p1, p0, Lqed;->a:Ljava/lang/Integer;
-
-    iput-object p2, p0, Lqed;->b:Landroid/view/ViewGroup;
-
-    iput-object p3, p0, Lqed;->c:Ljava/lang/Integer;
+    invoke-direct {p0, p1}, Lf3;-><init>(Lyed;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 3
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    iget-object p1, p0, Lqed;->a:Ljava/lang/Integer;
+    iget v0, p0, Lqed;->o:I
 
-    iget-object v0, p0, Lqed;->b:Landroid/view/ViewGroup;
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "statusBarOverlay"
+    const-string v0, "DELETE FROM WorkProgress"
 
-    if-eqz p1, :cond_0
+    return-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    :pswitch_0
+    const-string v0, "DELETE from WorkProgress where work_spec_id=?"
 
-    move-result p1
+    return-object v0
 
-    const/4 v2, 0x1
+    :pswitch_1
+    const-string v0, "DELETE FROM webapp_biometry WHERE user_id = ? AND bot_id = ?"
 
-    invoke-static {v0, v1, p2, v2}, Lsed;->q(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
+    return-object v0
 
-    move-result-object v1
+    :pswitch_2
+    const-string v0, "DELETE FROM webapp_biometry"
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    return-object v0
 
-    goto :goto_0
+    :pswitch_3
+    const-string v0, "UPDATE webapp_biometry SET access_requested = ?, access_granted = ? WHERE user_id = ? AND bot_id = ?"
 
-    :cond_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_4
+    const-string v0, "UPDATE webapp_biometry SET token = ? WHERE user_id = ? AND bot_id = ?"
 
-    if-eqz p1, :cond_1
+    return-object v0
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    :pswitch_5
+    const-string v0, "DELETE FROM video_conversions"
 
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lqed;->c:Ljava/lang/Integer;
+    return-object v0
 
-    const-string v1, "navBarOverlay"
+    :pswitch_6
+    const-string v0, "DELETE FROM video_conversions WHERE source_uri=? AND quality=? AND start_trim_position=? AND end_trim_position=? AND mute=?"
 
-    if-eqz p1, :cond_2
+    return-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    :pswitch_7
+    const-string v0, "DELETE FROM uploads"
 
-    move-result p1
+    return-object v0
 
-    const/4 v2, 0x2
+    :pswitch_8
+    const-string v0, "DELETE FROM uploads WHERE photo_token=?"
 
-    invoke-static {v0, v1, p2, v2}, Lsed;->q(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
+    return-object v0
 
-    move-result-object v0
+    :pswitch_9
+    const-string v0, "DELETE FROM uploads WHERE attach_id=?"
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    return-object v0
 
-    return-object p2
+    :pswitch_a
+    const-string v0, "DELETE FROM uploads WHERE path=? AND upload_type=? AND last_modified=?"
 
-    :cond_2
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_b
+    const-string v0, "DELETE FROM tasks WHERE type = ?"
 
-    if-eqz p1, :cond_3
+    return-object v0
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    :pswitch_c
+    const-string v0, "DELETE FROM tasks"
 
-    :cond_3
-    return-object p2
+    return-object v0
+
+    :pswitch_d
+    const-string v0, "DELETE FROM tasks WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_e
+    const-string v0, "UPDATE tasks SET fails_count = fails_count + 1 WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_f
+    const-string v0, "UPDATE tasks SET data = ?, status = ? WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_10
+    const-string v0, "UPDATE tasks SET data = ? WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_11
+    const-string v0, "UPDATE tasks SET status = ? WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_12
+    const-string v0, "DELETE FROM SystemIdInfo where work_spec_id=?"
+
+    return-object v0
+
+    :pswitch_13
+    const-string v0, "DELETE FROM SystemIdInfo where work_spec_id=? AND generation=?"
+
+    return-object v0
+
+    :pswitch_14
+    const-string v0, "DELETE FROM stickers"
+
+    return-object v0
+
+    :pswitch_15
+    const-string v0, "DELETE FROM sticker_sets"
+
+    return-object v0
+
+    :pswitch_16
+    const-string v0, "\n            DELETE FROM stat_events\n            WHERE timestamp < ?\n        "
+
+    return-object v0
+
+    :pswitch_17
+    const-string v0, "DELETE FROM stat_events"
+
+    return-object v0
+
+    :pswitch_18
+    const-string v0, "DELETE FROM saved_msg_chat"
+
+    return-object v0
+
+    :pswitch_19
+    const-string v0, "DELETE FROM saved_msg_chat WHERE chat_id = ?"
+
+    return-object v0
+
+    :pswitch_1a
+    const-string v0, "INSERT OR REPLACE INTO saved_msg_chat(user_id, chat_id) VALUES(?, ?)"
+
+    return-object v0
+
+    :pswitch_1b
+    const-string v0, "DELETE FROM folder_and_chats WHERE chatId = ?"
+
+    return-object v0
+
+    :pswitch_1c
+    const-string v0, "UPDATE chat_folder SET title = ?, emoji = ? WHERE id = ?"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

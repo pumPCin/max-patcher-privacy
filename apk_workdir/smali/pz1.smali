@@ -1,89 +1,152 @@
-.class public final Lpz1;
+.class public interface abstract Lpz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqo3;
 
+# virtual methods
+.method public e(Lgg5;)V
+    .locals 5
 
-# instance fields
-.field public final synthetic a:Ljava/util/concurrent/Executor;
+    iget-object v0, p1, Lgg5;->a:Ljava/util/ArrayList;
 
-.field public final synthetic b:Ll12;
+    invoke-interface {p0}, Lpz1;->k()I
 
-.field public final synthetic c:Lqz1;
+    move-result v1
 
+    const/4 v2, 0x1
 
-# direct methods
-.method public constructor <init>(Lzp7;Ljava/util/concurrent/Executor;Ll12;)V
-    .locals 0
+    if-ne v1, v2, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
 
-    iput-object p1, p0, Lpz1;->c:Lqz1;
+    :cond_0
+    invoke-static {v1}, Lwx1;->v(I)I
 
-    iput-object p2, p0, Lpz1;->a:Ljava/util/concurrent/Executor;
+    move-result v3
 
-    iput-object p3, p0, Lpz1;->b:Ll12;
+    if-eq v3, v2, :cond_7
+
+    const/4 v4, 0x2
+
+    if-eq v3, v4, :cond_6
+
+    const/4 v4, 0x3
+
+    if-eq v3, v4, :cond_5
+
+    const/4 p1, 0x1
+
+    if-eq v1, p1, :cond_4
+
+    const/4 p1, 0x2
+
+    if-eq v1, p1, :cond_3
+
+    const/4 p1, 0x3
+
+    if-eq v1, p1, :cond_2
+
+    const/4 p1, 0x4
+
+    if-eq v1, p1, :cond_1
+
+    const-string p1, "null"
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "FIRED"
+
+    goto :goto_0
+
+    :cond_2
+    const-string p1, "READY"
+
+    goto :goto_0
+
+    :cond_3
+    const-string p1, "NONE"
+
+    goto :goto_0
+
+    :cond_4
+    const-string p1, "UNKNOWN"
+
+    :goto_0
+    const-string v0, "Unknown flash state: "
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ExifData"
+
+    invoke-static {v0, p1}, Lgth;->g(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_5
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_6
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :cond_7
+    const/16 v1, 0x20
+
+    :goto_1
+    and-int/lit8 v3, v1, 0x1
+
+    if-ne v3, v2, :cond_8
+
+    const/4 v2, 0x4
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "LightSource"
+
+    invoke-virtual {p1, v3, v2, v0}, Lgg5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+
+    :cond_8
+    const-string v2, "Flash"
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v2, v1, v0}, Lgg5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
 
+.method public abstract f()Lwjf;
+.end method
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public abstract getTimestamp()J
+.end method
 
-    check-cast p1, Lwgg;
+.method public abstract j()Lnz1;
+.end method
 
-    instance-of v0, p1, Lrgg;
+.method public abstract k()I
+.end method
 
-    if-eqz v0, :cond_1
+.method public abstract l()Llz1;
+.end method
 
-    invoke-static {}, Lg8;->r()Z
+.method public n()Landroid/hardware/camera2/CaptureResult;
+    .locals 1
 
-    move-result v0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    new-instance v0, Low1;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1, p0}, Low1;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lpz1;->a:Ljava/util/concurrent/Executor;
-
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lpz1;->c:Lqz1;
-
-    iget-object v1, v0, Lqz1;->h:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsuc;
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, v0, Lqz1;->g:Lsuc;
-
-    if-ne v2, v1, :cond_1
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lqz1;->g:Lsuc;
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lpz1;->b:Ll12;
-
-    invoke-virtual {v0, p1}, Ll12;->accept(Ljava/lang/Object;)V
-
-    return-void
+.method public abstract p()Lmz1;
 .end method

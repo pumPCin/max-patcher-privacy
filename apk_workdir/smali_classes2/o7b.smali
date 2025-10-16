@@ -1,21 +1,3 @@
 .class public final Lo7b;
-.super Lrp;
+.super Lgd0;
 .source "SourceFile"
-
-
-# static fields
-.field public static final a:Lo7b;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lo7b;
-
-    invoke-direct {v0}, Lrp;-><init>()V
-
-    sput-object v0, Lo7b;->a:Lo7b;
-
-    return-void
-.end method

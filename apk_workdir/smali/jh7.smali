@@ -1,52 +1,145 @@
 .class public final Ljh7;
-.super Ljava/lang/Object;
+.super Lm92;
 .source "SourceFile"
-
-# interfaces
-.implements Lkh7;
 
 
 # instance fields
-.field public final a:Landroid/content/Intent;
+.field public final c:Landroid/view/View;
 
-.field public final b:I
+.field public d:I
 
-.field public final synthetic c:Lph7;
+.field public e:I
+
+.field public final f:[I
 
 
 # direct methods
-.method public constructor <init>(Lph7;Landroid/content/Intent;I)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ljh7;->c:Lph7;
+    invoke-direct {p0, v0}, Lm92;-><init>(I)V
 
-    iput-object p2, p0, Ljh7;->a:Landroid/content/Intent;
+    const/4 v0, 0x2
 
-    iput p3, p0, Ljh7;->b:I
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Ljh7;->f:[I
+
+    iput-object p1, p0, Ljh7;->c:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final b(Limh;)V
+    .locals 1
 
-    iget-object v0, p0, Ljh7;->c:Lph7;
+    iget-object p1, p0, Ljh7;->c:Landroid/view/View;
 
-    iget v1, p0, Ljh7;->b:I
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/app/Service;->stopSelf(I)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
 .end method
 
-.method public final getIntent()Landroid/content/Intent;
+.method public final c(Limh;)V
     .locals 1
 
-    iget-object v0, p0, Ljh7;->a:Landroid/content/Intent;
+    iget-object p1, p0, Ljh7;->c:Landroid/view/View;
 
-    return-object v0
+    iget-object v0, p0, Ljh7;->f:[I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    const/4 p1, 0x1
+
+    aget p1, v0, p1
+
+    iput p1, p0, Ljh7;->d:I
+
+    return-void
+.end method
+
+.method public final d(Lwmh;Ljava/util/List;)Lwmh;
+    .locals 2
+
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Limh;
+
+    iget-object v1, v0, Limh;->a:Lhmh;
+
+    invoke-virtual {v1}, Lhmh;->c()I
+
+    move-result v1
+
+    and-int/lit8 v1, v1, 0x8
+
+    if-eqz v1, :cond_0
+
+    iget p2, p0, Ljh7;->e:I
+
+    iget-object v0, v0, Limh;->a:Lhmh;
+
+    invoke-virtual {v0}, Lhmh;->b()F
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {p2, v0, v1}, Lvg;->c(IFI)I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    iget-object v0, p0, Ljh7;->c:Landroid/view/View;
+
+    invoke-virtual {v0, p2}, Landroid/view/View;->setTranslationY(F)V
+
+    :cond_1
+    return-object p1
+.end method
+
+.method public final e(Limh;Lvve;)Lvve;
+    .locals 2
+
+    iget-object p1, p0, Ljh7;->c:Landroid/view/View;
+
+    iget-object v0, p0, Ljh7;->f:[I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    const/4 v1, 0x1
+
+    aget v0, v0, v1
+
+    iget v1, p0, Ljh7;->d:I
+
+    sub-int/2addr v1, v0
+
+    iput v1, p0, Ljh7;->e:I
+
+    int-to-float v0, v1
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-object p2
 .end method

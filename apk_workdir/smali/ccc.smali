@@ -1,10 +1,31 @@
-.class public abstract Lccc;
-.super Ljava/lang/Object;
+.class public final Lccc;
+.super Led6;
+.source "SourceFile"
 
 
-# static fields
-.field public static call_permission_dialog_check_cancel:I = 0x7f0a019e
+# instance fields
+.field public final synthetic b:Lkcc;
 
-.field public static call_permission_dialog_check_continue:I = 0x7f0a019f
 
-.field public static call_start_no_network_connection_neutral_button:I = 0x7f0a01f5
+# direct methods
+.method public constructor <init>(Lkcc;Lnwd;)V
+    .locals 0
+
+    iput-object p1, p0, Lccc;->b:Lkcc;
+
+    invoke-direct {p0, p2}, Led6;-><init>(Lnwd;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final f()J
+    .locals 2
+
+    iget-object v0, p0, Lccc;->b:Lkcc;
+
+    iget-wide v0, v0, Lkcc;->M0:J
+
+    return-wide v0
+.end method

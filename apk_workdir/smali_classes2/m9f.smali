@@ -1,57 +1,130 @@
-.class public final Lm9f;
+.class public abstract Lm9f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln9f;
 
-
-# instance fields
-.field public final a:Ln9f;
-
-.field public final b:Ljava/util/HashMap;
+# static fields
+.field public static final a:Ljava/text/DecimalFormat;
 
 
 # direct methods
-.method public constructor <init>(Ln9f;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    iput-object p1, p0, Lm9f;->a:Ln9f;
+    const-string v1, "#.#"
 
-    new-instance p1, Ljava/util/HashMap;
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
 
-    iput-object p1, p0, Lm9f;->b:Ljava/util/HashMap;
+    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
+
+    sput-object v0, Lm9f;->a:Ljava/text/DecimalFormat;
+
+    new-instance v0, Ljava/text/DecimalFormat;
+
+    const-string v2, "0.0"
+
+    invoke-direct {v0, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
 
     return-void
 .end method
 
+.method public static final a(I)Ljava/lang/String;
+    .locals 5
 
-# virtual methods
-.method public final a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
-    .locals 2
+    int-to-long v0, p0
 
-    iget-object v0, p0, Lm9f;->b:Ljava/util/HashMap;
+    const-wide/32 v2, 0x3b9aca00
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    cmp-long p0, v0, v2
 
-    move-result-object v1
+    sget-object v2, Lm9f;->a:Ljava/text/DecimalFormat;
 
-    check-cast v1, Ljava/util/concurrent/ThreadFactory;
+    if-ltz p0, :cond_0
 
-    if-nez v1, :cond_0
+    long-to-double v0, v0
 
-    iget-object v1, p0, Lm9f;->a:Ln9f;
+    const-wide v3, 0x41cdcd6500000000L    # 1.0E9
 
-    invoke-interface {v1, p1}, Ln9f;->a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
+    div-double/2addr v0, v3
 
-    move-result-object v1
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p0
+
+    const-string v0, "B"
+
+    invoke-static {p0, v0}, Lwx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    return-object v1
+    const-wide/32 v3, 0xf4240
+
+    cmp-long p0, v0, v3
+
+    if-ltz p0, :cond_1
+
+    long-to-double v0, v0
+
+    const-wide v3, 0x412e848000000000L    # 1000000.0
+
+    div-double/2addr v0, v3
+
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "M"
+
+    invoke-static {p0, v0}, Lwx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    const-wide/16 v3, 0x3e8
+
+    cmp-long p0, v0, v3
+
+    if-ltz p0, :cond_2
+
+    long-to-double v0, v0
+
+    const-wide v3, 0x408f400000000000L    # 1000.0
+
+    div-double/2addr v0, v3
+
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "K"
+
+    invoke-static {p0, v0}, Lwx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

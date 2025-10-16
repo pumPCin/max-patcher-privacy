@@ -1,164 +1,68 @@
-.class public final synthetic Lii4;
+.class public final Lii4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Li0f;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Lyq5;
+
+.field public c:J
+
+.field public d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
     .locals 0
 
-    iput p1, p0, Lii4;->a:I
-
-    iput-object p2, p0, Lii4;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lii4;->a:Ljava/lang/String;
+
+    new-instance p2, Lyq5;
+
+    invoke-direct {p2, p1}, Lyq5;-><init>(Ljava/io/File;)V
+
+    iput-object p2, p0, Lii4;->b:Lyq5;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lii4;->c:J
+
+    iput-wide p1, p0, Lii4;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public final a()J
+    .locals 4
 
-    iget v0, p0, Lii4;->a:I
+    iget-wide v0, p0, Lii4;->d:J
 
-    packed-switch v0, :pswitch_data_0
+    const-wide/16 v2, 0x0
 
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
+    cmp-long v0, v0, v2
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-gez v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    iget-object v0, p0, Lii4;->b:Lyq5;
 
-    move-result v0
+    iget-object v0, v0, Lyq5;->a:Ljava/io/File;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
 
-    move-result-object v0
+    move-result-wide v0
 
-    return-object v0
+    iput-wide v0, p0, Lii4;->d:J
 
-    :pswitch_0
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
+    :cond_0
+    iget-wide v0, p0, Lii4;->d:J
 
-    check-cast v0, Ljf5;
-
-    iget-boolean v0, v0, Ljf5;->O0:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Laya;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ldl4;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lox7;
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lh8h;
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcl4;
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Luyc;
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmt8;
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lei4;
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Lii4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmt8;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

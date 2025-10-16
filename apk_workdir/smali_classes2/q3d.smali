@@ -1,252 +1,229 @@
 .class public final Lq3d;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ljava/util/List;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Lv3d;
+.field public final synthetic Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lv3d;Ljava/util/List;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
     .locals 0
 
-    iput p3, p0, Lq3d;->a:I
+    iput-object p2, p0, Lq3d;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    iput-object p1, p0, Lq3d;->c:Lv3d;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lq3d;->b:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lq3d;->a:I
+    check-cast p1, Lb54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v0, "DELETE FROM folder_and_chats WHERE folderId IN ("
+    invoke-virtual {p0, p1, p2}, Lq3d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0}, Lsw1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lq3d;
 
-    iget-object v1, p0, Lq3d;->b:Ljava/util/List;
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-virtual {p1, p2}, Lq3d;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v2
+    move-result-object p1
 
-    invoke-static {v0, v2}, Lr5b;->d(Ljava/lang/StringBuilder;I)V
+    return-object p1
+.end method
 
-    const-string v2, ")"
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Lq3d;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lq3d;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lq3d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
 
-    iget-object v2, p0, Lq3d;->c:Lv3d;
+    iput-object p1, v0, Lq3d;->Y:Ljava/lang/Object;
 
-    iget-object v2, v2, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    return-object v0
+.end method
 
-    invoke-virtual {v2, v0}, Lc4d;->d(Ljava/lang/String;)Llc6;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    move-result-object v0
+    iget v0, p0, Lq3d;->X:I
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    const/4 v3, 0x1
+    if-ne v0, v1, :cond_0
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lq3d;->Y:Ljava/lang/Object;
 
-    move-result v4
+    check-cast v0, Lb54;
 
-    if-eqz v4, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    if-nez v4, :cond_0
-
-    invoke-interface {v0, v3}, Lw0f;->Q(I)V
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {v0, v3, v4}, Lw0f;->f(ILjava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    invoke-virtual {v2}, Lc4d;->c()V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    :try_start_0
-    invoke-virtual {v0}, Llc6;->n()I
+    iget-object p1, p0, Lq3d;->Y:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lc4d;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, Lb54;
 
-    invoke-virtual {v2}, Lc4d;->k()V
+    move-object v0, p1
 
-    sget-object v0, Laxf;->a:Laxf;
+    :cond_2
+    :goto_0
+    invoke-static {v0}, Lcwi;->e(Lb54;)Z
 
-    return-object v0
+    move-result p1
 
-    :catchall_0
-    move-exception v0
+    if-eqz p1, :cond_6
 
-    invoke-virtual {v2}, Lc4d;->k()V
+    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
-    throw v0
+    iget-object p1, p0, Lq3d;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    :pswitch_0
-    const-string v0, "DELETE FROM chat_folder WHERE id IN ("
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
-    invoke-static {v0}, Lsw1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v2}, Ly2d;->z()Lv3d;
 
-    iget-object v1, p0, Lq3d;->b:Ljava/util/List;
+    move-result-object v2
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Lv3d;->a()I
 
     move-result v2
 
-    invoke-static {v0, v2}, Lr5b;->d(Ljava/lang/StringBuilder;I)V
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
 
-    const-string v2, ")"
+    move-result-object v3
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Landroid/view/View;->clearAnimation()V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    int-to-float v2, v2
 
-    move-result-object v0
+    const v3, 0x3fb9999a    # 1.45f
 
-    iget-object v2, p0, Lq3d;->c:Lv3d;
+    mul-float/2addr v2, v3
 
-    iget-object v2, v2, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    const v4, 0x8000
 
-    invoke-virtual {v2, v0}, Lc4d;->d(Ljava/lang/String;)Llc6;
+    int-to-float v4, v4
 
-    move-result-object v0
+    div-float/2addr v2, v4
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    int-to-float v4, v1
 
-    move-result-object v1
+    add-float/2addr v2, v4
 
-    const/4 v3, 0x1
+    cmpl-float v4, v2, v3
 
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    if-lez v4, :cond_3
 
-    move-result v4
+    move v7, v3
 
-    if-eqz v4, :cond_3
+    goto :goto_1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_3
+    move v7, v2
+
+    :goto_1
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
+
+    move-result-object v5
+
+    iget v6, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0:F
+
+    const-wide/16 v8, 0x64
+
+    const-wide/16 v10, 0x0
+
+    invoke-static/range {v5 .. v11}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iput-object v3, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:Landroid/animation/AnimatorSet;
+
+    iget-object v4, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0:Ljava/lang/Object;
+
+    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v4, Lsm5;
 
-    if-nez v4, :cond_2
+    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    invoke-interface {v0, v3}, Lw0f;->Q(I)V
+    iget-object v3, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:Landroid/animation/AnimatorSet;
 
-    goto :goto_3
+    if-eqz v3, :cond_4
 
-    :cond_2
-    invoke-interface {v0, v3, v4}, Lw0f;->f(ILjava/lang/String;)V
+    invoke-virtual {v3, v2}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    :goto_3
-    add-int/lit8 v3, v3, 0x1
+    :cond_4
+    iget-object v2, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:Landroid/animation/AnimatorSet;
 
-    goto :goto_2
+    if-eqz v2, :cond_5
 
-    :cond_3
-    invoke-virtual {v2}, Lc4d;->c()V
+    invoke-virtual {v2}, Landroid/animation/AnimatorSet;->start()V
 
-    :try_start_1
-    invoke-virtual {v0}, Llc6;->n()I
+    :cond_5
+    iput v7, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0:F
 
-    invoke-virtual {v2}, Lc4d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    iput-object v0, p0, Lq3d;->Y:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lc4d;->k()V
+    iput v1, p0, Lq3d;->X:I
 
-    sget-object v0, Laxf;->a:Laxf;
+    const-wide/16 v2, 0x64
 
-    return-object v0
+    invoke-static {v2, v3, p0}, Lpxi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :catchall_1
-    move-exception v0
+    move-result-object p1
 
-    invoke-virtual {v2}, Lc4d;->k()V
+    sget-object v2, Lc54;->a:Lc54;
 
-    throw v0
+    if-ne p1, v2, :cond_2
 
-    :pswitch_1
-    iget-object v0, p0, Lq3d;->c:Lv3d;
+    return-object v2
 
-    iget-object v1, v0, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    :cond_6
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-virtual {v1}, Lc4d;->c()V
-
-    :try_start_2
-    iget-object v0, v0, Lv3d;->c:Lvh;
-
-    iget-object v2, p0, Lq3d;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v2}, Lw95;->z(Ljava/lang/Iterable;)V
-
-    invoke-virtual {v1}, Lc4d;->q()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    invoke-virtual {v1}, Lc4d;->k()V
-
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :catchall_2
-    move-exception v0
-
-    invoke-virtual {v1}, Lc4d;->k()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

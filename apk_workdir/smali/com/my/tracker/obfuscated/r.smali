@@ -184,7 +184,7 @@
     goto :goto_4
 
     :cond_1
-    invoke-static {v0}, Lzdd;->d(Landroid/content/pm/PackageInfo;)J
+    invoke-static {v0}, Lzod;->d(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v4
 

@@ -1,59 +1,47 @@
 .class public final Lcf2;
-.super Lti0;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic X:Lef2;
 
-.field public final c:Ljava/lang/Long;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Long;)V
+.method public constructor <init>(Lef2;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Lti0;-><init>()V
+    iput-object p1, p0, Lcf2;->X:Lef2;
 
-    iput-wide p1, p0, Lcf2;->b:J
-
-    iput-object p3, p0, Lcf2;->c:Ljava/lang/Long;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-super {p0}, Lti0;->toString()Ljava/lang/String;
+    iput-object p1, p0, Lcf2;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lcf2;->Y:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/high16 v0, -0x80000000
 
-    const-string v2, "ChatLastReactionUpdatedEvent{chatId="
+    or-int/2addr p1, v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput p1, p0, Lcf2;->Y:I
 
-    iget-wide v2, p0, Lcf2;->b:J
+    iget-object p1, p0, Lcf2;->X:Lef2;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Lef2;->l(Lk14;)Ljava/lang/Object;
 
-    const-string v2, "\'lastReactionMessageId="
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcf2;->c:Ljava/lang/Long;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\', lastReaction=null}"
-
-    invoke-static {v1, v2, v0}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

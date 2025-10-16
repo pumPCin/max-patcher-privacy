@@ -1,421 +1,226 @@
 .class public final Lpw7;
-.super Ljava/lang/Object;
+.super Ljava/io/FilterInputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ln4f;
+.field public a:I
 
-.field public final b:Lv4f;
-
-.field public final c:Lmw7;
-
-.field public final d:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final e:Ljava/util/ArrayDeque;
-
-.field public final f:Ljava/util/ArrayDeque;
-
-.field public final g:Ljava/lang/Object;
-
-.field public h:Z
-
-.field public final i:Z
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Looper;Ln4f;Lmw7;)V
-    .locals 6
-
-    .line 1
-    new-instance v1, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    const/4 v5, 0x1
-
-    move-object v0, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v0 .. v5}, Lpw7;-><init>(Ljava/util/concurrent/CopyOnWriteArraySet;Landroid/os/Looper;Ln4f;Lmw7;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/concurrent/CopyOnWriteArraySet;Landroid/os/Looper;Ln4f;Lmw7;Z)V
+.method public constructor <init>(Ljava/io/InputStream;I)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 3
-    iput-object p3, p0, Lpw7;->a:Ln4f;
+    if-ltz p2, :cond_0
 
-    .line 4
-    iput-object p1, p0, Lpw7;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput p2, p0, Lpw7;->a:I
 
-    .line 5
-    iput-object p4, p0, Lpw7;->c:Lmw7;
+    const/4 p1, -0x1
 
-    .line 6
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpw7;->g:Ljava/lang/Object;
-
-    .line 7
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Lpw7;->e:Ljava/util/ArrayDeque;
-
-    .line 8
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Lpw7;->f:Ljava/util/ArrayDeque;
-
-    .line 9
-    new-instance p1, Lwg3;
-
-    const/4 p4, 0x4
-
-    invoke-direct {p1, p4, p0}, Lwg3;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p3, p2, p1}, Ln4f;->a(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lv4f;
-
-    move-result-object p1
-
-    .line 10
-    iput-object p1, p0, Lpw7;->b:Lv4f;
-
-    .line 11
-    iput-boolean p5, p0, Lpw7;->i:Z
+    iput p1, p0, Lpw7;->b:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 3
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lpw7;->g:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lpw7;->h:Z
-
-    if-eqz v1, :cond_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lpw7;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v2, Low7;
+    const-string p2, "limit must be >= 0"
 
-    invoke-direct {v2, p1}, Low7;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final b()V
-    .locals 5
 
-    invoke-virtual {p0}, Lpw7;->g()V
+# virtual methods
+.method public final available()I
+    .locals 2
 
-    iget-object v0, p0, Lpw7;->f:Ljava/util/ArrayDeque;
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v1, p0, Lpw7;->b:Lv4f;
-
-    iget-object v2, v1, Lv4f;->a:Landroid/os/Handler;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lv4f;->c()Lt4f;
-
-    move-result-object v2
-
-    iget-object v4, v1, Lv4f;->a:Landroid/os/Handler;
-
-    invoke-virtual {v4, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v3
-
-    iput-object v3, v2, Lt4f;->a:Landroid/os/Message;
-
-    iget-object v1, v1, Lv4f;->a:Landroid/os/Handler;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v1, v3}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
-
-    invoke-virtual {v2}, Lt4f;->a()V
-
-    :cond_1
-    iget-object v1, p0, Lpw7;->e:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v2
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayDeque;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
-
-    if-nez v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
 
     move-result v0
 
-    if-nez v0, :cond_3
+    iget v1, p0, Lpw7;->a:I
 
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->peekFirst()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    return-void
+    return v0
 .end method
 
-.method public final c(ILkw7;)V
-    .locals 3
+.method public final mark(I)V
+    .locals 1
 
-    invoke-virtual {p0}, Lpw7;->g()V
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
 
-    iget-object v1, p0, Lpw7;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>(Ljava/util/Collection;)V
+    if-eqz v0, :cond_0
 
-    new-instance v1, Lpl1;
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
-    const/16 v2, 0xd
+    invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
 
-    invoke-direct {v1, v0, p1, p2, v2}, Lpl1;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+    iget p1, p0, Lpw7;->a:I
 
-    iget-object p1, p0, Lpw7;->f:Ljava/util/ArrayDeque;
-
-    invoke-virtual {p1, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 3
-
-    invoke-virtual {p0}, Lpw7;->g()V
-
-    iget-object v0, p0, Lpw7;->g:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Lpw7;->h:Z
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lpw7;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Low7;
-
-    iget-object v2, p0, Lpw7;->c:Lmw7;
-
-    invoke-virtual {v1, v2}, Low7;->a(Lmw7;)V
-
-    goto :goto_0
+    iput p1, p0, Lpw7;->b:I
 
     :cond_0
-    iget-object v0, p0, Lpw7;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final e(Ljava/lang/Object;)V
-    .locals 4
-
-    invoke-virtual {p0}, Lpw7;->g()V
-
-    iget-object v0, p0, Lpw7;->d:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Low7;
-
-    iget-object v3, v2, Low7;->a:Ljava/lang/Object;
-
-    invoke-virtual {v3, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p0, Lpw7;->c:Lmw7;
-
-    invoke-virtual {v2, v3}, Low7;->a(Lmw7;)V
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
-.method public final f(ILkw7;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lpw7;->c(ILkw7;)V
-
-    invoke-virtual {p0}, Lpw7;->b()V
-
-    return-void
-.end method
-
-.method public final g()V
+.method public final read()I
     .locals 2
 
-    iget-boolean v0, p0, Lpw7;->i:Z
+    .line 1
+    iget v0, p0, Lpw7;->a:I
+
+    const/4 v1, -0x1
 
     if-nez v0, :cond_0
 
+    return v1
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    move-result v0
+
+    if-eq v0, v1, :cond_1
+
+    .line 3
+    iget v1, p0, Lpw7;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Lpw7;->a:I
+
+    :cond_1
+    return v0
+.end method
+
+.method public final read([BII)I
+    .locals 1
+
+    .line 4
+    iget v0, p0, Lpw7;->a:I
+
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    .line 5
+    :cond_0
+    invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p3
+
+    .line 6
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
+
+    move-result p1
+
+    if-lez p1, :cond_1
+
+    .line 7
+    iget p2, p0, Lpw7;->a:I
+
+    sub-int/2addr p2, p1
+
+    iput p2, p0, Lpw7;->a:I
+
+    :cond_1
+    return p1
+.end method
+
+.method public final reset()V
+    .locals 2
+
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Lpw7;->b:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
+
+    iget v0, p0, Lpw7;->b:I
+
+    iput v0, p0, Lpw7;->a:I
+
     return-void
 
     :cond_0
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    new-instance v0, Ljava/io/IOException;
 
-    move-result-object v0
+    const-string v1, "mark not set"
 
-    iget-object v1, p0, Lpw7;->b:Lv4f;
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v1, Lv4f;->a:Landroid/os/Handler;
-
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
+    throw v0
 
     :cond_1
-    const/4 v0, 0x0
+    new-instance v0, Ljava/io/IOException;
 
-    :goto_0
-    invoke-static {v0}, Lq5h;->k(Z)V
+    const-string v1, "mark is not supported"
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final skip(J)J
+    .locals 2
+
+    iget v0, p0, Lpw7;->a:I
+
+    int-to-long v0, v0
+
+    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p1
+
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
+
+    move-result-wide p1
+
+    iget v0, p0, Lpw7;->a:I
+
+    int-to-long v0, v0
+
+    sub-long/2addr v0, p1
+
+    long-to-int v0, v0
+
+    iput v0, p0, Lpw7;->a:I
+
+    return-wide p1
 .end method

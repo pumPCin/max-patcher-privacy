@@ -1,53 +1,80 @@
-.class public final Lwp8;
+.class public final synthetic Lwp8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx18;
+
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Landroidx/media3/common/PlaybackException;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+.method public synthetic constructor <init>(ILandroidx/media3/common/PlaybackException;)V
+    .locals 0
+
+    iput p1, p0, Lwp8;->a:I
+
+    iput-object p2, p0, Lwp8;->b:Landroidx/media3/common/PlaybackException;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwp8;->a:Ljava/lang/Object;
+    return-void
+.end method
 
-    instance-of v0, p1, Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 p1, 0x1
+    iget v0, p0, Lwp8;->a:I
 
-    iput p1, p0, Lwp8;->b:I
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwp8;->b:Landroidx/media3/common/PlaybackException;
+
+    check-cast p1, Lisb;
+
+    invoke-interface {p1, v0}, Lisb;->K0(Landroidx/media3/common/PlaybackException;)V
 
     return-void
 
-    :cond_0
-    instance-of p1, p1, Lvq8;
+    :pswitch_0
+    iget-object v0, p0, Lwp8;->b:Landroidx/media3/common/PlaybackException;
 
-    if-eqz p1, :cond_1
+    check-cast p1, Lisb;
 
-    const/4 p1, 0x2
-
-    iput p1, p0, Lwp8;->b:I
+    invoke-interface {p1, v0}, Lisb;->C0(Landroidx/media3/common/PlaybackException;)V
 
     return-void
 
-    :cond_1
-    const/4 p1, 0x0
+    :pswitch_1
+    iget-object v0, p0, Lwp8;->b:Landroidx/media3/common/PlaybackException;
 
-    iput p1, p0, Lwp8;->b:I
+    check-cast p1, Lisb;
 
-    const-string p1, "RecyclerAdapter"
-
-    const-string v0, "Wrong type of data passed to Item constructor"
-
-    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-interface {p1, v0}, Lisb;->K0(Landroidx/media3/common/PlaybackException;)V
 
     return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lwp8;->b:Landroidx/media3/common/PlaybackException;
+
+    check-cast p1, Lisb;
+
+    invoke-interface {p1, v0}, Lisb;->C0(Landroidx/media3/common/PlaybackException;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

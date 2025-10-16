@@ -1,20 +1,120 @@
-.class public interface abstract Lhb9;
+.class public final Lhb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lib9;
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+
+# direct methods
+.method public constructor <init>(JJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lhb9;->a:J
+
+    iput-wide p3, p0, Lhb9;->b:J
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lhb9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lhb9;
+
+    iget-wide v3, p0, Lhb9;->a:J
+
+    iget-wide v5, p1, Lhb9;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lhb9;->b:J
+
+    iget-wide v5, p1, Lhb9;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public b()V
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    return-void
+    iget-wide v0, p0, Lhb9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lhb9;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public abstract getTag()Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ByRange(startTime="
+
+    const-string v1, ", endTime="
+
+    iget-wide v2, p0, Lhb9;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lhb9;->b:J
+
+    invoke-static {v0, v2, v3, v1}, Lyy8;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

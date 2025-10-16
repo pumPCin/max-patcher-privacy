@@ -1,6 +1,8 @@
-.class public abstract Lgq7;
+.class public interface abstract Lgq7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln24;
+
+# virtual methods
+.method public abstract getAnnotations()Ljava/util/List;
+.end method

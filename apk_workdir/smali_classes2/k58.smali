@@ -1,48 +1,41 @@
 .class public final Lk58;
-.super Lwy3;
+.super Llj0;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lz48;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lz48;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lk58;->Y:Lz48;
+    invoke-direct {p0}, Llj0;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lk58;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lk58;->o:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lk58;->X:I
+    const-string v1, "LocalMediaEvent{albumId=\'"
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lk58;->b:Ljava/lang/String;
 
-    iput p1, p0, Lk58;->X:I
+    const-string v2, "\'}"
 
-    iget-object p1, p0, Lk58;->Y:Lz48;
+    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-virtual {p1, v0, p0}, Lz48;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

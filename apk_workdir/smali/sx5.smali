@@ -1,154 +1,87 @@
-.class public final Lsx5;
-.super Lim4;
+.class public abstract Lsx5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbz5;
 
-
-# instance fields
-.field public X:Lwxe;
-
-.field public Y:Z
-
-.field public final c:Lrl0;
-
-.field public final o:Ljava/lang/Object;
+# static fields
+.field public static final a:[F
 
 
 # direct methods
-.method public constructor <init>(Luxe;Ljava/lang/Object;Lrl0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0, p1}, Lim4;-><init>(Luxe;)V
+    sget-object v0, Lmmd;->a:[J
 
-    iput-object p3, p0, Lsx5;->c:Lrl0;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lsx5;->o:Ljava/lang/Object;
+    invoke-static {v1}, Lmmd;->e(I)I
 
-    return-void
-.end method
+    move-result v2
 
+    if-lez v2, :cond_0
 
-# virtual methods
-.method public final b()V
-    .locals 1
+    invoke-static {v2}, Lmmd;->d(I)I
 
-    iget-boolean v0, p0, Lsx5;->Y:Z
+    move-result v2
 
-    if-eqz v0, :cond_0
+    const/4 v3, 0x7
 
-    return-void
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
-    :cond_0
-    const/4 v0, 0x1
+    move-result v2
 
-    iput-boolean v0, p0, Lsx5;->Y:Z
-
-    iget-object v0, p0, Lsx5;->o:Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lim4;->f(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lim4;->b:Ljava/lang/Object;
-
-    iget-object v0, p0, Lsx5;->X:Lwxe;
-
-    invoke-interface {v0}, Lwxe;->cancel()V
-
-    return-void
-.end method
-
-.method public final d(Lwxe;)V
-    .locals 2
-
-    iget-object v0, p0, Lsx5;->X:Lwxe;
-
-    invoke-static {v0, p1}, Lyxe;->e(Lwxe;Lwxe;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lsx5;->X:Lwxe;
-
-    iget-object v0, p0, Lim4;->a:Luxe;
-
-    invoke-interface {v0, p0}, Luxe;->d(Lwxe;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Lwxe;->h(J)V
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    move v2, v1
 
-.method public final e(Ljava/lang/Object;)V
-    .locals 2
+    :goto_0
+    if-nez v2, :cond_1
 
-    iget-boolean v0, p0, Lsx5;->Y:Z
+    goto :goto_1
 
-    if-eqz v0, :cond_0
+    :cond_1
+    add-int/lit8 v0, v2, 0xf
 
-    return-void
+    and-int/lit8 v0, v0, -0x8
 
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lsx5;->c:Lrl0;
+    shr-int/lit8 v0, v0, 0x3
 
-    iget-object v1, p0, Lsx5;->o:Ljava/lang/Object;
+    new-array v3, v0, [J
 
-    invoke-interface {v0, v1, p1}, Lrl0;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-wide v4, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    return-void
+    invoke-static {v3, v1, v0, v4, v5}, Ljava/util/Arrays;->fill([JIIJ)V
 
-    :catchall_0
-    move-exception p1
+    move-object v0, v3
 
-    invoke-static {p1}, Loq0;->t(Ljava/lang/Throwable;)V
+    :goto_1
+    shr-int/lit8 v3, v2, 0x3
 
-    iget-object v0, p0, Lsx5;->X:Lwxe;
+    and-int/lit8 v4, v2, 0x7
 
-    invoke-interface {v0}, Lwxe;->cancel()V
+    shl-int/lit8 v4, v4, 0x3
 
-    invoke-virtual {p0, p1}, Lsx5;->onError(Ljava/lang/Throwable;)V
+    aget-wide v5, v0, v3
 
-    return-void
-.end method
+    const-wide/16 v7, 0xff
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    shl-long/2addr v7, v4
 
-    iget-boolean v0, p0, Lsx5;->Y:Z
+    not-long v9, v7
 
-    if-eqz v0, :cond_0
+    and-long v4, v5, v9
 
-    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
+    or-long/2addr v4, v7
 
-    return-void
+    aput-wide v4, v0, v3
 
-    :cond_0
-    const/4 v0, 0x1
+    new-array v0, v2, [F
 
-    iput-boolean v0, p0, Lsx5;->Y:Z
+    new-array v0, v1, [F
 
-    iget-object v0, p0, Lim4;->a:Luxe;
-
-    invoke-interface {v0, p1}, Luxe;->onError(Ljava/lang/Throwable;)V
+    sput-object v0, Lsx5;->a:[F
 
     return-void
 .end method

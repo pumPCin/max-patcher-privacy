@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lr6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lzy0;
+.field public final synthetic b:Ljy0;
+
+.field public final synthetic c:Ljava/util/HashSet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzy0;I)V
+.method public synthetic constructor <init>(Ljy0;Ljava/util/HashSet;I)V
     .locals 0
 
-    iput p2, p0, Lgy0;->a:I
+    iput p3, p0, Lgy0;->a:I
 
-    iput-object p1, p0, Lgy0;->b:Lzy0;
+    iput-object p1, p0, Lgy0;->b:Ljy0;
+
+    iput-object p2, p0, Lgy0;->c:Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,202 +31,136 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final run()V
     .locals 6
 
     iget v0, p0, Lgy0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lgy0;->b:Lzy0;
+    iget-object v0, p0, Lgy0;->b:Ljy0;
 
-    iget-object v0, v0, Lzy0;->m0:Lfq1;
+    iget-object v1, p0, Lgy0;->c:Ljava/util/HashSet;
 
-    invoke-virtual {v0}, Lfq1;->v()Lnkf;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    sget-object v2, Ljy0;->l:Ljava/util/LinkedHashSet;
 
-    return-object v0
+    invoke-interface {v1, v2}, Ljava/util/Collection;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Ljy0;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :cond_0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lgy0;->b:Lzy0;
+    iget-object v0, p0, Lgy0;->b:Ljy0;
 
-    iget-object v0, v0, Lzy0;->G0:Lxd1;
+    iget-object v1, p0, Lgy0;->c:Ljava/util/HashSet;
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_1
-    iget-object v0, p0, Lgy0;->b:Lzy0;
+    sget-object v2, Lny0;->t0:Lny0;
 
-    iget-object v0, v0, Lzy0;->N0:Lhp1;
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lhp1;->j:Lq61;
+    move-result v2
 
-    return-object v0
+    if-eqz v2, :cond_1
 
-    :pswitch_2
-    iget-object v0, p0, Lgy0;->b:Lzy0;
+    sget-object v2, Lny0;->Y:Lny0;
 
-    iget-object v0, v0, Lzy0;->m0:Lfq1;
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lfq1;->v()Lnkf;
+    move-result v3
 
-    move-result-object v0
+    if-nez v3, :cond_1
 
-    return-object v0
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    :pswitch_3
-    iget-object v0, p0, Lgy0;->b:Lzy0;
+    :cond_1
+    iget-object v2, v0, Ljy0;->k:Lhy0;
 
-    iget-object v1, v0, Lzy0;->z0:Lgi;
+    iget-object v2, v2, Lhy0;->a:Lkoh;
 
-    iget-object v2, v0, Lzy0;->d0:Lb7e;
+    if-eqz v2, :cond_4
 
-    if-nez v2, :cond_0
+    iget-object v2, v0, Ljy0;->k:Lhy0;
+
+    sget-object v3, Lny0;->Z:Lny0;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    sget-object v3, Lny0;->c:Lny0;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    :cond_2
+    iget-object v3, v0, Ljy0;->b:Ll30;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v4, "l30"
+
+    const-string v5, "stop"
+
+    invoke-static {v4, v5}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ll30;->u()V
+
+    iget-object v4, v3, Ll30;->c:Lez9;
+
+    invoke-virtual {v4}, Lez9;->s()V
+
+    invoke-virtual {v3}, Ll30;->n()V
+
+    :cond_3
+    iget-object v2, v2, Lhy0;->a:Lkoh;
+
+    invoke-virtual {v2, v1}, Lkoh;->r(Ljava/util/Collection;)V
+
+    iget-object v0, v0, Ljy0;->c:Lsoh;
+
+    new-instance v2, Lm3e;
+
+    invoke-direct {v2, v1}, Lm3e;-><init>(Ljava/util/HashSet;)V
+
+    invoke-virtual {v0, v2}, Lsoh;->b(Lk3e;)V
 
     goto :goto_0
 
-    :cond_0
-    iget-object v3, v0, Lzy0;->c:Ljava/util/concurrent/ExecutorService;
+    :cond_4
+    const-string v0, "onClearCacheTypesPicked: already cleared all"
 
-    new-instance v4, Lxi;
+    const/4 v1, 0x0
 
-    const/16 v5, 0x9
+    const-string v2, "jy0"
 
-    invoke-direct {v4, v0, v1, v2, v5}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v3, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-static {v2, v0, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->j:Lwae;
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->j:Lwae;
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->j:Lwae;
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->j:Lwae;
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->m0:Lfq1;
-
-    invoke-virtual {v0}, Lfq1;->v()Lnkf;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->m0:Lfq1;
-
-    invoke-virtual {v0}, Lfq1;->v()Lnkf;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_a
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->i0:Lhh1;
-
-    iget-object v0, v0, Lhh1;->a:Lch1;
-
-    iget-object v0, v0, Lch1;->c:Lvr9;
-
-    iget-boolean v0, v0, Lvr9;->e:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Lgy0;->b:Lzy0;
-
-    iget-object v0, v0, Lzy0;->m0:Lfq1;
-
-    invoke-virtual {v0}, Lfq1;->v()Lnkf;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v0, Ld11;
-
-    iget-object v1, p0, Lgy0;->b:Lzy0;
-
-    iget-object v2, v1, Lzy0;->O0:Lkbe;
-
-    iget-object v2, v2, Lkbe;->j:Lqt;
-
-    iget-object v1, v1, Lzy0;->R0:Lvd1;
-
-    invoke-direct {v0, v2, v1}, Ld11;-><init>(Lqt;Lvd1;)V
-
-    return-object v0
-
-    :pswitch_d
-    new-instance v0, Lcj1;
-
-    iget-object v1, p0, Lgy0;->b:Lzy0;
-
-    iget-object v2, v1, Lzy0;->O0:Lkbe;
-
-    iget-object v2, v2, Lkbe;->i:Lkkh;
-
-    iget-object v1, v1, Lzy0;->R0:Lvd1;
-
-    invoke-direct {v0, v2, v1}, Lcj1;-><init>(Lkkh;Lvd1;)V
-
-    return-object v0
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

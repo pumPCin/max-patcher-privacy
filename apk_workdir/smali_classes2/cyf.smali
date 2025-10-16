@@ -1,110 +1,111 @@
 .class public final Lcyf;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lgyf;
-
-.field public final synthetic Z:J
-
-.field public final synthetic r0:Ljava/util/List;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lgyf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Lcyf;->Y:Lgyf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lcyf;->Z:J
+    iput p1, p0, Lcyf;->a:I
 
-    iput-object p4, p0, Lcyf;->r0:Ljava/util/List;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lcyf;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Ln24;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lcyf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lcyf;
 
-    move-result-object p1
+    if-nez v0, :cond_1
 
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Lcyf;
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget v0, p0, Lcyf;->a:I
 
-    invoke-virtual {p1, p2}, Lcyf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, p1, Lcyf;->a:I
 
-    return-object p2
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lcyf;->b:I
+
+    iget p1, p1, Lcyf;->b:I
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+.method public final hashCode()I
+    .locals 2
 
-    new-instance v0, Lcyf;
+    iget v0, p0, Lcyf;->a:I
 
-    iget-wide v2, p0, Lcyf;->Z:J
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v4, p0, Lcyf;->r0:Ljava/util/List;
+    move-result v0
 
-    iget-object v1, p0, Lcyf;->Y:Lgyf;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-object v5, p2
+    iget v1, p0, Lcyf;->b:I
 
-    invoke-direct/range {v0 .. v5}, Lcyf;-><init>(Lgyf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    iput-object p1, v0, Lcyf;->X:Ljava/lang/Object;
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", secondary="
+
+    const-string v1, ")"
+
+    const-string v2, "TopbarStrokeSeparatorDefaultColors(primary="
+
+    iget v3, p0, Lcyf;->a:I
+
+    iget v4, p0, Lcyf;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcyf;->X:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    iget-object v1, p0, Lcyf;->Y:Lgyf;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lyxf;
-
-    const/4 v5, 0x0
-
-    iget-wide v2, p0, Lcyf;->Z:J
-
-    iget-object v4, p0, Lcyf;->r0:Ljava/util/List;
-
-    invoke-direct/range {v0 .. v5}, Lyxf;-><init>(Lgyf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v2, v2, v0, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
 .end method

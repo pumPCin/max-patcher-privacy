@@ -1,305 +1,278 @@
 .class public final Lg4e;
-.super Ljava/lang/Object;
+.super Lk4e;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/opengl/GLSurfaceView$Renderer;
+
+# static fields
+.field public static final synthetic x0:I
 
 
 # instance fields
-.field public X:Ljava/nio/FloatBuffer;
+.field public final t0:Lt68;
 
-.field public Y:J
+.field public final u0:F
 
-.field public Z:I
+.field public final v0:Z
 
-.field public a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public o:I
-
-.field public r0:I
+.field public final w0:J
 
 
 # direct methods
-.method public static a(ILjava/lang/String;)I
-    .locals 2
+.method public constructor <init>(Lf4e;)V
+    .locals 5
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
+    invoke-direct {p0, p1}, Lk4e;-><init>(Lj4e;)V
 
-    move-result p0
+    iget-object v0, p1, Lf4e;->g:Lt68;
 
-    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
+    iput-object v0, p0, Lg4e;->t0:Lt68;
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glCompileShader(I)V
+    iget v1, p1, Lf4e;->h:F
 
-    const/4 p1, 0x1
+    iput v1, p0, Lg4e;->u0:F
 
-    new-array p1, p1, [I
+    iget-wide v1, p1, Lf4e;->i:J
 
-    const v0, 0x8b81
+    iput-wide v1, p0, Lg4e;->w0:J
 
-    const/4 v1, 0x0
+    const-wide/16 v3, 0x0
 
-    invoke-static {p0, v0, p1, v1}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
+    cmp-long v1, v1, v3
 
-    aget p1, p1, v1
+    if-eqz v1, :cond_2
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Lt68;->a()Z
 
-    return p0
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Lf4e;->g:Lt68;
+
+    iget-wide v0, p1, Lt68;->a:D
+
+    const-wide/16 v2, 0x0
+
+    cmpg-double v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    invoke-static {p0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
+    iget-wide v0, p1, Lt68;->b:D
 
-    move-result-object p1
+    cmpg-double p1, v0, v2
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+    if-nez p1, :cond_2
 
-    new-instance p0, Ljava/lang/RuntimeException;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    const-string v0, "Error compiling shader: "
+    iput-boolean p1, p0, Lg4e;->v0:Z
 
-    invoke-static {v0, p1}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return-void
 
-    move-result-object p1
+    :cond_2
+    const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    iput-boolean p1, p0, Lg4e;->v0:Z
 
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
-    .locals 6
+.method public final x()Lna9;
+    .locals 9
 
-    const/16 p1, 0x4000
+    new-instance v0, Le20;
 
-    invoke-static {p1}, Landroid/opengl/GLES20;->glClear(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {p0}, Lk3e;->i()Ll83;
 
-    move-result-wide v0
+    move-result-object v1
 
-    iget-wide v2, p0, Lg4e;->Y:J
+    check-cast v1, Lgsd;
 
-    sub-long/2addr v0, v2
+    invoke-virtual {v1}, Lgsd;->j()J
 
-    long-to-float p1, v0
+    move-result-wide v1
 
-    const/high16 v0, 0x447a0000    # 1000.0f
+    iget-wide v3, p0, Lg4e;->w0:J
 
-    div-float/2addr p1, v0
+    const-wide v5, 0x7fffffffffffffffL
 
-    iget v0, p0, Lg4e;->b:I
+    cmp-long v7, v3, v5
 
-    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
+    if-nez v7, :cond_0
 
-    iget p1, p0, Lg4e;->c:I
-
-    iget v0, p0, Lg4e;->Z:I
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lg4e;->r0:I
-
-    int-to-float v1, v1
-
-    invoke-static {p1, v0, v1}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
-
-    iget p1, p0, Lg4e;->o:I
-
-    invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
-
-    iget v0, p0, Lg4e;->o:I
-
-    iget-object p1, p0, Lg4e;->X:Ljava/nio/FloatBuffer;
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
+    goto :goto_0
 
     :cond_0
-    move-object v5, p1
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v1, 0x2
+    invoke-virtual {v5, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    const/16 v2, 0x1406
+    move-result-wide v5
 
-    const/4 v3, 0x0
+    add-long/2addr v5, v1
 
-    const/4 v4, 0x0
+    :goto_0
+    new-instance v7, Ln10;
 
-    invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iget-object v8, p0, Lg4e;->t0:Lt68;
 
-    const/4 v0, 0x4
+    iput-object v8, v7, Ln10;->a:Lt68;
 
-    const/4 v1, 0x5
+    iget v8, p0, Lg4e;->u0:F
 
-    invoke-static {v1, p1, v0}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+    iput v8, v7, Ln10;->g:F
 
-    iget p1, p0, Lg4e;->o:I
+    iput-wide v3, v7, Ln10;->b:J
 
-    invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+    iput-wide v1, v7, Ln10;->c:J
 
-    return-void
-.end method
+    iput-wide v5, v7, Ln10;->d:J
 
-.method public final onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
-    .locals 0
+    iget-object v1, p0, Lk3e;->a:Ll3e;
 
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
-    invoke-static {p1, p1, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    if-eqz v1, :cond_1
 
-    iput p2, p0, Lg4e;->Z:I
+    goto :goto_1
 
-    iput p3, p0, Lg4e;->r0:I
+    :cond_1
+    move-object v1, v2
 
-    return-void
-.end method
+    :goto_1
+    iget-object v1, v1, Ll3e;->d:Llt7;
 
-.method public final onSurfaceCreated(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V
-    .locals 2
+    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
 
-    const/16 p1, 0x8
+    move-result-object v1
 
-    new-array p1, p1, [F
+    check-cast v1, Lxr4;
 
-    fill-array-data p1, :array_0
+    invoke-virtual {v1}, Lxr4;->a()Ljava/lang/String;
 
-    const/16 p2, 0x20
+    move-result-object v1
 
-    invoke-static {p2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    iput-object v1, v7, Ln10;->f:Ljava/lang/String;
 
-    move-result-object p2
+    invoke-virtual {v7}, Ln10;->a()Lo10;
 
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+    move-result-object v1
+
+    new-instance v3, Le10;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, v3, Le10;->v:Lo10;
+
+    sget-object v1, Lz10;->w0:Lz10;
+
+    iput-object v1, v3, Le10;->a:Lz10;
+
+    iget-boolean v1, p0, Lg4e;->v0:Z
+
+    if-eqz v1, :cond_2
+
+    sget-object v1, Lw10;->X:Lw10;
+
+    iput-object v1, v3, Le10;->i:Lw10;
+
+    :cond_2
+    invoke-virtual {v3}, Le10;->a()Ld20;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    iput-object v1, v0, Le20;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Le20;->c()Lk68;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    new-instance v1, Lna9;
 
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+    invoke-direct {v1}, Lna9;-><init>()V
 
-    move-result-object p2
+    iput-object v2, v1, Lna9;->g:Ljava/lang/String;
 
-    invoke-virtual {p2, p1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+    iput-object v0, v1, Lna9;->n:Lk68;
 
-    const/4 p1, 0x0
+    return-object v1
+.end method
 
-    invoke-virtual {p2, p1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+.method public final y(Lda2;J)J
+    .locals 9
 
-    iput-object p2, p0, Lg4e;->X:Ljava/nio/FloatBuffer;
+    invoke-super {p0, p1, p2, p3}, Lk4e;->y(Lda2;J)J
 
-    const p2, 0x8b31
+    move-result-wide v0
 
-    const-string v0, "\n            attribute vec4 vPosition;\n            void main() {\n                gl_Position = vPosition;\n            }\n        "
+    iget-boolean p1, p0, Lg4e;->v0:Z
 
-    invoke-static {p2, v0}, Lg4e;->a(ILjava/lang/String;)I
+    if-eqz p1, :cond_1
 
-    move-result p2
+    const-string p1, "g4e"
 
-    const v0, 0x8b30
+    const-string v2, "specifyLocation, start TaskLocationRequest to define location"
 
-    const-string v1, "\n            #define PI 3.14159\n            \n            precision mediump float;\n            \n            uniform float time;\n            uniform vec2 resolution;\n            \n            // \u0423\u043d\u0438\u0444\u043e\u0440\u043c\u044b \u0434\u043b\u044f \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432\n            const float numBeams = 128.0;        // \u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043b\u0443\u0447\u0435\u0439\n            const float tunnelStretch = 0.05;   // \u0420\u0430\u0441\u0442\u044f\u0436\u0435\u043d\u0438\u0435 \u0442\u0443\u043d\u043d\u0435\u043b\u044f\n            const float offsetFreq = 215.4;      // \u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u0441\u043c\u0435\u0449\u0435\u043d\u0438\u044f\n            const float speedFreq = 33.1;       // \u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u0438\n            const float trailStart = 6.0;      // \u041d\u0430\u0447\u0430\u043b\u043e \u043b\u0443\u0447\u0430\n            const float trailEnd = 33.0;        // \u041a\u043e\u043d\u0435\u0446 \u043b\u0443\u0447\u0430\n            const float amplitude = 5.0;       // \u0410\u043c\u043f\u043b\u0438\u0442\u0443\u0434\u0430 \u043b\u0443\u0447\u0435\u0439\n            const vec3 color1 = vec3(1.55, 0.65, 2.25);           // \u041f\u0435\u0440\u0432\u044b\u0439 \u0446\u0432\u0435\u0442\n            const vec3 color2 = vec3(0.55, 0.75, 1.225);           // \u0412\u0442\u043e\u0440\u043e\u0439 \u0446\u0432\u0435\u0442\n            const vec3 color3 = vec3(0.85, 0.25, 1.425);           // \u0422\u0440\u0435\u0442\u0438\u0439 \u0446\u0432\u0435\u0442\n            const float timeMultiplier = 0.4;  // \u041c\u043d\u043e\u0436\u0438\u0442\u0435\u043b\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u0438\n            const float distanceOffset = 0.078;  // \u0421\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u044f\n            \n            \n            const float nebulaIntensity = 0.5; // \u0418\u043d\u0442\u0435\u043d\u0441\u0438\u0432\u043d\u043e\u0441\u0442\u044c \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const vec3 nebulaColor1 = vec3(0.2, 0.0, 0.5);     // \u041f\u0435\u0440\u0432\u044b\u0439 \u0446\u0432\u0435\u0442 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const vec3 nebulaColor2 = vec3(0.8, 0.2, 1.0);     // \u0412\u0442\u043e\u0440\u043e\u0439 \u0446\u0432\u0435\u0442 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const float nebulaSpeed = 0.1;     // \u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u044f \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const float nebulaScale = 1.0;     // \u041c\u0430\u0441\u0448\u0442\u0430\u0431 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            \n            // \u041f\u0441\u0435\u0432\u0434\u043e\u0441\u043b\u0443\u0447\u0430\u0439\u043d\u0430\u044f \u0444\u0443\u043d\u043a\u0446\u0438\u044f\n            float hash(vec2 p) {\n                return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);\n            }\n            \n            // \u0418\u043d\u0442\u0435\u0440\u043f\u043e\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0448\u0443\u043c\n            float noise(vec2 p) {\n                vec2 i = floor(p);\n                vec2 f = fract(p);\n            \n                float a = hash(i);\n                float b = hash(i + vec2(1.0, 0.0));\n                float c = hash(i + vec2(0.0, 1.0));\n                float d = hash(i + vec2(1.0, 1.0));\n            \n                vec2 u = f * f * (3.0 - 2.0 * f);\n            \n                return mix(a, b, u.x) +\n                    (c - a) * u.y * (1.0 - u.x) +\n                    (d - b) * u.x * u.y;\n            }\n            \n            // \u0424\u0440\u0430\u043a\u0442\u0430\u043b\u044c\u043d\u044b\u0439 \u0448\u0443\u043c\n            float fbm(vec2 p) {\n                float value = 0.0;\n                float amplitude = 0.5;\n                for (int i = 0; i < 4; i++) {\n                    value += amplitude * noise(p);\n                    p *= 2.0;\n                    amplitude *= 0.5;\n                }\n                return value;\n            }\n            \n            // \u0424\u043e\u0440\u043c\u0438\u0440\u0443\u0435\u043c \u043b\u0443\u0447\u0438\n            float vDrop(vec2 uv, float t) {\n                uv.x = uv.x * numBeams;\n                float dx = fract(uv.x);\n                uv.x = floor(uv.x);\n                uv.y *= tunnelStretch;\n                float o = sin(uv.x * offsetFreq);\n                float s = cos(uv.x * speedFreq) * 0.3 + 0.2;\n                float trail = mix(trailStart, trailEnd, s);\n                float yv = fract(uv.y + t * s + o) * trail;\n                yv = 1.0 / yv;\n                yv = smoothstep(0.0, 1.0, yv * yv);\n                yv = sin(yv * PI) * (s * amplitude);\n                float d2 = sin(dx * PI);\n                return yv * (d2 * d2);\n            }\n            \n            void main() {\n                // \u041d\u043e\u0440\u043c\u0430\u043b\u0438\u0437\u0443\u0435\u043c \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b \u0441 \u0443\u0447\u0435\u0442\u043e\u043c \u0441\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f \u0441\u0442\u043e\u0440\u043e\u043d\n                vec2 uv = (gl_FragCoord.xy / resolution.xy) * 2.0 - 1.0;\n                uv.x *= resolution.x / resolution.y; // \u041a\u043e\u0440\u0440\u0435\u043a\u0442\u0438\u0440\u0443\u0435\u043c \u043f\u043e \u0441\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044e \u0441\u0442\u043e\u0440\u043e\u043d\n            \n                float d = length(uv) + distanceOffset;\n                vec2 uvPolar = vec2(atan(uv.x, uv.y) / PI, 2.5 / d);\n            \n                float t = time * timeMultiplier;\n                vec3 col = color1 * vDrop(uvPolar, t);\n                col += color2 * vDrop(uvPolar, t + 0.33);\n                col += color3 * vDrop(uvPolar, t + 0.66);\n            \n                col *= d * d;\n            \n                // \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442 \u0434\u043b\u044f \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n                vec2 nebulaUV = uv * nebulaScale + vec2(0.0, t * nebulaSpeed);\n            \n                float nebulaValue = fbm(nebulaUV) * nebulaIntensity;\n                vec3 nebulaColor = mix(nebulaColor1, nebulaColor2, nebulaValue);\n            \n                col += nebulaColor * nebulaValue;\n            \n                gl_FragColor = vec4(col, 1.0);\n            }\n        "
+    invoke-static {p1, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lg4e;->a(ILjava/lang/String;)I
+    invoke-virtual {p0}, Lk3e;->t()Lsoh;
 
-    move-result v0
+    move-result-object p1
 
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
+    new-instance v2, Lz3e;
 
-    move-result v1
+    invoke-virtual {p0}, Lk3e;->i()Ll83;
 
-    invoke-static {v1, p2}, Landroid/opengl/GLES20;->glAttachShader(II)V
+    move-result-object v3
 
-    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
+    check-cast v3, Lgsd;
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glLinkProgram(I)V
+    invoke-virtual {v3}, Lgsd;->k()J
 
-    const/4 p2, 0x1
+    move-result-wide v3
 
-    new-array p2, p2, [I
+    iget-wide v5, p0, Lg4e;->w0:J
 
-    const v0, 0x8b82
+    const-wide/16 v7, 0x0
 
-    invoke-static {v1, v0, p2, p1}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
+    cmp-long v5, v5, v7
 
-    aget p1, p2, p1
+    if-eqz v5, :cond_0
 
-    if-eqz p1, :cond_0
+    const/4 v5, 0x1
 
-    iput v1, p0, Lg4e;->a:I
+    :goto_0
+    move v7, v5
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
+    move-wide v5, p2
 
-    iget p1, p0, Lg4e;->a:I
-
-    const-string p2, "time"
-
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Lg4e;->b:I
-
-    iget p1, p0, Lg4e;->a:I
-
-    const-string p2, "resolution"
-
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Lg4e;->c:I
-
-    iget p1, p0, Lg4e;->a:I
-
-    const-string p2, "vPosition"
-
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Lg4e;->o:I
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    invoke-static {v1}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
+    const/4 v5, 0x0
 
-    move-result-object p1
+    goto :goto_0
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
+    :goto_1
+    invoke-direct/range {v2 .. v7}, Lz3e;-><init>(JJZ)V
 
-    new-instance p2, Ljava/lang/RuntimeException;
+    invoke-virtual {p1, v2}, Lsoh;->c(Lk3e;)J
 
-    const-string v0, "Error linking program: "
-
-    invoke-static {v0, p1}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :array_0
-    .array-data 4
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
+    :cond_1
+    return-wide v0
 .end method

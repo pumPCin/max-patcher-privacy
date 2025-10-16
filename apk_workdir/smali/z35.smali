@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract a()Z
-.end method
-
-.method public abstract setEmojiCompatEnabled(Z)V
+.method public abstract g(F)V
 .end method

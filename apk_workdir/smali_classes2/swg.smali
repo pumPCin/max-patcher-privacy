@@ -1,19 +1,20 @@
-.class public final Lswg;
+.class public interface abstract Lswg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lql7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lql7;"
-        }
-    .end annotation
+.method public abstract F()I
+.end method
 
-    sget-object v0, Lrwg;->a:Lrwg;
+.method public abstract J(Landroid/view/Surface;)V
+.end method
 
-    return-object v0
+.method public abstract N()I
+.end method
+
+.method public abstract d()I
+.end method
+
+.method public abstract n()I
 .end method

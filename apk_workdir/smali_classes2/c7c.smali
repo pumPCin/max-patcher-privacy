@@ -1,22 +1,46 @@
 .class public final Lc7c;
-.super Ljava/lang/Object;
+.super Lt7c;
 .source "SourceFile"
-
-# interfaces
-.implements Lf7c;
 
 
 # instance fields
-.field public final a:Ljava/io/File;
+.field public final a:I
+
+.field public final b:La7a;
+
+.field public final c:Lpqf;
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 0
+.method public constructor <init>(ILpqf;I)V
+    .locals 2
 
+    new-instance v0, La7a;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, La7a;-><init>(I)V
+
+    const/4 v1, 0x4
+
+    and-int/2addr p3, v1
+
+    if-eqz p3, :cond_0
+
+    sget-object p2, Ldag;->w:Lpqf;
+
+    :cond_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc7c;->a:Ljava/io/File;
+    iput p1, p0, Lc7c;->a:I
+
+    iput-object v0, p0, Lc7c;->b:La7a;
+
+    iput-object p2, p0, Lc7c;->c:Lpqf;
+
+    iput v1, p0, Lc7c;->o:I
 
     return-void
 .end method
@@ -24,50 +48,112 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lc7c;
+    instance-of v0, p1, Lc7c;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lc7c;
 
-    iget-object v1, p0, Lc7c;->a:Ljava/io/File;
+    iget v0, p0, Lc7c;->a:I
 
-    iget-object p1, p1, Lc7c;->a:Ljava/io/File;
+    iget v1, p1, Lc7c;->a:I
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lc7c;->b:La7a;
+
+    iget-object v1, p1, Lc7c;->b:La7a;
+
+    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lc7c;->c:Lpqf;
+
+    iget-object p1, p1, Lc7c;->c:Lpqf;
+
+    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_4
 
-    return v2
+    :goto_0
+    const/4 p1, 0x0
 
-    :cond_2
-    return v0
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/4 v0, 0x4
+
+    int-to-long v0, v0
+
+    return-wide v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lc7c;->a:Ljava/io/File;
+    iget v0, p0, Lc7c;->a:I
 
-    invoke-virtual {v0}, Ljava/io/File;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lc7c;->b:La7a;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lc7c;->c:Lpqf;
+
+    invoke-virtual {v0}, Lpqf;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lc7c;->o:I
 
     return v0
 .end method
@@ -77,11 +163,27 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "StartRecordVideo(file="
+    const-string v1, "Section(title="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lc7c;->a:Ljava/io/File;
+    iget v1, p0, Lc7c;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textColor="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc7c;->b:La7a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", typography="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc7c;->c:Lpqf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

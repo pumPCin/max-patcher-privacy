@@ -1,147 +1,43 @@
-.class public final Lfba;
-.super Ljava/util/ArrayList;
+.class public abstract Lfba;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbba;
 
-
-# instance fields
-.field public volatile a:I
-
-
-# virtual methods
-.method public final a()V
-    .locals 1
-
-    sget-object v0, Lb5a;->a:Lb5a;
-
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    iget v0, p0, Lfba;->a:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lfba;->a:I
-
-    return-void
-.end method
-
-.method public final b(Ljava/lang/Object;)V
+# direct methods
+.method public static a(Landroid/app/NotificationChannel;)Ljava/lang/String;
     .locals 0
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
 
-    iget p1, p0, Lfba;->a:I
+    move-result-object p0
 
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lfba;->a:I
-
-    return-void
+    return-object p0
 .end method
 
-.method public final c(Lzaa;)V
-    .locals 5
+.method public static b(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getParentChannelId()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p0
 
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p1, Lzaa;->b:Lyba;
-
-    const/4 v1, 0x1
-
-    :cond_1
-    iget-boolean v2, p1, Lzaa;->o:Z
-
-    if-eqz v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget v2, p0, Lfba;->a:I
-
-    iget-object v3, p1, Lzaa;->c:Ljava/io/Serializable;
-
-    check-cast v3, Ljava/lang/Integer;
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_6
-
-    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Lb5a;->a(Lyba;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v4, p1, Lzaa;->o:Z
-
-    if-eqz v4, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_6
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    iput-object v2, p1, Lzaa;->c:Ljava/io/Serializable;
-
-    neg-int v1, v1
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :goto_1
-    return-void
+    return-object p0
 .end method
 
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 1
+.method public static c(Landroid/app/NotificationChannel;)Z
+    .locals 0
 
-    new-instance v0, Lz4a;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->isImportantConversation()Z
 
-    invoke-direct {v0, p1}, Lz4a;-><init>(Ljava/lang/Throwable;)V
+    move-result p0
 
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    return p0
+.end method
 
-    iget p1, p0, Lfba;->a:I
+.method public static d(Landroid/app/NotificationChannel;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lfba;->a:I
+    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setConversationId(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

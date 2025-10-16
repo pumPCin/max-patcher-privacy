@@ -1,323 +1,246 @@
 .class public final Ld48;
-.super Lj7b;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/graphics/drawable/Animatable;
 
-# static fields
-.field public static final i:Ld48;
 
-.field public static final j:Ljava/lang/String;
+# instance fields
+.field public final X:Landroid/animation/ObjectAnimator;
 
-.field public static final k:Lyn7;
+.field public final a:Landroid/content/Context;
 
-.field public static volatile l:Z
+.field public final b:I
 
-.field public static volatile m:Z
+.field public final c:Ljava/lang/Object;
 
-.field public static final n:Ljava/lang/String;
+.field public final o:Lkg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(IILandroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Ld48;
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    invoke-direct {v0}, Lj7b;-><init>()V
+    iput-object p3, p0, Ld48;->a:Landroid/content/Context;
 
-    sput-object v0, Ld48;->i:Ld48;
+    iput p2, p0, Ld48;->b:I
 
-    const-class v0, Ld48;
+    new-instance p2, Lyk5;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 p3, 0x1
 
-    move-result-object v0
+    invoke-direct {p2, p0, p1, p3}, Lyk5;-><init>(Ljava/lang/Object;II)V
 
-    sput-object v0, Ld48;->j:Ljava/lang/String;
+    const/4 p1, 0x3
 
-    sget-object v0, Lo7b;->a:Lo7b;
+    invoke-static {p1, p2}, Lmbi;->b(ILoh6;)Llt7;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+    move-result-object p1
 
-    move-result-object v0
+    iput-object p1, p0, Ld48;->c:Ljava/lang/Object;
 
-    const-class v1, Lp7b;
+    new-instance p1, Lkg;
 
-    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    const-string p2, "rotation"
 
-    move-result-object v0
+    const/4 p3, 0x0
 
-    sput-object v0, Ld48;->k:Lyn7;
+    invoke-direct {p1, p2, p3}, Lkg;-><init>(Ljava/lang/String;F)V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ld48;->o:Lkg;
 
-    sput-boolean v0, Ld48;->l:Z
+    const/4 p2, 0x2
 
-    sput-boolean v0, Ld48;->m:Z
+    new-array p2, p2, [F
 
-    const-string v0, "login"
+    fill-array-data p2, :array_0
 
-    sput-object v0, Ld48;->n:Ljava/lang/String;
+    const/4 p3, 0x0
 
-    return-void
-.end method
+    invoke-static {p3, p1, p2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-.method public static d(Lc48;)V
-    .locals 4
+    move-result-object p1
 
-    invoke-static {}, Ld48;->e()Lp7b;
+    const-wide/16 p2, 0x4b0
 
-    move-result-object v0
+    invoke-virtual {p1, p2, p3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {v0}, Lp7b;->b()Ljava/lang/String;
+    const/4 p2, -0x1
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    if-nez v0, :cond_0
+    new-instance p2, Landroid/view/animation/LinearInterpolator;
 
-    const-string v0, ""
+    invoke-direct {p2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {p1, p2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    move-result v1
+    new-instance p2, Lx00;
 
-    if-nez v1, :cond_3
+    const/16 p3, 0xe
 
-    sget-object p0, Ld48;->j:Ljava/lang/String;
+    invoke-direct {p2, p3, p0}, Lx00;-><init>(ILjava/lang/Object;)V
 
-    sget-object v0, Lyt3;->n:Lhoa;
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v1, Lr28;->Y:Lr28;
-
-    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    const-string v2, "Invoked \'failMetric\', but traceId is null or empty!"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p0, v2, v3}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :cond_3
-    sget-object v1, Ld48;->i:Ld48;
-
-    iget-object v1, v1, Lj7b;->g:Lt6e;
-
-    new-instance v2, Lb7b;
-
-    invoke-direct {v2, v0, p0}, Lb7b;-><init>(Ljava/lang/String;La7b;)V
-
-    invoke-virtual {v1, v2}, Lt6e;->h(Ljava/lang/Object;)Z
+    iput-object p1, p0, Ld48;->X:Landroid/animation/ObjectAnimator;
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x43b38000    # 359.0f
+    .end array-data
 .end method
 
-.method public static e()Lp7b;
-    .locals 1
 
-    sget-object v0, Ld48;->k:Lyn7;
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    move-result-object v0
-
-    check-cast v0, Lp7b;
-
-    return-object v0
-.end method
-
-.method public static f()V
-    .locals 9
-
-    invoke-static {}, Ld48;->e()Lp7b;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lp7b;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    :cond_0
-    move-object v5, v0
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
     move-result v0
 
-    if-nez v0, :cond_3
+    int-to-float v0, v0
 
-    sget-object v0, Ld48;->j:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    sget-object v1, Lyt3;->n:Lhoa;
+    move-result-object v1
 
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v2, Lr28;->Y:Lr28;
-
-    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    const-string v3, "Invoked \'onLoginHandled\', but traceId is null or empty!"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :cond_3
-    sget-object v0, Ld48;->i:Ld48;
-
-    iget-object v8, v0, Lj7b;->g:Lt6e;
-
-    iget-object v0, v0, Lj7b;->b:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lp7b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v3
-
-    new-instance v1, Lc7b;
-
-    const/4 v2, 0x4
-
-    const-string v6, "login_receive_to_handle"
-
-    const/4 v7, 0x1
-
-    invoke-direct/range {v1 .. v7}, Lc7b;-><init>(IJLjava/lang/String;Ljava/lang/String;Z)V
-
-    invoke-virtual {v8, v1}, Lt6e;->h(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public static g()V
-    .locals 5
-
-    invoke-static {}, Ld48;->e()Lp7b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lp7b;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Landroid/graphics/Rect;->centerY()I
 
     move-result v1
 
-    if-nez v1, :cond_3
+    int-to-float v1, v1
 
-    sget-object v0, Ld48;->j:Ljava/lang/String;
+    iget-object v2, p0, Ld48;->o:Lkg;
 
-    sget-object v1, Lyt3;->n:Lhoa;
+    iget v2, v2, Lkg;->a:F
 
-    if-nez v1, :cond_1
+    invoke-virtual {p1, v2, v0, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    goto :goto_0
+    iget-object v0, p0, Ld48;->c:Ljava/lang/Object;
 
-    :cond_1
-    sget-object v2, Lr28;->Y:Lr28;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+    move-result-object v0
 
-    move-result v3
+    check-cast v0, Landroid/graphics/drawable/Drawable;
 
-    if-eqz v3, :cond_2
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    const-string v3, "Invoked \'onLoginReceived\', but traceId is null or empty!"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :cond_3
-    sget-object v1, Ld48;->i:Ld48;
-
-    const-string v2, "login_send_to_receive"
-
-    const/4 v3, 0x3
-
-    invoke-static {v1, v2, v3, v0}, Lj7b;->a(Lj7b;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
 .end method
 
-.method public static h(Z)V
-    .locals 5
+.method public final getIntrinsicHeight()I
+    .locals 1
 
-    sget-object v0, Ld48;->j:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    sget-object v1, Lyt3;->n:Lhoa;
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
-    goto :goto_0
+    move-result v0
 
-    :cond_0
-    sget-object v2, Lr28;->o:Lr28;
+    return v0
+.end method
 
-    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+.method public final getIntrinsicWidth()I
+    .locals 1
 
-    move-result v3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    if-eqz v3, :cond_1
+    move-result-object v0
 
-    const-string v3, "Setting isFirstLogin="
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
-    invoke-static {v3, p0}, Ln29;->h(Ljava/lang/String;Z)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v3
+    return v0
+.end method
 
-    const/4 v4, 0x0
+.method public final getOpacity()I
+    .locals 1
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v0, -0x3
 
-    :cond_1
-    :goto_0
-    sput-boolean p0, Ld48;->m:Z
+    return v0
+.end method
+
+.method public final isRunning()Z
+    .locals 1
+
+    iget-object v0, p0, Ld48;->X:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->isRunning()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
+
+    iget-object v0, p0, Ld48;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final start()V
+    .locals 1
+
+    iget-object v0, p0, Ld48;->X:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 1
+
+    iget-object v0, p0, Ld48;->X:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
     return-void
 .end method

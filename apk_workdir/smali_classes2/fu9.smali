@@ -1,108 +1,115 @@
-.class public final synthetic Lfu9;
-.super Ljava/lang/Object;
+.class public final Lfu9;
+.super Lyki;
 .source "SourceFile"
-
-# interfaces
-.implements Ll6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lhu9;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhu9;I)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput p2, p0, Lfu9;->a:I
-
-    iput-object p1, p0, Lfu9;->b:Lhu9;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lfu9;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lfu9;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lfu9;
+
+    iget-wide v1, p0, Lfu9;->a:J
+
+    iget-wide v3, p1, Lfu9;->a:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lfu9;->a:I
+    iget-wide v0, p0, Lfu9;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    new-instance v0, Lej0;
+    move-result v0
 
-    const/16 v1, 0x18
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v1, p0, Lfu9;->b:Lhu9;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v1, v0}, Le3;->k(Lqo3;)V
+    move-result v1
 
-    return-void
+    add-int/2addr v1, v0
 
-    :pswitch_0
-    new-instance v0, Lej0;
+    return v1
+.end method
 
-    const/16 v1, 0x1c
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v1, p0, Lfu9;->b:Lhu9;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Le3;->k(Lqo3;)V
+    const-string v2, "Value(value="
 
-    return-void
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_1
-    new-instance v0, Lej0;
+    iget-wide v2, p0, Lfu9;->a:J
 
-    const/16 v1, 0x19
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    const-string v2, ", timeUnit="
 
-    iget-object v1, p0, Lfu9;->b:Lhu9;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Le3;->k(Lqo3;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v0, ")"
 
-    :pswitch_2
-    new-instance v0, Lej0;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x1d
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+    move-result-object v0
 
-    iget-object v1, p0, Lfu9;->b:Lhu9;
-
-    invoke-virtual {v1, v0}, Le3;->k(Lqo3;)V
-
-    return-void
-
-    :pswitch_3
-    new-instance v0, Lej0;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lej0;-><init>(I)V
-
-    iget-object v1, p0, Lfu9;->b:Lhu9;
-
-    invoke-virtual {v1, v0}, Le3;->k(Lqo3;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

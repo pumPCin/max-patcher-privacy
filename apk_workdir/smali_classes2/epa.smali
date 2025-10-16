@@ -1,283 +1,109 @@
-.class public abstract Lepa;
-.super Ljava/lang/Object;
+.class public final enum Lepa;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final A:I
+.field public static final enum X:Lepa;
 
-.field public static final B:I
+.field public static final synthetic Y:[Lepa;
 
-.field public static final C:I
+.field public static final enum a:Lepa;
 
-.field public static final D:I
+.field public static final enum b:Lepa;
 
-.field public static final E:I
+.field public static final enum c:Lepa;
 
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public static final enum o:Lepa;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 7
 
-    sget v0, Lbdc;->chat_screen_message_send_error_delete_action:I
+    new-instance v0, Lepa;
 
-    sput v0, Lepa;->a:I
+    const-string v1, "ACCENT"
 
-    sget v0, Lbdc;->chat_screen_message_send_error_resend_action_multi:I
+    const/4 v2, 0x0
 
-    sput v0, Lepa;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lbdc;->chat_screen_message_send_error_resend_action_solo:I
+    sput-object v0, Lepa;->a:Lepa;
 
-    sput v0, Lepa;->c:I
+    new-instance v1, Lepa;
 
-    sget v0, Lbdc;->messages_list_chat_description_view_id:I
+    const-string v2, "NEGATIVE"
 
-    sput v0, Lepa;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lbdc;->messages_list_chat_description_view_type:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lepa;->e:I
+    sput-object v1, Lepa;->b:Lepa;
 
-    sget v0, Lbdc;->messages_list_confirm_cancel:I
+    new-instance v2, Lepa;
 
-    sput v0, Lepa;->f:I
+    const-string v3, "NEUTRAL"
 
-    sget v0, Lbdc;->messages_list_confirm_complaint_extremism:I
+    const/4 v4, 0x2
 
-    sput v0, Lepa;->g:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lbdc;->messages_list_confirm_complaint_fake:I
+    sput-object v2, Lepa;->c:Lepa;
 
-    sput v0, Lepa;->h:I
+    new-instance v3, Lepa;
 
-    sget v0, Lbdc;->messages_list_confirm_complaint_other:I
+    const-string v4, "NEUTRAL_THEMED"
 
-    sput v0, Lepa;->i:I
+    const/4 v5, 0x3
 
-    sget v0, Lbdc;->messages_list_confirm_complaint_porno:I
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lepa;->j:I
+    sput-object v3, Lepa;->o:Lepa;
 
-    sget v0, Lbdc;->messages_list_confirm_complaint_spam:I
+    new-instance v4, Lepa;
 
-    sput v0, Lepa;->k:I
+    const-string v5, "CONTRAST_STATIC"
 
-    sget v0, Lbdc;->messages_list_confirm_complaint_threat:I
+    const/4 v6, 0x4
 
-    sput v0, Lepa;->l:I
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lbdc;->messages_list_confirm_delete:I
+    sput-object v4, Lepa;->X:Lepa;
 
-    sput v0, Lepa;->m:I
+    filled-new-array {v0, v1, v2, v3, v4}, [Lepa;
 
-    sget v0, Lbdc;->messages_list_confirm_delete_for_all:I
+    move-result-object v0
 
-    sput v0, Lepa;->n:I
-
-    sget v0, Lbdc;->messages_list_confirm_pin_with_notify:I
-
-    sput v0, Lepa;->o:I
-
-    sget v0, Lbdc;->messages_list_confirm_pin_without_notify:I
-
-    sput v0, Lepa;->p:I
-
-    sget v0, Lbdc;->messages_list_context_action_copy:I
-
-    sput v0, Lepa;->q:I
-
-    sget v0, Lbdc;->messages_list_context_action_copy_photo:I
-
-    sput v0, Lepa;->r:I
-
-    sget v0, Lbdc;->messages_list_context_action_delete:I
-
-    sput v0, Lepa;->s:I
-
-    sget v0, Lbdc;->messages_list_context_action_delete_for_all:I
-
-    sput v0, Lepa;->t:I
-
-    sget v0, Lbdc;->messages_list_context_action_edit:I
-
-    sput v0, Lepa;->u:I
-
-    sget v0, Lbdc;->messages_list_context_action_forward:I
-
-    sput v0, Lepa;->v:I
-
-    sget v0, Lbdc;->messages_list_context_action_mark_as_unread:I
-
-    sput v0, Lepa;->w:I
-
-    sget v0, Lbdc;->messages_list_context_action_pin:I
-
-    sput v0, Lepa;->x:I
-
-    sget v0, Lbdc;->messages_list_context_action_reply:I
-
-    sput v0, Lepa;->y:I
-
-    sget v0, Lbdc;->messages_list_context_action_report:I
-
-    sput v0, Lepa;->z:I
-
-    sget v0, Lbdc;->messages_list_context_action_save_to_gallery:I
-
-    sput v0, Lepa;->A:I
-
-    sget v0, Lbdc;->messages_list_context_action_select:I
-
-    sput v0, Lepa;->B:I
-
-    sget v0, Lbdc;->messages_list_context_action_unpin:I
-
-    sput v0, Lepa;->C:I
-
-    sget v0, Lbdc;->messages_list_context_actions_view_type:I
-
-    sput v0, Lepa;->D:I
-
-    sget v0, Lbdc;->messages_list_context_content_container:I
-
-    sput v0, Lepa;->E:I
-
-    sget v0, Lbdc;->messages_list_context_member_view_type:I
-
-    sput v0, Lepa;->F:I
-
-    sget v0, Lbdc;->messages_list_context_members_member_cell:I
-
-    sput v0, Lepa;->G:I
-
-    sget v0, Lbdc;->messages_list_context_members_member_reaction:I
-
-    sput v0, Lepa;->H:I
-
-    sget v0, Lbdc;->messages_list_context_reactions_container:I
-
-    sput v0, Lepa;->I:I
-
-    sget v0, Lbdc;->messages_list_item_alias:I
-
-    sput v0, Lepa;->J:I
-
-    sget v0, Lbdc;->messages_list_item_date:I
-
-    sput v0, Lepa;->K:I
-
-    sget v0, Lbdc;->messages_list_item_keyboard_buttons:I
-
-    sput v0, Lepa;->L:I
-
-    sget v0, Lbdc;->messages_list_item_single_image:I
-
-    sput v0, Lepa;->M:I
-
-    sget v0, Lbdc;->messages_list_item_text:I
-
-    sput v0, Lepa;->N:I
-
-    sget v0, Lbdc;->messages_list_item_title:I
-
-    sput v0, Lepa;->O:I
-
-    sget v0, Lbdc;->messages_list_item_video_duration:I
-
-    sput v0, Lepa;->P:I
-
-    sget v0, Lbdc;->messages_list_recycler_view:I
-
-    sput v0, Lepa;->Q:I
-
-    sget v0, Lbdc;->messages_list_scroll_btn:I
-
-    sput v0, Lepa;->R:I
-
-    sget v0, Lbdc;->messages_list_share_contact_for_bot_action:I
-
-    sput v0, Lepa;->S:I
+    sput-object v0, Lepa;->Y:[Lepa;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lepa;
+    .locals 1
+
+    const-class v0, Lepa;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lepa;
+
+    return-object p0
+.end method
+
+.method public static values()[Lepa;
+    .locals 1
+
+    sget-object v0, Lepa;->Y:[Lepa;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lepa;
+
+    return-object v0
 .end method

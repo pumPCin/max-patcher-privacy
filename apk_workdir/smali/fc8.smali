@@ -2,143 +2,37 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/LoudnessCodecController$OnLoudnessCodecUpdateListener;
+
 
 # instance fields
-.field public A:I
+.field public final synthetic a:Lymi;
 
-.field public B:I
 
-.field public C:I
+# direct methods
+.method public constructor <init>(Lymi;)V
+    .locals 0
 
-.field public D:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public E:I
+    iput-object p1, p0, Lfc8;->a:Lymi;
 
-.field public F:F
-
-.field public G:F
-
-.field public H:F
-
-.field public I:F
-
-.field public J:F
-
-.field public K:F
-
-.field public L:F
-
-.field public M:F
-
-.field public N:F
-
-.field public O:F
-
-.field public P:[B
-
-.field public Q:I
-
-.field public R:I
-
-.field public S:I
-
-.field public T:J
-
-.field public U:J
-
-.field public V:Leqf;
-
-.field public W:Z
-
-.field public X:Z
-
-.field public Y:Ljava/lang/String;
-
-.field public Z:Ltmf;
-
-.field public a:Z
-
-.field public a0:I
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:Z
-
-.field public j:[B
-
-.field public k:Lrmf;
-
-.field public l:[B
-
-.field public m:Lfy4;
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:I
-
-.field public t:I
-
-.field public u:F
-
-.field public v:F
-
-.field public w:F
-
-.field public x:[B
-
-.field public y:I
-
-.field public z:Z
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)[B
-    .locals 2
+.method public final onLoudnessCodecUpdate(Landroid/media/MediaCodec;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 0
 
-    iget-object v0, p0, Lfc8;->l:[B
+    iget-object p1, p0, Lfc8;->a:Lymi;
 
-    if-eqz v0, :cond_0
+    iget-object p1, p1, Lymi;->b:Ljava/lang/Object;
 
-    return-object v0
+    check-cast p1, Ley0;
 
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, "Missing CodecPrivate for codec "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, p1}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object p1
-
-    throw p1
+    return-object p2
 .end method

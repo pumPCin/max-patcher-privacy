@@ -3,18 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lue6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lfx1;
+
+.field public final synthetic c:Lyt1;
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lfx1;Lyt1;I)V
     .locals 0
 
-    iput p1, p0, Lex1;->a:I
+    iput p3, p0, Lex1;->a:I
+
+    iput-object p1, p0, Lex1;->b:Lfx1;
+
+    iput-object p2, p0, Lex1;->c:Lyt1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,292 +31,162 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public final run()V
+    .locals 4
 
     iget v0, p0, Lex1;->a:I
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/util/List;
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_1
+    iget-object v1, p0, Lex1;->b:Lfx1;
 
-    new-instance v2, Ljava/util/ArrayList;
+    iput-boolean v0, v1, Lfx1;->b:Z
 
-    const/16 v0, 0xa
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
 
-    invoke-static {p1, v0}, Ly83;->O(Ljava/lang/Iterable;I)I
+    const-string v2, "Camera2CameraControl was updated with new options."
 
-    move-result v0
+    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
+    iget-object v2, v1, Lfx1;->g:Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    check-cast v2, Lyt1;
 
-    move-result-object p1
+    if-eqz v2, :cond_0
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v2, v0}, Lyt1;->d(Ljava/lang/Throwable;)Z
 
-    move-result v0
+    const/4 v0, 0x0
+
+    iput-object v0, v1, Lfx1;->g:Ljava/lang/Object;
+
+    :cond_0
+    iget-object v0, p0, Lex1;->c:Lyt1;
+
+    iput-object v0, v1, Lfx1;->g:Ljava/lang/Object;
+
+    iget-boolean v0, v1, Lfx1;->a:Z
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, v1, Lfx1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lox1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lihd;
+
+    const/16 v3, 0x16
+
+    invoke-direct {v2, v3, v0}, Lihd;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2}, Lmli;->a(Lzt1;)Lbu1;
 
     move-result-object v0
 
-    check-cast v0, Ln8h;
+    invoke-static {v0}, Lt9g;->n(Lo18;)Lo18;
 
-    iget-object v1, v0, Ln8h;->g:Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    new-instance v2, Lk3;
 
-    move-result v4
+    const/16 v3, 0x1c
 
-    if-nez v4, :cond_0
+    invoke-direct {v2, v3, v1}, Lk3;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v3, v1, Lfx1;->d:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast v3, Lt1e;
 
-    check-cast v1, Lf84;
+    invoke-interface {v0, v2, v3}, Lo18;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    :goto_1
-    move-object v9, v1
+    const/4 v0, 0x0
 
-    goto :goto_2
-
-    :cond_0
-    sget-object v1, Lf84;->c:Lf84;
-
-    goto :goto_1
-
-    :goto_2
-    new-instance v4, Lt7h;
-
-    iget-object v1, v0, Ln8h;->a:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
-
-    move-result-object v5
-
-    iget-object v6, v0, Ln8h;->b:Ls7h;
-
-    iget-object v7, v0, Ln8h;->c:Lf84;
-
-    iget-object v8, v0, Ln8h;->f:Ljava/util/ArrayList;
-
-    iget v10, v0, Ln8h;->d:I
-
-    iget v11, v0, Ln8h;->e:I
-
-    invoke-direct/range {v4 .. v11}, Lt7h;-><init>(Ljava/util/UUID;Ls7h;Lf84;Ljava/util/ArrayList;Lf84;II)V
-
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
+    iput-boolean v0, v1, Lfx1;->b:Z
 
     :cond_1
-    return-object v2
+    return-void
 
     :pswitch_0
-    check-cast p1, Lnb0;
+    const/4 v0, 0x1
 
-    :try_start_0
-    invoke-static {p1}, Ld8g;->H0(Lnb0;)Ld8g;
+    iget-object v1, p0, Lex1;->b:Lfx1;
 
-    move-result-object p1
+    iput-boolean v0, v1, Lfx1;->b:Z
 
-    invoke-static {p1, v2}, Le8g;->a(Lc8g;Landroid/util/Size;)Lc8g;
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
 
-    move-result-object v2
-    :try_end_0
-    .catch Landroidx/camera/video/internal/encoder/InvalidConfigException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v2, "Camera2CameraControl was updated with new options."
 
-    goto :goto_3
+    invoke-direct {v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    :catch_0
-    move-exception v0
+    iget-object v2, v1, Lfx1;->g:Ljava/lang/Object;
 
-    move-object p1, v0
+    check-cast v2, Lyt1;
 
-    const-string v0, "VideoEncoderInfoImpl"
+    if-eqz v2, :cond_2
 
-    const-string v1, "Unable to find a VideoEncoderInfoImpl"
+    invoke-virtual {v2, v0}, Lyt1;->d(Ljava/lang/Throwable;)Z
 
-    invoke-static {v0, v1, p1}, Lnc6;->I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v0, 0x0
 
-    :goto_3
-    return-object v2
+    iput-object v0, v1, Lfx1;->g:Ljava/lang/Object;
 
-    :pswitch_1
-    check-cast p1, Ljava/util/List;
+    :cond_2
+    iget-object v0, p0, Lex1;->c:Lyt1;
 
-    return-object v2
+    iput-object v0, v1, Lfx1;->g:Ljava/lang/Object;
 
-    :pswitch_2
-    check-cast p1, Lp08;
+    iget-boolean v0, v1, Lfx1;->a:Z
 
-    iput-boolean v1, p1, Lp08;->a:Z
+    if-eqz v0, :cond_3
 
-    iput-boolean v1, p1, Lp08;->c:Z
+    iget-object v0, v1, Lfx1;->c:Ljava/lang/Object;
 
-    iput-boolean v3, p1, Lp08;->b:Z
+    check-cast v0, Lox1;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_3
-    check-cast p1, Lp08;
+    new-instance v2, Lihd;
 
-    iput-boolean v3, p1, Lp08;->e:Z
+    const/16 v3, 0x16
 
-    iput-boolean v3, p1, Lp08;->g:Z
+    invoke-direct {v2, v3, v0}, Lihd;-><init>(ILjava/lang/Object;)V
 
-    iput-boolean v3, p1, Lp08;->h:Z
+    invoke-static {v2}, Lmli;->a(Lzt1;)Lbu1;
 
-    return-object p1
+    move-result-object v0
 
-    :pswitch_4
-    check-cast p1, Lp08;
+    invoke-static {v0}, Lt9g;->n(Lo18;)Lo18;
 
-    iput-boolean v3, p1, Lp08;->g:Z
+    move-result-object v0
 
-    iput-boolean v3, p1, Lp08;->h:Z
+    new-instance v2, Lk3;
 
-    iput-boolean v3, p1, Lp08;->e:Z
+    const/16 v3, 0x1c
 
-    return-object p1
+    invoke-direct {v2, v3, v1}, Lk3;-><init>(ILjava/lang/Object;)V
 
-    :pswitch_5
-    check-cast p1, Lp08;
+    iget-object v3, v1, Lfx1;->d:Ljava/lang/Object;
 
-    iput-boolean v3, p1, Lp08;->e:Z
+    check-cast v3, Lt1e;
 
-    iput-boolean v3, p1, Lp08;->g:Z
+    invoke-interface {v0, v2, v3}, Lo18;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    iput-boolean v3, p1, Lp08;->h:Z
+    const/4 v0, 0x0
 
-    return-object p1
+    iput-boolean v0, v1, Lfx1;->b:Z
 
-    :pswitch_6
-    check-cast p1, Lp08;
+    :cond_3
+    return-void
 
-    iput-boolean v1, p1, Lp08;->e:Z
-
-    return-object p1
-
-    :pswitch_7
-    check-cast p1, Lp08;
-
-    iput-boolean v1, p1, Lp08;->g:Z
-
-    iput-boolean v1, p1, Lp08;->h:Z
-
-    return-object p1
-
-    :pswitch_8
-    check-cast p1, Lp08;
-
-    iput-boolean v3, p1, Lp08;->e:Z
-
-    return-object p1
-
-    :pswitch_9
-    check-cast p1, Lp08;
-
-    iput-boolean v3, p1, Lp08;->g:Z
-
-    iput-boolean v3, p1, Lp08;->h:Z
-
-    return-object p1
-
-    :pswitch_a
-    check-cast p1, Ljava/util/List;
-
-    sget-object p1, Lk37;->A:Li37;
-
-    return-object v2
-
-    :pswitch_b
-    new-instance v0, Ljpb;
-
-    check-cast p1, Lipb;
-
-    invoke-direct {v0, p1}, Ljpb;-><init>(Lipb;)V
-
-    return-object v0
-
-    :pswitch_c
-    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
-
-    sget p1, Ltx1;->h:I
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :pswitch_d
-    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
-
-    sget p1, Lrx1;->g:I
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :pswitch_e
-    check-cast p1, Ljava/util/List;
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_f
-    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
-
-    return-object v2
-
-    :pswitch_10
-    check-cast p1, Ljava/lang/Void;
-
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p1
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

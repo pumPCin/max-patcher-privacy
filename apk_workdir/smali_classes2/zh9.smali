@@ -1,21 +1,19 @@
-.class public final Lzh9;
-.super Lrp;
+.class public interface abstract Lzh9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lai9;
 
-# static fields
-.field public static final a:Lzh9;
 
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public a()Z
     .locals 1
 
-    new-instance v0, Lzh9;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Lrp;-><init>()V
+    return v0
+.end method
 
-    sput-object v0, Lzh9;->a:Lzh9;
-
-    return-void
+.method public abstract b()Ljog;
 .end method

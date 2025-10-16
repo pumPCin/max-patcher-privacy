@@ -1,60 +1,42 @@
 .class public final Lpmd;
-.super Ljava/lang/Object;
+.super Ls0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:Lc94;
-
-
-# direct methods
-.method public constructor <init>(JLc94;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lpmd;->a:J
-
-    iput-object p3, p0, Lpmd;->b:Lc94;
-
-    return-void
-.end method
+.implements Ljava/lang/Runnable;
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.method public final run()V
+    .locals 2
 
-    check-cast p1, Lpmd;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    iget-wide v0, p1, Lpmd;->a:J
+    move-result-object v0
 
-    sget p1, Lg3g;->a:I
+    iput-object v0, p0, Ls0;->c:Ljava/lang/Thread;
 
-    iget-wide v2, p0, Lpmd;->a:J
+    const/4 v0, 0x0
 
-    cmp-long p1, v2, v0
+    :try_start_0
+    iget-object v1, p0, Ls0;->a:Ljava/lang/Runnable;
 
-    if-gez p1, :cond_0
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    const/4 p1, -0x1
+    iput-object v0, p0, Ls0;->c:Ljava/lang/Thread;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p1
+    return-void
 
-    :cond_0
-    if-nez p1, :cond_1
+    :catchall_0
+    move-exception v1
 
-    const/4 p1, 0x0
+    invoke-virtual {p0}, Ls0;->g()V
 
-    return p1
+    iput-object v0, p0, Ls0;->c:Ljava/lang/Thread;
 
-    :cond_1
-    const/4 p1, 0x1
+    invoke-static {v1}, Lgxi;->a(Ljava/lang/Throwable;)V
 
-    return p1
+    throw v1
 .end method

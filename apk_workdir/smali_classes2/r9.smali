@@ -1,37 +1,104 @@
 .class public final Lr9;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lq25;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/sdk/uikit/common/button/OneMeButton;
 
 
 # direct methods
-.method public constructor <init>(Lq25;)V
+.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lr9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    iput-object p1, p0, Lr9;->a:Lq25;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ls25;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/Set;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lr9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lr9;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lr9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    check-cast p1, Lx25;
+    new-instance v0, Lr9;
 
-    iget-object v0, p1, Lx25;->a:Ljava/util/ArrayList;
+    iget-object v1, p0, Lr9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    iget-object v1, p0, Lr9;->a:Lq25;
+    invoke-direct {v0, v1, p2}, Lr9;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    iput-object p1, v0, Lr9;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    return-object v0
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lr9;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result p1
+
+    iget-object v0, p0, Lr9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    if-nez p1, :cond_0
+
+    const/16 p1, 0x8
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    new-instance v1, Ljava/lang/Integer;
+
+    invoke-direct {v1, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
+
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

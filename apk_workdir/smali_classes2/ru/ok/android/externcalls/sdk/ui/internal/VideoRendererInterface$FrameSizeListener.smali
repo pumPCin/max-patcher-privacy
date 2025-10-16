@@ -23,7 +23,7 @@
         "",
         "width",
         "height",
-        "Laxf;",
+        "Lzag;",
         "onFrame",
         "(II)V",
         "calls-sdk_release"

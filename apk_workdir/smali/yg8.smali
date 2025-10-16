@@ -1,181 +1,151 @@
 .class public final Lyg8;
-.super Ljava/lang/Object;
+.super Lnuf;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Landroid/os/Bundle;
-
-.field public final synthetic Y:Ln12;
-
-.field public final synthetic a:Lch8;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:I
-
-.field public final synthetic o:I
+.field public final b:Lwr8;
 
 
 # direct methods
-.method public constructor <init>(IILn12;Lch8;Landroid/os/Bundle;Ljava/lang/String;)V
+.method public constructor <init>(Lwr8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lyg8;->Y:Ln12;
-
-    iput-object p4, p0, Lyg8;->a:Lch8;
-
-    iput-object p6, p0, Lyg8;->b:Ljava/lang/String;
-
-    iput p1, p0, Lyg8;->c:I
-
-    iput p2, p0, Lyg8;->o:I
-
-    iput-object p5, p0, Lyg8;->X:Landroid/os/Bundle;
+    iput-object p1, p0, Lyg8;->b:Lwr8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final b(Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object v5, p0, Lyg8;->a:Lch8;
+    sget-object v0, Lwg8;->X:Ljava/lang/Object;
 
-    iget-object v0, v5, Lch8;->a:Landroid/os/Messenger;
+    if-ne p1, v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+    const/4 p1, 0x0
 
-    move-result-object v6
+    return p1
 
-    iget-object v0, p0, Lyg8;->Y:Ln12;
+    :cond_0
+    const/4 p1, -0x1
 
-    iget-object v1, v0, Ln12;->b:Ljava/lang/Object;
+    return p1
+.end method
 
-    check-cast v1, Lus8;
+.method public final f(ILiuf;Z)Liuf;
+    .locals 11
 
-    iget-object v1, v1, Lus8;->X:Lrs;
+    const/4 p1, 0x0
 
-    invoke-virtual {v1, v6}, Lube;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p3, :cond_0
 
-    move-object v1, v0
+    const/4 v0, 0x0
 
-    new-instance v0, Lug8;
-
-    iget-object v1, v1, Ln12;->b:Ljava/lang/Object;
-
-    check-cast v1, Lus8;
-
-    iget v3, p0, Lyg8;->c:I
-
-    iget v4, p0, Lyg8;->o:I
-
-    iget-object v2, p0, Lyg8;->b:Ljava/lang/String;
-
-    invoke-direct/range {v0 .. v5}, Lug8;-><init>(Lus8;Ljava/lang/String;IILch8;)V
-
-    iput-object v0, v1, Lus8;->Y:Lug8;
-
-    iget-object v3, p0, Lyg8;->X:Landroid/os/Bundle;
-
-    invoke-virtual {v1, v3}, Lus8;->b(Landroid/os/Bundle;)Lkkh;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    iput-object v4, v1, Lus8;->Y:Lug8;
-
-    const-string v7, "MBServiceCompat"
-
-    if-nez v3, :cond_0
-
-    const-string v0, "No root for client "
-
-    const-string v1, " from service "
-
-    invoke-static {v0, v2, v1}, Lsw1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-class v1, Lyg8;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v7, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v0, 0x2
-
-    :try_start_0
-    invoke-virtual {v5, v0, v4}, Lch8;->b(ILandroid/os/Bundle;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    const-string v0, "Calling onConnectFailed() failed. Ignoring. pkg="
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v7, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    move-object v2, v0
 
     goto :goto_0
 
     :cond_0
-    :try_start_1
-    iget-object v4, v1, Lus8;->X:Lrs;
+    move-object v2, p1
 
-    invoke-virtual {v4, v6, v0}, Lube;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    if-eqz p3, :cond_1
+
+    sget-object p1, Lwg8;->X:Ljava/lang/Object;
+
+    :cond_1
+    move-object v3, p1
+
+    sget-object v9, Lx8;->Y:Lx8;
+
+    const/4 v10, 0x1
 
     const/4 v4, 0x0
 
-    invoke-interface {v6, v0, v4}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
 
-    iget-object v0, v1, Lus8;->r0:Lrr8;
+    const-wide/16 v7, 0x0
 
-    if-eqz v0, :cond_1
+    move-object v1, p2
 
-    iget-object v3, v3, Lkkh;->b:Ljava/lang/Object;
+    invoke-virtual/range {v1 .. v10}, Liuf;->g(Ljava/lang/Object;Ljava/lang/Object;IJJLx8;Z)V
 
-    check-cast v3, Landroid/os/Bundle;
+    return-object v1
+.end method
 
-    invoke-virtual {v5, v0, v3}, Lch8;->a(Lrr8;Landroid/os/Bundle;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+.method public final h()I
+    .locals 1
 
-    return-void
+    const/4 v0, 0x1
 
-    :catch_1
-    const-string v0, "Calling onConnect() failed. Dropping client. pkg="
+    return v0
+.end method
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
 
-    move-result-object v0
+    sget-object p1, Lwg8;->X:Ljava/lang/Object;
 
-    invoke-static {v7, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    return-object p1
+.end method
 
-    iget-object v0, v1, Lus8;->X:Lrs;
+.method public final m(ILluf;J)Lluf;
+    .locals 21
 
-    invoke-virtual {v0, v6}, Lube;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v1, Lluf;->B0:Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    return-void
+    const/16 v18, 0x0
+
+    const-wide/16 v19, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lyg8;->b:Lwr8;
+
+    const/4 v3, 0x0
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v17, 0x0
+
+    move-object/from16 v0, p2
+
+    invoke-virtual/range {v0 .. v20}, Lluf;->b(Ljava/lang/Object;Lwr8;Ljava/lang/Object;JJJZZLmr8;JJIIJ)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lluf;->v0:Z
+
+    return-object v0
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

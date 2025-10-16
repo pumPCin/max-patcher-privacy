@@ -1,248 +1,240 @@
-.class public final Lpdg;
-.super Lc2f;
+.class public final synthetic Lpdg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public X:Ljava/util/LinkedList;
+.field public final synthetic a:I
 
-.field public Y:Lysd;
+.field public final synthetic b:Lsdg;
 
-.field public Z:I
-
-.field public final synthetic r0:Lqdg;
-
-.field public final synthetic s0:J
-
-.field public final synthetic t0:Ljava/lang/Long;
-
-.field public final synthetic u0:Ltbg;
-
-.field public final synthetic v0:Ll76;
+.field public final synthetic c:Lldg;
 
 
 # direct methods
-.method public constructor <init>(Lqdg;JLjava/lang/Long;Ltbg;Ll76;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILldg;Lsdg;)V
     .locals 0
 
-    iput-object p1, p0, Lpdg;->r0:Lqdg;
+    iput p1, p0, Lpdg;->a:I
 
-    iput-wide p2, p0, Lpdg;->s0:J
+    iput-object p3, p0, Lpdg;->b:Lsdg;
 
-    iput-object p4, p0, Lpdg;->t0:Ljava/lang/Long;
+    iput-object p2, p0, Lpdg;->c:Lldg;
 
-    iput-object p5, p0, Lpdg;->u0:Ltbg;
-
-    iput-object p6, p0, Lpdg;->v0:Ll76;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p7}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final call()Ljava/lang/Object;
+    .locals 6
 
-    check-cast p1, Ln24;
+    iget v0, p0, Lpdg;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "sdg"
 
-    invoke-virtual {p0, p1, p2}, Lpdg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lpdg;->c:Lldg;
 
-    move-result-object p1
+    iget-object v3, p0, Lpdg;->b:Lsdg;
 
-    check-cast p1, Lpdg;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p2, Laxf;->a:Laxf;
+    invoke-virtual {v2}, Lldg;->b()Lkdg;
 
-    invoke-virtual {p1, p2}, Lpdg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    iget-object v2, v2, Lldg;->b:Ljava/lang/String;
 
-    return-object p1
-.end method
+    iget-object v3, v3, Lsdg;->g:Lv1g;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 8
+    :try_start_0
+    const-string v4, "resizePhoto: path = %s"
 
-    new-instance v0, Lpdg;
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lpdg;->u0:Ltbg;
+    move-result-object v5
 
-    iget-object v6, p0, Lpdg;->v0:Ll76;
+    invoke-static {v1, v4, v5}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lpdg;->r0:Lqdg;
+    const-string v4, "jpg"
 
-    iget-wide v2, p0, Lpdg;->s0:J
+    iget-object v5, v3, Lv1g;->f:Llt7;
 
-    iget-object v4, p0, Lpdg;->t0:Ljava/lang/Long;
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-object v7, p2
+    move-result-object v5
 
-    invoke-direct/range {v0 .. v7}, Lpdg;-><init>(Lqdg;JLjava/lang/Long;Ltbg;Ll76;Lkotlin/coroutines/Continuation;)V
+    check-cast v5, Lat5;
 
-    return-object v0
-.end method
+    invoke-interface {v5, v4}, Lat5;->a(Ljava/lang/String;)Ljava/io/File;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    move-result-object v4
 
-    iget v0, p0, Lpdg;->Z:I
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    const/4 v1, 0x2
+    move-result-object v5
 
-    const/4 v2, 0x1
+    iget-object v3, v3, Lv1g;->g:Llt7;
 
-    iget-wide v3, p0, Lpdg;->s0:J
+    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
 
-    iget-object v5, p0, Lpdg;->r0:Lqdg;
+    move-result-object v3
 
-    sget-object v6, Lo24;->a:Lo24;
+    check-cast v3, Lcw8;
 
-    if-eqz v0, :cond_2
+    check-cast v3, Luj0;
 
-    if-eq v0, v2, :cond_1
+    iget-object v3, v3, Luj0;->c:Lc3e;
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v3, v2, v5}, Lkzh;->h(Lc3e;Ljava/lang/String;Ljava/lang/String;)Z
 
-    iget-object v0, p0, Lpdg;->Y:Lysd;
+    move-result v3
 
-    iget-object v1, p0, Lpdg;->X:Ljava/util/LinkedList;
+    if-eqz v3, :cond_0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const-string v3, "resizePhoto: resized for path = %s"
 
-    goto :goto_2
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result-object v5
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static {v1, v3, v5}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, v5, Lqdg;->c:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Leb9;
-
-    iput v2, p0, Lpdg;->Z:I
-
-    iget-object v0, p0, Lpdg;->t0:Ljava/lang/Long;
-
-    invoke-virtual {p1, v3, v4, v0, p0}, Leb9;->a(JLjava/lang/Long;Lc2f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    check-cast p1, Le59;
-
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    new-instance v2, Lftd;
-
-    iget-object v7, p0, Lpdg;->u0:Ltbg;
-
-    invoke-direct {v2, v3, v4, v7}, Lftd;-><init>(JLx2;)V
-
-    iget-object v7, v7, Ltbg;->Z:Lax0;
-
-    iput-object v7, v2, Lftd;->k:Lax0;
-
-    iput-object p1, v2, Lzsd;->b:Le59;
-
-    invoke-virtual {v2}, Lftd;->b()Lysd;
-
-    move-result-object p1
-
-    iget-object v2, v5, Lqdg;->d:Lyn7;
-
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Lok6;
+    goto :goto_1
 
-    iput-object v0, p0, Lpdg;->X:Ljava/util/LinkedList;
+    :catch_0
+    move-exception v3
 
-    iput-object p1, p0, Lpdg;->Y:Lysd;
+    goto :goto_0
 
-    iput v1, p0, Lpdg;->Z:I
+    :cond_0
+    const-string v3, "resizePhoto: no resize needed for path = %s"
 
-    iget-object v1, p0, Lpdg;->v0:Ll76;
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    invoke-virtual {v2, v1, p0}, Lok6;->b(Ll76;Lc2f;)Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object v1
+    invoke-static {v1, v3, v4}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-ne v1, v6, :cond_4
+    goto :goto_1
+
+    :goto_0
+    const-string v4, "resizePhoto: failed"
+
+    invoke-static {v1, v4, v3}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
-    return-object v6
+    iput-object v2, v0, Lkdg;->b:Ljava/lang/String;
 
-    :cond_4
-    move-object v8, v0
+    new-instance v1, Lldg;
 
-    move-object v0, p1
+    invoke-direct {v1, v0}, Lldg;-><init>(Lkdg;)V
 
-    move-object p1, v1
+    return-object v1
 
-    move-object v1, v8
+    :pswitch_0
+    invoke-virtual {v2}, Lldg;->b()Lkdg;
+
+    move-result-object v0
+
+    iget-object v2, v2, Lldg;->b:Ljava/lang/String;
+
+    iget-object v3, v3, Lsdg;->g:Lv1g;
+
+    :try_start_1
+    const-string v4, "resizeSticker: path = %s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-static {v1, v4, v5}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const-string v4, "png"
+
+    iget-object v5, v3, Lv1g;->f:Llt7;
+
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lat5;
+
+    invoke-interface {v5, v4}, Lat5;->a(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v2, v5}, Lv1g;->f(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "resizeSticker: resized for path = %s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-static {v1, v3, v5}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v3
+
+    goto :goto_2
+
+    :cond_1
+    const-string v3, "resizeSticker: no resize needed for path = %s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-static {v1, v3, v4}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_3
 
     :goto_2
-    check-cast p1, Ljava/util/List;
+    const-string v4, "resizeSticker: failed"
 
-    invoke-interface {v1, v0}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+    invoke-static {v1, v4, v3}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v1, p1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
+    :goto_3
+    iput-object v2, v0, Lkdg;->b:Ljava/lang/String;
 
-    new-instance p1, Lesd;
+    new-instance v1, Lldg;
 
-    const/4 v0, 0x2
+    invoke-direct {v1, v0}, Lldg;-><init>(Lkdg;)V
 
-    invoke-direct {p1, v3, v4, v1, v0}, Lesd;-><init>(JLjava/lang/Object;I)V
+    return-object v1
 
-    new-instance v0, Lbtd;
+    nop
 
-    invoke-direct {v0, p1}, Lbtd;-><init>(Lesd;)V
-
-    iget-object p1, v5, Lqdg;->b:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, La9h;
-
-    invoke-virtual {p1, v0}, La9h;->b(Lasd;)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

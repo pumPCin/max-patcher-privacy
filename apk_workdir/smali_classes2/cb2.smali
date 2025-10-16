@@ -1,100 +1,109 @@
-.class public final synthetic Lcb2;
-.super Ljava/lang/Object;
+.class public final enum Lcb2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lno3;
 
+# static fields
+.field public static final enum X:Lcb2;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final synthetic Y:[Lcb2;
 
-.field public final synthetic b:Lsc2;
+.field public static final enum a:Lcb2;
+
+.field public static final enum b:Lcb2;
+
+.field public static final enum c:Lcb2;
+
+.field public static final enum o:Lcb2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsc2;)V
+.method static constructor <clinit>()V
+    .locals 7
+
+    new-instance v0, Lcb2;
+
+    const-string v1, "NONE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcb2;->a:Lcb2;
+
+    new-instance v1, Lcb2;
+
+    const-string v2, "IN_PROGRESS"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcb2;->b:Lcb2;
+
+    new-instance v2, Lcb2;
+
+    const-string v3, "SENT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lcb2;->c:Lcb2;
+
+    new-instance v3, Lcb2;
+
+    const-string v4, "READ"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lcb2;->o:Lcb2;
+
+    new-instance v4, Lcb2;
+
+    const-string v5, "ERROR"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lcb2;->X:Lcb2;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lcb2;
+
+    move-result-object v0
+
+    sput-object v0, Lcb2;->Y:[Lcb2;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcb2;
     .locals 1
 
-    .line 2
-    const/4 v0, 0x1
+    const-class v0, Lcb2;
 
-    iput v0, p0, Lcb2;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    iput-object p1, p0, Lcb2;->b:Lsc2;
+    check-cast p0, Lcb2;
 
-    return-void
+    return-object p0
 .end method
 
-.method public synthetic constructor <init>(Lzb2;Lsc2;)V
-    .locals 0
+.method public static values()[Lcb2;
+    .locals 1
 
-    .line 1
-    const/4 p1, 0x0
+    sget-object v0, Lcb2;->Y:[Lcb2;
 
-    iput p1, p0, Lcb2;->a:I
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    iput-object p2, p0, Lcb2;->b:Lsc2;
+    check-cast v0, [Lcb2;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Lcb2;->a:I
-
-    check-cast p1, Lec2;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcb2;->b:Lsc2;
-
-    iput-object v0, p1, Lec2;->c:Lsc2;
-
-    sget-object v1, Lsc2;->o:Lsc2;
-
-    if-eq v0, v1, :cond_0
-
-    sget-object v1, Lsc2;->b:Lsc2;
-
-    if-ne v0, v1, :cond_1
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p1, Lec2;->w:J
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcb2;->b:Lsc2;
-
-    iput-object v0, p1, Lec2;->c:Lsc2;
-
-    invoke-static {p1}, Lzb2;->q(Lec2;)V
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p1, Lec2;->w:J
-
-    const/4 v0, 0x0
-
-    iput v0, p1, Lec2;->m:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

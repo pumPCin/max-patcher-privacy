@@ -1,170 +1,460 @@
 .class public final Lr;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Loh6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:La0;
+.field public final synthetic b:Loh6;
 
 
 # direct methods
-.method public constructor <init>(La0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILoh6;)V
     .locals 0
 
-    iput-object p1, p0, Lr;->Y:La0;
+    iput p1, p0, Lr;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lr;->b:Loh6;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ln24;
+    iget v0, p0, Lr;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lr;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lq;
 
-    move-result-object p1
+    iget-object v1, p0, Lr;->b:Loh6;
 
-    check-cast p1, Lr;
+    check-cast v1, Li3;
 
-    sget-object p2, Laxf;->a:Laxf;
+    const/16 v2, 0x1d
 
-    invoke-virtual {p1, p2}, Lr;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
 
-    move-result-object p1
+    return-object v0
 
-    return-object p1
-.end method
+    :pswitch_0
+    new-instance v0, Lq;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v1, p0, Lr;->b:Loh6;
 
-    new-instance p1, Lr;
+    check-cast v1, Lfb2;
 
-    iget-object v0, p0, Lr;->Y:La0;
+    const/16 v2, 0x1c
 
-    invoke-direct {p1, v0, p2}, Lr;-><init>(La0;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
 
-    return-object p1
-.end method
+    return-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    :pswitch_1
+    new-instance v0, Lq;
 
-    iget v0, p0, Lr;->X:I
+    iget-object v1, p0, Lr;->b:Loh6;
 
-    sget-object v1, Laxf;->a:Laxf;
+    check-cast v1, Lla2;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lla2;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lnk1;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Llj1;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lnk1;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Llj1;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lok1;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Llj1;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Laj1;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_a
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lr31;
+
+    const/16 v2, 0x12
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_b
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Li3;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_c
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Li3;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_d
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Li3;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_e
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lhb1;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_f
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Li3;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_10
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lu91;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_11
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lm91;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_12
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lr31;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_13
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Ll6;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_14
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lm;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_15
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lm;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_16
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lm;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_17
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Ll6;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_18
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Lm;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_19
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Ll6;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_1a
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Ll6;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
+
+    return-object v0
+
+    :pswitch_1b
+    new-instance v0, Lq;
+
+    iget-object v1, p0, Lr;->b:Loh6;
+
+    check-cast v1, Li3;
 
     const/4 v2, 0x1
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
 
-    if-ne v0, v2, :cond_0
+    return-object v0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :pswitch_1c
+    new-instance v0, Lq;
 
-    return-object v1
+    iget-object v1, p0, Lr;->b:Loh6;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast v1, Lm;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2, v1}, Lq;-><init>(ILoh6;)V
 
-    throw p1
+    return-object v0
 
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    nop
 
-    iget-object p1, p0, Lr;->Y:La0;
-
-    iget-object v0, p1, La0;->Z:Lhne;
-
-    invoke-static {}, Lshd;->l()Lkv7;
-
-    move-result-object v3
-
-    iget-object v4, p1, La0;->b:Lsrd;
-
-    check-cast v4, Lohd;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->user-debug-report:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-wide/16 v6, 0x0
-
-    invoke-virtual {v4, v5, v6, v7}, Lohd;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v4
-
-    cmp-long v4, v4, v6
-
-    if-eqz v4, :cond_2
-
-    sget-object v4, Lmpd;->a:Lmpd;
-
-    invoke-virtual {v3, v4}, Lkv7;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    new-instance v4, Lsbe;
-
-    sget v5, Lvbc;->about_app_version:I
-
-    sget v6, Lrgc;->about_app_settings_version:I
-
-    new-instance v7, Lxcf;
-
-    invoke-direct {v7, v6}, Lxcf;-><init>(I)V
-
-    iget-object p1, p1, La0;->X:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzga;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Lbdf;
-
-    const-string v6, "25.13.0"
-
-    invoke-direct {p1, v6}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-direct {v4, v5, v7, p1}, Lsbe;-><init>(ILxcf;Lbdf;)V
-
-    invoke-virtual {v3, v4}, Lkv7;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v3}, Lshd;->e(Ljava/util/List;)Lkv7;
-
-    move-result-object p1
-
-    iput v2, p0, Lr;->X:I
-
-    invoke-virtual {v0, p1}, Lhne;->setValue(Ljava/lang/Object;)V
-
-    sget-object p1, Lo24;->a:Lo24;
-
-    if-ne v1, p1, :cond_3
-
-    return-object p1
-
-    :cond_3
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

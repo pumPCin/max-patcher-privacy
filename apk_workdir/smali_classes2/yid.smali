@@ -4,24 +4,16 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lyz4;->o:I
+    sget v0, Lelc;->ic_settings_2_24:I
 
-    const/4 v0, 0x5
-
-    sget-object v1, Ld05;->o:Ld05;
-
-    invoke-static {v0, v1}, Lx2d;->M(ILd05;)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lyid;->a:J
+    sput v0, Lyid;->a:I
 
     return-void
 .end method

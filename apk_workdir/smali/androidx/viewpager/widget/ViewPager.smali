@@ -6,7 +6,7 @@
 # static fields
 .field public static final V0:[I
 
-.field public static final W0:Lkg7;
+.field public static final W0:Lul7;
 
 
 # instance fields
@@ -44,17 +44,17 @@
 
 .field public Q0:Ljava/util/ArrayList;
 
-.field public R0:Lpkg;
+.field public R0:Llzg;
 
 .field public S0:Ljava/util/ArrayList;
 
-.field public final T0:Lvif;
+.field public final T0:Luwf;
 
 .field public U0:I
 
 .field public final a:Ljava/util/ArrayList;
 
-.field public final b:Lnkg;
+.field public final b:Ljzg;
 
 .field public final c:Landroid/graphics/Rect;
 
@@ -91,13 +91,13 @@
 
     sput-object v0, Landroidx/viewpager/widget/ViewPager;->V0:[I
 
-    new-instance v0, Lkg7;
+    new-instance v0, Lul7;
 
     const/4 v1, 0x4
 
-    invoke-direct {v0, v1}, Lkg7;-><init>(I)V
+    invoke-direct {v0, v1}, Lul7;-><init>(I)V
 
-    sput-object v0, Landroidx/viewpager/widget/ViewPager;->W0:Lkg7;
+    sput-object v0, Landroidx/viewpager/widget/ViewPager;->W0:Lul7;
 
     return-void
 .end method
@@ -113,11 +113,11 @@
 
     iput-object p1, p0, Landroidx/viewpager/widget/ViewPager;->a:Ljava/util/ArrayList;
 
-    new-instance p1, Lnkg;
+    new-instance p1, Ljzg;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/viewpager/widget/ViewPager;->b:Lnkg;
+    iput-object p1, p0, Landroidx/viewpager/widget/ViewPager;->b:Ljzg;
 
     new-instance p1, Landroid/graphics/Rect;
 
@@ -147,13 +147,13 @@
 
     iput-boolean p1, p0, Landroidx/viewpager/widget/ViewPager;->N0:Z
 
-    new-instance p2, Lvif;
+    new-instance p2, Luwf;
 
     const/4 v0, 0x5
 
-    invoke-direct {p2, v0, p0}, Lvif;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Luwf;-><init>(ILjava/lang/Object;)V
 
-    iput-object p2, p0, Landroidx/viewpager/widget/ViewPager;->T0:Lvif;
+    iput-object p2, p0, Landroidx/viewpager/widget/ViewPager;->T0:Luwf;
 
     const/4 p2, 0x0
 
@@ -173,7 +173,7 @@
 
     new-instance v0, Landroid/widget/Scroller;
 
-    sget-object v1, Landroidx/viewpager/widget/ViewPager;->W0:Lkg7;
+    sget-object v1, Landroidx/viewpager/widget/ViewPager;->W0:Lul7;
 
     invoke-direct {v0, p2, v1}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
@@ -229,13 +229,13 @@
 
     iput p2, p0, Landroidx/viewpager/widget/ViewPager;->C0:I
 
-    new-instance p2, Lir0;
+    new-instance p2, Lfs0;
 
     const/4 v0, 0x5
 
-    invoke-direct {p2, v0, p0}, Lir0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lfs0;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p0, p2}, Lijg;->n(Landroid/view/View;Lr4;)V
+    invoke-static {p0, p2}, Lcyg;->n(Landroid/view/View;Lt4;)V
 
     invoke-virtual {p0}, Landroid/view/View;->getImportantForAccessibility()I
 
@@ -246,11 +246,19 @@
     invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     :cond_0
-    new-instance p1, Lzab;
+    new-instance p1, Llpe;
 
-    invoke-direct {p1, p0}, Lzab;-><init>(Landroidx/viewpager/widget/ViewPager;)V
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0, p1}, Lwig;->u(Landroid/view/View;Lyca;)V
+    iput-object p0, p1, Llpe;->b:Ljava/lang/Object;
+
+    new-instance p2, Landroid/graphics/Rect;
+
+    invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object p2, p1, Llpe;->a:Ljava/lang/Object;
+
+    invoke-static {p0, p1}, Lqxg;->u(Landroid/view/View;Ldla;)V
 
     return-void
 .end method
@@ -740,15 +748,15 @@
     :cond_0
     move-object v0, p3
 
-    check-cast v0, Lokg;
+    check-cast v0, Lkzg;
 
-    iget-boolean v1, v0, Lokg;->a:Z
+    iget-boolean v1, v0, Lkzg;->a:Z
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    const-class v3, Lmkg;
+    const-class v3, Lizg;
 
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
 
@@ -766,7 +774,7 @@
     :goto_0
     or-int/2addr v1, v2
 
-    iput-boolean v1, v0, Lokg;->a:Z
+    iput-boolean v1, v0, Lkzg;->a:Z
 
     iget-boolean v0, p0, Landroidx/viewpager/widget/ViewPager;->x0:Z
 
@@ -867,7 +875,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lnkg;
+    check-cast v1, Ljzg;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -878,18 +886,18 @@
     :cond_3
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Landroidx/viewpager/widget/ViewPager;->T0:Lvif;
+    iget-object v0, p0, Landroidx/viewpager/widget/ViewPager;->T0:Luwf;
 
     if-eqz p1, :cond_4
 
-    sget-object p1, Lijg;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lcyg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, v0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
 
     return-void
 
     :cond_4
-    invoke-virtual {v0}, Lvif;->run()V
+    invoke-virtual {v0}, Luwf;->run()V
 
     :cond_5
     return-void
@@ -906,7 +914,7 @@
 .method public final checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 1
 
-    instance-of v0, p1, Lokg;
+    instance-of v0, p1, Lkzg;
 
     if-eqz v0, :cond_0
 
@@ -979,7 +987,7 @@
     invoke-virtual {p0, v0, v4}, Landroid/view/View;->scrollTo(II)V
 
     :cond_1
-    sget-object v0, Lijg;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lcyg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
@@ -1420,7 +1428,7 @@
     :goto_0
     if-eqz v3, :cond_3
 
-    sget-object p1, Lijg;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lcyg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
@@ -1473,7 +1481,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lnkg;
+    check-cast v0, Ljzg;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1482,7 +1490,7 @@
     throw v0
 .end method
 
-.method public final f()Lnkg;
+.method public final f()Ljzg;
     .locals 3
 
     const/4 v0, 0x0
@@ -1500,9 +1508,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lnkg;
+    check-cast v1, Ljzg;
 
-    iget v2, v1, Lnkg;->a:I
+    iget v2, v1, Ljzg;->a:I
 
     if-nez v2, :cond_0
 
@@ -1563,16 +1571,16 @@
 
     move-result-object v8
 
-    check-cast v8, Lokg;
+    check-cast v8, Lkzg;
 
-    iget-boolean v9, v8, Lokg;->a:Z
+    iget-boolean v9, v8, Lkzg;->a:Z
 
     if-nez v9, :cond_0
 
     goto :goto_3
 
     :cond_0
-    iget v8, v8, Lokg;->b:I
+    iget v8, v8, Lkzg;->b:I
 
     and-int/lit8 v8, v8, 0x7
 
@@ -1660,13 +1668,13 @@
     goto :goto_0
 
     :cond_5
-    iget-object p3, p0, Landroidx/viewpager/widget/ViewPager;->R0:Lpkg;
+    iget-object p3, p0, Landroidx/viewpager/widget/ViewPager;->R0:Llzg;
 
     if-eqz p3, :cond_6
 
-    check-cast p3, Lc6f;
+    check-cast p3, Lojf;
 
-    invoke-virtual {p3, p1, p2}, Lc6f;->a(IF)V
+    invoke-virtual {p3, p1, p2}, Lojf;->a(IF)V
 
     :cond_6
     iget-object p3, p0, Landroidx/viewpager/widget/ViewPager;->Q0:Ljava/util/ArrayList;
@@ -1686,13 +1694,13 @@
 
     move-result-object v2
 
-    check-cast v2, Lpkg;
+    check-cast v2, Llzg;
 
     if-eqz v2, :cond_7
 
-    check-cast v2, Lc6f;
+    check-cast v2, Lojf;
 
-    invoke-virtual {v2, p1, p2}, Lc6f;->a(IF)V
+    invoke-virtual {v2, p1, p2}, Lojf;->a(IF)V
 
     :cond_7
     add-int/lit8 v0, v0, 0x1
@@ -1708,7 +1716,7 @@
 .method public final generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 2
 
-    new-instance v0, Lokg;
+    new-instance v0, Lkzg;
 
     const/4 v1, -0x1
 
@@ -1721,7 +1729,7 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lokg;
+    new-instance v0, Lkzg;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1746,7 +1754,7 @@
 
     move-result v1
 
-    iput v1, v0, Lokg;->b:I
+    iput v1, v0, Lkzg;->b:I
 
     .line 6
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -1765,7 +1773,7 @@
     return-object p1
 .end method
 
-.method public getAdapter()Lz2b;
+.method public getAdapter()Lmbb;
     .locals 1
 
     const/4 v0, 0x0
@@ -1913,11 +1921,11 @@
 
     move-result-object v14
 
-    check-cast v14, Lnkg;
+    check-cast v14, Ljzg;
 
     if-nez v12, :cond_6
 
-    iget v15, v14, Lnkg;->a:I
+    iget v15, v14, Ljzg;->a:I
 
     add-int/2addr v9, v2
 
@@ -1930,17 +1938,17 @@
 
     add-float/2addr v13, v7
 
-    iget-object v1, v0, Landroidx/viewpager/widget/ViewPager;->b:Lnkg;
+    iget-object v1, v0, Landroidx/viewpager/widget/ViewPager;->b:Ljzg;
 
-    iput v13, v1, Lnkg;->b:F
+    iput v13, v1, Ljzg;->b:F
 
-    iput v9, v1, Lnkg;->a:I
+    iput v9, v1, Ljzg;->a:I
 
     throw v8
 
     :cond_6
     :goto_4
-    iget v13, v14, Lnkg;->b:F
+    iget v13, v14, Ljzg;->b:F
 
     add-float v9, v13, v4
 
@@ -1968,7 +1976,7 @@
     goto :goto_5
 
     :cond_8
-    iget v9, v14, Lnkg;->a:I
+    iget v9, v14, Ljzg;->a:I
 
     add-int/lit8 v10, v10, 0x1
 
@@ -1997,7 +2005,7 @@
 
     div-float/2addr v6, v1
 
-    iget v8, v11, Lnkg;->a:I
+    iget v8, v11, Ljzg;->a:I
 
     move/from16 v9, p1
 
@@ -2005,7 +2013,7 @@
 
     div-float/2addr v9, v1
 
-    iget v1, v11, Lnkg;->b:F
+    iget v1, v11, Ljzg;->b:F
 
     sub-float/2addr v9, v1
 
@@ -2128,13 +2136,13 @@
     return-void
 
     :cond_1
-    invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->f()Lnkg;
+    invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->f()Ljzg;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    iget p2, p2, Lnkg;->b:F
+    iget p2, p2, Ljzg;->b:F
 
     iget p3, p0, Landroidx/viewpager/widget/ViewPager;->v0:F
 
@@ -2201,7 +2209,7 @@
 .method public final onDetachedFromWindow()V
     .locals 1
 
-    iget-object v0, p0, Landroidx/viewpager/widget/ViewPager;->T0:Lvif;
+    iget-object v0, p0, Landroidx/viewpager/widget/ViewPager;->T0:Luwf;
 
     invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
@@ -2513,17 +2521,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lnkg;
+    check-cast v0, Ljzg;
 
-    invoke-static {p1, v1}, Lxw1;->e(Ljava/util/ArrayList;I)Ljava/lang/Object;
+    invoke-static {p1, v1}, Lxx1;->e(Ljava/util/ArrayList;I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lnkg;
+    check-cast p1, Ljzg;
 
-    iget v0, v0, Lnkg;->a:I
+    iget v0, v0, Ljzg;->a:I
 
-    iget p1, p1, Lnkg;->a:I
+    iget p1, p1, Ljzg;->a:I
 
     throw v2
 
@@ -2723,13 +2731,13 @@
 
     move-result-object v12
 
-    check-cast v12, Lokg;
+    check-cast v12, Lkzg;
 
-    iget-boolean v14, v12, Lokg;->a:Z
+    iget-boolean v14, v12, Lkzg;->a:Z
 
     if-eqz v14, :cond_6
 
-    iget v12, v12, Lokg;->b:I
+    iget v12, v12, Lkzg;->b:I
 
     and-int/lit8 v14, v12, 0x7
 
@@ -2912,9 +2920,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lokg;
+    check-cast v3, Lkzg;
 
-    iget-boolean v3, v3, Lokg;->a:Z
+    iget-boolean v3, v3, Lkzg;->a:Z
 
     if-nez v3, :cond_8
 
@@ -2932,7 +2940,7 @@
 
     if-eqz v1, :cond_b
 
-    invoke-virtual {v0}, Landroidx/viewpager/widget/ViewPager;->f()Lnkg;
+    invoke-virtual {v0}, Landroidx/viewpager/widget/ViewPager;->f()Ljzg;
 
     move-result-object v1
 
@@ -2944,7 +2952,7 @@
 
     int-to-float v2, v2
 
-    iget v1, v1, Lnkg;->b:F
+    iget v1, v1, Ljzg;->b:F
 
     iget v3, v0, Landroidx/viewpager/widget/ViewPager;->v0:F
 
@@ -3074,15 +3082,15 @@
 
     move-result-object v3
 
-    check-cast v3, Lokg;
+    check-cast v3, Lkzg;
 
     if-eqz v3, :cond_b
 
-    iget-boolean v6, v3, Lokg;->a:Z
+    iget-boolean v6, v3, Lkzg;->a:Z
 
     if-eqz v6, :cond_b
 
-    iget v6, v3, Lokg;->b:I
+    iget v6, v3, Lkzg;->b:I
 
     and-int/lit8 v7, v6, 0x7
 
@@ -3256,11 +3264,11 @@
 
     move-result-object v2
 
-    check-cast v2, Lokg;
+    check-cast v2, Lkzg;
 
     if-eqz v2, :cond_d
 
-    iget-boolean v5, v2, Lokg;->a:Z
+    iget-boolean v5, v2, Lkzg;->a:Z
 
     if-nez v5, :cond_e
 
@@ -3347,7 +3355,7 @@
 .method public final onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
-    instance-of v0, p1, Lqkg;
+    instance-of v0, p1, Lmzg;
 
     if-nez v0, :cond_0
 
@@ -3356,13 +3364,13 @@
     return-void
 
     :cond_0
-    check-cast p1, Lqkg;
+    check-cast p1, Lmzg;
 
-    iget-object v0, p1, Lf0;->a:Landroid/os/Parcelable;
+    iget-object v0, p1, Lg0;->a:Landroid/os/Parcelable;
 
     invoke-super {p0, v0}, Landroid/view/View;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-object p1, p1, Lqkg;->o:Landroid/os/Parcelable;
+    iget-object p1, p1, Lmzg;->o:Landroid/os/Parcelable;
 
     iput-object p1, p0, Landroidx/viewpager/widget/ViewPager;->o:Landroid/os/Parcelable;
 
@@ -3376,13 +3384,13 @@
 
     move-result-object v0
 
-    new-instance v1, Lqkg;
+    new-instance v1, Lmzg;
 
-    invoke-direct {v1, v0}, Lf0;-><init>(Landroid/os/Parcelable;)V
+    invoke-direct {v1, v0}, Lg0;-><init>(Landroid/os/Parcelable;)V
 
     const/4 v0, 0x0
 
-    iput v0, v1, Lqkg;->c:I
+    iput v0, v1, Lmzg;->c:I
 
     return-object v1
 .end method
@@ -3436,7 +3444,7 @@
     return-void
 .end method
 
-.method public setAdapter(Lz2b;)V
+.method public setAdapter(Lmbb;)V
     .locals 3
 
     iget-object p1, p0, Landroidx/viewpager/widget/ViewPager;->S0:Ljava/util/ArrayList;
@@ -3466,9 +3474,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lx5f;
+    check-cast v1, Ljjf;
 
-    iget-object v1, v1, Lx5f;->a:Lcom/google/android/material/tabs/TabLayout;
+    iget-object v1, v1, Ljjf;->a:Lcom/google/android/material/tabs/TabLayout;
 
     iget-object v2, v1, Lcom/google/android/material/tabs/TabLayout;->a1:Landroidx/viewpager/widget/ViewPager;
 
@@ -3535,12 +3543,12 @@
     return-void
 .end method
 
-.method public setOnPageChangeListener(Lpkg;)V
+.method public setOnPageChangeListener(Llzg;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iput-object p1, p0, Landroidx/viewpager/widget/ViewPager;->R0:Lpkg;
+    iput-object p1, p0, Landroidx/viewpager/widget/ViewPager;->R0:Llzg;
 
     return-void
 .end method
@@ -3572,7 +3580,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {v0, p1}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -3625,19 +3633,19 @@
     :cond_0
     iput p1, p0, Landroidx/viewpager/widget/ViewPager;->U0:I
 
-    iget-object v0, p0, Landroidx/viewpager/widget/ViewPager;->R0:Lpkg;
+    iget-object v0, p0, Landroidx/viewpager/widget/ViewPager;->R0:Llzg;
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lc6f;
+    check-cast v0, Lojf;
 
-    iget v1, v0, Lc6f;->c:I
+    iget v1, v0, Lojf;->c:I
 
-    iput v1, v0, Lc6f;->b:I
+    iput v1, v0, Lojf;->b:I
 
-    iput p1, v0, Lc6f;->c:I
+    iput p1, v0, Lojf;->c:I
 
-    iget-object v1, v0, Lc6f;->a:Ljava/lang/ref/WeakReference;
+    iget-object v1, v0, Lojf;->a:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
@@ -3647,7 +3655,7 @@
 
     if-eqz v1, :cond_1
 
-    iget v0, v0, Lc6f;->c:I
+    iget v0, v0, Lojf;->c:I
 
     iput v0, v1, Lcom/google/android/material/tabs/TabLayout;->e1:I
 
@@ -3671,19 +3679,19 @@
 
     move-result-object v2
 
-    check-cast v2, Lpkg;
+    check-cast v2, Llzg;
 
     if-eqz v2, :cond_2
 
-    check-cast v2, Lc6f;
+    check-cast v2, Lojf;
 
-    iget v3, v2, Lc6f;->c:I
+    iget v3, v2, Lojf;->c:I
 
-    iput v3, v2, Lc6f;->b:I
+    iput v3, v2, Lojf;->b:I
 
-    iput p1, v2, Lc6f;->c:I
+    iput p1, v2, Lojf;->c:I
 
-    iget-object v3, v2, Lc6f;->a:Ljava/lang/ref/WeakReference;
+    iget-object v3, v2, Lojf;->a:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
@@ -3693,7 +3701,7 @@
 
     if-eqz v3, :cond_2
 
-    iget v2, v2, Lc6f;->c:I
+    iget v2, v2, Lojf;->c:I
 
     iput v2, v3, Lcom/google/android/material/tabs/TabLayout;->e1:I
 

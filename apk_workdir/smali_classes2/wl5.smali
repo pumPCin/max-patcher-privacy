@@ -1,183 +1,203 @@
-.class public final enum Lwl5;
-.super Ljava/lang/Enum;
+.class public final Lwl5;
+.super Lpoe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lwl5;
-
-.field public static final enum Y:Lwl5;
-
-.field public static final enum Z:Lwl5;
-
-.field public static final b:[Lwl5;
-
-.field public static final enum c:Lwl5;
-
-.field public static final enum o:Lwl5;
-
-.field public static final enum r0:Lwl5;
-
-.field public static final enum s0:Lwl5;
-
-.field public static final enum t0:Lwl5;
-
-.field public static final synthetic u0:[Lwl5;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 11
-
-    new-instance v0, Lwl5;
-
-    const/4 v1, 0x0
-
-    const-string v2, "Message"
-
-    const-string v3, "MESSAGE"
-
-    invoke-direct {v0, v3, v1, v2}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lwl5;->c:Lwl5;
-
-    new-instance v1, Lwl5;
-
-    const/4 v2, 0x1
-
-    const-string v3, "ChatMessage"
-
-    const-string v4, "CHAT_MESSAGE"
-
-    invoke-direct {v1, v4, v2, v3}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lwl5;->o:Lwl5;
-
-    new-instance v2, Lwl5;
-
-    const/4 v3, 0x2
-
-    const-string v4, "ChatMessage-channel"
-
-    const-string v5, "CHANNEL_MESSAGE"
-
-    invoke-direct {v2, v5, v3, v4}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lwl5;->X:Lwl5;
-
-    new-instance v3, Lwl5;
-
-    const/4 v4, 0x3
-
-    const-string v5, "ChatSystemMessage"
-
-    const-string v6, "CHAT_SYSTEM_MESSAGE"
-
-    invoke-direct {v3, v6, v4, v5}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lwl5;->Y:Lwl5;
-
-    new-instance v4, Lwl5;
-
-    const/4 v5, 0x4
-
-    const-string v6, "ChatReply"
-
-    const-string v7, "CHAT_REPLY"
-
-    invoke-direct {v4, v7, v5, v6}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lwl5;->Z:Lwl5;
-
-    new-instance v5, Lwl5;
-
-    const/4 v6, 0x5
-
-    const-string v7, "GroupChat"
-
-    const-string v8, "GROUP_CHAT"
-
-    invoke-direct {v5, v8, v6, v7}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lwl5;->r0:Lwl5;
-
-    new-instance v6, Lwl5;
-
-    const/4 v7, 0x6
-
-    const-string v8, "Scheduled"
-
-    const-string v9, "SCHEDULED"
-
-    invoke-direct {v6, v9, v7, v8}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lwl5;->s0:Lwl5;
-
-    new-instance v7, Lwl5;
-
-    const/4 v8, 0x7
-
-    const-string v9, "Unknown"
-
-    const-string v10, "UNKNOWN"
-
-    invoke-direct {v7, v10, v8, v9}, Lwl5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lwl5;->t0:Lwl5;
-
-    filled-new-array/range {v0 .. v7}, [Lwl5;
-
-    move-result-object v0
-
-    sput-object v0, Lwl5;->u0:[Lwl5;
-
-    invoke-static {}, Lwl5;->values()[Lwl5;
-
-    move-result-object v0
-
-    sput-object v0, Lwl5;->b:[Lwl5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+# virtual methods
+.method public final bridge synthetic A(Lb18;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    check-cast p1, Lyl5;
 
-    iput-object p3, p0, Lwl5;->a:Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lwl5;->G(Lyl5;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwl5;
-    .locals 1
+.method public final B(Lb18;Ljava/lang/Object;)V
+    .locals 6
 
-    const-class v0, Lwl5;
+    check-cast p1, Lyl5;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    instance-of v0, p2, Lxl5;
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    check-cast p0, Lwl5;
+    check-cast p2, Lxl5;
 
-    return-object p0
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    if-eqz p2, :cond_6
+
+    iget-object p2, p2, Lqci;->b:Ljava/lang/Object;
+
+    check-cast p2, Ljava/util/BitSet;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lj6d;->a:Landroid/view/View;
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_1
+    move-object v0, v1
+
+    check-cast v0, Leb2;
+
+    iget-object v2, p1, Lyl5;->b:Landroid/net/Uri;
+
+    iget-object v3, p1, Lyl5;->r0:Ljava/lang/CharSequence;
+
+    iget-wide v4, p1, Lyl5;->a:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v2, v3, v4}, Leb2;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Ljava/lang/Long;)V
+
+    :cond_2
+    const/4 v0, 0x1
+
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    move-object v0, v1
+
+    check-cast v0, Leb2;
+
+    iget-boolean v2, p1, Lyl5;->c:Z
+
+    invoke-virtual {v0, v2}, Leb2;->setOnline(Z)V
+
+    :cond_3
+    const/4 v0, 0x2
+
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    move-object v0, v1
+
+    check-cast v0, Leb2;
+
+    iget-object v2, p1, Lyl5;->X:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v2}, Leb2;->setTitle(Ljava/lang/CharSequence;)V
+
+    :cond_4
+    const/4 v0, 0x3
+
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    move-object v0, v1
+
+    check-cast v0, Leb2;
+
+    iget-object v2, p1, Lyl5;->Y:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v2}, Leb2;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    :cond_5
+    const/4 v0, 0x4
+
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    const/4 v0, 0x6
+
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_6
+
+    check-cast v1, Leb2;
+
+    iget-boolean p1, p1, Lyl5;->o:Z
+
+    invoke-virtual {v1, p1}, Leb2;->setVerified(Z)V
+
+    :cond_6
+    return-void
 .end method
 
-.method public static values()[Lwl5;
-    .locals 1
+.method public final G(Lyl5;)V
+    .locals 5
 
-    sget-object v0, Lwl5;->u0:[Lwl5;
+    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    check-cast v0, Leb2;
 
-    move-result-object v0
+    iget-wide v1, p1, Lyl5;->a:J
 
-    check-cast v0, [Lwl5;
+    const-wide/32 v3, 0x7fffffff
 
-    return-object v0
+    cmp-long v3, v1, v3
+
+    if-lez v3, :cond_0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v3
+
+    goto :goto_0
+
+    :cond_0
+    long-to-int v3, v1
+
+    :goto_0
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+
+    iget-object v3, p1, Lyl5;->X:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v3}, Leb2;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v3, p1, Lyl5;->Y:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v3}, Leb2;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-object v3, p1, Lyl5;->b:Landroid/net/Uri;
+
+    iget-object v4, p1, Lyl5;->r0:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v3, v4, v1}, Leb2;->a(Landroid/net/Uri;Ljava/lang/CharSequence;Ljava/lang/Long;)V
+
+    iget-boolean v1, p1, Lyl5;->c:Z
+
+    invoke-virtual {v0, v1}, Leb2;->setOnline(Z)V
+
+    iget-boolean p1, p1, Lyl5;->o:Z
+
+    invoke-virtual {v0, p1}, Leb2;->setVerified(Z)V
+
+    return-void
 .end method

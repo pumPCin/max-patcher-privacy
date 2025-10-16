@@ -1,111 +1,123 @@
-.class public final synthetic Loy0;
+.class public abstract synthetic Loy0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvae;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzy0;
-
-.field public final synthetic c:Lyg1;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzy0;Lyg1;I)V
-    .locals 0
-
-    iput p3, p0, Loy0;->a:I
-
-    iput-object p1, p0, Loy0;->b:Lzy0;
-
-    iput-object p2, p0, Loy0;->c:Lyg1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    iget p1, p0, Loy0;->a:I
+    invoke-static {}, Lcy0;->values()[Lcy0;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object v0
 
-    iget-object p1, p0, Loy0;->b:Lzy0;
+    array-length v0, v0
 
-    iget-object v0, p1, Lzy0;->D0:Lyg1;
+    new-array v0, v0, [I
 
-    iget-object v1, p0, Loy0;->c:Lyg1;
+    :try_start_0
+    sget-object v1, Lcy0;->s0:Lcy0;
 
-    invoke-virtual {v1, v0}, Lyg1;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x1
 
-    const/4 v0, 0x0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v0, p1, Lzy0;->D0:Lyg1;
+    :catch_0
+    :try_start_1
+    sget-object v1, Lcy0;->t0:Lcy0;
 
-    sget-object v1, La61;->H0:La61;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p1, v1, v0}, Lzy0;->l(La61;Ljava/lang/Object;)V
+    move-result v1
 
-    :cond_0
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Lcy0;->u0:Lcy0;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v1, Lcy0;->v0:Lcy0;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Lcy0;->w0:Lcy0;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v1, Lcy0;->x0:Lcy0;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v1, Lcy0;->y0:Lcy0;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Loy0;->$EnumSwitchMapping$0:[I
+
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Loy0;->b:Lzy0;
-
-    iget-object v0, p1, Lzy0;->c0:Lun6;
-
-    iget-object p1, p1, Lzy0;->i0:Lhh1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, p0, Loy0;->c:Lyg1;
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v2, v1}, Lhh1;->l(Lvud;Ljava/util/List;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lw83;->g0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lch1;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, v0, Lun6;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Hashtable;
-
-    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

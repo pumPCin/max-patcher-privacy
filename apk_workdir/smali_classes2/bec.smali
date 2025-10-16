@@ -1,90 +1,95 @@
-.class public abstract Lbec;
-.super Ljava/lang/Object;
+.class public final Lbec;
+.super Lyi0;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_storage_item_action_all_cancel:I = 0x7f0a0804
+# instance fields
+.field public final j:I
 
-.field public static oneme_settings_storage_item_action_all_clear:I = 0x7f0a0805
 
-.field public static oneme_settings_storage_item_action_audio_cancel:I = 0x7f0a0806
+# direct methods
+.method public constructor <init>(Ly38;Loo3;Lxve;Lop3;I)V
+    .locals 0
 
-.field public static oneme_settings_storage_item_action_audio_clear:I = 0x7f0a0807
+    invoke-direct {p0, p1, p2, p3, p4}, Lyi0;-><init>(Ly38;Loo3;Lxve;Lop3;)V
 
-.field public static oneme_settings_storage_item_action_files_cancel:I = 0x7f0a0808
+    iput p5, p0, Lbec;->j:I
 
-.field public static oneme_settings_storage_item_action_files_clear:I = 0x7f0a0809
+    return-void
+.end method
 
-.field public static oneme_settings_storage_item_action_gif_cancel:I = 0x7f0a080a
 
-.field public static oneme_settings_storage_item_action_gif_clear:I = 0x7f0a080b
+# virtual methods
+.method public final close()V
+    .locals 0
 
-.field public static oneme_settings_storage_item_action_images_cancel:I = 0x7f0a080c
+    return-void
+.end method
 
-.field public static oneme_settings_storage_item_action_images_clear:I = 0x7f0a080d
+.method public final d()I
+    .locals 1
 
-.field public static oneme_settings_storage_item_action_music_cancel:I = 0x7f0a080e
+    iget-object v0, p0, Lyi0;->f:Loo3;
 
-.field public static oneme_settings_storage_item_action_music_clear:I = 0x7f0a080f
+    iget-object v0, v0, Loo3;->d:Lrhf;
 
-.field public static oneme_settings_storage_item_action_stickers_cancel:I = 0x7f0a0810
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
 
-.field public static oneme_settings_storage_item_action_stickers_clear:I = 0x7f0a0811
+    move-result-object v0
 
-.field public static oneme_settings_storage_item_action_video_cancel:I = 0x7f0a0812
+    check-cast v0, Ljava/lang/Number;
 
-.field public static oneme_settings_storage_item_action_video_clear:I = 0x7f0a0813
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-.field public static oneme_settings_storage_item_all_clear_title:I = 0x7f0a0814
+    move-result v0
 
-.field public static oneme_settings_storage_item_audio_clear_title:I = 0x7f0a0815
+    return v0
+.end method
 
-.field public static oneme_settings_storage_item_audio_messages:I = 0x7f0a0816
+.method public final g(Z)V
+    .locals 0
 
-.field public static oneme_settings_storage_item_clear_cache:I = 0x7f0a0817
+    return-void
+.end method
 
-.field public static oneme_settings_storage_item_files:I = 0x7f0a0818
+.method public final i()Ljava/lang/String;
+    .locals 1
 
-.field public static oneme_settings_storage_item_files_clear_title:I = 0x7f0a0819
+    iget-object v0, p0, Lyi0;->f:Loo3;
 
-.field public static oneme_settings_storage_item_gif:I = 0x7f0a081a
+    iget-object v0, v0, Loo3;->a:Ljava/lang/String;
 
-.field public static oneme_settings_storage_item_gif_clear_title:I = 0x7f0a081b
+    return-object v0
+.end method
 
-.field public static oneme_settings_storage_item_images:I = 0x7f0a081c
+.method public final j()I
+    .locals 1
 
-.field public static oneme_settings_storage_item_images_clear_title:I = 0x7f0a081d
+    iget v0, p0, Lbec;->j:I
 
-.field public static oneme_settings_storage_item_music:I = 0x7f0a081e
+    return v0
+.end method
 
-.field public static oneme_settings_storage_item_music_clear_title:I = 0x7f0a081f
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static oneme_settings_storage_item_one_month:I = 0x7f0a0820
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_storage_item_one_week:I = 0x7f0a0821
+    const-string v1, "ProxyClient{connectionHost="
 
-.field public static oneme_settings_storage_item_six_month:I = 0x7f0a0822
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static oneme_settings_storage_item_stickers:I = 0x7f0a0823
+    iget-object v1, p0, Lyi0;->f:Loo3;
 
-.field public static oneme_settings_storage_item_stickers_clear_title:I = 0x7f0a0824
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_storage_item_unlimited:I = 0x7f0a0825
+    const-string v1, "}"
 
-.field public static oneme_settings_storage_item_video:I = 0x7f0a0826
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_storage_item_video_clear_title:I = 0x7f0a0827
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static oneme_settings_storage_screen_data_section_header:I = 0x7f0a0828
+    move-result-object v0
 
-.field public static oneme_settings_storage_screen_list:I = 0x7f0a0829
-
-.field public static oneme_settings_storage_screen_preserve_media_section:I = 0x7f0a082a
-
-.field public static oneme_settings_storage_screen_settings_button_vh:I = 0x7f0a082b
-
-.field public static oneme_settings_storage_screen_settings_header_vh:I = 0x7f0a082c
-
-.field public static oneme_settings_storage_screen_settings_item_vh:I = 0x7f0a082d
-
-.field public static oneme_settings_storage_screen_toolbar:I = 0x7f0a082e
+    return-object v0
+.end method

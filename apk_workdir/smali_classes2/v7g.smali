@@ -1,108 +1,85 @@
 .class public final Lv7g;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lq65;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:Lw7g;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
 
 # direct methods
-.method public constructor <init>(Lw7g;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lv7g;->Y:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    iput-object p1, p0, Lv7g;->a:Lw7g;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lone/video/exo/error/OneVideoExoPlaybackException;Lmhg;Lqya;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string p3, "ERROR: "
-
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lv7g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object p2, p0, Lv7g;->a:Lw7g;
+    check-cast p1, Lv7g;
 
-    invoke-static {p2, p1}, Lw7g;->i(Lw7g;Ljava/lang/String;)V
+    sget-object p2, Lzag;->a:Lzag;
 
-    return-void
+    invoke-virtual {p1, p2}, Lv7g;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final j(Lqya;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lv7g;
+
+    iget-object v1, p0, Lv7g;->Y:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
+
+    invoke-direct {v0, p2, v1}, Lv7g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
+
+    iput-object p1, v0, Lv7g;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p1, p0, Lv7g;->a:Lw7g;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v0, "VIDEO FINISH"
+    iget-object p1, p0, Lv7g;->X:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lw7g;->i(Lw7g;Ljava/lang/String;)V
+    check-cast p1, Lb4a;
 
-    return-void
-.end method
+    instance-of v0, p1, Lhf4;
 
-.method public final k(Lqya;)V
-    .locals 1
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lv7g;->a:Lw7g;
+    sget-object v0, Ln7g;->c:Ln7g;
 
-    invoke-virtual {v0, p1}, Lw7g;->k(Lqya;)V
+    check-cast p1, Lhf4;
 
-    return-void
-.end method
+    invoke-virtual {v0, p1}, Lqci;->t0(Lhf4;)V
 
-.method public final l(Lgya;Lshg;)V
-    .locals 0
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    iget-object p2, p0, Lv7g;->a:Lw7g;
-
-    invoke-virtual {p2, p1}, Lw7g;->k(Lqya;)V
-
-    return-void
-.end method
-
-.method public final r(Lqya;)V
-    .locals 1
-
-    iget-object v0, p0, Lv7g;->a:Lw7g;
-
-    invoke-virtual {v0, p1}, Lw7g;->k(Lqya;)V
-
-    return-void
-.end method
-
-.method public final t(Lqya;)V
-    .locals 1
-
-    iget-object v0, p0, Lv7g;->a:Lw7g;
-
-    invoke-virtual {v0, p1}, Lw7g;->k(Lqya;)V
-
-    return-void
-.end method
-
-.method public final x(Lqya;)V
-    .locals 1
-
-    iget-object v0, p0, Lv7g;->a:Lw7g;
-
-    invoke-virtual {v0, p1}, Lw7g;->k(Lqya;)V
-
-    return-void
+    return-object p1
 .end method

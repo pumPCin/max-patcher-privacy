@@ -1,158 +1,130 @@
 .class public final La08;
-.super Ljava/lang/Object;
+.super Lsyg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final X:Lsze;
 
-.field public final b:Lwkc;
+.field public final Y:Ljava/lang/Object;
 
-.field public volatile c:Z
+.field public final b:Lsze;
 
-.field public volatile d:Z
+.field public final c:Lgzc;
+
+.field public final o:Llt7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lwkc;)V
-    .locals 2
+.method public constructor <init>(Llt7;Ljava/lang/String;)V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lsyg;-><init>()V
 
-    iput-object p1, p0, La08;->a:Landroid/content/Context;
+    new-instance v0, Lvz7;
 
-    iput-object p2, p0, La08;->b:Lwkc;
+    sget-object v1, Loqf;->b:Lnqf;
 
-    const-string p2, "android.permission.RECORD_AUDIO"
+    const-string v2, ""
 
-    invoke-static {p1, p2}, Lw7;->e(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-direct {v0, v1, v2}, Lvz7;-><init>(Loqf;Ljava/lang/String;)V
 
-    move-result p2
+    invoke-static {v0}, Ltze;->a(Ljava/lang/Object;)Lsze;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    const/4 v1, 0x1
+    iput-object v0, p0, La08;->b:Lsze;
 
-    if-nez p2, :cond_0
+    new-instance v1, Lgzc;
 
-    move p2, v1
+    invoke-direct {v1, v0}, Lgzc;-><init>(Lh0a;)V
 
-    goto :goto_0
+    iput-object v1, p0, La08;->c:Lgzc;
 
-    :cond_0
-    move p2, v0
+    iput-object p1, p0, La08;->o:Llt7;
 
-    :goto_0
-    iput-boolean p2, p0, La08;->c:Z
+    invoke-static {v2}, Ltze;->a(Ljava/lang/Object;)Lsze;
 
-    const-string p2, "android.permission.CAMERA"
+    move-result-object p1
 
-    invoke-static {p1, p2}, Lw7;->e(Landroid/content/Context;Ljava/lang/String;)I
+    iput-object p1, p0, La08;->X:Lsze;
+
+    new-instance v1, Lvj7;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v1, v2}, Lvj7;-><init>(I)V
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v1}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v1
+
+    iput-object v1, p0, La08;->Y:Ljava/lang/Object;
+
+    new-instance v1, Ln23;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, p1, v2}, Ln23;-><init>(Lzx5;I)V
+
+    const-wide/16 v2, 0x12c
+
+    invoke-static {v1, v2, v3}, Ly1j;->j(Lzx5;J)Lzx5;
+
+    move-result-object p1
+
+    new-instance v1, Lmr0;
+
+    const/4 v7, 0x4
+
+    const/16 v8, 0x13
+
+    const/4 v2, 0x2
+
+    const-class v4, La08;
+
+    const-string v5, "validateText"
+
+    const-string v6, "validateText(Ljava/lang/String;)V"
+
+    move-object v3, p0
+
+    invoke-direct/range {v1 .. v8}, Lmr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v2, Lh06;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, p1, v1, v4}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    iget-object p1, v3, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, p1}, La1j;->d(Lzx5;Lb54;)V
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-lez p1, :cond_0
 
-    move v0, v1
+    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    iput-boolean v0, p0, La08;->d:Z
+    move-result-object p1
 
-    return-void
-.end method
+    check-cast p1, Lvz7;
 
+    iget-object p1, p1, Lvz7;->b:Loqf;
 
-# virtual methods
-.method public final a()Z
-    .locals 10
+    new-instance v1, Lvz7;
 
-    const-string v0, "android.permission.RECORD_AUDIO"
+    invoke-direct {v1, p1, p2}, Lvz7;-><init>(Loqf;Ljava/lang/String;)V
 
-    iget-object v1, p0, La08;->a:Landroid/content/Context;
+    const/4 p1, 0x0
 
-    invoke-static {v1, v0}, Lw7;->e(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
+    invoke-virtual {v0, p1, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_0
-    move v0, v2
-
-    :goto_0
-    const-string v3, "android.permission.CAMERA"
-
-    iget-object v4, p0, La08;->a:Landroid/content/Context;
-
-    invoke-static {v4, v3}, Lw7;->e(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    move v3, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v2
-
-    :goto_1
-    iget-object v4, p0, La08;->b:Lwkc;
-
-    iget-boolean v5, p0, La08;->c:Z
-
-    iget-boolean v6, p0, La08;->d:Z
-
-    const-string v7, ", video: "
-
-    const-string v8, "call permissions state updated, audio: "
-
-    const-string v9, "->"
-
-    invoke-static {v8, v5, v9, v0, v7}, Lbk7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "LocalMediaPermissionProvider"
-
-    invoke-interface {v4, v6, v5}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v4, p0, La08;->c:Z
-
-    if-eq v4, v0, :cond_2
-
-    iput-boolean v0, p0, La08;->c:Z
-
-    move v2, v1
-
-    :cond_2
-    iget-boolean v0, p0, La08;->d:Z
-
-    if-eq v0, v3, :cond_3
-
-    iput-boolean v3, p0, La08;->d:Z
-
-    return v1
-
-    :cond_3
-    return v2
+    return-void
 .end method

@@ -1,269 +1,314 @@
-.class public Lkt5;
-.super Ljava/lang/Object;
+.class public final Lkt5;
+.super Lc2;
 .source "SourceFile"
-
-# interfaces
-.implements Lmld;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ld1e;
 
-.field public final b:J
+.field public final synthetic c:I
 
-.field public final c:Ljava/lang/Object;
+.field public final o:Ljava/util/ArrayDeque;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lgx5;)V
     .locals 2
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lkt5;->a:I
+    iput v0, p0, Lkt5;->c:I
 
-    const-wide/16 v0, 0x0
-
-    .line 4
-    invoke-direct {p0, p1, p2, v0, v1}, Lkt5;-><init>(JJ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JJ)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lkt5;->a:I
-
-    .line 5
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    iput-wide p1, p0, Lkt5;->b:J
+    .line 11
+    iput-object p1, p0, Lkt5;->X:Ld1e;
 
-    .line 7
-    new-instance p1, Lkld;
+    .line 12
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    const-wide/16 v0, 0x0
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    cmp-long p2, p3, v0
+    iput-object v0, p0, Lkt5;->o:Ljava/util/ArrayDeque;
 
-    if-nez p2, :cond_0
+    .line 13
+    iget-object v1, p1, Lgx5;->c:Lqh6;
 
-    .line 8
-    sget-object p2, Lqld;->c:Lqld;
+    .line 14
+    iget-object p1, p1, Lgx5;->b:Ljava/lang/Object;
+
+    .line 15
+    invoke-interface {v1, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 16
+    invoke-virtual {p0, p1}, Lkt5;->c(Ljava/lang/Object;)Lo3g;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 17
     :cond_0
-    new-instance p2, Lqld;
+    new-instance v1, Lr3g;
 
-    invoke-direct {p2, v0, v1, p3, p4}, Lqld;-><init>(JJ)V
+    invoke-direct {v1, p0, p1}, Lr3g;-><init>(Lkt5;Ljava/lang/Object;)V
 
-    .line 9
+    invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
+
     :goto_0
-    invoke-direct {p1, p2, p2}, Lkld;-><init>(Lqld;Lqld;)V
-
-    .line 10
-    iput-object p1, p0, Lkt5;->c:Ljava/lang/Object;
-
     return-void
 .end method
 
-.method public constructor <init>(Llt5;J)V
-    .locals 1
+.method public constructor <init>(Lmt5;)V
+    .locals 2
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lkt5;->a:I
+    iput v0, p0, Lkt5;->c:I
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lkt5;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lkt5;->X:Ld1e;
 
     .line 3
-    iput-wide p2, p0, Lkt5;->b:J
+    new-instance v0, Ljava/util/ArrayDeque;
 
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lkt5;->o:Ljava/util/ArrayDeque;
+
+    .line 4
+    iget-object p1, p1, Lmt5;->a:Ljava/io/File;
+
+    .line 5
+    invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, p1}, Lkt5;->b(Ljava/io/File;)Lgt5;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    invoke-virtual {p1}, Ljava/io/File;->isFile()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Lit5;
+
+    .line 7
+    invoke-direct {v1, p1}, Llt5;-><init>(Ljava/io/File;)V
+
+    .line 8
+    invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x2
+
+    .line 9
+    iput p1, p0, Lc2;->a:I
+
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final a()V
+    .locals 5
 
-    iget v0, p0, Lkt5;->a:I
+    iget v0, p0, Lkt5;->c:I
 
     packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lkt5;->X:Ld1e;
+
+    check-cast v0, Lgx5;
+
+    :goto_0
+    iget-object v1, p0, Lkt5;->o:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lt3g;
+
+    if-nez v2, :cond_0
 
     const/4 v0, 0x0
 
-    return v0
+    goto :goto_2
 
-    :pswitch_0
-    const/4 v0, 0x1
+    :cond_0
+    iget-object v3, v2, Lt3g;->a:Ljava/lang/Object;
 
-    return v0
+    invoke-virtual {v2}, Lt3g;->a()Ljava/lang/Object;
 
-    nop
+    move-result-object v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-nez v2, :cond_1
 
-.method public final e(J)Lkld;
-    .locals 13
-
-    iget v0, p0, Lkt5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lkt5;->c:Ljava/lang/Object;
-
-    check-cast p1, Lkld;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lkt5;->c:Ljava/lang/Object;
-
-    check-cast v0, Llt5;
-
-    iget-object v1, v0, Llt5;->l:Ljava/lang/Object;
-
-    check-cast v1, Lf8h;
-
-    invoke-static {v1}, Lnjg;->n(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Llt5;->l:Ljava/lang/Object;
-
-    check-cast v1, Lf8h;
-
-    iget-object v2, v1, Lf8h;->b:Ljava/lang/Object;
-
-    check-cast v2, [J
-
-    iget-object v1, v1, Lf8h;->c:Ljava/lang/Object;
-
-    check-cast v1, [J
-
-    iget v3, v0, Llt5;->f:I
-
-    int-to-long v3, v3
-
-    mul-long/2addr v3, p1
-
-    const-wide/32 v5, 0xf4240
-
-    div-long v7, v3, v5
-
-    iget-wide v3, v0, Llt5;->k:J
-
-    const-wide/16 v9, 0x1
-
-    sub-long v11, v3, v9
-
-    const-wide/16 v9, 0x0
-
-    invoke-static/range {v7 .. v12}, Le3g;->j(JJJ)J
-
-    move-result-wide v3
-
-    const/4 v7, 0x0
-
-    invoke-static {v2, v3, v4, v7}, Le3g;->e([JJZ)I
-
-    move-result v3
-
-    const-wide/16 v7, 0x0
-
-    const/4 v4, -0x1
-
-    if-ne v3, v4, :cond_0
-
-    move-wide v9, v7
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
 
     goto :goto_0
 
-    :cond_0
-    aget-wide v9, v2, v3
+    :cond_1
+    if-eq v2, v3, :cond_3
 
-    :goto_0
-    if-ne v3, v4, :cond_1
+    iget-object v3, v0, Lgx5;->c:Lqh6;
+
+    invoke-interface {v3, v2}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v3
+
+    const v4, 0x7fffffff
+
+    if-lt v3, v4, :cond_2
 
     goto :goto_1
 
-    :cond_1
-    aget-wide v7, v1, v3
-
-    :goto_1
-    mul-long/2addr v9, v5
-
-    iget v0, v0, Llt5;->f:I
-
-    int-to-long v11, v0
-
-    div-long/2addr v9, v11
-
-    iget-wide v11, p0, Lkt5;->b:J
-
-    add-long/2addr v7, v11
-
-    new-instance v4, Lqld;
-
-    invoke-direct {v4, v9, v10, v7, v8}, Lqld;-><init>(JJ)V
-
-    cmp-long p1, v9, p1
-
-    if-eqz p1, :cond_3
-
-    array-length p1, v2
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-ne v3, p1, :cond_2
-
-    goto :goto_2
-
     :cond_2
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {p0, v2}, Lkt5;->c(Ljava/lang/Object;)Lo3g;
 
-    aget-wide p1, v2, v3
+    move-result-object v2
 
-    aget-wide v2, v1, v3
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
 
-    mul-long/2addr p1, v5
+    goto :goto_0
 
-    int-to-long v0, v0
+    :cond_3
+    :goto_1
+    move-object v0, v2
 
-    div-long/2addr p1, v0
+    :goto_2
+    if-eqz v0, :cond_4
 
-    add-long/2addr v11, v2
+    iput-object v0, p0, Lc2;->b:Ljava/lang/Object;
 
-    new-instance v0, Lqld;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p1, p2, v11, v12}, Lqld;-><init>(JJ)V
-
-    new-instance p1, Lkld;
-
-    invoke-direct {p1, v4, v0}, Lkld;-><init>(Lqld;Lqld;)V
+    iput v0, p0, Lc2;->a:I
 
     goto :goto_3
 
-    :cond_3
-    :goto_2
-    new-instance p1, Lkld;
+    :cond_4
+    const/4 v0, 0x2
 
-    invoke-direct {p1, v4, v4}, Lkld;-><init>(Lqld;Lqld;)V
+    iput v0, p0, Lc2;->a:I
 
     :goto_3
-    return-object p1
+    return-void
+
+    :goto_4
+    :pswitch_0
+    iget-object v0, p0, Lkt5;->o:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llt5;
+
+    if-nez v1, :cond_5
+
+    const/4 v0, 0x0
+
+    goto :goto_6
+
+    :cond_5
+    invoke-virtual {v1}, Llt5;->a()Ljava/io/File;
+
+    move-result-object v2
+
+    if-nez v2, :cond_6
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
+
+    goto :goto_4
+
+    :cond_6
+    iget-object v1, v1, Llt5;->a:Ljava/io/File;
+
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v1
+
+    const v3, 0x7fffffff
+
+    if-lt v1, v3, :cond_7
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {p0, v2}, Lkt5;->b(Ljava/io/File;)Lgt5;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_8
+    :goto_5
+    move-object v0, v2
+
+    :goto_6
+    if-eqz v0, :cond_9
+
+    iput-object v0, p0, Lc2;->b:Ljava/lang/Object;
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lc2;->a:I
+
+    goto :goto_7
+
+    :cond_9
+    const/4 v0, 0x2
+
+    iput v0, p0, Lc2;->a:I
+
+    :goto_7
+    return-void
 
     nop
 
@@ -273,32 +318,87 @@
     .end packed-switch
 .end method
 
-.method public final f()J
+.method public b(Ljava/io/File;)Lgt5;
     .locals 2
 
-    iget v0, p0, Lkt5;->a:I
+    iget-object v0, p0, Lkt5;->X:Ld1e;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lmt5;
 
-    iget-wide v0, p0, Lkt5;->b:J
+    iget v0, v0, Lmt5;->b:I
 
-    return-wide v0
+    invoke-static {v0}, Lwx1;->v(I)I
 
-    :pswitch_0
-    iget-object v0, p0, Lkt5;->c:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Llt5;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Llt5;->c()J
+    const/4 v1, 0x1
 
-    move-result-wide v0
+    if-ne v0, v1, :cond_0
 
-    return-wide v0
+    new-instance v0, Lht5;
 
-    nop
+    invoke-direct {v0, p1}, Llt5;-><init>(Ljava/io/File;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    new-instance v0, Ljt5;
+
+    invoke-direct {v0, p1}, Llt5;-><init>(Ljava/io/File;)V
+
+    return-object v0
+.end method
+
+.method public c(Ljava/lang/Object;)Lo3g;
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Lwx1;->v(I)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    if-eq v1, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-ne v1, v0, :cond_0
+
+    new-instance v0, Lq3g;
+
+    invoke-direct {v0, p0, p1}, Lq3g;-><init>(Lkt5;Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    new-instance v0, Lp3g;
+
+    invoke-direct {v0, p0, p1}, Lp3g;-><init>(Lkt5;Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_2
+    new-instance v0, Ls3g;
+
+    invoke-direct {v0, p0, p1}, Ls3g;-><init>(Lkt5;Ljava/lang/Object;)V
+
+    return-object v0
 .end method

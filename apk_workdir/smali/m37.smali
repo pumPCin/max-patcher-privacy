@@ -1,133 +1,294 @@
 .class public final Lm37;
-.super Ldx1;
+.super Ldy;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lm37;
+# instance fields
+.field public final synthetic k:I
+
+.field public final l:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lm37;
+    iput p1, p0, Lm37;->k:I
 
-    new-instance v1, Le49;
+    iput-object p2, p0, Lm37;->l:Ljava/lang/Object;
 
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2}, Le49;-><init>(I)V
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lm37;->b:Lm37;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lf2g;Lq30;)V
-    .locals 3
+.method public final k()V
+    .locals 6
 
-    invoke-super {p0, p1, p2}, Ldx1;->a(Lf2g;Lq30;)V
+    iget v0, p0, Lm37;->k:I
 
-    instance-of v0, p1, Ll37;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_4
+    const-string v0, "Failed to close timed out socket "
 
-    check-cast p1, Ll37;
+    iget-object v1, p0, Lm37;->l:Ljava/lang/Object;
 
-    invoke-static {}, Lbs9;->c()Lbs9;
+    check-cast v1, Ljava/net/Socket;
 
-    move-result-object v0
+    :try_start_0
+    invoke-virtual {v1}, Ljava/net/Socket;->close()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget-object v1, Ll37;->b:Le90;
+    goto :goto_1
 
-    invoke-interface {p1, v1}, Lyoc;->i(Le90;)Z
+    :catch_0
+    move-exception v2
 
-    move-result v2
+    sget-object v3, Lcla;->a:Ljava/util/logging/Logger;
 
-    if-eqz v2, :cond_3
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    invoke-interface {p1, v1}, Lyoc;->f(Le90;)Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object p1
+    const/4 v4, 0x0
 
-    check-cast p1, Ljava/lang/Integer;
+    if-eqz v3, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v3
 
-    const-class v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
+    if-eqz v3, :cond_0
 
-    sget-object v2, Lgp4;->a:Lxce;
+    const-string v5, "getsockname failed"
 
-    invoke-virtual {v2, v1}, Lxce;->j(Ljava/lang/Class;)La8c;
+    invoke-static {v3, v5, v4}, Ls9f;->q(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
-
-    if-nez v1, :cond_0
+    move-result v3
 
     goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_2
+    move v3, v4
 
-    const/4 v1, 0x1
+    :goto_0
+    if-eqz v3, :cond_1
 
-    if-eq p1, v1, :cond_1
-
-    goto :goto_0
+    const/4 v4, 0x1
 
     :cond_1
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
+    if-eqz v4, :cond_2
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v3, Lcla;->a:Ljava/util/logging/Logger;
 
-    invoke-static {p1}, Lyx1;->Y(Landroid/hardware/camera2/CaptureRequest$Key;)Le90;
+    sget-object v4, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
-    move-result-object p1
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1, v1}, Lbs9;->o(Le90;Ljava/lang/Object;)V
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lyx1;->Y(Landroid/hardware/camera2/CaptureRequest$Key;)Le90;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v1}, Lbs9;->o(Le90;Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_0
-    new-instance p1, Lyx1;
-
-    invoke-static {v0}, Lg0b;->a(Lth3;)Lg0b;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lood;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v3, v4, v0, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p2, p1}, Lq30;->c(Lth3;)V
+    goto :goto_1
+
+    :cond_2
+    throw v2
+
+    :catch_1
+    move-exception v2
+
+    sget-object v3, Lcla;->a:Ljava/util/logging/Logger;
+
+    sget-object v4, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v4, v0, v2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lm37;->l:Ljava/lang/Object;
+
+    check-cast v0, Llzc;
+
+    invoke-virtual {v0}, Llzc;->d()V
 
     return-void
 
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    :pswitch_1
+    iget-object v0, p0, Lm37;->l:Ljava/lang/Object;
 
-    const-string p2, "config is not ImageCaptureConfig"
+    check-cast v0, Ln37;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/16 v1, 0x9
 
-    throw p1
+    invoke-virtual {v0, v1}, Ln37;->e(I)V
+
+    iget-object v0, p0, Lm37;->l:Ljava/lang/Object;
+
+    check-cast v0, Ln37;
+
+    iget-object v0, v0, Ln37;->n:Lg37;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-wide v1, v0, Lg37;->x0:J
+
+    iget-wide v3, v0, Lg37;->w0:J
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    cmp-long v1, v1, v3
+
+    if-gez v1, :cond_3
+
+    monitor-exit v0
+
+    goto :goto_2
+
+    :cond_3
+    const-wide/16 v1, 0x1
+
+    add-long/2addr v3, v1
+
+    :try_start_2
+    iput-wide v3, v0, Lg37;->w0:J
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v1
+
+    const v3, 0x3b9aca00
+
+    int-to-long v3, v3
+
+    add-long/2addr v1, v3
+
+    iput-wide v1, v0, Lg37;->y0:J
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v0
+
+    iget-object v1, v0, Lg37;->r0:Ldof;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, v0, Lg37;->c:Ljava/lang/String;
+
+    const-string v4, " ping"
+
+    invoke-static {v2, v3, v4}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Le37;
+
+    invoke-direct {v3, v2, v0}, Le37;-><init>(Ljava/lang/String;Lg37;)V
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v1, v3, v4, v5}, Ldof;->c(Lnnf;J)V
+
+    :goto_2
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public l()V
+    .locals 1
+
+    invoke-virtual {p0}, Ldy;->j()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lm37;->m(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public m(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 2
+
+    iget v0, p0, Lm37;->k:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/net/SocketTimeoutException;
+
+    const-string v1, "timeout"
+
+    invoke-direct {v0, v1}, Ljava/net/SocketTimeoutException;-><init>(Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    :cond_0
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/net/SocketTimeoutException;
+
+    const-string v1, "timeout"
+
+    invoke-direct {v0, v1}, Ljava/net/SocketTimeoutException;-><init>(Ljava/lang/String;)V
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    :cond_1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

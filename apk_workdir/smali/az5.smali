@@ -1,51 +1,52 @@
 .class public final Laz5;
-.super Lx0;
-.source "SourceFile"
+.super Lk14;
 
 
 # instance fields
-.field public final c:Lpcd;
+.field public X:I
 
-.field public final o:Z
+.field public final synthetic Y:Lz01;
+
+.field public Z:Lby5;
+
+.field public synthetic o:Ljava/lang/Object;
+
+.field public r0:Ljava/util/Iterator;
 
 
 # direct methods
-.method public constructor <init>(Ltx5;Lpcd;)V
+.method public constructor <init>(Lz01;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lx0;-><init>(Lrx5;)V
+    iput-object p1, p0, Laz5;->Y:Lz01;
 
-    iput-object p2, p0, Laz5;->c:Lpcd;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Laz5;->o:Z
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lbz5;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Laz5;->c:Lpcd;
+    iput-object p1, p0, Laz5;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lpcd;->a()Lncd;
+    iget p1, p0, Laz5;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    new-instance v1, Lzy5;
+    or-int/2addr p1, v0
 
-    iget-object v2, p0, Lx0;->b:Lrx5;
+    iput p1, p0, Laz5;->X:I
 
-    iget-boolean v3, p0, Laz5;->o:Z
+    iget-object p1, p0, Laz5;->Y:Lz01;
 
-    invoke-direct {v1, p1, v0, v2, v3}, Lzy5;-><init>(Luxe;Lncd;Lw5c;Z)V
+    const/4 v0, 0x0
 
-    invoke-interface {p1, v1}, Luxe;->d(Lwxe;)V
+    invoke-virtual {p1, v0, p0}, Lz01;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lncd;->b(Ljava/lang/Runnable;)Lfs4;
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

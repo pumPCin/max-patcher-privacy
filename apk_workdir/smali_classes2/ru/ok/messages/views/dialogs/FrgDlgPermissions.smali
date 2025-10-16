@@ -17,11 +17,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lz7d;->U2:I
+    sget v0, Lwid;->W2:I
 
     sput v0, Lru/ok/messages/views/dialogs/FrgDlgPermissions;->C1:I
 
-    sget v0, Lz7d;->I:I
+    sget v0, Lwid;->J:I
 
     sput v0, Lru/ok/messages/views/dialogs/FrgDlgPermissions;->D1:I
 
@@ -36,7 +36,7 @@
     return-void
 .end method
 
-.method public static I0([Ljava/lang/String;IIIZ)Lru/ok/messages/views/dialogs/FrgDlgPermissions;
+.method public static H0([Ljava/lang/String;IIIZ)Lru/ok/messages/views/dialogs/FrgDlgPermissions;
     .locals 3
 
     new-instance v0, Lru/ok/messages/views/dialogs/FrgDlgPermissions;
@@ -74,7 +74,7 @@
 
 
 # virtual methods
-.method public final E0()Landroid/app/Dialog;
+.method public final D0()Landroid/app/Dialog;
     .locals 7
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
@@ -111,7 +111,7 @@
 
     move-result v0
 
-    new-instance v3, Lsy3;
+    new-instance v3, Lg14;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->t0()Landroid/content/Context;
 
@@ -119,70 +119,70 @@
 
     sget v5, Lcom/google/android/material/ComGoogleAndroidMaterialR$style;->Theme_MaterialComponents:I
 
-    invoke-direct {v3, v4, v5}, Lsy3;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v3, v4, v5}, Lg14;-><init>(Landroid/content/Context;I)V
 
-    new-instance v4, Lwa8;
+    new-instance v4, Ldh8;
 
     const/4 v5, 0x0
 
-    invoke-direct {v4, v3, v5}, Lwa8;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v4, v3, v5}, Ldh8;-><init>(Landroid/content/Context;I)V
 
-    iget-object v3, v4, Lpc;->a:Llc;
+    iget-object v3, v4, Lyc;->a:Luc;
 
-    iget-object v6, v3, Llc;->a:Landroid/view/ContextThemeWrapper;
+    iget-object v6, v3, Luc;->a:Landroid/view/ContextThemeWrapper;
 
     invoke-virtual {v6, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    iput-object v2, v3, Llc;->d:Ljava/lang/CharSequence;
+    iput-object v2, v3, Luc;->d:Ljava/lang/CharSequence;
 
-    iget-object v2, v3, Llc;->a:Landroid/view/ContextThemeWrapper;
+    iget-object v2, v3, Luc;->a:Landroid/view/ContextThemeWrapper;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    iput-object v1, v3, Llc;->f:Ljava/lang/CharSequence;
+    iput-object v1, v3, Luc;->f:Ljava/lang/CharSequence;
 
-    new-instance v1, Lcd6;
+    new-instance v1, Lwg6;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lcd6;-><init>(Lru/ok/messages/views/dialogs/FrgDlgPermissions;I)V
+    invoke-direct {v1, p0, v2}, Lwg6;-><init>(Lru/ok/messages/views/dialogs/FrgDlgPermissions;I)V
 
-    invoke-virtual {v4, v0, v1}, Lwa8;->c(ILandroid/content/DialogInterface$OnClickListener;)Lwa8;
+    invoke-virtual {v4, v0, v1}, Ldh8;->c(ILandroid/content/DialogInterface$OnClickListener;)Ldh8;
 
     move-result-object v0
 
-    iget-object v1, v0, Lpc;->a:Llc;
+    iget-object v1, v0, Lyc;->a:Luc;
 
-    iput-boolean v5, v1, Llc;->m:Z
+    iput-boolean v5, v1, Luc;->m:Z
 
     iget-boolean v2, p0, Lru/ok/messages/views/dialogs/FrgDlgPermissions;->B1:Z
 
     if-eqz v2, :cond_0
 
-    sget v2, Lz7d;->U1:I
+    sget v2, Lwid;->V1:I
 
-    new-instance v3, Lcd6;
+    new-instance v3, Lwg6;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p0, v4}, Lcd6;-><init>(Lru/ok/messages/views/dialogs/FrgDlgPermissions;I)V
+    invoke-direct {v3, p0, v4}, Lwg6;-><init>(Lru/ok/messages/views/dialogs/FrgDlgPermissions;I)V
 
-    iget-object v4, v1, Llc;->a:Landroid/view/ContextThemeWrapper;
+    iget-object v4, v1, Luc;->a:Landroid/view/ContextThemeWrapper;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    iput-object v2, v1, Llc;->k:Ljava/lang/CharSequence;
+    iput-object v2, v1, Luc;->k:Ljava/lang/CharSequence;
 
-    iput-object v3, v1, Llc;->l:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v3, v1, Luc;->l:Landroid/content/DialogInterface$OnClickListener;
 
     :cond_0
-    invoke-virtual {v0}, Lwa8;->create()Lqc;
+    invoke-virtual {v0}, Ldh8;->create()Lzc;
 
     move-result-object v0
 
@@ -196,24 +196,24 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Ldd6;
+    instance-of v0, p1, Lxg6;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Ldd6;
+    check-cast p1, Lxg6;
 
-    invoke-interface {p1}, Ldd6;->d()V
+    invoke-interface {p1}, Lxg6;->g()V
 
     :cond_0
     iget-object p1, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
 
-    instance-of v0, p1, Ldd6;
+    instance-of v0, p1, Lxg6;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Ldd6;
+    check-cast p1, Lxg6;
 
-    invoke-interface {p1}, Ldd6;->d()V
+    invoke-interface {p1}, Lxg6;->g()V
 
     :cond_1
     return-void

@@ -1,59 +1,53 @@
-.class public abstract Ln82;
-.super Ljava/lang/Object;
+.class public final Ln82;
+.super Lk14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
+# instance fields
+.field public X:Lzx5;
 
-.field public static final b:Ljava/nio/charset/Charset;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static final c:Ljava/nio/charset/Charset;
+.field public final synthetic Z:Lo82;
 
-.field public static volatile d:Ljava/nio/charset/Charset;
+.field public o:Lo82;
 
-.field public static volatile e:Ljava/nio/charset/Charset;
+.field public r0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lo82;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-string v0, "UTF-8"
+    iput-object p1, p0, Ln82;->Z:Lo82;
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ln82;->a:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ln82;->b:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16BE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16LE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "US-ASCII"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "ISO-8859-1"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ln82;->c:Ljava/nio/charset/Charset;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ln82;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Ln82;->r0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ln82;->r0:I
+
+    iget-object p1, p0, Ln82;->Z:Lo82;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lo82;->b(Lzx5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

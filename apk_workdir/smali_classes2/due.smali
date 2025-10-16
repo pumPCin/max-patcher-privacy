@@ -1,13 +1,8 @@
-.class public final Ldue;
+.class public interface abstract Ldue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/util/List;
-
-.field public b:Ljava/util/List;
-
-.field public c:Ljava/util/List;
-
-.field public d:Leae;
+# virtual methods
+.method public abstract b()Landroid/graphics/drawable/Drawable;
+.end method

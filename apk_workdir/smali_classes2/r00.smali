@@ -1,124 +1,73 @@
-.class public final Lr00;
-.super Ljava/lang/Object;
+.class public final enum Lr00;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public A:Ljava/lang/String;
+# static fields
+.field public static final enum a:Lr00;
 
-.field public a:Lm10;
+.field public static final enum b:Lr00;
 
-.field public b:Le10;
-
-.field public c:Lx00;
-
-.field public d:Lp10;
-
-.field public e:Lq00;
-
-.field public f:Ll10;
-
-.field public g:Li10;
-
-.field public h:Lo00;
-
-.field public i:Lj10;
-
-.field public j:J
-
-.field public k:F
-
-.field public l:Ljava/lang/String;
-
-.field public m:Ljava/lang/String;
-
-.field public n:Z
-
-.field public o:J
-
-.field public p:J
-
-.field public q:Lt00;
-
-.field public r:Lz00;
-
-.field public s:Lu00;
-
-.field public t:Lf10;
-
-.field public u:J
-
-.field public v:Lb10;
-
-.field public w:Ln5h;
-
-.field public x:Lg10;
-
-.field public y:Z
-
-.field public z:Z
+.field public static final synthetic c:[Lr00;
 
 
-# virtual methods
-.method public final a()Lq10;
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    iget-object v0, p0, Lr00;->a:Lm10;
+    new-instance v0, Lr00;
 
-    if-nez v0, :cond_0
+    const-string v1, "Media"
 
-    sget-object v0, Lm10;->a:Lm10;
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lr00;->a:Lm10;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_0
-    iget-object v0, p0, Lr00;->i:Lj10;
+    sput-object v0, Lr00;->a:Lr00;
 
-    if-nez v0, :cond_1
+    new-instance v1, Lr00;
 
-    sget-object v0, Lj10;->a:Lj10;
+    const-string v2, "Files"
 
-    iput-object v0, p0, Lr00;->i:Lj10;
+    const/4 v3, 0x1
 
-    :cond_1
-    iget-object v0, p0, Lr00;->x:Lg10;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-nez v0, :cond_2
+    sput-object v1, Lr00;->b:Lr00;
 
-    sget-object v0, Lg10;->a:Lg10;
+    filled-new-array {v0, v1}, [Lr00;
 
-    iput-object v0, p0, Lr00;->x:Lg10;
+    move-result-object v0
 
-    :cond_2
-    new-instance v0, Lq10;
+    sput-object v0, Lr00;->c:[Lr00;
 
-    invoke-direct {v0, p0}, Lq10;-><init>(Lr00;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public final b()Lz00;
+.method public static valueOf(Ljava/lang/String;)Lr00;
     .locals 1
 
-    iget-object v0, p0, Lr00;->r:Lz00;
+    const-class v0, Lr00;
 
-    if-nez v0, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    sget-object v0, Lz00;->f:Lz00;
+    move-result-object p0
 
-    :cond_0
-    return-object v0
+    check-cast p0, Lr00;
+
+    return-object p0
 .end method
 
-.method public final c()Lp10;
+.method public static values()[Lr00;
     .locals 1
 
-    iget-object v0, p0, Lr00;->d:Lp10;
+    sget-object v0, Lr00;->c:[Lr00;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    sget-object v0, Lp10;->r:Lp10;
+    move-result-object v0
 
-    :cond_0
+    check-cast v0, [Lr00;
+
     return-object v0
 .end method

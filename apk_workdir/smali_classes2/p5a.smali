@@ -1,231 +1,120 @@
 .class public final Lp5a;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Ls5a;
 
-.field public final b:Z
+.field public final synthetic Y:Landroid/graphics/Rect;
 
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
+.field public final synthetic Z:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public constructor <init>(IZZZ)V
+.method public constructor <init>(Ls5a;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp5a;->X:Ls5a;
 
-    iput p1, p0, Lp5a;->a:I
+    iput-object p2, p0, Lp5a;->Y:Landroid/graphics/Rect;
 
-    iput-boolean p2, p0, Lp5a;->b:Z
+    iput-object p3, p0, Lp5a;->Z:Landroid/graphics/RectF;
 
-    iput-boolean p3, p0, Lp5a;->c:Z
+    const/4 p1, 0x2
 
-    iput-boolean p4, p0, Lp5a;->d:Z
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-boolean p1, p0, Lp5a;->e:Z
+    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Lp5a;IZZZI)Lp5a;
-    .locals 1
-
-    and-int/lit8 v0, p5, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget p1, p0, Lp5a;->a:I
-
-    :cond_0
-    and-int/lit8 v0, p5, 0x2
-
-    if-eqz v0, :cond_1
-
-    iget-boolean p2, p0, Lp5a;->b:Z
-
-    :cond_1
-    and-int/lit8 v0, p5, 0x4
-
-    if-eqz v0, :cond_2
-
-    iget-boolean p3, p0, Lp5a;->c:Z
-
-    :cond_2
-    and-int/lit8 p5, p5, 0x8
-
-    if-eqz p5, :cond_3
-
-    iget-boolean p4, p0, Lp5a;->d:Z
-
-    :cond_3
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lp5a;
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lp5a;-><init>(IZZZ)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lb54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lp5a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lp5a;
+    move-result-object p1
+
+    check-cast p1, Lp5a;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lp5a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lp5a;
+
+    iget-object v0, p0, Lp5a;->Y:Landroid/graphics/Rect;
+
+    iget-object v1, p0, Lp5a;->Z:Landroid/graphics/RectF;
+
+    iget-object v2, p0, Lp5a;->X:Ls5a;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lp5a;-><init>(Ls5a;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lp5a;->X:Ls5a;
+
+    invoke-virtual {p1}, Ls5a;->a()Lou5;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lp5a;->X:Ls5a;
+
+    iget-object v0, v0, Ls5a;->m:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lou5;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lp5a;->X:Ls5a;
+
+    iget-object v5, p0, Lp5a;->Y:Landroid/graphics/Rect;
+
+    iget-object v3, p0, Lp5a;->Z:Landroid/graphics/RectF;
+
+    iget-object p1, v2, Ls5a;->h:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v0, Lo5a;
+
+    const/4 v6, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-direct/range {v0 .. v6}, Lo5a;-><init>(Ljava/lang/String;Ls5a;Landroid/graphics/RectF;ILandroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-static {p1, v2, v2, v0, v1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    return v2
+    sget-object p1, Lzag;->a:Lzag;
 
-    :cond_1
-    check-cast p1, Lp5a;
-
-    iget v1, p0, Lp5a;->a:I
-
-    iget v3, p1, Lp5a;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lp5a;->b:Z
-
-    iget-boolean v3, p1, Lp5a;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lp5a;->c:Z
-
-    iget-boolean v3, p1, Lp5a;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lp5a;->d:Z
-
-    iget-boolean p1, p1, Lp5a;->d:Z
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lp5a;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lp5a;->b:Z
-
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lp5a;->c:Z
-
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lp5a;->d:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "NotificationStackModel(hasCounterValue="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lp5a;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasReaction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lp5a;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasMention="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lp5a;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMuted="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lp5a;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

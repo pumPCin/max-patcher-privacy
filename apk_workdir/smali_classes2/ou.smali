@@ -1,3 +1,3 @@
 .class public final Lou;
-.super Lti0;
+.super Llj0;
 .source "SourceFile"

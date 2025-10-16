@@ -1,237 +1,123 @@
-.class public final La5c;
-.super Ls59;
+.class public final synthetic La5c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile e:[La5c;
+# interfaces
+.implements Loh6;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:I
-
-.field public c:I
-
-.field public d:Lx46;
+.field public final synthetic b:Lqih;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lqih;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ls59;-><init>()V
+    iput p2, p0, La5c;->a:I
 
-    const/4 v0, 0x0
+    iput-object p1, p0, La5c;->b:Lqih;
 
-    iput v0, p0, La5c;->a:I
-
-    iput v0, p0, La5c;->b:I
-
-    iput v0, p0, La5c;->c:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, La5c;->d:Lx46;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Ls59;->cachedSize:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
-
-    iget v0, p0, La5c;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ly73;->f(II)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v1, p0, La5c;->b:I
-
-    if-eqz v1, :cond_1
-
-    const/4 v2, 0x2
-
-    invoke-static {v2, v1}, Ly73;->f(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_1
-    iget v1, p0, La5c;->c:I
-
-    if-eqz v1, :cond_2
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v1}, Ly73;->f(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_2
-    iget-object v1, p0, La5c;->d:Lx46;
-
-    if-eqz v1, :cond_3
-
-    const/4 v2, 0x4
-
-    invoke-static {v2, v1}, Ly73;->i(ILs59;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final mergeFrom(Lx73;)Ls59;
-    .locals 2
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lx73;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x10
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x18
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x22
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lx73;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, La5c;->d:Lx46;
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lx46;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lx46;-><init>(I)V
-
-    iput-object v0, p0, La5c;->d:Lx46;
-
-    :cond_2
-    iget-object v0, p0, La5c;->d:Lx46;
-
-    invoke-virtual {p1, v0}, Lx73;->j(Ls59;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Lx73;->p()I
-
-    move-result v0
-
-    iput v0, p0, La5c;->c:I
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lx73;->p()I
-
-    move-result v0
-
-    iput v0, p0, La5c;->b:I
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {p1}, Lx73;->p()I
-
-    move-result v0
-
-    iput v0, p0, La5c;->a:I
-
-    goto :goto_0
-
-    :cond_6
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Ly73;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
     iget v0, p0, La5c;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x1
+    iget-object v0, p0, La5c;->b:Lqih;
 
-    invoke-virtual {p1, v1, v0}, Ly73;->w(II)V
+    iget-object v0, v0, Lqih;->Y:Ljava/lang/Object;
 
-    :cond_0
-    iget v0, p0, La5c;->b:I
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lo5c;
 
-    const/4 v1, 0x2
+    move-result-object v0
 
-    invoke-virtual {p1, v1, v0}, Ly73;->w(II)V
+    iget-object v0, v0, Lo5c;->b:Lj55;
 
-    :cond_1
-    iget v0, p0, La5c;->c:I
+    const/16 v1, 0x200
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0, v1}, Lj55;->a(I)V
 
-    const/4 v1, 0x3
+    :goto_0
+    sget-object v0, Lzag;->a:Lzag;
 
-    invoke-virtual {p1, v1, v0}, Ly73;->w(II)V
+    return-object v0
 
-    :cond_2
-    iget-object v0, p0, La5c;->d:Lx46;
+    :pswitch_0
+    iget-object v0, p0, La5c;->b:Lqih;
 
-    if-eqz v0, :cond_3
+    iget-object v0, v0, Lqih;->Y:Ljava/lang/Object;
 
-    const/4 v1, 0x4
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
 
-    invoke-virtual {p1, v1, v0}, Ly73;->y(ILs59;)V
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lo5c;
 
-    :cond_3
-    return-void
+    move-result-object v0
+
+    iget-object v0, v0, Lo5c;->b:Lj55;
+
+    const/16 v1, 0x100
+
+    invoke-virtual {v0, v1}, Lj55;->a(I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, La5c;->b:Lqih;
+
+    iget-object v0, v0, Lqih;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lo5c;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lo5c;->b:Lj55;
+
+    const/16 v1, 0x80
+
+    invoke-virtual {v0, v1}, Lj55;->a(I)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, La5c;->b:Lqih;
+
+    iget-object v0, v0, Lqih;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lo5c;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lo5c;->b:Lj55;
+
+    const/16 v1, 0x40
+
+    invoke-virtual {v0, v1}, Lj55;->a(I)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

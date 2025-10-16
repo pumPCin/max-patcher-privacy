@@ -1,64 +1,50 @@
 .class public final Lb69;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lyb9;
-
-
-# static fields
-.field public static final a:Lb69;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lb69;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lb69;->a:Lb69;
-
-    return-void
-.end method
+.implements Lei6;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/util/Set;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lb69;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lb69;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Lb69;
 
-    const/4 p1, 0x0
+    sget-object p2, Lzag;->a:Lzag;
 
-    return p1
+    invoke-virtual {p1, p2}, Lb69;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const v0, 0x43f6b71e
+    new-instance p1, Lb69;
 
-    return v0
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "MessagePinned"
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

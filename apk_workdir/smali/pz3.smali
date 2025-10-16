@@ -1,115 +1,71 @@
-.class public final enum Lpz3;
-.super Ljava/lang/Enum;
+.class public final Lpz3;
+.super Lkh0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lpz3;
-
-.field public static final enum Y:Lpz3;
-
-.field public static final synthetic Z:[Lpz3;
-
-.field public static final enum c:Lpz3;
-
-.field public static final enum o:Lpz3;
-
-
 # instance fields
-.field public final a:Z
+.field public final a:Lv00;
 
-.field public final b:Z
+.field public final b:Lb23;
+
+.field public final c:Lnp3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lpz3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "PUSH_ENTER"
+    new-instance v0, Lv00;
 
-    const/4 v2, 0x0
+    const/16 v1, 0xd
 
-    const/4 v3, 0x1
+    invoke-direct {v0, v1}, Lv00;-><init>(I)V
 
-    invoke-direct {v0, v1, v2, v3, v3}, Lpz3;-><init>(Ljava/lang/String;IZZ)V
+    iput-object v0, p0, Lpz3;->a:Lv00;
 
-    sput-object v0, Lpz3;->c:Lpz3;
+    new-instance v0, Lb23;
 
-    new-instance v1, Lpz3;
+    const/16 v1, 0xb
 
-    const-string v4, "PUSH_EXIT"
+    invoke-direct {v0, v1}, Lb23;-><init>(I)V
 
-    invoke-direct {v1, v4, v3, v3, v2}, Lpz3;-><init>(Ljava/lang/String;IZZ)V
+    iput-object v0, p0, Lpz3;->b:Lb23;
 
-    sput-object v1, Lpz3;->o:Lpz3;
+    new-instance v0, Lnp3;
 
-    new-instance v4, Lpz3;
+    const/16 v1, 0x8
 
-    const-string v5, "POP_ENTER"
+    invoke-direct {v0, v1}, Lnp3;-><init>(I)V
 
-    const/4 v6, 0x2
-
-    invoke-direct {v4, v5, v6, v2, v3}, Lpz3;-><init>(Ljava/lang/String;IZZ)V
-
-    sput-object v4, Lpz3;->X:Lpz3;
-
-    new-instance v3, Lpz3;
-
-    const-string v5, "POP_EXIT"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v3, v5, v6, v2, v2}, Lpz3;-><init>(Ljava/lang/String;IZZ)V
-
-    sput-object v3, Lpz3;->Y:Lpz3;
-
-    filled-new-array {v0, v1, v4, v3}, [Lpz3;
-
-    move-result-object v0
-
-    sput-object v0, Lpz3;->Z:[Lpz3;
+    iput-object v0, p0, Lpz3;->c:Lnp3;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;IZZ)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-boolean p3, p0, Lpz3;->a:Z
-
-    iput-boolean p4, p0, Lpz3;->b:Z
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lpz3;
+# virtual methods
+.method public final a()Ljava/util/Comparator;
     .locals 1
 
-    const-class v0, Lpz3;
+    iget-object v0, p0, Lpz3;->a:Lv00;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lpz3;
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public static values()[Lpz3;
+.method public final b()Lqh6;
     .locals 1
 
-    sget-object v0, Lpz3;->Z:[Lpz3;
+    iget-object v0, p0, Lpz3;->b:Lb23;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final c()Loh6;
+    .locals 1
 
-    check-cast v0, [Lpz3;
+    iget-object v0, p0, Lpz3;->c:Lnp3;
 
     return-object v0
 .end method

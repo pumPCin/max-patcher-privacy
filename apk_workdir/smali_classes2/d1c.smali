@@ -1,86 +1,96 @@
-.class public final synthetic Ld1c;
-.super Ljava/lang/Object;
+.class public final Ld1c;
+.super Li1c;
 .source "SourceFile"
-
-# interfaces
-.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/profile/ProfileScreen;
+.field public final b:Llqf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/ProfileScreen;I)V
+.method public constructor <init>(Llqf;)V
     .locals 0
 
-    iput p2, p0, Ld1c;->a:I
+    invoke-direct {p0}, Li1c;-><init>()V
 
-    iput-object p1, p0, Ld1c;->b:Lone/me/profile/ProfileScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld1c;->b:Llqf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Ld1c;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Ld1c;->b:Lone/me/profile/ProfileScreen;
+    goto :goto_1
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of v0, p1, Ld1c;
 
-    sget-object v0, Lone/me/profile/ProfileScreen;->C0:[Lpl7;
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ld1c;
+
+    iget-object v0, p0, Ld1c;->b:Llqf;
+
+    iget-object p1, p1, Ld1c;->b:Llqf;
+
+    invoke-virtual {v0, p1}, Llqf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ld1c;->b:Llqf;
+
+    invoke-virtual {v0}, Llqf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShareLinkToChat(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ld1c;->b:Llqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/profile/ProfileScreen;->C0:[Lpl7;
-
-    invoke-virtual {v1}, Ljz3;->getRouter()Ln6d;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/profile/ProfileScreen;->C0:[Lpl7;
-
-    new-instance v0, Lnh1;
-
-    new-instance v2, Ld1c;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v1, v3}, Ld1c;-><init>(Lone/me/profile/ProfileScreen;I)V
-
-    new-instance v3, Lh4f;
-
-    invoke-direct {v3, v2}, Lh4f;-><init>(Ltd6;)V
-
-    new-instance v2, Lp5h;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v1, v4}, Lp5h;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-direct {v0, v3, v2}, Lnh1;-><init>(Lh4f;Lp5h;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

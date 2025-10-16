@@ -1,117 +1,62 @@
-.class public final enum Lv0c;
-.super Ljava/lang/Enum;
+.class public final synthetic Lv0c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lv0c;
-
-.field public static final synthetic Y:Laa5;
-
-.field public static final enum b:Lv0c;
-
-.field public static final enum c:Lv0c;
-
-.field public static final enum o:Lv0c;
+# interfaces
+.implements Lqh6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lwlb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lv0c;
-
-    const-string v1, "ESIA_CONNECTION"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lv0c;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lv0c;->b:Lv0c;
-
-    new-instance v1, Lv0c;
-
-    const-string v2, "SECOND_FACTOR_PASSWORD_ENABLED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v1, v2, v3, v4}, Lv0c;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lv0c;->c:Lv0c;
-
-    new-instance v2, Lv0c;
-
-    const-string v3, "SECOND_FACTOR_HAS_EMAIL"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v2, v3, v4, v5}, Lv0c;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lv0c;->o:Lv0c;
-
-    new-instance v3, Lv0c;
-
-    const-string v4, "SECOND_FACTOR_HAS_HINT"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v3, v4, v5, v6}, Lv0c;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1, v2, v3}, [Lv0c;
-
-    move-result-object v0
-
-    sput-object v0, Lv0c;->X:[Lv0c;
-
-    new-instance v1, Laa5;
-
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lv0c;->Y:Laa5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lwlb;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lv0c;->a:I
 
-    iput p3, p0, Lv0c;->a:I
+    iput-object p1, p0, Lv0c;->b:Lwlb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lv0c;
-    .locals 1
 
-    const-class v0, Lv0c;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lv0c;->a:I
 
-    move-result-object p0
+    sget-object v1, Lzag;->a:Lzag;
 
-    check-cast p0, Lv0c;
+    iget-object v2, p0, Lv0c;->b:Lwlb;
 
-    return-object p0
-.end method
+    check-cast p1, Landroid/view/View;
 
-.method public static values()[Lv0c;
-    .locals 1
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lv0c;->X:[Lv0c;
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Lwq7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Lwlb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    return-object v1
 
-    check-cast v0, [Lv0c;
+    :pswitch_0
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Lwq7;
 
-    return-object v0
+    invoke-virtual {v2, p1}, Lwlb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

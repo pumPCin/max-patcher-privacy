@@ -1,157 +1,205 @@
-.class public final enum Lso3;
-.super Ljava/lang/Enum;
+.class public final Lso3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lso3;
+# instance fields
+.field public final a:I
 
-.field public static final enum Y:Lso3;
+.field public final b:Ly45;
 
-.field public static final enum Z:Lso3;
+.field public final c:Lv0e;
 
-.field public static final enum a:Lso3;
+.field public final d:Lls3;
 
-.field public static final enum b:Lso3;
+.field public final e:Ltte;
 
-.field public static final enum c:Lso3;
+.field public final f:Lgr4;
 
-.field public static final enum o:Lso3;
+.field public final g:[B
 
-.field public static final enum r0:Lso3;
+.field public final h:[B
 
-.field public static final enum s0:Lso3;
+.field public volatile i:I
 
-.field public static final synthetic t0:[Lso3;
+.field public volatile j:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Lv0e;Lls3;Lt88;)V
+    .locals 4
 
-    new-instance v0, Lso3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "OPEN_PROFILE"
+    const/4 v0, 0x2
 
-    const/4 v2, 0x0
+    iput v0, p0, Lso3;->i:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lso3;->c:Lv0e;
 
-    sput-object v0, Lso3;->a:Lso3;
+    new-instance p1, Ltte;
 
-    new-instance v1, Lso3;
+    const/4 v1, 0x0
 
-    const-string v2, "SHARE_CONTACT"
+    invoke-direct {p1, v1, p3}, Lto3;-><init>(Ljava/lang/Integer;Lt88;)V
 
-    const/4 v3, 0x1
+    iput-object p1, p0, Lso3;->e:Ltte;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget v1, p1, Lto3;->e:I
 
-    sput-object v1, Lso3;->b:Lso3;
+    iput v1, p0, Lso3;->a:I
 
-    new-instance v2, Lso3;
+    iget-object p1, p1, Lto3;->b:[B
 
-    const-string v3, "WRITE"
+    iput-object p1, p0, Lso3;->g:[B
 
-    const/4 v4, 0x2
+    iput-object p2, p0, Lso3;->d:Lls3;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/16 p1, 0x8
 
-    sput-object v2, Lso3;->c:Lso3;
+    new-array p2, p1, [B
 
-    new-instance v3, Lso3;
+    iput-object p2, p0, Lso3;->h:[B
 
-    const-string v4, "SELECT"
+    new-instance v1, Ljava/security/SecureRandom;
 
-    const/4 v5, 0x3
+    invoke-direct {v1}, Ljava/security/SecureRandom;-><init>()V
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v1, p2}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    sput-object v3, Lso3;->o:Lso3;
+    new-instance v1, Lgr4;
 
-    new-instance v4, Lso3;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v5, "BLOCK"
+    move-result-object p1
 
-    const/4 v6, 0x4
+    invoke-direct {v1, p1, p3}, Lto3;-><init>(Ljava/lang/Integer;Lt88;)V
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p2, v1, Lto3;->b:[B
 
-    sput-object v4, Lso3;->X:Lso3;
+    iget-object p1, v1, Lto3;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    new-instance v5, Lso3;
+    const/4 p3, 0x0
 
-    const-string v6, "DELETE"
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v7, 0x5
+    move-result-object v2
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v3, Lpo3;
 
-    sput-object v5, Lso3;->Y:Lso3;
+    invoke-direct {v3, p3, p2, v0}, Lpo3;-><init>(I[BI)V
 
-    new-instance v6, Lso3;
+    invoke-virtual {p1, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v7, "AUDIO_CALL"
+    iput-object v1, p0, Lso3;->f:Lgr4;
 
-    const/4 v8, 0x6
+    new-instance p1, Ly45;
 
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    sput-object v6, Lso3;->Z:Lso3;
-
-    new-instance v7, Lso3;
-
-    const-string v8, "VIDEO_CALL"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lso3;->r0:Lso3;
-
-    new-instance v8, Lso3;
-
-    const-string v9, "SUSPEND"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lso3;->s0:Lso3;
-
-    filled-new-array/range {v0 .. v8}, [Lso3;
-
-    move-result-object v0
-
-    sput-object v0, Lso3;->t0:[Lso3;
+    iput-object p1, p0, Lso3;->b:Ly45;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lso3;
-    .locals 1
 
-    const-class v0, Lso3;
+# virtual methods
+.method public final a()V
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lso3;->e:Ltte;
 
-    move-result-object p0
+    iget-object v1, v0, Lto3;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    check-cast p0, Lso3;
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
 
-    return-object p0
-.end method
+    move-result-object v2
 
-.method public static values()[Lso3;
-    .locals 1
+    invoke-interface {v2}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    sget-object v0, Lso3;->t0:[Lso3;
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    new-instance v3, Lqy4;
 
-    move-result-object v0
+    const/16 v4, 0x1c
 
-    check-cast v0, [Lso3;
+    invoke-direct {v3, v4}, Lqy4;-><init>(I)V
 
-    return-object v0
+    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    add-int/2addr v2, v3
+
+    new-instance v4, Lpo3;
+
+    iget v5, v0, Lto3;->e:I
+
+    new-array v5, v5, [B
+
+    iget-object v6, v0, Lto3;->d:Ljava/security/SecureRandom;
+
+    invoke-virtual {v6, v5}, Ljava/security/SecureRandom;->nextBytes([B)V
+
+    invoke-direct {v4, v2, v5, v3}, Lpo3;-><init>(I[BI)V
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lto3;->a()[B
+
+    iget-object v0, p0, Lso3;->b:Ly45;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lm7a;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput v2, v0, Lm7a;->a:I
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Lm7a;->b:I
+
+    iput-object v5, v0, Lm7a;->c:[B
+
+    const/16 v1, 0x10
+
+    new-array v1, v1, [B
+
+    iput-object v1, v0, Lm7a;->o:[B
+
+    sget-object v2, Lm7a;->X:Ljava/util/Random;
+
+    invoke-virtual {v2, v1}, Ljava/util/Random;->nextBytes([B)V
+
+    new-instance v1, Lro3;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Lro3;-><init>(Lso3;I)V
+
+    iget-object v2, p0, Lso3;->c:Lv0e;
+
+    sget-object v3, Lqb5;->o:Lqb5;
+
+    invoke-virtual {v2, v0, v3, v1}, Lv0e;->f(Lxgc;Lqb5;Ljava/util/function/Consumer;)V
+
+    return-void
 .end method

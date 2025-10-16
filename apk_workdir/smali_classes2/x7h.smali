@@ -1,37 +1,65 @@
 .class public final Lx7h;
-.super Ljava/lang/Object;
+.super La8h;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lru/ok/messages/a;
-
-.field public final b:Ld8h;
-
-.field public final c:Lyn7;
+# static fields
+.field public static final c:Lx7h;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/a;Ld8h;Lyn7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lx7h;
 
-    iput-object p1, p0, Lx7h;->a:Lru/ok/messages/a;
+    const-string v1, "cancelled"
 
-    iput-object p2, p0, Lx7h;->b:Ld8h;
+    const/4 v2, 0x3
 
-    iput-object p3, p0, Lx7h;->c:Lyn7;
+    invoke-direct {v0, v1, v2}, La8h;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Lnef;
-
-    const/16 p2, 0x12
-
-    invoke-direct {p1, p2, p0}, Lnef;-><init>(ILjava/lang/Object;)V
-
-    const/4 p2, 0x3
-
-    invoke-static {p2, p1}, Lwee;->u(ILtd6;)Lyn7;
+    sput-object v0, Lx7h;->c:Lx7h;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lx7h;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x28d53415
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Cancelled"
+
+    return-object v0
 .end method

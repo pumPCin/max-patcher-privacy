@@ -1,103 +1,77 @@
-.class public abstract Ltxa;
-.super Ljava/lang/Object;
+.class public final enum Ltxa;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Ltxa;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+.field public static final synthetic b:[Ltxa;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    sget v0, Lxic;->web_app_root_biometry_open_settings_dialog_accept:I
+    new-instance v0, Ltxa;
 
-    sput v0, Ltxa;->a:I
+    const-string v1, "TITLE"
 
-    sget v0, Lxic;->web_app_root_biometry_open_settings_dialog_title:I
+    const/4 v2, 0x0
 
-    sput v0, Ltxa;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lxic;->web_app_root_biometry_request_dialog_accept:I
+    new-instance v1, Ltxa;
 
-    sput v0, Ltxa;->c:I
+    const-string v2, "SUBTITLE"
 
-    sget v0, Lxic;->web_app_root_biometry_request_dialog_decline:I
+    const/4 v3, 0x1
 
-    sput v0, Ltxa;->d:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lxic;->web_app_root_biometry_request_dialog_default_reason:I
+    new-instance v2, Ltxa;
 
-    sput v0, Ltxa;->e:I
+    const-string v3, "NONE"
 
-    sget v0, Lxic;->web_app_root_biometry_request_dialog_title:I
+    const/4 v4, 0x2
 
-    sput v0, Ltxa;->f:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lxic;->web_app_root_biometry_setting:I
+    sput-object v2, Ltxa;->a:Ltxa;
 
-    sput v0, Ltxa;->g:I
+    filled-new-array {v0, v1, v2}, [Ltxa;
 
-    sget v0, Lxic;->web_app_root_biometry_setting_description:I
+    move-result-object v0
 
-    sput v0, Ltxa;->h:I
-
-    sget v0, Lxic;->web_app_root_choose_media_bottomsheet_gallery:I
-
-    sput v0, Ltxa;->i:I
-
-    sget v0, Lxic;->web_app_root_choose_media_bottomsheet_title:I
-
-    sput v0, Ltxa;->j:I
-
-    sget v0, Lxic;->web_app_root_max_share_quote_title:I
-
-    sput v0, Ltxa;->k:I
-
-    sget v0, Lxic;->web_app_root_setting_open_webapp:I
-
-    sput v0, Ltxa;->l:I
-
-    sget v0, Lxic;->web_app_root_settings_header_subtitle:I
-
-    sput v0, Ltxa;->m:I
-
-    sget v0, Lxic;->web_app_root_settings_header_title:I
-
-    sput v0, Ltxa;->n:I
-
-    sget v0, Lxic;->web_app_root_settings_webapps:I
-
-    sput v0, Ltxa;->o:I
+    sput-object v0, Ltxa;->b:[Ltxa;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ltxa;
+    .locals 1
+
+    const-class v0, Ltxa;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ltxa;
+
+    return-object p0
+.end method
+
+.method public static values()[Ltxa;
+    .locals 1
+
+    sget-object v0, Ltxa;->b:[Ltxa;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ltxa;
+
+    return-object v0
 .end method

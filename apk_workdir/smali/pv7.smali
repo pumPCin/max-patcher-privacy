@@ -1,27 +1,54 @@
 .class public final Lpv7;
-.super Landroid/widget/BaseAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Lkw7;
 
-.field public final synthetic b:Lqv7;
+.field public final b:Lkv7;
+
+.field public final c:Lpu4;
+
+.field public final d:Llh3;
 
 
 # direct methods
-.method public constructor <init>(Lqv7;)V
-    .locals 0
+.method public constructor <init>(Lkw7;Lkv7;Lpu4;Lmm7;)V
+    .locals 1
 
-    iput-object p1, p0, Lpv7;->b:Lqv7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    iput-object p1, p0, Lpv7;->a:Lkw7;
 
-    const/4 p1, -0x1
+    iput-object p2, p0, Lpv7;->b:Lkv7;
 
-    iput p1, p0, Lpv7;->a:I
+    iput-object p3, p0, Lpv7;->c:Lpu4;
+
+    new-instance p2, Llh3;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p0, p3, p4}, Llh3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lpv7;->d:Llh3;
+
+    iget-object p3, p1, Lkw7;->d:Lkv7;
+
+    sget-object v0, Lkv7;->a:Lkv7;
+
+    if-ne p3, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-interface {p4, p1}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     invoke-virtual {p0}, Lpv7;->a()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1, p2}, Lkw7;->a(Lew7;)V
 
     return-void
 .end method
@@ -29,169 +56,21 @@
 
 # virtual methods
 .method public final a()V
-    .locals 5
-
-    iget-object v0, p0, Lpv7;->b:Lqv7;
-
-    iget-object v0, v0, Lqv7;->c:Lg09;
-
-    iget-object v1, v0, Lg09;->F0:Lk09;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lg09;->i()V
-
-    iget-object v0, v0, Lg09;->t0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lk09;
-
-    if-ne v4, v1, :cond_0
-
-    iput v3, p0, Lpv7;->a:I
-
-    return-void
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, -0x1
-
-    iput v0, p0, Lpv7;->a:I
-
-    return-void
-.end method
-
-.method public final b(I)Lk09;
     .locals 2
 
-    iget-object v0, p0, Lpv7;->b:Lqv7;
+    iget-object v0, p0, Lpv7;->a:Lkw7;
 
-    iget-object v1, v0, Lqv7;->c:Lg09;
+    iget-object v1, p0, Lpv7;->d:Llh3;
 
-    invoke-virtual {v1}, Lg09;->i()V
+    invoke-virtual {v0, v1}, Lkw7;->f(Lew7;)V
 
-    iget-object v1, v1, Lg09;->t0:Ljava/util/ArrayList;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lpv7;->c:Lpu4;
 
-    iget v0, p0, Lpv7;->a:I
+    iput-boolean v0, v1, Lpu4;->b:Z
 
-    if-ltz v0, :cond_0
-
-    if-lt p1, v0, :cond_0
-
-    add-int/lit8 p1, p1, 0x1
-
-    :cond_0
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lk09;
-
-    return-object p1
-.end method
-
-.method public final getCount()I
-    .locals 2
-
-    iget-object v0, p0, Lpv7;->b:Lqv7;
-
-    iget-object v1, v0, Lqv7;->c:Lg09;
-
-    invoke-virtual {v1}, Lg09;->i()V
-
-    iget-object v1, v1, Lg09;->t0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Lpv7;->a:I
-
-    if-gez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
-
-    return v1
-.end method
-
-.method public final bridge synthetic getItem(I)Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lpv7;->b(I)Lk09;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getItemId(I)J
-    .locals 2
-
-    int-to-long v0, p1
-
-    return-wide v0
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 2
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lpv7;->b:Lqv7;
-
-    iget-object v0, p2, Lqv7;->b:Landroid/view/LayoutInflater;
-
-    iget p2, p2, Lqv7;->X:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p2, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    :cond_0
-    move-object p3, p2
-
-    check-cast p3, Ly09;
-
-    invoke-virtual {p0, p1}, Lpv7;->b(I)Lk09;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Ly09;->d(Lk09;)V
-
-    return-object p2
-.end method
-
-.method public final notifyDataSetChanged()V
-    .locals 0
-
-    invoke-virtual {p0}, Lpv7;->a()V
-
-    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v1}, Lpu4;->a()V
 
     return-void
 .end method

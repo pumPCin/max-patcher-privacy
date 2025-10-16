@@ -1,53 +1,62 @@
-.class public final La23;
-.super Lwy3;
+.class public final synthetic La23;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lb2b;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lh23;
-
-.field public o:Lh23;
-
-.field public r0:I
+.field public final synthetic b:Lcke;
 
 
 # direct methods
-.method public constructor <init>(Lh23;Lwy3;)V
+.method public synthetic constructor <init>(Lcke;I)V
     .locals 0
 
-    iput-object p1, p0, La23;->Z:Lh23;
+    iput p2, p0, La23;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, La23;->b:Lcke;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final h(Lc2b;)V
     .locals 2
 
-    iput-object p1, p0, La23;->Y:Ljava/lang/Object;
+    iget v0, p0, La23;->a:I
 
-    iget p1, p0, La23;->r0:I
+    iget-object v1, p0, La23;->b:Lcke;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->O0:[Lwq7;
 
-    iput p1, p0, La23;->r0:I
+    iget-object v0, v1, Lcke;->b:Lqh6;
 
-    iget-object p1, p0, La23;->Z:Lh23;
+    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-wide/16 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, v1, p0}, Lh23;->K(JLwy3;)Ljava/lang/Comparable;
+    :pswitch_0
+    sget-object v0, Lone/me/chats/list/ChatsListWidget;->K0:[Lwq7;
 
-    move-result-object p1
+    iget-object v0, v1, Lcke;->b:Lqh6;
 
-    return-object p1
+    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

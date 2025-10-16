@@ -1,67 +1,30 @@
-.class public abstract Laz;
+.class public interface abstract Laz;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lq10;
-
-.field public volatile b:Z
+# static fields
+.field public static final f:Lwxi;
 
 
 # direct methods
-.method public constructor <init>(Lq10;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwxi;
 
-    iput-object p1, p0, Laz;->a:Lq10;
+    const/4 v1, 0x6
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lwxi;-><init>(IB)V
+
+    sput-object v0, Laz;->f:Lwxi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkx;Ljava/lang/Throwable;)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, p2}, Lkx;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Laz;->b:Z
-
-    return-void
-.end method
-
-.method public b()Ls8a;
-    .locals 2
-
-    iget-object v0, p0, Laz;->a:Lq10;
-
-    iget-object v0, v0, Lq10;->s:Ljava/lang/String;
-
-    invoke-static {v0}, Lwy8;->g(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Ls8a;->k(Ljava/lang/Object;)Lnaa;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
+.method public abstract error(Ljava/lang/String;Ljava/lang/Throwable;)V
 .end method

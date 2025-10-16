@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lib;
+.implements Lob;
 
 
 # instance fields
@@ -100,13 +100,13 @@
 
     const-string v1, ")"
 
-    const-string v2, "DisableAllScreenSharingInCall(isSuccess="
+    const-string v2, "DisableAllCameraInCall(isSuccess="
 
     iget-boolean v3, p0, Lcb;->a:Z
 
     iget-boolean v4, p0, Lcb;->b:Z
 
-    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v4, v1}, Lwc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

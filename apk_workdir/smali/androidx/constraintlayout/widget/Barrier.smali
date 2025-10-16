@@ -1,5 +1,5 @@
 .class public Landroidx/constraintlayout/widget/Barrier;
-.super Lpn3;
+.super Lgq3;
 .source "SourceFile"
 
 
@@ -8,7 +8,7 @@
 
 .field public v0:I
 
-.field public w0:Lsh0;
+.field public w0:Lji0;
 
 
 # direct methods
@@ -23,17 +23,17 @@
     .line 2
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lpn3;->a:[I
+    iput-object v0, p0, Lgq3;->a:[I
 
     .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lpn3;->t0:Ljava/util/HashMap;
+    iput-object v0, p0, Lgq3;->t0:Ljava/util/HashMap;
 
     .line 4
-    iput-object p1, p0, Lpn3;->c:Landroid/content/Context;
+    iput-object p1, p0, Lgq3;->c:Landroid/content/Context;
 
     const/4 p1, 0x0
 
@@ -52,7 +52,7 @@
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1, p2}, Lpn3;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lgq3;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/16 p1, 0x8
 
@@ -67,9 +67,9 @@
 .method public getAllowsGoneWidget()Z
     .locals 1
 
-    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
-    iget-boolean v0, v0, Lsh0;->t0:Z
+    iget-boolean v0, v0, Lji0;->t0:Z
 
     return v0
 .end method
@@ -77,9 +77,9 @@
 .method public getMargin()I
     .locals 1
 
-    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
-    iget v0, v0, Lsh0;->u0:I
+    iget v0, v0, Lji0;->u0:I
 
     return v0
 .end method
@@ -95,25 +95,25 @@
 .method public final h(Landroid/util/AttributeSet;)V
     .locals 6
 
-    invoke-super {p0, p1}, Lpn3;->h(Landroid/util/AttributeSet;)V
+    invoke-super {p0, p1}, Lgq3;->h(Landroid/util/AttributeSet;)V
 
-    new-instance v0, Lsh0;
+    new-instance v0, Lji0;
 
-    invoke-direct {v0}, Lct6;-><init>()V
+    invoke-direct {v0}, Lkx6;-><init>()V
 
     const/4 v1, 0x0
 
-    iput v1, v0, Lsh0;->s0:I
+    iput v1, v0, Lji0;->s0:I
 
     const/4 v2, 0x1
 
-    iput-boolean v2, v0, Lsh0;->t0:Z
+    iput-boolean v2, v0, Lji0;->t0:Z
 
-    iput v1, v0, Lsh0;->u0:I
+    iput v1, v0, Lji0;->u0:I
 
-    iput-boolean v1, v0, Lsh0;->v0:Z
+    iput-boolean v1, v0, Lji0;->v0:Z
 
-    iput-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iput-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
     if-eqz p1, :cond_4
 
@@ -121,7 +121,7 @@
 
     move-result-object v0
 
-    sget-object v3, Lgkc;->ConstraintLayout_Layout:[I
+    sget-object v3, Lhuc;->ConstraintLayout_Layout:[I
 
     invoke-virtual {v0, p1, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -140,7 +140,7 @@
 
     move-result v4
 
-    sget v5, Lgkc;->ConstraintLayout_Layout_barrierDirection:I
+    sget v5, Lhuc;->ConstraintLayout_Layout_barrierDirection:I
 
     if-ne v4, v5, :cond_0
 
@@ -153,22 +153,22 @@
     goto :goto_1
 
     :cond_0
-    sget v5, Lgkc;->ConstraintLayout_Layout_barrierAllowsGoneWidgets:I
+    sget v5, Lhuc;->ConstraintLayout_Layout_barrierAllowsGoneWidgets:I
 
     if-ne v4, v5, :cond_1
 
-    iget-object v5, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object v5, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
     invoke-virtual {p1, v4, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v4
 
-    iput-boolean v4, v5, Lsh0;->t0:Z
+    iput-boolean v4, v5, Lji0;->t0:Z
 
     goto :goto_1
 
     :cond_1
-    sget v5, Lgkc;->ConstraintLayout_Layout_barrierMargin:I
+    sget v5, Lhuc;->ConstraintLayout_Layout_barrierMargin:I
 
     if-ne v4, v5, :cond_2
 
@@ -176,9 +176,9 @@
 
     move-result v4
 
-    iget-object v5, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object v5, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
-    iput v4, v5, Lsh0;->u0:I
+    iput v4, v5, Lji0;->u0:I
 
     :cond_2
     :goto_1
@@ -190,16 +190,16 @@
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     :cond_4
-    iget-object p1, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object p1, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
-    iput-object p1, p0, Lpn3;->o:Lct6;
+    iput-object p1, p0, Lgq3;->o:Lkx6;
 
-    invoke-virtual {p0}, Lpn3;->k()V
+    invoke-virtual {p0}, Lgq3;->k()V
 
     return-void
 .end method
 
-.method public final i(Lfo3;Z)V
+.method public final i(Lwq3;Z)V
     .locals 5
 
     iget v0, p0, Landroidx/constraintlayout/widget/Barrier;->u0:I
@@ -243,15 +243,15 @@
 
     :cond_3
     :goto_0
-    instance-of p2, p1, Lsh0;
+    instance-of p2, p1, Lji0;
 
     if-eqz p2, :cond_4
 
-    check-cast p1, Lsh0;
+    check-cast p1, Lji0;
 
     iget p2, p0, Landroidx/constraintlayout/widget/Barrier;->v0:I
 
-    iput p2, p1, Lsh0;->s0:I
+    iput p2, p1, Lji0;->s0:I
 
     :cond_4
     return-void
@@ -260,9 +260,9 @@
 .method public setAllowsGoneWidget(Z)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
-    iput-boolean p1, v0, Lsh0;->t0:Z
+    iput-boolean p1, v0, Lji0;->t0:Z
 
     return-void
 .end method
@@ -290,9 +290,9 @@
 
     float-to-int p1, p1
 
-    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
-    iput p1, v0, Lsh0;->u0:I
+    iput p1, v0, Lji0;->u0:I
 
     return-void
 .end method
@@ -300,9 +300,9 @@
 .method public setMargin(I)V
     .locals 1
 
-    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lsh0;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/Barrier;->w0:Lji0;
 
-    iput p1, v0, Lsh0;->u0:I
+    iput p1, v0, Lji0;->u0:I
 
     return-void
 .end method

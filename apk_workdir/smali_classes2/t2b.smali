@@ -1,97 +1,100 @@
-.class public final enum Lt2b;
-.super Ljava/lang/Enum;
+.class public final Lt2b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ly2b;
 
 
 # static fields
-.field public static final synthetic X:[Lt2b;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lt2b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum a:Lt2b;
-
-.field public static final enum b:Lt2b;
-
-.field public static final enum c:Lt2b;
-
-.field public static final enum o:Lt2b;
+.field public static final a:Lt2b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
     new-instance v0, Lt2b;
 
-    const-string v1, "Loading"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lt2b;->a:Lt2b;
 
-    new-instance v1, Lt2b;
+    new-instance v0, Luj8;
 
-    const-string v2, "PartialSuccess"
+    const/16 v1, 0x1c
 
-    const/4 v3, 0x1
+    invoke-direct {v0, v1}, Luj8;-><init>(I)V
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lt2b;->b:Lt2b;
-
-    new-instance v2, Lt2b;
-
-    const-string v3, "Success"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lt2b;->c:Lt2b;
-
-    new-instance v3, Lt2b;
-
-    const-string v4, "Error"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lt2b;->o:Lt2b;
-
-    filled-new-array {v0, v1, v2, v3}, [Lt2b;
-
-    move-result-object v0
-
-    sput-object v0, Lt2b;->X:[Lt2b;
+    sput-object v0, Lt2b;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lt2b;
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    const-class v0, Lt2b;
+    const/4 v0, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lt2b;
-
-    return-object p0
+    return v0
 .end method
 
-.method public static values()[Lt2b;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    sget-object v0, Lt2b;->X:[Lt2b;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    check-cast v0, [Lt2b;
+    :cond_0
+    instance-of p1, p1, Lt2b;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x4e19c0b1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CancelBtn"
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

@@ -3,7 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvl;
+.implements Lem;
+.implements Lska;
 
 
 # annotations
@@ -19,18 +20,20 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lvl;"
+        "Lem;",
+        "Lska;"
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u0010\u0010\u0007\u001a\u00020\u0006H\u0096\u0001\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0010\u0010\t\u001a\u00020\u0006H\u0096\u0001\u00a2\u0006\u0004\u0008\t\u0010\u0008J\u0010\u0010\n\u001a\u00020\u0006H\u0096\u0001\u00a2\u0006\u0004\u0008\n\u0010\u0008J\u0010\u0010\u000b\u001a\u00020\u0006H\u0096\u0001\u00a2\u0006\u0004\u0008\u000b\u0010\u0008J\u0010\u0010\u000c\u001a\u00020\u0006H\u0096\u0001\u00a2\u0006\u0004\u0008\u000c\u0010\u0008J\u0010\u0010\r\u001a\u00020\u0006H\u0096\u0001\u00a2\u0006\u0004\u0008\r\u0010\u0008J\u0018\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u000eH\u0096\u0001\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J\u0018\u0010\u0013\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u000eH\u0096\u0001\u00a2\u0006\u0004\u0008\u0013\u0010\u0012R\u001a\u0010\u0017\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00148VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008\u0015\u0010\u0016R\u001c\u0010\u001c\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00190\u00188VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008\u001a\u0010\u001bR\u001c\u0010\u001e\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00020\u00188\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008\u001d\u0010\u001bR\u0014\u0010\"\u001a\u00020\u001f8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008 \u0010!R\u0014\u0010&\u001a\u00020#8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008$\u0010%R\u0014\u0010*\u001a\u00020\'8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008(\u0010)R\u0014\u0010.\u001a\u00020+8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008,\u0010-\u00a8\u0006/"
+        "\u0000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003B\u000f\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u0010\u0010\u0008\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0010\u0010\n\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\n\u0010\tJ\u0010\u0010\u000b\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u000b\u0010\tJ\u0010\u0010\u000c\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u000c\u0010\tJ\u0010\u0010\r\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\r\u0010\tJ\u0010\u0010\u000e\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u000e\u0010\tJ\u0018\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\u000fH\u0096\u0001\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0018\u0010\u0014\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\u000fH\u0096\u0001\u00a2\u0006\u0004\u0008\u0014\u0010\u0013J\u000f\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0017R\u001a\u0010\u001b\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00188VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008\u0019\u0010\u001aR\u001c\u0010 \u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u001d0\u001c8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008\u001e\u0010\u001fR\u001c\u0010\"\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00020\u001c8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008!\u0010\u001fR\u0014\u0010&\u001a\u00020#8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008$\u0010%R\u0014\u0010*\u001a\u00020\'8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008(\u0010)R\u0014\u0010.\u001a\u00020+8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008,\u0010-R\u0014\u00102\u001a\u00020/8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u00080\u00101\u00a8\u00063"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;",
-        "Lvl;",
+        "Lem;",
         "",
+        "Lska;",
         "cid",
         "<init>",
         "(Ljava/lang/String;)V",
@@ -42,20 +45,23 @@
         "shouldReport",
         "willWriteParams",
         "willWriteSupplyParams",
-        "Lyk7;",
+        "Lfq7;",
         "writer",
-        "Laxf;",
+        "Lzag;",
         "writeParams",
-        "(Lyk7;)V",
+        "(Lfq7;)V",
         "writeSupplyParams",
-        "Lrl;",
+        "",
+        "handleInterruptedIO",
+        "()Ljava/lang/Object;",
+        "Lam;",
         "getConfigExtractor",
-        "()Lrl;",
+        "()Lam;",
         "configExtractor",
-        "Llk7;",
+        "Lsp7;",
         "Lru/ok/android/api/core/ApiInvocationException;",
         "getFailParser",
-        "()Llk7;",
+        "()Lsp7;",
         "failParser",
         "getOkParser",
         "okParser",
@@ -63,13 +69,13 @@
         "getPriority",
         "()I",
         "priority",
-        "Lim;",
+        "Lsm;",
         "getScope",
-        "()Lim;",
+        "()Lsm;",
         "scope",
-        "Ljm;",
+        "Ltm;",
         "getScopeAfter",
-        "()Ljm;",
+        "()Ltm;",
         "scopeAfter",
         "Landroid/net/Uri;",
         "getUri",
@@ -88,10 +94,10 @@
 
 
 # instance fields
-.field private final synthetic $$delegate_0:Lvk0;
+.field private final synthetic $$delegate_0:Lol0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lvk0;"
+            "Lol0;"
         }
     .end annotation
 .end field
@@ -105,41 +111,41 @@
 
     const-string v0, "vchat.createJoinLink"
 
-    invoke-static {v0}, Lrm;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lbn;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    new-instance v1, Lcm;
+    new-instance v1, Lmm;
 
-    invoke-direct {v1}, Lcm;-><init>()V
+    invoke-direct {v1}, Lmm;-><init>()V
 
-    new-instance v2, Lhwe;
+    new-instance v2, Lk9f;
 
     const-string v3, "conversationId"
 
-    invoke-direct {v2, v3, p1}, Lnwe;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, p1}, Lq9f;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcm;->a(Lbm;)V
+    invoke-virtual {v1, v2}, Lmm;->a(Llm;)V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;
 
-    new-instance v2, Lws6;
+    new-instance v2, Lex6;
 
     const/16 v3, 0x9
 
-    invoke-direct {v2, v3}, Lws6;-><init>(I)V
+    invoke-direct {v2, v3}, Lex6;-><init>(I)V
 
     const-string v3, "join_link"
 
-    invoke-direct {p1, v3, v2}, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;-><init>(Ljava/lang/String;Llk7;)V
+    invoke-direct {p1, v3, v2}, Lru/ok/android/externcalls/sdk/api/UnwrappingParser;-><init>(Ljava/lang/String;Lsp7;)V
 
-    new-instance v2, Lvk0;
+    new-instance v2, Lol0;
 
-    sget-object v3, Lim;->c:Lim;
+    sget-object v3, Lsm;->c:Lsm;
 
-    invoke-direct {v2, v0, v3, v1, p1}, Lvk0;-><init>(Landroid/net/Uri;Lim;Lcm;Llk7;)V
+    invoke-direct {v2, v0, v3, v1, p1}, Lol0;-><init>(Landroid/net/Uri;Lsm;Lmm;Lsp7;)V
 
-    iput-object v2, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iput-object v2, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
     return-void
 .end method
@@ -149,63 +155,63 @@
 .method public canRepeat()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    iget-object v0, v0, Lvk0;->c:Lcm;
+    iget-object v0, v0, Lol0;->c:Lmm;
 
-    iget-boolean v0, v0, Lcm;->b:Z
+    iget-boolean v0, v0, Lmm;->b:Z
 
     return v0
 .end method
 
-.method public getConfigExtractor()Lrl;
+.method public getConfigExtractor()Lam;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrl;"
+            "Lam;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lrl;->e:Li7a;
+    sget-object v0, Lam;->e:Lsnd;
 
     return-object v0
 .end method
 
-.method public getFailParser()Llk7;
+.method public getFailParser()Lsp7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Llk7;"
+            "Lsp7;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lwt3;->b:Lwt3;
+    sget-object v0, Lg93;->a:Lg93;
 
     return-object v0
 .end method
 
-.method public getOkParser()Llk7;
+.method public getOkParser()Lsp7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Llk7;"
+            "Lsp7;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    iget-object v0, v0, Lvk0;->d:Llk7;
+    iget-object v0, v0, Lol0;->d:Lsp7;
 
     return-object v0
 .end method
@@ -213,7 +219,7 @@
 .method public getPriority()I
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -222,24 +228,24 @@
     return v0
 .end method
 
-.method public getScope()Lim;
+.method public getScope()Lsm;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    iget-object v0, v0, Lvk0;->b:Lim;
+    iget-object v0, v0, Lol0;->b:Lsm;
 
     return-object v0
 .end method
 
-.method public getScopeAfter()Ljm;
+.method public getScopeAfter()Ltm;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Ljm;->a:Ljm;
+    sget-object v0, Ltm;->a:Ltm;
 
     return-object v0
 .end method
@@ -247,9 +253,17 @@
 .method public getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    iget-object v0, v0, Lvk0;->a:Landroid/net/Uri;
+    iget-object v0, v0, Lol0;->a:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public handleInterruptedIO()Ljava/lang/Object;
+    .locals 1
+
+    const-string v0, ""
 
     return-object v0
 .end method
@@ -257,7 +271,7 @@
 .method public shouldGzip()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -269,11 +283,11 @@
 .method public shouldPost()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    iget-object v0, v0, Lvk0;->c:Lcm;
+    iget-object v0, v0, Lol0;->c:Lmm;
 
-    iget-boolean v0, v0, Lcm;->c:Z
+    iget-boolean v0, v0, Lmm;->c:Z
 
     return v0
 .end method
@@ -281,7 +295,7 @@
 .method public shouldReport()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -293,11 +307,11 @@
 .method public willWriteParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    iget-object v0, v0, Lvk0;->c:Lcm;
+    iget-object v0, v0, Lol0;->c:Lmm;
 
-    iget-boolean v0, v0, Lcm;->d:Z
+    iget-boolean v0, v0, Lmm;->d:Z
 
     return v0
 .end method
@@ -305,31 +319,31 @@
 .method public willWriteSupplyParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    iget-object v0, v0, Lvk0;->c:Lcm;
+    iget-object v0, v0, Lol0;->c:Lmm;
 
-    iget-boolean v0, v0, Lcm;->e:Z
+    iget-boolean v0, v0, Lmm;->e:Z
 
     return v0
 .end method
 
-.method public writeParams(Lyk7;)V
+.method public writeParams(Lfq7;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    invoke-virtual {v0, p1}, Lvk0;->writeParams(Lyk7;)V
+    invoke-virtual {v0, p1}, Lol0;->writeParams(Lfq7;)V
 
     return-void
 .end method
 
-.method public writeSupplyParams(Lyk7;)V
+.method public writeSupplyParams(Lfq7;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lvk0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/CreateJoinLink$Request;->$$delegate_0:Lol0;
 
-    invoke-virtual {v0, p1}, Lvk0;->writeSupplyParams(Lyk7;)V
+    invoke-virtual {v0, p1}, Lol0;->writeSupplyParams(Lfq7;)V
 
     return-void
 .end method

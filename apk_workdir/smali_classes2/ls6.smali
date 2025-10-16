@@ -2,391 +2,303 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Map;
-.implements Lel7;
-
 
 # instance fields
-.field public final X:Ljava/util/Collection;
+.field public final a:Lms6;
 
-.field public final a:Ll88;
+.field public final b:Lns6;
 
-.field public final b:Ljava/util/Set;
+.field public final c:Los6;
 
-.field public final c:Ljava/util/Set;
+.field public final d:Lps6;
 
-.field public final o:I
+.field public final e:Lqs6;
+
+.field public final f:Lrs6;
+
+.field public final g:Lss6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Map;)V
-    .locals 4
+.method public constructor <init>(Lms6;Lns6;Los6;Lps6;Lqs6;Lrs6;Lss6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ll88;
+    iput-object p1, p0, Lls6;->a:Lms6;
 
-    invoke-direct {v0}, Ll88;-><init>()V
+    iput-object p2, p0, Lls6;->b:Lns6;
 
-    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    iput-object p3, p0, Lls6;->c:Los6;
 
-    move-result-object p1
+    iput-object p4, p0, Lls6;->d:Lps6;
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iput-object p5, p0, Lls6;->e:Lqs6;
 
-    move-result-object p1
+    iput-object p6, p0, Lls6;->f:Lrs6;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1}, Lw83;->u0(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ll88;->b()Ll88;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lls6;->a:Ll88;
-
-    invoke-virtual {p1}, Ll88;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lls6;->b:Ljava/util/Set;
-
-    invoke-virtual {p1}, Ll88;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lls6;->c:Ljava/util/Set;
-
-    iget v0, p1, Ll88;->s0:I
-
-    iput v0, p0, Lls6;->o:I
-
-    invoke-virtual {p1}, Ll88;->values()Ljava/util/Collection;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lls6;->X:Ljava/util/Collection;
+    iput-object p7, p0, Lls6;->g:Lss6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lls6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lls6;
+
+    iget-object v1, p0, Lls6;->a:Lms6;
+
+    iget-object v3, p1, Lls6;->a:Lms6;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lls6;->b:Lns6;
+
+    iget-object v3, p1, Lls6;->b:Lns6;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lls6;->c:Los6;
+
+    iget-object v3, p1, Lls6;->c:Los6;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lls6;->d:Lps6;
+
+    iget-object v3, p1, Lls6;->d:Lps6;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lls6;->e:Lqs6;
+
+    iget-object v3, p1, Lls6;->e:Lqs6;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lls6;->f:Lrs6;
+
+    iget-object v3, p1, Lls6;->f:Lrs6;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lls6;->g:Lss6;
+
+    iget-object p1, p1, Lls6;->g:Lss6;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lls6;->a:Lms6;
 
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final bridge synthetic compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final bridge synthetic computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final bridge synthetic computeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final containsKey(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    check-cast p1, Ljava/lang/String;
-
-    iget-object v0, p0, Lls6;->a:Ll88;
-
-    invoke-virtual {v0, p1}, Ll88;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final containsValue(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lls6;->a:Ll88;
-
-    invoke-virtual {v0, p1}, Ll88;->containsValue(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final entrySet()Ljava/util/Set;
-    .locals 1
-
-    iget-object v0, p0, Lls6;->b:Ljava/util/Set;
-
-    return-object v0
-.end method
-
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p1, Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    check-cast p1, Ljava/lang/String;
-
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lls6;->a:Ll88;
-
-    invoke-virtual {v0, p1}, Ll88;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    return-object p1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    iget-object v0, p0, Lls6;->a:Ll88;
-
-    invoke-virtual {v0}, Ll88;->isEmpty()Z
+    invoke-virtual {v0}, Lms6;->hashCode()I
 
     move-result v0
 
-    return v0
-.end method
+    mul-int/lit8 v0, v0, 0x1f
 
-.method public final keySet()Ljava/util/Set;
-    .locals 1
+    iget-object v1, p0, Lls6;->b:Lns6;
 
-    iget-object v0, p0, Lls6;->c:Ljava/util/Set;
+    invoke-virtual {v1}, Lns6;->hashCode()I
 
-    return-object v0
-.end method
+    move-result v1
 
-.method public final bridge synthetic merge(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
+    add-int/2addr v1, v0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    mul-int/lit8 v1, v1, 0x1f
 
-    const-string p2, "Operation is not supported for read-only collection"
+    iget-object v0, p0, Lls6;->c:Los6;
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Los6;->hashCode()I
 
-    throw p1
-.end method
+    move-result v0
 
-.method public final bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    add-int/2addr v0, v1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string p2, "Operation is not supported for read-only collection"
+    iget-object v1, p0, Lls6;->d:Lps6;
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1}, Lps6;->hashCode()I
 
-    throw p1
-.end method
+    move-result v1
 
-.method public final putAll(Ljava/util/Map;)V
-    .locals 1
+    add-int/2addr v1, v0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    mul-int/lit8 v1, v1, 0x1f
 
-    const-string v0, "Operation is not supported for read-only collection"
+    iget-object v0, p0, Lls6;->e:Lqs6;
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lqs6;->hashCode()I
 
-    throw p1
-.end method
+    move-result v0
 
-.method public final bridge synthetic putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    add-int/2addr v0, v1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string p2, "Operation is not supported for read-only collection"
+    iget-object v1, p0, Lls6;->f:Lrs6;
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1}, Lrs6;->hashCode()I
 
-    throw p1
-.end method
+    move-result v1
 
-.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    add-int/2addr v1, v0
 
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    mul-int/lit8 v1, v1, 0x1f
 
-    const-string v0, "Operation is not supported for read-only collection"
+    iget-object v0, p0, Lls6;->g:Lss6;
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lss6;->hashCode()I
 
-    throw p1
-.end method
+    move-result v0
 
-.method public final remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final bridge synthetic replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final bridge synthetic replace(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final replaceAll(Ljava/util/function/BiFunction;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lls6;->o:I
+    add-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public final values()Ljava/util/Collection;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Lls6;->X:Ljava/util/Collection;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "GradientsLoadingIconColors(contrast="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lls6;->a:Lms6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contrastStatic="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lls6;->b:Lns6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", negative="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lls6;->c:Los6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", neutralThemed="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lls6;->d:Lps6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", primary="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lls6;->e:Lqs6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", primaryStatic="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lls6;->f:Lrs6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", themed="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lls6;->g:Lss6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

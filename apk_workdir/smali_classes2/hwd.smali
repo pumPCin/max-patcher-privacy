@@ -1,187 +1,59 @@
-.class public final Lhwd;
+.class public abstract synthetic Lhwd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:J
-
-.field public final d:Ljava/lang/String;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhwd;->a:Ljava/lang/String;
-
-    iput-object p4, p0, Lhwd;->b:Ljava/lang/String;
-
-    iput-wide p2, p0, Lhwd;->c:J
-
-    iput-object p5, p0, Lhwd;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhwd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhwd;
-
-    iget-object v1, p0, Lhwd;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lhwd;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lhwd;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lhwd;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Lhwd;->c:J
-
-    iget-wide v5, p1, Lhwd;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lhwd;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lhwd;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
+.method static constructor <clinit>()V
     .locals 4
 
-    iget-object v0, p0, Lhwd;->a:Ljava/lang/String;
+    const/4 v0, 0x4
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0}, Lwx1;->y(I)[I
 
-    move-result v0
+    move-result-object v1
 
-    const/16 v1, 0x1f
+    array-length v1, v1
 
-    mul-int/2addr v0, v1
+    new-array v1, v1, [I
 
-    iget-object v2, p0, Lhwd;->b:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
+    const/4 v3, 0x0
 
-    move-result v0
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-wide v2, p0, Lhwd;->c:J
+    :catch_0
+    const/4 v3, 0x2
 
-    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
+    :try_start_1
+    aput v3, v1, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result v0
+    :catch_1
+    const/4 v3, 0x3
 
-    iget-object v1, p0, Lhwd;->d:Ljava/lang/String;
+    :try_start_2
+    aput v3, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-nez v1, :cond_0
+    :catch_2
+    :try_start_3
+    aput v0, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    const/4 v1, 0x0
+    :catch_3
+    sput-object v1, Lhwd;->$EnumSwitchMapping$0:[I
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", title="
-
-    const-string v1, ", appId="
-
-    const-string v2, "SettingEntryBanner(iconUrl="
-
-    iget-object v3, p0, Lhwd;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lhwd;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", startParam="
-
-    iget-wide v2, p0, Lhwd;->c:J
-
-    iget-object v4, p0, Lhwd;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3, v1, v4, v0}, Ljl3;->i(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

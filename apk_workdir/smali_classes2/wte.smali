@@ -1,50 +1,86 @@
-.class public final synthetic Lwte;
-.super Lv8;
+.class public final Lwte;
+.super Lzte;
 .source "SourceFile"
 
-# interfaces
-.implements Lle6;
 
-
-# static fields
-.field public static final r0:Lwte;
+# instance fields
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(J)V
+    .locals 1
 
-    new-instance v0, Lwte;
+    const/4 v0, 0x2
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    invoke-direct {p0, p1, p2, v0}, Lzte;-><init>(JI)V
 
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Ld3b;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lv8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lwte;->r0:Lwte;
+    iput-wide p1, p0, Lwte;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Ljava/util/List;
+    const/4 v0, 0x1
 
-    check-cast p2, Lwse;
+    if-ne p0, p1, :cond_0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    return v0
 
-    new-instance p3, Ld3b;
+    :cond_0
+    instance-of v1, p1, Lwte;
 
-    invoke-direct {p3, p1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v2, 0x0
 
-    return-object p3
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwte;
+
+    iget-wide v3, p0, Lwte;->c:J
+
+    iget-wide v5, p1, Lwte;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lwte;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "DialogBotId(botId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lwte;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

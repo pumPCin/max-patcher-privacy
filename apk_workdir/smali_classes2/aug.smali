@@ -1,168 +1,88 @@
 .class public final Laug;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lztg;
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lztg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Laug;->Companion:Lztg;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Laug;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Laug;->b:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    sget-object p2, Lytg;->a:Lytg;
-
-    invoke-virtual {p2}, Lytg;->d()Lmqd;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lomc;->A(IILmqd;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Laug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    .line 3
-    iput-object p1, p0, Laug;->a:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    .line 4
-    iput-object p2, p0, Laug;->b:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Laug;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Laug;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Laug;
 
-    iget-object v1, p0, Laug;->a:Ljava/lang/String;
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object v3, p1, Laug;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Laug;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Laug;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Laug;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Laug;->a:Ljava/lang/String;
+    new-instance v0, Laug;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v1, p0, Laug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Laug;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object p1, v0, Laug;->X:Ljava/lang/Object;
 
-    iget-object v1, p0, Laug;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, ", status="
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-object p1, p0, Laug;->X:Ljava/lang/Object;
 
-    const-string v2, "WebAppDownloadFileResponse(requestId="
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v3, p0, Laug;->a:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v4, p0, Laug;->b:Ljava/lang/String;
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lwq7;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object p1, p0, Laug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    move-result-object v0
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->K0()Lgtg;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lgtg;->r0:Lde5;
+
+    sget-object v0, Lzag;->a:Lzag;
+
+    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     return-object v0
 .end method

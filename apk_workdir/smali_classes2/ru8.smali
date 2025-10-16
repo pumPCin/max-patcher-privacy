@@ -1,139 +1,65 @@
 .class public final Lru8;
-.super Lh9f;
+.super Lof4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final e0:Lru8;
+.field public static final b:Lru8;
+
+.field public static final c:Ljf4;
+
+.field public static final d:Ljf4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 42
+    .locals 6
 
     new-instance v0, Lru8;
 
-    const-wide v1, 0xff697cffL
+    invoke-direct {v0}, Lof4;-><init>()V
 
-    long-to-int v4, v1
+    sput-object v0, Lru8;->b:Lru8;
 
-    const-wide v1, 0xff23232fL
+    const/4 v1, 0x0
 
-    long-to-int v1, v1
+    new-array v2, v1, [Ljava/lang/String;
 
-    const-wide v2, 0xff333333L
+    const/4 v3, 0x0
 
-    long-to-int v9, v2
+    const/4 v4, 0x2
 
-    const-wide v2, 0xffff3f3fL
+    const-string v5, ":media-picker/select/photo"
 
-    long-to-int v2, v2
+    invoke-static {v0, v5, v2, v3, v4}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    const-wide v5, 0xff75757bL
+    move-result-object v2
 
-    long-to-int v3, v5
+    sput-object v2, Lru8;->c:Ljf4;
 
-    sget-object v5, Lfk4;->e0:Lfk4;
+    new-array v1, v1, [Ljava/lang/String;
 
-    iget v14, v5, Lh9f;->u:I
+    const-string v2, "image_uri"
 
-    iget v6, v5, Lh9f;->C:I
+    const-string v3, "file_path"
 
-    iget v5, v5, Lh9f;->E:I
+    filled-new-array {v2, v3}, [Ljava/lang/String;
 
-    move/from16 v32, v3
+    move-result-object v2
 
-    new-instance v3, Ls93;
+    invoke-static {v2}, Ln7e;->f([Ljava/lang/Object;)Ljava/util/Set;
 
-    const/high16 v40, -0x1000000
+    move-result-object v2
 
-    const/16 v41, 0x200
+    const/16 v3, 0xc
 
-    move/from16 v24, v5
+    const-string v4, ":media-picker/edit/avatar"
 
-    const/4 v5, -0x1
+    invoke-static {v0, v4, v1, v2, v3}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    move/from16 v22, v6
+    move-result-object v0
 
-    const/high16 v6, -0x1000000
-
-    const/high16 v7, -0x1000000
-
-    const/high16 v8, -0x1000000
-
-    const/high16 v10, -0x1000000
-
-    const/high16 v11, -0x1000000
-
-    const/high16 v12, -0x1000000
-
-    const/4 v13, -0x1
-
-    const/high16 v15, -0x1000000
-
-    const/16 v16, -0x1
-
-    const/high16 v17, -0x1000000
-
-    const/high16 v19, -0x1000000
-
-    const/high16 v21, -0x1000000
-
-    const/high16 v23, -0x1000000
-
-    const/16 v25, -0x1
-
-    const/high16 v26, -0x1000000
-
-    const/high16 v27, -0x1000000
-
-    const/high16 v28, -0x1000000
-
-    const/16 v29, -0x1
-
-    const/high16 v31, -0x1000000
-
-    const/high16 v33, -0x1000000
-
-    const/high16 v34, -0x1000000
-
-    const/high16 v35, -0x1000000
-
-    const/16 v36, -0x1
-
-    const/high16 v37, -0x1000000
-
-    const/high16 v38, -0x1000000
-
-    const/high16 v39, -0x1000000
-
-    move/from16 v30, v9
-
-    move/from16 v20, v1
-
-    move/from16 v18, v2
-
-    invoke-direct/range {v3 .. v41}, Ls93;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
-
-    sget-object v7, Lhl9;->X:Lps0;
-
-    sget-object v8, Lhl9;->o:Lps0;
-
-    const-string v1, "Media"
-
-    const-string v2, "TamTam Team"
-
-    move-object v6, v3
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x1
-
-    const-string v5, "media"
-
-    invoke-direct/range {v0 .. v8}, Lh9f;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Ls93;Lps0;Lps0;)V
-
-    sput-object v0, Lru8;->e0:Lru8;
+    sput-object v0, Lru8;->d:Ljf4;
 
     return-void
 .end method

@@ -1,102 +1,171 @@
-.class public final enum Lktg;
-.super Ljava/lang/Enum;
+.class public final synthetic Lktg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldwg;
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final enum a:Lktg;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic b:[Lktg;
-
-.field public static final synthetic c:Laa5;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lktg;
+    iput p1, p0, Lktg;->a:I
 
-    const-string v1, "DOWNLOAD_FILE"
+    iput-object p2, p0, Lktg;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lktg;->a:Lktg;
-
-    filled-new-array {v0}, [Lktg;
-
-    move-result-object v0
-
-    sput-object v0, Lktg;->b:[Lktg;
-
-    new-instance v1, Laa5;
-
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lktg;->c:Laa5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lktg;
-    .locals 1
-
-    const-class v0, Lktg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lktg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lktg;
-    .locals 1
-
-    sget-object v0, Lktg;->b:[Lktg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lktg;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    const/16 v0, 0xc
+    iget p1, p0, Lktg;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lktg;->b:Ljava/lang/Object;
+
+    packed-switch p1, :pswitch_data_0
+
+    check-cast v1, Lone/me/login/welcome/WelcomeScreen;
+
+    iget-object p1, v1, Lone/me/login/welcome/WelcomeScreen;->X:Ljava/lang/Object;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lli7;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lone/me/login/inputphone/InputPhoneScreen;
+
+    invoke-direct {v1}, Lone/me/login/inputphone/InputPhoneScreen;-><init>()V
+
+    invoke-static {v1, v0, v0}, Laxi;->a(Lx14;Lmh;Lmh;)Lmhd;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    const-string v1, "InputPhoneScreen"
 
-.method public final b()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {p1, v0, v1}, Lli7;->a(Lmhd;Ljava/lang/String;)V
 
-    const-string v0, "WebAppDownloadFile"
+    return-void
 
-    return-object v0
-.end method
+    :pswitch_0
+    check-cast v1, Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Lwq7;
 
-    const-string v0, "download_file"
+    invoke-virtual {v1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->R0()Lmeh;
 
-    return-object v0
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lceh;
+
+    invoke-direct {v1, p1, v0}, Lceh;-><init>(Lmeh;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x1
+
+    invoke-static {p1, v0, v1, v2}, Lsyg;->m(Lsyg;Lt44;Lei6;I)Lwwe;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lmeh;->G0:Lpzd;
+
+    sget-object v2, Lmeh;->m1:[Lwq7;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, p1, v2, v0}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v1, Lo3h;
+
+    iget-object p1, v1, Lo3h;->c:Ll3h;
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Ldsb;
+
+    iget-object p1, p1, Ldsb;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ly2d;->x()Ln18;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ln18;->e()V
+
+    :cond_0
+    return-void
+
+    :pswitch_2
+    check-cast v1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
+
+    iget-object p1, v1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->b:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Li2h;
+
+    iget-object p1, p1, Li2h;->b:Luu1;
+
+    sget-object v0, Logg;->c:Logg;
+
+    invoke-virtual {p1, v0}, Luu1;->n(Logg;)V
+
+    return-void
+
+    :pswitch_3
+    check-cast v1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lwq7;
+
+    invoke-virtual {v1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->K0()Lgtg;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lgtg;->s0:Lde5;
+
+    sget-object v0, Ldpg;->a:Ldpg;
+
+    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,14 +1,35 @@
-.class public interface abstract Lc68;
+.class public final Lc68;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# instance fields
+.field public a:Z
 
-.method public abstract c()V
-.end method
+.field public b:Z
 
-.method public abstract d()V
-.end method
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Legc;
+
+.field public j:Z
+
+.field public k:I
+
+.field public l:Z
+
+.field public m:Z
+
+.field public n:Z
+
+.field public o:Z

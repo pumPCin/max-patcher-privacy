@@ -1,17 +1,98 @@
-.class public interface abstract Lbfe;
-.super Ljava/lang/Object;
+.class public final Lbfe;
+.super Lgd0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Llqf;
+
+
+# direct methods
+.method public constructor <init>(Llqf;)V
+    .locals 1
+
+    const/16 v0, 0x14
+
+    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
+
+    iput-object p1, p0, Lbfe;->b:Llqf;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract g()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lbfe;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lbfe;
+
+    iget-object v0, p0, Lbfe;->b:Llqf;
+
+    iget-object p1, p1, Lbfe;->b:Llqf;
+
+    invoke-virtual {v0, p1}, Llqf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public abstract p()Z
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lbfe;->b:Llqf;
+
+    invoke-virtual {v0}, Llqf;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract u(I)V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.method public abstract w()V
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(message="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbfe;->b:Llqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

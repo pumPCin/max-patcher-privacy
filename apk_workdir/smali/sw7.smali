@@ -1,133 +1,221 @@
 .class public final Lsw7;
-.super Ljava/util/AbstractList;
+.super Lhlf;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/RandomAccess;
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final t0:Ll62;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final X:Lsm5;
 
-.field public final b:Lfe6;
+.field public final Y:Lbx7;
+
+.field public Z:I
+
+.field public o:Landroid/animation/ObjectAnimator;
+
+.field public r0:Z
+
+.field public s0:F
 
 
 # direct methods
-.method public constructor <init>(Lfe6;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+    new-instance v0, Ll62;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "animationFraction"
 
-    iput-object p2, p0, Lsw7;->a:Ljava/util/List;
+    const/16 v2, 0x8
 
-    iput-object p1, p0, Lsw7;->b:Lfe6;
+    const-class v3, Ljava/lang/Float;
+
+    invoke-direct {v0, v3, v1, v2}, Ll62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lsw7;->t0:Ll62;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lbx7;)V
+    .locals 1
+
+    const/4 v0, 0x3
+
+    invoke-direct {p0, v0}, Lhlf;-><init>(I)V
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lsw7;->Z:I
+
+    iput-object p1, p0, Lsw7;->Y:Lbx7;
+
+    new-instance p1, Lsm5;
+
+    invoke-direct {p1}, Lsm5;-><init>()V
+
+    iput-object p1, p0, Lsw7;->X:Lsm5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
+.method public final A()V
     .locals 1
 
-    iget-object v0, p0, Lsw7;->a:Ljava/util/List;
+    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    iget-object v0, p0, Lsw7;->b:Lfe6;
-
-    invoke-interface {v0, p1}, Lfe6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method
 
-.method public final isEmpty()Z
-    .locals 1
+.method public final T()V
+    .locals 0
 
-    iget-object v0, p0, Lsw7;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 2
-
-    new-instance v0, Lrw7;
-
-    iget-object v1, p0, Lsw7;->a:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lrw7;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
-
-    return-object v0
-.end method
-
-.method public final remove(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lsw7;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lsw7;->b:Lfe6;
-
-    invoke-interface {v0, p1}, Lfe6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final removeRange(II)V
-    .locals 1
-
-    iget-object v0, p0, Lsw7;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->clear()V
+    invoke-virtual {p0}, Lsw7;->f0()V
 
     return-void
 .end method
 
-.method public final size()I
-    .locals 1
+.method public final a0(Lkk0;)V
+    .locals 0
 
-    iget-object v0, p0, Lsw7;->a:Ljava/util/List;
+    return-void
+.end method
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+.method public final b0()V
+    .locals 0
 
-    move-result v0
+    return-void
+.end method
 
-    return v0
+.method public final d0()V
+    .locals 3
+
+    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_0
+
+    sget-object v1, Lsw7;->t0:Ll62;
+
+    invoke-static {p0, v1, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
+
+    const-wide/16 v1, 0x14d
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
+
+    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
+
+    new-instance v1, Lu6;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2, p0}, Lu6;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    :cond_0
+    invoke-virtual {p0}, Lsw7;->f0()V
+
+    iget-object v0, p0, Lsw7;->o:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public final e0()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final f0()V
+    .locals 5
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lsw7;->r0:Z
+
+    iput v0, p0, Lsw7;->Z:I
+
+    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly05;
+
+    iget-object v2, p0, Lsw7;->Y:Lbx7;
+
+    iget-object v3, v2, Lmk0;->c:[I
+
+    const/4 v4, 0x0
+
+    aget v3, v3, v4
+
+    iput v3, v1, Ly05;->c:I
+
+    iget v2, v2, Lmk0;->g:I
+
+    div-int/lit8 v2, v2, 0x2
+
+    iput v2, v1, Ly05;->d:I
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

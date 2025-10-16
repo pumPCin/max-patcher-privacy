@@ -1,118 +1,159 @@
 .class public final Llf7;
-.super Lc2f;
+.super Ldz;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+.field public final o:Lkr7;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lkr7;Ljava/lang/String;ZZ)V
+    .locals 1
 
-    iput-object p1, p0, Llf7;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    sget-object v0, Lz00;->x0:Lz00;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0, p3, p4}, Ldz;-><init>(Lz00;ZZ)V
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llf7;->o:Lkr7;
+
+    iput-object p2, p0, Llf7;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/util/HashMap;
+    .locals 9
 
-    check-cast p1, Lf6c;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Llf7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Llf7;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Llf7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Llf7;
-
-    iget-object v1, p0, Llf7;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
-
-    invoke-direct {v0, v1, p2}, Llf7;-><init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Llf7;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llf7;->X:Ljava/lang/Object;
-
-    check-cast p1, Lf6c;
-
-    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->K0:[Lpl7;
-
-    iget-object v0, p0, Llf7;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
-
-    iget-object v0, v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->B0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v3, p1, Lf6c;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v3
-
-    iget-object p1, p1, Lf6c;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v4
-
-    invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v3, 0x50
-
-    iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-super {p0}, Ldz;->a()Ljava/util/HashMap;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object p1, Laxf;->a:Laxf;
+    iget-object v2, p0, Llf7;->o:Lkr7;
 
-    return-object p1
+    iget-object v2, v2, Lkr7;->a:Ljava/io/Serializable;
+
+    check-cast v2, Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/List;
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lmw0;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Ljava/util/HashMap;
+
+    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
+
+    iget-object v7, v5, Lmw0;->o:Ljava/lang/String;
+
+    if-eqz v7, :cond_1
+
+    const-string v8, "url"
+
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    iget-object v7, v5, Lmw0;->a:Lkw0;
+
+    iget-object v7, v7, Lkw0;->a:Ljava/lang/String;
+
+    const-string v8, "type"
+
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v7, "text"
+
+    iget-object v8, v5, Lmw0;->b:Ljava/lang/String;
+
+    invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v7, v5, Lmw0;->c:Ljw0;
+
+    iget-object v7, v7, Ljw0;->a:Ljava/lang/String;
+
+    const-string v8, "intent"
+
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v7, "payload"
+
+    iget-object v8, v5, Lmw0;->X:Ljava/lang/String;
+
+    invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-boolean v7, v5, Lmw0;->Y:Z
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    const-string v8, "isQuick"
+
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-wide v7, v5, Lmw0;->Z:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    const-string v7, "contactId"
+
+    invoke-virtual {v6, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    const-string v2, "buttons"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
 .end method

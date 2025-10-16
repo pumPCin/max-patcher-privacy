@@ -1,50 +1,49 @@
-.class public interface abstract Lph8;
+.class public final Lph8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(JIII)V
+# static fields
+.field public static final e:Lh0;
+
+
+# instance fields
+.field public final a:Lp44;
+
+.field public final b:Lp44;
+
+.field public final c:Lp44;
+
+.field public final d:Lp44;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lh0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lh0;-><init>(F)V
+
+    sput-object v0, Lph8;->e:Lh0;
+
+    return-void
 .end method
 
-.method public abstract flush()V
-.end method
+.method public constructor <init>(Lp44;Lp44;Lp44;Lp44;)V
+    .locals 0
 
-.method public abstract getInputBuffer(I)Ljava/nio/ByteBuffer;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getOutputBuffer(I)Ljava/nio/ByteBuffer;
-.end method
+    iput-object p1, p0, Lph8;->a:Lp44;
 
-.method public abstract getOutputFormat()Landroid/media/MediaFormat;
-.end method
+    iput-object p3, p0, Lph8;->b:Lp44;
 
-.method public abstract h(IJ)V
-.end method
+    iput-object p4, p0, Lph8;->c:Lp44;
 
-.method public abstract i()I
-.end method
+    iput-object p2, p0, Lph8;->d:Lp44;
 
-.method public abstract j(Landroid/media/MediaCodec$BufferInfo;)I
-.end method
-
-.method public abstract k(I)V
-.end method
-
-.method public abstract n(Landroid/view/Surface;)V
-.end method
-
-.method public abstract o(ILn54;J)V
-.end method
-
-.method public abstract p(Lni8;Landroid/os/Handler;)V
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract releaseOutputBuffer(IZ)V
-.end method
-
-.method public abstract setParameters(Landroid/os/Bundle;)V
+    return-void
 .end method

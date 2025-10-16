@@ -1,128 +1,170 @@
-.class public final synthetic Lqlg;
-.super Lye6;
+.class public final Lqlg;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final b:Lwlg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lrlg;)V
-    .locals 8
+.method public constructor <init>(Llpe;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lqlg;->a:I
+    iget-object v0, p1, Llpe;->a:Ljava/lang/Object;
 
-    iput-object p1, p0, Lqlg;->c:Ljava/lang/Object;
+    check-cast v0, Ljava/lang/String;
 
-    iput-object p2, p0, Lqlg;->b:Landroid/view/View;
+    iput-object v0, p0, Lqlg;->a:Ljava/lang/String;
 
-    const-string v7, "doOnGlobalLayout$dispose(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V"
+    iget-object p1, p1, Llpe;->b:Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    check-cast p1, Lwlg;
 
-    const/4 v2, 0x0
-
-    .line 2
-    const-class v4, Lpd7;
-
-    const-string v6, "dispose"
-
-    move-object v1, p0
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v7}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lgmg;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
-    .locals 8
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lqlg;->a:I
-
-    iput-object p1, p0, Lqlg;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lqlg;->b:Landroid/view/View;
-
-    const-string v7, "attach$dispose(Landroid/view/ViewTreeObserver;Lone/me/sdk/contextmenu/helper/ViewWatcher$attach$listener$1;Landroid/view/View;)V"
-
-    const/4 v3, 0x0
-
-    const/4 v2, 0x0
-
-    .line 1
-    const-class v4, Lpd7;
-
-    const-string v6, "dispose"
-
-    move-object v1, p0
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v7}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p1, p0, Lqlg;->b:Lwlg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_5
+
+    const-class v2, Lqlg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lqlg;
+
+    iget-object v2, p1, Lqlg;->b:Lwlg;
+
+    iget-object p1, p1, Lqlg;->a:Ljava/lang/String;
+
+    iget-object v3, p0, Lqlg;->a:Ljava/lang/String;
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    :goto_0
+    return v1
+
+    :cond_3
+    iget-object p1, p0, Lqlg;->b:Lwlg;
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1, v2}, Lwlg;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_4
+    if-nez v2, :cond_5
+
+    return v0
+
+    :cond_5
+    :goto_1
+    return v1
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lqlg;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lqlg;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lps1;->receiver:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    check-cast v0, Landroid/view/ViewTreeObserver;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    iget-object v1, p0, Lqlg;->c:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v1, Lgmg;
+    goto :goto_0
 
-    iget-object v2, p0, Lqlg;->b:Landroid/view/View;
+    :cond_0
+    move v1, v0
 
-    invoke-static {v1, v2, v0}, Lvx;->c(Lgmg;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    sget-object v0, Laxf;->a:Laxf;
+    iget-object v2, p0, Lqlg;->b:Lwlg;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Lwlg;->hashCode()I
+
+    move-result v0
+
+    :cond_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VideoConversionData{sourceUri=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqlg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', convertOptions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqlg;->b:Lwlg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lps1;->receiver:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
-
-    iget-object v1, p0, Lqlg;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/ViewTreeObserver;
-
-    iget-object v2, p0, Lqlg;->b:Landroid/view/View;
-
-    invoke-static {v0, v1, v2}, Lslg;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
-
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

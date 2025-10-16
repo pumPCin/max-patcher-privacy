@@ -1,14 +1,15 @@
-.class public interface abstract Lkh8;
-.super Ljava/lang/Object;
+.class public final Lkh8;
+.super Lih8;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract c()Lwib;
-.end method
+.method public final a(Lhh8;)Landroid/window/OnBackInvokedCallback;
+    .locals 1
 
-.method public abstract q()J
-.end method
+    new-instance v0, Ljh8;
 
-.method public abstract r(Lwib;)V
+    invoke-direct {v0, p0, p1}, Ljh8;-><init>(Lkh8;Lhh8;)V
+
+    return-object v0
 .end method

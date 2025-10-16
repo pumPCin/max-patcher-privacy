@@ -1,16 +1,10 @@
-.class public final enum Lgch;
-.super Ljava/lang/Enum;
+.class public final Lgch;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lgch;
-
-.field public static final enum b:Lgch;
-
-.field public static final enum c:Lgch;
-
-.field public static final enum o:Lgch;
+.field public static final Companion:Lfch;
 
 
 # instance fields
@@ -19,87 +13,109 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
-    new-instance v0, Lgch;
+    new-instance v0, Lfch;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "tcp_relay"
-
-    const-string v3, "TCP_RELAY"
-
-    invoke-direct {v0, v3, v1, v2}, Lgch;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lgch;->b:Lgch;
-
-    new-instance v1, Lgch;
-
-    const/4 v2, 0x1
-
-    const-string v3, "udp_relay"
-
-    const-string v4, "UDP_RELAY"
-
-    invoke-direct {v1, v4, v2, v3}, Lgch;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lgch;->c:Lgch;
-
-    new-instance v2, Lgch;
-
-    const/4 v3, 0x2
-
-    const-string v4, "srflx"
-
-    const-string v5, "SRFLX"
-
-    invoke-direct {v2, v5, v3, v4}, Lgch;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lgch;->o:Lgch;
-
-    filled-new-array {v0, v1, v2}, [Lgch;
-
-    move-result-object v0
-
-    sput-object v0, Lgch;->X:[Lgch;
+    sput-object v0, Lgch;->Companion:Lfch;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method public synthetic constructor <init>(ILjava/lang/String;)V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    and-int/lit8 v0, p1, 0x1
 
-    iput-object p3, p0, Lgch;->a:Ljava/lang/String;
+    const/4 v1, 0x1
+
+    if-ne v1, v0, :cond_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lgch;->a:Ljava/lang/String;
 
     return-void
+
+    :cond_0
+    sget-object p2, Lech;->a:Lech;
+
+    invoke-virtual {p2}, Lech;->d()Lu1e;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Luti;->b(IILu1e;)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgch;
-    .locals 1
 
-    const-class v0, Lgch;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lgch;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Lgch;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgch;
+
+    iget-object v1, p0, Lgch;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lgch;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public static values()[Lgch;
+.method public final hashCode()I
     .locals 1
 
-    sget-object v0, Lgch;->X:[Lgch;
+    iget-object v0, p0, Lgch;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, [Lgch;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "WebAppRequestPhoneRequest(requestId="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lgch;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lgch;
 
     return-object v0
 .end method

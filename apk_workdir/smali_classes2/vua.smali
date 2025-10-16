@@ -1,56 +1,48 @@
 .class public final Lvua;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lwua;
+.field public final synthetic Y:Lj7a;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwua;I)V
+.method public constructor <init>(Lj7a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lvua;->a:I
+    iput-object p1, p0, Lvua;->Y:Lj7a;
 
-    iput-object p1, p0, Lvua;->b:Lwua;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lvua;->a:I
+    iput-object p1, p0, Lvua;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lvua;->X:I
 
-    iget-object v0, p0, Lvua;->b:Lwua;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lvua;->X:I
 
-    :pswitch_0
-    iget-object v0, p0, Lvua;->b:Lwua;
+    iget-object p1, p0, Lvua;->Y:Lj7a;
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Lj7a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    nop
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

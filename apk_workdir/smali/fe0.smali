@@ -2,94 +2,39 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lce0;
+
 
 # instance fields
-.field public final a:F
+.field public final a:I
 
-.field public final b:F
+.field public final b:I
 
-.field public final c:F
-
-.field public final d:I
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/window/BackEvent;)V
-    .locals 4
-
-    sget-object v0, Lhl;->a:Lhl;
-
-    invoke-virtual {v0, p1}, Lhl;->d(Landroid/window/BackEvent;)F
-
-    move-result v1
-
-    invoke-virtual {v0, p1}, Lhl;->e(Landroid/window/BackEvent;)F
-
-    move-result v2
-
-    invoke-virtual {v0, p1}, Lhl;->b(Landroid/window/BackEvent;)F
-
-    move-result v3
-
-    invoke-virtual {v0, p1}, Lhl;->c(Landroid/window/BackEvent;)I
-
-    move-result p1
+.method public constructor <init>(III)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v1, p0, Lfe0;->a:F
+    iput p1, p0, Lfe0;->a:I
 
-    iput v2, p0, Lfe0;->b:F
+    iput p2, p0, Lfe0;->b:I
 
-    iput v3, p0, Lfe0;->c:F
-
-    iput p1, p0, Lfe0;->d:I
+    iput p3, p0, Lfe0;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final getType()I
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const v0, 0x68697661
 
-    const-string v1, "BackEventCompat{touchX="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lfe0;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", touchY="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfe0;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", progress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfe0;->c:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", swipeEdge="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfe0;->d:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lnd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

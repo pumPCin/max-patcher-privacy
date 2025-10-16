@@ -1,142 +1,243 @@
-.class public final synthetic Lee5;
+.class public final Lee5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljw7;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic b:Luib;
+.field public final b:Ljava/lang/reflect/Method;
+
+.field public final c:I
+
+.field public d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Luib;I)V
-    .locals 0
-
-    iput p2, p0, Lee5;->a:I
-
-    iput-object p1, p0, Lee5;->b:Luib;
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/reflect/Method;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lee5;->d:Z
+
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    iput-object p1, p0, Lee5;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lee5;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {p2, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->hashCode()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x1f
+
+    mul-int/lit8 p2, p2, 0x1f
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lee5;->c:I
+
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "EventHandler method cannot be null."
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "EventHandler target cannot be null."
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lee5;->a:I
+    iget-boolean v0, p0, Lee5;->d:Z
 
-    check-cast p1, Lljb;
+    if-eqz v0, :cond_1
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    iget-object v0, p0, Lee5;->b:Ljava/lang/reflect/Method;
 
-    iget-object v0, p0, Lee5;->b:Luib;
+    iget-object v1, p0, Lee5;->a:Ljava/lang/Object;
 
-    iget-object v0, v0, Luib;->n:Lwib;
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lljb;->y(Lwib;)V
+    move-result-object p1
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lee5;->b:Luib;
-
-    invoke-static {v0}, Lve5;->N0(Luib;)Z
-
-    move-result v0
-
-    invoke-interface {p1, v0}, Lljb;->q(Z)V
+    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :pswitch_1
-    iget-object v0, p0, Lee5;->b:Luib;
+    :catch_0
+    move-exception p1
 
-    iget v0, v0, Luib;->m:I
+    goto :goto_0
 
-    invoke-interface {p1, v0}, Lljb;->f(I)V
+    :catch_1
+    move-exception p1
 
-    return-void
+    goto :goto_1
 
-    :pswitch_2
-    iget-object v0, p0, Lee5;->b:Luib;
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
-    iget v0, v0, Luib;->e:I
+    move-result-object v0
 
-    invoke-interface {p1, v0}, Lljb;->k(I)V
+    instance-of v0, v0, Ljava/lang/Error;
 
-    return-void
+    if-eqz v0, :cond_0
 
-    :pswitch_3
-    iget-object v0, p0, Lee5;->b:Luib;
+    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
-    iget-boolean v1, v0, Luib;->l:Z
+    move-result-object p1
 
-    iget v0, v0, Luib;->e:I
+    check-cast p1, Ljava/lang/Error;
 
-    invoke-interface {p1, v0, v1}, Lljb;->o(IZ)V
+    throw p1
 
-    return-void
+    :cond_0
+    throw p1
 
-    :pswitch_4
-    iget-object v0, p0, Lee5;->b:Luib;
+    :goto_1
+    new-instance v0, Ljava/lang/AssertionError;
 
-    iget-boolean v1, v0, Luib;->g:Z
+    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lee5;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " has been invalidated and can no longer handle events."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_1
+
+    return v1
+
+    :cond_1
+    const-class v2, Lee5;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v0, v0, Luib;->g:Z
+    move-result-object v3
 
-    invoke-interface {p1, v0}, Lljb;->h(Z)V
+    if-eq v2, v3, :cond_2
 
-    return-void
+    return v1
 
-    :pswitch_5
-    iget-object v0, p0, Lee5;->b:Luib;
+    :cond_2
+    check-cast p1, Lee5;
 
-    iget-object v0, v0, Luib;->i:Linf;
+    iget-object v2, p0, Lee5;->b:Ljava/lang/reflect/Method;
 
-    iget-object v0, v0, Linf;->Y:Ljava/lang/Object;
+    iget-object v3, p1, Lee5;->b:Ljava/lang/reflect/Method;
 
-    check-cast v0, Lonf;
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {p1, v0}, Lljb;->w(Lonf;)V
+    move-result v2
 
-    return-void
+    if-eqz v2, :cond_3
 
-    :pswitch_6
-    iget-object v0, p0, Lee5;->b:Luib;
+    iget-object v2, p0, Lee5;->a:Ljava/lang/Object;
 
-    iget-object v0, v0, Luib;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    iget-object p1, p1, Lee5;->a:Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lljb;->u(Lcom/google/android/exoplayer2/PlaybackException;)V
+    if-ne v2, p1, :cond_3
 
-    return-void
+    return v0
 
-    :pswitch_7
-    iget-object v0, p0, Lee5;->b:Luib;
+    :cond_3
+    return v1
+.end method
 
-    iget-object v0, v0, Luib;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-interface {p1, v0}, Lljb;->F(Lcom/google/android/exoplayer2/PlaybackException;)V
+    iget v0, p0, Lee5;->c:I
 
-    return-void
+    return v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "[EventHandler "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lee5;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

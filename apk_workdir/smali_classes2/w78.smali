@@ -1,37 +1,55 @@
 .class public final Lw78;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/EnumSet;
+.field public X:Ljava/util/List;
 
-.field public final b:J
+.field public Y:Ljava/lang/Exception;
 
-.field public c:Ljava/util/ArrayList;
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Ly78;
+
+.field public final synthetic r0:Ly78;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Ly78;Lk14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lw78;->r0:Ly78;
 
-    const-class v0, Lx78;
-
-    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lw78;->a:Ljava/util/EnumSet;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lw78;->c:Ljava/util/ArrayList;
-
-    iput-wide p1, p0, Lw78;->b:J
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lw78;->Z:Ljava/lang/Object;
+
+    iget p1, p0, Lw78;->s0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lw78;->s0:I
+
+    iget-object p1, p0, Lw78;->r0:Ly78;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, v0, p0}, Ly78;->a(Ly78;Ljava/util/List;Ljava/util/List;Ljava/lang/Exception;Lk14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

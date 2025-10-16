@@ -1,127 +1,100 @@
 .class public final Lp55;
-.super Lw35;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public final a:Ls7d;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;)V
-    .locals 1
+.method public constructor <init>(Lpzd;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object p1, p1, Lpzd;->b:Ljava/lang/Object;
+
+    check-cast p1, Leb7;
+
+    invoke-virtual {p1}, Leb7;->i()Ls7d;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lp55;->a:Ls7d;
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const-string v1, "The sequence must contain at least one EditedMediaItem."
+
+    invoke-static {v1, v0}, Lgfi;->a(Ljava/lang/Object;Z)V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lp55;->a:I
+    invoke-virtual {p1, v0}, Ls7d;->get(I)Ljava/lang/Object;
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    .line 2
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    check-cast p1, Lo55;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iget-object p1, p1, Lo55;->a:Lyr8;
 
-    iput-object v0, p0, Lp55;->b:Ljava/lang/ref/WeakReference;
+    invoke-static {p1}, Lo55;->c(Lyr8;)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public constructor <init>(Landroidx/appcompat/widget/SwitchCompat;)V
-    .locals 1
+    xor-int/lit8 p1, p1, 0x1
 
-    const/4 v0, 0x1
+    const-string v0, "If the first item in the sequence is a Gap, then forceAudioTrack or forceVideoTrack flag must be set"
 
-    iput v0, p0, Lp55;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lp55;->b:Ljava/lang/ref/WeakReference;
+    invoke-static {v0, p1}, Lgfi;->a(Ljava/lang/Object;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public h(Ljava/lang/Throwable;)V
-    .locals 0
+.method public final a()Z
+    .locals 4
 
-    iget p1, p0, Lp55;->a:I
+    const/4 v0, 0x0
 
-    packed-switch p1, :pswitch_data_0
+    move v1, v0
 
-    return-void
+    :goto_0
+    iget-object v2, p0, Lp55;->a:Ls7d;
 
-    :pswitch_0
-    iget-object p1, p0, Lp55;->b:Ljava/lang/ref/WeakReference;
+    iget v3, v2, Ls7d;->o:I
 
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    if-ge v1, v3, :cond_1
 
-    move-result-object p1
+    invoke-virtual {v2, v1}, Ls7d;->get(I)Ljava/lang/Object;
 
-    check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
+    move-result-object v2
 
-    if-eqz p1, :cond_0
+    check-cast v2, Lo55;
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/SwitchCompat;->d()V
+    iget-object v2, v2, Lo55;->a:Lyr8;
 
-    :cond_0
-    return-void
+    invoke-static {v2}, Lo55;->c(Lyr8;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v2
 
-.method public final i()V
-    .locals 2
+    if-eqz v2, :cond_0
 
-    iget v0, p0, Lp55;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lp55;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/appcompat/widget/SwitchCompat;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/SwitchCompat;->d()V
+    return v0
 
     :cond_0
-    return-void
+    add-int/lit8 v1, v1, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Lp55;->b:Ljava/lang/ref/WeakReference;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lr55;->a(Landroid/widget/EditText;I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return v0
 .end method

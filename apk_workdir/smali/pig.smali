@@ -1,20 +1,61 @@
-.class public interface abstract Lpig;
-.super Ljava/lang/Object;
+.class public final Lpig;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:I
+
+.field public b:Loig;
+
+.field public c:Landroid/content/res/ColorStateList;
+
+.field public d:Landroid/graphics/PorterDuff$Mode;
+
+.field public e:Z
+
+.field public f:Landroid/graphics/Bitmap;
+
+.field public g:Landroid/content/res/ColorStateList;
+
+.field public h:Landroid/graphics/PorterDuff$Mode;
+
+.field public i:I
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:Landroid/graphics/Paint;
+
+
 # virtual methods
-.method public abstract B(Landroid/view/View;)I
+.method public getChangingConfigurations()I
+    .locals 1
+
+    iget v0, p0, Lpig;->a:I
+
+    return v0
 .end method
 
-.method public abstract m(Landroid/view/View;)I
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .line 1
+    new-instance v0, Lrig;
+
+    invoke-direct {v0, p0}, Lrig;-><init>(Lpig;)V
+
+    return-object v0
 .end method
 
-.method public abstract p()I
-.end method
+.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-.method public abstract v()I
-.end method
+    .line 2
+    new-instance p1, Lrig;
 
-.method public abstract z(I)Landroid/view/View;
+    invoke-direct {p1, p0}, Lrig;-><init>(Lpig;)V
+
+    return-object p1
 .end method

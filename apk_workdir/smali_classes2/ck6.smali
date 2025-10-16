@@ -1,49 +1,75 @@
 .class public final Lck6;
-.super Lwy3;
+.super Lfk6;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:Lck6;
 
-.field public final synthetic Y:Ldk6;
+.field public static final b:Lvj6;
 
-.field public Z:I
-
-.field public o:Ldk6;
+.field public static final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ldk6;Lwy3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lck6;->Y:Ldk6;
+    new-instance v0, Lck6;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lck6;->a:Lck6;
+
+    new-instance v0, Lvj6;
+
+    sget v1, Li0b;->a:I
+
+    invoke-direct {v0, v1}, Lvj6;-><init>(I)V
+
+    sput-object v0, Lck6;->b:Lvj6;
+
+    sget-object v0, Lyj6;->e:Lyj6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lck6;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lck6;->X:Ljava/lang/Object;
+    const-string v0, "ru.ok.tamtam.ALL_PHOTO"
 
-    iget p1, p0, Lck6;->Z:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final c()Lf4;
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget-object v0, Lck6;->b:Lvj6;
 
-    iput p1, p0, Lck6;->Z:I
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lck6;->Y:Ldk6;
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    invoke-virtual {p1, p0}, Ldk6;->d(Lwy3;)Ljava/lang/Object;
+    sget-object v0, Lck6;->c:Ljava/util/List;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    return-object p1
+.method public final f()Lvj6;
+    .locals 1
+
+    sget-object v0, Lck6;->b:Lvj6;
+
+    return-object v0
 .end method

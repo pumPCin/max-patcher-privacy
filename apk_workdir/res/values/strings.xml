@@ -48,6 +48,7 @@
 %s"</string>
     <string name="attach_description_union">и</string>
     <string name="attach_file">Файл</string>
+    <string name="attach_gallery">Галерея</string>
     <string name="audio_onboarding_intro">Скорость звука можно изменить</string>
     <string name="audio_record_active_call_error_snackbar_title">Завершите звонок, чтобы записать голосовое сообщение</string>
     <string name="audio_record_confirm_exit_accept">Сбросить</string>
@@ -725,7 +726,6 @@
     <string name="map_type_satellite">Спутник</string>
     <string name="markdown_add_link">Добавить ссылку</string>
     <string name="markdown_bold">Жирный</string>
-    <string name="markdown_code">Красный</string>
     <string name="markdown_heading">Заголовок</string>
     <string name="markdown_italic">Курсив</string>
     <string name="markdown_mono">Моно</string>
@@ -779,13 +779,13 @@
     <string name="media_caching_time_option_month">Месяц</string>
     <string name="media_caching_time_option_six_month">6 месяцев</string>
     <string name="media_caching_time_option_week">Неделю</string>
+    <string name="media_files">Файлы</string>
     <string name="media_photo_video">Фото и видео</string>
     <string name="media_picker_default_toolbar_title">Фото и видео</string>
     <string name="media_picker_default_toolbar_title_only_photo">Фото</string>
     <string name="media_picker_empty_media_data">Отсутствуют фото и видео в галерее</string>
     <string name="media_settings_always">Всегда</string>
     <string name="media_settings_audio_autoload">Автозагрузка аудио</string>
-    <string name="media_settings_audio_setting">Аудио</string>
     <string name="media_settings_auto_load">Автозагрузка</string>
     <string name="media_settings_auto_play">Автовоспроизведение</string>
     <string name="media_settings_auto_play_never">Выключено</string>
@@ -1374,6 +1374,15 @@
     <string name="oneme_profile_start_chat">Чат</string>
     <string name="oneme_profile_unblock">Разблокировать</string>
     <string name="oneme_profile_video">Видео</string>
+    <string name="oneme_qrscanner_camera_request_description">Чтобы сканировать QR, разрешите доступ к камере</string>
+    <string name="oneme_qrscanner_context_menu_title">Загрузить фото</string>
+    <string name="oneme_qrscanner_error_snackbar_description">Попробуйте ещё раз</string>
+    <string name="oneme_qrscanner_error_snackbar_title">Не удалось считать QR-код</string>
+    <string name="oneme_qrscanner_hint_with_gallery">"Наведите камеру на QR-код
+или загрузите фото из галереи"</string>
+    <string name="oneme_qrscanner_hint_without_gallery">Наведите камеру на QR-код</string>
+    <string name="oneme_qrscanner_storage_request_description">Чтобы сканировать QR, разрешите доступ к галерее</string>
+    <string name="oneme_qrscanner_toolbar_title">Сканировать QR-код</string>
     <string name="oneme_registration_neuro_avatars_change_photo">Изменить фото</string>
     <string name="oneme_registration_neuro_avatars_choose_avatar">Выбрать аватар</string>
     <string name="oneme_registration_neuro_avatars_choose_photo">Добавить фото</string>
@@ -1416,8 +1425,6 @@
     <string name="oneme_settings_media_action_video_quality_720">720p</string>
     <string name="oneme_settings_media_action_wifi">Только Wi-Fi</string>
     <string name="oneme_settings_media_animoji">Анимированные emoji</string>
-    <string name="oneme_settings_media_audio">Аудио</string>
-    <string name="oneme_settings_media_audio_title">Автозагрузка аудио</string>
     <string name="oneme_settings_media_caching">Кэширование</string>
     <string name="oneme_settings_media_gif">GIF</string>
     <string name="oneme_settings_media_gif_play">GIF</string>
@@ -1425,11 +1432,14 @@
     <string name="oneme_settings_media_load_media_in_roaming">Загружать медиа в роуминге</string>
     <string name="oneme_settings_media_photo">Фотографии</string>
     <string name="oneme_settings_media_photo_title">Автозагрузка фото</string>
+    <string name="oneme_settings_media_playlist">Следующее аудио или видеосообщение</string>
     <string name="oneme_settings_media_screen_autoloading_section">Автозагрузка</string>
     <string name="oneme_settings_media_screen_autoplaying_section">Автовоспроизведение</string>
     <string name="oneme_settings_media_screen_datapressing_section">Сжатие данных при отправке</string>
     <string name="oneme_settings_media_screen_toolbar_title">Медиа</string>
     <string name="oneme_settings_media_video">Видео</string>
+    <string name="oneme_settings_media_video_messages">Видеосообщения</string>
+    <string name="oneme_settings_media_video_messages_title">Автозагрузка видеосообщений</string>
     <string name="oneme_settings_media_video_quality">Качество видео при отправке</string>
     <string name="oneme_settings_media_video_quality_title">Качество видео при отправке</string>
     <string name="oneme_settings_media_video_title">Автозагрузка видео</string>
@@ -1917,9 +1927,9 @@
     <string name="profile_invite_chat_link_description">Вы можете пригласить любого человека по этой ссылке</string>
     <string name="profile_invite_chat_link_refresh">Обновить</string>
     <string name="profile_invite_chat_link_update_action">Обновить</string>
-    <string name="profile_invite_chat_link_update_action_success">Вы обновили ссылку на чат</string>
-    <string name="profile_invite_chat_link_update_confirmation_description">Предыдущая ссылка на чат перестанет работать у всех, кого вы приглашали ранее</string>
-    <string name="profile_invite_chat_link_update_confirmation_title">Хотите обновить ссылку?</string>
+    <string name="profile_invite_chat_link_update_action_success">Вы обновили ссылку</string>
+    <string name="profile_invite_chat_link_update_confirmation_description">После изменения предыдущая ссылка больше не будет работать</string>
+    <string name="profile_invite_chat_link_update_confirmation_title">Вы уверены, что хотите обновить ссылку?</string>
     <string name="profile_invite_configure_type">"Настроить тип
 чата и ссылку"</string>
     <string name="profile_invite_create_link_error_confirm">Хорошо</string>
@@ -1978,6 +1988,7 @@
     <string name="profile_members_list_add_to_channel_action">Добавить подписчика</string>
     <string name="profile_members_list_add_to_chat_action">Добавить участника</string>
     <string name="profile_members_list_admin_alias">админ</string>
+    <string name="profile_members_list_already_admin_snackbar_title">Этого пользователя уже назначили администратором</string>
     <string name="profile_members_list_delete_from_admin_snackbar">Администратор удалён</string>
     <string name="profile_members_list_delete_from_admin_title">Вы уверены, что хотите удалить %s из администраторов?</string>
     <string name="profile_members_list_delete_from_chat_btn">Удалить</string>
@@ -2084,7 +2095,7 @@
     <string name="to_save">Сохранить</string>
     <string name="tracer_app_token">t6QnlHov0Gq1UBGYG9GPqZu0EiVMZ922FKvwyAEASa90</string>
     <string name="tracer_environment">playGoogleRelease</string>
-    <string name="tracer_mapping_uuid">a44d1b90-a6ba-11f0-b48b-3f92c76adbc7</string>
+    <string name="tracer_mapping_uuid">276f9820-a92e-11f0-92ec-3f92c76adbc7</string>
     <string name="trim_video__reset">Сбросить</string>
     <string name="trim_video__trim">Обрезать</string>
     <string name="tt_active_live_location_in_chat">Вы транслируете местоположение в чат \"%s\"</string>

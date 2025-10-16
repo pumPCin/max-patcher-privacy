@@ -2,124 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyta;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:I
+.field public final a:Lq8c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqg8;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
-
-    sput-object v0, Lyta;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lq8c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lyta;->a:I
+    iput-object p1, p0, Lyta;->a:Lq8c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a(ILjava/lang/String;)Lzu5;
+    .locals 9
 
-    const/4 v0, 0x0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return v0
-.end method
+    const/16 v1, 0x23
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    if-lt v0, v1, :cond_0
 
-    instance-of v0, p1, Lyta;
+    new-instance v0, Lwta;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;-><init>()V
+
+    :goto_0
+    move-object v7, v0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v0, Lxta;
+
+    invoke-direct {v0}, Ljava/util/concurrent/LinkedTransferQueue;-><init>()V
 
     goto :goto_0
 
-    :cond_0
-    check-cast p1, Lyta;
+    :goto_1
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget p1, p1, Lyta;->a:I
+    iget-object v0, p0, Lyta;->a:Lq8c;
 
-    iget v0, p0, Lyta;->a:I
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eq v0, p1, :cond_1
+    move-result-object p1
 
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {v0, p2, p1}, Lq8c;->p(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
 
-    return p1
+    move-result-object v8
 
-    :cond_1
-    const/4 p1, 0x1
+    new-instance v1, Lzu5;
 
-    return p1
-.end method
+    const/4 v2, 0x1
 
-.method public final hashCode()I
-    .locals 1
+    const/4 v3, 0x1
 
-    iget v0, p0, Lyta;->a:I
+    const-wide/16 v4, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
-    move-result v0
+    new-instance p1, Lb12;
 
-    return v0
-.end method
+    const/4 p2, 0x1
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-direct {p1, p2}, Lb12;-><init>(I)V
 
-    const-string v0, "ContainerGravity(value="
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
 
-    const-string v1, ")"
-
-    iget v2, p0, Lyta;->a:I
-
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lyta;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object v1
 .end method

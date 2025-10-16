@@ -1,141 +1,209 @@
-.class public final Ligg;
-.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.class public interface abstract Ligg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldnf;
+.implements Ld97;
 
-# instance fields
-.field public final B0:[I
 
-.field public C0:Lq5g;
+# static fields
+.field public static final g0:Lq90;
 
-.field public D0:F
+.field public static final h0:Lq90;
+
+.field public static final i0:Lq90;
+
+.field public static final j0:Lq90;
+
+.field public static final k0:Lq90;
+
+.field public static final l0:Lq90;
+
+.field public static final m0:Lq90;
+
+.field public static final n0:Lq90;
+
+.field public static final o0:Lq90;
+
+.field public static final p0:Lq90;
+
+.field public static final q0:Lq90;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+    new-instance v0, Lq90;
 
-    const/4 p1, 0x2
+    const-string v1, "camerax.core.useCase.defaultSessionConfig"
 
-    new-array p1, p1, [I
+    const-class v2, Lk5e;
 
-    iput-object p1, p0, Ligg;->B0:[I
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->g0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.defaultCaptureConfig"
+
+    const-class v2, Ly32;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->h0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.sessionConfigUnpacker"
+
+    const-class v2, Ldz1;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->i0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.captureConfigUnpacker"
+
+    const-class v2, Lhy1;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->j0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.surfaceOccupancyPriority"
+
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->k0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.targetFrameRate"
+
+    const-class v4, Landroid/util/Range;
+
+    invoke-direct {v0, v1, v4, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->l0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.zslDisabled"
+
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v4, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->m0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.highResolutionDisabled"
+
+    invoke-direct {v0, v1, v4, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->n0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.captureType"
+
+    const-class v4, Lkgg;
+
+    invoke-direct {v0, v1, v4, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->o0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.previewStabilizationMode"
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->p0:Lq90;
+
+    new-instance v0, Lq90;
+
+    const-string v1, "camerax.core.useCase.videoStabilizationMode"
+
+    invoke-direct {v0, v1, v2, v3}, Lq90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Ligg;->q0:Lq90;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j(Lq5g;F)V
-    .locals 1
-
-    iget-object v0, p0, Ligg;->C0:Lq5g;
-
-    invoke-virtual {p1, v0}, Lq5g;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ligg;->D0:F
-
-    cmpg-float v0, p2, v0
-
-    if-nez v0, :cond_0
+.method public A()I
+    .locals 2
 
     const/4 v0, 0x0
 
-    goto :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_0
-    const/4 v0, 0x1
+    move-result-object v0
 
-    :goto_0
-    iput-object p1, p0, Ligg;->C0:Lq5g;
+    sget-object v1, Ligg;->q0:Lq90;
 
-    iput p2, p0, Ligg;->D0:F
+    invoke-interface {p0, v1, v0}, Ldzc;->e(Lq90;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget-object p2, p1, Lq5g;->b:Landroid/net/Uri;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-static {p2}, Lx47;->a(Landroid/net/Uri;)Lx47;
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object p2
+    move-result v0
 
-    iget-object p1, p1, Lq5g;->h:Landroid/net/Uri;
-
-    invoke-static {p1}, Lx47;->a(Landroid/net/Uri;)Lx47;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p2, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lx47;Lx47;)V
-
-    :cond_1
-    return-void
+    return v0
 .end method
 
-.method public final onMeasure(II)V
-    .locals 4
+.method public F()I
+    .locals 2
 
-    iget-object v0, p0, Ligg;->C0:Lq5g;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget v1, v0, Lq5g;->d:I
+    move-result-object v0
 
-    iget v0, v0, Lq5g;->c:I
+    sget-object v1, Ligg;->p0:Lq90;
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+    invoke-interface {p0, v1, v0}, Ldzc;->e(Lq90;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v0
 
-    const/high16 v3, 0x40000000    # 2.0f
+    check-cast v0, Ljava/lang/Integer;
 
-    if-eq v2, v3, :cond_1
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    move-result v0
 
-    move-result p1
+    return v0
+.end method
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+.method public y()Lkgg;
+    .locals 1
 
-    move-result p2
+    sget-object v0, Ligg;->o0:Lq90;
 
-    iget v2, p0, Ligg;->D0:F
+    invoke-interface {p0, v0}, Ldzc;->h(Lq90;)Ljava/lang/Object;
 
-    const/high16 v3, 0x42b40000    # 90.0f
+    move-result-object v0
 
-    cmpg-float v2, v2, v3
+    check-cast v0, Lkgg;
 
-    iget-object v3, p0, Ligg;->B0:[I
-
-    if-nez v2, :cond_0
-
-    invoke-static {p2, p1, v0, v1, v3}, Lx2d;->n(IIII[I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1, p2, v0, v1, v3}, Lx2d;->n(IIII[I)V
-
-    :goto_0
-    const/4 p1, 0x0
-
-    aget p1, v3, p1
-
-    const/4 p2, 0x1
-
-    aget p2, v3, p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
-
-    :cond_1
-    invoke-super {p0, p1, p2}, Lwx4;->onMeasure(II)V
-
-    return-void
+    return-object v0
 .end method

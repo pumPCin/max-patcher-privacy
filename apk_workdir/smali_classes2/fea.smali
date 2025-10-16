@@ -1,77 +1,198 @@
-.class public final enum Lfea;
-.super Ljava/lang/Enum;
+.class public final Lfea;
+.super Lhj0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lfea;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic b:[Lfea;
+.field public final synthetic b:Lg32;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lg32;I)V
+    .locals 0
 
-    new-instance v0, Lfea;
+    iput p2, p0, Lfea;->a:I
 
-    const-string v1, "DISABLED"
+    iput-object p1, p0, Lfea;->b:Lg32;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lfea;->a:Lfea;
-
-    new-instance v1, Lfea;
-
-    const-string v2, "SOFT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lfea;
-
-    const-string v3, "HARD"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2}, [Lfea;
-
-    move-result-object v0
-
-    sput-object v0, Lfea;->b:[Lfea;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfea;
-    .locals 1
 
-    const-class v0, Lfea;
+# virtual methods
+.method public final d()V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lfea;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lfea;
+    iget-object v0, p0, Lfea;->b:Lg32;
 
-    return-object p0
+    invoke-virtual {v0}, Lg32;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/Throwable;
+
+    const-string v2, "Cancelled with fresco pipeline"
+
+    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lg32;->h(Ljava/lang/Throwable;)Z
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lfea;->b:Lg32;
+
+    invoke-virtual {v0}, Lg32;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/Throwable;
+
+    const-string v2, "Cancelled with fresco pipeline"
+
+    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lg32;->h(Ljava/lang/Throwable;)Z
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Lfea;
-    .locals 1
+.method public final e(Lr0;)V
+    .locals 3
 
-    sget-object v0, Lfea;->b:[Lfea;
+    iget v0, p0, Lfea;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object p1, p0, Lfea;->b:Lg32;
 
-    check-cast v0, [Lfea;
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-virtual {p1, v0}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lfea;->b:Lg32;
+
+    invoke-virtual {v0}, Lg32;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/Throwable;
+
+    const-string v2, "Fetch failed"
+
+    invoke-virtual {p1}, Lr0;->c()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, v2, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    new-instance p1, Lvcd;
+
+    invoke-direct {p1, v1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(Lr0;)V
+    .locals 3
+
+    iget v0, p0, Lfea;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p1}, Lr0;->h()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lfea;->b:Lg32;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {v2, v1}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lr0;->e()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lq93;
+
+    invoke-static {p1}, Lq93;->o(Lq93;)Lq93;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v2, v1}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lfea;->b:Lg32;
+
+    invoke-virtual {p1}, Lg32;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, v0}, Lg32;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,158 +3,45 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Landroid/util/Range;
-
-.field public static final f:Landroid/util/Range;
-
-.field public static final g:Lazb;
-
-
 # instance fields
-.field public final a:Lazb;
+.field public final a:Lpef;
 
-.field public final b:Landroid/util/Range;
-
-.field public final c:Landroid/util/Range;
-
-.field public final d:I
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Landroid/util/Range;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const v2, 0x7fffffff
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    sput-object v0, Lrb0;->e:Landroid/util/Range;
-
-    new-instance v0, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    sput-object v0, Lrb0;->f:Landroid/util/Range;
-
-    sget-object v0, Lra0;->f:Lra0;
-
-    sget-object v1, Lra0;->e:Lra0;
-
-    sget-object v2, Lra0;->d:Lra0;
-
-    filled-new-array {v0, v1, v2}, [Lra0;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    new-instance v2, Lp90;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3}, Lp90;-><init>(Lra0;I)V
-
-    invoke-static {v1, v2}, Lazb;->p(Ljava/util/List;Lp90;)Lazb;
-
-    move-result-object v0
-
-    sput-object v0, Lrb0;->g:Lazb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lazb;Landroid/util/Range;Landroid/util/Range;I)V
+.method public constructor <init>(Lpef;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrb0;->a:Lazb;
+    if-eqz p1, :cond_1
 
-    iput-object p2, p0, Lrb0;->b:Landroid/util/Range;
+    iput-object p1, p0, Lrb0;->a:Lpef;
 
-    iput-object p3, p0, Lrb0;->c:Landroid/util/Range;
+    if-eqz p2, :cond_0
 
-    iput p4, p0, Lrb0;->d:I
+    iput-object p2, p0, Lrb0;->b:Ljava/util/List;
 
     return-void
-.end method
-
-.method public static a()Lqb0;
-    .locals 2
-
-    new-instance v0, Lqb0;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v1, Lrb0;->g:Lazb;
-
-    if-eqz v1, :cond_2
-
-    iput-object v1, v0, Lqb0;->a:Lazb;
-
-    sget-object v1, Lrb0;->e:Landroid/util/Range;
-
-    if-eqz v1, :cond_1
-
-    iput-object v1, v0, Lqb0;->b:Landroid/util/Range;
-
-    sget-object v1, Lrb0;->f:Landroid/util/Range;
-
-    if-eqz v1, :cond_0
-
-    iput-object v1, v0, Lqb0;->c:Landroid/util/Range;
-
-    const/4 v1, -0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lqb0;->d:Ljava/lang/Integer;
-
-    return-object v0
 
     :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string v1, "Null bitrate"
+    const-string p2, "Null outConfigs"
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p1
 
     :cond_1
-    new-instance v0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string v1, "Null frameRate"
+    const-string p2, "Null surfaceEdge"
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw v0
-
-    :cond_2
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "Null qualitySelector"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    throw p1
 .end method
 
 
@@ -177,9 +64,9 @@
 
     check-cast p1, Lrb0;
 
-    iget-object v1, p0, Lrb0;->a:Lazb;
+    iget-object v1, p0, Lrb0;->a:Lpef;
 
-    iget-object v3, p1, Lrb0;->a:Lazb;
+    iget-object v3, p1, Lrb0;->a:Lpef;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -187,31 +74,15 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lrb0;->b:Landroid/util/Range;
+    iget-object v1, p0, Lrb0;->b:Ljava/util/List;
 
-    iget-object v3, p1, Lrb0;->b:Landroid/util/Range;
+    iget-object p1, p1, Lrb0;->b:Ljava/util/List;
 
-    invoke-virtual {v1, v3}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lrb0;->c:Landroid/util/Range;
-
-    iget-object v3, p1, Lrb0;->c:Landroid/util/Range;
-
-    invoke-virtual {v1, v3}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Lrb0;->d:I
-
-    iget p1, p1, Lrb0;->d:I
-
-    if-ne v1, p1, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -220,9 +91,9 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lrb0;->a:Lazb;
+    iget-object v0, p0, Lrb0;->a:Lpef;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -234,27 +105,11 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lrb0;->b:Landroid/util/Range;
+    iget-object v1, p0, Lrb0;->b:Ljava/util/List;
 
-    invoke-virtual {v2}, Landroid/util/Range;->hashCode()I
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
 
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lrb0;->c:Landroid/util/Range;
-
-    invoke-virtual {v2}, Landroid/util/Range;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lrb0;->d:I
+    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -266,39 +121,23 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "VideoSpec{qualitySelector="
+    const-string v1, "In{surfaceEdge="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lrb0;->a:Lazb;
+    iget-object v1, p0, Lrb0;->a:Lpef;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", frameRate="
+    const-string v1, ", outConfigs="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lrb0;->b:Landroid/util/Range;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bitrate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrb0;->c:Landroid/util/Range;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", aspectRatio="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lrb0;->d:I
+    iget-object v1, p0, Lrb0;->b:Ljava/util/List;
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lwx1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

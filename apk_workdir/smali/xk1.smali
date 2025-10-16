@@ -1,94 +1,152 @@
 .class public final Lxk1;
-.super Lhl1;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final D:Ljava/lang/CharSequence;
+.field public X:I
+
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+.field public final synthetic Z:I
+
+.field public final synthetic r0:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Lhl1;-><init>()V
+    iput-object p1, p0, Lxk1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iput-object p1, p0, Lxk1;->D:Ljava/lang/CharSequence;
+    iput p2, p0, Lxk1;->Z:I
+
+    iput-object p3, p0, Lxk1;->r0:Landroid/os/Bundle;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lb54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lxk1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lxk1;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lxk1;
 
-    iget-object v1, p0, Lxk1;->D:Ljava/lang/CharSequence;
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object p1, p1, Lxk1;->D:Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Lxk1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object v0, p0, Lxk1;->D:Ljava/lang/CharSequence;
+    new-instance p1, Lxk1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget v0, p0, Lxk1;->Z:I
 
-    move-result v0
+    iget-object v1, p0, Lxk1;->r0:Landroid/os/Bundle;
 
-    return v0
+    iget-object v2, p0, Lxk1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lxk1;-><init>(Lone/me/calls/ui/ui/call/CallScreen;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lxk1;->X:I
 
-    const-string v1, "RecordStart(name="
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lxk1;->D:Ljava/lang/CharSequence;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Ljfa;
+
+    iget-object p1, p0, Lxk1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lao1;
+
+    move-result-object p1
+
+    iput v1, p0, Lxk1;->X:I
+
+    invoke-virtual {p1}, Lao1;->v()Lqkf;
 
     move-result-object v0
 
+    check-cast v0, Losa;
+
+    invoke-virtual {v0}, Losa;->b()Lv44;
+
+    move-result-object v0
+
+    new-instance v1, Lmn1;
+
+    const/4 v2, 0x0
+
+    iget v3, p0, Lxk1;->Z:I
+
+    iget-object v4, p0, Lxk1;->r0:Landroid/os/Bundle;
+
+    invoke-direct {v1, p1, v3, v4, v2}, Lmn1;-><init>(Lao1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p0}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
+
     return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

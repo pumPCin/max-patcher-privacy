@@ -1,304 +1,270 @@
-.class public final Lng8;
-.super Landroid/os/Handler;
+.class public Lng8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
+.field public final a:Lpwh;
 
 
 # direct methods
-.method public constructor <init>(Lpg8;)V
-    .locals 1
+.method public constructor <init>(Lpwh;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lng8;->a:I
-
-    .line 3
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lng8;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzr8;Landroid/os/Looper;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lng8;->a:I
-
-    .line 1
-    iput-object p1, p0, Lng8;->c:Ljava/lang/Object;
-
-    .line 2
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-object p1, p0, Lng8;->a:Lpwh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 9
-
-    iget v0, p0, Lng8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
-
-    return-void
-
-    :pswitch_0
-    const-string v0, "MediaBrowserCompat"
-
-    const-string v1, "\n  Client version: 1\n  Service version: "
-
-    const-string v2, "Unhandled message: "
-
-    iget-object v3, p0, Lng8;->c:Ljava/lang/Object;
-
-    check-cast v3, Ljava/lang/ref/WeakReference;
-
-    if-nez v3, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/os/Messenger;
-
-    iget-object v4, p0, Lng8;->b:Ljava/lang/Object;
-
-    check-cast v4, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v4}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lpg8;
-
-    if-eqz v3, :cond_9
-
-    if-nez v4, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lsr8;->n(Landroid/os/Bundle;)V
+.method public final a()V
+    .locals 3
 
     :try_start_0
-    iget v6, p1, Landroid/os/Message;->what:I
+    iget-object v0, p0, Lng8;->a:Lpwh;
+
+    check-cast v0, Lfwh;
+
+    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
     :try_end_0
-    .catch Landroid/os/BadParcelableException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v7, 0x1
-
-    const-string v8, "data_media_item_id"
-
-    if-eq v6, v7, :cond_8
-
-    const/4 v7, 0x2
-
-    if-eq v6, v7, :cond_9
-
-    const/4 v7, 0x3
-
-    if-eq v6, v7, :cond_2
-
-    :try_start_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_3
-
-    :cond_2
-    const-string p1, "data_options"
-
-    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lsr8;->n(Landroid/os/Bundle;)V
-
-    const-string p1, "data_notify_children_changed_options"
-
-    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lsr8;->n(Landroid/os/Bundle;)V
-
-    invoke-virtual {v5, v8}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "data_media_item_list"
-
-    invoke-virtual {v5, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    sget-object v2, Lrg8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    if-nez v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v6, 0x0
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v7
-
-    if-ge v6, v7, :cond_4
-
-    invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/os/Parcelable;
-
-    invoke-static {v7, v2}, Lbp7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    :goto_1
-    iget-object v1, v4, Lpg8;->g:Landroid/os/Messenger;
-
-    if-eq v1, v3, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    if-nez p1, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v1, v4, Lpg8;->e:Lrs;
-
-    invoke-virtual {v1, p1}, Lube;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_7
-
-    :goto_2
-    sget-boolean v1, Lsg8;->b:Z
-
-    if-eqz v1, :cond_9
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onLoadChildren for id that isn\'t subscribed id="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_3
-
-    :cond_7
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :cond_8
-    const-string p1, "data_root_hints"
-
-    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lsr8;->n(Landroid/os/Bundle;)V
-
-    invoke-virtual {v5, v8}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    const-string p1, "data_media_session_token"
-
-    invoke-virtual {v5, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    sget-object v1, Lrr8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p1, v1}, Lbp7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lrr8;
-    :try_end_1
-    .catch Landroid/os/BadParcelableException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_3
-
-    :catch_0
-    const-string p1, "Could not unparcel the data."
-
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_9
-    :goto_3
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final b(Lso0;)V
+    .locals 3
+
+    const/16 v0, 0x12
+
+    iget-object v1, p0, Lng8;->a:Lpwh;
+
+    if-nez p1, :cond_0
+
+    :try_start_0
+    check-cast v1, Lfwh;
+
+    invoke-virtual {v1}, Lfth;->W()Landroid/os/Parcel;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2}, Ly0i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    invoke-virtual {v1, p1, v0}, Lfth;->Y(Landroid/os/Parcel;I)V
+
+    return-void
+
+    :cond_0
+    iget-object p1, p1, Lso0;->a:Lc67;
+
+    check-cast v1, Lfwh;
+
+    invoke-virtual {v1}, Lfth;->W()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Ly0i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    invoke-virtual {v1, v2, v0}, Lfth;->Y(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final c(Ljava/lang/Long;)V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lng8;->a:Lpwh;
+
+    new-instance v1, Luga;
+
+    invoke-direct {v1, p1}, Luga;-><init>(Ljava/lang/Object;)V
+
+    check-cast v0, Lfwh;
+
+    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-static {p1, v1}, Ly0i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 v1, 0x1d
+
+    invoke-virtual {v0, p1, v1}, Lfth;->Y(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final d()V
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lng8;->a:Lpwh;
+
+    check-cast v0, Lfwh;
+
+    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    sget v2, Ly0i;->a:I
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/16 v2, 0xe
+
+    invoke-virtual {v0, v1, v2}, Lfth;->Y(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Lng8;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lng8;->a:Lpwh;
+
+    check-cast p1, Lng8;
+
+    iget-object p1, p1, Lng8;->a:Lpwh;
+
+    check-cast v0, Lfwh;
+
+    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Ly0i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 p1, 0x10
+
+    invoke-virtual {v0, v2, p1}, Lfth;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lng8;->a:Lpwh;
+
+    check-cast v0, Lfwh;
+
+    invoke-virtual {v0}, Lfth;->W()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/16 v2, 0x11
+
+    invoke-virtual {v0, v1, v2}, Lfth;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

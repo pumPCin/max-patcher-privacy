@@ -3,93 +3,203 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static a:Z
+
+.field public static final b:Ljfa;
+
+.field public static c:Ljava/lang/reflect/Field;
+
+.field public static d:Ljava/lang/reflect/Field;
+
+
 # direct methods
-.method public static a(Landroid/app/RemoteInput;)Z
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
+    new-instance v0, Ljfa;
 
-    move-result p0
+    const/16 v1, 0x9
 
-    return p0
+    invoke-direct {v0, v1}, Ljfa;-><init>(I)V
+
+    sput-object v0, Li3a;->b:Ljfa;
+
+    return-void
 .end method
 
-.method public static b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
-    .locals 0
+.method public static final a(Ljava/lang/CharSequence;Lu4b;)V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getChoices()[Ljava/lang/CharSequence;
+    instance-of v0, p0, Landroid/text/Spanned;
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    check-cast p0, Landroid/text/Spanned;
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const-class v1, Lrrf;
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, v2, v0, v1}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    array-length v0, p0
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    aget-object v1, p0, v2
+
+    check-cast v1, Lrrf;
+
+    invoke-interface {v1, p1}, Lrrf;->onThemeChanged(Lu4b;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
 .end method
 
-.method public static c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
-    .locals 0
+.method public static declared-synchronized b()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
+    const-class v0, Li3a;
 
-    move-result-object p0
+    monitor-enter v0
 
-    return-object p0
+    :try_start_0
+    sget-boolean v1, Li3a;->a:Z
+
+    if-nez v1, :cond_0
+
+    const-string v1, "native-imagetranscoder"
+
+    invoke-static {v1}, Lm3a;->c(Ljava/lang/String;)Z
+
+    const/4 v1, 0x1
+
+    sput-boolean v1, Li3a;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method
 
-.method public static d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
-    .locals 0
+.method public static final c(Landroid/graphics/drawable/GradientDrawable;[I[F)V
+    .locals 5
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getExtras()Landroid/os/Bundle;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object p0
+    const/16 v1, 0x1d
 
-    return-object p0
-.end method
+    if-lt v0, v1, :cond_0
 
-.method public static e(Landroid/app/Notification;)Ljava/lang/String;
-    .locals 0
+    invoke-static {p0, p1, p2}, Lh05;->q(Landroid/graphics/drawable/GradientDrawable;[I[F)V
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getGroup()Ljava/lang/String;
+    return-void
 
-    move-result-object p0
+    :cond_0
+    :try_start_0
+    sget-object v0, Li3a;->c:Ljava/lang/reflect/Field;
 
-    return-object p0
-.end method
+    const/4 v1, 0x1
 
-.method public static f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
-    .locals 0
+    if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getLabel()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    const-string v2, "mGradientState"
 
-.method public static g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
-    .locals 0
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    return-object p0
-.end method
+    sput-object v0, Li3a;->c:Ljava/lang/reflect/Field;
 
-.method public static h(Landroid/app/RemoteInput;)Ljava/lang/String;
-    .locals 0
+    :cond_1
+    sget-object v0, Li3a;->c:Ljava/lang/reflect/Field;
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object p0
+    if-nez v0, :cond_2
 
-    return-object p0
-.end method
+    move-object v0, v2
 
-.method public static i(Landroid/app/Notification;)Ljava/lang/String;
-    .locals 0
+    :cond_2
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getSortKey()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    sget-object v3, Li3a;->d:Ljava/lang/reflect/Field;
 
-    return-object p0
+    if-nez v3, :cond_3
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    const-string v4, "mPositions"
+
+    invoke-virtual {v3, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    sput-object v3, Li3a;->d:Ljava/lang/reflect/Field;
+
+    :cond_3
+    sget-object v1, Li3a;->d:Ljava/lang/reflect/Field;
+
+    if-nez v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move-object v2, v1
+
+    :goto_0
+    invoke-virtual {v2, v0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColors([I)V
+
+    return-void
 .end method

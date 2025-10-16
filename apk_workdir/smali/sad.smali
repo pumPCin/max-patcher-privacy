@@ -1,18 +1,37 @@
 .class public final Lsad;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
-# interfaces
-.implements Lekg;
+
+# instance fields
+.field public final a:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Runnable;)V
+    .locals 1
+
+    const-string v0, "fonts-androidx"
+
+    invoke-direct {p0, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    const/16 p1, 0xa
+
+    iput p1, p0, Lsad;->a:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Class;Lhr9;)Lzjg;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    new-instance p1, Landroidx/lifecycle/SavedStateHandlesVM;
+    iget v0, p0, Lsad;->a:I
 
-    invoke-direct {p1}, Landroidx/lifecycle/SavedStateHandlesVM;-><init>()V
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    return-object p1
+    invoke-super {p0}, Ljava/lang/Thread;->run()V
+
+    return-void
 .end method

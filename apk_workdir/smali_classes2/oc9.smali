@@ -1,64 +1,74 @@
-.class public final synthetic Loc9;
+.class public final Loc9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:Lwe9;
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic b:Lf00;
+.field public final Y:Ljava/lang/String;
 
-.field public final synthetic c:J
+.field public final Z:I
 
-.field public final synthetic o:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:J
+
+.field public final c:Lb99;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwe9;Lf00;JLjava/lang/String;)V
+.method public constructor <init>(IJLb99;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loc9;->a:Lwe9;
+    iput p1, p0, Loc9;->a:I
 
-    iput-object p2, p0, Loc9;->b:Lf00;
+    iput-wide p2, p0, Loc9;->b:J
 
-    iput-wide p3, p0, Loc9;->c:J
+    iput-object p4, p0, Loc9;->c:Lb99;
 
     iput-object p5, p0, Loc9;->o:Ljava/lang/String;
+
+    iput-object p6, p0, Loc9;->X:Ljava/lang/String;
+
+    iput-object p7, p0, Loc9;->Y:Ljava/lang/String;
+
+    iput p8, p0, Loc9;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v2, p0, Loc9;->a:Lwe9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v7, v2, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    const-string v1, "{type="
 
-    iget-object v8, v2, Lwe9;->C0:Lh24;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lkd9;
+    iget v1, p0, Loc9;->a:I
 
-    const/4 v6, 0x0
+    invoke-static {v1}, Lyy8;->m(I)Ljava/lang/String;
 
-    iget-object v1, p0, Loc9;->b:Lf00;
+    move-result-object v1
 
-    iget-wide v3, p0, Loc9;->c:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Loc9;->o:Ljava/lang/String;
+    const-string v1, "}"
 
-    invoke-direct/range {v0 .. v6}, Lkd9;-><init>(Lf00;Lwe9;JLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lq24;->b:Lq24;
-
-    invoke-static {v7, v8, v1, v0}, Lov9;->S(Ln24;Lf24;Lq24;Lje6;)Loke;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

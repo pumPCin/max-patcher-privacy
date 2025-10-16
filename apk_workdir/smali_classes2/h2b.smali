@@ -3,148 +3,123 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Handler$Callback;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final X:Ljava/lang/ThreadLocal;
-
-.field public static final o:Ljava/util/concurrent/ExecutorService;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lh2b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
-
-.field public final b:Landroid/os/Handler;
-
-.field public final c:Lzkc;
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    new-instance v0, Luj8;
 
-    move-result-object v0
+    const/16 v1, 0x11
 
-    sput-object v0, Lh2b;->o:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {v0, v1}, Luj8;-><init>(I)V
 
-    new-instance v1, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v1, Lh2b;->X:Ljava/lang/ThreadLocal;
-
-    new-instance v1, Lhc;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, v2}, Lhc;-><init>(I)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    sput-object v0, Lh2b;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Lzkc;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh2b;->c:Lzkc;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lh2b;->b:Landroid/os/Handler;
-
-    sget-object p1, Lh2b;->o:Ljava/util/concurrent/ExecutorService;
-
-    iput-object p1, p0, Lh2b;->a:Ljava/util/concurrent/ExecutorService;
+    iput p1, p0, Lh2b;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 5
+.method public final describeContents()I
+    .locals 1
 
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast p1, Lmch;
+    return v0
+.end method
 
-    iget-boolean v0, p1, Lmch;->c:Z
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const/4 v1, 0x1
+    instance-of v0, p1, Lh2b;
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget v0, p1, Lmch;->o:I
+    check-cast p1, Lh2b;
 
-    add-int/2addr v0, v1
+    iget p1, p1, Lh2b;->a:I
 
-    iput v0, p1, Lmch;->o:I
+    iget v0, p0, Lh2b;->a:I
 
-    iget-object v0, p0, Lh2b;->c:Lzkc;
-
-    sget-object v2, Lvme;->u0:Lvme;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "rtc.long.executor.task."
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, p1, Lmch;->o:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lmch;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v4}, Lzkc;->log(Lvme;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v0, p1, Lmch;->o:I
-
-    const/4 v2, 0x4
-
-    if-lt v0, v2, :cond_1
+    if-eq v0, p1, :cond_1
 
     :goto_0
-    return v1
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    iget-object v0, p0, Lh2b;->b:Landroid/os/Handler;
+    const/4 p1, 0x1
 
-    if-eqz v0, :cond_2
+    return p1
+.end method
 
-    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lh2b;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ContainerGravity(value="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lh2b;->a:I
+
+    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lh2b;->b:Landroid/os/Handler;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    const-wide/16 v2, 0x1388
+    iget p2, p0, Lh2b;->a:I
 
-    invoke-virtual {p1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    return v1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "No task duration check thread"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

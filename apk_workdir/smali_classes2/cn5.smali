@@ -1,64 +1,180 @@
-.class public final Lcn5;
+.class public final synthetic Lcn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldn5;
-
-
-# static fields
-.field public static final c:Lcn5;
+.implements Lr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lvm5;
+.field public final synthetic b:J
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lcn5;
-
-    const-string v1, "file"
-
-    invoke-direct {v0, v1}, Lcn5;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lcn5;->c:Lcn5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JII)V
     .locals 0
 
+    iput p5, p0, Lcn5;->a:I
+
+    iput-object p1, p0, Lcn5;->d:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lcn5;->b:J
+
+    iput p4, p0, Lcn5;->c:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcn5;->a:Ljava/lang/String;
-
-    sget-object p1, Lvm5;->Y:Lvm5;
-
-    iput-object p1, p0, Lcn5;->b:Lvm5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final run()V
+    .locals 6
 
-    iget-object v0, p0, Lcn5;->a:Ljava/lang/String;
+    iget v0, p0, Lcn5;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b()Lvm5;
-    .locals 1
+    iget-object v0, p0, Lcn5;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcn5;->b:Lvm5;
+    check-cast v0, Lao5;
 
-    return-object v0
+    iget-wide v1, p0, Lcn5;->b:J
+
+    iget-object v3, v0, Lao5;->a:Lyed;
+
+    invoke-virtual {v3}, Lyed;->c()V
+
+    :try_start_0
+    invoke-virtual {v0}, Lao5;->c()Ljava/util/ArrayList;
+
+    move-result-object v4
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-ltz v1, :cond_0
+
+    iget v2, p0, Lcn5;->c:I
+
+    if-ltz v2, :cond_0
+
+    :try_start_1
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_0
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Lao5;->a(Ljava/util/List;)V
+
+    :cond_0
+    invoke-virtual {v3}, Lyed;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v3}, Lyed;->k()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v3}, Lyed;->k()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lcn5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lio5;
+
+    iget-wide v1, p0, Lcn5;->b:J
+
+    iget-object v3, v0, Lio5;->a:Lyed;
+
+    invoke-virtual {v3}, Lyed;->c()V
+
+    :try_start_2
+    invoke-virtual {v0}, Lio5;->c()Ljava/util/ArrayList;
+
+    move-result-object v4
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-ltz v1, :cond_1
+
+    iget v2, p0, Lcn5;->c:I
+
+    if-ltz v2, :cond_1
+
+    :try_start_3
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Lio5;->a(Ljava/util/List;)V
+
+    :cond_1
+    invoke-virtual {v3}, Lyed;->q()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    invoke-virtual {v3}, Lyed;->k()V
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {v3}, Lyed;->k()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

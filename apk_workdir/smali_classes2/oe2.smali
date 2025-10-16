@@ -1,120 +1,62 @@
 .class public final Loe2;
-.super Lc2f;
+.super Lpoe;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lpe2;
-
-.field public final synthetic Z:Lne2;
-
-
-# direct methods
-.method public constructor <init>(Lpe2;Lne2;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public final bridge synthetic A(Lb18;)V
     .locals 0
 
-    iput-object p1, p0, Loe2;->Y:Lpe2;
+    check-cast p1, Lpe2;
 
-    iput-object p2, p0, Loe2;->Z:Lne2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1}, Loe2;->G(Lpe2;)V
 
     return-void
 .end method
 
+.method public final G(Lpe2;)V
+    .locals 7
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
 
-    check-cast p1, Ln24;
+    check-cast v0, Lne2;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p1, Lpe2;->a:Loqf;
 
-    invoke-virtual {p0, p1, p2}, Loe2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0, v1}, Lne2;->setTitle(Loqf;)V
 
-    move-result-object p1
+    iget-object v1, p1, Lpe2;->b:Loqf;
 
-    check-cast p1, Loe2;
+    invoke-virtual {v0, v1}, Lne2;->setSubtitle(Loqf;)V
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget-object v1, p1, Lpe2;->c:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Loe2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p1, Lpe2;->o:Ljava/lang/CharSequence;
 
-    move-result-object p1
+    iget-wide v3, p1, Lpe2;->X:J
 
-    return-object p1
-.end method
+    iget-object v5, p1, Lpe2;->Y:Lvd0;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v6, v0, Lne2;->a:Lvna;
 
-    new-instance p1, Loe2;
+    invoke-virtual {v6, v5}, Lvna;->setCustomOverlay(Lvd0;)V
 
-    iget-object v0, p0, Loe2;->Y:Lpe2;
+    iget-object v5, v0, Lne2;->a:Lvna;
 
-    iget-object v1, p0, Loe2;->Z:Lne2;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {p1, v0, v1, p2}, Loe2;-><init>(Lpe2;Lne2;Lkotlin/coroutines/Continuation;)V
+    move-result-object v3
 
-    return-object p1
-.end method
+    if-nez v2, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Loe2;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
+    const-string v2, ""
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {v5, v1, v3, v2}, Lvna;->n(Lvna;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p1, p1, Lpe2;->Z:Ljava/util/List;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lne2;->setDescriptions(Ljava/util/List;)V
 
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Loe2;->Y:Lpe2;
-
-    iget-object p1, p1, Lpe2;->a:Lt6e;
-
-    iput v1, p0, Loe2;->X:I
-
-    iget-object v0, p0, Loe2;->Z:Lne2;
-
-    invoke-virtual {p1, v0, p0}, Lt6e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-void
 .end method

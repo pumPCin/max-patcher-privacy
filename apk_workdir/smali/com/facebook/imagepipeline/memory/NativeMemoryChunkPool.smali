@@ -1,20 +1,20 @@
 .class public Lcom/facebook/imagepipeline/memory/NativeMemoryChunkPool;
-.super Lxz8;
+.super Li79;
 .source "SourceFile"
 
 
 # annotations
-.annotation build Lws4;
+.annotation build Lvv4;
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Lc09;Lqlb;Lrlb;)V
+.method public constructor <init>(Ln79;Llub;Lmub;)V
     .locals 0
-    .annotation build Lws4;
+    .annotation build Lvv4;
     .end annotation
 
-    invoke-direct {p0, p1, p2, p3}, Lxz8;-><init>(Lc09;Lqlb;Lrlb;)V
+    invoke-direct {p0, p1, p2, p3}, Li79;-><init>(Ln79;Llub;Lmub;)V
 
     return-void
 .end method

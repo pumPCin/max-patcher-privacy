@@ -1,88 +1,47 @@
-.class public final synthetic Lxn6;
-.super Ljava/lang/Object;
+.class public final Lxn6;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lkda;
-.implements Lmda;
-.implements Ljda;
 
 
 # instance fields
-.field public final synthetic a:Lbo6;
+.field public final synthetic X:Lao6;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbo6;)V
+.method public constructor <init>(Lao6;Lk14;)V
     .locals 0
 
-    iput-object p1, p0, Lxn6;->a:Lbo6;
+    iput-object p1, p0, Lxn6;->X:Lao6;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public d()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lxn6;->a:Lbo6;
+    iput-object p1, p0, Lxn6;->o:Ljava/lang/Object;
 
-    iget-object v1, v0, Lbo6;->e:Ljava/lang/String;
+    iget p1, p0, Lxn6;->Y:I
 
-    const-string v2, "startRetriever: canceled"
+    const/high16 v0, -0x80000000
 
-    invoke-static {v1, v2}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    or-int/2addr p1, v0
 
-    const/4 v1, 0x0
+    iput p1, p0, Lxn6;->Y:I
 
-    iput-object v1, v0, Lbo6;->h:Lflh;
+    iget-object p1, p0, Lxn6;->X:Lao6;
 
-    return-void
-.end method
+    invoke-virtual {p1, p0}, Lao6;->b(Lk14;)Ljava/lang/Object;
 
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 4
+    move-result-object p1
 
-    iget-object v0, p0, Lxn6;->a:Lbo6;
-
-    iget-object v1, v0, Lbo6;->e:Ljava/lang/String;
-
-    new-instance v2, Lt24;
-
-    const-string v3, "startRetriever: failed"
-
-    invoke-direct {v2, v3, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {v1, v2, v3, p1}, Lyt3;->n(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iput-object v3, v0, Lbo6;->h:Lflh;
-
-    return-void
-.end method
-
-.method public t(Lcom/google/android/gms/tasks/Task;)V
-    .locals 2
-
-    iget-object p1, p0, Lxn6;->a:Lbo6;
-
-    iget-object v0, p1, Lbo6;->e:Ljava/lang/String;
-
-    const-string v1, "retriever is complete"
-
-    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lbo6;->h:Lflh;
-
-    return-void
+    return-object p1
 .end method

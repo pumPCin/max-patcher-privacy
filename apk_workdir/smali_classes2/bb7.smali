@@ -1,129 +1,258 @@
 .class public final Lbb7;
-.super Lc2f;
+.super La2;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Luhg;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:B
 
-.field public final synthetic Y:Lone/me/login/inputphone/InputPhoneScreen;
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+.method public constructor <init>(B[B)V
     .locals 0
 
-    iput-object p2, p0, Lbb7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-byte p1, p0, Lbb7;->a:B
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lbb7;->b:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 6
 
-    check-cast p1, Ldw9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "["
 
-    invoke-virtual {p0, p1, p2}, Lbb7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-byte v1, p0, Lbb7;->a:B
 
-    check-cast p1, Lbb7;
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
 
-    sget-object p2, Laxf;->a:Laxf;
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Lbb7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p2
-.end method
+    const-string v1, ",\""
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lbb7;
+    iget-object v1, p0, Lbb7;->b:[B
 
-    iget-object v1, p0, Lbb7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
+    array-length v2, v1
 
-    invoke-direct {v0, p2, v1}, Lbb7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+    const/4 v3, 0x0
 
-    iput-object p1, v0, Lbb7;->X:Ljava/lang/Object;
+    :goto_0
+    if-ge v3, v2, :cond_0
 
-    return-object v0
-.end method
+    aget-byte v4, v1, v3
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    const/16 v5, 0x10
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    iget-object p1, p0, Lbb7;->X:Ljava/lang/Object;
+    move-result-object v4
 
-    check-cast p1, Ldw9;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    instance-of v0, p1, Lza7;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lbb7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
-
-    iget-object v0, v0, Lone/me/login/inputphone/InputPhoneScreen;->z0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzc7;
-
-    check-cast p1, Lza7;
-
-    iget-object v1, p1, Lza7;->b:Ljava/lang/String;
-
-    iget-object v2, p1, Lza7;->c:Ljava/lang/String;
-
-    iget p1, p1, Lza7;->d:I
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    invoke-direct {v3, v1, v2, p1}, Lone/me/login/confirm/ConfirmPhoneScreen;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 p1, 0x0
-
-    invoke-static {v3, p1, p1}, Lomc;->e(Ljz3;Ldh;Ldh;)Lq6d;
-
-    move-result-object p1
-
-    const-string v1, "ConfirmPhoneScreen"
-
-    invoke-virtual {v0, p1, v1}, Lzc7;->a(Lq6d;Ljava/lang/String;)V
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lkc4;
+    const-string v1, "\"]"
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lb48;->c:Lb48;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast p1, Lkc4;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ld3;->r0(Lkc4;)V
+    return-object v0
+.end method
+
+.method public final b()I
+    .locals 1
+
+    const/16 v0, 0x9
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Luhg;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    check-cast p1, Luhg;
 
-    return-object p1
+    move-object v0, p1
+
+    check-cast v0, La2;
+
+    invoke-interface {v0}, Luhg;->b()I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p1}, Luhg;->o()Lbb7;
+
+    move-result-object p1
+
+    iget-byte v0, p0, Lbb7;->a:B
+
+    iget-byte v1, p1, Lbb7;->a:B
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lbb7;->b:[B
+
+    iget-object p1, p1, Lbb7;->b:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-byte v0, p0, Lbb7;->a:B
+
+    add-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lbb7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    add-int/2addr v0, v4
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+.end method
+
+.method public final o()Lbb7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-byte v1, p0, Lbb7;->a:B
+
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",0x"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbb7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    const/16 v5, 0x10
+
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final v()Lbb7;
+    .locals 0
+
+    return-object p0
 .end method

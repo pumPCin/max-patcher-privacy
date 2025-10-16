@@ -1,112 +1,197 @@
 .class public final Ly52;
-.super Lc2f;
+.super Lpj5;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lz52;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lz52;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/nio/ByteBuffer;)V
+    .locals 6
 
-    iput-object p1, p0, Ly52;->Y:Lz52;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    return-void
-.end method
+    iput-object v0, p0, Ly52;->a:Ljava/util/ArrayList;
 
+    sget-object v0, Lhwf;->t0:Lhwf;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-short v0, v0, Lhwf;->a:S
 
-    check-cast p1, Ln24;
+    const/4 v1, 0x2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, v0, v1}, Lpj5;->b(Ljava/nio/ByteBuffer;II)I
 
-    invoke-virtual {p0, p1, p2}, Ly52;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    check-cast p1, Ly52;
+    move-result v2
 
-    sget-object p2, Laxf;->a:Laxf;
+    add-int/lit8 v3, v2, 0x2
 
-    invoke-virtual {p1, p2}, Ly52;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v4, "inconsistent length fields"
 
-    move-result-object p1
+    if-ne v0, v3, :cond_4
 
-    return-object p1
-.end method
+    :goto_0
+    if-lez v2, :cond_3
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    if-lt v2, v1, :cond_2
 
-    new-instance p1, Ly52;
+    add-int/lit8 v2, v2, -0x2
 
-    iget-object v0, p0, Ly52;->Y:Lz52;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    invoke-direct {p1, v0, p2}, Ly52;-><init>(Lz52;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
-.end method
+    const v3, 0xffff
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    and-int/2addr v0, v3
 
-    iget v0, p0, Ly52;->X:I
+    if-gt v0, v2, :cond_1
 
-    const/4 v1, 0x1
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    if-eqz v0, :cond_1
+    move-result v3
 
-    if-ne v0, v1, :cond_0
+    if-gt v0, v3, :cond_0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    new-array v3, v0, [B
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    sub-int/2addr v2, v0
+
+    :try_start_0
+    iget-object v0, p0, Ly52;->a:Ljava/util/ArrayList;
+
+    new-instance v5, Ljavax/security/auth/x500/X500Principal;
+
+    invoke-direct {v5, v3}, Ljavax/security/auth/x500/X500Principal;-><init>([B)V
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    :catch_0
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string v0, "authority not in DER format"
+
+    invoke-direct {p1, v0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    iget-object p1, p0, Ly52;->Y:Lz52;
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p1, Lz52;->b:Ln52;
-
-    iput v1, p0, Ly52;->X:I
-
-    invoke-virtual {p1, p0}, Ln52;->j(Ly52;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    throw p1
 
     :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    return-object p1
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    return-void
+
+    :cond_4
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final a()[B
+    .locals 4
+
+    iget-object v0, p0, Ly52;->a:Ljava/util/ArrayList;
+
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Ln0;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    mul-int/lit8 v2, v2, 0x2
+
+    add-int/2addr v2, v1
+
+    add-int/lit8 v1, v2, 0x6
+
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
+
+    sget-object v3, Lhwf;->t0:Lhwf;
+
+    iget-short v3, v3, Lhwf;->a:S
+
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v3, v2, 0x2
+
+    int-to-short v3, v3
+
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v2, v2
+
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    new-instance v2, Ljs;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3, v1}, Ljs;-><init>(ILjava/nio/ByteBuffer;)V
+
+    invoke-interface {v0, v2}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
+
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,91 +1,224 @@
-.class public abstract Laja;
-.super Ljava/lang/Object;
+.class public final Laja;
+.super Ljava/util/concurrent/atomic/AtomicBoolean;
 .source "SourceFile"
 
+# interfaces
+.implements Lcka;
+.implements Lev4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lcka;
 
-.field public static final c:I
+.field public final b:Lbja;
 
-.field public static final d:I
+.field public final c:Lzia;
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public o:Lev4;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lcka;Lbja;Lzia;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object p1, p0, Laja;->a:Lcka;
+
+    iput-object p2, p0, Laja;->b:Lbja;
+
+    iput-object p3, p0, Laja;->c:Lzia;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Laja;->b:Lbja;
+
+    iget-object v1, p0, Laja;->c:Lzia;
+
+    invoke-virtual {v0, v1}, Lbja;->u(Lzia;)V
+
+    iget-object v0, p0, Laja;->a:Lcka;
+
+    invoke-interface {v0}, Lcka;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Lev4;)V
     .locals 1
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_close_reason_content_delete_text:I
+    iget-object v0, p0, Laja;->o:Lev4;
 
-    sput v0, Laja;->a:I
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_close_reason_photo_delete_text:I
+    move-result v0
 
-    sput v0, Laja;->b:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_close_reason_video_delete_text:I
+    iput-object p1, p0, Laja;->o:Lev4;
 
-    sput v0, Laja;->c:I
+    iget-object p1, p0, Laja;->a:Lcka;
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_content_level_subtitle:I
+    invoke-interface {p1, p0}, Lcka;->c(Lev4;)V
 
-    sput v0, Laja;->d:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_content_level_title:I
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
 
-    sput v0, Laja;->e:I
+    iget-object v0, p0, Laja;->a:Lcka;
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_seek_seconds:I
+    invoke-interface {v0, p1}, Lcka;->d(Ljava/lang/Object;)V
 
-    sput v0, Laja;->f:I
+    return-void
+.end method
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_toolbar_action_forward_photo:I
+.method public final g()V
+    .locals 6
 
-    sput v0, Laja;->g:I
+    iget-object v0, p0, Laja;->o:Lev4;
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_toolbar_action_forward_video:I
+    invoke-interface {v0}, Lev4;->g()V
 
-    sput v0, Laja;->h:I
+    const/4 v0, 0x0
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_toolbar_action_goto_message:I
+    const/4 v1, 0x1
 
-    sput v0, Laja;->i:I
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_toolbar_action_share:I
+    move-result v0
 
-    sput v0, Laja;->j:I
+    if-eqz v0, :cond_4
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_toolbar_countable_title:I
+    iget-object v0, p0, Laja;->b:Lbja;
 
-    sput v0, Laja;->k:I
+    iget-object v1, p0, Laja;->c:Lzia;
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_toolbar_photo_title:I
+    monitor-enter v0
 
-    sput v0, Laja;->l:I
+    :try_start_0
+    iget-object v2, v0, Lbja;->c:Lzia;
 
-    sget v0, Lchc;->oneme_chatmedia_viewer_toolbar_video_title:I
+    if-eqz v2, :cond_3
 
-    sput v0, Laja;->m:I
+    if-eq v2, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-wide v2, v1, Lzia;->b:J
+
+    const-wide/16 v4, 0x1
+
+    sub-long/2addr v2, v4
+
+    iput-wide v2, v1, Lzia;->b:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-boolean v2, v1, Lzia;->c:Z
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0, v1}, Lbja;->v(Lzia;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_2
+
+    :cond_2
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :cond_3
+    :goto_1
+    monitor-exit v0
+
+    return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_4
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Laja;->o:Lev4;
+
+    invoke-interface {v0}, Lev4;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Laja;->b:Lbja;
+
+    iget-object v1, p0, Laja;->c:Lzia;
+
+    invoke-virtual {v0, v1}, Lbja;->u(Lzia;)V
+
+    iget-object v0, p0, Laja;->a:Lcka;
+
+    invoke-interface {v0, p1}, Lcka;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lgxi;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

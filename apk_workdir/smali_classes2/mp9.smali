@@ -1,55 +1,39 @@
 .class public final Lmp9;
-.super Lwy3;
+.super Lof4;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lkv7;
+# static fields
+.field public static final b:Lmp9;
 
-.field public Y:Lkv7;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lup9;
-
-.field public final synthetic r0:Lup9;
-
-.field public s0:I
+.field public static final c:Ljf4;
 
 
 # direct methods
-.method public constructor <init>(Lup9;Lwy3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lmp9;->r0:Lup9;
+    new-instance v0, Lmp9;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lof4;-><init>()V
+
+    sput-object v0, Lmp9;->b:Lmp9;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":settings/messages"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+
+    move-result-object v0
+
+    sput-object v0, Lmp9;->c:Ljf4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lmp9;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lmp9;->s0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lmp9;->s0:I
-
-    iget-object p1, p0, Lmp9;->r0:Lup9;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lup9;->d(Ljava/util/Set;Lwy3;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
 .end method

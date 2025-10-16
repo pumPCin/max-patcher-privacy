@@ -1,88 +1,53 @@
 .class public final Lg99;
-.super Lc2f;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:J
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lj99;
+
+.field public o:Lj99;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(Lj99;Lk14;)V
     .locals 0
 
-    iput-object p2, p0, Lg99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput-object p1, p0, Lg99;->Z:Lj99;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lg99;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lg99;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lg99;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lg99;
+    iput-object p1, p0, Lg99;->Y:Ljava/lang/Object;
 
-    iget-object v1, p0, Lg99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iget p1, p0, Lg99;->r0:I
 
-    invoke-direct {v0, p2, v1}, Lg99;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    const/high16 v0, -0x80000000
 
-    iput-object p1, v0, Lg99;->X:Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    return-object v0
-.end method
+    iput p1, p0, Lg99;->r0:I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object p1, p0, Lg99;->Z:Lj99;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const-wide/16 v0, 0x0
 
-    iget-object p1, p0, Lg99;->X:Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1, p0}, Lj99;->c(JLk14;)Ljava/io/Serializable;
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:[Lpl7;
-
-    iget-object v0, p0, Lg99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lu49;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lu49;->setVideoMessageEnabled(Z)V
-
-    sget-object p1, Laxf;->a:Laxf;
+    move-result-object p1
 
     return-object p1
 .end method

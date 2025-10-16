@@ -1,43 +1,53 @@
-.class public abstract Lhsa;
-.super Ljava/lang/Object;
+.class public final Lhsa;
+.super Lk14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Loa9;
 
-.field public static final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static final c:I
+.field public final synthetic Z:Lmsa;
 
-.field public static final d:I
+.field public o:Lmsa;
 
-.field public static final e:I
+.field public r0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lmsa;Lk14;)V
+    .locals 0
 
-    sget v0, Lvdc;->oneme_snackbar_caption_id:I
+    iput-object p1, p0, Lhsa;->Z:Lmsa;
 
-    sput v0, Lhsa;->a:I
-
-    sget v0, Lvdc;->oneme_snackbar_container_id:I
-
-    sput v0, Lhsa;->b:I
-
-    sget v0, Lvdc;->oneme_snackbar_left_icon_id:I
-
-    sput v0, Lhsa;->c:I
-
-    sget v0, Lvdc;->oneme_snackbar_right_button_id:I
-
-    sput v0, Lhsa;->d:I
-
-    sget v0, Lvdc;->oneme_snackbar_title_id:I
-
-    sput v0, Lhsa;->e:I
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lhsa;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lhsa;->r0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lhsa;->r0:I
+
+    iget-object p1, p0, Lhsa;->Z:Lmsa;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lmsa;->e(Loa9;Lk14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

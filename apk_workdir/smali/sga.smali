@@ -1,85 +1,14 @@
-.class public final Lsga;
+.class public interface abstract Lsga;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltga;
-
-
-# instance fields
-.field public final a:I
-
-
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lsga;->a:I
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lsga;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsga;
-
-    iget v1, p0, Lsga;->a:I
-
-    iget p1, p1, Lsga;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+.method public abstract a(Liq5;Ljava/lang/Object;)Lsga;
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lsga;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
+.method public abstract d(Liq5;I)Lsga;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Resource(iconRes="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lsga;->a:I
-
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract e(Liq5;J)Lsga;
 .end method

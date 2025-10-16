@@ -1,334 +1,217 @@
 .class public final Lyy3;
-.super Lqy;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final A0:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final X:Ljava/lang/Long;
-
-.field public final Y:Ljava/util/List;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:I
-
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:Ljava/lang/String;
-
-.field public final t0:Ljava/lang/String;
-
-.field public final u0:Lh10;
-
-.field public final v0:Ljava/lang/String;
-
-.field public final w0:Ljava/lang/String;
-
-.field public final x0:Z
-
-.field public final y0:I
-
-.field public final z0:Lq19;
+.field public final synthetic Y:Lone/me/chats/picker/contacts/ContactsPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Long;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lh10;Ljava/lang/String;Ljava/lang/String;ZILq19;Ljava/lang/String;ZZ)V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/ContactsPickerScreen;)V
+    .locals 0
 
-    sget-object v0, Lm00;->c:Lm00;
+    iput-object p2, p0, Lyy3;->Y:Lone/me/chats/picker/contacts/ContactsPickerScreen;
 
-    move/from16 v1, p15
+    const/4 p2, 0x2
 
-    move/from16 v2, p16
-
-    invoke-direct {p0, v0, v1, v2}, Lqy;-><init>(Lm00;ZZ)V
-
-    iput p1, p0, Lyy3;->o:I
-
-    iput-object p2, p0, Lyy3;->X:Ljava/lang/Long;
-
-    iput-object p3, p0, Lyy3;->Y:Ljava/util/List;
-
-    iput-object p4, p0, Lyy3;->Z:Ljava/lang/String;
-
-    iput-object p5, p0, Lyy3;->r0:Ljava/lang/String;
-
-    iput-object p6, p0, Lyy3;->s0:Ljava/lang/String;
-
-    iput-object p7, p0, Lyy3;->t0:Ljava/lang/String;
-
-    iput-object p8, p0, Lyy3;->u0:Lh10;
-
-    iput-object p9, p0, Lyy3;->v0:Ljava/lang/String;
-
-    iput-object p10, p0, Lyy3;->w0:Ljava/lang/String;
-
-    iput-boolean p11, p0, Lyy3;->x0:Z
-
-    iput p12, p0, Lyy3;->y0:I
-
-    move-object/from16 p1, p13
-
-    iput-object p1, p0, Lyy3;->z0:Lq19;
-
-    move-object/from16 p1, p14
-
-    iput-object p1, p0, Lyy3;->A0:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lyy3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lyy3;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lyy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lyy3;
+
+    iget-object v1, p0, Lyy3;->Y:Lone/me/chats/picker/contacts/ContactsPickerScreen;
+
+    invoke-direct {v0, p2, v1}, Lyy3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/ContactsPickerScreen;)V
+
+    iput-object p1, v0, Lyy3;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    invoke-super {p0}, Lqy;->a()Ljava/util/HashMap;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lyy3;->X:Ljava/lang/Object;
 
-    iget v1, p0, Lyy3;->o:I
+    check-cast p1, Lwy3;
 
-    packed-switch v1, :pswitch_data_0
+    if-eqz p1, :cond_7
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lyy3;->Y:Lone/me/chats/picker/contacts/ContactsPickerScreen;
 
-    throw v0
+    iget-object v1, v0, Lone/me/chats/picker/contacts/ContactsPickerScreen;->t0:Lqs;
 
-    :pswitch_0
-    const-string v2, "botStarted"
+    iget-object p1, p1, Lwy3;->a:Lxw3;
 
-    goto :goto_0
+    sget-object v2, Lone/me/chats/picker/contacts/ContactsPickerScreen;->v0:[Lwq7;
 
-    :pswitch_1
-    const-string v2, "pin"
+    invoke-virtual {v0}, Lx14;->getRouter()Ljhd;
 
-    goto :goto_0
+    move-result-object v2
 
-    :pswitch_2
-    const-string v2, "joinByLink"
+    invoke-virtual {v2}, Ljhd;->e()Ljava/util/ArrayList;
 
-    goto :goto_0
+    move-result-object v2
 
-    :pswitch_3
-    const-string v2, "system"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v2, "hello"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v2, "icon"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v2, "title"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string v2, "leave"
-
-    goto :goto_0
-
-    :pswitch_8
-    const-string v2, "remove"
-
-    goto :goto_0
-
-    :pswitch_9
-    const-string v2, "add"
-
-    goto :goto_0
-
-    :pswitch_a
-    const-string v2, "new"
-
-    goto :goto_0
-
-    :pswitch_b
-    const-string v2, "unknown"
-
-    :goto_0
-    const-string v3, "event"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v2, p0, Lyy3;->Y:Ljava/util/List;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    if-lez v3, :cond_0
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->listIterator(I)Ljava/util/ListIterator;
 
-    const-string v3, "userIds"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
 
     :cond_0
-    iget-object v2, p0, Lyy3;->X:Ljava/lang/Long;
+    invoke-interface {v2}, Ljava/util/ListIterator;->hasPrevious()Z
 
-    if-eqz v2, :cond_1
+    move-result v3
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v3, v3, v5
+    const/4 v4, 0x0
 
     if-eqz v3, :cond_1
 
-    const-string v3, "userId"
+    invoke-interface {v2}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v3
+
+    move-object v5, v3
+
+    check-cast v5, Lmhd;
+
+    iget-object v5, v5, Lmhd;->a:Lx14;
+
+    instance-of v5, v5, Lne6;
+
+    if-eqz v5, :cond_0
+
+    goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Lyy3;->Z:Ljava/lang/String;
+    move-object v3, v4
 
-    if-eqz v2, :cond_2
+    :goto_0
+    check-cast v3, Lmhd;
 
-    const-string v3, "title"
+    if-eqz v3, :cond_2
 
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, v3, Lmhd;->a:Lx14;
+
+    goto :goto_1
 
     :cond_2
-    iget-object v2, p0, Lyy3;->r0:Ljava/lang/String;
-
-    if-eqz v2, :cond_3
-
-    const-string v3, "photoToken"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    iget-object v2, p0, Lyy3;->u0:Lh10;
-
-    if-eqz v2, :cond_4
-
-    const-string v3, "crop"
-
-    invoke-virtual {v2}, Lh10;->a()Ljava/util/HashMap;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_5
-
-    iget-boolean v2, p0, Lyy3;->x0:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    const-string v3, "showHistory"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_5
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_b
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lyy3;->y0:I
-
-    if-eq v2, v1, :cond_a
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_9
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_8
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_7
-
-    const/4 v1, 0x5
-
-    if-ne v2, v1, :cond_6
-
-    const-string v1, "GROUP_CHAT"
-
-    goto :goto_1
-
-    :cond_6
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_7
-    const-string v1, "CHANNEL"
-
-    goto :goto_1
-
-    :cond_8
-    const-string v1, "CHAT"
-
-    goto :goto_1
-
-    :cond_9
-    const-string v1, "DIALOG"
-
-    goto :goto_1
-
-    :cond_a
-    const-string v1, "UNKNOWN"
+    move-object v2, v4
 
     :goto_1
-    const-string v2, "chatType"
+    instance-of v3, v2, Lne6;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v3, :cond_3
 
-    :cond_b
-    iget-object v1, p0, Lyy3;->A0:Ljava/lang/String;
+    move-object v4, v2
 
-    invoke-static {v1}, Ld40;->A(Ljava/lang/CharSequence;)Z
+    check-cast v4, Lne6;
 
-    move-result v2
+    :cond_3
+    if-eqz v4, :cond_6
 
-    if-nez v2, :cond_c
+    sget-object v2, Lone/me/chats/picker/contacts/ContactsPickerScreen;->v0:[Lwq7;
 
-    const-string v2, "startPayload"
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    aget-object v5, v2, v3
 
-    :cond_c
-    return-object v0
+    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    nop
+    move-result-object v5
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    check-cast v5, Ljava/lang/Number;
+
+    invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v5, Landroid/content/Intent;
+
+    invoke-direct {v5}, Landroid/content/Intent;-><init>()V
+
+    const-string v6, "contacts.picker.result.key"
+
+    invoke-virtual {v5, v6, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    aget-object p1, v2, v3
+
+    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    const/4 v1, -0x1
+
+    invoke-interface {v4, p1, v1, v5}, Lne6;->c0(IILandroid/content/Intent;)V
+
+    invoke-virtual {v0}, Lx14;->getOnBackPressedDispatcher()Lnla;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Lnla;->d()V
+
+    :cond_5
+    invoke-static {v0}, Lbbi;->b(Lx14;)V
+
+    :cond_6
+    :goto_2
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :cond_7
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

@@ -3,67 +3,97 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls84;
+.implements Lndf;
+
+
+# static fields
+.field public static final b:J
 
 
 # instance fields
-.field public final a:Lax0;
-
-.field public b:Lznf;
-
-.field public c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:I
+.field public final a:Landroid/app/ActivityManager;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x5
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Ljh4;->b:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/app/ActivityManager;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lax0;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lax0;-><init>(I)V
-
-    iput-object v0, p0, Ljh4;->a:Lax0;
-
-    const/16 v0, 0x1f40
-
-    iput v0, p0, Ljh4;->d:I
-
-    iput v0, p0, Ljh4;->e:I
+    iput-object p1, p0, Ljh4;->a:Landroid/app/ActivityManager;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lv84;
-    .locals 5
+.method public final get()Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Lnh4;
+    new-instance v0, Lf79;
 
-    iget-object v1, p0, Ljh4;->c:Ljava/lang/String;
+    iget-object v1, p0, Ljh4;->a:Landroid/app/ActivityManager;
 
-    iget v2, p0, Ljh4;->d:I
+    invoke-virtual {v1}, Landroid/app/ActivityManager;->getMemoryClass()I
 
-    iget v3, p0, Ljh4;->e:I
+    move-result v1
 
-    iget-object v4, p0, Ljh4;->a:Lax0;
+    const/high16 v2, 0x100000
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lnh4;-><init>(Ljava/lang/String;IILax0;)V
+    mul-int/2addr v1, v2
 
-    iget-object v1, p0, Ljh4;->b:Lznf;
+    const v2, 0x7fffffff
 
-    if-eqz v1, :cond_0
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
-    invoke-virtual {v0, v1}, Lni0;->H(Lznf;)V
+    move-result v1
+
+    const/high16 v2, 0x2000000
+
+    if-ge v1, v2, :cond_0
+
+    const/high16 v1, 0x400000
+
+    goto :goto_0
 
     :cond_0
+    const/high16 v2, 0x4000000
+
+    if-ge v1, v2, :cond_1
+
+    const/high16 v1, 0x600000
+
+    goto :goto_0
+
+    :cond_1
+    div-int/lit8 v1, v1, 0x4
+
+    :goto_0
+    const v6, 0x7fffffff
+
+    sget-wide v4, Ljh4;->b:J
+
+    const/16 v2, 0x100
+
+    const v3, 0x7fffffff
+
+    invoke-direct/range {v0 .. v6}, Lf79;-><init>(IIIJI)V
+
     return-object v0
 .end method

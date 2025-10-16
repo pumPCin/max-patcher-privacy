@@ -3,72 +3,320 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
+.implements Lfu8;
+.implements Ldu8;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:Lfu8;
 
-.field public final b:I
+.field public Y:Ldu8;
 
-.field public final c:I
+.field public Z:J
 
-.field public final d:Los8;
+.field public final a:Lx09;
 
-.field public final e:Lbh8;
+.field public final b:J
 
-.field public final f:Ljava/util/HashMap;
+.field public final c:Ltf4;
 
-.field public final synthetic g:Lus8;
+.field public o:Lvj0;
 
 
 # direct methods
-.method public constructor <init>(Lus8;Ljava/lang/String;IILch8;)V
+.method public constructor <init>(Lx09;Ltf4;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lug8;->g:Lus8;
+    iput-object p1, p0, Lug8;->a:Lx09;
 
-    new-instance p1, Ljava/util/HashMap;
+    iput-object p2, p0, Lug8;->c:Ltf4;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    iput-wide p3, p0, Lug8;->b:J
 
-    iput-object p1, p0, Lug8;->f:Ljava/util/HashMap;
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
-    iput-object p2, p0, Lug8;->a:Ljava/lang/String;
-
-    iput p3, p0, Lug8;->b:I
-
-    iput p4, p0, Lug8;->c:I
-
-    new-instance p1, Los8;
-
-    invoke-direct {p1, p2, p3, p4}, Los8;-><init>(Ljava/lang/String;II)V
-
-    iput-object p1, p0, Lug8;->d:Los8;
-
-    iput-object p5, p0, Lug8;->e:Lbh8;
+    iput-wide p1, p0, Lug8;->Z:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final binderDied()V
-    .locals 3
+.method public final b(Ll1e;)V
+    .locals 1
 
-    iget-object v0, p0, Lug8;->g:Lus8;
+    check-cast p1, Lfu8;
 
-    iget-object v0, v0, Lus8;->Z:Lwx;
+    iget-object p1, p0, Lug8;->Y:Ldu8;
 
-    new-instance v1, Lum7;
+    sget v0, Lhhg;->a:I
 
-    const/4 v2, 0x6
-
-    invoke-direct {v1, v2, p0}, Lum7;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-interface {p1, p0}, Lj1e;->b(Ll1e;)V
 
     return-void
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0}, Ll1e;->c()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final d(Lfu8;)V
+    .locals 1
+
+    iget-object p1, p0, Lug8;->Y:Ldu8;
+
+    sget v0, Lhhg;->a:I
+
+    invoke-interface {p1, p0}, Ldu8;->d(Lfu8;)V
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lfu8;->f()V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lug8;->o:Lvj0;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lvj0;->g()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final g(J)J
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0, p1, p2}, Lfu8;->g(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final i()Z
+    .locals 1
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ll1e;->i()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0}, Lfu8;->j()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final k()Ln0g;
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0}, Lfu8;->k()Ln0g;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l()J
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0}, Ll1e;->l()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final m(J)V
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0, p1, p2}, Ll1e;->m(J)V
+
+    return-void
+.end method
+
+.method public final o(JLowd;)J
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0, p1, p2, p3}, Lfu8;->o(JLowd;)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final p(J)V
+    .locals 2
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    sget v1, Lhhg;->a:I
+
+    invoke-interface {v0, p1, p2}, Lfu8;->p(J)V
+
+    return-void
+.end method
+
+.method public final s(J)Z
+    .locals 1
+
+    iget-object v0, p0, Lug8;->X:Lfu8;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p2}, Ll1e;->s(J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final t(Ldu8;J)V
+    .locals 2
+
+    iput-object p1, p0, Lug8;->Y:Ldu8;
+
+    iget-object p1, p0, Lug8;->X:Lfu8;
+
+    if-eqz p1, :cond_1
+
+    iget-wide p2, p0, Lug8;->Z:J
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, p2, v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide p2, p0, Lug8;->b:J
+
+    :goto_0
+    invoke-interface {p1, p0, p2, p3}, Lfu8;->t(Ldu8;J)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final v([Lzi5;[Z[Lpkd;[ZJ)J
+    .locals 12
+
+    iget-wide v0, p0, Lug8;->Z:J
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    iget-wide v4, p0, Lug8;->b:J
+
+    cmp-long v4, p5, v4
+
+    if-nez v4, :cond_0
+
+    iput-wide v2, p0, Lug8;->Z:J
+
+    move-wide v10, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide/from16 v10, p5
+
+    :goto_0
+    iget-object v5, p0, Lug8;->X:Lfu8;
+
+    sget v0, Lhhg;->a:I
+
+    move-object v6, p1
+
+    move-object v7, p2
+
+    move-object v8, p3
+
+    move-object/from16 v9, p4
+
+    invoke-interface/range {v5 .. v11}, Lfu8;->v([Lzi5;[Z[Lpkd;[ZJ)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method

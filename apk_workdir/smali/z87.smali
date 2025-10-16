@@ -1,105 +1,102 @@
 .class public final Lz87;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ljava/lang/Object;
+
+
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Landroid/widget/TextView;
+.field public b:Ljava/util/ArrayList;
 
-.field public final synthetic c:I
-
-.field public final synthetic d:Landroid/widget/TextView;
-
-.field public final synthetic e:Lb97;
+.field public final c:Lmk4;
 
 
 # direct methods
-.method public constructor <init>(Lb97;ILandroid/widget/TextView;ILandroid/widget/TextView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lz87;->e:Lb97;
+    new-instance v0, Lim5;
 
-    iput p2, p0, Lz87;->a:I
+    const/16 v1, 0x14
 
-    iput-object p3, p0, Lz87;->b:Landroid/widget/TextView;
+    invoke-direct {v0, v1}, Lim5;-><init>(I)V
 
-    iput p4, p0, Lz87;->c:I
+    const/4 v1, 0x1
 
-    iput-object p5, p0, Lz87;->d:Landroid/widget/TextView;
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    move-result-object v0
+
+    sput-object v0, Lz87;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lmk4;
+
+    invoke-direct {v0}, Lmk4;-><init>()V
+
+    iput-object v0, p0, Lz87;->c:Lmk4;
+
+    invoke-virtual {p0}, Lz87;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final a()V
     .locals 3
 
-    iget p1, p0, Lz87;->a:I
+    iget-object v0, p0, Lz87;->c:Lmk4;
 
-    iget-object v0, p0, Lz87;->e:Lb97;
+    iget v0, v0, Lmk4;->a:I
 
-    iput p1, v0, Lb97;->n:I
+    iput v0, p0, Lz87;->a:I
 
-    const/4 p1, 0x0
-
-    iput-object p1, v0, Lb97;->l:Landroid/animation/AnimatorSet;
-
-    iget-object v1, p0, Lz87;->b:Landroid/widget/TextView;
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget v1, p0, Lz87;->c:I
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v0, v0, Lb97;->r:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Lz87;->b:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    :cond_0
-    iget-object p1, p0, Lz87;->d:Landroid/widget/TextView;
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 v0, 0x0
+    move-result v1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+    if-eqz v1, :cond_0
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    move-result-object v1
 
-    :cond_1
-    return-void
-.end method
+    check-cast v1, Lx87;
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+    iget v2, p0, Lz87;->a:I
 
-    iget-object p1, p0, Lz87;->d:Landroid/widget/TextView;
+    invoke-interface {v1}, Lx87;->b()I
 
-    if-eqz p1, :cond_0
+    move-result v1
 
-    const/4 v0, 0x0
+    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    move-result v1
 
-    const/4 v0, 0x0
+    iput v1, p0, Lz87;->a:I
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    goto :goto_0
 
     :cond_0
     return-void

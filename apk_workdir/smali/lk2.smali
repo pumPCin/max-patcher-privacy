@@ -1,68 +1,63 @@
 .class public final Llk2;
-.super Ld3;
+.super Lk14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Llk2;
+# instance fields
+.field public X:J
+
+.field public Y:J
+
+.field public Z:I
+
+.field public o:Lmk2;
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Lmk2;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lmk2;Lk14;)V
+    .locals 0
 
-    new-instance v0, Llk2;
+    iput-object p1, p0, Llk2;->s0:Lmk2;
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Llk2;->c:Llk2;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static H0(JLjava/lang/Long;)Lkc4;
-    .locals 2
 
-    const-string v0, ":chats/forward?messages_ids="
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    if-eqz p2, :cond_0
+    iput-object p1, p0, Llk2;->r0:Ljava/lang/Object;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget p1, p0, Llk2;->t0:I
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    or-int/2addr p1, v0
 
-    const-string p0, "&attach_id="
+    iput p1, p0, Llk2;->t0:I
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-wide/16 v4, 0x0
 
-    const-string p0, "&is_forward_attach=true"
+    iget-object v0, p0, Llk2;->s0:Lmk2;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object v6, p0
 
-    move-result-object p0
+    invoke-virtual/range {v0 .. v6}, Lmk2;->c(IJJLk14;)Ljava/lang/Object;
 
-    new-instance p1, Lkc4;
-
-    invoke-direct {p1, p0}, Lkc4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-
-    :cond_0
-    invoke-static {p0, p1, v0}, Ln29;->g(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lkc4;
-
-    invoke-direct {p1, p0}, Lkc4;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
     return-object p1
 .end method

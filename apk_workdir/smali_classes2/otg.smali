@@ -1,32 +1,34 @@
 .class public final Lotg;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
 .field public X:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-.field public final synthetic Z:Lxtg;
+.field public final synthetic Z:Lp6d;
 
-.field public final synthetic r0:Lutg;
+.field public final synthetic r0:Ltog;
 
 
 # direct methods
-.method public constructor <init>(Lutg;Lxtg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Lp6d;Ltog;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lotg;->Z:Lxtg;
+    iput-object p1, p0, Lotg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iput-object p1, p0, Lotg;->r0:Lutg;
+    iput-object p2, p0, Lotg;->Z:Lp6d;
+
+    iput-object p3, p0, Lotg;->r0:Ltog;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,7 +38,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ldtg;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -46,7 +48,7 @@
 
     check-cast p1, Lotg;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lotg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -58,158 +60,95 @@
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    new-instance v0, Lotg;
+    new-instance p1, Lotg;
 
-    iget-object v1, p0, Lotg;->Z:Lxtg;
+    iget-object v0, p0, Lotg;->Z:Lp6d;
 
-    iget-object v2, p0, Lotg;->r0:Lutg;
+    iget-object v1, p0, Lotg;->r0:Ltog;
 
-    invoke-direct {v0, v2, v1, p2}, Lotg;-><init>(Lutg;Lxtg;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Lotg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iput-object p1, v0, Lotg;->Y:Ljava/lang/Object;
+    invoke-direct {p1, v2, v0, v1, p2}, Lotg;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Lp6d;Ltog;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lotg;->X:I
 
-    iget v1, v0, Lotg;->X:I
+    sget-object v1, Lzag;->a:Lzag;
 
-    iget-object v2, v0, Lotg;->r0:Lutg;
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    if-eqz v0, :cond_1
 
-    if-eqz v1, :cond_1
+    if-ne v0, v2, :cond_0
 
-    if-ne v1, v3, :cond_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lotg;->Y:Ljava/lang/Object;
+    goto :goto_1
 
-    check-cast v1, Ljava/lang/String;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-object v8, v1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lwq7;
+
+    iget-object p1, p0, Lotg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->K0()Lgtg;
+
+    move-result-object p1
+
+    new-instance v0, Landroid/util/Size;
+
+    iget-object v3, p0, Lotg;->Z:Lp6d;
+
+    iget v3, v3, Lp6d;->a:I
+
+    invoke-direct {v0, v3, v3}, Landroid/util/Size;-><init>(II)V
+
+    iget-object v3, p0, Lotg;->r0:Ltog;
+
+    invoke-virtual {v3}, Ltog;->getSurfaceProvider()Lbxb;
+
+    move-result-object v3
+
+    iput v2, p0, Lotg;->X:I
+
+    iget-object p1, p1, Lgtg;->b:Lqog;
+
+    check-cast p1, Lyrg;
+
+    invoke-virtual {p1, v0, v3, p0}, Lyrg;->m(Landroid/util/Size;Lbxb;Lk14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lotg;->Y:Ljava/lang/Object;
-
-    check-cast v1, Ldtg;
-
-    sget-object v4, Lntg;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    aget v4, v4, v5
-
-    if-ne v4, v3, :cond_3
-
-    const-string v4, "DownloadFromWebApp"
-
-    const-string v5, "processDownloadFile complete"
-
-    invoke-static {v4, v5}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v4, Laug;
-
-    iget-object v5, v0, Lotg;->Z:Lxtg;
-
-    iget-object v5, v5, Lxtg;->a:Ljava/lang/String;
-
-    iget-object v1, v1, Ldtg;->a:Ljava/lang/String;
-
-    invoke-direct {v4, v5, v1}, Laug;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v2, Lutg;->e:Lfu0;
-
-    new-instance v5, Lfj7;
-
-    iget-object v6, v2, Lutg;->a:Lsj7;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v7, Laug;->Companion:Lztg;
-
-    invoke-virtual {v7}, Lztg;->serializer()Lql7;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7, v4}, Lsj7;->b(Lql7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v6, "WebAppDownloadFile"
-
-    invoke-direct {v5, v6, v4}, Lfj7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v6, v0, Lotg;->Y:Ljava/lang/Object;
-
-    iput v3, v0, Lotg;->X:I
-
-    invoke-interface {v1, v5, v0}, Lfpd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v3, Lo24;->a:Lo24;
-
-    if-ne v1, v3, :cond_2
-
-    return-object v3
-
     :cond_2
-    move-object v8, v6
+    move-object p1, v1
 
     :goto_0
-    iget-object v1, v2, Lutg;->f:Lfpg;
+    if-ne p1, v0, :cond_3
 
-    if-eqz v1, :cond_3
-
-    iget-object v2, v2, Lutg;->b:Lyn7;
-
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v7, v2
-
-    check-cast v7, Lpsg;
-
-    iget-wide v9, v1, Lfpg;->a:J
-
-    iget-object v11, v1, Lfpg;->b:Ljava/lang/String;
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0xf0
-
-    const/4 v12, 0x1
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    invoke-static/range {v7 .. v16}, Lpsg;->a(Lpsg;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
+    return-object v0
 
     :cond_3
-    sget-object v1, Laxf;->a:Laxf;
-
+    :goto_1
     return-object v1
 .end method

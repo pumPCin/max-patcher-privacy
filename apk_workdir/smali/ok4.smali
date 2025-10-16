@@ -1,215 +1,138 @@
 .class public final Lok4;
-.super Lenf;
+.super Ljf5;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
-# instance fields
-.field public final F:Z
 
-.field public final G:Z
+# static fields
+.field public static final a:Lok4;
 
-.field public final H:Z
-
-.field public final I:Z
-
-.field public J:Z
-
-.field public final K:Z
-
-.field public final L:Z
-
-.field public final M:Landroid/util/SparseArray;
-
-.field public final N:Landroid/util/SparseBooleanArray;
+.field public static final b:Lv44;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 9
 
-    .line 17
-    invoke-direct {p0}, Lenf;-><init>()V
+    new-instance v0, Lok4;
 
-    .line 18
-    new-instance v0, Landroid/util/SparseArray;
+    invoke-direct {v0}, Lv44;-><init>()V
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+    sput-object v0, Lok4;->a:Lok4;
 
-    iput-object v0, p0, Lok4;->M:Landroid/util/SparseArray;
+    sget-object v0, Libg;->a:Libg;
 
-    .line 19
-    new-instance v0, Landroid/util/SparseBooleanArray;
+    invoke-static {}, Lkotlinx/coroutines/internal/SystemPropsKt;->getAVAILABLE_PROCESSORS()I
 
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+    move-result v1
 
-    iput-object v0, p0, Lok4;->N:Landroid/util/SparseBooleanArray;
+    const/16 v2, 0x40
 
-    const/4 v0, 0x1
+    if-ge v2, v1, :cond_0
 
-    .line 20
-    iput-boolean v0, p0, Lok4;->F:Z
-
-    .line 21
-    iput-boolean v0, p0, Lok4;->G:Z
-
-    .line 22
-    iput-boolean v0, p0, Lok4;->H:Z
-
-    .line 23
-    iput-boolean v0, p0, Lok4;->I:Z
-
-    .line 24
-    iput-boolean v0, p0, Lok4;->J:Z
-
-    .line 25
-    iput-boolean v0, p0, Lok4;->K:Z
-
-    .line 26
-    iput-boolean v0, p0, Lok4;->L:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqk4;)V
-    .locals 6
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    invoke-virtual {p0, p1}, Lenf;->d(Lgnf;)V
-
-    .line 3
-    iget-boolean v0, p1, Lqk4;->o0:Z
-
-    iput-boolean v0, p0, Lok4;->F:Z
-
-    .line 4
-    iget-boolean v0, p1, Lqk4;->p0:Z
-
-    iput-boolean v0, p0, Lok4;->G:Z
-
-    .line 5
-    iget-boolean v0, p1, Lqk4;->q0:Z
-
-    iput-boolean v0, p0, Lok4;->H:Z
-
-    .line 6
-    iget-boolean v0, p1, Lqk4;->r0:Z
-
-    iput-boolean v0, p0, Lok4;->I:Z
-
-    .line 7
-    iget-boolean v0, p1, Lqk4;->s0:Z
-
-    iput-boolean v0, p0, Lok4;->J:Z
-
-    .line 8
-    iget-boolean v0, p1, Lqk4;->t0:Z
-
-    iput-boolean v0, p0, Lok4;->K:Z
-
-    .line 9
-    iget-boolean v0, p1, Lqk4;->u0:Z
-
-    iput-boolean v0, p0, Lok4;->L:Z
-
-    .line 10
-    iget-object v0, p1, Lqk4;->v0:Landroid/util/SparseArray;
-
-    .line 11
-    new-instance v1, Landroid/util/SparseArray;
-
-    invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
-
-    const/4 v2, 0x0
-
-    .line 12
-    :goto_0
-    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_0
-
-    .line 13
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->keyAt(I)I
-
-    move-result v3
-
-    new-instance v4, Ljava/util/HashMap;
-
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/Map;
-
-    invoke-direct {v4, v5}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-virtual {v1, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
+    move v4, v1
 
     goto :goto_0
 
-    .line 14
     :cond_0
-    iput-object v1, p0, Lok4;->M:Landroid/util/SparseArray;
+    move v4, v2
 
-    .line 15
-    iget-object p1, p1, Lqk4;->w0:Landroid/util/SparseBooleanArray;
+    :goto_0
+    const/16 v7, 0xc
 
-    .line 16
-    invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->clone()Landroid/util/SparseBooleanArray;
+    const/4 v8, 0x0
 
-    move-result-object p1
+    const-string v3, "kotlinx.coroutines.io.parallelism"
 
-    iput-object p1, p0, Lok4;->N:Landroid/util/SparseBooleanArray;
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v3 .. v8}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v3, v2, v3}, Lv44;->limitedParallelism$default(Lv44;ILjava/lang/String;ILjava/lang/Object;)Lv44;
+
+    move-result-object v0
+
+    sput-object v0, Lok4;->b:Lv44;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lymf;)V
+.method public final close()V
     .locals 2
 
-    iget-object v0, p0, Lenf;->D:Ljava/util/HashMap;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iget-object v1, p1, Lymf;->a:Lmmf;
+    const-string v1, "Cannot be invoked on Dispatchers.IO"
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final dispatch(Lt44;Ljava/lang/Runnable;)V
+    .locals 1
+
+    sget-object v0, Lok4;->b:Lv44;
+
+    invoke-virtual {v0, p1, p2}, Lv44;->dispatch(Lt44;Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public final b()Lgnf;
+.method public final dispatchYield(Lt44;Ljava/lang/Runnable;)V
     .locals 1
 
-    new-instance v0, Lqk4;
+    sget-object v0, Lok4;->b:Lv44;
 
-    invoke-direct {v0, p0}, Lqk4;-><init>(Lok4;)V
+    invoke-virtual {v0, p1, p2}, Lv44;->dispatchYield(Lt44;Ljava/lang/Runnable;)V
 
-    return-object v0
+    return-void
 .end method
 
-.method public final c()Lenf;
-    .locals 0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-super {p0}, Lenf;->c()Lenf;
+    sget-object v0, Lm95;->a:Lm95;
 
-    return-object p0
+    invoke-virtual {p0, v0, p1}, Lok4;->dispatch(Lt44;Ljava/lang/Runnable;)V
+
+    return-void
 .end method
 
-.method public final f([Ljava/lang/String;)Lenf;
-    .locals 0
+.method public final limitedParallelism(ILjava/lang/String;)Lv44;
+    .locals 1
 
-    invoke-static {p1}, Lenf;->e([Ljava/lang/String;)Lexc;
+    sget-object v0, Libg;->a:Libg;
+
+    invoke-virtual {v0, p1, p2}, Libg;->limitedParallelism(ILjava/lang/String;)Lv44;
 
     move-result-object p1
 
-    iput-object p1, p0, Lenf;->p:La67;
+    return-object p1
+.end method
+
+.method public final n()Ljava/util/concurrent/Executor;
+    .locals 0
 
     return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dispatchers.IO"
+
+    return-object v0
 .end method

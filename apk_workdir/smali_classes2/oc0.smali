@@ -1,22 +1,51 @@
 .class public final Loc0;
-.super Landroid/util/LruCache;
+.super Lk14;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lpc0;
+
+.field public Z:I
+
+.field public o:Landroid/net/Uri;
+
+
+# direct methods
+.method public constructor <init>(Lpc0;Lk14;)V
     .locals 0
 
-    check-cast p2, Ljava/lang/Long;
+    iput-object p1, p0, Loc0;->Y:Lpc0;
 
-    check-cast p3, Landroid/graphics/Bitmap;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    check-cast p4, Landroid/graphics/Bitmap;
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p3}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_0
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Loc0;->X:Ljava/lang/Object;
+
+    iget p1, p0, Loc0;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Loc0;->Z:I
+
+    iget-object p1, p0, Loc0;->Y:Lpc0;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lpc0;->b(Lnp2;Lk14;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,101 +1,125 @@
-.class public final Lqp0;
-.super Ljava/util/concurrent/CountDownLatch;
+.class public abstract synthetic Lqp0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyba;
-.implements Lfs4;
+
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
-# instance fields
-.field public a:Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.field public b:Ljava/lang/Throwable;
+    invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
 
-.field public c:Lfs4;
+    move-result-object v0
 
-.field public volatile o:Z
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final b()V
-    .locals 0
+    :try_start_0
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    return-void
-.end method
+    move-result v1
 
-.method public final c(Lfs4;)V
-    .locals 1
+    const/4 v2, 0x1
 
-    iput-object p1, p0, Lqp0;->c:Lfs4;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-boolean v0, p0, Lqp0;->o:Z
+    :catch_0
+    :try_start_1
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-interface {p1}, Lfs4;->f()V
+    move-result v1
 
-    :cond_0
-    return-void
-.end method
+    const/4 v2, 0x2
 
-.method public final e(Ljava/lang/Object;)V
-    .locals 1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v0, p0, Lqp0;->a:Ljava/lang/Object;
+    :catch_1
+    :try_start_2
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iput-object p1, p0, Lqp0;->a:Ljava/lang/Object;
+    move-result v1
 
-    iget-object p1, p0, Lqp0;->c:Lfs4;
+    const/4 v2, 0x3
 
-    invoke-interface {p1}, Lfs4;->f()V
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    :catch_2
+    :try_start_3
+    sget-object v1, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-.method public final f()V
-    .locals 1
+    move-result v1
 
-    const/4 v0, 0x1
+    const/4 v2, 0x4
 
-    iput-boolean v0, p0, Lqp0;->o:Z
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iget-object v0, p0, Lqp0;->c:Lfs4;
+    :catch_3
+    :try_start_4
+    sget-object v1, Landroid/graphics/Bitmap$Config;->RGBA_F16:Landroid/graphics/Bitmap$Config;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-interface {v0}, Lfs4;->f()V
+    move-result v1
 
-    :cond_0
-    return-void
-.end method
+    const/4 v2, 0x5
 
-.method public final g()Z
-    .locals 1
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    iget-boolean v0, p0, Lqp0;->o:Z
+    :catch_4
+    :try_start_5
+    invoke-static {}, Ly4;->f()Landroid/graphics/Bitmap$Config;
 
-    return v0
-.end method
+    move-result-object v1
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object v0, p0, Lqp0;->a:Ljava/lang/Object;
+    move-result v1
 
-    if-nez v0, :cond_0
+    const/4 v2, 0x6
 
-    iput-object p1, p0, Lqp0;->b:Ljava/lang/Throwable;
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    :catch_5
+    :try_start_6
+    sget-object v1, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Lqp0;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

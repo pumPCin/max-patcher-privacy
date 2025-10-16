@@ -1,132 +1,36 @@
-.class public final Ld1a;
-.super Ljava/io/Writer;
+.class public final synthetic Ld1a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpi6;
 
-# static fields
-.field public static final a:Ld1a;
+
+# instance fields
+.field public final synthetic a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Z)V
+    .locals 0
 
-    new-instance v0, Ld1a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/io/Writer;-><init>()V
-
-    sput-object v0, Ld1a;->a:Ld1a;
+    iput-boolean p1, p0, Ld1a;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final append(C)Ljava/io/Writer;
-    .locals 0
-
-    .line 4
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Ljava/io/Writer;
-    .locals 0
-
-    .line 5
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
-    .locals 0
-
-    .line 6
-    return-object p0
-.end method
-
-.method public final append(C)Ljava/lang/Appendable;
-    .locals 0
-
-    .line 1
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-    .locals 0
-
-    .line 2
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
-    .locals 0
-
-    .line 3
-    return-object p0
-.end method
-
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final flush()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final hashCode()I
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x0
+    check-cast p1, Lc68;
 
-    return v0
-.end method
+    iget-boolean v0, p0, Ld1a;->a:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iput-boolean v0, p1, Lc68;->n:Z
 
-    const-class v0, Ld1a;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final write(I)V
-    .locals 0
-
-    .line 1
-    return-void
-.end method
-
-.method public final write(Ljava/lang/String;)V
-    .locals 0
-
-    .line 4
-    return-void
-.end method
-
-.method public final write(Ljava/lang/String;II)V
-    .locals 0
-
-    .line 5
-    return-void
-.end method
-
-.method public final write([C)V
-    .locals 0
-
-    .line 2
-    return-void
-.end method
-
-.method public final write([CII)V
-    .locals 0
-
-    .line 3
-    return-void
+    return-object p1
 .end method

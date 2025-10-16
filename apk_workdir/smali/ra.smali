@@ -3,62 +3,52 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lib;
+.implements Lna;
 
 
-# static fields
-.field public static final a:Lra;
+# instance fields
+.field public final synthetic a:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;)V
+    .locals 0
 
-    new-instance v0, Lra;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lra;->a:Lra;
+    iput-object p1, p0, Lra;->a:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final c(Lei1;Z)V
     .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->r0:[Lwq7;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lra;->a:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
-    return v0
+    iget-object v0, v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Llt7;
 
-    :cond_0
-    instance-of p1, p1, Lra;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    if-nez p1, :cond_1
+    move-result-object v0
 
-    const/4 p1, 0x0
+    check-cast v0, Lva;
 
-    return p1
+    iget-object v0, v0, Lva;->c:Llt7;
 
-    :cond_1
-    return v0
-.end method
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object v0
 
-    const v0, 0x7c63762a
+    check-cast v0, Ln01;
 
-    return v0
-.end method
+    check-cast v0, Li11;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0, p1, p2}, Li11;->c(Lei1;Z)V
 
-    const-string v0, "AdminDisableMeMic"
-
-    return-object v0
+    return-void
 .end method

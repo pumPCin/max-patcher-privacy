@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lll3;
+.implements Ltn3;
 
 
 # annotations
@@ -14,16 +14,16 @@
     d2 = {
         "Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lll3;",
+        "Ltn3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
         "",
         "chatId",
-        "Lidd;",
+        "Ljod;",
         "scopeId",
-        "(JLjava/lang/String;Laf4;)V",
+        "(JLjava/lang/String;Lvh4;)V",
         "keyboard-media_release"
     }
     k = 0x1
@@ -37,32 +37,32 @@
 
 
 # static fields
-.field public static final synthetic s0:[Lpl7;
+.field public static final synthetic s0:[Lwq7;
 
 
 # instance fields
-.field public final X:Lvoc;
+.field public final X:Lazc;
 
-.field public final Y:Lew2;
+.field public final Y:Lsx2;
 
-.field public final Z:Lhre;
+.field public final Z:Lu3f;
 
-.field public final a:Lyn7;
+.field public final a:Llt7;
 
-.field public final b:Lyn7;
+.field public final b:Llt7;
 
-.field public c:Le68;
+.field public c:Lzb8;
 
-.field public final o:Lvoc;
+.field public final o:Lazc;
 
-.field public final r0:Lv32;
+.field public final r0:La52;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Lf4c;
+    new-instance v0, Lxcc;
 
     const-class v1, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
 
@@ -72,21 +72,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lewc;->a:Lfwc;
+    sget-object v2, Ls6d;->a:Lt6d;
 
     const-string v3, "stickersTabsRecyclerView"
 
     const-string v5, "getStickersTabsRecyclerView()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
+    invoke-static {v2, v1, v3, v5, v4}, Lf67;->d(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lxcc;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lpl7;
+    new-array v2, v2, [Lwq7;
 
     aput-object v0, v2, v4
 
@@ -94,12 +94,12 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->s0:[Lpl7;
+    sput-object v2, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->s0:[Lwq7;
 
     return-void
 .end method
 
-.method public constructor <init>(JLjava/lang/String;Laf4;)V
+.method public constructor <init>(JLjava/lang/String;Lvh4;)V
     .locals 0
 
     .line 65
@@ -108,26 +108,26 @@
     move-result-object p1
 
     .line 66
-    new-instance p2, Ld3b;
+    new-instance p2, Lqbb;
 
     const-string p4, "arg_key_chat_id"
 
-    invoke-direct {p2, p4, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, p4, p1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 67
-    new-instance p1, Ld3b;
+    new-instance p1, Lqbb;
 
     const-string p4, "arg_key_scope_id"
 
-    invoke-direct {p1, p4, p3}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, p4, p3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 68
-    filled-new-array {p2, p1}, [Ld3b;
+    filled-new-array {p2, p1}, [Lqbb;
 
     move-result-object p1
 
     .line 69
-    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
+    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -147,30 +147,30 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
 
     .line 2
-    new-instance v0, Lzh1;
+    new-instance v0, Laj1;
 
     const/4 v1, 0x6
 
-    invoke-direct {v0, p1, v1}, Lzh1;-><init>(Landroid/os/Bundle;I)V
+    invoke-direct {v0, p1, v1}, Laj1;-><init>(Landroid/os/Bundle;I)V
 
     .line 3
-    new-instance v1, Lgk3;
+    new-instance v1, Lpm3;
 
     const/16 v3, 0x17
 
-    invoke-direct {v1, v3, v0}, Lgk3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, v0}, Lpm3;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Lvue;
+    const-class v0, Li7f;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object v1
 
     .line 4
-    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->a:Lyn7;
+    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->a:Llt7;
 
     .line 5
     const-string v1, "arg_key_scope_id"
@@ -180,104 +180,104 @@
     move-result-object v1
 
     .line 6
-    const-class v3, Lul8;
+    const-class v3, Lhs8;
 
     .line 7
-    invoke-virtual {p0, v1, v3, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {p0, v1, v3, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object v1
 
     .line 8
-    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->b:Lyn7;
+    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->b:Llt7;
 
     .line 9
-    sget v1, Lqna;->n:I
+    sget v1, Luva;->n:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->o:Lvoc;
+    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->o:Lazc;
 
     .line 10
-    sget v1, Lqna;->o:I
+    sget v1, Luva;->o:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->X:Lvoc;
+    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->X:Lazc;
 
     .line 11
-    new-instance v1, Lew2;
+    new-instance v1, Lsx2;
 
     .line 12
-    sget-object v3, Lzl7;->a:Lzl7;
+    sget-object v3, Llr7;->a:Llr7;
 
     .line 13
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v4
 
     .line 14
-    const-class v5, Lzla;
+    const-class v5, Lcua;
 
-    invoke-virtual {v4, v5}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v4, v5}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lzla;
+    check-cast v4, Lcua;
 
     .line 15
-    invoke-virtual {v4}, Lzla;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v4}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v4
 
     .line 16
-    new-instance v6, Lam7;
+    new-instance v6, Lmr7;
 
     const/4 v7, 0x1
 
-    invoke-direct {v6, v7, p0}, Lam7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v6, v7, p0}, Lmr7;-><init>(ILjava/lang/Object;)V
 
     const/4 v7, 0x0
 
     .line 17
-    invoke-direct {v1, v4, v6, v7}, Lew2;-><init>(Ljava/util/concurrent/ExecutorService;Lam7;B)V
+    invoke-direct {v1, v4, v6, v7}, Lsx2;-><init>(Ljava/util/concurrent/ExecutorService;Lmr7;B)V
 
-    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Y:Lew2;
+    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Y:Lsx2;
 
     .line 18
-    new-instance v1, Lhre;
+    new-instance v1, Lu3f;
 
     .line 19
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v3
 
-    invoke-virtual {v3, v5}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3, v5}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lzla;
+    check-cast v3, Lcua;
 
     .line 20
-    invoke-virtual {v3}, Lzla;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v3}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v3
 
     .line 21
-    new-instance v4, Lqm7;
+    new-instance v4, Lcs7;
 
-    invoke-direct {v4, p0, p1}, Lqm7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Landroid/os/Bundle;)V
+    invoke-direct {v4, p0, p1}, Lcs7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Landroid/os/Bundle;)V
 
     .line 22
-    invoke-direct {v1, v3, v4}, Lhre;-><init>(Ljava/util/concurrent/ExecutorService;Lqm7;)V
+    invoke-direct {v1, v3, v4}, Lu3f;-><init>(Ljava/util/concurrent/ExecutorService;Lcs7;)V
 
-    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Z:Lhre;
+    iput-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Z:Lu3f;
 
     .line 23
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Lvue;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->E0()Li7f;
 
     move-result-object p1
 
@@ -291,258 +291,258 @@
     .line 25
     const-string v3, "loadStickers"
 
-    invoke-static {v0, v3}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 26
-    iget-object v0, p1, Lvue;->c:Lyn7;
+    iget-object v0, p1, Li7f;->c:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfpe;
+    check-cast v0, Ls1f;
 
     .line 27
-    invoke-virtual {v0}, Lfpe;->a()Ll9a;
+    invoke-virtual {v0}, Ls1f;->a()Lpha;
 
     move-result-object v0
 
-    invoke-static {v0}, Luce;->b(Loba;)Lus1;
+    invoke-static {v0}, Lexi;->a(Lsja;)Lxt1;
 
     move-result-object v0
 
     .line 28
-    iget-object v3, p1, Lvue;->X:Lyn7;
+    iget-object v3, p1, Li7f;->X:Llt7;
 
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lwk5;
+    check-cast v3, Lho5;
 
     .line 29
-    invoke-virtual {v3}, Lwk5;->p()Ll9a;
+    invoke-virtual {v3}, Lho5;->w()Lpha;
 
     move-result-object v3
 
-    invoke-static {v3}, Luce;->b(Loba;)Lus1;
+    invoke-static {v3}, Lexi;->a(Lsja;)Lxt1;
 
     move-result-object v3
 
     .line 30
-    iget-object v4, p1, Lvue;->Y:Lyn7;
+    iget-object v4, p1, Li7f;->Y:Llt7;
 
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lck5;
+    check-cast v4, Lnn5;
 
     .line 31
-    iget-object v4, v4, Lck5;->Z:Lpl0;
+    iget-object v4, v4, Lnn5;->Z:Lim0;
 
     .line 32
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 33
-    new-instance v5, Ln9a;
+    new-instance v5, Lrha;
 
     const/4 v6, 0x0
 
     .line 34
-    invoke-direct {v5, v4, v6}, Ln9a;-><init>(Loba;I)V
+    invoke-direct {v5, v4, v6}, Lrha;-><init>(Lsja;I)V
 
     .line 35
-    new-instance v4, Lgk5;
+    new-instance v4, Lrn5;
 
     const/16 v6, 0xb
 
-    invoke-direct {v4, v6}, Lgk5;-><init>(I)V
+    invoke-direct {v4, v6}, Lrn5;-><init>(I)V
 
     .line 36
-    new-instance v6, Ll9a;
+    new-instance v6, Lpha;
 
     const/4 v7, 0x5
 
-    invoke-direct {v6, v5, v4, v7}, Ll9a;-><init>(Ls8a;Lke6;I)V
+    invoke-direct {v6, v5, v4, v7}, Lpha;-><init>(Lwga;Lfi6;I)V
 
     .line 37
-    invoke-static {v6}, Luce;->b(Loba;)Lus1;
+    invoke-static {v6}, Lexi;->a(Lsja;)Lxt1;
 
     move-result-object v4
 
     .line 38
-    iget-object v5, p1, Lvue;->Z:Lh4f;
+    iget-object v5, p1, Li7f;->Z:Lrhf;
 
-    invoke-virtual {v5}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v5}, Lrhf;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lhae;
+    check-cast v5, Ltle;
 
     .line 39
-    iget-object v6, v5, Lhae;->a:Lyn7;
+    iget-object v6, v5, Ltle;->a:Llt7;
 
     .line 40
-    invoke-interface {v6}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v6}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lfpe;
+    check-cast v6, Ls1f;
 
     .line 41
-    iget-object v6, v6, Lfpe;->l:Lpl0;
+    iget-object v6, v6, Ls1f;->l:Lim0;
 
     .line 42
-    invoke-static {v6}, Luce;->b(Loba;)Lus1;
+    invoke-static {v6}, Lexi;->a(Lsja;)Lxt1;
 
     move-result-object v6
 
     .line 43
-    new-instance v7, Lbyb;
+    new-instance v7, Lu2c;
 
-    const/16 v8, 0x8
+    const/16 v8, 0x9
 
-    invoke-direct {v7, v6, v5, v8}, Lbyb;-><init>(Liu5;Ljava/lang/Object;I)V
+    invoke-direct {v7, v6, v5, v8}, Lu2c;-><init>(Lzx5;Ljava/lang/Object;I)V
 
     .line 44
-    iget-object v5, v5, Lhae;->b:Lyn7;
+    iget-object v5, v5, Ltle;->b:Llt7;
 
-    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Luse;
+    check-cast v5, Li5f;
 
     .line 45
-    iget-object v5, v5, Luse;->e:Lbpc;
+    iget-object v5, v5, Li5f;->e:Lgzc;
 
     .line 46
-    sget-object v6, Lgae;->r0:Lgae;
+    sget-object v6, Lsle;->r0:Lsle;
 
     .line 47
-    new-instance v8, Lm31;
+    new-instance v8, Ll41;
 
     const/4 v9, 0x3
 
-    invoke-direct {v8, v7, v5, v6, v9}, Lm31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v8, v7, v5, v6, v9}, Ll41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     .line 48
-    new-instance v5, Lpue;
+    new-instance v5, Lc7f;
 
     const/4 v6, 0x5
 
     .line 49
-    invoke-direct {v5, v6, v2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v5, v6, v2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     .line 50
-    invoke-static {v0, v3, v4, v8, v5}, Luce;->v(Liu5;Liu5;Liu5;Liu5;Lpe6;)Llx5;
+    invoke-static {v0, v3, v4, v8, v5}, Ly1j;->i(Lzx5;Lzx5;Lzx5;Lzx5;Lki6;)Lf16;
 
     move-result-object v0
 
     .line 51
-    new-instance v3, Lque;
+    new-instance v3, Ld7f;
 
-    invoke-direct {v3, p1, v2}, Lque;-><init>(Lvue;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v3, p1, v2}, Ld7f;-><init>(Li7f;Lkotlin/coroutines/Continuation;)V
 
     .line 52
-    new-instance v4, Lnw5;
+    new-instance v4, Lh06;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, v3, v5}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v4, v0, v3, v5}, Lh06;-><init>(Lzx5;Lei6;I)V
 
     .line 53
-    iget-object v0, p1, Lvue;->b:Le7f;
+    iget-object v0, p1, Li7f;->b:Lqkf;
 
-    check-cast v0, Lmka;
+    check-cast v0, Losa;
 
-    invoke-virtual {v0}, Lmka;->b()Lh24;
+    invoke-virtual {v0}, Losa;->b()Lv44;
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Luce;->H(Liu5;Lf24;)Liu5;
+    invoke-static {v4, v0}, Ly1j;->t(Lzx5;Lt44;)Lzx5;
 
     move-result-object v0
 
     .line 54
-    iget-object p1, p1, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object p1, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
     .line 55
-    invoke-static {v0, p1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v0, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
     .line 56
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Lvue;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->E0()Li7f;
 
     move-result-object p1
 
     .line 57
-    iget-object p1, p1, Lvue;->t0:Lbpc;
+    iget-object p1, p1, Li7f;->t0:Lgzc;
 
     .line 58
-    new-instance v0, Lnm7;
+    new-instance v0, Lzr7;
 
-    invoke-direct {v0, p0, v2}, Lnm7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v2}, Lzr7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
 
     .line 59
-    new-instance v2, Lnw5;
+    new-instance v2, Lh06;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p1, v0, v3}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v2, p1, v0, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
 
     .line 60
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lgq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Luv7;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v2, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
     .line 61
-    new-instance p1, Lv32;
+    new-instance p1, La52;
 
     .line 62
-    new-instance v2, Lyv0;
+    new-instance v2, Lww0;
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Lvue;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->E0()Li7f;
 
     move-result-object v4
 
     const/4 v8, 0x0
 
-    const/16 v9, 0x18
+    const/16 v9, 0x19
 
     .line 63
-    const-class v5, Lvue;
+    const-class v5, Li7f;
 
     const-string v6, "onNewItemInFocus"
 
     const-string v7, "onNewItemInFocus(Lone/me/sdk/lists/adapter/ListItem;)V"
 
-    invoke-direct/range {v2 .. v9}, Lyv0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v2 .. v9}, Lww0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 64
-    invoke-direct {p1, v1, v2}, Lv32;-><init>(Ltbe;Lvd6;)V
+    invoke-direct {p1, v1, v2}, La52;-><init>(Lrne;Lqh6;)V
 
-    iput-object p1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->r0:Lv32;
+    iput-object p1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->r0:La52;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.method public final C0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
     .locals 2
 
-    sget-object v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->s0:[Lpl7;
+    sget-object v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->s0:[Lwq7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->o:Lvoc;
+    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->o:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -551,18 +551,18 @@
     return-object v0
 .end method
 
-.method public final C0()Landroidx/recyclerview/widget/RecyclerView;
+.method public final D0()Landroidx/recyclerview/widget/RecyclerView;
     .locals 2
 
-    sget-object v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->s0:[Lpl7;
+    sget-object v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->s0:[Lwq7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->X:Lvoc;
+    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->X:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -571,62 +571,62 @@
     return-object v0
 .end method
 
-.method public final D0()Lvue;
+.method public final E0()Li7f;
     .locals 1
 
-    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->a:Lyn7;
+    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->a:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvue;
+    check-cast v0, Li7f;
 
     return-object v0
 .end method
 
-.method public final i(ILandroid/os/Bundle;)V
+.method public final f(ILandroid/os/Bundle;)V
     .locals 3
 
-    sget p2, Lqna;->g:I
+    sget p2, Luva;->g:I
 
     if-ne p1, p2, :cond_0
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Lvue;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->E0()Li7f;
 
     move-result-object p1
 
-    iget-object p2, p1, Lvue;->b:Le7f;
+    iget-object p2, p1, Li7f;->b:Lqkf;
 
-    check-cast p2, Lmka;
+    check-cast p2, Losa;
 
-    invoke-virtual {p2}, Lmka;->b()Lh24;
+    invoke-virtual {p2}, Losa;->b()Lv44;
 
     move-result-object p2
 
-    new-instance v0, Lrue;
+    new-instance v0, Le7f;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lrue;-><init>(Lvue;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, v1}, Le7f;-><init>(Li7f;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p1, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    sget-object v2, Lq24;->b:Lq24;
+    sget-object v2, Le54;->b:Le54;
 
-    invoke-static {v1, p2, v2, v0}, Lov9;->S(Ln24;Lf24;Lq24;Lje6;)Loke;
+    invoke-static {v1, p2, v2, v0}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
 
     move-result-object p2
 
-    iget-object v0, p1, Lvue;->z0:Lk5d;
+    iget-object v0, p1, Li7f;->z0:Lpzd;
 
-    sget-object v1, Lvue;->A0:[Lpl7;
+    sget-object v1, Li7f;->A0:[Lwq7;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-virtual {v0, p1, v1, p2}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, v1, p2}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -643,7 +643,7 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p2, Lqna;->l:I
+    sget p2, Luva;->l:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -651,7 +651,7 @@
 
     int-to-float p2, p2
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -663,7 +663,7 @@
 
     mul-float/2addr p2, p3
 
-    invoke-static {p2}, Li8e;->I(F)I
+    invoke-static {p2}, Lagi;->d(F)I
 
     move-result p2
 
@@ -677,7 +677,7 @@
 
     invoke-direct {p3, v0, v1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v0, Lqna;->o:I
+    sget v0, Luva;->o:I
 
     invoke-virtual {p3, v0}, Landroid/view/View;->setId(I)V
 
@@ -693,7 +693,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -705,7 +705,7 @@
 
     mul-float/2addr v0, v3
 
-    invoke-static {v0}, Li8e;->I(F)I
+    invoke-static {v0}, Lagi;->d(F)I
 
     move-result v0
 
@@ -713,7 +713,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -725,7 +725,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v3}, Lagi;->d(F)I
 
     move-result v3
 
@@ -745,17 +745,17 @@
 
     invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/RecyclerView;->setNestedScrollingEnabled(Z)V
 
-    invoke-virtual {p3, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lcvc;)V
+    invoke-virtual {p3, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lr5d;)V
 
-    new-instance v3, Ldm7;
+    new-instance v3, Lpr7;
 
     const/4 v4, 0x2
 
     const/4 v5, 0x3
 
-    invoke-direct {v3, v5, v1, v4}, Ldm7;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v3, v5, v1, v4}, Lpr7;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v3, p3}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v3, p3}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -769,7 +769,7 @@
 
     invoke-direct {p3, v3, v1, v4}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget v3, Lqna;->n:I
+    sget v3, Luva;->n:I
 
     invoke-virtual {p3, v3}, Landroid/view/View;->setId(I)V
 
@@ -783,13 +783,13 @@
 
     invoke-virtual {p3, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p2, Ler;
+    new-instance p2, Lpr;
 
     const/4 v2, 0x6
 
-    invoke-direct {p2, v5, v1, v2}, Ler;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p2, v5, v1, v2}, Lpr;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p2, p3}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {p2, p3}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
     invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -799,7 +799,7 @@
 
     int-to-float p2, p2
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -811,7 +811,7 @@
 
     mul-float/2addr p2, v0
 
-    invoke-static {p2}, Li8e;->I(F)I
+    invoke-static {p2}, Lagi;->d(F)I
 
     move-result p2
 
@@ -819,7 +819,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -831,7 +831,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Li8e;->I(F)I
+    invoke-static {v0}, Lagi;->d(F)I
 
     move-result v0
 
@@ -849,27 +849,27 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 2
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->B0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->C0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lxuc;)V
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lm5d;)V
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->B0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->r0:Lv32;
-
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->s0(Ljvc;)V
-
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->C0()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->C0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
+    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->r0:La52;
+
+    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->s0(Ly5d;)V
+
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
 
     return-void
 .end method
@@ -877,25 +877,25 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->C0()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
 
-    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Y:Lew2;
+    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Y:Lsx2;
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->C0()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
 
-    new-instance v0, Lh71;
+    new-instance v0, Li81;
 
     const/4 v1, 0x2
 
     int-to-float v1, v1
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -907,31 +907,31 @@
 
     mul-float/2addr v1, v2
 
-    invoke-static {v1}, Li8e;->I(F)I
+    invoke-static {v1}, Lagi;->d(F)I
 
     move-result v1
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, v1, v2}, Lh71;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Li81;-><init>(II)V
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->B0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->C0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
-    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->c:Le68;
+    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->c:Lzb8;
 
-    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Z:Lhre;
+    iget-object v1, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Z:Lu3f;
 
-    iput-object v0, v1, Lhre;->Z:Le68;
+    iput-object v0, v1, Lu3f;->Z:Lzb8;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lyt3;->q(Landroid/content/Context;)I
+    invoke-static {v0}, Ln0j;->c(Landroid/content/Context;)I
 
     move-result v0
 
@@ -941,21 +941,21 @@
 
     invoke-direct {v2, v0}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(I)V
 
-    new-instance v3, Lcm7;
+    new-instance v3, Lor7;
 
-    invoke-direct {v3, v2, v1}, Lcm7;-><init>(Landroidx/recyclerview/widget/GridLayoutManager;Lxuc;)V
+    invoke-direct {v3, v2, v1}, Lor7;-><init>(Landroidx/recyclerview/widget/GridLayoutManager;Lm5d;)V
 
-    iput-object v3, v2, Landroidx/recyclerview/widget/GridLayoutManager;->K:Lpp6;
+    iput-object v3, v2, Landroidx/recyclerview/widget/GridLayoutManager;->K:Lqt6;
 
     invoke-virtual {p1, v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    new-instance v2, Lj45;
+    new-instance v2, Lo75;
 
     const/4 v3, 0x4
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -967,61 +967,61 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v3}, Lagi;->d(F)I
 
     move-result v3
 
     const/4 v4, 0x6
 
-    invoke-direct {v2, v0, v3, v4}, Lj45;-><init>(III)V
+    invoke-direct {v2, v0, v3, v4}, Lo75;-><init>(III)V
 
-    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
+    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
 
-    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->r0:Lv32;
+    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->r0:La52;
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Ljvc;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Ly5d;)V
 
-    new-instance v0, Lv85;
+    new-instance v0, Lac5;
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, v2, p0}, Lv85;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v2, p0}, Lac5;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Ljvc;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Ly5d;)V
 
-    new-instance v0, Lom7;
+    new-instance v0, Las7;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lom7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v2, p0}, Las7;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->k(Lgvc;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->k(Lv5d;)V
 
-    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lxuc;)V
+    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lm5d;)V
 
-    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->D0()Lvue;
+    invoke-virtual {p0}, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->E0()Li7f;
 
     move-result-object p1
 
-    iget-object p1, p1, Lvue;->w0:Lbpc;
+    iget-object p1, p1, Li7f;->w0:Lgzc;
 
-    new-instance v0, Lpm7;
+    new-instance v0, Lbs7;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lpm7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v1}, Lbs7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Lnw5;
+    new-instance v1, Lh06;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v1, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
     return-void
 .end method

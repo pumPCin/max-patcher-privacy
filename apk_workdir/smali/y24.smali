@@ -1,74 +1,188 @@
-.class public final Ly24;
-.super Lc2f;
+.class public final synthetic Ly24;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/concurrent/Callable;
+.field public final synthetic a:I
+
+.field public final synthetic b:La34;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(La34;I)V
     .locals 0
 
-    iput-object p1, p0, Ly24;->X:Ljava/util/concurrent/Callable;
+    iput p2, p0, Ly24;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ly24;->b:La34;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    check-cast p1, Ln24;
+    iget p2, p0, Ly24;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p2, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ly24;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-result-object p1
+    move-result p2
 
-    check-cast p1, Ly24;
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    sget-object p2, Laxf;->a:Laxf;
+    move-result p3
 
-    invoke-virtual {p1, p2}, Ly24;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p4, p0, Ly24;->b:La34;
 
-    move-result-object p1
+    iget-object p5, p4, La34;->j:Lu24;
 
-    return-object p1
-.end method
+    iget p6, p5, Lu24;->a:I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    if-ne p3, p6, :cond_0
 
-    new-instance p1, Ly24;
+    goto :goto_2
 
-    iget-object v0, p0, Ly24;->X:Ljava/util/concurrent/Callable;
-
-    invoke-direct {p1, v0, p2}, Ly24;-><init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ly24;->X:Ljava/util/concurrent/Callable;
-
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+    :cond_0
+    invoke-static {p1}, Lqbi;->k(Landroid/view/View;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    return-object p1
+    const/4 p3, 0x0
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_1
+    move p1, p3
+
+    :goto_0
+    const/4 p6, 0x4
+
+    invoke-static {p5, p2, p1, p3, p6}, Lu24;->a(Lu24;IIZI)Lu24;
+
+    move-result-object p1
+
+    iput-object p1, p4, La34;->j:Lu24;
+
+    iget-object p1, p4, La34;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lv24;
+
+    iget-object p3, p4, La34;->j:Lu24;
+
+    invoke-interface {p2, p3}, Lv24;->J(Lu24;)V
+
+    goto :goto_1
+
+    :cond_2
+    :goto_2
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p2
+
+    iget-object p3, p0, Ly24;->b:La34;
+
+    iget-object p4, p3, La34;->k:Lu24;
+
+    iget p5, p4, Lu24;->a:I
+
+    if-ne p2, p5, :cond_3
+
+    goto :goto_5
+
+    :cond_3
+    invoke-static {p1}, Lqbi;->g(Landroid/view/View;)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const/4 p5, 0x0
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    goto :goto_3
+
+    :cond_4
+    move p1, p5
+
+    :goto_3
+    const/4 p6, 0x4
+
+    invoke-static {p4, p2, p1, p5, p6}, Lu24;->a(Lu24;IIZI)Lu24;
+
+    move-result-object p1
+
+    iput-object p1, p3, La34;->k:Lu24;
+
+    iget-object p1, p3, La34;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lv24;
+
+    iget-object p4, p3, La34;->k:Lu24;
+
+    invoke-interface {p2, p4}, Lv24;->B(Lu24;)V
+
+    goto :goto_4
+
+    :cond_5
+    :goto_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

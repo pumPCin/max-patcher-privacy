@@ -1,81 +1,42 @@
-.class public final Lcv6;
-.super Ldk0;
+.class public final synthetic Lcv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhv4;
 
 
 # instance fields
-.field public g:I
+.field public final synthetic a:Ldv6;
+
+.field public final synthetic b:Ljava/lang/Runnable;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ldv6;Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcv6;->a:Ldv6;
+
+    iput-object p2, p0, Lcv6;->b:Ljava/lang/Runnable;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b()I
-    .locals 1
+.method public final dispose()V
+    .locals 2
 
-    iget v0, p0, Lcv6;->g:I
+    iget-object v0, p0, Lcv6;->b:Ljava/lang/Runnable;
 
-    return v0
-.end method
+    iget-object v1, p0, Lcv6;->a:Ldv6;
 
-.method public final k()I
-    .locals 1
+    iget-object v1, v1, Ldv6;->a:Landroid/os/Handler;
 
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final m()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final t(JJJLjava/util/List;[Lhh8;)V
-    .locals 0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p1
-
-    iget p3, p0, Lcv6;->g:I
-
-    invoke-virtual {p0, p3, p1, p2}, Ldk0;->s(IJ)Z
-
-    move-result p3
-
-    if-nez p3, :cond_0
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     return-void
-
-    :cond_0
-    iget p3, p0, Ldk0;->b:I
-
-    add-int/lit8 p3, p3, -0x1
-
-    :goto_0
-    if-ltz p3, :cond_2
-
-    invoke-virtual {p0, p3, p1, p2}, Ldk0;->s(IJ)Z
-
-    move-result p4
-
-    if-nez p4, :cond_1
-
-    iput p3, p0, Lcv6;->g:I
-
-    return-void
-
-    :cond_1
-    add-int/lit8 p3, p3, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
 .end method

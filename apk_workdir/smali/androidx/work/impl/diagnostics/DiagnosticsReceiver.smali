@@ -13,7 +13,7 @@
 
     const-string v0, "DiagnosticsRcvr"
 
-    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

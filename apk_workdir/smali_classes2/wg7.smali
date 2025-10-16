@@ -1,117 +1,297 @@
-.class public abstract synthetic Lwg7;
-.super Ljava/lang/Object;
+.class public final Lwg7;
+.super Llff;
 .source "SourceFile"
 
+# interfaces
+.implements Lgi6;
 
-# static fields
-.field public static final synthetic a:[I
 
-.field public static final synthetic b:[I
+# instance fields
+.field public final synthetic X:I
+
+.field public synthetic Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    invoke-static {}, Luhg;->values()[Luhg;
+    iput p3, p0, Lwg7;->X:I
 
-    move-result-object v0
+    packed-switch p3, :pswitch_data_0
 
-    array-length v0, v0
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    new-array v0, v0, [I
+    return-void
 
-    sput-object v0, Lwg7;->b:[I
+    :pswitch_0
+    iput p1, p0, Lwg7;->Y:I
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lwg7;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    check-cast p2, Lu4b;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance p2, Lwg7;
+
+    iget v0, p0, Lwg7;->Y:I
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lwg7;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lwg7;->Z:Ljava/lang/Object;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {p2, p1}, Lwg7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/String;
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p2
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Lwg7;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Lwg7;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lwg7;->Z:Ljava/lang/Object;
+
+    iput p2, v0, Lwg7;->Y:I
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lwg7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    iget v0, p0, Lwg7;->X:I
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    packed-switch v0, :pswitch_data_0
 
-    :catch_0
-    const/4 v0, 0x2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    :try_start_1
-    sget-object v3, Lwg7;->b:[I
+    iget-object p1, p0, Lwg7;->Z:Ljava/lang/Object;
 
-    aput v0, v3, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    check-cast p1, Landroid/widget/ImageView;
 
-    :catch_1
-    const/4 v3, 0x3
+    sget v0, Liid;->E:I
 
-    :try_start_2
-    sget-object v4, Lwg7;->b:[I
+    sget-object v3, Lsz4;->t0:Lc82;
 
-    aput v3, v4, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-virtual {v3, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
 
-    :catch_2
-    const/4 v4, 0x4
+    move-result-object v4
 
-    :try_start_3
-    sget-object v5, Lwg7;->b:[I
+    invoke-interface {v4}, Lu4b;->getIcon()Lh67;
 
-    aput v4, v5, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    move-result-object v4
 
-    :catch_3
-    :try_start_4
-    sget-object v5, Lwg7;->b:[I
+    iget v4, v4, Lh67;->i:I
 
-    const/4 v6, 0x5
-
-    aput v6, v5, v0
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    invoke-static {}, Lin8;->values()[Lin8;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    array-length v5, v5
+    invoke-static {v5, v0}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    new-array v5, v5, [I
+    move-result-object v0
 
-    sput-object v5, Lwg7;->a:[I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    :try_start_5
-    aput v1, v5, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    move-result-object v0
 
-    :catch_5
-    :try_start_6
-    sget-object v2, Lwg7;->a:[I
+    invoke-static {v0, v4}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
 
-    aput v0, v2, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    new-instance v4, Landroid/graphics/drawable/ShapeDrawable;
 
-    :catch_6
-    :try_start_7
-    sget-object v1, Lwg7;->a:[I
+    new-instance v5, Landroid/graphics/drawable/shapes/OvalShape;
 
-    aput v3, v1, v0
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    invoke-direct {v5}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    :catch_7
-    :try_start_8
-    sget-object v0, Lwg7;->a:[I
+    invoke-direct {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    aput v4, v0, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+    iget v5, p0, Lwg7;->Y:I
 
-    :catch_8
-    return-void
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicWidth(I)V
+
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicHeight(I)V
+
+    invoke-virtual {v3, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lu4b;->b()Lwe0;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lwe0;->a:Lve0;
+
+    iget v3, v3, Lve0;->h:I
+
+    invoke-virtual {v4, v3}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    const/16 v3, 0x10
+
+    int-to-float v3, v3
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v6
+
+    invoke-static {v3}, Lagi;->d(F)I
+
+    move-result v3
+
+    sub-int v3, v5, v3
+
+    const/4 v6, 0x2
+
+    div-int/lit8 v9, v3, 0x2
+
+    const/16 v3, 0xc
+
+    int-to-float v3, v3
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v7
+
+    invoke-static {v3}, Lagi;->d(F)I
+
+    move-result v3
+
+    sub-int/2addr v5, v3
+
+    div-int/lit8 v10, v5, 0x2
+
+    new-instance v7, Landroid/graphics/drawable/LayerDrawable;
+
+    new-array v3, v6, [Landroid/graphics/drawable/Drawable;
+
+    aput-object v4, v3, v2
+
+    aput-object v0, v3, v1
+
+    invoke-direct {v7, v3}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    const/4 v8, 0x1
+
+    move v11, v9
+
+    move v12, v10
+
+    invoke-virtual/range {v7 .. v12}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
+
+    invoke-virtual {p1, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwg7;->Z:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iget v0, p0, Lwg7;->Y:I
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 p1, -0x1
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :cond_1
+    :goto_0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

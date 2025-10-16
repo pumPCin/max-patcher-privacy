@@ -1,19 +1,19 @@
-.class public abstract Ltra;
+.class public final Ltra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Llt7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llt7;)V
+    .locals 0
 
-    sget v0, Lodc;->oneme_emoji_view_type_emoji:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Ltra;->a:I
+    iput-object p1, p0, Ltra;->a:Llt7;
 
     return-void
 .end method

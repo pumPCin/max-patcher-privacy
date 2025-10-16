@@ -1,44 +1,58 @@
-.class public abstract Lucc;
-.super Ljava/lang/Object;
+.class public final Lucc;
+.super Landroid/util/FloatProperty;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_media_keyboard:I = 0x7f0a0714
+# instance fields
+.field public a:F
 
-.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a0715
 
-.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a0716
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a0717
+    const/4 v0, 0x0
 
-.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a0718
+    .line 1
+    invoke-direct {p0, p1, v0}, Lucc;-><init>(Ljava/lang/String;F)V
 
-.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a0719
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_pager:I = 0x7f0a071a
+.method public constructor <init>(Ljava/lang/String;F)V
+    .locals 0
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a071b
+    .line 2
+    invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a071c
+    .line 3
+    iput p2, p0, Lucc;->a:F
 
-.field public static oneme_media_keyboard_remove_action:I = 0x7f0a071d
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_settings_action:I = 0x7f0a071e
 
-.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a071f
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a0720
+    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
 
-.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a0721
+    iget p1, p0, Lucc;->a:F
 
-.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a0722
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a0723
+    move-result-object p1
 
-.field public static oneme_media_keyboard_tabs:I = 0x7f0a0724
+    return-object p1
+.end method
 
-.field public static oneme_media_keyboard_top_panel:I = 0x7f0a0725
+.method public final setValue(Ljava/lang/Object;F)V
+    .locals 0
 
-.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a0726
+    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
 
-.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a0727
+    iput p2, p0, Lucc;->a:F
+
+    return-void
+.end method

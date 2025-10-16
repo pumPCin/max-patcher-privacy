@@ -1,55 +1,51 @@
-.class public final Li48;
-.super Lyjg;
+.class public abstract synthetic Li48;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lhne;
-
-.field public final c:Lbpc;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lyn7;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Lyjg;-><init>()V
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-static {v0}, Line;->a(Ljava/lang/Object;)Lhne;
+    invoke-static {}, Lee2;->values()[Lee2;
 
     move-result-object v0
 
-    iput-object v0, p0, Li48;->b:Lhne;
+    array-length v0, v0
 
-    new-instance v1, Lbpc;
+    new-array v0, v0, [I
 
-    invoke-direct {v1, v0}, Lbpc;-><init>(Lis9;)V
+    const/4 v1, 0x1
 
-    iput-object v1, p0, Li48;->c:Lbpc;
+    const/4 v2, 0x0
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p1
+    :catch_0
+    const/4 v1, 0x2
 
-    check-cast p1, Lr8b;
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget-object v1, Lr8b;->f:[Ljava/lang/String;
+    :catch_1
+    const/4 v1, 0x3
 
-    invoke-virtual {p1, v1}, Lr8b;->c([Ljava/lang/String;)Z
+    :try_start_2
+    aput v1, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :catch_2
+    sput-object v0, Li48;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

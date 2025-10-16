@@ -1,75 +1,48 @@
 .class public final Lzb6;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lm54;
-
-
-# static fields
-.field public static final c:Z
+.super Lk14;
 
 
 # instance fields
-.field public final a:Ljava/util/UUID;
+.field public X:I
 
-.field public final b:[B
+.field public final synthetic Y:Ll23;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ll23;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-string v0, "Amazon"
+    iput-object p1, p0, Lzb6;->Y:Ll23;
 
-    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    const-string v1, "AFTM"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "AFTB"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-boolean v0, Lzb6;->c:Z
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/UUID;[B)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lzb6;->a:Ljava/util/UUID;
+    iput-object p1, p0, Lzb6;->o:Ljava/lang/Object;
 
-    iput-object p2, p0, Lzb6;->b:[B
+    iget p1, p0, Lzb6;->X:I
 
-    return-void
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lzb6;->X:I
+
+    iget-object p1, p0, Lzb6;->Y:Ll23;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ll23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

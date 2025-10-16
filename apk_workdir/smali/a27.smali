@@ -1,219 +1,141 @@
 .class public final La27;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lni9;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "La27;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lei6;
 
 
 # instance fields
-.field public final a:[B
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Lb54;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic Z:Ld27;
+
+.field public final synthetic r0:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lz94;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lz94;-><init>(I)V
-
-    sput-object v0, La27;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
-
-    move-result-object v0
-
-    .line 7
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 8
-    iput-object v0, p0, La27;->a:[B
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, La27;->b:Ljava/lang/String;
-
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, La27;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[B)V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lb54;Ld27;J)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La27;->X:Ljava/lang/Object;
 
-    .line 2
-    iput-object p3, p0, La27;->a:[B
+    iput-object p3, p0, La27;->Y:Lb54;
 
-    .line 3
-    iput-object p1, p0, La27;->b:Ljava/lang/String;
+    iput-object p4, p0, La27;->Z:Ld27;
 
-    .line 4
-    iput-object p2, p0, La27;->c:Ljava/lang/String;
+    iput-wide p5, p0, La27;->r0:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lb54;
 
-    return v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-virtual {p0, p1, p2}, La27;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, La27;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, La27;
 
-    iget-object v0, p0, La27;->a:[B
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object p1, p1, La27;->a:[B
+    invoke-virtual {p1, p2}, La27;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    move-result-object p1
 
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 7
 
-    iget-object v0, p0, La27;->a:[B
+    new-instance v0, La27;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+    iget-object v4, p0, La27;->Z:Ld27;
 
-    move-result v0
+    iget-wide v5, p0, La27;->r0:J
 
-    return v0
-.end method
+    iget-object v1, p0, La27;->X:Ljava/lang/Object;
 
-.method public final p(Lvm8;)V
-    .locals 1
+    iget-object v3, p0, La27;->Y:Lb54;
 
-    iget-object v0, p0, La27;->b:Ljava/lang/String;
+    move-object v2, p2
 
-    if-eqz v0, :cond_0
-
-    iput-object v0, p1, Lvm8;->a:Ljava/lang/CharSequence;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, La27;->a:[B
-
-    array-length v0, v0
-
-    const-string v1, "\", url=\""
-
-    const-string v2, "\", rawMetadata.length=\""
-
-    const-string v3, "ICY: title=\""
-
-    iget-object v4, p0, La27;->b:Ljava/lang/String;
-
-    iget-object v5, p0, La27;->c:Ljava/lang/String;
-
-    invoke-static {v3, v4, v1, v5, v2}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "\""
-
-    invoke-static {v1, v0, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v6}, La27;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lb54;Ld27;J)V
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object p2, p0, La27;->a:[B
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+    iget-object p1, p0, La27;->X:Ljava/lang/Object;
 
-    iget-object p2, p0, La27;->b:Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    :try_start_0
+    iget-object v0, p0, La27;->Z:Ld27;
 
-    iget-object p2, p0, La27;->c:Ljava/lang/String;
+    iget-object v0, v0, Ld27;->a:Llt7;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Lrv4;
+
+    iget-wide v1, p0, La27;->r0:J
+
+    check-cast v0, Lsv4;
+
+    invoke-virtual {v0, v1, v2, p1}, Lsv4;->a(JLjava/lang/String;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    new-instance v0, Lvcd;
+
+    invoke-direct {v0, p1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v0
+
+    :goto_0
+    invoke-static {p1}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    :goto_1
+    return-object p1
 .end method

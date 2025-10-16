@@ -1,267 +1,270 @@
 .class public final Lec2;
-.super Ljava/lang/Object;
+.super Lxm;
 .source "SourceFile"
+
+# interfaces
+.implements Lmmf;
+.implements Lphb;
 
 
 # instance fields
-.field public A:Ljava/util/ArrayList;
+.field public final X:J
 
-.field public B:Lpc2;
+.field public final Y:J
 
-.field public C:Lmc2;
+.field public final Z:Z
 
-.field public D:Ljava/lang/String;
-
-.field public E:Lzs5;
-
-.field public F:I
-
-.field public G:Ljava/lang/String;
-
-.field public H:Ljava/util/List;
-
-.field public I:I
-
-.field public J:Ljc2;
-
-.field public K:J
-
-.field public L:Z
-
-.field public M:Z
-
-.field public N:Z
-
-.field public O:J
-
-.field public P:I
-
-.field public Q:Lrs;
-
-.field public R:I
-
-.field public S:Ls00;
-
-.field public T:J
-
-.field public U:I
-
-.field public V:J
-
-.field public W:I
-
-.field public X:J
-
-.field public Y:J
-
-.field public Z:Lsq0;
-
-.field public a:J
-
-.field public a0:J
-
-.field public b:Ltc2;
-
-.field public b0:Lkla;
-
-.field public c:Lsc2;
-
-.field public c0:J
-
-.field public d:J
-
-.field public d0:J
-
-.field public e:Ljava/util/Map;
-
-.field public e0:Z
-
-.field public f:J
-
-.field public f0:Ljava/util/Map;
-
-.field public g:Ljava/lang/String;
-
-.field public g0:J
-
-.field public h:Ljava/lang/String;
-
-.field public h0:Z
-
-.field public i:Ljava/lang/String;
-
-.field public i0:Lqc2;
-
-.field public j:J
-
-.field public j0:J
-
-.field public k:J
-
-.field public k0:Ljava/lang/String;
-
-.field public l:J
-
-.field public l0:J
-
-.field public m:I
-
-.field public m0:J
-
-.field public n:Loc2;
-
-.field public n0:I
-
-.field public o:Llc2;
-
-.field public p:Lhc2;
-
-.field public q:Lhc2;
-
-.field public r:Lhc2;
-
-.field public s:Lhc2;
-
-.field public t:Lhc2;
-
-.field public u:Lhc2;
-
-.field public v:Lhc2;
-
-.field public w:J
-
-.field public x:Ljava/util/ArrayList;
-
-.field public y:Ljava/util/List;
-
-.field public z:J
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(JJJJZ)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lxm;-><init>(J)V
 
-    new-instance v0, Loc2;
+    iput-wide p3, p0, Lec2;->o:J
 
-    invoke-direct {v0}, Loc2;-><init>()V
+    iput-wide p5, p0, Lec2;->X:J
 
-    iput-object v0, p0, Lec2;->n:Loc2;
+    iput-wide p7, p0, Lec2;->Y:J
 
-    const/4 v0, 0x2
-
-    iput v0, p0, Lec2;->n0:I
-
-    new-instance v0, Lrs;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lube;-><init>(I)V
-
-    iput-object v0, p0, Lec2;->Q:Lrs;
-
-    sget-object v0, Lsq0;->c:Lsq0;
-
-    iput-object v0, p0, Lec2;->Z:Lsq0;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lec2;->i0:Lqc2;
+    iput-boolean p9, p0, Lec2;->Z:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfc2;)V
-    .locals 1
+.method public final c()I
+    .locals 3
 
-    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+    invoke-virtual {p0}, Lxm;->m()Lkd2;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-wide v1, p0, Lec2;->o:J
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0, v1, v2}, Lkd2;->C(J)Lda2;
 
-    iput-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lda2;->b:Lfe2;
+
+    iget-object v0, v0, Lfe2;->c:Lde2;
+
+    sget-object v1, Lde2;->o:Lde2;
+
+    if-eq v0, v1, :cond_0
+
+    sget-object v1, Lde2;->X:Lde2;
+
+    if-ne v0, v1, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+    const/4 v0, 0x3
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    return v0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final d()V
+    .locals 10
+
+    invoke-virtual {p0}, Lxm;->s()Lfof;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lxm;->a:J
+
+    invoke-virtual {v0, v1, v2}, Lfof;->d(J)V
+
+    invoke-virtual {p0}, Lxm;->o()Lma9;
+
+    move-result-object v3
+
+    iget-wide v6, p0, Lec2;->Y:J
+
+    sget-object v8, Lde9;->b:Lde9;
+
+    iget-wide v4, p0, Lec2;->o:J
+
+    invoke-virtual/range {v3 .. v8}, Lma9;->v(JJLde9;)V
+
+    invoke-virtual {p0}, Lxm;->m()Lkd2;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lec2;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lkd2;->w(J)V
+
+    invoke-virtual {p0}, Lxm;->l()Lgw0;
+
+    move-result-object v0
+
+    new-instance v3, Li43;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v4
+
+    const/4 v8, 0x0
+
+    const/16 v9, 0x7c
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v3 .. v9}, Li43;-><init>(Ljava/util/Collection;ZZLpp4;Lzxb;I)V
+
+    invoke-virtual {v0, v3}, Lgw0;->c(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final b()Ljava/util/List;
-    .locals 1
+.method public final e(Lklf;)V
+    .locals 4
 
-    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+    iget-object p1, p0, Lxm;->c:Lym;
 
-    if-nez v0, :cond_0
+    if-eqz p1, :cond_0
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+    const/4 p1, 0x0
 
-    return-object v0
+    :goto_0
+    iget-object p1, p1, Lym;->L:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lh73;
+
+    iget-wide v0, p0, Lec2;->o:J
+
+    iget-wide v2, p0, Lec2;->Y:J
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Lh73;->a(JJ)V
+
+    return-void
 .end method
 
-.method public final c()Ljava/util/Map;
-    .locals 2
+.method public final f(Lukf;)V
+    .locals 0
 
-    iget-object v0, p0, Lec2;->e:Ljava/util/Map;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lrs;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lube;-><init>(I)V
-
-    iput-object v0, p0, Lec2;->e:Ljava/util/Map;
-
-    :cond_0
-    iget-object v0, p0, Lec2;->e:Ljava/util/Map;
-
-    return-object v0
-.end method
-
-.method public final d(Ljava/util/Map;)V
-    .locals 2
+    instance-of p1, p1, Lmkf;
 
     if-nez p1, :cond_0
 
-    new-instance p1, Lrs;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0}, Lube;-><init>(I)V
-
-    iput-object p1, p0, Lec2;->Q:Lrs;
-
-    return-void
+    invoke-virtual {p0}, Lec2;->d()V
 
     :cond_0
-    new-instance v0, Lrs;
-
-    invoke-interface {p1}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Lube;-><init>(I)V
-
-    iput-object v0, p0, Lec2;->Q:Lrs;
-
-    invoke-virtual {v0, p1}, Lrs;->putAll(Ljava/util/Map;)V
-
     return-void
+.end method
+
+.method public final g()[B
+    .locals 3
+
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatClear;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatClear;-><init>()V
+
+    iget-wide v1, p0, Lxm;->a:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->requestId:J
+
+    iget-wide v1, p0, Lec2;->o:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->chatId:J
+
+    iget-wide v1, p0, Lec2;->X:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->chatServerId:J
+
+    iget-wide v1, p0, Lec2;->Y:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->lastEventTime:J
+
+    iget-boolean v1, p0, Lec2;->Z:Z
+
+    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->forAll:Z
+
+    invoke-static {v0}, Ldd9;->toByteArray(Ldd9;)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lxm;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lqhb;
+    .locals 1
+
+    sget-object v0, Lqhb;->t0:Lqhb;
+
+    return-object v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    const v0, 0xf4240
+
+    return v0
+.end method
+
+.method public final i()Lhlf;
+    .locals 4
+
+    new-instance v0, Lmu;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v1, v2}, Lmu;-><init>(Lk7b;I)V
+
+    const-string v1, "chatId"
+
+    iget-wide v2, p0, Lec2;->X:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lhlf;->u(JLjava/lang/String;)V
+
+    const-string v1, "lastEventTime"
+
+    iget-wide v2, p0, Lec2;->Y:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lhlf;->u(JLjava/lang/String;)V
+
+    const-string v1, "forAll"
+
+    iget-boolean v2, p0, Lec2;->Z:Z
+
+    invoke-virtual {v0, v1, v2}, Lhlf;->i(Ljava/lang/String;Z)V
+
+    return-object v0
 .end method

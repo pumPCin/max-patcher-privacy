@@ -1,181 +1,100 @@
-.class public abstract synthetic Lh3h;
+.class public final synthetic Lh3h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lo3h;
+
 
 # direct methods
-.method public static bridge synthetic a(Landroid/media/AudioAttributes;)I
+.method public synthetic constructor <init>(Lo3h;I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/media/AudioAttributes;->getAllowedCapturePolicy()I
+    iput p2, p0, Lh3h;->a:I
 
-    move-result p0
+    iput-object p1, p0, Lh3h;->b:Lo3h;
 
-    return p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public static bridge synthetic b(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getTappableElementInsets()Landroid/graphics/Insets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setAllowedCapturePolicy(I)Landroid/media/AudioAttributes$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic d(Landroid/media/projection/MediaProjection;)Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    new-instance v0, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
+    iget v0, p0, Lh3h;->a:I
 
-    invoke-direct {v0, p0}, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;-><init>(Landroid/media/projection/MediaProjection;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lh3h;->b:Lo3h;
 
-.method public static bridge synthetic e(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)Landroid/media/AudioPlaybackCaptureConfiguration;
-    .locals 0
+    iget-object v0, v0, Lo3h;->w0:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;->build()Landroid/media/AudioPlaybackCaptureConfiguration;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
-.end method
+    check-cast p1, Ljava/lang/Integer;
 
-.method public static synthetic f()Landroid/view/WindowInsets$Builder;
-    .locals 1
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    new-instance v0, Landroid/view/WindowInsets$Builder;
+    move-result p1
 
-    invoke-direct {v0}, Landroid/view/WindowInsets$Builder;-><init>()V
-
-    return-object v0
-.end method
-
-.method public static synthetic g(Landroid/view/WindowInsets;)Landroid/view/WindowInsets$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/view/WindowInsets$Builder;
-
-    invoke-direct {v0, p0}, Landroid/view/WindowInsets$Builder;-><init>(Landroid/view/WindowInsets;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic h(Landroid/view/WindowInsets$Builder;)Landroid/view/WindowInsets;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets$Builder;->build()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic i(Landroid/view/WindowInsets;IIII)Landroid/view/WindowInsets;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/WindowInsets;->inset(IIII)Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic j()V
-    .locals 1
-
-    new-instance v0, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
     return-void
-.end method
 
-.method public static bridge synthetic k(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lh3h;->b:Lo3h;
 
-    const/16 v0, 0xe
+    iget-object v0, v0, Lo3h;->u0:Lv60;
 
-    invoke-virtual {p0, v0}, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;->addMatchingUsage(I)Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public static bridge synthetic l(Landroid/media/AudioRecord$Builder;Landroid/media/AudioPlaybackCaptureConfiguration;)V
-    .locals 0
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p0, p1}, Landroid/media/AudioRecord$Builder;->setAudioPlaybackCaptureConfig(Landroid/media/AudioPlaybackCaptureConfiguration;)Landroid/media/AudioRecord$Builder;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    return-void
-.end method
+    move-result p1
 
-.method public static bridge synthetic m(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setSystemWindowInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    invoke-virtual {v0, p1}, Lv60;->setLinesColor(I)V
 
     return-void
-.end method
 
-.method public static bridge synthetic n(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 0
+    :pswitch_1
+    iget-object v0, p0, Lh3h;->b:Lo3h;
 
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getMandatorySystemGestureInsets()Landroid/graphics/Insets;
+    iget-object v0, v0, Lo3h;->w0:Landroid/widget/TextView;
 
-    move-result-object p0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public static bridge synthetic o(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setStableInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    return-void
-.end method
+    move-result p1
 
-.method public static bridge synthetic p(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemGestureInsets()Landroid/graphics/Insets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic q(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setSystemGestureInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
     return-void
-.end method
 
-.method public static bridge synthetic r(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
+    nop
 
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setMandatorySystemGestureInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic s(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setTappableElementInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

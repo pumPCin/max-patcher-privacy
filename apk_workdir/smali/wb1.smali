@@ -1,22 +1,21 @@
 .class public final Lwb1;
-.super Ljava/lang/Object;
+.super Lgd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lyb1;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lwb1;->a:Ljava/lang/String;
+    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
+
+    iput-object p1, p0, Lwb1;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,11 +43,11 @@
     :cond_1
     check-cast p1, Lwb1;
 
-    iget-object v1, p0, Lwb1;->a:Ljava/lang/String;
+    iget-object v1, p0, Lwb1;->b:Ljava/lang/String;
 
-    iget-object p1, p1, Lwb1;->a:Ljava/lang/String;
+    iget-object p1, p1, Lwb1;->b:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -60,41 +59,10 @@
     return v0
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const-wide v0, 0x7ffffffffffffffdL
-
-    return-wide v0
-.end method
-
-.method public final h(Lov7;)Z
-    .locals 4
-
-    const-wide v0, 0x7ffffffffffffffdL
-
-    invoke-interface {p1}, Lov7;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lwb1;->a:Ljava/lang/String;
+    iget-object v0, p0, Lwb1;->b:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -103,24 +71,16 @@
     return v0
 .end method
 
-.method public final m()I
-    .locals 1
-
-    const/4 v0, 0x3
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "CallShareLinkPreviewState(link="
+    const-string v0, "StartNewCall(link="
 
     const-string v1, ")"
 
-    iget-object v2, p0, Lwb1;->a:Ljava/lang/String;
+    iget-object v2, p0, Lwb1;->b:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,51 +1,118 @@
 .class public final Lfx5;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lyv5;
-
-.field public Z:I
-
-.field public o:Lyv5;
+.field public final a:Landroid/util/SparseBooleanArray;
 
 
 # direct methods
-.method public constructor <init>(Lyv5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/util/SparseBooleanArray;)V
     .locals 0
 
-    iput-object p1, p0, Lfx5;->Y:Lyv5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfx5;->a:Landroid/util/SparseBooleanArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final varargs a([I)Z
+    .locals 5
+
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    aget v3, p1, v2
+
+    iget-object v4, p0, Lfx5;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v4, v3}, Landroid/util/SparseBooleanArray;->get(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
+.end method
+
+.method public final b(I)I
+    .locals 2
+
+    iget-object v0, p0, Lfx5;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lgfi;->c(II)V
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lfx5;->X:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Lfx5;->Z:I
+    const/4 p1, 0x1
 
-    const/high16 v0, -0x80000000
+    return p1
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v0, p1, Lfx5;
 
-    iput p1, p0, Lfx5;->Z:I
+    if-nez v0, :cond_1
 
-    iget-object p1, p0, Lfx5;->Y:Lyv5;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lyv5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lfx5;
 
-    move-result-object p1
+    iget-object v0, p0, Lfx5;->a:Landroid/util/SparseBooleanArray;
 
-    return-object p1
+    iget-object p1, p1, Lfx5;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lfx5;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

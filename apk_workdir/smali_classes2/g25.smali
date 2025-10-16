@@ -1,129 +1,183 @@
-.class public final Lg25;
-.super Ljava/lang/Object;
+.class public final enum Lg25;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Liub;
+# static fields
+.field public static final enum X:Lg25;
 
-.field public final b:Ljava/util/List;
+.field public static final enum Y:Lg25;
+
+.field public static final enum Z:Lg25;
+
+.field public static final b:[Lg25;
+
+.field public static final enum c:Lg25;
+
+.field public static final enum o:Lg25;
+
+.field public static final enum r0:Lg25;
+
+.field public static final enum s0:Lg25;
+
+.field public static final enum t0:Lg25;
+
+.field public static final synthetic u0:[Lg25;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Liub;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg25;
 
-    iput-object p1, p0, Lg25;->a:Liub;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lg25;->b:Ljava/util/List;
+    const-string v2, "do_not_disturb_mode"
+
+    const-string v3, "DO_NOT_DISTURB_MODE"
+
+    invoke-direct {v0, v3, v1, v2}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lg25;->c:Lg25;
+
+    new-instance v1, Lg25;
+
+    const/4 v2, 0x1
+
+    const-string v3, "chat_muted"
+
+    const-string v4, "CHAT_MUTED"
+
+    invoke-direct {v1, v4, v2, v3}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lg25;->o:Lg25;
+
+    new-instance v2, Lg25;
+
+    const/4 v3, 0x2
+
+    const-string v4, "skipped_notif_message"
+
+    const-string v5, "SKIPPED_NOTIF_MESSAGE"
+
+    invoke-direct {v2, v5, v3, v4}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lg25;->X:Lg25;
+
+    new-instance v3, Lg25;
+
+    const/4 v4, 0x3
+
+    const-string v5, "notifications_limit"
+
+    const-string v6, "NOTIFICATIONS_LIMIT"
+
+    invoke-direct {v3, v6, v4, v5}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lg25;->Y:Lg25;
+
+    new-instance v4, Lg25;
+
+    const/4 v5, 0x4
+
+    const-string v6, "messages_limit"
+
+    const-string v7, "MESSAGES_LIMIT"
+
+    invoke-direct {v4, v7, v5, v6}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lg25;->Z:Lg25;
+
+    new-instance v5, Lg25;
+
+    const/4 v6, 0x5
+
+    const-string v7, "notif_channel_disabled"
+
+    const-string v8, "NOTIFICATION_CHANNEL_DISABLED"
+
+    invoke-direct {v5, v8, v6, v7}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lg25;->r0:Lg25;
+
+    new-instance v6, Lg25;
+
+    const/4 v7, 0x6
+
+    const-string v8, "notif_group_channel_disabled"
+
+    const-string v9, "NOTIFICATION_GROUP_CHANNEL_DISABLED"
+
+    invoke-direct {v6, v9, v7, v8}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lg25;->s0:Lg25;
+
+    new-instance v7, Lg25;
+
+    const/4 v8, 0x7
+
+    const-string v9, "system_app_notif_disabled"
+
+    const-string v10, "SYSTEM_APP_NOTIF_DISABLED"
+
+    invoke-direct {v7, v10, v8, v9}, Lg25;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lg25;->t0:Lg25;
+
+    filled-new-array/range {v0 .. v7}, [Lg25;
+
+    move-result-object v0
+
+    sput-object v0, Lg25;->u0:[Lg25;
+
+    invoke-static {}, Lg25;->values()[Lg25;
+
+    move-result-object v0
+
+    sput-object v0, Lg25;->b:[Lg25;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Lg25;->a:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lg25;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lg25;
-
-    iget-object v1, p0, Lg25;->a:Liub;
-
-    iget-object v3, p1, Lg25;->a:Liub;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lg25;->b:Ljava/util/List;
-
-    iget-object p1, p1, Lg25;->b:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lg25;
+    .locals 1
 
-    iget-object v0, p0, Lg25;->a:Liub;
+    const-class v0, Lg25;
 
-    invoke-virtual {v0}, Liub;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast p0, Lg25;
 
-    iget-object v1, p0, Lg25;->b:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static values()[Lg25;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lg25;->u0:[Lg25;
 
-    const-string v1, "State(appBarState="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lg25;->a:Liub;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", items="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lg25;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lg25;
 
     return-object v0
 .end method

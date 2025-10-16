@@ -2,99 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lat7;
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lis7;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final a:Lis7;
+# instance fields
+.field public a:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lis7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lis7;->a:Lis7;
-
-    new-instance v0, Llr7;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Llr7;-><init>(I)V
-
-    sput-object v0, Lis7;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p1, p0, Lis7;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public a(ILjava/lang/String;)Lec3;
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lis7;->a:Ljava/util/List;
 
-    return v0
-.end method
+    new-instance v1, Ljava/util/ArrayList;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v0, 0x1
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    move-result-object v0
 
     :cond_0
-    instance-of p1, p1, Lis7;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-nez p1, :cond_1
+    move-result v2
 
-    const/4 p1, 0x0
+    if-eqz v2, :cond_1
 
-    return p1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lthg;
+
+    invoke-interface {v2, p1, p2}, Lthg;->a(ILjava/lang/String;)Ljqf;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 
     :cond_1
-    return v0
-.end method
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
-.method public final hashCode()I
-    .locals 1
+    move-result p1
 
-    const v0, 0x608c29e1
+    const/4 p2, 0x0
 
-    return v0
-.end method
+    if-nez p1, :cond_2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    goto :goto_1
 
-    const-string v0, "ErrorPostNotFounded"
+    :cond_2
+    move-object v1, p2
 
-    return-object v0
-.end method
+    :goto_1
+    if-eqz v1, :cond_3
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    new-instance p1, Lec3;
 
-    const/4 p2, 0x1
+    invoke-direct {p1, v1}, Lec3;-><init>(Ljava/util/List;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    return-object p1
 
-    return-void
+    :cond_3
+    return-object p2
 .end method

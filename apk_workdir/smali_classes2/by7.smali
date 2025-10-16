@@ -2,52 +2,67 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lny7;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lby7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Lyn7;
-
-.field public final b:Lyn7;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgt7;
 
-    iput-object p1, p0, Lby7;->a:Lyn7;
+    const/16 v1, 0xc
 
-    iput-object p2, p0, Lby7;->b:Lyn7;
+    invoke-direct {v0, v1}, Lgt7;-><init>(I)V
+
+    sput-object v0, Lby7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static a(Lby7;Landroid/content/Context;Lze0;Lc2f;)Ljava/lang/Object;
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Lby7;->a:Lyn7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    iput-object p1, p0, Lby7;->a:Ljava/lang/String;
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, Le7f;
 
-    check-cast v0, Lmka;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    invoke-virtual {v0}, Lmka;->b()Lh24;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    return v0
+.end method
 
-    new-instance v1, Lay7;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    const/4 v2, 0x0
+    iget-object p2, p0, Lby7;->a:Ljava/lang/String;
 
-    invoke-direct {v1, p0, p2, p1, v2}, Lay7;-><init>(Lby7;Lze0;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-static {v0, v1, p3}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

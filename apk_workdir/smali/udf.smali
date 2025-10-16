@@ -2,26 +2,154 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lodf;
+
+
+# static fields
+.field public static final o:Lrb4;
+
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/Object;
 
-.field public final b:I
+.field public volatile b:Lodf;
 
-.field public final c:Ljava/lang/String;
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lrb4;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lrb4;-><init>(I)V
+
+    sput-object v0, Ludf;->o:Lrb4;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lodf;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ludf;->a:I
+    new-instance v0, Ljava/lang/Object;
 
-    iput p2, p0, Ludf;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ludf;->c:Ljava/lang/String;
+    iput-object v0, p0, Ludf;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Ludf;->b:Lodf;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Ludf;->b:Lodf;
+
+    sget-object v1, Ludf;->o:Lrb4;
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Ludf;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v2, p0, Ludf;->b:Lodf;
+
+    if-eq v2, v1, :cond_0
+
+    iget-object v2, p0, Ludf;->b:Lodf;
+
+    invoke-interface {v2}, Lodf;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iput-object v2, p0, Ludf;->c:Ljava/lang/Object;
+
+    iput-object v1, p0, Ludf;->b:Lodf;
+
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_0
+
+    :cond_0
+    monitor-exit v0
+
+    goto :goto_1
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_1
+    iget-object v0, p0, Ludf;->c:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ludf;->b:Lodf;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Suppliers.memoize("
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v2, Ludf;->o:Lrb4;
+
+    if-ne v0, v2, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "<supplier that returned "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Ludf;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ">"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

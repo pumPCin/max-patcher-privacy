@@ -1,51 +1,79 @@
 .class public final Lfk3;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-.field public Z:I
-
-.field public o:Lone/me/login/confirm/ConfirmPhoneScreen;
+.field public final synthetic a:Lfl3;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lfl3;)V
     .locals 0
 
-    iput-object p1, p0, Lfk3;->Y:Lone/me/login/confirm/ConfirmPhoneScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfk3;->a:Lfl3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onEvent(Li98;)V
+    .locals 2
+    .annotation runtime Lsaf;
+    .end annotation
 
-    iput-object p1, p0, Lfk3;->X:Ljava/lang/Object;
+    sget-object p1, Lfl3;->K0:Ljava/lang/String;
 
-    iget p1, p0, Lfk3;->Z:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Lfk3;->Z:I
+    const-string p1, "/bus"
 
-    iget-object p1, p0, Lfk3;->Y:Lone/me/login/confirm/ConfirmPhoneScreen;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lone/me/login/confirm/ConfirmPhoneScreen;->B0(Lone/me/login/confirm/ConfirmPhoneScreen;Lfge;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    const-string v0, "LoginEvent"
+
+    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lfk3;->a:Lfl3;
+
+    iget-object v0, p1, Lfl3;->x0:Lwwe;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lon7;->isCancelled()Z
+
+    move-result v0
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p1}, Lfl3;->C()V
+
+    :cond_0
+    iget-object v0, p1, Lfl3;->z0:Lws7;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lws7;->h()Z
+
+    move-result v0
+
+    if-ne v0, v1, :cond_1
+
+    invoke-virtual {p1}, Lfl3;->x()V
+
+    :cond_1
+    return-void
 .end method

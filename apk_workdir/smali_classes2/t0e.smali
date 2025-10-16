@@ -1,82 +1,98 @@
 .class public final Lt0e;
-.super Lc2f;
+.super Landroid/view/View;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:Landroid/text/Layout;
 
-.field public final synthetic Y:Lone/me/settings/SettingsListScreen;
+.field public b:I
 
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+# virtual methods
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 1
+
+    iget-object v0, p0, Lt0e;->a:Landroid/text/Layout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMeasure(II)V
     .locals 0
 
-    iput-object p2, p0, Lt0e;->Y:Lone/me/settings/SettingsListScreen;
+    iget-object p1, p0, Lt0e;->a:Landroid/text/Layout;
 
-    const/4 p2, 0x2
+    if-eqz p1, :cond_0
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1}, Landroid/text/Layout;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    move p1, p2
+
+    :goto_0
+    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
 
     return-void
 .end method
 
+.method public final setLayout(Landroid/text/Layout;)V
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iput-object p1, p0, Lt0e;->a:Landroid/text/Layout;
 
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lt0e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
     move-result-object p1
 
-    check-cast p1, Lt0e;
+    if-eqz p1, :cond_0
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget v0, p0, Lt0e;->b:I
 
-    invoke-virtual {p1, p2}, Lt0e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    return-object p2
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lt0e;
-
-    iget-object v1, p0, Lt0e;->Y:Lone/me/settings/SettingsListScreen;
-
-    invoke-direct {v0, p2, v1}, Lt0e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
-
-    iput-object p1, v0, Lt0e;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final setTextColor(I)V
     .locals 1
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iput p1, p0, Lt0e;->b:I
 
-    iget-object p1, p0, Lt0e;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lt0e;->a:Landroid/text/Layout;
 
-    check-cast p1, Ljava/util/List;
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lt0e;->Y:Lone/me/settings/SettingsListScreen;
+    invoke-virtual {v0}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
-    iget-object v0, v0, Lone/me/settings/SettingsListScreen;->y0:La0e;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lhv7;->E(Ljava/util/List;)V
+    if-eqz v0, :cond_0
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    return-object p1
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
 .end method

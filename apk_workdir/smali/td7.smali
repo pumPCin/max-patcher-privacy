@@ -1,13 +1,11 @@
-.class public final Ltd7;
-.super Lwy3;
+.class public interface abstract Ltd7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public abstract b()Lo8a;
+.end method
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    return-object p1
+.method public abstract isActive()Z
 .end method

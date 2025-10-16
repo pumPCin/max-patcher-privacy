@@ -3,194 +3,74 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lg63;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfud;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public final a:Landroid/text/style/ForegroundColorSpan;
+
+.field public final b:Landroid/text/style/BackgroundColorSpan;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lv2b;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
+
+    sput-object v0, Lfud;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/text/style/ForegroundColorSpan;Landroid/text/style/BackgroundColorSpan;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfud;->a:Lyn7;
+    iput-object p1, p0, Lfud;->a:Landroid/text/style/ForegroundColorSpan;
+
+    iput-object p2, p0, Lfud;->b:Landroid/text/style/BackgroundColorSpan;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lxm3;
+.method public final describeContents()I
     .locals 1
 
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->a()Lxm3;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b()V
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->b()V
-
-    return-void
-.end method
-
-.method public final c(Ljava/net/Socket;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lg63;->c(Ljava/net/Socket;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->close()V
-
-    return-void
-.end method
-
-.method public final connect()Ljava/net/Socket;
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->connect()Ljava/net/Socket;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final d()I
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->d()I
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final e()Z
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    invoke-virtual {p0}, Lfud;->l()Lg63;
+    iget-object v0, p0, Lfud;->a:Landroid/text/style/ForegroundColorSpan;
 
-    move-result-object v0
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    invoke-interface {v0}, Lg63;->e()Z
+    iget-object v0, p0, Lfud;->b:Landroid/text/style/BackgroundColorSpan;
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final f()V
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->f()V
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     return-void
-.end method
-
-.method public final g(Z)V
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lg63;->g(Z)V
-
-    return-void
-.end method
-
-.method public final h(I)J
-    .locals 2
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lg63;->h(I)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final i()Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->i()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final k()Ltl3;
-    .locals 1
-
-    invoke-virtual {p0}, Lfud;->l()Lg63;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lg63;->k()Ltl3;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final l()Lg63;
-    .locals 1
-
-    iget-object v0, p0, Lfud;->a:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lg63;
-
-    return-object v0
 .end method

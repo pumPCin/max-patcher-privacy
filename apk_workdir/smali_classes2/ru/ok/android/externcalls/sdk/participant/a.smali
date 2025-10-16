@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvae;
+.implements Lgme;
 
 
 # instance fields

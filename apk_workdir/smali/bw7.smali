@@ -2,10 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Future;
-
 
 # virtual methods
-.method public abstract d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+.method public abstract a()Landroid/app/Activity;
+.end method
+
+.method public abstract b(Landroid/content/Intent;I)V
 .end method

@@ -1,39 +1,25 @@
-.class public final Ltj4;
+.class public abstract Ltj4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ltj4;
+.field public static final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ltj4;
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Ltj4;->a:Ltj4;
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
 
-    return-void
-.end method
+    move-result v0
 
-
-# virtual methods
-.method public final a(Landroid/animation/AnimatorSet;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->reverse()V
-
-    return-void
-.end method
-
-.method public final b(Landroid/animation/AnimatorSet;J)V
-    .locals 0
-
-    invoke-virtual {p1, p2, p3}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
+    sput v0, Ltj4;->a:I
 
     return-void
 .end method

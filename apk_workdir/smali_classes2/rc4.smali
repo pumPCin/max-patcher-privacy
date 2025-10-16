@@ -1,143 +1,126 @@
-.class public abstract Lrc4;
+.class public final synthetic Lrc4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;II)V
+    .locals 0
+
+    iput p3, p0, Lrc4;->a:I
+
+    iput-object p1, p0, Lrc4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+
+    iput p2, p0, Lrc4;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/LinkedHashSet;-><init>(I)V
-
-    iput-object v0, p0, Lrc4;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
-.method public static a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
-    .locals 6
 
-    and-int/lit8 v0, p4, 0x2
+# virtual methods
+.method public final run()V
+    .locals 5
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Lrc4;->a:I
 
-    const/4 p3, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    move-object v5, p3
+    iget-object v0, p0, Lrc4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    and-int/lit8 p3, p4, 0x4
+    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->G0:Landroidx/recyclerview/widget/RecyclerView;
 
-    const/4 v0, 0x1
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    if-eqz p3, :cond_1
+    move-result-object v2
 
-    const/4 p3, 0x2
+    check-cast v2, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;
 
-    move v2, p3
+    iget v3, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->P0:I
 
-    goto :goto_0
+    iget v4, p0, Lrc4;->c:I
 
-    :cond_1
-    move v2, v0
+    invoke-virtual {v2, v4, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
 
-    :goto_0
-    and-int/lit8 p3, p4, 0x8
+    new-instance v2, Lsc4;
 
-    const/4 p4, 0x0
+    const/4 v3, 0x1
 
-    if-eqz p3, :cond_2
+    invoke-direct {v2, v0, v3}, Lsc4;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
 
-    move v4, v0
+    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    goto :goto_1
+    return-void
 
-    :cond_2
-    move v4, p4
+    :pswitch_0
+    iget-object v0, p0, Lrc4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    :goto_1
-    const/16 p3, 0x3a
+    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->H0:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {p1, p3}, Lpwe;->T0(Ljava/lang/String;C)Z
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    move-result p3
+    move-result-object v2
 
-    if-eqz p3, :cond_4
+    check-cast v2, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;
 
-    new-instance p3, Ljava/util/ArrayList;
+    iget v3, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->P0:I
 
-    array-length v0, p2
+    iget v4, p0, Lrc4;->c:I
 
-    invoke-direct {p3, v0}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-virtual {v2, v4, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
 
-    array-length v0, p2
+    new-instance v2, Lsc4;
 
-    :goto_2
-    if-ge p4, v0, :cond_3
+    const/4 v3, 0x2
 
-    aget-object v1, p2, p4
+    invoke-direct {v2, v0, v3}, Lsc4;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
 
-    sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    return-void
 
-    move-result-object v1
+    :pswitch_1
+    iget-object v0, p0, Lrc4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    invoke-virtual {p3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->F0:Landroidx/recyclerview/widget/RecyclerView;
 
-    add-int/lit8 p4, p4, 0x1
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    goto :goto_2
+    move-result-object v2
 
-    :cond_3
-    new-instance v3, Ljava/util/LinkedHashSet;
+    check-cast v2, Lru/ok/tamtam/messages/scheduled/SliderLayoutManager;
 
-    invoke-direct {v3, p3}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+    iget v3, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->P0:I
 
-    sget-object p2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    iget v4, p0, Lrc4;->c:I
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v2, v4, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
 
-    move-result-object p1
+    new-instance v2, Lsc4;
 
-    invoke-static {p1}, Loq0;->b(Ljava/lang/String;)Landroid/net/Uri;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    invoke-direct {v2, v0, v3}, Lsc4;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
 
-    new-instance v0, Lmc4;
+    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct/range {v0 .. v5}, Lmc4;-><init>(Landroid/net/Uri;ILjava/util/LinkedHashSet;ZLjava/util/Set;)V
+    return-void
 
-    iget-object p0, p0, Lrc4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    return-object v0
-
-    :cond_4
-    const-string p0, "invalid route "
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

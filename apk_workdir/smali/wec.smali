@@ -1,42 +1,136 @@
-.class public abstract Lwec;
-.super Ljava/lang/Object;
+.class public final Lwec;
+.super Lvs7;
+.source "SourceFile"
+
+# interfaces
+.implements Lqh6;
 
 
-# static fields
-.field public static action0:I = 0x7f0a0092
+# instance fields
+.field public final synthetic a:I
 
-.field public static action_divider:I = 0x7f0a009f
+.field public final synthetic b:Lgg1;
 
-.field public static cancel_action:I = 0x7f0a0226
+.field public final synthetic c:Lfg1;
 
-.field public static chronometer:I = 0x7f0a029f
+.field public final synthetic o:Ljava/lang/Object;
 
-.field public static end_padder:I = 0x7f0a0331
 
-.field public static icon:I = 0x7f0a03f8
+# direct methods
+.method public constructor <init>(Lfg1;Ljava/lang/Object;Lgg1;)V
+    .locals 1
 
-.field public static info:I = 0x7f0a0407
+    const/4 v0, 0x0
 
-.field public static line1:I = 0x7f0a043c
+    iput v0, p0, Lwec;->a:I
 
-.field public static line3:I = 0x7f0a043d
+    .line 1
+    iput-object p1, p0, Lwec;->c:Lfg1;
 
-.field public static media_actions:I = 0x7f0a0492
+    iput-object p2, p0, Lwec;->o:Ljava/lang/Object;
 
-.field public static media_controller_compat_view_tag:I = 0x7f0a04bb
+    iput-object p3, p0, Lwec;->b:Lgg1;
 
-.field public static notification_main_column:I = 0x7f0a05e8
+    const/4 p1, 0x1
 
-.field public static notification_main_column_container:I = 0x7f0a05e9
+    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
 
-.field public static right_side:I = 0x7f0a09f7
+    return-void
+.end method
 
-.field public static status_bar_latest_event_content:I = 0x7f0a0bc5
+.method public constructor <init>(Lgg1;Lfg1;Loh6;)V
+    .locals 1
 
-.field public static text:I = 0x7f0a0be5
+    const/4 v0, 0x1
 
-.field public static text2:I = 0x7f0a0be6
+    iput v0, p0, Lwec;->a:I
 
-.field public static time:I = 0x7f0a0c04
+    .line 2
+    iput-object p1, p0, Lwec;->b:Lgg1;
 
-.field public static title:I = 0x7f0a0c06
+    iput-object p2, p0, Lwec;->c:Lfg1;
+
+    iput-object p3, p0, Lwec;->o:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lwec;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwec;->o:Ljava/lang/Object;
+
+    check-cast v0, Loh6;
+
+    check-cast p1, Leg1;
+
+    :try_start_0
+    iget-object v1, p0, Lwec;->b:Lgg1;
+
+    iget-object v2, p0, Lwec;->c:Lfg1;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v2, Lfg1;->a:Landroid/opengl/EGLSurface;
+
+    const/4 v3, 0x0
+
+    iput-object v3, v2, Lfg1;->a:Landroid/opengl/EGLSurface;
+
+    invoke-virtual {p1, v1}, Leg1;->d(Landroid/opengl/EGLSurface;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
+
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    throw p1
+
+    :pswitch_0
+    check-cast p1, Leg1;
+
+    iget-object p1, p0, Lwec;->o:Ljava/lang/Object;
+
+    iget-object v0, p0, Lwec;->c:Lfg1;
+
+    invoke-virtual {v0, p1}, Lfg1;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwec;->b:Lgg1;
+
+    iget-object p1, p1, Lgg1;->i:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

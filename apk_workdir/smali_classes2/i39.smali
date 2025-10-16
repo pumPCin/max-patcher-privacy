@@ -1,323 +1,359 @@
-.class public final Li39;
+.class public final synthetic Li39;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loh6;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lyn7;
-
-.field public final c:Lyn7;
+.field public final synthetic b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;I)V
+    .locals 0
+
+    iput p2, p0, Li39;->a:I
+
+    iput-object p1, p0, Li39;->b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-class v0, Li39;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Li39;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Li39;->b:Lyn7;
-
-    iput-object p2, p0, Li39;->c:Lyn7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lwy3;Ljava/util/List;Z)Ljava/lang/Object;
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 14
 
-    instance-of v0, p1, Lh39;
+    iget v0, p0, Li39;->a:I
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    move-object v0, p1
+    const/4 v2, 0x0
 
-    check-cast v0, Lh39;
+    const/4 v3, 0x1
 
-    iget v1, v0, Lh39;->s0:I
+    iget-object v4, p0, Li39;->b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-    const/high16 v2, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    and-int v3, v1, v2
+    sget-object v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lwq7;
 
-    if-eqz v3, :cond_0
+    new-instance v0, Lq29;
 
-    sub-int/2addr v1, v2
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iput v1, v0, Lh39;->s0:I
+    move-result-object v5
 
-    goto :goto_0
+    invoke-direct {v0, v5}, Lq29;-><init>(Landroid/content/Context;)V
 
-    :cond_0
-    new-instance v0, Lh39;
+    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->C0()La39;
 
-    invoke-direct {v0, p0, p1}, Lh39;-><init>(Li39;Lwy3;)V
+    move-result-object v5
 
-    :goto_0
-    iget-object p1, v0, Lh39;->Z:Ljava/lang/Object;
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v1, v0, Lh39;->s0:I
+    iget-object v6, v5, La39;->Z:Llt7;
 
-    const/4 v2, 0x1
+    invoke-static {}, Lbb3;->c()Lx08;
 
-    if-eqz v1, :cond_2
+    move-result-object v7
 
-    if-ne v1, v2, :cond_1
+    sget-object v8, Ld39;->a:Ld39;
 
-    iget-boolean p3, v0, Lh39;->Y:Z
+    invoke-virtual {v7, v8}, Lx08;->add(Ljava/lang/Object;)Z
 
-    iget-object p2, v0, Lh39;->X:Ljava/util/List;
+    iget-object v8, v5, La39;->r0:Llt7;
 
-    iget-object v0, v0, Lh39;->o:Li39;
+    invoke-interface {v8}, Llt7;->getValue()Ljava/lang/Object;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-result-object v8
 
-    move v5, p3
+    check-cast v8, Lt23;
 
-    move-object p3, v0
+    iget-wide v9, v5, La39;->c:J
 
-    goto :goto_1
+    check-cast v8, Lu33;
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v8, v9, v10}, Lu33;->N(J)Lgzc;
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object v5
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v5, v5, Lgzc;->a:Llze;
 
-    throw p1
+    invoke-interface {v5}, Llze;->getValue()Ljava/lang/Object;
 
-    :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-result-object v5
 
-    iget-object p1, p0, Li39;->b:Lyn7;
+    check-cast v5, Lda2;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbh9;
-
-    iput-object p0, v0, Lh39;->o:Li39;
-
-    iput-object p2, v0, Lh39;->X:Ljava/util/List;
-
-    iput-boolean p3, v0, Lh39;->Y:Z
-
-    iput v2, v0, Lh39;->s0:I
-
-    invoke-virtual {p1, p2, v0}, Lbh9;->c(Ljava/util/Collection;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    move v5, p3
-
-    move-object p3, p0
-
-    :goto_1
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_4
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const-string v1, "Requested to delete "
-
-    const-string v2, " messages, but found only "
-
-    invoke-static {v1, p2, v0, v2}, Lbk7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    iget-object v0, p3, Li39;->a:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0, p2, v1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    new-instance p2, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p2}, Ljava/util/LinkedHashMap;-><init>()V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Le39;
-
-    iget-wide v1, v1, Le39;->r0:J
-
-    new-instance v3, Ljava/lang/Long;
-
-    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p2, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_5
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_5
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-nez v5, :cond_0
 
     goto :goto_2
 
-    :cond_6
-    invoke-virtual {p2}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+    :cond_0
+    iget-object v8, v5, Lda2;->b:Lfe2;
 
-    move-result-object p1
+    iget-wide v8, v8, Lfe2;->a:J
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const-wide/16 v10, 0x0
 
-    move-result-object p1
+    cmp-long v8, v8, v10
+
+    if-eqz v8, :cond_1
+
+    move v8, v3
+
+    goto :goto_0
+
+    :cond_1
+    move v8, v2
+
+    :goto_0
+    invoke-virtual {v5}, Lda2;->O()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_2
+
+    invoke-virtual {v5}, Lda2;->J()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v3, v2
+
+    :goto_1
+    invoke-interface {v6}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lc3e;
+
+    check-cast v5, Lpsd;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v9, Lru/ok/tamtam/android/prefs/PmsKey;->money-transfer-botid:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {v5, v9, v10, v11}, Lpsd;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v12
+
+    cmp-long v5, v12, v10
+
+    if-eqz v5, :cond_3
+
+    if-eqz v3, :cond_3
+
+    if-eqz v8, :cond_3
+
+    sget-object v3, Lf39;->a:Lf39;
+
+    invoke-virtual {v7, v3}, Lx08;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    :goto_2
+    invoke-interface {v6}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lc3e;
+
+    check-cast v3, Lpsd;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->send-location-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {v3, v5, v2}, Lpsd;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    sget-object v2, Le39;->a:Le39;
+
+    invoke-virtual {v7, v2}, Lx08;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    sget-object v2, Lb39;->a:Lb39;
+
+    invoke-virtual {v7, v2}, Lx08;->add(Ljava/lang/Object;)Z
+
+    sget-object v2, Lc39;->a:Lc39;
+
+    invoke-virtual {v7, v2}, Lx08;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v7}, Lbb3;->a(Ljava/util/List;)Lx08;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lq29;->setState(Ljava/util/List;)V
+
+    new-instance v5, Lww0;
+
+    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->C0()La39;
+
+    move-result-object v7
+
+    const/4 v11, 0x0
+
+    const/16 v12, 0x1b
+
+    const/4 v6, 0x1
+
+    const-class v8, La39;
+
+    const-string v9, "onButtonClicked"
+
+    const-string v10, "onButtonClicked(Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerViewState$Button;)V"
+
+    invoke-direct/range {v5 .. v12}, Lww0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-virtual {v0, v5}, Lq29;->setOnClickListener(Lqh6;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v2
+
+    const/16 v3, 0x8
+
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lwmh;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lwmh;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lwmh;->a:Lumh;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2}, Lumh;->f(I)Lih7;
+
+    move-result-object v1
+
+    iget v1, v1, Lih7;->d:I
+
+    if-lez v1, :cond_5
+
+    int-to-float v1, v2
 
     :goto_3
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-    move-result p2
+    move-result-object v2
 
-    if-eqz p2, :cond_8
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object p2
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    check-cast p2, Ljava/util/Map$Entry;
+    mul-float/2addr v1, v2
 
-    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-static {v1}, Lagi;->d(F)I
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/util/List;
-
-    iget-object v0, p3, Li39;->c:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, La9h;
-
-    sget-object v6, Lrm4;->X:Lrm4;
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    const/16 v0, 0xa
-
-    invoke-static {p2, v0}, Ly83;->O(Ljava/lang/Iterable;I)I
-
-    move-result v0
-
-    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_4
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Le39;
-
-    iget-wide v8, v0, Lqi0;->a:J
-
-    new-instance v0, Ljava/lang/Long;
-
-    invoke-direct {v0, v8, v9}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v1
 
     goto :goto_4
 
-    :cond_7
-    new-instance v0, Lhsd;
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lhsd;-><init>(JLjava/util/List;Lmd3;ZLrm4;)V
-
-    invoke-virtual {v7, v0}, La9h;->b(Lasd;)V
+    :cond_5
+    int-to-float v1, v3
 
     goto :goto_3
 
-    :cond_8
-    sget-object p1, Laxf;->a:Laxf;
+    :goto_4
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
 
-    return-object p1
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v4
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/view/View;->setPadding(IIII)V
+
+    goto :goto_5
+
+    :cond_6
+    new-instance v1, Lx40;
+
+    invoke-direct {v1, v0, v3, v0}, Lx40;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    :goto_5
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, La39;
+
+    iget-object v5, v4, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->b:Lqs;
+
+    sget-object v6, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lwq7;
+
+    aget-object v3, v6, v3
+
+    invoke-virtual {v5, v4}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljod;
+
+    iget-object v3, v3, Ljod;->a:Ljava/lang/String;
+
+    const-class v5, Ly29;
+
+    invoke-virtual {v4, v3, v5, v1}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly29;
+
+    iget-object v3, v4, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->a:Lqs;
+
+    aget-object v2, v6, v2
+
+    invoke-virtual {v3, v4}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-direct {v0, v1, v2, v3}, La39;-><init>(Ly29;J)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

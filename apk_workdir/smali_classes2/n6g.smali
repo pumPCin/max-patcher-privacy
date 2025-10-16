@@ -1,300 +1,341 @@
 .class public final Ln6g;
-.super Lnm;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements La9f;
+.implements Lei6;
 
 
 # instance fields
-.field public final X:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:Ljava/lang/String;
-
-.field public final o:J
+.field public final synthetic Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
 
 # direct methods
-.method public constructor <init>(JJZ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lnm;-><init>(J)V
+    iput-object p2, p0, Ln6g;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
-    iput-wide p3, p0, Ln6g;->o:J
+    const/4 p2, 0x2
 
-    iput-boolean p5, p0, Ln6g;->X:Z
-
-    const-class p1, Ln6g;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ln6g;->Y:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ly7f;)V
-    .locals 21
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ln6g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ln6g;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Ln6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ln6g;
+
+    iget-object v1, p0, Ln6g;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+
+    invoke-direct {v0, p2, v1}, Ln6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
+
+    iput-object p1, v0, Ln6g;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 18
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
+    invoke-static/range {p1 .. p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    check-cast v1, Lo6g;
+    iget-object v1, v0, Ln6g;->X:Ljava/lang/Object;
 
-    new-instance v14, Lyl7;
+    check-cast v1, Lm7g;
 
-    invoke-direct {v14}, Lyl7;-><init>()V
+    sget-object v2, Lone/me/settings/twofa/creation/TwoFACreationScreen;->w0:[Lwq7;
 
-    iget-object v2, v1, Lo6g;->c:Ljava/util/List;
+    instance-of v2, v1, Lj7g;
 
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iget-object v3, v0, Ln6g;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    if-eqz v2, :cond_3
+
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Lwq7;
+
+    check-cast v1, Lj7g;
+
+    iget-object v2, v1, Lj7g;->a:Ljqf;
+
+    iget-object v6, v1, Lj7g;->d:Lnod;
+
+    const/4 v7, 0x2
+
+    invoke-static {v2, v5, v6, v7}, Ldui;->a(Loqf;Landroid/os/Bundle;Lnod;I)Lrn3;
+
+    move-result-object v10
+
+    iget-object v2, v1, Lj7g;->b:Ljqf;
+
+    invoke-virtual {v10, v2}, Lrn3;->f(Loqf;)V
+
+    iget-object v1, v1, Lj7g;->c:Ljava/util/List;
+
+    new-instance v8, Llo2;
+
+    const/16 v14, 0x8
+
+    const/16 v15, 0x10
+
+    const/4 v9, 0x1
+
+    const-class v11, Lrn3;
+
+    const-string v12, "addButton"
+
+    const-string v13, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
+
+    invoke-direct/range {v8 .. v15}, Llo2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v2, Lg4;
+
+    const/16 v6, 0x18
+
+    invoke-direct {v2, v6, v8}, Lg4;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+
+    invoke-virtual {v10}, Lrn3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v12
+
+    invoke-virtual {v12, v3}, Lone/me/sdk/arch/Widget;->setTargetController(Lx14;)V
+
+    move-object v1, v3
+
+    :goto_0
+    invoke-virtual {v1}, Lx14;->getParentController()Lx14;
 
     move-result-object v2
 
-    const-wide/16 v3, 0x0
+    if-eqz v2, :cond_0
 
-    move-wide v5, v3
+    invoke-virtual {v1}, Lx14;->getParentController()Lx14;
 
-    move-wide v7, v5
+    move-result-object v1
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_6
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lw71;
-
-    invoke-virtual {v0}, Lnm;->m()Lzb2;
-
-    move-result-object v10
-
-    iget-wide v11, v9, Lw71;->a:J
-
-    iget-object v13, v9, Lw71;->b:Lq19;
-
-    invoke-virtual {v10, v11, v12}, Lzb2;->z(J)Lr82;
-
-    move-result-object v10
-
-    cmp-long v11, v5, v3
-
-    if-eqz v11, :cond_0
-
-    iget-wide v11, v13, Lq19;->b:J
-
-    cmp-long v11, v11, v5
-
-    if-gez v11, :cond_1
+    goto :goto_0
 
     :cond_0
-    iget-wide v5, v13, Lq19;->b:J
+    instance-of v2, v1, Lphd;
 
-    :cond_1
-    cmp-long v11, v7, v3
+    if-eqz v2, :cond_1
 
-    if-eqz v11, :cond_2
-
-    iget-wide v11, v13, Lq19;->b:J
-
-    cmp-long v11, v11, v7
-
-    if-lez v11, :cond_3
-
-    :cond_2
-    iget-wide v7, v13, Lq19;->b:J
-
-    :cond_3
-    if-eqz v10, :cond_5
-
-    iget-object v9, v0, Lnm;->c:Lom;
-
-    if-eqz v9, :cond_4
+    check-cast v1, Lphd;
 
     goto :goto_1
 
-    :cond_4
-    const/4 v9, 0x0
+    :cond_1
+    move-object v1, v5
 
     :goto_1
-    iget-object v9, v9, Lom;->Q:Lyn7;
+    if-eqz v1, :cond_2
 
-    invoke-interface {v9}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lphd;->f0()Ljhd;
 
-    move-result-object v9
+    move-result-object v5
 
-    check-cast v9, Lf94;
+    :cond_2
+    invoke-virtual {v12, v3}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
 
-    check-cast v9, Lm84;
+    if-eqz v5, :cond_9
 
-    iget-object v15, v9, Lm84;->c:Lq4d;
+    new-instance v11, Lmhd;
 
-    iget-wide v9, v10, Lr82;->a:J
+    const/16 v16, 0x0
 
-    invoke-virtual {v0}, Lnm;->q()Lnnb;
+    const/16 v17, -0x1
 
-    move-result-object v11
+    const/4 v13, 0x0
 
-    check-cast v11, Lpnb;
+    const/4 v14, 0x0
 
-    iget-object v11, v11, Lpnb;->a:Lt08;
+    const/4 v15, 0x0
 
-    invoke-virtual {v11}, Lfhd;->s()J
+    invoke-direct/range {v11 .. v17}, Lmhd;-><init>(Lx14;Ljava/lang/String;Lc24;Lc24;ZI)V
 
-    move-result-wide v18
+    const/4 v1, 0x1
 
-    move-wide/from16 v16, v9
+    const-string v2, "BottomSheetWidget"
 
-    move-object/from16 v20, v13
+    invoke-static {v4, v11, v1, v2}, Lwx1;->u(ZLmhd;ZLjava/lang/String;)V
 
-    invoke-virtual/range {v15 .. v20}, Lq4d;->e(JJLq19;)J
+    invoke-virtual {v5, v11}, Ljhd;->G(Lmhd;)V
 
-    goto :goto_0
+    goto/16 :goto_3
+
+    :cond_3
+    instance-of v2, v1, Lk7g;
+
+    if-eqz v2, :cond_7
+
+    new-instance v2, La2b;
+
+    invoke-direct {v2, v3}, La2b;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    new-instance v6, Lo2b;
+
+    check-cast v1, Lk7g;
+
+    iget v7, v1, Lk7g;->b:I
+
+    invoke-direct {v6, v7}, Lo2b;-><init>(I)V
+
+    invoke-virtual {v2, v6}, La2b;->e(Ls2b;)V
+
+    iget-object v6, v1, Lk7g;->a:Loqf;
+
+    invoke-virtual {v2, v6}, La2b;->g(Loqf;)V
+
+    invoke-virtual {v3}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->D0()Li6g;
+
+    move-result-object v6
+
+    sget-object v7, Li6g;->b:Li6g;
+
+    if-eq v6, v7, :cond_6
+
+    iget-boolean v1, v1, Lk7g;->c:Z
+
+    if-eqz v1, :cond_6
+
+    new-instance v1, Li2b;
+
+    invoke-virtual {v3}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->C0()Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v6
+
+    instance-of v7, v6, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v7, :cond_4
+
+    move-object v5, v6
+
+    check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    :cond_4
+    if-eqz v5, :cond_5
+
+    iget v5, v5, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
 
     :cond_5
-    move-object v10, v13
+    move v5, v4
 
-    iget-wide v11, v9, Lw71;->a:J
+    :goto_2
+    invoke-virtual {v3}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->C0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v6
 
-    move-result-object v9
+    invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
 
-    iget-wide v10, v10, Lq19;->a:J
+    move-result v6
 
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    add-int/2addr v6, v5
 
-    move-result-object v10
+    const/4 v5, 0x3
 
-    invoke-virtual {v14, v9, v10}, Lyl7;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, v4, v4, v6, v5}, Li2b;-><init>(IIII)V
 
-    goto :goto_0
+    invoke-virtual {v2, v1}, La2b;->c(Li2b;)V
+
+    invoke-virtual {v3}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->C0()Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
     :cond_6
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v2}, La2b;->i()Lz1b;
+
+    goto :goto_3
+
+    :cond_7
+    instance-of v2, v1, Ll7g;
+
+    if-eqz v2, :cond_8
+
+    invoke-virtual {v3}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->C0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
     move-result-object v2
 
-    invoke-static {v2}, Lbbh;->R(Ljava/lang/Long;)Ljava/lang/String;
+    check-cast v1, Ll7g;
+
+    iget-boolean v1, v1, Ll7g;->a:Z
+
+    invoke-virtual {v2, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    goto :goto_3
+
+    :cond_8
+    instance-of v2, v1, Li7g;
+
+    if-eqz v2, :cond_a
+
+    invoke-virtual {v3}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->E0()Lo9g;
 
     move-result-object v2
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast v1, Li7g;
 
-    move-result-object v3
+    iget-object v4, v1, Li7g;->a:Lmn3;
 
-    invoke-static {v3}, Lbbh;->R(Ljava/lang/Long;)Ljava/lang/String;
+    invoke-virtual {v2, v4}, Lo9g;->d(Lmn3;)V
 
-    move-result-object v3
-
-    invoke-virtual {v14}, Lyl7;->b()I
-
-    move-result v4
-
-    const-string v9, " endTime: "
-
-    const-string v10, " missedMessages: "
-
-    const-string v11, "onSuccess: startTime: "
-
-    invoke-static {v11, v2, v9, v3, v10}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->E0()Lo9g;
 
     move-result-object v2
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v1, v1, Li7g;->b:Loqf;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v1}, Lo9g;->c(Loqf;)V
 
-    move-result-object v2
+    :cond_9
+    :goto_3
+    sget-object v1, Lzag;->a:Lzag;
 
-    iget-object v3, v0, Ln6g;->Y:Ljava/lang/String;
+    return-object v1
 
-    invoke-static {v3, v2}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_a
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-virtual {v0}, Lnm;->l()Liv0;
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    move-result-object v15
-
-    new-instance v2, Lp6g;
-
-    iget-wide v9, v1, Lo6g;->o:J
-
-    iget-wide v11, v1, Lo6g;->X:J
-
-    iget-boolean v13, v1, Lo6g;->Y:Z
-
-    iget-wide v3, v0, Lnm;->a:J
-
-    invoke-direct/range {v2 .. v14}, Lp6g;-><init>(JJJJJZLyl7;)V
-
-    invoke-virtual {v15, v2}, Liv0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g(Li7f;)V
-    .locals 4
-
-    invoke-virtual {p0}, Lnm;->l()Liv0;
-
-    move-result-object v0
-
-    new-instance v1, Lsi0;
-
-    iget-wide v2, p0, Lnm;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Lsi0;-><init>(JLi7f;)V
-
-    invoke-virtual {v0, v1}, Liv0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final i()Lv7f;
-    .locals 5
-
-    new-instance v0, Lun9;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x1d
-
-    invoke-direct {v0, v1, v2}, Lun9;-><init>(Lcza;I)V
-
-    const-wide/16 v1, 0x0
-
-    iget-wide v3, p0, Ln6g;->o:J
-
-    cmp-long v1, v3, v1
-
-    if-lez v1, :cond_0
-
-    const-string v1, "marker"
-
-    invoke-virtual {v0, v3, v4, v1}, Lv7f;->j(JLjava/lang/String;)V
-
-    :cond_0
-    const-string v1, "count"
-
-    const/16 v2, 0x64
-
-    invoke-virtual {v0, v2, v1}, Lv7f;->f(ILjava/lang/String;)V
-
-    const-string v1, "forward"
-
-    iget-boolean v2, p0, Ln6g;->X:Z
-
-    invoke-virtual {v0, v1, v2}, Lv7f;->e(Ljava/lang/String;Z)V
-
-    return-object v0
+    throw v1
 .end method

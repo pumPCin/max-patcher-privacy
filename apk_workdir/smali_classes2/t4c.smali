@@ -1,265 +1,493 @@
-.class public final Lt4c;
-.super Ls59;
+.class public final synthetic Lt4c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile c:[Lt4c;
+# interfaces
+.implements Lqh6;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:[F
+.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ls59;-><init>()V
+    iput p2, p0, Lt4c;->a:I
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lt4c;->b:Lone/me/profileedit/ProfileEditScreen;
 
-    iput v0, p0, Lt4c;->a:I
-
-    sget-object v0, Lggh;->q:[F
-
-    iput-object v0, p0, Lt4c;->b:[F
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Ls59;->cachedSize:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 16
 
-    iget v0, p0, Lt4c;->a:I
+    move-object/from16 v0, p0
 
-    if-eqz v0, :cond_0
+    iget v1, v0, Lt4c;->a:I
 
-    const/4 v1, 0x1
+    const/4 v2, -0x2
 
-    invoke-static {v1, v0}, Ly73;->f(II)I
+    const/4 v3, -0x1
 
-    move-result v0
+    const/4 v4, 0x0
 
-    goto :goto_0
+    const/4 v5, 0x6
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    sget-object v8, Lzag;->a:Lzag;
+
+    iget-object v9, v0, Lt4c;->b:Lone/me/profileedit/ProfileEditScreen;
+
+    packed-switch v1, :pswitch_data_0
+
+    move-object/from16 v1, p1
+
+    check-cast v1, Landroid/view/View;
+
+    sget-object v1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
+
+    invoke-virtual {v9}, Lone/me/profileedit/ProfileEditScreen;->D0()Lo5c;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lo5c;->x()V
+
+    return-object v8
+
+    :pswitch_0
+    move-object/from16 v1, p1
+
+    check-cast v1, Landroid/view/View;
+
+    sget-object v1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
+
+    invoke-virtual {v9}, Lx14;->getOnBackPressedDispatcher()Lnla;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lnla;->d()V
 
     :cond_0
-    const/4 v0, 0x0
+    return-object v8
 
-    :goto_0
-    iget-object v1, p0, Lt4c;->b:[F
+    :pswitch_1
+    move-object/from16 v1, p1
 
-    array-length v2, v1
+    check-cast v1, Landroid/widget/LinearLayout;
 
-    if-lez v2, :cond_1
+    sget-object v2, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
 
-    array-length v2, v1
+    new-instance v2, Lvna;
 
-    mul-int/lit8 v2, v2, 0x4
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    add-int/2addr v2, v0
+    move-result-object v3
 
-    array-length v0, v1
+    invoke-direct {v2, v3}, Lvna;-><init>(Landroid/content/Context;)V
 
-    add-int/2addr v2, v0
+    sget v3, Lpya;->U:I
 
-    return v2
+    invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
 
-    :cond_1
-    return v0
-.end method
+    new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
-.method public final mergeFrom(Lx73;)Ls59;
-    .locals 6
+    const/16 v4, 0x60
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lx73;->s()I
+    int-to-float v4, v4
 
-    move-result v0
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-    if-eqz v0, :cond_9
+    move-result-object v10
 
-    const/16 v1, 0x8
+    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-eq v0, v1, :cond_7
+    move-result-object v10
 
-    const/16 v1, 0x12
+    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    const/4 v2, 0x0
+    mul-float/2addr v10, v4
 
-    if-eq v0, v1, :cond_4
+    invoke-static {v10}, Lagi;->d(F)I
 
-    const/16 v1, 0x15
+    move-result v10
 
-    if-eq v0, v1, :cond_1
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {p1, v0}, Lx73;->u(I)Z
+    move-result-object v11
 
-    move-result v0
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-nez v0, :cond_0
+    move-result-object v11
 
-    goto :goto_3
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_1
-    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
+    mul-float/2addr v4, v11
 
-    move-result v0
+    invoke-static {v4}, Lagi;->d(F)I
 
-    iget-object v1, p0, Lt4c;->b:[F
+    move-result v4
 
-    array-length v3, v1
+    invoke-direct {v3, v10, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    add-int/2addr v0, v3
+    iput v7, v3, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    new-array v4, v0, [F
+    int-to-float v4, v5
 
-    if-eqz v3, :cond_2
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    move-result-object v5
 
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v0, -0x1
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-ge v3, v1, :cond_3
+    move-result-object v5
 
-    invoke-virtual {p1}, Lx73;->i()F
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    move-result v1
+    mul-float/2addr v4, v5
 
-    aput v1, v4, v3
+    invoke-static {v4}, Lagi;->d(F)I
 
-    invoke-virtual {p1}, Lx73;->s()I
+    move-result v4
 
-    add-int/lit8 v3, v3, 0x1
+    iput v4, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    goto :goto_1
+    invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_3
-    invoke-virtual {p1}, Lx73;->i()F
+    invoke-virtual {v2, v6}, Lvna;->setAddBadgeVisibility(Z)V
 
-    move-result v0
+    new-instance v3, Ls4c;
 
-    aput v0, v4, v3
+    invoke-direct {v3, v9, v6}, Ls4c;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
 
-    iput-object v4, p0, Lt4c;->b:[F
+    invoke-static {v2, v3}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    goto :goto_0
+    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    :cond_4
-    invoke-virtual {p1}, Lx73;->p()I
+    return-object v8
 
-    move-result v0
+    :pswitch_2
+    move-object/from16 v1, p1
 
-    invoke-virtual {p1, v0}, Lx73;->e(I)I
+    check-cast v1, Lya3;
 
-    move-result v1
+    sget-object v10, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
 
-    div-int/lit8 v0, v0, 0x4
+    new-instance v10, Landroidx/appcompat/widget/Toolbar;
 
-    iget-object v3, p0, Lt4c;->b:[F
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    array-length v4, v3
+    move-result-object v11
 
-    add-int/2addr v0, v4
+    invoke-direct {v10, v11, v4}, Landroidx/appcompat/widget/Toolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    new-array v5, v0, [F
+    invoke-static {}, Landroid/view/View;->generateViewId()I
 
-    if-eqz v4, :cond_5
+    move-result v11
 
-    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v10, v11}, Landroid/view/View;->setId(I)V
 
-    :cond_5
-    :goto_2
-    if-ge v4, v0, :cond_6
+    new-instance v11, Lva3;
 
-    invoke-virtual {p1}, Lx73;->i()F
+    invoke-direct {v11, v3, v2}, Lva3;-><init>(II)V
+
+    iput v7, v11, Lva3;->a:I
+
+    invoke-virtual {v10, v11}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v10, v4}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v10, v6, v6}, Landroidx/appcompat/widget/Toolbar;->u(II)V
+
+    sget-object v4, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
+
+    new-instance v4, Ls5b;
+
+    invoke-virtual {v10}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-direct {v4, v6, v5}, Ls5b;-><init>(Landroid/content/Context;I)V
+
+    sget v5, Lpya;->p0:I
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setId(I)V
+
+    sget-object v5, Lk5b;->a:Lk5b;
+
+    invoke-virtual {v4, v5}, Ls5b;->setForm(Lk5b;)V
+
+    new-instance v5, La5b;
+
+    new-instance v6, Lt4c;
+
+    const/4 v11, 0x3
+
+    invoke-direct {v6, v9, v11}, Lt4c;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
+
+    invoke-direct {v5, v6}, La5b;-><init>(Lqh6;)V
+
+    invoke-virtual {v4, v5}, Ls5b;->setLeftActions(Lg5b;)V
+
+    sget-object v5, Ld5b;->a:Ld5b;
+
+    invoke-virtual {v4, v5}, Ls5b;->setRightActions(Li5b;)V
+
+    invoke-virtual {v10, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v1, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v4, Lt4c;
+
+    const/4 v5, 0x2
+
+    invoke-direct {v4, v9, v5}, Lt4c;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
+
+    new-instance v6, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v9
+
+    invoke-direct {v6, v9}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    sget v9, Lpya;->a0:I
+
+    invoke-virtual {v6, v9}, Landroid/view/View;->setId(I)V
+
+    new-instance v9, Lva3;
+
+    invoke-direct {v9, v3, v2}, Lva3;-><init>(II)V
+
+    iput v5, v9, Lva3;->a:I
+
+    const/16 v2, 0x10
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lagi;->d(F)I
 
     move-result v2
 
-    aput v2, v5, v4
+    iput v2, v9, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    add-int/lit8 v4, v4, 0x1
+    invoke-virtual {v6, v9}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    goto :goto_2
+    invoke-virtual {v6, v7}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    :cond_6
-    iput-object v5, p0, Lt4c;->b:[F
+    invoke-virtual {v4, v6}, Lt4c;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v1}, Lx73;->d(I)V
+    invoke-virtual {v1, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    goto :goto_0
+    return-object v8
 
-    :cond_7
-    invoke-virtual {p1}, Lx73;->p()I
+    :pswitch_3
+    move-object/from16 v1, p1
 
-    move-result v0
+    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    if-eqz v0, :cond_8
+    sget-object v10, Lone/me/profileedit/ProfileEditScreen;->x0:[Lwq7;
 
-    const/4 v1, 0x1
+    new-instance v10, Lnn;
 
-    if-eq v0, v1, :cond_8
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    goto :goto_0
+    move-result-object v11
 
-    :cond_8
-    iput v0, p0, Lt4c;->a:I
+    invoke-direct {v10, v11}, Lnn;-><init>(Landroid/content/Context;)V
 
-    goto :goto_0
+    sget v11, Lpya;->T:I
 
-    :cond_9
-    :goto_3
-    return-object p0
-.end method
+    invoke-virtual {v10, v11}, Landroid/view/View;->setId(I)V
 
-.method public final writeTo(Ly73;)V
-    .locals 3
+    new-instance v11, Landroid/view/ViewGroup$LayoutParams;
 
-    iget v0, p0, Lt4c;->a:I
+    invoke-direct {v11, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v10, v11}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const/4 v1, 0x1
+    invoke-virtual {v10, v4}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {p1, v1, v0}, Ly73;->w(II)V
+    invoke-virtual {v10, v7}, Lnn;->setLiftOnScroll(Z)V
 
-    :cond_0
-    iget-object v0, p0, Lt4c;->b:[F
+    invoke-virtual {v10, v4}, Landroid/view/View;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
-    array-length v0, v0
+    new-instance v2, Lt4c;
 
-    if-lez v0, :cond_1
+    invoke-direct {v2, v9, v7}, Lt4c;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
 
-    const/4 v0, 0x0
+    new-instance v7, Lya3;
+
+    invoke-virtual {v10}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v11
+
+    invoke-direct {v7, v11}, Lya3;-><init>(Landroid/content/Context;)V
+
+    invoke-static {}, Landroid/view/View;->generateViewId()I
+
+    move-result v11
+
+    invoke-virtual {v7, v11}, Landroid/view/View;->setId(I)V
+
+    new-instance v11, Lln;
+
+    invoke-direct {v11}, Lln;-><init>()V
+
+    const/16 v12, 0x13
+
+    iput v12, v11, Lln;->a:I
+
+    invoke-virtual {v7, v11}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v7, v6}, Lya3;->setTitleEnabled(Z)V
+
+    invoke-virtual {v2, v7}, Lt4c;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v10, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v1, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    invoke-direct {v2, v7, v4}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    sget v7, Lpya;->q0:I
+
+    invoke-virtual {v2, v7}, Landroid/view/View;->setId(I)V
+
+    new-instance v7, Lz34;
+
+    invoke-direct {v7, v3, v3}, Lz34;-><init>(II)V
+
+    new-instance v3, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;
+
+    invoke-direct {v3}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;-><init>()V
+
+    invoke-virtual {v7, v3}, Lz34;->b(Lw34;)V
+
+    invoke-virtual {v2, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v3, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    invoke-direct {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+
+    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    invoke-virtual {v2, v6}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
+
+    invoke-virtual {v2, v6}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+
+    iget-object v3, v9, Lone/me/profileedit/ProfileEditScreen;->X:Lqih;
+
+    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
+
+    invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lr5d;)V
+
+    new-array v3, v5, [I
+
+    fill-array-data v3, :array_0
+
+    sget-object v4, Lyh7;->a:Llz9;
+
+    new-instance v4, Llz9;
+
+    invoke-direct {v4, v5}, Llz9;-><init>(I)V
+
+    move v7, v6
 
     :goto_0
-    iget-object v1, p0, Lt4c;->b:[F
+    if-ge v7, v5, :cond_1
 
-    array-length v2, v1
+    aget v10, v3, v7
 
-    if-ge v0, v2, :cond_1
+    invoke-virtual {v4, v10}, Llz9;->h(I)V
 
-    const/4 v2, 0x2
-
-    aget v1, v1, v0
-
-    invoke-virtual {p1, v2, v1}, Ly73;->v(IF)V
-
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
     :cond_1
-    return-void
+    new-instance v12, Lka9;
+
+    const/16 v3, 0xd
+
+    invoke-direct {v12, v9, v3, v4}, Lka9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v10, Liwd;
+
+    sget-object v3, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v3, v2}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v11
+
+    const/4 v14, 0x0
+
+    const/16 v15, 0x1c
+
+    const/4 v13, 0x0
+
+    invoke-direct/range {v10 .. v15}, Liwd;-><init>(Lu4b;Lgwd;Ll;Lh9d;I)V
+
+    invoke-virtual {v2, v10}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
+
+    new-instance v3, Lag8;
+
+    invoke-direct {v3, v6}, Lag8;-><init>(I)V
+
+    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-object v8
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+
+    :array_0
+    .array-data 4
+        0x800
+        0x80
+        0x1
+        0x2
+        0x200
+        0x20000
+    .end array-data
 .end method

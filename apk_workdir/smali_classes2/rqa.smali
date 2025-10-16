@@ -1,61 +1,56 @@
 .class public final Lrqa;
-.super Lyqa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final a:Lrqa;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Loh6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILoh6;)V
+    .locals 0
 
-    new-instance v0, Lrqa;
+    iput p1, p0, Lrqa;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lrqa;->b:Loh6;
 
-    sput-object v0, Lrqa;->a:Lrqa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p1, p0, Lrqa;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    iget-object p1, p0, Lrqa;->b:Loh6;
 
-    :cond_0
-    instance-of p1, p1, Lrqa;
+    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
 
-    if-nez p1, :cond_1
+    return-void
 
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object p1, p0, Lrqa;->b:Loh6;
 
-    return p1
+    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    nop
 
-    const v0, -0x9ef0dbd
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Contrast"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

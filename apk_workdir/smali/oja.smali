@@ -1,133 +1,154 @@
 .class public abstract Loja;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Lcka;
+.implements Lev4;
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final X:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static final c:I
+.field public Y:Lev4;
 
-.field public static final d:I
+.field public final a:Lb2e;
 
-.field public static final e:I
+.field public final b:J
 
-.field public static final f:I
+.field public final c:Ljava/util/concurrent/TimeUnit;
 
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
+.field public final o:Lqnd;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lb2e;JLjava/util/concurrent/TimeUnit;Lqnd;)V
     .locals 1
 
-    sget v0, Ljcc;->oneme_contactlist_action_audio_call:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput v0, Loja;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Ljcc;->oneme_contactlist_action_block:I
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput v0, Loja;->b:I
+    iput-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Ljcc;->oneme_contactlist_action_delete:I
+    iput-object p1, p0, Loja;->a:Lb2e;
 
-    sput v0, Loja;->c:I
+    iput-wide p2, p0, Loja;->b:J
 
-    sget v0, Ljcc;->oneme_contactlist_action_open_profile:I
+    iput-object p4, p0, Loja;->c:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Loja;->d:I
+    iput-object p5, p0, Loja;->o:Lqnd;
 
-    sget v0, Ljcc;->oneme_contactlist_action_select:I
+    return-void
+.end method
 
-    sput v0, Loja;->e:I
 
-    sget v0, Ljcc;->oneme_contactlist_action_share_contact:I
+# virtual methods
+.method public abstract a()V
+.end method
 
-    sput v0, Loja;->f:I
+.method public final b()V
+    .locals 1
 
-    sget v0, Ljcc;->oneme_contactlist_action_suspend_bot:I
+    iget-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Loja;->g:I
+    invoke-static {v0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    sget v0, Ljcc;->oneme_contactlist_action_video_call:I
+    invoke-virtual {p0}, Loja;->a()V
 
-    sput v0, Loja;->h:I
+    return-void
+.end method
 
-    sget v0, Ljcc;->oneme_contactlist_action_write:I
+.method public final c(Lev4;)V
+    .locals 7
 
-    sput v0, Loja;->i:I
+    iget-object v0, p0, Loja;->Y:Lev4;
 
-    sget v0, Ljcc;->oneme_contactlist_confirm_block:I
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
 
-    sput v0, Loja;->j:I
+    move-result v0
 
-    sget v0, Ljcc;->oneme_contactlist_confirm_cancel:I
+    if-eqz v0, :cond_0
 
-    sput v0, Loja;->k:I
+    iput-object p1, p0, Loja;->Y:Lev4;
 
-    sget v0, Ljcc;->oneme_contactlist_confirm_delete:I
+    iget-object p1, p0, Loja;->a:Lb2e;
 
-    sput v0, Loja;->l:I
+    invoke-virtual {p1, p0}, Lb2e;->c(Lev4;)V
 
-    sget v0, Ljcc;->oneme_contactlist_contact_view_type:I
+    iget-wide v2, p0, Loja;->b:J
 
-    sput v0, Loja;->m:I
+    iget-object v6, p0, Loja;->c:Ljava/util/concurrent/TimeUnit;
 
-    sget v0, Ljcc;->oneme_contactlist_container:I
+    iget-object v0, p0, Loja;->o:Lqnd;
 
-    sput v0, Loja;->n:I
+    move-wide v4, v2
 
-    sget v0, Ljcc;->oneme_contactlist_empty_search_result_view_type:I
+    move-object v1, p0
 
-    sput v0, Loja;->o:I
+    invoke-virtual/range {v0 .. v6}, Lqnd;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lev4;
 
-    sget v0, Ljcc;->oneme_contactlist_global_contact_view_type:I
+    move-result-object p1
 
-    sput v0, Loja;->p:I
+    iget-object v0, v1, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Ljcc;->oneme_contactlist_menu_item_add_contact:I
+    invoke-static {v0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
 
-    sput v0, Loja;->q:I
+    return-void
 
-    sget v0, Ljcc;->oneme_contactlist_menu_item_create_chat:I
+    :cond_0
+    move-object v1, p0
 
-    sput v0, Loja;->r:I
+    return-void
+.end method
 
-    sget v0, Ljcc;->oneme_contactlist_phonebook_contact_view_type:I
+.method public final d(Ljava/lang/Object;)V
+    .locals 0
 
-    sput v0, Loja;->s:I
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget v0, Ljcc;->oneme_contactlist_toolbar:I
+    return-void
+.end method
 
-    sput v0, Loja;->t:I
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v0, p0, Loja;->Y:Lev4;
+
+    invoke-interface {v0}, Lev4;->g()V
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Loja;->Y:Lev4;
+
+    invoke-interface {v0}, Lev4;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Loja;->X:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v0, p0, Loja;->a:Lb2e;
+
+    invoke-virtual {v0, p1}, Lb2e;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

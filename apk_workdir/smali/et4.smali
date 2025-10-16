@@ -1,72 +1,53 @@
-.class public final synthetic Let4;
+.class public final Let4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltd6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Lgt4;
+.field public final b:Lwoe;
 
-.field public final synthetic c:Landroid/content/Context;
+.field public c:Landroid/view/VelocityTracker;
+
+.field public d:F
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public final h:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgt4;Landroid/content/Context;I)V
-    .locals 0
-
-    iput p3, p0, Let4;->a:I
-
-    iput-object p1, p0, Let4;->b:Lgt4;
-
-    iput-object p2, p0, Let4;->c:Landroid/content/Context;
+.method public constructor <init>(Landroid/content/Context;Lwoe;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, -0x1
 
+    iput v0, p0, Let4;->e:I
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+    iput v0, p0, Let4;->f:I
 
-    iget v0, p0, Let4;->a:I
+    iput v0, p0, Let4;->g:I
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Let4;->c:Landroid/content/Context;
+    const v0, 0x7fffffff
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Let4;->b:Lgt4;
-
-    invoke-virtual {v2, v0, v1}, Lgt4;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+    filled-new-array {v0, v1}, [I
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Let4;->h:[I
 
-    :pswitch_0
-    iget-object v0, p0, Let4;->c:Landroid/content/Context;
+    iput-object p1, p0, Let4;->a:Landroid/content/Context;
 
-    const/4 v1, 0x1
+    iput-object p2, p0, Let4;->b:Lwoe;
 
-    iget-object v2, p0, Let4;->b:Lgt4;
-
-    invoke-virtual {v2, v0, v1}, Lgt4;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

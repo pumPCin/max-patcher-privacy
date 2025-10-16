@@ -1,124 +1,87 @@
 .class public final Luc7;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lei6;
 
 
 # instance fields
-.field public final X:F
-
-.field public final Y:F
-
-.field public final Z:F
-
-.field public final a:Ljava/lang/ref/WeakReference;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:F
+.field public final synthetic X:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lvc7;FFFF)V
-    .locals 2
+.method public constructor <init>(Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luc7;->X:Ljava/util/ArrayList;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const/4 p1, 0x2
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Luc7;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Luc7;->c:J
-
-    const-wide/16 v0, 0xc8
-
-    iput-wide v0, p0, Luc7;->b:J
-
-    iput p2, p0, Luc7;->o:F
-
-    iput p3, p0, Luc7;->X:F
-
-    iput p4, p0, Luc7;->Y:F
-
-    iput p5, p0, Luc7;->Z:F
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Luc7;->a:Ljava/lang/ref/WeakReference;
+    check-cast p1, Lb54;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Luc7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lvc7;
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    check-cast p1, Luc7;
 
-    return-void
+    sget-object p2, Lzag;->a:Lzag;
 
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {p1, p2}, Luc7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide v1
+    return-object p2
+.end method
 
-    iget-wide v3, p0, Luc7;->c:J
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    sub-long/2addr v1, v3
+    new-instance p1, Luc7;
 
-    iget-wide v3, p0, Luc7;->b:J
+    iget-object v0, p0, Luc7;->X:Ljava/util/ArrayList;
 
-    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
+    invoke-direct {p1, v0, p2}, Luc7;-><init>(Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
 
-    move-result-wide v1
+    return-object p1
+.end method
 
-    long-to-float v1, v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    long-to-float v2, v3
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget v3, p0, Luc7;->X:F
+    iget-object p1, p0, Luc7;->X:Ljava/util/ArrayList;
 
-    invoke-static {v1, v3, v2}, Lomc;->k(FFF)F
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result v3
+    move-result v0
 
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_1
-
-    iget v1, p0, Luc7;->o:F
-
-    add-float/2addr v1, v3
-
-    iget v2, p0, Luc7;->Y:F
-
-    iget v3, p0, Luc7;->Z:F
-
-    invoke-virtual {v0, v1, v2, v3}, Lvc7;->j(FFF)V
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_1
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lvc7;->setImageToWrapCropBounds(Z)V
+    if-le v0, v1, :cond_0
 
-    return-void
+    new-instance v0, Lrc7;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lrc7;-><init>(I)V
+
+    invoke-static {v0, p1}, Lfb3;->n(Ljava/util/Comparator;Ljava/util/List;)V
+
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

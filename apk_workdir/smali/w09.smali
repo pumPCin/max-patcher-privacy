@@ -4,8 +4,23 @@
 
 
 # virtual methods
-.method public abstract L(Lg09;)Z
+.method public abstract a(Lyr8;)Lwj0;
 .end method
 
-.method public abstract h(Lg09;Z)V
+.method public b(Lzw3;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public d()V
+    .locals 0
+
+    return-void
 .end method

@@ -1,374 +1,839 @@
 .class public final Lnv5;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lle6;
+
+# static fields
+.field public static final j:Ljava/lang/Object;
+
+.field public static final k:Let;
 
 
 # instance fields
-.field public X:Ldwc;
+.field public final a:Landroid/content/Context;
 
-.field public Y:Lcwc;
+.field public final b:Ljava/lang/String;
 
-.field public Z:I
+.field public final c:Lwv5;
 
-.field public synthetic r0:Ljava/lang/Object;
+.field public final d:Lzh3;
 
-.field public synthetic s0:Ljava/lang/Object;
+.field public final e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final synthetic t0:Llj2;
+.field public final f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final synthetic u0:Liu5;
+.field public final g:Lmt7;
+
+.field public final h:Lvdc;
+
+.field public final i:Ljava/util/concurrent/CopyOnWriteArrayList;
 
 
 # direct methods
-.method public constructor <init>(Llj2;Liu5;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lnv5;->t0:Llj2;
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p2, p0, Lnv5;->u0:Liu5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x3
+    sput-object v0, Lnv5;->j:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Let;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lsne;-><init>(I)V
+
+    sput-object v0, Lnv5;->k:Let;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lwv5;)V
+    .locals 9
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Ln24;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    check-cast p2, Lku5;
+    const/4 v1, 0x0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    new-instance v0, Lnv5;
+    iput-object v0, p0, Lnv5;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iget-object v1, p0, Lnv5;->t0:Llj2;
+    new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iget-object v2, p0, Lnv5;->u0:Liu5;
+    invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    invoke-direct {v0, v1, v2, p3}, Lnv5;-><init>(Llj2;Liu5;Lkotlin/coroutines/Continuation;)V
+    iput-object v2, p0, Lnv5;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p1, v0, Lnv5;->r0:Ljava/lang/Object;
+    new-instance v2, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iput-object p2, v0, Lnv5;->s0:Ljava/lang/Object;
+    invoke-direct {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    sget-object p1, Laxf;->a:Laxf;
+    iput-object v2, p0, Lnv5;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v0, p1}, Lnv5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v3, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result-object p1
+    invoke-direct {v3}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    return-object p1
-.end method
+    iput-object p1, p0, Lnv5;->a:Landroid/content/Context;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
+    invoke-static {p2}, Lbi3;->e(Ljava/lang/String;)V
 
-    move-object/from16 v0, p0
+    iput-object p2, p0, Lnv5;->b:Ljava/lang/String;
 
-    iget v1, v0, Lnv5;->Z:I
+    iput-object p3, p0, Lnv5;->c:Lwv5;
 
-    const/4 v2, 0x0
+    sget-object p2, Lcom/google/firebase/provider/FirebaseInitProvider;->a:Ljb0;
+
+    const-string v3, "Firebase"
+
+    invoke-static {v3}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    const-string v3, "ComponentDiscovery"
+
+    invoke-static {v3}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    new-instance v3, Lo0f;
+
+    new-instance v4, Lwoe;
+
+    const/16 v5, 0x9
+
+    const-class v6, Lcom/google/firebase/components/ComponentDiscoveryService;
+
+    invoke-direct {v4, v5, v6}, Lwoe;-><init>(ILjava/lang/Object;)V
+
+    const/4 v6, 0x0
+
+    invoke-direct {v3, p1, v4, v6, v5}, Lo0f;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v3}, Lo0f;->l()Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    const-string v4, "Runtime"
+
+    invoke-static {v4}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    sget-object v4, Lnag;->a:Lnag;
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    new-instance v3, Lcom/google/firebase/FirebaseCommonRegistrar;
+
+    invoke-direct {v3}, Lcom/google/firebase/FirebaseCommonRegistrar;-><init>()V
+
+    new-instance v7, Luh3;
+
+    const/4 v8, 0x1
+
+    invoke-direct {v7, v8, v3}, Luh3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v3, Lcom/google/firebase/concurrent/ExecutorsRegistrar;
+
+    invoke-direct {v3}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;-><init>()V
+
+    new-instance v7, Luh3;
+
+    invoke-direct {v7, v8, v3}, Luh3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-class v3, Landroid/content/Context;
+
+    new-array v7, v1, [Ljava/lang/Class;
+
+    invoke-static {p1, v3, v7}, Lgh3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lgh3;
+
+    move-result-object v3
+
+    invoke-virtual {v6, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-class v3, Lnv5;
+
+    new-array v7, v1, [Ljava/lang/Class;
+
+    invoke-static {p0, v3, v7}, Lgh3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lgh3;
+
+    move-result-object v3
+
+    invoke-virtual {v6, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-class v3, Lwv5;
+
+    new-array v7, v1, [Ljava/lang/Class;
+
+    invoke-static {p3, v3, v7}, Lgh3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lgh3;
+
+    move-result-object p3
+
+    invoke-virtual {v6, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance p3, Llh4;
+
+    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lxgg;->a(Landroid/content/Context;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object v3, Lcom/google/firebase/provider/FirebaseInitProvider;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-class v3, Ljb0;
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    invoke-static {p2, v3, v1}, Lgh3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lgh3;
+
+    move-result-object p2
+
+    invoke-virtual {v6, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    new-instance p2, Lzh3;
+
+    invoke-direct {p2, v4, v5, v6, p3}, Lzh3;-><init>(Ljava/util/concurrent/Executor;Ljava/util/ArrayList;Ljava/util/ArrayList;Lwh3;)V
+
+    iput-object p2, p0, Lnv5;->d:Lzh3;
+
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    new-instance p3, Lmt7;
+
+    new-instance v1, Lyh3;
 
     const/4 v3, 0x2
 
-    const/4 v4, 0x1
+    invoke-direct {v1, p0, v3, p1}, Lyh3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/4 v5, 0x0
+    invoke-direct {p3, v1}, Lmt7;-><init>(Lvdc;)V
 
-    sget-object v6, Lo24;->a:Lo24;
+    iput-object p3, p0, Lnv5;->g:Lmt7;
 
-    if-eqz v1, :cond_3
+    const-class p1, Lxj4;
 
-    if-eq v1, v4, :cond_2
+    invoke-interface {p2, p1}, Lsh3;->c(Ljava/lang/Class;)Lvdc;
 
-    if-ne v1, v3, :cond_1
+    move-result-object p1
 
-    iget-object v1, v0, Lnv5;->X:Ldwc;
+    iput-object p1, p0, Lnv5;->h:Lvdc;
 
-    iget-object v7, v0, Lnv5;->s0:Ljava/lang/Object;
+    new-instance p1, Lkv5;
 
-    check-cast v7, Lupc;
+    invoke-direct {p1, p0}, Lkv5;-><init>(Lnv5;)V
 
-    iget-object v8, v0, Lnv5;->r0:Ljava/lang/Object;
+    invoke-virtual {p0}, Lnv5;->a()V
 
-    check-cast v8, Lku5;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-result p2
 
-    :cond_0
-    move-object v9, v8
+    if-eqz p2, :cond_1
 
-    move-object v8, v7
+    sget-object p2, Lbf0;->X:Lbf0;
+
+    iget-object p2, p2, Lbf0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    :cond_1
+    invoke-virtual {v2, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    return-void
+.end method
+
+.method public static b()Lnv5;
+    .locals 4
+
+    const-string v0, "Default FirebaseApp is not initialized in this process "
+
+    sget-object v1, Lnv5;->j:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v2, Lnv5;->k:Let;
+
+    const-string v3, "[DEFAULT]"
+
+    invoke-virtual {v2, v3}, Lsne;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lnv5;
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, v2, Lnv5;->h:Lvdc;
+
+    invoke-interface {v0}, Lvdc;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxj4;
+
+    invoke-virtual {v0}, Lxj4;->b()V
+
+    monitor-exit v1
+
+    return-object v2
+
+    :catchall_0
+    move-exception v0
 
     goto :goto_0
 
-    :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
+    :cond_0
+    new-instance v2, Ljava/lang/IllegalStateException;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    invoke-static {}, Ldui;->b()Ljava/lang/String;
 
-    :cond_2
-    iget-object v1, v0, Lnv5;->Y:Lcwc;
+    move-result-object v0
 
-    iget-object v7, v0, Lnv5;->X:Ldwc;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v8, v0, Lnv5;->s0:Ljava/lang/Object;
+    const-string v0, ". Make sure to call FirebaseApp.initializeApp(Context) first."
 
-    check-cast v8, Lupc;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v9, v0, Lnv5;->r0:Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v9, Lku5;
+    move-result-object v0
 
-    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    goto/16 :goto_1
-
-    :cond_3
-    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lnv5;->r0:Ljava/lang/Object;
-
-    check-cast v1, Ln24;
-
-    iget-object v7, v0, Lnv5;->s0:Ljava/lang/Object;
-
-    check-cast v7, Lku5;
-
-    new-instance v8, Lmv5;
-
-    iget-object v9, v0, Lnv5;->u0:Liu5;
-
-    invoke-direct {v8, v9, v5}, Lmv5;-><init>(Liu5;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v9, 0x4
-
-    invoke-static {v2, v4, v9}, Lnc6;->a(III)Lfu0;
-
-    move-result-object v9
-
-    sget-object v10, Li65;->a:Li65;
-
-    invoke-static {v1, v10}, Le88;->G(Ln24;Lf24;)Lf24;
-
-    move-result-object v1
-
-    new-instance v10, Lbqb;
-
-    invoke-direct {v10, v1, v9}, Lbqb;-><init>(Lf24;Lfu0;)V
-
-    sget-object v1, Lq24;->a:Lq24;
-
-    invoke-virtual {v10, v1, v10, v8}, Ll0;->start(Lq24;Ljava/lang/Object;Lje6;)V
-
-    new-instance v1, Ldwc;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    move-object v9, v7
-
-    move-object v8, v10
+    throw v2
 
     :goto_0
-    move-object v7, v1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v1, v7, Ldwc;->a:Ljava/lang/Object;
+    throw v0
+.end method
 
-    sget-object v10, La8a;->c:Lkotlinx/coroutines/internal/Symbol;
+.method public static e(Landroid/content/Context;)Lnv5;
+    .locals 3
 
-    if-eq v1, v10, :cond_a
+    sget-object v0, Lnv5;->j:Ljava/lang/Object;
 
-    new-instance v10, Lcwc;
+    monitor-enter v0
 
-    invoke-direct {v10}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    sget-object v1, Lnv5;->k:Let;
 
-    if-eqz v1, :cond_6
+    const-string v2, "[DEFAULT]"
 
-    sget-object v1, La8a;->a:Lkotlinx/coroutines/internal/Symbol;
+    invoke-virtual {v1, v2}, Lsne;->containsKey(Ljava/lang/Object;)Z
 
-    iget-object v11, v0, Lnv5;->t0:Llj2;
+    move-result v1
 
-    iget-wide v11, v11, Llj2;->b:J
+    if-eqz v1, :cond_0
 
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {}, Lnv5;->b()Lnv5;
 
-    move-result-object v11
+    move-result-object p0
 
-    invoke-virtual {v11}, Ljava/lang/Number;->longValue()J
+    monitor-exit v0
 
-    move-result-wide v11
+    return-object p0
 
-    iput-wide v11, v10, Lcwc;->a:J
+    :catchall_0
+    move-exception p0
 
-    const-wide/16 v13, 0x0
+    goto :goto_0
 
-    cmp-long v11, v11, v13
-
-    if-ltz v11, :cond_7
-
-    if-nez v11, :cond_6
-
-    iget-object v11, v7, Ldwc;->a:Ljava/lang/Object;
-
-    if-ne v11, v1, :cond_4
-
-    move-object v11, v5
-
-    :cond_4
-    iput-object v9, v0, Lnv5;->r0:Ljava/lang/Object;
-
-    iput-object v8, v0, Lnv5;->s0:Ljava/lang/Object;
-
-    iput-object v7, v0, Lnv5;->X:Ldwc;
-
-    iput-object v10, v0, Lnv5;->Y:Lcwc;
-
-    iput v4, v0, Lnv5;->Z:I
-
-    invoke-interface {v9, v11, v0}, Lku5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_0
+    invoke-static {p0}, Lwv5;->a(Landroid/content/Context;)Lwv5;
 
     move-result-object v1
 
-    if-ne v1, v6, :cond_5
+    if-nez v1, :cond_1
 
-    goto/16 :goto_4
+    const-string p0, "FirebaseApp"
 
-    :cond_5
-    move-object v1, v10
+    const-string v1, "Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project."
+
+    invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :cond_1
+    invoke-static {p0, v1}, Lnv5;->f(Landroid/content/Context;Lwv5;)Lnv5;
+
+    move-result-object p0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static f(Landroid/content/Context;Lwv5;)Lnv5;
+    .locals 6
+
+    const-string v0, "[DEFAULT]"
+
+    sget-object v1, Llv5;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    instance-of v1, v1, Landroid/app/Application;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/Application;
+
+    sget-object v2, Llv5;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-nez v3, :cond_3
+
+    new-instance v3, Llv5;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    :cond_1
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v4, v3}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-static {v1}, Lbf0;->a(Landroid/app/Application;)V
+
+    sget-object v4, Lbf0;->X:Lbf0;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-enter v4
+
+    :try_start_0
+    iget-object v1, v4, Lbf0;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    monitor-exit v4
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    :cond_3
+    :goto_0
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
 
     :goto_1
-    iput-object v5, v7, Ldwc;->a:Ljava/lang/Object;
+    sget-object v1, Lnv5;->j:Ljava/lang/Object;
 
-    move-object v10, v1
+    monitor-enter v1
 
-    :cond_6
-    move-object v1, v7
+    :try_start_1
+    sget-object v2, Lnv5;->k:Let;
 
-    move-object v7, v8
+    invoke-virtual {v2, v0}, Lsne;->containsKey(Ljava/lang/Object;)Z
 
-    move-object v8, v9
+    move-result v3
 
-    goto :goto_2
+    xor-int/lit8 v3, v3, 0x1
 
-    :cond_7
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v2, "Debounce timeout should not be negative"
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const-string v5, "FirebaseApp name "
 
-    throw v1
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_2
-    new-instance v12, Lond;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v9, v0, Lwy3;->b:Lf24;
+    const-string v5, " already exists!"
 
-    invoke-direct {v12, v9}, Lond;-><init>(Lf24;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v9, v1, Ldwc;->a:Ljava/lang/Object;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz v9, :cond_8
+    move-result-object v4
 
-    iget-wide v9, v10, Lcwc;->a:J
+    invoke-static {v4, v3}, Lbi3;->k(Ljava/lang/String;Z)V
 
-    new-instance v11, Lra4;
+    const-string v3, "Application context cannot be null."
 
-    const/4 v13, 0x1
+    invoke-static {p0, v3}, Lbi3;->j(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v11, v8, v1, v5, v13}, Lra4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    new-instance v3, Lnv5;
 
-    invoke-static {v12, v9, v10, v11}, Lte0;->m(Lond;JLvd6;)V
+    invoke-direct {v3, p0, v0, p1}, Lnv5;-><init>(Landroid/content/Context;Ljava/lang/String;Lwv5;)V
 
-    :cond_8
-    invoke-interface {v7}, Lupc;->a()Llnd;
+    invoke-virtual {v2, v0, v3}, Lsne;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v9
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    new-instance v10, Lkv5;
+    invoke-virtual {v3}, Lnv5;->d()V
 
-    invoke-direct {v10, v1, v8, v5}, Lkv5;-><init>(Ldwc;Lku5;Lkotlin/coroutines/Continuation;)V
+    return-object v3
 
-    new-instance v11, Lmnd;
+    :catchall_1
+    move-exception p0
 
-    check-cast v9, Lzrd;
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    iget-object v13, v9, Lzrd;->b:Ljava/lang/Object;
+    throw p0
+.end method
 
-    iget-object v14, v9, Lzrd;->c:Ljava/lang/Object;
 
-    check-cast v14, Lle6;
+# virtual methods
+.method public final a()V
+    .locals 2
 
-    iget-object v15, v9, Lzrd;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lnv5;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    check-cast v15, Lle6;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iget-object v9, v9, Lzrd;->X:Ljava/lang/Object;
+    move-result v0
 
-    move-object/from16 v18, v9
+    xor-int/lit8 v0, v0, 0x1
 
-    check-cast v18, Lle6;
+    const-string v1, "FirebaseApp was deleted"
 
-    const/16 v16, 0x0
+    invoke-static {v1, v0}, Lbi3;->k(Ljava/lang/String;Z)V
 
-    move-object/from16 v17, v10
+    return-void
+.end method
 
-    invoke-direct/range {v11 .. v18}, Lmnd;-><init>(Lond;Ljava/lang/Object;Lle6;Lle6;Ljava/lang/Object;Lc2f;Lle6;)V
+.method public final c()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {v12, v11, v2}, Lond;->f(Lmnd;Z)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object v8, v0, Lnv5;->r0:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object v7, v0, Lnv5;->s0:Ljava/lang/Object;
+    invoke-virtual {p0}, Lnv5;->a()V
 
-    iput-object v1, v0, Lnv5;->X:Ldwc;
+    iget-object v1, p0, Lnv5;->b:Ljava/lang/String;
 
-    iput-object v5, v0, Lnv5;->Y:Lcwc;
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
 
-    iput v3, v0, Lnv5;->Z:I
+    move-result-object v2
 
-    sget-object v9, Lond;->Y:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    invoke-virtual {v9, v12}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v9
+    const/16 v2, 0xb
 
-    instance-of v9, v9, Lmnd;
+    const/4 v3, 0x0
 
-    if-eqz v9, :cond_9
+    if-nez v1, :cond_0
 
-    invoke-virtual {v12, v0}, Lond;->c(Lwy3;)Ljava/lang/Object;
+    move-object v1, v3
 
-    move-result-object v9
+    goto :goto_0
 
-    goto :goto_3
+    :cond_0
+    invoke-static {v1, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    :cond_9
-    invoke-virtual {v12, v0}, Lond;->d(Lwy3;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v9
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_3
-    if-ne v9, v6, :cond_0
+    const-string v1, "+"
 
-    :goto_4
-    return-object v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_a
-    sget-object v1, Laxf;->a:Laxf;
+    invoke-virtual {p0}, Lnv5;->a()V
 
-    return-object v1
+    iget-object v1, p0, Lnv5;->c:Lwv5;
+
+    iget-object v1, v1, Lwv5;->b:Ljava/lang/String;
+
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v1, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final d()V
+    .locals 5
+
+    iget-object v0, p0, Lnv5;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Lxgg;->a(Landroid/content/Context;)Z
+
+    move-result v1
+
+    iget-object v2, p0, Lnv5;->b:Ljava/lang/String;
+
+    const-string v3, "FirebaseApp"
+
+    if-nez v1, :cond_3
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v4, "Device in Direct Boot Mode: postponing initialization of Firebase APIs for app "
+
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lnv5;->a()V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v1, Lmv5;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Lmv5;
+
+    invoke-direct {v2, v0}, Lmv5;-><init>(Landroid/content/Context;)V
+
+    :cond_0
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    new-instance v1, Landroid/content/IntentFilter;
+
+    const-string v3, "android.intent.action.USER_UNLOCKED"
+
+    invoke-direct {v1, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Device unlocked: initializing all Firebase APIs for app "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lnv5;->a()V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Lnv5;->a()V
+
+    const-string v0, "[DEFAULT]"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lnv5;->d:Lzh3;
+
+    invoke-virtual {v1, v0}, Lzh3;->l(Z)V
+
+    iget-object v0, p0, Lnv5;->h:Lvdc;
+
+    invoke-interface {v0}, Lvdc;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxj4;
+
+    invoke-virtual {v0}, Lxj4;->b()V
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lnv5;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    check-cast p1, Lnv5;
+
+    invoke-virtual {p1}, Lnv5;->a()V
+
+    iget-object p1, p1, Lnv5;->b:Ljava/lang/String;
+
+    iget-object v0, p0, Lnv5;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lnv5;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Lcz8;
+
+    invoke-direct {v0, p0}, Lcz8;-><init>(Ljava/lang/Object;)V
+
+    const-string v1, "name"
+
+    iget-object v2, p0, Lnv5;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v1}, Lcz8;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "options"
+
+    iget-object v2, p0, Lnv5;->c:Lwv5;
+
+    invoke-virtual {v0, v2, v1}, Lcz8;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lcz8;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

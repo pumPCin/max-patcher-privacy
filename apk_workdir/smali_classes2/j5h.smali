@@ -1,103 +1,145 @@
 .class public final Lj5h;
-.super Ljava/lang/IllegalStateException;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public X:I
 
-.field public final Y:Ljava/lang/String;
-
-.field public final a:Z
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final o:I
+.field public final synthetic Y:Lq5h;
 
 
 # direct methods
-.method public constructor <init>(IIILjava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Lq5h;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+    iput-object p1, p0, Lj5h;->Y:Lq5h;
 
-    iput-boolean p6, p0, Lj5h;->a:Z
+    const/4 p1, 0x2
 
-    iput p1, p0, Lj5h;->b:I
-
-    iput p2, p0, Lj5h;->c:I
-
-    iput p3, p0, Lj5h;->o:I
-
-    iput-object p4, p0, Lj5h;->X:Ljava/lang/String;
-
-    iput-object p5, p0, Lj5h;->Y:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getMessage()Ljava/lang/String;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lb54;
 
-    const-string v1, "Current state. \n                |hasTarget:"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lj5h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean v1, p0, Lj5h;->a:Z
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast p1, Lj5h;
 
-    const-string v1, ", \n                |backstackSize:"
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lj5h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v1, p0, Lj5h;->b:I
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ", \n                |childRoutersSize:"
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lj5h;
 
-    const-string v1, ", \n                |childBackStackSize:"
+    iget-object v0, p0, Lj5h;->Y:Lq5h;
 
-    const-string v2, "\n                |topControllerName:"
+    invoke-direct {p1, v0, p2}, Lj5h;-><init>(Lq5h;Lkotlin/coroutines/Continuation;)V
 
-    iget v3, p0, Lj5h;->c:I
+    return-object p1
+.end method
 
-    iget v4, p0, Lj5h;->o:I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    iget v0, p0, Lj5h;->X:I
 
-    iget-object v1, p0, Lj5h;->X:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v1, "\n                |childTopControllerName:"
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lj5h;->Y:Ljava/lang/String;
+    return-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v1, "\n                |"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj5h;->Y:Lq5h;
+
+    iget-object v0, p1, Lq5h;->h:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Lqwe;->b0(Ljava/lang/String;)Ljava/lang/String;
+    check-cast v0, Ln4h;
 
-    move-result-object v0
+    iget-wide v2, p1, Lq5h;->a:J
+
+    iget-wide v4, p1, Lq5h;->b:J
+
+    iput v1, p0, Lj5h;->X:I
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x2
+
+    const-string v6, "SELECT token FROM webapp_biometry WHERE user_id = ? AND bot_id = ?"
+
+    invoke-static {p1, v6}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v1, v2, v3}, Lpfd;->k(IJ)V
+
+    invoke-virtual {v6, p1, v4, v5}, Lpfd;->k(IJ)V
+
+    new-instance p1, Landroid/os/CancellationSignal;
+
+    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+
+    iget-object v1, v0, Ln4h;->a:Lyed;
+
+    new-instance v2, Ll4h;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v0, v6, v3}, Ll4h;-><init>(Ln4h;Lpfd;I)V
+
+    invoke-static {v1, p1, v2, p0}, Ldwi;->a(Lyed;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

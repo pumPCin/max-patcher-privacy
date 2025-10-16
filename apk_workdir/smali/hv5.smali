@@ -1,56 +1,73 @@
 .class public final Lhv5;
-.super Lwy3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/security/Signature;
 
-.field public final synthetic Y:La01;
+.field public final b:Ljavax/crypto/Cipher;
 
-.field public Z:La01;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public r0:Lku5;
-
-.field public s0:I
-
-.field public t0:I
+.field public final c:Ljavax/crypto/Mac;
 
 
 # direct methods
-.method public constructor <init>(La01;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/security/Signature;)V
     .locals 0
 
-    iput-object p1, p0, Lhv5;->Y:La01;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    .line 2
+    iput-object p1, p0, Lhv5;->a:Ljava/security/Signature;
+
+    const/4 p1, 0x0
+
+    .line 3
+    iput-object p1, p0, Lhv5;->b:Ljavax/crypto/Cipher;
+
+    .line 4
+    iput-object p1, p0, Lhv5;->c:Ljavax/crypto/Mac;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljavax/crypto/Cipher;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhv5;->o:Ljava/lang/Object;
+    .line 6
+    iput-object p1, p0, Lhv5;->b:Ljavax/crypto/Cipher;
 
-    iget p1, p0, Lhv5;->X:I
+    const/4 p1, 0x0
 
-    const/high16 v0, -0x80000000
+    .line 7
+    iput-object p1, p0, Lhv5;->a:Ljava/security/Signature;
 
-    or-int/2addr p1, v0
+    .line 8
+    iput-object p1, p0, Lhv5;->c:Ljavax/crypto/Mac;
 
-    iput p1, p0, Lhv5;->X:I
+    return-void
+.end method
 
-    iget-object p1, p0, Lhv5;->Y:La01;
+.method public constructor <init>(Ljavax/crypto/Mac;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, v0, p0}, La01;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .line 10
+    iput-object p1, p0, Lhv5;->c:Ljavax/crypto/Mac;
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    return-object p1
+    .line 11
+    iput-object p1, p0, Lhv5;->b:Ljavax/crypto/Cipher;
+
+    .line 12
+    iput-object p1, p0, Lhv5;->a:Ljava/security/Signature;
+
+    return-void
 .end method

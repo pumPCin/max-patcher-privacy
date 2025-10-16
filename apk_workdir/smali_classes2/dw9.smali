@@ -1,19 +1,23 @@
-.class public abstract Ldw9;
-.super Ljava/lang/Object;
+.class public final Ldw9;
+.super Lkj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final c:J
+
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(JLukf;JLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lkj0;-><init>(JLukf;)V
 
-    iput-object p1, p0, Ldw9;->a:Ljava/lang/Object;
+    iput-wide p4, p0, Ldw9;->c:J
+
+    iput-object p6, p0, Ldw9;->o:Ljava/util/List;
 
     return-void
 .end method

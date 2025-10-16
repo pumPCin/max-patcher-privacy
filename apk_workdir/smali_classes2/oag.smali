@@ -1,102 +1,99 @@
 .class public final Loag;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lrcg;
-
-.field public final synthetic Y:J
-
-.field public final synthetic Z:Lx9g;
-
-.field public final synthetic r0:Lc7g;
+.field public final a:Lsze;
 
 
 # direct methods
-.method public constructor <init>(Lrcg;JLx9g;Lc7g;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 5
 
-    iput-object p1, p0, Loag;->X:Lrcg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Loag;->Y:J
+    invoke-static {}, Len;->b()Lri3;
 
-    iput-object p4, p0, Loag;->Z:Lx9g;
+    move-result-object v0
 
-    iput-object p5, p0, Loag;->r0:Lc7g;
+    check-cast v0, Lqra;
 
-    const/4 p1, 0x2
+    invoke-virtual {v0}, Lqra;->j()Llwb;
 
-    invoke-direct {p0, p1, p6}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    iget-object v0, v0, Llwb;->c:Lchg;
+
+    const/4 v1, 0x0
+
+    iget-object v2, v0, Lw3;->h:Lot7;
+
+    const-string v3, "app.extra.text.size.sp"
+
+    invoke-virtual {v2, v3, v1}, Lot7;->getFloat(Ljava/lang/String;F)F
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+
+    move-result-object v1
+
+    iput-object v1, p0, Loag;->a:Lsze;
+
+    iget-object v0, v0, Lird;->i:Lim0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lzsa;
+
+    const/16 v2, 0x1d
+
+    invoke-direct {v1, v2, p0}, Lzsa;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lws7;
+
+    sget-object v3, Ljtf;->e:Lhu7;
+
+    sget-object v4, Ljtf;->c:Lvi6;
+
+    invoke-direct {v2, v1, v3, v4}, Lws7;-><init>(Ler3;Ler3;Lr6;)V
+
+    :try_start_0
+    new-instance v1, Lqha;
+
+    invoke-direct {v1, v2}, Lql0;-><init>(Lcka;)V
+
+    invoke-interface {v0, v1}, Lsja;->a(Lcka;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
-.end method
 
+    :catchall_0
+    move-exception v0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-static {v0}, Lnzi;->b(Ljava/lang/Throwable;)V
 
-    check-cast p1, Ln24;
+    invoke-static {v0}, Lgxi;->a(Ljava/lang/Throwable;)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v1, Ljava/lang/NullPointerException;
 
-    invoke-virtual {p0, p1, p2}, Loag;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "Actually not, but can\'t throw other exceptions due to RS"
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Loag;
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    sget-object p2, Laxf;->a:Laxf;
+    throw v1
 
-    invoke-virtual {p1, p2}, Loag;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :catch_0
+    move-exception v0
 
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
-
-    new-instance v0, Loag;
-
-    iget-object v4, p0, Loag;->Z:Lx9g;
-
-    iget-object v5, p0, Loag;->r0:Lc7g;
-
-    iget-object v1, p0, Loag;->X:Lrcg;
-
-    iget-wide v2, p0, Loag;->Y:J
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Loag;-><init>(Lrcg;JLx9g;Lc7g;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Loag;->Z:Lx9g;
-
-    iget-wide v3, p1, Lx9g;->a:J
-
-    iget-object v5, p1, Lx9g;->b:Ljava/lang/String;
-
-    iget-object v6, p0, Loag;->r0:Lc7g;
-
-    iget-object v0, p0, Loag;->X:Lrcg;
-
-    iget-wide v1, p0, Loag;->Y:J
-
-    invoke-virtual/range {v0 .. v6}, Lrcg;->e(JJLjava/lang/String;Lc7g;)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    throw v0
 .end method

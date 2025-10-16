@@ -2,105 +2,199 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luvb;
-
 
 # instance fields
-.field public final a:Lz93;
+.field public final a:Lgw0;
+
+.field public final b:Llt7;
+
+.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lz93;)V
+.method public constructor <init>(Lgw0;Llt7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqvb;->a:Lz93;
+    iput-object p1, p0, Lqvb;->a:Lgw0;
+
+    iput-object p2, p0, Lqvb;->b:Llt7;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Lqvb;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()V
+    .locals 4
+
+    iget-object v0, p0, Lqvb;->c:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lrvb;
+
+    const/4 v3, 0x0
+
+    iput-object v3, v2, Lrvb;->g:Ljava/lang/CharSequence;
+
+    iput-object v3, v2, Lrvb;->h:Ljava/lang/CharSequence;
+
+    iput-object v3, v2, Lrvb;->i:Ljava/lang/CharSequence;
+
+    iput-object v3, v2, Lrvb;->j:Ljava/lang/CharSequence;
+
+    iput-object v3, v2, Lrvb;->k:Ljava/lang/String;
+
+    iput-object v3, v2, Lrvb;->l:Ljava/lang/String;
+
+    iput-object v3, v2, Lrvb;->m:Lmc4;
+
+    const/4 v3, 0x0
+
+    iput-boolean v3, v2, Lrvb;->n:Z
+
+    iput-boolean v3, v2, Lrvb;->o:Z
+
+    iput-boolean v3, v2, Lrvb;->p:Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+
+    return-void
+.end method
+
+.method public final b(Lda2;Loa9;)V
     .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lqvb;->b:Llt7;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lqvb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lqvb;
-
-    iget-object v1, p0, Lqvb;->a:Lz93;
-
-    iget-object p1, p1, Lqvb;->a:Lz93;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lqvb;->a:Lz93;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    iget-object v0, v0, Lz93;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatNamePayload(errorText="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lqvb;->a:Lz93;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lsvb;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p2}, Lsvb;->a(Lda2;Loa9;)Lrvb;
+
+    move-result-object v0
+
+    iget-wide v1, p2, Lij0;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    iget-object v1, p0, Lqvb;->c:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1, p2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Lrvb;->h(Lda2;)V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 3
+
+    iget-object v0, p0, Lqvb;->c:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lrvb;
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Lrvb;->g:Ljava/lang/CharSequence;
+
+    iput-object v2, v1, Lrvb;->h:Ljava/lang/CharSequence;
+
+    iput-object v2, v1, Lrvb;->i:Ljava/lang/CharSequence;
+
+    iput-object v2, v1, Lrvb;->j:Ljava/lang/CharSequence;
+
+    iput-object v2, v1, Lrvb;->k:Ljava/lang/String;
+
+    iput-object v2, v1, Lrvb;->l:Ljava/lang/String;
+
+    iput-object v2, v1, Lrvb;->m:Lmc4;
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, v1, Lrvb;->n:Z
+
+    iput-boolean v2, v1, Lrvb;->o:Z
+
+    iput-boolean v2, v1, Lrvb;->p:Z
+
+    iget-object v2, v1, Lrvb;->f:Lda2;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1, v2}, Lrvb;->h(Lda2;)V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

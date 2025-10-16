@@ -1,159 +1,137 @@
-.class public final synthetic Lv36;
-.super Lye6;
+.class public final Lv36;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lle6;
+.implements Lei6;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Ly36;
+
+.field public final synthetic Z:Lqd7;
+
+
+# direct methods
+.method public constructor <init>(Ly36;Lqd7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lv36;->Y:Ly36;
+
+    iput-object p2, p0, Lv36;->Z:Lqd7;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Landroid/view/View;
+    check-cast p1, Lb54;
 
-    check-cast p2, Ln2g;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p3, Ljava/lang/Number;
-
-    invoke-virtual {p3}, Ljava/lang/Number;->intValue()I
-
-    iget-object p3, p0, Lps1;->receiver:Ljava/lang/Object;
-
-    check-cast p3, Lone/me/folders/list/FoldersListScreen;
-
-    sget-object v0, Lone/me/folders/list/FoldersListScreen;->Z:[Lpl7;
-
-    invoke-virtual {p3}, Lone/me/folders/list/FoldersListScreen;->B0()Le46;
-
-    move-result-object v0
-
-    iput-object p2, v0, Le46;->v0:Ln2g;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lnc6;->b(I)Ley3;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ley3;->x(Landroid/view/View;)Ley3;
+    invoke-virtual {p0, p1, p2}, Lv36;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p3}, Lone/me/folders/list/FoldersListScreen;->B0()Le46;
+    check-cast p1, Lv36;
 
-    move-result-object v0
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1, p2}, Lv36;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p2, p2, Ln2g;->a:Lsz5;
+    move-result-object p1
 
-    if-nez p2, :cond_0
+    return-object p1
+.end method
 
-    sget-object p2, Lo65;->a:Lo65;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lv36;
+
+    iget-object v0, p0, Lv36;->Y:Ly36;
+
+    iget-object v1, p0, Lv36;->Z:Lqd7;
+
+    invoke-direct {p1, v0, v1, p2}, Lv36;-><init>(Ly36;Lqd7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lv36;->X:I
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lv36;->Y:Ly36;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lshd;->l()Lkv7;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    new-instance v1, Lhy3;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    sget v2, Lvma;->j:I
-
-    sget v3, Lxma;->m:I
-
-    move v4, v3
-
-    new-instance v3, Lxcf;
-
-    invoke-direct {v3, v4}, Lxcf;-><init>(I)V
-
-    sget v4, Lpra;->f:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x14
-
-    invoke-direct/range {v1 .. v6}, Lhy3;-><init>(ILcdf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    invoke-virtual {v0, v1}, Lkv7;->add(Ljava/lang/Object;)Z
-
-    iget-object p2, p2, Lsz5;->s0:Ljava/util/Set;
-
-    sget-object v1, Lg26;->c:Lg26;
-
-    invoke-interface {p2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    sget v2, Lvma;->k:I
-
-    sget p2, Lxma;->n:I
-
-    new-instance v3, Lxcf;
-
-    invoke-direct {v3, p2}, Lxcf;-><init>(I)V
-
-    sget p2, Ll7d;->w:I
-
-    sget v1, Lnra;->V:I
-
-    sget v4, Lnra;->Q:I
-
-    move v5, v1
-
-    new-instance v1, Lhy3;
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    move-object v4, v5
-
-    move-object v5, p2
-
-    invoke-direct/range {v1 .. v6}, Lhy3;-><init>(ILcdf;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    invoke-virtual {v0, v1}, Lkv7;->add(Ljava/lang/Object;)Z
+    throw p1
 
     :cond_1
-    invoke-static {v0}, Lshd;->e(Ljava/util/List;)Lkv7;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result-object p2
+    iget-object p1, v2, Ly36;->b:Lqf2;
 
+    iget-object v0, v2, Ly36;->a:Ljava/lang/String;
+
+    iget-object v3, p0, Lv36;->Z:Lqd7;
+
+    iget-wide v3, v3, Lqd7;->b:J
+
+    iput v1, p0, Lv36;->X:I
+
+    invoke-virtual {p1, v3, v4, p0, v0}, Lqf2;->g(JLk14;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     :goto_0
-    invoke-interface {p1, p2}, Ley3;->p(Ljava/util/Collection;)Ley3;
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-interface {p1}, Ley3;->i()Ley3;
+    move-result p1
 
-    move-result-object p1
+    sget-object v0, Lzag;->a:Lzag;
 
-    invoke-interface {p1}, Ley3;->build()Lfy3;
+    if-nez p1, :cond_3
 
-    move-result-object p1
+    return-object v0
 
-    invoke-interface {p1, p3}, Lfy3;->v(Lone/me/sdk/arch/Widget;)V
+    :cond_3
+    invoke-static {v2}, Ly36;->a(Ly36;)V
 
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-object v0
 .end method

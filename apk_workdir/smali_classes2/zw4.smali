@@ -1,185 +1,137 @@
-.class public final Lzw4;
-.super Landroid/view/View;
+.class public final enum Lzw4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lfef;
 
+# static fields
+.field public static final enum X:Lzw4;
 
-# instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public static final enum Y:Lzw4;
 
-.field public final b:Landroid/graphics/RectF;
+.field public static final synthetic Z:[Lzw4;
 
-.field public c:F
+.field public static final enum a:Lzw4;
 
-.field public o:Llwa;
+.field public static final enum b:Lzw4;
+
+.field public static final enum c:Lzw4;
+
+.field public static final enum o:Lzw4;
+
+.field public static final synthetic r0:Lfd5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+    new-instance v0, Lzw4;
 
-    new-instance p1, Landroid/graphics/Paint;
+    const-string v1, "SHARE_VIDEO"
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lzw4;->a:Landroid/graphics/Paint;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Landroid/graphics/RectF;
+    sput-object v0, Lzw4;->a:Lzw4;
 
-    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+    new-instance v1, Lzw4;
 
-    iput-object p1, p0, Lzw4;->b:Landroid/graphics/RectF;
+    const-string v2, "DOWNLOAD_VIDEO"
 
-    sget-object p1, Lrw4;->t0:Lss6;
+    const/4 v3, 0x1
 
-    invoke-virtual {p1, p0}, Lss6;->v(Landroid/view/View;)Llwa;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object p1
+    sput-object v1, Lzw4;->b:Lzw4;
 
-    invoke-virtual {p0, p1}, Lzw4;->onThemeChanged(Llwa;)V
+    new-instance v2, Lzw4;
 
-    const/4 p1, 0x0
+    const-string v3, "SHARE_PHOTO"
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+    const/4 v4, 0x2
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, -0x2
+    sput-object v2, Lzw4;->c:Lzw4;
 
-    const/16 v1, 0x31
+    new-instance v3, Lzw4;
 
-    invoke-direct {p1, v0, v0, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+    const-string v4, "DOWNLOAD_PHOTO"
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v4, Lzw4;
+
+    const-string v5, "SHARE_GIF"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lzw4;->o:Lzw4;
+
+    new-instance v5, Lzw4;
+
+    const-string v6, "DOWNLOAD_GIF"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lzw4;->X:Lzw4;
+
+    new-instance v6, Lzw4;
+
+    const-string v7, "SHARE_FILE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lzw4;->Y:Lzw4;
+
+    filled-new-array/range {v0 .. v6}, [Lzw4;
+
+    move-result-object v0
+
+    sput-object v0, Lzw4;->Z:[Lzw4;
+
+    new-instance v1, Lfd5;
+
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lzw4;->r0:Lfd5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final getCustomTheme()Llwa;
+.method public static valueOf(Ljava/lang/String;)Lzw4;
     .locals 1
 
-    iget-object v0, p0, Lzw4;->o:Llwa;
+    const-class v0, Lzw4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lzw4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lzw4;
+    .locals 1
+
+    sget-object v0, Lzw4;->Z:[Lzw4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lzw4;
 
     return-object v0
-.end method
-
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    iget v0, p0, Lzw4;->c:F
-
-    iget-object v1, p0, Lzw4;->a:Landroid/graphics/Paint;
-
-    iget-object v2, p0, Lzw4;->b:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v2, v0, v0, v1}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public final onMeasure(II)V
-    .locals 2
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 p2, 0x42200000    # 40.0f
-
-    mul-float/2addr p1, p2
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x40800000    # 4.0f
-
-    mul-float/2addr p2, v0
-
-    iget-object v0, p0, Lzw4;->b:Landroid/graphics/RectF;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, v1, p1, p2}, Landroid/graphics/RectF;->set(FFFF)V
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
-
-    move-result p1
-
-    iput p1, p0, Lzw4;->c:F
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
-
-    move-result p1
-
-    float-to-int p1, p1
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
-
-    move-result p2
-
-    float-to-int p2, p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Llwa;)V
-    .locals 1
-
-    iget-object v0, p0, Lzw4;->o:Llwa;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v0
-
-    :goto_0
-    invoke-interface {p1}, Llwa;->getIcon()Lg17;
-
-    move-result-object p1
-
-    iget p1, p1, Lg17;->h:I
-
-    iget-object v0, p0, Lzw4;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final setCustomTheme(Llwa;)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0, p1}, Lzw4;->onThemeChanged(Llwa;)V
-
-    :cond_0
-    iput-object p1, p0, Lzw4;->o:Llwa;
-
-    return-void
 .end method

@@ -1,168 +1,74 @@
-.class public final Lwsc;
-.super Lc2f;
-.source "SourceFile"
+.class public abstract Lwsc;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lle6;
 
+# static fields
+.field public static oneme_stickers_settings_empty_favorite_title:I = 0x7f130a60
 
-# instance fields
-.field public final synthetic X:I
+.field public static oneme_stickers_settings_empty_recent_subtitle:I = 0x7f130a61
 
-.field public synthetic Y:Landroid/widget/FrameLayout;
+.field public static oneme_stickers_settings_empty_recent_title:I = 0x7f130a62
 
-.field public final synthetic Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_stickers_settings_favorite_title:I = 0x7f130a63
 
+.field public static oneme_stickers_settings_favorite_toolbar_title:I = 0x7f130a64
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Lkotlin/coroutines/Continuation;I)V
-    .locals 0
+.field public static oneme_stickers_settings_menu_copy_link_title:I = 0x7f130a65
 
-    iput p3, p0, Lwsc;->X:I
+.field public static oneme_stickers_settings_menu_copy_set_link_snackbar_title:I = 0x7f130a66
 
-    iput-object p1, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_stickers_settings_menu_delete_set_confirm_action:I = 0x7f130a67
 
-    const/4 p1, 0x3
+.field public static oneme_stickers_settings_menu_delete_set_confirm_cancel:I = 0x7f130a68
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static oneme_stickers_settings_menu_delete_set_confirm_subtitle:I = 0x7f130a69
 
-    return-void
-.end method
+.field public static oneme_stickers_settings_menu_delete_set_confirm_title:I = 0x7f130a6a
 
+.field public static oneme_stickers_settings_menu_delete_set_snackbar_title:I = 0x7f130a6b
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.field public static oneme_stickers_settings_menu_delete_set_title:I = 0x7f130a6c
 
-    iget v0, p0, Lwsc;->X:I
+.field public static oneme_stickers_settings_menu_forward_title:I = 0x7f130a6d
 
-    check-cast p1, Landroid/widget/FrameLayout;
+.field public static oneme_stickers_settings_menu_share_title:I = 0x7f130a6e
 
-    check-cast p2, Llwa;
+.field public static oneme_stickers_settings_recent_title:I = 0x7f130a6f
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+.field public static oneme_stickers_settings_recent_toolbar_title:I = 0x7f130a70
 
-    packed-switch v0, :pswitch_data_0
+.field public static oneme_stickers_settings_sets_title:I = 0x7f130a71
 
-    new-instance p2, Lwsc;
+.field public static oneme_stickers_settings_stickers_confirm_delete_sticker_title:I = 0x7f130a72
 
-    iget-object v0, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_stickers_settings_stickers_confirm_delete_stickers_title:I = 0x7f130a73
 
-    const/4 v1, 0x1
+.field public static oneme_stickers_settings_stickers_confirm_delete_subtitle:I = 0x7f130a74
 
-    invoke-direct {p2, v0, p3, v1}, Lwsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Lkotlin/coroutines/Continuation;I)V
+.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I = 0x7f130a75
 
-    iput-object p1, p2, Lwsc;->Y:Landroid/widget/FrameLayout;
+.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_title:I = 0x7f130a76
 
-    sget-object p1, Laxf;->a:Laxf;
+.field public static oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I = 0x7f130a77
 
-    invoke-virtual {p2, p1}, Lwsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_stickers_settings_stickers_favorite_snackbar_from:I = 0x7f130a78
 
-    return-object p1
+.field public static oneme_stickers_settings_stickers_menu_change_title:I = 0x7f130a79
 
-    :pswitch_0
-    new-instance p2, Lwsc;
+.field public static oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I = 0x7f130a7a
 
-    iget-object v0, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_stickers_settings_stickers_recent_confirm_clear_title:I = 0x7f130a7b
 
-    const/4 v1, 0x0
+.field public static oneme_stickers_settings_stickers_recent_delete_all_snackbar:I = 0x7f130a7c
 
-    invoke-direct {p2, v0, p3, v1}, Lwsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Lkotlin/coroutines/Continuation;I)V
+.field public static oneme_stickers_settings_stickers_recent_menu_clear_title:I = 0x7f130a7d
 
-    iput-object p1, p2, Lwsc;->Y:Landroid/widget/FrameLayout;
+.field public static oneme_stickers_settings_stickers_recent_snackbar_from:I = 0x7f130a7e
 
-    sget-object p1, Laxf;->a:Laxf;
+.field public static oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I = 0x7f130a7f
 
-    invoke-virtual {p2, p1}, Lwsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_stickers_settings_toolbar_title:I = 0x7f130a80
 
-    return-object p1
+.field public static oneme_strickers_settings_stickers_multiselect_empty_title:I = 0x7f130a82
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lwsc;->X:I
-
-    sget-object v1, Laxf;->a:Laxf;
-
-    sget-object v2, Lrw4;->t0:Lss6;
-
-    iget-object v3, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwsc;->Y:Landroid/widget/FrameLayout;
-
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    iget-object v0, v3, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v2, p1}, Lss6;->v(Landroid/view/View;)Llwa;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Llwa;->f()Lo4;
-
-    move-result-object p1
-
-    iget p1, p1, Lo4;->c:I
-
-    const v2, 0x3e4ccccd    # 0.2f
-
-    invoke-static {p1, v2}, Luce;->f0(IF)I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    return-object v1
-
-    :pswitch_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwsc;->Y:Landroid/widget/FrameLayout;
-
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    iget-object v0, v3, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {v2, p1}, Lss6;->v(Landroid/view/View;)Llwa;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Llwa;->f()Lo4;
-
-    move-result-object p1
-
-    iget p1, p1, Lo4;->c:I
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_strickers_settings_stickers_multiselect_title:I = 0x7f130a83

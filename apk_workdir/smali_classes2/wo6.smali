@@ -4,81 +4,54 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Llt7;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Llt7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lwo6;->a:I
+    iput-object p1, p0, Lwo6;->a:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Llff;)Ljava/lang/Object;
+    .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lg32;
 
-    goto :goto_1
+    invoke-static {p1}, Lf0i;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lwo6;
+    move-result-object p1
 
-    if-nez v0, :cond_1
+    const/4 v1, 0x1
 
-    goto :goto_0
+    invoke-direct {v0, v1, p1}, Lg32;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    :cond_1
-    check-cast p1, Lwo6;
+    invoke-virtual {v0}, Lg32;->o()V
 
-    iget v0, p0, Lwo6;->a:I
+    iget-object p1, p0, Lwo6;->a:Llt7;
 
-    iget p1, p1, Lwo6;->a:I
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
-    if-eq v0, p1, :cond_2
+    move-result-object p1
 
-    :goto_0
-    const/4 p1, 0x0
+    check-cast p1, Li78;
 
-    return p1
+    new-instance v1, Lvo6;
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-direct {v1, v0}, Lvo6;-><init>(Lg32;)V
 
-    return p1
-.end method
+    invoke-virtual {p1, v1}, Li78;->a(Lf78;)V
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v0}, Lg32;->n()Ljava/lang/Object;
 
-    iget v0, p0, Lwo6;->a:I
+    move-result-object p1
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "GradientsSkeletonGradientGridColors(staticBackground="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lwo6;->a:I
-
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

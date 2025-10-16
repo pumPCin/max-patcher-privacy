@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lke6;
+.implements Lfi6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lwkc;)V
+    value = Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lyuc;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lke6;"
+        "Lfi6;"
     }
 .end annotation
 
@@ -37,10 +37,10 @@
         "",
         "kotlin.jvm.PlatformType",
         "keys",
-        "Ldee;",
+        "Ldqe;",
         "",
         "apply",
-        "(Ljava/util/Set;)Ldee;",
+        "(Ljava/util/Set;)Ldqe;",
         "<anonymous>"
     }
     k = 0x3
@@ -69,7 +69,7 @@
 
 
 # virtual methods
-.method public final apply(Ljava/util/Set;)Ldee;
+.method public final apply(Ljava/util/Set;)Ldqe;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -77,14 +77,14 @@
             "Ljava/util/Set<",
             "Ljava/lang/String;",
             ">;)",
-            "Ldee;"
+            "Ldqe;"
         }
     .end annotation
 
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->this$0:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lwkc;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lyuc;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     const-string v2, "RemoteSettings"
 
-    invoke-interface {v0, v2, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->this$0:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
@@ -111,7 +111,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getSettings(Ljava/util/Set;)Lrce;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getSettings(Ljava/util/Set;)Lqoe;
 
     move-result-object p1
 
@@ -124,7 +124,7 @@
     .line 1
     check-cast p1, Ljava/util/Set;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->apply(Ljava/util/Set;)Ldee;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->apply(Ljava/util/Set;)Ldqe;
 
     move-result-object p1
 

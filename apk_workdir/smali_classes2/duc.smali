@@ -1,68 +1,28 @@
-.class public final synthetic Lduc;
+.class public abstract Lduc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lvae;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static MarkdownItemView:[I = null
 
-.field public final synthetic b:Ltd6;
+.field public static MarkdownItemView_miv_highlight_title:I = 0x0
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public static MarkdownItemView_miv_title:I = 0x1
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ltd6;I)V
-    .locals 0
-
-    iput p3, p0, Lduc;->a:I
-
-    iput-object p1, p0, Lduc;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lduc;->b:Ltd6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
+.method public static constructor <clinit>()V
     .locals 2
 
-    iget v0, p0, Lduc;->a:I
+    const v0, 0x7f04066f
 
-    packed-switch v0, :pswitch_data_0
+    const v1, 0x7f040670
 
-    iget-object v0, p0, Lduc;->c:Ljava/lang/Object;
+    filled-new-array {v0, v1}, [I
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;
+    move-result-object v0
 
-    iget-object v1, p0, Lduc;->b:Ltd6;
-
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->d(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Ltd6;Lorg/json/JSONObject;)V
+    sput-object v0, Lduc;->MarkdownItemView:[I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lduc;->c:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;
-
-    iget-object v1, p0, Lduc;->b:Ltd6;
-
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->c(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Ltd6;Lorg/json/JSONObject;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

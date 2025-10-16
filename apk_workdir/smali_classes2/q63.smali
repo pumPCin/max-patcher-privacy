@@ -1,117 +1,187 @@
-.class public abstract Lq63;
-.super Ljava/lang/Object;
+.class public final Lq63;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lw9h;
+# instance fields
+.field public final a:Landroid/graphics/Paint;
+
+.field public b:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 3
 
-    new-instance v0, Lw9h;
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lw9h;-><init>(Landroid/os/Looper;)V
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sput-object v0, Lq63;->a:Lw9h;
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
+
+    sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
+
+    iput-object v0, p0, Lq63;->a:Landroid/graphics/Paint;
+
+    const/high16 v0, 0x43b40000    # 360.0f
+
+    iput v0, p0, Lq63;->b:F
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 3
 
-    new-instance v0, Lxi;
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 10
 
-    const/16 v1, 0x12
-
-    const-string v2, "Copied Text"
-
-    invoke-direct {v0, p0, v2, p1, v1}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    sget-object p0, Lq63;->a:Lw9h;
-
-    invoke-virtual {p0, v0}, Lw9h;->w(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static final b()Z
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x20
-
-    if-le v0, v1, :cond_1
-
-    sget-object v0, Lw4g;->a:Lh4f;
-
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
+    iget v0, v0, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    int-to-float v2, v0
 
-    move-result v0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    iget v0, v0, Landroid/graphics/Rect;->top:I
 
-    :cond_0
-    const/4 v0, 0x0
+    int-to-float v3, v0
 
-    return v0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/Rect;->right:I
+
+    int-to-float v4, v0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float v5, v0
+
+    iget v7, p0, Lq63;->b:F
+
+    const/4 v8, 0x0
+
+    iget-object v9, p0, Lq63;->a:Landroid/graphics/Paint;
+
+    const/high16 v6, -0x3d4c0000    # -90.0f
+
+    move-object v1, p1
+
+    invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x3
 
     return v0
 .end method
 
-.method public static final c(Landroid/content/Context;)Ljava/lang/CharSequence;
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 3
+
+    const/4 v0, 0x2
+
+    int-to-float v0, v0
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lagi;->d(F)I
+
+    move-result v1
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v2
+
+    invoke-static {v0}, Lagi;->d(F)I
+
+    move-result v0
+
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/Rect;->inset(II)V
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public final setAlpha(I)V
     .locals 1
 
-    const-string v0, "clipboard"
+    iget-object v0, p0, Lq63;->a:Landroid/graphics/Paint;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Landroid/content/ClipboardManager;
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+    iget-object v0, p0, Lq63;->a:Landroid/graphics/Paint;
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method

@@ -1,122 +1,97 @@
-.class public final synthetic Lole;
-.super Ljava/lang/Object;
+.class public final enum Lole;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Las3;
 
+# static fields
+.field public static final synthetic X:[Lole;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum a:Lole;
 
-.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
+.field public static final enum b:Lole;
+
+.field public static final enum c:Lole;
+
+.field public static final enum o:Lole;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Lole;->a:I
+    new-instance v0, Lole;
 
-    iput-object p1, p0, Lole;->b:Lone/me/startconversation/StartConversationScreen;
+    const-string v1, "LOADING"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lole;->a:Lole;
+
+    new-instance v1, Lole;
+
+    const-string v2, "CONTENT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lole;->b:Lole;
+
+    new-instance v2, Lole;
+
+    const-string v3, "CONTENT_SEARCH"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lole;->c:Lole;
+
+    new-instance v3, Lole;
+
+    const-string v4, "EMPTY_SEARCH"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lole;->o:Lole;
+
+    filled-new-array {v0, v1, v2, v3}, [Lole;
+
+    move-result-object v0
+
+    sput-object v0, Lole;->X:[Lole;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lole;
+    .locals 1
 
-# virtual methods
-.method public final c(I)Z
-    .locals 5
+    const-class v0, Lole;
 
-    iget v0, p0, Lole;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v1, 0x0
+    move-result-object p0
 
-    const/4 v2, 0x1
+    check-cast p0, Lole;
 
-    iget-object v3, p0, Lole;->b:Lone/me/startconversation/StartConversationScreen;
+    return-object p0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public static values()[Lole;
+    .locals 1
 
-    sget-object p1, Lone/me/startconversation/StartConversationScreen;->H0:[Lpl7;
+    sget-object v0, Lole;->X:[Lole;
 
-    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->B0()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_0
+    check-cast v0, [Lole;
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    :cond_0
-    move v1, v2
-
-    :cond_1
-    xor-int/lit8 p1, v1, 0x1
-
-    return p1
-
-    :pswitch_0
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->x0:Lz2h;
-
-    invoke-virtual {v0}, Lhv7;->j()I
-
-    move-result v0
-
-    iget-object v4, v3, Lone/me/startconversation/StartConversationScreen;->C0:Lpm6;
-
-    invoke-virtual {v4}, Lhv7;->j()I
-
-    move-result v4
-
-    add-int/2addr v4, v0
-
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->y0:Lph0;
-
-    invoke-virtual {v0}, Lhv7;->j()I
-
-    move-result v0
-
-    add-int/2addr v0, v4
-
-    if-eq p1, v0, :cond_2
-
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->E0:Lsg3;
-
-    invoke-virtual {v0}, Lsg3;->j()I
-
-    move-result v0
-
-    if-ne p1, v0, :cond_3
-
-    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->B0()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :cond_2
-    move v1, v2
-
-    :cond_3
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

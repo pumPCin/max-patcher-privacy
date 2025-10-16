@@ -1,103 +1,147 @@
-.class public final synthetic Lgj0;
+.class public final Lgj0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lnb4;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Liu9;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liu9;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 1
 
-    iput p2, p0, Lgj0;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lgj0;->b:Liu9;
+    iput v0, p0, Lgj0;->a:I
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Lgk4;
+
+    invoke-direct {v0}, Lgk4;-><init>()V
+
+    .line 3
+    iput-object p2, v0, Lgk4;->c:Ljava/lang/String;
+
+    .line 4
+    sget-object p2, Lbg8;->Y:Lbg8;
+
+    .line 5
+    invoke-virtual {p2, p1}, Lbg8;->g(Landroid/content/Context;)Lj6b;
+
+    move-result-object p1
+
+    .line 6
+    iget-object p1, p1, Lj6b;->c:Li6b;
+
+    .line 7
+    iput-object p1, v0, Lgk4;->b:Lz1g;
+
+    const/16 p1, 0x1f40
+
+    .line 8
+    iput p1, v0, Lgk4;->d:I
+
+    .line 9
+    iput p1, v0, Lgk4;->e:I
+
+    .line 10
+    iput-object v0, p0, Lgj0;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lr5;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lgj0;->a:I
+
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    new-instance v0, Lo21;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p1, v1}, Lo21;-><init>(Lr5;I)V
+
+    .line 13
+    new-instance p1, Lrhf;
+
+    invoke-direct {p1, v0}, Lrhf;-><init>(Loh6;)V
+
+    .line 14
+    iput-object p1, p0, Lgj0;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a()Lqb4;
+    .locals 6
 
     iget v0, p0, Lgj0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lgj0;->b:Liu9;
+    iget-object v0, p0, Lgj0;->b:Ljava/lang/Object;
 
-    iget-object v1, v0, Liu9;->Z:Lxc;
+    check-cast v0, Lrhf;
 
-    const-string v2, "LOCATION_MAP_TYPE_HYBRID"
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Lxc;->f(Ljava/lang/String;)V
+    move-result-object v0
 
-    new-instance v1, Lej0;
+    check-cast v0, Lux0;
 
-    const/16 v2, 0x9
+    invoke-virtual {v0}, Lux0;->b()Lwx0;
 
-    invoke-direct {v1, v2}, Lej0;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Le3;->k(Lqo3;)V
-
-    :goto_0
-    sget-object v0, Laxf;->a:Laxf;
+    move-result-object v0
 
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lgj0;->b:Liu9;
+    iget-object v0, p0, Lgj0;->b:Ljava/lang/Object;
 
-    iget-object v1, v0, Liu9;->Z:Lxc;
+    check-cast v0, Lgk4;
 
-    const-string v2, "LOCATION_MAP_TYPE_SATELLITE"
+    new-instance v1, Lkk4;
 
-    invoke-virtual {v1, v2}, Lxc;->f(Ljava/lang/String;)V
+    iget-object v2, v0, Lgk4;->c:Ljava/lang/String;
 
-    new-instance v1, Lej0;
+    iget v3, v0, Lgk4;->d:I
 
-    const/4 v2, 0x6
+    iget v4, v0, Lgk4;->e:I
 
-    invoke-direct {v1, v2}, Lej0;-><init>(I)V
+    iget-object v5, v0, Lgk4;->a:Lcz8;
 
-    invoke-virtual {v0, v1}, Le3;->k(Lqo3;)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lkk4;-><init>(Ljava/lang/String;IILcz8;)V
 
-    goto :goto_0
+    iget-object v0, v0, Lgk4;->b:Lz1g;
 
-    :pswitch_1
-    iget-object v0, p0, Lgj0;->b:Liu9;
+    if-eqz v0, :cond_0
 
-    iget-object v1, v0, Liu9;->Z:Lxc;
+    invoke-virtual {v1, v0}, Lfj0;->I(Lz1g;)V
 
-    const-string v2, "LOCATION_MAP_TYPE_NORMAL"
-
-    invoke-virtual {v1, v2}, Lxc;->f(Ljava/lang/String;)V
-
-    new-instance v1, Lej0;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v1, v2}, Lej0;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Le3;->k(Lqo3;)V
-
-    goto :goto_0
+    :cond_0
+    return-object v1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

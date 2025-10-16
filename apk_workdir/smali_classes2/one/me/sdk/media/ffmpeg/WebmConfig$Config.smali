@@ -22,16 +22,16 @@
         "",
         "Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;",
         "nativeLibraryLoader",
-        "Lsv9;",
+        "Lq3a;",
         "logger",
         "<init>",
-        "(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lsv9;)V",
+        "(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lq3a;)V",
         "Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;",
         "getNativeLibraryLoader",
         "()Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;",
-        "Lsv9;",
+        "Lq3a;",
         "getLogger",
-        "()Lsv9;",
+        "()Lq3a;",
         "media-ffmpeg_release"
     }
     k = 0x1
@@ -45,7 +45,7 @@
 
 
 # instance fields
-.field private final logger:Lsv9;
+.field private final logger:Lq3a;
 
 .field private final nativeLibraryLoader:Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
 
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;-><init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lsv9;ILaf4;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;-><init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lq3a;ILvh4;)V
 
     return-void
 .end method
@@ -72,12 +72,12 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, p1, v0, v1, v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;-><init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lsv9;ILaf4;)V
+    invoke-direct {p0, p1, v0, v1, v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;-><init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lq3a;ILvh4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lsv9;)V
+.method public constructor <init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lq3a;)V
     .locals 0
 
     .line 3
@@ -87,12 +87,12 @@
     iput-object p1, p0, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->nativeLibraryLoader:Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
 
     .line 5
-    iput-object p2, p0, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->logger:Lsv9;
+    iput-object p2, p0, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->logger:Lq3a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lsv9;ILaf4;)V
+.method public constructor <init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lq3a;ILvh4;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -100,12 +100,12 @@
     if-eqz p4, :cond_0
 
     .line 6
-    sget-object p1, Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;->Companion:Lsm5;
+    sget-object p1, Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;->Companion:Lhq5;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
-    sget-object p1, Lsm5;->b:Lrm5;
+    sget-object p1, Lhq5;->b:Lgq5;
 
     :cond_0
     and-int/lit8 p3, p3, 0x2
@@ -113,21 +113,21 @@
     if-eqz p3, :cond_1
 
     .line 8
-    sget-object p2, Lrv9;->a:Lku3;
+    sget-object p2, Lp3a;->a:Leh2;
 
     .line 9
     :cond_1
-    invoke-direct {p0, p1, p2}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;-><init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lsv9;)V
+    invoke-direct {p0, p1, p2}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;-><init>(Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;Lq3a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getLogger()Lsv9;
+.method public final getLogger()Lq3a;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->logger:Lsv9;
+    iget-object v0, p0, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->logger:Lq3a;
 
     return-object v0
 .end method

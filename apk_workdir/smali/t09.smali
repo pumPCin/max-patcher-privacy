@@ -1,13 +1,8 @@
-.class public abstract Lt09;
+.class public interface abstract Lt09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/widget/PopupWindow;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setTouchModal(Z)V
-
-    return-void
+# virtual methods
+.method public abstract m(Liz8;Loy8;I)Ljava/lang/Object;
 .end method

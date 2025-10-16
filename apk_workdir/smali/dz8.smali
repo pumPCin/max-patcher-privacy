@@ -1,109 +1,98 @@
-.class public final Ldz8;
-.super Lc2f;
+.class public final synthetic Ldz8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lq8h;
+.field public final synthetic b:Liz8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lq8h;)V
+.method public synthetic constructor <init>(Liz8;I)V
     .locals 0
 
-    iput-object p1, p0, Ldz8;->X:Ljava/lang/Object;
+    iput p2, p0, Ldz8;->a:I
 
-    iput-object p3, p0, Ldz8;->Y:Lq8h;
+    iput-object p1, p0, Ldz8;->b:Liz8;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Ln24;
+    iget v0, p0, Ldz8;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ldz8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ldz8;->b:Liz8;
 
-    move-result-object p1
+    invoke-virtual {v0}, Liz8;->u()V
 
-    check-cast p1, Ldz8;
+    return-void
 
-    sget-object p2, Laxf;->a:Laxf;
+    :pswitch_0
+    iget-object v0, p0, Ldz8;->b:Liz8;
 
-    invoke-virtual {p1, p2}, Ldz8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Liz8;->a(Liz8;)V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
-.end method
+    :pswitch_1
+    iget-object v0, p0, Ldz8;->b:Liz8;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v1, v0, Liz8;->w:Lx85;
 
-    new-instance p1, Ldz8;
+    if-eqz v1, :cond_0
 
-    iget-object v0, p0, Ldz8;->X:Ljava/lang/Object;
+    iget-object v0, v0, Liz8;->k:Lqy8;
 
-    iget-object v1, p0, Ldz8;->Y:Lq8h;
+    iget-object v1, v1, Lx85;->b:Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p2, v1}, Ldz8;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lq8h;)V
+    check-cast v1, Lone/me/android/media/service/OneMeMediaSessionService;
 
-    return-object p1
-.end method
+    const/4 v2, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldz8;->X:Ljava/lang/Object;
-
-    check-cast p1, Lr82;
-
-    iget-object v0, p0, Ldz8;->Y:Lq8h;
-
-    iget-object v0, v0, Lq8h;->e:Ljava/lang/Object;
-
-    check-cast v0, Lh4f;
-
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpeb;
-
-    invoke-virtual {p1}, Lr82;->l()Lro3;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0, p1}, Lpeb;->a(Lro3;)Lkdb;
-
-    move-result-object p1
-
-    return-object p1
+    invoke-virtual {v1, v0, v2}, Lone/me/android/media/service/OneMeMediaSessionService;->k(Lqy8;Z)Z
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    return-void
 
-    const-string v0, "Required value was null."
+    :pswitch_2
+    iget-object v0, p0, Ldz8;->b:Liz8;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v1, v0, Liz8;->v:Lgz8;
 
-    throw p1
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Liz8;->t:Lrtb;
+
+    invoke-virtual {v0}, Lrtb;->m0()V
+
+    iget-object v2, v0, Lrtb;->a:Ldi5;
+
+    new-instance v3, Lbd6;
+
+    invoke-direct {v3, v0, v1}, Lbd6;-><init>(Lrtb;Lisb;)V
+
+    invoke-virtual {v2, v3}, Ldi5;->p1(Lisb;)V
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

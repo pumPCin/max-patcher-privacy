@@ -1,370 +1,126 @@
-.class public final Lug;
+.class public final synthetic Lug;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lgm4;
+.field public final synthetic a:I
 
-.field public final b:Lkuc;
+.field public final synthetic b:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lgm4;Lkuc;)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
+    iput p2, p0, Lug;->a:I
+
+    iput-object p1, p0, Lug;->b:Landroid/view/View;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lug;->a:Lgm4;
-
-    iput-object p2, p0, Lug;->b:Lkuc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Lug;->b:Lkuc;
+    iget v0, p0, Lug;->a:I
 
-    invoke-virtual {v0}, Lkuc;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lug;->b:Landroid/view/View;
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object v1
 
-    move-result v0
+    const-class v2, Landroid/view/inputmethod/InputMethodManager;
 
-    return v0
-.end method
+    invoke-static {v1, v2}, Ln04;->b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
 
-.method public final b(Landroid/view/View;)Lvn4;
-    .locals 10
+    move-result-object v1
 
-    invoke-virtual {p0}, Lug;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Landroid/view/animation/TranslateAnimation;
-
-    const/4 v8, 0x1
-
-    const/high16 v9, 0x3f800000    # 1.0f
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v1 .. v9}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
-
-    iget-object v0, p0, Lug;->a:Lgm4;
-
-    invoke-virtual {v0}, Lgm4;->f()Landroid/view/animation/Interpolator;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    new-instance v0, Lkg;
+    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v2, p1}, Lkg;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v1, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    invoke-virtual {v1, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    return-void
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+    :pswitch_0
+    iget-object v0, p0, Lug;->b:Landroid/view/View;
 
-    new-instance p1, Lvn4;
-
-    invoke-direct {p1, v1}, Lvn4;-><init>(Landroid/view/animation/TranslateAnimation;)V
-
-    return-object p1
-
-    :cond_0
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object p1, Lvn4;->o:Lvn4;
-
-    return-object p1
-.end method
-
-.method public final c(Landroid/view/View;)Lvn4;
-    .locals 4
-
-    invoke-virtual {p0}, Lug;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lvn4;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    const-string v2, "input_method"
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lug;->a:Lgm4;
-
-    invoke-virtual {v2}, Lgm4;->o()Landroid/view/animation/Interpolator;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    new-instance v2, Llg;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p1, v3}, Llg;-><init>(Landroid/view/View;I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lvn4;-><init>(Landroid/view/ViewPropertyAnimator;)V
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object p1, Lvn4;->o:Lvn4;
-
-    return-object p1
-.end method
-
-.method public final d(Landroid/view/View;)Lvn4;
-    .locals 4
-
-    invoke-virtual {p0}, Lug;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lvn4;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
+    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v1, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    move-result-object v1
+    return-void
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
+    :pswitch_1
+    iget-object v0, p0, Lug;->b:Landroid/view/View;
 
-    move-result-object v1
+    const/16 v1, 0x8
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object v1
+    return-void
 
-    iget-object v2, p0, Lug;->a:Lgm4;
-
-    invoke-virtual {v2}, Lgm4;->f()Landroid/view/animation/Interpolator;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    new-instance v2, Llg;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, p1, v3}, Llg;-><init>(Landroid/view/View;I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lvn4;-><init>(Landroid/view/ViewPropertyAnimator;)V
-
-    return-object v0
-
-    :cond_0
+    :pswitch_2
     const/16 v0, 0x8
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    iget-object v1, p0, Lug;->b:Landroid/view/View;
 
-    sget-object p1, Lvn4;->o:Lvn4;
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    return-object p1
-.end method
+    const/high16 v0, 0x3f800000    # 1.0f
 
-.method public final e(Landroid/view/View;)Lvn4;
-    .locals 4
+    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {p0}, Lug;->a()Z
+    return-void
 
-    move-result v0
+    :pswitch_3
+    iget-object v0, p0, Lug;->b:Landroid/view/View;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    new-instance v0, Lvn4;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    return-void
 
-    move-result-object v1
+    :pswitch_4
+    iget-object v0, p0, Lug;->b:Landroid/view/View;
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object v1
+    return-void
 
-    iget-object v2, p0, Lug;->a:Lgm4;
-
-    invoke-virtual {v2}, Lgm4;->d()Landroid/view/animation/Interpolator;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    new-instance v2, Llg;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Llg;-><init>(Landroid/view/View;I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lvn4;-><init>(Landroid/view/ViewPropertyAnimator;)V
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object p1, Lvn4;->o:Lvn4;
-
-    return-object p1
-.end method
-
-.method public final f(Landroid/view/View;)Lvn4;
-    .locals 4
-
-    invoke-virtual {p0}, Lug;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lvn4;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lug;->a:Lgm4;
-
-    invoke-virtual {v2}, Lgm4;->f()Landroid/view/animation/Interpolator;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    new-instance v2, Llg;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, p1, v3}, Llg;-><init>(Landroid/view/View;I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lvn4;-><init>(Landroid/view/ViewPropertyAnimator;)V
-
-    return-object v0
-
-    :cond_0
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object p1, Lvn4;->o:Lvn4;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

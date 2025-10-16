@@ -1,55 +1,20 @@
-.class public abstract Lr4a;
+.class public interface abstract Lr4a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
-
-    move-result-object p0
-
-    return-object p0
+# virtual methods
+.method public abstract i(Landroid/view/View;IIIII)V
 .end method
 
-.method public static b(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomBigContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract j(Landroid/view/View;Landroid/view/View;II)Z
 .end method
 
-.method public static c(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract k(Landroid/view/View;Landroid/view/View;II)V
 .end method
 
-.method public static d(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomHeadsUpContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract l(Landroid/view/View;I)V
 .end method
 
-.method public static e(Landroid/app/Notification$Builder;[Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setRemoteInputHistory([Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract m(Landroid/view/View;II[II)V
 .end method

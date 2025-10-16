@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/views/widgets/AvatarCropView;
-.super Lxah;
+.super Lqqh;
 .source "SourceFile"
 
 
@@ -24,14 +24,14 @@
 
 .field public M0:I
 
-.field public N0:Llc0;
+.field public N0:Lxc0;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxah;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lqqh;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
@@ -47,47 +47,47 @@
 .method public final a(Landroid/graphics/Matrix;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lxah;->a(Landroid/graphics/Matrix;)V
+    invoke-super {p0, p1}, Lqqh;->a(Landroid/graphics/Matrix;)V
 
-    iget-object p1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->N0:Llc0;
+    iget-object p1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->N0:Lxc0;
 
-    invoke-interface {p1}, Llc0;->t()V
+    invoke-interface {p1}, Lxc0;->t()V
 
     return-void
 .end method
 
-.method public final h(Lw37;)V
+.method public final h(Lb97;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lxah;->h(Lw37;)V
+    invoke-super {p0, p1}, Lqqh;->h(Lb97;)V
 
-    invoke-interface {p1}, Lw37;->getWidth()I
+    invoke-interface {p1}, Lb97;->getWidth()I
 
     move-result p1
 
     iput p1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->L0:I
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object p1
 
-    check-cast p1, Ll44;
+    check-cast p1, Lz64;
 
-    invoke-virtual {p1}, Ll44;->e()V
+    invoke-virtual {p1}, Lz64;->e()V
 
     iget p1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->M0:I
 
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object p1
 
-    check-cast p1, Ll44;
+    check-cast p1, Lz64;
 
     iget v0, p0, Lru/ok/messages/views/widgets/AvatarCropView;->L0:I
 
-    invoke-virtual {p1, v0}, Ll44;->d(I)V
+    invoke-virtual {p1, v0}, Lz64;->d(I)V
 
     :cond_0
     return-void
@@ -96,13 +96,13 @@
 .method public final k()Z
     .locals 5
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object v0
 
-    check-cast v0, Ll44;
+    check-cast v0, Lz64;
 
-    iget-boolean v1, v0, Lzl4;->d:Z
+    iget-boolean v1, v0, Lxo4;->d:Z
 
     const/4 v2, 0x0
 
@@ -111,9 +111,9 @@
     return v2
 
     :cond_0
-    iget-object v1, v0, Lzl4;->k:Landroid/graphics/Matrix;
+    iget-object v1, v0, Lxo4;->k:Landroid/graphics/Matrix;
 
-    invoke-static {v1, v2}, Lpr0;->q(Landroid/graphics/Matrix;I)F
+    invoke-static {v1, v2}, Ljyh;->b(Landroid/graphics/Matrix;I)F
 
     move-result v1
 
@@ -137,11 +137,11 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lk00;
+    new-instance v3, Lx00;
 
     const/16 v4, 0x9
 
-    invoke-direct {v3, v4, v0}, Lk00;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, v0}, Lx00;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -157,35 +157,35 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lgq4;->a()Lgq4;
+    invoke-static {}, Lft4;->a()Lft4;
 
     move-result-object v0
 
-    iget v1, v0, Lgq4;->n:I
+    iget v1, v0, Lft4;->n:I
 
     iput v1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->D0:I
 
-    iget v2, v0, Lgq4;->y:I
+    iget v2, v0, Lft4;->y:I
 
     iput v2, p0, Lru/ok/messages/views/widgets/AvatarCropView;->E0:I
 
     iput v1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->F0:I
 
-    iget v1, v0, Lgq4;->w:I
+    iget v1, v0, Lft4;->w:I
 
     iput v1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->G0:I
 
-    invoke-static {}, Lum;->b()Ljg3;
+    invoke-static {}, Len;->b()Lri3;
 
     move-result-object v1
 
-    check-cast v1, Lnja;
+    check-cast v1, Lqra;
 
-    invoke-virtual {v1}, Lnja;->j()Lpnb;
+    invoke-virtual {v1}, Lqra;->j()Llwb;
 
     move-result-object v1
 
-    iget-object v1, v1, Lpnb;->b:Lhlb;
+    iget-object v1, v1, Llwb;->b:Lbub;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -195,25 +195,25 @@
 
     int-to-long v3, v3
 
-    invoke-virtual {v1, v2, v3, v4}, Lohd;->m(Ljava/lang/Enum;J)J
+    invoke-virtual {v1, v2, v3, v4}, Lpsd;->m(Ljava/lang/Enum;J)J
 
     move-result-wide v1
 
     long-to-int v1, v1
 
-    new-instance v2, Ll44;
+    new-instance v2, Lz64;
 
-    new-instance v3, Lzab;
+    new-instance v3, Lshf;
 
-    new-instance v4, Lc17;
+    new-instance v4, La6;
 
-    invoke-direct {v4}, Lc17;-><init>()V
+    invoke-direct {v4}, La6;-><init>()V
 
-    invoke-direct {v3, v4}, Lzab;-><init>(Lc17;)V
+    invoke-direct {v3, v4}, Lshf;-><init>(La6;)V
 
-    invoke-direct {v2, v3, v1}, Ll44;-><init>(Lzab;I)V
+    invoke-direct {v2, v3, v1}, Lz64;-><init>(Lshf;I)V
 
-    invoke-virtual {p0, v2}, Lxah;->setZoomableController(Luah;)V
+    invoke-virtual {p0, v2}, Lqqh;->setZoomableController(Lnqh;)V
 
     new-instance v1, Landroid/graphics/Path;
 
@@ -233,17 +233,17 @@
 
     iput-object v1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->I0:Landroid/graphics/Paint;
 
-    sget-object v2, Lrw4;->t0:Lss6;
+    sget-object v2, Lsz4;->t0:Lc82;
 
-    invoke-virtual {v2, p0}, Lss6;->v(Landroid/view/View;)Llwa;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Llwa;->b()Lme0;
+    invoke-virtual {v2, p0}, Lc82;->g(Landroid/view/View;)Lu4b;
 
     move-result-object v2
 
-    iget v2, v2, Lme0;->f:I
+    invoke-interface {v2}, Lu4b;->b()Lwe0;
+
+    move-result-object v2
+
+    iget v2, v2, Lwe0;->f:I
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -263,7 +263,7 @@
 
     move-result-object v3
 
-    sget v4, Lt7d;->d:I
+    sget v4, Lqid;->d:I
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -283,7 +283,7 @@
 
     iget-object v1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->J0:Landroid/graphics/Paint;
 
-    iget v0, v0, Lgq4;->a:I
+    iget v0, v0, Lft4;->a:I
 
     int-to-float v0, v0
 
@@ -295,15 +295,15 @@
 .method public final m()V
     .locals 3
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object v0
 
-    check-cast v0, Ll44;
+    check-cast v0, Lz64;
 
-    invoke-virtual {v0}, Ll44;->reset()V
+    invoke-virtual {v0}, Lz64;->reset()V
 
-    invoke-virtual {v0}, Ll44;->e()V
+    invoke-virtual {v0}, Lz64;->e()V
 
     iget v1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->L0:I
 
@@ -313,18 +313,18 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object v1
 
-    check-cast v1, Ll44;
+    check-cast v1, Lz64;
 
     iget v2, p0, Lru/ok/messages/views/widgets/AvatarCropView;->L0:I
 
-    invoke-virtual {v1, v2}, Ll44;->d(I)V
+    invoke-virtual {v1, v2}, Lz64;->d(I)V
 
     :cond_0
-    iget-object v0, v0, Lzl4;->k:Landroid/graphics/Matrix;
+    iget-object v0, v0, Lxo4;->k:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, v0}, Lru/ok/messages/views/widgets/AvatarCropView;->a(Landroid/graphics/Matrix;)V
 
@@ -334,13 +334,13 @@
 .method public final n()Z
     .locals 6
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object v0
 
-    check-cast v0, Ll44;
+    check-cast v0, Lz64;
 
-    iget-boolean v1, v0, Lzl4;->d:Z
+    iget-boolean v1, v0, Lxo4;->d:Z
 
     const/4 v2, 0x0
 
@@ -349,7 +349,7 @@
     return v2
 
     :cond_0
-    iget v1, v0, Ll44;->p:F
+    iget v1, v0, Lz64;->p:F
 
     const/4 v3, 0x1
 
@@ -367,11 +367,11 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    new-instance v4, Ld5d;
+    new-instance v4, Lzfd;
 
     const/4 v5, 0x2
 
-    invoke-direct {v4, v0, v1, v5}, Ld5d;-><init>(Ljava/lang/Object;FI)V
+    invoke-direct {v4, v0, v1, v5}, Lzfd;-><init>(Ljava/lang/Object;FI)V
 
     invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -385,7 +385,7 @@
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 13
 
-    invoke-super {p0, p1}, Lxah;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Lqqh;->onDraw(Landroid/graphics/Canvas;)V
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
@@ -542,17 +542,17 @@
 .method public final onLayout(ZIIII)V
     .locals 0
 
-    invoke-super/range {p0 .. p5}, Lxah;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Lqqh;->onLayout(ZIIII)V
 
     move-object p1, p0
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object p2
 
-    check-cast p2, Ll44;
+    check-cast p2, Lz64;
 
-    invoke-virtual {p2}, Ll44;->e()V
+    invoke-virtual {p2}, Lz64;->e()V
 
     iget p2, p1, Lru/ok/messages/views/widgets/AvatarCropView;->L0:I
 
@@ -562,15 +562,15 @@
 
     if-nez p2, :cond_0
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object p2
 
-    check-cast p2, Ll44;
+    check-cast p2, Lz64;
 
     iget p3, p1, Lru/ok/messages/views/widgets/AvatarCropView;->L0:I
 
-    invoke-virtual {p2, p3}, Ll44;->d(I)V
+    invoke-virtual {p2, p3}, Lz64;->d(I)V
 
     :cond_0
     return-void
@@ -579,7 +579,7 @@
 .method public final onMeasure(II)V
     .locals 8
 
-    invoke-super {p0, p1, p2}, Lwx4;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lx05;->onMeasure(II)V
 
     iget p1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->M0:I
 
@@ -767,15 +767,15 @@
 
     invoke-virtual {p2, v1, v2, v3, p1}, Landroid/graphics/Rect;->set(IIII)V
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object p1
 
-    check-cast p1, Ll44;
+    check-cast p1, Lz64;
 
     iget-object p2, p0, Lru/ok/messages/views/widgets/AvatarCropView;->K0:Landroid/graphics/Rect;
 
-    iput-object p2, p1, Ll44;->m:Landroid/graphics/Rect;
+    iput-object p2, p1, Lz64;->m:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -795,15 +795,15 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object p1
 
-    check-cast p1, Ll44;
+    check-cast p1, Lz64;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Ll44;->o:Z
+    iput-boolean v0, p1, Lz64;->o:Z
 
     return-void
 
@@ -814,21 +814,21 @@
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    invoke-virtual {p0}, Lxah;->getZoomableController()Luah;
+    invoke-virtual {p0}, Lqqh;->getZoomableController()Lnqh;
 
     move-result-object p1
 
-    check-cast p1, Ll44;
+    check-cast p1, Lz64;
 
-    iput-boolean v0, p1, Ll44;->o:Z
+    iput-boolean v0, p1, Lz64;->o:Z
 
     return-void
 .end method
 
-.method public setTransformChangeListener(Llc0;)V
+.method public setTransformChangeListener(Lxc0;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->N0:Llc0;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/AvatarCropView;->N0:Lxc0;
 
     return-void
 .end method

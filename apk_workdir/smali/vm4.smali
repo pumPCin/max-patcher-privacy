@@ -1,49 +1,64 @@
-.class public final Lvm4;
+.class public final synthetic Lvm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/lang/String;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lzo6;
+.field public final synthetic a:I
 
-.field public final b:Lt55;
-
-.field public final c:Ljava/util/HashMap;
+.field public final synthetic b:Lyt1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lyt1;I)V
+    .locals 0
 
-    const-string v0, "DelayedWorkTracker"
+    iput p2, p0, Lvm4;->a:I
 
-    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Lvm4;->b:Lyt1;
 
-    move-result-object v0
-
-    sput-object v0, Lvm4;->d:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lzo6;Lt55;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Lvm4;->a:Lzo6;
+    iget v0, p0, Lvm4;->a:I
 
-    iput-object p2, p0, Lvm4;->b:Lt55;
+    packed-switch v0, :pswitch_data_0
 
-    new-instance p1, Ljava/util/HashMap;
+    iget-object v0, p0, Lvm4;->b:Lyt1;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lvm4;->c:Ljava/util/HashMap;
+    invoke-virtual {v0, v1}, Lyt1;->b(Ljava/lang/Object;)Z
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/Exception;
+
+    const-string v1, "Failed to snapshot: OpenGLRenderer not ready."
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvm4;->b:Lyt1;
+
+    invoke-virtual {v1, v0}, Lyt1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

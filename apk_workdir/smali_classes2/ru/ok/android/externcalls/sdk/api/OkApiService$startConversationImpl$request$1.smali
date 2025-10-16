@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/api/OkApiService$startConversationImpl$request$1;
-.super Lye6;
+.super Lti6;
 .source "SourceFile"
 
 # interfaces
-.implements Lne6;
+.implements Lii6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->startConversationImpl(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lrce;
+    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->startConversationImpl(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lqoe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lye6;",
-        "Lne6;"
+        "Lti6;",
+        "Lii6;"
     }
 .end annotation
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -69,16 +69,16 @@
 
     check-cast p3, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;
 
-    check-cast p4, Luk0;
+    check-cast p4, Lnl0;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/api/OkApiService$startConversationImpl$request$1;->invoke(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Luk0;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/api/OkApiService$startConversationImpl$request$1;->invoke(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lnl0;)V
 
-    sget-object p1, Laxf;->a:Laxf;
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method
 
-.method public final invoke(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Luk0;)V
+.method public final invoke(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lnl0;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -88,17 +88,17 @@
             "Ljava/lang/Long;",
             ">;",
             "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
-            "Luk0;",
+            "Lnl0;",
             ")V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lps1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lst1;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/api/OkApiService;->addCreateConversationParams(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Luk0;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/api/OkApiService;->addCreateConversationParams(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lnl0;)V
 
     return-void
 .end method

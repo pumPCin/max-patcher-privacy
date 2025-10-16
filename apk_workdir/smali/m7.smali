@@ -1,34 +1,17 @@
 .class public final Lm7;
-.super Ljava/lang/Object;
+.super Lvw7;
 .source "SourceFile"
 
-# interfaces
-.implements Lb1a;
 
+# instance fields
+.field public a:Z
 
-# static fields
-.field public static final a:Lm7;
+.field public b:I
 
+.field public c:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public d:Z
 
-    new-instance v0, Lm7;
+.field public e:Z
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lm7;->a:Lm7;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Active"
-
-    return-object v0
-.end method
+.field public f:Z

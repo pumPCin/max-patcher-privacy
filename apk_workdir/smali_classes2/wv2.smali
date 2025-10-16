@@ -1,24 +1,23 @@
 .class public final Lwv2;
-.super Ljava/lang/Object;
+.super Lgd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lxv2;
 
 
 # static fields
-.field public static final a:Lwv2;
+.field public static final b:Lwv2;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lwv2;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x4
 
-    sput-object v0, Lwv2;->a:Lwv2;
+    invoke-direct {v0, v1}, Lgd0;-><init>(I)V
+
+    sput-object v0, Lwv2;->b:Lwv2;
 
     return-void
 .end method
@@ -50,7 +49,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x59c2e32f
+    const v0, 0x74a363af
 
     return v0
 .end method
@@ -58,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "InvalidateAll"
+    const-string v0, "RequestCameraPermission"
 
     return-object v0
 .end method

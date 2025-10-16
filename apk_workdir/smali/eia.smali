@@ -1,937 +1,215 @@
-.class public abstract Leia;
-.super Ljava/lang/Object;
+.class public final Leia;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Lev4;
+.implements Lcka;
 
-# static fields
-.field public static final A:I
 
-.field public static final A0:I
+# instance fields
+.field public X:Lev4;
 
-.field public static final A1:I
+.field public volatile Y:Z
 
-.field public static final B:I
+.field public final a:Ltg3;
 
-.field public static final B0:I
+.field public final b:Lcz;
 
-.field public static final B1:I
+.field public final c:Lfi6;
 
-.field public static final C:I
-
-.field public static final C0:I
-
-.field public static final C1:I
-
-.field public static final D:I
-
-.field public static final D0:I
-
-.field public static final D1:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final E1:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final F1:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final G1:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final H1:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final I1:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final J1:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final K1:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final L1:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final M1:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final N1:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final O1:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final P1:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final Q1:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final R1:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final S1:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final T1:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final U1:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final V1:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final W1:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final X1:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final b1:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final c1:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final d1:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final e1:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final f1:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final g1:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final h1:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final i1:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final j1:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final k1:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final l1:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final m1:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final n1:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final o1:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final p1:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final q1:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final r1:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final s1:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final t1:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final u1:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final v1:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final w1:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final x1:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final y1:I
-
-.field public static final z:I
-
-.field public static final z0:I
-
-.field public static final z1:I
+.field public final o:Lai3;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ltg3;Lfi6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object p1, p0, Leia;->a:Ltg3;
+
+    iput-object p2, p0, Leia;->c:Lfi6;
+
+    new-instance p1, Lcz;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Leia;->b:Lcz;
+
+    new-instance p1, Lai3;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leia;->o:Lai3;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Leia;->b:Lcz;
+
+    iget-object v1, p0, Leia;->a:Ltg3;
+
+    invoke-virtual {v0, v1}, Lcz;->c(Ltg3;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Lev4;)V
     .locals 1
 
-    sget v0, Lecc;->call_admin_settings_camera_in_call:I
+    iget-object v0, p0, Leia;->X:Lev4;
 
-    sput v0, Leia;->a:I
+    invoke-static {v0, p1}, Liv4;->j(Lev4;Lev4;)Z
 
-    sget v0, Lecc;->call_admin_settings_disable_all_cameras_once:I
+    move-result v0
 
-    sput v0, Leia;->b:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lecc;->call_admin_settings_disable_all_hands_once:I
+    iput-object p1, p0, Leia;->X:Lev4;
 
-    sput v0, Leia;->c:I
+    iget-object p1, p0, Leia;->a:Ltg3;
 
-    sget v0, Lecc;->call_admin_settings_disable_all_mic_once:I
+    invoke-interface {p1, p0}, Ltg3;->c(Lev4;)V
 
-    sput v0, Leia;->d:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lecc;->call_admin_settings_header_bottom_vh:I
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
 
-    sput v0, Leia;->e:I
+    :try_start_0
+    iget-object v0, p0, Leia;->c:Lfi6;
 
-    sget v0, Lecc;->call_admin_settings_header_vh:I
+    invoke-interface {v0, p1}, Lfi6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput v0, Leia;->f:I
+    move-result-object p1
 
-    sget v0, Lecc;->call_admin_settings_item_vh:I
+    const-string v0, "The mapper returned a null CompletableSource"
 
-    sput v0, Leia;->g:I
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    sget v0, Lecc;->call_admin_settings_mic_in_call:I
+    check-cast p1, Ljg3;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Leia;->h:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sget v0, Lecc;->call_admin_settings_screen_record_in_call:I
+    new-instance v0, Llg3;
 
-    sput v0, Leia;->i:I
+    invoke-direct {v0, p0}, Llg3;-><init>(Leia;)V
 
-    sget v0, Lecc;->call_admin_settings_screen_sharing_in_call:I
+    iget-boolean v1, p0, Leia;->Y:Z
 
-    sput v0, Leia;->j:I
+    if-nez v1, :cond_0
 
-    sget v0, Lecc;->call_admins_settings_waiting_room:I
+    iget-object v1, p0, Leia;->o:Lai3;
 
-    sput v0, Leia;->k:I
+    invoke-virtual {v1, v0}, Lai3;->a(Lev4;)Z
 
-    sget v0, Lecc;->call_animation_background_fade:I
+    move-result v1
 
-    sput v0, Leia;->l:I
+    if-eqz v1, :cond_0
 
-    sget v0, Lecc;->call_animation_fade:I
+    invoke-virtual {p1, v0}, Ljg3;->h(Ltg3;)V
 
-    sput v0, Leia;->m:I
+    :cond_0
+    return-void
 
-    sget v0, Lecc;->call_animation_indicator_show_tag:I
+    :catchall_0
+    move-exception p1
 
-    sput v0, Leia;->n:I
+    invoke-static {p1}, Lnzi;->b(Ljava/lang/Throwable;)V
 
-    sget v0, Lecc;->call_bottom_control_container:I
+    iget-object v0, p0, Leia;->X:Lev4;
 
-    sput v0, Leia;->o:I
+    invoke-interface {v0}, Lev4;->g()V
 
-    sget v0, Lecc;->call_context_action_chat:I
+    invoke-virtual {p0, p1}, Leia;->onError(Ljava/lang/Throwable;)V
 
-    sput v0, Leia;->p:I
+    return-void
+.end method
 
-    sget v0, Lecc;->call_context_action_open_profile:I
+.method public final g()V
+    .locals 1
 
-    sput v0, Leia;->q:I
+    const/4 v0, 0x1
 
-    sget v0, Lecc;->call_context_action_record_screen:I
+    iput-boolean v0, p0, Leia;->Y:Z
 
-    sput v0, Leia;->r:I
+    iget-object v0, p0, Leia;->X:Lev4;
 
-    sget v0, Lecc;->call_context_action_record_screen_unavailable:I
+    invoke-interface {v0}, Lev4;->g()V
 
-    sput v0, Leia;->s:I
+    iget-object v0, p0, Leia;->o:Lai3;
 
-    sget v0, Lecc;->call_context_action_settings:I
+    invoke-virtual {v0}, Lai3;->g()V
 
-    sput v0, Leia;->t:I
+    iget-object v0, p0, Leia;->b:Lcz;
 
-    sget v0, Lecc;->call_context_action_share_screen:I
+    invoke-virtual {v0}, Lcz;->b()V
 
-    sput v0, Leia;->u:I
+    return-void
+.end method
 
-    sget v0, Lecc;->call_context_action_share_screen_unavailable:I
+.method public final h()Z
+    .locals 1
 
-    sput v0, Leia;->v:I
+    iget-object v0, p0, Leia;->X:Lev4;
 
-    sget v0, Lecc;->call_context_action_user_camera_rotate:I
+    invoke-interface {v0}, Lev4;->h()Z
 
-    sput v0, Leia;->w:I
+    move-result v0
 
-    sget v0, Lecc;->call_context_action_user_low_hand:I
+    return v0
+.end method
 
-    sput v0, Leia;->x:I
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    sget v0, Lecc;->call_context_action_user_pin:I
+    iget-object v0, p0, Leia;->b:Lcz;
 
-    sput v0, Leia;->y:I
+    invoke-virtual {v0, p1}, Lcz;->a(Ljava/lang/Throwable;)Z
 
-    sget v0, Lecc;->call_context_action_user_unpin:I
+    move-result p1
 
-    sput v0, Leia;->z:I
+    if-eqz p1, :cond_0
 
-    sget v0, Lecc;->call_context_action_user_write_chat:I
+    const/4 p1, 0x1
 
-    sput v0, Leia;->A:I
+    iput-boolean p1, p0, Leia;->Y:Z
 
-    sget v0, Lecc;->call_context_action_write_chat:I
+    iget-object p1, p0, Leia;->X:Lev4;
 
-    sput v0, Leia;->B:I
+    invoke-interface {p1}, Lev4;->g()V
 
-    sget v0, Lecc;->call_context_dialog_invite_user_to_p2p:I
+    iget-object p1, p0, Leia;->o:Lai3;
 
-    sput v0, Leia;->C:I
+    invoke-virtual {p1}, Lai3;->g()V
 
-    sget v0, Lecc;->call_dynamic_type_bluetooth:I
+    iget-object p1, p0, Leia;->b:Lcz;
 
-    sput v0, Leia;->D:I
+    iget-object v0, p0, Leia;->a:Ltg3;
 
-    sget v0, Lecc;->call_dynamic_type_earpiece:I
+    invoke-virtual {p1, v0}, Lcz;->c(Ltg3;)V
 
-    sput v0, Leia;->E:I
-
-    sget v0, Lecc;->call_dynamic_type_speakerphone:I
-
-    sput v0, Leia;->F:I
-
-    sget v0, Lecc;->call_dynamic_type_unknown:I
-
-    sput v0, Leia;->G:I
-
-    sget v0, Lecc;->call_dynamic_type_wired_headset:I
-
-    sput v0, Leia;->H:I
-
-    sget v0, Lecc;->call_events_recyclerview:I
-
-    sput v0, Leia;->I:I
-
-    sget v0, Lecc;->call_ic_share_view:I
-
-    sput v0, Leia;->J:I
-
-    sget v0, Lecc;->call_incoming_avatar_preview_small:I
-
-    sput v0, Leia;->K:I
-
-    sget v0, Lecc;->call_incoming_camera_preview:I
-
-    sput v0, Leia;->L:I
-
-    sget v0, Lecc;->call_indicator_panel:I
-
-    sput v0, Leia;->M:I
-
-    sget v0, Lecc;->call_indicator_panel_container:I
-
-    sput v0, Leia;->N:I
-
-    sget v0, Lecc;->call_indicator_panel_fake:I
-
-    sput v0, Leia;->O:I
-
-    sget v0, Lecc;->call_indicator_time:I
-
-    sput v0, Leia;->P:I
-
-    sget v0, Lecc;->call_indicator_title:I
-
-    sput v0, Leia;->Q:I
-
-    sget v0, Lecc;->call_info_admin_setting_action_list:I
-
-    sput v0, Leia;->R:I
-
-    sget v0, Lecc;->call_info_admin_setting_toolbar:I
-
-    sput v0, Leia;->S:I
-
-    sget v0, Lecc;->call_invite_banner_close_btn:I
-
-    sput v0, Leia;->T:I
-
-    sget v0, Lecc;->call_invite_banner_copy_btn:I
-
-    sput v0, Leia;->U:I
-
-    sget v0, Lecc;->call_invite_banner_send_btn:I
-
-    sput v0, Leia;->V:I
-
-    sget v0, Lecc;->call_invite_banner_share_btn:I
-
-    sput v0, Leia;->W:I
-
-    sget v0, Lecc;->call_invite_banner_title_btn:I
-
-    sput v0, Leia;->X:I
-
-    sget v0, Lecc;->call_join_link_cancel:I
-
-    sput v0, Leia;->Y:I
-
-    sget v0, Lecc;->call_join_link_stack_avatar:I
-
-    sput v0, Leia;->Z:I
-
-    sget v0, Lecc;->call_join_link_title:I
-
-    sput v0, Leia;->a0:I
-
-    sget v0, Lecc;->call_join_link_with_ask_device_microphone_switch:I
-
-    sput v0, Leia;->b0:I
-
-    sget v0, Lecc;->call_join_link_with_ask_device_preview:I
-
-    sput v0, Leia;->c0:I
-
-    sget v0, Lecc;->call_join_link_with_ask_device_preview_container:I
-
-    sput v0, Leia;->d0:I
-
-    sget v0, Lecc;->call_join_link_with_ask_device_video_switch:I
-
-    sput v0, Leia;->e0:I
-
-    sget v0, Lecc;->call_loading:I
-
-    sput v0, Leia;->f0:I
-
-    sget v0, Lecc;->call_menu_record:I
-
-    sput v0, Leia;->g0:I
-
-    sget v0, Lecc;->call_more:I
-
-    sput v0, Leia;->h0:I
-
-    sget v0, Lecc;->call_more_action_call_chat_vh:I
-
-    sput v0, Leia;->i0:I
-
-    sget v0, Lecc;->call_more_action_record_vh:I
-
-    sput v0, Leia;->j0:I
-
-    sget v0, Lecc;->call_more_actions_list:I
-
-    sput v0, Leia;->k0:I
-
-    sget v0, Lecc;->call_more_actions_vh:I
-
-    sput v0, Leia;->l0:I
-
-    sget v0, Lecc;->call_more_popup_drag_layout:I
-
-    sput v0, Leia;->m0:I
-
-    sget v0, Lecc;->call_name_layout:I
-
-    sput v0, Leia;->n0:I
-
-    sget v0, Lecc;->call_opponent_info_buttons:I
-
-    sput v0, Leia;->o0:I
-
-    sget v0, Lecc;->call_pip_camera_preview:I
-
-    sput v0, Leia;->p0:I
-
-    sget v0, Lecc;->call_pip_container_id:I
-
-    sput v0, Leia;->q0:I
-
-    sget v0, Lecc;->call_pip_video:I
-
-    sput v0, Leia;->r0:I
-
-    sget v0, Lecc;->call_raise_hand:I
-
-    sput v0, Leia;->s0:I
-
-    sget v0, Lecc;->call_raise_hand_status:I
-
-    sput v0, Leia;->t0:I
-
-    sget v0, Lecc;->call_rate_button_group:I
-
-    sput v0, Leia;->u0:I
-
-    sget v0, Lecc;->call_rate_chip_group:I
-
-    sput v0, Leia;->v0:I
-
-    sget v0, Lecc;->call_rate_negative_button:I
-
-    sput v0, Leia;->w0:I
-
-    sget v0, Lecc;->call_rate_positive_button:I
-
-    sput v0, Leia;->x0:I
-
-    sget v0, Lecc;->call_rate_send_button:I
-
-    sput v0, Leia;->y0:I
-
-    sget v0, Lecc;->call_rate_toolbar:I
-
-    sput v0, Leia;->z0:I
-
-    sget v0, Lecc;->call_round_btn_counter:I
-
-    sput v0, Leia;->A0:I
-
-    sget v0, Lecc;->call_round_btn_icon:I
-
-    sput v0, Leia;->B0:I
-
-    sget v0, Lecc;->call_round_btn_title:I
-
-    sput v0, Leia;->C0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_add_users_check:I
-
-    sput v0, Leia;->D0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_add_users_neutral:I
-
-    sput v0, Leia;->E0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_add_users_positive:I
-
-    sput v0, Leia;->F0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_add_users_subtitle:I
-
-    sput v0, Leia;->G0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_add_users_title:I
-
-    sput v0, Leia;->H0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_remove_user_neutral:I
-
-    sput v0, Leia;->I0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_remove_user_positive:I
-
-    sput v0, Leia;->J0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_remove_user_subtitle:I
-
-    sput v0, Leia;->K0:I
-
-    sget v0, Lecc;->call_screen_admin_confirm_remove_user_title:I
-
-    sput v0, Leia;->L0:I
-
-    sget v0, Lecc;->call_screen_admin_user_in_wait_room_apply_all:I
-
-    sput v0, Leia;->M0:I
-
-    sget v0, Lecc;->call_screen_admin_user_in_wait_room_empty:I
-
-    sput v0, Leia;->N0:I
-
-    sget v0, Lecc;->call_screen_admin_user_in_wait_room_list:I
-
-    sput v0, Leia;->O0:I
-
-    sget v0, Lecc;->call_screen_admin_user_in_wait_room_more_vh:I
-
-    sput v0, Leia;->P0:I
-
-    sget v0, Lecc;->call_screen_admin_user_in_wait_room_reject_all:I
-
-    sput v0, Leia;->Q0:I
-
-    sget v0, Lecc;->call_screen_admin_user_in_wait_room_title:I
-
-    sput v0, Leia;->R0:I
-
-    sget v0, Lecc;->call_screen_admin_user_in_wait_room_vh:I
-
-    sput v0, Leia;->S0:I
-
-    sget v0, Lecc;->call_screen_camera_admin_remove_user:I
-
-    sput v0, Leia;->T0:I
-
-    sget v0, Lecc;->call_screen_camera_admin_stop_camera_user:I
-
-    sput v0, Leia;->U0:I
-
-    sget v0, Lecc;->call_screen_camera_admin_stop_mic_user:I
-
-    sput v0, Leia;->V0:I
-
-    sget v0, Lecc;->call_screen_camera_admin_stop_sharing_user:I
-
-    sput v0, Leia;->W0:I
-
-    sget v0, Lecc;->call_screen_container_id:I
-
-    sput v0, Leia;->X0:I
-
-    sget v0, Lecc;->call_screen_incoming_container_id:I
-
-    sput v0, Leia;->Y0:I
-
-    sget v0, Lecc;->call_screen_menu_grid_mode:I
-
-    sput v0, Leia;->Z0:I
-
-    sget v0, Lecc;->call_screen_menu_speaker_mode:I
-
-    sput v0, Leia;->a1:I
-
-    sget v0, Lecc;->call_screen_opponents_list_add_users:I
-
-    sput v0, Leia;->b1:I
-
-    sget v0, Lecc;->call_screen_opponents_list_invite_users:I
-
-    sput v0, Leia;->c1:I
-
-    sget v0, Lecc;->call_screen_opponents_list_link:I
-
-    sput v0, Leia;->d1:I
-
-    sget v0, Lecc;->call_screen_raisehand_manage_negative_btn:I
-
-    sput v0, Leia;->e1:I
-
-    sget v0, Lecc;->call_screen_raisehand_manage_positive_btn:I
-
-    sput v0, Leia;->f1:I
-
-    sget v0, Lecc;->call_screen_raisehand_manage_subtitle:I
-
-    sput v0, Leia;->g1:I
-
-    sget v0, Lecc;->call_screen_raisehand_manage_title:I
-
-    sput v0, Leia;->h1:I
-
-    sget v0, Lecc;->call_screen_record_admin_skip_record:I
-
-    sput v0, Leia;->i1:I
-
-    sget v0, Lecc;->call_screen_record_admin_stop_record:I
-
-    sput v0, Leia;->j1:I
-
-    sget v0, Lecc;->call_screen_record_manage_negative_btn:I
-
-    sput v0, Leia;->k1:I
-
-    sget v0, Lecc;->call_screen_record_manage_positive_btn:I
-
-    sput v0, Leia;->l1:I
-
-    sget v0, Lecc;->call_screen_record_manage_record_info:I
-
-    sput v0, Leia;->m1:I
-
-    sget v0, Lecc;->call_screen_record_manage_record_need_remove:I
-
-    sput v0, Leia;->n1:I
-
-    sget v0, Lecc;->call_screen_record_manage_subtitle:I
-
-    sput v0, Leia;->o1:I
-
-    sget v0, Lecc;->call_screen_record_manage_title:I
-
-    sput v0, Leia;->p1:I
-
-    sget v0, Lecc;->call_screen_record_me_owner_exit_negative:I
-
-    sput v0, Leia;->q1:I
-
-    sget v0, Lecc;->call_screen_record_me_owner_exit_positive:I
-
-    sput v0, Leia;->r1:I
-
-    sget v0, Lecc;->call_screen_record_start_name:I
-
-    sput v0, Leia;->s1:I
-
-    sget v0, Lecc;->call_screen_record_start_target_chat:I
-
-    sput v0, Leia;->t1:I
-
-    sget v0, Lecc;->call_screen_record_start_target_start_btn:I
-
-    sput v0, Leia;->u1:I
-
-    sget v0, Lecc;->call_screen_record_start_title:I
-
-    sput v0, Leia;->v1:I
-
-    sget v0, Lecc;->call_settings:I
-
-    sput v0, Leia;->w1:I
-
-    sget v0, Lecc;->call_share_screen_stop_share_btn:I
-
-    sput v0, Leia;->x1:I
-
-    sget v0, Lecc;->call_share_screen_subtitle_view:I
-
-    sput v0, Leia;->y1:I
-
-    sget v0, Lecc;->call_share_screen_title_view:I
-
-    sput v0, Leia;->z1:I
-
-    sget v0, Lecc;->call_share_sound_switch:I
-
-    sput v0, Leia;->A1:I
-
-    sget v0, Lecc;->call_top_control_container:I
-
-    sput v0, Leia;->B1:I
-
-    sget v0, Lecc;->call_user_full_avatar:I
-
-    sput v0, Leia;->C1:I
-
-    sget v0, Lecc;->call_user_full_name:I
-
-    sput v0, Leia;->D1:I
-
-    sget v0, Lecc;->call_user_full_status:I
-
-    sput v0, Leia;->E1:I
-
-    sget v0, Lecc;->call_user_small_avatar:I
-
-    sput v0, Leia;->F1:I
-
-    sget v0, Lecc;->call_user_top_spacer:I
-
-    sput v0, Leia;->G1:I
-
-    sget v0, Lecc;->call_users_action_negative:I
-
-    sput v0, Leia;->H1:I
-
-    sget v0, Lecc;->call_users_action_one_positive:I
-
-    sput v0, Leia;->I1:I
-
-    sget v0, Lecc;->call_users_action_two_positive:I
-
-    sput v0, Leia;->J1:I
-
-    sget v0, Lecc;->call_users_blocked_label:I
-
-    sput v0, Leia;->K1:I
-
-    sget v0, Lecc;->call_users_large_label_view:I
-
-    sput v0, Leia;->L1:I
-
-    sget v0, Lecc;->call_users_large_video_view:I
-
-    sput v0, Leia;->M1:I
-
-    sget v0, Lecc;->call_users_speakers_pip_view:I
-
-    sput v0, Leia;->N1:I
-
-    sget v0, Lecc;->call_users_speakers_scroll_start:I
-
-    sput v0, Leia;->O1:I
-
-    sget v0, Lecc;->call_users_speakers_view_pager:I
-
-    sput v0, Leia;->P1:I
-
-    sget v0, Lecc;->call_waiting_room_events_container:I
-
-    sput v0, Leia;->Q1:I
-
-    sget v0, Lecc;->call_waiting_room_events_multi_view:I
-
-    sput v0, Leia;->R1:I
-
-    sget v0, Lecc;->call_waiting_room_events_multi_view_avatar:I
-
-    sput v0, Leia;->S1:I
-
-    sget v0, Lecc;->call_waiting_room_events_multi_view_chevron:I
-
-    sput v0, Leia;->T1:I
-
-    sget v0, Lecc;->call_waiting_room_events_multi_view_subtitle:I
-
-    sput v0, Leia;->U1:I
-
-    sget v0, Lecc;->call_waiting_room_events_multi_view_title:I
-
-    sput v0, Leia;->V1:I
-
-    sget v0, Lecc;->call_waiting_room_events_router:I
-
-    sput v0, Leia;->W1:I
-
-    sget v0, Lecc;->call_waiting_room_events_view:I
-
-    sput v0, Leia;->X1:I
-
+    :cond_0
     return-void
 .end method

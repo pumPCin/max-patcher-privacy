@@ -2,120 +2,145 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzh9;
+
 
 # instance fields
-.field public final a:Lyn7;
+.field public final a:J
 
-.field public final b:Lyn7;
-
-.field public final c:Lyn7;
-
-.field public final d:Lyn7;
-
-.field public final e:Lyn7;
+.field public final b:Ljog;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
+.method public constructor <init>(JLjog;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyh9;->a:Lyn7;
+    iput-wide p1, p0, Lyh9;->a:J
 
-    iput-object p2, p0, Lyh9;->b:Lyn7;
-
-    iput-object p3, p0, Lyh9;->c:Lyn7;
-
-    iput-object p4, p0, Lyh9;->d:Lyn7;
-
-    iput-object p5, p0, Lyh9;->e:Lyn7;
+    iput-object p3, p0, Lyh9;->b:Ljog;
 
     return-void
 .end method
 
-.method public static synthetic b(Lyh9;JLjava/lang/CharSequence;Ljava/lang/Long;Ll76;Lc2f;I)Ljava/lang/Object;
-    .locals 8
-
-    and-int/lit8 p7, p7, 0x8
-
-    if-eqz p7, :cond_0
-
-    const/4 p5, 0x0
-
-    :cond_0
-    move-object v5, p5
-
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v7, p6
-
-    invoke-virtual/range {v0 .. v7}, Lyh9;->a(JLjava/lang/CharSequence;Ljava/lang/Long;Ll76;ZLc2f;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a(JLjava/lang/CharSequence;Ljava/lang/Long;Ll76;ZLc2f;)Ljava/lang/Object;
-    .locals 10
+.method public final b()Ljog;
+    .locals 1
 
-    iget-object v0, p0, Lyh9;->a:Lyn7;
+    iget-object v0, p0, Lyh9;->b:Ljog;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast v0, Le7f;
+    const/4 v0, 0x1
 
-    check-cast v0, Lmka;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Lmka;->b()Lh24;
-
-    move-result-object v0
-
-    new-instance v1, Lxh9;
-
-    const/4 v9, 0x0
-
-    move-object v2, p0
-
-    move-wide v3, p1
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    move-object v8, p5
-
-    move/from16 v7, p6
-
-    invoke-direct/range {v1 .. v9}, Lxh9;-><init>(Lyh9;JLjava/lang/CharSequence;Ljava/lang/Long;ZLl76;Lkotlin/coroutines/Continuation;)V
-
-    move-object/from16 p1, p7
-
-    invoke-static {v0, v1, p1}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lo24;->a:Lo24;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
+    return v0
 
     :cond_0
-    sget-object p1, Laxf;->a:Laxf;
+    instance-of v1, p1, Lyh9;
 
-    return-object p1
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lyh9;
+
+    iget-wide v3, p0, Lyh9;->a:J
+
+    iget-wide v5, p1, Lyh9;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lyh9;->b:Ljog;
+
+    iget-object p1, p1, Lyh9;->b:Ljog;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lyh9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lyh9;->b:Ljog;
+
+    invoke-virtual {v1}, Ljog;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lyh9;->a:J
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OnVideoEnded(messageId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lyh9;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", model="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyh9;->b:Ljog;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

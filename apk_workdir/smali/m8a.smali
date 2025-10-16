@@ -1,31 +1,64 @@
-.class public abstract Lm8a;
+.class public final Lm8a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ln79;
+
+
+# static fields
+.field public static a:Lm8a;
+
 
 # direct methods
-.method public static a(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "V:",
-            "Ljava/lang/Object;",
-            ">(TT;",
-            "Landroid/util/Property<",
-            "TT;TV;>;",
-            "Landroid/graphics/Path;",
-            ")",
-            "Landroid/animation/ObjectAnimator;"
-        }
-    .end annotation
+.method public static declared-synchronized b()Lm8a;
+    .locals 2
 
-    const/4 v0, 0x0
+    const-class v0, Lm8a;
 
-    invoke-static {p0, p1, v0, p2}, Landroid/animation/ObjectAnimator;->ofObject(Ljava/lang/Object;Landroid/util/Property;Landroid/animation/TypeConverter;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
+    monitor-enter v0
 
-    move-result-object p0
+    :try_start_0
+    sget-object v1, Lm8a;->a:Lm8a;
 
-    return-object p0
+    if-nez v1, :cond_0
+
+    new-instance v1, Lm8a;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sput-object v1, Lm8a;->a:Lm8a;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Lm8a;->a:Lm8a;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+
+# virtual methods
+.method public final a(Lm79;)V
+    .locals 0
+
+    return-void
 .end method

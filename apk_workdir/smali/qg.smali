@@ -1,182 +1,58 @@
-.class public final Lqg;
+.class public final synthetic Lqg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:F
-
-.field public final synthetic d:F
-
-.field public final synthetic e:Z
-
-.field public final synthetic f:Lvd6;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFZLvd6;)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    sget v0, Leia;->a:I
+    iput p1, p0, Lqg;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqg;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lqg;->b:Ljava/lang/String;
-
-    iput p3, p0, Lqg;->c:F
-
-    iput p4, p0, Lqg;->d:F
-
-    iput-boolean p5, p0, Lqg;->e:Z
-
-    iput-object p6, p0, Lqg;->f:Lvd6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget p1, p0, Lqg;->d:F
-
-    iget-object v0, p0, Lqg;->a:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-boolean p1, p0, Lqg;->e:Z
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_0
-
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p1, 0x8
-
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lqg;->f:Lvd6;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    sget p1, Leia;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget p1, p0, Lqg;->d:F
-
-    iget-object v0, p0, Lqg;->a:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-boolean p1, p0, Lqg;->e:Z
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_0
-
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p1, 0x8
-
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lqg;->f:Lvd6;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    sget p1, Leia;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
-    sget p1, Leia;->m:I
+    iget v0, p0, Lqg;->a:I
 
-    iget-object v0, p0, Lqg;->b:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lqg;->a:Landroid/view/View;
+    new-instance v0, Ljava/lang/Thread;
 
-    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    const-string v1, "tracer-scheduler"
 
-    iget p1, p0, Lqg;->c:F
+    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
+    return-object v0
 
-    const/4 p1, 0x0
+    :pswitch_0
+    new-instance v0, Ljava/lang/Thread;
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    return-void
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

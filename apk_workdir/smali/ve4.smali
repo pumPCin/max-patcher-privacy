@@ -1,301 +1,194 @@
 .class public final Lve4;
-.super Lwe4;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ln73;
-.implements Lfef;
 
 
 # instance fields
-.field public final X:Lane;
+.field public final a:Ljava/lang/String;
 
-.field public Y:Z
+.field public final b:Lsa6;
 
-.field public final Z:Lkotlinx/coroutines/internal/ContextScope;
+.field public final c:Lsa6;
 
-.field public o:Landroid/graphics/drawable/Drawable;
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lane;Lz68;)V
-    .locals 8
+.method public constructor <init>(Ljava/lang/String;Lsa6;Lsa6;II)V
+    .locals 1
 
-    invoke-direct {p0}, Lhi0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+    if-eqz p4, :cond_1
 
-    iput-object p2, p0, Lve4;->X:Lane;
+    if-nez p5, :cond_0
 
-    invoke-static {p3}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lve4;->Z:Lkotlinx/coroutines/internal/ContextScope;
+    goto :goto_1
 
-    new-instance v0, Lpq0;
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-    const/4 v6, 0x4
+    :goto_1
+    invoke-static {v0}, Lgfi;->b(Z)V
 
-    const/16 v7, 0x11
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const/4 v1, 0x2
+    move-result v0
 
-    const-class v3, Lve4;
+    if-nez v0, :cond_2
 
-    const-string v4, "onThemeChanged"
+    iput-object p1, p0, Lve4;->a:Ljava/lang/String;
 
-    const-string v5, "onThemeChanged(Lone/me/sdk/design/OneMeTheme;)V"
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v2, p0
+    iput-object p2, p0, Lve4;->b:Lsa6;
 
-    invoke-direct/range {v0 .. v7}, Lpq0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p3, Lnw5;
+    iput-object p3, p0, Lve4;->c:Lsa6;
 
-    const/4 v1, 0x1
+    iput p4, p0, Lve4;->d:I
 
-    invoke-direct {p3, p2, v0, v1}, Lnw5;-><init>(Liu5;Lje6;I)V
-
-    invoke-static {p3, p1}, Luce;->N(Liu5;Ln24;)Loke;
+    iput p5, p0, Lve4;->e:I
 
     return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final E()Landroid/graphics/drawable/Drawable;
-    .locals 3
-
-    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    if-eq v1, v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    :cond_1
-    instance-of v0, v1, Lfef;
-
-    if-eqz v0, :cond_2
-
-    move-object v0, v1
-
-    check-cast v0, Lfef;
-
-    iget-object v2, p0, Lve4;->X:Lane;
-
-    invoke-interface {v2}, Lane;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Llwa;
-
-    invoke-interface {v0, v2}, Lfef;->onThemeChanged(Llwa;)V
-
-    :cond_2
-    return-object v1
-.end method
-
-.method public final close()V
-    .locals 3
-
-    iget-object v0, p0, Lve4;->Z:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lov9;->l(Ln24;Ljava/util/concurrent/CancellationException;)V
-
-    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
-
-    instance-of v2, v0, Ljava/io/Closeable;
-
-    if-eqz v2, :cond_0
-
-    check-cast v0, Ljava/io/Closeable;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    :cond_1
-    iput-object v1, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lve4;->Y:Z
+    if-ne p0, p1, :cond_0
 
-    return-void
-.end method
+    return v0
 
-.method public final getHeight()I
-    .locals 2
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+    if-eqz p1, :cond_2
 
-    if-eqz v0, :cond_1
+    const-class v2, Lve4;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    move-result-object v3
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    if-ltz v1, :cond_0
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
-
     :cond_1
-    const/4 v0, 0x0
+    check-cast p1, Lve4;
+
+    iget v2, p0, Lve4;->d:I
+
+    iget v3, p1, Lve4;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lve4;->e:I
+
+    iget v3, p1, Lve4;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lve4;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lve4;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lve4;->b:Lsa6;
+
+    iget-object v3, p1, Lve4;->b:Lsa6;
+
+    invoke-virtual {v2, v3}, Lsa6;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lve4;->c:Lsa6;
+
+    iget-object p1, p1, Lve4;->c:Lsa6;
+
+    invoke-virtual {v2, p1}, Lsa6;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     return v0
-.end method
 
-.method public final getSizeInBytes()I
-    .locals 2
-
-    invoke-virtual {p0}, Lve4;->getWidth()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lve4;->getHeight()I
-
-    move-result v1
-
-    mul-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x4
-
+    :cond_2
+    :goto_0
     return v1
 .end method
 
-.method public final getWidth()I
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+    const/16 v0, 0x20f
 
-    if-eqz v0, :cond_1
+    iget v1, p0, Lve4;->d:I
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    add-int/2addr v0, v1
 
-    move-result v0
+    const/16 v1, 0x1f
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    mul-int/2addr v0, v1
 
-    move-result-object v0
+    iget v2, p0, Lve4;->e:I
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    add-int/2addr v0, v2
 
-    move-result v1
+    mul-int/2addr v0, v1
 
-    if-ltz v1, :cond_0
+    iget-object v2, p0, Lve4;->a:Ljava/lang/String;
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
 
     move-result v0
 
-    return v0
+    iget-object v2, p0, Lve4;->b:Lsa6;
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {v2}, Lsa6;->hashCode()I
 
-    return v0
-.end method
+    move-result v2
 
-.method public final isClosed()Z
-    .locals 1
+    add-int/2addr v2, v0
 
-    iget-boolean v0, p0, Lve4;->Y:Z
+    mul-int/2addr v2, v1
 
-    return v0
-.end method
+    iget-object v0, p0, Lve4;->c:Lsa6;
 
-.method public final isStateful()Z
-    .locals 1
-
-    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+    invoke-virtual {v0}, Lsa6;->hashCode()I
 
     move-result v0
 
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
+    add-int/2addr v0, v2
 
     return v0
-.end method
-
-.method public final onThemeChanged(Llwa;)V
-    .locals 2
-
-    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
-
-    instance-of v1, v0, Lfef;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lfef;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p1}, Lfef;->onThemeChanged(Llwa;)V
-
-    :cond_1
-    return-void
 .end method

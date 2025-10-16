@@ -1,49 +1,19 @@
 .class public final Ledg;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lndg;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lndg;Lwy3;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    iput-object p1, p0, Ledg;->X:Lndg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ledg;->a:Ljava/util/ArrayList;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Ledg;->o:Ljava/lang/Object;
-
-    iget p1, p0, Ledg;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ledg;->Y:I
-
-    iget-object p1, p0, Ledg;->X:Lndg;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lndg;->f(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,110 +1,124 @@
-.class public final synthetic Lgq0;
+.class public final Lgq0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll6;
-
 
 # instance fields
-.field public final synthetic a:Lhq0;
+.field public final a:Llt7;
 
-.field public final synthetic b:J
+.field public final b:Leie;
 
-.field public final synthetic c:Liq0;
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhq0;JLiq0;)V
-    .locals 0
+.method public constructor <init>(Llt7;Llt7;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgq0;->a:Lhq0;
+    iput-object p1, p0, Lgq0;->a:Llt7;
 
-    iput-wide p2, p0, Lgq0;->b:J
+    const/4 v0, 0x0
 
-    iput-object p4, p0, Lgq0;->c:Liq0;
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lgq0;->b:Leie;
+
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lqkf;
+
+    check-cast p2, Losa;
+
+    invoke-virtual {p2}, Losa;->a()Lv44;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgw0;
+
+    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final onEvent(Lkj0;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
 
-    iget-object v0, p0, Lgq0;->a:Lhq0;
+    .line 3
+    new-instance v0, Lfq0;
 
-    iget-object v0, v0, Lhq0;->a:Llp5;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lgq0;->c:Liq0;
+    invoke-direct {v0, p0, p1, v1}, Lfq0;-><init>(Lgq0;Lkj0;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v2, v1, Liq0;->a:Ljava/util/List;
+    const/4 p1, 0x3
 
-    invoke-static {v2}, Ld40;->B(Ljava/util/Collection;)Z
+    iget-object v2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result v2
-
-    iget-wide v3, p0, Lgq0;->b:J
-
-    const-string v5, "hq0"
-
-    if-eqz v2, :cond_0
-
-    :try_start_0
-    check-cast v0, Lyq5;
-
-    invoke-virtual {v0, v3, v4}, Lyq5;->e(J)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
     return-void
+.end method
 
-    :catch_0
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.method public final onEvent(Lqz3;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
 
-    move-result-object v0
+    .line 1
+    new-instance v0, Ldq0;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, p0, p1, v1}, Ldq0;-><init>(Lgq0;Lqz3;Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, "deleteBotCommandsForChat: exception when delete botCommands for, chatId = %d"
+    const/4 p1, 0x3
 
-    invoke-static {v5, v1, v0}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
     return-void
+.end method
 
-    :cond_0
-    check-cast v0, Lyq5;
+.method public final onEvent(Lru3;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
 
-    invoke-virtual {v0, v3, v4}, Lyq5;->e(J)Ljava/io/File;
+    .line 2
+    new-instance v0, Leq0;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lwy8;->A(Ljava/io/File;Ljava/lang/Object;)Z
+    invoke-direct {v0, p0, p1, v1}, Leq0;-><init>(Lgq0;Lru3;Lkotlin/coroutines/Continuation;)V
 
-    move-result v0
+    const/4 p1, 0x3
 
-    if-nez v0, :cond_1
+    iget-object v2, p0, Lgq0;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "Failed to store botCommands, chatId = %d"
-
-    invoke-static {v5, v1, v0}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_1
     return-void
 .end method

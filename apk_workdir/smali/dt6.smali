@@ -1,261 +1,121 @@
 .class public final Ldt6;
-.super Ljava/lang/Object;
+.super Lgma;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic d:Lgma;
 
-.field public final b:I
-
-.field public final c:F
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic e:Lgma;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;IFLjava/lang/String;)V
+.method public constructor <init>(Lgma;Lgma;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lgma;-><init>()V
 
-    iput-object p1, p0, Ldt6;->a:Ljava/util/List;
+    iput-object p1, p0, Ldt6;->d:Lgma;
 
-    iput p2, p0, Ldt6;->b:I
-
-    iput p3, p0, Ldt6;->c:F
-
-    iput-object p4, p0, Ldt6;->d:Ljava/lang/String;
+    iput-object p2, p0, Ldt6;->e:Lgma;
 
     return-void
 .end method
 
-.method public static a(Lt3g;)Ldt6;
-    .locals 24
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final c(Landroid/view/View;II)I
+    .locals 2
 
-    const/16 v1, 0x15
+    sget-object v0, Lcyg;->a:Ljava/util/WeakHashMap;
 
-    :try_start_0
-    invoke-virtual {v0, v1}, Lt3g;->F(I)V
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
 
-    invoke-virtual {v0}, Lt3g;->s()I
+    move-result v0
 
-    move-result v1
+    const/4 v1, 0x1
 
-    and-int/lit8 v1, v1, 0x3
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0}, Lt3g;->s()I
-
-    move-result v2
-
-    iget v3, v0, Lt3g;->b:I
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    move v6, v5
-
-    :goto_0
-    const/4 v7, 0x1
-
-    if-ge v5, v2, :cond_1
-
-    invoke-virtual {v0, v7}, Lt3g;->F(I)V
-
-    invoke-virtual {v0}, Lt3g;->x()I
-
-    move-result v7
-
-    move v8, v4
-
-    :goto_1
-    if-ge v8, v7, :cond_0
-
-    invoke-virtual {v0}, Lt3g;->x()I
-
-    move-result v9
-
-    add-int/lit8 v10, v9, 0x4
-
-    add-int/2addr v6, v10
-
-    invoke-virtual {v0, v9}, Lt3g;->F(I)V
-
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v5, v5, 0x1
+    iget-object v0, p0, Ldt6;->e:Lgma;
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v0, v3}, Lt3g;->E(I)V
+    :cond_0
+    iget-object v0, p0, Ldt6;->d:Lgma;
 
-    new-array v3, v6, [B
+    :goto_0
+    invoke-virtual {v0, p1, p2, p3}, Lgma;->c(Landroid/view/View;II)I
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    move-result p1
 
-    const/4 v8, 0x0
+    return p1
+.end method
 
-    move v9, v4
+.method public final e()Ljava/lang/String;
+    .locals 2
 
-    move v10, v9
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_2
-    if-ge v9, v2, :cond_4
+    const-string v1, "SWITCHING[L:"
 
-    invoke-virtual {v0}, Lt3g;->s()I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v11
+    iget-object v1, p0, Ldt6;->d:Lgma;
 
-    and-int/lit8 v11, v11, 0x7f
+    invoke-virtual {v1}, Lgma;->e()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lt3g;->x()I
+    move-result-object v1
 
-    move-result v12
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v13, v4
+    const-string v1, ", R:"
 
-    :goto_3
-    if-ge v13, v12, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lt3g;->x()I
+    iget-object v1, p0, Ldt6;->e:Lgma;
 
-    move-result v14
+    invoke-virtual {v1}, Lgma;->e()Ljava/lang/String;
 
-    sget-object v15, Lk84;->b:[B
+    move-result-object v1
 
-    move/from16 v16, v7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v7, 0x4
+    const-string v1, "]"
 
-    invoke-static {v15, v4, v3, v10, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v10, v10, 0x4
-
-    iget-object v7, v0, Lt3g;->a:[B
-
-    iget v15, v0, Lt3g;->b:I
-
-    invoke-static {v7, v15, v3, v10, v14}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    const/16 v7, 0x21
-
-    if-ne v11, v7, :cond_2
-
-    if-nez v13, :cond_2
-
-    add-int v5, v10, v14
-
-    invoke-static {v10, v3, v5}, Lk84;->C(I[BI)Lav9;
-
-    move-result-object v5
-
-    iget v7, v5, Lav9;->g:F
-
-    iget v8, v5, Lav9;->a:I
-
-    iget-boolean v15, v5, Lav9;->b:Z
-
-    iget v4, v5, Lav9;->c:I
-
-    move/from16 v23, v1
-
-    iget v1, v5, Lav9;->d:I
-
-    move/from16 v20, v1
-
-    iget-object v1, v5, Lav9;->e:[I
-
-    iget v5, v5, Lav9;->f:I
-
-    move-object/from16 v21, v1
-
-    move/from16 v19, v4
-
-    move/from16 v22, v5
-
-    move/from16 v17, v8
-
-    move/from16 v18, v15
-
-    invoke-static/range {v17 .. v22}, Lu64;->e(IZII[II)Ljava/lang/String;
-
-    move-result-object v8
-
-    move v5, v7
-
-    goto :goto_4
-
-    :cond_2
-    move/from16 v23, v1
-
-    :goto_4
-    add-int/2addr v10, v14
-
-    invoke-virtual {v0, v14}, Lt3g;->F(I)V
-
-    add-int/lit8 v13, v13, 0x1
-
-    move/from16 v7, v16
-
-    move/from16 v1, v23
-
-    const/4 v4, 0x0
-
-    goto :goto_3
-
-    :cond_3
-    move/from16 v23, v1
-
-    move/from16 v16, v7
-
-    add-int/lit8 v9, v9, 0x1
-
-    const/4 v4, 0x0
-
-    goto :goto_2
-
-    :cond_4
-    move/from16 v23, v1
-
-    move/from16 v16, v7
-
-    if-nez v6, :cond_5
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    goto :goto_5
-
-    :cond_5
-    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_5
-    new-instance v1, Ldt6;
+    return-object v0
+.end method
 
-    add-int/lit8 v2, v23, 0x1
+.method public final g(Landroid/view/View;I)I
+    .locals 2
 
-    invoke-direct {v1, v0, v2, v5, v8}, Ldt6;-><init>(Ljava/util/List;IFLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, Lcyg;->a:Ljava/util/WeakHashMap;
 
-    return-object v1
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
 
-    :catch_0
-    move-exception v0
+    move-result v0
 
-    const-string v1, "Error parsing HEVC config"
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    iget-object v0, p0, Ldt6;->e:Lgma;
 
-    throw v0
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Ldt6;->d:Lgma;
+
+    :goto_0
+    invoke-virtual {v0, p1, p2}, Lgma;->g(Landroid/view/View;I)I
+
+    move-result p1
+
+    return p1
 .end method

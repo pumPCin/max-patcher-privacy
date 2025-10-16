@@ -1,136 +1,292 @@
-.class public final Lre8;
-.super Lc2f;
+.class public abstract Lre8;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public a:I
 
-.field public final synthetic Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+.field public b:I
 
-.field public final synthetic Z:Landroid/widget/FrameLayout;
+.field public c:I
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lre8;->Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lre8;->Z:Landroid/widget/FrameLayout;
+    sget-object v0, Lzw3;->v0:Lzw3;
 
-    const/4 p1, 0x2
+    if-nez v0, :cond_0
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Lzw3;
 
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lzw3;->v0:Lzw3;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a(I)I
+    .locals 2
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget v0, p0, Lre8;->c:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ge p1, v0, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lre8;->o:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lre8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Ljava/nio/ByteBuffer;
 
-    move-result-object p1
+    iget v1, p0, Lre8;->b:I
 
-    check-cast p1, Lre8;
+    add-int/2addr v1, p1
 
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lre8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lre8;
-
-    iget-object v1, p0, Lre8;->Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
-
-    iget-object v2, p0, Lre8;->Z:Landroid/widget/FrameLayout;
-
-    invoke-direct {v0, v1, v2, p2}, Lre8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
 
     move-result p1
 
-    iput-boolean p1, v0, Lre8;->X:Z
+    return p1
 
-    return-object v0
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public b()V
+    .locals 2
+
+    iget-object v0, p0, Lre8;->o:Ljava/lang/Object;
+
+    check-cast v0, Lse8;
+
+    iget v0, v0, Lse8;->r0:I
+
+    iget v1, p0, Lre8;->c:I
+
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public abstract c(Landroid/view/View;)Ljava/lang/Object;
+.end method
+
+.method public abstract d(Landroid/view/View;Ljava/lang/Object;)V
+.end method
+
+.method public e()V
     .locals 3
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :goto_0
+    iget v0, p0, Lre8;->a:I
 
-    iget-boolean p1, p0, Lre8;->X:Z
+    iget-object v1, p0, Lre8;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Lre8;->Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+    check-cast v1, Lse8;
 
-    if-eqz p1, :cond_0
+    iget v2, v1, Lse8;->Y:I
 
-    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->o:Ltm0;
+    if-ge v0, v2, :cond_0
 
-    invoke-virtual {p1}, Ltm0;->getValue()Ljava/lang/Object;
+    iget-object v1, v1, Lse8;->c:[I
 
-    move-result-object p1
+    aget v1, v1, v0
 
-    check-cast p1, Ldy1;
+    if-gez v1, :cond_0
 
-    invoke-interface {p1}, Ldy1;->getRootView()Landroid/view/View;
+    add-int/lit8 v0, v0, 0x1
 
-    move-result-object p1
-
-    new-instance v1, Lpe8;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v0, v2}, Lpe8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
-
-    invoke-static {p1, v1}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    iput v0, p0, Lre8;->a:I
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->c:Ltm0;
+    return-void
+.end method
 
-    sget-object v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Z:[Lpl7;
+.method public f(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v1, 0x0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    aget-object v0, v0, v1
+    iget v1, p0, Lre8;->b:I
 
-    invoke-virtual {p1}, Ltm0;->getValue()Ljava/lang/Object;
+    if-lt v0, v1, :cond_0
 
-    move-result-object p1
+    invoke-virtual {p0, p1, p2}, Lre8;->d(Landroid/view/View;Ljava/lang/Object;)V
 
-    check-cast p1, Landroid/widget/LinearLayout;
+    return-void
+
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    iget v1, p0, Lre8;->b:I
+
+    if-lt v0, v1, :cond_1
+
+    invoke-virtual {p0, p1}, Lre8;->c(Landroid/view/View;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Lre8;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lre8;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Class;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
 
     :goto_0
-    iget-object v0, p0, Lre8;->Z:Landroid/widget/FrameLayout;
+    invoke-virtual {p0, v0, p2}, Lre8;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+    move-result v0
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    if-eqz v0, :cond_6
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-static {p1}, Lcyg;->d(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
 
-    return-object p1
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    instance-of v1, v0, Ls4;
+
+    if-eqz v1, :cond_4
+
+    check-cast v0, Ls4;
+
+    iget-object v0, v0, Ls4;->a:Lt4;
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v1, Lt4;
+
+    invoke-direct {v1, v0}, Lt4;-><init>(Landroid/view/View$AccessibilityDelegate;)V
+
+    move-object v0, v1
+
+    :goto_1
+    if-nez v0, :cond_5
+
+    new-instance v0, Lt4;
+
+    invoke-direct {v0}, Lt4;-><init>()V
+
+    :cond_5
+    invoke-static {p1, v0}, Lcyg;->n(Landroid/view/View;Lt4;)V
+
+    iget v0, p0, Lre8;->a:I
+
+    invoke-virtual {p1, v0, p2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    iget p2, p0, Lre8;->c:I
+
+    invoke-static {p1, p2}, Lcyg;->h(Landroid/view/View;I)V
+
+    :cond_6
+    return-void
+.end method
+
+.method public abstract g(Ljava/lang/Object;Ljava/lang/Object;)Z
+.end method
+
+.method public hasNext()Z
+    .locals 2
+
+    iget v0, p0, Lre8;->a:I
+
+    iget-object v1, p0, Lre8;->o:Ljava/lang/Object;
+
+    check-cast v1, Lse8;
+
+    iget v1, v1, Lse8;->Y:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public remove()V
+    .locals 3
+
+    iget-object v0, p0, Lre8;->o:Ljava/lang/Object;
+
+    check-cast v0, Lse8;
+
+    invoke-virtual {p0}, Lre8;->b()V
+
+    iget v1, p0, Lre8;->b:I
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0}, Lse8;->c()V
+
+    iget v1, p0, Lre8;->b:I
+
+    invoke-virtual {v0, v1}, Lse8;->h(I)V
+
+    iput v2, p0, Lre8;->b:I
+
+    iget v0, v0, Lse8;->r0:I
+
+    iput v0, p0, Lre8;->c:I
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Call next() before removing element from the iterator."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

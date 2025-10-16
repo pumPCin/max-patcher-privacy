@@ -1,84 +1,67 @@
 .class public final Lp36;
-.super Ly7f;
+.super Lpoe;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:J
+# static fields
+.field public static final E0:Landroid/graphics/drawable/ShapeDrawable;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    iput-wide p1, p0, Lp36;->c:J
+    invoke-direct {v0}, Landroid/graphics/drawable/ShapeDrawable;-><init>()V
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x41800000    # 16.0f
+
+    mul-float/2addr v1, v2
+
+    const/16 v2, 0x8
+
+    new-array v3, v2, [F
+
+    const/4 v4, 0x0
+
+    :goto_0
+    if-ge v4, v2, :cond_0
+
+    aput v1, v3, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Landroid/graphics/drawable/shapes/RoundRectShape;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v3, v2, v2}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;->setShape(Landroid/graphics/drawable/shapes/Shape;)V
+
+    sput-object v0, Lp36;->E0:Landroid/graphics/drawable/ShapeDrawable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final A(Lb18;)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lp36;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lp36;
-
-    iget-wide v3, p0, Lp36;->c:J
-
-    iget-wide v5, p1, Lp36;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lp36;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Response(folderSync="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lp36;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

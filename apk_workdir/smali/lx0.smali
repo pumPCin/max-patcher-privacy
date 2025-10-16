@@ -1,149 +1,84 @@
-.class public abstract Llx0;
+.class public final Llx0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-
 
 # instance fields
-.field public final X:Ljava/io/File;
+.field public a:Z
 
-.field public final Y:J
+.field public b:J
 
-.field public final a:Ljava/lang/String;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:Z
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;JJJLjava/io/File;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llx0;->a:Ljava/lang/String;
-
-    iput-wide p2, p0, Llx0;->b:J
-
-    iput-wide p4, p0, Llx0;->c:J
-
-    if-eqz p8, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-boolean p1, p0, Llx0;->o:Z
-
-    iput-object p8, p0, Llx0;->X:Ljava/io/File;
-
-    iput-wide p6, p0, Llx0;->Y:J
-
-    return-void
-.end method
+.field public c:J
 
 
 # virtual methods
-.method public final a(Llx0;)I
-    .locals 4
+.method public declared-synchronized a()J
+    .locals 2
 
-    iget-object v0, p1, Llx0;->a:Ljava/lang/String;
+    monitor-enter p0
 
-    iget-object v1, p0, Llx0;->a:Ljava/lang/String;
+    :try_start_0
+    iget-wide v0, p0, Llx0;->b:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    monitor-exit p0
 
-    move-result v0
+    return-wide v0
 
-    if-nez v0, :cond_0
+    :catchall_0
+    move-exception v0
 
-    iget-object p1, p1, Llx0;->a:Ljava/lang/String;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    throw v0
+.end method
 
-    move-result p1
+.method public declared-synchronized b(JJ)V
+    .locals 2
 
-    return p1
+    monitor-enter p0
 
-    :cond_0
+    :try_start_0
+    iget-boolean v0, p0, Llx0;->a:Z
+
+    if-eqz v0, :cond_0
+
     iget-wide v0, p0, Llx0;->b:J
 
-    iget-wide v2, p1, Llx0;->b:J
+    add-long/2addr v0, p1
 
-    sub-long/2addr v0, v2
+    iput-wide v0, p0, Llx0;->b:J
 
-    const-wide/16 v2, 0x0
+    iget-wide p1, p0, Llx0;->c:J
 
-    cmp-long p1, v0, v2
+    add-long/2addr p1, p3
 
-    if-nez p1, :cond_1
+    iput-wide p1, p0, Llx0;->c:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 p1, 0x0
+    goto :goto_0
 
-    return p1
+    :catchall_0
+    move-exception p1
 
-    :cond_1
-    if-gez p1, :cond_2
+    goto :goto_1
 
-    const/4 p1, -0x1
+    :cond_0
+    :goto_0
+    monitor-exit p0
 
-    return p1
+    return-void
 
-    :cond_2
-    const/4 p1, 0x1
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return p1
-.end method
-
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Llx0;
-
-    invoke-virtual {p0, p1}, Llx0;->a(Llx0;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x2c
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "["
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Llx0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    iget-wide v2, p0, Llx0;->c:J
-
-    invoke-static {v0, v2, v3, v1}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method

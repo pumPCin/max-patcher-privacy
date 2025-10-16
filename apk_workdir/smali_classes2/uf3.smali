@@ -1,298 +1,102 @@
-.class public final Luf3;
+.class public final synthetic Luf3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzfg;
+.implements Loh6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;I)V
+    .locals 0
+
+    iput p2, p0, Luf3;->a:I
+
+    iput-object p1, p0, Luf3;->b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Ljava/lang/Throwable;)V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v0, p0, Luf3;->a:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Luf3;->b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->Y:[Lwq7;
 
-    move-result v1
+    new-instance v0, La2b;
 
-    if-eqz v1, :cond_0
+    invoke-direct {v0, v1}, La2b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v1, Lo2b;
 
-    move-result-object v1
+    sget v2, Liid;->O1:I
 
-    check-cast v1, Lzfg;
+    invoke-direct {v1, v2}, Lo2b;-><init>(I)V
 
-    invoke-interface {v1, p1}, Lzfg;->A(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, La2b;->e(Ls2b;)V
 
-    goto :goto_0
+    sget v1, Lfta;->b:I
 
-    :cond_0
-    return-void
-.end method
+    new-instance v2, Ljqf;
 
-.method public final a(F)V
-    .locals 2
+    invoke-direct {v2, v1}, Ljqf;-><init>(I)V
 
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-virtual {v0, v2}, La2b;->g(Loqf;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    return-object v0
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, v1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->b:Lqs;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->Y:[Lwq7;
 
-    move-result v1
+    const/4 v3, 0x1
 
-    if-eqz v1, :cond_0
+    aget-object v3, v2, v3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzfg;
-
-    invoke-interface {v1, p1}, Lzfg;->a(F)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Ljava/lang/Long;
 
-    move-result v1
+    iget-object v3, v1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->a:Lqs;
 
-    if-eqz v1, :cond_0
+    const/4 v4, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aget-object v2, v2, v4
 
-    move-result-object v1
-
-    check-cast v1, Lzfg;
-
-    invoke-interface {v1}, Lzfg;->b()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v3, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lzfg;
+    check-cast v1, [J
 
-    invoke-interface {v1}, Lzfg;->c()V
+    new-instance v2, Lig3;
 
-    goto :goto_0
+    invoke-direct {v2, v0, v1}, Lig3;-><init>(Ljava/lang/Long;[J)V
 
-    :cond_0
-    return-void
-.end method
+    return-object v2
 
-.method public final d(Z)V
-    .locals 2
+    nop
 
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzfg;
-
-    invoke-interface {v1, p1}, Lzfg;->d(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g()V
-    .locals 2
-
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzfg;
-
-    invoke-interface {v1}, Lzfg;->g()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final p()V
-    .locals 2
-
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzfg;
-
-    invoke-interface {v1}, Lzfg;->p()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final s()V
-    .locals 2
-
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzfg;
-
-    invoke-interface {v1}, Lzfg;->s()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final x()V
-    .locals 2
-
-    iget-object v0, p0, Luf3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzfg;
-
-    invoke-interface {v1}, Lzfg;->x()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

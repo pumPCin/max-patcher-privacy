@@ -1,104 +1,96 @@
 .class public final Lvc8;
-.super Lkc8;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lj0f;
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Callable;
+.field public synthetic X:Z
+
+.field public final synthetic Y:Lone/me/android/MainActivity;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvc8;->Y:Lone/me/android/MainActivity;
 
-    iput-object p1, p0, Lvc8;->a:Ljava/util/concurrent/Callable;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ldd8;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lnjg;->b:Lbeh;
+    check-cast p1, Ljava/lang/Boolean;
 
-    new-instance v1, Lv6;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 v2, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v1, v2, v0}, Lv6;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Lvc8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1, v1}, Ldd8;->c(Lfs4;)V
+    move-result-object p1
 
-    invoke-virtual {v1}, Lv6;->g()Z
+    check-cast p1, Lvc8;
 
-    move-result v0
+    sget-object p2, Lzag;->a:Lzag;
 
-    if-nez v0, :cond_2
+    invoke-virtual {p1, p2}, Lvc8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v0, p0, Lvc8;->a:Ljava/util/concurrent/Callable;
+    return-object p2
+.end method
 
-    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v0, Lvc8;
 
-    invoke-virtual {v1}, Lv6;->g()Z
+    iget-object v1, p0, Lvc8;->Y:Lone/me/android/MainActivity;
 
-    move-result v1
+    invoke-direct {v0, v1, p2}, Lvc8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v1, :cond_2
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-interface {p1}, Ldd8;->b()V
+    move-result p1
 
-    return-void
+    iput-boolean p1, v0, Lvc8;->X:Z
 
-    :cond_0
-    invoke-interface {p1, v0}, Ldd8;->a(Ljava/lang/Object;)V
+    return-object v0
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :catchall_0
-    move-exception v0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0}, Loq0;->t(Ljava/lang/Throwable;)V
+    iget-boolean p1, p0, Lvc8;->X:Z
 
-    invoke-virtual {v1}, Lv6;->g()Z
+    if-eqz p1, :cond_0
 
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    invoke-interface {p1, v0}, Ldd8;->onError(Ljava/lang/Throwable;)V
+    const/4 p1, 0x4
 
     goto :goto_0
 
-    :cond_1
-    invoke-static {v0}, Lwee;->y(Ljava/lang/Throwable;)V
+    :cond_0
+    const/4 p1, 0x1
 
-    :cond_2
     :goto_0
-    return-void
-.end method
+    iget-object v0, p0, Lvc8;->Y:Lone/me/android/MainActivity;
 
-.method public final get()Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, p1}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
-    iget-object v0, p0, Lvc8;->a:Ljava/util/concurrent/Callable;
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

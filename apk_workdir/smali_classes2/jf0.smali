@@ -1,92 +1,116 @@
 .class public final Ljf0;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final synthetic b:I
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-.field public final synthetic Y:Ljava/util/HashSet;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "space_light"
+
+    const-string v1, "gradient_light"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+
+    const-string v0, "space_dark"
+
+    const-string v1, "gradient_dark"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Ljf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljf0;->Y:Ljava/util/HashSet;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ljf0;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ln24;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ljf0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Ljf0;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Ljf0;
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget-object v1, p0, Ljf0;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Ljf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Ljf0;->a:Ljava/lang/String;
 
-    return-object p2
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ljf0;
-
-    iget-object v0, p0, Ljf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-    iget-object v1, p0, Ljf0;->Y:Ljava/util/HashSet;
-
-    invoke-direct {p1, v0, v1, p2}, Ljf0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v0, p0, Ljf0;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Ljf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Ld8h;
+    move-result v0
 
-    move-result-object p1
+    return v0
+.end method
 
-    invoke-virtual {p1}, Ld8h;->g()Landroidx/work/impl/model/WorkersQueueDao;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object p1
+    const-string v0, "BackgroundNameId(name="
 
-    iget-object v0, p0, Ljf0;->Y:Ljava/util/HashSet;
+    const-string v1, ")"
 
-    invoke-static {v0}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+    iget-object v2, p0, Ljf0;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->delete(Ljava/util/List;)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-object v0
 .end method

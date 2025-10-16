@@ -1,23 +1,27 @@
-.class public final synthetic Lhy0;
+.class public final Lhy0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lkoh;
 
-.field public final synthetic b:Lhp1;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhp1;I)V
+.method public constructor <init>(Lkoh;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput p2, p0, Lhy0;->a:I
-
-    iput-object p1, p0, Lhy0;->b:Lhp1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhy0;->a:Lkoh;
+
+    iput-object p2, p0, Lhy0;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lhy0;->c:Ljava/util/ArrayList;
 
     return-void
 .end method

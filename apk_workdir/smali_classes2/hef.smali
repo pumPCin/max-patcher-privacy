@@ -1,35 +1,235 @@
 .class public final Lhef;
-.super Ljava/lang/Object;
+.super Lpj5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public final a:Liwf;
 
-.field public final b:Lyn7;
+.field public final b:S
 
 
 # direct methods
-.method public constructor <init>(Lo5;)V
-    .locals 1
+.method public constructor <init>(Liwf;)V
+    .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v0, Lby7;
+    .line 2
+    iput-object p1, p0, Lhef;->a:Liwf;
 
-    invoke-virtual {p1, v0}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    const/16 p1, 0x304
+
+    .line 3
+    iput-short p1, p0, Lhef;->b:S
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/nio/ByteBuffer;Liwf;)V
+    .locals 3
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-object p2, p0, Lhef;->a:Liwf;
+
+    .line 6
+    sget-object v0, Lhwf;->r0:Lhwf;
+
+    .line 7
+    iget-short v0, v0, Lhwf;->a:S
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, p1, v0, v1}, Lpj5;->b(Ljava/nio/ByteBuffer;II)I
+
+    move-result v0
+
+    .line 8
+    sget-object v2, Liwf;->b:Liwf;
+
+    if-ne p2, v2, :cond_4
+
+    .line 9
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result p2
+
+    and-int/lit16 p2, p2, 0xff
+
+    .line 10
+    rem-int/lit8 v1, p2, 0x2
+
+    if-nez v1, :cond_3
+
+    add-int/lit8 v1, p2, 0x1
+
+    if-ne v0, v1, :cond_3
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_2
+
+    .line 11
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v1
+
+    const/16 v2, 0x304
+
+    if-eq v1, v2, :cond_0
+
+    .line 12
+    iget-short v2, p0, Lhef;->b:S
+
+    if-nez v2, :cond_1
+
+    .line 13
+    :cond_0
+    iput-short v1, p0, Lhef;->b:S
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x2
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+
+    .line 14
+    :cond_3
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string p2, "invalid versions length"
+
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 15
+    :cond_4
+    sget-object v2, Liwf;->c:Liwf;
+
+    if-ne p2, v2, :cond_6
+
+    if-ne v0, v1, :cond_5
+
+    .line 16
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result p1
+
+    iput-short p1, p0, Lhef;->b:S
+
+    return-void
+
+    .line 17
+    :cond_5
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string p2, "Incorrect extension length"
+
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 18
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final a()[B
+    .locals 4
+
+    sget-object v0, Liwf;->b:Liwf;
+
+    iget-object v1, p0, Lhef;->a:Liwf;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x7
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x6
+
+    :goto_0
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    sget-object v3, Lhwf;->r0:Lhwf;
+
+    iget-short v3, v3, Lhwf;->a:S
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x3
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    new-array v0, v1, [B
+
+    fill-array-data v0, :array_0
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    new-array v0, v1, [B
+
+    fill-array-data v0, :array_1
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    :goto_1
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
 
-    iput-object v0, p0, Lhef;->a:Lyn7;
+    return-object v0
 
-    const-class v0, Landroid/content/Context;
+    nop
 
-    invoke-virtual {p1, v0}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    :array_0
+    .array-data 1
+        0x3t
+        0x4t
+    .end array-data
 
-    move-result-object p1
+    nop
 
-    iput-object p1, p0, Lhef;->b:Lyn7;
-
-    return-void
+    :array_1
+    .array-data 1
+        0x3t
+        0x4t
+    .end array-data
 .end method

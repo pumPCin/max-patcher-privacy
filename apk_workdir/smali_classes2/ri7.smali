@@ -1,104 +1,47 @@
 .class public final Lri7;
-.super Lis5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final g:Lpfa;
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
+.field public final a:Ljhd;
 
 
 # direct methods
-.method public constructor <init>(Lpfa;ZZZLjgf;Lp61;Lwkc;)V
+.method public constructor <init>(Ljhd;)V
     .locals 0
 
-    invoke-direct {p0, p5, p6, p7}, Lis5;-><init>(Ljgf;Lp61;Lwkc;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lri7;->g:Lpfa;
-
-    iput-boolean p2, p0, Lri7;->h:Z
-
-    iput-boolean p3, p0, Lri7;->i:Z
-
-    iput-boolean p4, p0, Lri7;->j:Z
+    iput-object p1, p0, Lri7;->a:Ljhd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 0
-
-    invoke-virtual {p0}, Lis5;->h()V
-
-    return-void
-.end method
-
-.method public final d(Lgoe;)V
+.method public final a(Lmhd;Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lri7;->g:Lpfa;
+    invoke-virtual {p1, p2}, Lmhd;->d(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lpfa;->invoke()Ljava/lang/Object;
+    new-instance p2, Lr17;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-direct {p2, v0}, Lr17;-><init>(I)V
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p1, p2}, Lmhd;->c(Lc24;)V
 
-    move-result v0
+    new-instance p2, Lr17;
 
-    if-nez v0, :cond_1
+    invoke-direct {p2, v0}, Lr17;-><init>(I)V
 
-    iget-boolean v0, p0, Lri7;->h:Z
+    invoke-virtual {p1, p2}, Lmhd;->a(Lc24;)V
 
-    if-nez v0, :cond_1
+    iget-object p2, p0, Lri7;->a:Ljhd;
 
-    iget-boolean v0, p0, Lri7;->i:Z
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Lri7;->j:Z
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-super {p0, p1}, Lis5;->d(Lgoe;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final e()V
-    .locals 0
-
-    invoke-virtual {p0}, Lis5;->h()V
+    invoke-virtual {p2, p1}, Ljhd;->G(Lmhd;)V
 
     return-void
-.end method
-
-.method public final f()I
-    .locals 1
-
-    const/4 v0, 0x7
-
-    return v0
-.end method
-
-.method public final g()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "JoinP2PFirstDataStat"
-
-    return-object v0
 .end method

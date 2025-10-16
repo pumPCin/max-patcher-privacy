@@ -1,130 +1,66 @@
 .class public final Lcv0;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lsmf;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Ldv0;
 
-.field public final b:Lu66;
+.field public Y:I
 
-.field public final c:Lwz4;
-
-.field public d:Lu66;
-
-.field public e:Lsmf;
-
-.field public f:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(IILu66;)V
+.method public constructor <init>(Ldv0;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcv0;->X:Ldv0;
 
-    iput p2, p0, Lcv0;->a:I
-
-    iput-object p3, p0, Lcv0;->b:Lu66;
-
-    new-instance p1, Lwz4;
-
-    invoke-direct {p1}, Lwz4;-><init>()V
-
-    iput-object p1, p0, Lcv0;->c:Lwz4;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ln84;IZ)I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lcv0;->e:Lsmf;
+    iput-object p1, p0, Lcv0;->o:Ljava/lang/Object;
 
-    sget v1, Le3g;->a:I
+    iget p1, p0, Lcv0;->Y:I
 
-    invoke-interface {v0, p1, p2, p3}, Lsmf;->e(Ln84;IZ)I
+    const/high16 v0, -0x80000000
 
-    move-result p1
+    or-int/2addr p1, v0
 
-    return p1
-.end method
+    iput p1, p0, Lcv0;->Y:I
 
-.method public final b(JIIILqmf;)V
-    .locals 8
+    const/4 v2, 0x0
 
-    iget-wide v0, p0, Lcv0;->f:J
+    const-wide/16 v3, 0x0
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    iget-object v0, p0, Lcv0;->X:Ldv0;
 
-    cmp-long v2, v0, v2
+    const/4 v1, 0x0
 
-    if-eqz v2, :cond_0
+    move-object v5, p0
 
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    iget-object v0, p0, Lcv0;->c:Lwz4;
-
-    iput-object v0, p0, Lcv0;->e:Lsmf;
-
-    :cond_0
-    iget-object v1, p0, Lcv0;->e:Lsmf;
-
-    sget v0, Le3g;->a:I
-
-    move-wide v2, p1
-
-    move v4, p3
-
-    move v5, p4
-
-    move v6, p5
-
-    move-object v7, p6
-
-    invoke-interface/range {v1 .. v7}, Lsmf;->b(JIIILqmf;)V
-
-    return-void
-.end method
-
-.method public final c(ILt3g;)V
-    .locals 2
-
-    iget-object v0, p0, Lcv0;->e:Lsmf;
-
-    sget v1, Le3g;->a:I
-
-    invoke-interface {v0, p1, p2}, Lsmf;->c(ILt3g;)V
-
-    return-void
-.end method
-
-.method public final d(Lu66;)V
-    .locals 2
-
-    iget-object v0, p0, Lcv0;->b:Lu66;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1, v0}, Lu66;->c(Lu66;)Lu66;
+    invoke-virtual/range {v0 .. v5}, Ldv0;->C(Lf92;IJLk14;)Ljava/lang/Object;
 
     move-result-object p1
 
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_0
+
+    return-object p1
+
     :cond_0
-    iput-object p1, p0, Lcv0;->d:Lu66;
+    new-instance v0, Le92;
 
-    iget-object v0, p0, Lcv0;->e:Lsmf;
+    invoke-direct {v0, p1}, Le92;-><init>(Ljava/lang/Object;)V
 
-    sget v1, Le3g;->a:I
-
-    invoke-interface {v0, p1}, Lsmf;->d(Lu66;)V
-
-    return-void
+    return-object v0
 .end method

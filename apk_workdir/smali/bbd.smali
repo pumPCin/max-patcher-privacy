@@ -2,301 +2,94 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldc8;
-
 
 # instance fields
-.field public final a:F
+.field public final a:Lwb0;
 
-.field public final b:Landroid/graphics/Matrix;
+.field public final b:Ldkf;
 
-.field public c:Landroid/graphics/Matrix;
+.field public final c:Lbu1;
+
+.field public final d:Lbu1;
+
+.field public e:Lyt1;
+
+.field public f:Lyt1;
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Lk62;
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 2
+.method public constructor <init>(Lwb0;Ldkf;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lbbd;->a:F
+    const/4 v0, 0x0
 
-    new-instance v0, Landroid/graphics/Matrix;
+    iput-boolean v0, p0, Lbbd;->g:Z
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    iput-boolean v0, p0, Lbbd;->h:Z
 
-    iput-object v0, p0, Lbbd;->b:Landroid/graphics/Matrix;
+    iput-object p1, p0, Lbbd;->a:Lwb0;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    iput-object p2, p0, Lbbd;->b:Ldkf;
 
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
+    new-instance p1, Labd;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->postRotate(F)Z
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Labd;-><init>(Lbbd;I)V
+
+    invoke-static {p1}, Lmli;->a(Lzt1;)Lbu1;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lbbd;->c:Lbu1;
+
+    new-instance p1, Labd;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Labd;-><init>(Lbbd;I)V
+
+    invoke-static {p1}, Lmli;->a(Lzt1;)Lbu1;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lbbd;->d:Lbu1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Landroid/graphics/Matrix;
+.method public final a()V
     .locals 2
 
-    iget-object v0, p0, Lbbd;->c:Landroid/graphics/Matrix;
+    iget-object v0, p0, Lbbd;->d:Lbu1;
 
-    const-string v1, "configure must be called first"
+    iget-object v0, v0, Lbu1;->b:Lau1;
 
-    invoke-static {v0, v1}, Lq5h;->m(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0}, Le4;->isDone()Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final d(II)Z
-    .locals 2
+    xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lbbd;->e(II)Ltee;
+    const-string v1, "The callback can only complete once."
 
-    move-result-object v0
+    invoke-static {v1, v0}, Lbui;->f(Ljava/lang/String;Z)V
 
-    iget-object v1, p0, Lbbd;->c:Landroid/graphics/Matrix;
+    iget-object v0, p0, Lbbd;->f:Lyt1;
 
-    invoke-static {v1}, Lq5h;->l(Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->isIdentity()Z
+    invoke-virtual {v0, v1}, Lyt1;->b(Ljava/lang/Object;)Z
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v1, v0, Ltee;->a:I
-
-    if-ne p1, v1, :cond_0
-
-    iget p1, v0, Ltee;->b:I
-
-    if-ne p2, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final e(II)Ltee;
-    .locals 12
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-lez p1, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    const-string v3, "inputWidth must be positive"
-
-    invoke-static {v3, v2}, Lq5h;->e(Ljava/lang/Object;Z)V
-
-    if-lez p2, :cond_1
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v0
-
-    :goto_1
-    const-string v3, "inputHeight must be positive"
-
-    invoke-static {v3, v2}, Lq5h;->e(Ljava/lang/Object;Z)V
-
-    new-instance v2, Landroid/graphics/Matrix;
-
-    iget-object v3, p0, Lbbd;->b:Landroid/graphics/Matrix;
-
-    invoke-direct {v2, v3}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
-
-    iput-object v2, p0, Lbbd;->c:Landroid/graphics/Matrix;
-
-    invoke-virtual {v3}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Ltee;
-
-    invoke-direct {v0, p1, p2}, Ltee;-><init>(II)V
-
-    return-object v0
-
-    :cond_2
-    int-to-float p1, p1
-
-    int-to-float p2, p2
-
-    div-float v2, p1, p2
-
-    iget-object v3, p0, Lbbd;->c:Landroid/graphics/Matrix;
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-virtual {v3, v2, v4}, Landroid/graphics/Matrix;->preScale(FF)Z
-
-    iget-object v3, p0, Lbbd;->c:Landroid/graphics/Matrix;
-
-    div-float v2, v4, v2
-
-    invoke-virtual {v3, v2, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    const/4 v2, 0x4
-
-    new-array v3, v2, [F
-
-    fill-array-data v3, :array_0
-
-    new-array v5, v2, [F
-
-    fill-array-data v5, :array_1
-
-    new-array v6, v2, [F
-
-    fill-array-data v6, :array_2
-
-    new-array v7, v2, [F
-
-    fill-array-data v7, :array_3
-
-    filled-new-array {v3, v5, v6, v7}, [[F
-
-    move-result-object v3
-
-    const/4 v5, 0x1
-
-    const v6, 0x7f7fffff    # Float.MAX_VALUE
-
-    move v9, v0
-
-    move v7, v6
-
-    move v8, v7
-
-    move v6, v5
-
-    :goto_2
-    if-ge v9, v2, :cond_3
-
-    aget-object v10, v3, v9
-
-    iget-object v11, p0, Lbbd;->c:Landroid/graphics/Matrix;
-
-    invoke-virtual {v11, v10}, Landroid/graphics/Matrix;->mapPoints([F)V
-
-    aget v11, v10, v0
-
-    invoke-static {v7, v11}, Ljava/lang/Math;->min(FF)F
-
-    move-result v7
-
-    aget v11, v10, v0
-
-    invoke-static {v5, v11}, Ljava/lang/Math;->max(FF)F
-
-    move-result v5
-
-    aget v11, v10, v1
-
-    invoke-static {v8, v11}, Ljava/lang/Math;->min(FF)F
-
-    move-result v8
-
-    aget v10, v10, v1
-
-    invoke-static {v6, v10}, Ljava/lang/Math;->max(FF)F
-
-    move-result v6
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    sub-float/2addr v5, v7
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    div-float/2addr v5, v0
-
-    sub-float/2addr v6, v8
-
-    div-float/2addr v6, v0
-
-    iget-object v0, p0, Lbbd;->c:Landroid/graphics/Matrix;
-
-    div-float v1, v4, v5
-
-    div-float/2addr v4, v6
-
-    invoke-virtual {v0, v1, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    new-instance v0, Ltee;
-
-    mul-float/2addr p1, v5
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
-
-    move-result p1
-
-    mul-float/2addr p2, v6
-
-    invoke-static {p2}, Ljava/lang/Math;->round(F)I
-
-    move-result p2
-
-    invoke-direct {v0, p1, p2}, Ltee;-><init>(II)V
-
-    return-object v0
-
-    :array_0
-    .array-data 4
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x3f800000    # 1.0f
-        -0x40800000    # -1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_3
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    return-void
 .end method

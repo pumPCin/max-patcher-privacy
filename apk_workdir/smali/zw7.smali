@@ -3,54 +3,68 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzba;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzw7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public a:I
 
-.field public final b:Lr8a;
+.field public b:I
 
-.field public final c:Ljava/util/concurrent/Executor;
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lr8a;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance v0, Lgt7;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    invoke-direct {v0, v1}, Lgt7;-><init>(I)V
 
-    iput-object v0, p0, Lzw7;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iput-object p1, p0, Lzw7;->c:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lzw7;->b:Lr8a;
+    sput-object v0, Lzw7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 2
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Lax7;
+    const/4 v0, 0x0
 
-    new-instance v0, Lfr5;
+    return v0
+.end method
 
-    const/16 v1, 0x14
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-direct {v0, p0, v1, p1}, Lfr5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget p2, p0, Lzw7;->a:I
 
-    iget-object p1, p0, Lzw7;->c:Ljava/util/concurrent/Executor;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    iget p2, p0, Lzw7;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lzw7;->c:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

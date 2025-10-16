@@ -1,85 +1,31 @@
-.class public final enum Lfk;
-.super Ljava/lang/Enum;
+.class public final Lfk;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lfk;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final enum b:Lfk;
+.field public final b:Ljava/lang/String;
 
-.field public static final enum c:Lfk;
+.field public final c:Ljava/lang/String;
 
-.field public static final synthetic o:[Lfk;
+.field public final d:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;)V
+    .locals 0
 
-    new-instance v0, Lfk;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "EMPTY"
+    iput-object p1, p0, Lfk;->a:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lfk;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lfk;->c:Ljava/lang/String;
 
-    sput-object v0, Lfk;->a:Lfk;
-
-    new-instance v1, Lfk;
-
-    const-string v2, "STATIC"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lfk;->b:Lfk;
-
-    new-instance v2, Lfk;
-
-    const-string v3, "RLOTTIE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lfk;->c:Lfk;
-
-    filled-new-array {v0, v1, v2}, [Lfk;
-
-    move-result-object v0
-
-    sput-object v0, Lfk;->o:[Lfk;
+    iput-object p4, p0, Lfk;->d:Ljava/util/ArrayList;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lfk;
-    .locals 1
-
-    const-class v0, Lfk;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lfk;
-
-    return-object p0
-.end method
-
-.method public static values()[Lfk;
-    .locals 1
-
-    sget-object v0, Lfk;->o:[Lfk;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lfk;
-
-    return-object v0
 .end method

@@ -1,18 +1,3 @@
-.class public final synthetic Lku9;
+.class public abstract Lku9;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
-
-
-# virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 0
-
-    sget p1, Llu9;->x0:I
-
-    const/4 p1, 0x1
-
-    return p1
-.end method

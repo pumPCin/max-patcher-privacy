@@ -1,108 +1,119 @@
 .class public final Lqv2;
-.super Ljava/lang/Object;
+.super Lgd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lt6e;
+.field public final b:Ljava/lang/String;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Liv0;Le7f;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    const/4 v0, 0x0
+    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
 
-    const/4 v1, 0x7
+    iput-object p1, p0, Lqv2;->b:Ljava/lang/String;
 
-    invoke-static {v0, v0, v1}, Lu6e;->b(III)Lt6e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqv2;->a:Lt6e;
-
-    check-cast p2, Lmka;
-
-    invoke-virtual {p2}, Lmka;->a()Lh24;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lqv2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Liv0;->d(Ljava/lang/Object;)V
+    iput-object p2, p0, Lqv2;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lj87;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    .line 2
-    new-instance p1, Lpv2;
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, p0, v0}, Lpv2;-><init>(Lqv2;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lqv2;
 
-    iget-object v2, p0, Lqv2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x0
 
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lqv2;
+
+    iget-object v1, p0, Lqv2;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lqv2;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lqv2;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lqv2;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final onEvent(Lr38;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final hashCode()I
+    .locals 2
 
-    .line 3
-    new-instance p1, Lpv2;
+    iget-object v0, p0, Lqv2;->b:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {p1, p0, v0}, Lpv2;-><init>(Lqv2;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    const/4 v1, 0x3
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lqv2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p0, Lqv2;->c:Ljava/lang/String;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    return-void
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final onEvent(Lv23;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    .line 1
-    new-instance p1, Lpv2;
+    const-string v0, ", path="
 
-    const/4 v0, 0x0
+    const-string v1, ")"
 
-    invoke-direct {p1, p0, v0}, Lpv2;-><init>(Lqv2;Lkotlin/coroutines/Continuation;)V
+    const-string v2, "CropPhoto(uriAsString="
 
-    const/4 v1, 0x3
+    iget-object v3, p0, Lqv2;->b:Ljava/lang/String;
 
-    iget-object v2, p0, Lqv2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v4, p0, Lqv2;->c:Ljava/lang/String;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

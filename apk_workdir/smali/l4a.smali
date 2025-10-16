@@ -4,12 +4,12 @@
 
 
 # direct methods
-.method public static a(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
-    .locals 1
+.method public static a(Landroid/view/ViewGroup;)Z
+    .locals 0
 
-    new-instance v0, Landroid/app/Notification$Action$Builder;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getClipToPadding()Z
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    move-result p0
 
-    return-object v0
+    return p0
 .end method

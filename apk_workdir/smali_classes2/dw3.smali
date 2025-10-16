@@ -1,94 +1,160 @@
 .class public final Ldw3;
-.super Lqce;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lone/me/contactlist/ContactListWidget;
+
+.field public final synthetic Z:Lpq6;
+
+.field public final synthetic r0:Z
+
+
+# direct methods
+.method public constructor <init>(Lone/me/contactlist/ContactListWidget;Lpq6;ZLkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ldw3;->Y:Lone/me/contactlist/ContactListWidget;
+
+    iput-object p2, p0, Ldw3;->Z:Lpq6;
+
+    iput-boolean p3, p0, Ldw3;->r0:Z
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final bridge synthetic A(Lov7;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcw3;
+    check-cast p1, Lb54;
 
-    invoke-virtual {p0, p1}, Ldw3;->G(Lcw3;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
-.end method
-
-.method public final G(Lcw3;)V
-    .locals 3
-
-    iget-object v0, p0, Luvc;->a:Landroid/view/View;
-
-    check-cast v0, Lrla;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v1, Ll7d;->H0:I
-
-    invoke-virtual {v0, v1}, Lrla;->setIcon(I)V
-
-    sget v1, Lpja;->p:I
-
-    new-instance v2, Lxcf;
-
-    invoke-direct {v2, v1}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lrla;->setTitle(Lcdf;)V
-
-    iget p1, p1, Lcw3;->a:I
-
-    new-instance v1, Lxcf;
-
-    invoke-direct {v1, p1}, Lxcf;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lrla;->setSubtitle(Lcdf;)V
-
-    return-void
-.end method
-
-.method public final H(Ljava/lang/Integer;Ltd6;)V
-    .locals 2
-
-    iget-object v0, p0, Luvc;->a:Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    check-cast v0, Lrla;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Ldw3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    new-instance v1, Lg6;
+    check-cast p1, Ldw3;
 
-    invoke-direct {v1, p2}, Lg6;-><init>(Ltd6;)V
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-virtual {v0, p1, v1}, Lrla;->w(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, p2}, Ldw3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Ldw3;
+
+    iget-object v0, p0, Ldw3;->Z:Lpq6;
+
+    iget-boolean v1, p0, Ldw3;->r0:Z
+
+    iget-object v2, p0, Ldw3;->Y:Lone/me/contactlist/ContactListWidget;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Ldw3;-><init>(Lone/me/contactlist/ContactListWidget;Lpq6;ZLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Ldw3;->X:I
+
+    sget-object v1, Lzag;->a:Lzag;
+
+    iget-object v2, p0, Ldw3;->Z:Lpq6;
+
+    iget-object v3, p0, Ldw3;->Y:Lone/me/contactlist/ContactListWidget;
+
+    const/4 v4, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v4, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
 
     :cond_0
-    check-cast v0, Lrla;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p1, v0, Lrla;->I0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/4 p2, 0x0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+    throw p1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const/16 p2, 0x8
+    sget-object p1, Lone/me/contactlist/ContactListWidget;->O0:[Lwq7;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v3}, Lone/me/contactlist/ContactListWidget;->F0()Lvv3;
 
-    return-void
+    move-result-object p1
+
+    iget-object v0, v2, Lpq6;->Z:Ldu3;
+
+    iput v4, p0, Ldw3;->X:I
+
+    iget-object v4, p1, Lvv3;->c:Lqkf;
+
+    check-cast v4, Losa;
+
+    invoke-virtual {v4}, Losa;->b()Lv44;
+
+    move-result-object v4
+
+    new-instance v5, Lnv3;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, p1, v0, v6}, Lnv3;-><init>(Lvv3;Ldu3;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v4, v5, p0}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_1
+    iget-wide v4, v2, Lpq6;->a:J
+
+    iget-boolean p1, p0, Ldw3;->r0:Z
+
+    invoke-virtual {v3, v4, v5, p1}, Lone/me/contactlist/ContactListWidget;->e(JZ)V
+
+    return-object v1
 .end method

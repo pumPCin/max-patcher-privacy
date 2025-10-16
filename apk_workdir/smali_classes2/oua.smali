@@ -1,141 +1,98 @@
 .class public final Loua;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lpua;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Loua;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lqh6;
 
 
 # instance fields
-.field public final a:Lcdf;
+.field public final synthetic X:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lnua;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lnua;-><init>(I)V
-
-    sput-object v0, Loua;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcdf;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Loua;->X:I
 
-    iput-object p1, p0, Loua;->a:Lcdf;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Loua;->X:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lkotlin/coroutines/Continuation;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Loua;
+    new-instance v0, Loua;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p1, v2}, Loua;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Loua;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Loua;
+
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, p1, v2}, Loua;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v2
+    sget-object p1, Lzag;->a:Lzag;
 
-    :cond_1
-    check-cast p1, Loua;
+    invoke-virtual {v0, p1}, Loua;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Loua;->a:Lcdf;
+    return-object p1
 
-    iget-object p1, p1, Loua;->a:Lcdf;
+    nop
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Loua;->a:Lcdf;
+    iget v0, p0, Loua;->X:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    return v0
-.end method
+    sget-object p1, Lzag;->a:Lzag;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    return-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "TextButton(caption="
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object p1
 
-    iget-object v1, p0, Loua;->a:Lcdf;
+    nop
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Loua;->a:Lcdf;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

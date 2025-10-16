@@ -3,200 +3,115 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ljava/util/regex/Pattern;
+
+.field public static final e:Lsb7;
+
+.field public static final f:Lsb7;
+
+.field public static final g:Lsb7;
+
+.field public static final h:Lsb7;
+
+
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final a:I
 
-.field public final b:Landroid/view/View;
+.field public final b:I
 
-.field public final c:Ljava/util/ArrayList;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "\\s+"
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    move-result-object v0
 
-    iput-object v0, p0, Lhpf;->a:Ljava/util/HashMap;
+    sput-object v0, Lhpf;->d:Ljava/util/regex/Pattern;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-string v0, "auto"
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-string v1, "none"
 
-    iput-object v0, p0, Lhpf;->c:Ljava/util/ArrayList;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    iput-object p1, p0, Lhpf;->b:Landroid/view/View;
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Lsb7;->j(I[Ljava/lang/Object;)Lsb7;
+
+    move-result-object v0
+
+    sput-object v0, Lhpf;->e:Lsb7;
+
+    const-string v0, "dot"
+
+    const-string v2, "sesame"
+
+    const-string v3, "circle"
+
+    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v0}, Lsb7;->j(I[Ljava/lang/Object;)Lsb7;
+
+    move-result-object v0
+
+    sput-object v0, Lhpf;->f:Lsb7;
+
+    const-string v0, "filled"
+
+    const-string v3, "open"
+
+    filled-new-array {v0, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lsb7;->j(I[Ljava/lang/Object;)Lsb7;
+
+    move-result-object v0
+
+    sput-object v0, Lhpf;->g:Lsb7;
+
+    const-string v0, "before"
+
+    const-string v1, "outside"
+
+    const-string v3, "after"
+
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lsb7;->j(I[Ljava/lang/Object;)Lsb7;
+
+    move-result-object v0
+
+    sput-object v0, Lhpf;->h:Lsb7;
 
     return-void
 .end method
 
+.method public constructor <init>(III)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    instance-of v0, p1, Lhpf;
+    iput p1, p0, Lhpf;->a:I
 
-    if-eqz v0, :cond_0
+    iput p2, p0, Lhpf;->b:I
 
-    check-cast p1, Lhpf;
+    iput p3, p0, Lhpf;->c:I
 
-    iget-object v0, p1, Lhpf;->b:Landroid/view/View;
-
-    iget-object v1, p0, Lhpf;->b:Landroid/view/View;
-
-    if-ne v1, v0, :cond_0
-
-    iget-object v0, p0, Lhpf;->a:Ljava/util/HashMap;
-
-    iget-object p1, p1, Lhpf;->a:Ljava/util/HashMap;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lhpf;->b:Landroid/view/View;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lhpf;->a:Ljava/util/HashMap;
-
-    invoke-interface {v1}, Ljava/util/Map;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TransitionValues@"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lhpf;->hashCode()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ":\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "    view = "
-
-    invoke-static {v0, v1}, Lbk7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lhpf;->b:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "    values:"
-
-    invoke-static {v0, v2}, Lsw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lhpf;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "    "
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ": "
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
+    return-void
 .end method

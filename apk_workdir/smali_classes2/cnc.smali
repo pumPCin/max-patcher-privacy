@@ -1,61 +1,24 @@
-.class public final Lcnc;
+.class public abstract Lcnc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static pinbars_group_call_bar:I = 0x7f0a08e1
 
-.field public final synthetic b:Lenc;
+.field public static pinbars_group_call_bar_button:I = 0x7f0a08e2
 
-.field public final synthetic c:Lone/me/rlottie/RLottieImageView;
+.field public static pinbars_group_call_bar_divider:I = 0x7f0a08e3
 
+.field public static pinbars_group_call_bar_stack:I = 0x7f0a08e4
 
-# direct methods
-.method public constructor <init>(Lenc;Lone/me/rlottie/RLottieImageView;)V
-    .locals 0
+.field public static pinbars_group_call_bar_subtitle:I = 0x7f0a08e5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static pinbars_group_call_bar_title:I = 0x7f0a08e6
 
-    iput-object p1, p0, Lcnc;->b:Lenc;
+.field public static pinbars_message:I = 0x7f0a08e7
 
-    iput-object p2, p0, Lcnc;->c:Lone/me/rlottie/RLottieImageView;
+.field public static pinbars_miniplayer:I = 0x7f0a08e8
 
-    return-void
-.end method
+.field public static pinbars_root:I = 0x7f0a08e9
 
-
-# virtual methods
-.method public final onLoaded(Lone/me/rlottie/RLottieDrawable;)V
-    .locals 2
-
-    iget-object p1, p0, Lcnc;->b:Lenc;
-
-    iget-object p1, p1, Lenc;->a:Ljava/lang/String;
-
-    iget-boolean v0, p0, Lcnc;->a:Z
-
-    const-string v1, "Reaction effect. OnLoaded, called:"
-
-    invoke-static {v1, p1, v0}, Lbk7;->q(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    iget-boolean p1, p0, Lcnc;->a:Z
-
-    if-eqz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lcnc;->a:Z
-
-    iget-object p1, p0, Lcnc;->c:Lone/me/rlottie/RLottieImageView;
-
-    invoke-virtual {p1}, Lone/me/rlottie/RLottieImageView;->playAnimation()V
-
-    return-void
-.end method
+.field public static unknown_contact:I = 0x7f0a0c47

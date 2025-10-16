@@ -1,84 +1,114 @@
-.class public final Ljv;
-.super Lmv;
+.class public final synthetic Ljv;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Llj2;
+
+.field public final synthetic c:La99;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Llj2;La99;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ljv;->a:I
 
-    iput-wide p1, p0, Ljv;->a:J
+    iput-object p1, p0, Ljv;->b:Llj2;
+
+    iput-object p2, p0, Ljv;->c:La99;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljv;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ljv;
-
-    iget-wide v3, p0, Ljv;->a:J
-
-    iget-wide v5, p1, Ljv;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ljv;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 4
 
-    const-string v0, "LoadingAround(time="
+    iget v0, p0, Ljv;->a:I
 
-    const-string v1, ")"
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v2, p0, Ljv;->a:J
+    iget-object v0, p0, Ljv;->b:Llj2;
 
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Ljv;->c:La99;
 
-    move-result-object v0
+    :try_start_0
+    iget-object v2, v0, Llj2;->b:Lez6;
 
-    return-object v0
+    invoke-virtual {v2, v1}, Lez6;->r(Lmy6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    iget-object v2, v0, Llj2;->a:Ljava/lang/String;
+
+    const-string v3, "updateHistoryItemSync: exception"
+
+    invoke-static {v2, v3, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, v0, Llj2;->Y:Lye5;
+
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Lye5;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ljv;->b:Llj2;
+
+    iget-object v1, p0, Ljv;->c:La99;
+
+    :try_start_1
+    iget-object v2, v0, Llj2;->b:Lez6;
+
+    invoke-virtual {v2, v1}, Lez6;->b(Lmy6;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v1
+
+    iget-object v2, v0, Llj2;->a:Ljava/lang/String;
+
+    const-string v3, "addHistoryItem: exception"
+
+    invoke-static {v2, v3, v1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, v0, Llj2;->Y:Lye5;
+
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Lye5;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

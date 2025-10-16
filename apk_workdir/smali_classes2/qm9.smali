@@ -1,73 +1,219 @@
-.class public final enum Lqm9;
-.super Ljava/lang/Enum;
+.class public final Lqm9;
+.super Ly5d;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lqm9;
+# instance fields
+.field public final a:I
 
-.field public static final enum b:Lqm9;
+.field public b:Ljava/lang/Boolean;
 
-.field public static final synthetic c:[Lqm9;
+.field public c:Z
+
+.field public final synthetic d:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 1
 
-    new-instance v0, Lqm9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "MOVIE"
+    iput-object p1, p0, Lqm9;->d:Lone/me/messages/list/ui/MessagesListWidget;
 
-    const/4 v2, 0x0
+    const/16 p1, 0x50
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    int-to-float p1, p1
 
-    sput-object v0, Lqm9;->a:Lqm9;
-
-    new-instance v1, Lqm9;
-
-    const-string v2, "STREAM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lqm9;->b:Lqm9;
-
-    filled-new-array {v0, v1}, [Lqm9;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sput-object v0, Lqm9;->c:[Lqm9;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Lagi;->d(F)I
+
+    move-result p1
+
+    iput p1, p0, Lqm9;->a:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqm9;
-    .locals 1
 
-    const-class v0, Lqm9;
+# virtual methods
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-eqz p2, :cond_0
 
-    move-result-object p0
+    const/4 p1, 0x1
 
-    check-cast p0, Lqm9;
+    goto :goto_0
 
-    return-object p0
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lqm9;->c:Z
+
+    return-void
 .end method
 
-.method public static values()[Lqm9;
-    .locals 1
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 6
 
-    sget-object v0, Lqm9;->c:[Lqm9;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result p2
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
 
-    check-cast v0, [Lqm9;
+    move-result p3
 
-    return-object v0
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    iget v2, p0, Lqm9;->a:I
+
+    add-int/2addr v1, v2
+
+    if-ge p3, v1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-static {p1}, Lewi;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lqm9;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 v4, 0x1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lm5d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Lm5d;->j()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    if-lez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v5, 0x0
+
+    :goto_0
+    if-eqz v5, :cond_5
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    sub-int/2addr p1, v4
+
+    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->r(I)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    add-int/2addr p2, v0
+
+    sub-int/2addr p3, p2
+
+    if-lt p3, v2, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget-object p1, p0, Lqm9;->b:Ljava/lang/Boolean;
+
+    if-eqz p1, :cond_4
+
+    sget-object p2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    :cond_4
+    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
+
+    invoke-virtual {v3}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lim9;->L(Z)V
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    iput-object p1, p0, Lqm9;->b:Ljava/lang/Boolean;
+
+    return-void
+
+    :cond_5
+    :goto_1
+    iget-object p1, p0, Lqm9;->b:Ljava/lang/Boolean;
+
+    if-eqz p1, :cond_7
+
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    :goto_2
+    return-void
+
+    :cond_7
+    :goto_3
+    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
+
+    invoke-virtual {v3}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v4}, Lim9;->L(Z)V
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    iput-object p1, p0, Lqm9;->b:Ljava/lang/Boolean;
+
+    return-void
 .end method

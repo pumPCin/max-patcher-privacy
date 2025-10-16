@@ -1,139 +1,50 @@
-.class public final Lsle;
-.super Ljava/lang/Object;
+.class public final synthetic Lsle;
+.super Lb9;
 .source "SourceFile"
 
 # interfaces
-.implements Lssa;
+.implements Lgi6;
 
 
-# instance fields
-.field public final synthetic a:Lone/me/startconversation/StartConversationScreen;
+# static fields
+.field public static final r0:Lsle;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/startconversation/StartConversationScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsle;
 
-    iput-object p1, p0, Lsle;->a:Lone/me/startconversation/StartConversationScreen;
+    const-string v1, "<init>(Ljava/util/List;Ljava/util/List;)V"
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Lqle;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lsle;->r0:Lsle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final O(Ljava/lang/CharSequence;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->H0:[Lpl7;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v0, p0, Lsle;->a:Lone/me/startconversation/StartConversationScreen;
+    check-cast p2, Ljava/util/List;
 
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->c:Lds;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lone/me/startconversation/StartConversationScreen;->H0:[Lpl7;
+    new-instance p3, Lqle;
 
-    const/4 v3, 0x0
+    invoke-direct {p3, p1, p2}, Lqle;-><init>(Ljava/util/List;Ljava/util/List;)V
 
-    aget-object v3, v2, v3
-
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v1, v0, v3}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->o:Lds;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v0, p1}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lone/me/startconversation/StartConversationScreen;->C0()Lcme;
-
-    move-result-object v0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    const-string p1, ""
-
-    :cond_1
-    iget-object v0, v0, Lcme;->v0:Lww3;
-
-    iget-object v0, v0, Lww3;->g:Lh4f;
-
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lis9;
-
-    invoke-interface {v0, p1}, Lis9;->setValue(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g0()V
-    .locals 4
-
-    iget-object v0, p0, Lsle;->a:Lone/me/startconversation/StartConversationScreen;
-
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->X:Lds;
-
-    sget-object v2, Lone/me/startconversation/StartConversationScreen;->H0:[Lpl7;
-
-    const/4 v3, 0x2
-
-    aget-object v2, v2, v3
-
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {v1, v0, v2}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    iget-object v0, v0, Lone/me/startconversation/StartConversationScreen;->G0:Lgz3;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lada;->f(Z)V
-
-    return-void
-.end method
-
-.method public final n()V
-    .locals 4
-
-    iget-object v0, p0, Lsle;->a:Lone/me/startconversation/StartConversationScreen;
-
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->X:Lds;
-
-    sget-object v2, Lone/me/startconversation/StartConversationScreen;->H0:[Lpl7;
-
-    const/4 v3, 0x2
-
-    aget-object v2, v2, v3
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v1, v0, v2}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    iget-object v0, v0, Lone/me/startconversation/StartConversationScreen;->G0:Lgz3;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lada;->f(Z)V
-
-    return-void
+    return-object p3
 .end method

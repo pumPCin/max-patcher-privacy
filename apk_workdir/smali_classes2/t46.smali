@@ -1,28 +1,26 @@
 .class public final Lt46;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic X:Lw46;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Ljava/lang/String;
+.field public final synthetic Y:Lone/me/folders/edit/FolderEditScreen;
 
 
 # direct methods
-.method public constructor <init>(Lw46;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lt46;->X:Lw46;
-
-    iput-object p2, p0, Lt46;->Y:Ljava/lang/String;
+    iput-object p1, p0, Lt46;->Y:Lone/me/folders/edit/FolderEditScreen;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ln24;
+    check-cast p1, Lw46;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,7 +40,7 @@
 
     check-cast p1, Lt46;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lt46;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,47 +50,141 @@
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance p1, Lt46;
+    new-instance v0, Lt46;
 
-    iget-object v0, p0, Lt46;->X:Lw46;
+    iget-object v1, p0, Lt46;->Y:Lone/me/folders/edit/FolderEditScreen;
 
-    iget-object v1, p0, Lt46;->Y:Ljava/lang/String;
+    invoke-direct {v0, v1, p2}, Lt46;-><init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {p1, v0, v1, p2}, Lt46;-><init>(Lw46;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lt46;->X:Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 7
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lt46;->Y:Lone/me/folders/edit/FolderEditScreen;
 
-    iget-object p1, p0, Lt46;->X:Lw46;
+    iget-object v1, v0, Lone/me/folders/edit/FolderEditScreen;->Z:Lazc;
 
-    iget-object p1, p1, Lw46;->Z:Lyn7;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Lt46;->X:Ljava/lang/Object;
+
+    check-cast p1, Lw46;
+
+    instance-of v2, p1, Lu46;
+
+    const/4 v3, 0x3
+
+    sget-object v4, Ld5b;->a:Ld5b;
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->C0(Lone/me/folders/edit/FolderEditScreen;)Ls5b;
+
+    move-result-object v2
+
+    sget v5, Lava;->j:I
+
+    invoke-virtual {v2, v5}, Ls5b;->setTitle(I)V
+
+    sget-object v2, Lone/me/folders/edit/FolderEditScreen;->r0:[Lwq7;
+
+    aget-object v5, v2, v3
+
+    invoke-interface {v1, v0, v5}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    check-cast p1, Lu46;
+
+    iget-boolean p1, p1, Lu46;->b:Z
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+
+    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->C0(Lone/me/folders/edit/FolderEditScreen;)Ls5b;
 
     move-result-object p1
 
-    check-cast p1, Lrta;
+    invoke-virtual {p1, v4}, Ls5b;->setRightActions(Li5b;)V
 
-    iget-object v0, p0, Lt46;->Y:Ljava/lang/String;
+    goto :goto_0
 
-    invoke-virtual {p1, v0}, Lrta;->h(Ljava/lang/CharSequence;)V
+    :cond_0
+    instance-of v2, p1, Lv46;
 
-    new-instance v0, Lfua;
+    if-eqz v2, :cond_2
 
-    sget v1, Ll7d;->j:I
+    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->C0(Lone/me/folders/edit/FolderEditScreen;)Ls5b;
 
-    invoke-direct {v0, v1}, Lfua;-><init>(I)V
+    move-result-object v2
 
-    invoke-virtual {p1, v0}, Lrta;->e(Ljua;)V
+    sget v5, Lava;->k:I
 
-    invoke-virtual {p1}, Lrta;->i()Lqta;
+    invoke-virtual {v2, v5}, Ls5b;->setTitle(I)V
 
-    sget-object p1, Laxf;->a:Laxf;
+    sget-object v2, Lone/me/folders/edit/FolderEditScreen;->r0:[Lwq7;
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->C0(Lone/me/folders/edit/FolderEditScreen;)Ls5b;
+
+    move-result-object v1
+
+    check-cast p1, Lv46;
+
+    iget-boolean p1, p1, Lv46;->c:Z
+
+    if-eqz p1, :cond_1
+
+    new-instance v4, Lc5b;
+
+    new-instance p1, Lr46;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v0, v2}, Lr46;-><init>(Lone/me/folders/edit/FolderEditScreen;I)V
+
+    invoke-direct {v4, p1}, Lc5b;-><init>(Lqh6;)V
+
+    :cond_1
+    invoke-virtual {v1, v4}, Ls5b;->setRightActions(Li5b;)V
+
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

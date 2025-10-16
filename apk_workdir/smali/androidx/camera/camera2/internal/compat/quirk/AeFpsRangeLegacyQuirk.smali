@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements La8c;
+.implements Lzhc;
 
 
 # instance fields
@@ -11,14 +11,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcz1;)V
+.method public constructor <init>(Lg02;)V
     .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    invoke-virtual {p1, v0}, Lcz1;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lg02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -1,265 +1,140 @@
-.class public Lvxf;
+.class public final Lvxf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Lxcd;
+.field public final b:I
 
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/util/HashMap;
-
-.field public final e:Ljava/util/HashMap;
-
-.field public final f:Ljava/util/HashMap;
-
-.field public final g:Ljava/util/HashSet;
-
-.field public final h:Ljava/util/ArrayList;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvxf;->a:Ljava/lang/String;
+    iput p1, p0, Lvxf;->a:I
 
-    sget-object p1, Lw7;->g:Lxcd;
+    iput p2, p0, Lvxf;->b:I
 
-    iput-object p1, p0, Lvxf;->b:Lxcd;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lvxf;->c:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lvxf;->d:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lvxf;->e:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lvxf;->f:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p1, p0, Lvxf;->g:Ljava/util/HashSet;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lvxf;->h:Ljava/util/ArrayList;
+    iput p3, p0, Lvxf;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lhdd;
-    .locals 14
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    const-string v0, "Finish initialization of \""
-
-    const-string v1, "Start initialization of scope \""
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x2
-
-    const/16 v5, 0x22
-
-    iget-object v6, p0, Lvxf;->b:Lxcd;
-
-    iget-object v8, p0, Lvxf;->a:Ljava/lang/String;
-
-    if-eqz v6, :cond_1
-
-    :try_start_0
-    invoke-static {v4, v4}, Lsw1;->b(II)I
-
-    move-result v7
-
-    if-ltz v7, :cond_0
-
-    move v7, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v7, v2
-
-    :goto_0
-    if-eqz v7, :cond_1
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v6, v1}, Lxcd;->d(Lxcd;Ljava/lang/String;)V
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    instance-of v0, p1, Lvxf;
 
-    goto :goto_2
+    if-nez v0, :cond_1
+
+    goto :goto_0
 
     :cond_1
+    check-cast p1, Lvxf;
+
+    iget v0, p0, Lvxf;->a:I
+
+    iget v1, p1, Lvxf;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lvxf;->b:I
+
+    iget v1, p1, Lvxf;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lvxf;->c:I
+
+    iget p1, p1, Lvxf;->c:I
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
     :goto_1
-    iget-object v1, p0, Lvxf;->h:Ljava/util/ArrayList;
+    const/4 p1, 0x1
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+    return p1
+.end method
 
-    move-result v7
+.method public final hashCode()I
+    .locals 3
 
-    if-eqz v7, :cond_4
+    iget v0, p0, Lvxf;->a:I
 
-    new-instance v7, Lhdd;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v9, p0, Lvxf;->c:Ljava/util/ArrayList;
+    move-result v0
 
-    iget-object v10, p0, Lvxf;->d:Ljava/util/HashMap;
+    const/16 v1, 0x1f
 
-    iget-object v11, p0, Lvxf;->e:Ljava/util/HashMap;
+    mul-int/2addr v0, v1
 
-    iget-object v12, p0, Lvxf;->f:Ljava/util/HashMap;
+    iget v2, p0, Lvxf;->b:I
 
-    iget-object v13, p0, Lvxf;->g:Ljava/util/HashSet;
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
-    invoke-direct/range {v7 .. v13}, Lhdd;-><init>(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/HashMap;Ljava/util/HashMap;Ljava/util/HashMap;Ljava/util/HashSet;)V
+    move-result v0
 
-    if-eqz v6, :cond_3
+    iget v1, p0, Lvxf;->c:I
 
-    invoke-static {v4, v4}, Lsw1;->b(II)I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
-    if-ltz v1, :cond_2
+    add-int/2addr v1, v0
 
-    move v2, v3
+    return v1
+.end method
 
-    :cond_2
-    if-eqz v2, :cond_3
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v0, ", neutralFade="
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, ", themed="
 
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "TopbarBackgroundDisabledColors(neutral="
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iget v3, p0, Lvxf;->a:I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v4, p0, Lvxf;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Lxcd;->d(Lxcd;Ljava/lang/String;)V
+    const-string v1, ")"
 
-    :cond_3
-    return-object v7
+    iget v2, p0, Lvxf;->c:I
 
-    :cond_4
-    new-instance v0, Lscout/exception/IllegalOverridesException;
+    invoke-static {v0, v2, v1}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, v8, v1}, Lscout/exception/IllegalOverridesException;-><init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    move-result-object v0
 
-    throw v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_2
-    new-instance v1, Lscout/exception/ScopeInitializationException;
-
-    invoke-direct {v1, v8, v0}, Lscout/exception/ScopeInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
-
-    throw v1
-.end method
-
-.method public bridge synthetic b(Ljava/lang/Class;Lbc7;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lvxf;->c(Ljava/lang/Class;Lbc7;)V
-
-    return-void
-.end method
-
-.method public c(Ljava/lang/Class;Lbc7;)V
-    .locals 2
-
-    iget-object v0, p0, Lvxf;->e:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public bridge synthetic d(Ljava/lang/Class;Lbc7;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lvxf;->e(Ljava/lang/Class;Lbc7;)V
-
-    return-void
-.end method
-
-.method public e(Ljava/lang/Class;Lbc7;)V
-    .locals 1
-
-    iget-object v0, p0, Lvxf;->d:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p0, Lvxf;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

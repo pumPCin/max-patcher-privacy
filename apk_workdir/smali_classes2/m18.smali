@@ -4,94 +4,130 @@
 
 
 # instance fields
-.field public a:Z
+.field public final a:Ljava/lang/Float;
 
-.field public b:Z
-
-.field public c:I
-
-.field public d:I
-
-.field public e:Ln18;
-
-.field public f:Z
-
-.field public g:Z
-
-.field public h:J
-
-.field public i:Z
-
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:Z
-
-.field public n:Z
-
-.field public o:J
-
-.field public p:J
-
-.field public q:J
-
-.field public r:Z
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/Float;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lm18;->a:Ljava/lang/Float;
 
-    iput-boolean v0, p0, Lm18;->a:Z
-
-    iput-boolean v0, p0, Lm18;->b:Z
-
-    const/4 v1, 0x1
-
-    iput v1, p0, Lm18;->c:I
-
-    iput v1, p0, Lm18;->d:I
-
-    sget-object v2, Ln18;->X:Ln18;
-
-    iput-object v2, p0, Lm18;->e:Ln18;
-
-    iput-boolean v1, p0, Lm18;->f:Z
-
-    iput-boolean v1, p0, Lm18;->g:Z
-
-    const-wide/16 v1, -0x1
-
-    iput-wide v1, p0, Lm18;->h:J
-
-    iput-boolean v0, p0, Lm18;->i:Z
-
-    iput-boolean v0, p0, Lm18;->j:Z
-
-    iput-boolean v0, p0, Lm18;->k:Z
-
-    iput-boolean v0, p0, Lm18;->l:Z
-
-    iput-boolean v0, p0, Lm18;->m:Z
-
-    iput-boolean v0, p0, Lm18;->n:Z
-
-    iput-wide v1, p0, Lm18;->o:J
-
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, p0, Lm18;->p:J
-
-    iput-wide v1, p0, Lm18;->q:J
-
-    iput-boolean v0, p0, Lm18;->r:Z
+    iput-boolean p2, p0, Lm18;->b:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lm18;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lm18;
+
+    iget-object v1, p0, Lm18;->a:Ljava/lang/Float;
+
+    iget-object v3, p1, Lm18;->a:Ljava/lang/Float;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lm18;->b:Z
+
+    iget-boolean p1, p1, Lm18;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lm18;->a:Ljava/lang/Float;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lm18;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ListeningState(progress="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lm18;->a:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isPlaying="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lm18;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

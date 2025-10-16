@@ -1,108 +1,124 @@
 .class public final Lpye;
-.super Lnye;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Loye;
+.implements Lrye;
 
 
 # instance fields
-.field public final b:Lu54;
+.field public final a:Ljava/lang/String;
+
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;J)V
+    .locals 0
 
-    new-instance v0, Loye;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpye;->a:Ljava/lang/String;
 
-    sput-object v0, Lpye;->CREATOR:Loye;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    .line 2
-    const-class v0, Lu54;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
-
-    .line 3
-    :cond_0
-    invoke-static {p1}, Lu54;->b(Landroid/os/Bundle;)Lu54;
-
-    move-result-object p1
-
-    .line 4
-    invoke-direct {p0, p1}, Lpye;-><init>(Lu54;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lu54;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p1, Lu54;->a:Ljava/lang/CharSequence;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lnye;-><init>(Ljava/lang/String;)V
-
-    iput-object p1, p0, Lpye;->b:Lu54;
+    iput-wide p2, p0, Lpye;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpye;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpye;
+
+    iget-object v1, p0, Lpye;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lpye;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lpye;->b:J
+
+    iget-wide v5, p1, Lpye;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    iget-object p2, p0, Lpye;->b:Lu54;
+    iget-object v0, p0, Lpye;->a:Ljava/lang/String;
 
-    invoke-virtual {p2}, Lu54;->c()Landroid/os/Bundle;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lpye;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "ShowWarningBottomSheet(fileUrl="
+
+    const-string v1, ", fileSize="
+
+    iget-wide v2, p0, Lpye;->b:J
+
+    iget-object v4, p0, Lpye;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Lfef;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object p2, p2, Lu54;->d:Landroid/graphics/Bitmap;
+    const-string v1, ")"
 
-    if-eqz p2, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lu54;->v:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    move-result-object v0
 
-    :cond_0
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
-
-    return-void
+    return-object v0
 .end method

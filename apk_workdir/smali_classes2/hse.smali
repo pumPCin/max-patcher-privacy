@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lore;
+.field public final synthetic b:Lxf7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lore;I)V
+.method public synthetic constructor <init>(Lxf7;I)V
     .locals 0
 
     iput p2, p0, Lhse;->a:I
 
-    iput-object p1, p0, Lhse;->b:Lore;
+    iput-object p1, p0, Lhse;->b:Lxf7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,39 +27,63 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
     iget v0, p0, Lhse;->a:I
 
-    check-cast p1, Lgse;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhse;->b:Lore;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-wide v0, v0, Lore;->b:J
+    move-result-object p1
 
-    iget-object p1, p1, Lgse;->a:Ljava/lang/String;
+    check-cast p1, Ljava/lang/Integer;
 
-    new-instance v2, Lgse;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {v2, p1, v0, v1}, Lgse;-><init>(Ljava/lang/String;J)V
+    move-result p1
 
-    return-object v2
+    iget-object v0, p0, Lhse;->b:Lxf7;
+
+    check-cast v0, Lbse;
+
+    iget-object v0, v0, Lbse;->G0:Lkn3;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lhse;->b:Lore;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-wide v0, v0, Lore;->b:J
+    move-result-object p1
 
-    iget-object p1, p1, Lgse;->a:Ljava/lang/String;
+    check-cast p1, Ljava/lang/Float;
 
-    new-instance v2, Lgse;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-direct {v2, p1, v0, v1}, Lgse;-><init>(Ljava/lang/String;J)V
+    move-result p1
 
-    return-object v2
+    iget-object v0, p0, Lhse;->b:Lxf7;
+
+    check-cast v0, Lbse;
+
+    iget-object v1, v0, Lbse;->G0:Lkn3;
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getCurrentTextColor()I
+
+    move-result v1
+
+    invoke-static {v1, p1}, Lpti;->d(IF)I
+
+    move-result p1
+
+    iget-object v0, v0, Lbse;->G0:Lkn3;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
 
     nop
 

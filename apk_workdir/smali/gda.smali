@@ -2,106 +2,68 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq7;
-.implements La22;
-
 
 # instance fields
-.field public final a:Lwq7;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lada;
+.field public final b:I
 
-.field public c:Lhda;
+.field public final c:Ljava/lang/String;
 
-.field public final synthetic o:Lida;
+.field public final d:Landroid/app/Notification;
 
 
 # direct methods
-.method public constructor <init>(Lida;Lwq7;Lada;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgda;->o:Lida;
+    iput-object p1, p0, Lgda;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lgda;->a:Lwq7;
+    iput p2, p0, Lgda;->b:I
 
-    iput-object p3, p0, Lgda;->b:Lada;
+    iput-object p3, p0, Lgda;->c:Ljava/lang/String;
 
-    invoke-virtual {p2, p0}, Lwq7;->a(Lqq7;)V
+    iput-object p4, p0, Lgda;->d:Landroid/app/Notification;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lgda;->a:Lwq7;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Lwq7;->f(Lqq7;)V
+    const-string v1, "NotifyTask[packageName:"
 
-    iget-object v0, p0, Lgda;->b:Lada;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lada;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Lgda;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lgda;->c:Lhda;
+    const-string v1, ", id:"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lhda;->cancel()V
+    iget v1, p0, Lgda;->b:I
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lgda;->c:Lhda;
+    const-string v1, ", tag:"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final d(Luq7;Lvp7;)V
-    .locals 0
+    iget-object v1, p0, Lgda;->c:Ljava/lang/String;
 
-    sget-object p1, Lvp7;->ON_START:Lvp7;
+    const-string v2, "]"
 
-    if-ne p2, p1, :cond_0
+    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object p1, p0, Lgda;->o:Lida;
+    move-result-object v0
 
-    iget-object p2, p0, Lgda;->b:Lada;
-
-    invoke-virtual {p1, p2}, Lida;->b(Lada;)Lhda;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgda;->c:Lhda;
-
-    return-void
-
-    :cond_0
-    sget-object p1, Lvp7;->ON_STOP:Lvp7;
-
-    if-ne p2, p1, :cond_1
-
-    iget-object p1, p0, Lgda;->c:Lhda;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lhda;->cancel()V
-
-    return-void
-
-    :cond_1
-    sget-object p1, Lvp7;->ON_DESTROY:Lvp7;
-
-    if-ne p2, p1, :cond_2
-
-    invoke-virtual {p0}, Lgda;->cancel()V
-
-    :cond_2
-    return-void
+    return-object v0
 .end method

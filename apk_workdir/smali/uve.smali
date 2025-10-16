@@ -1,209 +1,293 @@
-.class public abstract Luve;
+.class public final Luve;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:J
+.field public final b:I
 
-.field public c:J
+.field public final c:Ljava/lang/Integer;
 
-.field public d:J
+.field public final d:Ljava/lang/Integer;
 
-.field public e:I
+.field public final e:F
 
-.field public f:I
+.field public final f:Z
 
-.field public g:J
+.field public final g:Z
 
-.field public h:Z
+.field public final h:Z
 
-.field public i:Z
+.field public final i:Z
 
-.field public final j:Ljava/lang/Object;
-
-.field public k:Ljava/lang/Object;
-
-.field public l:Ljava/lang/Object;
-
-.field public m:Ljava/lang/Object;
-
-.field public n:Ljava/lang/Object;
+.field public final j:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
-
-    iput p1, p0, Luve;->a:I
-
-    packed-switch p1, :pswitch_data_0
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;FZZZZI)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lhca;
+    iput-object p1, p0, Luve;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    iput p2, p0, Luve;->b:I
 
-    invoke-direct {p1, v0}, Lhca;-><init>(I)V
+    iput-object p3, p0, Luve;->c:Ljava/lang/Integer;
 
-    iput-object p1, p0, Luve;->j:Ljava/lang/Object;
+    iput-object p4, p0, Luve;->d:Ljava/lang/Integer;
 
-    new-instance p1, Ll5c;
+    iput p5, p0, Luve;->e:F
 
-    const/4 v0, 0x6
+    iput-boolean p6, p0, Luve;->f:Z
 
-    invoke-direct {p1, v0}, Ll5c;-><init>(I)V
+    iput-boolean p7, p0, Luve;->g:Z
 
-    iput-object p1, p0, Luve;->n:Ljava/lang/Object;
+    iput-boolean p8, p0, Luve;->h:Z
+
+    iput-boolean p9, p0, Luve;->i:Z
+
+    iput p10, p0, Luve;->j:I
 
     return-void
+.end method
+
+.method public static a(Ljava/lang/String;)I
+    .locals 2
+
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
 
     :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x1
 
-    new-instance p1, Lhca;
+    :goto_0
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x1
+    return v0
 
-    invoke-direct {p1, v0}, Lhca;-><init>(I)V
+    :catch_0
+    :cond_0
+    const-string v0, "SsaStyle"
 
-    iput-object p1, p0, Luve;->j:Ljava/lang/Object;
+    const-string v1, "Ignoring unknown alignment: "
 
-    new-instance p1, Lzab;
+    invoke-static {v1, p0, v0}, Lxx1;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v0, 0x8
+    const/4 p0, -0x1
 
-    invoke-direct {p1, v0}, Lzab;-><init>(I)V
-
-    iput-object p1, p0, Luve;->n:Ljava/lang/Object;
-
-    return-void
+    return p0
 
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public a(J)V
-    .locals 1
-
-    iget v0, p0, Luve;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-wide p1, p0, Luve;->d:J
-
-    return-void
-
-    :pswitch_0
-    iput-wide p1, p0, Luve;->d:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public abstract b(Lo3b;)J
-.end method
-
-.method public abstract c(Lt3g;)J
-.end method
-
-.method public abstract d(Lo3b;JLzab;)Z
-.end method
-
-.method public abstract e(Lt3g;JLl5c;)Z
-.end method
-
-.method public f(Z)V
+.method public static b(Ljava/lang/String;)Z
     .locals 4
 
-    iget v0, p0, Luve;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    const-wide/16 v0, 0x0
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz p1, :cond_0
+    const/4 v1, 0x1
 
-    new-instance p1, Lzab;
+    if-eq p0, v1, :cond_1
 
-    const/16 v2, 0x8
+    const/4 v2, -0x1
 
-    invoke-direct {p1, v2}, Lzab;-><init>(I)V
-
-    iput-object p1, p0, Luve;->n:Ljava/lang/Object;
-
-    iput-wide v0, p0, Luve;->c:J
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Luve;->e:I
+    if-ne p0, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x1
+    return v0
 
-    iput p1, p0, Luve;->e:I
+    :cond_1
+    :goto_0
+    return v1
+
+    :catch_0
+    move-exception v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Failed to parse boolean value: \'"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v2, "SsaStyle"
+
+    invoke-static {v2, p0, v1}, Ltxh;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return v0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 8
+
+    :try_start_0
+    const-string v0, "&H"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/16 v1, 0x10
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
+
+    move-result-wide v2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
 
     :goto_0
-    const-wide/16 v2, -0x1
+    const-wide v4, 0xffffffffL
 
-    iput-wide v2, p0, Luve;->b:J
+    cmp-long v0, v2, v4
 
-    iput-wide v0, p0, Luve;->d:J
+    if-gtz v0, :cond_1
 
-    return-void
-
-    :pswitch_0
-    const-wide/16 v0, 0x0
-
-    if-eqz p1, :cond_1
-
-    new-instance p1, Ll5c;
-
-    const/4 v2, 0x6
-
-    invoke-direct {p1, v2}, Ll5c;-><init>(I)V
-
-    iput-object p1, p0, Luve;->n:Ljava/lang/Object;
-
-    iput-wide v0, p0, Luve;->c:J
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Luve;->e:I
+    const/4 v0, 0x1
 
     goto :goto_1
 
     :cond_1
-    const/4 p1, 0x1
-
-    iput p1, p0, Luve;->e:I
+    const/4 v0, 0x0
 
     :goto_1
-    const-wide/16 v2, -0x1
+    invoke-static {v0}, Lgfi;->b(Z)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-wide v2, p0, Luve;->b:J
+    const/16 p0, 0x18
 
-    iput-wide v0, p0, Luve;->d:J
+    shr-long v4, v2, p0
 
-    return-void
+    const-wide/16 v6, 0xff
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    and-long/2addr v4, v6
+
+    xor-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Lg0i;->b(J)I
+
+    move-result p0
+
+    shr-long v0, v2, v1
+
+    and-long/2addr v0, v6
+
+    invoke-static {v0, v1}, Lg0i;->b(J)I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    shr-long v4, v2, v1
+
+    and-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Lg0i;->b(J)I
+
+    move-result v1
+
+    and-long/2addr v2, v6
+
+    invoke-static {v2, v3}, Lg0i;->b(J)I
+
+    move-result v2
+
+    invoke-static {p0, v2, v1, v0}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :goto_2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed to parse color expression: \'"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "SsaStyle"
+
+    invoke-static {v1, p0, v0}, Ltxh;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

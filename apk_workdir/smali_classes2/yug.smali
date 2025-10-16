@@ -1,200 +1,105 @@
-.class public final Lyug;
-.super Ljava/lang/Object;
+.class public final enum Lyug;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Companion:Lxug;
-
-.field public static final c:[Lql7;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ldvg;
+.field public static final synthetic a:[Lyug;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 9
 
-    new-instance v0, Lxug;
+    new-instance v0, Lyug;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lyug;->Companion:Lxug;
-
-    sget-object v0, Ldvg;->Companion:Lcvg;
-
-    invoke-virtual {v0}, Lcvg;->serializer()Lql7;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Lql7;
+    const-string v1, "LOWEST"
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    aput-object v2, v1, v3
+    new-instance v1, Lyug;
 
-    const/4 v2, 0x1
+    const-string v2, "HIGHEST"
 
-    aput-object v0, v1, v2
+    const/4 v3, 0x1
 
-    sput-object v1, Lyug;->c:[Lql7;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
+    new-instance v2, Lyug;
 
-.method public synthetic constructor <init>(ILjava/lang/String;Ldvg;)V
-    .locals 2
+    const-string v3, "MAX_QVGA"
 
-    and-int/lit8 v0, p1, 0x3
+    const/4 v4, 0x2
 
-    const/4 v1, 0x3
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne v1, v0, :cond_0
+    new-instance v3, Lyug;
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v4, "MAX_480P"
 
-    iput-object p2, p0, Lyug;->a:Ljava/lang/String;
+    const/4 v5, 0x3
 
-    iput-object p3, p0, Lyug;->b:Ldvg;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
+    new-instance v4, Lyug;
 
-    :cond_0
-    sget-object p2, Lwug;->a:Lwug;
+    const-string v5, "MAX_720P"
 
-    invoke-virtual {p2}, Lwug;->d()Lmqd;
+    const/4 v6, 0x4
 
-    move-result-object p2
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p1, v1, p2}, Lomc;->A(IILmqd;)V
+    new-instance v5, Lyug;
 
-    const/4 p1, 0x0
+    const-string v6, "MAX_1080P"
 
-    throw p1
-.end method
+    const/4 v7, 0x5
 
-.method public constructor <init>(Ljava/lang/String;Ldvg;)V
-    .locals 0
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v6, Lyug;
 
-    .line 3
-    iput-object p1, p0, Lyug;->a:Ljava/lang/String;
+    const-string v7, "MAX_2160P"
 
-    .line 4
-    iput-object p2, p0, Lyug;->b:Ldvg;
+    const/4 v8, 0x6
 
-    return-void
-.end method
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyug;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyug;
-
-    iget-object v1, p0, Lyug;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lyug;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lyug;->b:Ldvg;
-
-    iget-object p1, p1, Lyug;->b:Ldvg;
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lyug;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lyug;->b:Ldvg;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppHapticFeedbackResponse(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyug;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", status="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyug;->b:Ldvg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array/range {v0 .. v6}, [Lyug;
 
     move-result-object v0
+
+    sput-object v0, Lyug;->a:[Lyug;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lyug;
+    .locals 1
+
+    const-class v0, Lyug;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lyug;
+
+    return-object p0
+.end method
+
+.method public static values()[Lyug;
+    .locals 1
+
+    sget-object v0, Lyug;->a:[Lyug;
+
+    invoke-virtual {v0}, [Lyug;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lyug;
 
     return-object v0
 .end method

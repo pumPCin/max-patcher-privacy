@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/contacts/ContactCallManager;
-.implements Lv31;
+.implements Lv41;
 
 
 # annotations
@@ -15,20 +15,20 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;",
         "Lru/ok/android/externcalls/sdk/contacts/ContactCallManager;",
-        "Lv31;",
+        "Lv41;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "participantsStore",
         "",
         "iAmAnonymous",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Z)V",
-        "Laxf;",
+        "Lzag;",
         "notifyContactCallStateChanged",
         "()V",
-        "Lu31;",
+        "Lu41;",
         "info",
         "onDecorativeParticipantIdChanged",
-        "(Lu31;)V",
+        "(Lu41;)V",
         "Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;",
         "listener",
         "addContactCallListener",
@@ -153,7 +153,7 @@
     return v0
 .end method
 
-.method public onDecorativeParticipantIdChanged(Lu31;)V
+.method public onDecorativeParticipantIdChanged(Lu41;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->participantsStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
@@ -164,7 +164,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lch1;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
 
     move-result-object v0
 
@@ -185,11 +185,11 @@
 
     if-eqz v1, :cond_2
 
-    iget-object p1, p1, Lu31;->a:Lyg1;
+    iget-object p1, p1, Lu41;->a:Lzh1;
 
-    iget-object v0, v0, Lch1;->a:Lyg1;
+    iget-object v0, v0, Ldi1;->a:Lzh1;
 
-    invoke-static {p1, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

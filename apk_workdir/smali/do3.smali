@@ -1,23 +1,14 @@
 .class public abstract Ldo3;
-.super Ljava/lang/Object;
+.super Lwga;
 .source "SourceFile"
 
+# interfaces
+.implements Lcka;
 
-# static fields
-.field public static final a:Ljava/lang/String;
 
+# virtual methods
+.method public abstract u(Lzia;)V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "ConstraintTracker"
-
-    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ldo3;->a:Ljava/lang/String;
-
-    return-void
+.method public abstract v()V
 .end method

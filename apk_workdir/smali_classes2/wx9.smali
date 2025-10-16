@@ -1,232 +1,256 @@
-.class public final Lwx9;
-.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.class public final synthetic Lwx9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfef;
+.implements Lqh6;
 
 
 # instance fields
-.field public B0:Z
+.field public final synthetic a:I
 
-.field public final C0:Ljava/lang/Object;
+.field public final synthetic b:Lyx9;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(Lyx9;I)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+    iput p2, p0, Lwx9;->a:I
 
-    const/4 p1, 0x1
+    iput-object p1, p0, Lwx9;->b:Lyx9;
 
-    iput-boolean p1, p0, Lwx9;->B0:Z
-
-    new-instance v0, Lpf7;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1, p0}, Lpf7;-><init>(ILjava/lang/Object;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwx9;->C0:Ljava/lang/Object;
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance v0, Lxi6;
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lxi6;-><init>(Landroid/content/res/Resources;)V
-
-    invoke-direct {p0}, Lwx9;->getShimmerDrawable()Lvx9;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lxi6;->d:Landroid/graphics/drawable/Drawable;
-
-    new-instance v1, Lk6d;
-
-    invoke-direct {v1}, Lk6d;-><init>()V
-
-    iput-boolean p1, v1, Lk6d;->b:Z
-
-    iput-object v1, v0, Lxi6;->p:Lk6d;
-
-    invoke-virtual {v0}, Lxi6;->a()Lwi6;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lwx4;->setHierarchy(Ltx4;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method private final getShimmerDrawable()Lvx9;
-    .locals 1
-
-    iget-object v0, p0, Lwx9;->C0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvx9;
-
-    return-object v0
-.end method
-
-.method public static j(Llwa;)Lk7e;
-    .locals 3
-
-    new-instance v0, Lj7e;
-
-    invoke-direct {v0}, Lj7e;-><init>()V
-
-    iget-object v1, v0, Lj7e;->a:Ljava/lang/Object;
-
-    check-cast v1, Lk7e;
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, v1, Lk7e;->j:Z
-
-    invoke-interface {p0}, Llwa;->b()Lme0;
-
-    move-result-object v2
-
-    iget v2, v2, Lme0;->m:I
-
-    invoke-virtual {v0, v2}, Lj7e;->i(I)V
-
-    invoke-interface {p0}, Llwa;->b()Lme0;
-
-    move-result-object p0
-
-    iget p0, p0, Lme0;->l:I
-
-    iput p0, v1, Lk7e;->d:I
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p0}, Lj7e;->h(F)V
-
-    const/16 p0, 0x40
-
-    int-to-float p0, p0
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v1
-
-    invoke-static {p0}, Li8e;->I(F)I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Lj7e;->k(I)V
-
-    invoke-virtual {v0}, Lj7e;->g()Lk7e;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final i(Lw37;Landroid/graphics/drawable/Animatable;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
+    iget v0, p0, Lwx9;->a:I
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwx9;->b:Lyx9;
+
+    iget-object v0, v0, Lyx9;->b:Lej9;
+
+    invoke-virtual {v0, p1}, Lej9;->M(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->K0:I
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p1}, Lbf9;->e(I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lwx9;->B0:Z
-
-    invoke-direct {p0}, Lwx9;->getShimmerDrawable()Lvx9;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ln7e;->d()V
-
-    iget-boolean p1, p0, Lwx9;->B0:Z
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
-
-    return-void
-.end method
-
-.method public final onAttachedToWindow()V
-    .locals 1
-
-    invoke-super {p0}, Lwx4;->onAttachedToWindow()V
-
-    iget-boolean v0, p0, Lwx9;->B0:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
-
-    iget-boolean v0, p0, Lwx9;->B0:Z
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lwx9;->getShimmerDrawable()Lvx9;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ln7e;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 1
-
-    invoke-super {p0}, Lwx4;->onDetachedFromWindow()V
-
-    iget-boolean v0, p0, Lwx9;->B0:Z
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lwx9;->getShimmerDrawable()Lvx9;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ln7e;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onThemeChanged(Llwa;)V
-    .locals 1
-
-    invoke-direct {p0}, Lwx9;->getShimmerDrawable()Lvx9;
-
-    move-result-object v0
-
-    invoke-static {p1}, Lwx9;->j(Llwa;)Lk7e;
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ln7e;->b(Lk7e;)V
+    return-object p1
 
-    return-void
+    :pswitch_0
+    iget-object v0, p0, Lwx9;->b:Lyx9;
+
+    iget-object v0, v0, Lyx9;->b:Lej9;
+
+    invoke-virtual {v0, p1}, Lej9;->M(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_3
+
+    goto :goto_5
+
+    :cond_3
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->t0:Lrz;
+
+    iget-object v1, v1, Lrz;->b:Ls00;
+
+    instance-of v2, v1, Ljog;
+
+    if-eqz v2, :cond_4
+
+    check-cast v1, Ljog;
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v1, 0x0
+
+    :goto_2
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Ljog;->e()Lesg;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_6
+
+    iget-wide v4, v3, Lesg;->b:J
+
+    iget-wide v6, v1, Ljog;->a:J
+
+    cmp-long v1, v4, v6
+
+    if-nez v1, :cond_6
+
+    iget-object v1, v3, Lesg;->X:Ldsg;
+
+    sget-object v3, Ldsg;->a:Ldsg;
+
+    if-eq v1, v3, :cond_6
+
+    sget-object v3, Ldsg;->X:Ldsg;
+
+    if-eq v1, v3, :cond_6
+
+    sget-object v3, Ldsg;->Y:Ldsg;
+
+    if-ne v1, v3, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v1, v2
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    move v1, v0
+
+    :goto_4
+    iget-boolean v3, p1, Lone/me/messages/list/loader/MessageModel;->F0:Z
+
+    if-nez v3, :cond_7
+
+    if-eqz v1, :cond_9
+
+    :cond_7
+    invoke-virtual {p1}, Lone/me/messages/list/loader/MessageModel;->n()Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    iget-object p1, p1, Lone/me/messages/list/loader/MessageModel;->z0:Lu43;
+
+    if-eqz p1, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    move v0, v2
+
+    :cond_9
+    :goto_5
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lwx9;->b:Lyx9;
+
+    iget-object v1, v0, Lyx9;->b:Lej9;
+
+    invoke-virtual {v1}, Lu08;->j()I
+
+    move-result v2
+
+    if-le v2, p1, :cond_b
+
+    if-ltz p1, :cond_b
+
+    invoke-virtual {v1, p1}, Lej9;->M(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p1
+
+    if-nez p1, :cond_a
+
+    goto :goto_6
+
+    :cond_a
+    iget-object v0, v0, Lyx9;->c:Lsx9;
+
+    iget-wide v1, p1, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object p1, v0, Lsx9;->g:Lgzc;
+
+    iget-object p1, p1, Lgzc;->a:Llze;
+
+    invoke-interface {p1}, Llze;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljx9;
+
+    iget-object p1, p1, Ljx9;->a:Ljava/util/Set;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    goto :goto_7
+
+    :cond_b
+    :goto_6
+    const/4 p1, 0x0
+
+    :goto_7
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

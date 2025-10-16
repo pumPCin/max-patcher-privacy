@@ -4,24 +4,34 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lyz4;->o:I
+    sget v0, Lclc;->ic_file_24:I
 
-    const/4 v0, 0x5
+    sput v0, Lnid;->a:I
 
-    sget-object v1, Ld05;->o:Ld05;
+    sget v0, Lclc;->ic_geolocation_24:I
 
-    invoke-static {v0, v1}, Lx2d;->M(ILd05;)J
+    sput v0, Lnid;->b:I
 
-    move-result-wide v0
+    sget v0, Lclc;->ic_microphone_24:I
 
-    sput-wide v0, Lnid;->a:J
+    sput v0, Lnid;->c:I
+
+    sget v0, Lclc;->picture_plus_outline_24:I
+
+    sput v0, Lnid;->d:I
 
     return-void
 .end method

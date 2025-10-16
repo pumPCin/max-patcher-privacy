@@ -1,114 +1,77 @@
-.class public Lcj8;
-.super Ljgh;
+.class public final Lcj8;
+.super Lti8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final g:Landroid/media/session/MediaController$TransportControls;
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Lfi6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/session/MediaController$TransportControls;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lfi6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lcj8;->a:I
 
-    iput-object p1, p0, Lcj8;->g:Landroid/media/session/MediaController$TransportControls;
+    iput-object p1, p0, Lcj8;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lcj8;->c:Lfi6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 2
+.method public final f(Lmj8;)V
+    .locals 4
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lcj8;->a:I
 
-    goto :goto_0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    const-string v0, "android.support.v4.media.session.action.FOLLOW"
+    iget-object v0, p0, Lcj8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast v0, Lqoe;
 
-    move-result v0
+    new-instance v1, Lvt1;
 
-    if-nez v0, :cond_1
+    iget-object v2, p0, Lcj8;->c:Lfi6;
 
-    const-string v0, "android.support.v4.media.session.action.UNFOLLOW"
+    const/16 v3, 0x9
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v1, p1, v3, v2}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const-string v0, "android.support.v4.media.session.ARGUMENT_MEDIA_ATTRIBUTE"
-
-    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :goto_0
-    iget-object v0, p0, Lcj8;->g:Landroid/media/session/MediaController$TransportControls;
-
-    invoke-virtual {v0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lqoe;->k(Lkpe;)V
 
     return-void
 
-    :cond_2
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    :pswitch_0
+    iget-object v0, p0, Lcj8;->b:Ljava/lang/Object;
 
-    const-string v0, "An extra field android.support.v4.media.session.ARGUMENT_MEDIA_ATTRIBUTE is required for this action "
+    check-cast v0, Ldj8;
 
-    const-string v1, "."
+    new-instance v1, Lvt1;
 
-    invoke-static {v0, p1, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, p0, Lcj8;->c:Lfi6;
 
-    move-result-object p1
+    check-cast v2, Lbmg;
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v3, 0x3
 
-    throw p2
-.end method
+    invoke-direct {v1, p1, v3, v2}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.method public I(F)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    cmpl-float v0, p1, v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    const-string v1, "android.support.v4.media.session.action.ARGUMENT_PLAYBACK_SPEED"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
-
-    const-string p1, "android.support.v4.media.session.action.SET_PLAYBACK_SPEED"
-
-    invoke-virtual {p0, p1, v0}, Lcj8;->H(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lti8;->a(Lmj8;)V
 
     return-void
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "speed must not be zero"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

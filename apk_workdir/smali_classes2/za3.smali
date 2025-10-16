@@ -1,132 +1,104 @@
-.class public final Lza3;
-.super Lc2f;
+.class public abstract Lza3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lbb3;
-
-.field public final synthetic Z:Lj87;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lbb3;Lj87;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lza3;->Y:Lbb3;
+    new-instance v0, Lnk;
 
-    iput-object p2, p0, Lza3;->Z:Lj87;
+    const/4 v1, 0x1
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1}, Lnk;-><init>(I)V
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Ljava/lang/ThreadLocal;->withInitial(Ljava/util/function/Supplier;)Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lza3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lza3;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lza3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static final a(Ljava/util/List;II)Ljava/util/List;
     .locals 3
 
-    new-instance v0, Lza3;
+    :goto_0
+    sget-object v0, Ls95;->a:Ls95;
 
-    iget-object v1, p0, Lza3;->Y:Lbb3;
+    if-ltz p1, :cond_6
 
-    iget-object v2, p0, Lza3;->Z:Lj87;
+    invoke-static {p0}, Lbb3;->e(Ljava/util/List;)I
 
-    invoke-direct {v0, v1, v2, p2}, Lza3;-><init>(Lbb3;Lj87;Lkotlin/coroutines/Continuation;)V
+    move-result v1
 
-    iput-object p1, v0, Lza3;->X:Ljava/lang/Object;
+    if-le p1, v1, :cond_0
 
+    goto :goto_1
+
+    :cond_0
+    if-nez p2, :cond_2
+
+    invoke-static {p1, p0}, Lab3;->E(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    :cond_1
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :cond_2
+    if-lez p2, :cond_4
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    add-int/2addr p2, p1
 
-    iget-object p1, p0, Lza3;->X:Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
-    check-cast p1, Ln24;
+    move-result v1
 
-    iget-object p1, p0, Lza3;->Y:Lbb3;
+    if-le p2, v1, :cond_3
 
-    iget-object v0, p0, Lza3;->Z:Lj87;
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
+    move-result p2
+
+    :cond_3
     :try_start_0
-    iget-object p1, p1, Lbb3;->d:Lyn7;
+    invoke-interface {p0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lsz7;
-
-    iget-wide v0, v0, Lj87;->c:J
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v1, v2}, Lsz7;->a(JZ)Lnba;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lrce;->e()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lp19;
+    move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    return-object p0
 
     :catchall_0
-    move-exception p1
+    return-object v0
 
-    new-instance v0, Lb2d;
+    :cond_4
+    add-int/2addr p2, p1
 
-    invoke-direct {v0, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
+    if-gez p2, :cond_5
 
-    move-object p1, v0
+    const/4 p2, 0x0
 
-    :goto_0
-    nop
+    :cond_5
+    move v2, p2
 
-    instance-of v0, p1, Lb2d;
+    move p2, p1
 
-    if-eqz v0, :cond_0
+    move p1, v2
 
-    const/4 p1, 0x0
+    goto :goto_0
 
-    :cond_0
-    return-object p1
+    :cond_6
+    :goto_1
+    return-object v0
 .end method

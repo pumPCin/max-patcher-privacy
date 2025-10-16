@@ -3,87 +3,88 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lat7;
-.implements Lys7;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lks7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lwk4;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:Landroid/view/View;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Ljs7;
+
+.field public c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Llr7;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Llr7;-><init>(I)V
-
-    sput-object v0, Lks7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lks7;->a:Landroid/net/Uri;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lks7;->b:Ljava/lang/String;
+    iput v0, p0, Lks7;->c:I
+
+    iput-object p1, p0, Lks7;->a:Landroid/view/View;
+
+    new-instance v0, Ljs7;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Lj6;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2, p1}, Lj6;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, p2, v1}, Ljs7;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lj6;)V
+
+    iput-object v0, p0, Lks7;->b:Ljs7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final onPause(Liw7;)V
     .locals 1
 
-    const/4 v0, 0x0
+    const-string p1, "ks7"
 
-    return v0
+    const-string v0, "onPause: unregisterGlobalLayoutListener"
+
+    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lks7;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lks7;->b:Ljs7;
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    return-void
 .end method
 
-.method public final n()Ljava/lang/String;
+.method public final onResume(Liw7;)V
     .locals 1
 
-    iget-object v0, p0, Lks7;->b:Ljava/lang/String;
+    const-string p1, "ks7"
 
-    return-object v0
-.end method
+    const-string v0, "onResume: registerGlobalLayoutListener"
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lvc4;
+    iget-object p1, p0, Lks7;->a:Landroid/view/View;
 
-    iget-object v1, p0, Lks7;->a:Landroid/net/Uri;
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    invoke-direct {v0, v1}, Lvc4;-><init>(Landroid/net/Uri;)V
+    move-result-object p1
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    iget-object v0, p0, Lks7;->b:Ljs7;
 
-    iget-object p2, p0, Lks7;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     return-void
 .end method

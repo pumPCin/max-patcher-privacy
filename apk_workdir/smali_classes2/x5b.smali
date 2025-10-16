@@ -1,121 +1,154 @@
-.class public abstract Lx5b;
-.super Ljava/lang/Object;
+.class public Lx5b;
+.super Landroid/webkit/WebView;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lw8b;
+# instance fields
+.field public a:Landroid/webkit/ValueCallback;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
 
-    new-instance v0, Ld3b;
+    and-int/lit8 p2, p2, 0x4
 
-    const/4 v1, -0x1
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz p2, :cond_0
+
+    move p2, v0
+
+    goto :goto_0
+
+    :cond_0
+    const p2, 0x1010085
+
+    :goto_0
+    new-instance v1, Lg14;
+
+    invoke-direct {v1, p1, v0}, Lg14;-><init>(Landroid/content/Context;I)V
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, v1, p1, p2, v0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    invoke-virtual {p0}, Lx5b;->b()V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 2
+
+    sget-object v0, Lsz4;->t0:Lc82;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget-object v2, Lw5b;->a:Lw5b;
-
-    invoke-direct {v0, v1, v2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v1, Ld3b;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    sget-object v3, Lw5b;->b:Lw5b;
-
-    invoke-direct {v1, v2, v3}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v2, Ld3b;
-
-    const/4 v3, 0x3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    sget-object v4, Lw5b;->c:Lw5b;
-
-    invoke-direct {v2, v3, v4}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v3, Ld3b;
-
-    const/4 v4, 0x2
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    sget-object v5, Lw5b;->o:Lw5b;
-
-    invoke-direct {v3, v4, v5}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v4, Ld3b;
-
-    const/high16 v5, 0x10000000
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget-object v6, Lw5b;->X:Lw5b;
-
-    invoke-direct {v4, v5, v6}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v5, Ld3b;
-
-    const/16 v6, 0x15
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget-object v7, Lw5b;->Y:Lw5b;
-
-    invoke-direct {v5, v6, v7}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v6, Ld3b;
-
-    const/16 v7, 0x16
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    sget-object v8, Lw5b;->Z:Lw5b;
-
-    invoke-direct {v6, v7, v8}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v7, Ld3b;
-
-    const/4 v8, 0x4
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    sget-object v9, Lw5b;->r0:Lw5b;
-
-    invoke-direct {v7, v8, v9}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array/range {v0 .. v7}, [Ld3b;
+    invoke-virtual {v0, v1}, Lc82;->c(Landroid/content/Context;)Lsz4;
 
     move-result-object v0
 
-    invoke-static {v0}, Lyt3;->D([Ld3b;)Lw8b;
+    invoke-virtual {v0}, Lsz4;->l()Lu4b;
 
     move-result-object v0
 
-    sput-object v0, Lx5b;->a:Lw8b;
+    invoke-interface {v0}, Lu4b;->h()Lpb3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    sget v0, Llid;->a:I
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    sget v0, Llid;->b:I
+
+    :goto_1
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->setTheme(I)V
+
+    return-void
+.end method
+
+.method public final getFilePathCallback()Landroid/webkit/ValueCallback;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/webkit/ValueCallback<",
+            "[",
+            "Landroid/net/Uri;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lx5b;->a:Landroid/webkit/ValueCallback;
+
+    return-object v0
+.end method
+
+.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lx5b;->b()V
+
+    invoke-super {p0, p1}, Landroid/webkit/WebView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    return-void
+.end method
+
+.method public final setFilePathCallback(Landroid/webkit/ValueCallback;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback<",
+            "[",
+            "Landroid/net/Uri;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lx5b;->a:Landroid/webkit/ValueCallback;
 
     return-void
 .end method

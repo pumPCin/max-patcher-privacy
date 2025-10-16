@@ -1,15 +1,14 @@
-.class public abstract Lfpf;
+.class public interface abstract Lfpf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/graphics/Picture;)Landroid/graphics/Bitmap;
-    .locals 0
+# virtual methods
+.method public abstract a()V
+.end method
 
-    invoke-static {p0}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Picture;)Landroid/graphics/Bitmap;
+.method public abstract getState()[I
+.end method
 
-    move-result-object p0
-
-    return-object p0
+.method public abstract onStateChange([I)Z
 .end method

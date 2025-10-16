@@ -1,65 +1,97 @@
 .class public final Lcx9;
-.super Lon3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvib;
+
+
+# static fields
+.field public static final b:Ljava/util/regex/Pattern;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "NetworkMeteredCtrlr"
+    const-string v0, "^[\\p{L}\\p{N}]+$"
 
-    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lcx9;->b:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "_"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcx9;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lo8h;)Z
-    .locals 1
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 2
 
-    iget-object p1, p1, Lo8h;->j:Lio3;
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget p1, p1, Lio3;->a:I
+    move-result-object v0
 
-    const/4 v0, 0x5
+    sget-object v1, Lcx9;->b:Ljava/util/regex/Pattern;
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    const/4 p1, 0x1
+    move-result-object v1
 
-    return p1
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcx9;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    return p1
-.end method
+    const-string v1, "Invalid key: "
 
-.method public final b(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-static {v1, v0}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast p1, Lex9;
+    move-result-object v0
 
-    iget-boolean v0, p1, Lex9;->a:Z
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
-
-    iget-boolean p1, p1, Lex9;->c:Z
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    throw p1
 .end method

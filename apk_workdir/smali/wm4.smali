@@ -1,51 +1,58 @@
-.class public abstract Lwm4;
-.super Lii0;
+.class public final synthetic Lwm4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Lii0;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzef;
 
 
 # direct methods
-.method public constructor <init>(Lii0;)V
+.method public synthetic constructor <init>(Lzef;I)V
     .locals 0
 
-    invoke-direct {p0}, Lii0;-><init>()V
+    iput p2, p0, Lwm4;->a:I
 
-    iput-object p1, p0, Lwm4;->b:Lii0;
+    iput-object p1, p0, Lwm4;->b:Lzef;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public d()V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lwm4;->b:Lii0;
+    iget v0, p0, Lwm4;->a:I
 
-    invoke-virtual {v0}, Lii0;->c()V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object v0, p0, Lwm4;->b:Lzef;
 
-.method public f(Ljava/lang/Throwable;)V
-    .locals 1
+    iget-object v0, v0, Lzef;->g:Lbu1;
 
-    iget-object v0, p0, Lwm4;->b:Lii0;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p1}, Lii0;->e(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Lbu1;->cancel(Z)Z
 
     return-void
-.end method
 
-.method public j(F)V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lwm4;->b:Lzef;
 
-    iget-object v0, p0, Lwm4;->b:Lii0;
-
-    invoke-virtual {v0, p1}, Lii0;->i(F)V
+    invoke-virtual {v0}, Lzef;->d()V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

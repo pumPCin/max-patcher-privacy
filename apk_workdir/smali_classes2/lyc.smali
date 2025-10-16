@@ -1,70 +1,77 @@
-.class public final Llyc;
+.class public final synthetic Llyc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La3e;
+
 
 # instance fields
-.field public final a:Lgya;
+.field public final synthetic e:I
 
-.field public final b:Landroid/view/Surface;
+.field public final synthetic f:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lgya;Landroid/view/Surface;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Llyc;->e:I
+
+    iput-object p2, p0, Llyc;->f:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llyc;->a:Lgya;
-
-    iput-object p2, p0, Llyc;->b:Landroid/view/Surface;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    instance-of v0, p1, Llyc;
+    iget v0, p0, Llyc;->e:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llyc;->f:Ljava/lang/Object;
+
+    check-cast v0, Lnsd;
+
+    iget-object v0, v0, Lw3;->f:Leie;
+
+    sget-object v1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, v1}, Leie;->h(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llyc;->f:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/onechat/reactions/ReactionsViewModel;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Llyc;
+    iget-object v0, v0, Lru/ok/onechat/reactions/ReactionsViewModel;->q:Lkbd;
 
-    goto :goto_0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lkbd;->reset()V
 
     :cond_0
-    const/4 p1, 0x0
+    return-void
 
-    :goto_0
-    if-nez p1, :cond_1
+    nop
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    iget-object v0, p0, Llyc;->a:Lgya;
-
-    iget-object p1, p1, Llyc;->a:Lgya;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Llyc;->a:Lgya;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

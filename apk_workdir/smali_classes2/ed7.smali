@@ -1,73 +1,125 @@
-.class public final enum Led7;
-.super Ljava/lang/Enum;
+.class public final Led7;
+.super Llff;
 .source "SourceFile"
 
+# interfaces
+.implements Lei6;
 
-# static fields
-.field public static final enum a:Led7;
 
-.field public static final enum b:Led7;
+# instance fields
+.field public X:I
 
-.field public static final synthetic c:[Led7;
+.field public final synthetic Y:Lld7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lld7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Led7;
+    iput-object p1, p0, Led7;->Y:Lld7;
 
-    const-string v1, "AUTH"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Led7;->a:Led7;
-
-    new-instance v1, Led7;
-
-    const-string v2, "SETTINGS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Led7;->b:Led7;
-
-    filled-new-array {v0, v1}, [Led7;
-
-    move-result-object v0
-
-    sput-object v0, Led7;->c:[Led7;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Led7;
-    .locals 1
 
-    const-class v0, Led7;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lb54;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Led7;
+    invoke-virtual {p0, p1, p2}, Led7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Led7;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Led7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Led7;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Led7;->c:[Led7;
+    new-instance p1, Led7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Led7;->Y:Lld7;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Led7;-><init>(Lld7;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Led7;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Led7;->X:I
+
+    sget-object v1, Lzag;->a:Lzag;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iput v2, p0, Led7;->X:I
+
+    sget-object p1, Lld7;->D0:Ljava/lang/String;
+
+    new-instance p1, Lyc7;
+
+    const/4 v0, 0x0
+
+    iget-object v2, p0, Led7;->Y:Lld7;
+
+    invoke-direct {p1, v2, v0}, Lyc7;-><init>(Lld7;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, p0}, Lcwi;->c(Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
 
     return-object v0
+
+    :cond_3
+    return-object v1
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxkc;
+.implements Lzuc;
 
 
 # annotations

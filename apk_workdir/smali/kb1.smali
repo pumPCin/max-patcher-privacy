@@ -1,121 +1,199 @@
 .class public final Lkb1;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:Lmb1;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lyn7;
+.field public final synthetic Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
 
 # direct methods
-.method public constructor <init>(Lmb1;Lyn7;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkb1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    iput-object p1, p0, Lkb1;->a:Lmb1;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lkb1;->b:Lyn7;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFeatureEnabledChanged(Ly61;Z)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Ly61;Z)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Ly61;->a:Ly61;
+    invoke-virtual {p0, p1, p2}, Lkb1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eq p1, v0, :cond_0
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lkb1;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lkb1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lkb1;
+
+    iget-object v1, p0, Lkb1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    invoke-direct {v0, p2, v1}, Lkb1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    iput-object p1, v0, Lkb1;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget-object v0, p0, Lkb1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    iget-object v0, v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->c:Lva1;
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkb1;->X:Ljava/lang/Object;
+
+    check-cast p1, Lb4a;
+
+    instance-of v1, p1, Lwa1;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lva1;->f()Lphd;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lphd;->I()Ljhd;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lgw1;->a(Ljhd;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    sget-object p1, Ldd8;->c:Ldd8;
+
+    invoke-virtual {p1}, Lqci;->q0()Llf4;
+
+    move-result-object p1
+
+    const-string v0, ":call-active"
+
+    invoke-virtual {p1, v0, v2}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    goto :goto_2
 
     :cond_0
-    sget-object v0, Lyt3;->n:Lhoa;
+    instance-of v1, p1, Lxa1;
 
-    const/4 v1, 0x0
+    if-eqz v1, :cond_5
 
-    if-nez v0, :cond_1
+    check-cast p1, Lxa1;
+
+    iget-object v1, p1, Lxa1;->b:Lz31;
+
+    iget-boolean v8, p1, Lxa1;->c:Z
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lva1;->f()Lphd;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lphd;->I()Ljhd;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lgw1;->b(Ljhd;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    sget-object v3, Ldd8;->c:Ldd8;
+
+    iget-object p1, v1, Lz31;->a:Ljava/lang/Long;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
 
     goto :goto_0
 
     :cond_1
-    sget-object v2, Lr28;->o:Lr28;
+    const-wide/16 v4, 0x0
 
-    invoke-virtual {v0, v2}, Lhoa;->b(Lr28;)Z
+    :goto_0
+    iget-object p1, v1, Lz31;->c:Ljava/lang/CharSequence;
 
-    move-result v3
+    if-eqz p1, :cond_2
 
-    if-eqz v3, :cond_2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Add participant to p2p changed="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, " feature="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v3, "CallInviteToP2PController"
-
-    invoke-virtual {v0, v2, v3, p1, v1}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_1
 
     :cond_2
-    :goto_0
-    iget-object p1, p0, Lkb1;->a:Lmb1;
+    move-object p1, v2
 
-    iget-object p1, p1, Lmb1;->r0:Lhne;
+    :goto_1
+    if-nez p1, :cond_3
+
+    const-string p1, ""
+
+    :cond_3
+    move-object v6, p1
+
+    iget-object p1, v1, Lz31;->d:Ljava/lang/String;
+
+    if-eqz p1, :cond_4
+
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p1
 
     const/4 v0, 0x0
 
-    if-eqz p2, :cond_3
+    invoke-static {p1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    iget-object p2, p0, Lkb1;->b:Lyn7;
+    move-result-object v2
 
-    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
+    :cond_4
+    move-object v7, v2
 
-    move-result-object p2
+    invoke-virtual/range {v3 .. v8}, Ldd8;->V0(JLjava/lang/String;Ljava/lang/String;Z)V
 
-    check-cast p2, Lzl5;
+    :cond_5
+    :goto_2
+    sget-object p1, Lzag;->a:Lzag;
 
-    check-cast p2, Lbm5;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->gc-from-p2p:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {p2, v2, v0}, Lmhd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    const/4 v0, 0x1
-
-    :cond_3
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-virtual {p1, v1, p2}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
+    return-object p1
 .end method

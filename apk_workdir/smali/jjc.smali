@@ -3,36 +3,36 @@
 
 
 # static fields
-.field public static TextAppearance_MediaRouter_Dynamic_Body:I = 0x7f140332
+.field public static mr_cast_meta_black_scrim:I = 0x7f06031e
 
-.field public static TextAppearance_MediaRouter_Dynamic_Body_Light:I = 0x7f140333
+.field public static mr_cast_meta_default_background:I = 0x7f06031f
 
-.field public static TextAppearance_MediaRouter_Dynamic_Header:I = 0x7f140334
+.field public static mr_cast_meta_default_text_color:I = 0x7f060320
 
-.field public static TextAppearance_MediaRouter_Dynamic_Header_Light:I = 0x7f140335
+.field public static mr_cast_progressbar_background_dark:I = 0x7f060321
 
-.field public static TextAppearance_MediaRouter_Dynamic_Metadata_PrimaryText:I = 0x7f140336
+.field public static mr_cast_progressbar_background_light:I = 0x7f060322
 
-.field public static TextAppearance_MediaRouter_Dynamic_Metadata_SecondaryText:I = 0x7f140337
+.field public static mr_cast_progressbar_progress_and_thumb_dark:I = 0x7f060323
 
-.field public static TextAppearance_MediaRouter_PrimaryText:I = 0x7f140338
+.field public static mr_cast_progressbar_progress_and_thumb_light:I = 0x7f060324
 
-.field public static TextAppearance_MediaRouter_SecondaryText:I = 0x7f140339
+.field public static mr_cast_route_divider_dark:I = 0x7f060325
 
-.field public static TextAppearance_MediaRouter_Title:I = 0x7f14033a
+.field public static mr_cast_route_divider_light:I = 0x7f060326
 
-.field public static ThemeOverlay_MediaRouter_Dark:I = 0x7f140429
+.field public static mr_dynamic_dialog_background_dark:I = 0x7f060327
 
-.field public static ThemeOverlay_MediaRouter_Light:I = 0x7f14042a
+.field public static mr_dynamic_dialog_background_light:I = 0x7f060328
 
-.field public static Theme_MediaRouter:I = 0x7f1403a8
+.field public static mr_dynamic_dialog_header_text_color_dark:I = 0x7f060329
 
-.field public static Theme_MediaRouter_Light:I = 0x7f1403a9
+.field public static mr_dynamic_dialog_header_text_color_light:I = 0x7f06032a
 
-.field public static Theme_MediaRouter_LightControlPanel:I = 0x7f1403ab
+.field public static mr_dynamic_dialog_icon_dark:I = 0x7f06032b
 
-.field public static Theme_MediaRouter_Light_DarkControlPanel:I = 0x7f1403aa
+.field public static mr_dynamic_dialog_icon_light:I = 0x7f06032c
 
-.field public static Widget_MediaRouter_Light_MediaRouteButton:I = 0x7f14067a
+.field public static mr_dynamic_dialog_route_text_color_dark:I = 0x7f06032d
 
-.field public static Widget_MediaRouter_MediaRouteButton:I = 0x7f14067b
+.field public static mr_dynamic_dialog_route_text_color_light:I = 0x7f06032e

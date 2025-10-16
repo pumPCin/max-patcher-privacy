@@ -1,24 +1,28 @@
-.class public final synthetic Lfh9;
+.class public final Lfh9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Lzx5;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:Lzx5;
+
+.field public final synthetic c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
+.method public synthetic constructor <init>(Lgzc;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
     iput p3, p0, Lfh9;->a:I
 
-    iput-wide p1, p0, Lfh9;->b:J
+    iput-object p1, p0, Lfh9;->b:Lzx5;
+
+    iput-object p2, p0, Lfh9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,105 +31,97 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lfh9;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/util/Set;
+    new-instance v0, Leh9;
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iget-object v1, p0, Lfh9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+    const/4 v2, 0x2
 
-    new-instance p1, Llj2;
+    invoke-direct {v0, p1, v1, v2}, Leh9;-><init>(Lby5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
 
-    const/4 v1, 0x4
+    iget-object p1, p0, Lfh9;->b:Lzx5;
 
-    iget-wide v2, p0, Lfh9;->b:J
+    invoke-interface {p1, v0, p2}, Lzx5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct {p1, v2, v3, v1}, Llj2;-><init>(JI)V
+    move-result-object p1
 
-    new-instance v1, Lc16;
+    sget-object p2, Lc54;->a:Lc54;
 
-    const/4 v2, 0x3
+    if-ne p1, p2, :cond_0
 
-    invoke-direct {v1, v2, p1}, Lc16;-><init>(ILvd6;)V
+    goto :goto_0
 
-    invoke-interface {v0, v1}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    return-object v0
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    check-cast p1, Lih9;
+    new-instance v0, Leh9;
 
-    new-instance v0, Lih9;
+    iget-object v1, p0, Lfh9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    const-wide/16 v4, 0x0
+    const/4 v2, 0x1
 
-    const/16 v8, 0x1a
+    invoke-direct {v0, p1, v1, v2}, Leh9;-><init>(Lby5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
 
-    const/4 v1, 0x2
+    iget-object p1, p0, Lfh9;->b:Lzx5;
 
-    const/4 v2, 0x0
+    invoke-interface {p1, v0, p2}, Lzx5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    iget-wide v6, p0, Lfh9;->b:J
+    sget-object p2, Lc54;->a:Lc54;
 
-    invoke-direct/range {v0 .. v8}, Lih9;-><init>(IZZJJI)V
+    if-ne p1, p2, :cond_1
 
-    return-object v0
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lzag;->a:Lzag;
+
+    :goto_1
+    return-object p1
 
     :pswitch_1
-    check-cast p1, Lih9;
+    new-instance v0, Leh9;
 
-    new-instance v0, Lih9;
-
-    const-wide/16 v6, 0x0
-
-    const/16 v8, 0x26
-
-    const/4 v1, 0x3
+    iget-object v1, p0, Lfh9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    invoke-direct {v0, p1, v1, v2}, Leh9;-><init>(Lby5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
 
-    iget-wide v4, p0, Lfh9;->b:J
+    iget-object p1, p0, Lfh9;->b:Lzx5;
 
-    invoke-direct/range {v0 .. v8}, Lih9;-><init>(IZZJJI)V
+    invoke-interface {p1, v0, p2}, Lzx5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_2
-    check-cast p1, Lih9;
+    sget-object p2, Lc54;->a:Lc54;
 
-    new-instance v0, Lih9;
+    if-ne p1, p2, :cond_2
 
-    const-wide/16 v6, 0x0
+    goto :goto_2
 
-    const/16 v8, 0x2e
+    :cond_2
+    sget-object p1, Lzag;->a:Lzag;
 
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    iget-wide v4, p0, Lfh9;->b:J
-
-    invoke-direct/range {v0 .. v8}, Lih9;-><init>(IZZJJI)V
-
-    return-object v0
+    :goto_2
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

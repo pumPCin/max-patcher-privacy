@@ -1,62 +1,424 @@
-.class public abstract Lrec;
+.class public final Lrec;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static back:I = 0x7f0a00ec
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrec;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static copy:I = 0x7f0a02db
 
-.field public static cut:I = 0x7f0a02e5
+# instance fields
+.field public final X:J
 
-.field public static edit_menu_item:I = 0x7f0a0322
+.field public final Y:Ljava/lang/String;
 
-.field public static extendedMenu:I = 0x7f0a0369
+.field public final Z:J
 
-.field public static markdown_badge_count_view:I = 0x7f0a0467
+.field public final a:J
 
-.field public static markdown_bold:I = 0x7f0a0468
+.field public final b:Ljava/lang/String;
 
-.field public static markdown_code:I = 0x7f0a0469
+.field public final c:J
 
-.field public static markdown_group:I = 0x7f0a046a
+.field public final o:Ljava/lang/Long;
 
-.field public static markdown_heading:I = 0x7f0a046b
+.field public final r0:Lsp2;
 
-.field public static markdown_italic:I = 0x7f0a046c
 
-.field public static markdown_link:I = 0x7f0a046d
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public static markdown_menu_container:I = 0x7f0a046e
+    new-instance v0, Lv2b;
 
-.field public static markdown_message_bubble_view:I = 0x7f0a046f
+    const/16 v1, 0x13
 
-.field public static markdown_mono:I = 0x7f0a0470
+    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
 
-.field public static markdown_original:I = 0x7f0a0471
+    sput-object v0, Lrec;->CREATOR:Landroid/os/Parcelable$Creator;
 
-.field public static markdown_preview_send_as_scheduled_button:I = 0x7f0a0472
+    return-void
+.end method
 
-.field public static markdown_preview_send_button:I = 0x7f0a0473
+.method public constructor <init>(JLjava/lang/String;JLjava/lang/Long;JLjava/lang/String;JLsp2;)V
+    .locals 0
 
-.field public static markdown_preview_send_button_guideline:I = 0x7f0a0474
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static markdown_quote:I = 0x7f0a0475
+    iput-wide p1, p0, Lrec;->a:J
 
-.field public static markdown_regular:I = 0x7f0a0476
+    iput-object p3, p0, Lrec;->b:Ljava/lang/String;
 
-.field public static markdown_strikethrough:I = 0x7f0a0477
+    iput-wide p4, p0, Lrec;->c:J
 
-.field public static markdown_underline:I = 0x7f0a0478
+    iput-object p6, p0, Lrec;->o:Ljava/lang/Long;
 
-.field public static menu:I = 0x7f0a04d3
+    iput-wide p7, p0, Lrec;->X:J
 
-.field public static menu_list:I = 0x7f0a0501
+    iput-object p9, p0, Lrec;->Y:Ljava/lang/String;
 
-.field public static paste:I = 0x7f0a08d9
+    iput-wide p10, p0, Lrec;->Z:J
 
-.field public static rect:I = 0x7f0a09eb
+    iput-object p12, p0, Lrec;->r0:Lsp2;
 
-.field public static root:I = 0x7f0a09fe
+    return-void
+.end method
 
-.field public static select_all:I = 0x7f0a0b1d
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lrec;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lrec;
+
+    iget-wide v3, p0, Lrec;->a:J
+
+    iget-wide v5, p1, Lrec;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lrec;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lrec;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lrec;->c:J
+
+    iget-wide v5, p1, Lrec;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lrec;->o:Ljava/lang/Long;
+
+    iget-object v3, p1, Lrec;->o:Ljava/lang/Long;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lrec;->X:J
+
+    iget-wide v5, p1, Lrec;->X:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lrec;->Y:Ljava/lang/String;
+
+    iget-object v3, p1, Lrec;->Y:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-wide v3, p0, Lrec;->Z:J
+
+    iget-wide v5, p1, Lrec;->Z:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-object v1, p0, Lrec;->r0:Lsp2;
+
+    iget-object p1, p1, Lrec;->r0:Lsp2;
+
+    if-eq v1, p1, :cond_9
+
+    return v2
+
+    :cond_9
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-wide v0, p0, Lrec;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lrec;->b:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Lrec;->c:J
+
+    invoke-static {v0, v1, v3, v4}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lrec;->o:Ljava/lang/Long;
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Lrec;->X:J
+
+    invoke-static {v0, v1, v3, v4}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lrec;->Y:Ljava/lang/String;
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lrec;->Z:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lrec;->r0:Lsp2;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "PushInfo(pushId="
+
+    const-string v1, ", eventKey="
+
+    iget-wide v2, p0, Lrec;->a:J
+
+    iget-object v4, p0, Lrec;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lf67;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", chatServerId="
+
+    const-string v2, ", chatId="
+
+    iget-wide v3, p0, Lrec;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lrec;->o:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageServerId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lrec;->X:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pushType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrec;->Y:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", createdTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lrec;->Z:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrec;->r0:Lsp2;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Lrec;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object v0, p0, Lrec;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-wide v0, p0, Lrec;->c:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object v0, p0, Lrec;->o:Ljava/lang/Long;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    :goto_0
+    iget-wide v0, p0, Lrec;->X:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object v0, p0, Lrec;->Y:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-wide v0, p0, Lrec;->Z:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object v0, p0, Lrec;->r0:Lsp2;
+
+    invoke-virtual {v0, p1, p2}, Lsp2;->writeToParcel(Landroid/os/Parcel;I)V
+
+    return-void
+.end method

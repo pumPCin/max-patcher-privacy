@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Lqh6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Ld33;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ld33;JI)V
     .locals 0
 
-    iput p1, p0, Lw23;->a:I
+    iput p4, p0, Lw23;->a:I
 
-    iput-object p2, p0, Lw23;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lw23;->b:Ld33;
+
+    iput-wide p2, p0, Lw23;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,169 +31,217 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
     iget v0, p0, Lw23;->a:I
 
+    check-cast p1, Ljava/lang/Long;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lw23;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lw23;->b:Ld33;
 
-    check-cast p1, Lh0e;
+    iget-object p1, v3, Ld33;->c:Ljava/lang/Object;
 
-    if-eqz p2, :cond_0
+    check-cast p1, Llt7;
 
-    invoke-virtual {p1}, Landroid/view/View;->callOnClick()Z
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lw23;->b:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->J0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->o:Lkcd;
+    check-cast p1, Lkd2;
 
-    sget-object v1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Lpl7;
+    iget-object p1, p1, Lkd2;->g:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-wide v4, p0, Lw23;->c:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lda2;
+
+    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lda2;
+
+    if-nez p1, :cond_0
+
+    iget-object p1, v3, Ld33;->X:Ljava/lang/Object;
+
+    check-cast p1, Lrhf;
+
+    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb54;
+
+    new-instance v0, Lb33;
 
     const/4 v2, 0x0
 
-    aget-object v1, v1, v2
+    invoke-direct/range {v0 .. v5}, Lb33;-><init>(Lsze;Lkotlin/coroutines/Continuation;Ld33;J)V
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v2, 0x3
 
-    move-result-object p2
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, p1, v1, p2}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lw23;->b:Ljava/lang/Object;
-
-    check-cast p1, Lno7;
-
-    iget-object v0, p1, Lno7;->F0:Lru/ok/messages/settings/FrgBaseSettings;
-
-    if-eqz v0, :cond_2
-
-    invoke-static {}, Lum;->b()Ljg3;
-
-    move-result-object v1
-
-    check-cast v1, Lnja;
-
-    invoke-virtual {v1}, Lnja;->j()Lpnb;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lpnb;->c:Lz2g;
-
-    iget-object p1, p1, Lno7;->K0:Lfwd;
-
-    iget p1, p1, Lfwd;->a:I
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {v1}, Lz2g;->q()I
-
-    move-result p2
+    invoke-static {p1, v3, v3, v0, v2}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
     goto :goto_0
 
-    :cond_1
-    const/4 p2, 0x0
+    :cond_0
+    iget-object v0, v3, Ld33;->Y:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-wide v2, p1, Lda2;->a:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    new-instance v3, Lz23;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, p1, v4}, Lz23;-><init>(Lda2;I)V
+
+    new-instance v4, Lc33;
+
+    invoke-direct {v4, v3}, Lc33;-><init>(Lqh6;)V
+
+    invoke-virtual {v0, v2, v4}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh0a;
+
+    invoke-interface {v0, p1}, Lh0a;->setValue(Ljava/lang/Object;)V
 
     :goto_0
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object v1
 
-    move-result-object p2
+    :pswitch_0
+    iget-object v3, p0, Lw23;->b:Ld33;
 
-    invoke-virtual {v0, p1, p2}, Lru/ok/messages/settings/FrgBaseSettings;->P0(ILjava/lang/Object;)V
+    iget-object p1, v3, Ld33;->c:Ljava/lang/Object;
 
-    :cond_2
-    return-void
+    check-cast p1, Llt7;
 
-    :pswitch_2
-    iget-object v0, p0, Lw23;->b:Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
-    check-cast v0, Lcom/google/android/material/chip/Chip;
+    move-result-object p1
 
-    iget-object v1, v0, Lcom/google/android/material/chip/Chip;->w0:Lqb8;
+    check-cast p1, Lkd2;
 
-    if-eqz v1, :cond_4
+    iget-object p1, p1, Lkd2;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
-    check-cast v1, Lt55;
+    iget-wide v4, p0, Lw23;->c:J
 
-    iget-object v1, v1, Lt55;->b:Ljava/lang/Object;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast v1, Lb33;
+    move-result-object v0
 
-    if-eqz p2, :cond_3
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Lb33;->a(Lrb8;)Z
+    move-result-object p1
 
-    move-result v2
+    check-cast p1, Lda2;
 
-    if-eqz v2, :cond_4
+    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lda2;
+
+    if-nez p1, :cond_1
+
+    iget-object p1, v3, Ld33;->X:Ljava/lang/Object;
+
+    check-cast p1, Lrhf;
+
+    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb54;
+
+    new-instance v0, La33;
+
+    const/4 v2, 0x0
+
+    invoke-direct/range {v0 .. v5}, La33;-><init>(Lsze;Lkotlin/coroutines/Continuation;Ld33;J)V
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x0
+
+    invoke-static {p1, v3, v3, v0, v2}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
     goto :goto_1
 
-    :cond_3
-    iget-boolean v2, v1, Lb33;->b:Z
+    :cond_1
+    iget-object v0, p1, Lda2;->b:Lfe2;
 
-    invoke-virtual {v1, v0, v2}, Lb33;->h(Lrb8;Z)Z
+    iget-wide v4, v0, Lfe2;->a:J
 
-    move-result v2
+    const-wide/16 v6, 0x0
 
-    if-eqz v2, :cond_4
+    cmp-long v0, v4, v6
 
+    if-eqz v0, :cond_2
+
+    iget-object v0, v3, Ld33;->Z:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    new-instance v3, Lz23;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, p1, v4}, Lz23;-><init>(Lda2;I)V
+
+    new-instance v4, Lc33;
+
+    invoke-direct {v4, v3}, Lc33;-><init>(Lqh6;)V
+
+    invoke-virtual {v0, v2, v4}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh0a;
+
+    invoke-interface {v0, p1}, Lh0a;->setValue(Ljava/lang/Object;)V
+
+    :cond_2
     :goto_1
-    invoke-virtual {v1}, Lb33;->g()V
+    return-object v1
 
-    :cond_4
-    iget-object v0, v0, Lcom/google/android/material/chip/Chip;->v0:Landroid/widget/CompoundButton$OnCheckedChangeListener;
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v0, p1, p2}, Landroid/widget/CompoundButton$OnCheckedChangeListener;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-
-    :cond_5
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Lw23;->b:Ljava/lang/Object;
-
-    check-cast p1, Lx23;
-
-    iget-object v0, p1, Liwd;->M0:Lru/ok/messages/settings/FrgBaseSettings;
-
-    if-eqz v0, :cond_6
-
-    iget-object p1, p1, Liwd;->L0:Lfwd;
-
-    iget p1, p1, Lfwd;->a:I
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p2}, Lru/ok/messages/settings/FrgBaseSettings;->P0(ILjava/lang/Object;)V
-
-    :cond_6
-    return-void
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

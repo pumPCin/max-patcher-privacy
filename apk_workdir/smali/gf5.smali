@@ -2,26 +2,37 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ler3;
+
 
 # instance fields
-.field public final a:Lahf;
-
-.field public final b:I
-
-.field public final c:J
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lahf;IJ)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
+
+    iput-object p1, p0, Lgf5;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgf5;->a:Lahf;
+    return-void
+.end method
 
-    iput p2, p0, Lgf5;->b:I
 
-    iput-wide p3, p0, Lgf5;->c:J
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
+    .locals 1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    iget-object p1, p0, Lgf5;->a:Ljava/lang/String;
+
+    const-string v0, "Connection restored"
+
+    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

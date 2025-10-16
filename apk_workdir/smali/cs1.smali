@@ -1,95 +1,47 @@
 .class public final Lcs1;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Les1;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Les1;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Les1;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcs1;->X:Les1;
 
-    iput-wide p1, p0, Lcs1;->a:J
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Lcs1;->a:J
+    iput-object p1, p0, Lcs1;->o:Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    iget p1, p0, Lcs1;->Y:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    const/high16 v0, -0x80000000
 
-    const/4 v0, 0x1
+    or-int/2addr p1, v0
 
-    if-ne p0, p1, :cond_0
+    iput p1, p0, Lcs1;->Y:I
 
-    return v0
+    iget-object p1, p0, Lcs1;->X:Les1;
 
-    :cond_0
-    instance-of v1, p1, Lcs1;
+    invoke-static {p1, p0}, Les1;->a(Les1;Lk14;)Ljava/lang/Comparable;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lcs1;
-
-    iget-wide v3, p0, Lcs1;->a:J
-
-    iget-wide v5, p1, Lcs1;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lcs1;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "None(lastUpdate="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lcs1;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,23 +1,45 @@
-.class public final Lpf5;
+.class public abstract Lpf5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Llmf;
-
-.field public final b:[I
+# static fields
+.field public static final a:Lqnd;
 
 
 # direct methods
-.method public constructor <init>(ILlmf;[I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ldod;->a:Laqe;
 
-    iput-object p2, p0, Lpf5;->a:Llmf;
+    sget-object v1, Lgxi;->c:Lob9;
 
-    iput-object p3, p0, Lpf5;->b:[I
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1, v0}, Lob9;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    check-cast v0, Lqnd;
+
+    :goto_0
+    sput-object v0, Lpf5;->a:Lqnd;
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Laf5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
 .end method

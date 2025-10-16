@@ -36,122 +36,74 @@
 
 .field public static final p:I
 
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lric;->oneme_startconversation_channel_add_subscribers_error:I
+    sget v0, Lmrc;->oneme_fodlers_delete_folder_bottom_sheet_title:I
 
     sput v0, Lava;->a:I
 
-    sget v0, Lric;->oneme_startconversation_channel_create_error:I
+    sget v0, Lmrc;->oneme_folder_list_recommended_folders_section_title:I
 
     sput v0, Lava;->b:I
 
-    sget v0, Lric;->oneme_startconversation_channel_limit_add_subscribers_error:I
+    sget v0, Lmrc;->oneme_folder_list_toolbar_title:I
 
     sput v0, Lava;->c:I
 
-    sget v0, Lric;->oneme_startconversation_channel_select_subscribers_skip_button:I
+    sget v0, Lmrc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
     sput v0, Lava;->d:I
 
-    sget v0, Lric;->oneme_startconversation_channel_select_subscribers_toolbar_title:I
+    sget v0, Lmrc;->oneme_folders_delete_folder_bottom_sheet_description:I
 
     sput v0, Lava;->e:I
 
-    sget v0, Lric;->oneme_startconversation_title:I
+    sget v0, Lmrc;->oneme_folders_edit_add_chats_button:I
 
     sput v0, Lava;->f:I
 
-    sget v0, Lric;->oneme_startconversations_chat_members:I
+    sget v0, Lmrc;->oneme_folders_edit_create_button:I
 
     sput v0, Lava;->g:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I
+    sget v0, Lmrc;->oneme_folders_edit_delete_button:I
 
     sput v0, Lava;->h:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I
+    sget v0, Lmrc;->oneme_folders_edit_name_hint:I
 
     sput v0, Lava;->i:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_avatars_take_photo_action:I
+    sget v0, Lmrc;->oneme_folders_edit_toolbar_title_creation:I
 
     sput v0, Lava;->j:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_confirm_button_title:I
+    sget v0, Lmrc;->oneme_folders_edit_toolbar_title_edit:I
 
     sput v0, Lava;->k:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_confirm_button_title_channel:I
+    sget v0, Lmrc;->oneme_folders_list_create_folder:I
 
     sput v0, Lava;->l:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_hint:I
+    sget v0, Lmrc;->oneme_folders_list_menu_action_change:I
 
     sput v0, Lava;->m:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_hint_channel:I
+    sget v0, Lmrc;->oneme_folders_list_menu_action_delete_folder:I
 
     sput v0, Lava;->n:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_input_description_hint:I
+    sget v0, Lmrc;->oneme_folders_picker_empty_title:I
 
     sput v0, Lava;->o:I
 
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_input_hint:I
+    sget v0, Lmrc;->oneme_folders_picker_toolbar_title:I
 
     sput v0, Lava;->p:I
-
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_input_hint_channel:I
-
-    sput v0, Lava;->q:I
-
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_toolbar_title:I
-
-    sput v0, Lava;->r:I
-
-    sget v0, Lric;->oneme_startconversations_chat_titleicon_toolbar_title_channel:I
-
-    sput v0, Lava;->s:I
-
-    sget v0, Lric;->oneme_startconversations_continue_create_chat:I
-
-    sput v0, Lava;->t:I
-
-    sget v0, Lric;->oneme_startconversations_create_empty_chat:I
-
-    sput v0, Lava;->u:I
-
-    sget v0, Lric;->oneme_startconversations_member_search_hint:I
-
-    sput v0, Lava;->v:I
-
-    sget v0, Lric;->oneme_startconversations_phonebook_section_header:I
-
-    sput v0, Lava;->w:I
-
-    sget v0, Lric;->oneme_startconversations_search_hint:I
-
-    sput v0, Lava;->x:I
 
     return-void
 .end method

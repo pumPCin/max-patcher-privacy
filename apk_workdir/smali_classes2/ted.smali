@@ -3,34 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Loh6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:Lved;
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JI)V
+.method public synthetic constructor <init>(Lved;JI)V
     .locals 0
 
-    iput p6, p0, Lted;->a:I
+    iput p4, p0, Lted;->a:I
 
-    iput-object p1, p0, Lted;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lted;->b:Lved;
 
-    iput-object p2, p0, Lted;->o:Ljava/lang/Object;
-
-    iput-object p3, p0, Lted;->X:Ljava/lang/Object;
-
-    iput-wide p4, p0, Lted;->b:J
+    iput-wide p2, p0, Lted;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,159 +31,156 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
     iget v0, p0, Lted;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lted;->c:Ljava/lang/Object;
+    iget-wide v0, p0, Lted;->c:J
 
-    check-cast v0, Lcom/my/tracker/obfuscated/t;
+    iget-object v2, p0, Lted;->b:Lved;
 
-    iget-object v1, p0, Lted;->o:Ljava/lang/Object;
+    invoke-virtual {v2}, Lved;->c()Lgx2;
 
-    check-cast v1, Ljava/lang/String;
+    move-result-object v3
 
-    iget-object v2, p0, Lted;->X:Ljava/lang/Object;
+    iget-object v4, v3, Lgx2;->a:Lyed;
 
-    check-cast v2, Ljava/lang/String;
-
-    iget-wide v3, p0, Lted;->b:J
-
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/my/tracker/obfuscated/t;->e(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;J)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lted;->c:Ljava/lang/Object;
-
-    move-object v2, v0
-
-    check-cast v2, Lued;
-
-    iget-object v0, p0, Lted;->o:Ljava/lang/Object;
-
-    check-cast v0, Lyg1;
-
-    iget-object v1, p0, Lted;->X:Ljava/lang/Object;
-
-    check-cast v1, Landroid/util/Size;
-
-    iget-wide v3, p0, Lted;->b:J
-
-    monitor-enter v2
+    invoke-virtual {v4}, Lyed;->c()V
 
     :try_start_0
-    iget-object v5, v2, Lued;->d:Ljava/util/LinkedHashSet;
+    invoke-static {v3, v0, v1}, Lgx2;->c(Lgx2;J)V
 
-    invoke-interface {v5, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v5
+    invoke-virtual {v4}, Lyed;->q()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    if-eqz v5, :cond_0
+    invoke-virtual {v4}, Lyed;->k()V
 
-    monitor-exit v2
+    iget-object v3, v2, Lved;->d:Lrhf;
 
-    goto :goto_1
+    invoke-virtual {v3}, Lrhf;->getValue()Ljava/lang/Object;
 
-    :cond_0
+    move-result-object v3
+
+    check-cast v3, Lhi9;
+
+    invoke-virtual {v3, v0, v1}, Lhi9;->f(J)V
+
+    invoke-virtual {v2}, Lved;->d()Lgld;
+
+    move-result-object v2
+
+    iget-object v3, v2, Lgld;->a:Lyed;
+
+    invoke-virtual {v3}, Lyed;->b()V
+
+    iget-object v2, v2, Lgld;->c:Lqed;
+
+    invoke-virtual {v2}, Lf3;->a()Lfg6;
+
+    move-result-object v4
+
+    const/4 v5, 0x1
+
+    invoke-interface {v4, v5, v0, v1}, Lcef;->k(IJ)V
+
     :try_start_1
-    iget-object v5, v2, Lued;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v5, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Long;
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    sub-long/2addr v3, v5
-
-    const-string v5, "width"
-
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
-
-    move-result v6
-
-    invoke-static {v6}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    move-result-object v6
-
-    new-instance v7, Ld3b;
-
-    invoke-direct {v7, v5, v6}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v5, "height"
-
-    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
-
-    move-result v1
-
-    invoke-static {v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    move-result-object v1
-
-    new-instance v6, Ld3b;
-
-    invoke-direct {v6, v5, v1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v7, v6}, [Ld3b;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lr98;->F([Ld3b;)Ljava/util/Map;
-
-    move-result-object v5
-
-    invoke-static {}, Lyd;->a()Lpcd;
-
-    move-result-object v7
-
-    new-instance v1, Lre2;
-
-    const/4 v6, 0x4
-
-    invoke-direct/range {v1 .. v6}, Lre2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    invoke-virtual {v7, v1}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
-
-    iget-object v1, v2, Lued;->c:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, v2, Lued;->d:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3}, Lyed;->c()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_0
+    :try_start_2
+    invoke-virtual {v4}, Lfg6;->n()I
+
+    invoke-virtual {v3}, Lyed;->q()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :try_start_3
+    invoke-virtual {v3}, Lyed;->k()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-virtual {v2, v4}, Lf3;->u(Lfg6;)V
+
+    sget-object v0, Lzag;->a:Lzag;
+
+    return-object v0
 
     :catchall_0
     move-exception v0
 
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_4
+    invoke-virtual {v3}, Lyed;->k()V
+
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_0
+    invoke-virtual {v2, v4}, Lf3;->u(Lfg6;)V
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    invoke-virtual {v4}, Lyed;->k()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lted;->b:Lved;
+
+    invoke-virtual {v0}, Lved;->d()Lgld;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lted;->c:J
+
+    invoke-virtual {v1, v2, v3}, Lgld;->a(J)Lhld;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0}, Lved;->c()Lgx2;
+
+    move-result-object v2
+
+    iget-wide v3, v1, Lhld;->b:J
+
+    invoke-virtual {v2, v3, v4}, Lgx2;->e(J)Lff2;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0, v1}, Lved;->a(Lff2;)Lge2;
+
+    move-result-object v0
+
     goto :goto_2
 
     :cond_1
-    :goto_0
-    monitor-exit v2
-
     :goto_1
-    return-void
+    const/4 v0, 0x0
 
     :goto_2
-    monitor-exit v2
+    return-object v0
 
-    throw v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

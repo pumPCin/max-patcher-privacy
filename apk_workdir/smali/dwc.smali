@@ -1,24 +1,26 @@
-.class public final Ldwc;
+.class public abstract Ldwc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lyv0;
 
 
-# instance fields
-.field public a:Ljava/lang/Object;
+# static fields
+.field public static final a:Lwjb;
 
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    iget-object v0, p0, Ldwc;->a:Ljava/lang/Object;
+    new-instance v0, Lwjb;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v1, 0x7
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lwjb;-><init>(I)V
 
-    return-object v0
+    sput-object v0, Ldwc;->a:Lwjb;
+
+    return-void
 .end method

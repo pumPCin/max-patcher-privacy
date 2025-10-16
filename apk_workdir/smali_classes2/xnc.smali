@@ -1,75 +1,68 @@
-.class public final Lxnc;
+.class public abstract Lxnc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
 
 
-# instance fields
-.field public final synthetic a:Lync;
+# static fields
+.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a0796
 
-.field public final synthetic b:Landroid/view/View;
+.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a0797
 
-.field public final synthetic c:J
+.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a0798
 
+.field public static oneme_settings_media_gif_always:I = 0x7f0a0799
 
-# direct methods
-.method public constructor <init>(Lync;Landroid/view/View;J)V
-    .locals 0
+.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a079a
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_media_gif_wifi:I = 0x7f0a079b
 
-    iput-object p1, p0, Lxnc;->a:Lync;
+.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a079c
 
-    iput-object p2, p0, Lxnc;->b:Landroid/view/View;
+.field public static oneme_settings_media_item_gif:I = 0x7f0a079d
 
-    iput-wide p3, p0, Lxnc;->c:J
+.field public static oneme_settings_media_item_gif_available:I = 0x7f0a079e
 
-    return-void
-.end method
+.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a079f
 
+.field public static oneme_settings_media_item_photo:I = 0x7f0a07a0
 
-# virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.field public static oneme_settings_media_item_playlist_enabled:I = 0x7f0a07a1
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+.field public static oneme_settings_media_item_video:I = 0x7f0a07a2
 
-    iget-object p1, p0, Lxnc;->a:Lync;
+.field public static oneme_settings_media_item_video_caching:I = 0x7f0a07a3
 
-    iget-object p2, p1, Lync;->c:Lpf7;
+.field public static oneme_settings_media_item_video_messages:I = 0x7f0a07a4
 
-    iget-object p2, p2, Lpf7;->b:Ljava/lang/Object;
+.field public static oneme_settings_media_item_video_quality:I = 0x7f0a07a5
 
-    check-cast p2, Landroid/view/View;
+.field public static oneme_settings_media_photo_always:I = 0x7f0a07a6
 
-    sget-object p3, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a07a7
 
-    iget-object p3, p0, Lxnc;->b:Landroid/view/View;
+.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07a8
 
-    if-nez p3, :cond_0
+.field public static oneme_settings_media_quality_1080:I = 0x7f0a07a9
 
-    const/4 p2, 0x0
+.field public static oneme_settings_media_quality_480:I = 0x7f0a07aa
 
-    goto :goto_0
+.field public static oneme_settings_media_quality_720:I = 0x7f0a07ab
 
-    :cond_0
-    invoke-static {p3, p2}, Lslg;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
+.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07ac
 
-    move-result-object p2
+.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07ad
 
-    :goto_0
-    if-nez p2, :cond_1
+.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07ae
 
-    return-void
+.field public static oneme_settings_media_screen_list:I = 0x7f0a07af
 
-    :cond_1
-    iget-object p1, p1, Lync;->b:Lenc;
+.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07b0
 
-    iget-wide p3, p0, Lxnc;->c:J
+.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07b1
 
-    invoke-virtual {p1, p3, p4, p2}, Lenc;->d(JLandroid/graphics/Rect;)V
+.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07b2
 
-    return-void
-.end method
+.field public static oneme_settings_media_video_messages_always:I = 0x7f0a07b3
+
+.field public static oneme_settings_media_video_messages_dont_load:I = 0x7f0a07b4
+
+.field public static oneme_settings_media_video_messages_wifi:I = 0x7f0a07b5

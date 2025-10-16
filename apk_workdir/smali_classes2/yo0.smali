@@ -4,20 +4,32 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/graphics/Bitmap;
 
-.field public b:I
-
-.field public c:I
+.field public final b:Ljava/lang/Exception;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Landroid/graphics/Bitmap;Lig5;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lyo0;->a:I
+    .line 2
+    iput-object p1, p0, Lyo0;->a:Landroid/graphics/Bitmap;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Exception;)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lyo0;->b:Ljava/lang/Exception;
 
     return-void
 .end method

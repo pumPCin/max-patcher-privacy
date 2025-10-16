@@ -1,21 +1,46 @@
 .class public final Lrv9;
-.super Ljava/lang/Object;
+.super Lklf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lku3;
+# instance fields
+.field public c:Lsd9;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final d(Loe9;Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Lku3;
+    const-string v0, "reactionInfo"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p2, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sput-object v0, Lrv9;->a:Lku3;
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-static {p1}, Lrji;->e(Loe9;)Lsd9;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrv9;->c:Lsd9;
 
     return-void
+
+    :cond_0
+    invoke-virtual {p1}, Loe9;->y()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lrv9;->c:Lsd9;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,65 +1,98 @@
-.class public final Lw50;
-.super Landroid/media/AudioManager$AudioRecordingCallback;
+.class public final synthetic Lw50;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lx50;
+.field public final synthetic a:I
+
+.field public final synthetic b:Luq4;
 
 
 # direct methods
-.method public constructor <init>(Lx50;)V
+.method public synthetic constructor <init>(Luq4;Ljava/lang/Exception;I)V
     .locals 0
 
-    iput-object p1, p0, Lw50;->a:Lx50;
+    iput p3, p0, Lw50;->a:I
 
-    invoke-direct {p0}, Landroid/media/AudioManager$AudioRecordingCallback;-><init>()V
+    iput-object p1, p0, Lw50;->b:Luq4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onRecordingConfigChanged(Ljava/util/List;)V
+.method public final run()V
     .locals 4
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iget v0, p0, Lw50;->a:I
 
-    move-result-object p1
+    iget-object v1, p0, Lw50;->b:Luq4;
 
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, v1, Luq4;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast v0, Lxh5;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v0, v0, Lxh5;->a:Ldi5;
 
-    check-cast v0, Landroid/media/AudioRecordingConfiguration;
+    iget-object v0, v0, Ldi5;->D0:Lpg4;
 
-    invoke-virtual {v0}, Landroid/media/AudioRecordingConfiguration;->getClientAudioSessionId()I
+    invoke-virtual {v0}, Lpg4;->H()Lnd;
 
-    move-result v1
+    move-result-object v1
 
-    iget-object v2, p0, Lw50;->a:Lx50;
+    new-instance v2, Lcg4;
 
-    iget-object v3, v2, Lx50;->a:Landroid/media/AudioRecord;
+    const/16 v3, 0x14
 
-    invoke-virtual {v3}, Landroid/media/AudioRecord;->getAudioSessionId()I
+    invoke-direct {v2, v3}, Lcg4;-><init>(I)V
 
-    move-result v3
+    const/16 v3, 0x3f6
 
-    if-ne v1, v3, :cond_0
+    invoke-virtual {v0, v1, v3, v2}, Lpg4;->I(Lnd;ILx18;)V
 
-    invoke-static {v0}, Lfl;->c(Landroid/media/AudioRecordingConfiguration;)Z
-
-    move-result p1
-
-    invoke-virtual {v2, p1}, Lx50;->c(Z)V
-
-    :cond_1
     return-void
+
+    :pswitch_0
+    iget-object v0, v1, Luq4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lxh5;
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lxh5;->a:Ldi5;
+
+    iget-object v0, v0, Ldi5;->D0:Lpg4;
+
+    invoke-virtual {v0}, Lpg4;->H()Lnd;
+
+    move-result-object v1
+
+    new-instance v2, Lfa4;
+
+    const/16 v3, 0x17
+
+    invoke-direct {v2, v3}, Lfa4;-><init>(I)V
+
+    const/16 v3, 0x405
+
+    invoke-virtual {v0, v1, v3, v2}, Lpg4;->I(Lnd;ILx18;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

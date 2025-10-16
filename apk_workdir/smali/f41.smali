@@ -1,80 +1,126 @@
 .class public final Lf41;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lj41;
+.implements Lei6;
 
 
-# static fields
-.field public static final a:Lf41;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lo41;
+
+.field public final synthetic Z:Lda2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lo41;Lda2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lf41;
+    iput-object p1, p0, Lf41;->Y:Lo41;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lf41;->Z:Lda2;
 
-    sput-object v0, Lf41;->a:Lf41;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lb54;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lf41;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lf41;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lf41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b()Z
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance p1, Lf41;
 
-    return v0
+    iget-object v0, p0, Lf41;->Y:Lo41;
+
+    iget-object v1, p0, Lf41;->Z:Lda2;
+
+    invoke-direct {p1, v0, v1, p2}, Lf41;-><init>(Lo41;Lda2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lf41;->X:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x1
 
-    return v0
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lf41;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-nez p1, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/4 p1, 0x0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return p1
+    throw p1
 
     :cond_1
-    return v0
-.end method
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 1
+    iget-object p1, p0, Lf41;->Y:Lo41;
 
-    const v0, 0x588300f
+    iget-object p1, p1, Lo41;->h:Llt7;
 
-    return v0
-.end method
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object p1
 
-    const-string v0, "Active"
+    check-cast p1, Lrs9;
+
+    iput v1, p0, Lf41;->X:I
+
+    iget-object v0, p0, Lf41;->Z:Lda2;
+
+    invoke-virtual {p1, v0, p0}, Lrs9;->R(Lda2;Llff;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

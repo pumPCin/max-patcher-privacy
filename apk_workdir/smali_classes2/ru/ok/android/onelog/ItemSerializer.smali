@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public bridge synthetic serialize(Lyk7;Ljava/lang/Object;)V
+.method public bridge synthetic serialize(Lfq7;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -62,12 +62,12 @@
     .line 1
     check-cast p2, Lru/ok/android/onelog/OneLogItem;
 
-    invoke-virtual {p0, p1, p2}, Lru/ok/android/onelog/ItemSerializer;->serialize(Lyk7;Lru/ok/android/onelog/OneLogItem;)V
+    invoke-virtual {p0, p1, p2}, Lru/ok/android/onelog/ItemSerializer;->serialize(Lfq7;Lru/ok/android/onelog/OneLogItem;)V
 
     return-void
 .end method
 
-.method public serialize(Lyk7;Lru/ok/android/onelog/OneLogItem;)V
+.method public serialize(Lfq7;Lru/ok/android/onelog/OneLogItem;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -76,12 +76,12 @@
     .end annotation
 
     .line 2
-    invoke-interface {p1}, Lyk7;->s()V
+    invoke-interface {p1}, Lfq7;->s()V
 
     .line 3
     const-string v0, "timestamp"
 
-    invoke-interface {p1, v0}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 4
     invoke-virtual {p2}, Lru/ok/android/onelog/OneLogItem;->timestamp()J
@@ -90,43 +90,43 @@
 
     move-object v2, p1
 
-    check-cast v2, Lb2;
+    check-cast v2, Le2;
 
     .line 5
     invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lb2;->c(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Le2;->c(Ljava/lang/String;)V
 
     .line 6
     const-string v0, "type"
 
-    invoke-interface {p1, v0}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 7
     invoke-virtual {p2}, Lru/ok/android/onelog/OneLogItem;->type()I
 
     move-result v0
 
-    invoke-virtual {v2, v0}, Lb2;->m(I)V
+    invoke-virtual {v2, v0}, Le2;->m(I)V
 
     .line 8
     const-string v0, "operation"
 
-    invoke-interface {p1, v0}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 9
     invoke-virtual {p2}, Lru/ok/android/onelog/OneLogItem;->operation()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lyk7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lfq7;->h(Ljava/lang/String;)V
 
     .line 10
     const-string v0, "time"
 
-    invoke-interface {p1, v0}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 11
     invoke-virtual {p2}, Lru/ok/android/onelog/OneLogItem;->time()J
@@ -138,7 +138,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lb2;->c(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Le2;->c(Ljava/lang/String;)V
 
     .line 13
     invoke-virtual {p2}, Lru/ok/android/onelog/OneLogItem;->uid()Ljava/lang/String;
@@ -150,10 +150,10 @@
     .line 14
     const-string v1, "uid"
 
-    invoke-interface {p1, v1}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v1}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 15
-    invoke-interface {p1, v0}, Lyk7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lfq7;->h(Ljava/lang/String;)V
 
     .line 16
     :cond_0
@@ -166,10 +166,10 @@
     .line 17
     const-string v1, "network"
 
-    invoke-interface {p1, v1}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v1}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 18
-    invoke-interface {p1, v0}, Lyk7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lfq7;->h(Ljava/lang/String;)V
 
     .line 19
     :cond_1
@@ -184,14 +184,14 @@
     .line 20
     const-string v0, "count"
 
-    invoke-interface {p1, v0}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v0}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 21
     invoke-virtual {p2}, Lru/ok/android/onelog/OneLogItem;->count()I
 
     move-result v0
 
-    invoke-virtual {v2, v0}, Lb2;->m(I)V
+    invoke-virtual {v2, v0}, Le2;->m(I)V
 
     .line 22
     :cond_2
@@ -206,10 +206,10 @@
     .line 23
     const-string v3, "groups"
 
-    invoke-interface {p1, v3}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v3}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 24
-    invoke-interface {p1}, Lyk7;->u()V
+    invoke-interface {p1}, Lfq7;->u()V
 
     move v3, v1
 
@@ -221,7 +221,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v4}, Lb2;->d(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Le2;->d(Ljava/lang/String;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -229,7 +229,7 @@
 
     .line 26
     :cond_3
-    invoke-interface {p1}, Lyk7;->t()V
+    invoke-interface {p1}, Lfq7;->t()V
 
     .line 27
     :cond_4
@@ -242,10 +242,10 @@
     .line 28
     const-string v3, "data"
 
-    invoke-interface {p1, v3}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v3}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 29
-    invoke-interface {p1}, Lyk7;->u()V
+    invoke-interface {p1}, Lfq7;->u()V
 
     move v3, v1
 
@@ -257,7 +257,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v4}, Lb2;->d(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Le2;->d(Ljava/lang/String;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -265,7 +265,7 @@
 
     .line 31
     :cond_5
-    invoke-interface {p1}, Lyk7;->t()V
+    invoke-interface {p1}, Lfq7;->t()V
 
     .line 32
     :cond_6
@@ -278,10 +278,10 @@
     .line 33
     const-string v3, "custom"
 
-    invoke-interface {p1, v3}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v3}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 34
-    invoke-interface {p1}, Lyk7;->s()V
+    invoke-interface {p1}, Lfq7;->s()V
 
     :goto_2
     if-ge v1, v0, :cond_7
@@ -291,14 +291,14 @@
 
     move-result-object v3
 
-    invoke-interface {p1, v3}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    invoke-interface {p1, v3}, Lfq7;->b0(Ljava/lang/String;)Lfq7;
 
     .line 36
     invoke-virtual {p2, v1}, Lru/ok/android/onelog/OneLogItem;->customValue(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lb2;->d(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Le2;->d(Ljava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -306,11 +306,11 @@
 
     .line 37
     :cond_7
-    invoke-interface {p1}, Lyk7;->q()V
+    invoke-interface {p1}, Lfq7;->q()V
 
     .line 38
     :cond_8
-    invoke-interface {p1}, Lyk7;->q()V
+    invoke-interface {p1}, Lfq7;->q()V
 
     return-void
 .end method

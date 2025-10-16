@@ -1,66 +1,199 @@
-.class public final Lju8;
+.class public Lju8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzt8;
-
 
 # instance fields
-.field public final a:Lta8;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:I
 
-.field public final c:Ljava/util/ArrayList;
+.field public final c:I
 
-.field public d:I
+.field public final d:J
 
-.field public e:Z
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Lcj0;Z)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;IIJI)V
+    .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lta8;
+    .line 8
+    iput-object p1, p0, Lju8;->a:Ljava/lang/Object;
 
-    invoke-direct {v0, p1, p2}, Lta8;-><init>(Lcj0;Z)V
+    .line 9
+    iput p2, p0, Lju8;->b:I
 
-    iput-object v0, p0, Lju8;->a:Lta8;
+    .line 10
+    iput p3, p0, Lju8;->c:I
 
-    new-instance p1, Ljava/util/ArrayList;
+    .line 11
+    iput-wide p4, p0, Lju8;->d:J
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    .line 12
+    iput p6, p0, Lju8;->e:I
 
-    iput-object p1, p0, Lju8;->c:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    new-instance p1, Ljava/lang/Object;
+.method public constructor <init>(Lju8;)V
+    .locals 2
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lju8;->b:Ljava/lang/Object;
+    .line 2
+    iget-object v0, p1, Lju8;->a:Ljava/lang/Object;
+
+    iput-object v0, p0, Lju8;->a:Ljava/lang/Object;
+
+    .line 3
+    iget v0, p1, Lju8;->b:I
+
+    iput v0, p0, Lju8;->b:I
+
+    .line 4
+    iget v0, p1, Lju8;->c:I
+
+    iput v0, p0, Lju8;->c:I
+
+    .line 5
+    iget-wide v0, p1, Lju8;->d:J
+
+    iput-wide v0, p0, Lju8;->d:J
+
+    .line 6
+    iget p1, p1, Lju8;->e:I
+
+    iput p1, p0, Lju8;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
+.method public final a()Z
+    .locals 2
 
-    iget-object v0, p0, Lju8;->b:Ljava/lang/Object;
+    iget v0, p0, Lju8;->b:I
 
-    return-object v0
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final b()Lahf;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lju8;->a:Lta8;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lta8;->o:Lpa8;
+    if-ne p0, p1, :cond_0
 
-    return-object v0
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lju8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lju8;
+
+    iget-object v1, p0, Lju8;->a:Ljava/lang/Object;
+
+    iget-object v3, p1, Lju8;->a:Ljava/lang/Object;
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Lju8;->b:I
+
+    iget v3, p1, Lju8;->b:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lju8;->c:I
+
+    iget v3, p1, Lju8;->c:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-wide v3, p0, Lju8;->d:J
+
+    iget-wide v5, p1, Lju8;->d:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Lju8;->e:I
+
+    iget p1, p1, Lju8;->e:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lju8;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lju8;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lju8;->c:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lju8;->d:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lju8;->e:I
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

@@ -1,164 +1,141 @@
-.class public final Ljs0;
+.class public final synthetic Ljs0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loh6;
+
 
 # instance fields
-.field public final a:Lks0;
+.field public final synthetic a:I
 
-.field public final b:Lls0;
-
-.field public final c:Lms0;
+.field public final synthetic b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
 
 
 # direct methods
-.method public constructor <init>(Lks0;Lls0;Lms0;)V
+.method public synthetic constructor <init>(Lone/me/sdk/bottomsheet/BottomSheetWidget;I)V
     .locals 0
 
+    iput p2, p0, Ljs0;->a:I
+
+    iput-object p1, p0, Ljs0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljs0;->a:Lks0;
-
-    iput-object p2, p0, Ljs0;->b:Lls0;
-
-    iput-object p3, p0, Ljs0;->c:Lms0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    iget v0, p0, Ljs0;->a:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljs0;
+    sget-object v1, Lzag;->a:Lzag;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    iget-object v4, p0, Ljs0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
 
-    :cond_1
-    check-cast p1, Ljs0;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Ljs0;->a:Lks0;
+    iget-object v0, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->x0:Landroid/view/View;
 
-    iget-object v3, p1, Ljs0;->a:Lks0;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    move-result v1
+    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Lqs;
 
-    if-nez v1, :cond_2
+    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Lwq7;
 
-    return v2
+    aget-object v2, v6, v2
 
-    :cond_2
-    iget-object v1, p0, Ljs0;->b:Lls0;
+    invoke-virtual {v5, v4}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    iget-object v3, p1, Ljs0;->b:Lls0;
+    move-result-object v2
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v2, Ljava/lang/Boolean;
 
-    move-result v1
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-nez v1, :cond_3
+    move-result v2
 
-    return v2
+    if-eqz v2, :cond_0
 
-    :cond_3
-    iget-object v1, p0, Ljs0;->c:Lms0;
+    invoke-static {v0}, Lbbi;->g(Landroid/view/View;)V
 
-    iget-object p1, p1, Ljs0;->c:Lms0;
+    :cond_0
+    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->x0:Landroid/view/View;
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v1
 
-    move-result p1
+    :pswitch_0
+    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Lwq7;
 
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ljs0;->a:Lks0;
-
-    invoke-virtual {v0}, Lks0;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ljs0;->b:Lls0;
-
-    invoke-virtual {v1}, Lls0;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ljs0;->c:Lms0;
-
-    invoke-virtual {v0}, Lms0;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "BubbleBackgroundFocusColors(regular="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ljs0;->a:Lks0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", singleMedia="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ljs0;->b:Lls0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", transparent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ljs0;->c:Lms0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Lx14;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
+
+    sget v3, Lxr7;->a:I
+
+    sget v3, Lxr7;->c:I
+
+    invoke-static {v3}, Lxr7;->b(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v4}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->Q0()Z
+
+    move-result v3
+
+    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Lqs;
+
+    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Lwq7;
+
+    aget-object v2, v6, v2
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v5, v4, v2}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    invoke-static {v0}, Lbbi;->d(Landroid/view/View;)V
+
+    :cond_1
+    move-object v3, v0
+
+    :cond_2
+    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->x0:Landroid/view/View;
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

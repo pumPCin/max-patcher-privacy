@@ -1,140 +1,116 @@
-.class public final synthetic Lpj5;
+.class public abstract Lpj5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lxk5;
-
-.field public final synthetic c:Ljava/util/List;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lxk5;Ljava/util/List;I)V
-    .locals 0
-
-    iput p3, p0, Lpj5;->a:I
-
-    iput-object p1, p0, Lpj5;->b:Lxk5;
-
-    iput-object p2, p0, Lpj5;->c:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public abstract a()[B
+.end method
 
-    iget v0, p0, Lpj5;->a:I
+.method public final b(Ljava/nio/ByteBuffer;II)I
+    .locals 3
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    iget-object v0, p0, Lpj5;->c:Ljava/util/List;
+    move-result v0
 
-    iget-object v1, p0, Lpj5;->b:Lxk5;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    iget-object v2, v1, Lxk5;->a:Lc4d;
+    move-result v1
 
-    invoke-virtual {v2}, Lc4d;->c()V
+    sub-int/2addr v0, v1
 
-    :try_start_0
-    const-string v3, "SELECT MAX(`index`) FROM favorite_stickers"
+    const/4 v1, 0x4
 
-    const/4 v4, 0x0
+    const-string v2, "extension underflow"
 
-    invoke-static {v4, v3}, Lt4d;->c(ILjava/lang/String;)Lt4d;
+    if-lt v0, v1, :cond_3
 
-    move-result-object v3
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    iget-object v1, v1, Lxk5;->a:Lc4d;
+    move-result v0
 
-    invoke-virtual {v1}, Lc4d;->b()V
+    const v1, 0xffff
 
-    invoke-virtual {v1, v3}, Lc4d;->n(Lx0f;)Landroid/database/Cursor;
+    and-int/2addr v0, v1
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    if-ne v0, p2, :cond_2
 
-    :try_start_1
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    move-result v5
+    move-result p2
 
-    if-eqz v5, :cond_0
+    and-int/2addr p2, v1
 
-    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
+    if-lt p2, p3, :cond_1
 
-    move-result v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    goto :goto_0
+    move-result p3
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    goto :goto_1
+    move-result p1
+
+    sub-int/2addr p3, p1
+
+    if-lt p3, p2, :cond_0
+
+    return p2
 
     :cond_0
-    :goto_0
-    :try_start_2
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    invoke-virtual {v3}, Lt4d;->o()V
+    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
 
-    add-int/lit8 v4, v4, 0x1
+    throw p1
 
-    invoke-static {v4, v0}, Lxk5;->b(ILjava/util/List;)Ljava/util/ArrayList;
+    :cond_1
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    invoke-virtual {v2}, Lc4d;->q()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2}, Lc4d;->k()V
+    move-result-object p2
 
-    return-void
+    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    :catchall_1
-    move-exception v0
+    move-result-object p2
 
-    goto :goto_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_1
-    :try_start_3
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3}, Lt4d;->o()V
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    const-string p2, " can\'t be less than "
 
-    :goto_2
-    invoke-virtual {v2}, Lc4d;->k()V
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw v0
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object v0, p0, Lpj5;->b:Lxk5;
+    const-string p2, " bytes"
 
-    iget-object v1, p0, Lpj5;->c:Ljava/util/List;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lxk5;->a(Ljava/util/List;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

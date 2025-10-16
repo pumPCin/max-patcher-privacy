@@ -1,72 +1,79 @@
-.class public abstract Lide;
-.super Ljava/lang/Object;
+.class public final Lide;
+.super Lof4;
 .source "SourceFile"
 
-# interfaces
-.implements Lbc7;
 
+# static fields
+.field public static final b:Lide;
 
-# instance fields
-.field public volatile a:Ljava/lang/Object;
+.field public static final c:Ljf4;
+
+.field public static final d:Ljf4;
+
+.field public static final e:Ljf4;
+
+.field public static final f:Ljf4;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lide;
 
-    sget-object v0, Lrkc;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Lof4;-><init>()V
 
-    iput-object v0, p0, Lide;->a:Ljava/lang/Object;
+    sput-object v0, Lide;->b:Lide;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    new-array v2, v1, [Ljava/lang/String;
 
-# virtual methods
-.method public final a(Lo5;)Ljava/lang/Object;
-    .locals 2
+    const-string v3, ":settings/privacy"
 
-    iget-object v0, p0, Lide;->a:Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    sget-object v1, Lrkc;->b:Ljava/lang/Object;
+    const/16 v5, 0xe
 
-    if-eq v0, v1, :cond_0
+    invoke-static {v0, v3, v2, v4, v5}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    return-object v0
+    move-result-object v2
 
-    :cond_0
-    monitor-enter p0
+    sput-object v2, Lide;->c:Ljf4;
 
-    :try_start_0
-    iget-object v0, p0, Lide;->a:Ljava/lang/Object;
+    const-string v2, ":settings/blacklist"
 
-    if-eq v0, v1, :cond_1
+    new-array v3, v1, [Ljava/lang/String;
 
-    goto :goto_0
+    invoke-static {v0, v2, v3, v4, v5}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    :cond_1
-    invoke-virtual {p0, p1}, Lide;->b(Lo5;)Ljava/lang/Object;
+    move-result-object v2
+
+    sput-object v2, Lide;->d:Ljf4;
+
+    const-string v2, ":settings/privacy/onboarding"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+
+    move-result-object v1
+
+    sput-object v1, Lide;->e:Ljf4;
+
+    const-string v1, "mode"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":settings/privacy/pincode"
+
+    invoke-static {v0, v2, v1, v4, v5}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
     move-result-object v0
 
-    iput-object v0, p0, Lide;->a:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sput-object v0, Lide;->f:Ljf4;
 
-    :goto_0
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public abstract b(Lo5;)Ljava/lang/Object;
+    return-void
 .end method

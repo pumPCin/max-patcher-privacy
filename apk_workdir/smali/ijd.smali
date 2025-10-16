@@ -1,83 +1,117 @@
 .class public final Lijd;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicLong;
 .source "SourceFile"
 
 # interfaces
-.implements Lljd;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
+
+    const/4 v0, 0x5
+
+    const/4 v1, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, v0, v1}, Lijd;-><init>(Ljava/lang/String;IZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    iput-boolean p1, p0, Lijd;->a:Z
+    .line 3
+    iput-object p1, p0, Lijd;->a:Ljava/lang/String;
+
+    .line 4
+    iput p2, p0, Lijd;->b:I
+
+    .line 5
+    iput-boolean p3, p0, Lijd;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lijd;->a:Ljava/lang/String;
 
-    return v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v1, 0x2d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lijd;->c:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Lzx;
+
+    invoke-direct {v1, v0, p1}, Lzx;-><init>(Ljava/lang/String;Ljava/lang/Runnable;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lijd;
+    new-instance v1, Ljava/lang/Thread;
 
-    const/4 v2, 0x0
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    if-nez v1, :cond_1
+    :goto_0
+    iget p1, p0, Lijd;->b:I
 
-    return v2
+    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
 
-    :cond_1
-    check-cast p1, Lijd;
+    const/4 p1, 0x1
 
-    iget-boolean v1, p0, Lijd;->a:Z
+    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    iget-boolean p1, p1, Lijd;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lijd;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
+    return-object v1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "Show(openWithAnimation="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, "RxThreadFactory["
 
-    iget-boolean v2, p0, Lijd;->a:Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    iget-object v1, p0, Lijd;->a:Ljava/lang/String;
+
+    const-string v2, "]"
+
+    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

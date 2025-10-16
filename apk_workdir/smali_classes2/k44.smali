@@ -3,239 +3,188 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lk44;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final a:Landroid/graphics/RectF;
+.field public final a:Ljava/util/ListIterator;
 
-.field public final b:F
+.field public final b:I
 
-.field public final c:[F
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lb8;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lb8;-><init>(I)V
-
-    sput-object v0, Lk44;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/graphics/RectF;F[F)V
+.method public constructor <init>(Ljava/util/List;III)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lk44;->a:Landroid/graphics/RectF;
+    iput p3, p0, Lk44;->b:I
 
-    .line 3
-    iput p2, p0, Lk44;->b:F
+    iput p4, p0, Lk44;->c:I
 
-    .line 4
-    iput-object p3, p0, Lk44;->c:[F
+    add-int/2addr p2, p3
 
-    return-void
-.end method
+    invoke-interface {p1, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+    move-result-object p1
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    const-class v0, Landroid/graphics/RectF;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/RectF;
-
-    iput-object v0, p0, Lk44;->a:Landroid/graphics/RectF;
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
-
-    move-result v0
-
-    iput v0, p0, Lk44;->b:F
-
-    const/16 v0, 0x9
-
-    .line 8
-    new-array v0, v0, [F
-
-    iput-object v0, p0, Lk44;->c:[F
-
-    .line 9
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
+    iput-object p1, p0, Lk44;->a:Ljava/util/ListIterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    return v0
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final hasNext()Z
+    .locals 2
 
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_4
-
-    const-class v1, Lk44;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lk44;
-
-    iget v1, p1, Lk44;->b:F
-
-    iget v2, p0, Lk44;->b:F
-
-    invoke-static {v1, v2}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v0
-
-    :cond_2
-    iget-object v1, p0, Lk44;->a:Landroid/graphics/RectF;
-
-    iget-object v2, p1, Lk44;->a:Landroid/graphics/RectF;
-
-    invoke-virtual {v1, v2}, Landroid/graphics/RectF;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v0
-
-    :cond_3
-    iget-object v0, p0, Lk44;->c:[F
-
-    iget-object p1, p1, Lk44;->c:[F
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([F[F)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    :goto_0
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lk44;->a:Landroid/graphics/RectF;
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->hashCode()I
+    invoke-virtual {p0}, Lk44;->nextIndex()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget v1, p0, Lk44;->c:I
 
-    const/4 v1, 0x0
+    if-ge v0, v1, :cond_0
 
-    iget v2, p0, Lk44;->b:F
+    const/4 v0, 0x1
 
-    cmpl-float v1, v2, v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    :goto_0
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lk44;->c:[F
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([F)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final hasPrevious()Z
     .locals 1
 
-    iget-object v0, p0, Lk44;->a:Landroid/graphics/RectF;
+    invoke-virtual {p0}, Lk44;->previousIndex()I
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    move-result v0
 
-    iget p2, p0, Lk44;->b:F
+    if-ltz v0, :cond_0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    const/4 v0, 0x1
 
-    iget-object p2, p0, Lk44;->c:[F
+    return v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
+    :cond_0
+    const/4 v0, 0x0
 
-    return-void
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lk44;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lk44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final nextIndex()I
+    .locals 2
+
+    iget-object v0, p0, Lk44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+
+    move-result v0
+
+    iget v1, p0, Lk44;->b:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lk44;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lk44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 2
+
+    iget-object v0, p0, Lk44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
+
+    move-result v0
+
+    iget v1, p0, Lk44;->b:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

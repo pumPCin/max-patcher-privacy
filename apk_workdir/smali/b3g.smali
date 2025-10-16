@@ -1,97 +1,157 @@
-.class public final enum Lb3g;
-.super Ljava/lang/Enum;
+.class public final Lb3g;
+.super Lx2g;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lb3g;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum a:Lb3g;
-
-.field public static final enum b:Lb3g;
-
-.field public static final enum c:Lb3g;
-
-.field public static final enum o:Lb3g;
+.field public b:Lc3g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lb3g;
+    .line 1
+    const/4 v0, 0x1
 
-    const-string v1, "MORE"
+    iput v0, p0, Lb3g;->a:I
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lb3g;->a:Lb3g;
-
-    new-instance v1, Lb3g;
-
-    const-string v2, "ROTATION"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lb3g;->b:Lb3g;
-
-    new-instance v2, Lb3g;
-
-    const-string v3, "PIN"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lb3g;->c:Lb3g;
-
-    new-instance v3, Lb3g;
-
-    const-string v4, "NONE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lb3g;->o:Lb3g;
-
-    filled-new-array {v0, v1, v2, v3}, [Lb3g;
-
-    move-result-object v0
-
-    sput-object v0, Lb3g;->X:[Lb3g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lb3g;
+.method public constructor <init>(Lc3g;)V
     .locals 1
 
-    const-class v0, Lb3g;
+    const/4 v0, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput v0, p0, Lb3g;->a:I
 
-    move-result-object p0
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lb3g;
+    .line 3
+    iput-object p1, p0, Lb3g;->b:Lc3g;
 
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lb3g;
+
+# virtual methods
+.method public a(Lu2g;)V
     .locals 1
 
-    sget-object v0, Lb3g;->X:[Lb3g;
+    iget p1, p0, Lb3g;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v0
+    return-void
 
-    check-cast v0, [Lb3g;
+    :pswitch_0
+    iget-object p1, p0, Lb3g;->b:Lc3g;
 
-    return-object v0
+    iget-boolean v0, p1, Lc3g;->T0:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Lu2g;->P()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lc3g;->T0:Z
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(Lu2g;)V
+    .locals 2
+
+    iget v0, p0, Lb3g;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lb3g;->b:Lc3g;
+
+    iget v1, v0, Lc3g;->S0:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, v0, Lc3g;->S0:I
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lc3g;->T0:Z
+
+    invoke-virtual {v0}, Lu2g;->n()V
+
+    :cond_0
+    invoke-virtual {p1, p0}, Lu2g;->E(Lt2g;)Lu2g;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Lu2g;)V
+    .locals 2
+
+    iget v0, p0, Lb3g;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lb3g;->b:Lc3g;
+
+    iget-object v1, v0, Lc3g;->Q0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0}, Lc3g;->w()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lk1g;->o:Lk1g;
+
+    invoke-virtual {v0, p1}, Lu2g;->B(Lk1g;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lu2g;->D0:Z
+
+    sget-object p1, Lk1g;->c:Lk1g;
+
+    invoke-virtual {v0, p1}, Lu2g;->B(Lk1g;)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

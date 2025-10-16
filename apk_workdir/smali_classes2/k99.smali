@@ -1,94 +1,79 @@
 .class public final Lk99;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:I
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public b:I
+
+.field public c:I
+
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p2, p0, Lk99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput v0, p0, Lk99;->a:I
+
+    iput v0, p0, Lk99;->b:I
+
+    iput v0, p0, Lk99;->c:I
+
+    iput v0, p0, Lk99;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Lk99;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v1, "MeasureResult{layoutWidth="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Lk99;
+    iget v1, p0, Lk99;->a:I
 
-    sget-object p2, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Lk99;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", layoutHeight="
 
-    return-object p2
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget v1, p0, Lk99;->b:I
 
-    new-instance v0, Lk99;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lk99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    const-string v1, ", imageWidth="
 
-    invoke-direct {v0, p2, v1}, Lk99;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Lk99;->X:Ljava/lang/Object;
+    iget v1, p0, Lk99;->c:I
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const-string v1, ", imageHeight="
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lk99;->X:Ljava/lang/Object;
+    iget v1, p0, Lk99;->d:I
 
-    check-cast p1, Ljava/lang/CharSequence;
+    const/16 v2, 0x7d
 
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:[Lpl7;
-
-    iget-object v0, p0, Lk99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lu49;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Lu49;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lu49;
+    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lu49;->h(I)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-object v0
 .end method

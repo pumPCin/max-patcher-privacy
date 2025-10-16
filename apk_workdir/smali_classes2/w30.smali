@@ -1,102 +1,70 @@
-.class public final Lw30;
-.super Lc2f;
+.class public final synthetic Lw30;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Loh6;
 
 
 # instance fields
-.field public final synthetic X:Lyn7;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ly30;
+.field public final synthetic b:Ly30;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Ly30;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ly30;I)V
     .locals 0
 
-    iput-object p1, p0, Lw30;->X:Lyn7;
+    iput p2, p0, Lw30;->a:I
 
-    iput-object p2, p0, Lw30;->Y:Ly30;
+    iput-object p1, p0, Lw30;->b:Ly30;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lku5;
+    iget v0, p0, Lw30;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lw30;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lw30;->b:Ly30;
 
-    move-result-object p1
+    iget-object v0, v0, Ly30;->b:Ljava/lang/Object;
 
-    check-cast p1, Lw30;
+    check-cast v0, Landroid/content/Context;
 
-    sget-object p2, Laxf;->a:Laxf;
+    const-string v1, "audio"
 
-    invoke-virtual {p1, p2}, Lw30;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lw30;
-
-    iget-object v0, p0, Lw30;->X:Lyn7;
-
-    iget-object v1, p0, Lw30;->Y:Ly30;
-
-    invoke-direct {p1, v0, v1, p2}, Lw30;-><init>(Lyn7;Ly30;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lw30;->X:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Loq9;
+    check-cast v0, Landroid/media/AudioManager;
 
-    iget-object v1, p0, Lw30;->Y:Ly30;
+    return-object v0
 
-    iget-object v2, v1, Ly30;->d:Lkkh;
+    :pswitch_0
+    new-instance v0, Ljo;
 
-    check-cast v0, Lfr9;
+    const/4 v1, 0x2
 
-    invoke-virtual {v0, v2}, Lfr9;->d(Lmq9;)V
+    iget-object v2, p0, Lw30;->b:Ly30;
 
-    iget-object v0, v1, Ly30;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-direct {v0, v1, v2}, Ljo;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Lv30;
+    return-object v0
 
-    const/4 v3, 0x0
+    nop
 
-    invoke-direct {v2, p1, v1, v3}, Lv30;-><init>(Lyn7;Ly30;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v3, v3, v2, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

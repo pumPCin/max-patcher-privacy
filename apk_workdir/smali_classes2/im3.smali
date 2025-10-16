@@ -1,284 +1,180 @@
-.class public final Lim3;
+.class public final synthetic Lim3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final g:Lim3;
+# interfaces
+.implements Loh6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
+.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lim3;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lim3;-><init>(ZZZZZZ)V
-
-    sput-object v0, Lim3;->g:Lim3;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZ)V
+.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
     .locals 0
+
+    iput p2, p0, Lim3;->a:I
+
+    iput-object p1, p0, Lim3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lim3;->a:Z
-
-    iput-boolean p2, p0, Lim3;->b:Z
-
-    iput-boolean p3, p0, Lim3;->c:Z
-
-    iput-boolean p4, p0, Lim3;->d:Z
-
-    iput-boolean p5, p0, Lim3;->e:Z
-
-    iput-boolean p6, p0, Lim3;->f:Z
-
     return-void
-.end method
-
-.method public static a(Lim3;ZI)Lim3;
-    .locals 7
-
-    and-int/lit8 p2, p2, 0x2
-
-    if-eqz p2, :cond_0
-
-    iget-boolean p2, p0, Lim3;->b:Z
-
-    :goto_0
-    move v2, p2
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p2, 0x1
-
-    goto :goto_0
-
-    :goto_1
-    iget-boolean v3, p0, Lim3;->c:Z
-
-    iget-boolean v4, p0, Lim3;->d:Z
-
-    iget-boolean v5, p0, Lim3;->e:Z
-
-    iget-boolean v6, p0, Lim3;->f:Z
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lim3;
-
-    move v1, p1
-
-    invoke-direct/range {v0 .. v6}, Lim3;-><init>(ZZZZZZ)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
-    const/4 v0, 0x1
+    iget v0, p0, Lim3;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lim3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Lim3;
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lwq7;
 
-    const/4 v2, 0x0
+    sget v0, Lrrc;->oneme_login_confirm_timer:I
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    return v2
+    move-result-object v1
 
-    :cond_1
-    check-cast p1, Lim3;
-
-    iget-boolean v1, p0, Lim3;->a:Z
-
-    iget-boolean v3, p1, Lim3;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lim3;->b:Z
-
-    iget-boolean v3, p1, Lim3;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lim3;->c:Z
-
-    iget-boolean v3, p1, Lim3;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lim3;->d:Z
-
-    iget-boolean v3, p1, Lim3;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lim3;->e:Z
-
-    iget-boolean v3, p1, Lim3;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lim3;->f:Z
-
-    iget-boolean p1, p1, Lim3;->f:Z
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-boolean v0, p0, Lim3;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lim3;->b:Z
-
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lim3;->c:Z
-
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lim3;->d:Z
-
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lim3;->e:Z
-
-    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lim3;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "|v="
-
-    const-string v1, "|m="
-
-    const-string v2, "Inet(c="
-
-    iget-boolean v3, p0, Lim3;->a:Z
-
-    iget-boolean v4, p0, Lim3;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lbk7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "|r="
-
-    const-string v2, "|t="
-
-    iget-boolean v3, p0, Lim3;->c:Z
-
-    iget-boolean v4, p0, Lim3;->d:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lsw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    iget-boolean v1, p0, Lim3;->e:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, "|vpn="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lim3;->f:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0}, Lc8;->f(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lwq7;
+
+    new-instance v0, Lli7;
+
+    invoke-virtual {v1}, Lx14;->getRouter()Ljhd;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lli7;-><init>(Ljhd;)V
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lwq7;
+
+    new-instance v2, Lym3;
+
+    iget-object v0, v1, Lone/me/login/confirm/ConfirmPhoneScreen;->X:Lqs;
+
+    sget-object v3, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lwq7;
+
+    const/4 v4, 0x2
+
+    aget-object v4, v3, v4
+
+    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    iget-object v4, v1, Lone/me/login/confirm/ConfirmPhoneScreen;->c:Lqs;
+
+    const/4 v5, 0x0
+
+    aget-object v5, v3, v5
+
+    invoke-virtual {v4, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    iget-object v5, v1, Lone/me/login/confirm/ConfirmPhoneScreen;->o:Lqs;
+
+    const/4 v6, 0x1
+
+    aget-object v3, v3, v6
+
+    invoke-virtual {v5, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v5, v1
+
+    check-cast v5, Ljava/lang/String;
+
+    sget-object v1, Lz88;->a:Lz88;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    const-class v6, Ly98;
+
+    invoke-virtual {v3, v6}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+
+    move-result-object v6
+
+    new-instance v3, Lvj7;
+
+    const/16 v7, 0x13
+
+    invoke-direct {v3, v7}, Lvj7;-><init>(I)V
+
+    new-instance v7, Lrhf;
+
+    invoke-direct {v7, v3}, Lrhf;-><init>(Loh6;)V
+
+    new-instance v3, Lvj7;
+
+    const/16 v8, 0x12
+
+    invoke-direct {v3, v8}, Lvj7;-><init>(I)V
+
+    new-instance v8, Lrhf;
+
+    invoke-direct {v8, v3}, Lrhf;-><init>(Loh6;)V
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    const-class v9, Lqkf;
+
+    invoke-virtual {v3, v9}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+
+    move-result-object v9
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const-class v3, Lvo3;
+
+    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+
+    move-result-object v10
+
+    move v3, v0
+
+    invoke-direct/range {v2 .. v10}, Lym3;-><init>(ILjava/lang/String;Ljava/lang/String;Llt7;Lrhf;Lrhf;Llt7;Llt7;)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

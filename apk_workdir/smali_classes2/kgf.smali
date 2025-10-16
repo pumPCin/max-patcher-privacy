@@ -3,118 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljgf;
+.implements Lzx5;
 
 
 # instance fields
-.field public a:Ljava/lang/Long;
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/Long;
+.field public final synthetic b:Ln23;
+
+.field public final synthetic c:Lngf;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ln23;Lngf;I)V
+    .locals 0
+
+    iput p3, p0, Lkgf;->a:I
+
+    iput-object p1, p0, Lkgf;->b:Ln23;
+
+    iput-object p2, p0, Lkgf;->c:Lngf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final getMsSinceBoot()J
-    .locals 2
+.method public final d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget v0, p0, Lkgf;->a:I
 
-    move-result-wide v0
+    packed-switch v0, :pswitch_data_0
 
-    return-wide v0
-.end method
+    new-instance v0, Ljgf;
 
-.method public final getServerTimeMs()Ljava/lang/Long;
-    .locals 6
+    iget-object v1, p0, Lkgf;->c:Lngf;
 
-    iget-object v0, p0, Lkgf;->b:Ljava/lang/Long;
+    const/4 v2, 0x1
 
-    const/4 v1, 0x0
+    invoke-direct {v0, p1, v1, v2}, Ljgf;-><init>(Lby5;Lngf;I)V
 
-    if-eqz v0, :cond_0
+    iget-object p1, p0, Lkgf;->b:Ln23;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    sub-long/2addr v4, v2
-
-    iget-object v0, p0, Lkgf;->a:Ljava/lang/Long;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v4
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public final localTimeMs()J
-    .locals 2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
-    .locals 2
-
-    invoke-virtual {p0}, Lkgf;->getServerTimeMs()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    sub-long/2addr p1, v0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, p1
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1, v0, p2}, Ln23;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    sget-object p2, Lc54;->a:Lc54;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    sget-object p1, Lzag;->a:Lzag;
 
+    :goto_0
     return-object p1
-.end method
 
-.method public final utcTimeMs()J
-    .locals 2
+    :pswitch_0
+    new-instance v0, Ljgf;
 
-    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
+    iget-object v1, p0, Lkgf;->c:Lngf;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
+    invoke-direct {v0, p1, v1, v2}, Ljgf;-><init>(Lby5;Lngf;I)V
 
-    move-result-wide v0
+    iget-object p1, p0, Lkgf;->b:Ln23;
 
-    return-wide v0
+    invoke-virtual {p1, v0, p2}, Ln23;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lc54;->a:Lc54;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lzag;->a:Lzag;
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

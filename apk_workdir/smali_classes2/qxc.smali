@@ -1,23 +1,64 @@
 .class public final Lqxc;
-.super Llb6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public final f:Lk47;
+.field public final synthetic a:Landroid/view/View;
 
-.field public g:Lo0;
-
-.field public h:Lo0;
+.field public final synthetic b:F
 
 
 # direct methods
-.method public constructor <init>(Lz7f;Ltb5;Lk47;)V
+.method public constructor <init>(Landroid/view/View;F)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Llb6;-><init>(Lz7f;Ltb5;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lqxc;->f:Lk47;
+    iput-object p1, p0, Lqxc;->a:Landroid/view/View;
+
+    iput p2, p0, Lqxc;->b:F
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onTransitionCancel(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onTransitionEnd(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onTransitionPause(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onTransitionResume(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onTransitionStart(Landroid/transition/Transition;)V
+    .locals 1
+
+    iget-object p1, p0, Lqxc;->a:Landroid/view/View;
+
+    iget v0, p0, Lqxc;->b:F
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
     return-void
 .end method

@@ -1,15 +1,23 @@
-.class public abstract Ld3a;
+.class public final Ld3a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+
 # direct methods
-.method public static a(Landroid/app/NotificationChannel;)Z
+.method public constructor <init>(IIZ)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canBubble()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p2, p0, Ld3a;->a:I
 
-    return p0
+    iput-boolean p3, p0, Ld3a;->b:Z
+
+    return-void
 .end method

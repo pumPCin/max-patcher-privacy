@@ -1,25 +1,29 @@
-.class public final Lal0;
+.class public abstract Lal0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# static fields
+.field public static final synthetic a:I
 
-.field public b:I
 
-.field public c:I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.field public d:I
+    sget-object v0, Lvg;->a:Landroid/view/animation/LinearInterpolator;
 
-.field public e:I
+    new-instance v0, Landroid/os/Handler;
 
-.field public f:I
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-.field public g:I
+    move-result-object v1
 
-.field public h:Z
+    new-instance v2, Lyk0;
 
-.field public i:Z
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-.field public j:I
+    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    return-void
+.end method

@@ -1,131 +1,144 @@
 .class public final Lsr5;
-.super Ljava/lang/Object;
+.super Lcqe;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:Z
-
-.field public final d:Lrr5;
+# static fields
+.field public static final b:Lsr5;
 
 
 # direct methods
-.method public constructor <init>(Lo6b;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsr5;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Lcqe;-><init>()V
 
-    iput-boolean v0, p0, Lsr5;->c:Z
-
-    iput-object p1, p0, Lsr5;->d:Lrr5;
+    sput-object v0, Lsr5;->b:Lsr5;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)J
-    .locals 7
 
-    const-string v0, "\n"
+# virtual methods
+.method public final c()Lpf4;
+    .locals 4
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    new-instance v0, Lpf4;
 
-    move-result-object p0
+    new-instance v1, Lim5;
 
-    array-length v0, p0
+    const/4 v2, 0x2
 
-    const/4 v1, 0x0
+    invoke-direct {v1, v2}, Lim5;-><init>(I)V
 
-    const/4 v2, 0x0
+    new-instance v2, Lim5;
 
-    :goto_0
-    const/4 v3, 0x1
+    const/4 v3, 0x3
 
-    if-ge v2, v0, :cond_1
+    invoke-direct {v2, v3}, Lim5;-><init>(I)V
 
-    aget-object v4, p0, v2
+    invoke-direct {v0, v1, v2}, Lpf4;-><init>(Loh6;Loh6;)V
 
-    const-string v5, "a=fingerprint"
+    return-object v0
+.end method
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+.method public final d(Landroid/os/Bundle;)Lqf4;
+    .locals 13
 
-    move-result v5
+    const-string v0, "chat_id"
 
-    if-eqz v5, :cond_0
+    invoke-static {v0, p1}, Lkxi;->i(Ljava/lang/String;Landroid/os/Bundle;)J
 
-    const-string v5, " "
+    move-result-wide v3
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    const-string v0, "message_id"
 
-    move-result-object v4
+    invoke-static {v0, p1}, Lkxi;->i(Ljava/lang/String;Landroid/os/Bundle;)J
 
-    array-length v5, v4
+    move-result-wide v5
 
-    const/4 v6, 0x2
+    const-string v0, "attach_id"
 
-    if-ne v5, v6, :cond_0
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    aget-object v1, v4, v3
+    move-result-object v7
+
+    const-string v0, "file_id"
+
+    invoke-static {v0, p1}, Lkxi;->i(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v8
+
+    const-string v0, "file_name"
+
+    invoke-static {v0, p1}, Lkxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v0, "file_size"
+
+    invoke-static {v0, p1}, Lkxi;->i(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v11
+
+    const-string v0, "file_url"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    move-object v2, p1
+
+    check-cast v2, Landroid/net/Uri;
+
+    new-instance v1, Lrr5;
+
+    invoke-direct/range {v1 .. v12}, Lrr5;-><init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
+
+    return-object v1
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    goto :goto_0
+    const-string v0, "Required value was null."
 
-    :cond_1
-    if-eqz v1, :cond_3
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-string p0, ":"
+    throw p1
+.end method
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+.method public final e(Lbqe;)V
+    .locals 5
 
-    move-result-object p0
+    const-string v0, "file_name"
 
-    array-length v0, p0
+    const-string v1, "file_size"
 
-    sub-int/2addr v0, v3
+    const-string v2, "chat_id"
 
-    const/4 v1, 0x7
+    const-string v3, "message_id"
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+    const-string v4, "file_id"
 
-    move-result v0
+    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
 
-    const-wide/16 v1, 0x0
+    move-result-object v0
 
-    :goto_1
-    if-ltz v0, :cond_2
+    const-string v1, "file_url"
 
-    aget-object v3, p0, v0
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    const/16 v4, 0x10
+    move-result-object v1
 
-    invoke-static {v3, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    const/16 v2, 0xc
 
-    move-result v3
+    const-string v3, ":dialogs/file-download-warning"
 
-    const/16 v4, 0x8
+    invoke-static {p1, v3, v0, v1, v2}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    shl-long/2addr v1, v4
-
-    int-to-long v3, v3
-
-    or-long/2addr v1, v3
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-wide v1
-
-    :cond_3
-    const-wide/16 v0, -0x1
-
-    return-wide v0
+    return-void
 .end method

@@ -1,154 +1,55 @@
-.class public final synthetic Lhe5;
-.super Ljava/lang/Object;
+.class public final Lhe5;
+.super Lie5;
 .source "SourceFile"
-
-# interfaces
-.implements Lkw7;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvib;
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvib;I)V
+.method public constructor <init>(Ljava/lang/Runnable;J)V
     .locals 0
 
-    iput p2, p0, Lhe5;->a:I
+    invoke-direct {p0, p2, p3}, Lie5;-><init>(J)V
 
-    iput-object p1, p0, Lhe5;->b:Lvib;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhe5;->c:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Lhe5;->c:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Lhe5;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p1, Lmjb;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    invoke-super {p0}, Lie5;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Lhe5;->b:Lvib;
+    move-result-object v1
 
-    iget-object v0, v0, Lvib;->i:Linf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Linf;->Y:Ljava/lang/Object;
+    iget-object v1, p0, Lhe5;->c:Ljava/lang/Runnable;
 
-    check-cast v0, Lmnf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v0}, Lmjb;->d0(Lmnf;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget-object v0, v0, Lvib;->f:Landroidx/media3/exoplayer/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Lmjb;->I0(Landroidx/media3/common/PlaybackException;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget-object v0, v0, Lvib;->f:Landroidx/media3/exoplayer/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Lmjb;->B0(Landroidx/media3/common/PlaybackException;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget-object v0, v0, Lvib;->o:Lxib;
-
-    invoke-interface {p1, v0}, Lmjb;->z0(Lxib;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    invoke-virtual {v0}, Lvib;->l()Z
-
-    move-result v0
-
-    invoke-interface {p1, v0}, Lmjb;->q(Z)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget v0, v0, Lvib;->n:I
-
-    invoke-interface {p1, v0}, Lmjb;->f(I)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget-boolean v1, v0, Lvib;->l:Z
-
-    iget v0, v0, Lvib;->m:I
-
-    invoke-interface {p1, v0, v1}, Lmjb;->i(IZ)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget v0, v0, Lvib;->e:I
-
-    invoke-interface {p1, v0}, Lmjb;->k(I)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget-boolean v1, v0, Lvib;->l:Z
-
-    iget v0, v0, Lvib;->e:I
-
-    invoke-interface {p1, v0, v1}, Lmjb;->o(IZ)V
-
-    return-void
-
-    :pswitch_8
-    iget-object v0, p0, Lhe5;->b:Lvib;
-
-    iget-boolean v1, v0, Lvib;->g:Z
-
-    invoke-interface {p1, v1}, Lmjb;->r(Z)V
-
-    iget-boolean v0, v0, Lvib;->g:Z
-
-    invoke-interface {p1, v0}, Lmjb;->h(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

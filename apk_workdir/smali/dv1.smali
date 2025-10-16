@@ -1,27 +1,48 @@
 .class public final Ldv1;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lk14;
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public X:I
 
-.field public final b:Lyn7;
+.field public final synthetic Y:Lxn1;
 
-.field public final c:Lyn7;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;Lyn7;)V
+.method public constructor <init>(Lxn1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldv1;->Y:Lxn1;
 
-    iput-object p1, p0, Ldv1;->a:Lyn7;
-
-    iput-object p2, p0, Ldv1;->b:Lyn7;
-
-    iput-object p3, p0, Ldv1;->c:Lyn7;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ldv1;->o:Ljava/lang/Object;
+
+    iget p1, p0, Ldv1;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ldv1;->X:I
+
+    iget-object p1, p0, Ldv1;->Y:Lxn1;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lxn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,9 +1,9 @@
-.class public final Lj6;
+.class public final synthetic Lj6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/transition/Transition$TransitionListener;
+.implements Lgr3;
 
 
 # instance fields
@@ -25,164 +25,148 @@
     return-void
 .end method
 
-.method private final a(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final j(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final k(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final l(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
-
-    iget p1, p0, Lj6;->a:I
-
-    return-void
-.end method
-
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
     iget v0, p0, Lj6;->a:I
 
+    iget-object v1, p0, Lj6;->b:Ljava/lang/Object;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lj6;->b:Ljava/lang/Object;
+    check-cast v1, Ljava/util/ArrayList;
 
-    check-cast p1, Lymc;
+    check-cast p1, Ljava/util/List;
 
-    iget-object p1, p1, Lymc;->s0:Ltd6;
-
-    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     return-void
 
     :pswitch_0
-    iget-object p1, p0, Lj6;->b:Ljava/lang/Object;
+    check-cast v1, Landroid/view/View;
 
-    check-cast p1, Lone/me/chats/forward/ForwardPickerScreen;
+    check-cast p1, Landroid/graphics/Rect;
 
-    iget-object p1, p1, Lone/me/chats/forward/ForwardPickerScreen;->y0:Ltd6;
-
-    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
     return-void
 
     :pswitch_1
-    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+    check-cast v1, Lru/ok/messages/settings/FrgMediaSettings;
 
-    iget-object p1, p0, Lj6;->b:Ljava/lang/Object;
+    check-cast p1, Ldlg;
 
-    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+    iget-object v0, v1, Lru/ok/messages/settings/FrgMediaSettings;->A1:Lchg;
 
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lj3;
+    const-string v2, "app.media.video.compress"
 
-    const/4 v1, 0x2
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    invoke-direct {v0, v1, p0}, Lj3;-><init>(ILjava/lang/Object;)V
+    move-result-object v3
 
-    const-wide/16 v1, 0x64
+    invoke-virtual {v0, v2, v3}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    iget-object v0, v1, Lru/ok/messages/settings/FrgMediaSettings;->C1:Lhd;
+
+    const-string v2, "VIDEO_COMPRESSION_MODE_SELECTED"
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1, v2}, Lhd;->d(ILjava/lang/String;)V
+
+    invoke-virtual {v1}, Lru/ok/messages/settings/FrgBaseSettings;->Q0()V
+
+    return-void
+
+    :pswitch_2
+    check-cast v1, Lnx;
+
+    check-cast p1, Ljava/util/Collection;
+
+    iget-object v0, v1, Lnx;->a:Ljava/lang/String;
+
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result v2
+
+    const-string v3, "ValidateMessagesTimeUseCase find some items for delete, count = "
+
+    invoke-static {v2, v3, v0}, Lmb3;->f(ILjava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lnx;->g:Ljava/lang/Object;
+
+    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v2, Lmx;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v1, p1, v3}, Lmx;-><init>(Lnx;Ljava/util/Collection;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v0, v3, v3, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    return-void
+
+    :pswitch_3
+    check-cast v1, Lru/ok/messages/photoeditor/ActPhotoEditor;
+
+    check-cast p1, Land;
+
+    sget v0, Lru/ok/messages/photoeditor/ActPhotoEditor;->Y0:I
+
+    new-instance v0, Lqp4;
+
+    iget-object v2, p1, Land;->a:Llc4;
+
+    invoke-virtual {v2}, Llc4;->b()J
+
+    move-result-wide v2
+
+    iget-boolean p1, p1, Land;->b:Z
+
+    invoke-direct {v0, v2, v3, p1}, Lqp4;-><init>(JZ)V
+
+    invoke-virtual {v1, v0}, Lru/ok/messages/photoeditor/ActPhotoEditor;->V(Lqp4;)V
+
+    return-void
+
+    :pswitch_4
+    check-cast v1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    check-cast p1, Land;
+
+    sget v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->q1:I
+
+    new-instance v0, Lqp4;
+
+    iget-object v2, p1, Land;->a:Llc4;
+
+    invoke-virtual {v2}, Llc4;->b()J
+
+    move-result-wide v2
+
+    iget-boolean p1, p1, Land;->b:Z
+
+    invoke-direct {v0, v2, v3, p1}, Lqp4;-><init>(JZ)V
+
+    invoke-virtual {v1, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->b0(Lqp4;)V
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
-
-    iget p1, p0, Lj6;->a:I
-
-    return-void
-.end method
-
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
-
-    iget p1, p0, Lj6;->a:I
-
-    return-void
-.end method
-
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 0
-
-    iget p1, p0, Lj6;->a:I
-
-    return-void
 .end method

@@ -1,319 +1,429 @@
-.class public abstract Lnra;
+.class public final synthetic Lnra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loh6;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final C:I
+.field public final synthetic b:Landroid/content/Context;
 
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final synthetic c:Lpra;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/content/Context;Lpra;I)V
+    .locals 0
 
-    sget v0, Lt8c;->chat_common_background_fileType_archiveBadge:I
+    .line 2
+    iput p3, p0, Lnra;->a:I
 
-    sput v0, Lnra;->a:I
+    iput-object p1, p0, Lnra;->b:Landroid/content/Context;
 
-    sget v0, Lt8c;->chat_common_background_fileType_archiveBkg:I
+    iput-object p2, p0, Lnra;->c:Lpra;
 
-    sput v0, Lnra;->b:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_archiveElement:I
-
-    sput v0, Lnra;->c:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_archiveIcon:I
-
-    sput v0, Lnra;->d:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_dataBadge:I
-
-    sput v0, Lnra;->e:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_dataBkg:I
-
-    sput v0, Lnra;->f:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_dataElement:I
-
-    sput v0, Lnra;->g:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_dataIcon:I
-
-    sput v0, Lnra;->h:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_imageBadge:I
-
-    sput v0, Lnra;->i:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_imageBkg:I
-
-    sput v0, Lnra;->j:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_imageElement:I
-
-    sput v0, Lnra;->k:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_imageIcon:I
-
-    sput v0, Lnra;->l:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_musicBadge:I
-
-    sput v0, Lnra;->m:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_musicBkg:I
-
-    sput v0, Lnra;->n:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_musicElement:I
-
-    sput v0, Lnra;->o:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_musicIcon:I
-
-    sput v0, Lnra;->p:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_presentationBadge:I
-
-    sput v0, Lnra;->q:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_presentationBkg:I
-
-    sput v0, Lnra;->r:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_presentationElement:I
-
-    sput v0, Lnra;->s:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_presentationIcon:I
-
-    sput v0, Lnra;->t:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_programBadge:I
-
-    sput v0, Lnra;->u:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_programBkg:I
-
-    sput v0, Lnra;->v:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_programElement:I
-
-    sput v0, Lnra;->w:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_programIcon:I
-
-    sput v0, Lnra;->x:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_textBadge:I
-
-    sput v0, Lnra;->y:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_textBkg:I
-
-    sput v0, Lnra;->z:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_textElement:I
-
-    sput v0, Lnra;->A:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_textIcon:I
-
-    sput v0, Lnra;->B:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_unknownBadge:I
-
-    sput v0, Lnra;->C:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_unknownBkg:I
-
-    sput v0, Lnra;->D:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_unknownElement:I
-
-    sput v0, Lnra;->E:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_unknownIcon:I
-
-    sput v0, Lnra;->F:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_videoBadge:I
-
-    sput v0, Lnra;->G:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_videoBkg:I
-
-    sput v0, Lnra;->H:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_videoElement:I
-
-    sput v0, Lnra;->I:I
-
-    sget v0, Lt8c;->chat_common_background_fileType_videoIcon:I
-
-    sput v0, Lnra;->J:I
-
-    sget v0, Lt8c;->chat_common_text_fileType:I
-
-    sput v0, Lnra;->K:I
-
-    sget v0, Lt8c;->global_background_accent_neutral:I
-
-    sput v0, Lnra;->L:I
-
-    sget v0, Lt8c;->global_background_accent_neutralFade:I
-
-    sput v0, Lnra;->M:I
-
-    sget v0, Lt8c;->global_background_accent_neutralFadeSecondary:I
-
-    sput v0, Lnra;->N:I
-
-    sget v0, Lt8c;->global_background_surfaceCard:I
-
-    sput v0, Lnra;->O:I
-
-    sget v0, Lt8c;->global_icon_contrastStatic:I
-
-    sput v0, Lnra;->P:I
-
-    sget v0, Lt8c;->global_icon_negative:I
-
-    sput v0, Lnra;->Q:I
-
-    sget v0, Lt8c;->global_icon_primary:I
-
-    sput v0, Lnra;->R:I
-
-    sget v0, Lt8c;->global_icon_tertiary:I
-
-    sput v0, Lnra;->S:I
-
-    sget v0, Lt8c;->global_icon_themed:I
-
-    sput v0, Lnra;->T:I
-
-    sget v0, Lt8c;->global_states_text_disabled_primary:I
-
-    sput v0, Lnra;->U:I
-
-    sget v0, Lt8c;->global_text_negative:I
-
-    sput v0, Lnra;->V:I
-
-    sget v0, Lt8c;->global_text_positive:I
-
-    sput v0, Lnra;->W:I
-
-    sget v0, Lt8c;->global_text_primary:I
-
-    sput v0, Lnra;->X:I
-
-    sget v0, Lt8c;->global_text_secondary:I
-
-    sput v0, Lnra;->Y:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public synthetic constructor <init>(Lpra;Landroid/content/Context;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x4
+
+    iput v0, p0, Lnra;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnra;->c:Lpra;
+
+    iput-object p2, p0, Lnra;->b:Landroid/content/Context;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lnra;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget v0, Lwza;->r:I
+
+    iget-object v1, p0, Lnra;->c:Lpra;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    sget-object v1, Lsz4;->t0:Lc82;
+
+    iget-object v2, p0, Lnra;->b:Landroid/content/Context;
+
+    invoke-static {v1, v2}, Lu9d;->i(Lc82;Landroid/content/Context;)Lh67;
+
+    move-result-object v1
+
+    iget v1, v1, Lh67;->f:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Landroid/widget/FrameLayout;
+
+    iget-object v1, p0, Lnra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    sget v1, Ljid;->z:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    new-instance v1, Liq3;
+
+    sget v2, Lpra;->Y0:I
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lagi;->d(F)I
+
+    move-result v3
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lagi;->d(F)I
+
+    move-result v2
+
+    invoke-direct {v1, v3, v2}, Liq3;-><init>(II)V
+
+    const/4 v2, 0x0
+
+    iput v2, v1, Liq3;->i:I
+
+    iput v2, v1, Liq3;->v:I
+
+    iput v2, v1, Liq3;->l:I
+
+    const/16 v2, 0x18
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lagi;->d(F)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lnra;->c:Lpra;
+
+    iget-object v1, v1, Lpra;->M0:Landroid/graphics/drawable/LayerDrawable;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lnra;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Lnra;->c:Lpra;
+
+    invoke-static {v1, v0}, Lpra;->v(Lpra;Landroid/content/Context;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lnra;->c:Lpra;
+
+    iget-object v1, v0, Lpra;->K0:Ljava/lang/Object;
+
+    iget v2, v0, Lpra;->H0:I
+
+    new-instance v3, Landroid/widget/TextView;
+
+    iget-object v4, p0, Lnra;->b:Landroid/content/Context;
+
+    invoke-direct {v3, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget v4, Ljid;->A:I
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
+
+    new-instance v4, Liq3;
+
+    const/4 v5, -0x2
+
+    const/4 v6, 0x0
+
+    invoke-direct {v4, v6, v5}, Liq3;-><init>(II)V
+
+    iput v6, v4, Liq3;->t:I
+
+    iget-object v5, v0, Lpra;->I0:Ljava/lang/Object;
+
+    invoke-interface {v5}, Llt7;->e()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/TextView;
+
+    invoke-virtual {v5}, Landroid/view/View;->getId()I
+
+    move-result v5
+
+    goto :goto_0
+
+    :cond_0
+    move v5, v6
+
+    :goto_0
+    iput v5, v4, Liq3;->j:I
+
+    invoke-interface {v1}, Llt7;->e()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v6
+
+    :goto_1
+    iput v1, v4, Liq3;->u:I
+
+    iput v6, v4, Liq3;->l:I
+
+    invoke-virtual {v4, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    iget v0, v0, Lpra;->F0:I
+
+    iput v0, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    invoke-virtual {v4, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+
+    iput v2, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v0, 0x2
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    sget-object v0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    sget-object v0, Ldag;->r:Lpqf;
+
+    invoke-static {v0, v3}, Lpqf;->d(Lpqf;Landroid/widget/TextView;)V
+
+    sget-object v0, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v0, v3}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lu4b;->getText()Lapf;
+
+    const/4 v0, -0x1
+
+    const v1, 0x3f333333    # 0.7f
+
+    invoke-static {v0, v1}, Lpti;->d(IF)I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-object v3
+
+    :pswitch_3
+    iget-object v0, p0, Lnra;->c:Lpra;
+
+    iget v1, v0, Lpra;->H0:I
+
+    iget-object v2, v0, Lpra;->J0:Ljava/lang/Object;
+
+    new-instance v3, Landroid/widget/TextView;
+
+    iget-object v4, p0, Lnra;->b:Landroid/content/Context;
+
+    invoke-direct {v3, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget v4, Ljid;->B:I
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
+
+    new-instance v4, Liq3;
+
+    const/4 v5, -0x2
+
+    const/4 v6, 0x0
+
+    invoke-direct {v4, v6, v5}, Liq3;-><init>(II)V
+
+    iput v6, v4, Liq3;->t:I
+
+    iput v6, v4, Liq3;->i:I
+
+    iget-object v0, v0, Lpra;->K0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->e()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getId()I
+
+    move-result v0
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v6
+
+    :goto_2
+    iput v0, v4, Liq3;->u:I
+
+    invoke-interface {v2}, Llt7;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getId()I
+
+    move-result v6
+
+    :cond_3
+    iput v6, v4, Liq3;->k:I
+
+    invoke-virtual {v4, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    iput v1, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    invoke-virtual {v4, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v0, 0x2
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    sget-object v0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    sget-object v0, Ldag;->D:Lpqf;
+
+    invoke-static {v0, v3}, Lpqf;->d(Lpqf;Landroid/widget/TextView;)V
+
+    sget-object v0, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v0, v3}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lu4b;->getText()Lapf;
+
+    const/4 v0, -0x1
+
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-object v3
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,51 +1,58 @@
-.class public final Lez8;
-.super Lwy3;
+.class public final synthetic Lez8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhz8;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final synthetic a:Lc6e;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Z
 
-.field public final synthetic Z:Lq8h;
+.field public final synthetic c:Z
 
-.field public o:Lq8h;
-
-.field public r0:I
+.field public final synthetic o:Loy8;
 
 
 # direct methods
-.method public constructor <init>(Lq8h;Lwy3;)V
+.method public synthetic constructor <init>(Lc6e;ZZLoy8;)V
     .locals 0
 
-    iput-object p1, p0, Lez8;->Z:Lq8h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lez8;->a:Lc6e;
+
+    iput-boolean p2, p0, Lez8;->b:Z
+
+    iput-boolean p3, p0, Lez8;->c:Z
+
+    iput-object p4, p0, Lez8;->o:Loy8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lny8;I)V
+    .locals 7
 
-    iput-object p1, p0, Lez8;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lez8;->o:Loy8;
 
-    iget p1, p0, Lez8;->r0:I
+    iget v6, v0, Loy8;->c:I
 
-    const/high16 v0, -0x80000000
+    iget-object v3, p0, Lez8;->a:Lc6e;
 
-    or-int/2addr p1, v0
+    iget-boolean v4, p0, Lez8;->b:Z
 
-    iput p1, p0, Lez8;->r0:I
+    iget-boolean v5, p0, Lez8;->c:Z
 
-    iget-object p1, p0, Lez8;->Z:Lq8h;
+    move-object v1, p1
 
-    invoke-static {p1, p0}, Lq8h;->e(Lq8h;Lwy3;)Ljava/lang/Object;
+    move v2, p2
 
-    move-result-object p1
+    invoke-interface/range {v1 .. v6}, Lny8;->l(ILc6e;ZZI)V
 
-    return-object p1
+    return-void
 .end method

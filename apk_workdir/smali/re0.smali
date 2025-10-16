@@ -3,276 +3,470 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
-.implements Landroid/content/ComponentCallbacks2;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final X:Lre0;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lre0;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final X:I
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final Y:Ljava/lang/String;
 
-.field public final c:Ljava/util/ArrayList;
+.field public final Z:I
 
-.field public o:Z
+.field public final a:[I
+
+.field public final b:Ljava/util/ArrayList;
+
+.field public final c:[I
+
+.field public final o:[I
+
+.field public final r0:I
+
+.field public final s0:Ljava/lang/CharSequence;
+
+.field public final t0:I
+
+.field public final u0:Ljava/lang/CharSequence;
+
+.field public final v0:Ljava/util/ArrayList;
+
+.field public final w0:Ljava/util/ArrayList;
+
+.field public final x0:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lre0;
-
-    invoke-direct {v0}, Lre0;-><init>()V
-
-    sput-object v0, Lre0;->X:Lre0;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
-
-    iput-object v0, p0, Lre0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
-
-    iput-object v0, p0, Lre0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lre0;->c:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lre0;->o:Z
-
-    return-void
-.end method
-
-.method public static a(Landroid/app/Application;)V
     .locals 2
 
-    sget-object v0, Lre0;->X:Lre0;
+    new-instance v0, Lh8;
 
-    monitor-enter v0
+    const/4 v1, 0x5
 
-    :try_start_0
-    iget-boolean v1, v0, Lre0;->o:Z
+    invoke-direct {v0, v1}, Lh8;-><init>(I)V
 
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    invoke-virtual {p0, v0}, Landroid/app/Application;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
-
-    const/4 p0, 0x1
-
-    iput-boolean p0, v0, Lre0;->o:Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    sput-object v0, Lre0;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
 
-# virtual methods
-.method public final b(Z)V
-    .locals 3
+    .line 29
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lre0;->X:Lre0;
+    .line 30
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
-    monitor-enter v0
+    move-result-object v0
 
-    :try_start_0
-    iget-object v1, p0, Lre0;->c:Ljava/util/ArrayList;
+    iput-object v0, p0, Lre0;->a:[I
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    .line 31
+    invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lre0;->b:Ljava/util/ArrayList;
+
+    .line 32
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lre0;->c:[I
+
+    .line 33
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lre0;->o:[I
+
+    .line 34
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lre0;->X:I
+
+    .line 35
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lre0;->Y:Ljava/lang/String;
+
+    .line 36
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lre0;->Z:I
+
+    .line 37
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lre0;->r0:I
+
+    .line 38
+    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v1, Ljava/lang/CharSequence;
 
-    move-result v2
+    iput-object v1, p0, Lre0;->s0:Ljava/lang/CharSequence;
 
-    if-eqz v2, :cond_0
+    .line 39
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v2
+    iput v1, p0, Lre0;->t0:I
 
-    check-cast v2, Lqe0;
+    .line 40
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    invoke-interface {v2, p1}, Lqe0;->a(Z)V
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lre0;->u0:Ljava/lang/CharSequence;
+
+    .line 41
+    invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lre0;->v0:Ljava/util/ArrayList;
+
+    .line 42
+    invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lre0;->w0:Ljava/util/ArrayList;
+
+    .line 43
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lre0;->x0:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lqe0;)V
+    .locals 8
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iget-object v0, p1, Lqe0;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    mul-int/lit8 v1, v0, 0x6
+
+    .line 3
+    new-array v1, v1, [I
+
+    iput-object v1, p0, Lre0;->a:[I
+
+    .line 4
+    iget-boolean v1, p1, Lqe0;->g:Z
+
+    if-eqz v1, :cond_2
+
+    .line 5
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v1, p0, Lre0;->b:Ljava/util/ArrayList;
+
+    .line 6
+    new-array v1, v0, [I
+
+    iput-object v1, p0, Lre0;->c:[I
+
+    .line 7
+    new-array v1, v0, [I
+
+    iput-object v1, p0, Lre0;->o:[I
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    .line 8
+    iget-object v3, p1, Lqe0;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lke6;
+
+    .line 9
+    iget-object v4, p0, Lre0;->a:[I
+
+    add-int/lit8 v5, v2, 0x1
+
+    iget v6, v3, Lke6;->a:I
+
+    aput v6, v4, v2
+
+    .line 10
+    iget-object v4, p0, Lre0;->b:Ljava/util/ArrayList;
+
+    iget-object v6, v3, Lke6;->b:Landroidx/fragment/app/a;
+
+    if-eqz v6, :cond_0
+
+    iget-object v6, v6, Landroidx/fragment/app/a;->X:Ljava/lang/String;
 
     goto :goto_1
 
     :cond_0
-    monitor-exit v0
+    const/4 v6, 0x0
+
+    :goto_1
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 11
+    iget-object v4, p0, Lre0;->a:[I
+
+    add-int/lit8 v6, v2, 0x2
+
+    iget-boolean v7, v3, Lke6;->c:Z
+
+    aput v7, v4, v5
+
+    add-int/lit8 v5, v2, 0x3
+
+    .line 12
+    iget v7, v3, Lke6;->d:I
+
+    aput v7, v4, v6
+
+    add-int/lit8 v6, v2, 0x4
+
+    .line 13
+    iget v7, v3, Lke6;->e:I
+
+    aput v7, v4, v5
+
+    add-int/lit8 v5, v2, 0x5
+
+    .line 14
+    iget v7, v3, Lke6;->f:I
+
+    aput v7, v4, v6
+
+    add-int/lit8 v2, v2, 0x6
+
+    .line 15
+    iget v6, v3, Lke6;->g:I
+
+    aput v6, v4, v5
+
+    .line 16
+    iget-object v4, p0, Lre0;->c:[I
+
+    iget-object v5, v3, Lke6;->h:Lkv7;
+
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v5
+
+    aput v5, v4, v1
+
+    .line 17
+    iget-object v4, p0, Lre0;->o:[I
+
+    iget-object v3, v3, Lke6;->i:Lkv7;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    aput v3, v4, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 18
+    :cond_1
+    iget v0, p1, Lqe0;->f:I
+
+    iput v0, p0, Lre0;->X:I
+
+    .line 19
+    iget-object v0, p1, Lqe0;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Lre0;->Y:Ljava/lang/String;
+
+    .line 20
+    iget v0, p1, Lqe0;->s:I
+
+    iput v0, p0, Lre0;->Z:I
+
+    .line 21
+    iget v0, p1, Lqe0;->i:I
+
+    iput v0, p0, Lre0;->r0:I
+
+    .line 22
+    iget-object v0, p1, Lqe0;->j:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lre0;->s0:Ljava/lang/CharSequence;
+
+    .line 23
+    iget v0, p1, Lqe0;->k:I
+
+    iput v0, p0, Lre0;->t0:I
+
+    .line 24
+    iget-object v0, p1, Lqe0;->l:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lre0;->u0:Ljava/lang/CharSequence;
+
+    .line 25
+    iget-object v0, p1, Lqe0;->m:Ljava/util/ArrayList;
+
+    iput-object v0, p0, Lre0;->v0:Ljava/util/ArrayList;
+
+    .line 26
+    iget-object v0, p1, Lqe0;->n:Ljava/util/ArrayList;
+
+    iput-object v0, p0, Lre0;->w0:Ljava/util/ArrayList;
+
+    .line 27
+    iget-boolean p1, p1, Lqe0;->o:Z
+
+    iput-boolean p1, p0, Lre0;->x0:Z
 
     return-void
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 28
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Not on back stack"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 2
 
-    iget-object p1, p0, Lre0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 p2, 0x1
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result p1
-
-    iget-object v1, p0, Lre0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0, v0}, Lre0;->b(Z)V
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    return-void
-.end method
+    iget-object p2, p0, Lre0;->a:[I
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    return-void
-.end method
+    iget-object p2, p0, Lre0;->b:Ljava/util/ArrayList;
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 3
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    iget-object p1, p0, Lre0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object p2, p0, Lre0;->c:[I
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    const/4 v1, 0x0
+    iget-object p2, p0, Lre0;->o:[I
 
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    move-result p1
+    iget p2, p0, Lre0;->X:I
 
-    iget-object v2, p0, Lre0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iget-object p2, p0, Lre0;->Y:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v1}, Lre0;->b(Z)V
+    iget p2, p0, Lre0;->Z:I
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+    iget p2, p0, Lre0;->r0:I
 
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onLowMemory()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTrimMemory(I)V
-    .locals 2
-
-    const/16 v0, 0x14
-
-    if-ne p1, v0, :cond_0
-
-    iget-object p1, p0, Lre0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object p2, p0, Lre0;->s0:Ljava/lang/CharSequence;
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    iget p2, p0, Lre0;->t0:I
 
-    move-result p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eqz p1, :cond_0
+    iget-object p2, p0, Lre0;->u0:Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lre0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iget-object p2, p0, Lre0;->v0:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, v1}, Lre0;->b(Z)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    :cond_0
+    iget-object p2, p0, Lre0;->w0:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    iget-boolean p2, p0, Lre0;->x0:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
     return-void
 .end method

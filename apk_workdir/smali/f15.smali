@@ -3,175 +3,321 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le15;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lf15;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+.field public final X:[B
+
+.field public a:I
+
+.field public final b:Ljava/util/UUID;
+
+.field public final c:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwc4;
 
-    check-cast p1, Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    const/16 v1, 0x9
 
-    iput-object p1, p0, Lf15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    invoke-direct {v0, v1}, Lwc4;-><init>(I)V
+
+    sput-object v0, Lf15;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static d(Ljava/util/Set;)Ljava/util/Set;
-    .locals 6
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 5
 
-    invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    .line 9
+    new-instance v0, Ljava/util/UUID;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    sget-object p0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+    move-result-wide v1
 
-    return-object p0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    :cond_0
-    new-instance v0, Ljava/util/HashSet;
+    move-result-wide v3
 
-    invoke-interface {p0}, Ljava/util/Set;->size()I
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
 
-    move-result v1
+    iput-object v0, p0, Lf15;->b:Ljava/util/UUID;
 
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    move-result-object v0
 
-    move-result-object p0
+    iput-object v0, p0, Lf15;->c:Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput-object v0, p0, Lf15;->o:Ljava/lang/String;
 
-    move-result-object v1
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
-    check-cast v1, Ljava/lang/Long;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    iput-object p1, p0, Lf15;->X:[B
 
-    move-result-wide v2
+    return-void
+.end method
 
-    sget-object v4, Lb15;->a:Ljava/util/HashMap;
+.method public constructor <init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
+    .locals 0
 
-    invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, La15;
+    .line 3
+    iput-object p1, p0, Lf15;->b:Ljava/util/UUID;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    .line 4
+    iput-object p2, p0, Lf15;->c:Ljava/lang/String;
 
-    const-string v5, "Dynamic range profile cannot be converted to a DynamicRange object: "
+    .line 5
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 6
+    invoke-static {p3}, Ler9;->n(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object p1, p0, Lf15;->o:Ljava/lang/String;
 
-    move-result-object v2
+    .line 7
+    iput-object p4, p0, Lf15;->X:[B
 
-    invoke-static {v1, v2}, Lnjg;->k(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/Set;
-    .locals 1
+.method public final a(Ljava/util/UUID;)Z
+    .locals 2
 
-    iget-object v0, p0, Lf15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    sget-object v0, Lmx0;->a:Ljava/util/UUID;
 
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getSupportedProfiles()Ljava/util/Set;
+    iget-object v1, p0, Lf15;->b:Ljava/util/UUID;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0}, Lf15;->d(Ljava/util/Set;)Ljava/util/Set;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_1
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
 
-.method public final b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-    .locals 1
+    move-result p1
 
-    iget-object v0, p0, Lf15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
-
-    return-object v0
-.end method
-
-.method public final c(La15;)Ljava/util/Set;
-    .locals 4
-
-    iget-object v0, p0, Lf15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
-
-    invoke-static {p1, v0}, Lb15;->a(La15;Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    instance-of v0, p1, Lf15;
+
     const/4 v1, 0x0
 
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_1
+
+    return v0
+
+    :cond_1
+    check-cast p1, Lf15;
+
+    iget-object v2, p0, Lf15;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lf15;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lf15;->o:Ljava/lang/String;
+
+    iget-object v3, p1, Lf15;->o:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lf15;->b:Ljava/util/UUID;
+
+    iget-object v3, p1, Lf15;->b:Ljava/util/UUID;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lf15;->X:[B
+
+    iget-object p1, p1, Lf15;->X:[B
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lf15;->a:I
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lf15;->b:Ljava/util/UUID;
+
+    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lf15;->c:Ljava/lang/String;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
     :goto_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    add-int/2addr v0, v2
 
-    const-string v3, "DynamicRange is not supported: "
+    mul-int/2addr v0, v1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Lf15;->o:Ljava/lang/String;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object p1
+    iget-object v1, p0, Lf15;->X:[B
 
-    invoke-static {p1, v1}, Lnjg;->f(Ljava/lang/String;Z)V
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
-    iget-object p1, p0, Lf15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lf15;->a:I
+
+    :cond_1
+    iget v0, p0, Lf15;->a:I
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-object p2, p0, Lf15;->b:Ljava/util/UUID;
+
+    invoke-virtual {p2}, Ljava/util/UUID;->getMostSignificantBits()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getProfileCaptureRequestConstraints(J)Ljava/util/Set;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    move-result-object p1
+    invoke-virtual {p2}, Ljava/util/UUID;->getLeastSignificantBits()J
 
-    invoke-static {p1}, Lf15;->d(Ljava/util/Set;)Ljava/util/Set;
+    move-result-wide v0
 
-    move-result-object p1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    return-object p1
+    iget-object p2, p0, Lf15;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lf15;->o:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lf15;->X:[B
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    return-void
 .end method

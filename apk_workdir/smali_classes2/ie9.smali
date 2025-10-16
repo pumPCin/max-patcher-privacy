@@ -1,55 +1,106 @@
-.class public final Lie9;
-.super Lwy3;
+.class public final synthetic Lie9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loh6;
 
 
 # instance fields
-.field public X:Le39;
+.field public final synthetic a:I
 
-.field public Y:Lq10;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lwe9;
-
-.field public final synthetic r0:Lwe9;
-
-.field public s0:I
+.field public final synthetic b:Landroid/text/Layout;
 
 
 # direct methods
-.method public constructor <init>(Lwe9;Lwy3;)V
+.method public synthetic constructor <init>(Landroid/text/Layout;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Lie9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lie9;->b:Landroid/text/Layout;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lke9;Landroid/text/Layout;)V
     .locals 0
 
-    iput-object p1, p0, Lie9;->r0:Lwe9;
+    .line 1
+    const/4 p1, 0x1
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lie9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lie9;->b:Landroid/text/Layout;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lie9;->Z:Ljava/lang/Object;
+    iget v0, p0, Lie9;->a:I
 
-    iget p1, p0, Lie9;->s0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lie9;->b:Landroid/text/Layout;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
 
-    iput p1, p0, Lie9;->s0:I
+    move-result-object v0
 
-    iget-object p1, p0, Lie9;->r0:Lwe9;
+    instance-of v1, v0, Landroid/text/Spanned;
 
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p0}, Lwe9;->t(Lwe9;Le39;Lwy3;)Ljava/lang/Object;
+    :goto_0
+    const/4 v1, 0x0
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    return-object p1
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const-class v3, Liic;
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    new-array v0, v1, [Liic;
+
+    :cond_2
+    check-cast v0, [Liic;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lie9;->b:Landroid/text/Layout;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

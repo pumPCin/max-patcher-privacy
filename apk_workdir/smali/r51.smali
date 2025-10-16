@@ -3,62 +3,96 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx51;
+.implements Lqf4;
 
 
-# static fields
-.field public static final a:Lr51;
+# instance fields
+.field public final synthetic a:J
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    new-instance v0, Lr51;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lr51;->a:J
 
-    sput-object v0, Lr51;->a:Lr51;
+    iput-object p3, p0, Lr51;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lr51;->c:Ljava/lang/String;
+
+    iput-boolean p5, p0, Lr51;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    sget-object v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->s0:Ll8a;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
+    new-instance v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
-    :cond_0
-    instance-of p1, p1, Lr51;
+    new-instance v1, Lqbb;
 
-    if-nez p1, :cond_1
+    const-string v2, "call_incoming_avatar"
 
-    const/4 p1, 0x0
+    iget-object v3, p0, Lr51;->c:Ljava/lang/String;
 
-    return p1
+    invoke-direct {v1, v2, v3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_1
-    return v0
-.end method
+    new-instance v2, Lqbb;
 
-.method public final hashCode()I
-    .locals 1
+    const-string v3, "call_incoming_name"
 
-    const v0, -0x3f0d84a0
+    iget-object v4, p0, Lr51;->b:Ljava/lang/String;
 
-    return v0
-.end method
+    invoke-direct {v2, v3, v4}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-wide v3, p0, Lr51;->a:J
 
-    const-string v0, "Logout"
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    new-instance v4, Lqbb;
+
+    const-string v5, "call_incoming_chat_id"
+
+    invoke-direct {v4, v5, v3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v3, p0, Lr51;->o:Z
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    new-instance v5, Lqbb;
+
+    const-string v6, "call_incoming_video"
+
+    invoke-direct {v5, v6, v3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v2, v4, v5}, [Lqbb;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;-><init>(Landroid/os/Bundle;)V
 
     return-object v0
 .end method

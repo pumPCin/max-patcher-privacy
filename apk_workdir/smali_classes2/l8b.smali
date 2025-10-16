@@ -1,94 +1,110 @@
 .class public final Ll8b;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final b:Ll8b;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ln8b;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ln8b;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ll8b;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ll8b;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+
+    sput-object v0, Ll8b;->b:Ll8b;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
     .locals 0
 
-    iput-object p1, p0, Ll8b;->Y:Ln8b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ll8b;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lo8b;
+    instance-of v0, p1, Ll8b;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ll8b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
+    if-eqz v0, :cond_1
 
     check-cast p1, Ll8b;
 
-    sget-object p2, Laxf;->a:Laxf;
+    if-eq p1, p0, :cond_0
 
-    invoke-virtual {p1, p2}, Ll8b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    return-object p2
-.end method
+    iget-object v0, p0, Ll8b;->a:Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object p1, p1, Ll8b;->a:Ljava/lang/Object;
 
-    new-instance v0, Ll8b;
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Ll8b;->Y:Ln8b;
+    move-result p1
 
-    invoke-direct {v0, v1, p2}, Ll8b;-><init>(Ln8b;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ll8b;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ll8b;->X:Ljava/lang/Object;
-
-    check-cast p1, Lo8b;
-
-    sget-object v0, Lo8b;->a:Lo8b;
-
-    if-ne p1, v0, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
+    if-eqz p1, :cond_1
 
     :cond_0
-    const-string p1, "denied"
+    const/4 p1, 0x1
 
-    :goto_0
-    iget-object v0, p0, Ll8b;->Y:Ln8b;
+    return p1
 
-    const-string v1, "microphone"
+    :cond_1
+    const/4 p1, 0x0
 
-    invoke-static {v0, v1, p1}, Ln8b;->a(Ln8b;Ljava/lang/String;Ljava/lang/String;)V
+    return p1
+.end method
 
-    sget-object p1, Laxf;->a:Laxf;
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    iget-object v0, p0, Ll8b;->a:Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Ll8b;->a:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "Optional[%s]"
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const-string v0, "Optional.empty"
+
+    return-object v0
 .end method

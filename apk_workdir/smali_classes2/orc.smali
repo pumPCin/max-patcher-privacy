@@ -1,64 +1,30 @@
-.class public final Lorc;
+.class public abstract Lorc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lurc;
 
 
 # static fields
-.field public static final a:Lorc;
+.field public static oneme_action_share_qr_code_error:I = 0x7f1307aa
 
+.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f130811
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_contact_not_found_bottom_sheet_subtitle:I = 0x7f130813
 
-    new-instance v0, Lorc;
+.field public static oneme_contact_not_found_bottom_sheet_title:I = 0x7f130814
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_found_contact_is_self_error:I = 0x7f130844
 
-    sput-object v0, Lorc;->a:Lorc;
+.field public static oneme_invite_actions_header:I = 0x7f130850
 
-    return-void
-.end method
+.field public static oneme_invite_by_link_action:I = 0x7f130851
 
+.field public static oneme_invite_by_phone_action:I = 0x7f130852
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_invite_by_phone_continue_button:I = 0x7f130853
 
-    const/4 v0, 0x1
+.field public static oneme_invite_by_phone_description:I = 0x7f130854
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_invite_by_phone_hint_default:I = 0x7f130855
 
-    return v0
+.field public static oneme_invite_by_phone_title:I = 0x7f130856
 
-    :cond_0
-    instance-of p1, p1, Lorc;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x5ce2dfa5
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CloseTooltip"
-
-    return-object v0
-.end method
+.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f130857

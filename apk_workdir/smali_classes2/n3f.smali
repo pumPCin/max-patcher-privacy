@@ -1,76 +1,123 @@
-.class public final synthetic Ln3f;
-.super Ljava/lang/Object;
+.class public final Ln3f;
+.super Lklf;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public c:Ljava/util/ArrayList;
 
-.field public final synthetic b:Lo3f;
+.field public o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo3f;I)V
+.method public constructor <init>(Loe9;)V
     .locals 0
 
-    iput p2, p0, Ln3f;->a:I
-
-    iput-object p1, p0, Ln3f;->b:Lo3f;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lklf;-><init>(Loe9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public final d(Loe9;Ljava/lang/String;)V
+    .locals 4
 
-    iget v0, p0, Ln3f;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v0, "marker"
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v0
 
-    check-cast p1, Ljava/lang/Float;
+    if-nez v0, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    const-string v0, "stickers"
 
-    move-result p1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Ln3f;->b:Lo3f;
+    move-result p2
 
-    invoke-virtual {v0, p1}, Lo3f;->d(F)V
+    if-nez p2, :cond_0
 
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Ln3f;->b:Lo3f;
-
-    invoke-virtual {v0, p1}, Lo3f;->d(F)V
+    invoke-virtual {p1}, Loe9;->y()V
 
     return-void
 
-    nop
+    :cond_0
+    invoke-static {p1}, Lfzh;->i(Loe9;)I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result p2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Ln3f;->c:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_1
+
+    iget-object v1, p0, Ln3f;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Loe9;->r0()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+
+    :cond_2
+    invoke-virtual {p1}, Loe9;->r0()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ln3f;->o:J
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Ln3f;->c:Ljava/util/ArrayList;
+
+    iget-wide v1, p0, Ln3f;->o:J
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "{stickerIds="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", marker="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

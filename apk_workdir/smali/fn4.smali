@@ -1,291 +1,357 @@
-.class public final Lfn4;
+.class public final synthetic Lfn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
+.implements Lyvb;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final synthetic a:Lao4;
 
-.field public final b:Ljava/util/concurrent/ScheduledExecutorService;
+.field public final synthetic b:Lnn4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ScheduledExecutorService;)V
+.method public synthetic constructor <init>(Lao4;Lnn4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    iput-object p1, p0, Lfn4;->a:Lao4;
 
-    iput-object p2, p0, Lfn4;->b:Ljava/util/concurrent/ScheduledExecutorService;
+    iput-object p2, p0, Lfn4;->b:Lnn4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 10
 
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    check-cast p1, Lsa6;
 
-    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    iget-object v0, p0, Lfn4;->a:Lao4;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return p1
-.end method
+    iget-object v1, p0, Lfn4;->b:Lnn4;
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
+    iget-boolean v1, v1, Lnn4;->s0:Z
 
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    const/4 v2, 0x1
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    if-eqz v1, :cond_d
 
-    return-void
-.end method
+    iget-object v1, v0, Lao4;->j:Ljava/lang/Boolean;
 
-.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
-    .locals 1
+    if-eqz v1, :cond_0
 
-    .line 1
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    move-result v1
 
-    move-result-object p1
+    if-nez v1, :cond_d
 
-    return-object p1
-.end method
+    :cond_0
+    iget v1, p1, Lsa6;->F:I
 
-.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-    .locals 1
+    iget-object v3, p1, Lsa6;->n:Ljava/lang/String;
 
-    .line 2
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    const/4 v4, -0x1
 
-    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    if-eq v1, v4, :cond_d
 
-    move-result-object p1
+    const/4 v5, 0x2
 
-    return-object p1
-.end method
+    if-le v1, v5, :cond_d
 
-.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-    .locals 1
+    const-string v1, "audio/ac4"
 
-    .line 1
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isShutdown()Z
-    .locals 1
-
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isTerminated()Z
-    .locals 1
-
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
-
-    .line 1
-    new-instance v0, Lhn4;
-
-    new-instance v1, Lan4;
+    const-string v6, "audio/eac3-joc"
 
     const/4 v7, 0x0
 
-    move-object v2, p0
+    const/16 v8, 0x20
 
-    move-object v3, p1
+    if-nez v3, :cond_1
 
-    move-wide v4, p2
+    goto :goto_2
 
-    move-object v6, p4
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct/range {v1 .. v7}, Lan4;-><init>(Lfn4;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;I)V
+    move-result v9
 
-    invoke-direct {v0, v1}, Lhn4;-><init>(Lgn4;)V
+    sparse-switch v9, :sswitch_data_0
 
-    return-object v0
-.end method
+    :goto_0
+    move v9, v4
 
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
+    goto :goto_1
 
-    .line 2
-    new-instance v0, Lhn4;
+    :sswitch_0
+    const-string v9, "audio/eac3"
 
-    new-instance v1, Lan4;
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v7, 0x1
+    move-result v9
 
-    move-object v2, p0
+    if-nez v9, :cond_2
 
-    move-object v3, p1
+    goto :goto_0
 
-    move-wide v4, p2
+    :cond_2
+    const/4 v9, 0x3
 
-    move-object v6, p4
+    goto :goto_1
 
-    invoke-direct/range {v1 .. v7}, Lan4;-><init>(Lfn4;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;I)V
+    :sswitch_1
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1}, Lhn4;-><init>(Lgn4;)V
+    move-result v9
 
-    return-object v0
-.end method
+    if-nez v9, :cond_3
 
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 10
+    goto :goto_0
 
-    new-instance v0, Lhn4;
+    :cond_3
+    move v9, v5
 
-    new-instance v1, Lcn4;
+    goto :goto_1
 
-    const/4 v9, 0x0
+    :sswitch_2
+    const-string v9, "audio/ac3"
 
-    move-object v2, p0
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-object v3, p1
+    move-result v9
 
-    move-wide v4, p2
+    if-nez v9, :cond_4
 
-    move-wide v6, p4
+    goto :goto_0
 
-    move-object/from16 v8, p6
+    :cond_4
+    move v9, v2
 
-    invoke-direct/range {v1 .. v9}, Lcn4;-><init>(Ljava/lang/Object;Ljava/lang/Object;JJLjava/lang/Object;I)V
+    goto :goto_1
 
-    invoke-direct {v0, v1}, Lhn4;-><init>(Lgn4;)V
+    :sswitch_3
+    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
-.end method
+    move-result v9
 
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 10
+    if-nez v9, :cond_5
 
-    new-instance v0, Lhn4;
+    goto :goto_0
 
-    new-instance v1, Lcn4;
+    :cond_5
+    move v9, v7
 
-    const/4 v9, 0x1
+    :goto_1
+    packed-switch v9, :pswitch_data_0
 
-    move-object v2, p0
+    goto :goto_2
 
-    move-object v3, p1
+    :pswitch_0
+    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-wide v4, p2
+    if-lt v9, v8, :cond_d
 
-    move-wide v6, p4
+    iget-object v9, v0, Lao4;->h:Llg6;
 
-    move-object/from16 v8, p6
+    if-eqz v9, :cond_d
 
-    invoke-direct/range {v1 .. v9}, Lcn4;-><init>(Ljava/lang/Object;Ljava/lang/Object;JJLjava/lang/Object;I)V
+    iget-boolean v9, v9, Llg6;->a:Z
 
-    invoke-direct {v0, v1}, Lhn4;-><init>(Lgn4;)V
+    if-eqz v9, :cond_d
 
-    return-object v0
-.end method
+    :goto_2
+    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
 
-.method public final shutdown()V
-    .locals 2
+    if-lt v9, v8, :cond_c
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget-object v8, v0, Lao4;->h:Llg6;
 
-    const-string v1, "Shutting down is not allowed."
+    if-eqz v8, :cond_c
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-boolean v9, v8, Llg6;->a:Z
 
-    throw v0
-.end method
+    if-eqz v9, :cond_c
 
-.method public final shutdownNow()Ljava/util/List;
-    .locals 2
+    iget-object v8, v8, Llg6;->b:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    check-cast v8, Landroid/media/Spatializer;
 
-    const-string v1, "Shutting down is not allowed."
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-static {v8}, Lx4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
 
-    throw v0
-.end method
+    move-result-object v8
 
-.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-    .locals 1
+    invoke-static {v8}, Lx4;->i(Landroid/media/Spatializer;)Z
 
-    .line 3
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    move-result v8
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    if-eqz v8, :cond_c
+
+    iget-object v8, v0, Lao4;->h:Llg6;
+
+    iget-object v8, v8, Llg6;->b:Ljava/lang/Object;
+
+    check-cast v8, Landroid/media/Spatializer;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v8}, Lx4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
+
+    move-result-object v8
+
+    invoke-static {v8}, Lx4;->l(Landroid/media/Spatializer;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_c
+
+    iget-object v8, v0, Lao4;->h:Llg6;
+
+    iget-object v0, v0, Lao4;->i:Lr20;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v9, p1, Lsa6;->F:I
+
+    invoke-static {v3, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_6
+
+    const/16 v1, 0x10
+
+    if-ne v9, v1, :cond_9
+
+    const/16 v9, 0xc
+
+    goto :goto_3
+
+    :cond_6
+    const-string v6, "audio/iamf"
+
+    invoke-static {v3, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    if-ne v9, v4, :cond_9
+
+    const/4 v9, 0x6
+
+    goto :goto_3
+
+    :cond_7
+    invoke-static {v3, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    const/16 v1, 0x12
+
+    if-eq v9, v1, :cond_8
+
+    const/16 v1, 0x15
+
+    if-ne v9, v1, :cond_9
+
+    :cond_8
+    const/16 v9, 0x18
+
+    :cond_9
+    :goto_3
+    invoke-static {v9}, Ljhg;->s(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_a
+
+    move p1, v7
+
+    goto :goto_4
+
+    :cond_a
+    new-instance v3, Landroid/media/AudioFormat$Builder;
+
+    invoke-direct {v3}, Landroid/media/AudioFormat$Builder;-><init>()V
+
+    invoke-virtual {v3, v5}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
+
+    move-result-object v1
+
+    iget p1, p1, Lsa6;->G:I
+
+    if-eq p1, v4, :cond_b
+
+    invoke-virtual {v1, p1}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
+
+    :cond_b
+    iget-object p1, v8, Llg6;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/media/Spatializer;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lx4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Lr20;->b()Lswe;
 
-.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 1
+    move-result-object v0
 
-    .line 2
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v0, v0, Lswe;->b:Ljava/lang/Object;
 
-    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    check-cast v0, Landroid/media/AudioAttributes;
 
-    move-result-object p1
+    invoke-virtual {v1}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
 
-    return-object p1
-.end method
+    move-result-object v1
 
-.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-    .locals 1
+    invoke-static {p1, v0, v1}, Lx4;->j(Landroid/media/Spatializer;Landroid/media/AudioAttributes;Landroid/media/AudioFormat;)Z
 
-    .line 1
-    iget-object v0, p0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+    move-result p1
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    :goto_4
+    if-eqz p1, :cond_c
 
-    move-result-object p1
+    goto :goto_5
 
-    return-object p1
+    :cond_c
+    return v7
+
+    :cond_d
+    :goto_5
+    return v2
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7e929daa -> :sswitch_3
+        0xb269698 -> :sswitch_2
+        0xb269699 -> :sswitch_1
+        0x59ae0c65 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

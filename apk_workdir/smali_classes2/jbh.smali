@@ -4,139 +4,54 @@
 
 
 # instance fields
-.field public final a:[Z
+.field public final a:Lrhf;
 
-.field public b:I
+.field public final b:Lrhf;
+
+.field public final c:Lrhf;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Litg;
 
-    iput v0, p0, Ljbh;->b:I
+    const/16 v1, 0x8
 
-    invoke-static {}, Lpf0;->values()[Lpf0;
+    invoke-direct {v0, v1}, Litg;-><init>(I)V
 
-    move-result-object v0
+    new-instance v1, Lrhf;
 
-    array-length v0, v0
+    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
 
-    new-array v0, v0, [Z
+    iput-object v1, p0, Ljbh;->a:Lrhf;
 
-    iput-object v0, p0, Ljbh;->a:[Z
+    new-instance v0, Litg;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Litg;-><init>(I)V
+
+    new-instance v1, Lrhf;
+
+    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
+
+    iput-object v1, p0, Ljbh;->b:Lrhf;
+
+    new-instance v0, Litg;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Litg;-><init>(I)V
+
+    new-instance v1, Lrhf;
+
+    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
+
+    iput-object v1, p0, Ljbh;->c:Lrhf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lpf0;Z)Z
-    .locals 2
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    iget-object v1, p0, Ljbh;->a:[Z
-
-    aget-boolean v0, v1, v0
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aput-boolean p2, v1, p1
-
-    if-eq v0, p2, :cond_1
-
-    iget p1, p0, Ljbh;->b:I
-
-    const/4 v0, 0x1
-
-    if-eqz p2, :cond_0
-
-    move p2, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, -0x1
-
-    :goto_0
-    add-int/2addr p1, p2
-
-    iput p1, p0, Ljbh;->b:I
-
-    return v0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    const-class v3, Ljbh;
-
-    if-eq v3, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ljbh;
-
-    iget v2, p0, Ljbh;->b:I
-
-    iget v3, p1, Ljbh;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Ljbh;->a:[Z
-
-    iget-object p1, p1, Ljbh;->a:[Z
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Z[Z)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ljbh;->a:[Z
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Z)I
-
-    move-result v0
-
-    return v0
 .end method

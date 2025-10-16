@@ -1,78 +1,333 @@
 .class public final Lzs;
-.super Lnib;
+.super Ljava/util/AbstractSet;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lko0;
+.field public final synthetic a:I
 
-.field public final b:Lood;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lko0;Lood;)V
+.method public synthetic constructor <init>(ILjava/util/Map;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    iput p1, p0, Lzs;->a:I
 
-    iput-object p1, p0, Lzs;->a:Lko0;
+    iput-object p2, p0, Lzs;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Lzs;->b:Lood;
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>([Luhg;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lzs;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lzs;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(IILandroid/graphics/Bitmap$Config;)Lm73;
-    .locals 5
+.method public bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {p1, p2, p3}, Luo0;->c(IILandroid/graphics/Bitmap$Config;)I
+    iget v0, p0, Lzs;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-virtual {p0, p1}, Lzs;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    iget-object v1, p0, Lzs;->a:Lko0;
+    if-nez v0, :cond_0
 
-    invoke-interface {v1, v0}, Lolb;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lcbi;
 
-    check-cast v0, Landroid/graphics/Bitmap;
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+    move-result-object v1
 
-    move-result v2
+    check-cast v1, Ljava/lang/Comparable;
 
-    mul-int v3, p1, p2
-
-    invoke-static {p3}, Luo0;->b(Landroid/graphics/Bitmap$Config;)I
-
-    move-result v4
-
-    mul-int/2addr v4, v3
-
-    if-lt v2, v4, :cond_0
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/graphics/Bitmap;->reconfigure(IILandroid/graphics/Bitmap$Config;)V
-
-    iget-object p1, p0, Lzs;->b:Lood;
-
-    iget-object p1, p1, Lood;->a:Ljava/lang/Object;
-
-    check-cast p1, Lwka;
-
-    invoke-static {v0, v1, p1}, Lm73;->h0(Ljava/lang/Object;La1d;Ll73;)Lxe4;
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v0, v1, p1}, Lcbi;->b(Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string p2, "Check failed."
+    :goto_0
+    return p1
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    nop
 
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public clear()V
+    .locals 1
+
+    iget v0, p0, Lzs;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/util/AbstractCollection;->clear()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcbi;
+
+    invoke-virtual {v0}, Lcbi;->clear()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public contains(Ljava/lang/Object;)Z
+    .locals 3
+
+    iget v0, p0, Lzs;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v1, Lcbi;
+
+    invoke-virtual {v1, v0}, Lcbi;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    if-eq v0, p1, :cond_1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :cond_1
+    :goto_0
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    iget v0, p0, Lzs;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lkbi;
+
+    iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v1, Lcbi;
+
+    invoke-direct {v0, v1}, Lkbi;-><init>(Lcbi;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Loa7;
+
+    iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v1, [Luhg;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Loa7;-><init>([Luhg;I)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lct;
+
+    iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v1, Let;
+
+    invoke-direct {v0, v1}, Lct;-><init>(Let;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget v0, p0, Lzs;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-virtual {p0, p1}, Lzs;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcbi;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcbi;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lzs;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcbi;
+
+    invoke-virtual {v0}, Lcbi;->size()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v0, [Luhg;
+
+    array-length v0, v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    return v0
+
+    :pswitch_1
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v0, Let;
+
+    iget v0, v0, Lsne;->c:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

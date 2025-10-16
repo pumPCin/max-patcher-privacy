@@ -1,99 +1,32 @@
-.class public final Lz27;
-.super Lt86;
+.class public abstract Lz27;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ljava/lang/Object;
-
-.field public final synthetic o:I
+# static fields
+.field public static final a:Ly27;
 
 
 # direct methods
-.method public constructor <init>(Lp47;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance v0, Ly27;
 
-    iput v0, p0, Lz27;->o:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-direct {p0, p1}, Lt86;-><init>(Lp47;)V
-
-    .line 2
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lz27;->X:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lp47;La37;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lz27;->o:I
-
-    .line 3
-    invoke-direct {p0, p1}, Lt86;-><init>(Lp47;)V
-
-    .line 4
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lz27;->X:Ljava/lang/Object;
-
-    .line 5
-    new-instance p1, Ly27;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2, p0}, Ly27;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1}, Lt86;->c(Ls86;)V
+    sput-object v0, Lz27;->a:Ly27;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public close()V
-    .locals 2
-
-    iget v0, p0, Lz27;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lt86;->close()V
+.method public a(Lbae;)V
+    .locals 0
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lz27;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Lt86;->close()V
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+.method public abstract b(Ln37;)V
 .end method

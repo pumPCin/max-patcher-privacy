@@ -1,75 +1,85 @@
-.class public final synthetic Lt26;
+.class public final Lt26;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvd6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lu26;
+.field public final b:J
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu26;I)V
-    .locals 0
+.method public constructor <init>(JLyja;)V
+    .locals 1
 
-    iput p2, p0, Lt26;->a:I
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lt26;->b:Lu26;
+    iput v0, p0, Lt26;->a:I
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-wide p1, p0, Lt26;->b:J
+
+    .line 6
+    iput-object p3, p0, Lt26;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLzaf;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lt26;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p3, p0, Lt26;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-wide p1, p0, Lt26;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 3
 
     iget v0, p0, Lt26;->a:I
 
-    check-cast p1, Lb36;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lt26;->b:Lu26;
+    iget-object v0, p0, Lt26;->c:Ljava/lang/Object;
 
-    iget-object v0, v0, Lu26;->Y:Ljava/lang/Object;
+    iget-wide v1, p0, Lt26;->b:J
 
-    check-cast v0, Lg36;
+    invoke-interface {v0, v1, v2}, Lyja;->a(J)V
 
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lw22;
-
-    invoke-virtual {v0, p1}, Lw22;->h(Lb36;)V
-
-    :cond_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lt26;->b:Lu26;
+    iget-object v0, p0, Lt26;->c:Ljava/lang/Object;
 
-    iget-object v0, v0, Lu26;->Y:Ljava/lang/Object;
+    check-cast v0, Lzaf;
 
-    check-cast v0, Lg36;
+    iget-wide v1, p0, Lt26;->b:J
 
-    if-eqz v0, :cond_1
+    invoke-interface {v0, v1, v2}, Lzaf;->j(J)V
 
-    check-cast v0, Lw22;
-
-    invoke-virtual {v0, p1}, Lw22;->h(Lb36;)V
-
-    :cond_1
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-void
 
     nop
 

@@ -1,18 +1,14 @@
-.class public final synthetic Lz04;
+.class public interface abstract Lz04;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loo3;
-
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public abstract F(ILandroid/os/Bundle;)V
+.end method
+
+.method public onDismiss()V
     .locals 0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void
 .end method

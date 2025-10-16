@@ -1,23 +1,22 @@
-.class public final Lylb;
-.super Lxlb;
+.class public final synthetic Lylb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqf4;
 
 
 # instance fields
-.field public final c:Ljava/lang/Object;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxlb;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lylb;->c:Ljava/lang/Object;
+    iput p1, p0, Lylb;->a:I
 
     return-void
 .end method
@@ -27,51 +26,11 @@
 .method public final a()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lylb;->c:Ljava/lang/Object;
+    new-instance v0, Lone/me/chats/picker/contacts/ContactsPickerScreen;
 
-    monitor-enter v0
+    iget v1, p0, Lylb;->a:I
 
-    :try_start_0
-    invoke-super {p0}, Lxlb;->a()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lone/me/chats/picker/contacts/ContactsPickerScreen;-><init>(I)V
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public final d(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Lylb;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-super {p0, p1}, Lxlb;->d(Ljava/lang/Object;)Z
-
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
+    return-object v0
 .end method

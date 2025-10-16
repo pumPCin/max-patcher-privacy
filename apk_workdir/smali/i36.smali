@@ -1,99 +1,139 @@
-.class public final Li36;
-.super Landroidx/recyclerview/widget/RecyclerView;
+.class public final synthetic Li36;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final U1:Lu26;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ll36;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
-    .locals 2
+.method public synthetic constructor <init>(Ll36;JI)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p4, p0, Li36;->a:I
 
-    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p1, p0, Li36;->b:Ll36;
 
-    new-instance v0, Lu26;
+    iput-wide p2, p0, Li36;->c:J
 
-    invoke-direct {v0, p2}, Lu26;-><init>(Ljava/util/concurrent/Executor;)V
-
-    iput-object v0, p0, Li36;->U1:Lu26;
-
-    new-instance p2, Lh36;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;
-
-    invoke-direct {v1, p1, p0}, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;-><init>(Landroid/content/Context;Li36;)V
-
-    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->l(Livc;)V
-
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
-
-    new-instance p1, Lbz0;
-
-    const/16 p2, 0x8
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v0
-
-    invoke-static {p2}, Li8e;->I(F)I
-
-    move-result p2
-
-    const/4 v0, 0x6
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Li8e;->I(F)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-direct {p1, p2, v0, v1}, Lbz0;-><init>(III)V
-
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final setListener(Lg36;)V
-    .locals 1
+.method public final run()V
+    .locals 6
 
-    iget-object v0, p0, Li36;->U1:Lu26;
+    iget v0, p0, Li36;->a:I
 
-    iput-object p1, v0, Lu26;->Y:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    iget-wide v0, p0, Li36;->c:J
+
+    iget-object v2, p0, Li36;->b:Ll36;
+
+    iget-wide v3, v2, Ll36;->k:J
+
+    cmp-long v0, v0, v3
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, v2, Ll36;->m:Z
+
+    iget-object v1, v2, Ll36;->j:Ljava/util/concurrent/ScheduledFuture;
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_0
+
+    const/4 v4, 0x1
+
+    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    iput-object v3, v2, Ll36;->j:Ljava/util/concurrent/ScheduledFuture;
+
+    :cond_0
+    iget-object v1, v2, Ll36;->s:Lyt1;
+
+    if-eqz v1, :cond_1
+
+    new-instance v4, Lm36;
+
+    invoke-direct {v4, v0}, Lm36;-><init>(Z)V
+
+    invoke-virtual {v1, v4}, Lyt1;->b(Ljava/lang/Object;)Z
+
+    iput-object v3, v2, Ll36;->s:Lyt1;
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-wide v0, p0, Li36;->c:J
+
+    iget-object v2, p0, Li36;->b:Ll36;
+
+    iget-wide v3, v2, Ll36;->k:J
+
+    cmp-long v0, v0, v3
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {v2}, Ll36;->b()V
+
+    :cond_2
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Li36;->b:Ll36;
+
+    iget-object v1, v0, Ll36;->b:Lt1e;
+
+    new-instance v2, Li36;
+
+    const/4 v3, 0x2
+
+    iget-wide v4, p0, Li36;->c:J
+
+    invoke-direct {v2, v0, v4, v5, v3}, Li36;-><init>(Ll36;JI)V
+
+    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
 
     return-void
+
+    :pswitch_2
+    iget-object v0, p0, Li36;->b:Ll36;
+
+    iget-object v1, v0, Ll36;->b:Lt1e;
+
+    new-instance v2, Li36;
+
+    const/4 v3, 0x3
+
+    iget-wide v4, p0, Li36;->c:J
+
+    invoke-direct {v2, v0, v4, v5, v3}, Li36;-><init>(Ll36;JI)V
+
+    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

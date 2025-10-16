@@ -3,22 +3,32 @@
 
 
 # static fields
-.field public static ColorSelectorView:[I
+.field public static attach_bar_thumbnail_size:I = 0x7f070054
 
-.field public static ColorSelectorView_color_selector_orientation:I
+.field public static flash_close_button_height:I = 0x7f0700f8
 
+.field public static flash_close_button_width:I = 0x7f0700f9
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public static flash_close_wrapper_height:I = 0x7f0700fa
 
-    const v0, 0x7f0402ed
+.field public static flash_close_wrapper_width:I = 0x7f0700fb
 
-    filled-new-array {v0}, [I
+.field public static full_screen_mode_button_height:I = 0x7f070114
 
-    move-result-object v0
+.field public static full_screen_mode_button_width:I = 0x7f070115
 
-    sput-object v0, Ldkc;->ColorSelectorView:[I
+.field public static gallery_album_cover_size:I = 0x7f070116
 
-    return-void
-.end method
+.field public static progress_bar_medium:I = 0x7f0703ee
+
+.field public static quick_camera_button_margin:I = 0x7f0703f0
+
+.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
+
+.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
+
+.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
+
+.field public static quick_camera_wrapper_height:I = 0x7f0703f4
+
+.field public static quick_camera_wrapper_width:I = 0x7f0703f5

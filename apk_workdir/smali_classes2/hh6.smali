@@ -4,60 +4,48 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:I
+.field public final b:Ljava/lang/String;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Lu0d;
-
-.field public final g:Lu0d;
+.field public final c:Lhh6;
 
 
 # direct methods
-.method public constructor <init>(IIIIILu0d;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lhh6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lhh6;->a:I
+    iput-object p1, p0, Lhh6;->a:Ljava/lang/String;
 
-    iput p2, p0, Lhh6;->b:I
+    iput-object p2, p0, Lhh6;->b:Ljava/lang/String;
 
-    iput p3, p0, Lhh6;->c:I
-
-    iput p4, p0, Lhh6;->d:I
-
-    iput p5, p0, Lhh6;->e:I
-
-    iput-object p6, p0, Lhh6;->f:Lu0d;
-
-    if-gtz p5, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lu0d;
-
-    invoke-direct {p1, p5, p5}, Lu0d;-><init>(II)V
-
-    :goto_0
-    iput-object p1, p0, Lhh6;->g:Lu0d;
+    iput-object p3, p0, Lhh6;->c:Lhh6;
 
     return-void
+.end method
+
+.method public static a(Lhh6;Ljava/lang/String;)Lhh6;
+    .locals 2
+
+    iget-object v0, p0, Lhh6;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Lhh6;->c:Lhh6;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Lhh6;
+
+    invoke-direct {p0, v0, p1, v1}, Lhh6;-><init>(Ljava/lang/String;Ljava/lang/String;Lhh6;)V
+
+    return-object p0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -68,83 +56,63 @@
     :cond_0
     instance-of v1, p1, Lhh6;
 
+    const/4 v2, 0x0
+
     if-nez v1, :cond_1
 
-    goto :goto_0
+    return v2
 
     :cond_1
     check-cast p1, Lhh6;
 
-    iget v1, p0, Lhh6;->a:I
+    iget-object v1, p0, Lhh6;->a:Ljava/lang/String;
 
-    iget v2, p1, Lhh6;->a:I
+    iget-object v3, p1, Lhh6;->a:Ljava/lang/String;
 
-    if-eq v1, v2, :cond_2
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    iget v1, p0, Lhh6;->b:I
+    iget-object v1, p0, Lhh6;->b:Ljava/lang/String;
 
-    iget v2, p1, Lhh6;->b:I
+    iget-object v3, p1, Lhh6;->b:Ljava/lang/String;
 
-    if-eq v1, v2, :cond_3
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
 
     :cond_3
-    iget v1, p0, Lhh6;->c:I
+    iget-object v1, p0, Lhh6;->c:Lhh6;
 
-    iget v2, p1, Lhh6;->c:I
+    iget-object p1, p1, Lhh6;->c:Lhh6;
 
-    if-eq v1, v2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v1, p0, Lhh6;->d:I
-
-    iget v2, p1, Lhh6;->d:I
-
-    if-eq v1, v2, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v1, p0, Lhh6;->e:I
-
-    iget v2, p1, Lhh6;->e:I
-
-    if-eq v1, v2, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v1, p0, Lhh6;->f:Lu0d;
-
-    iget-object p1, p1, Lhh6;->f:Lu0d;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_4
 
-    :goto_0
-    const/4 p1, 0x0
+    return v2
 
-    return p1
-
-    :cond_7
+    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lhh6;->a:I
+    iget-object v0, p0, Lhh6;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -152,47 +120,27 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lhh6;->b:I
+    iget-object v2, p0, Lhh6;->b:Ljava/lang/String;
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lhh6;->c:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
 
     move-result v0
 
-    iget v2, p0, Lhh6;->d:I
+    iget-object v1, p0, Lhh6;->c:Lhh6;
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    if-nez v1, :cond_0
 
-    move-result v0
+    const/4 v1, 0x0
 
-    iget v2, p0, Lhh6;->e:I
+    goto :goto_0
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    :cond_0
+    invoke-virtual {v1}, Lhh6;->hashCode()I
 
-    move-result v0
+    move-result v1
 
-    iget-object v2, p0, Lhh6;->f:Lu0d;
-
-    invoke-virtual {v2}, Lu0d;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v2
+    :goto_0
+    add-int/2addr v0, v1
 
     return v0
 .end method
@@ -200,43 +148,25 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", threshold="
+    const-string v0, ", original="
 
-    const-string v1, ", spanCount="
+    const-string v1, ", noEmoji="
 
-    const-string v2, "GalleryUiOptions(cellSize="
+    const-string v2, "Result(normalized="
 
-    iget v3, p0, Lhh6;->a:I
+    iget-object v3, p0, Lhh6;->a:Ljava/lang/String;
 
-    iget v4, p0, Lhh6;->b:I
+    iget-object v4, p0, Lhh6;->b:Ljava/lang/String;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", spanSpacing="
-
-    const-string v2, ", thumbnailSize="
-
-    iget v3, p0, Lhh6;->c:I
-
-    iget v4, p0, Lhh6;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget v1, p0, Lhh6;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", albumsCoverResizeOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhh6;->f:Lu0d;
+    iget-object v1, p0, Lhh6;->c:Lhh6;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isItemAnimatorEnabled=false)"
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

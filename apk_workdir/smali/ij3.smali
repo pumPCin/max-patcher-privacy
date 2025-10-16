@@ -2,120 +2,46 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lbh8;
 
-.field public final synthetic b:Z
+.field public final b:Ljava/lang/Object;
 
-.field public final c:Ljava/io/Serializable;
+.field public final c:Ljava/util/ArrayList;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 1
+.method public constructor <init>(Lwj0;)V
+    .locals 2
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lij3;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lij3;->c:Ljava/io/Serializable;
+    new-instance v0, Lbh8;
 
-    iput-boolean p2, p0, Lij3;->b:Z
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    invoke-direct {v0, p1, v1}, Lbh8;-><init>(Lwj0;Z)V
 
-.method public constructor <init>(Z)V
-    .locals 1
+    iput-object v0, p0, Lij3;->a:Lbh8;
 
-    const/4 v0, 0x0
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput v0, p0, Lij3;->a:I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lij3;->c:Ljava/util/ArrayList;
 
-    iput-boolean p1, p0, Lij3;->b:Z
+    new-instance p1, Ljava/lang/Object;
 
-    .line 3
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p1, p0, Lij3;->c:Ljava/io/Serializable;
+    iput-object p1, p0, Lij3;->b:Ljava/lang/Object;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
-
-    iget v0, p0, Lij3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/Thread;
-
-    iget-object v1, p0, Lij3;->c:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    iget-boolean p1, p0, Lij3;->b:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setDaemon(Z)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-boolean v0, p0, Lij3;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "WM.task-"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "androidx.work-"
-
-    :goto_0
-    new-instance v1, Ljava/lang/Thread;
-
-    invoke-static {v0}, Lsw1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lij3;->c:Ljava/io/Serializable;
-
-    check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

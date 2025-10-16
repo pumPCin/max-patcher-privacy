@@ -1,35 +1,61 @@
-.class public interface abstract Lzh4;
-.super Ljava/lang/Object;
+.class public final Lzh4;
+.super Lsj0;
 .source "SourceFile"
 
-# interfaces
-.implements Lqq7;
+
+# instance fields
+.field public final X:Lyh4;
+
+
+# direct methods
+.method public constructor <init>(Lyh4;JJ)V
+    .locals 6
+
+    const/4 v1, 0x0
+
+    move-object v0, p0
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lsj0;-><init>(IJJ)V
+
+    iput-object p1, v0, Lzh4;->X:Lyh4;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public onDestroy(Luq7;)V
-    .locals 0
+.method public final a()J
+    .locals 3
 
-    return-void
+    invoke-virtual {p0}, Lsj0;->c()V
+
+    iget-object v0, p0, Lzh4;->X:Lyh4;
+
+    iget-wide v1, p0, Lsj0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lyh4;->i(J)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
-.method public onPause(Luq7;)V
-    .locals 0
+.method public final b()J
+    .locals 3
 
-    return-void
-.end method
+    invoke-virtual {p0}, Lsj0;->c()V
 
-.method public abstract onResume(Luq7;)V
-.end method
+    iget-object v0, p0, Lzh4;->X:Lyh4;
 
-.method public onStart(Luq7;)V
-    .locals 0
+    iget-wide v1, p0, Lsj0;->o:J
 
-    return-void
-.end method
+    invoke-virtual {v0, v1, v2}, Lyh4;->g(J)J
 
-.method public onStop(Luq7;)V
-    .locals 0
+    move-result-wide v0
 
-    return-void
+    return-wide v0
 .end method

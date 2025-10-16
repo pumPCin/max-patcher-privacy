@@ -1,23 +1,11 @@
-.class public final Lo8f;
-.super Ljava/lang/Object;
+.class public abstract Lo8f;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lm63;
+# virtual methods
+.method public abstract m()V
+.end method
 
-.field public final b:Lsrd;
-
-
-# direct methods
-.method public constructor <init>(Lm63;Lsrd;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lo8f;->a:Lm63;
-
-    iput-object p2, p0, Lo8f;->b:Lsrd;
-
-    return-void
+.method public abstract n(J)V
 .end method

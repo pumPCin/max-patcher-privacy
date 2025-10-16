@@ -32,14 +32,14 @@
         "Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;",
         "<init>",
         "()V",
-        "Lsif;",
+        "Lrwf;",
         "tokenProvider",
         "setTokenProvider",
-        "(Lsif;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;",
-        "Lqm;",
+        "(Lrwf;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;",
+        "Lan;",
         "tokenInfoProvider",
         "setTokenInfoProvider",
-        "(Lqm;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;",
+        "(Lan;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;",
         "",
         "link",
         "setLink",
@@ -49,8 +49,8 @@
         "build",
         "()Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;",
         "Ljava/lang/String;",
-        "Lsif;",
-        "Lqm;",
+        "Lrwf;",
+        "Lan;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -68,9 +68,9 @@
 
 .field private payload:Ljava/lang/String;
 
-.field private tokenInfoProvider:Lqm;
+.field private tokenInfoProvider:Lan;
 
-.field private tokenProvider:Lsif;
+.field private tokenProvider:Lrwf;
 
 
 # direct methods
@@ -111,14 +111,14 @@
     if-eqz v5, :cond_2
 
     .line 4
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lvd6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lqh6;
 
     move-result-object v6
 
     if-eqz v6, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lvd6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lqh6;
 
     move-result-object v7
 
@@ -135,19 +135,19 @@
     move-result v8
 
     .line 8
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Le32;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Lj42;
 
     .line 9
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenProvider:Lsif;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenProvider:Lrwf;
 
     .line 10
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenInfoProvider:Lqm;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenInfoProvider:Lan;
 
     .line 11
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->payload:Ljava/lang/String;
 
     .line 12
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lg8a;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lkga;
 
     move-result-object v11
 
@@ -163,7 +163,7 @@
 
     const/4 v10, 0x0
 
-    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;-><init>(Ljava/lang/String;Lsif;Lqm;Ljava/lang/String;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvd6;Lvd6;ZLru/ok/android/externcalls/sdk/events/ConversationEventsListener;Le32;Lg8a;Ljava/lang/String;Laf4;)V
+    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;-><init>(Ljava/lang/String;Lrwf;Lan;Ljava/lang/String;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lqh6;Lqh6;ZLru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lj42;Lkga;Ljava/lang/String;Lvh4;)V
 
     return-object v0
 
@@ -224,18 +224,18 @@
     return-object p0
 .end method
 
-.method public final setTokenInfoProvider(Lqm;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+.method public final setTokenInfoProvider(Lan;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenInfoProvider:Lqm;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenInfoProvider:Lan;
 
     return-object p0
 .end method
 
-.method public final setTokenProvider(Lsif;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+.method public final setTokenProvider(Lrwf;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenProvider:Lsif;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->tokenProvider:Lrwf;
 
     return-object p0
 .end method

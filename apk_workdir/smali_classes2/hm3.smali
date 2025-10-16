@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lqh6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lkm3;
+.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkm3;I)V
+.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
     .locals 0
 
     iput p2, p0, Lhm3;->a:I
 
-    iput-object p1, p0, Lhm3;->b:Lkm3;
+    iput-object p1, p0, Lhm3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,43 +27,52 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lhm3;->a:I
 
+    sget-object v1, Lzag;->a:Lzag;
+
+    iget-object v2, p0, Lhm3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhm3;->b:Lkm3;
+    check-cast p1, Lmn3;
 
-    iget-object v0, v0, Lkm3;->a:Landroid/content/Context;
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lwq7;
 
-    const-string v1, "phone"
+    sget-object v0, Lmn3;->b:Lmn3;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    if-ne p1, v0, :cond_0
 
-    move-result-object v0
+    invoke-virtual {v2}, Lone/me/login/confirm/ConfirmPhoneScreen;->H0()Lym3;
 
-    check-cast v0, Landroid/telephony/TelephonyManager;
+    move-result-object p1
 
-    return-object v0
+    iget-object p1, p1, Lym3;->A0:Lsze;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2, v0}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    return-object v1
 
     :pswitch_0
-    iget-object v0, p0, Lhm3;->b:Lkm3;
+    check-cast p1, Landroid/view/View;
 
-    iget-object v0, v0, Lkm3;->a:Landroid/content/Context;
+    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lwq7;
 
-    const-string v1, "connectivity"
+    invoke-virtual {v2}, Lx14;->getRouter()Ljhd;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljhd;->C()Z
 
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    return-object v0
-
-    nop
+    return-object v1
 
     :pswitch_data_0
     .packed-switch 0x0

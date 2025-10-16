@@ -1,138 +1,146 @@
 .class public final Lzwc;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+.field public final synthetic b:F
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
     .locals 0
 
-    iput-object p2, p0, Lzwc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+    iput p3, p0, Lzwc;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lzwc;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lzwc;->b:F
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lzwc;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lzwc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzwc;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lzwc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    new-instance v0, Lzwc;
+    iget p1, p0, Lzwc;->a:I
 
-    iget-object v1, p0, Lzwc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, p2, v1}, Lzwc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    iget-object p1, p0, Lzwc;->c:Ljava/lang/Object;
 
-    iput-object p1, v0, Lzwc;->X:Ljava/lang/Object;
+    check-cast p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    return-object v0
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
+
+    move-result-object p1
+
+    iget v0, p0, Lzwc;->b:F
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    :pswitch_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget p1, p0, Lzwc;->a:I
 
-    iget-object p1, p0, Lzwc;->X:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast p1, Ldw9;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
 
-    instance-of v0, p1, Ljy9;
+    iget p1, p0, Lzwc;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    sget-object p1, Li38;->a:Li38;
+    return-void
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
+    :pswitch_0
+    iget-object p1, p0, Lzwc;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast p1, Lbxc;
 
-    const-class v0, Lu7b;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iput-boolean v0, p1, Lbxc;->a:Z
 
-    move-result-object p1
+    iget v0, p0, Lzwc;->b:F
 
-    check-cast p1, Lu7b;
+    iput v0, p1, Lbxc;->o:F
 
-    invoke-virtual {p1}, Lu7b;->c()V
+    return-void
 
-    sget-object p1, Lb48;->c:Lb48;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Ld3;->o0()Loc4;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    const-string v1, ":chat-list"
-
-    invoke-virtual {p1, v1, v0}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lkc4;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lb48;->c:Lb48;
-
-    check-cast p1, Lkc4;
-
-    invoke-virtual {v0, p1}, Ld3;->r0(Lkc4;)V
-
-    goto :goto_0
-
-    :cond_1
-    instance-of p1, p1, Lc73;
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lzwc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
-
-    invoke-virtual {p1}, Ljz3;->getRouter()Ln6d;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ln6d;->C()Z
-
-    :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

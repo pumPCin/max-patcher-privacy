@@ -1,99 +1,129 @@
 .class public final Lau7;
-.super Landroid/text/style/ClickableSpan;
+.super Lj6d;
 .source "SourceFile"
-
-# interfaces
-.implements Lda8;
 
 
 # instance fields
-.field public a:I
+.field public final E0:Lru/ok/messages/settings/view/LedSeekBar;
 
-.field public final b:Ljava/lang/String;
+.field public final F0:Lru/ok/messages/settings/FrgBaseSettings;
 
-.field public c:Lzt7;
+.field public final G0:Landroidx/appcompat/widget/SwitchCompat;
 
-.field public final o:I
+.field public final H0:Landroid/view/View;
+
+.field public final I0:Landroid/view/View;
+
+.field public final J0:Landroid/widget/TextView;
+
+.field public K0:Ls7e;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+    .locals 4
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0, p1}, Lj6d;-><init>(Landroid/view/View;)V
 
-    iput p2, p0, Lau7;->a:I
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {p1}, Lpwe;->a1(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    move-result-object v0
+
+    sget-object v1, Ltmf;->a0:Lrhf;
+
+    invoke-static {v0}, Lnw3;->g(Landroid/content/Context;)Ltmf;
+
+    move-result-object v0
+
+    iput-object p2, p0, Lau7;->F0:Lru/ok/messages/settings/FrgBaseSettings;
+
+    sget v1, Looc;->row_setting_led__ls_seekbar:I
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lru/ok/messages/settings/view/LedSeekBar;
+
+    iput-object v1, p0, Lau7;->E0:Lru/ok/messages/settings/view/LedSeekBar;
+
+    sget v2, Looc;->row_setting_led__title:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lau7;->J0:Landroid/widget/TextView;
+
+    iget v3, v0, Ltmf;->F:I
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget v2, Looc;->row_setting_led__cb_check:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/appcompat/widget/SwitchCompat;
+
+    iput-object v2, p0, Lau7;->G0:Landroidx/appcompat/widget/SwitchCompat;
+
+    invoke-static {v0, v2}, Lgma;->b(Ltmf;Landroidx/appcompat/widget/SwitchCompat;)V
+
+    sget v2, Looc;->row_setting__separator:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lau7;->H0:Landroid/view/View;
+
+    iget v3, v0, Ltmf;->H:I
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget v2, Looc;->row_setting_led__separator_small:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    iget v0, v0, Ltmf;->K:I
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget v0, Looc;->row_setting_led__ll_led_container:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lau7;->I0:Landroid/view/View;
+
+    new-instance v0, Lxm4;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, p0, v2, p2}, Lxm4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v0}, Lru/ok/messages/settings/view/LedSeekBar;->setListener(Lzt7;)V
+
+    sget p2, Looc;->row_setting_led__ll_root:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    new-instance p2, Lz66;
 
-    move-result-object p1
+    const/16 v0, 0xd
 
-    iput-object p1, p0, Lau7;->b:Ljava/lang/String;
+    invoke-direct {p2, v0, p0}, Lz66;-><init>(ILjava/lang/Object;)V
 
-    const/4 p1, 0x6
-
-    iput p1, p0, Lau7;->o:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final copy()Lo14;
-    .locals 3
-
-    new-instance v0, Lau7;
-
-    iget-object v1, p0, Lau7;->b:Ljava/lang/String;
-
-    iget v2, p0, Lau7;->a:I
-
-    invoke-direct {v0, v1, v2}, Lau7;-><init>(Ljava/lang/String;I)V
-
-    return-object v0
-.end method
-
-.method public final getType()I
-    .locals 1
-
-    iget v0, p0, Lau7;->o:I
-
-    return v0
-.end method
-
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    iget-object v0, p0, Lau7;->c:Lzt7;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lau7;->b:Ljava/lang/String;
-
-    invoke-interface {v0, p1, v1}, Lzt7;->b(Landroid/view/View;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    iget v0, p0, Lau7;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget v0, p0, Lau7;->a:I
-
-    iput v0, p1, Landroid/text/TextPaint;->linkColor:I
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

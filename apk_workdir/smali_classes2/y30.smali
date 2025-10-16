@@ -2,439 +2,945 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Law7;
-
 
 # static fields
-.field public static final synthetic h:[Lpl7;
+.field public static final g:Ley0;
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final b:Ljava/lang/Object;
 
-.field public final c:Lk5d;
+.field public final c:Ljava/lang/Object;
 
-.field public final d:Lkkh;
+.field public final d:Ljava/lang/Object;
 
-.field public volatile e:Ljava/lang/Long;
+.field public final e:Ljava/lang/Object;
 
-.field public final f:Lhne;
-
-.field public final g:Luu5;
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lds9;
+    new-instance v0, Ley0;
 
-    const-string v1, "updatePlayer"
+    const/16 v1, 0x10
 
-    const-string v2, "getUpdatePlayer()Lkotlinx/coroutines/Job;"
+    invoke-direct {v0, v1}, Ley0;-><init>(I)V
 
-    const-class v3, Ly30;
-
-    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lewc;->a:Lfwc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lpl7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Ly30;->h:[Lpl7;
+    sput-object v0, Ly30;->g:Ley0;
 
     return-void
 .end method
 
-.method public constructor <init>(Lyn7;Lyn7;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 3
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ly30;->a:Lyn7;
+    .line 16
+    new-instance v0, Ly2e;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    const/16 v1, 0x8
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ly2e;-><init>(I)V
 
-    check-cast p1, Le7f;
+    const/4 v1, 0x3
 
-    check-cast p1, Lmka;
-
-    invoke-virtual {p1}, Lmka;->c()Lz68;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lz68;->getImmediate()Lz68;
-
-    move-result-object p1
-
-    invoke-static {}, Le88;->a()Lfh7;
+    .line 17
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lm0;->plus(Lf24;)Lf24;
+    .line 18
+    iput-object v0, p0, Ly30;->b:Ljava/lang/Object;
+
+    .line 19
+    new-instance v0, Ly2e;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2}, Ly2e;-><init>(I)V
+
+    .line 20
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    .line 21
+    iput-object v0, p0, Ly30;->c:Ljava/lang/Object;
+
+    .line 22
+    new-instance v0, Ly2e;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2}, Ly2e;-><init>(I)V
+
+    .line 23
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    .line 24
+    iput-object v0, p0, Ly30;->a:Ljava/lang/Object;
+
+    .line 25
+    new-instance v0, Ly2e;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2}, Ly2e;-><init>(I)V
+
+    .line 26
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    .line 27
+    iput-object v0, p0, Ly30;->d:Ljava/lang/Object;
+
+    .line 28
+    new-instance v0, Ly2e;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2}, Ly2e;-><init>(I)V
+
+    .line 29
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    .line 30
+    iput-object v0, p0, Ly30;->e:Ljava/lang/Object;
+
+    .line 31
+    new-instance v0, Ly2e;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2}, Ly2e;-><init>(I)V
+
+    .line 32
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    .line 33
+    iput-object v0, p0, Ly30;->f:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lx30;)V
+    .locals 0
+
+    .line 34
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 35
+    iput-object p1, p0, Ly30;->b:Ljava/lang/Object;
+
+    .line 36
+    iput-object p2, p0, Ly30;->c:Ljava/lang/Object;
+
+    .line 37
+    const-class p1, Ly30;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+    .line 38
+    iput-object p1, p0, Ly30;->a:Ljava/lang/Object;
 
-    move-result-object p1
+    .line 39
+    new-instance p1, Lw30;
 
-    iput-object p1, p0, Ly30;->b:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 p2, 0x0
 
-    invoke-static {}, Lkv9;->G()Lk5d;
+    invoke-direct {p1, p0, p2}, Lw30;-><init>(Ly30;I)V
 
-    move-result-object p1
+    .line 40
+    new-instance p2, Lkbd;
 
-    iput-object p1, p0, Ly30;->c:Lk5d;
+    invoke-direct {p2, p1}, Lkbd;-><init>(Loh6;)V
 
-    new-instance p1, Lkkh;
+    .line 41
+    iput-object p2, p0, Ly30;->d:Ljava/lang/Object;
+
+    .line 42
+    new-instance p1, Lw30;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lw30;-><init>(Ly30;I)V
+
+    .line 43
+    new-instance p2, Lrhf;
+
+    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+
+    .line 44
+    iput-object p2, p0, Ly30;->e:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ldi;Lmie;Lpi;Lkab;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ly30;->b:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Ly30;->c:Ljava/lang/Object;
+
+    .line 4
+    iput-object p3, p0, Ly30;->d:Ljava/lang/Object;
+
+    .line 5
+    iput-object p4, p0, Ly30;->e:Ljava/lang/Object;
+
+    .line 6
+    const-string p1, ""
+
+    iput-object p1, p0, Ly30;->a:Ljava/lang/Object;
+
+    .line 7
+    sget-object p1, Ly30;->g:Ley0;
+
+    iput-object p1, p0, Ly30;->f:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lkotlinx/coroutines/internal/ContextScope;Ljava/lang/String;Lvi0;)V
+    .locals 2
+
+    .line 45
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 46
+    iput-object p1, p0, Ly30;->b:Ljava/lang/Object;
+
+    .line 47
+    iput-object p2, p0, Ly30;->a:Ljava/lang/Object;
+
+    .line 48
+    iput-object p3, p0, Ly30;->c:Ljava/lang/Object;
+
+    const p1, 0x7fffffff
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, v0, p0}, Lkkh;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x1
 
-    iput-object p1, p0, Ly30;->d:Lkkh;
-
-    new-instance p1, Lzv7;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v1, v0}, Lzv7;-><init>(Ljava/lang/Float;Z)V
-
-    invoke-static {p1}, Line;->a(Ljava/lang/Object;)Lhne;
+    .line 49
+    invoke-static {v1, p1, v0}, Lfie;->a(III)Leie;
 
     move-result-object p1
 
-    iput-object p1, p0, Ly30;->f:Lhne;
+    iput-object p1, p0, Ly30;->d:Ljava/lang/Object;
 
-    new-instance v0, Lw30;
+    .line 50
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v0, p2, p0, v1}, Lw30;-><init>(Lyn7;Ly30;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    new-instance p2, Luu5;
+    iput-object p1, p0, Ly30;->e:Ljava/lang/Object;
 
-    invoke-direct {p2, v0, p1}, Luu5;-><init>(Lje6;Liu5;)V
+    .line 51
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p2, p0, Ly30;->g:Luu5;
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Ly30;->f:Ljava/lang/Object;
+
+    .line 52
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "init "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p2, p1}, Lvi0;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static final f(Ly30;)V
-    .locals 5
+.method public constructor <init>(Lyuc;Lii1;Lar8;Lye1;Lwe1;Lvtf;)V
+    .locals 0
 
-    iget-object v0, p0, Ly30;->b:Lkotlinx/coroutines/internal/ContextScope;
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lx30;
+    .line 9
+    iput-object p1, p0, Ly30;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    .line 10
+    iput-object p2, p0, Ly30;->c:Ljava/lang/Object;
 
-    invoke-direct {v1, p0, v2}, Lx30;-><init>(Ly30;Lkotlin/coroutines/Continuation;)V
+    .line 11
+    iput-object p3, p0, Ly30;->a:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    .line 12
+    iput-object p4, p0, Ly30;->d:Ljava/lang/Object;
 
-    sget-object v4, Lq24;->b:Lq24;
+    .line 13
+    iput-object p5, p0, Ly30;->e:Ljava/lang/Object;
 
-    invoke-static {v0, v2, v4, v1, v3}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ly30;->c:Lk5d;
-
-    sget-object v2, Ly30;->h:[Lpl7;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p0, v2, v0}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+    .line 14
+    iput-object p6, p0, Ly30;->f:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public static f(Ly30;Lei6;)Lwwe;
+    .locals 6
+
+    new-instance v0, Ldn7;
+
+    iget-object v1, p0, Ly30;->f:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v1
+
+    const-string v2, "-"
+
+    const-string v3, "job"
+
+    invoke-static {v1, v3, v2}, Lwc0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ly30;->b:Ljava/lang/Object;
+
+    check-cast v2, Lkotlinx/coroutines/internal/ContextScope;
+
+    sget-object v3, Le54;->b:Le54;
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    invoke-static {v2, v5, v3, p1, v4}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Ldn7;-><init>(Ljava/lang/String;Lwwe;)V
+
+    iget-object v2, p0, Ly30;->e:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2, v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v2, p0, Ly30;->d:Ljava/lang/Object;
+
+    check-cast v2, Leie;
+
+    invoke-virtual {v2, v0}, Leie;->h(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Ly30;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvi0;
+
+    iget-object p0, p0, Ly30;->a:Ljava/lang/Object;
+
+    check-cast p0, Ljava/lang/String;
+
+    const-string v2, "Adding for queue job="
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p0, v1}, Lvi0;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public a(Lk14;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-virtual {p0}, Ly30;->g()Loq9;
-
-    move-result-object v0
-
-    check-cast v0, Lfr9;
-
-    iget-boolean v0, v0, Lfr9;->x:Z
+    instance-of v0, p1, Len7;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ly30;->g()Loq9;
+    move-object v0, p1
 
-    move-result-object v0
+    check-cast v0, Len7;
 
-    check-cast v0, Lfr9;
+    iget v1, v0, Len7;->r0:I
 
-    invoke-virtual {v0}, Lfr9;->s()V
+    const/high16 v2, -0x80000000
 
-    :cond_0
-    return-void
-.end method
+    and-int v3, v1, v2
 
-.method public final b(Ljava/lang/Long;)V
-    .locals 0
+    if-eqz v3, :cond_0
 
-    iput-object p1, p0, Ly30;->e:Ljava/lang/Long;
+    sub-int/2addr v1, v2
 
-    return-void
-.end method
-
-.method public final c()V
-    .locals 4
-
-    iget-object v0, p0, Ly30;->f:Lhne;
-
-    invoke-virtual {v0}, Lhne;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzv7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lzv7;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Lzv7;-><init>(Ljava/lang/Float;Z)V
-
-    invoke-virtual {v0, v2, v1}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final d()Liu5;
-    .locals 1
-
-    iget-object v0, p0, Ly30;->g:Luu5;
-
-    return-object v0
-.end method
-
-.method public final e()V
-    .locals 6
-
-    invoke-virtual {p0}, Ly30;->g()Loq9;
-
-    move-result-object v0
-
-    check-cast v0, Lfr9;
-
-    iget-object v1, v0, Lfr9;->h:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lcr9;
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v0, v3, v4}, Lcr9;-><init>(Lfr9;FLkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v1, v4, v4, v2, v0}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    invoke-virtual {p0}, Ly30;->g()Loq9;
-
-    move-result-object v0
-
-    check-cast v0, Lfr9;
-
-    invoke-virtual {v0}, Lfr9;->k()J
-
-    move-result-wide v0
-
-    iget-object v2, p0, Ly30;->e:Ljava/lang/Long;
-
-    if-nez v2, :cond_0
+    iput v1, v0, Len7;->r0:I
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    new-instance v0, Len7;
 
-    move-result-wide v2
+    invoke-direct {v0, p0, p1}, Len7;-><init>(Ly30;Lk14;)V
 
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    const/4 v0, 0x0
+    iget-object p1, v0, Len7;->Y:Ljava/lang/Object;
 
-    :goto_1
-    invoke-virtual {p0}, Ly30;->g()Loq9;
+    iget v1, v0, Len7;->r0:I
 
-    move-result-object v1
-
-    check-cast v1, Lfr9;
-
-    iget-boolean v1, v1, Lfr9;->x:Z
+    const/4 v2, 0x1
 
     if-eqz v1, :cond_2
 
-    if-eqz v0, :cond_2
+    if-ne v1, v2, :cond_1
 
-    invoke-virtual {p0}, Ly30;->g()Loq9;
+    iget-object v1, v0, Len7;->X:Ljava/util/Iterator;
 
-    move-result-object v0
+    iget-object v3, v0, Len7;->o:Ljava/util/concurrent/ConcurrentHashMap;
 
-    check-cast v0, Lfr9;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lfr9;->o()V
+    goto :goto_2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly30;->e:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v1, p0, Ly30;->c:Ljava/lang/Object;
+
+    check-cast v1, Lvi0;
+
+    iget-object v3, p0, Ly30;->a:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+
+    move-result v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Cancelling all jobs in queue="
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v4}, Lvi0;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lmm7;
+
+    const/4 v4, 0x0
+
+    invoke-interface {v3, v4}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    move-object v3, p1
+
+    :cond_4
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lmm7;
+
+    iput-object v3, v0, Len7;->o:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iput-object v1, v0, Len7;->X:Ljava/util/Iterator;
+
+    iput v2, v0, Len7;->r0:I
+
+    invoke-interface {p1, v0}, Lmm7;->join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v4, Lc54;->a:Lc54;
+
+    if-ne p1, v4, :cond_4
+
+    return-object v4
+
+    :cond_5
+    invoke-virtual {v3}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+.end method
+
+.method public b(I)V
+    .locals 4
+
+    iget-object v0, p0, Ly30;->c:Ljava/lang/Object;
+
+    check-cast v0, Lx30;
+
+    iget-object v1, p0, Ly30;->a:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "On audio focus change, %d"
+
+    invoke-static {v1, v3, v2}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const/4 v2, -0x3
+
+    const/4 v3, 0x0
+
+    if-eq p1, v2, :cond_4
+
+    const/4 v2, -0x2
+
+    if-eq p1, v2, :cond_3
+
+    const/4 v2, -0x1
+
+    if-eq p1, v2, :cond_2
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_0
+
+    const/4 v2, 0x2
+
+    if-eq p1, v2, :cond_0
+
+    const/4 v2, 0x3
+
+    if-eq p1, v2, :cond_0
+
+    const/4 v2, 0x4
+
+    if-eq p1, v2, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "Player. Audio Focus. Focus changed: "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ". It\'s not implemented"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {v0}, Lx30;->d()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const-string p1, "Player. Audio Focus. Focus changed: AUDIOFOCUS_GAIN. Resuming player"
+
+    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0}, Lx30;->play()V
+
+    :cond_1
+    invoke-interface {v0}, Lx30;->a()F
+
+    move-result p1
+
+    cmpl-float v2, p1, v3
+
+    if-lez v2, :cond_5
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    cmpg-float p1, p1, v2
+
+    if-gez p1, :cond_5
+
+    const-string p1, "Player. Audio Focus. Focus changed: AUDIOFOCUS_GAIN. Volume up"
+
+    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v2}, Lx30;->b(F)V
 
     return-void
 
     :cond_2
-    invoke-virtual {p0}, Ly30;->g()Loq9;
+    const-string p1, "onAudioFocusChange: AUDIOFOCUS_LOSS"
 
-    move-result-object v1
+    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v1, Lfr9;
+    invoke-interface {v0}, Lx30;->d()Z
 
-    iget-boolean v1, v1, Lfr9;->w:Z
+    move-result p1
 
-    if-eqz v1, :cond_3
+    if-eqz p1, :cond_5
 
-    if-eqz v0, :cond_3
+    invoke-interface {v0}, Lx30;->a()F
 
-    invoke-virtual {p0}, Ly30;->g()Loq9;
+    move-result p1
 
-    move-result-object v0
+    cmpl-float p1, p1, v3
 
-    check-cast v0, Lfr9;
+    if-lez p1, :cond_5
 
-    invoke-virtual {v0}, Lfr9;->p()V
+    const-string p1, "Player. Audio Focus. Focus changed: AUDIOFOCUS_LOSS. Stop"
+
+    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0}, Lx30;->pause()V
 
     return-void
 
     :cond_3
-    iget-object v0, p0, Ly30;->e:Ljava/lang/Long;
+    invoke-interface {v0}, Lx30;->d()Z
 
-    if-eqz v0, :cond_4
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    if-eqz p1, :cond_5
 
-    move-result-wide v0
+    invoke-interface {v0}, Lx30;->a()F
 
-    invoke-virtual {p0}, Ly30;->g()Loq9;
+    move-result p1
 
-    move-result-object v2
+    cmpl-float p1, p1, v3
 
-    new-instance v3, Llq9;
+    if-lez p1, :cond_5
 
-    invoke-direct {v3, v0, v1}, Llq9;-><init>(J)V
+    const-string p1, "Player. Audio Focus. Focus changed: AUDIOFOCUS_LOSS_TRANSIENT. Pausing current player"
 
-    check-cast v2, Lfr9;
+    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, v2, Lfr9;->h:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-interface {v0}, Lx30;->pause()V
 
-    iget-object v1, v2, Lfr9;->b:Le7f;
+    return-void
 
-    check-cast v1, Lmka;
+    :cond_4
+    invoke-interface {v0}, Lx30;->d()Z
 
-    invoke-virtual {v1}, Lmka;->b()Lh24;
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {v0}, Lx30;->a()F
+
+    move-result p1
+
+    cmpl-float p1, p1, v3
+
+    if-lez p1, :cond_5
+
+    const-string p1, "Player. Audio Focus. Focus changed: AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK. Setting volume to 0.2"
+
+    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    const p1, 0x3e4ccccd    # 0.2f
+
+    invoke-interface {v0, p1}, Lx30;->b(F)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public c()V
+    .locals 4
+
+    iget-object v0, p0, Ly30;->f:Ljava/lang/Object;
+
+    check-cast v0, Landroid/media/AudioFocusRequest;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Ly30;->f:Ljava/lang/Object;
+
+    iget-object v1, p0, Ly30;->a:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    const-string v2, "Release audio focus"
+
+    invoke-static {v1, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Ly30;->d:Ljava/lang/Object;
+
+    check-cast v1, Lkbd;
+
+    invoke-virtual {v1}, Lkbd;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Ly30;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroid/content/Context;
+
+    invoke-virtual {v1}, Lkbd;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    invoke-virtual {v1}, Lkbd;->reset()V
+
+    :cond_1
+    iget-object v1, p0, Ly30;->e:Ljava/lang/Object;
+
+    check-cast v1, Lrhf;
+
+    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v5, Lzq9;
+    check-cast v1, Landroid/media/AudioManager;
 
-    invoke-direct {v5, v3, v2, v4}, Lzq9;-><init>(Lrkc;Lfr9;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v1, v0}, Landroid/media/AudioManager;->abandonAudioFocusRequest(Landroid/media/AudioFocusRequest;)I
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v1, v4, v5, v2}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    :cond_4
     return-void
 .end method
 
-.method public final g()Loq9;
+.method public d(II)V
+    .locals 5
+
+    iget-object v0, p0, Ly30;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/Context;
+
+    iget-object v1, p0, Ly30;->d:Ljava/lang/Object;
+
+    check-cast v1, Lkbd;
+
+    iget-object v2, p0, Ly30;->c:Ljava/lang/Object;
+
+    check-cast v2, Lx30;
+
+    invoke-interface {v2}, Lx30;->a()F
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    cmpl-float v3, v3, v4
+
+    if-lez v3, :cond_1
+
+    invoke-interface {v2}, Lx30;->d()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v1}, Lkbd;->e()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1}, Lkbd;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v0, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    invoke-virtual {v1}, Lkbd;->reset()V
+
+    :cond_0
+    invoke-virtual {v1}, Lkbd;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/BroadcastReceiver;
+
+    new-instance v3, Landroid/content/IntentFilter;
+
+    const-string v4, "android.media.AUDIO_BECOMING_NOISY"
+
+    invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    new-instance v0, Landroid/media/AudioAttributes$Builder;
+
+    invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object p1
+
+    new-instance v0, Landroid/media/AudioFocusRequest$Builder;
+
+    invoke-direct {v0, p2}, Landroid/media/AudioFocusRequest$Builder;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Landroid/media/AudioFocusRequest$Builder;->setOnAudioFocusChangeListener(Landroid/media/AudioManager$OnAudioFocusChangeListener;)Landroid/media/AudioFocusRequest$Builder;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroid/media/AudioFocusRequest$Builder;->setAudioAttributes(Landroid/media/AudioAttributes;)Landroid/media/AudioFocusRequest$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/media/AudioFocusRequest$Builder;->build()Landroid/media/AudioFocusRequest;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly30;->f:Ljava/lang/Object;
+
+    iget-object p2, p0, Ly30;->a:Ljava/lang/Object;
+
+    check-cast p2, Ljava/lang/String;
+
+    const-string v0, "Request audio focus"
+
+    invoke-static {p2, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p2, p0, Ly30;->e:Ljava/lang/Object;
+
+    check-cast p2, Lrhf;
+
+    invoke-virtual {p2}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/media/AudioManager;
+
+    invoke-virtual {p2, p1}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioFocusRequest;)I
+
+    :cond_1
+    return-void
+.end method
+
+.method public e()V
     .locals 1
 
-    iget-object v0, p0, Ly30;->a:Lyn7;
+    iget-object v0, p0, Ly30;->d:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    check-cast v0, Lpi;
 
-    move-result-object v0
-
-    check-cast v0, Loq9;
-
-    return-object v0
-.end method
-
-.method public final release()V
-    .locals 2
-
-    iget-object v0, p0, Ly30;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lov9;->l(Ln24;Ljava/util/concurrent/CancellationException;)V
-
-    invoke-virtual {p0}, Ly30;->g()Loq9;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ly30;->d:Lkkh;
-
-    check-cast v0, Lfr9;
-
-    invoke-virtual {v0, v1}, Lfr9;->r(Lmq9;)V
-
-    return-void
-.end method
-
-.method public final seekTo(J)V
-    .locals 4
-
-    invoke-virtual {p0}, Ly30;->g()Loq9;
-
-    move-result-object v0
-
-    check-cast v0, Lfr9;
-
-    iget-object v1, v0, Lfr9;->h:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lbr9;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, p2, v0, v3}, Lbr9;-><init>(JLfr9;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v1, v3, v3, v2, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method

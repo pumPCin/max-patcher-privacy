@@ -1,84 +1,158 @@
-.class public final Lqnd;
+.class public abstract Lqnd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lle6;
-
 
 # static fields
-.field public static final b:Lqnd;
+.field public static final a:Z
 
-.field public static final c:Lqnd;
-
-
-# instance fields
-.field public final synthetic a:I
+.field public static final b:J
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lqnd;
+    const-string v0, "rx3.scheduler.use-nanotime"
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
 
-    invoke-direct {v0, v1}, Lqnd;-><init>(I)V
+    move-result v0
 
-    sput-object v0, Lqnd;->b:Lqnd;
+    sput-boolean v0, Lqnd;->a:Z
 
-    new-instance v0, Lqnd;
+    const-string v0, "rx3.scheduler.drift-tolerance"
 
-    const/4 v1, 0x1
+    const-wide/16 v1, 0xf
 
-    invoke-direct {v0, v1}, Lqnd;-><init>(I)V
+    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
 
-    sput-object v0, Lqnd;->c:Lqnd;
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-.method public synthetic constructor <init>(I)V
-    .locals 0
+    move-result-wide v0
 
-    iput p1, p0, Lqnd;->a:I
+    const-string v2, "rx3.scheduler.drift-tolerance-unit"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v3, "minutes"
+
+    invoke-static {v2, v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "seconds"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v3, "milliseconds"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    :goto_0
+    sput-wide v0, Lqnd;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a()Lond;
+.end method
 
-    iget v0, p0, Lqnd;->a:I
+.method public b(Ljava/lang/Runnable;)Lev4;
+    .locals 3
 
-    packed-switch v0, :pswitch_data_0
+    const-wide/16 v0, 0x0
 
-    check-cast p1, Ljava/lang/Throwable;
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    check-cast p2, Lj1d;
+    invoke-virtual {p0, p1, v0, v1, v2}, Lqnd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
 
-    check-cast p3, Lf24;
+    move-result-object p1
 
-    invoke-static {p2}, Lf3g;->c(Ljava/io/Closeable;)V
+    return-object p1
+.end method
 
-    sget-object p1, Laxf;->a:Laxf;
+.method public c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
+    .locals 2
+
+    invoke-virtual {p0}, Lqnd;->a()Lond;
+
+    move-result-object v0
+
+    const-string v1, "run is null"
+
+    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v1, Lmnd;
+
+    invoke-direct {v1, p1, v0}, Lmnd;-><init>(Ljava/lang/Runnable;Lond;)V
+
+    invoke-virtual {v0, v1, p2, p3, p4}, Lond;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lev4;
+
+    return-object v1
+.end method
+
+.method public d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lev4;
+    .locals 7
+
+    invoke-virtual {p0}, Lqnd;->a()Lond;
+
+    move-result-object v0
+
+    new-instance v1, Liv6;
+
+    invoke-direct {v1, p1, v0}, Liv6;-><init>(Ljava/lang/Runnable;Lond;)V
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    move-object v6, p6
+
+    invoke-virtual/range {v0 .. v6}, Lond;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lev4;
+
+    move-result-object p1
+
+    sget-object p2, Ln95;->a:Ln95;
+
+    if-ne p1, p2, :cond_0
 
     return-object p1
 
-    :pswitch_0
-    const/4 p1, 0x0
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-object v1
 .end method

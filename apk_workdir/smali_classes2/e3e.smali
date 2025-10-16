@@ -1,95 +1,133 @@
 .class public final Le3e;
-.super Luc0;
+.super Lzv5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final g:Z
+
+.field public final h:Loh6;
+
+.field public final i:Ltna;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(ZLoh6;Ltna;Lvtf;Lp71;Lyuc;)V
+    .locals 0
 
-    const/16 v0, 0x13
+    invoke-direct {p0, p4, p5, p6}, Lzv5;-><init>(Lvtf;Lp71;Lyuc;)V
 
-    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+    iput-boolean p1, p0, Le3e;->g:Z
 
-    iput-object p1, p0, Le3e;->b:Ljava/lang/String;
+    iput-object p2, p0, Le3e;->h:Loh6;
+
+    iput-object p3, p0, Le3e;->i:Ltna;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Le3e;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Le3e;
-
-    iget-object v1, p0, Le3e;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Le3e;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final b()V
     .locals 1
 
-    iget-object v0, p0, Le3e;->b:Ljava/lang/String;
+    iget-boolean v0, p0, Le3e;->g:Z
 
     if-nez v0, :cond_0
 
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0}, Lzv5;->h()V
+
+    const/4 v0, 0x6
+
+    iput v0, p0, Lzv5;->e:I
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    invoke-virtual {p0}, Lzv5;->h()V
+
+    const/4 v0, 0x5
+
+    iput v0, p0, Lzv5;->e:I
+
+    return-void
+.end method
+
+.method public final d(Lu0f;)V
+    .locals 1
+
+    iget-object v0, p0, Le3e;->i:Ltna;
+
+    invoke-virtual {v0}, Ltna;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    return-void
 
-    const-string v0, "OpenSystemRingtones(selected="
+    :cond_0
+    iget-object v0, p0, Le3e;->h:Loh6;
 
-    const-string v1, ")"
-
-    iget-object v2, p0, Le3e;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Loh6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lzv5;->d:Z
+
+    return-void
+
+    :cond_1
+    invoke-super {p0, p1}, Lzv5;->d(Lu0f;)V
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    iget-boolean v0, p0, Le3e;->g:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lzv5;->h()V
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lzv5;->e:I
+
+    return-void
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ServerTopologyFirstDataStat"
 
     return-object v0
 .end method

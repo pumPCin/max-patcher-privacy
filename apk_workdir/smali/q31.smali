@@ -4,314 +4,118 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/Long;
-
-.field public final b:Ljava/lang/CharSequence;
-
-.field public final c:Lhd0;
-
-.field public final d:Ljd0;
-
-.field public final e:Z
+.field public final a:Llt7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lhd0;Ljd0;Z)V
+.method public constructor <init>(Llt7;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lq31;->a:Ljava/lang/Long;
-
-    .line 3
-    iput-object p2, p0, Lq31;->b:Ljava/lang/CharSequence;
-
-    .line 4
-    iput-object p3, p0, Lq31;->c:Lhd0;
-
-    .line 5
-    iput-object p4, p0, Lq31;->d:Ljd0;
-
-    .line 6
-    iput-boolean p5, p0, Lq31;->e:Z
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lhd0;ZI)V
-    .locals 8
-
-    and-int/lit8 v0, p5, 0x1
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object v3, v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v3, p1
-
-    :goto_0
-    and-int/lit8 p1, p5, 0x2
-
-    if-eqz p1, :cond_1
-
-    move-object v4, v1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v4, p2
-
-    :goto_1
-    and-int/lit8 p1, p5, 0x4
-
-    if-eqz p1, :cond_2
-
-    move-object v5, v1
-
-    goto :goto_2
-
-    :cond_2
-    move-object v5, p3
-
-    :goto_2
-    const/4 v6, 0x0
-
-    move-object v2, p0
-
-    move v7, p4
-
-    .line 7
-    invoke-direct/range {v2 .. v7}, Lq31;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lhd0;Ljd0;Z)V
+    iput-object p1, p0, Lq31;->a:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lq31;->a:Llt7;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of v1, p1, Lq31;
+    check-cast v0, Lj34;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Lj34;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
-    if-nez v1, :cond_1
+    move-result-object v0
 
-    return v2
+    if-eqz v0, :cond_0
 
-    :cond_1
-    check-cast p1, Lq31;
-
-    iget-object v1, p0, Lq31;->a:Ljava/lang/Long;
-
-    iget-object v3, p1, Lq31;->a:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lq31;->b:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lq31;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lq31;->c:Lhd0;
-
-    iget-object v3, p1, Lq31;->c:Lhd0;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lq31;->d:Ljd0;
-
-    iget-object v3, p1, Lq31;->d:Ljd0;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lq31;->e:Z
-
-    iget-boolean p1, p1, Lq31;->e:Z
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lq31;->a:Ljava/lang/Long;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lq31;->b:Ljava/lang/CharSequence;
-
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lq31;->c:Lhd0;
-
-    if-nez v2, :cond_2
-
-    move v2, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Lhd0;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lq31;->d:Ljd0;
-
-    if-nez v2, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_3
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lq31;->e:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CallChatState(chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lq31;->a:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lq31;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lq31;->c:Lhd0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", overlay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lq31;->d:Ljd0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isLinkCall="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lq31;->e:Z
-
-    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getCameraManager()Lru/ok/android/externcalls/sdk/video/CameraManager;
 
     move-result-object v0
 
     return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final b()Z
+    .locals 3
+
+    invoke-virtual {p0}, Lq31;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/video/CameraManager;->isCapturingFromFrontCamera()Z
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    return v2
+
+    :cond_0
+    return v1
+.end method
+
+.method public final c(Z)V
+    .locals 5
+
+    sget-object v0, Lndi;->a:Lkwa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lf88;->o:Lf88;
+
+    invoke-virtual {v0, v1}, Lkwa;->b(Lf88;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "CallCameraController camera changed="
+
+    const-string v3, " "
+
+    invoke-static {v2, v3, p1}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const-string v4, "CallCameraControllerTag"
+
+    invoke-virtual {v0, v1, v4, v2, v3}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lq31;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/video/CameraManager;->setCameraEnabled(Z)V
+
+    :cond_2
+    return-void
 .end method

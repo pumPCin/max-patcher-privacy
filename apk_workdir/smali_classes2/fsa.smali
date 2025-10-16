@@ -1,73 +1,79 @@
-.class public abstract Lfsa;
-.super Ljava/lang/Object;
+.class public final Lfsa;
+.super Lk14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public A0:I
 
-.field public static final b:I
+.field public B0:I
 
-.field public static final c:I
+.field public synthetic C0:Ljava/lang/Object;
 
-.field public static final d:I
+.field public final synthetic D0:Lmsa;
 
-.field public static final e:I
+.field public E0:I
 
-.field public static final f:I
+.field public X:Ljava/lang/Object;
 
-.field public static final g:I
+.field public Y:Ljava/lang/Object;
 
-.field public static final h:I
+.field public Z:Ljava/lang/Object;
 
-.field public static final i:I
+.field public o:Ljava/lang/Object;
 
-.field public static final j:I
+.field public r0:Ljava/lang/Object;
+
+.field public s0:Ljava/lang/Object;
+
+.field public t0:Ljava/lang/CharSequence;
+
+.field public u0:Lt99;
+
+.field public v0:Z
+
+.field public w0:Z
+
+.field public x0:J
+
+.field public y0:J
+
+.field public z0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lmsa;Lk14;)V
+    .locals 0
 
-    sget v0, Lgic;->permissions_allow_access:I
+    iput-object p1, p0, Lfsa;->D0:Lmsa;
 
-    sput v0, Lfsa;->a:I
-
-    sget v0, Lgic;->permissions_audio_denied_title:I
-
-    sput v0, Lfsa;->b:I
-
-    sget v0, Lgic;->permissions_audio_request_denied:I
-
-    sput v0, Lfsa;->c:I
-
-    sget v0, Lgic;->permissions_audio_title:I
-
-    sput v0, Lfsa;->d:I
-
-    sget v0, Lgic;->permissions_dialog_no:I
-
-    sput v0, Lfsa;->e:I
-
-    sget v0, Lgic;->permissions_dialog_open_setting:I
-
-    sput v0, Lfsa;->f:I
-
-    sget v0, Lgic;->permissions_dialog_yes:I
-
-    sput v0, Lfsa;->g:I
-
-    sget v0, Lgic;->permissions_video_message_request:I
-
-    sput v0, Lfsa;->h:I
-
-    sget v0, Lgic;->permissions_video_message_request_only_camera_title:I
-
-    sput v0, Lfsa;->i:I
-
-    sget v0, Lgic;->permissions_video_message_request_title:I
-
-    sput v0, Lfsa;->j:I
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lfsa;->C0:Ljava/lang/Object;
+
+    iget p1, p0, Lfsa;->E0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lfsa;->E0:I
+
+    iget-object p1, p0, Lfsa;->D0:Lmsa;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Lmsa;->a(Lmsa;Llf8;Lrz;Lk14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

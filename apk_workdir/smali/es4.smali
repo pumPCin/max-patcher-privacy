@@ -1,43 +1,37 @@
-.class public final Les4;
+.class public abstract Les4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ltt1;
-
-.field public final b:Lyn7;
-
-.field public final c:Lyn7;
-
-.field public final d:Lh4f;
-
-.field public e:Loke;
+# static fields
+.field public static volatile a:Lx85;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Ltt1;Lyn7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lcic;->c:Lcic;
 
-    iput-object p2, p0, Les4;->a:Ltt1;
+    invoke-static {}, Ldmi;->a()Lst4;
 
-    iput-object p1, p0, Les4;->b:Lyn7;
+    move-result-object v1
 
-    iput-object p3, p0, Les4;->c:Lyn7;
+    new-instance v2, Lxj0;
 
-    new-instance p1, Lwm3;
+    const/16 v3, 0xc
 
-    const/16 p2, 0x16
+    invoke-direct {v2, v3}, Lxj0;-><init>(I)V
 
-    invoke-direct {p1, p2}, Lwm3;-><init>(I)V
+    iget-object v0, v0, Lcic;->a:Ljy;
 
-    new-instance p2, Lh4f;
+    new-instance v3, Lbic;
 
-    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
+    const/4 v4, 0x0
 
-    iput-object p2, p0, Les4;->d:Lh4f;
+    invoke-direct {v3, v4, v2}, Lbic;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1, v3}, Ljy;->g(Ljava/util/concurrent/Executor;Lvga;)V
 
     return-void
 .end method

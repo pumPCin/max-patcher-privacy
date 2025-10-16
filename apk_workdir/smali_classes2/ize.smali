@@ -1,109 +1,41 @@
-.class public final enum Lize;
-.super Ljava/lang/Enum;
+.class public final Lize;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lv0f;
 
-# static fields
-.field public static final enum X:Lize;
 
-.field public static final synthetic Y:[Lize;
-
-.field public static final enum a:Lize;
-
-.field public static final enum b:Lize;
-
-.field public static final enum c:Lize;
-
-.field public static final enum o:Lize;
+# instance fields
+.field public final synthetic a:Luoe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Luoe;)V
+    .locals 0
 
-    new-instance v0, Lize;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "TAGS"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lize;->a:Lize;
-
-    new-instance v1, Lize;
-
-    const-string v2, "CONTACT_TAGS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lize;->b:Lize;
-
-    new-instance v2, Lize;
-
-    const-string v3, "COMMANDS"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lize;->c:Lize;
-
-    new-instance v3, Lize;
-
-    const-string v4, "DESCRIPTION"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lize;->o:Lize;
-
-    new-instance v4, Lize;
-
-    const-string v5, "UNKNOWN"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lize;->X:Lize;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lize;
-
-    move-result-object v0
-
-    sput-object v0, Lize;->Y:[Lize;
+    iput-object p1, p0, Lize;->a:Luoe;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lize;
-    .locals 1
 
-    const-class v0, Lize;
+# virtual methods
+.method public final a(Lu0f;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lize;->a:Luoe;
 
-    move-result-object p0
+    invoke-virtual {v0}, Luoe;->h()Z
 
-    check-cast p0, Lize;
+    move-result v1
 
-    return-object p0
-.end method
+    if-nez v1, :cond_0
 
-.method public static values()[Lize;
-    .locals 1
+    invoke-virtual {v0, p1}, Luoe;->a(Ljava/lang/Object;)V
 
-    sget-object v0, Lize;->Y:[Lize;
-
-    invoke-virtual {v0}, [Lize;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lize;
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

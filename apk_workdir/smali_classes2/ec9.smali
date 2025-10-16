@@ -3,83 +3,178 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhc9;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lfc9;
+
+.field public final synthetic c:Llt7;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lfc9;Llt7;I)V
     .locals 0
+
+    iput p3, p0, Lec9;->a:I
+
+    iput-object p1, p0, Lec9;->b:Lfc9;
+
+    iput-object p2, p0, Lec9;->c:Llt7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lec9;->a:I
+    return-void
+.end method
+
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p1, p0, Lec9;->a:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lec9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lec9;
-
-    iget v1, p0, Lec9;->a:I
-
-    iget p1, p1, Lec9;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget v0, p0, Lec9;->a:I
+    iget p1, p0, Lec9;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lec9;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 3
 
-    const-string v0, "ProcessClickMultiSelect(actionId="
+    iget p1, p0, Lec9;->a:I
 
-    const-string v1, ")"
+    packed-switch p1, :pswitch_data_0
 
-    iget v2, p0, Lec9;->a:I
+    iget-object p1, p0, Lec9;->b:Lfc9;
 
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p1, Lfc9;->o:Lcc9;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-object v0, p1, Lfc9;->b:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-object v0, p0, Lec9;->c:Llt7;
+
+    invoke-interface {v0}, Llt7;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lvye;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    :cond_0
+    iget-object p1, p1, Lfc9;->v0:Landroid/widget/ImageView;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lec9;->b:Lfc9;
+
+    iget-object v0, p1, Lfc9;->v0:Landroid/widget/ImageView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p1, Lfc9;->b:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-object p1, p0, Lec9;->c:Llt7;
+
+    invoke-interface {p1}, Llt7;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvye;
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

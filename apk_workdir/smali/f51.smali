@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll51;
+.implements Lj51;
 
 
 # static fields
@@ -25,6 +25,22 @@
 
 
 # virtual methods
+.method public final a()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
@@ -50,7 +66,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x6cbb84b4
+    const v0, 0x588300f
 
     return v0
 .end method
@@ -58,7 +74,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Failed"
+    const-string v0, "Active"
 
     return-object v0
 .end method

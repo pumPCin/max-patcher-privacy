@@ -1,193 +1,271 @@
-.class public abstract Lija;
-.super Ljava/lang/Object;
+.class public final Lija;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Lfja;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public a:Leja;
 
-.field public static final C:I
+.field public b:I
 
-.field public static final D:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance v0, Leja;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Leja;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lija;->a:Leja;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lija;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 3
+
+    new-instance v0, Leja;
+
+    sget-object v1, Lcda;->a:Lcda;
+
+    invoke-direct {v0, v1}, Leja;-><init>(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lija;->a:Leja;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lija;->a:Leja;
+
+    iget v0, p0, Lija;->b:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lija;->b:I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leja;
+
+    iget-object v1, v0, Leja;->a:Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Leja;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Leja;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Object;)V
     .locals 1
 
-    sget v0, Licc;->chat__background:I
+    new-instance v0, Leja;
 
-    sput v0, Lija;->a:I
+    invoke-direct {v0, p1}, Leja;-><init>(Ljava/lang/Object;)V
 
-    sget v0, Licc;->chat__bottom_container:I
+    iget-object p1, p0, Lija;->a:Leja;
 
-    sput v0, Lija;->b:I
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    sget v0, Licc;->chat__bottom_container_chat_status_button:I
+    iput-object v0, p0, Lija;->a:Leja;
 
-    sput v0, Lija;->c:I
+    iget p1, p0, Lija;->b:I
 
-    sget v0, Licc;->chat__bottom_container_search:I
+    add-int/lit8 p1, p1, 0x1
 
-    sput v0, Lija;->d:I
+    iput p1, p0, Lija;->b:I
 
-    sget v0, Licc;->chat__bottom_container_search_down_button:I
+    iget v0, p0, Lija;->c:I
 
-    sput v0, Lija;->e:I
+    if-le p1, v0, :cond_0
 
-    sget v0, Licc;->chat__bottom_container_search_separator:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sput v0, Lija;->f:I
+    move-result-object p1
 
-    sget v0, Licc;->chat__bottom_container_search_up_button:I
+    check-cast p1, Leja;
 
-    sput v0, Lija;->g:I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sget v0, Licc;->chat__main_container:I
+    move-result-object p1
 
-    sput v0, Lija;->h:I
+    check-cast p1, Leja;
 
-    sget v0, Licc;->chat__media_bar_container:I
+    iget v0, p0, Lija;->b:I
 
-    sput v0, Lija;->i:I
+    add-int/lit8 v0, v0, -0x1
 
-    sget v0, Licc;->chat__media_keyboard:I
+    iput v0, p0, Lija;->b:I
 
-    sput v0, Lija;->j:I
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    sget v0, Licc;->chat__messages_container:I
+    :cond_0
+    return-void
+.end method
 
-    sput v0, Lija;->k:I
+.method public final d(Ldja;)V
+    .locals 5
 
-    sget v0, Licc;->chat__pinbars_container:I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sput v0, Lija;->l:I
+    move-result v0
 
-    sget v0, Licc;->chat__search_view:I
+    if-eqz v0, :cond_0
 
-    sput v0, Lija;->m:I
+    goto :goto_1
 
-    sget v0, Licc;->chat__suggestion_container:I
+    :cond_0
+    const/4 v0, 0x1
 
-    sput v0, Lija;->n:I
+    :cond_1
+    iget-object v1, p1, Ldja;->c:Ljava/io/Serializable;
 
-    sget v0, Licc;->chat__toolbar:I
+    check-cast v1, Leja;
 
-    sput v0, Lija;->o:I
+    if-nez v1, :cond_2
 
-    sget v0, Licc;->chat__video_msg_container:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sput v0, Lija;->p:I
+    move-result-object v1
 
-    sget v0, Licc;->chat_screen__action_cancel:I
+    check-cast v1, Leja;
 
-    sput v0, Lija;->q:I
+    iput-object v1, p1, Ldja;->c:Ljava/io/Serializable;
 
-    sget v0, Licc;->chat_screen__leave_chat_confirm:I
+    :cond_2
+    :goto_0
+    iget-boolean v2, p1, Ldja;->o:Z
 
-    sput v0, Lija;->r:I
+    const/4 v3, 0x0
 
-    sget v0, Licc;->chat_screen__remove_chat_confirm:I
+    if-eqz v2, :cond_3
 
-    sput v0, Lija;->s:I
+    iput-object v3, p1, Ldja;->c:Ljava/io/Serializable;
 
-    sget v0, Licc;->chat_screen__video_msg_placeholder:I
+    return-void
 
-    sput v0, Lija;->t:I
+    :cond_3
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    sget v0, Licc;->chat_screen__video_msg_preview:I
+    move-result-object v2
 
-    sput v0, Lija;->u:I
+    check-cast v2, Leja;
 
-    sget v0, Licc;->chat_screen__video_msg_progress:I
+    if-eqz v2, :cond_5
 
-    sput v0, Lija;->v:I
+    iget-object v1, v2, Leja;->a:Ljava/lang/Object;
 
-    sget v0, Licc;->chat_screen__video_msg_root_container:I
+    iget-object v4, p1, Ldja;->b:Lcka;
 
-    sput v0, Lija;->w:I
+    invoke-static {v4, v1}, Lcda;->a(Lcka;Ljava/lang/Object;)Z
 
-    sget v0, Licc;->chat_screen__video_msg_switch_camera_btn:I
+    move-result v1
 
-    sput v0, Lija;->x:I
+    if-eqz v1, :cond_4
 
-    sget v0, Licc;->chat_screen__video_msg_timer:I
+    iput-object v3, p1, Ldja;->c:Ljava/io/Serializable;
 
-    sput v0, Lija;->y:I
+    return-void
 
-    sget v0, Licc;->chat_screen__video_msg_torch_btn:I
+    :cond_4
+    move-object v1, v2
 
-    sput v0, Lija;->z:I
+    goto :goto_0
 
-    sget v0, Licc;->chat_screen__video_msg_video_view:I
+    :cond_5
+    iput-object v1, p1, Ldja;->c:Ljava/io/Serializable;
 
-    sput v0, Lija;->A:I
+    neg-int v0, v0
 
-    sget v0, Licc;->media_bar__emoji_keyboard_container:I
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
-    sput v0, Lija;->B:I
+    move-result v0
 
-    sget v0, Licc;->media_bar__media_type_picker_button:I
+    if-nez v0, :cond_1
 
-    sput v0, Lija;->C:I
+    :goto_1
+    return-void
+.end method
 
-    sget v0, Licc;->media_bar__select_album_container:I
+.method public final e(Ljava/lang/Throwable;)V
+    .locals 2
 
-    sput v0, Lija;->D:I
+    new-instance v0, Lada;
 
+    invoke-direct {v0, p1}, Lada;-><init>(Ljava/lang/Throwable;)V
+
+    new-instance p1, Leja;
+
+    invoke-direct {p1, v0}, Leja;-><init>(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lija;->a:Leja;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lija;->a:Leja;
+
+    iget p1, p0, Lija;->b:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lija;->b:I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Leja;
+
+    iget-object v0, p1, Leja;->a:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Leja;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Leja;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    :cond_0
     return-void
 .end method

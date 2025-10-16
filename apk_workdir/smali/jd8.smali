@@ -1,241 +1,334 @@
 .class public final Ljd8;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldd8;
-.implements Lfs4;
-.implements Lme3;
+.implements Landroid/util/Printer;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final b:Llde;
+.field public b:J
 
-.field public final c:Lrce;
+.field public c:J
+
+.field public final d:Ljava/util/LinkedList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llde;Lrce;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p3, p0, Ljd8;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    new-instance v0, Ljava/util/LinkedList;
 
-    iput-object p1, p0, Ljd8;->b:Llde;
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object p2, p0, Ljd8;->c:Lrce;
+    iput-object v0, p0, Ljd8;->d:Ljava/util/LinkedList;
 
     return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 8
+
+    const-string v0, ">>>>> Dispatching to "
+
+    invoke-static {p0, v0}, Ls9f;->L(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "<<<<< Finished to "
+
+    invoke-static {p0, v0}, Ls9f;->L(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, ": "
+
+    const/4 v1, 0x6
+
+    invoke-static {v0, p0, v1}, Ls9f;->G(Ljava/lang/String;Ljava/lang/CharSequence;I)I
+
+    move-result v0
+
+    const-string v2, "} "
+
+    const/4 v3, 0x0
+
+    invoke-static {p0, v2, v3, v3, v1}, Ls9f;->C(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
+
+    add-int/lit8 v4, v2, 0x1
+
+    invoke-virtual {p0, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-gtz v0, :cond_1
+
+    if-lez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-object p0
+
+    :cond_1
+    :goto_0
+    const-string v5, "DispatchedContinuation[Dispatchers.Main"
+
+    invoke-static {p0, v5, v3, v3, v1}, Ls9f;->C(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v5
+
+    if-ltz v5, :cond_3
+
+    add-int/lit8 v5, v5, 0x27
+
+    const-string v2, ".immediate"
+
+    const/4 v6, 0x4
+
+    invoke-static {p0, v2, v5, v3, v6}, Ls9f;->C(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
+
+    const-string v7, ", Continuation at "
+
+    if-ltz v2, :cond_2
+
+    add-int/lit8 v2, v2, 0xa
+
+    invoke-static {p0, v7, v2, v3, v6}, Ls9f;->C(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p0, v7, v5, v3, v6}, Ls9f;->C(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
+
+    :goto_1
+    if-ltz v2, :cond_4
+
+    add-int/lit8 v2, v2, 0x12
+
+    goto :goto_2
+
+    :cond_3
+    add-int/lit8 v2, v2, 0x2
+
+    :cond_4
+    :goto_2
+    const/16 v5, 0x5d
+
+    invoke-static {p0, v5, v3, v1}, Ls9f;->F(Ljava/lang/CharSequence;CII)I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    if-le v5, v2, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move-object v6, v7
+
+    :goto_3
+    if-eqz v6, :cond_6
+
+    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    :goto_4
+    const/16 v6, 0x40
+
+    invoke-static {p0, v6, v3, v1}, Ls9f;->F(Ljava/lang/CharSequence;CII)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    if-le v1, v2, :cond_7
+
+    move-object v7, v3
+
+    :cond_7
+    if-eqz v7, :cond_8
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    :goto_5
+    invoke-static {v1, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    invoke-virtual {p0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "null"
+
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_9
+
+    return-object v1
+
+    :cond_9
+    add-int/lit8 v0, v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, " "
+
+    invoke-static {v4, v0, p0}, Ld15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 1
+.method public final println(Ljava/lang/String;)V
+    .locals 10
 
-    iget-object v0, p0, Ljd8;->b:Llde;
+    if-eqz p1, :cond_3
 
-    invoke-interface {v0, p1}, Llde;->a(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 3
-
-    iget v0, p0, Ljd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lazb;
-
-    iget-object v1, p0, Ljd8;->b:Llde;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p0, v2, v1}, Lazb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object v1, p0, Ljd8;->c:Lrce;
-
-    invoke-virtual {v1, v0}, Lrce;->k(Llde;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfs4;
-
-    sget-object v1, Ljs4;->a:Ljs4;
-
-    if-eq v0, v1, :cond_0
+    const-string v0, ">>>>> Dispatching to "
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Ljd8;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {}, Lqxh;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lvn4;
+    invoke-static {p1}, Lqxh;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, p0, Ljd8;->b:Llde;
+    move-result-object p1
 
-    const/16 v2, 0x16
-
-    invoke-direct {v0, v1, v2, p0}, Lvn4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object v1, p0, Ljd8;->c:Lrce;
-
-    invoke-virtual {v1, v0}, Lrce;->k(Llde;)V
+    invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
     :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ljd8;->a:J
+
+    iget-wide v0, p0, Ljd8;->c:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ljd8;->c:J
+
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lfs4;)V
-    .locals 1
-
-    iget v0, p0, Ljd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0, p1}, Ljs4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Ljd8;->b:Llde;
-
-    invoke-interface {p1, p0}, Llde;->c(Lfs4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ljs4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Ljd8;->b:Llde;
-
-    invoke-interface {p1, p0}, Llde;->c(Lfs4;)V
 
     :cond_1
-    return-void
+    const-string v0, "<<<<< Finished to "
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget v0, p0, Ljd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget v0, p0, Ljd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfs4;
-
-    invoke-static {v0}, Ljs4;->b(Lfs4;)Z
+    invoke-static {p1, v0, v1}, Laaf;->p(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_3
 
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfs4;
-
-    invoke-static {v0}, Ljs4;->b(Lfs4;)Z
+    invoke-static {}, Lqxh;->b()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_2
 
-    nop
+    invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_2
+    iget-wide v0, p0, Ljd8;->c:J
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    const-wide/16 v2, -0x1
 
-    iget v0, p0, Ljd8;->a:I
+    add-long/2addr v0, v2
 
-    packed-switch v0, :pswitch_data_0
+    iput-wide v0, p0, Ljd8;->c:J
 
-    iget-object v0, p0, Ljd8;->b:Llde;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-interface {v0, p1}, Llde;->onError(Ljava/lang/Throwable;)V
+    move-result-wide v0
 
+    iput-wide v0, p0, Ljd8;->b:J
+
+    invoke-static {p1}, Ljd8;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v2, Lid8;
+
+    iget-wide v4, p0, Ljd8;->a:J
+
+    iget-wide v6, p0, Ljd8;->b:J
+
+    iget-wide v8, p0, Ljd8;->c:J
+
+    invoke-direct/range {v2 .. v9}, Lid8;-><init>(Ljava/lang/String;JJJ)V
+
+    iget-object p1, p0, Ljd8;->d:Ljava/util/LinkedList;
+
+    invoke-virtual {p1, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Ljd8;->a:J
+
+    iput-wide v0, p0, Ljd8;->b:J
+
+    :cond_3
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ljd8;->b:Llde;
-
-    invoke-interface {v0, p1}, Llde;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

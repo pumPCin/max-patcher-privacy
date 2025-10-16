@@ -1,300 +1,145 @@
 .class public final Lyqd;
-.super Ljava/lang/Object;
+.super Lsl7;
 .source "SourceFile"
-
-# interfaces
-.implements Lvo4;
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
 
 # instance fields
-.field public final a:Lm63;
+.field public final c:Ljm9;
 
-.field public final b:Lyn7;
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:Lhne;
-
-.field public final f:Lbpc;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lm63;)V
-    .locals 2
+.method public constructor <init>(Ljm9;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lyqd;->a:Lm63;
+    iput-object p1, p0, Lyqd;->c:Ljm9;
 
-    iput-object p1, p0, Lyqd;->b:Lyn7;
+    const-class p1, Lyqd;
 
-    sget-object p1, Llo4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lyqd;->c:J
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lyqd;->d:J
-
-    invoke-virtual {p0}, Lyqd;->e()Ljava/util/List;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Line;->a(Ljava/lang/Object;)Lhne;
+    iput-object p1, p0, Lyqd;->d:Ljava/lang/String;
 
-    move-result-object p1
+    return-void
+.end method
 
-    iput-object p1, p0, Lyqd;->e:Lhne;
+.method public static final d(Lyqd;Landroidx/recyclerview/widget/RecyclerView;I)Z
+    .locals 0
 
-    new-instance v0, Lbpc;
+    const/4 p0, 0x1
 
-    invoke-direct {v0, p1}, Lbpc;-><init>(Lis9;)V
+    sub-int/2addr p2, p0
 
-    iput-object v0, p0, Lyqd;->f:Lbpc;
+    invoke-static {p1, p2}, Lewi;->f(Landroidx/recyclerview/widget/RecyclerView;I)Z
 
-    instance-of p1, p2, Lv3;
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-static {p1, p2}, Lewi;->a(Landroidx/recyclerview/widget/RecyclerView;F)I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lewi;->f(Landroidx/recyclerview/widget/RecyclerView;I)Z
+
+    move-result p1
 
     if-eqz p1, :cond_0
 
-    check-cast p2, Lv3;
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final e(Lyqd;Lm5d;)V
+    .locals 5
+
+    invoke-virtual {p1}, Lm5d;->j()I
+
+    move-result p1
+
+    add-int/lit8 p1, p1, -0x1
+
+    iget-object v0, p0, Lyqd;->d:Ljava/lang/String;
+
+    sget-object v1, Lndi;->a:Lkwa;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p2, 0x0
+    sget-object v3, Lf88;->o:Lf88;
 
-    :goto_0
-    if-eqz p2, :cond_1
+    invoke-virtual {v1, v3}, Lkwa;->b(Lf88;)Z
 
-    iget-object p1, p2, Lv3;->h:Lbo7;
+    move-result v4
 
-    invoke-virtual {p1, p0}, Lbo7;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    if-eqz v4, :cond_1
+
+    const-string v4, "scrollToBottomNotifier scroll to bottom position, pos:"
+
+    invoke-static {p1, v4}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v3, v0, p1, v2}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
+    :goto_0
+    iget-object p0, p0, Lyqd;->c:Ljm9;
+
+    iget-object p0, p0, Ljm9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
+
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lim9;->C()Lgp9;
+
+    move-result-object p0
+
+    iget-object p1, p0, Lgp9;->c:Lb54;
+
+    iget-object v0, p0, Lgp9;->b:Lv44;
+
+    sget-object v1, Le54;->b:Le54;
+
+    new-instance v3, Lzo9;
+
+    invoke-direct {v3, p0, v2}, Lzo9;-><init>(Lgp9;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v0, v1, v3}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lgp9;->f(Lwwe;)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Lyqd;->a:Lm63;
-
-    instance-of v1, v0, Lv3;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lv3;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Lv3;->h:Lbo7;
-
-    invoke-virtual {v0, p0}, Lbo7;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c()Lane;
+.method public final c(Landroidx/recyclerview/widget/RecyclerView;Lm5d;)Lo5d;
     .locals 1
 
-    iget-object v0, p0, Lyqd;->f:Lbpc;
+    new-instance v0, Lgc5;
+
+    invoke-direct {v0, p0, p1, p2}, Lgc5;-><init>(Lyqd;Landroidx/recyclerview/widget/RecyclerView;Lm5d;)V
 
     return-object v0
-.end method
-
-.method public final d(Lfb4;)V
-    .locals 6
-
-    iget-wide v0, p1, Lfb4;->a:J
-
-    iget-wide v2, p0, Lyqd;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Llo4;->a(JJ)Z
-
-    move-result p1
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lyqd;->b:Lyn7;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Loc4;
-
-    sget-object v0, Loo4;->b:Loo4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Loo4;->h:Lmc4;
-
-    iget-object v0, v0, Lmc4;->a:Landroid/net/Uri;
-
-    invoke-static {v0}, Lvc4;->a(Landroid/net/Uri;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v2}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-
-    :cond_0
-    iget-wide v4, p0, Lyqd;->d:J
-
-    invoke-static {v0, v1, v4, v5}, Llo4;->a(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Loc4;
-
-    sget-object v0, Loo4;->b:Loo4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Loo4;->i:Lmc4;
-
-    iget-object v0, v0, Lmc4;->a:Landroid/net/Uri;
-
-    invoke-static {v0}, Lvc4;->a(Landroid/net/Uri;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v2}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final e()Ljava/util/List;
-    .locals 19
-
-    move-object/from16 v0, p0
-
-    new-instance v1, Lfb4;
-
-    iget-object v2, v0, Lyqd;->a:Lm63;
-
-    move-object v9, v2
-
-    check-cast v9, Lt08;
-
-    invoke-virtual {v9}, Lt08;->I()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v10, ""
-
-    if-nez v2, :cond_0
-
-    move-object v2, v10
-
-    :cond_0
-    new-instance v4, Lbdf;
-
-    invoke-direct {v4, v2}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v6, Lbdf;
-
-    const-string v2, "\u0410\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
-
-    invoke-direct {v6, v2}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x14
-
-    iget-wide v2, v0, Lyqd;->c:J
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v1 .. v8}, Lfb4;-><init>(JLcdf;ILcdf;Lhq;I)V
-
-    new-instance v11, Lfb4;
-
-    invoke-virtual {v9}, Lt08;->J()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move-object v10, v2
-
-    :goto_0
-    new-instance v14, Lbdf;
-
-    invoke-direct {v14, v10}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v2, Lbdf;
-
-    const-string v3, "\u041f\u043e\u0440\u0442 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
-
-    invoke-direct {v2, v3}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
-
-    const/16 v17, 0x0
-
-    const/16 v18, 0x14
-
-    iget-wide v12, v0, Lyqd;->d:J
-
-    const/4 v15, 0x0
-
-    move-object/from16 v16, v2
-
-    invoke-direct/range {v11 .. v18}, Lfb4;-><init>(JLcdf;ILcdf;Lhq;I)V
-
-    filled-new-array {v1, v11}, [Lfb4;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    return-object v1
-.end method
-
-.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lyqd;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    iget-object v0, p0, Lyqd;->e:Lhne;
-
-    invoke-virtual {v0, p2, p1}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
 .end method

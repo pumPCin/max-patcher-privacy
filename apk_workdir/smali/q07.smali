@@ -1,38 +1,39 @@
-.class public interface abstract Lq07;
+.class public final Lq07;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# instance fields
+.field public final a:Landroid/net/Uri;
+
+.field public final b:Lsa6;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
 
 
-# virtual methods
-.method public abstract S(ILandroid/os/Bundle;Z)V
-.end method
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Lsa6;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-.method public abstract X(ILandroid/os/Bundle;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract b(I)V
-.end method
+    iput-object p1, p0, Lq07;->a:Landroid/net/Uri;
 
-.method public abstract c(ILandroid/app/PendingIntent;)V
-.end method
+    iput-object p2, p0, Lq07;->b:Lsa6;
 
-.method public abstract onDisconnected()V
-.end method
+    iput-object p3, p0, Lq07;->c:Ljava/lang/String;
 
-.method public abstract p(ILandroid/os/Bundle;)V
-.end method
+    iput-object p4, p0, Lq07;->d:Ljava/lang/String;
 
-.method public abstract u(ILandroid/os/Bundle;)V
-.end method
+    iput-object p5, p0, Lq07;->e:Ljava/lang/String;
 
-.method public abstract v(ILandroid/os/Bundle;)V
-.end method
+    iput-object p6, p0, Lq07;->f:Ljava/lang/String;
 
-.method public abstract w(ILandroid/os/Bundle;Landroid/os/Bundle;)V
-.end method
-
-.method public abstract z(ILandroid/os/Bundle;)V
+    return-void
 .end method

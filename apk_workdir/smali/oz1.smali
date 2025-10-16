@@ -1,22 +1,11 @@
-.class public final Loz1;
+.class public interface abstract Loz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lj37;
-
 
 # virtual methods
-.method public final a(JLqx1;)V
-    .locals 0
-
-    invoke-virtual {p3}, Lqx1;->a()V
-
-    return-void
+.method public abstract a()Lo18;
 .end method
 
-.method public final clear()V
-    .locals 0
-
-    return-void
+.method public abstract b()Lo18;
 .end method

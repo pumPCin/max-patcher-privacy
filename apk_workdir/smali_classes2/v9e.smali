@@ -1,23 +1,26 @@
 .class public final Lv9e;
-.super Lua5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lcdf;
+# interfaces
+.implements Lb19;
 
 
-# direct methods
-.method public constructor <init>(ILcdf;)V
-    .locals 0
+# virtual methods
+.method public final a(Landroid/media/MediaPlayer;Landroid/content/Context;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iput p1, p0, Lv9e;->a:I
+    move-result-object p2
 
-    iput-object p2, p0, Lv9e;->b:Lcdf;
+    sget v0, Lvid;->a:I
+
+    invoke-virtual {p2, v0}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/res/AssetFileDescriptor;)V
 
     return-void
 .end method

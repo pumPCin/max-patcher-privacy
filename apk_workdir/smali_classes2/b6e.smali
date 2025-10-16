@@ -1,66 +1,68 @@
-.class public final synthetic Lb6e;
+.class public final Lb6e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltc4;
-
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Integer;
+.field public a:Ljava/lang/String;
 
-.field public final synthetic Y:Ljava/lang/Boolean;
+.field public volatile b:I
 
-.field public final synthetic a:J
+.field public c:J
 
-.field public final synthetic b:J
+.field public d:Z
 
-.field public final synthetic c:Ljava/lang/String;
+.field public e:Ljava/lang/String;
 
-.field public final synthetic o:I
+.field public f:J
 
-
-# direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lb6e;->a:J
-
-    iput-wide p3, p0, Lb6e;->b:J
-
-    iput-object p5, p0, Lb6e;->c:Ljava/lang/String;
-
-    iput p6, p0, Lb6e;->o:I
-
-    iput-object p7, p0, Lb6e;->X:Ljava/lang/Integer;
-
-    iput-object p8, p0, Lb6e;->Y:Ljava/lang/Boolean;
-
-    return-void
-.end method
+.field public g:J
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
+.method public final a()Low5;
     .locals 9
 
-    new-instance v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    iget-wide v0, p0, Lb6e;->f:J
 
-    iget-wide v1, p0, Lb6e;->a:J
+    const-wide/16 v2, 0x0
 
-    iget-wide v3, p0, Lb6e;->b:J
+    cmp-long v4, v0, v2
 
-    iget-object v5, p0, Lb6e;->c:Ljava/lang/String;
+    if-eqz v4, :cond_0
 
-    iget v6, p0, Lb6e;->o:I
+    iget-wide v4, p0, Lb6e;->g:J
 
-    iget-object v7, p0, Lb6e;->X:Ljava/lang/Integer;
+    cmp-long v2, v4, v2
 
-    iget-object v8, p0, Lb6e;->Y:Ljava/lang/Boolean;
+    if-eqz v2, :cond_0
 
-    invoke-direct/range {v0 .. v8}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
+    cmp-long v2, v4, v0
 
-    return-object v0
+    if-lez v2, :cond_0
+
+    sub-long/2addr v4, v0
+
+    long-to-int v0, v4
+
+    int-to-long v0, v0
+
+    iput-wide v0, p0, Lb6e;->c:J
+
+    :cond_0
+    new-instance v2, Low5;
+
+    iget-object v6, p0, Lb6e;->a:Ljava/lang/String;
+
+    iget v3, p0, Lb6e;->b:I
+
+    iget-wide v4, p0, Lb6e;->c:J
+
+    iget-boolean v8, p0, Lb6e;->d:Z
+
+    iget-object v7, p0, Lb6e;->e:Ljava/lang/String;
+
+    invoke-direct/range {v2 .. v8}, Low5;-><init>(IJLjava/lang/String;Ljava/lang/String;Z)V
+
+    return-object v2
 .end method

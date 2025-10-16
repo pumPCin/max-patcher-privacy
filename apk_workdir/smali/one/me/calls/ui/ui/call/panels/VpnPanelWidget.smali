@@ -15,10 +15,10 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lidd;",
+        "Ljod;",
         "scopeId",
-        "(Ljava/lang/String;Laf4;)V",
-        "k5d",
+        "(Ljava/lang/String;Lvh4;)V",
+        "swe",
         "calls-ui_release"
     }
     k = 0x1
@@ -36,9 +36,9 @@
 
 
 # instance fields
-.field public a:Lk5d;
+.field public a:Lswe;
 
-.field public final b:Lyn7;
+.field public final b:Llt7;
 
 
 # direct methods
@@ -52,55 +52,53 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
 
     .line 5
-    new-instance p1, Lvag;
+    new-instance p1, Litg;
 
-    const/4 v0, 0x5
-
-    invoke-direct {p1, v0}, Lvag;-><init>(I)V
+    invoke-direct {p1, v0}, Litg;-><init>(I)V
 
     .line 6
-    new-instance v0, Lpsf;
+    new-instance v0, Lbtf;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1, p1}, Lpsf;-><init>(ILtd6;)V
+    invoke-direct {v0, v1, p1}, Lbtf;-><init>(ILoh6;)V
 
-    const-class p1, Lnng;
+    const-class p1, Li2h;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object p1
 
     .line 7
-    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->b:Lyn7;
+    iput-object p1, p0, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->b:Llt7;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Laf4;)V
+.method public constructor <init>(Ljava/lang/String;Lvh4;)V
     .locals 1
 
     .line 1
-    new-instance p2, Lidd;
+    new-instance p2, Ljod;
 
-    invoke-direct {p2, p1}, Lidd;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Ljod;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Ld3b;
+    new-instance p1, Lqbb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {p1}, [Ld3b;
+    filled-new-array {p1}, [Lqbb;
 
     move-result-object p1
 
-    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
+    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -118,17 +116,17 @@
 
     move-result-object p1
 
-    new-instance p2, Lxe7;
+    new-instance p2, Lik7;
 
-    invoke-direct {p2, p0, p1}, Lxe7;-><init>(Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;Landroid/content/Context;)V
+    invoke-direct {p2, p0, p1}, Lik7;-><init>(Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;Landroid/content/Context;)V
 
-    new-instance p1, Lr3f;
+    new-instance p1, Lbhf;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p1, p3}, Lr3f;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p3}, Lbhf;-><init>(Landroid/content/Context;)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -146,7 +144,7 @@
 
     int-to-float p3, p3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -158,7 +156,7 @@
 
     mul-float/2addr v0, p3
 
-    invoke-static {v0}, Li8e;->I(F)I
+    invoke-static {v0}, Lagi;->d(F)I
 
     move-result v0
 
@@ -166,7 +164,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -178,11 +176,11 @@
 
     mul-float/2addr v1, v2
 
-    invoke-static {v1}, Li8e;->I(F)I
+    invoke-static {v1}, Lagi;->d(F)I
 
     move-result v1
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -194,11 +192,11 @@
 
     mul-float/2addr v2, p3
 
-    invoke-static {v2}, Li8e;->I(F)I
+    invoke-static {v2}, Lagi;->d(F)I
 
     move-result v2
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -210,25 +208,25 @@
 
     mul-float/2addr p3, v3
 
-    invoke-static {p3}, Li8e;->I(F)I
+    invoke-static {p3}, Lagi;->d(F)I
 
     move-result p3
 
     invoke-virtual {p1, v0, v1, v2, p3}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance p3, Lljh;
+    new-instance p3, Lymi;
 
-    invoke-direct {p3, p0, p1, p2}, Lljh;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p0, p1, p2}, Lymi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p3}, Lr3f;->setCallback(Lq3f;)V
+    invoke-virtual {p1, p3}, Lbhf;->setCallback(Lahf;)V
 
-    new-instance p2, Lhs1;
+    new-instance p2, Ljt1;
 
     const/4 p3, 0x2
 
-    invoke-direct {p2, p1, p1, p3}, Lhs1;-><init>(Lr3f;Lr3f;I)V
+    invoke-direct {p2, p1, p1, p3}, Ljt1;-><init>(Lbhf;Lbhf;I)V
 
-    invoke-static {p1, p2}, Lwxa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lwxa;
+    invoke-static {p1, p2}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
 
     return-object p1
 .end method

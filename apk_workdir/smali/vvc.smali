@@ -1,334 +1,233 @@
 .class public final Lvvc;
-.super Lr4;
+.super Landroid/widget/TextView;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/Checkable;
 
 
 # instance fields
-.field public final d:Lwvc;
+.field public final a:Landroid/graphics/drawable/GradientDrawable;
 
-.field public final e:Ljava/util/WeakHashMap;
+.field public b:Z
 
 
 # direct methods
-.method public constructor <init>(Lwvc;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    invoke-direct {p0}, Lr4;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    const/4 v1, 0x0
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
+    new-instance p1, Landroid/graphics/drawable/GradientDrawable;
 
-    iput-object p1, p0, Lvvc;->d:Lwvc;
+    invoke-direct {p1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x41a00000    # 20.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    iput-object p1, p0, Lvvc;->a:Landroid/graphics/drawable/GradientDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
+
+    sget-object v2, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v2, p0}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lu4b;->c()Le0f;
+
+    move-result-object v2
+
+    iget-object v2, v2, Le0f;->a:Lc0f;
+
+    iget-object v2, v2, Lc0f;->a:Lb0f;
+
+    iget v2, v2, Lb0f;->i:I
+
+    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, p1, v0}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    const/16 p1, 0xc
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lagi;->d(F)I
+
+    move-result v0
+
+    const/16 v2, 0xa
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lagi;->d(F)I
+
+    move-result v3
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v4
+
+    invoke-static {p1}, Lagi;->d(F)I
+
+    move-result p1
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lagi;->d(F)I
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v3, p1, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+.method public final isChecked()Z
     .locals 1
 
-    iget-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
+    iget-boolean v0, p0, Lvvc;->b:Z
 
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lr4;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    iget-object v0, p0, Lr4;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {v0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->dispatchPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result p1
-
-    return p1
+    return v0
 .end method
 
-.method public final b(Landroid/view/View;)Lkke;
+.method public final onCreateDrawableState(I)[I
     .locals 1
 
-    iget-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
+    add-int/lit8 p1, p1, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-super {p0, p1}, Landroid/widget/TextView;->onCreateDrawableState(I)[I
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lr4;
+    iget-boolean v0, p0, Lvvc;->b:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lr4;->b(Landroid/view/View;)Lkke;
+    const v0, 0x10100a0
 
-    move-result-object p1
+    filled-new-array {v0}, [I
 
-    return-object p1
+    move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/view/View;->mergeDrawableStates([I[I)[I
 
     :cond_0
-    invoke-super {p0, p1}, Lr4;->b(Landroid/view/View;)Lkke;
-
-    move-result-object p1
-
     return-object p1
 .end method
 
-.method public final c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.method public final setBackgroundColors(Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    iget-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
+    iget-object v0, p0, Lvvc;->a:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Lc05;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
-    move-result-object v0
-
-    check-cast v0, Lr4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lr4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Lr4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
 
     return-void
 .end method
 
-.method public final d(Landroid/view/View;Le5;)V
-    .locals 4
+.method public setChecked(Z)V
+    .locals 0
 
-    iget-object v0, p2, Le5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+    iput-boolean p1, p0, Lvvc;->b:Z
 
-    iget-object v1, p0, Lvvc;->d:Lwvc;
-
-    iget-object v2, v1, Lwvc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v1, v1, Lwvc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
-
-    move-result v2
-
-    iget-object v3, p0, Lr4;->a:Landroid/view/View$AccessibilityDelegate;
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, p2}, Landroidx/recyclerview/widget/a;->c0(Landroid/view/View;Le5;)V
-
-    iget-object v1, p0, Lvvc;->e:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lr4;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1, p2}, Lr4;->d(Landroid/view/View;Le5;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v3, p1, v0}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v3, p1, v0}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
 
     return-void
 .end method
 
-.method public final e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.method public final setTextColors(Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public final toggle()V
     .locals 1
 
-    iget-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
+    iget-boolean v0, p0, Lvvc;->b:Z
 
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    xor-int/lit8 v0, v0, 0x1
 
-    move-result-object v0
-
-    check-cast v0, Lr4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lr4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Lr4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    return-void
-.end method
-
-.method public final f(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2, p3}, Lr4;->f(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    iget-object v0, p0, Lr4;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/view/View$AccessibilityDelegate;->onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final g(Landroid/view/View;ILandroid/os/Bundle;)Z
-    .locals 2
-
-    iget-object v0, p0, Lvvc;->d:Lwvc;
-
-    iget-object v1, v0, Lwvc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v0, v0, Lwvc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lvvc;->e:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lr4;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1, p2, p3}, Lr4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Lr4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object p1
-
-    iget-object p1, p1, Landroidx/recyclerview/widget/a;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->c:Llvc;
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    invoke-super {p0, p1, p2, p3}, Lr4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final h(Landroid/view/View;I)V
-    .locals 1
-
-    iget-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lr4;->h(Landroid/view/View;I)V
-
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Lr4;->h(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public final i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 1
-
-    iget-object v0, p0, Lvvc;->e:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lr4;->i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Lr4;->i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    iput-boolean v0, p0, Lvvc;->b:Z
 
     return-void
 .end method

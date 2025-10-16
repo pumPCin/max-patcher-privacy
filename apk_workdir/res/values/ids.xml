@@ -885,7 +885,6 @@
     <item type="id" name="m3_side_sheet" />
     <item type="id" name="markdown_badge_count_view" />
     <item type="id" name="markdown_bold" />
-    <item type="id" name="markdown_code" />
     <item type="id" name="markdown_group" />
     <item type="id" name="markdown_heading" />
     <item type="id" name="markdown_italic" />
@@ -1680,9 +1679,6 @@
     <item type="id" name="oneme_settings_itemcontent_end_text" />
     <item type="id" name="oneme_settings_list_screen_appbar" />
     <item type="id" name="oneme_settings_list_screen_pinned_toolbar" />
-    <item type="id" name="oneme_settings_media_audio_always" />
-    <item type="id" name="oneme_settings_media_audio_dont_load" />
-    <item type="id" name="oneme_settings_media_audio_wifi" />
     <item type="id" name="oneme_settings_media_auto_play_video_always" />
     <item type="id" name="oneme_settings_media_auto_play_video_disable" />
     <item type="id" name="oneme_settings_media_auto_play_video_wifi" />
@@ -1690,13 +1686,14 @@
     <item type="id" name="oneme_settings_media_gif_dont_load" />
     <item type="id" name="oneme_settings_media_gif_wifi" />
     <item type="id" name="oneme_settings_media_item_animoji_enabled" />
-    <item type="id" name="oneme_settings_media_item_audio" />
     <item type="id" name="oneme_settings_media_item_gif" />
     <item type="id" name="oneme_settings_media_item_gif_available" />
     <item type="id" name="oneme_settings_media_item_load_in_roaming" />
     <item type="id" name="oneme_settings_media_item_photo" />
+    <item type="id" name="oneme_settings_media_item_playlist_enabled" />
     <item type="id" name="oneme_settings_media_item_video" />
     <item type="id" name="oneme_settings_media_item_video_caching" />
+    <item type="id" name="oneme_settings_media_item_video_messages" />
     <item type="id" name="oneme_settings_media_item_video_quality" />
     <item type="id" name="oneme_settings_media_photo_always" />
     <item type="id" name="oneme_settings_media_photo_dont_load" />
@@ -1711,6 +1708,9 @@
     <item type="id" name="oneme_settings_media_screen_settings_header_vh" />
     <item type="id" name="oneme_settings_media_screen_settings_item_vh" />
     <item type="id" name="oneme_settings_media_screen_toolbar" />
+    <item type="id" name="oneme_settings_media_video_messages_always" />
+    <item type="id" name="oneme_settings_media_video_messages_dont_load" />
+    <item type="id" name="oneme_settings_media_video_messages_wifi" />
     <item type="id" name="oneme_settings_privacy_black_list_empty_state" />
     <item type="id" name="oneme_settings_privacy_black_list_rv" />
     <item type="id" name="oneme_settings_privacy_black_list_toolbar" />
@@ -2189,6 +2189,11 @@
     <item type="id" name="profile_media_tabs_pager" />
     <item type="id" name="profile_media_tabs_pinbars_container" />
     <item type="id" name="profile_media_toolbar" />
+    <item type="id" name="profile_media_view_type_audio" />
+    <item type="id" name="profile_media_view_type_file" />
+    <item type="id" name="profile_media_view_type_link" />
+    <item type="id" name="profile_media_view_type_photo_video" />
+    <item type="id" name="profile_media_view_type_video_msg" />
     <item type="id" name="profile_members_list_action_delete_from_admin" />
     <item type="id" name="profile_members_list_action_delete_from_channel" />
     <item type="id" name="profile_members_list_action_delete_from_chat" />
@@ -2249,6 +2254,14 @@
     <item type="id" name="profile_video_button" />
     <item type="id" name="progress_circular" />
     <item type="id" name="progress_horizontal" />
+    <item type="id" name="qrscanner_allow_permission" />
+    <item type="id" name="qrscanner_camera_preview" />
+    <item type="id" name="qrscanner_gallery_button_image" />
+    <item type="id" name="qrscanner_hint_view" />
+    <item type="id" name="qrscanner_not_allow_permission" />
+    <item type="id" name="qrscanner_overlay_view" />
+    <item type="id" name="qrscanner_toolbar" />
+    <item type="id" name="qrscanner_torch_button_image" />
     <item type="id" name="quick_camera_item" />
     <item type="id" name="quick_camera_view__cv_camera" />
     <item type="id" name="radio" />
@@ -3046,6 +3059,7 @@
     <item type="id" name="writebar__add_link_bottom_sheet_button_add" />
     <item type="id" name="writebar__add_link_bottom_sheet_input" />
     <item type="id" name="writebar__container" />
+    <item type="id" name="writebar__miui_menu" />
     <item type="id" name="writebar__record_controls" />
     <item type="id" name="writebar__root" />
     <item type="id" name="writebar__suggestion_close_button" />

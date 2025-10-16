@@ -2,93 +2,124 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc7d;
+
+# static fields
+.field public static final p:Ly10;
 
 
 # instance fields
-.field public a:Ljava/util/ArrayList;
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/util/List;
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:J
+
+.field public final j:I
+
+.field public final k:J
+
+.field public final l:Ljava/lang/String;
+
+.field public final m:Z
+
+.field public final n:I
+
+.field public final o:Ljava/lang/String;
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Ly10;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ly10;
-
-    iget-object v0, p0, Ly10;->a:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Ly10;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Ly10;->a:Ljava/util/ArrayList;
+    new-instance v0, Lx10;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0}, Lx10;->a()Ly10;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    sput-object v0, Ly10;->p:Ly10;
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public constructor <init>(Lx10;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "AudioActivityNotification{participantIds="
+    iget-wide v0, p1, Lx10;->a:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-wide v0, p0, Ly10;->a:J
 
-    iget-object v1, p0, Ly10;->a:Ljava/util/ArrayList;
+    iget-object v0, p1, Lx10;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Ly10;->b:Ljava/lang/String;
 
-    const/16 v1, 0x7d
+    iget v0, p1, Lx10;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iput v0, p0, Ly10;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v0, p1, Lx10;->c:I
 
-    move-result-object v0
+    iput v0, p0, Ly10;->d:I
 
-    return-object v0
+    iget-object v0, p1, Lx10;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->e:Ljava/lang/String;
+
+    iget-object v0, p1, Lx10;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->f:Ljava/lang/String;
+
+    iget-object v0, p1, Lx10;->i:Ljava/util/List;
+
+    iput-object v0, p0, Ly10;->g:Ljava/util/List;
+
+    iget-object v0, p1, Lx10;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->h:Ljava/lang/String;
+
+    iget-wide v0, p1, Lx10;->e:J
+
+    iput-wide v0, p0, Ly10;->i:J
+
+    iget v0, p1, Lx10;->j:I
+
+    iput v0, p0, Ly10;->j:I
+
+    iget-wide v0, p1, Lx10;->k:J
+
+    iput-wide v0, p0, Ly10;->k:J
+
+    iget-object v0, p1, Lx10;->l:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->l:Ljava/lang/String;
+
+    iget-boolean v0, p1, Lx10;->m:Z
+
+    iput-boolean v0, p0, Ly10;->m:Z
+
+    iget v0, p1, Lx10;->n:I
+
+    iput v0, p0, Ly10;->n:I
+
+    iget-object p1, p1, Lx10;->o:Ljava/lang/String;
+
+    iput-object p1, p0, Ly10;->o:Ljava/lang/String;
+
+    return-void
 .end method

@@ -1,77 +1,87 @@
 .class public final Llle;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkj9;
 
-# static fields
-.field public static final c:Llle;
+
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Llle;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Llle;->c:Llle;
+    iput-wide p1, p0, Llle;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H0(J)Lkc4;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    const-string v0, ":chats?id="
+    const/4 v0, 0x1
 
-    const-string v1, "&type=local"
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1, p2, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return v0
 
-    move-result-object p1
-
-    new-instance p2, Lkc4;
-
-    invoke-direct {p2, p1}, Lkc4;-><init>(Ljava/lang/String;)V
-
-    return-object p2
-.end method
-
-.method public final I0()V
-    .locals 3
-
-    invoke-virtual {p0}, Ld3;->o0()Loc4;
-
-    move-result-object v0
-
-    const-string v1, ":chat-list"
+    :cond_0
+    instance-of v1, p1, Llle;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Llle;
+
+    iget-wide v3, p0, Llle;->a:J
+
+    iget-wide v5, p1, Llle;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final J0(Lvd6;)V
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0}, Ld3;->o0()Loc4;
+    iget-wide v0, p0, Llle;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ShowUnpinCancelableSnackbar(messageId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Llle;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lffd;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, p1}, Lffd;-><init>(ILvd6;)V
-
-    invoke-virtual {v0, v1}, Loc4;->e(Ltd6;)V
-
-    return-void
+    return-object v0
 .end method

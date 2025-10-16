@@ -1,91 +1,104 @@
-.class public final Lr66;
+.class public abstract Lr66;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
+# static fields
+.field public static final a:Lxh7;
 
-.field public final b:Lq66;
+.field public static final b:Lxh7;
 
-.field public final c:Ljava/util/ArrayList;
+.field public static final c:Lxh7;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxh7;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    const/4 v1, 0x0
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
+    const/16 v2, 0x13f
 
-    iput-object v0, p0, Lr66;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
+    const/4 v3, 0x1
 
-    new-instance v0, Lq66;
+    invoke-direct {v0, v1, v2, v3}, Lvh7;-><init>(III)V
 
-    invoke-direct {v0, p0}, Lq66;-><init>(Lr66;)V
+    sput-object v0, Lr66;->a:Lxh7;
 
-    iput-object v0, p0, Lr66;->b:Lq66;
+    new-instance v0, Lxh7;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const/16 v1, 0x140
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/16 v2, 0x21b
 
-    iput-object v0, p0, Lr66;->c:Ljava/util/ArrayList;
+    invoke-direct {v0, v1, v2, v3}, Lvh7;-><init>(III)V
+
+    sput-object v0, Lr66;->b:Lxh7;
+
+    new-instance v0, Lxh7;
+
+    const/16 v1, 0x21c
+
+    const v2, 0x7fffffff
+
+    invoke-direct {v0, v1, v2, v3}, Lvh7;-><init>(III)V
+
+    sput-object v0, Lr66;->c:Lxh7;
 
     return-void
 .end method
 
-.method public static synthetic b(Lr66;Ljava/lang/String;Ltd6;)Lo66;
+.method public static a(I)I
     .locals 1
 
-    sget-object v0, Lo65;->a:Lo65;
+    sget v0, Lfmc;->oneme_big_folder_widget_view_type:I
 
-    invoke-virtual {p0, p1, v0, p2}, Lr66;->a(Ljava/lang/String;Ljava/lang/Iterable;Ltd6;)Lo66;
+    if-ne p0, v0, :cond_0
 
-    move-result-object p0
+    const/16 p0, 0x5c
 
-    return-object p0
-.end method
+    int-to-float p0, p0
 
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-# virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Ltd6;)Lo66;
-    .locals 7
+    move-result-object v0
 
-    new-instance v0, Lo66;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    new-instance v1, Loy1;
+    move-result-object v0
 
-    const/4 v6, 0x6
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    move-object v4, p0
+    mul-float/2addr p0, v0
 
-    move-object v5, p1
+    invoke-static {p0}, Lagi;->d(F)I
 
-    move-object v2, p2
+    move-result p0
 
-    move-object v3, p3
+    return p0
 
-    invoke-direct/range {v1 .. v6}, Loy1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    :cond_0
+    const/16 p0, 0x80
 
-    invoke-direct {v0, v5, v1}, Lo66;-><init>(Ljava/lang/String;Loy1;)V
+    int-to-float p0, p0
 
-    iget-object p1, v4, Lr66;->c:Ljava/util/ArrayList;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-    const/4 p2, 0x0
+    move-result-object v0
 
-    iget-object p3, v0, Lo66;->b:Lp66;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    move-result-object v0
 
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    move-result-object p1
+    mul-float/2addr p0, v0
 
-    invoke-virtual {p1, p3}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
+    invoke-static {p0}, Lagi;->d(F)I
 
-    return-object v0
+    move-result p0
+
+    return p0
 .end method

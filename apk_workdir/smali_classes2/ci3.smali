@@ -1,274 +1,298 @@
 .class public final Lci3;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Loug;
 
 
 # instance fields
-.field public X:Lwi3;
-
-.field public Y:I
-
-.field public final synthetic Z:Lwi3;
-
-.field public final synthetic r0:Ljava/lang/String;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lwi3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lci3;->Z:Lwi3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lci3;->r0:Ljava/lang/String;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lci3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lci3;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lci3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final A(Ljava/lang/Throwable;)V
     .locals 2
 
-    new-instance p1, Lci3;
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object v0, p0, Lci3;->Z:Lwi3;
-
-    iget-object v1, p0, Lci3;->r0:Ljava/lang/String;
-
-    invoke-direct {p1, v0, v1, p2}, Lci3;-><init>(Lwi3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    iget v0, p0, Lci3;->Y:I
-
-    sget-object v1, Laxf;->a:Laxf;
-
-    iget-object v2, p0, Lci3;->r0:Ljava/lang/String;
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x2
-
-    iget-object v5, p0, Lci3;->Z:Lwi3;
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x1
-
-    sget-object v8, Lo24;->a:Lo24;
-
-    if-eqz v0, :cond_4
-
-    if-eq v0, v7, :cond_3
-
-    if-eq v0, v4, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v6, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v5, p0, Lci3;->X:Lwi3;
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto/16 :goto_3
-
-    :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    sget-object p1, Lwi3;->K0:Ljava/lang/String;
-
-    invoke-virtual {v5}, Lwi3;->p()Lv3d;
-
-    move-result-object p1
-
-    iput v7, p0, Lci3;->Y:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "SELECT options FROM chat_folder WHERE id=? "
-
-    invoke-static {v7, v0}, Lt4d;->c(ILjava/lang/String;)Lt4d;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    if-nez v2, :cond_5
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0, v7}, Lt4d;->Q(I)V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loug;
+
+    invoke-interface {v1, p1}, Loug;->A(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    :cond_5
-    invoke-virtual {v0, v7, v2}, Lt4d;->f(ILjava/lang/String;)V
+    :cond_0
+    return-void
+.end method
 
-    :goto_0
-    new-instance v9, Landroid/os/CancellationSignal;
+.method public final a(F)V
+    .locals 2
 
-    invoke-direct {v9}, Landroid/os/CancellationSignal;-><init>()V
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object v10, p1, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    new-instance v11, Lt3d;
-
-    const/4 v12, 0x5
-
-    invoke-direct {v11, p1, v0, v12}, Lt3d;-><init>(Lv3d;Lt4d;I)V
-
-    invoke-static {v10, v9, v11, p0}, Lcea;->i(Lc4d;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v8, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    :goto_1
-    check-cast p1, [B
-
-    invoke-static {p1}, Le88;->p([B)Ljava/util/Set;
-
-    move-result-object p1
-
-    sget-object v0, Lg26;->c:Lg26;
-
-    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    sget-object p1, Lwi3;->K0:Ljava/lang/String;
-
-    const-string v0, "try to delete not deleted folder!"
-
-    invoke-static {p1, v0}, Lyt3;->N(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_7
-    sget-object p1, Lwi3;->K0:Ljava/lang/String;
-
-    invoke-virtual {v5}, Lwi3;->p()Lv3d;
-
-    move-result-object p1
-
-    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    iput v4, p0, Lci3;->Y:I
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v2, p1, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    move-result v1
 
-    new-instance v9, Lryc;
+    if-eqz v1, :cond_0
 
-    invoke-direct {v9, p1, v4, v0}, Lryc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {v2, v9, p0}, Lb19;->s(Lc4d;Lvd6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    check-cast v1, Loug;
 
-    if-ne p1, v8, :cond_8
+    invoke-interface {v1, p1}, Loug;->a(F)V
 
-    goto :goto_4
+    goto :goto_0
 
-    :cond_8
-    :goto_2
-    sget-object p1, Lwi3;->K0:Ljava/lang/String;
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v5}, Lwi3;->p()Lv3d;
+.method public final b()V
+    .locals 2
 
-    move-result-object p1
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-object v5, p0, Lci3;->X:Lwi3;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    iput v3, p0, Lci3;->Y:I
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lv3d;->f(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v1
 
-    if-ne p1, v8, :cond_9
+    if-eqz v1, :cond_0
 
-    goto :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :cond_9
-    :goto_3
-    check-cast p1, Ljava/util/List;
+    move-result-object v1
 
-    const/4 v0, 0x0
+    check-cast v1, Loug;
 
-    iput-object v0, p0, Lci3;->X:Lwi3;
+    invoke-interface {v1}, Loug;->b()V
 
-    iput v6, p0, Lci3;->Y:I
+    goto :goto_0
 
-    invoke-static {v5, p1, v7, p0}, Lwi3;->H(Lwi3;Ljava/util/List;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_0
+    return-void
+.end method
 
-    move-result-object p1
+.method public final c()V
+    .locals 2
 
-    if-ne p1, v8, :cond_a
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    :goto_4
-    return-object v8
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    :cond_a
-    return-object v1
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loug;
+
+    invoke-interface {v1}, Loug;->c()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loug;
+
+    invoke-interface {v1, p1}, Loug;->d(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e()V
+    .locals 2
+
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loug;
+
+    invoke-interface {v1}, Loug;->e()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final p()V
+    .locals 2
+
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loug;
+
+    invoke-interface {v1}, Loug;->p()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final s()V
+    .locals 2
+
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loug;
+
+    invoke-interface {v1}, Loug;->s()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final x()V
+    .locals 2
+
+    iget-object v0, p0, Lci3;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loug;
+
+    invoke-interface {v1}, Loug;->x()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

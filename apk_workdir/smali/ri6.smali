@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lql7;
+.implements Lji6;
 
 
 # virtual methods
-.method public abstract c()[Lql7;
+.method public abstract getArity()I
 .end method

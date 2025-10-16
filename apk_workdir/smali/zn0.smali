@@ -1,26 +1,15 @@
-.class public interface abstract Lzn0;
+.class public abstract Lzn0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract clear()V
-.end method
+# direct methods
+.method public static a(Landroid/hardware/biometrics/BiometricManager;I)I
+    .locals 0
 
-.method public abstract d(I)Z
-.end method
+    invoke-virtual {p0, p1}, Landroid/hardware/biometrics/BiometricManager;->canAuthenticate(I)I
 
-.method public abstract k()Lm73;
-.end method
+    move-result p0
 
-.method public abstract l(ILm73;)V
-.end method
-
-.method public abstract m(ILm73;)V
-.end method
-
-.method public abstract p()Lm73;
-.end method
-
-.method public abstract q(I)Lm73;
+    return p0
 .end method

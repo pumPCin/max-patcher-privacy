@@ -1,303 +1,162 @@
-.class public final Lk01;
-.super Ldvc;
+.class public final synthetic Lk01;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:I
 
-.field public final a:I
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final b:I
+.field public final synthetic c:Ljava/lang/Object;
 
-.field public final c:I
-
-.field public final o:I
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    .locals 0
+
+    iput p4, p0, Lk01;->a:I
+
+    iput-object p1, p0, Lk01;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lk01;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lk01;->o:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v1
-
-    iput v1, p0, Lk01;->a:I
-
-    const/16 v1, 0x14
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v1
-
-    iput v1, p0, Lk01;->b:I
-
-    const/16 v1, 0x1c
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v1
-
-    iput v1, p0, Lk01;->c:I
-
-    const/16 v1, 0x8
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v1
-
-    iput v1, p0, Lk01;->o:I
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Li8e;->I(F)I
-
-    move-result v0
-
-    iput v0, p0, Lk01;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lqvc;)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
+    iget p1, p0, Lk01;->a:I
 
-    move-result p2
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lxuc;
+    iget-object p1, p0, Lk01;->b:Ljava/lang/Object;
 
-    move-result-object p3
+    check-cast p1, Lu5b;
 
-    instance-of p4, p3, Lnz0;
+    iget-object v0, p0, Lk01;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v0, Lqh6;
 
-    if-eqz p4, :cond_0
+    iget-object v1, p0, Lk01;->o:Ljava/lang/Object;
 
-    check-cast p3, Lnz0;
+    check-cast v1, Lp5b;
+
+    invoke-static {p1, v0, v1}, Lu5b;->d(Lu5b;Lqh6;Lp5b;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lk01;->b:Ljava/lang/Object;
+
+    check-cast p1, Lyl5;
+
+    iget-object v0, p0, Lk01;->c:Ljava/lang/Object;
+
+    check-cast v0, Lww0;
+
+    iget-object v1, p0, Lk01;->o:Ljava/lang/Object;
+
+    check-cast v1, Lww0;
+
+    iget-wide v2, p1, Lyl5;->a:J
+
+    iget-boolean p1, p1, Lyl5;->Z:Z
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lww0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    move-object p3, v0
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lww0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0
-    if-nez p3, :cond_1
+    return-void
 
-    goto/16 :goto_7
+    :pswitch_1
+    iget-object p1, p0, Lk01;->b:Ljava/lang/Object;
 
-    :cond_1
-    if-ltz p2, :cond_b
+    check-cast p1, Ll01;
 
-    invoke-virtual {p3}, Lhv7;->j()I
+    iget-object v0, p0, Lk01;->c:Ljava/lang/Object;
 
-    move-result p4
+    check-cast v0, Ldsb;
 
-    if-ge p2, p4, :cond_b
+    iget-object v1, p0, Lk01;->o:Ljava/lang/Object;
 
-    invoke-virtual {p3, p2}, Lhv7;->C(I)Ljava/lang/Object;
+    check-cast v1, Lo11;
 
-    move-result-object p4
+    iget-object p1, p1, Lj6d;->a:Landroid/view/View;
 
-    check-cast p4, Lov7;
+    check-cast p1, Ltbe;
 
-    instance-of v1, p4, Ls01;
+    iget-object v2, p1, Ltbe;->P0:Ljava/lang/Object;
 
-    if-eqz v1, :cond_2
+    invoke-interface {v2}, Llt7;->e()Z
 
-    check-cast p4, Ls01;
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    const/4 v2, 0x0
 
     goto :goto_1
 
-    :cond_2
-    move-object p4, v0
+    :cond_1
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Le4b;
+
+    invoke-virtual {v2}, Landroid/widget/CompoundButton;->isChecked()Z
+
+    move-result v2
 
     :goto_1
-    add-int/lit8 v1, p2, 0x1
+    const/4 v3, 0x1
 
-    invoke-virtual {p3, v1}, Ltbe;->G(I)Lov7;
+    xor-int/2addr v2, v3
 
-    move-result-object p3
+    new-instance v4, Lfbe;
 
-    instance-of v1, p3, Ls01;
+    invoke-direct {v4, v2, v3}, Lfbe;-><init>(ZZ)V
 
-    if-eqz v1, :cond_3
+    invoke-virtual {p1, v4}, Ltbe;->setEndView(Lhbe;)V
 
-    check-cast p3, Ls01;
+    iget-wide v3, v1, Lo11;->o:J
 
-    goto :goto_2
+    invoke-virtual {v0, v3, v4, v2}, Ldsb;->G(JZ)V
 
-    :cond_3
-    move-object p3, v0
-
-    :goto_2
-    const/4 v1, 0x0
-
-    if-nez p2, :cond_4
-
-    const/4 p2, 0x1
-
-    goto :goto_3
-
-    :cond_4
-    move p2, v1
-
-    :goto_3
-    iget v2, p0, Lk01;->X:I
-
-    iput v2, p1, Landroid/graphics/Rect;->left:I
-
-    iput v2, p1, Landroid/graphics/Rect;->right:I
-
-    instance-of v2, p4, Lr01;
-
-    if-eqz v2, :cond_5
-
-    iget p2, p0, Lk01;->a:I
-
-    goto :goto_4
-
-    :cond_5
-    if-eqz p2, :cond_6
-
-    iget p2, p0, Lk01;->b:I
-
-    goto :goto_4
-
-    :cond_6
-    move p2, v1
-
-    :goto_4
-    iput p2, p1, Landroid/graphics/Rect;->top:I
-
-    if-eqz p4, :cond_7
-
-    invoke-interface {p4}, Lyzd;->t()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    goto :goto_5
-
-    :cond_7
-    move-object p2, v0
-
-    :goto_5
-    if-eqz p3, :cond_8
-
-    invoke-interface {p3}, Lyzd;->t()I
-
-    move-result p3
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    :cond_8
-    invoke-static {p2, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_9
-
-    iget v1, p0, Lk01;->c:I
-
-    goto :goto_6
-
-    :cond_9
-    if-eqz p4, :cond_a
-
-    invoke-interface {p4}, Ls01;->g()Z
-
-    move-result p2
-
-    if-nez p2, :cond_a
-
-    iget v1, p0, Lk01;->o:I
-
-    :cond_a
-    :goto_6
-    iput v1, p1, Landroid/graphics/Rect;->bottom:I
-
-    :cond_b
-    :goto_7
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

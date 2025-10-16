@@ -1,29 +1,47 @@
 .class public final Lwu7;
-.super Ldv7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lthg;
 
-# instance fields
-.field public final X:Ljava/lang/String;
 
+# virtual methods
+.method public final a(ILjava/lang/String;)Ljqf;
+    .locals 1
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 9
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    const-wide/16 v5, 0x0
+    move-result p2
 
-    const-wide/16 v7, 0x0
+    const/16 v0, 0x3c
 
-    const-wide/16 v1, 0x0
+    if-lt p2, v0, :cond_0
 
-    const-wide/16 v3, 0x0
+    const-class p2, Lwu7;
 
-    move-object v0, p0
+    invoke-static {p2}, Ls6d;->a(Ljava/lang/Class;)Lv63;
 
-    invoke-direct/range {v0 .. v8}, Ldv7;-><init>(JJJJ)V
+    move-result-object p2
 
-    iput-object p1, v0, Lwu7;->X:Ljava/lang/String;
+    invoke-static {p1, p2}, Leai;->c(ILv63;)Ljava/lang/Integer;
 
-    return-void
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    new-instance p2, Ljqf;
+
+    invoke-direct {p2, p1}, Ljqf;-><init>(I)V
+
+    return-object p2
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

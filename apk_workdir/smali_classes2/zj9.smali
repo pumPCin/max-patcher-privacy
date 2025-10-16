@@ -1,136 +1,110 @@
-.class public final Lzj9;
-.super Lc2f;
+.class public final synthetic Lzj9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Loh6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lru/ok/tamtam/logout/a;
-
-.field public final synthetic Z:Lfk9;
+.field public final synthetic b:Lim9;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/logout/a;Lfk9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lim9;I)V
     .locals 0
 
-    iput-object p1, p0, Lzj9;->Y:Lru/ok/tamtam/logout/a;
+    iput p2, p0, Lzj9;->a:I
 
-    iput-object p2, p0, Lzj9;->Z:Lfk9;
+    iput-object p1, p0, Lzj9;->b:Lim9;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 14
 
-    check-cast p1, Ln24;
+    iget v0, p0, Lzj9;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lzj9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v1, Lgp9;
 
-    move-result-object p1
+    iget-object v4, p0, Lzj9;->b:Lim9;
 
-    check-cast p1, Lzj9;
+    iget-object v0, v4, Lim9;->b:Lrn9;
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget-object v10, v4, Lim9;->C0:Lv44;
 
-    invoke-virtual {p1, p2}, Lzj9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v11, v4, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object p1
+    iget-object v12, v4, Lim9;->w1:Lgzc;
 
-    return-object p1
-.end method
+    iget-object v13, v4, Lim9;->y1:Lgzc;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    new-instance v2, Luk9;
 
-    new-instance p1, Lzj9;
+    const/4 v8, 0x0
 
-    iget-object v0, p0, Lzj9;->Y:Lru/ok/tamtam/logout/a;
+    const/4 v9, 0x1
 
-    iget-object v1, p0, Lzj9;->Z:Lfk9;
+    const/4 v3, 0x2
 
-    invoke-direct {p1, v0, v1, p2}, Lzj9;-><init>(Lru/ok/tamtam/logout/a;Lfk9;Lkotlin/coroutines/Continuation;)V
+    const-class v5, Lim9;
 
-    return-object p1
-.end method
+    const-string v6, "processReactionEffect"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const-string v7, "processReactionEffect(Ljava/util/Set;J)V"
 
-    iget v0, p0, Lzj9;->X:I
+    invoke-direct/range {v2 .. v9}, Luk9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    const/4 v1, 0x1
+    new-instance v8, Lmr7;
 
-    if-eqz v0, :cond_1
+    const/16 v3, 0xf
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v8, v3, v4}, Lmr7;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-object v7, v2
 
-    goto :goto_0
+    move-object v3, v10
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object v4, v11
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-object v5, v12
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-object v6, v13
 
-    throw p1
+    move-object v2, v0
 
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-direct/range {v1 .. v8}, Lgp9;-><init>(Lrn9;Lv44;Lkotlinx/coroutines/internal/ContextScope;Lgzc;Lgzc;Luk9;Lmr7;)V
 
-    iput v1, p0, Lzj9;->X:I
+    return-object v1
 
-    iget-object p1, p0, Lzj9;->Y:Lru/ok/tamtam/logout/a;
+    :pswitch_0
+    new-instance v0, Lubg;
 
-    invoke-interface {p1, p0}, Lru/ok/tamtam/logout/a;->b(Lc2f;)Ljava/lang/Object;
+    iget-object v1, p0, Lzj9;->b:Lim9;
 
-    move-result-object p1
+    iget-object v2, v1, Lim9;->w1:Lgzc;
 
-    sget-object v0, Lo24;->a:Lo24;
+    iget-object v3, v1, Lim9;->y1:Lgzc;
 
-    if-ne p1, v0, :cond_2
+    iget-object v4, v1, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, v1, Lim9;->Y:Lqkf;
+
+    invoke-direct {v0, v2, v3, v4, v1}, Lubg;-><init>(Lgzc;Lgzc;Lkotlinx/coroutines/internal/ContextScope;Lqkf;)V
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    iget-object p1, p0, Lzj9;->Z:Lfk9;
-
-    iget-object v0, p1, Lfk9;->f:Lh4f;
-
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldc0;
-
-    iget-object v0, v0, Ldc0;->b:Lic8;
-
-    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
-
-    iget-object p1, p1, Lfk9;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lov9;->l(Ln24;Ljava/util/concurrent/CancellationException;)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

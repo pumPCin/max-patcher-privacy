@@ -1,100 +1,75 @@
 .class public final Lskg;
-.super Lvkg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lvkg;
 
-.field public final synthetic b:Landroidx/viewpager2/widget/ViewPager2;
+.field public static final b:Landroid/util/Range;
+
+.field public static final c:Lc45;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/viewpager2/widget/ViewPager2;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lskg;->a:I
+    new-instance v0, Lrkg;
 
-    iput-object p1, p0, Lskg;->b:Landroidx/viewpager2/widget/ViewPager2;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Landroid/util/Range;
+
+    const/16 v2, 0x1e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    sput-object v1, Lskg;->b:Landroid/util/Range;
+
+    sget-object v1, Lc45;->d:Lc45;
+
+    sput-object v1, Lskg;->c:Lc45;
+
+    new-instance v2, Lv77;
+
+    invoke-direct {v2, v0}, Lv77;-><init>(Liug;)V
+
+    sget-object v0, Ligg;->k0:Lq90;
+
+    const/4 v3, 0x5
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v2, v2, Lv77;->b:La0a;
+
+    invoke-virtual {v2, v0, v3}, La0a;->k(Lq90;Ljava/lang/Object;)V
+
+    sget-object v0, Lvkg;->c:Lq90;
+
+    sget-object v3, Lomg;->o:Liy1;
+
+    invoke-virtual {v2, v0, v3}, La0a;->k(Lq90;Ljava/lang/Object;)V
+
+    sget-object v0, Ld97;->y:Lq90;
+
+    invoke-virtual {v2, v0, v1}, La0a;->k(Lq90;Ljava/lang/Object;)V
+
+    new-instance v0, Lvkg;
+
+    invoke-static {v2}, Lq8b;->a(Lck3;)Lq8b;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lvkg;-><init>(Lq8b;)V
+
+    sput-object v0, Lskg;->a:Lvkg;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a(I)V
-    .locals 1
-
-    iget v0, p0, Lskg;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lskg;->b:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->h()V
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(I)V
-    .locals 2
-
-    iget v0, p0, Lskg;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lskg;->b:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
-
-    invoke-virtual {p1}, Landroid/view/View;->hasFocus()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->w0:Lykg;
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->requestFocus(I)Z
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lskg;->b:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget v1, v0, Landroidx/viewpager2/widget/ViewPager2;->o:I
-
-    if-eq v1, p1, :cond_1
-
-    iput p1, v0, Landroidx/viewpager2/widget/ViewPager2;->o:I
-
-    iget-object p1, v0, Landroidx/viewpager2/widget/ViewPager2;->G0:Lx4f;
-
-    invoke-virtual {p1}, Lx4f;->F()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

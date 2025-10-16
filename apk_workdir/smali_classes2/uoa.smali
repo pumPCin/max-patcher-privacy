@@ -1,73 +1,26 @@
-.class public abstract Luoa;
+.class public final Luoa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwoa;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lqh6;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final b:Lgi6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lgi6;Lqh6;)V
+    .locals 0
 
-    sget v0, Lthc;->media_picker_default_toolbar_title:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Luoa;->a:I
+    iput-object p2, p0, Luoa;->a:Lqh6;
 
-    sget v0, Lthc;->media_picker_default_toolbar_title_only_photo:I
-
-    sput v0, Luoa;->b:I
-
-    sget v0, Lthc;->media_picker_empty_media_data:I
-
-    sput v0, Luoa;->c:I
-
-    sget v0, Lthc;->media_type_picker__permissions_dialog__button:I
-
-    sput v0, Luoa;->d:I
-
-    sget v0, Lthc;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
-
-    sput v0, Luoa;->e:I
-
-    sget v0, Lthc;->media_type_picker__permissions_dialog__gallery_camera_title:I
-
-    sput v0, Luoa;->f:I
-
-    sget v0, Lthc;->media_type_picker__permissions_dialog__gallery_subtitle:I
-
-    sput v0, Luoa;->g:I
-
-    sget v0, Lthc;->media_type_picker__permissions_dialog__gallery_title:I
-
-    sput v0, Luoa;->h:I
-
-    sget v0, Lthc;->media_type_picker__permissions_dialog__subtitle:I
-
-    sput v0, Luoa;->i:I
-
-    sget v0, Lthc;->media_type_picker__permissions_dialog__title:I
-
-    sput v0, Luoa;->j:I
+    iput-object p1, p0, Luoa;->b:Lgi6;
 
     return-void
 .end method

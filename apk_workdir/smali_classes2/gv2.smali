@@ -1,148 +1,163 @@
-.class public abstract Lgv2;
-.super Ljava/lang/Object;
+.class public final Lgv2;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
+
+
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Llv2;
 
 
 # direct methods
-.method public static a([B)Lhv2;
-    .locals 23
+.method public constructor <init>(Llv2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
+    iput-object p1, p0, Lgv2;->Z:Llv2;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatUpdate;-><init>()V
+    const/4 p1, 0x2
 
-    move-object/from16 v1, p0
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lda2;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lgv2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lgv2;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lgv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lgv2;
+
+    iget-object v1, p0, Lgv2;->Z:Llv2;
+
+    invoke-direct {v0, v1, p2}, Lgv2;-><init>(Llv2;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lgv2;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    sget-object v0, Lzag;->a:Lzag;
+
+    sget-object v1, Lc54;->a:Lc54;
+
+    iget v2, p0, Lgv2;->X:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
 
     :try_start_0
-    invoke-static {v0, v1}, Ls59;->mergeFrom(Ls59;[B)Ls59;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
     :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+    goto :goto_1
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    new-instance v3, Lh10;
-
-    iget v4, v1, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
-
-    iget v5, v1, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
-
-    iget v6, v1, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
-
-    iget v7, v1, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
-
-    const/4 v8, 0x2
-
-    invoke-direct/range {v3 .. v8}, Lh10;-><init>(FFFFI)V
-
-    move-object/from16 v18, v3
+    :catchall_0
+    move-exception p1
 
     goto :goto_0
 
     :cond_0
-    move-object/from16 v18, v2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    new-instance v4, Lhv2;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-wide v5, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->requestId:J
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-wide v7, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatId:J
-
-    iget-wide v9, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatServerId:J
-
-    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->descriptionIsNull:Z
-
-    if-eqz v1, :cond_1
-
-    move-object v14, v2
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->description:Ljava/lang/String;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-object v14, v1
+    iget-object p1, p0, Lgv2;->Y:Ljava/lang/Object;
 
-    :goto_1
-    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->themeIsNull:Z
+    check-cast p1, Lda2;
 
-    if-eqz v1, :cond_2
+    iget-object p1, p1, Lda2;->b:Lfe2;
 
-    move-object/from16 v16, v2
+    iget-wide v4, p1, Lfe2;->a:J
 
-    goto :goto_2
+    iget-object p1, p1, Lfe2;->c:Lde2;
+
+    :try_start_1
+    iget-object v2, p0, Lgv2;->Z:Llv2;
+
+    iget-wide v6, v2, Llv2;->h:J
+
+    cmp-long v2, v6, v4
+
+    if-nez v2, :cond_2
+
+    iget-object v2, p0, Lgv2;->Z:Llv2;
+
+    iget-object v2, v2, Llv2;->g:Lde2;
+
+    if-eq v2, p1, :cond_3
 
     :cond_2
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->theme:Ljava/lang/String;
+    iget-object v2, p0, Lgv2;->Z:Llv2;
 
-    move-object/from16 v16, v1
+    iput-object p1, v2, Llv2;->g:Lde2;
 
-    :goto_2
-    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoTokenIsNull:Z
+    iget-object p1, p0, Lgv2;->Z:Llv2;
 
-    if-eqz v1, :cond_3
+    iput-wide v4, p1, Llv2;->h:J
 
-    move-object/from16 v17, v2
+    iget-object p1, p0, Lgv2;->Z:Llv2;
 
-    goto :goto_3
+    iput v3, p0, Lgv2;->X:I
+
+    invoke-virtual {p1, v4, v5, p0}, Llv2;->c(JLk14;)Lzag;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-ne v0, v1, :cond_3
+
+    return-object v1
+
+    :goto_0
+    const-string v1, "lv2"
+
+    const-string v2, "catch error in chatUpdateFlow.onEach"
+
+    invoke-static {v1, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoToken:Ljava/lang/String;
-
-    move-object/from16 v17, v1
-
-    :goto_3
-    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageIdIsNull:Z
-
-    if-eqz v1, :cond_4
-
-    :goto_4
-    move-object/from16 v19, v2
-
-    goto :goto_5
-
-    :cond_4
-    iget-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageId:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    goto :goto_4
-
-    :goto_5
-    iget-boolean v0, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->notifyPin:Z
-
-    const-wide/16 v21, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    const/4 v15, 0x0
-
-    move/from16 v20, v0
-
-    invoke-direct/range {v4 .. v22}, Lhv2;-><init>(JJJILjava/lang/String;ZLjava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lh10;Ljava/lang/Long;ZJ)V
-
-    return-object v4
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    :goto_1
+    return-object v0
 .end method

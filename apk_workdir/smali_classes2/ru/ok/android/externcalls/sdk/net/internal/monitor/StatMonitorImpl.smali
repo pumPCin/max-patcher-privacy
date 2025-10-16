@@ -21,26 +21,26 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
-        "Lwkc;",
+        "Lyuc;",
         "logger",
         "<init>",
-        "(Lwkc;)V",
-        "Lykc;",
+        "(Lyuc;)V",
+        "Lavc;",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "mapToMonitoringStat",
-        "(Lykc;)Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
-        "Ls8a;",
+        "(Lavc;)Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
+        "Lwga;",
         "observeStat",
-        "()Ls8a;",
+        "()Lwga;",
         "rtcStat",
-        "Laxf;",
+        "Lzag;",
         "onRtcStats",
-        "(Lykc;)V",
-        "Lwkc;",
-        "Lpl0;",
+        "(Lavc;)V",
+        "Lyuc;",
+        "Lim0;",
         "kotlin.jvm.PlatformType",
         "statSubject",
-        "Lpl0;",
+        "Lim0;",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;",
         "audioLossCalculator",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;",
@@ -68,12 +68,12 @@
 # instance fields
 .field private final audioLossCalculator:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;
 
-.field private final logger:Lwkc;
+.field private final logger:Lyuc;
 
-.field private final statSubject:Lpl0;
+.field private final statSubject:Lim0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lpl0;"
+            "Lim0;"
         }
     .end annotation
 .end field
@@ -89,27 +89,27 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$Companion;-><init>(Laf4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$Companion;-><init>(Lvh4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->Companion:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lwkc;)V
+.method public constructor <init>(Lyuc;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->logger:Lwkc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->logger:Lyuc;
 
-    new-instance p1, Lpl0;
+    new-instance p1, Lim0;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0}, Lpl0;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p1, v0}, Lim0;-><init>(Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->statSubject:Lpl0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->statSubject:Lim0;
 
     new-instance p1, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;
 
@@ -126,10 +126,10 @@
     return-void
 .end method
 
-.method private final mapToMonitoringStat(Lykc;)Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;
+.method private final mapToMonitoringStat(Lavc;)Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;
     .locals 8
 
-    invoke-virtual {p1}, Lykc;->c()Ll22;
+    invoke-virtual {p1}, Lavc;->c()Lp32;
 
     move-result-object v0
 
@@ -149,22 +149,44 @@
 
     const/4 v5, 0x0
 
-    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;-><init>(Ljava/lang/Integer;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;ILaf4;)V
+    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;-><init>(Ljava/lang/Integer;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;ILvh4;)V
 
     return-object v1
 
     :cond_0
-    iget-object v1, v0, Ll22;->h:Ljava/lang/String;
+    iget-object v1, v0, Lp32;->h:Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    invoke-static {v1}, Lvwe;->d0(Ljava/lang/String;)Ljava/lang/Float;
+    :try_start_0
+    sget-object v3, Lyod;->a:Lv6d;
+
+    invoke-virtual {v3, v1}, Lv6d;->a(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v1, :cond_1
+    goto :goto_0
+
+    :catch_0
+    :cond_1
+    move-object v1, v2
+
+    :goto_0
+    if-eqz v1, :cond_2
 
     invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
@@ -176,15 +198,15 @@
 
     move-result-object v1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     move-object v1, v2
 
-    :goto_0
-    iget-object p1, p1, Lykc;->c:Ljava/util/List;
+    :goto_1
+    iget-object p1, p1, Lavc;->c:Ljava/util/List;
 
-    invoke-static {p1, v0}, Ldt;->I(Ljava/util/List;Ll22;)Ljava/util/ArrayList;
+    invoke-static {p1, v0}, Lxzi;->e(Ljava/util/List;Lp32;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -194,12 +216,12 @@
 
     move-result-object v4
 
-    :cond_2
+    :cond_3
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_4
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -207,67 +229,67 @@
 
     move-object v6, v5
 
-    check-cast v6, Lcke;
+    check-cast v6, Lhwe;
 
-    instance-of v7, v6, Lxje;
+    instance-of v7, v6, Lcwe;
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_3
 
-    check-cast v6, Lzje;
+    check-cast v6, Lewe;
 
-    iget-object v6, v6, Lzje;->l:Ljava/lang/Boolean;
+    iget-object v6, v6, Lewe;->l:Ljava/lang/Boolean;
 
     sget-object v7, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-static {v6, v7}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v7}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_2
-
-    goto :goto_1
-
-    :cond_3
-    move-object v5, v2
-
-    :goto_1
-    instance-of v4, v5, Lxje;
-
-    if-nez v4, :cond_4
-
-    move-object v5, v2
-
-    :cond_4
-    check-cast v5, Lxje;
-
-    if-nez v5, :cond_5
-
-    move-object v3, v2
+    if-eqz v6, :cond_3
 
     goto :goto_2
 
-    :cond_5
-    iget-object v4, v5, Lzje;->i:Ljava/math/BigInteger;
+    :cond_4
+    move-object v5, v2
 
-    iget-object v5, v5, Lzje;->h:Ljava/math/BigInteger;
+    :goto_2
+    instance-of v4, v5, Lcwe;
+
+    if-nez v4, :cond_5
+
+    move-object v5, v2
+
+    :cond_5
+    check-cast v5, Lcwe;
+
+    if-nez v5, :cond_6
+
+    move-object v3, v2
+
+    goto :goto_3
+
+    :cond_6
+    iget-object v4, v5, Lewe;->i:Ljava/math/BigInteger;
+
+    iget-object v5, v5, Lewe;->h:Ljava/math/BigInteger;
 
     invoke-static {v3, v4, v5}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;->access$calculateLoss(Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljava/lang/Float;
 
     move-result-object v3
 
-    :goto_2
+    :goto_3
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->videoLossCalculator:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    :cond_6
+    :cond_7
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_8
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -275,60 +297,60 @@
 
     move-object v6, v5
 
-    check-cast v6, Lcke;
+    check-cast v6, Lhwe;
 
-    instance-of v7, v6, Lbke;
+    instance-of v7, v6, Lgwe;
 
-    if-eqz v7, :cond_6
+    if-eqz v7, :cond_7
 
-    check-cast v6, Lzje;
+    check-cast v6, Lewe;
 
-    iget-object v6, v6, Lzje;->l:Ljava/lang/Boolean;
+    iget-object v6, v6, Lewe;->l:Ljava/lang/Boolean;
 
     sget-object v7, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-static {v6, v7}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v7}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_6
-
-    goto :goto_3
-
-    :cond_7
-    move-object v5, v2
-
-    :goto_3
-    instance-of p1, v5, Lbke;
-
-    if-nez p1, :cond_8
-
-    move-object v5, v2
-
-    :cond_8
-    check-cast v5, Lbke;
-
-    if-nez v5, :cond_9
+    if-eqz v6, :cond_7
 
     goto :goto_4
 
-    :cond_9
-    iget-object p1, v5, Lzje;->i:Ljava/math/BigInteger;
+    :cond_8
+    move-object v5, v2
 
-    iget-object v2, v5, Lzje;->h:Ljava/math/BigInteger;
+    :goto_4
+    instance-of p1, v5, Lgwe;
+
+    if-nez p1, :cond_9
+
+    move-object v5, v2
+
+    :cond_9
+    check-cast v5, Lgwe;
+
+    if-nez v5, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    iget-object p1, v5, Lewe;->i:Ljava/math/BigInteger;
+
+    iget-object v2, v5, Lewe;->h:Ljava/math/BigInteger;
 
     invoke-static {v4, p1, v2}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;->access$calculateLoss(Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljava/lang/Float;
 
     move-result-object v2
 
-    :goto_4
-    iget-object p1, v0, Ll22;->b:Ljava/lang/String;
+    :goto_5
+    iget-object p1, v0, Lp32;->b:Ljava/lang/String;
 
     new-instance v0, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;
 
     invoke-direct {v0, v1, v3, v2, p1}, Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;-><init>(Ljava/lang/Integer;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/String;)V
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->logger:Lwkc;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->logger:Lyuc;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -344,47 +366,47 @@
 
     const-string v2, "StatMonitorImpl"
 
-    invoke-interface {p1, v2, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public observeStat()Ls8a;
+.method public observeStat()Lwga;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ls8a;"
+            "Lwga;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->statSubject:Lpl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->statSubject:Lim0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v1, Ln9a;
+    new-instance v1, Lrha;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v0, v2}, Ln9a;-><init>(Loba;I)V
+    invoke-direct {v1, v0, v2}, Lrha;-><init>(Lsja;I)V
 
     return-object v1
 .end method
 
-.method public onRtcStats(Lykc;)V
+.method public onRtcStats(Lavc;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->mapToMonitoringStat(Lykc;)Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->mapToMonitoringStat(Lavc;)Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->statSubject:Lpl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl;->statSubject:Lim0;
 
-    invoke-virtual {v0, p1}, Lpl0;->e(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lim0;->d(Ljava/lang/Object;)V
 
     :cond_0
     return-void

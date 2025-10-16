@@ -3,43 +3,147 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgvc;
+.implements Lvga;
+
+
+# instance fields
+.field public a:Lq02;
+
+.field public b:Z
 
 
 # virtual methods
-.method public final b(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final d(Landroid/view/View;)V
+.method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-object p1
+    invoke-static {}, Ltwc;->c()Z
 
-    check-cast p1, Lfvc;
+    move-result v0
 
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+    const-string v1, "SourceStreamRequirementObserver can be updated from main thread only"
 
-    const/4 v1, -0x1
+    invoke-static {v1, v0}, Lbui;->f(Ljava/lang/String;Z)V
 
-    if-ne v0, v1, :cond_0
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+    invoke-virtual {v0, p1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
 
-    if-ne p1, v1, :cond_0
+    move-result p1
+
+    iget-boolean v0, p0, Ltkg;->b:Z
+
+    if-ne v0, p1, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iput-boolean p1, p0, Ltkg;->b:Z
 
-    const-string v0, "Pages must fill the whole ViewPager2 (use match_parent)"
+    iget-object v0, p0, Ltkg;->a:Lq02;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_2
 
-    throw p1
+    if-eqz p1, :cond_1
+
+    invoke-interface {v0}, Lq02;->o()V
+
+    return-void
+
+    :cond_1
+    invoke-interface {v0}, Lq02;->a()V
+
+    return-void
+
+    :cond_2
+    const-string p1, "VideoCapture"
+
+    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
+
+    invoke-static {p1, v0}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 3
+
+    invoke-static {}, Ltwc;->c()Z
+
+    move-result v0
+
+    const-string v1, "SourceStreamRequirementObserver can be closed from main thread only"
+
+    invoke-static {v1, v0}, Lbui;->f(Ljava/lang/String;Z)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SourceStreamRequirementObserver#close: mIsSourceStreamRequired = "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Ltkg;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "VideoCapture"
+
+    invoke-static {v1, v0}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Ltkg;->a:Lq02;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "SourceStreamRequirementObserver#close: Already closed!"
+
+    invoke-static {v1, v0}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    iget-boolean v2, p0, Ltkg;->b:Z
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Ltkg;->b:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lq02;->a()V
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
+
+    invoke-static {v1, v0}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ltkg;->a:Lq02;
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    const-string v0, "VideoCapture"
+
+    const-string v1, "SourceStreamRequirementObserver#onError"
+
+    invoke-static {v0, v1, p1}, Lgth;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

@@ -1,125 +1,61 @@
 .class public final Lto6;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[I
+.field public X:Ljava/lang/String;
 
-.field public final b:[I
+.field public Y:J
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
+
+.field public final synthetic r0:Luo6;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>([I[I)V
+.method public constructor <init>(Luo6;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lto6;->r0:Luo6;
 
-    iput-object p1, p0, Lto6;->a:[I
-
-    iput-object p2, p0, Lto6;->b:[I
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lto6;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lto6;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lto6;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lto6;->s0:I
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    const/4 v4, 0x0
 
-    :cond_1
-    check-cast p1, Lto6;
+    iget-object v0, p0, Lto6;->r0:Luo6;
 
-    iget-object v1, p0, Lto6;->a:[I
+    const-wide/16 v1, 0x0
 
-    iget-object v3, p1, Lto6;->a:[I
+    move-object v5, p0
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual/range {v0 .. v5}, Luo6;->a(JLjava/lang/Long;Ljava/lang/String;Lk14;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lto6;->b:[I
-
-    iget-object p1, p1, Lto6;->b:[I
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lto6;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lto6;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lto6;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lto6;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ", surfacePrimaryGradient="
-
-    const-string v3, ")"
-
-    const-string v4, "GradientsOverlayColors(surfaceGroundGradient="
-
-    invoke-static {v4, v0, v2, v1, v3}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

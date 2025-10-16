@@ -140,7 +140,7 @@
 
     add-int/2addr p4, p2
 
-    invoke-static {p0}, Lx2d;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Lbxi;->c(Landroid/view/View;)Z
 
     move-result p2
 

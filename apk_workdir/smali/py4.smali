@@ -1,28 +1,31 @@
-.class public interface abstract Lpy4;
+.class public final Lpy4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final m:Lnd4;
+# instance fields
+.field public final a:Lkw4;
+
+.field public final b:Z
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/lang/Exception;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkw4;ZLjava/util/ArrayList;Ljava/lang/Exception;)V
+    .locals 0
 
-    new-instance v0, Lnd4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1a
+    iput-object p1, p0, Lpy4;->a:Lkw4;
 
-    invoke-direct {v0, v1}, Lnd4;-><init>(I)V
+    iput-boolean p2, p0, Lpy4;->b:Z
 
-    sput-object v0, Lpy4;->m:Lnd4;
+    iput-object p3, p0, Lpy4;->c:Ljava/util/ArrayList;
+
+    iput-object p4, p0, Lpy4;->d:Ljava/lang/Exception;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract release()V
 .end method

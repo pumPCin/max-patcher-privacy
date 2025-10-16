@@ -20,7 +20,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;",
         "params",
-        "Laxf;",
+        "Lzag;",
         "setKeywordSpotterParams",
         "(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;)V",
         "KeywordSpotterConfig",

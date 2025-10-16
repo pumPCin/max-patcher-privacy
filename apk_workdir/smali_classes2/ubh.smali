@@ -1,87 +1,121 @@
-.class public final synthetic Lubh;
+.class public final Lubh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final Companion:Ltbh;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lukb;
-
-.field public final synthetic c:Lmt2;
-
-.field public final synthetic o:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lukb;Lmt2;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p4, p0, Lubh;->a:I
+    new-instance v0, Ltbh;
 
-    iput-object p1, p0, Lubh;->b:Lukb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lubh;->c:Lmt2;
-
-    iput-object p3, p0, Lubh;->o:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lubh;->Companion:Ltbh;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public synthetic constructor <init>(ILjava/lang/String;)V
     .locals 2
 
-    iget v0, p0, Lubh;->a:I
+    and-int/lit8 v0, p1, 0x1
 
-    check-cast p1, Lru/ok/android/onelog/OneLogItem;
+    const/4 v1, 0x1
 
-    check-cast p2, Ljava/lang/Exception;
+    if-ne v1, v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Lru/ok/android/onelog/OneLogItem;->operation()Ljava/lang/String;
+    iput-object p2, p0, Lubh;->a:Ljava/lang/String;
 
-    move-result-object p1
+    return-void
 
-    iget-object p2, p0, Lubh;->b:Lukb;
+    :cond_0
+    sget-object p2, Lsbh;->a:Lsbh;
 
-    iget-object v0, p0, Lubh;->c:Lmt2;
+    invoke-virtual {p2}, Lsbh;->d()Lu1e;
 
-    iget-object v1, p0, Lubh;->o:Ljava/lang/String;
+    move-result-object p2
 
-    invoke-static {p1, p2, v0, v1}, Lwbh;->b(Ljava/lang/String;Lukb;Lmt2;Ljava/lang/Object;)V
+    invoke-static {p1, v1, p2}, Luti;->b(IILu1e;)V
 
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    const/4 p1, 0x0
 
-    return-object p1
+    throw p1
+.end method
 
-    :pswitch_0
-    invoke-virtual {p1}, Lru/ok/android/onelog/OneLogItem;->operation()Ljava/lang/String;
 
-    move-result-object p1
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object p2, p0, Lubh;->b:Lukb;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lubh;->c:Lmt2;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lubh;->o:Ljava/lang/String;
+    return v0
 
-    invoke-static {p1, p2, v0, v1}, Lwbh;->b(Ljava/lang/String;Lukb;Lmt2;Ljava/lang/Object;)V
+    :cond_0
+    instance-of v1, p1, Lubh;
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    nop
+    if-nez v1, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_1
+    check-cast p1, Lubh;
+
+    iget-object v1, p0, Lubh;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lubh;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lubh;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "WebAppOpenLinkRequest(url="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lubh;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

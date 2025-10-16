@@ -1,69 +1,48 @@
 .class public final Lctg;
-.super Lrc4;
-.source "SourceFile"
+.super Lk14;
 
 
-# static fields
-.field public static final b:Lctg;
+# instance fields
+.field public X:I
 
-.field public static final c:Lmc4;
+.field public final synthetic Y:Lbtg;
 
-.field public static final d:Lmc4;
-
-.field public static final e:Lmc4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lbtg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lctg;
+    iput-object p1, p0, Lctg;->Y:Lbtg;
 
-    invoke-direct {v0}, Lrc4;-><init>()V
-
-    sput-object v0, Lctg;->b:Lctg;
-
-    const-string v1, "bot_id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ":webapp:root"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
-
-    move-result-object v2
-
-    sput-object v2, Lctg;->c:Lmc4;
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, ":settings/webapps"
-
-    invoke-static {v0, v3, v2, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
-
-    move-result-object v2
-
-    sput-object v2, Lctg;->d:Lmc4;
-
-    const-string v2, ":settings/webapp"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v2, v1, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
-
-    move-result-object v0
-
-    sput-object v0, Lctg;->e:Lmc4;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lctg;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lctg;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lctg;->X:I
+
+    iget-object p1, p0, Lctg;->Y:Lbtg;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lbtg;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

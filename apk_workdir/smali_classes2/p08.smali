@@ -1,35 +1,29 @@
 .class public final Lp08;
-.super Ljava/lang/Object;
+.super Lq08;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final X:Ljava/lang/String;
 
-.field public b:Z
 
-.field public c:Z
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 9
 
-.field public d:Z
+    const-wide/16 v5, 0x0
 
-.field public e:Z
+    const-wide/16 v7, 0x0
 
-.field public f:Z
+    const-wide/16 v1, 0x0
 
-.field public g:Z
+    const-wide/16 v3, 0x0
 
-.field public h:Z
+    move-object v0, p0
 
-.field public i:Lp6c;
+    invoke-direct/range {v0 .. v8}, Lq08;-><init>(JJJJ)V
 
-.field public j:Z
+    iput-object p1, v0, Lp08;->X:Ljava/lang/String;
 
-.field public k:I
-
-.field public l:Z
-
-.field public m:Z
-
-.field public n:Z
-
-.field public o:Z
+    return-void
+.end method

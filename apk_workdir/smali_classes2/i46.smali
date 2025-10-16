@@ -1,116 +1,80 @@
-.class public final synthetic Li46;
+.class public final Li46;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lb18;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+# static fields
+.field public static final a:Li46;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Li46;->a:I
+    new-instance v0, Li46;
 
-    iput-object p1, p0, Li46;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Li46;->a:Li46;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Li46;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Li46;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    return v0
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of p1, p1, Li46;
 
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lpl7;
+    if-nez p1, :cond_1
 
-    new-instance v0, Lrla;
+    const/4 p1, 0x0
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    return p1
 
-    move-result-object v3
+    :cond_1
+    return v0
+.end method
 
-    invoke-direct {v0, v3, v1}, Lrla;-><init>(Landroid/content/Context;I)V
+.method public final getItemId()J
+    .locals 2
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+    const-wide v0, 0x7ffffffffffffffdL
 
-    sget v1, Ll7d;->O:I
+    return-wide v0
+.end method
 
-    invoke-virtual {v0, v1}, Lrla;->setIcon(I)V
+.method public final hashCode()I
+    .locals 1
 
-    sget v1, Lxma;->o:I
+    const v0, 0xb62c3a2
 
-    new-instance v3, Lxcf;
+    return v0
+.end method
 
-    invoke-direct {v3, v1}, Lxcf;-><init>(I)V
+.method public final m()I
+    .locals 1
 
-    invoke-virtual {v0, v3}, Lrla;->setTitle(Lcdf;)V
+    const/16 v0, 0x8
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    sget v3, Lxma;->l:I
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v3, Lk46;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v2, v4}, Lk46;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
-
-    invoke-virtual {v0, v1, v3}, Lrla;->w(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+    const-string v0, "FolderEditDeleteItem"
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lpl7;
-
-    new-instance v0, Lw46;
-
-    iget-object v3, v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lds;
-
-    sget-object v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lpl7;
-
-    aget-object v1, v4, v1
-
-    invoke-virtual {v3, v2}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    invoke-direct {v0, v1, v2}, Lw46;-><init>(J)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

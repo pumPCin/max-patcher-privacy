@@ -1,222 +1,374 @@
 .class public final Lhib;
-.super Landroid/view/Surface;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static X:Z
-
-.field public static o:I
-
-
 # instance fields
-.field public final a:Z
+.field public a:Ljava/lang/CharSequence;
 
-.field public final b:Luz4;
+.field public b:Landroidx/core/graphics/drawable/IconCompat;
 
-.field public c:Z
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Z
+
+.field public f:Z
 
 
-# direct methods
-.method public constructor <init>(Luz4;Landroid/graphics/SurfaceTexture;Z)V
-    .locals 0
+# virtual methods
+.method public final a()Lxk;
+    .locals 2
 
-    invoke-direct {p0, p2}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+    new-instance v0, Lxk;
 
-    iput-object p1, p0, Lhib;->b:Luz4;
+    invoke-direct {v0}, Lxk;-><init>()V
 
-    iput-boolean p3, p0, Lhib;->a:Z
+    iget-object v1, p0, Lhib;->a:Ljava/lang/CharSequence;
 
-    return-void
+    iput-object v1, v0, Lxk;->o:Ljava/lang/Object;
+
+    iget-object v1, p0, Lhib;->b:Landroidx/core/graphics/drawable/IconCompat;
+
+    iput-object v1, v0, Lxk;->X:Ljava/lang/Object;
+
+    iget-object v1, p0, Lhib;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Lxk;->Y:Ljava/lang/Object;
+
+    iget-object v1, p0, Lhib;->d:Ljava/lang/String;
+
+    iput-object v1, v0, Lxk;->Z:Ljava/lang/Object;
+
+    iget-boolean v1, p0, Lhib;->e:Z
+
+    iput-boolean v1, v0, Lxk;->b:Z
+
+    iget-boolean v1, p0, Lhib;->f:Z
+
+    iput-boolean v1, v0, Lxk;->c:Z
+
+    return-object v0
 .end method
 
-.method public static declared-synchronized a(Landroid/content/Context;)Z
-    .locals 7
+.method public final b()Landroid/os/Bundle;
+    .locals 5
 
-    const-class v0, Lhib;
+    new-instance v0, Landroid/os/Bundle;
 
-    monitor-enter v0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    :try_start_0
-    sget-boolean v1, Lhib;->X:Z
+    const-string v1, "name"
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lhib;->a:Ljava/lang/CharSequence;
 
-    const/4 v3, 0x1
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    if-nez v1, :cond_6
+    iget-object v1, p0, Lhib;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    sget v1, Lg3g;->a:I
+    if-eqz v1, :cond_1
 
-    const/16 v4, 0x18
+    new-instance v2, Landroid/os/Bundle;
 
-    if-ge v1, v4, :cond_1
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    iget v3, v1, Landroidx/core/graphics/drawable/IconCompat;->a:I
+
+    const-string v4, "obj"
+
+    packed-switch v3, :pswitch_data_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Invalid icon"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    check-cast v3, [B
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :pswitch_3
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    check-cast v3, Landroid/graphics/Bitmap;
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    goto :goto_0
+
+    :pswitch_4
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
+
+    check-cast v3, Landroid/os/Parcelable;
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :goto_0
+    const-string v3, "type"
+
+    iget v4, v1, Landroidx/core/graphics/drawable/IconCompat;->a:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v3, "int1"
+
+    iget v4, v1, Landroidx/core/graphics/drawable/IconCompat;->e:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v3, "int2"
+
+    iget v4, v1, Landroidx/core/graphics/drawable/IconCompat;->f:I
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v3, "string1"
+
+    iget-object v4, v1, Landroidx/core/graphics/drawable/IconCompat;->j:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v3, v1, Landroidx/core/graphics/drawable/IconCompat;->g:Landroid/content/res/ColorStateList;
+
+    if-eqz v3, :cond_0
+
+    const-string v4, "tint_list"
+
+    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     :cond_0
-    :goto_0
-    move p0, v2
+    iget-object v1, v1, Landroidx/core/graphics/drawable/IconCompat;->h:Landroid/graphics/PorterDuff$Mode;
+
+    sget-object v3, Landroidx/core/graphics/drawable/IconCompat;->k:Landroid/graphics/PorterDuff$Mode;
+
+    if-eq v1, v3, :cond_2
+
+    const-string v3, "tint_mode"
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v3, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_1
-    const/16 v4, 0x1a
+    const/4 v2, 0x0
 
-    if-ge v1, v4, :cond_2
+    :cond_2
+    :goto_1
+    const-string v1, "icon"
 
-    const-string v5, "samsung"
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    sget-object v6, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+    const-string v1, "uri"
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v2, p0, Lhib;->c:Ljava/lang/String;
 
-    move-result v5
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez v5, :cond_0
+    const-string v1, "key"
 
-    const-string v5, "XT1650"
+    iget-object v2, p0, Lhib;->d:Ljava/lang/String;
 
-    sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v1, "isBot"
 
-    move-result v5
+    iget-boolean v2, p0, Lhib;->e:Z
 
-    if-eqz v5, :cond_2
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string v1, "isImportant"
+
+    iget-boolean v2, p0, Lhib;->f:Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_4
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_2
+    .end packed-switch
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lhib;
+
+    if-nez v1, :cond_1
+
+    return v0
+
+    :cond_1
+    check-cast p1, Lhib;
+
+    iget-object v1, p0, Lhib;->d:Ljava/lang/String;
+
+    iget-object v2, p1, Lhib;->d:Ljava/lang/String;
+
+    if-nez v1, :cond_4
+
+    if-eqz v2, :cond_2
 
     goto :goto_0
 
     :cond_2
-    if-ge v1, v4, :cond_3
+    iget-object v1, p0, Lhib;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-static {v1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "android.hardware.vr.high_performance"
+    iget-object v2, p1, Lhib;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    invoke-static {v2}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result p0
+    move-result-object v2
 
-    if-nez p0, :cond_3
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lhib;->c:Ljava/lang/String;
+
+    iget-object v2, p1, Lhib;->c:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v1, p0, Lhib;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iget-boolean v2, p1, Lhib;->e:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v1, p0, Lhib;->f:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iget-boolean p1, p1, Lhib;->f:Z
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_3
-    const-string p0, "EGL_EXT_protected_content"
-
-    invoke-static {p0}, Labh;->D(Ljava/lang/String;)Z
-
-    move-result p0
-
-    :goto_1
-    if-eqz p0, :cond_5
-
-    const-string p0, "EGL_KHR_surfaceless_context"
-
-    invoke-static {p0}, Labh;->D(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_4
-
-    move p0, v3
-
-    goto :goto_2
+    return v0
 
     :cond_4
-    const/4 p0, 0x2
+    :goto_0
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_2
+    move-result p1
 
-    :cond_5
-    move p0, v2
-
-    :goto_2
-    sput p0, Lhib;->o:I
-
-    sput-boolean v3, Lhib;->X:Z
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_4
-
-    :cond_6
-    :goto_3
-    sget p0, Lhib;->o:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p0, :cond_7
-
-    move v2, v3
-
-    :cond_7
-    monitor-exit v0
-
-    return v2
-
-    :goto_4
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
+    return p1
 .end method
 
+.method public final hashCode()I
+    .locals 4
 
-# virtual methods
-.method public final release()V
-    .locals 3
+    iget-object v0, p0, Lhib;->d:Ljava/lang/String;
 
-    invoke-super {p0}, Landroid/view/Surface;->release()V
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lhib;->b:Luz4;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    monitor-enter v0
+    move-result v0
 
-    :try_start_0
-    iget-boolean v1, p0, Lhib;->c:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lhib;->b:Luz4;
-
-    iget-object v2, v1, Luz4;->b:Landroid/os/Handler;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, v1, Luz4;->b:Landroid/os/Handler;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lhib;->c:Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    :goto_0
-    monitor-exit v0
+    iget-object v0, p0, Lhib;->a:Ljava/lang/CharSequence;
 
-    return-void
+    iget-object v1, p0, Lhib;->c:Ljava/lang/String;
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-boolean v2, p0, Lhib;->e:Z
 
-    throw v1
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    iget-boolean v3, p0, Lhib;->f:Z
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

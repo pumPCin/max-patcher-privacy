@@ -1,34 +1,26 @@
 .class public final Lbh0;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
 .field public X:I
 
-.field public final synthetic Y:Lfh0;
-
-.field public final synthetic Z:Lyn7;
-
-.field public final synthetic r0:Z
+.field public final synthetic Y:Ljh0;
 
 
 # direct methods
-.method public constructor <init>(Lfh0;Lyn7;ZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljh0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lbh0;->Y:Lfh0;
-
-    iput-object p2, p0, Lbh0;->Z:Lyn7;
-
-    iput-boolean p3, p0, Lbh0;->r0:Z
+    iput-object p1, p0, Lbh0;->Y:Ljh0;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ln24;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -48,7 +40,7 @@
 
     check-cast p1, Lbh0;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lbh0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -58,41 +50,31 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 1
 
     new-instance p1, Lbh0;
 
-    iget-object v0, p0, Lbh0;->Z:Lyn7;
+    iget-object v0, p0, Lbh0;->Y:Ljh0;
 
-    iget-boolean v1, p0, Lbh0;->r0:Z
-
-    iget-object v2, p0, Lbh0;->Y:Lfh0;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lbh0;-><init>(Lfh0;Lyn7;ZLkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lbh0;-><init>(Ljh0;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 2
 
     iget v0, p0, Lbh0;->X:I
 
-    sget-object v1, Laxf;->a:Laxf;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lbh0;->Y:Lfh0;
-
-    const/4 v4, 0x1
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v4, :cond_0
+    if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -104,55 +86,29 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, v3, Lfh0;->c:Lnh0;
+    iget-object p1, p0, Lbh0;->Y:Ljh0;
 
-    iget-object v0, p0, Lbh0;->Z:Lyn7;
+    iget-object p1, p1, Ljh0;->b:Leie;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    iput v1, p0, Lbh0;->X:I
 
-    move-result-object v0
+    sget-object v0, Lwg0;->a:Lwg0;
 
-    check-cast v0, Lzg0;
-
-    iput v4, p0, Lbh0;->X:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v4, Lmh0;
-
-    invoke-direct {v4, p1, v0, v2}, Lmh0;-><init>(Lnh0;Lzg0;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v4, p0}, Lov9;->n(Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Leie;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lo24;->a:Lo24;
+    sget-object v0, Lc54;->a:Lc54;
 
     if-ne p1, v0, :cond_2
 
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v1
-
-    :goto_0
-    if-ne p1, v0, :cond_3
-
     return-object v0
 
-    :cond_3
-    :goto_1
-    iget-object p1, v3, Lfh0;->Z:Lhne;
+    :cond_2
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    iget-boolean v0, p0, Lbh0;->r0:Z
-
-    invoke-virtual {v3, v0}, Lfh0;->r(Z)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v2, v0}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-object v1
+    return-object p1
 .end method

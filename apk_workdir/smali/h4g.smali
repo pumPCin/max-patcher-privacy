@@ -1,154 +1,188 @@
-.class public abstract Lh4g;
-.super Lg4g;
+.class public final Lh4g;
+.super Lx1;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/RunnableFuture;
+.implements Lo1;
 
 
 # instance fields
-.field public a:[Lq5b;
-
-.field public b:Ljava/lang/String;
-
-.field public c:I
+.field public volatile r0:Lg4g;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/util/concurrent/Callable;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Lg4g;
 
-    .line 2
-    iput-object v0, p0, Lh4g;->a:[Lq5b;
+    invoke-direct {v0, p0, p1}, Lg4g;-><init>(Lh4g;Ljava/util/concurrent/Callable;)V
 
-    const/4 v0, 0x0
-
-    .line 3
-    iput v0, p0, Lh4g;->c:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Lh4g;)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 5
-    iput-object v0, p0, Lh4g;->a:[Lq5b;
-
-    const/4 v0, 0x0
-
-    .line 6
-    iput v0, p0, Lh4g;->c:I
-
-    .line 7
-    iget-object v0, p1, Lh4g;->b:Ljava/lang/String;
-
-    iput-object v0, p0, Lh4g;->b:Ljava/lang/String;
-
-    .line 8
-    iget-object p1, p1, Lh4g;->a:[Lq5b;
-
-    invoke-static {p1}, Lfn7;->k([Lq5b;)[Lq5b;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lh4g;->a:[Lq5b;
+    iput-object v0, p0, Lh4g;->r0:Lg4g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getPathData()[Lq5b;
-    .locals 1
-
-    iget-object v0, p0, Lh4g;->a:[Lq5b;
-
-    return-object v0
-.end method
-
-.method public getPathName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lh4g;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public setPathData([Lq5b;)V
+.method public final b()V
     .locals 6
 
-    iget-object v0, p0, Lh4g;->a:[Lq5b;
+    iget-object v0, p0, Lx1;->a:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lfn7;->e([Lq5b;[Lq5b;)Z
+    instance-of v1, v0, Lb1;
 
-    move-result v0
+    if-eqz v1, :cond_1
 
-    if-nez v0, :cond_0
+    check-cast v0, Lb1;
 
-    invoke-static {p1}, Lfn7;->k([Lq5b;)[Lq5b;
+    iget-boolean v0, v0, Lb1;->a:Z
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    iput-object p1, p0, Lh4g;->a:[Lq5b;
+    iget-object v0, p0, Lh4g;->r0:Lg4g;
 
-    return-void
+    if-eqz v0, :cond_1
 
-    :cond_0
-    iget-object v0, p0, Lh4g;->a:[Lq5b;
+    sget-object v1, Lg4g;->o:Lyth;
 
-    const/4 v1, 0x0
+    sget-object v2, Lg4g;->c:Lyth;
 
-    move v2, v1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    :goto_0
-    array-length v3, p1
+    move-result-object v3
 
-    if-ge v2, v3, :cond_2
+    check-cast v3, Ljava/lang/Runnable;
 
-    aget-object v3, v0, v2
+    instance-of v4, v3, Ljava/lang/Thread;
 
-    aget-object v4, p1, v2
+    if-eqz v4, :cond_1
 
-    iget-char v4, v4, Lq5b;->a:C
+    new-instance v4, Laj7;
 
-    iput-char v4, v3, Lq5b;->a:C
+    invoke-direct {v4, v0}, Laj7;-><init>(Lg4g;)V
 
-    move v3, v1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    :goto_1
-    aget-object v4, p1, v2
+    move-result-object v5
 
-    iget-object v4, v4, Lq5b;->b:[F
+    invoke-static {v4, v5}, Laj7;->a(Laj7;Ljava/lang/Thread;)V
 
-    array-length v5, v4
+    invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-ge v3, v5, :cond_1
+    move-result v4
 
-    aget-object v5, v0, v2
+    if-eqz v4, :cond_1
 
-    iget-object v5, v5, Lq5b;->b:[F
+    :try_start_0
+    move-object v4, v3
 
-    aget v4, v4, v3
+    check-cast v4, Ljava/lang/Thread;
 
-    aput v4, v5, v3
+    invoke-virtual {v4}, Ljava/lang/Thread;->interrupt()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
+    check-cast v0, Ljava/lang/Runnable;
+
+    if-ne v0, v1, :cond_1
+
+    check-cast v3, Ljava/lang/Thread;
+
+    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
 
     goto :goto_0
 
-    :cond_2
+    :catchall_0
+    move-exception v4
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    if-ne v0, v1, :cond_0
+
+    check-cast v3, Ljava/lang/Thread;
+
+    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
+
+    :cond_0
+    throw v4
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lh4g;->r0:Lg4g;
+
+    return-void
+.end method
+
+.method public final i()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lh4g;->r0:Lg4g;
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "task=["
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    invoke-super {p0}, Lx1;->i()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lx1;->a:Ljava/lang/Object;
+
+    instance-of v0, v0, Lb1;
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Lh4g;->r0:Lg4g;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lg4g;->run()V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lh4g;->r0:Lg4g;
+
     return-void
 .end method

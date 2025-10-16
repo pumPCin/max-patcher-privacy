@@ -3,114 +3,85 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lth5;
-.implements Ljava/io/Closeable;
+.implements Lvk8;
 
 
 # instance fields
-.field public final a:Lth5;
-
-.field public final b:Llk8;
-
-.field public final c:Landroid/net/Uri;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lth5;Llk8;)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmk8;->a:Lth5;
-
-    iput-object p2, p0, Lmk8;->b:Llk8;
-
-    iget-object p1, p2, Llk8;->a:Lkf4;
-
-    invoke-virtual {p1}, Lkf4;->getUri()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iput-object p1, p0, Lmk8;->c:Landroid/net/Uri;
+    iput-boolean p1, p0, Lmk8;->a:Z
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Required value was null."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
-
-    invoke-virtual {p0}, Lmk8;->release()V
-
-    return-void
-.end method
-
-.method public final d(JJ)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lmk8;->a:Lth5;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lth5;->d(JJ)V
+    goto :goto_1
 
-    return-void
-.end method
+    :cond_0
+    instance-of v0, p1, Lmk8;
 
-.method public final i(Lvh5;)Z
-    .locals 1
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lmk8;->a:Lth5;
+    goto :goto_0
 
-    invoke-interface {v0, p1}, Lth5;->i(Lvh5;)Z
+    :cond_1
+    check-cast p1, Lmk8;
 
-    move-result p1
+    iget-boolean v0, p0, Lmk8;->a:Z
+
+    iget-boolean p1, p1, Lmk8;->a:Z
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public final n(Lxh5;)V
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lmk8;->a:Lth5;
+    iget-boolean v0, p0, Lmk8;->a:Z
 
-    invoke-interface {v0, p1}, Lth5;->n(Lxh5;)V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
-.method public final o(Lvh5;Lk7;)I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lmk8;->a:Lth5;
+    const-string v0, "Close(withClear="
 
-    invoke-interface {v0, p1, p2}, Lth5;->o(Lvh5;Lk7;)I
+    const-string v1, ")"
 
-    move-result p1
+    iget-boolean v2, p0, Lmk8;->a:Z
 
-    return p1
-.end method
+    invoke-static {v0, v1, v2}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-.method public final release()V
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Lmk8;->a:Lth5;
-
-    invoke-interface {v0}, Lth5;->release()V
-
-    iget-object v0, p0, Lmk8;->b:Llk8;
-
-    invoke-virtual {v0}, Llk8;->close()V
-
-    return-void
+    return-object v0
 .end method

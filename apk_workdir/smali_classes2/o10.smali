@@ -3,91 +3,135 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final j:Lo10;
+
+
 # instance fields
-.field public a:F
+.field public final a:Lt68;
 
-.field public b:F
+.field public final b:J
 
-.field public c:Lp6c;
+.field public final c:J
 
-.field public d:Z
+.field public final d:J
+
+.field public final e:Ljava/util/List;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:F
+
+.field public final h:Z
+
+.field public final i:Lp10;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    sget-object p1, Lp6c;->Y:Lp6c;
-
-    iput-object p1, p0, Lo10;->c:Lp6c;
-
-    return-void
-
-    .line 8
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    sget-object p1, Lp6c;->Y:Lp6c;
-
-    iput-object p1, p0, Lo10;->c:Lp6c;
-
-    const/4 p1, 0x0
-
-    .line 10
-    iput p1, p0, Lo10;->a:F
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 11
-    iput p1, p0, Lo10;->b:F
-
-    const/4 p1, 0x0
-
-    .line 12
-    iput-boolean p1, p0, Lo10;->d:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(Lo10;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ln10;
 
-    .line 2
-    iget v0, p1, Lo10;->a:F
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lo10;->a:F
+    invoke-virtual {v0}, Ln10;->a()Lo10;
 
-    .line 3
-    iget v0, p1, Lo10;->b:F
+    move-result-object v0
 
-    iput v0, p0, Lo10;->b:F
-
-    .line 4
-    iget-object v0, p1, Lo10;->c:Lp6c;
-
-    iput-object v0, p0, Lo10;->c:Lp6c;
-
-    .line 5
-    iget-boolean p1, p1, Lo10;->d:Z
-
-    iput-boolean p1, p0, Lo10;->d:Z
+    sput-object v0, Lo10;->j:Lo10;
 
     return-void
+.end method
+
+.method public constructor <init>(Ln10;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v0, p1, Ln10;->a:Lt68;
+
+    iput-object v0, p0, Lo10;->a:Lt68;
+
+    iget-wide v0, p1, Ln10;->b:J
+
+    iput-wide v0, p0, Lo10;->b:J
+
+    iget-wide v0, p1, Ln10;->c:J
+
+    iput-wide v0, p0, Lo10;->c:J
+
+    iget-wide v0, p1, Ln10;->d:J
+
+    iput-wide v0, p0, Lo10;->d:J
+
+    iget-object v0, p1, Ln10;->e:Ljava/util/List;
+
+    iput-object v0, p0, Lo10;->e:Ljava/util/List;
+
+    iget-object v0, p1, Ln10;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Lo10;->f:Ljava/lang/String;
+
+    iget v0, p1, Ln10;->g:F
+
+    iput v0, p0, Lo10;->g:F
+
+    iget-boolean v0, p1, Ln10;->h:Z
+
+    iput-boolean v0, p0, Lo10;->h:Z
+
+    iget-object p1, p1, Ln10;->i:Lp10;
+
+    iput-object p1, p0, Lo10;->i:Lp10;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ln10;
+    .locals 3
+
+    new-instance v0, Ln10;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Lo10;->a:Lt68;
+
+    iput-object v1, v0, Ln10;->a:Lt68;
+
+    iget-wide v1, p0, Lo10;->b:J
+
+    iput-wide v1, v0, Ln10;->b:J
+
+    iget-wide v1, p0, Lo10;->c:J
+
+    iput-wide v1, v0, Ln10;->c:J
+
+    iget-wide v1, p0, Lo10;->d:J
+
+    iput-wide v1, v0, Ln10;->d:J
+
+    iget-object v1, p0, Lo10;->e:Ljava/util/List;
+
+    iput-object v1, v0, Ln10;->e:Ljava/util/List;
+
+    iget-object v1, p0, Lo10;->f:Ljava/lang/String;
+
+    iput-object v1, v0, Ln10;->f:Ljava/lang/String;
+
+    iget v1, p0, Lo10;->g:F
+
+    iput v1, v0, Ln10;->g:F
+
+    iget-boolean v1, p0, Lo10;->h:Z
+
+    iput-boolean v1, v0, Ln10;->h:Z
+
+    iget-object v1, p0, Lo10;->i:Lp10;
+
+    iput-object v1, v0, Ln10;->i:Lp10;
+
+    return-object v0
 .end method

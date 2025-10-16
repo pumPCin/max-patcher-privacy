@@ -1,8 +1,3 @@
-.class public interface abstract Lm0f;
-.super Ljava/lang/Object;
+.class public abstract Lm0f;
+.super Ljava/lang/Exception;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract get()Ljava/lang/Object;
-.end method

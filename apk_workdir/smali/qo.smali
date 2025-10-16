@@ -1,24 +1,19 @@
-.class public abstract Lqo;
+.class public final Lqo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Landroidx/appcompat/widget/AppCompatEditText;
+
+
 # direct methods
-.method public static a(Landroid/widget/ThemedSpinnerAdapter;Landroid/content/res/Resources$Theme;)V
-    .locals 1
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatEditText;)V
+    .locals 0
 
-    invoke-interface {p0}, Landroid/widget/ThemedSpinnerAdapter;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lqo;->a:Landroidx/appcompat/widget/AppCompatEditText;
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p0, p1}, Landroid/widget/ThemedSpinnerAdapter;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
-
-    :cond_0
     return-void
 .end method

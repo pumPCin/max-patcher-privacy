@@ -1,16 +1,28 @@
-.class public interface abstract Lq78;
+.class public final Lq78;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public c(Ljava/lang/String;Ljava/util/List;)V
+.method public final a(Loa9;)V
     .locals 0
 
     return-void
 .end method
 
-.method public e(Ljava/lang/String;Ljava/util/List;Z)V
+.method public final b()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c(Ljava/util/ArrayList;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(JJJ)V
     .locals 0
 
     return-void

@@ -3,39 +3,62 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ly3;
+
+.field public static final d:Ly3;
+
+
 # instance fields
-.field public final a:Ljava/lang/Throwable;
+.field public final a:Z
+
+.field public final b:Ljava/lang/Throwable;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
+
+    sget-boolean v0, Le4;->o:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    sput-object v1, Ly3;->d:Ly3;
+
+    sput-object v1, Ly3;->c:Ly3;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ly3;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ly3;-><init>(Ljava/lang/Throwable;Z)V
+
+    sput-object v0, Ly3;->d:Ly3;
 
     new-instance v0, Ly3;
 
-    new-instance v1, La1;
+    const/4 v2, 0x1
 
-    const-string v2, "Failure occurred while trying to finish a future."
+    invoke-direct {v0, v1, v2}, Ly3;-><init>(Ljava/lang/Throwable;Z)V
 
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v3}, La1;-><init>(Ljava/lang/String;I)V
-
-    invoke-direct {v0, v1}, Ly3;-><init>(Ljava/lang/Throwable;)V
+    sput-object v0, Ly3;->c:Ly3;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Throwable;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-boolean v0, Ld4;->o:Z
+    iput-boolean p2, p0, Ly3;->a:Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Ly3;->a:Ljava/lang/Throwable;
+    iput-object p1, p0, Ly3;->b:Ljava/lang/Throwable;
 
     return-void
 .end method

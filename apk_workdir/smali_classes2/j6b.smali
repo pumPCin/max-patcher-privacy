@@ -1,172 +1,234 @@
-.class public final synthetic Lj6b;
+.class public final Lj6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lug0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lfj5;
 
-.field public final synthetic b:Lo6b;
+.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.field public final synthetic c:Lorg/webrtc/SessionDescription;
+.field public final c:Li6b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo6b;Lorg/webrtc/SessionDescription;I)V
-    .locals 0
-
-    iput p3, p0, Lj6b;->a:I
-
-    iput-object p1, p0, Lj6b;->b:Lo6b;
-
-    iput-object p2, p0, Lj6b;->c:Lorg/webrtc/SessionDescription;
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lqo4;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lqo4;-><init>(I)V
+
+    new-instance v1, Llre;
+
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
+
+    const-wide/16 v4, 0x0
+
+    invoke-static {v2, v3, v4, v5}, Ljvi;->a(DD)D
+
+    move-result-wide v2
+
+    invoke-direct {v1, v2, v3}, Llre;-><init>(D)V
+
+    iput-object v1, v0, Lqo4;->c:Ljava/lang/Object;
+
+    const-wide/32 v1, 0x1f400
+
+    iput-wide v1, v0, Lqo4;->b:J
+
+    const/4 v1, 0x3
+
+    iput v1, v0, Lqo4;->a:I
+
+    new-instance v2, Leve;
+
+    invoke-direct {v2, v0}, Leve;-><init>(Lqo4;)V
+
+    new-instance v0, Ljfb;
+
+    const/16 v3, 0xa
+
+    invoke-direct {v0, v3}, Ljfb;-><init>(I)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v4, Lpi8;
+
+    invoke-direct {v4}, Lpi8;-><init>()V
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v4, Lnre;
+
+    invoke-direct {v4}, Lnre;-><init>()V
+
+    new-instance v4, Lwoe;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v5}, Lwoe;-><init>(I)V
+
+    new-instance v4, Ljava/util/HashMap;
+
+    const/16 v5, 0x8
+
+    invoke-direct {v4, v5}, Ljava/util/HashMap;-><init>(I)V
+
+    const/4 v5, 0x0
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-wide/32 v6, 0xf4240
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v5, 0x2
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x5
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x9
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x7
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Lfj5;
+
+    invoke-direct {v1, p1, v4, v0, v2}, Lfj5;-><init>(Landroid/content/Context;Ljava/util/HashMap;Ljfb;Leve;)V
+
+    iput-object v1, p0, Lj6b;->a:Lfj5;
+
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object p1, p0, Lj6b;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance p1, Li6b;
+
+    invoke-direct {p1, p0}, Li6b;-><init>(Lj6b;)V
+
+    iput-object p1, p0, Lj6b;->c:Li6b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 10
+.method public final a(Lpg4;)V
+    .locals 1
 
-    iget v0, p0, Lj6b;->a:I
+    iget-object v0, p0, Lj6b;->a:Lfj5;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, p1}, Lfj5;->a(Lpg4;)V
 
-    iget-object v0, p0, Lj6b;->b:Lo6b;
-
-    iget-object v1, v0, Lo6b;->E:Lsr5;
-
-    iget-object v2, p0, Lj6b;->c:Lorg/webrtc/SessionDescription;
-
-    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
-
-    iget-boolean v4, v1, Lsr5;->c:Z
-
-    const-wide/16 v5, 0x0
-
-    if-nez v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iput-wide v5, v1, Lsr5;->b:J
-
-    iput-wide v5, v1, Lsr5;->a:J
-
-    const/4 v4, 0x0
-
-    iput-boolean v4, v1, Lsr5;->c:Z
-
-    :goto_0
-    invoke-static {v3}, Lsr5;->a(Ljava/lang/String;)J
-
-    move-result-wide v3
-
-    iput-wide v3, v1, Lsr5;->a:J
-
-    iget-wide v7, v1, Lsr5;->b:J
-
-    cmp-long v9, v7, v5
-
-    if-eqz v9, :cond_1
-
-    cmp-long v5, v3, v5
-
-    if-eqz v5, :cond_1
-
-    xor-long/2addr v3, v7
-
-    const/4 v5, 0x1
-
-    iput-boolean v5, v1, Lsr5;->c:Z
-
-    iget-object v1, v1, Lsr5;->d:Lrr5;
-
-    invoke-interface {v1, v3, v4}, Lrr5;->c(J)V
-
-    :cond_1
-    iget-object v1, v0, Lo6b;->N:Ln6b;
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1, v0, v2}, Ln6b;->a(Lo6b;Lorg/webrtc/SessionDescription;)V
-
-    :cond_2
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lj6b;->b:Lo6b;
+.method public final b()J
+    .locals 2
 
-    iget-object v1, v0, Lo6b;->E:Lsr5;
+    iget-object v0, p0, Lj6b;->a:Lfj5;
 
-    iget-object v2, p0, Lj6b;->c:Lorg/webrtc/SessionDescription;
+    invoke-virtual {v0}, Lfj5;->b()J
 
-    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+    move-result-wide v0
 
-    iget-boolean v4, v1, Lsr5;->c:Z
+    return-wide v0
+.end method
 
-    const-wide/16 v5, 0x0
+.method public final e()Lz1g;
+    .locals 1
 
-    if-nez v4, :cond_3
+    iget-object v0, p0, Lj6b;->c:Li6b;
 
-    goto :goto_1
+    return-object v0
+.end method
 
-    :cond_3
-    iput-wide v5, v1, Lsr5;->b:J
+.method public final f()J
+    .locals 2
 
-    iput-wide v5, v1, Lsr5;->a:J
+    iget-object v0, p0, Lj6b;->a:Lfj5;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Lfj5;->f()J
 
-    iput-boolean v4, v1, Lsr5;->c:Z
+    move-result-wide v0
 
-    :goto_1
-    invoke-static {v3}, Lsr5;->a(Ljava/lang/String;)J
+    return-wide v0
+.end method
 
-    move-result-wide v3
+.method public final g(Landroid/os/Handler;Lpg4;)V
+    .locals 1
 
-    iput-wide v3, v1, Lsr5;->b:J
+    iget-object v0, p0, Lj6b;->a:Lfj5;
 
-    cmp-long v7, v3, v5
+    invoke-virtual {v0, p1, p2}, Lfj5;->g(Landroid/os/Handler;Lpg4;)V
 
-    if-eqz v7, :cond_4
-
-    iget-wide v7, v1, Lsr5;->a:J
-
-    cmp-long v5, v7, v5
-
-    if-eqz v5, :cond_4
-
-    xor-long/2addr v3, v7
-
-    const/4 v5, 0x1
-
-    iput-boolean v5, v1, Lsr5;->c:Z
-
-    iget-object v1, v1, Lsr5;->d:Lrr5;
-
-    invoke-interface {v1, v3, v4}, Lrr5;->c(J)V
-
-    :cond_4
-    iget-object v1, v0, Lo6b;->N:Ln6b;
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v1, v0, v2}, Ln6b;->k(Lo6b;Lorg/webrtc/SessionDescription;)V
-
-    :cond_5
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -20,11 +20,11 @@
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "store",
         "",
-        "Lx41;",
-        "Laxf;",
+        "Lx51;",
+        "Lzag;",
         "sender",
         "<init>",
-        "(Lvd6;Lvd6;)V",
+        "(Lqh6;Lqh6;)V",
         "Lru/ok/android/externcalls/sdk/video/DisplayLayoutSender$SendFilter;",
         "condition",
         "applyFilter",
@@ -34,7 +34,7 @@
         "items",
         "sendDisplayLayouts",
         "(Ljava/util/Collection;)V",
-        "Lvd6;",
+        "Lqh6;",
         "Lru/ok/android/externcalls/sdk/video/DisplayLayoutSender$SendFilter;",
         "calls-sdk_release"
     }
@@ -51,40 +51,40 @@
 # instance fields
 .field private condition:Lru/ok/android/externcalls/sdk/video/DisplayLayoutSender$SendFilter;
 
-.field private final sender:Lvd6;
+.field private final sender:Lqh6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lvd6;"
+            "Lqh6;"
         }
     .end annotation
 .end field
 
-.field private final store:Lvd6;
+.field private final store:Lqh6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lvd6;"
+            "Lqh6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lvd6;Lvd6;)V
+.method public constructor <init>(Lqh6;Lqh6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvd6;",
-            "Lvd6;",
+            "Lqh6;",
+            "Lqh6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->store:Lvd6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->store:Lqh6;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->sender:Lvd6;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->sender:Lqh6;
 
     return-void
 .end method
@@ -100,7 +100,7 @@
 .end method
 
 .method public sendDisplayLayouts(Ljava/util/Collection;)V
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -120,11 +120,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->sender:Lvd6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->sender:Lqh6;
 
-    sget-object v0, Lo65;->a:Lo65;
+    sget-object v0, Ls95;->a:Ls95;
 
-    invoke-interface {p1, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -155,7 +155,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getType()Luhg;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getType()Lowg;
 
     move-result-object v2
 
@@ -167,9 +167,9 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->store:Lvd6;
+    iget-object v4, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->store:Lqh6;
 
-    invoke-interface {v4, v3}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v3}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -186,54 +186,52 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lch1;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Ldi1;
 
     move-result-object v3
 
-    iget-object v3, v3, Lch1;->a:Lyg1;
+    iget-object v3, v3, Ldi1;->a:Lzh1;
 
     if-eqz v3, :cond_1
 
-    new-instance v4, Lzzb;
+    new-instance v4, Lt65;
 
-    const/4 v5, 0x3
+    invoke-direct {v4}, Lt65;-><init>()V
 
-    invoke-direct {v4, v5}, Lzzb;-><init>(I)V
+    iput-object v3, v4, Lt65;->a:Ljava/lang/Object;
 
-    iput-object v3, v4, Lzzb;->b:Ljava/lang/Object;
-
-    iput-object v2, v4, Lzzb;->c:Ljava/lang/Object;
+    iput-object v2, v4, Lt65;->b:Ljava/lang/Object;
 
     invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/layout/ConversationDisplayLayoutItem;->getVideoTrackParticipantKey()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getMovieId()Llm9;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getMovieId()Lgu9;
 
     move-result-object v2
 
-    iput-object v2, v4, Lzzb;->o:Ljava/lang/Object;
+    iput-object v2, v4, Lt65;->c:Ljava/lang/Object;
 
-    invoke-virtual {v4}, Lzzb;->a()Lpr1;
+    invoke-virtual {v4}, Lt65;->o()Lrs1;
 
     move-result-object v2
 
-    new-instance v3, Lx41;
+    new-instance v3, Lx51;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/layout/ConversationDisplayLayoutItem;->getLayout()La8g;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/layout/ConversationDisplayLayoutItem;->getLayout()Llmg;
 
     move-result-object v1
 
-    invoke-direct {v3, v2, v1}, Lx41;-><init>(Lpr1;La8g;)V
+    invoke-direct {v3, v2, v1}, Lx51;-><init>(Lrs1;Llmg;)V
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_3
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->sender:Lvd6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/DisplayLayoutSenderImpl;->sender:Lqh6;
 
-    invoke-interface {p1, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

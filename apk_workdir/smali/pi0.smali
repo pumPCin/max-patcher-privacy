@@ -3,74 +3,250 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld94;
+.implements Lq50;
+
+
+# instance fields
+.field public b:Lo50;
+
+.field public c:Lo50;
+
+.field public d:Lo50;
+
+.field public e:Lo50;
+
+.field public f:Ljava/nio/ByteBuffer;
+
+.field public g:Ljava/nio/ByteBuffer;
+
+.field public h:Z
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Lq50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lpi0;->f:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lpi0;->g:Ljava/nio/ByteBuffer;
+
+    sget-object v0, Lo50;->e:Lo50;
+
+    iput-object v0, p0, Lpi0;->d:Lo50;
+
+    iput-object v0, p0, Lpi0;->e:Lo50;
+
+    iput-object v0, p0, Lpi0;->b:Lo50;
+
+    iput-object v0, p0, Lpi0;->c:Lo50;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lo0;)V
+.method public a()Z
     .locals 2
 
-    invoke-virtual {p1}, Lo0;->h()Z
-
-    move-result v0
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lpi0;->f(Lo0;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-boolean v0, p0, Lpi0;->h:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lo0;->a()Z
+    iget-object v0, p0, Lpi0;->g:Ljava/nio/ByteBuffer;
+
+    sget-object v1, Lq50;->a:Ljava/nio/ByteBuffer;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
 
-    :catchall_0
-    move-exception v1
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lo0;->a()Z
-
-    :cond_1
-    throw v1
+    return v0
 .end method
 
-.method public b(Lo0;)V
-    .locals 0
+.method public b()Ljava/nio/ByteBuffer;
+    .locals 2
 
-    return-void
+    iget-object v0, p0, Lpi0;->g:Ljava/nio/ByteBuffer;
+
+    sget-object v1, Lq50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v1, p0, Lpi0;->g:Ljava/nio/ByteBuffer;
+
+    return-object v0
 .end method
 
-.method public final c(Lo0;)V
+.method public final d()V
     .locals 1
 
-    :try_start_0
-    invoke-virtual {p0, p1}, Lpi0;->e(Lo0;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Lo0;->a()Z
+    iput-boolean v0, p0, Lpi0;->h:Z
+
+    invoke-virtual {p0}, Lpi0;->h()V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {p1}, Lo0;->a()Z
-
-    throw v0
 .end method
 
-.method public d()V
+.method public final e(Lo50;)Lo50;
+    .locals 0
+
+    iput-object p1, p0, Lpi0;->d:Lo50;
+
+    invoke-virtual {p0, p1}, Lpi0;->f(Lo50;)Lo50;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lpi0;->e:Lo50;
+
+    invoke-virtual {p0}, Lpi0;->isActive()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lpi0;->e:Lo50;
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lo50;->e:Lo50;
+
+    return-object p1
+.end method
+
+.method public abstract f(Lo50;)Lo50;
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    sget-object v0, Lq50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lpi0;->g:Ljava/nio/ByteBuffer;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lpi0;->h:Z
+
+    iget-object v0, p0, Lpi0;->d:Lo50;
+
+    iput-object v0, p0, Lpi0;->b:Lo50;
+
+    iget-object v0, p0, Lpi0;->e:Lo50;
+
+    iput-object v0, p0, Lpi0;->c:Lo50;
+
+    invoke-virtual {p0}, Lpi0;->g()V
+
+    return-void
+.end method
+
+.method public g()V
     .locals 0
 
     return-void
 .end method
 
-.method public abstract e(Lo0;)V
+.method public h()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract f(Lo0;)V
+.method public i()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public isActive()Z
+    .locals 2
+
+    iget-object v0, p0, Lpi0;->e:Lo50;
+
+    sget-object v1, Lo50;->e:Lo50;
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final j(I)Ljava/nio/ByteBuffer;
+    .locals 1
+
+    iget-object v0, p0, Lpi0;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v0
+
+    if-ge v0, p1, :cond_0
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lpi0;->f:Ljava/nio/ByteBuffer;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lpi0;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    :goto_0
+    iget-object p1, p0, Lpi0;->f:Ljava/nio/ByteBuffer;
+
+    iput-object p1, p0, Lpi0;->g:Ljava/nio/ByteBuffer;
+
+    return-object p1
+.end method
+
+.method public final reset()V
+    .locals 1
+
+    invoke-virtual {p0}, Lpi0;->flush()V
+
+    sget-object v0, Lq50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lpi0;->f:Ljava/nio/ByteBuffer;
+
+    sget-object v0, Lo50;->e:Lo50;
+
+    iput-object v0, p0, Lpi0;->d:Lo50;
+
+    iput-object v0, p0, Lpi0;->e:Lo50;
+
+    iput-object v0, p0, Lpi0;->b:Lo50;
+
+    iput-object v0, p0, Lpi0;->c:Lo50;
+
+    invoke-virtual {p0}, Lpi0;->i()V
+
+    return-void
 .end method

@@ -3,100 +3,101 @@
 .source "SourceFile"
 
 # interfaces
-.implements Luyc;
+.implements Lyaf;
+.implements Lpec;
 
 
 # instance fields
-.field public final a:Lh33;
+.field public final a:Ljava/util/HashMap;
 
-.field public final b:Z
+.field public b:Ljava/util/ArrayDeque;
 
-.field public final c:Z
-
-.field public final d:Lljh;
-
-.field public final e:I
-
-.field public final f:Lvt;
+.field public final c:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(ZZLljh;ILvt;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lce5;->b:Z
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-boolean p2, p0, Lce5;->c:Z
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p3, p0, Lce5;->d:Lljh;
+    iput-object v0, p0, Lce5;->a:Ljava/util/HashMap;
 
-    iput p4, p0, Lce5;->e:I
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    iput-object p5, p0, Lce5;->f:Lvt;
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    new-instance p1, Lh33;
+    iput-object v0, p0, Lce5;->b:Ljava/util/ArrayDeque;
 
-    const/16 p2, 0x10
-
-    invoke-direct {p1, p2}, Lh33;-><init>(I)V
-
-    iput-object p1, p0, Lce5;->a:Lh33;
+    iput-object p1, p0, Lce5;->c:Ljava/util/concurrent/Executor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/os/Handler;Lqe5;Lqe5;Lqe5;Lqe5;)[Lvj0;
-    .locals 1
+.method public final a(Lrn5;)V
+    .locals 4
 
-    new-instance p1, Ljava/util/ArrayList;
+    const-class v0, Leb4;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    iget-object v1, p0, Lce5;->c:Ljava/util/concurrent/Executor;
 
-    iget-boolean p2, p0, Lce5;->b:Z
+    monitor-enter p0
 
-    iget-object p3, p0, Lce5;->f:Lvt;
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p4, p0, Lce5;->a:Lh33;
+    iget-object v2, p0, Lce5;->a:Ljava/util/HashMap;
 
-    iget-object p5, p0, Lce5;->d:Lljh;
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    if-nez p2, :cond_0
+    move-result v2
 
-    new-instance p2, Lod5;
+    if-nez v2, :cond_0
 
-    invoke-direct {p2, p5, p4, p3}, Lod5;-><init>(Lljh;Lh33;Lvt;)V
+    iget-object v2, p0, Lce5;->a:Ljava/util/HashMap;
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v3, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    iget-boolean p2, p0, Lce5;->c:Z
+    :goto_0
+    iget-object v2, p0, Lce5;->a:Ljava/util/HashMap;
 
-    if-nez p2, :cond_1
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p2, Lqd5;
+    move-result-object v0
 
-    iget v0, p0, Lce5;->e:I
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {p2, p5, v0, p4, p3}, Lqd5;-><init>(Lljh;ILh33;Lvt;)V
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    monitor-exit p0
 
-    :cond_1
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    return-void
 
-    move-result p2
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    new-array p2, p2, [Lvj0;
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lvj0;
-
-    return-object p1
+    throw p1
 .end method

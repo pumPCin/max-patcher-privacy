@@ -1,64 +1,40 @@
-.class public final Lgrc;
+.class public abstract Lgrc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lhrc;
 
 
 # static fields
-.field public static final a:Lgrc;
+.field public static contact_list_call_contact_title:I = 0x7f130411
 
+.field public static contact_list_confirm_contact_block_action:I = 0x7f130412
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static contact_list_confirm_contact_block_description:I = 0x7f130413
 
-    new-instance v0, Lgrc;
+.field public static contact_list_confirm_contact_block_title:I = 0x7f130414
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static contact_list_confirm_contact_delete_action:I = 0x7f130415
 
-    sput-object v0, Lgrc;->a:Lgrc;
+.field public static contact_list_confirm_contact_delete_title:I = 0x7f130416
 
-    return-void
-.end method
+.field public static contact_list_contact_block_snackbar_title:I = 0x7f130417
 
+.field public static contact_list_contact_delete_snackbar_title:I = 0x7f130418
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static contact_list_menu_item_add_contact:I = 0x7f130419
 
-    const/4 v0, 0x1
+.field public static contact_list_search_hint:I = 0x7f13041a
 
-    if-ne p0, p1, :cond_0
+.field public static contact_list_search_hint_with_nick:I = 0x7f13041b
 
-    return v0
+.field public static empty_contact_list_description:I = 0x7f13048b
 
-    :cond_0
-    instance-of p1, p1, Lgrc;
+.field public static empty_contact_list_title:I = 0x7f13048c
 
-    if-nez p1, :cond_1
+.field public static empty_search_contact_btn_title:I = 0x7f13048f
 
-    const/4 p1, 0x0
+.field public static empty_search_contact_disabled_description:I = 0x7f130490
 
-    return p1
+.field public static empty_search_contact_enabled_description:I = 0x7f130491
 
-    :cond_1
-    return v0
-.end method
+.field public static empty_search_contact_title:I = 0x7f130492
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x726dbab4
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OutOfMemory"
-
-    return-object v0
-.end method
+.field public static snackbar_self_title:I = 0x7f130d14

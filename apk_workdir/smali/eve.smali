@@ -2,303 +2,217 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final o:Ljava/lang/String;
-
 
 # instance fields
-.field public final a:Lz7h;
+.field public final a:Lvg0;
 
-.field public final b:Lpme;
+.field public final b:I
 
-.field public final c:Z
+.field public final c:J
+
+.field public final d:Lyhf;
+
+.field public final e:Lwoe;
+
+.field public f:I
+
+.field public g:J
+
+.field public h:J
+
+.field public i:J
+
+.field public j:J
+
+.field public k:I
+
+.field public l:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "StopWorkRunnable"
-
-    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Leve;->o:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lz7h;Lpme;Z)V
-    .locals 0
+.method public constructor <init>(Lqo4;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Leve;->a:Lz7h;
+    iget-object v0, p1, Lqo4;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Leve;->b:Lpme;
+    check-cast v0, Lvg0;
 
-    iput-boolean p3, p0, Leve;->c:Z
+    iput-object v0, p0, Leve;->a:Lvg0;
+
+    iget v0, p1, Lqo4;->a:I
+
+    iput v0, p0, Leve;->b:I
+
+    iget-wide v0, p1, Lqo4;->b:J
+
+    iput-wide v0, p0, Leve;->c:J
+
+    iget-object p1, p1, Lqo4;->d:Ljava/lang/Object;
+
+    check-cast p1, Lyhf;
+
+    iput-object p1, p0, Leve;->d:Lyhf;
+
+    new-instance p1, Lwoe;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Lwoe;-><init>(I)V
+
+    iput-object p1, p0, Leve;->e:Lwoe;
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    iput-wide v0, p0, Leve;->i:J
+
+    iput-wide v0, p0, Leve;->j:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a(IJJ)V
+    .locals 7
 
-    iget-boolean v0, p0, Leve;->c:Z
+    const-wide/high16 v0, -0x8000000000000000L
+
+    cmp-long v0, p4, v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Leve;->a:Lz7h;
+    if-nez p1, :cond_0
 
-    iget-object v0, v0, Lz7h;->f:Lvpb;
+    const-wide/16 v0, 0x0
 
-    iget-object v1, p0, Leve;->b:Lpme;
+    cmp-long v0, p2, v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v0, :cond_0
 
-    const-string v2, "Processor stopping foreground work "
+    iget-wide v0, p0, Leve;->j:J
 
-    iget-object v1, v1, Lpme;->a:Lr7h;
+    cmp-long v0, p4, v0
 
-    iget-object v1, v1, Lr7h;->a:Ljava/lang/String;
-
-    iget-object v3, v0, Lvpb;->v0:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    :try_start_0
-    invoke-static {}, Ldt;->r()Ldt;
-
-    move-result-object v4
-
-    sget-object v5, Lvpb;->w0:Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v5, v2}, Ldt;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v0, Lvpb;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lc9h;
-
-    if-eqz v2, :cond_0
-
-    iget-object v0, v0, Lvpb;->r0:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
     :cond_0
-    :goto_0
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-wide p4, p0, Leve;->j:J
 
-    invoke-static {v1, v2}, Lvpb;->c(Ljava/lang/String;Lc9h;)Z
+    iget-object v1, p0, Leve;->e:Lwoe;
 
-    move-result v0
+    move v2, p1
 
-    goto/16 :goto_4
+    move-wide v3, p2
 
-    :goto_1
-    :try_start_1
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-wide v5, p4
 
-    throw v0
+    invoke-virtual/range {v1 .. v6}, Lwoe;->i(IJJ)V
 
     :cond_1
-    iget-object v0, p0, Leve;->a:Lz7h;
+    :goto_0
+    return-void
+.end method
 
-    iget-object v0, v0, Lz7h;->f:Lvpb;
+.method public final b()V
+    .locals 13
 
-    iget-object v1, p0, Leve;->b:Lpme;
+    iget v1, p0, Leve;->f:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v6, 0x1
 
-    const-string v2, "Processor stopping background work "
+    if-lez v1, :cond_0
 
-    const-string v3, "WorkerWrapper could not be found for "
+    move v1, v6
 
-    iget-object v4, v1, Lpme;->a:Lr7h;
+    goto :goto_0
 
-    iget-object v4, v4, Lr7h;->a:Ljava/lang/String;
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v5, v0, Lvpb;->v0:Ljava/lang/Object;
+    :goto_0
+    invoke-static {v1}, Lgfi;->g(Z)V
 
-    monitor-enter v5
+    iget-object v1, p0, Leve;->d:Lyhf;
 
-    :try_start_2
-    iget-object v6, v0, Lvpb;->Z:Ljava/util/HashMap;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v6, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-object v6
+    move-result-wide v7
 
-    check-cast v6, Lc9h;
+    iget-wide v1, p0, Leve;->g:J
 
-    const/4 v7, 0x0
+    sub-long v1, v7, v1
 
-    if-nez v6, :cond_2
+    long-to-int v1, v1
 
-    invoke-static {}, Ldt;->r()Ldt;
+    int-to-long v1, v1
 
-    move-result-object v0
+    const-wide/16 v9, 0x0
 
-    sget-object v1, Lvpb;->w0:Ljava/lang/String;
+    cmp-long v3, v1, v9
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-lez v3, :cond_2
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v3, p0, Leve;->h:J
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v11, 0x3e8
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    mul-long/2addr v11, v1
 
-    move-result-object v2
+    iget-object v5, p0, Leve;->a:Lvg0;
 
-    invoke-virtual {v0, v1, v2}, Ldt;->l(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v5, v3, v4, v11, v12}, Lvg0;->a(JJ)V
 
-    monitor-exit v5
+    iget v3, p0, Leve;->k:I
 
-    :goto_2
-    move v0, v7
+    add-int/2addr v3, v6
 
-    goto :goto_4
+    iput v3, p0, Leve;->k:I
 
-    :catchall_1
-    move-exception v0
+    iget v4, p0, Leve;->b:I
 
-    goto :goto_5
+    if-le v3, v4, :cond_1
+
+    iget-wide v3, p0, Leve;->l:J
+
+    iget-wide v11, p0, Leve;->c:J
+
+    cmp-long v3, v3, v11
+
+    if-lez v3, :cond_1
+
+    invoke-interface {v5}, Lvg0;->b()J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Leve;->i:J
+
+    :cond_1
+    long-to-int v1, v1
+
+    iget-wide v2, p0, Leve;->h:J
+
+    iget-wide v4, p0, Leve;->i:J
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Leve;->a(IJJ)V
+
+    iput-wide v7, p0, Leve;->g:J
+
+    iput-wide v9, p0, Leve;->h:J
 
     :cond_2
-    iget-object v3, v0, Lvpb;->r0:Ljava/util/HashMap;
+    iget v1, p0, Leve;->f:I
 
-    invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sub-int/2addr v1, v6
 
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Set;
-
-    if-eqz v3, :cond_4
-
-    invoke-interface {v3, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {}, Ldt;->r()Ldt;
-
-    move-result-object v1
-
-    sget-object v3, Lvpb;->w0:Ljava/lang/String;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v3, v2}, Ldt;->l(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Lvpb;->r0:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit v5
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-static {v4, v6}, Lvpb;->c(Ljava/lang/String;Lc9h;)Z
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_4
-    :goto_3
-    :try_start_3
-    monitor-exit v5
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_2
-
-    :goto_4
-    invoke-static {}, Ldt;->r()Ldt;
-
-    move-result-object v1
-
-    sget-object v2, Leve;->o:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "StopWorkRunnable for "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v4, p0, Leve;->b:Lpme;
-
-    iget-object v4, v4, Lpme;->a:Lr7h;
-
-    iget-object v4, v4, Lr7h;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, "; Processor.stopWork = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v2, v0}, Ldt;->l(Ljava/lang/String;Ljava/lang/String;)V
+    iput v1, p0, Leve;->f:I
 
     return-void
-
-    :goto_5
-    :try_start_4
-    monitor-exit v5
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v0
 .end method

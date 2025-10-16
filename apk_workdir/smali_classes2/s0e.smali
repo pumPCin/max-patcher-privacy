@@ -1,104 +1,136 @@
 .class public final Ls0e;
-.super Lc2f;
+.super Lhlf;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/settings/SettingsListScreen;
+.implements Lu0e;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p2, p0, Ls0e;->Y:Lone/me/settings/SettingsListScreen;
+    new-instance v0, Ltxc;
 
-    const/4 p2, 0x2
+    const/16 v1, 0xc
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Ltxc;-><init>(I)V
+
+    invoke-direct {p0, v0}, Lhlf;-><init>(Lqh6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final f0()I
+    .locals 3
 
-    check-cast p1, Lw2e;
+    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Lqbi;->n(Llt7;)Z
 
-    invoke-virtual {p0, p1, p2}, Ls0e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lhlf;->M()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    int-to-float v1, v1
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Ld15;->c(FFI)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final setAlias(Landroid/text/Layout;)V
+    .locals 1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lhlf;->c:Ljava/lang/Object;
+
+    invoke-interface {p1}, Llt7;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ls0e;
+    check-cast p1, Lt0e;
 
-    sget-object p2, Laxf;->a:Laxf;
+    const/16 v0, 0x8
 
-    invoke-virtual {p1, p2}, Ls0e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    return-object p2
-.end method
+    :cond_0
+    return-void
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ls0e;
-
-    iget-object v1, p0, Ls0e;->Y:Lone/me/settings/SettingsListScreen;
-
-    invoke-direct {v0, p2, v1}, Ls0e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
-
-    iput-object p1, v0, Ls0e;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls0e;->X:Ljava/lang/Object;
-
-    check-cast p1, Lw2e;
-
-    sget-object v0, Lone/me/settings/SettingsListScreen;->A0:[Lpl7;
-
-    iget-object v0, p0, Ls0e;->Y:Lone/me/settings/SettingsListScreen;
-
-    invoke-virtual {v0}, Lone/me/settings/SettingsListScreen;->E0()Lb4e;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Lb4e;->setTopBarContent(Lw2e;)V
-
-    iget-object v1, v0, Lone/me/settings/SettingsListScreen;->s0:Lvoc;
-
-    sget-object v2, Lone/me/settings/SettingsListScreen;->A0:[Lpl7;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, v0, v2}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    :cond_1
+    invoke-virtual {p0}, Lhlf;->R()Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Ljxa;
+    check-cast v0, Lt0e;
 
-    iget-object p1, p1, Lw2e;->c:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lt0e;->setLayout(Landroid/text/Layout;)V
 
-    invoke-virtual {v0, p1}, Ljxa;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0}, Lhlf;->R()Landroid/view/View;
 
-    sget-object p1, Laxf;->a:Laxf;
+    move-result-object p1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {p0}, Lhlf;->y()V
+
+    return-void
+.end method
+
+.method public final setAliasColor(I)V
+    .locals 2
+
+    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt0e;
+
+    invoke-virtual {v0, p1}, Lt0e;->setTextColor(I)V
+
+    :cond_0
+    return-void
 .end method

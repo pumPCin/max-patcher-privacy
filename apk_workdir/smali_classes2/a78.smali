@@ -1,75 +1,97 @@
 .class public final La78;
-.super Lh5d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:La78;
+# instance fields
+.field public a:Z
 
-.field public static final c:Lmc4;
+.field public b:Z
 
-.field public static final d:Lmc4;
+.field public c:I
 
-.field public static final e:Lmc4;
+.field public d:I
 
-.field public static final f:Lmc4;
+.field public e:Lb78;
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:J
+
+.field public i:Z
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:Z
+
+.field public n:Z
+
+.field public o:J
+
+.field public p:J
+
+.field public q:J
+
+.field public r:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>()V
+    .locals 3
 
-    new-instance v0, La78;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lrc4;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, La78;->b:La78;
+    iput-boolean v0, p0, La78;->a:Z
 
-    const/4 v1, 0x0
+    iput-boolean v0, p0, La78;->b:Z
 
-    new-array v2, v1, [Ljava/lang/String;
+    const/4 v1, 0x1
 
-    const-string v3, ":contact-list"
+    iput v1, p0, La78;->c:I
 
-    const/4 v4, 0x0
+    iput v1, p0, La78;->d:I
 
-    const/16 v5, 0xe
+    sget-object v2, Lb78;->X:Lb78;
 
-    invoke-static {v0, v3, v2, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+    iput-object v2, p0, La78;->e:Lb78;
 
-    move-result-object v2
+    iput-boolean v1, p0, La78;->f:Z
 
-    sput-object v2, La78;->c:Lmc4;
+    iput-boolean v1, p0, La78;->g:Z
 
-    const-string v2, ":call-list"
+    const-wide/16 v1, -0x1
 
-    new-array v3, v1, [Ljava/lang/String;
+    iput-wide v1, p0, La78;->h:J
 
-    invoke-static {v0, v2, v3, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+    iput-boolean v0, p0, La78;->i:Z
 
-    move-result-object v2
+    iput-boolean v0, p0, La78;->j:Z
 
-    sput-object v2, La78;->d:Lmc4;
+    iput-boolean v0, p0, La78;->k:Z
 
-    const-string v2, ":chat-list"
+    iput-boolean v0, p0, La78;->l:Z
 
-    new-array v3, v1, [Ljava/lang/String;
+    iput-boolean v0, p0, La78;->m:Z
 
-    invoke-static {v0, v2, v3, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+    iput-boolean v0, p0, La78;->n:Z
 
-    move-result-object v2
+    iput-wide v1, p0, La78;->o:J
 
-    sput-object v2, La78;->e:Lmc4;
+    const-wide/16 v1, 0x0
 
-    const-string v2, ":settings"
+    iput-wide v1, p0, La78;->p:J
 
-    new-array v1, v1, [Ljava/lang/String;
+    iput-wide v1, p0, La78;->q:J
 
-    invoke-static {v0, v2, v1, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
-
-    move-result-object v0
-
-    sput-object v0, La78;->f:Lmc4;
+    iput-boolean v0, p0, La78;->r:Z
 
     return-void
 .end method

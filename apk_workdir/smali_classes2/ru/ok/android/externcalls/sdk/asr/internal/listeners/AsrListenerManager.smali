@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;",
         "listener",
-        "Laxf;",
+        "Lzag;",
         "addAsrRecordListener",
         "(Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;)V",
         "removeAsrRecordListener",

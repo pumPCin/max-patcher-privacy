@@ -1,41 +1,82 @@
-.class public final Laj5;
-.super Lo3;
+.class public interface abstract Laj5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Lgv0;
+# virtual methods
+.method public abstract a()Lm0g;
+.end method
 
+.method public abstract b()I
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public abstract c(Z)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract d(I)Lsa6;
+.end method
 
-    new-instance v0, Lgv0;
+.method public abstract e()V
+.end method
 
-    const/4 v1, 0x7
+.method public abstract f(I)I
+.end method
 
-    invoke-direct {v0, v1}, Lgv0;-><init>(I)V
+.method public abstract g(JLjava/util/List;)I
+.end method
 
-    iput-object v0, p0, Laj5;->c:Lgv0;
+.method public abstract h()V
+.end method
+
+.method public abstract i()I
+.end method
+
+.method public abstract j()Lsa6;
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public abstract l(F)V
+.end method
+
+.method public abstract length()I
+.end method
+
+.method public abstract m()Ljava/lang/Object;
+.end method
+
+.method public n()V
+    .locals 0
 
     return-void
 .end method
 
+.method public o()V
+    .locals 0
 
-# virtual methods
-.method public final g()Ljava/util/Random;
-    .locals 1
+    return-void
+.end method
 
-    iget-object v0, p0, Laj5;->c:Lgv0;
+.method public abstract p(I)I
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+.method public abstract q(IJ)Z
+.end method
 
-    move-result-object v0
+.method public abstract r(JJJLjava/util/List;[Lsn8;)V
+.end method
 
-    check-cast v0, Ljava/util/Random;
+.method public abstract s(Lsa6;)I
+.end method
 
-    return-object v0
+.method public t(JLw53;Ljava/util/List;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract u(IJ)Z
 .end method

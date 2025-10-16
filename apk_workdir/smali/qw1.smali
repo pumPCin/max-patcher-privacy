@@ -1,89 +1,39 @@
 .class public final Lqw1;
-.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
+.super Lof4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final b:Lqw1;
 
-.field public b:Z
-
-.field public final synthetic c:Lww1;
+.field public static final c:Ljf4;
 
 
 # direct methods
-.method public constructor <init>(Lww1;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lqw1;->c:Lww1;
+    new-instance v0, Lqw1;
 
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
+    invoke-direct {v0}, Lof4;-><init>()V
 
-    const/4 p1, 0x1
+    sput-object v0, Lqw1;->b:Lqw1;
 
-    iput-boolean p1, p0, Lqw1;->b:Z
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lqw1;->a:Ljava/lang/String;
+    new-array v1, v1, [Ljava/lang/String;
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
+    const/16 v3, 0xe
 
-# virtual methods
-.method public final onCameraAvailable(Ljava/lang/String;)V
-    .locals 1
+    const-string v4, ":chats/callshare"
 
-    iget-object v0, p0, Lqw1;->a:Ljava/lang/String;
+    invoke-static {v0, v4, v1, v2, v3}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lqw1;->b:Z
-
-    iget-object p1, p0, Lqw1;->c:Lww1;
-
-    iget p1, p1, Lww1;->R0:I
-
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p1, p0, Lqw1;->c:Lww1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lww1;->J(Z)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final onCameraUnavailable(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lqw1;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lqw1;->b:Z
+    sput-object v0, Lqw1;->c:Ljf4;
 
     return-void
 .end method

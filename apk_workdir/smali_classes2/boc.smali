@@ -1,170 +1,90 @@
-.class public final Lboc;
+.class public abstract Lboc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
+# static fields
+.field public static oneme_settings_storage_item_action_all_cancel:I = 0x7f0a0804
 
-# instance fields
-.field public final synthetic a:Lsnc;
+.field public static oneme_settings_storage_item_action_all_clear:I = 0x7f0a0805
 
-.field public final synthetic b:Landroid/view/ViewGroup;
+.field public static oneme_settings_storage_item_action_audio_cancel:I = 0x7f0a0806
 
-.field public final synthetic c:Lvd6;
+.field public static oneme_settings_storage_item_action_audio_clear:I = 0x7f0a0807
 
-.field public final synthetic d:I
+.field public static oneme_settings_storage_item_action_files_cancel:I = 0x7f0a0808
 
+.field public static oneme_settings_storage_item_action_files_clear:I = 0x7f0a0809
 
-# direct methods
-.method public constructor <init>(Lsnc;Landroid/view/ViewGroup;Lvd6;I)V
-    .locals 0
+.field public static oneme_settings_storage_item_action_gif_cancel:I = 0x7f0a080a
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_storage_item_action_gif_clear:I = 0x7f0a080b
 
-    iput-object p1, p0, Lboc;->a:Lsnc;
+.field public static oneme_settings_storage_item_action_images_cancel:I = 0x7f0a080c
 
-    iput-object p2, p0, Lboc;->b:Landroid/view/ViewGroup;
+.field public static oneme_settings_storage_item_action_images_clear:I = 0x7f0a080d
 
-    iput-object p3, p0, Lboc;->c:Lvd6;
+.field public static oneme_settings_storage_item_action_music_cancel:I = 0x7f0a080e
 
-    iput p4, p0, Lboc;->d:I
+.field public static oneme_settings_storage_item_action_music_clear:I = 0x7f0a080f
 
-    return-void
-.end method
+.field public static oneme_settings_storage_item_action_stickers_cancel:I = 0x7f0a0810
 
+.field public static oneme_settings_storage_item_action_stickers_clear:I = 0x7f0a0811
 
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+.field public static oneme_settings_storage_item_action_video_cancel:I = 0x7f0a0812
 
-    iget-object p1, p0, Lboc;->a:Lsnc;
+.field public static oneme_settings_storage_item_action_video_clear:I = 0x7f0a0813
 
-    iget-object p1, p1, Lsnc;->d:Landroidx/recyclerview/widget/RecyclerView;
+.field public static oneme_settings_storage_item_all_clear_title:I = 0x7f0a0814
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+.field public static oneme_settings_storage_item_audio_clear_title:I = 0x7f0a0815
 
-    move-result-object v0
+.field public static oneme_settings_storage_item_audio_messages:I = 0x7f0a0816
 
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+.field public static oneme_settings_storage_item_clear_cache:I = 0x7f0a0817
 
-    if-eqz v0, :cond_2
+.field public static oneme_settings_storage_item_files:I = 0x7f0a0818
 
-    iget v2, p0, Lboc;->d:I
+.field public static oneme_settings_storage_item_files_clear_title:I = 0x7f0a0819
 
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+.field public static oneme_settings_storage_item_gif:I = 0x7f0a081a
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.field public static oneme_settings_storage_item_gif_clear_title:I = 0x7f0a081b
 
-    iget-object p1, p0, Lboc;->b:Landroid/view/ViewGroup;
+.field public static oneme_settings_storage_item_images:I = 0x7f0a081c
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+.field public static oneme_settings_storage_item_images_clear_title:I = 0x7f0a081d
 
-    move-result-object v0
+.field public static oneme_settings_storage_item_music:I = 0x7f0a081e
 
-    if-eqz v0, :cond_1
+.field public static oneme_settings_storage_item_music_clear_title:I = 0x7f0a081f
 
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+.field public static oneme_settings_storage_item_one_month:I = 0x7f0a0820
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.field public static oneme_settings_storage_item_one_week:I = 0x7f0a0821
 
-    iget-object p1, p0, Lboc;->c:Lvd6;
+.field public static oneme_settings_storage_item_six_month:I = 0x7f0a0822
 
-    if-eqz p1, :cond_0
+.field public static oneme_settings_storage_item_stickers:I = 0x7f0a0823
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.field public static oneme_settings_storage_item_stickers_clear_title:I = 0x7f0a0824
 
-    move-result-object v0
+.field public static oneme_settings_storage_item_unlimited:I = 0x7f0a0825
 
-    invoke-interface {p1, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_settings_storage_item_video:I = 0x7f0a0826
 
-    :cond_0
-    return-void
+.field public static oneme_settings_storage_item_video_clear_title:I = 0x7f0a0827
 
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+.field public static oneme_settings_storage_screen_data_section_header:I = 0x7f0a0828
 
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+.field public static oneme_settings_storage_screen_list:I = 0x7f0a0829
 
-    throw p1
+.field public static oneme_settings_storage_screen_preserve_media_section:I = 0x7f0a082a
 
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
+.field public static oneme_settings_storage_screen_settings_button_vh:I = 0x7f0a082b
 
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+.field public static oneme_settings_storage_screen_settings_header_vh:I = 0x7f0a082c
 
-    throw p1
-.end method
+.field public static oneme_settings_storage_screen_settings_item_vh:I = 0x7f0a082d
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget-object p1, p0, Lboc;->a:Lsnc;
-
-    iget-object p1, p1, Lsnc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
-
-    if-eqz v0, :cond_2
-
-    iget v2, p0, Lboc;->d:I
-
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p1, p0, Lboc;->b:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p1, p0, Lboc;->c:Lvd6;
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
+.field public static oneme_settings_storage_screen_toolbar:I = 0x7f0a082e

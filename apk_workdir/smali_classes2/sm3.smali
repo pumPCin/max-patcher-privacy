@@ -1,79 +1,70 @@
 .class public final Lsm3;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lhne;
+.field public synthetic X:Z
 
 
-# direct methods
-.method public constructor <init>(Le7f;Lfvd;)V
-    .locals 9
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ljava/lang/Boolean;
 
-    check-cast p1, Lmka;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {p1}, Lmka;->a()Lh24;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    const-string v1, "conn-events"
-
-    invoke-virtual {p1, v0, v1}, Lh24;->limitedParallelism(ILjava/lang/String;)Lh24;
+    invoke-virtual {p0, p1, p2}, Lsm3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-static {p1}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+    check-cast p1, Lsm3;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lsm3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p2, Lhvd;
+    return-object p1
+.end method
 
-    iget v0, p2, Lhvd;->h:I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v0, Lsm3;
 
-    move-result-object v0
+    const/4 v1, 0x2
 
-    invoke-static {v0}, Line;->a(Ljava/lang/Object;)Lhne;
+    invoke-direct {v0, v1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result-object v3
+    check-cast p1, Ljava/lang/Boolean;
 
-    iput-object v3, p0, Lsm3;->a:Lhne;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object p2, p2, Lhvd;->e:Lpl0;
+    move-result p1
 
-    invoke-static {p2}, Luce;->b(Loba;)Lus1;
+    iput-boolean p1, v0, Lsm3;->X:Z
 
-    move-result-object p2
+    return-object v0
+.end method
 
-    new-instance v1, Lmw;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v7, 0x0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const/16 v8, 0xe
+    iget-boolean p1, p0, Lsm3;->X:Z
 
-    const/4 v2, 0x2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const-class v4, Lis9;
+    move-result-object p1
 
-    const-string v5, "emit"
-
-    const-string v6, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
-
-    invoke-direct/range {v1 .. v8}, Lmw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v0, Lnw5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p2, v1, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
-
-    invoke-static {v0, p1}, Luce;->N(Liu5;Ln24;)Loke;
-
-    return-void
+    return-object p1
 .end method

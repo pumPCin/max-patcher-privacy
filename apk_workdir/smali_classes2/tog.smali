@@ -1,269 +1,400 @@
 .class public final Ltog;
-.super Lc2f;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic Y:[B
+.field public final b:Ljava/lang/Object;
 
-.field public final synthetic Z:Luog;
+.field public c:Landroid/view/ViewPropertyAnimator;
+
+.field public final o:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+.field public final r0:Llxb;
+
+.field public final s0:Lkpg;
 
 
 # direct methods
-.method public constructor <init>(Luog;Lkotlin/coroutines/Continuation;[B)V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
+
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Ldpe;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, p1, v1}, Ldpe;-><init>(Landroid/content/Context;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ltog;->a:Ljava/lang/Object;
+
+    new-instance v0, Lzrf;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2, p0}, Lzrf;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v1, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ltog;->b:Ljava/lang/Object;
+
+    new-instance v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-direct {v0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+
+    sget v1, Llra;->t:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lx05;->getHierarchy()Lu05;
+
+    move-result-object v3
+
+    check-cast v3, Lsm6;
+
+    invoke-direct {p0}, Ltog;->getShimmerDrawable()Lzie;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lsm6;->k(Landroid/graphics/drawable/Drawable;)V
+
+    iput-object v0, p0, Ltog;->o:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    new-instance v3, Llxb;
+
+    invoke-direct {v3, p1}, Llxb;-><init>(Landroid/content/Context;)V
+
+    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v4, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v4, 0x4
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
+
+    iput-object v3, p0, Ltog;->r0:Llxb;
+
+    new-instance v4, Lkpg;
+
+    invoke-direct {v4, p1}, Lkpg;-><init>(Landroid/content/Context;)V
+
+    sget p1, Llra;->v:I
+
+    invoke-virtual {v4, p1}, Landroid/view/View;->setId(I)V
+
+    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {p1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v4, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v4, v1}, Lkpg;->setPausingEnabled(Z)V
+
+    iput-object v4, p0, Ltog;->s0:Lkpg;
+
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setKeepScreenOn(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
+
+    new-instance p1, Lz43;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p1, p0, v0}, Lz43;-><init>(Landroid/view/View;I)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    return-void
+.end method
+
+.method public static a(Ltog;)V
+    .locals 2
+
+    iget-object v0, p0, Ltog;->o:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-direct {p0}, Ltog;->getShimmerDrawable()Lzie;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lzie;->d()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ltog;->c:Landroid/view/ViewPropertyAnimator;
+
+    return-void
+.end method
+
+.method private final getAllPostProcessor()Lg62;
+    .locals 1
+
+    iget-object v0, p0, Ltog;->a:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lg62;
+
+    return-object v0
+.end method
+
+.method private final getShimmerDrawable()Lzie;
+    .locals 1
+
+    iget-object v0, p0, Ltog;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzie;
+
+    return-object v0
+.end method
+
+.method private static synthetic getShimmerDrawable$annotations()V
     .locals 0
-
-    iput-object p3, p0, Ltog;->Y:[B
-
-    iput-object p1, p0, Ltog;->Z:Luog;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final getFrameAsBitmap()Landroid/graphics/Bitmap;
+    .locals 3
 
-    check-cast p1, Ln24;
+    iget-object v0, p0, Ltog;->r0:Llxb;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Llxb;->getPreviewStreamState()Lk28;
 
-    invoke-virtual {p0, p1, p2}, Ltog;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {v1}, Lk28;->d()Ljava/lang/Object;
 
-    check-cast p1, Ltog;
+    move-result-object v1
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object v2, Lkxb;->b:Lkxb;
 
-    invoke-virtual {p1, p2}, Ltog;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne v1, v2, :cond_0
 
-    move-result-object p1
+    invoke-virtual {v0}, Llxb;->getBitmap()Landroid/graphics/Bitmap;
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ltog;
-
-    iget-object v0, p0, Ltog;->Y:[B
-
-    iget-object v1, p0, Ltog;->Z:Luog;
-
-    invoke-direct {p1, v1, p2, v0}, Ltog;-><init>(Luog;Lkotlin/coroutines/Continuation;[B)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget v0, p0, Ltog;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto/16 :goto_4
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    const/4 p1, 0x0
-
-    iget-object v0, p0, Ltog;->Z:Luog;
-
-    iget-object v2, p0, Ltog;->Y:[B
-
-    if-eqz v2, :cond_8
-
-    sget-object v3, Lj60;->F0:Landroid/animation/IntEvaluator;
-
-    invoke-virtual {v0}, Luog;->getWaveView()Lj60;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lj60;->getPeaksCount()I
-
-    move-result v3
-
-    array-length v4, v2
-
-    if-nez v4, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    new-array v4, v3, [B
-
-    const/4 v5, 0x0
-
-    move v6, v5
-
-    :goto_0
-    if-ge v6, v3, :cond_7
-
-    if-eqz v6, :cond_6
-
-    array-length v7, v2
-
-    if-ne v7, v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    add-int/lit8 v7, v3, -0x1
-
-    if-ne v6, v7, :cond_4
-
-    array-length v7, v2
-
-    sub-int/2addr v7, v1
-
-    aget-byte v7, v2, v7
-
-    goto :goto_2
-
-    :cond_4
-    int-to-float v7, v6
-
-    int-to-float v8, v3
-
-    div-float/2addr v7, v8
-
-    array-length v8, v2
-
-    sub-int/2addr v8, v1
-
-    int-to-float v8, v8
-
-    mul-float/2addr v7, v8
-
-    float-to-int v8, v7
-
-    add-int/lit8 v9, v8, 0x1
-
-    array-length v10, v2
-
-    sub-int/2addr v10, v1
-
-    if-ge v8, v10, :cond_5
-
-    array-length v10, v2
-
-    sub-int/2addr v10, v1
-
-    if-ge v9, v10, :cond_5
-
-    int-to-float v10, v8
-
-    sub-float/2addr v7, v10
-
-    aget-byte v8, v2, v8
-
-    aget-byte v9, v2, v9
-
-    sget-object v10, Lj60;->F0:Landroid/animation/IntEvaluator;
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    invoke-virtual {v10, v7, v8, v9}, Landroid/animation/IntEvaluator;->evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
-
-    move-result v7
-
-    goto :goto_2
-
-    :cond_5
-    move v7, v5
-
-    goto :goto_2
-
-    :cond_6
-    :goto_1
-    aget-byte v7, v2, v5
-
-    :goto_2
-    int-to-byte v7, v7
-
-    aput-byte v7, v4, v6
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_7
-    move-object v2, v4
-
-    goto :goto_3
-
-    :cond_8
-    move-object v2, p1
-
-    :goto_3
-    invoke-static {v0}, Luog;->a(Luog;)Le7f;
-
-    move-result-object v3
-
-    check-cast v3, Lmka;
-
-    invoke-virtual {v3}, Lmka;->c()Lz68;
-
-    move-result-object v3
-
-    new-instance v4, Lsog;
-
-    invoke-direct {v4, v0, p1, v2}, Lsog;-><init>(Luog;Lkotlin/coroutines/Continuation;[B)V
-
-    iput v1, p0, Ltog;->X:I
-
-    invoke-static {v3, v4, p0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_9
+    move-result-object v0
 
     return-object v0
 
-    :cond_9
-    :goto_4
-    sget-object p1, Laxf;->a:Laxf;
+    :cond_0
+    const/4 v0, 0x0
 
-    return-object p1
+    return-object v0
+.end method
+
+.method public final getPreviewStreamState()Lzx5;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lzx5;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Ltog;->r0:Llxb;
+
+    invoke-virtual {v0}, Llxb;->getPreviewStreamState()Lk28;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ldf0;->a(Lk28;)Lzx5;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getSurfaceProvider()Lbxb;
+    .locals 1
+
+    iget-object v0, p0, Ltog;->r0:Llxb;
+
+    invoke-virtual {v0}, Llxb;->getSurfaceProvider()Lbxb;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    invoke-direct {p0}, Ltog;->getShimmerDrawable()Lzie;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lzie;->d()V
+
+    return-void
+.end method
+
+.method public final setPlaceholder(Ljava/lang/String;)V
+    .locals 5
+
+    iget-object v0, p0, Ltog;->c:Landroid/view/ViewPropertyAnimator;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
+
+    :cond_0
+    iget-object v0, p0, Ltog;->r0:Llxb;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Ltog;->o:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lea7;->d(Landroid/net/Uri;)Lea7;
+
+    move-result-object p1
+
+    invoke-direct {p0}, Ltog;->getAllPostProcessor()Lg62;
+
+    move-result-object v1
+
+    iput-object v1, p1, Lea7;->k:Lnvb;
+
+    invoke-virtual {p1}, Lea7;->a()Lda7;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lda7;Lda7;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Lx05;->getHierarchy()Lu05;
+
+    move-result-object p1
+
+    check-cast p1, Lsm6;
+
+    new-instance v0, Ltq0;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget-object v3, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v3, p0}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lu4b;->a()Lpv2;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lpv2;->t()Lyd3;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lyd3;->b:Lpc3;
+
+    iget v3, v3, Lpc3;->l:I
+
+    const/high16 v4, 0x42300000    # 44.0f
+
+    invoke-direct {v0, v2, v3, v4, v1}, Ltq0;-><init>(Landroid/content/Context;IFZ)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1}, Lsm6;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    :goto_0
+    invoke-direct {p0}, Ltog;->getShimmerDrawable()Lzie;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lzie;->c()V
+
+    return-void
+.end method
+
+.method public final setZoomListener(Lqh6;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lqh6;",
+            ")V"
+        }
+    .end annotation
+
+    new-instance v0, Lqk1;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, p1}, Lqk1;-><init>(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Ltog;->r0:Llxb;
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    return-void
 .end method

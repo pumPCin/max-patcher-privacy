@@ -1,332 +1,361 @@
 .class public final Lvg8;
-.super Landroid/service/media/MediaBrowserService;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lgu8;
+.implements Leu8;
 
 
 # instance fields
-.field public final synthetic a:Lem4;
+.field public X:Lgu8;
 
-.field public final synthetic b:Lwg8;
+.field public Y:Leu8;
 
-.field public final synthetic c:Lwg8;
+.field public Z:J
+
+.field public final a:Ly09;
+
+.field public final b:J
+
+.field public final c:Luf4;
+
+.field public o:Lwj0;
 
 
 # direct methods
-.method public constructor <init>(Lwg8;Landroid/content/Context;)V
+.method public constructor <init>(Ly09;Luf4;J)V
     .locals 0
 
-    iput-object p1, p0, Lvg8;->c:Lwg8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvg8;->b:Lwg8;
+    iput-object p1, p0, Lvg8;->a:Ly09;
 
-    iput-object p1, p0, Lvg8;->a:Lem4;
+    iput-object p2, p0, Lvg8;->c:Luf4;
 
-    invoke-direct {p0}, Landroid/service/media/MediaBrowserService;-><init>()V
+    iput-wide p3, p0, Lvg8;->b:J
 
-    invoke-virtual {p0, p2}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide p1, p0, Lvg8;->Z:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onGetRoot(Ljava/lang/String;ILandroid/os/Bundle;)Landroid/service/media/MediaBrowserService$BrowserRoot;
-    .locals 9
+.method public final a(Ly09;)V
+    .locals 4
 
-    invoke-static {p3}, Lsr8;->n(Landroid/os/Bundle;)V
+    iget-wide v0, p0, Lvg8;->Z:J
 
-    iget-object v0, p0, Lvg8;->a:Lem4;
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    iget-object v1, v0, Lem4;->d:Ljava/lang/Object;
+    cmp-long v2, v0, v2
 
-    move-object v3, v1
-
-    check-cast v3, Lus8;
-
-    const/4 v1, 0x0
-
-    if-nez p3, :cond_0
-
-    move-object p3, v1
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2, p3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    move-object p3, v2
+    iget-wide v0, p0, Lvg8;->b:J
 
     :goto_0
-    const/4 v2, -0x1
+    iget-object v2, p0, Lvg8;->o:Lwj0;
 
-    if-eqz p3, :cond_3
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v4, 0x0
+    iget-object v3, p0, Lvg8;->c:Luf4;
 
-    const-string v5, "extra_client_version"
-
-    invoke-virtual {p3, v5, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p3, v5}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    new-instance v4, Landroid/os/Messenger;
-
-    iget-object v5, v3, Lus8;->Z:Lwx;
-
-    invoke-direct {v4, v5}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
-
-    iput-object v4, v0, Lem4;->c:Ljava/lang/Object;
-
-    const-string v4, "extra_service_version"
-
-    const/4 v5, 0x2
-
-    invoke-static {v5, v4}, Lbk7;->d(ILjava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v4
-
-    iget-object v5, v0, Lem4;->c:Ljava/lang/Object;
-
-    check-cast v5, Landroid/os/Messenger;
-
-    invoke-virtual {v5}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
-
-    move-result-object v5
-
-    const-string v6, "extra_messenger"
-
-    invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    iget-object v5, v3, Lus8;->r0:Lrr8;
-
-    if-eqz v5, :cond_2
-
-    invoke-virtual {v5}, Lrr8;->a()Lv07;
-
-    move-result-object v5
-
-    if-nez v5, :cond_1
-
-    move-object v5, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {v5}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v5
-
-    :goto_1
-    const-string v6, "extra_session_binder"
-
-    invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v5, v0, Lem4;->a:Ljava/lang/Object;
-
-    check-cast v5, Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_2
-    const-string v5, "extra_calling_pid"
-
-    invoke-virtual {p3, v5, v2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    invoke-virtual {p3, v5}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    move-object v8, v4
-
-    :goto_3
-    move v5, v2
-
-    goto :goto_4
-
-    :cond_3
-    move-object v8, v1
-
-    goto :goto_3
-
-    :goto_4
-    new-instance v2, Lug8;
-
-    const/4 v7, 0x0
-
-    move-object v4, p1
-
-    move v6, p2
-
-    invoke-direct/range {v2 .. v7}, Lug8;-><init>(Lus8;Ljava/lang/String;IILch8;)V
-
-    iput-object v2, v3, Lus8;->Y:Lug8;
-
-    invoke-virtual {v3, p3}, Lus8;->b(Landroid/os/Bundle;)Lkkh;
+    invoke-virtual {v2, p1, v3, v0, v1}, Lwj0;->c(Ly09;Luf4;J)Lgu8;
 
     move-result-object p1
 
-    iput-object v1, v3, Lus8;->Y:Lug8;
+    iput-object p1, p0, Lvg8;->X:Lgu8;
 
-    if-nez p1, :cond_4
+    iget-object v2, p0, Lvg8;->Y:Leu8;
 
-    move-object p1, v1
+    if-eqz v2, :cond_1
 
-    goto :goto_6
+    invoke-interface {p1, p0, v0, v1}, Lgu8;->q(Leu8;J)V
 
-    :cond_4
-    iget-object p2, v0, Lem4;->c:Ljava/lang/Object;
-
-    check-cast p2, Landroid/os/Messenger;
-
-    if-eqz p2, :cond_5
-
-    iget-object p2, v3, Lus8;->o:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_5
-    iget-object p1, p1, Lkkh;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/os/Bundle;
-
-    if-nez v8, :cond_6
-
-    move-object v8, p1
-
-    goto :goto_5
-
-    :cond_6
-    if-eqz p1, :cond_7
-
-    invoke-virtual {v8, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_7
-    :goto_5
-    new-instance p1, Lkkh;
-
-    const/16 p2, 0x15
-
-    invoke-direct {p1, p2, v8}, Lkkh;-><init>(ILjava/lang/Object;)V
-
-    :goto_6
-    if-nez p1, :cond_8
-
-    return-object v1
-
-    :cond_8
-    new-instance p2, Landroid/service/media/MediaBrowserService$BrowserRoot;
-
-    iget-object p1, p1, Lkkh;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/os/Bundle;
-
-    const-string p3, "androidx.media3.session.MediaLibraryService"
-
-    invoke-direct {p2, p3, p1}, Landroid/service/media/MediaBrowserService$BrowserRoot;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object p2
-.end method
-
-.method public final onLoadChildren(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;)V
-    .locals 1
-
-    .line 1
-    new-instance p1, Lk5d;
-
-    const/16 v0, 0x17
-
-    invoke-direct {p1, v0, p2}, Lk5d;-><init>(ILjava/lang/Object;)V
-
-    .line 2
-    iget-object p2, p0, Lvg8;->a:Lem4;
-
-    iget-object p2, p2, Lem4;->d:Ljava/lang/Object;
-
-    check-cast p2, Lus8;
-
-    iget-object v0, p2, Lus8;->c:Lug8;
-
-    iput-object v0, p2, Lus8;->Y:Lug8;
-
-    const/4 v0, 0x0
-
-    .line 3
-    invoke-virtual {p1, v0}, Lk5d;->Y(Ljava/lang/Object;)V
-
-    .line 4
-    iput-object v0, p2, Lus8;->Y:Lug8;
-
+    :cond_1
     return-void
 .end method
 
-.method public final onLoadChildren(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;Landroid/os/Bundle;)V
+.method public final c()J
     .locals 2
 
-    .line 5
-    invoke-static {p3}, Lsr8;->n(Landroid/os/Bundle;)V
+    iget-object v0, p0, Lvg8;->X:Lgu8;
 
-    .line 6
-    iget-object p1, p0, Lvg8;->c:Lwg8;
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Lwg8;->f:Lus8;
+    invoke-interface {v0}, Lm1e;->c()J
 
-    iget-object p3, p1, Lus8;->c:Lug8;
+    move-result-wide v0
 
-    .line 7
-    new-instance v0, Lk5d;
+    return-wide v0
+.end method
 
-    const/16 v1, 0x17
+.method public final d(JLpwd;)J
+    .locals 2
 
-    invoke-direct {v0, v1, p2}, Lk5d;-><init>(ILjava/lang/Object;)V
+    iget-object v0, p0, Lvg8;->X:Lgu8;
 
-    .line 8
-    iput-object p3, p1, Lus8;->Y:Lug8;
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
 
-    const/4 p2, 0x0
+    invoke-interface {v0, p1, p2, p3}, Lgu8;->d(JLpwd;)J
 
-    .line 9
-    invoke-virtual {v0, p2}, Lk5d;->Y(Ljava/lang/Object;)V
+    move-result-wide p1
 
-    .line 10
-    iput-object p2, p1, Lus8;->Y:Lug8;
+    return-wide p1
+.end method
 
-    .line 11
-    iput-object p2, p1, Lus8;->Y:Lug8;
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lgu8;->f()V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lvg8;->o:Lwj0;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lwj0;->k()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final g(J)J
+    .locals 2
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {v0, p1, p2}, Lgu8;->g(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final h(Lgu8;)V
+    .locals 1
+
+    iget-object p1, p0, Lvg8;->Y:Leu8;
+
+    sget-object v0, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {p1, p0}, Leu8;->h(Lgu8;)V
 
     return-void
 .end method
 
-.method public final onLoadItem(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;)V
+.method public final i()Z
     .locals 1
 
-    new-instance p1, Lk5d;
+    iget-object v0, p0, Lvg8;->X:Lgu8;
 
-    const/16 v0, 0x17
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lk5d;-><init>(ILjava/lang/Object;)V
+    invoke-interface {v0}, Lm1e;->i()Z
 
-    iget-object p2, p0, Lvg8;->b:Lwg8;
+    move-result v0
 
-    iget-object p2, p2, Lwg8;->e:Lus8;
+    if-eqz v0, :cond_0
 
-    iget-object v0, p2, Lus8;->c:Lug8;
+    const/4 v0, 0x1
 
-    iput-object v0, p2, Lus8;->Y:Lug8;
+    return v0
 
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lk5d;->Y(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    iput-object v0, p2, Lus8;->Y:Lug8;
+.method public final j()J
+    .locals 2
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {v0}, Lgu8;->j()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final k()Lo0g;
+    .locals 2
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {v0}, Lgu8;->k()Lo0g;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l()J
+    .locals 2
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {v0}, Lm1e;->l()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final m(J)V
+    .locals 2
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {v0, p1, p2}, Lm1e;->m(J)V
+
+    return-void
+.end method
+
+.method public final n(Lm1e;)V
+    .locals 1
+
+    check-cast p1, Lgu8;
+
+    iget-object p1, p0, Lvg8;->Y:Leu8;
+
+    sget-object v0, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {p1, p0}, Lk1e;->n(Lm1e;)V
+
+    return-void
+.end method
+
+.method public final o([Laj5;[Z[Lqkd;[ZJ)J
+    .locals 12
+
+    iget-wide v0, p0, Lvg8;->Z:J
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    iget-wide v4, p0, Lvg8;->b:J
+
+    cmp-long v4, p5, v4
+
+    if-nez v4, :cond_0
+
+    move-wide v10, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide/from16 v10, p5
+
+    :goto_0
+    iput-wide v2, p0, Lvg8;->Z:J
+
+    iget-object v5, p0, Lvg8;->X:Lgu8;
+
+    sget-object v0, Ljhg;->a:Ljava/lang/String;
+
+    move-object v6, p1
+
+    move-object v7, p2
+
+    move-object v8, p3
+
+    move-object/from16 v9, p4
+
+    invoke-interface/range {v5 .. v11}, Lgu8;->o([Laj5;[Z[Lqkd;[ZJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final q(Leu8;J)V
+    .locals 2
+
+    iput-object p1, p0, Lvg8;->Y:Leu8;
+
+    iget-object p1, p0, Lvg8;->X:Lgu8;
+
+    if-eqz p1, :cond_1
+
+    iget-wide p2, p0, Lvg8;->Z:J
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, p2, v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide p2, p0, Lvg8;->b:J
+
+    :goto_0
+    invoke-interface {p1, p0, p2, p3}, Lgu8;->q(Leu8;J)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final t(Lf48;)Z
+    .locals 1
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Lm1e;->t(Lf48;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final u(JZ)V
+    .locals 2
+
+    iget-object v0, p0, Lvg8;->X:Lgu8;
+
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
+
+    invoke-interface {v0, p1, p2, p3}, Lgu8;->u(JZ)V
 
     return-void
 .end method

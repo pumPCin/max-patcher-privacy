@@ -1,58 +1,73 @@
 .class public final Ly3b;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lgh1;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public X:Ljava/io/File;
+
+.field public Y:Ljff;
+
+.field public Z:Ljava/io/File;
+
+.field public o:Ljava/lang/Object;
+
+.field public r0:Ljava/lang/Object;
+
+.field public s0:Lw3b;
+
+.field public t0:Z
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Ld4b;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ld4b;Lk14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ly3b;->v0:Ld4b;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Ly3b;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onStateChanged(Lyg1;Lah1;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v0, p0, Ly3b;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Ly3b;->u0:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget p1, p0, Ly3b;->w0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Ly3b;->w0:I
 
-    if-eqz v1, :cond_0
+    const/4 v4, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    move-result-object v1
+    iget-object v0, p0, Ly3b;->v0:Ld4b;
 
-    check-cast v1, Lgh1;
+    const/4 v1, 0x0
 
-    invoke-interface {v1, p1, p2}, Lgh1;->onStateChanged(Lyg1;Lah1;)V
+    const/4 v2, 0x0
 
-    goto :goto_0
+    const/4 v3, 0x0
 
-    :cond_0
-    return-void
+    move-object v6, p0
+
+    invoke-virtual/range {v0 .. v6}, Ld4b;->b(Ljava/lang/String;Ljava/io/File;Ljff;Ljava/lang/String;ZLk14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

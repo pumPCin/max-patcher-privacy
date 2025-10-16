@@ -1,48 +1,29 @@
-.class public final Lp68;
-.super Lwy3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lz48;
-
-.field public synthetic o:Ljava/lang/Object;
+.class public abstract Lp68;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Lz48;Lkotlin/coroutines/Continuation;)V
+.method public static a(Ljava/lang/Object;)Landroid/os/LocaleList;
     .locals 0
 
-    iput-object p1, p0, Lp68;->Y:Lz48;
+    check-cast p0, Landroid/app/LocaleManager;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0}, Landroid/app/LocaleManager;->getApplicationLocales()Landroid/os/LocaleList;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
+.method public static b(Ljava/lang/Object;)Landroid/os/LocaleList;
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast p0, Landroid/app/LocaleManager;
 
-    iput-object p1, p0, Lp68;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/LocaleManager;->getSystemLocales()Landroid/os/LocaleList;
 
-    iget p1, p0, Lp68;->X:I
+    move-result-object p0
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lp68;->X:I
-
-    iget-object p1, p0, Lp68;->Y:Lz48;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lz48;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

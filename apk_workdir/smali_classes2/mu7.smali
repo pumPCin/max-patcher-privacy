@@ -1,59 +1,116 @@
-.class public abstract synthetic Lmu7;
+.class public final synthetic Lmu7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqf4;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic X:Ljava/lang/Long;
+
+.field public final synthetic a:J
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Lt68;
+
+.field public final synthetic o:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(JJLt68;FLjava/lang/Long;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lsw1;->y(I)[I
+    iput-wide p1, p0, Lmu7;->a:J
+
+    iput-wide p3, p0, Lmu7;->b:J
+
+    iput-object p5, p0, Lmu7;->c:Lt68;
+
+    iput p6, p0, Lmu7;->o:F
+
+    iput-object p7, p0, Lmu7;->X:Ljava/lang/Long;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 8
+
+    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
+
+    iget-wide v1, p0, Lmu7;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    array-length v1, v1
+    new-instance v2, Lqbb;
 
-    new-array v1, v1, [I
+    const-string v3, "ru.ok.tamtam.extra.CHAT_ID"
 
-    const/4 v2, 0x1
+    invoke-direct {v2, v3, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const/4 v3, 0x2
+    iget-wide v3, p0, Lmu7;->b:J
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :catch_0
-    const/4 v4, 0x0
+    move-result-object v1
 
-    :try_start_1
-    aput v3, v1, v4
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    new-instance v3, Lqbb;
 
-    :catch_1
-    const/4 v3, 0x3
+    const-string v4, "ru.ok.tamtam.extra.MESSAGE_ID"
 
-    :try_start_2
-    aput v3, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct {v3, v4, v1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :catch_2
-    :try_start_3
-    aput v0, v1, v3
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    new-instance v1, Lqbb;
 
-    :catch_3
-    sput-object v1, Lmu7;->$EnumSwitchMapping$0:[I
+    const-string v4, "ru.ok.tamtam.extra.LOCATION"
 
-    return-void
+    iget-object v5, p0, Lmu7;->c:Lt68;
+
+    invoke-direct {v1, v4, v5}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget v4, p0, Lmu7;->o:F
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
+
+    new-instance v5, Lqbb;
+
+    const-string v6, "ru.ok.tamtam.extra.ZOOM"
+
+    invoke-direct {v5, v6, v4}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v4, Lqbb;
+
+    const-string v6, "ru.ok.tamtam.extra.CONTACT_ID"
+
+    iget-object v7, p0, Lmu7;->X:Ljava/lang/Long;
+
+    invoke-direct {v4, v6, v7}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v2, v3, v1, v5, v4}, [Lqbb;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    const v2, 0x7a3a1dca
+
+    const-class v3, Lru/ok/messages/location/FrgLocationMap;
+
+    const-string v4, "ru.ok.messages.location.FrgLocationMap"
+
+    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-object v0
 .end method

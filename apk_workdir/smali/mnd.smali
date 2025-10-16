@@ -2,93 +2,128 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lev4;
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Ljava/lang/Runnable;
 
-.field public final b:Lle6;
+.field public final b:Lond;
 
-.field public final c:Lle6;
-
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Lc2f;
-
-.field public final f:Lle6;
-
-.field public g:Ljava/lang/Object;
-
-.field public h:I
-
-.field public final synthetic i:Lond;
+.field public c:Ljava/lang/Thread;
 
 
 # direct methods
-.method public constructor <init>(Lond;Ljava/lang/Object;Lle6;Lle6;Ljava/lang/Object;Lc2f;Lle6;)V
+.method public constructor <init>(Ljava/lang/Runnable;Lond;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmnd;->i:Lond;
+    iput-object p1, p0, Lmnd;->a:Ljava/lang/Runnable;
 
-    iput-object p2, p0, Lmnd;->a:Ljava/lang/Object;
-
-    iput-object p3, p0, Lmnd;->b:Lle6;
-
-    iput-object p4, p0, Lmnd;->c:Lle6;
-
-    iput-object p5, p0, Lmnd;->d:Ljava/lang/Object;
-
-    iput-object p6, p0, Lmnd;->e:Lc2f;
-
-    iput-object p7, p0, Lmnd;->f:Lle6;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lmnd;->h:I
+    iput-object p2, p0, Lmnd;->b:Lond;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final g()V
+    .locals 2
 
-    iget-object v0, p0, Lmnd;->g:Ljava/lang/Object;
+    iget-object v0, p0, Lmnd;->c:Ljava/lang/Thread;
 
-    instance-of v1, v0, Lkotlinx/coroutines/internal/Segment;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    if-eqz v1, :cond_0
+    if-ne v0, v1, :cond_1
 
-    check-cast v0, Lkotlinx/coroutines/internal/Segment;
+    iget-object v0, p0, Lmnd;->b:Lond;
 
-    iget v1, p0, Lmnd;->h:I
-
-    iget-object v3, p0, Lmnd;->i:Lond;
-
-    iget-object v3, v3, Lond;->a:Lf24;
-
-    invoke-virtual {v0, v1, v2, v3}, Lkotlinx/coroutines/internal/Segment;->onCancellation(ILjava/lang/Throwable;Lf24;)V
-
-    return-void
-
-    :cond_0
-    instance-of v1, v0, Lis4;
+    instance-of v1, v0, Lu7a;
 
     if-eqz v1, :cond_1
 
-    move-object v2, v0
+    check-cast v0, Lu7a;
 
-    check-cast v2, Lis4;
+    iget-boolean v1, v0, Lu7a;->b:Z
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lu7a;->b:Z
+
+    iget-object v0, v0, Lu7a;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+
+    :cond_0
+    return-void
 
     :cond_1
-    if-eqz v2, :cond_2
+    iget-object v0, p0, Lmnd;->b:Lond;
 
-    invoke-interface {v2}, Lis4;->dispose()V
+    invoke-interface {v0}, Lev4;->g()V
 
-    :cond_2
     return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Lmnd;->b:Lond;
+
+    invoke-interface {v0}, Lev4;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 2
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lmnd;->c:Ljava/lang/Thread;
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Lmnd;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Lmnd;->g()V
+
+    iput-object v0, p0, Lmnd;->c:Ljava/lang/Thread;
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    invoke-static {v1}, Lgxi;->a(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-virtual {p0}, Lmnd;->g()V
+
+    iput-object v0, p0, Lmnd;->c:Ljava/lang/Thread;
+
+    throw v1
 .end method

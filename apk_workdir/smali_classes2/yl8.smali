@@ -1,82 +1,48 @@
 .class public final Lyl8;
-.super Lc2f;
-.source "SourceFile"
-
-# interfaces
-.implements Lje6;
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic X:Lzl8;
+.field public X:I
+
+.field public final synthetic Y:Lqa8;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lzl8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lqa8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lyl8;->X:Lzl8;
+    iput-object p1, p0, Lyl8;->Y:Lqa8;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyl8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyl8;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lyl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lyl8;
-
-    iget-object v0, p0, Lyl8;->X:Lzl8;
-
-    invoke-direct {p1, v0, p2}, Lyl8;-><init>(Lzl8;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iput-object p1, p0, Lyl8;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lyl8;->X:Lzl8;
+    iget p1, p0, Lyl8;->X:I
 
-    iget-boolean v0, p1, Lzl8;->e:Z
+    const/high16 v0, -0x80000000
 
-    xor-int/lit8 v0, v0, 0x1
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1, v0}, Lzl8;->e(Z)V
+    iput p1, p0, Lyl8;->X:I
 
-    iget-object p1, p1, Lzl8;->h:Ltd6;
+    iget-object p1, p0, Lyl8;->Y:Lqa8;
 
-    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {p1, v0, p0}, Lqa8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method

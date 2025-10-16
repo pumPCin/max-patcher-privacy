@@ -1,96 +1,108 @@
-.class public final synthetic Ljb9;
+.class public final Ljb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lkb9;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public final synthetic Y:Ljava/lang/CharSequence;
-
-.field public final synthetic Z:Z
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Lqb9;
-
-.field public final synthetic c:Lr82;
-
-.field public final synthetic o:Lp19;
+.field public final a:Ljava/util/Collection;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqb9;Lr82;Lp19;ILjava/lang/CharSequence;ZI)V
+.method public constructor <init>(Ljava/util/Collection;)V
     .locals 0
 
-    iput p7, p0, Ljb9;->a:I
-
-    iput-object p1, p0, Ljb9;->b:Lqb9;
-
-    iput-object p2, p0, Ljb9;->c:Lr82;
-
-    iput-object p3, p0, Ljb9;->o:Lp19;
-
-    iput p4, p0, Ljb9;->X:I
-
-    iput-object p5, p0, Ljb9;->Y:Ljava/lang/CharSequence;
-
-    iput-boolean p6, p0, Ljb9;->Z:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljb9;->a:Ljava/util/Collection;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Ljb9;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v5, p0, Ljb9;->Y:Ljava/lang/CharSequence;
+    const/4 p1, 0x1
 
-    iget-boolean v6, p0, Ljb9;->Z:Z
+    return p1
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    if-eqz p1, :cond_1
 
-    iget-object v1, p0, Ljb9;->b:Lqb9;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v2, p0, Ljb9;->c:Lr82;
+    move-result-object v0
 
-    iget-object v3, p0, Ljb9;->o:Lp19;
+    goto :goto_0
 
-    iget v4, p0, Ljb9;->X:I
+    :cond_1
+    const/4 v0, 0x0
 
-    invoke-virtual/range {v1 .. v6}, Lqb9;->b(Lr82;Lp19;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
+    :goto_0
+    const-class v1, Ljb9;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    check-cast p1, Ljb9;
+
+    iget-object v0, p0, Ljb9;->a:Ljava/util/Collection;
+
+    iget-object p1, p1, Ljb9;->a:Ljava/util/Collection;
+
+    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ljb9;->a:Ljava/util/Collection;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Update(messageIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljb9;->a:Ljava/util/Collection;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v1, p0, Ljb9;->b:Lqb9;
-
-    iget-object v2, p0, Ljb9;->c:Lr82;
-
-    iget-object v3, p0, Ljb9;->o:Lp19;
-
-    iget v4, p0, Ljb9;->X:I
-
-    invoke-virtual/range {v1 .. v6}, Lqb9;->b(Lr82;Lp19;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,135 +1,52 @@
-.class public abstract Li09;
+.class public final synthetic Li09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldr3;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
 
 # direct methods
-.method public static a(Landroid/view/MenuItem;)I
+.method public synthetic constructor <init>(III)V
     .locals 0
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->getAlphabeticModifiers()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p1, p0, Li09;->a:I
 
-    return p0
+    iput p2, p0, Li09;->b:I
+
+    iput p3, p0, Li09;->c:I
+
+    return-void
 .end method
 
-.method public static b(Landroid/view/MenuItem;)Ljava/lang/CharSequence;
-    .locals 0
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->getContentDescription()Ljava/lang/CharSequence;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    move-result-object p0
+    check-cast p1, Lrtb;
 
-    return-object p0
-.end method
+    invoke-virtual {p1}, Lrtb;->m0()V
 
-.method public static c(Landroid/view/MenuItem;)Landroid/content/res/ColorStateList;
-    .locals 0
+    iget-object p1, p1, Lrtb;->a:Ldi5;
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->getIconTintList()Landroid/content/res/ColorStateList;
+    iget v0, p0, Li09;->a:I
 
-    move-result-object p0
+    iget v1, p0, Li09;->b:I
 
-    return-object p0
-.end method
+    iget v2, p0, Li09;->c:I
 
-.method public static d(Landroid/view/MenuItem;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
+    invoke-virtual {p1, v0, v1, v2}, Ldi5;->n1(III)V
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->getIconTintMode()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/view/MenuItem;)I
-    .locals 0
-
-    invoke-interface {p0}, Landroid/view/MenuItem;->getNumericModifiers()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static f(Landroid/view/MenuItem;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-interface {p0}, Landroid/view/MenuItem;->getTooltipText()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Landroid/view/MenuItem;CI)Landroid/view/MenuItem;
-    .locals 0
-
-    invoke-interface {p0, p1, p2}, Landroid/view/MenuItem;->setAlphabeticShortcut(CI)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Landroid/view/MenuItem;Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Landroid/view/MenuItem;Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(Landroid/view/MenuItem;Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static k(Landroid/view/MenuItem;CI)Landroid/view/MenuItem;
-    .locals 0
-
-    invoke-interface {p0, p1, p2}, Landroid/view/MenuItem;->setNumericShortcut(CI)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static l(Landroid/view/MenuItem;CCII)Landroid/view/MenuItem;
-    .locals 0
-
-    invoke-interface {p0, p1, p2, p3, p4}, Landroid/view/MenuItem;->setShortcut(CCII)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static m(Landroid/view/MenuItem;Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

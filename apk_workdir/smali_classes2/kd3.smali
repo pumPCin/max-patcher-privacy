@@ -1,61 +1,104 @@
 .class public final Lkd3;
-.super Ly7f;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic X:Lpd3;
 
-.field public final o:Ljava/util/List;
+.field public final synthetic Y:Lbd3;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
+.method public constructor <init>(Lpd3;Lbd3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkd3;->X:Lpd3;
 
-    iput-wide p1, p0, Lkd3;->c:J
+    iput-object p2, p0, Lkd3;->Y:Lbd3;
 
-    iput-object p3, p0, Lkd3;->o:Ljava/util/List;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lkd3;->o:Ljava/util/List;
+    check-cast p1, Lb54;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Lkd3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v2, "Response(complainSync="
+    check-cast p1, Lkd3;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-wide v2, p0, Lkd3;->c:J
+    invoke-virtual {p1, p2}, Lkd3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v2, ",complainsSize:"
+    return-object p1
+.end method
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance p1, Lkd3;
 
-    const-string v0, ")"
+    iget-object v0, p0, Lkd3;->X:Lpd3;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lkd3;->Y:Lbd3;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {p1, v0, v1, p2}, Lkd3;-><init>(Lpd3;Lbd3;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    return-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lpd3;->m:[Lwq7;
+
+    iget-object p1, p0, Lkd3;->X:Lpd3;
+
+    iget-object p1, p1, Lpd3;->f:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lt23;
+
+    iget-object v0, p0, Lkd3;->Y:Lbd3;
+
+    check-cast v0, Lzc3;
+
+    iget-wide v0, v0, Lzc3;->a:J
+
+    check-cast p1, Lu33;
+
+    invoke-virtual {p1, v0, v1}, Lu33;->N(J)Lgzc;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lgzc;->a:Llze;
+
+    invoke-interface {p1}, Llze;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

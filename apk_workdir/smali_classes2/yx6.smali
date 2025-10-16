@@ -1,204 +1,282 @@
 .class public final Lyx6;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/String;
+.field public final a:I
 
-.field public final synthetic Y:Lzx6;
+.field public final b:Ljava/lang/String;
+
+.field public final c:F
+
+.field public final d:F
+
+.field public final e:F
+
+.field public final f:F
+
+.field public final g:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lzx6;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ILjava/lang/String;FFFFF)V
     .locals 0
 
-    iput-object p1, p0, Lyx6;->X:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lyx6;->Y:Lzx6;
+    iput p1, p0, Lyx6;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lyx6;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Lyx6;->c:F
+
+    iput p4, p0, Lyx6;->d:F
+
+    iput p5, p0, Lyx6;->e:F
+
+    iput p6, p0, Lyx6;->f:F
+
+    iput p7, p0, Lyx6;->g:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyx6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyx6;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lyx6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lyx6;
-
-    iget-object v0, p0, Lyx6;->X:Ljava/lang/String;
-
-    iget-object v1, p0, Lyx6;->Y:Lzx6;
-
-    invoke-direct {p1, v0, v1, p2}, Lyx6;-><init>(Ljava/lang/String;Lzx6;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget-object v0, p0, Lyx6;->Y:Lzx6;
-
-    iget-object v1, v0, Lzx6;->o:Lyn7;
-
-    iget-object v2, v0, Lzx6;->r0:Lya5;
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    const/4 p1, 0x0
-
-    iget-object v3, p0, Lyx6;->X:Ljava/lang/String;
-
-    const-string v4, "Custom"
-
-    invoke-static {v3, v4, p1}, Lxwe;->o0(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    sget-object v5, Laxf;->a:Laxf;
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Lvx6;
-
-    iget-object v0, v0, Lzx6;->X:Landroid/content/SharedPreferences;
-
-    const-string v1, ""
-
-    invoke-interface {v0, v4, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Lvx6;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2, p1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
-
-    return-object v5
-
-    :cond_0
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcfa;
-
-    invoke-virtual {p1}, Lcfa;->d()Z
-
-    move-result p1
-
-    invoke-virtual {v0}, Lzx6;->r()Lnnb;
-
-    move-result-object v4
-
-    check-cast v4, Lpnb;
-
-    iget-object v6, v4, Lpnb;->a:Lt08;
-
-    invoke-virtual {v6}, Lt08;->c()V
-
-    iget-object v6, v4, Lpnb;->b:Lhlb;
-
-    invoke-virtual {v6}, Lv3;->c()V
-
-    iget-object v6, v4, Lpnb;->c:Lz2g;
-
-    invoke-virtual {v6}, Lv3;->c()V
-
-    iget-object v6, v4, Lpnb;->d:Li70;
-
-    invoke-virtual {v6}, Li70;->c()V
-
-    iget-object v4, v4, Lpnb;->e:Lbm5;
-
-    invoke-virtual {v4}, Lv3;->c()V
-
-    invoke-virtual {v0}, Lzx6;->r()Lnnb;
-
-    move-result-object v4
-
-    check-cast v4, Lpnb;
-
-    iget-object v4, v4, Lpnb;->a:Lt08;
-
-    iget-object v6, v4, Lt08;->l0:Lzrd;
-
-    sget-object v7, Lt08;->M0:[Lpl7;
-
-    const/4 v8, 0x3
-
-    aget-object v7, v7, v8
-
-    invoke-virtual {v6, v4, v7, v3}, Lzrd;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lzx6;->r()Lnnb;
-
-    move-result-object v3
-
-    check-cast v3, Lpnb;
-
-    iget-object v3, v3, Lpnb;->a:Lt08;
-
-    const-string v4, "443"
-
-    invoke-virtual {v3, v4}, Lt08;->P(Ljava/lang/String;)V
-
-    iget-object v3, v0, Lzx6;->Z:Lhne;
-
-    invoke-virtual {v0}, Lzx6;->s()Lkv7;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lhne;->setValue(Ljava/lang/Object;)V
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lwx6;->a:Lwx6;
-
-    invoke-static {v2, p1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcfa;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcfa;->g(Z)V
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lyx6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    sget-object p1, Lux6;->a:Lux6;
+    check-cast p1, Lyx6;
 
-    invoke-static {v2, p1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    iget v1, p0, Lyx6;->a:I
 
-    return-object v5
+    iget v3, p1, Lyx6;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lyx6;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lyx6;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lyx6;->c:F
+
+    iget v3, p1, Lyx6;->c:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lyx6;->d:F
+
+    iget v3, p1, Lyx6;->d:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lyx6;->e:F
+
+    iget v3, p1, Lyx6;->e:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lyx6;->f:F
+
+    iget v3, p1, Lyx6;->f:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget v1, p0, Lyx6;->g:F
+
+    iget p1, p1, Lyx6;->g:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lyx6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lyx6;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lyx6;->c:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lyx6;->d:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lyx6;->e:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lyx6;->f:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget v1, p0, Lyx6;->g:F
+
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SelectedLineState(line="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lyx6;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", highlightText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyx6;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lyx6;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lyx6;->d:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", baseLine="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lyx6;->e:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lyx6;->f:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lyx6;->g:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

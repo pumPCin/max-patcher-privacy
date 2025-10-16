@@ -2,101 +2,112 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsu6;
-
 
 # instance fields
-.field public final X:Lsf3;
+.field public final a:Lrhf;
 
-.field public final Y:Ltb5;
-
-.field public Z:Lkk2;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lwu6;
-
-.field public final c:Lpcd;
-
-.field public final o:Lpcd;
-
-.field public final r0:Lbv;
-
-.field public final s0:Lbv;
-
-.field public final t0:Lbv;
+.field public final b:Lrhf;
 
 
 # direct methods
-.method public constructor <init>(Lwu6;Lw22;Lpcd;Ltb5;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lsf3;
+    new-instance v0, Lfb2;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x7
 
-    iput-object v0, p0, Lxh2;->X:Lsf3;
+    invoke-direct {v0, v1}, Lfb2;-><init>(I)V
 
-    new-instance v0, Lbv;
+    new-instance v1, Lrhf;
 
-    invoke-direct {v0}, Lbv;-><init>()V
+    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
 
-    iput-object v0, p0, Lxh2;->r0:Lbv;
+    iput-object v1, p0, Lxh2;->a:Lrhf;
 
-    new-instance v0, Lbv;
+    new-instance v0, Lfb2;
 
-    invoke-direct {v0}, Lbv;-><init>()V
+    const/16 v1, 0x8
 
-    iput-object v0, p0, Lxh2;->s0:Lbv;
+    invoke-direct {v0, v1}, Lfb2;-><init>(I)V
 
-    new-instance v0, Lbv;
+    new-instance v1, Lrhf;
 
-    invoke-direct {v0}, Lbv;-><init>()V
+    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
 
-    iput-object v0, p0, Lxh2;->t0:Lbv;
-
-    iput-object p1, p0, Lxh2;->b:Lwu6;
-
-    iput-object p0, p1, Lwu6;->i:Lsu6;
-
-    iget-object p1, p2, Lw22;->b:Ljava/lang/Object;
-
-    check-cast p1, Lz7f;
-
-    check-cast p1, La8f;
-
-    invoke-virtual {p1}, La8f;->a()Lpcd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxh2;->c:Lpcd;
-
-    iput-object p3, p0, Lxh2;->o:Lpcd;
-
-    iput-object p4, p0, Lxh2;->Y:Ltb5;
-
-    iput-object p5, p0, Lxh2;->a:Ljava/lang/String;
+    iput-object v1, p0, Lxh2;->b:Lrhf;
 
     return-void
 .end method
 
+.method public static a(I)Lv04;
+    .locals 6
+
+    new-instance v0, Lv04;
+
+    sget v1, Ltya;->a0:I
+
+    new-instance v2, Ljqf;
+
+    invoke-direct {v2, p0}, Ljqf;-><init>(I)V
+
+    sget p0, Lwza;->j:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x14
+
+    invoke-direct/range {v0 .. v5}, Lv04;-><init>(ILoqf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final l()V
+.method public final b()Lx08;
     .locals 2
 
-    new-instance v0, Lj3;
+    invoke-static {}, Lbb3;->c()Lx08;
 
-    const/16 v1, 0x8
+    move-result-object v0
 
-    invoke-direct {v0, v1, p0}, Lj3;-><init>(ILjava/lang/Object;)V
+    iget-object v1, p0, Lxh2;->b:Lrhf;
 
-    iget-object v1, p0, Lxh2;->o:Lpcd;
+    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
+    move-result-object v1
 
-    return-void
+    check-cast v1, Lv04;
+
+    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
+
+    sget v1, Lvya;->r1:I
+
+    invoke-static {v1}, Lxh2;->a(I)Lv04;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Lxh2;->a:Lrhf;
+
+    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lv04;
+
+    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v0}, Lbb3;->a(Ljava/util/List;)Lx08;
+
+    move-result-object v0
+
+    return-object v0
 .end method

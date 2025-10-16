@@ -1,347 +1,72 @@
-.class public final enum Llp0;
-.super Ljava/lang/Enum;
+.class public final synthetic Llp0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ling;
 
-# static fields
-.field public static final enum a:Llp0;
 
-.field public static final synthetic b:[Llp0;
+# instance fields
+.field public final synthetic a:Lop0;
+
+.field public final synthetic b:Landroid/graphics/Bitmap;
+
+.field public final synthetic c:Lif6;
+
+.field public final synthetic d:Laq3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 31
+.method public synthetic constructor <init>(Lop0;Landroid/graphics/Bitmap;Lif6;Laq3;)V
+    .locals 0
 
-    new-instance v1, Llp0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "CLEAR"
+    iput-object p1, p0, Llp0;->a:Lop0;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Llp0;->b:Landroid/graphics/Bitmap;
 
-    invoke-direct {v1, v0, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Llp0;->c:Lif6;
 
-    new-instance v2, Llp0;
-
-    const-string v0, "SRC"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Llp0;
-
-    const-string v0, "DST"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v0, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Llp0;
-
-    const-string v0, "SRC_OVER"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v0, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Llp0;
-
-    const-string v0, "DST_OVER"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v5, v0, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Llp0;
-
-    const-string v0, "SRC_IN"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v6, v0, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v7, Llp0;
-
-    const-string v0, "DST_IN"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v7, v0, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v8, Llp0;
-
-    const-string v0, "SRC_OUT"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v8, v0, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v9, Llp0;
-
-    const-string v0, "DST_OUT"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v9, v0, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v10, Llp0;
-
-    const-string v0, "SRC_ATOP"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v10, v0, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v10, Llp0;->a:Llp0;
-
-    new-instance v11, Llp0;
-
-    const-string v0, "DST_ATOP"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v11, v0, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v12, Llp0;
-
-    const-string v0, "XOR"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v12, v0, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v13, Llp0;
-
-    const-string v0, "PLUS"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v13, v0, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v14, Llp0;
-
-    const-string v0, "MODULATE"
-
-    const/16 v15, 0xd
-
-    invoke-direct {v14, v0, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v15, Llp0;
-
-    const-string v0, "SCREEN"
-
-    move-object/from16 v16, v1
-
-    const/16 v1, 0xe
-
-    invoke-direct {v15, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v0, Llp0;
-
-    const-string v1, "OVERLAY"
-
-    move-object/from16 v17, v2
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Llp0;
-
-    const-string v2, "DARKEN"
-
-    move-object/from16 v18, v0
-
-    const/16 v0, 0x10
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v0, Llp0;
-
-    const-string v2, "LIGHTEN"
-
-    move-object/from16 v19, v1
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Llp0;
-
-    const-string v2, "COLOR_DODGE"
-
-    move-object/from16 v20, v0
-
-    const/16 v0, 0x12
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v0, Llp0;
-
-    const-string v2, "COLOR_BURN"
-
-    move-object/from16 v21, v1
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Llp0;
-
-    const-string v2, "HARD_LIGHT"
-
-    move-object/from16 v22, v0
-
-    const/16 v0, 0x14
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v0, Llp0;
-
-    const-string v2, "SOFT_LIGHT"
-
-    move-object/from16 v23, v1
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Llp0;
-
-    const-string v2, "DIFFERENCE"
-
-    move-object/from16 v24, v0
-
-    const/16 v0, 0x16
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v0, Llp0;
-
-    const-string v2, "EXCLUSION"
-
-    move-object/from16 v25, v1
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Llp0;
-
-    const-string v2, "MULTIPLY"
-
-    move-object/from16 v26, v0
-
-    const/16 v0, 0x18
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v0, Llp0;
-
-    const-string v2, "HUE"
-
-    move-object/from16 v27, v1
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Llp0;
-
-    const-string v2, "SATURATION"
-
-    move-object/from16 v28, v0
-
-    const/16 v0, 0x1a
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v0, Llp0;
-
-    const-string v2, "COLOR"
-
-    move-object/from16 v29, v1
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Llp0;
-
-    const-string v2, "LUMINOSITY"
-
-    move-object/from16 v30, v0
-
-    const/16 v0, 0x1c
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v17, v19
-
-    move-object/from16 v19, v21
-
-    move-object/from16 v21, v23
-
-    move-object/from16 v23, v25
-
-    move-object/from16 v25, v27
-
-    move-object/from16 v27, v29
-
-    move-object/from16 v29, v1
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v16, v18
-
-    move-object/from16 v18, v20
-
-    move-object/from16 v20, v22
-
-    move-object/from16 v22, v24
-
-    move-object/from16 v24, v26
-
-    move-object/from16 v26, v28
-
-    move-object/from16 v28, v30
-
-    filled-new-array/range {v1 .. v29}, [Llp0;
-
-    move-result-object v0
-
-    sput-object v0, Llp0;->b:[Llp0;
+    iput-object p4, p0, Llp0;->d:Laq3;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Llp0;
-    .locals 1
 
-    const-class v0, Llp0;
+# virtual methods
+.method public final run()V
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Llp0;->d:Laq3;
 
-    move-result-object p0
+    invoke-virtual {v0}, Laq3;->b()Z
 
-    check-cast p0, Llp0;
+    move-result v1
 
-    return-object p0
-.end method
+    const-string v2, "Bitmap queued but no timestamps provided."
 
-.method public static values()[Llp0;
-    .locals 1
+    invoke-static {v2, v1}, Lgfi;->a(Ljava/lang/Object;Z)V
 
-    sget-object v0, Llp0;->b:[Llp0;
+    iget-object v1, p0, Llp0;->a:Lop0;
 
-    invoke-virtual {v0}, [Llp0;->clone()Ljava/lang/Object;
+    iget-object v2, v1, Lop0;->o:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    move-result-object v0
+    new-instance v3, Lnp0;
 
-    check-cast v0, [Llp0;
+    iget-object v4, p0, Llp0;->b:Landroid/graphics/Bitmap;
 
-    return-object v0
+    iget-object v5, p0, Llp0;->c:Lif6;
+
+    invoke-direct {v3, v4, v5, v0}, Lnp0;-><init>(Landroid/graphics/Bitmap;Lif6;Laq3;)V
+
+    invoke-interface {v2, v3}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1}, Lop0;->B()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, v1, Lop0;->t0:Z
+
+    return-void
 .end method

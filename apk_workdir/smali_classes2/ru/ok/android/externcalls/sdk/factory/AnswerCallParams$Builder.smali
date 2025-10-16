@@ -45,14 +45,14 @@
         "answerAsContact",
         "setAnswerAsContact",
         "(Z)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;",
-        "Lsif;",
+        "Lrwf;",
         "tokenProvider",
         "setTokenProvider",
-        "(Lsif;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;",
-        "Lqm;",
+        "(Lrwf;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;",
+        "Lan;",
         "tokenInfoProvider",
         "setTokenInfoProvider",
-        "(Lqm;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;",
+        "(Lan;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;",
         "conversationParams",
         "setConversationParams",
         "build",
@@ -60,8 +60,8 @@
         "Ljava/lang/String;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Z",
-        "Lsif;",
-        "Lqm;",
+        "Lrwf;",
+        "Lan;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -83,9 +83,9 @@
 
 .field private opponentId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private tokenInfoProvider:Lqm;
+.field private tokenInfoProvider:Lan;
 
-.field private tokenProvider:Lsif;
+.field private tokenProvider:Lrwf;
 
 
 # direct methods
@@ -133,14 +133,14 @@
     if-eqz v8, :cond_2
 
     .line 5
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lvd6;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lqh6;
 
     move-result-object v12
 
     if-eqz v12, :cond_1
 
     .line 6
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lvd6;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lqh6;
 
     move-result-object v13
 
@@ -160,16 +160,16 @@
     iget-boolean v4, v0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->answerAsContact:Z
 
     .line 10
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Le32;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Lj42;
 
     .line 11
-    iget-object v5, v0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenProvider:Lsif;
+    iget-object v5, v0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenProvider:Lrwf;
 
     .line 12
-    iget-object v6, v0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenInfoProvider:Lqm;
+    iget-object v6, v0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenInfoProvider:Lan;
 
     .line 13
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lg8a;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lkga;
 
     move-result-object v14
 
@@ -188,7 +188,7 @@
 
     const/4 v10, 0x0
 
-    invoke-direct/range {v1 .. v16}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/sdk/id/ParticipantId;ZLsif;Lqm;Ljava/lang/String;Lru/ok/android/externcalls/sdk/id/ParticipantId;ZLe32;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lvd6;Lvd6;Lg8a;Ljava/lang/String;Laf4;)V
+    invoke-direct/range {v1 .. v16}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/sdk/id/ParticipantId;ZLrwf;Lan;Ljava/lang/String;Lru/ok/android/externcalls/sdk/id/ParticipantId;ZLj42;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lqh6;Lqh6;Lkga;Ljava/lang/String;Lvh4;)V
 
     return-object v1
 
@@ -275,18 +275,18 @@
     return-object p0
 .end method
 
-.method public final setTokenInfoProvider(Lqm;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+.method public final setTokenInfoProvider(Lan;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenInfoProvider:Lqm;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenInfoProvider:Lan;
 
     return-object p0
 .end method
 
-.method public final setTokenProvider(Lsif;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+.method public final setTokenProvider(Lrwf;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenProvider:Lsif;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->tokenProvider:Lrwf;
 
     return-object p0
 .end method

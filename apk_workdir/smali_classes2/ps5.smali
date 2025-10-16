@@ -2,123 +2,161 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lbz;
 
-.field public final synthetic b:Lus5;
+.field public final b:Lns5;
 
-.field public final synthetic c:Landroid/widget/TextView;
+.field public final c:Lms5;
 
-.field public final synthetic o:Lss5;
+.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final e:Ljava/lang/Object;
+
+.field public final f:Z
+
+.field public g:Lv44;
+
+.field public final h:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lus5;Landroid/widget/TextView;Lss5;I)V
+.method public constructor <init>(Lbz;Lns5;Lms5;)V
     .locals 0
 
-    iput p4, p0, Lps5;->a:I
-
-    iput-object p1, p0, Lps5;->b:Lus5;
-
-    iput-object p2, p0, Lps5;->c:Landroid/widget/TextView;
-
-    iput-object p3, p0, Lps5;->o:Lss5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lps5;->a:Lbz;
+
+    iput-object p2, p0, Lps5;->b:Lns5;
+
+    iput-object p3, p0, Lps5;->c:Lms5;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lps5;->d:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lps5;->e:Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lps5;->f:Z
+
+    new-instance p1, Lc14;
+
+    const/16 p2, 0xe
+
+    invoke-direct {p1, p2, p0}, Lc14;-><init>(ILjava/lang/Object;)V
+
+    const/4 p2, 0x2
+
+    invoke-static {p2, p1}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lps5;->h:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final a(Le0a;)V
+    .locals 3
 
-    iget v0, p0, Lps5;->a:I
+    iget-object v0, p0, Lps5;->e:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    iget-object v5, p0, Lps5;->b:Lus5;
+    :try_start_0
+    iget-object v1, p0, Lps5;->b:Lns5;
 
-    iget-boolean v0, v5, Lus5;->b:Z
+    if-eqz v1, :cond_0
 
-    iget-object v6, p0, Lps5;->o:Lss5;
+    const-string v2, "schedule update"
 
-    iget-object v3, p0, Lps5;->c:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Lz8h;
-
-    const/4 v2, 0x2
-
-    const/4 v7, 0x0
-
-    move-object v4, v3
-
-    invoke-direct/range {v1 .. v7}, Lz8h;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    invoke-static {v3, v1}, Lwxa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lwxa;
+    invoke-interface {v1, v2}, Lns5;->g(Ljava/lang/String;)V
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
     :cond_0
-    invoke-virtual {v3}, Landroid/view/View;->invalidate()V
-
-    iget-object v0, v6, Lss5;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
     :goto_0
-    return-void
+    iget-object v1, p0, Lps5;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    :pswitch_0
-    iget-object v6, p0, Lps5;->b:Lus5;
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    iget-boolean v0, v6, Lus5;->b:Z
+    iget-object p1, p0, Lps5;->g:Lv44;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v7, p0, Lps5;->o:Lss5;
+    if-nez p1, :cond_1
 
-    iget-object v4, p0, Lps5;->c:Landroid/widget/TextView;
+    :try_start_1
+    iget-object p1, p0, Lps5;->c:Lms5;
 
-    if-eqz v0, :cond_1
+    invoke-interface {p1}, Lms5;->a()Lv44;
 
-    new-instance v2, Lz8h;
+    move-result-object p1
 
-    const/4 v3, 0x2
+    const-string v1, "file-prefs"
 
-    const/4 v8, 0x0
+    const/4 v2, 0x1
 
-    move-object v5, v4
+    invoke-virtual {p1, v2, v1}, Lv44;->limitedParallelism(ILjava/lang/String;)Lv44;
 
-    invoke-direct/range {v2 .. v8}, Lz8h;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    invoke-static {v4, v2}, Lwxa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lwxa;
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v4}, Landroid/view/View;->invalidate()V
-
-    iget-object v0, v7, Lss5;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    :catchall_1
+    const/4 p1, 0x0
 
     :goto_1
+    :try_start_2
+    iput-object p1, p0, Lps5;->g:Lv44;
+
+    :cond_1
+    iget-object p1, p0, Lps5;->g:Lv44;
+
+    if-eqz p1, :cond_2
+
+    sget-object v1, Lm95;->a:Lm95;
+
+    iget-object v2, p0, Lps5;->h:Ljava/lang/Object;
+
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Los5;
+
+    invoke-virtual {p1, v1, v2}, Lv44;->dispatch(Lt44;Ljava/lang/Runnable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :cond_2
+    monitor-exit v0
+
     return-void
 
-    nop
+    :goto_2
+    monitor-exit v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

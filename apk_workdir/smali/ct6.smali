@@ -1,91 +1,228 @@
-.class public abstract Lct6;
-.super Lfo3;
+.class public final Lct6;
+.super Lgma;
 .source "SourceFile"
 
 
 # instance fields
-.field public q0:[Lfo3;
-
-.field public r0:I
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {p0}, Lfo3;-><init>()V
+    iput p1, p0, Lct6;->d:I
 
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Lfo3;
-
-    iput-object v0, p0, Lct6;->q0:[Lfo3;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lct6;->r0:I
+    invoke-direct {p0}, Lgma;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(ILt5h;Ljava/util/ArrayList;)V
-    .locals 5
+.method public final c(Landroid/view/View;II)I
+    .locals 0
 
-    const/4 v0, 0x0
+    iget p3, p0, Lct6;->d:I
 
-    move v1, v0
+    packed-switch p3, :pswitch_data_0
 
-    :goto_0
-    iget v2, p0, Lct6;->r0:I
+    const/high16 p1, -0x80000000
 
-    if-ge v1, v2, :cond_1
+    return p1
 
-    iget-object v2, p0, Lct6;->q0:[Lfo3;
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
-    aget-object v2, v2, v1
+    move-result p2
 
-    iget-object v3, p2, Lt5h;->a:Ljava/util/ArrayList;
+    const/16 p3, 0x8
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    if-ne p2, p3, :cond_0
 
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    const/4 p1, 0x0
 
     goto :goto_0
 
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getBaseline()I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_1
+
+    const/high16 p1, -0x80000000
+
     :cond_1
-    :goto_2
-    iget v1, p0, Lct6;->r0:I
+    :goto_0
+    return p1
 
-    if-ge v0, v1, :cond_2
+    :pswitch_1
+    shr-int/lit8 p1, p2, 0x1
 
-    iget-object v1, p0, Lct6;->q0:[Lfo3;
+    return p1
 
-    aget-object v1, v1, v0
+    :pswitch_2
+    return p2
 
-    invoke-static {v1, p1, p3, p2}, Lr5b;->q(Lfo3;ILjava/util/ArrayList;Lt5h;)Lt5h;
+    :pswitch_3
+    const/4 p1, 0x0
 
-    add-int/lit8 v0, v0, 0x1
+    return p1
 
-    goto :goto_2
+    :pswitch_4
+    const/high16 p1, -0x80000000
 
-    :cond_2
-    return-void
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public S()V
+.method public d()Lit6;
+    .locals 1
+
+    iget v0, p0, Lct6;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lgma;->d()Lit6;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Let6;
+
+    invoke-direct {v0}, Lit6;-><init>()V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lct6;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "FILL"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "BASELINE"
+
+    return-object v0
+
+    :pswitch_1
+    const-string v0, "CENTER"
+
+    return-object v0
+
+    :pswitch_2
+    const-string v0, "TRAILING"
+
+    return-object v0
+
+    :pswitch_3
+    const-string v0, "LEADING"
+
+    return-object v0
+
+    :pswitch_4
+    const-string v0, "UNDEFINED"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g(Landroid/view/View;I)I
     .locals 0
 
-    return-void
+    iget p1, p0, Lct6;->d:I
+
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :pswitch_1
+    shr-int/lit8 p1, p2, 0x1
+
+    return p1
+
+    :pswitch_2
+    return p2
+
+    :pswitch_3
+    const/4 p1, 0x0
+
+    return p1
+
+    :pswitch_4
+    const/high16 p1, -0x80000000
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(II)I
+    .locals 1
+
+    iget v0, p0, Lct6;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return p1
+
+    :pswitch_0
+    return p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_0
+    .end packed-switch
 .end method

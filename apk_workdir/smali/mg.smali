@@ -1,115 +1,38 @@
-.class public abstract Lmg;
+.class public final synthetic Lmg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$DurationScaleChangeListener;
 
-# static fields
-.field public static final a:Landroid/view/animation/LinearInterpolator;
 
-.field public static final b:Lhj5;
-
-.field public static final c:Lgj5;
-
-.field public static final d:Lgj5;
-
-.field public static final e:Landroid/view/animation/DecelerateInterpolator;
+# instance fields
+.field public final synthetic a:Lar8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lar8;)V
+    .locals 0
 
-    new-instance v0, Landroid/view/animation/LinearInterpolator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    sput-object v0, Lmg;->a:Landroid/view/animation/LinearInterpolator;
-
-    new-instance v0, Lhj5;
-
-    invoke-direct {v0}, Lhj5;-><init>()V
-
-    sput-object v0, Lmg;->b:Lhj5;
-
-    new-instance v0, Lgj5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lgj5;-><init>(I)V
-
-    sput-object v0, Lmg;->c:Lgj5;
-
-    new-instance v0, Lgj5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lgj5;-><init>(I)V
-
-    sput-object v0, Lmg;->d:Lgj5;
-
-    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
-
-    sput-object v0, Lmg;->e:Landroid/view/animation/DecelerateInterpolator;
+    iput-object p1, p0, Lmg;->a:Lar8;
 
     return-void
 .end method
 
-.method public static a(FFF)F
-    .locals 0
 
-    invoke-static {p1, p0, p2, p0}, Lsab;->f(FFFF)F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(FFFFF)F
+# virtual methods
+.method public final onChanged(F)V
     .locals 1
 
-    cmpg-float v0, p4, p2
+    iget-object v0, p0, Lmg;->a:Lar8;
 
-    if-gtz v0, :cond_0
+    iget-object v0, v0, Lar8;->b:Ljava/lang/Object;
 
-    return p0
+    check-cast v0, Log;
 
-    :cond_0
-    cmpl-float v0, p4, p3
+    iput p1, v0, Log;->g:F
 
-    if-ltz v0, :cond_1
-
-    return p1
-
-    :cond_1
-    sub-float/2addr p4, p2
-
-    sub-float/2addr p3, p2
-
-    div-float/2addr p4, p3
-
-    invoke-static {p0, p1, p4}, Lmg;->a(FFF)F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(IFI)I
-    .locals 0
-
-    sub-int/2addr p2, p0
-
-    int-to-float p2, p2
-
-    mul-float/2addr p1, p2
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
-
-    move-result p1
-
-    add-int/2addr p1, p0
-
-    return p1
+    return-void
 .end method

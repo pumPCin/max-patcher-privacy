@@ -1,55 +1,72 @@
 .class public final Lrtg;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# static fields
+.field public static final b:Lrtg;
 
 
 # instance fields
-.field public X:Lxtg;
-
-.field public Y:Lftg;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lutg;
-
-.field public final synthetic r0:Lutg;
-
-.field public s0:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lutg;Lwy3;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lrtg;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lrtg;-><init>(I)V
+
+    sput-object v0, Lrtg;->b:Lrtg;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lrtg;->r0:Lutg;
+    iput p1, p0, Lrtg;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    iput-object p1, p0, Lrtg;->Z:Ljava/lang/Object;
+    iget p1, p0, Lrtg;->a:I
 
-    iget p1, p0, Lrtg;->s0:I
+    packed-switch p1, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    const/4 p1, 0x1
 
-    or-int/2addr p1, v0
+    return p1
 
-    iput p1, p0, Lrtg;->s0:I
+    :pswitch_0
+    const/4 p1, 0x1
 
-    iget-object p1, p0, Lrtg;->r0:Lutg;
+    return p1
 
-    const/4 v0, 0x0
+    :pswitch_1
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, v0, p0}, Lutg;->g(Ljava/lang/String;Lwy3;)Ljava/lang/Object;
+    return p1
 
-    move-result-object p1
+    nop
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

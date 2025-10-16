@@ -1,8 +1,3 @@
-.class public interface abstract Lo08;
-.super Ljava/lang/Object;
+.class public final Lo08;
+.super Lq08;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract a(II)V
-.end method

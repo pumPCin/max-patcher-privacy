@@ -2,14 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lm7g;
+
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final a:Lmn3;
 
-.field public b:Lp6c;
+.field public final b:Loqf;
 
-.field public c:F
 
-.field public d:F
+# direct methods
+.method public constructor <init>(Lmn3;Loqf;)V
+    .locals 0
 
-.field public e:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Li7g;->a:Lmn3;
+
+    iput-object p2, p0, Li7g;->b:Loqf;
+
+    return-void
+.end method

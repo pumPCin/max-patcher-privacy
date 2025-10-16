@@ -1,54 +1,58 @@
 .class public final Lix5;
-.super Lwy3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lzsa;
 
-.field public final synthetic Y:Lm31;
-
-.field public Z:Lm31;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public r0:Lku5;
-
-.field public s0:Ldwc;
+.field public final b:Lhx5;
 
 
 # direct methods
-.method public constructor <init>(Lm31;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ln79;Llub;)V
+    .locals 2
 
-    iput-object p1, p0, Lix5;->Y:Lm31;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iget v0, p2, Llub;->d:I
 
-    return-void
-.end method
+    if-lez v0, :cond_0
 
+    const/4 v0, 0x1
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    goto :goto_0
 
-    iput-object p1, p0, Lix5;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lix5;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lix5;->X:I
-
-    iget-object p1, p0, Lix5;->Y:Lm31;
-
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lm31;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    move-result-object p1
+    new-instance v0, Lhx5;
 
-    return-object p1
+    invoke-static {}, Ln8a;->m()Ln8a;
+
+    move-result-object v1
+
+    invoke-direct {v0, p1, p2, v1}, Lpm6;-><init>(Ln79;Llub;Ln8a;)V
+
+    iput-object v0, p0, Lix5;->b:Lhx5;
+
+    new-instance p1, Lzsa;
+
+    const/16 p2, 0xd
+
+    invoke-direct {p1, p2, p0}, Lzsa;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lix5;->a:Lzsa;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
 .end method

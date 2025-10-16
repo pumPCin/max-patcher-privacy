@@ -1,53 +1,26 @@
-.class public final Lv97;
+.class public interface abstract Lv97;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyn7;
-.implements Ljava/io/Serializable;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lv97;->a:Ljava/lang/Object;
-
-    return-void
-.end method
+.implements Ljava/lang/AutoCloseable;
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+.method public abstract V()Landroid/media/Image;
 .end method
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lv97;->a:Ljava/lang/Object;
-
-    return-object v0
+.method public abstract getFormat()I
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract getHeight()I
+.end method
 
-    iget-object v0, p0, Lv97;->a:Ljava/lang/Object;
+.method public abstract getImageInfo()Lc97;
+.end method
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.method public abstract getWidth()I
+.end method
 
-    move-result-object v0
-
-    return-object v0
+.method public abstract v()[Lxr6;
 .end method

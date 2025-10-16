@@ -1,121 +1,75 @@
-.class public final synthetic Lbf3;
+.class public final Lbf3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq7;
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroidx/fragment/app/b;
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p2, p0, Lbf3;->a:I
-
-    iput-object p1, p0, Lbf3;->b:Landroidx/fragment/app/b;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lbf3;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Luq7;Lvp7;)V
-    .locals 1
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
-    iget p1, p0, Lbf3;->a:I
+    check-cast p1, Landroid/util/Size;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Landroid/util/Size;
 
-    iget-object p1, p0, Lbf3;->b:Landroidx/fragment/app/b;
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    sget-object v0, Lvp7;->ON_DESTROY:Lvp7;
+    move-result v0
 
-    if-ne p2, v0, :cond_1
+    int-to-long v0, v0
 
-    iget-object p2, p1, Lkf3;->b:Lol;
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    const/4 v0, 0x0
+    move-result p1
 
-    iput-object v0, p2, Lol;->c:Ljava/lang/Object;
+    int-to-long v2, p1
 
-    invoke-virtual {p1}, Landroid/app/Activity;->isChangingConfigurations()Z
+    mul-long/2addr v0, v2
 
-    move-result p2
+    invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
-    if-nez p2, :cond_0
+    move-result p1
 
-    invoke-virtual {p1}, Lkf3;->k()Lgkg;
+    int-to-long v2, p1
 
-    move-result-object p2
+    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
-    invoke-virtual {p2}, Lgkg;->a()V
+    move-result p1
+
+    int-to-long p1, p1
+
+    mul-long/2addr v2, p1
+
+    sub-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->signum(J)I
+
+    move-result p1
+
+    iget-boolean p2, p0, Lbf3;->a:Z
+
+    if-eqz p2, :cond_0
+
+    mul-int/lit8 p1, p1, -0x1
 
     :cond_0
-    iget-object p1, p1, Lkf3;->Y:Lhf3;
-
-    iget-object p2, p1, Lhf3;->o:Landroidx/fragment/app/b;
-
-    invoke-virtual {p2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    invoke-virtual {p2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Landroid/view/ViewTreeObserver;->removeOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lbf3;->b:Landroidx/fragment/app/b;
-
-    sget-object v0, Lvp7;->ON_STOP:Lvp7;
-
-    if-ne p2, v0, :cond_2
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/View;->cancelPendingInputEvents()V
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

@@ -1,201 +1,158 @@
 .class public final Lzx;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
-# static fields
-.field public static final g:Ljava/util/ArrayDeque;
-
-.field public static final h:Ljava/lang/Object;
-
-
 # instance fields
-.field public final a:Landroid/media/MediaCodec;
-
-.field public final b:Landroid/os/HandlerThread;
-
-.field public c:Lwx;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final e:Lrh3;
-
-.field public f:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Ljava/util/ArrayDeque;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+    iput v0, p0, Lzx;->a:I
 
-    sput-object v0, Lzx;->g:Ljava/util/ArrayDeque;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzx;->h:Ljava/lang/Object;
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/media/MediaCodec;Landroid/os/HandlerThread;)V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Runnable;)V
+    .locals 1
 
-    new-instance v0, Lrh3;
+    .line 2
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    iput v0, p0, Lzx;->a:I
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lrh3;-><init>(IZ)V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzx;->a:Landroid/media/MediaCodec;
-
-    iput-object p2, p0, Lzx;->b:Landroid/os/HandlerThread;
-
-    iput-object v0, p0, Lzx;->e:Lrh3;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lzx;->d:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0, p2, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static b()Lxx;
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
+    .locals 1
 
-    sget-object v0, Lzx;->g:Ljava/util/ArrayDeque;
+    .line 3
+    const/4 v0, 0x2
 
-    monitor-enter v0
+    iput v0, p0, Lzx;->a:I
 
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Lxx;
-
-    invoke-direct {v1}, Lxx;-><init>()V
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxx;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public run()V
     .locals 3
 
-    iget-boolean v0, p0, Lzx;->f:Z
+    iget v0, p0, Lzx;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
+    :pswitch_0
+    invoke-super {p0}, Ljava/lang/Thread;->run()V
+
+    return-void
+
+    :pswitch_1
+    const/16 v0, 0x13
+
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    monitor-enter p0
+
+    :goto_0
     :try_start_0
-    iget-object v0, p0, Lzx;->c:Lwx;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lzx;->e:Lrh3;
-
-    monitor-enter v0
+    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v1, 0x0
+    goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_0
     :try_start_1
-    iput-boolean v1, v0, Lrh3;->b:Z
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    throw v0
+
+    :catch_1
+    :cond_0
+    :goto_2
+    :pswitch_2
     :try_start_2
-    monitor-exit v0
+    const-class v0, Ldy;
 
-    iget-object v1, p0, Lzx;->c:Lwx;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
-
-    invoke-virtual {v0}, Lrh3;->a()V
+    monitor-enter v0
     :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
 
     :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    sget-object v1, Ldy;->j:Ldy;
 
-    :try_start_4
-    throw v1
-    :try_end_4
-    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-static {}, Lrfi;->a()Ldy;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
+    sget-object v2, Ldy;->j:Ldy;
 
-    new-instance v1, Ljava/lang/IllegalStateException;
+    if-ne v1, v2, :cond_1
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+    const/4 v1, 0x0
+
+    sput-object v1, Ldy;->j:Ldy;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    monitor-exit v0
+
+    return-void
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_3
+
+    :cond_1
+    monitor-exit v0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ldy;->k()V
+
+    goto :goto_2
+
+    :goto_3
+    monitor-exit v0
 
     throw v1
+    :try_end_4
+    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
 
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

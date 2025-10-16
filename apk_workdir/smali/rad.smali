@@ -1,58 +1,59 @@
 .class public final Lrad;
-.super Ljava/lang/Object;
+.super Lc0i;
 .source "SourceFile"
-
-# interfaces
-.implements Lmq7;
-.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:[B
 
-.field public final b:Lqad;
+.field public final synthetic b:Lo29;
 
-.field public c:Z
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lqad;)V
+.method public constructor <init>([BLo29;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrad;->a:Ljava/lang/String;
+    iput-object p1, p0, Lrad;->a:[B
 
-    iput-object p2, p0, Lrad;->b:Lqad;
+    iput-object p2, p0, Lrad;->b:Lo29;
+
+    iput p3, p0, Lrad;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final d()J
+    .locals 2
 
-    return-void
+    iget v0, p0, Lrad;->c:I
+
+    int-to-long v0, v0
+
+    return-wide v0
 .end method
 
-.method public final d(Luq7;Lvp7;)V
+.method public final e()Lo29;
     .locals 1
 
-    sget-object v0, Lvp7;->ON_DESTROY:Lvp7;
+    iget-object v0, p0, Lrad;->b:Lo29;
 
-    if-ne p2, v0, :cond_0
+    return-object v0
+.end method
 
-    const/4 p2, 0x0
+.method public final h(Liv0;)V
+    .locals 2
 
-    iput-boolean p2, p0, Lrad;->c:Z
+    iget-object v0, p0, Lrad;->a:[B
 
-    invoke-interface {p1}, Luq7;->x()Lwq7;
+    iget v1, p0, Lrad;->c:I
 
-    move-result-object p1
+    invoke-interface {p1, v1, v0}, Liv0;->E(I[B)Liv0;
 
-    invoke-virtual {p1, p0}, Lwq7;->f(Lqq7;)V
-
-    :cond_0
     return-void
 .end method

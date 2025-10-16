@@ -2,153 +2,192 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxpd;
-.implements Lhz4;
-
 
 # instance fields
-.field public final a:Lxpd;
+.field public final a:Llxe;
 
-.field public final b:I
+.field public final b:Z
 
-.field public final c:I
+.field public final c:Z
+
+.field public final d:Loh6;
 
 
 # direct methods
-.method public constructor <init>(Lxpd;II)V
-    .locals 1
+.method public constructor <init>(Llxe;ZZLoh6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmxe;->a:Lxpd;
+    iput-object p1, p0, Lmxe;->a:Llxe;
 
-    iput p2, p0, Lmxe;->b:I
+    iput-boolean p2, p0, Lmxe;->b:Z
 
-    iput p3, p0, Lmxe;->c:I
+    iput-boolean p3, p0, Lmxe;->c:Z
 
-    if-ltz p2, :cond_2
-
-    if-ltz p3, :cond_1
-
-    if-lt p3, p2, :cond_0
+    iput-object p4, p0, Lmxe;->d:Loh6;
 
     return-void
-
-    :cond_0
-    const-string p1, "endIndex should be not less than startIndex, but was "
-
-    const-string v0, " < "
-
-    invoke-static {p1, p3, p2, v0}, Lbk7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_1
-    const-string p1, "endIndex should be non-negative, but is "
-
-    invoke-static {p3, p1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_2
-    const-string p1, "startIndex should be non-negative, but is "
-
-    invoke-static {p2, p1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
 .end method
 
 
 # virtual methods
-.method public final a(I)Lxpd;
-    .locals 3
-
-    iget v0, p0, Lmxe;->c:I
-
-    iget v1, p0, Lmxe;->b:I
-
-    sub-int/2addr v0, v1
-
-    if-lt p1, v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lmxe;
-
-    iget-object v2, p0, Lmxe;->a:Lxpd;
-
-    add-int/2addr p1, v1
-
-    invoke-direct {v0, v2, v1, p1}, Lmxe;-><init>(Lxpd;II)V
-
-    return-object v0
-.end method
-
-.method public final b(I)Lxpd;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lmxe;->c:I
+    const/4 v0, 0x1
 
-    iget v1, p0, Lmxe;->b:I
+    if-ne p0, p1, :cond_0
 
-    sub-int v2, v0, v1
-
-    if-lt p1, v2, :cond_0
-
-    sget-object p1, Lx65;->a:Lx65;
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance v2, Lmxe;
+    instance-of v1, p1, Lmxe;
 
-    iget-object v3, p0, Lmxe;->a:Lxpd;
+    const/4 v2, 0x0
 
-    add-int/2addr v1, p1
+    if-nez v1, :cond_1
 
-    invoke-direct {v2, v3, v1, v0}, Lmxe;-><init>(Lxpd;II)V
+    return v2
 
-    return-object v2
+    :cond_1
+    check-cast p1, Lmxe;
+
+    iget-object v1, p0, Lmxe;->a:Llxe;
+
+    iget-object v3, p1, Lmxe;->a:Llxe;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lmxe;->b:Z
+
+    iget-boolean v3, p1, Lmxe;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lmxe;->c:Z
+
+    iget-boolean v3, p1, Lmxe;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lmxe;->d:Loh6;
+
+    iget-object p1, p1, Lmxe;->d:Loh6;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v0, Lti6;
+    iget-object v0, p0, Lmxe;->a:Llxe;
 
-    invoke-direct {v0, p0}, Lti6;-><init>(Lmxe;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmxe;->b:Z
+
+    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lmxe;->c:Z
+
+    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lmxe;->d:Loh6;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "StartCallParams(type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lmxe;->a:Llxe;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lmxe;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isAudio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lmxe;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callbackPrepare="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmxe;->d:Loh6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

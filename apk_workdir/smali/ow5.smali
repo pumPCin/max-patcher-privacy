@@ -1,49 +1,148 @@
 .class public final Low5;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Ly03;
+.field public final synthetic a:I
 
-.field public Y:I
+.field public b:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:J
+
+.field public d:I
+
+.field public e:Ljava/lang/Object;
+
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ly03;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Low5;->X:Ly03;
+    .line 1
+    iput p1, p0, Low5;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(IJLjava/lang/String;Ljava/lang/String;Z)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Low5;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p4, p0, Low5;->e:Ljava/lang/Object;
+
+    .line 4
+    iput p1, p0, Low5;->d:I
+
+    .line 5
+    iput-wide p2, p0, Low5;->c:J
+
+    .line 6
+    iput-boolean p6, p0, Low5;->b:Z
+
+    .line 7
+    iput-object p5, p0, Low5;->f:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/graphics/Bitmap;JLandroid/graphics/Point;IZ)V
+    .locals 1
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Low5;->a:I
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    iput-object p1, p0, Low5;->e:Ljava/lang/Object;
+
+    .line 10
+    iput-wide p2, p0, Low5;->c:J
+
+    .line 11
+    iput-object p4, p0, Low5;->f:Ljava/lang/Object;
+
+    .line 12
+    iput p5, p0, Low5;->d:I
+
+    .line 13
+    iput-boolean p6, p0, Low5;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public toString()Ljava/lang/String;
+    .locals 8
 
-    iput-object p1, p0, Low5;->o:Ljava/lang/Object;
+    iget v0, p0, Low5;->a:I
 
-    iget p1, p0, Low5;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Low5;->Y:I
+    return-object v0
 
-    iget-object p1, p0, Low5;->X:Ly03;
+    :pswitch_0
+    iget-object v0, p0, Low5;->e:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Ly03;->b(Liu5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget v1, p0, Low5;->d:I
 
-    move-result-object p1
+    iget-wide v2, p0, Low5;->c:J
 
-    return-object p1
+    iget-boolean v4, p0, Low5;->b:Z
+
+    const-string v5, "\', bytesSent="
+
+    const-string v6, ", bytesReceived=0, responseTime="
+
+    const-string v7, "SessionLogEvent{opcode=\'"
+
+    invoke-static {v1, v7, v0, v5, v6}, Llfb;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", retry=false, error="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method

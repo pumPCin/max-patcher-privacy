@@ -2,59 +2,81 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb18;
+
 
 # instance fields
-.field public final a:Lzae;
+.field public final X:Z
 
-.field public final b:J
+.field public final Y:Landroid/net/Uri;
 
-.field public final c:Lzh5;
+.field public final Z:Ldu3;
 
-.field public final d:Lvae;
+.field public final a:J
 
-.field public final e:Lvae;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic f:Lwae;
+.field public final c:Ltvb;
+
+.field public final o:Ltvb;
+
+.field public final r0:Ljava/util/List;
+
+.field public final s0:Z
+
+.field public final t0:I
+
+.field public final u0:J
 
 
 # direct methods
-.method public constructor <init>(Lwae;Lzae;Lzh5;Lvae;Lvae;)V
-    .locals 2
+.method public constructor <init>(JLjava/lang/String;Ltvb;Ltvb;ZLandroid/net/Uri;Ldu3;Ljava/util/List;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpq6;->f:Lwae;
+    iput-wide p1, p0, Lpq6;->a:J
 
-    iget-wide v0, p3, Lzh5;->b:J
+    iput-object p3, p0, Lpq6;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lpq6;->a:Lzae;
+    iput-object p4, p0, Lpq6;->c:Ltvb;
 
-    iput-wide v0, p0, Lpq6;->b:J
+    iput-object p5, p0, Lpq6;->o:Ltvb;
 
-    iput-object p3, p0, Lpq6;->c:Lzh5;
+    iput-boolean p6, p0, Lpq6;->X:Z
 
-    iput-object p4, p0, Lpq6;->d:Lvae;
+    iput-object p7, p0, Lpq6;->Y:Landroid/net/Uri;
 
-    iput-object p5, p0, Lpq6;->e:Lvae;
+    iput-object p8, p0, Lpq6;->Z:Ldu3;
+
+    iput-object p9, p0, Lpq6;->r0:Ljava/util/List;
+
+    iput-boolean p10, p0, Lpq6;->s0:Z
+
+    sget p3, Lrra;->p:I
+
+    iput p3, p0, Lpq6;->t0:I
+
+    iput-wide p1, p0, Lpq6;->u0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lpq6;->u0:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iget-object v0, p0, Lpq6;->c:Lzh5;
+    iget v0, p0, Lpq6;->t0:I
 
-    if-nez v0, :cond_0
-
-    const-string v0, "<unknown command>"
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, v0, Lzh5;->a:Ljava/lang/String;
-
-    return-object v0
+    return v0
 .end method

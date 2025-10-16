@@ -1,74 +1,133 @@
-.class public final Lt91;
-.super Lc2f;
+.class public final synthetic Lt91;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/calllist/ui/CallHistoryScreen;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lt91;->a:I
+
+    iput-object p1, p0, Lt91;->b:Lone/me/calllist/ui/CallHistoryScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    check-cast p1, Ln24;
+    iget p1, p0, Lt91;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lt91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lt91;->b:Lone/me/calllist/ui/CallHistoryScreen;
 
-    move-result-object p1
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p1, Lt91;
+    iget-object p1, v1, Lone/me/calllist/ui/CallHistoryScreen;->b:Llt7;
 
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lt91;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    check-cast p1, Lnhb;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    new-instance v2, Lilh;
 
-    new-instance v0, Lt91;
+    invoke-direct {v2, v1, v0}, Lilh;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    const/4 v1, 0x2
+    sget-object v0, Lnhb;->h:[Ljava/lang/String;
 
-    invoke-direct {v0, v1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xa0
 
-    iput-object p1, v0, Lt91;->X:Ljava/lang/Object;
+    invoke-virtual {p1, v2, v0, v1}, Lnhb;->h(Lilh;[Ljava/lang/String;I)V
 
-    return-object v0
-.end method
+    return-void
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :pswitch_0
+    sget-object p1, Lone/me/calllist/ui/CallHistoryScreen;->A0:[Lwq7;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lt91;->X:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    new-instance v0, Ls91;
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, v2, v2, v0, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-virtual {v1}, Lone/me/calllist/ui/CallHistoryScreen;->D0()Lba1;
 
     move-result-object p1
 
-    return-object p1
+    iget-object p1, p1, Lba1;->c:Loi1;
+
+    new-instance v1, Lr31;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v1, v2}, Lr31;-><init>(I)V
+
+    invoke-virtual {p1}, Loi1;->c()V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p1, Loi1;->j:Z
+
+    invoke-virtual {p1}, Loi1;->e()Lnhb;
+
+    move-result-object v2
+
+    iget-object v3, p1, Loi1;->a:Lilh;
+
+    invoke-virtual {v2, v0, v3}, Lnhb;->a(ZLilh;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object p1, p1, Loi1;->d:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvo3;
+
+    invoke-interface {p1}, Lvo3;->f()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v3}, Lilh;->b()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lr31;->invoke()Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    iput-object v1, p1, Loi1;->l:Loh6;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p1, Loi1;->h:Llxe;
+
+    iput-boolean v0, p1, Loi1;->i:Z
+
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

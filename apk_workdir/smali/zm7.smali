@@ -1,29 +1,111 @@
 .class public abstract Lzm7;
-.super Ljava/lang/Object;
+.super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 .source "SourceFile"
 
+# interfaces
+.implements Lhv4;
+.implements Ltd7;
 
-# direct methods
-.method public static a(Landroid/content/Context;)Landroid/app/KeyguardManager;
+
+# instance fields
+.field public a:Lon7;
+
+
+# virtual methods
+.method public final b()Lo8a;
     .locals 1
 
-    const-class v0, Landroid/app/KeyguardManager;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/app/KeyguardManager;
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public static b(Landroid/app/KeyguardManager;)Z
-    .locals 0
+.method public abstract c()Z
+.end method
 
-    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isDeviceSecure()Z
+.method public abstract d(Ljava/lang/Throwable;)V
+.end method
 
-    move-result p0
+.method public final dispose()V
+    .locals 1
 
-    return p0
+    iget-object v0, p0, Lzm7;->a:Lon7;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v0, p0}, Lon7;->removeNode$kotlinx_coroutines_core(Lzm7;)V
+
+    return-void
+.end method
+
+.method public final isActive()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x40
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-static {p0}, Lde4;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "[job@"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzm7;->a:Lon7;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, Lde4;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

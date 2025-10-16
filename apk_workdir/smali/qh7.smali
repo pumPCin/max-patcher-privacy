@@ -3,104 +3,97 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbw7;
+.implements Le79;
 
 
 # instance fields
-.field public final a:Lcwd;
+.field public final a:Le79;
+
+.field public final b:Lg79;
 
 
 # direct methods
-.method public constructor <init>(Lfh7;)V
-    .locals 2
-
-    new-instance v0, Lcwd;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.method public constructor <init>(Ls54;Lg79;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lqh7;->a:Lcwd;
+    iput-object p1, p0, Lqh7;->a:Le79;
 
-    new-instance v0, Li0;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p0}, Li0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Lgi7;->invokeOnCompletion(Lvd6;)Lis4;
+    iput-object p2, p0, Lqh7;->b:Lg79;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel(Z)Z
+.method public final a(Ll79;)V
     .locals 1
 
-    iget-object v0, p0, Lqh7;->a:Lcwd;
+    iget-object v0, p0, Lqh7;->a:Le79;
 
-    invoke-virtual {v0, p1}, Lv1;->cancel(Z)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 1
-
-    iget-object v0, p0, Lqh7;->a:Lcwd;
-
-    invoke-virtual {v0, p1, p2}, Lv1;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-interface {v0, p1}, Lm79;->a(Ll79;)V
 
     return-void
 .end method
 
-.method public final get()Ljava/lang/Object;
+.method public final b(Ldy0;Lq93;)Lq93;
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lqh7;->a:Lcwd;
+    iget-object v0, p0, Lqh7;->b:Lg79;
 
-    invoke-virtual {v0}, Lv1;->get()Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lg79;->H(Ldy0;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lqh7;->a:Le79;
 
-    return-object v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lqh7;->a:Lcwd;
-
-    invoke-virtual {v0, p1, p2, p3}, Lv1;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Le79;->b(Ldy0;Lq93;)Lq93;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final isCancelled()Z
+.method public final c(Lbwb;)I
     .locals 1
 
-    iget-object v0, p0, Lqh7;->a:Lcwd;
+    iget-object v0, p0, Lqh7;->a:Le79;
 
-    iget-object v0, v0, Lv1;->a:Ljava/lang/Object;
+    invoke-interface {v0, p1}, Le79;->c(Lbwb;)I
 
-    instance-of v0, v0, Lz0;
+    move-result p1
 
-    return v0
+    return p1
 .end method
 
-.method public final isDone()Z
+.method public final get(Ljava/lang/Object;)Lq93;
+    .locals 2
+
+    iget-object v0, p0, Lqh7;->a:Le79;
+
+    invoke-interface {v0, p1}, Le79;->get(Ljava/lang/Object;)Lq93;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lqh7;->b:Lg79;
+
+    if-nez v0, :cond_0
+
+    invoke-interface {v1, p1}, Lg79;->z(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_0
+    invoke-interface {v1, p1}, Lg79;->x(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final getSizeInBytes()I
     .locals 1
 
-    iget-object v0, p0, Lqh7;->a:Lcwd;
+    iget-object v0, p0, Lqh7;->a:Le79;
 
-    invoke-virtual {v0}, Lv1;->isDone()Z
+    invoke-interface {v0}, Le79;->getSizeInBytes()I
 
     move-result v0
 

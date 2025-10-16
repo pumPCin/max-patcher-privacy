@@ -1,89 +1,32 @@
 .class public final Lop8;
-.super Landroid/view/animation/Animation;
+.super Lnp8;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:I
-
-.field public final synthetic c:I
-
-.field public final synthetic o:Landroid/view/View;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroid/view/View;III)V
-    .locals 0
-
-    iput p4, p0, Lop8;->a:I
-
-    iput p2, p0, Lop8;->b:I
-
-    iput p3, p0, Lop8;->c:I
-
-    iput-object p1, p0, Lop8;->o:Landroid/view/View;
-
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
-    .locals 3
+.method public final K0(F)V
+    .locals 1
 
-    iget p2, p0, Lop8;->a:I
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lop8;->o:Landroid/view/View;
+    cmpl-float v0, p1, v0
 
-    iget v1, p0, Lop8;->c:I
+    if-eqz v0, :cond_0
 
-    iget v2, p0, Lop8;->b:I
+    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
 
-    packed-switch p2, :pswitch_data_0
+    check-cast v0, Landroid/media/session/MediaController$TransportControls;
 
-    sub-int/2addr v2, v1
-
-    int-to-float p2, v2
-
-    mul-float/2addr p2, p1
-
-    float-to-int p1, p2
-
-    add-int/2addr v1, p1
-
-    sget-boolean p1, Liq8;->d1:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-static {v0, p1}, Lh05;->r(Landroid/media/session/MediaController$TransportControls;F)V
 
     return-void
 
-    :pswitch_0
-    sub-int p2, v2, v1
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    int-to-float p2, p2
+    const-string v0, "speed must not be zero"
 
-    mul-float/2addr p2, p1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    float-to-int p1, p2
-
-    sub-int/2addr v2, p1
-
-    invoke-static {v0, v2}, Landroidx/mediarouter/app/d;->o(Landroid/view/View;I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

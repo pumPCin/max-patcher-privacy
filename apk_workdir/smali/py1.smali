@@ -1,170 +1,175 @@
-.class public final synthetic Lpy1;
+.class public final Lpy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final j:J
+
+.field public static final k:J
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic a:I
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public final synthetic b:J
+.field public final c:Ljava/util/concurrent/ScheduledExecutorService;
 
-.field public final synthetic c:I
+.field public final d:Lox1;
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public final e:Lpr0;
+
+.field public final f:Z
+
+.field public g:J
+
+.field public final h:Ljava/util/ArrayList;
+
+.field public final i:Lny1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li8f;Lnm;JI)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 2
-    const/4 v0, 0x1
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iput v0, p0, Lpy1;->a:I
+    const-wide/16 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    iput-object p1, p0, Lpy1;->o:Ljava/lang/Object;
+    move-result-wide v1
 
-    iput-object p2, p0, Lpy1;->X:Ljava/lang/Object;
+    sput-wide v1, Lpy1;->j:J
 
-    iput-wide p3, p0, Lpy1;->b:J
+    const-wide/16 v1, 0x5
 
-    iput p5, p0, Lpy1;->c:I
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lpy1;->k:J
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Liw1;Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lpy1;->a:I
+.method public constructor <init>(ILt1e;Lgv6;Lox1;ZLpr0;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpy1;->o:Ljava/lang/Object;
+    sget-wide v0, Lpy1;->j:J
 
-    iput-object p2, p0, Lpy1;->X:Ljava/lang/Object;
+    iput-wide v0, p0, Lpy1;->g:J
 
-    iput p3, p0, Lpy1;->c:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-wide p4, p0, Lpy1;->b:J
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lpy1;->h:Ljava/util/ArrayList;
+
+    new-instance v0, Lny1;
+
+    invoke-direct {v0, p0}, Lny1;-><init>(Lpy1;)V
+
+    iput-object v0, p0, Lpy1;->i:Lny1;
+
+    iput p1, p0, Lpy1;->a:I
+
+    iput-object p2, p0, Lpy1;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Lpy1;->c:Ljava/util/concurrent/ScheduledExecutorService;
+
+    iput-object p4, p0, Lpy1;->d:Lox1;
+
+    iput-boolean p5, p0, Lpy1;->f:Z
+
+    iput-object p6, p0, Lpy1;->e:Lpr0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final a(I)Lo18;
+    .locals 4
 
-    iget v0, p0, Lpy1;->a:I
+    iget-object v0, p0, Lpy1;->h:Ljava/util/ArrayList;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    iget-object v0, p0, Lpy1;->o:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Li8f;
+    sget-object v1, Lla7;->c:Lla7;
 
-    iget-object v1, p0, Lpy1;->X:Ljava/lang/Object;
+    if-nez v0, :cond_1
 
-    check-cast v1, Lnm;
+    iget-object v0, p0, Lpy1;->i:Lny1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lny1;->b()Z
 
-    sget-object v2, Li8f;->z0:Ljava/lang/String;
+    move-result v0
 
-    const-string v3, "persistable task execution started, force connection"
+    if-eqz v0, :cond_0
 
-    invoke-static {v2, v3}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v0, Lsy1;
 
-    iget-object v2, v0, Li8f;->X:Lyn7;
+    const/4 v1, 0x0
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lsy1;-><init>(Lry1;)V
 
-    move-result-object v2
+    iget-object v1, p0, Lpy1;->d:Lox1;
 
-    check-cast v2, Lnnb;
+    invoke-virtual {v1, v0}, Lox1;->p(Lnx1;)V
 
-    check-cast v2, Lpnb;
+    new-instance v2, Ljx1;
 
-    iget-object v2, v2, Lpnb;->a:Lt08;
+    const/4 v3, 0x6
 
-    const/4 v3, 0x1
+    invoke-direct {v2, v1, v3, v0}, Ljx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v2, v3}, Lfhd;->A(Z)V
+    iget-object v1, v1, Lox1;->c:Lt1e;
 
-    iget-object v2, v0, Li8f;->o:Lyn7;
+    iget-object v0, v0, Lsy1;->b:Lbu1;
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    iget-object v3, v0, Lbu1;->b:Lau1;
 
-    move-result-object v2
+    invoke-virtual {v3, v2, v1}, Le4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    check-cast v2, Ltaf;
+    move-object v1, v0
 
-    check-cast v1, Lu8b;
-
-    iget-wide v3, p0, Lpy1;->b:J
-
-    iget v5, p0, Lpy1;->c:I
-
-    invoke-virtual {v2, v1, v3, v4, v5}, Ltaf;->g(Lu8b;JI)V
-
-    iget-object v1, v0, Li8f;->t0:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, La9h;
-
-    invoke-static {v1}, Lltd;->x(La9h;)V
-
-    iget-object v0, v0, Li8f;->u0:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    :cond_0
+    invoke-static {v1}, Lfj6;->a(Lo18;)Lfj6;
 
     move-result-object v0
 
-    check-cast v0, Lqaf;
+    new-instance v1, Lyc0;
 
-    invoke-virtual {v0}, Lqaf;->a()V
+    const/4 v2, 0x1
 
-    return-void
+    invoke-direct {v1, p0, p1, v2}, Lyc0;-><init>(Ljava/lang/Object;II)V
 
-    :pswitch_0
-    iget-object v0, p0, Lpy1;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Liw1;
+    iget-object p1, p0, Lpy1;->b:Ljava/util/concurrent/Executor;
 
-    iget-object v1, p0, Lpy1;->X:Ljava/lang/Object;
+    invoke-static {v0, v1, p1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
 
-    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession;
+    move-result-object v0
 
-    iget-object v0, v0, Liw1;->b:Ljava/lang/Object;
+    new-instance v1, Lihd;
 
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    const/16 v2, 0x1b
 
-    iget v2, p0, Lpy1;->c:I
+    invoke-direct {v1, v2, p0}, Lihd;-><init>(ILjava/lang/Object;)V
 
-    iget-wide v3, p0, Lpy1;->b:J
+    invoke-static {v0, v1, p1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-object v1
 .end method

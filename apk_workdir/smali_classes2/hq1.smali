@@ -1,8 +1,37 @@
-.class public interface abstract Lhq1;
+.class public abstract Lhq1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract onUrlSharingInfoUpdated(Lgq1;)V
+# static fields
+.field public static final a:Lkb8;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x5
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    new-instance v2, Lkb8;
+
+    const-wide/16 v3, 0x7d0
+
+    sub-long v3, v0, v3
+
+    const-wide/16 v5, 0xfa0
+
+    add-long/2addr v0, v5
+
+    invoke-direct {v2, v3, v4, v0, v1}, Lkb8;-><init>(JJ)V
+
+    sput-object v2, Lhq1;->a:Lkb8;
+
+    return-void
 .end method

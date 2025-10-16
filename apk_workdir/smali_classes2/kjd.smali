@@ -1,177 +1,99 @@
-.class public final Lkjd;
+.class public abstract Lkjd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lkjd;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/util/List;
+.field public static final a:Lx85;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lkjd;
+    new-instance v0, Lx85;
 
-    const/4 v1, 0x1
+    invoke-static {}, Ldod;->b()Lqnd;
 
-    sget-object v2, Lo65;->a:Lo65;
+    move-result-object v1
 
-    invoke-direct {v0, v1, v2}, Lkjd;-><init>(ILjava/util/List;)V
+    const/16 v2, 0x1c
 
-    sput-object v0, Lkjd;->c:Lkjd;
+    invoke-direct {v0, v2, v1}, Lx85;-><init>(ILjava/lang/Object;)V
 
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lkjd;->a:I
-
-    iput-object p2, p0, Lkjd;->b:Ljava/util/List;
+    sput-object v0, Lkjd;->a:Lx85;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static a(Lr6;Ler3;Lqnd;)Lvt1;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Ljjd;
 
-    goto :goto_1
+    invoke-direct {v0, p0}, Ljjd;-><init>(Lr6;)V
 
-    :cond_0
-    instance-of v0, p1, Lkjd;
+    new-instance p0, Lmg3;
 
-    if-nez v0, :cond_1
+    const/4 v1, 0x0
 
-    goto :goto_0
+    invoke-direct {p0, v1, v0}, Lmg3;-><init>(ILjava/lang/Object;)V
 
-    :cond_1
-    check-cast p1, Lkjd;
+    invoke-virtual {p0, p2}, Ljg3;->j(Lqnd;)Lsg3;
 
-    iget v0, p0, Lkjd;->a:I
+    move-result-object p0
 
-    iget v1, p1, Lkjd;->a:I
+    new-instance p2, Lbj4;
 
-    if-eq v0, v1, :cond_2
+    const/16 v0, 0x9
 
-    goto :goto_0
+    invoke-direct {p2, v0}, Lbj4;-><init>(I)V
 
-    :cond_2
-    iget-object v0, p0, Lkjd;->b:Ljava/util/List;
+    new-instance v0, Lvt1;
 
-    iget-object p1, p1, Lkjd;->b:Ljava/util/List;
+    invoke-direct {v0, p1, v1, p2}, Lvt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Ljg3;->h(Ltg3;)V
 
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static b(Lev4;)V
+    .locals 1
 
-    iget v0, p0, Lkjd;->a:I
-
-    invoke-static {v0}, Lsw1;->u(I)I
+    invoke-static {p0}, Lkjd;->c(Lev4;)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lkjd;->b:Ljava/util/List;
+    invoke-interface {p0}, Lev4;->g()V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static c(Lev4;)Z
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-eqz p0, :cond_1
 
-    const-string v1, "SearchState(state="
+    invoke-interface {p0}, Lev4;->h()Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result p0
 
-    const/4 v1, 0x1
-
-    iget v2, p0, Lkjd;->a:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "EMPTY"
+    const/4 p0, 0x0
 
-    goto :goto_0
+    return p0
 
     :cond_1
-    const-string v1, "CONTENT"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "LOADING"
-
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p0, 0x1
 
-    const-string v1, ", content="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkjd;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p0
 .end method

@@ -1,47 +1,201 @@
-.class public final Lak6;
-.super Lwy3;
+.class public abstract Lak6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ljava/util/List;
+
+
 # instance fields
-.field public final synthetic X:Ldk6;
+.field public final a:Ljava/lang/String;
 
-.field public Y:I
+.field public final b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ldk6;Lwy3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lak6;->X:Ldk6;
+    const/4 v0, 0x2
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-array v0, v0, [Lak6;
+
+    sget-object v1, Lyj6;->e:Lyj6;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lzj6;->e:Lzj6;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lak6;->d:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 9
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lak6;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lak6;->d()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, " DESC"
+
+    invoke-static {p1, v0}, Lwx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lak6;->b:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lak6;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lak6;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lak6;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lak6;->c()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lak6;->d()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lak6;->h()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lak6;->i()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lak6;->e()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {p0}, Lak6;->g()Ljava/lang/String;
+
+    move-result-object v8
+
+    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljt;->s([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/String;
+
+    iput-object p1, p0, Lak6;->c:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract a()Ljava/lang/String;
+.end method
+
+.method public abstract b()Ljava/lang/String;
+.end method
+
+.method public abstract c()Ljava/lang/String;
+.end method
+
+.method public abstract d()Ljava/lang/String;
+.end method
+
+.method public e()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lak6;->o:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    iget p1, p0, Lak6;->Y:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public abstract f()Ljava/lang/String;
+.end method
 
-    or-int/2addr p1, v0
+.method public g()Ljava/lang/String;
+    .locals 1
 
-    iput p1, p0, Lak6;->Y:I
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lak6;->X:Ldk6;
+    return-object v0
+.end method
 
-    invoke-virtual {p1, p0}, Ldk6;->b(Lwy3;)Ljava/lang/Object;
+.method public abstract h()Ljava/lang/String;
+.end method
 
-    move-result-object p1
+.method public i()Ljava/lang/String;
+    .locals 1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract j()Landroid/net/Uri;
+.end method
+
+.method public abstract k()Ljava/lang/String;
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const/16 v0, 0x2a
+
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "QueryParams(name=\'"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\')"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

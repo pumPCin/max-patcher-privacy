@@ -1,3 +1,3 @@
-.class public interface abstract Lc5c;
-.super Ljava/lang/Object;
+.class public abstract Lc5c;
+.super Lpoe;
 .source "SourceFile"

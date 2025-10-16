@@ -1,241 +1,216 @@
-.class public final Lrlf;
+.class public final synthetic Lrlf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lmmf;
 
-.field public final b:Ldzb;
+.field public final synthetic a:I
 
-.field public volatile c:Z
+.field public final synthetic b:Lm29;
 
-.field public final d:Landroid/content/Context;
+.field public final synthetic c:Lxm;
 
-.field public final e:Ljava/lang/Object;
-
-.field public final f:Ljava/lang/Object;
-
-.field public final g:Lcvd;
-
-.field public final h:Luaf;
-
-.field public final i:Lp35;
-
-.field public final j:Lhqe;
-
-.field public final k:Lt8b;
+.field public final synthetic o:Lukf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ldzb;)V
-    .locals 2
+.method public synthetic constructor <init>(Lm29;Lmmf;Lxm;Lukf;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Lrlf;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lrlf;->a:Ljava/lang/String;
+    iput-object p1, p0, Lrlf;->b:Lm29;
 
-    iput-object p3, p0, Lrlf;->b:Ldzb;
+    iput-object p2, p0, Lrlf;->X:Lmmf;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iput-object p3, p0, Lrlf;->c:Lxm;
 
-    move-result-object p3
+    iput-object p4, p0, Lrlf;->o:Lukf;
 
-    iput-object p3, p0, Lrlf;->d:Landroid/content/Context;
+    return-void
+.end method
 
-    new-instance p3, Lqlf;
+.method public synthetic constructor <init>(Lm29;Lxm;Lukf;Lmmf;)V
+    .locals 1
 
+    .line 1
     const/4 v0, 0x1
 
-    invoke-direct {p3, p0, v0}, Lqlf;-><init>(Lrlf;I)V
+    iput v0, p0, Lrlf;->a:I
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p3}, Lwee;->u(ILtd6;)Lyn7;
+    iput-object p1, p0, Lrlf;->b:Lm29;
 
-    move-result-object p3
+    iput-object p2, p0, Lrlf;->c:Lxm;
 
-    iput-object p3, p0, Lrlf;->e:Ljava/lang/Object;
+    iput-object p3, p0, Lrlf;->o:Lukf;
 
-    new-instance p3, Lqlf;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p3, p0, v1}, Lqlf;-><init>(Lrlf;I)V
-
-    invoke-static {v0, p3}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lrlf;->f:Ljava/lang/Object;
-
-    new-instance p3, Lcvd;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p3, v0}, Lcvd;-><init>(I)V
-
-    iput-object p3, p0, Lrlf;->g:Lcvd;
-
-    new-instance p3, Luaf;
-
-    invoke-direct {p3, p1, p2}, Luaf;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    iput-object p3, p0, Lrlf;->h:Luaf;
-
-    new-instance p3, Lp35;
-
-    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p3, Lp35;->a:Ljava/lang/Object;
-
-    iput-object p2, p3, Lp35;->b:Ljava/lang/Object;
-
-    new-instance v0, Lee;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p3}, Lee;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Lh4f;
-
-    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
-
-    iput-object v1, p3, Lp35;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lrlf;->i:Lp35;
-
-    new-instance p3, Lhqe;
-
-    invoke-direct {p3, p2}, Lhqe;-><init>(Ljava/lang/String;)V
-
-    iput-object p3, p0, Lrlf;->j:Lhqe;
-
-    new-instance p3, Lt8b;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p3, p1, v0, p2}, Lt8b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object p3, p0, Lrlf;->k:Lt8b;
+    iput-object p4, p0, Lrlf;->X:Lmmf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ltlf;
-    .locals 1
+.method public final run()V
+    .locals 12
 
-    iget-object v0, p0, Lrlf;->e:Ljava/lang/Object;
+    iget v0, p0, Lrlf;->a:I
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lrlf;->b:Lm29;
 
-    check-cast v0, Ltlf;
+    iget-object v0, v0, Lm29;->c:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Lulf;
 
-.method public final b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+    iget-object v1, p0, Lrlf;->c:Lxm;
 
-    iget-boolean v0, p0, Lrlf;->c:Z
-
-    if-eqz v0, :cond_0
-
-    const-string p1, "Tracer"
-
-    const-string p2, "Tracer is disabled"
-
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lrlf;->g:Lcvd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 v1, 0x1f
-
-    invoke-static {v1, p1}, Lpwe;->X0(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p2}, Lpwe;->X0(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    iget-object v1, v0, Lcvd;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, v0, Lcvd;->a:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lxm;->r()Lhlf;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/String;
+    iget-object v3, p0, Lrlf;->o:Lukf;
 
-    iget-object v3, v0, Lcvd;->a:Ljava/lang/Object;
+    if-eqz v2, :cond_1
 
-    check-cast v3, Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v4, v0, Lulf;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {v3, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v5, Lilf;->b0:Ljava/util/List;
 
-    if-nez v2, :cond_1
+    iget-object v6, v3, Lukf;->b:Ljava/lang/String;
 
-    iget-object p1, v0, Lcvd;->a:Ljava/lang/Object;
+    invoke-interface {v5, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
+    move-result v5
 
-    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+    if-eqz v5, :cond_1
 
-    move-result p1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 p2, 0x1e
+    move-result-object v5
 
-    if-le p1, p2, :cond_1
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object p1, v0, Lcvd;->a:Ljava/lang/Object;
+    move-result-object v5
 
-    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-virtual {v4, v5}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+    move-result-object v6
 
-    move-result-object p1
+    check-cast v6, Ltlf;
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    if-nez v6, :cond_0
 
-    move-result-object p1
+    new-instance v6, Ltlf;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_0
+    const/4 v7, 0x0
 
-    :catchall_0
-    move-exception p1
+    iput v7, v6, Ltlf;->a:I
 
-    goto :goto_1
+    :cond_0
+    iget v7, v6, Ltlf;->a:I
+
+    add-int/lit8 v7, v7, 0x1
+
+    iput v7, v6, Ltlf;->a:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v7
+
+    iput-wide v7, v6, Ltlf;->b:J
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v2}, Lhlf;->O()S
+
+    move-result v2
+
+    sget-object v4, Lulf;->z0:Ljava/lang/String;
+
+    iget-object v5, v3, Lukf;->X:Lfkf;
+
+    invoke-static {v2}, Lk7b;->b(S)Ljava/lang/String;
+
+    move-result-object v7
+
+    sget-object v8, Lk7b;->c:Ll8a;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Ll8a;->d(S)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v8, v3, Lukf;->b:Ljava/lang/String;
+
+    iget v9, v6, Ltlf;->a:I
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    iget-wide v10, v6, Ltlf;->b:J
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    filled-new-array {v7, v2, v8, v9, v6}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v6, "saveTaskFail, %s(%s), error=%s, totalErrors=%d, lastErrorTime=%d"
+
+    invoke-static {v4, v5, v6, v2}, Lndi;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_1
-    :goto_0
-    monitor-exit v1
+    iget-object v2, p0, Lrlf;->X:Lmmf;
+
+    invoke-interface {v2, v3}, Lmmf;->f(Lukf;)V
+
+    invoke-virtual {v0, v1, v3}, Lulf;->f(Lxm;Lukf;)V
 
     return-void
 
-    :goto_1
-    monitor-exit v1
+    :pswitch_0
+    iget-object v0, p0, Lrlf;->X:Lmmf;
 
-    throw p1
+    invoke-interface {v0}, Lmmf;->b()Llmf;
+
+    move-result-object v1
+
+    new-instance v2, Lrlf;
+
+    iget-object v3, p0, Lrlf;->b:Lm29;
+
+    iget-object v4, p0, Lrlf;->c:Lxm;
+
+    iget-object v5, p0, Lrlf;->o:Lukf;
+
+    invoke-direct {v2, v3, v4, v5, v0}, Lrlf;-><init>(Lm29;Lxm;Lukf;Lmmf;)V
+
+    invoke-virtual {v1, v2}, Llmf;->a(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,94 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lmwe;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lkotlin/coroutines/Continuation;
+.implements Ld54;
 
 
 # instance fields
-.field public final a:Landroid/util/SparseArray;
+.field public final a:Lkotlin/coroutines/Continuation;
+
+.field public final b:Lt44;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lpzd;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
-
-    sput-object v0, Lmwe;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/util/SparseArray;)V
+.method public constructor <init>(Lt44;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmwe;->a:Landroid/util/SparseArray;
+    iput-object p2, p0, Lmwe;->a:Lkotlin/coroutines/Continuation;
+
+    iput-object p1, p0, Lmwe;->b:Lt44;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final getCallerFrame()Ld54;
+    .locals 2
+
+    iget-object v0, p0, Lmwe;->a:Lkotlin/coroutines/Continuation;
+
+    instance-of v1, v0, Ld54;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ld54;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getContext()Lt44;
+    .locals 1
+
+    iget-object v0, p0, Lmwe;->b:Lt44;
+
+    return-object v0
+.end method
+
+.method public final getStackTraceElement()Ljava/lang/StackTraceElement;
     .locals 1
 
     const/4 v0, 0x0
 
-    return v0
+    return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public final resumeWith(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object p2, p0, Lmwe;->a:Landroid/util/SparseArray;
+    iget-object v0, p0, Lmwe;->a:Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
+    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p2, v1}, Landroid/util/SparseArray;->keyAt(I)I
-
-    move-result v2
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p2, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

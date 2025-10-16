@@ -1,3 +1,3 @@
-.class public final Lu67;
+.class public interface abstract Lu67;
 .super Ljava/lang/Object;
 .source "SourceFile"

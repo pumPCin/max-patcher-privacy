@@ -1,204 +1,118 @@
-.class public final synthetic Lpl4;
+.class public final Lpl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ly8g;
+.implements Lmwd;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic a:Lrl4;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lrl4;)V
     .locals 0
 
-    iput p1, p0, Lpl4;->a:I
-
-    iput-object p2, p0, Lpl4;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpl4;->a:Lrl4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final c()Z
+    .locals 1
 
-    iget v0, p0, Lpl4;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lpl4;->b:Ljava/lang/Object;
+.method public final e(J)Lkwd;
+    .locals 11
 
-    check-cast v0, Le3;
+    iget-object v0, p0, Lpl4;->a:Lrl4;
 
-    invoke-virtual {v0}, Le3;->e()V
+    iget-object v1, v0, Lrl4;->w0:Ljava/lang/Object;
 
-    return-void
+    check-cast v1, Lu8f;
 
-    :pswitch_0
-    iget-object v0, p0, Lpl4;->b:Ljava/lang/Object;
+    iget v1, v1, Lu8f;->f:I
 
-    check-cast v0, Linf;
+    int-to-long v1, v1
 
-    invoke-virtual {v0}, Linf;->j()V
+    mul-long/2addr v1, p1
 
-    return-void
+    const-wide/32 v3, 0xf4240
 
-    :pswitch_1
-    iget-object v0, p0, Lpl4;->b:Ljava/lang/Object;
+    div-long/2addr v1, v3
 
-    check-cast v0, Libf;
+    iget-wide v5, v0, Lrl4;->b:J
 
-    iget-object v0, v0, Libf;->o:Linf;
+    iget-wide v3, v0, Lrl4;->c:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sub-long v7, v3, v5
 
-    invoke-virtual {v0}, Linf;->R()V
+    mul-long/2addr v7, v1
 
-    invoke-static {}, Lgb4;->a()V
+    iget-wide v0, v0, Lrl4;->X:J
 
-    return-void
+    div-long/2addr v7, v0
 
-    :pswitch_2
-    iget-object v0, p0, Lpl4;->b:Ljava/lang/Object;
+    add-long/2addr v7, v5
 
-    check-cast v0, Ltl4;
+    const-wide/16 v0, 0x7530
 
-    const-string v1, "Error releasing GL objects"
+    sub-long/2addr v7, v0
 
-    iget-object v2, v0, Ltl4;->d:Landroid/opengl/EGLDisplay;
+    const-wide/16 v0, 0x1
 
-    iget-object v3, v0, Ltl4;->b:Lyl6;
+    sub-long/2addr v3, v0
 
-    iget-boolean v4, v0, Ltl4;->c:Z
+    move-wide v9, v7
 
-    iget-object v5, v0, Ltl4;->k:Ljava/util/ArrayList;
+    move-wide v7, v3
 
-    const-string v6, "DefaultFrameProcessor"
+    move-wide v3, v9
 
-    :try_start_0
-    iget-object v7, v0, Ltl4;->e:Lr20;
+    invoke-static/range {v3 .. v8}, Lhhg;->j(JJJ)J
 
-    invoke-virtual {v7}, Lr20;->b()V
+    move-result-wide v0
 
-    const/4 v7, 0x0
+    new-instance v2, Lkwd;
 
-    :goto_0
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+    new-instance v3, Lqwd;
 
-    move-result v8
+    invoke-direct {v3, p1, p2, v0, v1}, Lqwd;-><init>(JJ)V
 
-    if-ge v7, v8, :cond_0
+    invoke-direct {v2, v3, v3}, Lkwd;-><init>(Lqwd;Lqwd;)V
 
-    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    return-object v2
+.end method
 
-    move-result-object v8
+.method public final f()J
+    .locals 6
 
-    check-cast v8, Lem6;
+    iget-object v0, p0, Lpl4;->a:Lrl4;
 
-    invoke-interface {v8}, Lem6;->release()V
+    iget-object v1, v0, Lrl4;->w0:Ljava/lang/Object;
 
-    add-int/lit8 v7, v7, 0x1
+    check-cast v1, Lu8f;
 
-    goto :goto_0
+    iget-wide v2, v0, Lrl4;->X:J
 
-    :catchall_0
-    move-exception v0
+    const-wide/32 v4, 0xf4240
 
-    goto :goto_4
+    mul-long/2addr v2, v4
 
-    :catch_0
-    move-exception v0
+    iget v0, v1, Lu8f;->f:I
 
-    goto :goto_1
+    int-to-long v0, v0
 
-    :cond_0
-    iget-object v0, v0, Ltl4;->j:Lgr5;
+    div-long/2addr v2, v0
 
-    invoke-virtual {v0}, Lgr5;->release()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :goto_1
-    :try_start_1
-    const-string v5, "Error releasing shader program"
-
-    invoke-static {v6, v5, v0}, Lhq;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_2
-    if-eqz v4, :cond_1
-
-    :try_start_2
-    invoke-interface {v3, v2}, Lyl6;->r(Landroid/opengl/EGLDisplay;)V
-    :try_end_2
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_2 .. :try_end_2} :catch_1
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    invoke-static {v6, v1, v0}, Lhq;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_3
-    return-void
-
-    :goto_4
-    if-eqz v4, :cond_2
-
-    :try_start_3
-    invoke-interface {v3, v2}, Lyl6;->r(Landroid/opengl/EGLDisplay;)V
-    :try_end_3
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_3 .. :try_end_3} :catch_2
-
-    goto :goto_5
-
-    :catch_2
-    move-exception v2
-
-    invoke-static {v6, v1, v2}, Lhq;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_5
-    throw v0
-
-    :pswitch_3
-    iget-object v0, p0, Lpl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgr5;
-
-    invoke-virtual {v0}, Lgr5;->flush()V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lpl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-wide v2
 .end method

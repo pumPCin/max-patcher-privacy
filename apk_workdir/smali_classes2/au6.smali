@@ -1,96 +1,52 @@
-.class public final Lau6;
-.super Ljava/lang/Object;
+.class public final synthetic Lau6;
+.super Lb9;
 .source "SourceFile"
 
 # interfaces
-.implements Lbu6;
+.implements Lgi6;
 
 
-# instance fields
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Ljava/util/List;
-
-.field public final e:Z
+# static fields
+.field public static final r0:Lau6;
 
 
 # direct methods
-.method public constructor <init>(Lbu6;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lau6;
 
-    invoke-interface {p1}, Lbu6;->g()J
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    move-result-wide v0
+    const/4 v2, 0x4
 
-    iput-wide v0, p0, Lau6;->b:J
+    const/4 v3, 0x3
 
-    invoke-interface {p1}, Lbu6;->h()J
+    const-class v4, Lqbb;
 
-    move-result-wide v0
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
 
-    iput-wide v0, p0, Lau6;->c:J
-
-    invoke-interface {p1}, Lbu6;->j()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lau6;->d:Ljava/util/List;
-
-    invoke-interface {p1}, Lbu6;->b()V
-
-    invoke-interface {p1}, Lbu6;->a()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lau6;->e:Z
+    sput-object v0, Lau6;->r0:Lau6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lau6;->e:Z
-
-    return v0
-.end method
-
-.method public final b()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
-.end method
+    check-cast p1, Lda2;
 
-.method public final g()J
-    .locals 2
+    check-cast p2, Lp84;
 
-    iget-wide v0, p0, Lau6;->b:J
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    return-wide v0
-.end method
+    sget-object p3, Lfu6;->j:Lqbb;
 
-.method public final h()J
-    .locals 2
+    new-instance p3, Lqbb;
 
-    iget-wide v0, p0, Lau6;->c:J
+    invoke-direct {p3, p1, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-wide v0
-.end method
-
-.method public final j()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lau6;->d:Ljava/util/List;
-
-    return-object v0
+    return-object p3
 .end method

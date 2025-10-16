@@ -1,63 +1,84 @@
-.class public final Lv91;
-.super Luc0;
+.class public final synthetic Lv91;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final b:Lv91;
+
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lv91;
+    iput p1, p0, Lv91;->a:I
 
-    const/4 v1, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+    return-void
+.end method
 
-    sput-object v0, Lv91;->b:Lv91;
+.method private final a(Landroid/view/View;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget p1, p0, Lv91;->a:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x0
 
-    return v0
+    packed-switch p1, :pswitch_data_0
 
-    :cond_0
-    instance-of p1, p1, Lv91;
+    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lwq7;
 
-    if-nez p1, :cond_1
+    :pswitch_0
+    return-void
 
-    const/4 p1, 0x0
+    :pswitch_1
+    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lwq7;
 
-    return p1
+    sget-object p1, Lur7;->c:Lur7;
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1}, Lqci;->q0()Llf4;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    const v0, -0x5d3948c3
+    const-string v1, ":stickers/settings"
 
-    return v0
-.end method
+    invoke-virtual {p1, v1, v0}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    return-void
 
-    const-string v0, "OpenActiveCall"
+    :pswitch_2
+    sget-object p1, Lone/me/calllist/ui/CallHistoryScreen;->A0:[Lwq7;
 
-    return-object v0
+    sget-object p1, Lg91;->c:Lg91;
+
+    invoke-virtual {p1}, Lqci;->q0()Llf4;
+
+    move-result-object p1
+
+    const-string v1, ":call-contact"
+
+    invoke-virtual {p1, v1, v0}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,97 +1,38 @@
-.class public final Ltnc;
+.class public abstract Ltnc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
+# static fields
+.field public static oneme_section_avatar:I = 0x7f0a077c
 
-.field public final b:Lnc9;
+.field public static oneme_section_description:I = 0x7f0a077d
 
-.field public final c:Lroc;
+.field public static oneme_section_end_arrow:I = 0x7f0a077e
 
-.field public final d:Lwe9;
+.field public static oneme_section_end_container:I = 0x7f0a077f
 
-.field public final e:Ljava/util/concurrent/ExecutorService;
+.field public static oneme_section_end_custom_icon:I = 0x7f0a0780
 
-.field public f:Lcoc;
+.field public static oneme_section_end_text:I = 0x7f0a0781
 
-.field public final g:Landroid/graphics/Rect;
+.field public static oneme_section_start_icon:I = 0x7f0a0782
 
-.field public final h:Lv85;
+.field public static oneme_section_title:I = 0x7f0a0783
 
+.field public static oneme_section_upper_text:I = 0x7f0a0784
 
-# direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lnc9;Lroc;Lwe9;Lup9;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.field public static oneme_settings_itemcontent_container:I = 0x7f0a078d
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_itemcontent_counter:I = 0x7f0a078e
 
-    iput-object p1, p0, Ltnc;->a:Landroidx/recyclerview/widget/RecyclerView;
+.field public static oneme_settings_itemcontent_end_custom_icon:I = 0x7f0a078f
 
-    iput-object p2, p0, Ltnc;->b:Lnc9;
+.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a0790
 
-    iput-object p3, p0, Ltnc;->c:Lroc;
+.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a0791
 
-    iput-object p4, p0, Ltnc;->d:Lwe9;
+.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a0792
 
-    iput-object p6, p0, Ltnc;->e:Ljava/util/concurrent/ExecutorService;
+.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a0793
 
-    new-instance p1, Landroid/graphics/Rect;
-
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object p1, p0, Ltnc;->g:Landroid/graphics/Rect;
-
-    new-instance p1, Lv85;
-
-    const/4 p2, 0x4
-
-    invoke-direct {p1, p2, p0}, Lv85;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Ltnc;->h:Lv85;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 3
-
-    iget-object v0, p0, Ltnc;->f:Lcoc;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
-
-    iget-object v2, v0, Lcoc;->Z:Landroid/animation/ValueAnimator;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->cancel()V
-
-    :cond_0
-    iput-object v1, v0, Lcoc;->Z:Landroid/animation/ValueAnimator;
-
-    iput-object v1, v0, Lcoc;->c:Lsnc;
-
-    iput-object v1, v0, Lcoc;->X:Landroid/view/View;
-
-    iput-object v1, v0, Lcoc;->o:Landroid/graphics/Rect;
-
-    iput-object v1, v0, Lcoc;->r0:Ljava/lang/Long;
-
-    :cond_1
-    iput-object v1, p0, Ltnc;->f:Lcoc;
-
-    iget-object v0, p0, Ltnc;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v1, p0, Ltnc;->h:Lv85;
-
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->s0(Ljvc;)V
-
-    return-void
-.end method
+.field public static oneme_settingslist_rv:I = 0x7f0a0853

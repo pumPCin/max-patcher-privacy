@@ -3,26 +3,35 @@
 .source "SourceFile"
 
 # interfaces
-.implements Log4;
+.implements Lx18;
+.implements Ldr3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic a:Lm38;
 
-.field public final synthetic c:I
+.field public final synthetic b:Lus8;
+
+.field public final synthetic c:Ljava/io/IOException;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lm38;Lus8;Ljava/io/IOException;Z)V
     .locals 0
 
-    iput p3, p0, Lmg4;->a:I
+    iput-object p1, p0, Lmg4;->X:Ljava/lang/Object;
 
-    iput-object p1, p0, Lmg4;->b:Ljava/lang/String;
+    iput-object p2, p0, Lmg4;->a:Lm38;
 
-    iput p2, p0, Lmg4;->c:I
+    iput-object p3, p0, Lmg4;->b:Lus8;
+
+    iput-object p4, p0, Lmg4;->c:Ljava/io/IOException;
+
+    iput-boolean p5, p0, Lmg4;->o:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,84 +40,60 @@
 
 
 # virtual methods
-.method public final a(Landroid/media/MediaCodecInfo;)I
-    .locals 3
+.method public accept(Ljava/lang/Object;)V
+    .locals 8
 
-    iget v0, p0, Lmg4;->a:I
+    iget-object v0, p0, Lmg4;->X:Ljava/lang/Object;
 
-    iget v1, p0, Lmg4;->c:I
+    check-cast v0, Lvf6;
 
-    iget-object v2, p0, Lmg4;->b:Ljava/lang/String;
+    move-object v1, p1
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v1, Li19;
 
-    sget-object v0, Lk85;->a:Ljs;
+    iget v2, v0, Lvf6;->b:I
 
-    invoke-virtual {p1, v2}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
+    iget-object p1, v0, Lvf6;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    move-object v3, p1
 
-    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getEncoderCapabilities()Landroid/media/MediaCodecInfo$EncoderCapabilities;
+    check-cast v3, Ly09;
 
-    move-result-object p1
+    iget-object v4, p0, Lmg4;->a:Lm38;
 
-    invoke-virtual {p1, v1}, Landroid/media/MediaCodecInfo$EncoderCapabilities;->isBitrateModeSupported(I)Z
+    iget-object v5, p0, Lmg4;->b:Lus8;
 
-    move-result p1
+    iget-object v6, p0, Lmg4;->c:Ljava/io/IOException;
 
-    if-eqz p1, :cond_0
+    iget-boolean v7, p0, Lmg4;->o:Z
 
-    const/4 p1, 0x0
+    invoke-interface/range {v1 .. v7}, Li19;->a(ILy09;Lm38;Lus8;Ljava/io/IOException;Z)V
 
-    goto :goto_0
+    return-void
+.end method
 
-    :cond_0
-    const p1, 0x7fffffff
+.method public invoke(Ljava/lang/Object;)V
+    .locals 7
 
-    :goto_0
-    return p1
+    iget-object v0, p0, Lmg4;->X:Ljava/lang/Object;
 
-    :pswitch_0
-    sget-object v0, Lk85;->a:Ljs;
+    move-object v2, v0
 
-    invoke-virtual {p1, v2}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
+    check-cast v2, Lnd;
 
-    move-result-object p1
+    iget-boolean v6, p0, Lmg4;->o:Z
 
-    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
+    move-object v1, p1
 
-    move-result-object p1
+    check-cast v1, Lod;
 
-    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getBitrateRange()Landroid/util/Range;
+    iget-object v3, p0, Lmg4;->a:Lm38;
 
-    move-result-object p1
+    iget-object v4, p0, Lmg4;->b:Lus8;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v5, p0, Lmg4;->c:Ljava/io/IOException;
 
-    move-result-object v0
+    invoke-interface/range {v1 .. v6}, Lod;->d0(Lnd;Lm38;Lus8;Ljava/io/IOException;Z)V
 
-    invoke-virtual {p1, v0}, Landroid/util/Range;->clamp(Ljava/lang/Comparable;)Ljava/lang/Comparable;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    sub-int/2addr p1, v1
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

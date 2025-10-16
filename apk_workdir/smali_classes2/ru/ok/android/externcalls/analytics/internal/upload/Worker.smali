@@ -390,7 +390,7 @@
 
     const-string v4, "ms"
 
-    invoke-static {v0, v1, v3, v4}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v3, v4}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

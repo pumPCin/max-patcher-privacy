@@ -1,140 +1,165 @@
-.class public final enum Lij2;
-.super Ljava/lang/Enum;
+.class public final Lij2;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
+.implements Lei6;
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lij2;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final enum a:Lij2;
-
-.field public static final enum b:Lij2;
-
-.field public static final synthetic c:[Lij2;
-
-.field public static final synthetic o:Laa5;
+.field public final synthetic Y:Lone/me/profile/screens/media/ChatMediaListWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaListWidget;)V
+    .locals 0
 
-    new-instance v0, Lij2;
+    iput-object p2, p0, Lij2;->Y:Lone/me/profile/screens/media/ChatMediaListWidget;
 
-    const-string v1, "MEDIA"
+    const/4 p2, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lij2;->a:Lij2;
-
-    new-instance v1, Lij2;
-
-    const-string v2, "FILE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lij2;
-
-    const-string v3, "LINK"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lij2;
-
-    const-string v4, "AUDIO"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lij2;->b:Lij2;
-
-    filled-new-array {v0, v1, v2, v3}, [Lij2;
-
-    move-result-object v0
-
-    sput-object v0, Lij2;->c:[Lij2;
-
-    new-instance v1, Laa5;
-
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lij2;->o:Laa5;
-
-    new-instance v0, Lb8;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lb8;-><init>(I)V
-
-    sput-object v0, Lij2;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lij2;
-    .locals 1
-
-    const-class v0, Lij2;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lij2;
-
-    return-object p0
-.end method
-
-.method public static values()[Lij2;
-    .locals 1
-
-    sget-object v0, Lij2;->c:[Lij2;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lij2;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p2
+    invoke-virtual {p0, p1, p2}, Lij2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lij2;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lij2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lij2;
+
+    iget-object v1, p0, Lij2;->Y:Lone/me/profile/screens/media/ChatMediaListWidget;
+
+    invoke-direct {v0, p2, v1}, Lij2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaListWidget;)V
+
+    iput-object p1, v0, Lij2;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lij2;->X:Ljava/lang/Object;
+
+    check-cast p1, Lbl2;
+
+    iget-object v0, p0, Lij2;->Y:Lone/me/profile/screens/media/ChatMediaListWidget;
+
+    invoke-static {v0}, Lone/me/profile/screens/media/ChatMediaListWidget;->C0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
+
+    invoke-static {v0}, Lone/me/profile/screens/media/ChatMediaListWidget;->C0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v1
+
+    instance-of v3, v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    check-cast v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v4
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+
+    move-result v1
+
+    new-instance v3, Ljava/lang/Integer;
+
+    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    goto :goto_1
+
+    :cond_1
+    move-object v3, v4
+
+    :goto_1
+    invoke-static {v0}, Lone/me/profile/screens/media/ChatMediaListWidget;->C0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lm5d;
+
+    move-result-object v1
+
+    instance-of v5, v1, Lfj2;
+
+    if-eqz v5, :cond_2
+
+    move-object v4, v1
+
+    check-cast v4, Lfj2;
+
+    :cond_2
+    if-eqz v4, :cond_3
+
+    iget-object p1, p1, Lbl2;->a:Ljava/util/List;
+
+    invoke-virtual {v4, p1}, Lu08;->E(Ljava/util/List;)V
+
+    :cond_3
+    if-nez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    invoke-static {v0}, Lone/me/profile/screens/media/ChatMediaListWidget;->C0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->B0(I)V
+
+    :cond_5
+    :goto_2
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

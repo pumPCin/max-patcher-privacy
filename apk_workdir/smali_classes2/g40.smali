@@ -1,62 +1,48 @@
 .class public final Lg40;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lf00;
+.super Lk14;
 
 
 # instance fields
-.field public final a:J
+.field public X:I
 
-.field public final b:J
+.field public final synthetic Y:Lh40;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:[B
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:J
-
-.field public final j:Lane;
-
-.field public final k:Lane;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BLjava/lang/String;JLhne;Lane;)V
+.method public constructor <init>(Lh40;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lg40;->Y:Lh40;
 
-    iput-wide p1, p0, Lg40;->a:J
-
-    iput-wide p3, p0, Lg40;->b:J
-
-    iput-object p5, p0, Lg40;->c:Ljava/lang/String;
-
-    iput-object p6, p0, Lg40;->d:Ljava/lang/String;
-
-    iput-object p7, p0, Lg40;->e:Ljava/lang/String;
-
-    iput-object p8, p0, Lg40;->f:Ljava/lang/String;
-
-    iput-object p9, p0, Lg40;->g:[B
-
-    iput-object p10, p0, Lg40;->h:Ljava/lang/String;
-
-    iput-wide p11, p0, Lg40;->i:J
-
-    iput-object p13, p0, Lg40;->j:Lane;
-
-    iput-object p14, p0, Lg40;->k:Lane;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lg40;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lg40;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lg40;->X:I
+
+    iget-object p1, p0, Lg40;->Y:Lh40;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lh40;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

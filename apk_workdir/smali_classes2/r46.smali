@@ -1,41 +1,77 @@
 .class public final synthetic Lr46;
-.super Lf4c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqh6;
 
-# static fields
-.field public static final a:Lr46;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/folders/edit/FolderEditScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lone/me/folders/edit/FolderEditScreen;I)V
+    .locals 0
 
-    new-instance v0, Lr46;
+    iput p2, p0, Lr46;->a:I
 
-    const-string v1, "getId()Ljava/lang/String;"
+    iput-object p1, p0, Lr46;->b:Lone/me/folders/edit/FolderEditScreen;
 
-    const/4 v2, 0x0
-
-    const-class v3, Lsz5;
-
-    const-string v4, "id"
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lr46;->a:Lr46;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lsz5;
+    iget v0, p0, Lr46;->a:I
 
-    iget-object p1, p1, Lsz5;->a:Ljava/lang/String;
+    sget-object v1, Lzag;->a:Lzag;
 
-    return-object p1
+    iget-object v2, p0, Lr46;->b:Lone/me/folders/edit/FolderEditScreen;
+
+    check-cast p1, Landroid/view/View;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->r0:[Lwq7;
+
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->D0()Ll56;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ll56;->v()V
+
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->E0()V
+
+    return-object v1
+
+    :pswitch_0
+    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->r0:[Lwq7;
+
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->E0()V
+
+    invoke-virtual {v2}, Lx14;->getOnBackPressedDispatcher()Lnla;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lnla;->d()V
+
+    :cond_0
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

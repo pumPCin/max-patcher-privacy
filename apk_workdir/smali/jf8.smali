@@ -1,120 +1,182 @@
 .class public final Ljf8;
-.super Lc2f;
+.super Lf4;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ljf8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lqf8;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lqf8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ljf8;->Y:Lqf8;
+    new-instance v0, Lpzh;
 
-    const/4 p1, 0x2
+    const/16 v1, 0x1d
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lpzh;-><init>(I)V
+
+    sput-object v0, Ljf8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljf8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljf8;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Ljf8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    new-instance p1, Ljf8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Ljf8;->Y:Lqf8;
+    const-string v0, "json must not be null"
 
-    invoke-direct {p1, v0, p2}, Ljf8;-><init>(Lqf8;Lkotlin/coroutines/Continuation;)V
+    invoke-static {p1, v0}, Lbi3;->j(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object p1
+    iput-object p1, p0, Ljf8;->a:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public static b(Landroid/content/Context;I)Ljf8;
+    .locals 6
 
-    iget v0, p0, Ljf8;->X:I
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const/4 v1, 0x1
+    move-result-object p0
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
-    if-ne v0, v1, :cond_0
+    move-result-object p0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :try_start_0
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    return-object p1
+    const/16 v1, 0x400
+
+    new-array v2, v1, [B
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    const/4 v3, 0x0
+
+    :try_start_1
+    invoke-virtual {p0, v2, v3, v1}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    if-eq v4, v5, :cond_0
+
+    invoke-virtual {v0, v2, v3, v4}, Ljava/io/OutputStream;->write([BII)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :try_start_2
+    invoke-static {p0}, Lfyh;->a(Ljava/io/Closeable;)V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static {v0}, Lfyh;->a(Ljava/io/Closeable;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    throw p1
+    move-result-object p0
 
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/String;
 
-    iget-object p1, p0, Ljf8;->Y:Lqf8;
+    const-string v1, "UTF-8"
 
-    iget-object v0, p1, Lqf8;->s0:Lhne;
+    invoke-direct {v0, p0, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    new-instance v2, Low;
+    new-instance p0, Ljf8;
 
-    const/4 v3, 0x7
+    invoke-direct {p0, v0}, Ljf8;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v3, p1}, Low;-><init>(ILjava/lang/Object;)V
+    return-object p0
 
-    iput v1, p0, Ljf8;->X:I
+    :catch_0
+    move-exception p0
 
-    new-instance p1, Lbwc;
+    goto :goto_2
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    :goto_1
+    invoke-static {p0}, Lfyh;->a(Ljava/io/Closeable;)V
 
-    new-instance v1, Lr3;
+    invoke-static {v0}, Lfyh;->a(Ljava/io/Closeable;)V
 
-    const/16 v3, 0x16
+    throw v1
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    invoke-direct {v1, p1, v2, v3}, Lr3;-><init>(Ljava/io/Serializable;Lku5;I)V
+    :goto_2
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
 
-    invoke-interface {v0, v1, p0}, Liu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    sget-object p1, Lo24;->a:Lo24;
+    move-result-object p0
 
-    return-object p1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed to read resource "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ": "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Ljxi;->k(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Ljf8;->a:Ljava/lang/String;
+
+    invoke-static {p1, v0, v1}, Ljxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, p2}, Ljxi;->l(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

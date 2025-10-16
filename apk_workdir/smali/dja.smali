@@ -1,31 +1,63 @@
-.class public abstract Ldja;
-.super Ljava/lang/Object;
+.class public final Ldja;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Lev4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lgja;
 
-.field public static final c:I
+.field public final b:Lcka;
+
+.field public c:Ljava/io/Serializable;
+
+.field public volatile o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lgja;Lcka;)V
+    .locals 0
 
-    sget v0, Ldhc;->forward_message_hint:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    sput v0, Ldja;->a:I
+    iput-object p1, p0, Ldja;->a:Lgja;
 
-    sget v0, Ldhc;->forward_toolbar_action_cancel_selection:I
-
-    sput v0, Ldja;->b:I
-
-    sget v0, Ldhc;->forward_toolbar_action_select:I
-
-    sput v0, Ldja;->c:I
+    iput-object p2, p0, Ldja;->b:Lcka;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final g()V
+    .locals 1
+
+    iget-boolean v0, p0, Ldja;->o:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ldja;->o:Z
+
+    iget-object v0, p0, Ldja;->a:Lgja;
+
+    invoke-virtual {v0, p0}, Lgja;->a(Ldja;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ldja;->c:Ljava/io/Serializable;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ldja;->o:Z
+
+    return v0
 .end method

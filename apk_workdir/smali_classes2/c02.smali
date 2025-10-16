@@ -1,137 +1,136 @@
-.class public final Lc02;
-.super Ld02;
+.class public final synthetic Lc02;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:F
 
-.field public final b:Ljava/util/List;
+.field public final synthetic Y:F
+
+.field public final synthetic Z:F
+
+.field public final synthetic a:Le02;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic o:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+.method public synthetic constructor <init>(Le02;IIFFFF)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc02;->a:Ljava/lang/String;
+    iput-object p1, p0, Lc02;->a:Le02;
 
-    iput-object p2, p0, Lc02;->b:Ljava/util/List;
+    iput p2, p0, Lc02;->b:I
+
+    iput p3, p0, Lc02;->c:I
+
+    iput p4, p0, Lc02;->o:F
+
+    iput p5, p0, Lc02;->X:F
+
+    iput p6, p0, Lc02;->Y:F
+
+    iput p7, p0, Lc02;->Z:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
 
-    iget-object v0, p0, Lc02;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lc02;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lc02;
-
-    iget-object v1, p0, Lc02;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lc02;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lc02;->b:Ljava/util/List;
-
-    iget-object p1, p1, Lc02;->b:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p1
 
-    if-nez p1, :cond_3
+    iget-object v0, p0, Lc02;->a:Le02;
 
-    return v2
+    iget-object v1, v0, Le02;->s0:Landroid/graphics/Paint;
 
-    :cond_3
-    return v0
-.end method
+    iget-object v2, v0, Le02;->b:Landroid/animation/ArgbEvaluator;
 
-.method public final hashCode()I
-    .locals 2
+    iget v3, p0, Lc02;->b:I
 
-    iget-object v0, p0, Lc02;->a:Ljava/lang/String;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    move-result-object v3
 
-    move-result v0
+    iget v4, p0, Lc02;->c:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v1, p0, Lc02;->b:Ljava/util/List;
+    move-result-object v4
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2, p1, v3, v4}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v2
 
-    add-int/2addr v1, v0
+    check-cast v2, Ljava/lang/Integer;
 
-    return v1
-.end method
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result v2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    const-string v1, "Unknown(cameraId="
+    iget-object v1, v0, Le02;->c:Landroid/animation/FloatEvaluator;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Lc02;->o:F
 
-    iget-object v1, p0, Lc02;->a:Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    const-string v1, ", cameraParameterList="
+    iget v3, p0, Lc02;->X:F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget-object v1, p0, Lc02;->b:Ljava/util/List;
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1, v2, v3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
 
-    const-string v1, ")"
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v2
 
-    move-result-object v0
+    iput v2, v0, Le02;->t0:F
 
-    return-object v0
+    iget v2, p0, Lc02;->Y:F
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    iget v3, p0, Lc02;->Z:F
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    invoke-virtual {v1, p1, v2, v3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v0, Le02;->u0:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
 .end method

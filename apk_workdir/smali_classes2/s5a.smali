@@ -1,258 +1,199 @@
 .class public final Ls5a;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/android/services/NotificationTamService;
+.field public final a:Llt7;
 
-.field public final synthetic Y:J
+.field public final b:Llt7;
 
-.field public final synthetic Z:J
+.field public final c:Llt7;
 
-.field public final synthetic r0:J
+.field public final d:Llt7;
 
-.field public final synthetic s0:Z
+.field public final e:Llt7;
 
-.field public final synthetic t0:J
+.field public final f:Llt7;
 
-.field public final synthetic u0:Ljava/lang/String;
+.field public final g:Ljava/lang/String;
+
+.field public final h:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final i:Leie;
+
+.field public final j:Lfzc;
+
+.field public final k:Lsze;
+
+.field public final l:Lgzc;
+
+.field public volatile m:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;)V
     .locals 0
 
-    iput-object p1, p0, Ls5a;->X:Lru/ok/tamtam/android/services/NotificationTamService;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Ls5a;->Y:J
+    iput-object p1, p0, Ls5a;->a:Llt7;
 
-    iput-wide p4, p0, Ls5a;->Z:J
+    iput-object p3, p0, Ls5a;->b:Llt7;
 
-    iput-wide p6, p0, Ls5a;->r0:J
+    iput-object p4, p0, Ls5a;->c:Llt7;
 
-    iput-boolean p8, p0, Ls5a;->s0:Z
+    iput-object p5, p0, Ls5a;->d:Llt7;
 
-    iput-wide p9, p0, Ls5a;->t0:J
+    iput-object p6, p0, Ls5a;->e:Llt7;
 
-    iput-object p11, p0, Ls5a;->u0:Ljava/lang/String;
+    iput-object p7, p0, Ls5a;->f:Llt7;
 
-    const/4 p1, 0x2
+    const-class p1, Ls5a;
 
-    invoke-direct {p0, p1, p12}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls5a;->g:Ljava/lang/String;
+
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqkf;
+
+    check-cast p1, Losa;
+
+    invoke-virtual {p1}, Losa;->b()Lv44;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls5a;->h:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 p1, 0x4
+
+    const/4 p2, 0x0
+
+    const p3, 0x7fffffff
+
+    invoke-static {p2, p3, p1}, Lfie;->b(III)Leie;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls5a;->i:Leie;
+
+    new-instance p2, Lfzc;
+
+    invoke-direct {p2, p1}, Lfzc;-><init>(Lg0a;)V
+
+    iput-object p2, p0, Ls5a;->j:Lfzc;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls5a;->k:Lsze;
+
+    new-instance p2, Lgzc;
+
+    invoke-direct {p2, p1}, Lgzc;-><init>(Lh0a;)V
+
+    iput-object p2, p0, Ls5a;->l:Lgzc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lou5;
+    .locals 1
 
-    check-cast p1, Ln24;
+    iget-object v0, p0, Ls5a;->b:Llt7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ls5a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
-
-    check-cast p1, Ls5a;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Ls5a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 13
-
-    new-instance v0, Ls5a;
-
-    iget-wide v9, p0, Ls5a;->t0:J
-
-    iget-object v11, p0, Ls5a;->u0:Ljava/lang/String;
-
-    iget-object v1, p0, Ls5a;->X:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-wide v2, p0, Ls5a;->Y:J
-
-    iget-wide v4, p0, Ls5a;->Z:J
-
-    iget-wide v6, p0, Ls5a;->r0:J
-
-    iget-boolean v8, p0, Ls5a;->s0:Z
-
-    move-object v12, p2
-
-    invoke-direct/range {v0 .. v12}, Ls5a;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+    check-cast v0, Lou5;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public final b()V
+    .locals 3
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Ls5a;->X:Lru/ok/tamtam/android/services/NotificationTamService;
+    iput-object v0, p0, Ls5a;->m:Ljava/lang/String;
 
-    iget-object v0, p1, Lru/ok/tamtam/android/services/NotificationTamService;->Z:Lh4f;
+    iget-object v0, p0, Ls5a;->f:Llt7;
 
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Luoc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v9, 0x0
-
-    const/16 v11, 0x58
-
-    iget-wide v2, p0, Ls5a;->Y:J
-
-    iget-wide v4, p0, Ls5a;->Z:J
-
-    iget-wide v6, p0, Ls5a;->r0:J
-
-    const/4 v8, 0x0
-
-    iget-boolean v10, p0, Ls5a;->s0:Z
-
-    invoke-static/range {v1 .. v11}, Luoc;->e(Luoc;JJJZZZI)J
-
-    iget-object v0, v1, Luoc;->b:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lspa;
+    check-cast v0, La2b;
 
-    invoke-virtual {v0, v2, v3}, Lspa;->a(J)V
+    sget v1, Lwid;->r:I
 
-    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->r0:Lh4f;
+    new-instance v2, Ljqf;
 
-    invoke-virtual {p1}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-direct {v2, v1}, Ljqf;-><init>(I)V
 
-    move-result-object p1
+    invoke-virtual {v0, v2}, La2b;->g(Loqf;)V
 
-    check-cast p1, Lr7a;
+    new-instance v1, Lo2b;
 
-    invoke-virtual {p1}, Lr7a;->e()Ls7a;
+    sget v2, Liid;->I:I
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Lo2b;-><init>(I)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1}, La2b;->e(Ls2b;)V
 
-    sget-object v1, Ls7a;->d:Ljava/lang/String;
+    invoke-virtual {v0}, La2b;->i()Lz1b;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v2, "onNotificationMarkAsRead: pushId="
+.method public final c()V
+    .locals 3
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    iget-wide v2, p0, Ls5a;->t0:J
+    iput-object v0, p0, Ls5a;->m:Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ls5a;->f:Llt7;
 
-    const-string v4, ", eventKey="
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Ls5a;->u0:Ljava/lang/String;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, La2b;
 
-    if-nez v4, :cond_0
+    sget v1, Lwid;->s:I
 
-    goto :goto_0
+    new-instance v2, Ljqf;
 
-    :cond_0
-    :try_start_0
-    invoke-virtual {p1}, Ls7a;->b()Lxc;
+    invoke-direct {v2, v1}, Ljqf;-><init>(I)V
 
-    move-result-object v0
+    invoke-virtual {v0, v2}, La2b;->g(Loqf;)V
 
-    const-string v5, "Action"
+    new-instance v1, Lo2b;
 
-    const-string v6, "trid"
+    sget v2, Liid;->I:I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {v1, v2}, Lo2b;-><init>(I)V
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, La2b;->e(Ls2b;)V
 
-    new-instance v3, Ld3b;
+    invoke-virtual {v0}, La2b;->i()Lz1b;
 
-    invoke-direct {v3, v6, v2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v2, "eKey"
-
-    new-instance v6, Ld3b;
-
-    invoke-direct {v6, v2, v4}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v2, "p_op"
-
-    const-string v4, "m_as_read"
-
-    new-instance v7, Ld3b;
-
-    invoke-direct {v7, v2, v4}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v3, v6, v7}, [Ld3b;
-
-    move-result-object v2
-
-    invoke-static {v2}, Luce;->a([Ld3b;)Lrs;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v5, v2}, Lxc;->b(Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v2, "onNotificationMarkAsRead: failed"
-
-    invoke-static {v1, v2, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1}, Ls7a;->c()Ltb5;
-
-    move-result-object p1
-
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
-
-    const-string v2, "failed to log mark as read"
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    check-cast p1, Lsla;
-
-    invoke-virtual {p1, v1}, Lsla;->c(Ljava/lang/Throwable;)V
-
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-void
 .end method

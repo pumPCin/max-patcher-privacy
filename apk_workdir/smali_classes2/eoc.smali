@@ -1,75 +1,44 @@
-.class public final Leoc;
+.class public abstract Leoc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lc4d;
+# static fields
+.field public static oneme_startconversation_chat_titleicon_avatars_cancel_action:I = 0x7f0a0859
 
-.field public final b:Lvh;
+.field public static oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f0a085a
 
-.field public final c:Lra9;
+.field public static oneme_startconversation_chat_titleicon_avatars_take_photo_action:I = 0x7f0a085b
 
+.field public static oneme_startconversation_chat_titleicon_constraint_layout:I = 0x7f0a085c
 
-# direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.field public static oneme_startconversation_chat_titleicon_create_button_view:I = 0x7f0a085d
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_startconversation_chat_titleicon_create_hint_text_view:I = 0x7f0a085e
 
-    iput-object p1, p0, Leoc;->a:Lc4d;
+.field public static oneme_startconversation_chat_titleicon_description_view:I = 0x7f0a085f
 
-    new-instance v0, Lvh;
+.field public static oneme_startconversation_chat_titleicon_icon_view:I = 0x7f0a0860
 
-    const/16 v1, 0x13
+.field public static oneme_startconversation_chat_titleicon_scroll_view:I = 0x7f0a0861
 
-    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
+.field public static oneme_startconversation_chat_titleicon_title_view:I = 0x7f0a0862
 
-    iput-object v0, p0, Leoc;->b:Lvh;
+.field public static oneme_startconversation_chat_titleicon_toolbar:I = 0x7f0a0863
 
-    new-instance v0, Lra9;
+.field public static oneme_startconversation_chat_toolbar:I = 0x7f0a0864
 
-    const/16 v1, 0x18
+.field public static oneme_startconversation_confirm_add_subscribers_button:I = 0x7f0a0865
 
-    invoke-direct {v0, p1, v1}, Lra9;-><init>(Lc4d;I)V
+.field public static oneme_startconversation_container:I = 0x7f0a0866
 
-    iput-object v0, p0, Leoc;->c:Lra9;
+.field public static oneme_startconversation_create_button_view_type:I = 0x7f0a0867
 
-    return-void
-.end method
+.field public static oneme_startconversation_recyclerview:I = 0x7f0a0868
 
+.field public static oneme_startconversation_select_channel_subscribers_toolbar:I = 0x7f0a0869
 
-# virtual methods
-.method public final a(Lwy3;)Ljava/lang/Object;
-    .locals 4
+.field public static oneme_startconversation_toolbar:I = 0x7f0a086a
 
-    const/4 v0, 0x1
+.field public static oneme_startconversations_create_channel:I = 0x7f0a086b
 
-    const-string v1, "SELECT * FROM reactions_section WHERE id = ?"
-
-    invoke-static {v0, v1}, Lt4d;->c(ILjava/lang/String;)Lt4d;
-
-    move-result-object v1
-
-    const-string v2, "POPULAR"
-
-    invoke-virtual {v1, v0, v2}, Lt4d;->f(ILjava/lang/String;)V
-
-    new-instance v0, Landroid/os/CancellationSignal;
-
-    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
-
-    new-instance v2, Lxh;
-
-    const/16 v3, 0x1b
-
-    invoke-direct {v2, p0, v3, v1}, Lxh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object v1, p0, Leoc;->a:Lc4d;
-
-    invoke-static {v1, v0, v2, p1}, Lcea;->i(Lc4d;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
+.field public static oneme_startconversations_create_chat:I = 0x7f0a086c

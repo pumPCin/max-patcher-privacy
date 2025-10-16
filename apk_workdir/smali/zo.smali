@@ -1,34 +1,66 @@
-.class public abstract Lzo;
-.super Ljava/lang/Object;
+.class public final Lzo;
+.super Lzc6;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic t0:Lgp;
+
+.field public final synthetic u0:Ljp;
+
+
 # direct methods
-.method public static a(Landroid/widget/TextView;)Landroid/view/textclassifier/TextClassifier;
+.method public constructor <init>(Ljp;Ljp;Lgp;)V
+    .locals 0
+
+    iput-object p1, p0, Lzo;->u0:Ljp;
+
+    iput-object p3, p0, Lzo;->t0:Lgp;
+
+    invoke-direct {p0, p2}, Lzc6;-><init>(Landroid/view/View;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lmle;
     .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object v0, p0, Lzo;->t0:Lgp;
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    const-class v0, Landroid/view/textclassifier/TextClassificationManager;
+.method public final c()Z
+    .locals 3
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v0, p0, Lzo;->u0:Ljp;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljp;->getInternalPopup()Lip;
 
-    check-cast p0, Landroid/view/textclassifier/TextClassificationManager;
+    move-result-object v1
 
-    if-eqz p0, :cond_0
+    invoke-interface {v1}, Lip;->a()Z
 
-    invoke-virtual {p0}, Landroid/view/textclassifier/TextClassificationManager;->getTextClassifier()Landroid/view/textclassifier/TextClassifier;
+    move-result v1
 
-    move-result-object p0
+    if-nez v1, :cond_0
 
-    return-object p0
+    iget-object v1, v0, Ljp;->s0:Lip;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextDirection()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextAlignment()I
+
+    move-result v0
+
+    invoke-interface {v1, v2, v0}, Lip;->m(II)V
 
     :cond_0
-    sget-object p0, Landroid/view/textclassifier/TextClassifier;->NO_OP:Landroid/view/textclassifier/TextClassifier;
+    const/4 v0, 0x1
 
-    return-object p0
+    return v0
 .end method

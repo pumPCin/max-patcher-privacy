@@ -1,172 +1,176 @@
 .class public final Lxt4;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-.field public final synthetic r0:Lr6g;
+.field public final a:Llt7;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lr6g;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Llt7;)V
     .locals 0
 
-    iput-object p1, p0, Lxt4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxt4;->r0:Lr6g;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxt4;->a:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(JLjava/lang/Long;Ljava/lang/Long;)V
+    .locals 7
 
-    check-cast p1, Lku5;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "execute: chatId="
 
-    invoke-virtual {p0, p1, p2}, Lxt4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lxt4;
+    const-string v1, ", contactId="
 
-    sget-object p2, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Lxt4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", serverTime="
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lxt4;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, p0, Lxt4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    move-result-object v0
 
-    iget-object v2, p0, Lxt4;->r0:Lr6g;
+    const-string v1, "xt4"
 
-    invoke-direct {v0, v1, v2, p2}, Lxt4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lr6g;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, v0, Lxt4;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lxt4;->a:Llt7;
 
-    return-object v0
-.end method
+    const-wide/16 v2, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    const/4 v4, 0x0
 
-    iget v0, p0, Lxt4;->X:I
+    if-eqz p3, :cond_0
 
-    const/4 v1, 0x2
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
 
-    const/4 v2, 0x1
+    move-result-wide v5
 
-    sget-object v3, Lo24;->a:Lo24;
+    cmp-long v5, v5, v2
 
-    if-eqz v0, :cond_2
+    if-eqz v5, :cond_0
 
-    if-eq v0, v2, :cond_1
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_0
+    move-result-object p4
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    check-cast p4, Lkd2;
 
-    goto :goto_2
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result-wide v5
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {p4, v5, v6}, Lkd2;->z(J)Lda2;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v0, p0, Lxt4;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lku5;
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-result-object p3
 
     goto :goto_0
 
+    :cond_0
+    if-eqz p4, :cond_1
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    cmp-long p3, v5, v2
+
+    if-eqz p3, :cond_1
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lkd2;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p3, v5, v6}, Lkd2;->F(J)Lda2;
+
+    move-result-object p3
+
+    goto :goto_0
+
+    :cond_1
+    move-object p3, v4
+
+    :goto_0
+    if-nez p3, :cond_2
+
+    const-string p1, "Chat is null. Ignore"
+
+    invoke-static {v1, p1}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
     :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object p4, p3, Lda2;->b:Lfe2;
 
-    iget-object p1, p0, Lxt4;->Y:Ljava/lang/Object;
+    iget-object p4, p4, Lfe2;->c0:Lnta;
 
-    move-object v0, p1
+    if-nez p4, :cond_3
 
-    check-cast v0, Lku5;
+    const-string p1, "draft is null, ignore"
 
-    iget-object p1, p0, Lxt4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-static {v1, p1, v4}, Lndi;->n(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
 
-    iget-object p1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->u0:Lh4f;
-
-    invoke-virtual {p1}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcl;
-
-    iput-object v0, p0, Lxt4;->Y:Ljava/lang/Object;
-
-    iput v2, p0, Lxt4;->X:I
-
-    check-cast p1, Lgea;
-
-    iget-object v2, p0, Lxt4;->r0:Lr6g;
-
-    invoke-virtual {p1, v2, p0}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_3
-
-    goto :goto_1
+    return-void
 
     :cond_3
-    :goto_0
-    check-cast p1, Lwfg;
+    invoke-virtual {p4}, Lnta;->b()Ljava/lang/Long;
 
-    const/4 v2, 0x0
+    move-result-object p4
 
-    iput-object v2, p0, Lxt4;->Y:Ljava/lang/Object;
+    if-eqz p4, :cond_4
 
-    iput v1, p0, Lxt4;->X:I
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
 
-    invoke-interface {v0, p1, p0}, Lku5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-wide v2
+
+    :cond_4
+    cmp-long p1, v2, p1
+
+    if-lez p1, :cond_5
+
+    const-string p1, "try to rewrite draft by old, ignore it!"
+
+    invoke-static {v1, p1}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_5
+    const-string p1, "Discard server draft"
+
+    invoke-static {v1, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    if-ne p1, v3, :cond_4
+    check-cast p1, Lkd2;
 
-    :goto_1
-    return-object v3
+    iget-wide p2, p3, Lda2;->a:J
 
-    :cond_4
-    :goto_2
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {p1, p2, p3}, Lkd2;->p(J)V
 
-    return-object p1
+    return-void
 .end method

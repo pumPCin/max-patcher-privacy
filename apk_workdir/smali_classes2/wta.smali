@@ -1,27 +1,75 @@
 .class public final Lwta;
-.super Ljava/lang/Object;
+.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ldua;
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public final b:Ljava/lang/ref/WeakReference;
+    if-nez p1, :cond_0
 
+    const/4 v0, 0x1
 
-# direct methods
-.method public constructor <init>(Luta;Ldua;)V
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ljava/lang/Runnable;
 
-    iput-object p2, p0, Lwta;->a:Ldua;
+    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
 
-    new-instance p2, Ljava/lang/ref/WeakReference;
+    move-result p1
 
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    return p1
+.end method
 
-    iput-object p2, p0, Lwta;->b:Ljava/lang/ref/WeakReference;
+.method public final bridge remove(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

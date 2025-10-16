@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpo3;
+.implements Ler3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lru/ok/messages/views/ActAvatarCrop;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lru/ok/messages/views/ActAvatarCrop;I)V
     .locals 0
 
-    iput p1, p0, Ld6;->a:I
+    iput p2, p0, Ld6;->a:I
 
-    iput-object p2, p0, Ld6;->b:Ljava/lang/Object;
+    iput-object p1, p0, Ld6;->b:Lru/ok/messages/views/ActAvatarCrop;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,145 +28,164 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 4
+    .locals 9
 
     iget v0, p0, Ld6;->a:I
 
-    iget-object v1, p0, Ld6;->b:Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Ld6;->b:Lru/ok/messages/views/ActAvatarCrop;
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast v1, Ljava/util/ArrayList;
+    check-cast p1, Ljava/lang/Throwable;
 
-    check-cast p1, Ljava/util/List;
+    sget v0, Lru/ok/messages/views/ActAvatarCrop;->d1:I
 
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "Error occurred during applying image transformation. Error: "
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ru.ok.messages.views.ActAvatarCrop"
+
+    invoke-static {v0, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Landroid/app/Activity;->setResult(I)V
+
+    sget p1, Lwid;->F:I
+
+    invoke-virtual {v2, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v2, p1}, Lhyg;->z(ILandroid/content/Context;Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lh6;->finish()V
 
     return-void
 
     :pswitch_0
-    check-cast v1, Landroid/view/View;
-
     check-cast p1, Landroid/graphics/Rect;
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+    sget v0, Lru/ok/messages/views/ActAvatarCrop;->d1:I
 
-    return-void
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_1
-    check-cast v1, Lru/ok/messages/settings/FrgMediaSettings;
+    new-instance v0, Landroid/content/Intent;
 
-    check-cast p1, Lu6g;
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    iget-object v0, v1, Lru/ok/messages/settings/FrgMediaSettings;->A1:Lz2g;
+    const-string v3, "ru.ok.tamtam.extra.CROPPED_ABSOLUTE"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    const-string v2, "app.media.video.compress"
+    iget-object v3, v2, Lru/ok/messages/views/ActAvatarCrop;->a1:Landroid/graphics/Point;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    new-instance v4, Landroid/graphics/RectF;
 
-    move-result-object v3
+    iget v5, p1, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v0, v2, v3}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+    int-to-float v5, v5
 
-    iget-object v0, v1, Lru/ok/messages/settings/FrgMediaSettings;->C1:Lxc;
+    iget v6, v3, Landroid/graphics/Point;->x:I
 
-    const-string v2, "VIDEO_COMPRESSION_MODE_SELECTED"
+    int-to-float v6, v6
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    div-float/2addr v5, v6
+
+    iget v7, p1, Landroid/graphics/Rect;->top:I
+
+    int-to-float v7, v7
+
+    iget v3, v3, Landroid/graphics/Point;->y:I
+
+    int-to-float v3, v3
+
+    div-float/2addr v7, v3
+
+    iget v8, p1, Landroid/graphics/Rect;->right:I
+
+    int-to-float v8, v8
+
+    div-float/2addr v8, v6
+
+    iget p1, p1, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float p1, p1
+
+    div-float/2addr p1, v3
+
+    invoke-direct {v4, v5, v7, v8, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    const-string p1, "ru.ok.tamtam.extra.CROPPED_RECT"
+
+    invoke-virtual {v0, p1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object p1
+
+    const-string v3, "ru.ok.tamtam.extra.URI"
+
+    invoke-virtual {p1, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/net/Uri;
+
+    invoke-virtual {v0, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object p1
+
+    const-string v3, "ru.ok.tamtam.extra.FILE_PATH"
+
+    invoke-virtual {p1, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const/4 p1, -0x1
+
+    invoke-virtual {v2, p1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
+
+    invoke-virtual {v2}, Lh6;->finish()V
+
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object p1
+
+    const-string v0, "ru.ok.tamtam.extra.NO_ANIM "
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    invoke-virtual {v0, p1, v2}, Lxc;->d(ILjava/lang/String;)V
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1}, Lru/ok/messages/settings/FrgBaseSettings;->Q0()V
+    invoke-virtual {v2, v1, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
-    return-void
-
-    :pswitch_2
-    check-cast v1, Lax;
-
-    check-cast p1, Ljava/util/Collection;
-
-    iget-object v0, v1, Lax;->a:Ljava/lang/String;
-
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v2
-
-    const-string v3, "ValidateMessagesTimeUseCase find some items for delete, count = "
-
-    invoke-static {v2, v3, v0}, Ljl3;->h(ILjava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v1, Lax;->g:Ljava/lang/Object;
-
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lzw;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v1, p1, v3}, Lzw;-><init>(Lax;Ljava/util/Collection;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v3, v3, v2, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    return-void
-
-    :pswitch_3
-    check-cast v1, Lru/ok/messages/photoeditor/ActPhotoEditor;
-
-    check-cast p1, Lzbd;
-
-    sget v0, Lru/ok/messages/photoeditor/ActPhotoEditor;->Y0:I
-
-    new-instance v0, Lsm4;
-
-    iget-object v2, p1, Lzbd;->a:Lo94;
-
-    invoke-virtual {v2}, Lo94;->b()J
-
-    move-result-wide v2
-
-    iget-boolean p1, p1, Lzbd;->b:Z
-
-    invoke-direct {v0, v2, v3, p1}, Lsm4;-><init>(JZ)V
-
-    invoke-virtual {v1, v0}, Lru/ok/messages/photoeditor/ActPhotoEditor;->V(Lsm4;)V
-
-    return-void
-
-    :pswitch_4
-    check-cast v1, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    check-cast p1, Lzbd;
-
-    sget v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->q1:I
-
-    new-instance v0, Lsm4;
-
-    iget-object v2, p1, Lzbd;->a:Lo94;
-
-    invoke-virtual {v2}, Lo94;->b()J
-
-    move-result-wide v2
-
-    iget-boolean p1, p1, Lzbd;->b:Z
-
-    invoke-direct {v0, v2, v3, p1}, Lsm4;-><init>(JZ)V
-
-    invoke-virtual {v1, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->b0(Lsm4;)V
-
+    :cond_0
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

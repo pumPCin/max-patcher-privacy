@@ -1,26 +1,41 @@
-.class public interface abstract Lkl1;
-.super Ljava/lang/Object;
+.class public final Lkl1;
+.super Lcq;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lkl1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lkl1;
+
+    invoke-direct {v0}, Lcq;-><init>()V
+
+    sput-object v0, Lkl1;->a:Lkl1;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public d(Landroid/graphics/RectF;Z)V
-    .locals 0
+.method public final a()Luu1;
+    .locals 2
 
-    return-void
-.end method
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-.method public e(Z)V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
+    const-class v1, Luu1;
 
-.method public abstract f(Lkv7;ZJ)V
-.end method
+    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-.method public abstract getShouldScaleMainOpponent()Z
-.end method
+    move-result-object v0
 
-.method public abstract o(Z)V
+    check-cast v0, Luu1;
+
+    return-object v0
 .end method

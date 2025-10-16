@@ -1,122 +1,100 @@
-.class public final Lq69;
+.class public final synthetic Lq69;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lqh6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lr6d;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public synthetic constructor <init>(Lr6d;I)V
     .locals 0
 
+    iput p2, p0, Lq69;->a:I
+
+    iput-object p1, p0, Lq69;->b:Lr6d;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lq69;->a:I
-
-    iput p2, p0, Lq69;->b:I
 
     return-void
 .end method
 
-.method public static a(Lc79;)Lq69;
-    .locals 6
-
-    invoke-static {p0}, Lg8;->I(Lc79;)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    :goto_0
-    if-ge v1, v0, :cond_3
-
-    invoke-virtual {p0}, Lc79;->r0()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v5, "views"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    const-string v5, "forwards"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {p0}, Lc79;->y()V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Lc79;->n0()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0}, Lc79;->n0()I
-
-    move-result v2
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p0, Lq69;
-
-    invoke-direct {p0, v2, v3}, Lq69;-><init>(II)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const-string v0, ", forwards="
+    iget v0, p0, Lq69;->a:I
 
-    const-string v1, "}"
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "{views="
+    iget-object v0, p0, Lq69;->b:Lr6d;
 
-    iget v3, p0, Lq69;->a:I
+    check-cast p1, Landroid/view/Surface;
 
-    iget v4, p0, Lq69;->b:I
+    iput-object p1, v0, Lr6d;->a:Ljava/lang/Object;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lir3;
+
+    iget-object v0, p0, Lq69;->b:Lr6d;
+
+    iget-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    check-cast v1, Lc79;
+
+    new-instance v2, Lgo2;
+
+    invoke-static {p1}, Luf8;->r(Lir3;)Ldu3;
+
+    move-result-object v3
+
+    iget-object v0, v0, Lr6d;->a:Ljava/lang/Object;
+
+    check-cast v0, Lc79;
+
+    iget-object v0, v0, Lc79;->x0:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lrwb;
+
+    invoke-virtual {p1}, Lir3;->p()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0, v4, v5}, Lrwb;->w(J)Lnwb;
+
+    move-result-object p1
+
+    invoke-static {p1}, Luf8;->k(Lnwb;)Lowb;
+
+    move-result-object p1
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct {v2, v3, p1, v4, v5}, Lgo2;-><init>(Ldu3;Lowb;J)V
+
+    invoke-virtual {v1, v2}, Lc79;->z(Lgo2;)Le49;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

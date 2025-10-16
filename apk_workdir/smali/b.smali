@@ -1,5 +1,5 @@
 .class public final synthetic Lb;
-.super Lf4c;
+.super Lxcc;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
     new-instance v0, Lb;
 
-    const-string v1, "getTotalFreezesDurationMs()J"
+    const-string v1, "getFreezeCount()J"
 
     const/4 v2, 0x0
 
-    const-class v3, Lake;
+    const-class v3, Lfwe;
 
-    const-string v4, "totalFreezesDurationMs"
+    const-string v4, "freezeCount"
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v4, v1, v2}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     sput-object v0, Lb;->a:Lb;
 
@@ -33,9 +33,9 @@
 .method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    check-cast p1, Lake;
+    check-cast p1, Lfwe;
 
-    iget-wide v0, p1, Lake;->w:J
+    iget-wide v0, p1, Lfwe;->v:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 

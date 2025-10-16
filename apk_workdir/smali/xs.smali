@@ -3,151 +3,154 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxpd;
+.implements Lxq7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lxq7;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lvs;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lxs;->a:I
-
-    iput-object p2, p0, Lxs;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lje6;)V
+.method public constructor <init>(Lxq7;)V
     .locals 1
 
-    const/4 v0, 0x5
-
-    iput v0, p0, Lxs;->a:I
-
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    check-cast p1, Lw1d;
+    iput-object p1, p0, Lxs;->a:Lxq7;
 
-    iput-object p1, p0, Lxs;->b:Ljava/lang/Object;
+    new-instance v0, Lvs;
+
+    invoke-interface {p1}, Lxq7;->d()Lu1e;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lvs;-><init>(Lu1e;)V
+
+    iput-object v0, p0, Lxs;->b:Lvs;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public a(Ld9;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lxs;->a:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v0, p0, Lxs;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    check-cast v0, Landroid/view/ViewGroup;
+    move-result v1
 
-    new-instance v1, Lc2;
+    invoke-interface {p0}, Lxq7;->d()Lu1e;
 
-    const/4 v2, 0x5
+    move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lc2;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1, v2}, Ld9;->k(Lu1e;)Ld9;
 
-    return-object v1
+    move-result-object p1
 
-    :pswitch_0
-    iget-object v0, p0, Lxs;->b:Ljava/lang/Object;
+    :goto_0
+    invoke-interface {p0}, Lxq7;->d()Lu1e;
 
-    check-cast v0, Ljava/util/Iterator;
+    move-result-object v2
 
-    return-object v0
+    invoke-virtual {p1, v2}, Ld9;->q(Lu1e;)I
 
-    :pswitch_1
-    iget-object v0, p0, Lxs;->b:Ljava/lang/Object;
+    move-result v2
 
-    check-cast v0, Lw1d;
+    const/4 v3, -0x1
 
-    invoke-static {v0}, Lbv0;->B(Lje6;)Laqd;
+    if-eq v2, v3, :cond_0
 
-    move-result-object v0
+    add-int/2addr v2, v1
 
-    return-object v0
+    invoke-interface {p0}, Lxq7;->d()Lu1e;
 
-    :pswitch_2
-    iget-object v0, p0, Lxs;->b:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast v0, Landroid/view/Menu;
+    iget-object v4, p0, Lxs;->a:Lxq7;
 
-    new-instance v1, Lc2;
+    const/4 v5, 0x0
 
-    const/4 v2, 0x3
+    invoke-virtual {p1, v3, v2, v4, v5}, Ld9;->t(Lu1e;ILxq7;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v0}, Lc2;-><init>(ILjava/lang/Object;)V
+    move-result-object v3
 
-    return-object v1
+    invoke-virtual {v0, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    :pswitch_3
-    new-instance v0, Lrr7;
+    goto :goto_0
 
-    invoke-direct {v0, p0}, Lrr7;-><init>(Lxs;)V
+    :cond_0
+    invoke-interface {p0}, Lxq7;->d()Lu1e;
 
-    return-object v0
+    move-result-object v1
 
-    :pswitch_4
-    iget-object v0, p0, Lxs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
+    invoke-virtual {p1, v1}, Ld9;->z(Lu1e;)V
 
     return-object v0
+.end method
 
-    :pswitch_5
-    iget-object v0, p0, Lxs;->b:Ljava/lang/Object;
+.method public b(La24;Ljava/lang/Object;)V
+    .locals 5
 
-    check-cast v0, [F
+    move-object v0, p2
 
-    new-instance v1, Lc2;
+    check-cast v0, Ljava/util/Collection;
 
-    const/4 v2, 0x1
+    invoke-interface {v0}, Ljava/util/Collection;->size()I
 
-    invoke-direct {v1, v2, v0}, Lc2;-><init>(ILjava/lang/Object;)V
+    move-result v0
 
-    return-object v1
+    invoke-interface {p0}, Lxq7;->d()Lu1e;
 
-    :pswitch_6
-    iget-object v0, p0, Lxs;->b:Ljava/lang/Object;
+    move-result-object v1
 
-    check-cast v0, [Ljava/lang/Object;
+    invoke-virtual {p1, v1}, La24;->b(Lu1e;)La24;
 
-    new-instance v1, Lc2;
+    move-result-object p1
 
-    const/4 v2, 0x2
+    check-cast p2, Ljava/util/Collection;
 
-    invoke-direct {v1, v2, v0}, Lc2;-><init>(ILjava/lang/Object;)V
+    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    return-object v1
+    move-result-object p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    invoke-interface {p0}, Lxq7;->d()Lu1e;
+
+    move-result-object v2
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lxs;->a:Lxq7;
+
+    invoke-virtual {p1, v2, v1, v4, v3}, La24;->i(Lu1e;ILxq7;Ljava/lang/Object;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, La24;->m()V
+
+    return-void
+.end method
+
+.method public final d()Lu1e;
+    .locals 1
+
+    iget-object v0, p0, Lxs;->b:Lvs;
+
+    return-object v0
 .end method

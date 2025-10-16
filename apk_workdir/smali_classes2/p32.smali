@@ -1,178 +1,165 @@
 .class public final Lp32;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lle6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:Ljava/lang/String;
 
-.field public synthetic Y:Landroidx/appcompat/widget/AppCompatTextView;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:Ljava/lang/String;
+
+.field public final j:Ljava/lang/String;
+
+.field public final k:Z
+
+.field public final l:Ljava/util/HashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 1
 
-    iput p3, p0, Lp32;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lp32;->l:Ljava/util/HashMap;
+
+    iput-object p1, p0, Lp32;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lp32;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lp32;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lp32;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lp32;->e:Ljava/lang/String;
+
+    iput-object p6, p0, Lp32;->f:Ljava/lang/String;
+
+    iput-object p7, p0, Lp32;->g:Ljava/lang/String;
+
+    iput-object p8, p0, Lp32;->h:Ljava/lang/String;
+
+    iput-object p9, p0, Lp32;->i:Ljava/lang/String;
+
+    iput-object p10, p0, Lp32;->j:Ljava/lang/String;
+
+    iput-boolean p11, p0, Lp32;->k:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Lp32;->X:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
+    const-string v1, "CandidatePair{name=\'"
 
-    check-cast p2, Llwa;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lp32;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance p2, Lp32;
+    const-string v1, "\', localCandidateType=\'"
 
-    const/4 v0, 0x3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lp32;->b:Ljava/lang/String;
 
-    invoke-direct {p2, v0, p3, v1}, Lp32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, p2, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    const-string v1, "\', localAddress=\'"
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1}, Lp32;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lp32;->c:Ljava/lang/String;
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    new-instance p2, Lp32;
+    const-string v1, "\', remoteCandidateType=\'"
 
-    const/4 v0, 0x3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lp32;->e:Ljava/lang/String;
 
-    invoke-direct {p2, v0, p3, v1}, Lp32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, p2, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    const-string v1, "\', remoteAddress=\'"
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1}, Lp32;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lp32;->f:Ljava/lang/String;
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    new-instance p2, Lp32;
+    const-string v1, "\', rtt=\'"
 
-    const/4 v0, 0x3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lp32;->h:Ljava/lang/String;
 
-    invoke-direct {p2, v0, p3, v1}, Lp32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, p2, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    const-string v1, "\', transport=\'"
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1}, Lp32;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lp32;->i:Ljava/lang/String;
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    const-string v1, "\', channelId=\'"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lp32;->X:I
+    iget-object v1, p0, Lp32;->j:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const-string v1, "\', activeConnection="
 
-    iget-object p1, p0, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lrw4;->t0:Lss6;
+    iget-boolean v1, p0, Lp32;->k:Z
 
-    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", unknown="
 
-    invoke-interface {v0}, Llwa;->getText()Lobf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-object v1, p0, Lp32;->l:Ljava/util/HashMap;
 
-    iget v0, v0, Lobf;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    const/16 v1, 0x7d
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget-object v0, Lrw4;->t0:Lss6;
-
-    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Llwa;->getText()Lobf;
-
-    move-result-object v0
-
-    iget v0, v0, Lobf;->h:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget-object v0, Lrw4;->t0:Lss6;
-
-    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Llwa;->getText()Lobf;
-
-    move-result-object v0
-
-    iget v0, v0, Lobf;->i:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

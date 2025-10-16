@@ -1,42 +1,191 @@
-.class public final Lmbh;
+.class public final synthetic Lmbh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh7d;
+.implements Lmm6;
 
 
-# instance fields
-.field public final synthetic a:Ly6d;
+# static fields
+.field public static final a:Lmbh;
+
+.field private static final descriptor:Lu1e;
 
 
 # direct methods
-.method public constructor <init>(Ly6d;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmbh;
 
-    iput-object p1, p0, Lmbh;->a:Ly6d;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmbh;->a:Lmbh;
+
+    new-instance v1, Lztb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.codereader.WebAppOpenCodeReaderRequest"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Lztb;-><init>(Ljava/lang/String;Lmm6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lztb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "fileSelect"
+
+    invoke-virtual {v1, v0, v2}, Lztb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lmbh;->descriptor:Lu1e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lg84;Z)V
-    .locals 2
+.method public final a(Ld9;)Ljava/lang/Object;
+    .locals 9
 
-    new-instance v0, Lyi;
+    sget-object v0, Lmbh;->descriptor:Lu1e;
 
-    const/4 v1, 0x7
+    invoke-virtual {p1, v0}, Ld9;->k(Lu1e;)Ld9;
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lyi;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    move-result-object p1
 
-    iget-object p1, p0, Lmbh;->a:Ly6d;
+    const/4 v1, 0x1
 
-    iget-object p1, p1, Ly6d;->f:Landroid/os/Handler;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v3, 0x0
+
+    move v5, v1
+
+    move v6, v2
+
+    move-object v4, v3
+
+    :goto_0
+    if-eqz v5, :cond_3
+
+    invoke-virtual {p1, v0}, Ld9;->q(Lu1e;)I
+
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-ne v7, v1, :cond_0
+
+    sget-object v7, Lzq0;->a:Lzq0;
+
+    invoke-virtual {p1, v0, v1, v7, v4}, Ld9;->s(Lu1e;ILxq7;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Boolean;
+
+    or-int/lit8 v6, v6, 0x2
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    invoke-virtual {p1, v0, v2}, Ld9;->w(Lu1e;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v5, v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1, v0}, Ld9;->z(Lu1e;)V
+
+    new-instance p1, Lobh;
+
+    invoke-direct {p1, v6, v3, v4}, Lobh;-><init>(ILjava/lang/String;Ljava/lang/Boolean;)V
+
+    return-object p1
+.end method
+
+.method public final b(La24;Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p2, Lobh;
+
+    sget-object v0, Lmbh;->descriptor:Lu1e;
+
+    invoke-virtual {p1, v0}, La24;->b(Lu1e;)La24;
+
+    move-result-object p1
+
+    iget-object v1, p2, Lobh;->a:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v2, v1}, La24;->l(Lu1e;ILjava/lang/String;)V
+
+    sget-object v1, Lzq0;->a:Lzq0;
+
+    iget-object p2, p2, Lobh;->b:Ljava/lang/Boolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v0, v2, v1, p2}, La24;->h(Lu1e;ILxq7;Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, La24;->m()V
 
     return-void
+.end method
+
+.method public final c()[Lxq7;
+    .locals 4
+
+    sget-object v0, Lzq0;->a:Lzq0;
+
+    invoke-static {v0}, Lwji;->a(Lxq7;)Lxq7;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Lxq7;
+
+    sget-object v2, Lo9f;->a:Lo9f;
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    const/4 v2, 0x1
+
+    aput-object v0, v1, v2
+
+    return-object v1
+.end method
+
+.method public final d()Lu1e;
+    .locals 1
+
+    sget-object v0, Lmbh;->descriptor:Lu1e;
+
+    return-object v0
 .end method

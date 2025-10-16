@@ -1,47 +1,36 @@
-.class public final Lt2g;
-.super Lwy3;
+.class public interface abstract Lt2g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lazb;
+# virtual methods
+.method public abstract a(Lu2g;)V
+.end method
 
-.field public Y:I
+.method public abstract b()V
+.end method
 
-.field public synthetic o:Ljava/lang/Object;
+.method public abstract c(Lu2g;)V
+.end method
 
-
-# direct methods
-.method public constructor <init>(Lazb;Lwy3;)V
+.method public d(Lu2g;)V
     .locals 0
 
-    iput-object p1, p0, Lt2g;->X:Lazb;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-interface {p0, p1}, Lt2g;->a(Lu2g;)V
 
     return-void
 .end method
 
+.method public e(Lu2g;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-interface {p0, p1}, Lt2g;->c(Lu2g;)V
 
-    iput-object p1, p0, Lt2g;->o:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lt2g;->Y:I
+.method public abstract f()V
+.end method
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lt2g;->Y:I
-
-    iget-object p1, p0, Lt2g;->X:Lazb;
-
-    invoke-virtual {p1, p0}, Lazb;->q(Lwy3;)Ljava/lang/Comparable;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract h(Lu2g;)V
 .end method

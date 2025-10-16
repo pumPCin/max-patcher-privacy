@@ -1,43 +1,87 @@
-.class public abstract synthetic Ltjb;
-.super Ljava/lang/Object;
+.class public final Ltjb;
+.super Lnz;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final c:Lrhf;
+
+.field public d:Lxx;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ld20;Lrhf;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    invoke-direct {p0, p1}, Lnz;-><init>(Ld20;)V
 
-    invoke-static {v0}, Lsw1;->y(I)[I
+    iput-object p2, p0, Ltjb;->c:Lrhf;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lwga;
+    .locals 5
+
+    invoke-super {p0}, Lnz;->b()Lwga;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lr6d;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Ltjb;->d:Lxx;
+
+    iput-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    if-eqz v1, :cond_1
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Lxx;
+
+    invoke-direct {v1}, Lxx;-><init>()V
+
+    iput-object v1, p0, Ltjb;->d:Lxx;
+
+    iput-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    iget-object v1, p0, Ltjb;->c:Lrhf;
+
+    invoke-virtual {v1}, Lrhf;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    array-length v1, v1
+    check-cast v1, Lk97;
 
-    new-array v1, v1, [I
+    iget-object v2, p0, Lnz;->a:Ld20;
 
-    const/4 v2, 0x1
+    iget-object v2, v2, Ld20;->b:Lr10;
 
-    const/4 v3, 0x0
+    invoke-virtual {v2}, Lr10;->a()Ljava/lang/String;
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v2
 
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    new-instance v3, Lfwb;
 
-    :catch_1
-    sput-object v1, Ltjb;->$EnumSwitchMapping$0:[I
+    const/16 v4, 0x18
 
-    return-void
+    invoke-direct {v3, p0, v4, v0}, Lfwb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2, v3}, Lk97;->a(Ljava/lang/String;Lj97;)V
+
+    iget-object v0, v0, Lr6d;->a:Ljava/lang/Object;
+
+    check-cast v0, Lwga;
+
+    return-object v0
 .end method

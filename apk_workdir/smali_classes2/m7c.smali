@@ -1,26 +1,19 @@
 .class public final Lm7c;
-.super Ljava/lang/Object;
+.super Ls7c;
 .source "SourceFile"
-
-# interfaces
-.implements Lp7c;
 
 
 # instance fields
-.field public final a:Ltz7;
-
-.field public final b:I
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Ltz7;I)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm7c;->a:Ltz7;
-
-    iput p2, p0, Lm7c;->b:I
+    iput-wide p1, p0, Lm7c;->a:J
 
     return-void
 .end method
@@ -28,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -48,79 +41,60 @@
     :cond_1
     check-cast p1, Lm7c;
 
-    iget-object v1, p0, Lm7c;->a:Ltz7;
+    iget-wide v3, p0, Lm7c;->a:J
 
-    iget-object v3, p1, Lm7c;->a:Ltz7;
+    iget-wide v5, p1, Lm7c;->a:J
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eqz p1, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Lm7c;->b:I
-
-    iget p1, p1, Lm7c;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x1000
+
+    int-to-long v0, v0
+
+    return-wide v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lm7c;->a:Ltz7;
+    iget-wide v0, p0, Lm7c;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    return v0
+.end method
 
-    iget v1, p0, Lm7c;->b:I
+.method public final m()I
+    .locals 1
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    const/16 v0, 0x1000
 
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenFullScreenMedia(localMedia="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lm7c;->a:Ltz7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", position="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lm7c;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v0, "DebugProfileInfo(id="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lm7c;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

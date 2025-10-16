@@ -45,7 +45,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
 
     const/4 v0, 0x1
 
@@ -87,19 +87,19 @@
 
     const/high16 p3, 0x3f000000    # 0.5f
 
-    invoke-static {p2, p3}, Li8e;->N(IF)I
+    invoke-static {p2, p3}, Loti;->b(IF)I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    new-instance p2, Lfra;
+    new-instance p2, Lkza;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Lfra;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p3}, Lkza;-><init>(Landroid/content/Context;)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -113,13 +113,13 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object p3, Lxqa;->a:Lxqa;
+    sget-object p3, Lcza;->a:Lcza;
 
-    invoke-virtual {p2, p3}, Lfra;->setAppearance(Lyqa;)V
+    invoke-virtual {p2, p3}, Lkza;->setAppearance(Ldza;)V
 
-    sget-object p3, Lara;->a:Lara;
+    sget-object p3, Lfza;->a:Lfza;
 
-    invoke-virtual {p2, p3}, Lfra;->setSize(Ldra;)V
+    invoke-virtual {p2, p3}, Lkza;->setSize(Liza;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 

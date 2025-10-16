@@ -1,128 +1,166 @@
-.class public final enum Ltvg;
-.super Ljava/lang/Enum;
+.class public final Ltvg;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ldwg;
-
-
-# static fields
-.field public static final synthetic c:[Ltvg;
-
-.field public static final synthetic o:Laa5;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lumg;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Landroid/content/Context;
+
+.field public final c:Liu7;
+
+.field public final d:Lvo3;
+
+.field public final e:Lmlf;
+
+.field public final f:Lqnd;
+
+.field public final g:Llwb;
+
+.field public final h:Lll;
+
+.field public final i:Lgmf;
+
+.field public final j:Lmo3;
+
+.field public final k:Lgw0;
+
+.field public final l:Lat5;
+
+.field public final m:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Ltvg;
-
-    const-string v1, "WebAppOpenLink"
-
-    const-string v2, "open_link"
-
-    const-string v3, "OPEN_LINK"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ltvg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    new-instance v1, Ltvg;
-
-    const-string v2, "WebAppOpenMaxLink"
-
-    const-string v3, "open_max_link"
-
-    const-string v4, "OPEN_MAX_LINK"
-
-    const/4 v5, 0x1
-
-    invoke-direct {v1, v4, v5, v2, v3}, Ltvg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    filled-new-array {v0, v1}, [Ltvg;
-
-    move-result-object v0
-
-    sput-object v0, Ltvg;->c:[Ltvg;
-
-    new-instance v1, Laa5;
-
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ltvg;->o:Laa5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Ltvg;->a:Ljava/lang/String;
-
-    iput-object p4, p0, Ltvg;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ltvg;
+.method public constructor <init>(Landroid/content/Context;Lvo3;Liu7;Lllf;Llwb;Lll;Lgmf;Lmo3;Lgw0;Lat5;)V
     .locals 1
 
-    const-class v0, Ltvg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lumg;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Ltvg;
+    iput-object v0, p0, Ltvg;->a:Lumg;
 
-    return-object p0
-.end method
+    iput-object p1, p0, Ltvg;->b:Landroid/content/Context;
 
-.method public static values()[Ltvg;
-    .locals 1
+    iput-object p2, p0, Ltvg;->d:Lvo3;
 
-    sget-object v0, Ltvg;->c:[Ltvg;
+    iput-object p3, p0, Ltvg;->c:Liu7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    check-cast p4, Lmlf;
 
-    move-result-object v0
+    invoke-virtual {p4}, Lmlf;->a()Lqnd;
 
-    check-cast v0, [Ltvg;
+    move-result-object p1
 
-    return-object v0
+    iput-object p1, p0, Ltvg;->f:Lqnd;
+
+    iput-object p4, p0, Ltvg;->e:Lmlf;
+
+    iput-object p5, p0, Ltvg;->g:Llwb;
+
+    iput-object p6, p0, Ltvg;->h:Lll;
+
+    iput-object p7, p0, Ltvg;->i:Lgmf;
+
+    iput-object p8, p0, Ltvg;->j:Lmo3;
+
+    iput-object p9, p0, Ltvg;->k:Lgw0;
+
+    iput-object p10, p0, Ltvg;->l:Lat5;
+
+    const/16 p1, 0x1e
+
+    iput p1, p0, Ltvg;->m:I
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final a(Ld20;)Ljava/lang/String;
+    .locals 5
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lyfi;->h(Ld20;)Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final b()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {p1}, Ld20;->g()Z
 
-    iget-object v0, p0, Ltvg;->a:Ljava/lang/String;
+    move-result v1
 
-    return-object v0
-.end method
+    iget-object v2, p1, Ld20;->s:Ljava/lang/String;
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+    const-wide/16 v3, 0x0
 
-    iget-object v0, p0, Ltvg;->b:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    return-object v0
+    iget-object p1, p1, Ld20;->d:Lc20;
+
+    iget-wide v0, p1, Lc20;->a:J
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz v0, :cond_4
+
+    move-wide v0, v3
+
+    :goto_0
+    invoke-static {v2}, Lke8;->c(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Ljava/io/File;
+
+    invoke-direct {p1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Lr0j;->b(Ljava/io/File;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return-object v2
+
+    :cond_2
+    cmp-long p1, v0, v3
+
+    if-nez p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget-object p1, p0, Ltvg;->l:Lat5;
+
+    check-cast p1, Lou5;
+
+    invoke-virtual {p1, v0, v1}, Lou5;->r(J)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lr0j;->b(Ljava/io/File;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

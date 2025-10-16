@@ -2,23 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvud;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Ltud;
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(II)V
+    .locals 0
 
-    new-instance v0, Ltud;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Ltud;->a:I
 
-    sput-object v0, Ltud;->a:Ltud;
+    iput p2, p0, Ltud;->b:I
 
     return-void
 .end method

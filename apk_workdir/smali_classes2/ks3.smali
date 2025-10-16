@@ -1,89 +1,131 @@
-.class public final Lks3;
-.super Lc2f;
+.class public final synthetic Lks3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lqs3;
+.field public final synthetic b:J
+
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lqs3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lks3;->Y:Lqs3;
+    iput p1, p0, Lks3;->a:I
 
-    const/4 p1, 0x2
+    iput-object p6, p0, Lks3;->d:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lks3;->b:J
+
+    iput-wide p4, p0, Lks3;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 7
 
-    check-cast p1, La8b;
+    iget v0, p0, Lks3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lks3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lks3;->d:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Lao5;
 
-    check-cast p1, Lks3;
+    iget-wide v1, p0, Lks3;->b:J
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget-wide v3, p0, Lks3;->c:J
 
-    invoke-virtual {p1, p2}, Lks3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v5, v0, Lao5;->a:Lyed;
 
-    return-object p2
-.end method
+    invoke-virtual {v5}, Lyed;->c()V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :try_start_0
+    invoke-virtual {v0}, Lao5;->c()Ljava/util/ArrayList;
 
-    new-instance v0, Lks3;
+    move-result-object v6
 
-    iget-object v1, p0, Lks3;->Y:Lqs3;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v0, v1, p2}, Lks3;-><init>(Lqs3;Lkotlin/coroutines/Continuation;)V
+    move-result-object v1
 
-    iput-object p1, v0, Lks3;->X:Ljava/lang/Object;
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
-    return-object v0
-.end method
+    move-result v1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-result-object v2
 
-    iget-object p1, p0, Lks3;->X:Ljava/lang/Object;
+    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
-    check-cast p1, La8b;
+    move-result v2
 
-    if-eqz p1, :cond_0
+    if-ltz v1, :cond_0
 
-    iget-object p1, p0, Lks3;->Y:Lqs3;
+    if-ltz v2, :cond_0
 
-    invoke-virtual {p1}, Lqs3;->b()V
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    sget-object p1, Laxf;->a:Laxf;
+    move-result-object v3
 
-    return-object p1
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v6, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v6}, Lao5;->a(Ljava/util/List;)V
 
     :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v5}, Lyed;->q()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {v5}, Lyed;->k()V
 
-    throw p1
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v5}, Lyed;->k()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lks3;->d:Ljava/lang/Object;
+
+    check-cast v0, Lms3;
+
+    new-instance v1, La10;
+
+    const/16 v2, 0xb
+
+    iget-wide v3, p0, Lks3;->c:J
+
+    invoke-direct {v1, v3, v4, v2}, La10;-><init>(JI)V
+
+    iget-wide v2, p0, Lks3;->b:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lms3;->c(JLer3;)Lir3;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

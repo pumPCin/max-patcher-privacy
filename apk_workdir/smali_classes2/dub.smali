@@ -1,280 +1,331 @@
-.class public final synthetic Ldub;
+.class public final Ldub;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltd6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.field public final b:I
+
+.field public final c:Landroid/graphics/Paint;
+
+.field public final d:Landroid/graphics/Paint;
+
+.field public final e:Landroid/graphics/Paint;
+
+.field public final f:I
+
+.field public final g:Landroid/graphics/RectF;
+
+.field public h:F
+
+.field public final i:Landroid/graphics/RectF;
+
+.field public final j:Landroid/graphics/RectF;
+
+.field public final k:Landroid/graphics/RectF;
+
+.field public final l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
-    .locals 0
-
-    iput p2, p0, Ldub;->a:I
-
-    iput-object p1, p0, Ldub;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.method public constructor <init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
+    .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p3, p0, Ldub;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+
+    invoke-static {}, Lft4;->a()Lft4;
+
+    move-result-object p3
+
+    iget v0, p3, Lft4;->i:I
+
+    iget v1, p3, Lft4;->b:I
+
+    iget v2, p3, Lft4;->a:I
+
+    iput v2, p0, Ldub;->a:I
+
+    iget p3, p3, Lft4;->h:I
+
+    iput p3, p0, Ldub;->b:I
+
+    sget-object v3, Ltmf;->a0:Lrhf;
+
+    invoke-static {p2}, Lnw3;->g(Landroid/content/Context;)Ltmf;
+
+    move-result-object p2
+
+    new-instance v3, Landroid/graphics/Paint;
+
+    invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v3, p0, Ldub;->c:Landroid/graphics/Paint;
+
+    iget v4, p2, Ltmf;->w:I
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
+
+    sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    iput-object v3, p0, Ldub;->d:Landroid/graphics/Paint;
+
+    new-instance v3, Landroid/graphics/Paint;
+
+    invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v3, p0, Ldub;->e:Landroid/graphics/Paint;
+
+    iget p2, p2, Ltmf;->m:I
+
+    const v6, 0x3f19999a    # 0.6f
+
+    invoke-static {p2, v6}, Loti;->b(IF)I
+
+    move-result p2
+
+    invoke-virtual {v3, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    sub-int/2addr p1, p3
+
+    iput p1, p0, Ldub;->f:I
+
+    new-instance p2, Landroid/graphics/RectF;
+
+    neg-int v3, p3
+
+    mul-int/lit8 v3, v3, 0x2
+
+    int-to-float v3, v3
+
+    int-to-float v1, v1
+
+    const/high16 v4, 0x40000000    # 2.0f
+
+    div-float/2addr v1, v4
+
+    add-float/2addr v3, v1
+
+    int-to-float v2, v2
+
+    add-float/2addr v3, v2
+
+    sub-int v4, p1, p3
+
+    int-to-float v4, v4
+
+    mul-int/lit8 v5, p3, 0x2
+
+    int-to-float v5, v5
+
+    add-float/2addr v5, v1
+
+    add-float/2addr v5, v2
+
+    add-int/2addr p3, p1
+
+    add-int/2addr p3, v0
+
+    int-to-float p3, p3
+
+    invoke-direct {p2, v3, v4, v5, p3}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iput-object p2, p0, Ldub;->g:Landroid/graphics/RectF;
+
+    new-instance p3, Landroid/graphics/RectF;
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v0
+
+    sub-float/2addr v0, v1
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
+
+    move-result p2
+
+    add-float/2addr p2, v1
+
+    int-to-float p1, p1
+
+    const/high16 v1, -0x3ee00000    # -10.0f
+
+    invoke-direct {p3, v0, v1, p2, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iput-object p3, p0, Ldub;->i:Landroid/graphics/RectF;
+
+    new-instance p2, Landroid/graphics/RectF;
+
+    iget v0, p3, Landroid/graphics/RectF;->left:F
+
+    sub-float v1, v0, v2
+
+    const/4 v3, 0x0
+
+    invoke-direct {p2, v1, v3, v0, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iput-object p2, p0, Ldub;->j:Landroid/graphics/RectF;
+
+    new-instance p2, Landroid/graphics/RectF;
+
+    iget p3, p3, Landroid/graphics/RectF;->right:F
+
+    add-float/2addr v2, p3
+
+    invoke-direct {p2, p3, v3, v2, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iput-object p2, p0, Ldub;->k:Landroid/graphics/RectF;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 19
+.method public final a()F
+    .locals 2
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ldub;->i:Landroid/graphics/RectF;
 
-    iget v1, v0, Ldub;->a:I
+    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
 
-    const/4 v2, 0x0
+    move-result v0
 
-    iget-object v3, v0, Ldub;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    iget-object v1, p0, Ldub;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
 
-    packed-switch v1, :pswitch_data_0
+    invoke-virtual {v1, v0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->c(F)F
 
-    sget-object v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->v0:[Lpl7;
+    move-result v0
 
-    new-instance v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    return v0
+.end method
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+.method public final b(Landroid/view/MotionEvent;)V
+    .locals 3
 
-    move-result-object v4
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    const/4 v5, 0x0
+    move-result v0
 
-    invoke-direct {v1, v4, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iget-object v1, p0, Ldub;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
 
-    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+    if-eqz v0, :cond_1
 
-    const/4 v5, -0x2
+    const/4 v2, 0x2
 
-    const/16 v6, 0x50
+    if-eq v0, v2, :cond_0
 
-    const/4 v7, -0x1
-
-    invoke-direct {v4, v7, v5, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    const/16 v5, 0xc
-
-    int-to-float v5, v5
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v5, v6
-
-    invoke-static {v5}, Li8e;->I(F)I
-
-    move-result v5
-
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
-
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
-
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v4, Leha;->c:Leha;
-
-    invoke-virtual {v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Leha;)V
-
-    sget-object v4, Ldha;->a:Ldha;
-
-    invoke-virtual {v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ldha;)V
-
-    sget-object v4, Lbha;->c:Lbha;
-
-    invoke-virtual {v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lbha;)V
-
-    invoke-virtual {v3}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()Lstb;
-
-    move-result-object v4
-
-    sget-object v5, Lstb;->b:Lstb;
-
-    if-ne v4, v5, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/16 v2, 0x8
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    :goto_0
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    move-result p1
 
-    invoke-virtual {v3}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()Lstb;
+    iget v0, p0, Ldub;->h:F
 
-    move-result-object v2
+    add-float/2addr p1, v0
 
-    sget-object v4, Lstb;->c:Lstb;
+    invoke-virtual {v1, p1}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->c(F)F
 
-    if-ne v2, v4, :cond_1
+    move-result p1
 
-    sget v2, Lnqa;->Z0:I
+    invoke-virtual {p0, p1}, Ldub;->c(F)V
 
-    goto :goto_1
+    return-void
 
     :cond_1
-    sget v2, Lnqa;->F0:I
+    invoke-virtual {p0}, Ldub;->a()F
 
-    :goto_1
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+    move-result v0
 
-    new-instance v2, La5b;
+    invoke-virtual {v1, v0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b(F)F
 
-    const/4 v4, 0x5
+    move-result v0
 
-    invoke-direct {v2, v4, v3}, La5b;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    invoke-static {v1, v2}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    move-result p1
 
-    return-object v1
+    sub-float/2addr v0, p1
 
-    :pswitch_0
-    iget-object v1, v3, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->b:Lds;
+    iput v0, p0, Ldub;->h:F
 
-    sget-object v4, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->v0:[Lpl7;
+    return-void
+.end method
 
-    aget-object v2, v4, v2
+.method public final c(F)V
+    .locals 3
 
-    invoke-virtual {v1, v3}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    iget-object v0, p0, Ldub;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b(F)F
 
-    check-cast v1, Ljava/lang/Number;
+    move-result p1
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    iget-object v0, p0, Ldub;->g:Landroid/graphics/RectF;
 
-    move-result-wide v6
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
-    iget-object v1, v3, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->c:Lds;
+    move-result v1
 
-    const/4 v2, 0x1
+    const/high16 v2, 0x40000000    # 2.0f
 
-    aget-object v2, v4, v2
+    div-float/2addr v1, v2
 
-    invoke-virtual {v1, v3}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    sub-float/2addr p1, v1
 
-    move-result-object v1
+    iget v1, v0, Landroid/graphics/RectF;->top:F
 
-    check-cast v1, Ljava/lang/Number;
+    invoke-virtual {v0, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
 
-    move-result-wide v8
+    move-result p1
 
-    invoke-virtual {v3}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()Lstb;
+    iget-object v0, p0, Ldub;->i:Landroid/graphics/RectF;
 
-    move-result-object v10
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
-    sget-object v1, Ljub;->a:Ljub;
+    move-result v1
 
-    invoke-virtual {v1}, Ljub;->b()Lyn7;
+    div-float/2addr v1, v2
 
-    move-result-object v2
+    sub-float/2addr p1, v1
 
-    check-cast v2, Lh4f;
+    const/4 v1, 0x0
 
-    invoke-virtual {v2}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
 
-    move-result-object v2
+    iget p1, v0, Landroid/graphics/RectF;->left:F
 
-    move-object v11, v2
+    iget v2, p0, Ldub;->a:I
 
-    check-cast v11, Lg13;
+    int-to-float v2, v2
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
+    sub-float/2addr p1, v2
 
-    move-result-object v2
+    iget-object v2, p0, Ldub;->j:Landroid/graphics/RectF;
 
-    const-class v3, Lrw3;
+    invoke-virtual {v2, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
 
-    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    iget-object p1, p0, Ldub;->k:Landroid/graphics/RectF;
 
-    move-result-object v2
+    iget v0, v0, Landroid/graphics/RectF;->right:F
 
-    invoke-virtual {v2}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
 
-    move-result-object v2
-
-    move-object v12, v2
-
-    check-cast v12, Lrw3;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object v2
-
-    const-class v3, Lda;
-
-    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
-
-    move-result-object v17
-
-    invoke-virtual {v1}, Ljub;->c()Lyn7;
-
-    move-result-object v15
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object v2
-
-    const-class v3, Lu0c;
-
-    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
-
-    move-result-object v13
-
-    invoke-virtual {v1}, Ljub;->a()Lyn7;
-
-    move-result-object v14
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object v2
-
-    const-class v3, Lzl5;
-
-    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
-
-    move-result-object v16
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object v1
-
-    const-class v2, Lm63;
-
-    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
-
-    move-result-object v18
-
-    new-instance v5, Lcub;
-
-    invoke-direct/range {v5 .. v18}, Lcub;-><init>(JJLstb;Lg13;Lrw3;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
-
-    return-object v5
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

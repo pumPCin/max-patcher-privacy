@@ -1,178 +1,67 @@
-.class public final Lnb8;
-.super Ljvc;
+.class public abstract Lnb8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lcom/google/android/material/datepicker/c;
-
-.field public final synthetic b:Lcom/google/android/material/button/MaterialButton;
-
-.field public final synthetic c:Lcom/google/android/material/datepicker/MaterialCalendar;
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;Lcom/google/android/material/button/MaterialButton;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x80
 
-    iput-object p1, p0, Lnb8;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
+    new-array v0, v0, [B
 
-    iput-object p2, p0, Lnb8;->a:Lcom/google/android/material/datepicker/c;
+    const/4 v1, -0x1
 
-    iput-object p3, p0, Lnb8;->b:Lcom/google/android/material/button/MaterialButton;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    move v2, v1
 
-# virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+    :goto_0
+    const/16 v3, 0xa
 
-    if-nez p2, :cond_0
+    if-ge v2, v3, :cond_0
 
-    iget-object p2, p0, Lnb8;->b:Lcom/google/android/material/button/MaterialButton;
+    add-int/lit8 v3, v2, 0x30
 
-    invoke-virtual {p2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    int-to-byte v4, v2
 
-    move-result-object p2
+    aput-byte v4, v0, v3
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 3
-
-    iget-object p1, p0, Lnb8;->a:Lcom/google/android/material/datepicker/c;
-
-    iget-object p1, p1, Lcom/google/android/material/datepicker/c;->o:Lby0;
-
-    iget-object p3, p0, Lnb8;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
-
-    if-gez p2, :cond_0
-
-    iget-object p2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object p2
-
-    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result p2
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object p2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    :goto_1
+    const/16 v2, 0x1a
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    if-ge v1, v2, :cond_1
 
-    move-result-object p2
+    add-int/lit8 v2, v1, 0x41
 
-    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
+    add-int/lit8 v3, v1, 0xa
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
+    int-to-byte v3, v3
 
-    move-result p2
+    aput-byte v3, v0, v2
 
-    :goto_0
-    iget-object v0, p1, Lby0;->a:Ltl9;
+    add-int/lit8 v2, v1, 0x61
 
-    iget-object v0, v0, Ltl9;->a:Ljava/util/Calendar;
+    aput-byte v3, v0, v2
 
-    invoke-static {v0}, Lc3g;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+    add-int/lit8 v1, v1, 0x1
 
-    move-result-object v0
+    goto :goto_1
 
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1, p2}, Ljava/util/Calendar;->add(II)V
-
-    new-instance v2, Ltl9;
-
-    invoke-direct {v2, v0}, Ltl9;-><init>(Ljava/util/Calendar;)V
-
-    iput-object v2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Ltl9;
-
-    iget-object p1, p1, Lby0;->a:Ltl9;
-
-    iget-object p1, p1, Ltl9;->a:Ljava/util/Calendar;
-
-    invoke-static {p1}, Lc3g;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1, p2}, Ljava/util/Calendar;->add(II)V
-
-    const/4 p2, 0x5
-
-    const/4 p3, 0x1
-
-    invoke-virtual {p1, p2, p3}, Ljava/util/Calendar;->set(II)V
-
-    invoke-static {p1}, Lc3g;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Ljava/util/Calendar;->get(I)I
-
-    invoke-virtual {p1, p3}, Ljava/util/Calendar;->get(I)I
-
-    const/4 p3, 0x7
-
-    invoke-virtual {p1, p3}, Ljava/util/Calendar;->getMaximum(I)I
-
-    invoke-virtual {p1, p2}, Ljava/util/Calendar;->getActualMaximum(I)I
-
-    invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide p1
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object p3
-
-    sget-object v0, Lc3g;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const-string v0, "yMMMM"
-
-    invoke-static {v0, p3}, Landroid/icu/text/DateFormat;->getInstanceForSkeleton(Ljava/lang/String;Ljava/util/Locale;)Landroid/icu/text/DateFormat;
-
-    move-result-object p3
-
-    const-string v0, "UTC"
-
-    invoke-static {v0}, Landroid/icu/util/TimeZone;->getTimeZone(Ljava/lang/String;)Landroid/icu/util/TimeZone;
-
-    move-result-object v0
-
-    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->setTimeZone(Landroid/icu/util/TimeZone;)V
-
-    sget-object v0, Landroid/icu/text/DisplayContext;->CAPITALIZATION_FOR_STANDALONE:Landroid/icu/text/DisplayContext;
-
-    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->setContext(Landroid/icu/text/DisplayContext;)V
-
-    new-instance v0, Ljava/util/Date;
-
-    invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
-
-    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lnb8;->b:Lcom/google/android/material/button/MaterialButton;
-
-    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    :cond_1
+    sput-object v0, Lnb8;->a:[B
 
     return-void
 .end method

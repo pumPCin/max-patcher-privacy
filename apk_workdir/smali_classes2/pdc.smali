@@ -1,76 +1,296 @@
-.class public abstract Lpdc;
-.super Ljava/lang/Object;
+.class public final Lpdc;
+.super Ldd9;
+.source "SourceFile"
 
 
-# static fields
-.field public static check_button:I = 0x7f0a029a
+# instance fields
+.field public a:F
 
-.field public static check_button_parent:I = 0x7f0a029b
+.field public b:F
 
-.field public static check_button_view_stub:I = 0x7f0a029c
+.field public c:F
 
-.field public static media_bar_view__iv_constructor:I = 0x7f0a049e
+.field public d:F
 
-.field public static media_bar_view__iv_contact:I = 0x7f0a049f
 
-.field public static media_bar_view__iv_drawing:I = 0x7f0a04a0
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static media_bar_view__iv_file:I = 0x7f0a04a1
+    invoke-direct {p0}, Ldd9;-><init>()V
 
-.field public static media_bar_view__iv_gallery:I = 0x7f0a04a2
+    const/4 v0, 0x0
 
-.field public static media_bar_view__iv_location:I = 0x7f0a04a4
+    iput v0, p0, Lpdc;->a:F
 
-.field public static media_bar_view__iv_photo:I = 0x7f0a04a5
+    iput v0, p0, Lpdc;->b:F
 
-.field public static media_bar_view__iv_video:I = 0x7f0a04a7
+    iput v0, p0, Lpdc;->c:F
 
-.field public static media_bar_view__ll_constructor:I = 0x7f0a04a8
+    iput v0, p0, Lpdc;->d:F
 
-.field public static media_bar_view__ll_contact:I = 0x7f0a04a9
+    const/4 v0, -0x1
 
-.field public static media_bar_view__ll_drawing:I = 0x7f0a04aa
+    iput v0, p0, Ldd9;->cachedSize:I
 
-.field public static media_bar_view__ll_file:I = 0x7f0a04ab
+    return-void
+.end method
 
-.field public static media_bar_view__ll_gallery:I = 0x7f0a04ac
 
-.field public static media_bar_view__ll_layout_create:I = 0x7f0a04ad
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 4
 
-.field public static media_bar_view__ll_location:I = 0x7f0a04ae
+    iget v0, p0, Lpdc;->a:F
 
-.field public static media_bar_view__ll_photo:I = 0x7f0a04af
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static media_bar_view__ll_video:I = 0x7f0a04b0
+    move-result v0
 
-.field public static media_bar_view__tv_constructor:I = 0x7f0a04b1
+    const/4 v1, 0x0
 
-.field public static media_bar_view__tv_contact:I = 0x7f0a04b2
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static media_bar_view__tv_drawing:I = 0x7f0a04b3
+    move-result v2
 
-.field public static media_bar_view__tv_file:I = 0x7f0a04b4
+    if-eq v0, v2, :cond_0
 
-.field public static media_bar_view__tv_gallery:I = 0x7f0a04b5
+    const/4 v0, 0x1
 
-.field public static media_bar_view__tv_location:I = 0x7f0a04b7
+    invoke-static {v0}, Lca3;->e(I)I
 
-.field public static media_bar_view__tv_photo:I = 0x7f0a04b8
+    move-result v0
 
-.field public static media_bar_view__tv_video:I = 0x7f0a04ba
+    goto :goto_0
 
-.field public static media_permissions_view_button:I = 0x7f0a04c4
+    :cond_0
+    const/4 v0, 0x0
 
-.field public static media_permissions_view_title:I = 0x7f0a04c5
+    :goto_0
+    iget v2, p0, Lpdc;->b:F
 
-.field public static quick_camera_view__cv_camera:I = 0x7f0a09e1
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static row_media_bar_actions__icon:I = 0x7f0a0a75
+    move-result v2
 
-.field public static row_media_bar_actions__title:I = 0x7f0a0a76
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static select_album_content_container:I = 0x7f0a0b1c
+    move-result v3
 
-.field public static simple_drawee_view:I = 0x7f0a0b9d
+    if-eq v2, v3, :cond_1
 
-.field public static video_info:I = 0x7f0a0c42
+    const/4 v2, 0x2
+
+    invoke-static {v2}, Lca3;->e(I)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_1
+    iget v2, p0, Lpdc;->c:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_2
+
+    const/4 v2, 0x3
+
+    invoke-static {v2}, Lca3;->e(I)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_2
+    iget v2, p0, Lpdc;->d:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Lca3;->e(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final mergeFrom(Lba3;)Ldd9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lba3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xd
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x1d
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x25
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lpdc;->d:F
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lpdc;->c:F
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lpdc;->b:F
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lpdc;->a:F
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lca3;)V
+    .locals 3
+
+    iget v0, p0, Lpdc;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    iget v2, p0, Lpdc;->a:F
+
+    invoke-virtual {p1, v0, v2}, Lca3;->v(IF)V
+
+    :cond_0
+    iget v0, p0, Lpdc;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_1
+
+    const/4 v0, 0x2
+
+    iget v2, p0, Lpdc;->b:F
+
+    invoke-virtual {p1, v0, v2}, Lca3;->v(IF)V
+
+    :cond_1
+    iget v0, p0, Lpdc;->c:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_2
+
+    const/4 v0, 0x3
+
+    iget v2, p0, Lpdc;->c:F
+
+    invoke-virtual {p1, v0, v2}, Lca3;->v(IF)V
+
+    :cond_2
+    iget v0, p0, Lpdc;->d:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v0, 0x4
+
+    iget v1, p0, Lpdc;->d:F
+
+    invoke-virtual {p1, v0, v1}, Lca3;->v(IF)V
+
+    :cond_3
+    return-void
+.end method

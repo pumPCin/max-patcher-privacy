@@ -4,50 +4,81 @@
 
 
 # instance fields
-.field public final a:Lh1f;
+.field public final a:J
 
-.field public final b:Ljava/util/List;
+.field public final b:J
+
+.field public final c:Lf90;
 
 
 # direct methods
-.method public constructor <init>(Lh1f;Ljava/util/List;)V
+.method public constructor <init>(JJLf90;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput-wide p1, p0, Lfb0;->a:J
 
-    iput-object p1, p0, Lfb0;->a:Lh1f;
+    iput-wide p3, p0, Lfb0;->b:J
 
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Lfb0;->b:Ljava/util/List;
+    iput-object p5, p0, Lfb0;->c:Lf90;
 
     return-void
+.end method
+
+.method public static a(JJLf90;)Lfb0;
+    .locals 10
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p0, v0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-ltz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    move v2, v3
 
-    const-string p2, "Null outConfigs"
+    :goto_0
+    const-string v5, "duration must be positive value."
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lbui;->a(Ljava/lang/String;Z)V
 
-    throw p1
+    cmp-long v0, p2, v0
+
+    if-ltz v0, :cond_1
+
+    move v3, v4
 
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    const-string v0, "bytes must be positive value."
 
-    const-string p2, "Null surfaceEdge"
+    invoke-static {v0, v3}, Lbui;->a(Ljava/lang/String;Z)V
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    new-instance v4, Lfb0;
 
-    throw p1
+    move-wide v5, p0
+
+    move-wide v7, p2
+
+    move-object v9, p4
+
+    invoke-direct/range {v4 .. v9}, Lfb0;-><init>(JJLf90;)V
+
+    return-object v4
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -64,21 +95,27 @@
 
     check-cast p1, Lfb0;
 
-    iget-object v1, p0, Lfb0;->a:Lh1f;
+    iget-wide v3, p0, Lfb0;->a:J
 
-    iget-object v3, p1, Lfb0;->a:Lh1f;
+    iget-wide v5, p1, Lfb0;->a:J
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result v1
+    if-nez v1, :cond_1
 
-    if-eqz v1, :cond_1
+    iget-wide v3, p0, Lfb0;->b:J
 
-    iget-object v1, p0, Lfb0;->b:Ljava/util/List;
+    iget-wide v5, p1, Lfb0;->b:J
 
-    iget-object p1, p1, Lfb0;->b:Ljava/util/List;
+    cmp-long v1, v3, v5
 
-    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lfb0;->c:Lf90;
+
+    iget-object p1, p1, Lfb0;->c:Lf90;
+
+    invoke-virtual {v1, p1}, Lf90;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -91,13 +128,17 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 7
 
-    iget-object v0, p0, Lfb0;->a:Lh1f;
+    iget-wide v0, p0, Lfb0;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/16 v2, 0x20
 
-    move-result v0
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -105,9 +146,21 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lfb0;->b:Ljava/util/List;
+    iget-wide v3, p0, Lfb0;->b:J
 
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+    ushr-long v5, v3, v2
+
+    xor-long v2, v5, v3
+
+    long-to-int v2, v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lfb0;->c:Lf90;
+
+    invoke-virtual {v1}, Lf90;->hashCode()I
 
     move-result v1
 
@@ -121,23 +174,35 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "In{surfaceEdge="
+    const-string v1, "RecordingStats{recordedDurationNanos="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lfb0;->a:Lh1f;
+    iget-wide v1, p0, Lfb0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", outConfigs="
+    const-string v1, ", numBytesRecorded="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lfb0;->b:Ljava/util/List;
+    iget-wide v1, p0, Lfb0;->b:J
 
-    const-string v2, "}"
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v2}, Lsw1;->i(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, ", audioStats="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfb0;->c:Lf90;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

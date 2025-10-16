@@ -1,97 +1,158 @@
-.class public final enum Lfn5;
-.super Ljava/lang/Enum;
+.class public final synthetic Lfn5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr6;
 
-# static fields
-.field public static final synthetic a:[Lfn5;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(ILjava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lfn5;
+    iput p1, p0, Lfn5;->a:I
 
-    const-string v1, "ALREADY_DOWNLOADING"
+    iput-object p2, p0, Lfn5;->b:Ljava/util/List;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lfn5;
-
-    const-string v2, "FILE_IS_NULL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lfn5;
-
-    const-string v3, "INTERRUPTED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lfn5;
-
-    const-string v4, "FAIL"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Lfn5;
-
-    const-string v5, "CANCELLED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lfn5;
-
-    const-string v6, "MAX_FAIL_COUNT"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array/range {v0 .. v5}, [Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lfn5;->a:[Lfn5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfn5;
-    .locals 1
 
-    const-class v0, Lfn5;
+# virtual methods
+.method public final run()V
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lfn5;->a:I
 
-    move-result-object p0
+    const-string v1, "nn5"
 
-    check-cast p0, Lfn5;
+    const-string v2, "g3f"
 
-    return-object p0
-.end method
+    const-string v3, "ho5"
 
-.method public static values()[Lfn5;
-    .locals 1
+    iget-object v4, p0, Lfn5;->b:Ljava/util/List;
 
-    sget-object v0, Lfn5;->a:[Lfn5;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string v0, "awaitNoTasksByTypes: finished for types=%s"
 
-    move-result-object v0
+    filled-new-array {v4}, [Ljava/lang/Object;
 
-    check-cast v0, [Lfn5;
+    move-result-object v1
 
-    return-object v0
+    const-string v2, "fof"
+
+    invoke-static {v2, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    const-string v0, "storeStickerSetsFromServer: success: %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v2, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    const-string v0, "storeStickerSets: success for sets = %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v2, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_2
+    const-string v0, "onNotifRemoved: removed stickers %s from cache"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_3
+    const-string v0, "onListUpdated: success store stickers %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_4
+    const-string v0, "removeFromFavorites: ids=%s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_5
+    const-string v0, "onAssetsUpdate: success store stickers %s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_6
+    const-string v0, "onListUpdated: success store stickers sets=%s"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_7
+    const-string v0, "onNotifRemoved: removed sticker sets %s from cache"
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

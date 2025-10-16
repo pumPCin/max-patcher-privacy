@@ -1,143 +1,98 @@
-.class public final enum Lj39;
-.super Ljava/lang/Enum;
+.class public final Lj39;
+.super Llff;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lj39;
-
-.field public static final enum Y:Lj39;
-
-.field public static final enum Z:Lj39;
-
-.field public static final b:Ljava/util/List;
-
-.field public static final enum c:Lj39;
-
-.field public static final enum o:Lj39;
-
-.field public static final synthetic r0:[Lj39;
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
+    .locals 0
+
+    iput-object p2, p0, Lj39;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lj39;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lj39;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lj39;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lj39;
 
-    const-string v1, "UNKNOWN"
+    iget-object v1, p0, Lj39;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p2, v1}, Lj39;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
 
-    invoke-direct {v0, v1, v2, v2}, Lj39;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lj39;->c:Lj39;
-
-    new-instance v1, Lj39;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0xa
-
-    const-string v4, "SENDING"
-
-    invoke-direct {v1, v4, v2, v3}, Lj39;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lj39;->o:Lj39;
-
-    new-instance v2, Lj39;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x14
-
-    const-string v5, "SENT"
-
-    invoke-direct {v2, v5, v3, v4}, Lj39;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lj39;->X:Lj39;
-
-    new-instance v3, Lj39;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0x1e
-
-    const-string v6, "READ"
-
-    invoke-direct {v3, v6, v4, v5}, Lj39;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lj39;->Y:Lj39;
-
-    new-instance v4, Lj39;
-
-    const/4 v5, 0x4
-
-    const/16 v6, 0x28
-
-    const-string v7, "ERROR"
-
-    invoke-direct {v4, v7, v5, v6}, Lj39;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lj39;->Z:Lj39;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lj39;
-
-    move-result-object v0
-
-    sput-object v0, Lj39;->r0:[Lj39;
-
-    new-instance v1, Laa5;
-
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
-
-    invoke-static {v1}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lj39;->b:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lj39;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lj39;
-    .locals 1
-
-    const-class v0, Lj39;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lj39;
-
-    return-object p0
-.end method
-
-.method public static values()[Lj39;
-    .locals 1
-
-    sget-object v0, Lj39;->r0:[Lj39;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lj39;
+    iput-object p1, v0, Lj39;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj39;->X:Ljava/lang/Object;
+
+    check-cast p1, Lh39;
+
+    sget-object v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lwq7;
+
+    iget-object v0, p0, Lj39;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+
+    iget-object v0, v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->o:Lnn0;
+
+    sget-object v1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lwq7;
+
+    const/4 v2, 0x2
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0}, Lnn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lq29;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Ld39;->a:Ld39;
+
+    invoke-virtual {v0, p1}, Lq29;->setSelected(Lg39;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

@@ -1,55 +1,199 @@
 .class public final Lff0;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public final a:Lef0;
 
-.field public Y:I
+.field public final b:Lgf0;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final c:Lhf0;
 
-.field public o:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-.field public final synthetic r0:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-.field public s0:I
+.field public final d:Lif0;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lwy3;)V
+.method public constructor <init>(Lef0;Lgf0;Lhf0;Lif0;)V
     .locals 0
 
-    iput-object p1, p0, Lff0;->r0:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lff0;->a:Lef0;
+
+    iput-object p2, p0, Lff0;->b:Lgf0;
+
+    iput-object p3, p0, Lff0;->c:Lhf0;
+
+    iput-object p4, p0, Lff0;->d:Lif0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Lff0;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lff0;->s0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lff0;
 
-    iput p1, p0, Lff0;->s0:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lff0;->r0:Lru/ok/tamtam/workmanager/BacklogWorker;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-virtual {p1, v0, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->g(Ljava/util/List;Lwy3;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lff0;
 
-    move-result-object p1
+    iget-object v1, p0, Lff0;->a:Lef0;
 
-    return-object p1
+    iget-object v3, p1, Lff0;->a:Lef0;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lff0;->b:Lgf0;
+
+    iget-object v3, p1, Lff0;->b:Lgf0;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lff0;->c:Lhf0;
+
+    iget-object v3, p1, Lff0;->c:Lhf0;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lff0;->d:Lif0;
+
+    iget-object p1, p1, Lff0;->d:Lif0;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lff0;->a:Lef0;
+
+    invoke-virtual {v0}, Lef0;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lff0;->b:Lgf0;
+
+    invoke-virtual {v2}, Lgf0;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lff0;->c:Lhf0;
+
+    iget v0, v0, Lhf0;->a:I
+
+    invoke-static {v0, v2, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lff0;->d:Lif0;
+
+    invoke-virtual {v1}, Lif0;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BackgroundLocalColors(chips="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lff0;->a:Lef0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fileType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lff0;->b:Lgf0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", tabBar="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lff0;->c:Lhf0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", topBar="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lff0;->d:Lif0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

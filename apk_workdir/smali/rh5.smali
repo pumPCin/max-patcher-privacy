@@ -1,126 +1,113 @@
-.class public final Lrh5;
-.super Lv7f;
+.class public final synthetic Lrh5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
+.implements Lx18;
+.implements Lw18;
+.implements Ldr3;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:I
 
-.field public final o:Ljava/util/zip/ZipEntry;
+.field public final synthetic b:I
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/zip/ZipEntry;I)V
-    .locals 2
+.method public synthetic constructor <init>(III)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getCrc()J
+    iput p3, p0, Lrh5;->a:I
 
-    move-result-wide v0
+    iput p1, p0, Lrh5;->b:I
 
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    iput p2, p0, Lrh5;->c:I
 
-    move-result-object v0
-
-    const/16 v1, 0xb
-
-    invoke-direct {p0, p1, v1, v0}, Lv7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lrh5;->o:Ljava/util/zip/ZipEntry;
-
-    iput p3, p0, Lrh5;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+.method public accept(Ljava/lang/Object;)V
+    .locals 3
 
-    check-cast p1, Lrh5;
+    iget v0, p0, Lrh5;->a:I
 
-    iget-object v0, p0, Lv7f;->b:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p1, Lrtb;
 
-    iget-object p1, p1, Lv7f;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lrtb;->m0()V
 
-    check-cast p1, Ljava/lang/String;
+    iget-object p1, p1, Lrtb;->a:Ldi5;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    iget v0, p0, Lrh5;->b:I
 
-    move-result p1
+    iget v1, p0, Lrh5;->c:I
 
-    return p1
-.end method
+    if-eq v0, v1, :cond_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    add-int/lit8 v2, v0, 0x1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    invoke-virtual {p1, v0, v2, v1}, Ldi5;->n1(III)V
 
     :cond_0
-    const/4 v1, 0x0
+    return-void
 
-    if-eqz p1, :cond_2
+    :pswitch_0
+    iget v0, p0, Lrh5;->c:I
 
-    const-class v2, Lrh5;
+    check-cast p1, Lrtb;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p0, Lrh5;->b:I
 
-    move-result-object v3
+    invoke-virtual {p1, v1, v0}, Lrtb;->h0(II)V
 
-    if-eq v2, v3, :cond_1
+    return-void
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lrh5;
-
-    iget-object v2, p0, Lrh5;->o:Ljava/util/zip/ZipEntry;
-
-    iget-object v3, p1, Lrh5;->o:Ljava/util/zip/ZipEntry;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Lrh5;->X:I
-
-    iget p1, p1, Lrh5;->X:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public invoke(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lrh5;->X:I
+    iget v0, p0, Lrh5;->a:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lrh5;->o:Ljava/util/zip/ZipEntry;
+    iget v0, p0, Lrh5;->c:I
 
-    invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->hashCode()I
+    check-cast p1, Lhsb;
 
-    move-result v1
+    iget v1, p0, Lrh5;->b:I
 
-    add-int/2addr v1, v0
+    invoke-interface {p1, v1, v0}, Lhsb;->p(II)V
 
-    return v1
+    return-void
+
+    :pswitch_0
+    iget v0, p0, Lrh5;->c:I
+
+    check-cast p1, Lisb;
+
+    iget v1, p0, Lrh5;->b:I
+
+    invoke-interface {p1, v1, v0}, Lisb;->p(II)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

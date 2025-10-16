@@ -6,7 +6,7 @@
 # instance fields
 .field public x1:Ljava/util/List;
 
-.field public y1:Lryd;
+.field public y1:Lcae;
 
 .field public z1:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -22,14 +22,14 @@
 
 
 # virtual methods
-.method public final I0(Lb6;)V
+.method public final I0(Lh6;)V
     .locals 1
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->k1:Z
 
-    instance-of p1, p1, Lx0e;
+    instance-of p1, p1, Ljce;
 
     if-eqz p1, :cond_0
 
@@ -82,20 +82,20 @@
 
     iget-object v0, p0, Lru/ok/messages/settings/FrgBaseSettings;->z1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v1, Lq96;
+    new-instance v1, Lg86;
 
-    const/4 v2, 0x2
+    const/4 v2, 0x4
 
-    invoke-direct {v1, v2, p0}, Lq96;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lg86;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/settings/FrgBaseSettings;->y1:Lryd;
+    iget-object v0, p0, Lru/ok/messages/settings/FrgBaseSettings;->y1:Lcae;
 
-    invoke-virtual {v0}, Lxuc;->m()V
+    invoke-virtual {v0}, Lm5d;->m()V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
 .method public final X(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->E0()Lq13;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->E0()Lr5e;
 
     move-result-object p3
 
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    iget-object p3, p3, Lq13;->o:Ljava/lang/Object;
+    iget-object p3, p3, Lr5e;->o:Ljava/lang/Object;
 
     check-cast p3, Landroid/widget/TextView;
 
@@ -122,7 +122,7 @@
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    sget p3, Lmfc;->frg_settings_base:I
+    sget p3, Llpc;->frg_settings_base:I
 
     const/4 v0, 0x0
 
@@ -130,13 +130,13 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lh9f;
+    iget-object p2, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Ltmf;
 
-    iget p2, p2, Lh9f;->m:I
+    iget p2, p2, Ltmf;->m:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    sget p2, Lpec;->frg_settings__rv_content:I
+    sget p2, Looc;->frg_settings__rv_content:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -160,7 +160,7 @@
 
     iput-object p2, p0, Lru/ok/messages/settings/FrgBaseSettings;->x1:Ljava/util/List;
 
-    new-instance p2, Lryd;
+    new-instance p2, Lcae;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->C()Landroidx/fragment/app/b;
 
@@ -168,13 +168,13 @@
 
     iget-object v0, p0, Lru/ok/messages/settings/FrgBaseSettings;->x1:Ljava/util/List;
 
-    invoke-direct {p2, p3, v0, p0}, Lryd;-><init>(Landroidx/fragment/app/b;Ljava/util/List;Lru/ok/messages/settings/FrgBaseSettings;)V
+    invoke-direct {p2, p3, v0, p0}, Lcae;-><init>(Landroidx/fragment/app/b;Ljava/util/List;Lru/ok/messages/settings/FrgBaseSettings;)V
 
-    iput-object p2, p0, Lru/ok/messages/settings/FrgBaseSettings;->y1:Lryd;
+    iput-object p2, p0, Lru/ok/messages/settings/FrgBaseSettings;->y1:Lcae;
 
     iget-object p3, p0, Lru/ok/messages/settings/FrgBaseSettings;->z1:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
+    invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
 
     return-object p1
 .end method

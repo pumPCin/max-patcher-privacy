@@ -1,19 +1,34 @@
-.class public final Lfpc;
-.super Ljava/lang/ref/WeakReference;
-.source "SourceFile"
+.class public abstract Lfpc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+# static fields
+.field public static mr_cast_dialog:I = 0x7f0d00b1
 
+.field public static mr_cast_group_item:I = 0x7f0d00b2
 
-# direct methods
-.method public constructor <init>(Lgpc;Ljava/lang/Object;)V
-    .locals 0
+.field public static mr_cast_group_volume_item:I = 0x7f0d00b3
 
-    invoke-direct {p0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+.field public static mr_cast_header_item:I = 0x7f0d00b4
 
-    iput-object p2, p0, Lfpc;->a:Ljava/lang/Object;
+.field public static mr_cast_media_metadata:I = 0x7f0d00b5
 
-    return-void
-.end method
+.field public static mr_cast_route_item:I = 0x7f0d00b6
+
+.field public static mr_chooser_dialog:I = 0x7f0d00b7
+
+.field public static mr_chooser_list_item:I = 0x7f0d00b8
+
+.field public static mr_controller_material_dialog_b:I = 0x7f0d00b9
+
+.field public static mr_controller_volume_item:I = 0x7f0d00ba
+
+.field public static mr_picker_dialog:I = 0x7f0d00bb
+
+.field public static mr_picker_header_item:I = 0x7f0d00bc
+
+.field public static mr_picker_route_item:I = 0x7f0d00bd
+
+.field public static mr_playback_control:I = 0x7f0d00be
+
+.field public static mr_volume_control:I = 0x7f0d00bf

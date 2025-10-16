@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lekg;
+.implements Lyyg;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Lzjg;
+.method public final a(Ljava/lang/Class;)Ltyg;
     .locals 1
 
     new-instance p1, Landroidx/fragment/app/FragmentManagerViewModel;

@@ -1,82 +1,86 @@
-.class public abstract Licc;
+.class public final Licc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static chat__audio_record:I = 0x7f0a023b
+# instance fields
+.field public final a:I
 
-.field public static chat__background:I = 0x7f0a023c
+.field public final b:Z
 
-.field public static chat__bottom_container:I = 0x7f0a023d
 
-.field public static chat__bottom_container_chat_status_button:I = 0x7f0a023e
+# direct methods
+.method public constructor <init>(IZ)V
+    .locals 0
 
-.field public static chat__bottom_container_search:I = 0x7f0a023f
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static chat__bottom_container_search_down_button:I = 0x7f0a0240
+    iput p1, p0, Licc;->a:I
 
-.field public static chat__bottom_container_search_separator:I = 0x7f0a0241
+    iput-boolean p2, p0, Licc;->b:Z
 
-.field public static chat__bottom_container_search_up_button:I = 0x7f0a0242
+    return-void
+.end method
 
-.field public static chat__main_container:I = 0x7f0a0243
 
-.field public static chat__media_bar_container:I = 0x7f0a0244
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public static chat__media_keyboard:I = 0x7f0a0245
+    if-ne p0, p1, :cond_0
 
-.field public static chat__messages_container:I = 0x7f0a0246
+    goto :goto_0
 
-.field public static chat__pinbars_container:I = 0x7f0a0247
+    :cond_0
+    if-eqz p1, :cond_2
 
-.field public static chat__root_container:I = 0x7f0a0248
+    const-class v0, Licc;
 
-.field public static chat__search_view:I = 0x7f0a0249
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static chat__suggestion_container:I = 0x7f0a024a
+    move-result-object v1
 
-.field public static chat__toolbar:I = 0x7f0a024b
+    if-eq v0, v1, :cond_1
 
-.field public static chat__video_msg_container:I = 0x7f0a024c
+    goto :goto_1
 
-.field public static chat_screen__action_cancel:I = 0x7f0a026d
+    :cond_1
+    check-cast p1, Licc;
 
-.field public static chat_screen__leave_chat_confirm:I = 0x7f0a026e
+    iget v0, p0, Licc;->a:I
 
-.field public static chat_screen__remove_chat_confirm:I = 0x7f0a026f
+    iget v1, p1, Licc;->a:I
 
-.field public static chat_screen__video_msg_placeholder:I = 0x7f0a0270
+    if-ne v0, v1, :cond_2
 
-.field public static chat_screen__video_msg_preview:I = 0x7f0a0271
+    iget-boolean v0, p0, Licc;->b:Z
 
-.field public static chat_screen__video_msg_progress:I = 0x7f0a0272
+    iget-boolean p1, p1, Licc;->b:Z
 
-.field public static chat_screen__video_msg_root_container:I = 0x7f0a0273
+    if-ne v0, p1, :cond_2
 
-.field public static chat_screen__video_msg_switch_camera_btn:I = 0x7f0a0274
+    :goto_0
+    const/4 p1, 0x1
 
-.field public static chat_screen__video_msg_timer:I = 0x7f0a0275
+    return p1
 
-.field public static chat_screen__video_msg_torch_btn:I = 0x7f0a0276
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
 
-.field public static chat_screen__video_msg_video_view:I = 0x7f0a0277
+    return p1
+.end method
 
-.field public static media_bar__album_chooser:I = 0x7f0a0493
+.method public final hashCode()I
+    .locals 2
 
-.field public static media_bar__bottom_container:I = 0x7f0a0494
+    iget v0, p0, Licc;->a:I
 
-.field public static media_bar__draggable_container:I = 0x7f0a0495
+    mul-int/lit8 v0, v0, 0x1f
 
-.field public static media_bar__emoji_keyboard_container:I = 0x7f0a0496
+    iget-boolean v1, p0, Licc;->b:Z
 
-.field public static media_bar__media_type_picker_button:I = 0x7f0a0497
+    add-int/2addr v0, v1
 
-.field public static media_bar__message_container:I = 0x7f0a0498
-
-.field public static media_bar__partial_media_access_container:I = 0x7f0a0499
-
-.field public static media_bar__popup_layout:I = 0x7f0a049a
-
-.field public static media_bar__primary_container:I = 0x7f0a049b
-
-.field public static media_bar__select_album_container:I = 0x7f0a049c
+    return v0
+.end method

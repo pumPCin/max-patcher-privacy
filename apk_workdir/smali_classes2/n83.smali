@@ -1,32 +1,24 @@
-.class public final Ln83;
+.class public final synthetic Ln83;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lo83;
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic o:Ljava/lang/Runnable;
+.field public final synthetic b:Lp83;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+.method public synthetic constructor <init>(Lp83;I)V
     .locals 0
 
-    iput p4, p0, Ln83;->a:I
+    iput p2, p0, Ln83;->a:I
 
-    iput-object p1, p0, Ln83;->b:Lo83;
-
-    iput-object p2, p0, Ln83;->c:Landroid/graphics/drawable/Drawable;
-
-    iput-object p3, p0, Ln83;->o:Ljava/lang/Runnable;
+    iput-object p1, p0, Ln83;->b:Lp83;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,35 +27,84 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
     iget v0, p0, Ln83;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ln83;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Ln83;->b:Lp83;
 
-    iget-object v1, p0, Ln83;->o:Ljava/lang/Runnable;
+    check-cast p1, Lu47;
 
-    iget-object v2, p0, Ln83;->b:Lo83;
+    :try_start_0
+    invoke-interface {p1}, Lu47;->b()Ljava/io/InputStream;
 
-    invoke-static {v2, v0, v1}, Lo83;->D(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    move-result-object v1
 
+    invoke-static {v1}, Loai;->h(Ljava/io/InputStream;)J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x41
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_0
+
+    invoke-static {v1}, Loai;->h(Ljava/io/InputStream;)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2, p1}, Lp83;->a(JLu47;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ltech/kwik/flupke/webtransport/impl/BufferedStreamsLimitExceededException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-wide/32 v0, 0x3994bd84
+
+    invoke-interface {p1, v0, v1}, Lu47;->d(J)V
+
+    invoke-interface {p1, v0, v1}, Lu47;->e(J)V
+
+    :catch_1
+    :cond_0
+    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Ln83;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Ln83;->b:Lp83;
 
-    iget-object v1, p0, Ln83;->o:Ljava/lang/Runnable;
+    check-cast p1, Lu47;
 
-    iget-object v2, p0, Ln83;->b:Lo83;
+    :try_start_1
+    invoke-interface {p1}, Lu47;->b()Ljava/io/InputStream;
 
-    invoke-static {v2, v0, v1}, Lo83;->D(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    move-result-object v1
 
+    invoke-static {v1}, Loai;->h(Ljava/io/InputStream;)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2, p1}, Lp83;->a(JLu47;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ltech/kwik/flupke/webtransport/impl/BufferedStreamsLimitExceededException; {:try_start_1 .. :try_end_1} :catch_2
+
+    goto :goto_1
+
+    :catch_2
+    const-wide/32 v0, 0x3994bd84
+
+    invoke-interface {p1, v0, v1}, Lu47;->d(J)V
+
+    :catch_3
+    :goto_1
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

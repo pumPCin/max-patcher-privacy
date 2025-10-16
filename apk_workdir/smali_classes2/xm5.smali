@@ -1,147 +1,189 @@
-.class public final Lxm5;
-.super Lc2f;
+.class public final synthetic Lxm5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lfi6;
+.implements Ler3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lzm5;
+.field public final synthetic b:J
 
-.field public final synthetic Z:J
-
-.field public final synthetic r0:J
-
-.field public final synthetic s0:J
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lzm5;JJJLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(IJZ)V
     .locals 0
 
-    iput-object p1, p0, Lxm5;->Y:Lzm5;
+    iput p1, p0, Lxm5;->a:I
 
-    iput-wide p2, p0, Lxm5;->Z:J
+    iput-wide p2, p0, Lxm5;->b:J
 
-    iput-wide p4, p0, Lxm5;->r0:J
+    iput-boolean p4, p0, Lxm5;->c:Z
 
-    iput-wide p6, p0, Lxm5;->s0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p8}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public accept(Ljava/lang/Object;)V
+    .locals 6
 
-    check-cast p1, Ln24;
+    iget v0, p0, Lxm5;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, " favorite="
 
-    invoke-virtual {p0, p1, p2}, Lxm5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-boolean v2, p0, Lxm5;->c:Z
 
-    move-result-object p1
+    iget-wide v3, p0, Lxm5;->b:J
 
-    check-cast p1, Lxm5;
+    check-cast p1, Ljava/lang/Throwable;
 
-    sget-object p2, Laxf;->a:Laxf;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, p2}, Lxm5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v5, "markAsFavorite: failed for stickerId="
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ho5"
+
+    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v5, "markAsFavorite: failed for setId="
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "nn5"
+
+    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 9
+
+    iget v0, p0, Lxm5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    move-object v2, p1
+
+    check-cast v2, Lao5;
+
+    new-instance v1, Lym5;
+
+    const/4 v4, 0x1
+
+    iget-boolean v3, p0, Lxm5;->c:Z
+
+    iget-wide v5, p0, Lxm5;->b:J
+
+    invoke-direct/range {v1 .. v6}, Lym5;-><init>(Ljava/lang/Object;ZIJ)V
+
+    new-instance p1, Lmg3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lsn5;
+
+    invoke-virtual {p1}, Lsn5;->a()Lape;
+
+    move-result-object p1
 
     new-instance v0, Lxm5;
 
-    iget-wide v4, p0, Lxm5;->r0:J
+    const/4 v1, 0x3
 
-    iget-wide v6, p0, Lxm5;->s0:J
+    iget-wide v2, p0, Lxm5;->b:J
 
-    iget-object v1, p0, Lxm5;->Y:Lzm5;
+    iget-boolean v4, p0, Lxm5;->c:Z
 
-    iget-wide v2, p0, Lxm5;->Z:J
+    invoke-direct {v0, v1, v2, v3, v4}, Lxm5;-><init>(IJZ)V
 
-    move-object v8, p2
+    new-instance v1, Lkg3;
 
-    invoke-direct/range {v0 .. v8}, Lxm5;-><init>(Lzm5;JJJLkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x2
 
-    return-object v0
-.end method
+    invoke-direct {v1, p1, v2, v0}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    return-object v1
 
-    iget v0, p0, Lxm5;->X:I
+    :pswitch_1
+    move-object v4, p1
 
-    const/4 v1, 0x1
+    check-cast v4, Lio5;
 
-    if-eqz v0, :cond_1
+    new-instance v3, Lym5;
 
-    if-ne v0, v1, :cond_0
+    const/4 v6, 0x0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-boolean v5, p0, Lxm5;->c:Z
+
+    iget-wide v7, p0, Lxm5;->b:J
+
+    invoke-direct/range {v3 .. v8}, Lym5;-><init>(Ljava/lang/Object;ZIJ)V
+
+    new-instance p1, Lmg3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, v3}, Lmg3;-><init>(ILjava/lang/Object;)V
 
     return-object p1
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxm5;->Y:Lzm5;
-
-    iget-object p1, p1, Lzm5;->b:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcl;
-
-    new-instance v2, Lje2;
-
-    iget-wide v5, p0, Lxm5;->r0:J
-
-    iget-wide v7, p0, Lxm5;->s0:J
-
-    iget-wide v3, p0, Lxm5;->Z:J
-
-    invoke-direct/range {v2 .. v8}, Lje2;-><init>(JJJ)V
-
-    iput v1, p0, Lxm5;->X:I
-
-    check-cast p1, Lgea;
-
-    invoke-virtual {p1, v2, p0}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

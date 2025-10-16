@@ -1,88 +1,135 @@
-.class public final synthetic Lj29;
+.class public final Lj29;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lc29;
 
-.field public final synthetic b:Lm29;
+.field public final b:J
 
-.field public final synthetic c:Ld29;
+.field public final c:Ljava/util/ArrayList;
+
+.field public volatile d:I
+
+.field public volatile e:I
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final g:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm29;Lmf9;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lj29;->a:I
+.method public constructor <init>(Lc29;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj29;->b:Lm29;
+    iput-object p1, p0, Lj29;->a:Lc29;
 
-    iput-object p2, p0, Lj29;->c:Ld29;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-void
-.end method
+    move-result-wide v0
 
-.method public synthetic constructor <init>(Lmf9;Lm29;)V
-    .locals 1
+    iput-wide v0, p0, Lj29;->b:J
 
-    .line 2
-    const/4 v0, 0x0
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput v0, p0, Lj29;->a:I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj29;->c:Ljava/util/ArrayList;
 
-    iput-object p1, p0, Lj29;->c:Ld29;
+    const/4 p1, -0x1
 
-    iput-object p2, p0, Lj29;->b:Lm29;
+    iput p1, p0, Lj29;->d:I
+
+    iput p1, p0, Lj29;->e:I
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lj29;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lj29;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(Lone/me/sdk/media/transformer/MediaTransformException;)V
+    .locals 1
 
-    iget p1, p0, Lj29;->a:I
+    iget-object v0, p0, Lj29;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object v0, p0, Lj29;->c:Ld29;
-
-    iget-object v1, p0, Lj29;->b:Lm29;
-
-    packed-switch p1, :pswitch_data_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, v0, p1}, Lm29;->L(Ld29;Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-wide v1, v1, Lm29;->I0:J
+.method public final toString()Ljava/lang/String;
+    .locals 8
 
-    check-cast v0, Lmf9;
+    iget-object v0, p0, Lj29;->a:Lc29;
 
-    iget-object p1, v0, Lmf9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object v1, v0, Lc29;->b:Ljava/util/ArrayList;
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    invoke-static {v1}, Lfh2;->g(Ljava/util/ArrayList;)Ljava/lang/String;
 
-    invoke-virtual {p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->Q0(J)V
+    move-result-object v1
 
-    return-void
+    iget-object v2, p0, Lj29;->c:Ljava/util/ArrayList;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v2}, Lfh2;->d(Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lc29;->c:Ljava/lang/String;
+
+    const-string v4, "              "
+
+    invoke-static {v0, v4}, Lfh2;->f(Lc29;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0}, Lfh2;->e(Lc29;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "\n              }\n              inputMedias={"
+
+    const-string v6, "\n              }\n              out="
+
+    const-string v7, "\n            MediaTransformRequest(\n              in={"
+
+    invoke-static {v7, v1, v5, v2, v6}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\n              anc={"
+
+    const-string v5, "\n              }\n              request={"
+
+    invoke-static {v1, v3, v2, v4, v5}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\n              }\n            )\n        "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lt9f;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

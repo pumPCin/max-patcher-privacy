@@ -1,146 +1,34 @@
-.class public final Lqrf;
-.super Lc2f;
+.class public final synthetic Lqrf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lwrf;
+.field public final synthetic a:Lei6;
 
 
 # direct methods
-.method public constructor <init>(Lwrf;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lei6;)V
     .locals 0
 
-    iput-object p1, p0, Lqrf;->Z:Lwrf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqrf;->a:Lei6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onFrame(II)V
+    .locals 1
 
-    check-cast p1, Ln24;
+    iget-object v0, p0, Lqrf;->a:Lei6;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p1, p2}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->c(Lei6;II)V
 
-    invoke-virtual {p0, p1, p2}, Lqrf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqrf;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lqrf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lqrf;
-
-    iget-object v1, p0, Lqrf;->Z:Lwrf;
-
-    invoke-direct {v0, v1, p2}, Lqrf;-><init>(Lwrf;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lqrf;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lqrf;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lqrf;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    iget-object v0, p0, Lqrf;->Z:Lwrf;
-
-    :try_start_1
-    new-instance v2, Lprf;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3, v0}, Lprf;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lwrf;)V
-
-    iput v1, p0, Lqrf;->X:I
-
-    const-wide/16 v0, 0x1f4
-
-    invoke-static {v0, v1, v2, p0}, Lcc7;->J(JLje6;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :goto_0
-    new-instance v0, Lb2d;
-
-    invoke-direct {v0, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
-
-    :cond_2
-    :goto_1
-    new-instance v0, Ld2d;
-
-    invoke-direct {v0, p1}, Ld2d;-><init>(Ljava/lang/Object;)V
-
-    return-object v0
+    return-void
 .end method

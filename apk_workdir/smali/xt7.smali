@@ -1,160 +1,164 @@
 .class public final Lxt7;
-.super Landroid/text/method/LinkMovementMethod;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyx0;
 
-# static fields
-.field public static a:Lxt7;
+
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/util/TreeSet;
+
+.field public c:J
+
+
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lxt7;->a:J
+
+    new-instance p1, Ljava/util/TreeSet;
+
+    new-instance p2, Lqy4;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p2, v0}, Lqy4;-><init>(I)V
+
+    invoke-direct {p1, p2}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+
+    iput-object p1, p0, Lxt7;->b:Ljava/util/TreeSet;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+.method public final a(Lune;Lxne;)V
     .locals 4
 
-    sget v0, Lou0;->a:I
+    iget-object v0, p0, Lxt7;->b:Ljava/util/TreeSet;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    const/16 v1, 0x22
+    iget-wide v0, p0, Lxt7;->c:J
 
-    if-lt v0, v1, :cond_1
+    iget-wide v2, p2, Lly0;->c:J
 
-    sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
+    add-long/2addr v0, v2
 
-    const-string v1, "REL"
+    iput-wide v0, p0, Lxt7;->c:J
 
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-wide/16 v0, 0x0
 
-    move-result v1
+    invoke-virtual {p0, p1, v0, v1}, Lxt7;->e(Lox0;J)V
 
-    if-eqz v1, :cond_0
+    return-void
+.end method
 
-    goto :goto_0
+.method public final b(Lox0;Ljava/lang/String;JJ)V
+    .locals 0
+
+    const-wide/16 p2, -0x1
+
+    cmp-long p2, p5, p2
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p0, p1, p5, p6}, Lxt7;->e(Lox0;J)V
 
     :cond_0
-    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+.method public final c(Lune;Lxne;Lxne;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lxt7;->d(Lune;Lly0;)V
+
+    invoke-virtual {p0, p1, p3}, Lxt7;->a(Lune;Lxne;)V
+
+    return-void
+.end method
+
+.method public final d(Lune;Lly0;)V
+    .locals 2
+
+    iget-object p1, p0, Lxt7;->b:Ljava/util/TreeSet;
+
+    invoke-virtual {p1, p2}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
+
+    iget-wide v0, p0, Lxt7;->c:J
+
+    iget-wide p1, p2, Lly0;->c:J
+
+    sub-long/2addr v0, p1
+
+    iput-wide v0, p0, Lxt7;->c:J
+
+    return-void
+.end method
+
+.method public final e(Lox0;J)V
+    .locals 4
+
+    :goto_0
+    iget-wide v0, p0, Lxt7;->c:J
+
+    add-long/2addr v0, p2
+
+    iget-wide v2, p0, Lxt7;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lxt7;->b:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lxt7;->b:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v2, "VanillaIceCream"
+    check-cast v0, Lly0;
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    move-object v1, p1
 
-    move-result-object v1
+    check-cast v1, Lune;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    monitor-enter v1
 
-    move-result v0
+    :try_start_0
+    invoke-virtual {v1, v0}, Lune;->m(Lly0;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-ltz v0, :cond_1
+    monitor-exit v1
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_1
-    :goto_0
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
+    :catchall_0
+    move-exception p1
 
-    move-result v0
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    const/4 v1, 0x1
+    throw p1
 
-    if-eq v0, v1, :cond_2
-
-    if-nez v0, :cond_4
-
-    :cond_2
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
-
-    move-result v2
-
-    sub-int/2addr v0, v2
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
-
-    move-result-object v1
-
-    if-ltz v0, :cond_5
-
-    invoke-virtual {v1}, Landroid/text/Layout;->getHeight()I
-
-    move-result v3
-
-    if-le v0, v3, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineForVertical(I)I
-
-    move-result v0
-
-    int-to-float v2, v2
-
-    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineLeft(I)F
-
-    move-result v3
-
-    cmpg-float v3, v2, v3
-
-    if-ltz v3, :cond_5
-
-    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineRight(I)F
-
-    move-result v0
-
-    cmpl-float v0, v2, v0
-
-    if-lez v0, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    invoke-super {p0, p1, p2, p3}, Landroid/text/method/LinkMovementMethod;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_5
-    :goto_2
-    invoke-static {p2}, Landroid/text/Selection;->removeSelection(Landroid/text/Spannable;)V
-
-    invoke-static {p1, p2, p3}, Landroid/text/method/Touch;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
+    :cond_0
+    return-void
 .end method

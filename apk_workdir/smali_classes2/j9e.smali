@@ -2,26 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll9e;
+
 
 # instance fields
-.field public final a:Lcom/google/android/gms/maps/model/LatLng;
-
-.field public final b:F
-
-.field public final c:Landroid/graphics/Bitmap;
+.field public final a:Lf7e;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/maps/model/LatLng;FLandroid/graphics/Bitmap;)V
+.method public constructor <init>(Lf7e;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj9e;->a:Lcom/google/android/gms/maps/model/LatLng;
-
-    iput p2, p0, Lj9e;->b:F
-
-    iput-object p3, p0, Lj9e;->c:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lj9e;->a:Lf7e;
 
     return-void
 .end method
@@ -29,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -49,76 +44,32 @@
     :cond_1
     check-cast p1, Lj9e;
 
-    iget-object v1, p0, Lj9e;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v1, p0, Lj9e;->a:Lf7e;
 
-    iget-object v3, p1, Lj9e;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object p1, p1, Lj9e;->a:Lf7e;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Lj9e;->b:F
-
-    iget v3, p1, Lj9e;->b:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lj9e;->c:Landroid/graphics/Bitmap;
-
-    iget-object p1, p1, Lj9e;->c:Landroid/graphics/Bitmap;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Lj9e;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v0, p0, Lj9e;->a:Lf7e;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/LatLng;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lj9e;->b:F
-
-    invoke-static {v0, v2, v1}, Ljl3;->b(IFI)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    iget-object v1, p0, Lj9e;->c:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -126,27 +77,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "MarkerModel(latLng="
+    const-string v1, "SessionsClose(event="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lj9e;->a:Lcom/google/android/gms/maps/model/LatLng;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", zoom="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lj9e;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lj9e;->c:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lj9e;->a:Lf7e;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

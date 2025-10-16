@@ -1,44 +1,120 @@
-.class public abstract Ldk8;
+.class public final Ldk8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lhdd;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
+    const/4 v0, 0x1
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lvxf;
-
-    const-string v1, "media-gallery-scope"
-
-    invoke-direct {v0, v1}, Lvxf;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lx2d;->c:Lhdd;
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, v0, Lvxf;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Lvxf;->a()Lhdd;
-
-    move-result-object v0
-
-    sput-object v0, Ldk8;->a:Lhdd;
-
-    return-void
+    return v0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    instance-of v1, p1, Ldk8;
 
-    const-string v1, "Trying to access DI graph before initialization!"
+    if-nez v1, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    throw v0
+    :cond_1
+    check-cast p1, Ldk8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-wide v1, 0x4056800000000000L    # 90.0
+
+    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const-wide v1, 0x3f947ae147ae147bL    # 0.02
+
+    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const-wide v3, 0x4085e00000000000L    # 700.0
+
+    invoke-static {v3, v4, v3, v4}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    const-wide v0, 0x4056800000000000L    # 90.0
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const-wide v1, 0x3f947ae147ae147bL    # 0.02
+
+    invoke-static {v0, v1, v2}, Ltuc;->a(ID)I
+
+    move-result v0
+
+    const-wide v3, 0x4085e00000000000L    # 700.0
+
+    invoke-static {v0, v3, v4}, Ltuc;->a(ID)I
+
+    move-result v0
+
+    invoke-static {v0, v1, v2}, Ltuc;->a(ID)I
+
+    move-result v0
+
+    const-wide/16 v1, 0x7530
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "GoodNetworkCondition(rttLowBound=90.0, lostPacketsLimitForRttLowBound=0.02, rttHighBound=700.0, lostPacketsLimitForRttHighBound=0.02, recoveryTimeoutMs=30000)"
+
+    return-object v0
 .end method

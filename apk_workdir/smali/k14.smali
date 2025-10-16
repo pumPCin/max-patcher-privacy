@@ -1,76 +1,24 @@
-.class public final Lk14;
-.super Ljava/lang/Object;
+.class public abstract Lk14;
+.super Lbj0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Lt44;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public transient c:Lkotlin/coroutines/Continuation;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    iput p1, p0, Lk14;->a:I
+    if-eqz p1, :cond_0
 
-    iput-object p2, p0, Lk14;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
-    .locals 2
-
-    iget v0, p0, Lk14;->a:I
-
-    iget-object v1, p0, Lk14;->b:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v1, Lqla;
-
-    iget-object p1, v1, Lqla;->a:Lbpc;
-
-    iget-object p1, p1, Lbpc;->a:Lane;
-
-    iget-object v0, v1, Lqla;->b:Ljava/util/WeakHashMap;
-
-    instance-of v1, p2, Landroid/widget/TextView;
-
-    if-eqz v1, :cond_1
-
-    sget-object v1, Laxf;->a:Laxf;
-
-    invoke-virtual {v0, p2, v1}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    check-cast p2, Landroid/widget/TextView;
-
-    invoke-interface {p1}, Lane;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lz05;
-
-    sget v0, Lqra;->a:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lt44;
 
     move-result-object v0
-
-    instance-of v1, v0, Lddf;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lddf;
 
     goto :goto_0
 
@@ -78,120 +26,60 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, p2, p1}, Lddf;->b(Landroid/widget/TextView;Lz05;)V
-
-    goto :goto_1
-
-    :cond_1
-    instance-of v1, p2, Lr56;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0, p2}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    check-cast p2, Lr56;
-
-    invoke-interface {p1}, Lane;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lz05;
-
-    invoke-interface {p2, p1}, Lr56;->a(Lz05;)V
-
-    :cond_2
-    :goto_1
-    return-void
-
-    :pswitch_0
-    check-cast v1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
-
-    sget p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->A0:I
-
-    invoke-virtual {v1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b()V
+    invoke-direct {p0, v0, p1}, Lk14;-><init>(Lt44;Lkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_1
-    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    iget-object v0, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->C0:Landroid/view/ViewGroup$OnHierarchyChangeListener;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
-    .locals 2
+.method public constructor <init>(Lt44;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iget v0, p0, Lk14;->a:I
+    .line 1
+    invoke-direct {p0, p2}, Lbj0;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lk14;->b:Ljava/lang/Object;
+    .line 2
+    iput-object p1, p0, Lk14;->b:Lt44;
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    check-cast v1, Lqla;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+# virtual methods
+.method public getContext()Lt44;
+    .locals 1
 
-    instance-of p1, p2, Landroid/widget/TextView;
+    iget-object v0, p0, Lk14;->b:Lt44;
 
-    if-nez p1, :cond_0
+    return-object v0
+.end method
 
-    instance-of p1, p2, Lr56;
+.method public o()V
+    .locals 3
 
-    if-eqz p1, :cond_1
+    iget-object v0, p0, Lk14;->c:Lkotlin/coroutines/Continuation;
+
+    if-eqz v0, :cond_0
+
+    if-eq v0, p0, :cond_0
+
+    invoke-virtual {p0}, Lk14;->getContext()Lt44;
+
+    move-result-object v1
+
+    sget-object v2, Lk8a;->o:Lk8a;
+
+    invoke-interface {v1, v2}, Lt44;->get(Ls44;)Lr44;
+
+    move-result-object v1
+
+    check-cast v1, Ll14;
+
+    invoke-interface {v1, v0}, Ll14;->releaseInterceptedContinuation(Lkotlin/coroutines/Continuation;)V
 
     :cond_0
-    iget-object p1, v1, Lqla;->b:Ljava/util/WeakHashMap;
+    sget-object v0, Lch3;->b:Lch3;
 
-    invoke-virtual {p1, p2}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    check-cast v1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
-
-    sget p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->A0:I
-
-    invoke-virtual {v1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b()V
+    iput-object v0, p0, Lk14;->c:Lkotlin/coroutines/Continuation;
 
     return-void
-
-    :pswitch_1
-    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    const/4 v0, 0x2
-
-    invoke-virtual {v1, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->p(I)V
-
-    iget-object v0, v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->C0:Landroid/view/ViewGroup$OnHierarchyChangeListener;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

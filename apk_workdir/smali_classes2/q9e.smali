@@ -1,22 +1,21 @@
 .class public final Lq9e;
-.super Ljava/lang/Object;
+.super Lgd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lyb9;
 
 
 # instance fields
-.field public final a:J
+.field public final b:Ljqf;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Ljqf;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x10
 
-    iput-wide p1, p0, Lq9e;->a:J
+    invoke-direct {p0, v0}, Lgd0;-><init>(I)V
+
+    iput-object p1, p0, Lq9e;->b:Ljqf;
 
     return-void
 .end method
@@ -24,46 +23,52 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lq9e;
+    instance-of v0, p1, Lq9e;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lq9e;
 
-    iget-wide v3, p0, Lq9e;->a:J
+    iget-object v0, p0, Lq9e;->b:Ljqf;
 
-    iget-wide v5, p1, Lq9e;->a:J
+    iget-object p1, p1, Lq9e;->b:Ljqf;
 
-    cmp-long p1, v3, v5
+    invoke-virtual {v0, p1}, Ljqf;->equals(Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_2
+    move-result p1
 
-    return v2
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_2
-    return v0
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Lq9e;->a:J
+    iget-object v0, p0, Lq9e;->b:Ljqf;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget v0, v0, Ljqf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
@@ -71,15 +76,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
-    const-string v0, "ShowMessageContextMenu(messageId="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowError(message="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lq9e;->b:Ljqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lq9e;->a:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,68 +3,58 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lmfd;
 
-.field public final synthetic b:Lmfd;
+.field public final synthetic b:J
+
+.field public final synthetic c:Lb99;
+
+.field public final synthetic o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmfd;I)V
+.method public synthetic constructor <init>(Lmfd;JLb99;J)V
     .locals 0
 
-    iput p2, p0, Ldfd;->a:I
-
-    iput-object p1, p0, Ldfd;->b:Lmfd;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldfd;->a:Lmfd;
+
+    iput-wide p2, p0, Ldfd;->b:J
+
+    iput-object p4, p0, Ldfd;->c:Lb99;
+
+    iput-wide p5, p0, Ldfd;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final call()Ljava/lang/Object;
+    .locals 7
 
-    iget p1, p0, Ldfd;->a:I
+    iget-wide v3, p0, Ldfd;->o:J
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v6, 0x0
 
-    iget-object p1, p0, Ldfd;->b:Lmfd;
+    iget-object v0, p0, Ldfd;->a:Lmfd;
 
-    iget-object p1, p1, Lmfd;->r0:Ltd6;
+    iget-wide v1, p0, Ldfd;->b:J
 
-    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
+    iget-object v5, p0, Ldfd;->c:Lb99;
 
-    return-void
+    invoke-virtual/range {v0 .. v6}, Lmfd;->f(JJLb99;Z)J
 
-    :pswitch_0
-    iget-object p1, p0, Ldfd;->b:Lmfd;
+    move-result-wide v0
 
-    iget-object p1, p1, Lmfd;->c:Ltd6;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
+    move-result-object v0
 
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Ldfd;->b:Lmfd;
-
-    iget-object p1, p1, Lmfd;->a:Ltd6;
-
-    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

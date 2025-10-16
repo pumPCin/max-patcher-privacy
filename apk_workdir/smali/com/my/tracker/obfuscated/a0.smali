@@ -99,11 +99,11 @@
     invoke-direct {v1, p0, p1, p2}, Lcom/my/tracker/obfuscated/a0;-><init>(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/i;Landroid/content/Context;)V
 
     .line 6
-    new-instance p0, Lfbh;
+    new-instance p0, Lxqh;
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, v1, p1}, Lfbh;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
+    invoke-direct {p0, v1, p1}, Lxqh;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
 
     invoke-static {p0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
@@ -274,11 +274,11 @@
 
     .line 18
     :cond_0
-    new-instance v0, Lfbh;
+    new-instance v0, Lxqh;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lfbh;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
+    invoke-direct {v0, p0, v1}, Lxqh;-><init>(Lcom/my/tracker/obfuscated/a0;I)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->b(Ljava/lang/Runnable;)V
 
@@ -319,11 +319,11 @@
     move-result-object p1
 
     .line 23
-    new-instance v0, Lw8g;
+    new-instance v0, Lpkg;
 
-    const/16 v1, 0x11
+    const/16 v1, 0x16
 
-    invoke-direct {v0, p0, v1, p1}, Lw8g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lpkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 

@@ -1,35 +1,188 @@
-.class public interface abstract Lvl;
+.class public final synthetic Lvl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldm;
+.implements Lbm;
+
+
+# instance fields
+.field public final synthetic X:Lr6d;
+
+.field public final synthetic Y:Lr6d;
+
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Lsm;
+
+.field public final synthetic c:Lwl;
+
+.field public final synthetic o:Lru/ok/android/api/core/ApiInvocationException;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/String;Lsm;Lwl;Lru/ok/android/api/core/ApiInvocationException;Lr6d;Lr6d;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvl;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lvl;->b:Lsm;
+
+    iput-object p3, p0, Lvl;->c:Lwl;
+
+    iput-object p4, p0, Lvl;->o:Lru/ok/android/api/core/ApiInvocationException;
+
+    iput-object p5, p0, Lvl;->X:Lr6d;
+
+    iput-object p6, p0, Lvl;->Y:Lr6d;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public getConfigExtractor()Lrl;
-    .locals 1
+.method public final f(Lzl;)Lzl;
+    .locals 8
 
-    sget-object v0, Lrl;->e:Li7a;
+    iget-object v0, p0, Lvl;->X:Lr6d;
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lvl;->Y:Lr6d;
 
-.method public getFailParser()Llk7;
-    .locals 1
+    iget-object v2, p0, Lvl;->c:Lwl;
 
-    sget-object v0, Lwt3;->b:Lwt3;
+    iget-object v2, v2, Lwl;->c:Lum;
 
-    return-object v0
-.end method
+    iget-object v3, p1, Lzl;->c:Ljava/lang/String;
 
-.method public abstract getOkParser()Llk7;
-.end method
+    iget-object v4, p0, Lvl;->a:Ljava/lang/String;
 
-.method public getScopeAfter()Ljm;
-    .locals 1
+    invoke-static {v3, v4}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object v0, Ljm;->a:Ljm;
+    move-result v4
 
-    return-object v0
+    if-nez v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-nez v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, Lzl;
+
+    iget-object v4, p1, Lzl;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lzl;->b:Ljava/lang/String;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v4, p1, v5, v5}, Lzl;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object p1, v3
+
+    :goto_0
+    :try_start_0
+    iget-object v3, p1, Lzl;->c:Ljava/lang/String;
+
+    sget-object v4, Lsm;->o:Lsm;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v5, p0, Lvl;->b:Lsm;
+
+    iget-object v6, p0, Lvl;->o:Lru/ok/android/api/core/ApiInvocationException;
+
+    if-eq v5, v4, :cond_7
+
+    sget-object v7, Lsm;->c:Lsm;
+
+    if-ne v5, v7, :cond_3
+
+    if-eqz v3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :try_start_1
+    iget-object v3, p1, Lzl;->b:Ljava/lang/String;
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_3
+    :goto_1
+    move-object v2, p1
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_3
+
+    :cond_4
+    invoke-interface {v2, p1}, Lum;->d(Lzl;)Lzl;
+
+    move-result-object v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_2
+    iget-object v3, v2, Lzl;->c:Ljava/lang/String;
+
+    if-ne v5, v4, :cond_5
+
+    if-nez v3, :cond_5
+
+    :try_start_2
+    new-instance v1, Lru/ok/android/api/core/ApiScopeException;
+
+    const-string v3, "Couldn\'t provide session"
+
+    invoke-direct {v1, v3, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iput-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    return-object v2
+
+    :cond_5
+    if-ne v5, v7, :cond_6
+
+    if-nez v3, :cond_6
+
+    new-instance v1, Lru/ok/android/api/core/ApiScopeException;
+
+    const-string v3, "Couldn\'t provide anonymous session"
+
+    invoke-direct {v1, v3, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iput-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    return-object v2
+
+    :cond_6
+    iput-object v2, v1, Lr6d;->a:Ljava/lang/Object;
+
+    return-object v2
+
+    :cond_7
+    new-instance v1, Lru/ok/android/api/core/ApiScopeException;
+
+    const-string v2, "No user for session"
+
+    invoke-direct {v1, v2, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_3
+    iput-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    return-object p1
 .end method

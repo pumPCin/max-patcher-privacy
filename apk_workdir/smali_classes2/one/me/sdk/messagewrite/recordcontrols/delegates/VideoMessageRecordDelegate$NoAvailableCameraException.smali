@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field public final a:Lxcf;
+.field public final a:Ljqf;
 
 
 # direct methods
@@ -44,12 +44,12 @@
     .locals 1
 
     .line 2
-    sget p1, Ldsa;->n:I
+    sget p1, Ll0b;->n:I
 
     .line 3
-    new-instance v0, Lxcf;
+    new-instance v0, Ljqf;
 
-    invoke-direct {v0, p1}, Lxcf;-><init>(I)V
+    invoke-direct {v0, p1}, Ljqf;-><init>(I)V
 
     .line 4
     const-string p1, "The phone doesn\'t have cameras at all"
@@ -57,7 +57,7 @@
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     .line 5
-    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/delegates/VideoMessageRecordDelegate$NoAvailableCameraException;->a:Lxcf;
+    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/delegates/VideoMessageRecordDelegate$NoAvailableCameraException;->a:Ljqf;
 
     return-void
 .end method

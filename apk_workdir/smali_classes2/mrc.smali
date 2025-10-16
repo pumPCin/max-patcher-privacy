@@ -1,64 +1,36 @@
-.class public final Lmrc;
+.class public abstract Lmrc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lnrc;
 
 
 # static fields
-.field public static final a:Lmrc;
+.field public static oneme_fodlers_delete_folder_bottom_sheet_title:I = 0x7f13082e
 
+.field public static oneme_folder_list_recommended_folders_section_title:I = 0x7f13082f
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_folder_list_toolbar_title:I = 0x7f130830
 
-    new-instance v0, Lmrc;
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f130831
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_folders_delete_folder_bottom_sheet_description:I = 0x7f130832
 
-    sput-object v0, Lmrc;->a:Lmrc;
+.field public static oneme_folders_edit_add_chats_button:I = 0x7f130833
 
-    return-void
-.end method
+.field public static oneme_folders_edit_create_button:I = 0x7f130834
 
+.field public static oneme_folders_edit_delete_button:I = 0x7f130835
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_folders_edit_name_hint:I = 0x7f130836
 
-    const/4 v0, 0x1
+.field public static oneme_folders_edit_toolbar_title_creation:I = 0x7f130837
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_folders_edit_toolbar_title_edit:I = 0x7f130838
 
-    return v0
+.field public static oneme_folders_list_create_folder:I = 0x7f130839
 
-    :cond_0
-    instance-of p1, p1, Lmrc;
+.field public static oneme_folders_list_menu_action_change:I = 0x7f13083a
 
-    if-nez p1, :cond_1
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f13083b
 
-    const/4 p1, 0x0
+.field public static oneme_folders_picker_empty_title:I = 0x7f13083c
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x18d35279
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Stop"
-
-    return-object v0
-.end method
+.field public static oneme_folders_picker_toolbar_title:I = 0x7f13083d

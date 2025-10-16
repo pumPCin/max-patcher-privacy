@@ -1,121 +1,64 @@
-.class public abstract Lqna;
+.class public final Lqna;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Lvna;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lvna;Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
-    sget v0, Lucc;->oneme_media_keyboard_bottom_panel:I
+    iput p3, p0, Lqna;->a:I
 
-    sput v0, Lqna;->a:I
+    iput-object p1, p0, Lqna;->b:Lvna;
 
-    sget v0, Lucc;->oneme_media_keyboard_emoji_container:I
+    iput-object p2, p0, Lqna;->c:Landroid/graphics/drawable/Drawable;
 
-    sput v0, Lqna;->b:I
-
-    sget v0, Lucc;->oneme_media_keyboard_emoji_list:I
-
-    sput v0, Lqna;->c:I
-
-    sget v0, Lucc;->oneme_media_keyboard_emoji_tabs:I
-
-    sput v0, Lqna;->d:I
-
-    sget v0, Lucc;->oneme_media_keyboard_fake_search_view:I
-
-    sput v0, Lqna;->e:I
-
-    sget v0, Lucc;->oneme_media_keyboard_pager:I
-
-    sput v0, Lqna;->f:I
-
-    sget v0, Lucc;->oneme_media_keyboard_recent_clear_confirmation_action:I
-
-    sput v0, Lqna;->g:I
-
-    sget v0, Lucc;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
-
-    sput v0, Lqna;->h:I
-
-    sget v0, Lucc;->oneme_media_keyboard_remove_action:I
-
-    sput v0, Lqna;->i:I
-
-    sget v0, Lucc;->oneme_media_keyboard_settings_action:I
-
-    sput v0, Lqna;->j:I
-
-    sget v0, Lucc;->oneme_media_keyboard_showcase_action:I
-
-    sput v0, Lqna;->k:I
-
-    sget v0, Lucc;->oneme_media_keyboard_stickers_container:I
-
-    sput v0, Lqna;->l:I
-
-    sget v0, Lucc;->oneme_media_keyboard_stickers_header_title:I
-
-    sput v0, Lqna;->m:I
-
-    sget v0, Lucc;->oneme_media_keyboard_stickers_list:I
-
-    sput v0, Lqna;->n:I
-
-    sget v0, Lucc;->oneme_media_keyboard_stickers_tabs:I
-
-    sput v0, Lqna;->o:I
-
-    sget v0, Lucc;->oneme_media_keyboard_tabs:I
-
-    sput v0, Lqna;->p:I
-
-    sget v0, Lucc;->oneme_media_keyboard_view_type_category_emoji:I
-
-    sput v0, Lqna;->q:I
-
-    sget v0, Lucc;->oneme_media_keyboard_view_type_fake_search:I
-
-    sput v0, Lqna;->r:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Lqna;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqna;->b:Lvna;
+
+    iget-object v1, p0, Lqna;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, v1}, Lvna;->d(Lvna;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqna;->b:Lvna;
+
+    iget-object v1, p0, Lqna;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, v1}, Lvna;->b(Lvna;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,158 +1,228 @@
-.class public final Lnv0;
+.class public abstract Lnv0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# static fields
+.field public static final a:[I
 
-# instance fields
-.field public final X:Ljava/lang/String;
+.field public static final b:[I
 
-.field public final Y:Z
+.field public static final c:[I
 
-.field public final Z:J
+.field public static final d:[I
 
-.field public final a:Ljava/lang/String;
+.field public static final e:[I
 
-.field public final b:Lvv0;
-
-.field public final c:I
-
-.field public final o:Ljava/lang/String;
-
-.field public final r0:Z
+.field public static final f:[I
 
 
 # direct methods
-.method public constructor <init>(Lkv0;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x9
 
-    iget-object v0, p1, Lkv0;->a:Ljava/lang/String;
+    new-array v0, v0, [I
 
-    iput-object v0, p0, Lnv0;->a:Ljava/lang/String;
+    fill-array-data v0, :array_0
 
-    iget-object v0, p1, Lkv0;->b:Lvv0;
+    sput-object v0, Lnv0;->a:[I
 
-    iput-object v0, p0, Lnv0;->b:Lvv0;
+    const/16 v0, 0x8
 
-    iget v0, p1, Lkv0;->c:I
+    new-array v0, v0, [I
 
-    iput v0, p0, Lnv0;->c:I
+    fill-array-data v0, :array_1
 
-    iget-object v0, p1, Lkv0;->d:Ljava/lang/String;
+    sput-object v0, Lnv0;->b:[I
 
-    iput-object v0, p0, Lnv0;->o:Ljava/lang/String;
+    const/16 v0, 0xe
 
-    iget-object v0, p1, Lkv0;->e:Ljava/lang/String;
+    new-array v0, v0, [I
 
-    iput-object v0, p0, Lnv0;->X:Ljava/lang/String;
+    fill-array-data v0, :array_2
 
-    iget-boolean v0, p1, Lkv0;->f:Z
+    sput-object v0, Lnv0;->c:[I
 
-    iput-boolean v0, p0, Lnv0;->Y:Z
+    const v0, 0x1010003
 
-    iget-boolean v0, p1, Lkv0;->g:Z
+    const v1, 0x1010405
 
-    iput-boolean v0, p0, Lnv0;->r0:Z
+    const v2, 0x101051e
 
-    iget-wide v0, p1, Lkv0;->h:J
+    filled-new-array {v0, v1, v2}, [I
 
-    iput-wide v0, p0, Lnv0;->Z:J
+    move-result-object v1
+
+    sput-object v1, Lnv0;->d:[I
+
+    const v1, 0x1010199
+
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lnv0;->e:[I
+
+    const v1, 0x10101cd
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lnv0;->f:[I
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x1010003
+        0x1010121
+        0x1010155
+        0x1010159
+        0x101031f
+        0x10103ea
+        0x10103fb
+        0x1010402
+        0x1010403
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x1010003
+        0x10101b5
+        0x10101b6
+        0x1010324
+        0x1010325
+        0x1010326
+        0x101045a
+        0x101045b
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x1010003
+        0x1010404
+        0x1010405
+        0x1010406
+        0x1010407
+        0x1010408
+        0x1010409
+        0x101040a
+        0x101040b
+        0x101040c
+        0x101040d
+        0x10104cb
+        0x10104cc
+        0x101051e
+    .end array-data
 .end method
 
+.method public static final a(Ljava/io/File;Ljava/util/List;)V
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    sget-object v0, Lz92;->a:Ljava/nio/charset/Charset;
 
-    instance-of v0, p1, Lnv0;
+    new-instance v1, Ljava/io/OutputStreamWriter;
 
-    if-nez v0, :cond_0
+    new-instance v2, Ljava/io/FileOutputStream;
+
+    invoke-direct {v2, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+
+    invoke-direct {v1, v2, v0}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/nio/charset/Charset;)V
+
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v1, p1}, Ljava/io/OutputStreamWriter;->write(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
     :cond_0
-    check-cast p1, Lnv0;
+    invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->close()V
 
-    iget-object v0, p0, Lnv0;->a:Ljava/lang/String;
+    return-void
 
-    iget-object v1, p1, Lnv0;->a:Ljava/lang/String;
+    :goto_1
+    :try_start_1
+    throw p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-static {v0, v1}, Ld40;->e(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    :catchall_1
+    move-exception p1
+
+    invoke-static {v1, p0}, Lqoi;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p1
+.end method
+
+.method public static b(I)La66;
+    .locals 3
+
+    sget-object v0, La66;->Y:Lfd5;
+
+    new-instance v1, Lf2;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2, v0}, Lf2;-><init>(ILjava/lang/Object;)V
+
+    :cond_0
+    invoke-virtual {v1}, Lf2;->hasNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, La66;
+
+    iget v2, v2, La66;->a:I
+
+    if-ne v2, p0, :cond_0
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lnv0;->X:Ljava/lang/String;
-
-    iget-object v1, p1, Lnv0;->X:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ld40;->e(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lnv0;->b:Lvv0;
-
-    iget-object v1, p1, Lnv0;->b:Lvv0;
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lnv0;->Y:Z
-
-    iget-boolean v1, p1, Lnv0;->Y:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lnv0;->c:I
-
-    iget v1, p1, Lnv0;->c:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-wide v0, p0, Lnv0;->Z:J
-
-    iget-wide v2, p1, Lnv0;->Z:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_6
+    const/4 v0, 0x0
 
     :goto_0
-    const/4 p1, 0x0
+    check-cast v0, La66;
 
-    return p1
-
-    :cond_6
-    iget-object v0, p0, Lnv0;->o:Ljava/lang/String;
-
-    iget-object p1, p1, Lnv0;->o:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Ld40;->e(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    return p1
+    return-object v0
 .end method

@@ -1,146 +1,85 @@
 .class public final Lx7a;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lc8a;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ly7a;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ly7a;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lx7a;->Y:Ly7a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lx7a;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lx7a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lx7a;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lx7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lx7a;
-
-    iget-object v0, p0, Lx7a;->Y:Ly7a;
-
-    invoke-direct {p1, v0, p2}, Lx7a;-><init>(Ly7a;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lx7a;->X:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lx7a;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    check-cast p1, Lx7a;
 
-    iget-object p1, p0, Lx7a;->Y:Ly7a;
+    iget v1, p0, Lx7a;->b:I
 
-    :try_start_1
-    iput v1, p0, Lx7a;->X:I
+    iget p1, p1, Lx7a;->b:I
 
-    iget-object v0, p1, Ly7a;->a:Lc4d;
+    if-eq v1, p1, :cond_2
 
-    new-instance v1, Lig4;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, v2, p1}, Lig4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1, p0}, Lcea;->j(Lc4d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :goto_0
-    const-string v0, "NotificationsTrackerMessagesDao"
-
-    const-string v1, "onLogout: failed"
-
-    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_2
-    :goto_1
-    sget-object p1, Laxf;->a:Laxf;
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
 
-    :goto_2
-    throw p1
+    iget v0, p0, Lx7a;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Auto(brightnessThreshold="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lx7a;->b:I
+
+    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

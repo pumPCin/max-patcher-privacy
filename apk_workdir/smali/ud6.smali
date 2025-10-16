@@ -1,6 +1,19 @@
-.class public interface abstract Lud6;
+.class public final Lud6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loe6;
+
+# instance fields
+.field public final synthetic a:Landroidx/fragment/app/c;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/fragment/app/c;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lud6;->a:Landroidx/fragment/app/c;
+
+    return-void
+.end method

@@ -2,38 +2,39 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpn6;
 
-# instance fields
-.field public final a:Lteh;
 
-.field public final b:Ljava/util/HashMap;
+# static fields
+.field public static final a:Lmn6;
+
+.field public static final b:Lmn6;
+
+.field public static final c:Lmn6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method static synthetic constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmn6;
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    sput-object v0, Lmn6;->a:Lmn6;
 
-    iput-object v0, p0, Lmn6;->b:Ljava/util/HashMap;
+    new-instance v0, Lmn6;
 
-    sget v0, Lv18;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lteh;
+    sput-object v0, Lmn6;->b:Lmn6;
 
-    sget-object v1, Lteh;->v0:Lvn4;
+    new-instance v0, Lmn6;
 
-    sget-object v2, Lal;->d:Lzk;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v3, Lcn6;->c:Lcn6;
-
-    invoke-direct {v0, p1, v1, v2, v3}, Ldn6;-><init>(Landroid/content/Context;Lvn4;Lal;Lcn6;)V
-
-    iput-object v0, p0, Lmn6;->a:Lteh;
+    sput-object v0, Lmn6;->c:Lmn6;
 
     return-void
 .end method

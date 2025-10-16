@@ -880,7 +880,7 @@
 
     const-string v2, "AudioRecord.startRecording failed - incorrect state: "
 
-    invoke-static {p1, v2}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -904,7 +904,7 @@
 
     const-string v2, "AudioRecord.startRecording failed: "
 
-    invoke-static {v2, p1}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1160,7 +1160,7 @@
 
     const-string v1, "Bad audio format "
 
-    invoke-static {p0, v1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1207,7 +1207,7 @@
 
     const-string v2, "initRecording(sampleRate="
 
-    invoke-static {v2, p1, v0, p2, v1}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0, p2, v1}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1718,7 +1718,7 @@
 
     const-string v4, "AudioRecord: session ID: "
 
-    invoke-static {v4, v0, v2, v1, v3}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v0, v2, v1, v3}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -2126,11 +2126,11 @@
 
     invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Ld14;
+    new-instance v0, Lr34;
 
     const/16 v1, 0xc
 
-    invoke-direct {v0, p0, v1, p1}, Ld14;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lr34;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     iget-object p1, p0, Lorg/webrtc/audio/WebRtcAudioRecord;->future:Ljava/util/concurrent/ScheduledFuture;
 
@@ -2744,25 +2744,25 @@
     const/4 v3, 0x1
 
     :try_start_0
-    invoke-static {}, Lh3h;->j()V
+    invoke-static {}, Lyih;->j()V
 
-    invoke-static {p1}, Lh3h;->d(Landroid/media/projection/MediaProjection;)Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
+    invoke-static {p1}, Lyih;->d(Landroid/media/projection/MediaProjection;)Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
 
     move-result-object v4
 
-    invoke-static {v4}, Lfyc;->u(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)V
+    invoke-static {v4}, Lv8d;->u(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)V
 
-    invoke-static {v4}, Lh3h;->k(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)V
+    invoke-static {v4}, Lyih;->k(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)V
 
     new-instance v5, Landroid/media/AudioRecord$Builder;
 
     invoke-direct {v5}, Landroid/media/AudioRecord$Builder;-><init>()V
 
-    invoke-static {v4}, Lh3h;->e(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)Landroid/media/AudioPlaybackCaptureConfiguration;
+    invoke-static {v4}, Lyih;->e(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)Landroid/media/AudioPlaybackCaptureConfiguration;
 
     move-result-object v4
 
-    invoke-static {v5, v4}, Lh3h;->l(Landroid/media/AudioRecord$Builder;Landroid/media/AudioPlaybackCaptureConfiguration;)V
+    invoke-static {v5, v4}, Lyih;->l(Landroid/media/AudioRecord$Builder;Landroid/media/AudioPlaybackCaptureConfiguration;)V
 
     new-instance v4, Landroid/media/AudioFormat$Builder;
 
@@ -2842,7 +2842,7 @@
 
     const-string v1, "device AudioRecord.startRecording failed - incorrect state :"
 
-    invoke-static {v0, v1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2863,7 +2863,7 @@
 
     const-string v1, "device AudioRecord.startRecording failed: "
 
-    invoke-static {v1, p1}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2890,7 +2890,7 @@
 
     const-string v0, "device AudioRecord ctor error: "
 
-    invoke-static {v0, p1}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lxx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2904,7 +2904,7 @@
     :goto_2
     const-string p1, "AudioRecord.getMinBufferSize failed: "
 
-    invoke-static {v1, p1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

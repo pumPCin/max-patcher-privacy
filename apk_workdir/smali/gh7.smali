@@ -2,391 +2,172 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Landroid/app/Dialog;
 
-.field public final b:Lnb5;
+.field public final b:I
 
-.field public final c:Lua0;
+.field public final c:I
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lnb5;Lua0;)V
-    .locals 0
+.method public constructor <init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgh7;->a:Landroid/content/Context;
+    iput-object p1, p0, Lgh7;->a:Landroid/app/Dialog;
 
-    iput-object p2, p0, Lgh7;->b:Lnb5;
+    iget v0, p2, Landroid/graphics/Rect;->left:I
 
-    iput-object p3, p0, Lgh7;->c:Lua0;
+    iput v0, p0, Lgh7;->b:I
+
+    iget p2, p2, Landroid/graphics/Rect;->top:I
+
+    iput p2, p0, Lgh7;->c:I
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
+
+    move-result p1
+
+    iput p1, p0, Lgh7;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lmb0;IZ)V
-    .locals 16
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 5
 
-    move-object/from16 v1, p0
+    const v0, 0x1020002
 
-    move-object/from16 v0, p1
-
-    move/from16 v2, p2
-
-    new-instance v3, Landroid/content/ComponentName;
-
-    const-class v4, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoSchedulerService;
-
-    iget-object v5, v1, Lgh7;->a:Landroid/content/Context;
-
-    invoke-direct {v3, v5, v4}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v4, "jobscheduler"
-
-    invoke-virtual {v5, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/app/job/JobScheduler;
-
-    new-instance v6, Ljava/util/zip/Adler32;
-
-    invoke-direct {v6}, Ljava/util/zip/Adler32;-><init>()V
-
-    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v7, "UTF-8"
-
-    invoke-static {v7}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v5
-
-    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
-
-    iget-object v5, v0, Lmb0;->a:Ljava/lang/String;
-
-    iget-object v8, v0, Lmb0;->a:Ljava/lang/String;
-
-    invoke-static {v7}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v5
-
-    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
-
-    const/4 v5, 0x4
-
-    invoke-static {v5}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v5
-
-    iget-object v7, v0, Lmb0;->c:Lyob;
-
-    invoke-static {v7}, Lbpb;->a(Lyob;)I
-
-    move-result v9
-
-    invoke-virtual {v5, v9}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v5
-
-    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
-
-    iget-object v5, v0, Lmb0;->b:[B
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
-
-    :cond_0
-    invoke-virtual {v6}, Ljava/util/zip/Adler32;->getValue()J
-
-    move-result-wide v9
-
-    long-to-int v6, v9
-
-    const-string v9, "JobInfoScheduler"
-
-    const-string v10, "attemptNumber"
-
-    if-nez p3, :cond_2
-
-    invoke-virtual {v4}, Landroid/app/job/JobScheduler;->getAllPendingJobs()Ljava/util/List;
-
-    move-result-object v11
-
-    invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v11
-
-    :cond_1
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_2
-
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Landroid/app/job/JobInfo;
-
-    invoke-virtual {v12}, Landroid/app/job/JobInfo;->getExtras()Landroid/os/PersistableBundle;
-
-    move-result-object v13
-
-    invoke-virtual {v13, v10}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
-
-    move-result v13
-
-    invoke-virtual {v12}, Landroid/app/job/JobInfo;->getId()I
-
-    move-result v12
-
-    if-ne v12, v6, :cond_1
-
-    if-lt v13, v2, :cond_2
-
-    const-string v2, "Upload for context %s is already scheduled. Returning..."
-
-    invoke-static {v9, v2, v0}, Lzc6;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_2
-    iget-object v11, v1, Lgh7;->b:Lnb5;
-
-    check-cast v11, Lt8d;
-
-    invoke-virtual {v11}, Lt8d;->m()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v11
-
-    invoke-static {v7}, Lbpb;->a(Lyob;)I
-
-    move-result v12
-
-    invoke-static {v12}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v12
-
-    filled-new-array {v8, v12}, [Ljava/lang/String;
-
-    move-result-object v12
-
-    const-string v13, "SELECT next_request_ms FROM transport_contexts WHERE backend_name = ? and priority = ?"
-
-    invoke-virtual {v11, v13, v12}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v11
-
-    :try_start_0
-    invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v12
-
-    const/4 v13, 0x0
-
-    if-eqz v12, :cond_3
-
-    invoke-interface {v11, v13}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v14
-
-    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v12
-
-    goto :goto_0
-
-    :cond_3
-    const-wide/16 v14, 0x0
-
-    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v12
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    invoke-interface {v11}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v12}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v14
-
-    new-instance v11, Landroid/app/job/JobInfo$Builder;
-
-    invoke-direct {v11, v6, v3}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
-
-    iget-object v3, v1, Lgh7;->c:Lua0;
-
-    invoke-virtual {v3, v7, v14, v15, v2}, Lua0;->a(Lyob;JI)J
-
-    move-result-wide v0
-
-    invoke-virtual {v11, v0, v1}, Landroid/app/job/JobInfo$Builder;->setMinimumLatency(J)Landroid/app/job/JobInfo$Builder;
-
-    iget-object v0, v3, Lua0;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lva0;
+    iget v1, p0, Lgh7;->b:I
 
-    iget-object v0, v0, Lva0;->c:Ljava/util/Set;
-
-    sget-object v1, Lscd;->a:Lscd;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v13, 0x1
-
-    if-eqz v1, :cond_4
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v11, v1}, Landroid/app/job/JobInfo$Builder;->setRequiredNetworkType(I)Landroid/app/job/JobInfo$Builder;
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {v11, v13}, Landroid/app/job/JobInfo$Builder;->setRequiredNetworkType(I)Landroid/app/job/JobInfo$Builder;
-
-    :goto_1
-    sget-object v1, Lscd;->c:Lscd;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v11, v13}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
-
-    :cond_5
-    sget-object v1, Lscd;->b:Lscd;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v11, v13}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
-
-    :cond_6
-    new-instance v0, Landroid/os/PersistableBundle;
-
-    invoke-direct {v0}, Landroid/os/PersistableBundle;-><init>()V
-
-    invoke-virtual {v0, v10, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v1, "backendName"
-
-    invoke-virtual {v0, v1, v8}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "priority"
-
-    invoke-static {v7}, Lbpb;->a(Lyob;)I
-
-    move-result v8
-
-    invoke-virtual {v0, v1, v8}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    if-eqz v5, :cond_7
-
-    const-string v1, "extras"
-
-    const/4 v8, 0x0
-
-    invoke-static {v5, v8}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v1, v5}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_7
-    invoke-virtual {v11, v0}, Landroid/app/job/JobInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/app/job/JobInfo$Builder;
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v7, v14, v15, v2}, Lua0;->a(Lyob;JI)J
-
-    move-result-wide v5
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v3, p1
-
-    filled-new-array {v3, v0, v1, v12, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "TRuntime."
-
-    invoke-virtual {v1, v9}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
     move-result v2
 
-    if-eqz v2, :cond_8
+    add-int/2addr v2, v1
 
-    const-string v2, "Scheduling upload for context %s with jobId=%d in %dms(Backend next call timestamp %d). Attempt %d"
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    invoke-static {v2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    iget v3, p0, Lgh7;->c:I
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, v4
+
+    new-instance v3, Landroid/graphics/RectF;
+
+    int-to-float v2, v2
+
+    int-to-float v4, v4
+
+    int-to-float v1, v1
+
+    int-to-float v0, v0
+
+    invoke-direct {v3, v2, v4, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v1
+
+    invoke-virtual {v3, v0, v1}, Landroid/graphics/RectF;->contains(FF)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    :cond_8
-    invoke-virtual {v11}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
+    move-result p2
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    invoke-virtual {v4, v0}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
+    if-ne p2, v2, :cond_1
 
-    return-void
+    const/4 p2, 0x4
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {v0, p2}, Landroid/view/MotionEvent;->setAction(I)V
 
-    invoke-interface {v11}, Landroid/database/Cursor;->close()V
+    :cond_1
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    throw v0
+    const/16 v3, 0x1c
+
+    if-ge p2, v3, :cond_2
+
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setAction(I)V
+
+    iget p2, p0, Lgh7;->o:I
+
+    neg-int v1, p2
+
+    sub-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    neg-int p2, p2
+
+    sub-int/2addr p2, v2
+
+    int-to-float p2, p2
+
+    invoke-virtual {v0, v1, p2}, Landroid/view/MotionEvent;->setLocation(FF)V
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
+
+    iget-object p1, p0, Lgh7;->a:Landroid/app/Dialog;
+
+    invoke-virtual {p1, v0}, Landroid/app/Dialog;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
 .end method

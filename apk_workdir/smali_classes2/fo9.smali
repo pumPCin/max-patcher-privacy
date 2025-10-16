@@ -1,110 +1,53 @@
 .class public final Lfo9;
-.super Ly7f;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:J
+.field public X:Lxca;
 
-.field public o:Ljava/util/List;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ljo9;
+
+.field public o:Ljo9;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lc79;)V
+.method public constructor <init>(Ljo9;Lk14;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
+    iput-object p1, p0, Lfo9;->Z:Ljo9;
 
-    iget-object p1, p0, Lfo9;->o:Ljava/util/List;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    if-nez p1, :cond_0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lfo9;->o:Ljava/util/List;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lc79;Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lfo9;->Y:Ljava/lang/Object;
 
-    const-string v0, "chatId"
+    iget p1, p0, Lfo9;->r0:I
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/high16 v0, -0x80000000
 
-    move-result v0
+    or-int/2addr p1, v0
 
-    if-nez v0, :cond_1
+    iput p1, p0, Lfo9;->r0:I
 
-    const-string v0, "messages"
+    iget-object p1, p0, Lfo9;->Z:Ljo9;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
 
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lc79;->y()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Llz;->e(Lc79;)Llz;
+    invoke-virtual {p1, v0, p0}, Ljo9;->N(Lxca;Lk14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lfo9;->o:Ljava/util/List;
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Lc79;->o0()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lfo9;->c:J
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-wide v0, p0, Lfo9;->c:J
-
-    iget-object v2, p0, Lfo9;->o:Ljava/util/List;
-
-    invoke-static {v2}, Lzvd;->k(Ljava/util/Collection;)I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "{chatId="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", messages="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

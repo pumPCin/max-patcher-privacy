@@ -1,97 +1,201 @@
 .class public final Lf6d;
-.super Lfn7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:I
+
+.field public b:Landroid/util/SparseArray;
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:I
+
+.field public n:J
+
+.field public o:I
+
+
 # virtual methods
-.method public final s(Lt4e;FF)V
-    .locals 5
+.method public final a(I)V
+    .locals 3
 
-    mul-float v0, p3, p2
+    iget v0, p0, Lf6d;->e:I
 
-    const/4 v1, 0x0
+    and-int/2addr v0, p1
 
-    const/high16 v2, 0x43340000    # 180.0f
-
-    const/high16 v3, 0x42b40000    # 90.0f
-
-    invoke-virtual {p1, v1, v0, v2, v3}, Lt4e;->d(FFFF)V
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    mul-float/2addr p3, v0
-
-    mul-float/2addr p3, p2
-
-    new-instance p2, Lp4e;
-
-    invoke-direct {p2, v1, v1, p3, p3}, Lp4e;-><init>(FFFF)V
-
-    iput v2, p2, Lp4e;->f:F
-
-    iput v3, p2, Lp4e;->g:F
-
-    iget-object v3, p1, Lt4e;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance v3, Ln4e;
-
-    invoke-direct {v3, p2}, Ln4e;-><init>(Lp4e;)V
-
-    invoke-virtual {p1, v2}, Lt4e;->a(F)V
-
-    iget-object p2, p1, Lt4e;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/high16 p2, 0x43870000    # 270.0f
-
-    iput p2, p1, Lt4e;->e:F
-
-    add-float v2, v1, p3
-
-    const/high16 v3, 0x3f000000    # 0.5f
-
-    mul-float/2addr v2, v3
-
-    sub-float/2addr p3, v1
-
-    div-float/2addr p3, v0
-
-    float-to-double v0, p2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v3
-
-    double-to-float p2, v3
-
-    mul-float/2addr p2, p3
-
-    add-float/2addr p2, v2
-
-    iput p2, p1, Lt4e;->c:F
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v0
-
-    double-to-float p2, v0
-
-    mul-float/2addr p3, p2
-
-    add-float/2addr p3, v2
-
-    iput p3, p1, Lt4e;->d:F
+    if-eqz v0, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Layout state should be one of "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " but it is "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p0, Lf6d;->e:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final b()I
+    .locals 2
+
+    iget-boolean v0, p0, Lf6d;->h:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lf6d;->c:I
+
+    iget v1, p0, Lf6d;->d:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+
+    :cond_0
+    iget v0, p0, Lf6d;->f:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "State{mTargetPosition="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lf6d;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf6d;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mItemCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lf6d;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mIsMeasuring="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lf6d;->j:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mPreviousLayoutItemCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lf6d;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mDeletedInvisibleItemCountSincePreviousLayout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lf6d;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mStructureChanged="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lf6d;->g:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mInPreLayout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lf6d;->h:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mRunSimpleAnimations="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lf6d;->k:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mRunPredictiveAnimations="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lf6d;->l:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

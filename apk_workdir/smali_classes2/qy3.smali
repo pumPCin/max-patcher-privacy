@@ -1,72 +1,101 @@
 .class public final Lqy3;
-.super Landroid/widget/TextView;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lfef;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+.field public final a:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lcdf;Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;Landroid/content/Context;)V
+.method public constructor <init>(Ljava/lang/Integer;)V
     .locals 0
 
-    iput-object p2, p0, Lqy3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget-object p3, Ldwf;->n:Lddf;
-
-    invoke-static {p3, p0}, Lddf;->d(Lddf;Landroid/widget/TextView;)V
-
-    const/4 p3, 0x1
-
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setMaxLines(I)V
-
-    sget-object p3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-static {p2}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->B0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Llwa;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lqy3;->onThemeChanged(Llwa;)V
+    iput-object p1, p0, Lqy3;->a:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Llwa;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object p1, p0, Lqy3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->B0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Llwa;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
-    invoke-interface {p1}, Llwa;->getText()Lobf;
+    :cond_0
+    instance-of v1, p1, Lqy3;
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    iget p1, p1, Lobf;->h:I
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lqy3;
+
+    iget-object v1, p0, Lqy3;->a:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lqy3;->a:Ljava/lang/Integer;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqy3;->a:Ljava/lang/Integer;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ButtonTitle(buttonTitleRes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqy3;->a:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

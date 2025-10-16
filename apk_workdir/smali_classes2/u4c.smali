@@ -1,397 +1,82 @@
 .class public final Lu4c;
-.super Ls59;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public a:[Lv4c;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:[Lr4c;
+.field public final synthetic Y:Lone/me/profileedit/ProfileEditScreen;
 
-.field public c:Lx4c;
 
-.field public d:Z
+# direct methods
+.method public constructor <init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lu4c;->Y:Lone/me/profileedit/ProfileEditScreen;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lu4c;->a:[Lv4c;
+    check-cast p1, Ljava/util/List;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p1, p2}, Lu4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    array-length v0, v0
+    move-result-object p1
 
-    if-lez v0, :cond_1
+    check-cast p1, Lu4c;
 
-    move v0, v1
+    sget-object p2, Lzag;->a:Lzag;
 
-    move v2, v0
+    invoke-virtual {p1, p2}, Lu4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    iget-object v3, p0, Lu4c;->a:[Lv4c;
-
-    array-length v4, v3
-
-    if-ge v0, v4, :cond_2
-
-    aget-object v3, v3, v0
-
-    if-eqz v3, :cond_0
-
-    const/4 v4, 0x1
-
-    invoke-static {v4, v3}, Ly73;->i(ILs59;)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v1
-
-    :cond_2
-    iget-object v0, p0, Lu4c;->b:[Lr4c;
-
-    if-eqz v0, :cond_4
-
-    array-length v0, v0
-
-    if-lez v0, :cond_4
-
-    :goto_1
-    iget-object v0, p0, Lu4c;->b:[Lr4c;
-
-    array-length v3, v0
-
-    if-ge v1, v3, :cond_4
-
-    aget-object v0, v0, v1
-
-    if-eqz v0, :cond_3
-
-    const/4 v3, 0x2
-
-    invoke-static {v3, v0}, Ly73;->i(ILs59;)I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    move v2, v0
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_4
-    iget-object v0, p0, Lu4c;->c:Lx4c;
-
-    if-eqz v0, :cond_5
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Ly73;->i(ILs59;)I
-
-    move-result v0
-
-    add-int/2addr v2, v0
-
-    :cond_5
-    iget-boolean v0, p0, Lu4c;->d:Z
-
-    if-eqz v0, :cond_6
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, Ly73;->a(I)I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    return v0
-
-    :cond_6
-    return v2
+    return-object p2
 .end method
 
-.method public final mergeFrom(Lx73;)Ls59;
-    .locals 5
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lx73;->s()I
+    new-instance v0, Lu4c;
 
-    move-result v0
+    iget-object v1, p0, Lu4c;->Y:Lone/me/profileedit/ProfileEditScreen;
 
-    if-eqz v0, :cond_c
+    invoke-direct {v0, v1, p2}, Lu4c;-><init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0xa
+    iput-object p1, v0, Lu4c;->X:Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_8
-
-    const/16 v1, 0x12
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x1a
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x20
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lx73;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto/16 :goto_5
-
-    :cond_1
-    invoke-virtual {p1}, Lx73;->f()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lu4c;->d:Z
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lu4c;->c:Lx4c;
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Lx4c;
-
-    invoke-direct {v0}, Lx4c;-><init>()V
-
-    iput-object v0, p0, Lu4c;->c:Lx4c;
-
-    :cond_3
-    iget-object v0, p0, Lu4c;->c:Lx4c;
-
-    invoke-virtual {p1, v0}, Lx73;->j(Ls59;)V
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lu4c;->b:[Lr4c;
-
-    if-nez v1, :cond_5
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_5
-    array-length v3, v1
-
-    :goto_1
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [Lr4c;
-
-    if-eqz v3, :cond_6
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_6
-    :goto_2
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_7
-
-    new-instance v1, Lr4c;
-
-    invoke-direct {v1}, Lr4c;-><init>()V
-
-    aput-object v1, v4, v3
-
-    invoke-virtual {p1, v1}, Lx73;->j(Ls59;)V
-
-    invoke-virtual {p1}, Lx73;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_7
-    new-instance v0, Lr4c;
-
-    invoke-direct {v0}, Lr4c;-><init>()V
-
-    aput-object v0, v4, v3
-
-    invoke-virtual {p1, v0}, Lx73;->j(Ls59;)V
-
-    iput-object v4, p0, Lu4c;->b:[Lr4c;
-
-    goto :goto_0
-
-    :cond_8
-    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lu4c;->a:[Lv4c;
-
-    if-nez v1, :cond_9
-
-    move v3, v2
-
-    goto :goto_3
-
-    :cond_9
-    array-length v3, v1
-
-    :goto_3
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [Lv4c;
-
-    if-eqz v3, :cond_a
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_a
-    :goto_4
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_b
-
-    new-instance v1, Lv4c;
-
-    invoke-direct {v1}, Lv4c;-><init>()V
-
-    aput-object v1, v4, v3
-
-    invoke-virtual {p1, v1}, Lx73;->j(Ls59;)V
-
-    invoke-virtual {p1}, Lx73;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_4
-
-    :cond_b
-    new-instance v0, Lv4c;
-
-    invoke-direct {v0}, Lv4c;-><init>()V
-
-    aput-object v0, v4, v3
-
-    invoke-virtual {p1, v0}, Lx73;->j(Ls59;)V
-
-    iput-object v4, p0, Lu4c;->a:[Lv4c;
-
-    goto/16 :goto_0
-
-    :cond_c
-    :goto_5
-    return-object p0
+    return-object v0
 .end method
 
-.method public final writeTo(Ly73;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lu4c;->a:[Lv4c;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    iget-object p1, p0, Lu4c;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Ljava/util/List;
 
-    array-length v0, v0
+    iget-object v0, p0, Lu4c;->Y:Lone/me/profileedit/ProfileEditScreen;
 
-    if-lez v0, :cond_1
+    iget-object v0, v0, Lone/me/profileedit/ProfileEditScreen;->X:Lqih;
 
-    move v0, v1
+    invoke-virtual {v0, p1}, Lu08;->E(Ljava/util/List;)V
 
-    :goto_0
-    iget-object v2, p0, Lu4c;->a:[Lv4c;
+    sget-object p1, Lzag;->a:Lzag;
 
-    array-length v3, v2
-
-    if-ge v0, v3, :cond_1
-
-    aget-object v2, v2, v0
-
-    if-eqz v2, :cond_0
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p1, v3, v2}, Ly73;->y(ILs59;)V
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lu4c;->b:[Lr4c;
-
-    if-eqz v0, :cond_3
-
-    array-length v0, v0
-
-    if-lez v0, :cond_3
-
-    :goto_1
-    iget-object v0, p0, Lu4c;->b:[Lr4c;
-
-    array-length v2, v0
-
-    if-ge v1, v2, :cond_3
-
-    aget-object v0, v0, v1
-
-    if-eqz v0, :cond_2
-
-    const/4 v2, 0x2
-
-    invoke-virtual {p1, v2, v0}, Ly73;->y(ILs59;)V
-
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lu4c;->c:Lx4c;
-
-    if-eqz v0, :cond_4
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v1, v0}, Ly73;->y(ILs59;)V
-
-    :cond_4
-    iget-boolean v0, p0, Lu4c;->d:Z
-
-    if-eqz v0, :cond_5
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1, v0}, Ly73;->r(IZ)V
-
-    :cond_5
-    return-void
+    return-object p1
 .end method

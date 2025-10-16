@@ -1,224 +1,128 @@
-.class public final synthetic Lhnd;
-.super Ljava/lang/Object;
+.class public final Lhnd;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+.field public final synthetic Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
+.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lhnd;->a:I
+    iput-object p1, p0, Lhnd;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iput-object p1, p0, Lhnd;->b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lhnd;->a:I
+    check-cast p1, Llc4;
 
-    const/4 v1, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x3
+    invoke-virtual {p0, p1, p2}, Lhnd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v3, 0x5
+    move-result-object p1
 
-    const/4 v4, 0x0
+    check-cast p1, Lhnd;
 
-    const/4 v5, 0x0
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object v6, p0, Lhnd;->b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+    invoke-virtual {p1, p2}, Lhnd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    return-object p2
+.end method
 
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lpl7;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v0, Limb;
+    new-instance v0, Lhnd;
 
-    invoke-virtual {v6}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object v1, p0, Lhnd;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    move-result-object v1
+    invoke-direct {v0, v1, p2}, Lhnd;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1}, Limb;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, v4}, Limb;->setStackFromBottom(Z)V
-
-    new-instance v1, Ls9;
-
-    invoke-direct {v1, v6, v3}, Ls9;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-virtual {v0, v1}, Limb;->setCallback(Lcmb;)V
-
-    invoke-virtual {v6}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->B0()Lxnd;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    new-instance v1, Ler;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v1, v2, v5, v3}, Ler;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v1, v0}, Luce;->T(Lle6;Landroid/view/View;)V
+    iput-object p1, v0, Lhnd;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lpl7;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Lxnd;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v6}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object p1, p0, Lhnd;->X:Ljava/lang/Object;
 
-    move-result-object v3
+    check-cast p1, Llc4;
 
-    invoke-direct {v0, v3, v5}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iget-object v0, p0, Lhnd;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    sget v3, Lwra;->d:I
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v7, -0x1
-
-    const/4 v8, -0x2
-
-    invoke-direct {v3, v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v3, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-direct {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
-
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    iget-object v3, v6, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->c:Ltm0;
-
-    sget-object v6, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lpl7;
-
-    aget-object v1, v6, v1
-
-    invoke-virtual {v3}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->I0()Ldnd;
 
     move-result-object v1
 
-    check-cast v1, Lwnd;
-
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
-
-    new-instance v1, Lbr0;
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v6, 0x41a00000    # 20.0f
-
-    mul-float/2addr v3, v6
-
-    invoke-direct {v1, v4, v3}, Lbr0;-><init>(IF)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    new-instance v1, Lxfb;
-
-    const/16 v3, 0x12
-
-    invoke-direct {v1, v2, v5, v3}, Lxfb;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v1, v0}, Luce;->T(Lle6;Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lpl7;
-
-    new-instance v0, Lwnd;
-
-    new-instance v2, Ll8d;
-
-    invoke-direct {v2, v3, v6}, Ll8d;-><init>(ILjava/lang/Object;)V
-
-    iget-object v3, v6, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->b:Lyn7;
-
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lzla;
-
-    invoke-virtual {v3}, Lzla;->a()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v3
-
-    invoke-direct {v0, v2, v3}, Lwnd;-><init>(Ll8d;Ljava/util/concurrent/ExecutorService;)V
-
-    invoke-virtual {v6}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->D0()Lgnd;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lgnd;->r0:Lbpc;
-
-    invoke-virtual {v6}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Luq7;->x()Lwq7;
-
-    move-result-object v3
-
-    sget-object v4, Lwp7;->o:Lwp7;
-
-    invoke-static {v2, v3, v4}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
-
-    move-result-object v2
-
-    new-instance v3, Lind;
-
-    invoke-direct {v3, v5, v0}, Lind;-><init>(Lkotlin/coroutines/Continuation;Lwnd;)V
-
-    new-instance v4, Lnw5;
-
-    invoke-direct {v4, v2, v3, v1}, Lnw5;-><init>(Liu5;Lje6;I)V
-
-    invoke-virtual {v6}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {v1}, Ldnd;->c()Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->t0()Landroid/content/Context;
 
-    return-object v0
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget v2, Lpid;->y:I
+
+    iget-object v3, p1, Llc4;->a:Lxc4;
+
+    iget-object v3, v3, Lxc4;->X:Ljava/lang/String;
+
+    iget-object v4, p1, Llc4;->b:Lqtf;
+
+    iget-object p1, p1, Llc4;->c:Lqtf;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, ":"
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    filled-new-array {v3, p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

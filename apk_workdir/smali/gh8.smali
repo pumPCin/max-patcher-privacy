@@ -1,67 +1,79 @@
 .class public abstract Lgh8;
-.super Lj43;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final t0:J
+.field public final a:Landroid/animation/TimeInterpolator;
+
+.field public final b:Landroid/view/View;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public f:Lpe0;
 
 
 # direct methods
-.method public constructor <init>(Lv84;Lc94;Lw66;ILjava/lang/Object;JJJ)V
-    .locals 11
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 3
 
-    const/4 v3, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Lgh8;->b:Landroid/view/View;
 
-    move-object v1, p1
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-object v2, p2
+    move-result-object p1
 
-    move-object v4, p3
+    sget v0, Lzic;->motionEasingStandardDecelerateInterpolator:I
 
-    move v5, p4
+    const/4 v1, 0x0
 
-    move-object/from16 v6, p5
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    move-wide/from16 v7, p6
+    invoke-static {v1, v1, v1, v2}, Lbeb;->b(FFFF)Landroid/view/animation/Interpolator;
 
-    move-wide/from16 v9, p8
+    move-result-object v1
 
-    invoke-direct/range {v0 .. v10}, Lj43;-><init>(Lv84;Lc94;ILw66;ILjava/lang/Object;JJ)V
+    invoke-static {p1, v0, v1}, Lwki;->f(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
 
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    move-wide/from16 p1, p10
+    iput-object v0, p0, Lgh8;->a:Landroid/animation/TimeInterpolator;
 
-    iput-wide p1, p0, Lgh8;->t0:J
+    sget v0, Lzic;->motionDurationMedium2:I
+
+    const/16 v1, 0x12c
+
+    invoke-static {v0, v1, p1}, Lwki;->e(IILandroid/content/Context;)I
+
+    move-result v0
+
+    iput v0, p0, Lgh8;->c:I
+
+    sget v0, Lzic;->motionDurationShort3:I
+
+    const/16 v1, 0x96
+
+    invoke-static {v0, v1, p1}, Lwki;->e(IILandroid/content/Context;)I
+
+    move-result v0
+
+    iput v0, p0, Lgh8;->d:I
+
+    sget v0, Lzic;->motionDurationShort2:I
+
+    const/16 v1, 0x64
+
+    invoke-static {v0, v1, p1}, Lwki;->e(IILandroid/content/Context;)I
+
+    move-result p1
+
+    iput p1, p0, Lgh8;->e:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a()J
-    .locals 5
-
-    iget-wide v0, p0, Lgh8;->t0:J
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-
-    :cond_0
-    return-wide v2
-.end method
-
-.method public abstract c()Z
 .end method

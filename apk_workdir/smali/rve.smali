@@ -2,287 +2,188 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-.implements Landroid/os/Parcelable;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lrve;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:Ljava/util/regex/Pattern;
 
-.field public static final X:Ljava/lang/String;
+.field public static final b:Ljava/util/regex/Pattern;
 
-.field public static final Y:Ljava/lang/String;
+.field public static final c:Ljava/util/regex/Pattern;
 
-.field public static final o:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
+.field public static final d:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lpzd;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
-
-    sput-object v0, Lrve;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    sget v0, Lg3g;->a:I
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lrve;->o:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lrve;->X:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lrve;->Y:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput p1, p0, Lrve;->a:I
-
-    .line 3
-    iput p2, p0, Lrve;->b:I
-
-    .line 4
-    iput p3, p0, Lrve;->c:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lrve;->a:I
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lrve;->b:I
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, p0, Lrve;->c:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
-
-    check-cast p1, Lrve;
-
-    iget v0, p0, Lrve;->a:I
-
-    iget v1, p1, Lrve;->a:I
-
-    sub-int/2addr v0, v1
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lrve;->b:I
-
-    iget v1, p1, Lrve;->b:I
-
-    sub-int/2addr v0, v1
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lrve;->c:I
-
-    iget p1, p1, Lrve;->c:I
-
-    sub-int/2addr v0, p1
-
-    :cond_0
-    return v0
-.end method
-
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    const/4 v0, 0x1
+    const-string v0, "\\{([^}]*)\\}"
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    return v0
+    move-result-object v0
+
+    sput-object v0, Lrve;->a:Ljava/util/regex/Pattern;
+
+    const-string v0, "\\s*\\d+(?:\\.\\d+)?\\s*"
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget v2, Lhhg;->a:I
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v3, "\\\\pos\\((%1$s),(%1$s)\\)"
+
+    invoke-static {v2, v3, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Lrve;->b:Ljava/util/regex/Pattern;
+
+    const-string v1, "\\\\move\\(%1$s,%1$s,(%1$s),(%1$s)(?:,%1$s,%1$s)?\\)"
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v1, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lrve;->c:Ljava/util/regex/Pattern;
+
+    const-string v0, "\\\\an(\\d+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lrve;->d:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Landroid/graphics/PointF;
+    .locals 6
+
+    sget-object v0, Lrve;->b:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    sget-object v1, Lrve;->c:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v3
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x52
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Override has both \\pos(x,y) and \\move(x1,y1,x2,y2); using \\pos values. override=\'"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "SsaStyle.Overrides"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    if-eqz p1, :cond_2
+    move-result-object p0
 
-    const-class v2, Lrve;
+    invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lrve;
+    if-eqz v3, :cond_2
 
-    iget v2, p0, Lrve;->a:I
+    invoke-virtual {v1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    iget v3, p1, Lrve;->a:I
+    move-result-object p0
 
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lrve;->b:I
-
-    iget v3, p1, Lrve;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lrve;->c:I
-
-    iget p1, p1, Lrve;->c:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lrve;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lrve;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lrve;->c:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v1, p0, Lrve;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lrve;->b:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lrve;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    :goto_0
+    new-instance v1, Landroid/graphics/PointF;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget p2, p0, Lrve;->a:I
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object p0
 
-    iget p2, p0, Lrve;->b:I
+    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result p0
 
-    iget p2, p0, Lrve;->c:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    invoke-direct {v1, p0, v0}, Landroid/graphics/PointF;-><init>(FF)V
+
+    return-object v1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

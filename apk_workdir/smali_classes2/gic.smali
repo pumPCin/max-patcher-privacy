@@ -1,132 +1,177 @@
-.class public abstract Lgic;
-.super Ljava/lang/Object;
+.class public final Lgic;
+.super Landroid/widget/FrameLayout;
+.source "SourceFile"
 
 
-# static fields
-.field public static permission_fsi_request:I = 0x7f130a97
+# instance fields
+.field public final a:I
 
-.field public static permission_fsi_request_rationale:I = 0x7f130a98
+.field public final b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static permissions_allow_access:I = 0x7f130a99
+.field public final c:Ljava/lang/Object;
 
-.field public static permissions_audio_denied_title:I = 0x7f130a9a
+.field public final o:Ljava/lang/Object;
 
-.field public static permissions_audio_for_video_not_granted:I = 0x7f130a9b
+.field public final r0:Ljava/lang/Object;
 
-.field public static permissions_audio_for_video_request:I = 0x7f130a9c
+.field public final s0:Ljava/lang/Object;
 
-.field public static permissions_audio_for_video_request_denied:I = 0x7f130a9d
 
-.field public static permissions_audio_not_granted:I = 0x7f130a9e
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-.field public static permissions_audio_request:I = 0x7f130a9f
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-.field public static permissions_audio_request_denied:I = 0x7f130aa0
+    const/16 v0, 0x28
 
-.field public static permissions_audio_title:I = 0x7f130aa1
+    iput v0, p0, Lgic;->a:I
 
-.field public static permissions_background_location_denied:I = 0x7f130aa2
+    new-instance v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static permissions_calls_audio:I = 0x7f130aa3
+    invoke-direct {v0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
 
-.field public static permissions_calls_audio_denied:I = 0x7f130aa4
+    new-instance v1, Lq44;
 
-.field public static permissions_calls_audio_not_granted:I = 0x7f130aa5
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-.field public static permissions_calls_audio_video_request:I = 0x7f130aa6
+    move-result-object v2
 
-.field public static permissions_calls_audio_video_request_title:I = 0x7f130aa7
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static permissions_calls_only_audio:I = 0x7f130aa8
+    move-result-object v2
 
-.field public static permissions_calls_only_calls:I = 0x7f130aa9
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-.field public static permissions_calls_only_video:I = 0x7f130aaa
+    const/high16 v3, 0x40800000    # 4.0f
 
-.field public static permissions_calls_only_video_bluetooth_connect:I = 0x7f130aab
+    mul-float/2addr v2, v3
 
-.field public static permissions_calls_video:I = 0x7f130aac
+    invoke-direct {v1, v2}, Lq44;-><init>(F)V
 
-.field public static permissions_calls_video_bluetooth_connect:I = 0x7f130aad
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-.field public static permissions_calls_video_denied:I = 0x7f130aae
+    iput-object v0, p0, Lgic;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static permissions_calls_video_not_granted:I = 0x7f130aaf
+    new-instance v1, Loqa;
 
-.field public static permissions_calls_video_preview_request:I = 0x7f130ab0
+    const/16 v2, 0x13
 
-.field public static permissions_calls_video_request:I = 0x7f130ab1
+    invoke-direct {v1, p1, v2}, Loqa;-><init>(Landroid/content/Context;I)V
 
-.field public static permissions_calls_video_request_denied:I = 0x7f130ab2
+    const/4 v2, 0x3
 
-.field public static permissions_calls_video_request_not_granted:I = 0x7f130ab3
+    invoke-static {v2, v1}, Lmbi;->b(ILoh6;)Llt7;
 
-.field public static permissions_camera_and_storage_not_granted:I = 0x7f130ab4
+    move-result-object v1
 
-.field public static permissions_camera_not_granted:I = 0x7f130ab5
+    iput-object v1, p0, Lgic;->c:Ljava/lang/Object;
 
-.field public static permissions_camera_request_photo:I = 0x7f130ab6
+    new-instance v1, Lvqa;
 
-.field public static permissions_camera_request_photo_denied:I = 0x7f130ab7
+    const/16 v3, 0x10
 
-.field public static permissions_camera_request_photo_with_storage:I = 0x7f130ab8
+    invoke-direct {v1, p1, v3, p0}, Lvqa;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.field public static permissions_camera_request_photo_with_storage_denied:I = 0x7f130ab9
+    invoke-static {v2, v1}, Lmbi;->b(ILoh6;)Llt7;
 
-.field public static permissions_camera_request_video:I = 0x7f130aba
+    move-result-object p1
 
-.field public static permissions_camera_request_video_with_storage:I = 0x7f130abb
+    iput-object p1, p0, Lgic;->o:Ljava/lang/Object;
 
-.field public static permissions_camera_request_video_with_storage_denied:I = 0x7f130abc
+    new-instance p1, Lfic;
 
-.field public static permissions_contacts_not_granted:I = 0x7f130abd
+    const/4 v1, 0x0
 
-.field public static permissions_contacts_request:I = 0x7f130abe
+    invoke-direct {p1, p0, v1}, Lfic;-><init>(Lgic;I)V
 
-.field public static permissions_contacts_request_denied:I = 0x7f130abf
+    invoke-static {v2, p1}, Lmbi;->b(ILoh6;)Llt7;
 
-.field public static permissions_contacts_request_rationale:I = 0x7f130ac0
+    move-result-object p1
 
-.field public static permissions_dialog_enable_access:I = 0x7f130ac1
+    iput-object p1, p0, Lgic;->r0:Ljava/lang/Object;
 
-.field public static permissions_dialog_no:I = 0x7f130ac2
+    new-instance p1, Lfic;
 
-.field public static permissions_dialog_open_setting:I = 0x7f130ac3
+    const/4 v1, 0x1
 
-.field public static permissions_dialog_yes:I = 0x7f130ac4
+    invoke-direct {p1, p0, v1}, Lfic;-><init>(Lgic;I)V
 
-.field public static permissions_files_request_denied:I = 0x7f130ac5
+    invoke-static {v2, p1}, Lmbi;->b(ILoh6;)Llt7;
 
-.field public static permissions_fsi_request_positive_button:I = 0x7f130ac6
+    move-result-object p1
 
-.field public static permissions_location_denied:I = 0x7f130ac7
+    iput-object p1, p0, Lgic;->s0:Ljava/lang/Object;
 
-.field public static permissions_location_not_granted:I = 0x7f130ac8
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-.field public static permissions_location_rationale_live:I = 0x7f130aca
+    return-void
+.end method
 
-.field public static permissions_location_rationale_nearby:I = 0x7f130acb
 
-.field public static permissions_location_rationale_send:I = 0x7f130acd
+# virtual methods
+.method public final measureChildren(II)V
+    .locals 2
 
-.field public static permissions_post_notification_request_positive_button:I = 0x7f130acf
+    iget-object v0, p0, Lgic;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static permissions_post_notification_request_rationale:I = 0x7f130ad0
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
 
-.field public static permissions_post_notification_request_title:I = 0x7f130ad1
+    iget-object v0, p0, Lgic;->o:Ljava/lang/Object;
 
-.field public static permissions_storage_not_granted:I = 0x7f130ad2
+    invoke-interface {v0}, Llt7;->e()Z
 
-.field public static permissions_storage_request:I = 0x7f130ad3
+    move-result v1
 
-.field public static permissions_storage_request_denied:I = 0x7f130ad4
+    if-eqz v1, :cond_0
 
-.field public static permissions_storage_video_save_request_denied:I = 0x7f130ad5
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-.field public static permissions_storage_video_share_request_denied:I = 0x7f130ad6
+    move-result-object v0
 
-.field public static permissions_video_message_request:I = 0x7f130ad7
+    check-cast v0, Landroid/view/View;
 
-.field public static permissions_video_message_request_only_camera_title:I = 0x7f130ad8
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
 
-.field public static permissions_video_message_request_title:I = 0x7f130ad9
+    :cond_0
+    return-void
+.end method
+
+.method public final setDrawOverlay(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lgic;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lx05;->getHierarchy()Lu05;
+
+    move-result-object p1
+
+    check-cast p1, Lsm6;
+
+    iget-object v0, p0, Lgic;->r0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p1, v0}, Lsm6;->k(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Lx05;->getHierarchy()Lu05;
+
+    move-result-object p1
+
+    check-cast p1, Lsm6;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lsm6;->k(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method

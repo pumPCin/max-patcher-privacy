@@ -1,63 +1,103 @@
 .class public final Lpkf;
-.super Lqkf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
+# static fields
+.field public static volatile b:Lpkf;
 
-.field public final c:J
+.field public static final c:Ljava/util/concurrent/CountDownLatch;
+
+
+# instance fields
+.field public final a:Lrhf;
 
 
 # direct methods
-.method public constructor <init>(JI)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    sput-object v0, Lpkf;->c:Ljava/util/concurrent/CountDownLatch;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lrhf;)V
     .locals 0
 
-    iput p3, p0, Lpkf;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p3, :pswitch_data_0
-
-    sget-object p3, Lokf;->b:Lokf;
-
-    invoke-direct {p0, p3}, Lqkf;-><init>(Lokf;)V
-
-    iput-wide p1, p0, Lpkf;->c:J
+    iput-object p1, p0, Lpkf;->a:Lrhf;
 
     return-void
+.end method
 
-    :pswitch_0
-    sget-object p3, Lokf;->X:Lokf;
+.method public static a()Llkf;
+    .locals 4
 
-    invoke-direct {p0, p3}, Lqkf;-><init>(Lokf;)V
+    :try_start_0
+    sget-object v0, Lpkf;->c:Ljava/util/concurrent/CountDownLatch;
 
-    iput-wide p1, p0, Lpkf;->c:J
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
 
-    :pswitch_1
-    sget-object p3, Lokf;->o:Lokf;
+    :catch_0
+    move-exception v0
 
-    invoke-direct {p0, p3}, Lqkf;-><init>(Lokf;)V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    iput-wide p1, p0, Lpkf;->c:J
+    move-result-object v0
 
-    return-void
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    :pswitch_2
-    sget-object p3, Lokf;->c:Lokf;
+    move-result-object v0
 
-    invoke-direct {p0, p3}, Lqkf;-><init>(Lokf;)V
+    const-string v1, "TamContextAndroid"
 
-    iput-wide p1, p0, Lpkf;->c:J
+    const-string v2, "TamContext initialization was interrupted: %s"
 
-    return-void
+    invoke-static {v1, v2, v0}, Lndi;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    nop
+    :goto_0
+    sget-object v0, Lpkf;->c:Ljava/util/concurrent/CountDownLatch;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lpkf;->b:Lpkf;
+
+    iget-object v0, v0, Lpkf;->a:Lrhf;
+
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llkf;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "TamContextAndroid should call `init` before `getInstance`"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

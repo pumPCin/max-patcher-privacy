@@ -1,9 +1,6 @@
 .class public final Lh7c;
-.super Ljava/lang/Object;
+.super Lk7c;
 .source "SourceFile"
-
-# interfaces
-.implements Ll7c;
 
 
 # static fields
@@ -47,10 +44,28 @@
     return v0
 .end method
 
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x200
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x38ae5339
+    const v0, 0x563d9696
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/16 v0, 0x200
 
     return v0
 .end method
@@ -58,7 +73,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ModePhoto"
+    const-string v0, "Empty"
 
     return-object v0
 .end method

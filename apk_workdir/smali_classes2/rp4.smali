@@ -1,80 +1,123 @@
 .class public final Lrp4;
-.super Lc2f;
+.super Lc24;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final synthetic Z:I
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:Landroid/os/Handler;
 
-.field public final synthetic Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
+.field public Y:Lsz1;
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p2, p0, Lrp4;->Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
+    invoke-direct {p0}, Lc24;-><init>()V
 
-    const/4 p2, 0x2
+    const-wide/16 v0, 0x3e8
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide v0, p0, Lrp4;->o:J
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lrp4;->X:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lrp4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lrp4;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lrp4;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()V
     .locals 2
 
-    new-instance v0, Lrp4;
+    iget-object v0, p0, Lrp4;->Y:Lsz1;
 
-    iget-object v1, p0, Lrp4;->Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, p2, v1}, Lrp4;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;)V
+    iget-object v1, p0, Lrp4;->X:Landroid/os/Handler;
 
-    iput-object p1, v0, Lrp4;->X:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    return-object v0
+    :cond_0
+    iget-object v0, p0, Lrp4;->Y:Lsz1;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lsz1;->run()V
+
+    :cond_1
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lrp4;->Y:Lsz1;
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final f(Lc24;Lx14;)V
+    .locals 0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object p1, p0, Lrp4;->Y:Lsz1;
 
-    iget-object p1, p0, Lrp4;->X:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    check-cast p1, Ljava/util/List;
+    iget-object p2, p0, Lrp4;->X:Landroid/os/Handler;
 
-    iget-object v0, p0, Lrp4;->Y:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
+    invoke-virtual {p2, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iget-object v0, v0, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->c:La0e;
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Lhv7;->E(Ljava/util/List;)V
+    iput-object p1, p0, Lrp4;->Y:Lsz1;
 
-    sget-object p1, Laxf;->a:Laxf;
+    return-void
+.end method
 
-    return-object p1
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLa24;)V
+    .locals 9
+
+    iget-object v0, p0, Lrp4;->Y:Lsz1;
+
+    iget-object v1, p0, Lrp4;->X:Landroid/os/Handler;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    :cond_0
+    new-instance v2, Lsz1;
+
+    move-object v5, p0
+
+    move-object v6, p1
+
+    move-object v3, p2
+
+    move-object v7, p3
+
+    move v4, p4
+
+    move-object v8, p5
+
+    invoke-direct/range {v2 .. v8}, Lsz1;-><init>(Landroid/view/View;ZLrp4;Landroid/view/ViewGroup;Landroid/view/View;La24;)V
+
+    iget-wide p1, v5, Lrp4;->o:J
+
+    invoke-virtual {v1, v2, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    iput-object v2, v5, Lrp4;->Y:Lsz1;
+
+    return-void
 .end method

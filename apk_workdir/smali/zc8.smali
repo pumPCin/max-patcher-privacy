@@ -1,242 +1,103 @@
 .class public final Lzc8;
-.super Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lad8;
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:I
+.field public final synthetic Y:Lone/me/android/MainActivity;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+    iput-object p1, p0, Lzc8;->Y:Lone/me/android/MainActivity;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    const/4 p1, 0x2
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
-
-    iput-object p1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    :goto_0
-    iget v0, p0, Lzc8;->b:I
+    check-cast p1, Lny7;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v1
+    invoke-virtual {p0, p1, p2}, Lzc8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    if-ne v0, v1, :cond_0
+    check-cast p1, Lzc8;
 
-    goto :goto_1
+    sget-object p2, Lzag;->a:Lzag;
 
-    :cond_0
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lzc8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    add-int/lit8 v3, v0, 0x1
-
-    iput v3, p0, Lzc8;->b:I
-
-    invoke-virtual {p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    move-object v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
-    :goto_1
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p0}, Lzc8;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    return-void
+    return-object p2
 .end method
 
-.method public final isEmpty()Z
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lzc8;->b:I
+    new-instance v0, Lzc8;
 
-    iget-object v1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v1, p0, Lzc8;->Y:Lone/me/android/MainActivity;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-direct {v0, v1, p2}, Lzc8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    move-result v1
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final j()I
-    .locals 1
-
-    iget-object v0, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lzc8;->b:I
-
-    return v0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 2
-
-    const-string v0, "value is null"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final peek()Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lzc8;->b:I
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
+    iput-object p1, v0, Lzc8;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final poll()Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lzc8;->b:I
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+    iget-object p1, p0, Lzc8;->X:Ljava/lang/Object;
 
-    move-result v1
+    check-cast p1, Lny7;
 
-    const/4 v2, 0x0
+    sget v0, Lone/me/android/deeplink/LinkInterceptorActivity;->J0:I
 
-    if-ne v0, v1, :cond_0
+    new-instance v0, Landroid/content/Intent;
 
-    return-object v2
+    const-class v1, Lone/me/android/deeplink/LinkInterceptorActivity;
+
+    iget-object v2, p0, Lzc8;->Y:Lone/me/android/MainActivity;
+
+    invoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "link:result"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    invoke-virtual {v2, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    iget-object p1, v2, Lone/me/android/MainActivity;->a1:Lwwe;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, v0}, Lon7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+    iput-object v0, v2, Lone/me/android/MainActivity;->a1:Lwwe;
 
-    move-result-object v1
+    sget-object p1, Lzag;->a:Lzag;
 
-    if-eqz v1, :cond_1
-
-    add-int/lit8 v3, v0, 0x1
-
-    iput v3, p0, Lzc8;->b:I
-
-    invoke-virtual {p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :cond_1
-    iget-object v1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
-    return-object v2
-.end method
-
-.method public final q()V
-    .locals 2
-
-    iget v0, p0, Lzc8;->b:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lzc8;->b:I
-
-    return-void
+    return-object p1
 .end method

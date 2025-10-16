@@ -1,157 +1,50 @@
 .class public final Ldpf;
-.super Lzof;
+.super Lqci;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public b:Lepf;
+# static fields
+.field public static final c:Ldpf;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 1
-    const/4 v0, 0x1
+    new-instance v0, Ldpf;
 
-    iput v0, p0, Ldpf;->a:I
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v2, 0x10
 
-    return-void
-.end method
+    invoke-direct {v0, v2, v1}, Lqci;-><init>(ILjava/lang/Object;)V
 
-.method public constructor <init>(Lepf;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ldpf;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Ldpf;->b:Lepf;
+    sput-object v0, Ldpf;->c:Ldpf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lwof;)V
-    .locals 1
-
-    iget p1, p0, Ldpf;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Ldpf;->b:Lepf;
-
-    iget-boolean v0, p1, Lepf;->T0:Z
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Lwof;->P()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lepf;->T0:Z
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c(Lwof;)V
+.method public final j0()Z
     .locals 2
 
-    iget v0, p0, Ldpf;->a:I
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    return-void
+    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
-    :pswitch_0
-    iget-object v0, p0, Ldpf;->b:Lepf;
+    move-result v0
 
-    iget v1, v0, Lepf;->S0:I
+    const/4 v1, 0x1
 
-    add-int/lit8 v1, v1, -0x1
+    if-ne v0, v1, :cond_0
 
-    iput v1, v0, Lepf;->S0:I
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lepf;->T0:Z
-
-    invoke-virtual {v0}, Lwof;->n()V
+    return v1
 
     :cond_0
-    invoke-virtual {p1, p0}, Lwof;->E(Lvof;)Lwof;
+    const/4 v0, 0x0
 
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h(Lwof;)V
-    .locals 2
-
-    iget v0, p0, Ldpf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldpf;->b:Lepf;
-
-    iget-object v1, v0, Lepf;->Q0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Lepf;->w()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Lzmf;->o:Lzmf;
-
-    invoke-virtual {v0, p1}, Lwof;->B(Lzmf;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, v0, Lwof;->D0:Z
-
-    sget-object p1, Lzmf;->c:Lzmf;
-
-    invoke-virtual {v0, p1}, Lwof;->B(Lzmf;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

@@ -3,50 +3,90 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvd6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic a:I
 
-.field public final synthetic b:Lxo1;
-
-.field public final synthetic c:Ljava/util/List;
+.field public final synthetic b:Luo1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLxo1;Ljava/util/List;)V
+.method public synthetic constructor <init>(Luo1;I)V
     .locals 0
 
+    iput p2, p0, Lso1;->a:I
+
+    iput-object p1, p0, Lso1;->b:Luo1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lso1;->a:Z
-
-    iput-object p2, p0, Lso1;->b:Lxo1;
-
-    iput-object p3, p0, Lso1;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget p1, p0, Lso1;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch p1, :pswitch_data_0
 
-    iget-boolean p1, p0, Lso1;->a:Z
+    iget-object p1, p0, Lso1;->b:Luo1;
 
-    iget-object v0, p0, Lso1;->b:Lxo1;
+    iget-object p1, p1, Luo1;->F0:Lto1;
 
-    iget-object v1, p0, Lso1;->c:Ljava/util/List;
+    if-eqz p1, :cond_0
 
-    invoke-static {p1, v0, v1}, Lxo1;->x(ZLxo1;Ljava/util/List;)V
+    invoke-interface {p1}, Lto1;->o()V
 
-    sget-object p1, Laxf;->a:Laxf;
+    :cond_0
+    return-void
 
-    return-object p1
+    :pswitch_0
+    iget-object p1, p0, Lso1;->b:Luo1;
+
+    iget-object p1, p1, Luo1;->F0:Lto1;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Lto1;->c()V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lso1;->b:Luo1;
+
+    iget-object p1, p1, Luo1;->F0:Lto1;
+
+    if-eqz p1, :cond_2
+
+    invoke-interface {p1}, Lto1;->g()V
+
+    :cond_2
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lso1;->b:Luo1;
+
+    iget-object p1, p1, Luo1;->F0:Lto1;
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Lto1;->i()V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

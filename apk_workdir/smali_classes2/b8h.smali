@@ -1,52 +1,102 @@
-.class public final Lb8h;
-.super Landroid/content/ContextWrapper;
+.class public final enum Lb8h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ljj3;
+.implements Lkbh;
 
 
-# instance fields
-.field public final synthetic a:Ld8h;
+# static fields
+.field public static final enum a:Lb8h;
+
+.field public static final synthetic b:[Lb8h;
+
+.field public static final synthetic c:Lfd5;
 
 
 # direct methods
-.method public constructor <init>(Ld8h;Landroid/content/Context;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lb8h;->a:Ld8h;
+    new-instance v0, Lb8h;
 
-    invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+    const-string v1, "OPEN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lb8h;->a:Lb8h;
+
+    filled-new-array {v0}, [Lb8h;
+
+    move-result-object v0
+
+    sput-object v0, Lb8h;->b:[Lb8h;
+
+    new-instance v1, Lfd5;
+
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lb8h;->c:Lfd5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Llj3;
+.method public static valueOf(Ljava/lang/String;)Lb8h;
     .locals 1
 
-    iget-object v0, p0, Lb8h;->a:Ld8h;
+    const-class v0, Lb8h;
 
-    iget-object v0, v0, Ld8h;->a:Landroid/content/Context;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    move-result-object p0
+
+    check-cast p0, Lb8h;
+
+    return-object p0
+.end method
+
+.method public static values()[Lb8h;
+    .locals 1
+
+    sget-object v0, Lb8h;->b:[Lb8h;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljj3;
+    check-cast v0, [Lb8h;
 
-    invoke-interface {v0}, Ljj3;->a()Llj3;
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
+
+    const/16 v0, 0x1e
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final isDeviceProtectedStorage()Z
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
+    const-string v0, "WebAppOpenCodeReader"
 
-    return v0
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "open_code_reader"
+
+    return-object v0
 .end method

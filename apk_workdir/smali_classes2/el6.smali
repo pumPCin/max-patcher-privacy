@@ -1,51 +1,95 @@
-.class public abstract synthetic Lel6;
+.class public final synthetic Lel6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewStub$OnInflateListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Lfl6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lfl6;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lsw1;->y(I)[I
+    iput-object p1, p0, Lel6;->a:Lfl6;
 
-    move-result-object v1
+    return-void
+.end method
 
-    array-length v1, v1
 
-    new-array v1, v1, [I
+# virtual methods
+.method public final onInflate(Landroid/view/ViewStub;Landroid/view/View;)V
+    .locals 8
 
-    const/4 v2, 0x1
+    sget p1, Le0b;->b:I
 
-    const/4 v3, 0x0
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v6
 
-    :catch_0
-    const/4 v3, 0x2
+    sget p1, Le0b;->a:I
 
-    :try_start_1
-    aput v3, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object p1
 
-    :catch_2
-    sput-object v1, Lel6;->$EnumSwitchMapping$0:[I
+    move-object v1, p1
+
+    check-cast v1, Lone/me/sdk/gallery/view/NumericCheckButton;
+
+    iget-object p1, p0, Lel6;->a:Lfl6;
+
+    iput-object v1, p1, Lfl6;->F0:Lone/me/sdk/gallery/view/NumericCheckButton;
+
+    iget-object p1, p1, Lj6d;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const/16 p2, 0xa
+
+    int-to-float p2, p2
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, p1
+
+    invoke-static {p2}, Lagi;->d(F)I
+
+    move-result v2
+
+    if-nez v6, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Loi3;
+
+    const/4 v7, 0x1
+
+    move v3, v2
+
+    move v4, v2
+
+    move v5, v2
+
+    invoke-direct/range {v0 .. v7}, Loi3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
+
+    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

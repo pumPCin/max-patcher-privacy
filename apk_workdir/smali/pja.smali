@@ -1,115 +1,76 @@
-.class public abstract Lpja;
-.super Ljava/lang/Object;
+.class public final Lpja;
+.super Lg3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final X:Z
 
-.field public static final b:I
+.field public final b:J
 
-.field public static final c:I
+.field public final c:Ljava/util/concurrent/TimeUnit;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
+.field public final o:Lqnd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lsja;JLjava/util/concurrent/TimeUnit;Lqnd;Z)V
+    .locals 0
 
-    sget v0, Lghc;->contact_list_confirm_contact_block_action:I
+    invoke-direct {p0, p1}, Lg3;-><init>(Lsja;)V
 
-    sput v0, Lpja;->a:I
+    iput-wide p2, p0, Lpja;->b:J
 
-    sget v0, Lghc;->contact_list_confirm_contact_block_description:I
+    iput-object p4, p0, Lpja;->c:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Lpja;->b:I
+    iput-object p5, p0, Lpja;->o:Lqnd;
 
-    sget v0, Lghc;->contact_list_confirm_contact_block_title:I
+    iput-boolean p6, p0, Lpja;->X:Z
 
-    sput v0, Lpja;->c:I
+    return-void
+.end method
 
-    sget v0, Lghc;->contact_list_confirm_contact_delete_action:I
 
-    sput v0, Lpja;->d:I
+# virtual methods
+.method public final o(Lcka;)V
+    .locals 7
 
-    sget v0, Lghc;->contact_list_confirm_contact_delete_title:I
+    new-instance v1, Lb2e;
 
-    sput v0, Lpja;->e:I
+    invoke-direct {v1, p1}, Lb2e;-><init>(Lcka;)V
 
-    sget v0, Lghc;->contact_list_contact_block_snackbar_title:I
+    iget-boolean p1, p0, Lpja;->X:Z
 
-    sput v0, Lpja;->f:I
+    iget-object v6, p0, Lg3;->a:Lsja;
 
-    sget v0, Lghc;->contact_list_contact_delete_snackbar_title:I
+    if-eqz p1, :cond_0
 
-    sput v0, Lpja;->g:I
+    new-instance v0, Lmja;
 
-    sget v0, Lghc;->contact_list_menu_item_add_contact:I
+    iget-object v4, p0, Lpja;->c:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Lpja;->h:I
+    iget-object v5, p0, Lpja;->o:Lqnd;
 
-    sget v0, Lghc;->contact_list_search_hint:I
+    iget-wide v2, p0, Lpja;->b:J
 
-    sput v0, Lpja;->i:I
+    invoke-direct/range {v0 .. v5}, Lmja;-><init>(Lb2e;JLjava/util/concurrent/TimeUnit;Lqnd;)V
 
-    sget v0, Lghc;->contact_list_search_hint_with_nick:I
+    invoke-interface {v6, v0}, Lsja;->a(Lcka;)V
 
-    sput v0, Lpja;->j:I
+    return-void
 
-    sget v0, Lghc;->empty_contact_list_description:I
+    :cond_0
+    new-instance v0, Lnja;
 
-    sput v0, Lpja;->k:I
+    iget-object v4, p0, Lpja;->c:Ljava/util/concurrent/TimeUnit;
 
-    sget v0, Lghc;->empty_contact_list_title:I
+    iget-object v5, p0, Lpja;->o:Lqnd;
 
-    sput v0, Lpja;->l:I
+    iget-wide v2, p0, Lpja;->b:J
 
-    sget v0, Lghc;->empty_search_contact_btn_title:I
+    invoke-direct/range {v0 .. v5}, Loja;-><init>(Lb2e;JLjava/util/concurrent/TimeUnit;Lqnd;)V
 
-    sput v0, Lpja;->m:I
-
-    sget v0, Lghc;->empty_search_contact_disabled_description:I
-
-    sput v0, Lpja;->n:I
-
-    sget v0, Lghc;->empty_search_contact_enabled_description:I
-
-    sput v0, Lpja;->o:I
-
-    sget v0, Lghc;->empty_search_contact_title:I
-
-    sput v0, Lpja;->p:I
-
-    sget v0, Lghc;->snackbar_self_title:I
-
-    sput v0, Lpja;->q:I
+    invoke-interface {v6, v0}, Lsja;->a(Lcka;)V
 
     return-void
 .end method

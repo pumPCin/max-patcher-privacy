@@ -1,23 +1,56 @@
-.class public final Lim7;
-.super Ld3;
+.class public final synthetic Lim7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final c:Lim7;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/nio/ByteBuffer;)V
+    .locals 0
 
-    new-instance v0, Lim7;
+    iput p1, p0, Lim7;->a:I
 
-    const/16 v1, 0x8
+    iput-object p2, p0, Lim7;->b:Ljava/nio/ByteBuffer;
 
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Lim7;->c:Lim7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lim7;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lim7;->b:Ljava/nio/ByteBuffer;
+
+    invoke-static {v0}, Lorg/webrtc/YuvConverter;->a(Ljava/nio/ByteBuffer;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lim7;->b:Ljava/nio/ByteBuffer;
+
+    invoke-static {v0}, Lorg/webrtc/JavaI420Buffer;->a(Ljava/nio/ByteBuffer;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

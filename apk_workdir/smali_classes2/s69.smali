@@ -1,125 +1,57 @@
-.class public final enum Ls69;
-.super Ljava/lang/Enum;
+.class public final Ls69;
+.super Lk14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Ls69;
+# instance fields
+.field public X:Ljava/lang/Object;
 
-.field public static final a:Ljava/util/HashMap;
+.field public Y:Lx08;
 
-.field public static final enum b:Ls69;
+.field public Z:Lx08;
 
-.field public static final enum c:Ls69;
+.field public o:Lc79;
 
-.field public static final enum o:Ls69;
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Lc79;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lc79;Lk14;)V
+    .locals 0
 
-    new-instance v0, Ls69;
+    iput-object p1, p0, Ls69;->s0:Lc79;
 
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ls69;->b:Ls69;
-
-    new-instance v1, Ls69;
-
-    const-string v3, "EDITED"
-
-    const/4 v4, 0x1
-
-    invoke-direct {v1, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Ls69;
-
-    const-string v4, "REMOVED"
-
-    const/4 v5, 0x2
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ls69;->c:Ls69;
-
-    new-instance v4, Ls69;
-
-    const-string v5, "DELAYED_FIRE_ERROR"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ls69;->o:Ls69;
-
-    filled-new-array {v0, v1, v3, v4}, [Ls69;
-
-    move-result-object v0
-
-    sput-object v0, Ls69;->X:[Ls69;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
-
-    invoke-static {}, Ls69;->values()[Ls69;
-
-    move-result-object v1
-
-    array-length v3, v1
-
-    :goto_0
-    if-ge v2, v3, :cond_0
-
-    aget-object v4, v1, v2
-
-    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v0, Ls69;->a:Ljava/util/HashMap;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ls69;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Ls69;
+    iput-object p1, p0, Ls69;->r0:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Ls69;->t0:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Ls69;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Ls69;->t0:I
 
-.method public static values()[Ls69;
-    .locals 1
+    iget-object p1, p0, Ls69;->s0:Lc79;
 
-    sget-object v0, Ls69;->X:[Ls69;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0, v0}, Lc79;->w(Lda2;Lk14;Loa9;)Ljava/io/Serializable;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Ls69;
-
-    return-object v0
+    return-object p1
 .end method

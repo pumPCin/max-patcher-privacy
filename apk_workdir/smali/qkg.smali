@@ -1,118 +1,157 @@
 .class public final Lqkg;
-.super Lf0;
+.super Liz1;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lqkg;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public c:I
+.field public a:Z
 
-.field public final o:Landroid/os/Parcelable;
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final synthetic c:Lyt1;
+
+.field public final synthetic d:Lg5e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lyt1;Lg5e;)V
+    .locals 0
 
-    new-instance v0, Le0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x9
+    iput-object p1, p0, Lqkg;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {v0, v1}, Le0;-><init>(I)V
+    iput-object p2, p0, Lqkg;->c:Lyt1;
 
-    sput-object v0, Lqkg;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p3, p0, Lqkg;->d:Lg5e;
 
-    return-void
-.end method
+    const/4 p1, 0x1
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 1
-
-    invoke-direct {p0, p1, p2}, Lf0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    if-nez p2, :cond_0
-
-    const-class p2, Lqkg;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object p2
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lqkg;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqkg;->o:Landroid/os/Parcelable;
+    iput-boolean p1, p0, Lqkg;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final b(ILpz1;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-boolean p1, p0, Lqkg;->a:Z
 
-    const-string v1, "FragmentPager.SavedState{"
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    iput-boolean p1, p0, Lqkg;->a:Z
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "cameraCaptureResult timestampNs = "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p2}, Lpz1;->getTimestamp()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", current system uptimeMs = "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", current system realtimeMs = "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "VideoCapture"
+
+    invoke-static {v0, p1}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object p1, p0, Lqkg;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p2}, Lpz1;->f()Lwjf;
+
+    move-result-object p2
+
+    const-string v0, "androidx.camera.video.VideoCapture.streamUpdate"
+
+    iget-object p2, p2, Lwjf;->a:Landroid/util/ArrayMap;
+
+    invoke-virtual {p2, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    iget-object v0, p0, Lqkg;->c:Lyt1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    if-ne p2, v1, :cond_1
 
-    move-result-object v1
+    const/4 p2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Lyt1;->b(Ljava/lang/Object;)Z
 
-    const-string v1, " position="
+    move-result p2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p2, :cond_1
 
-    iget v1, p0, Lqkg;->c:I
+    const/4 p2, 0x1
 
-    const-string v2, "}"
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    move-result p1
 
-    move-result-object v0
+    if-nez p1, :cond_1
 
-    return-object v0
-.end method
+    invoke-static {}, Ldmi;->e()Lgv6;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    move-result-object p1
 
-    invoke-super {p0, p1, p2}, Lf0;->writeToParcel(Landroid/os/Parcel;I)V
+    new-instance p2, Lpkg;
 
-    iget v0, p0, Lqkg;->c:I
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, p0, Lqkg;->d:Lg5e;
 
-    iget-object v0, p0, Lqkg;->o:Landroid/os/Parcelable;
+    invoke-direct {p2, p0, v0, v1}, Lpkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, p2}, Lgv6;->execute(Ljava/lang/Runnable;)V
 
+    :cond_1
     return-void
 .end method

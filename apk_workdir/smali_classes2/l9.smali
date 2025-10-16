@@ -1,104 +1,93 @@
 .class public final Ll9;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-
-# direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ll9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ll9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ll9;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Ll9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Ll9;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ll9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, v1, p2}, Ll9;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ll9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ll9;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p1
-
-    iget-object v0, p0, Ll9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-nez p1, :cond_0
-
-    const/16 p1, 0x8
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of v1, p1, Ll9;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    if-nez v1, :cond_1
 
-    new-instance v1, Ljava/lang/Integer;
+    const/4 p1, 0x0
 
-    invoke-direct {v1, p1}, Ljava/lang/Integer;-><init>(I)V
+    return p1
 
-    const/4 p1, 0x1
+    :cond_1
+    check-cast p1, Ll9;
 
-    invoke-virtual {v0, v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
+    sget v1, Ltya;->a:I
 
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p1
+    sget p1, Lvya;->a:I
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    sget v0, Ltya;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    sget v2, Lvya;->R:I
+
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Lwx1;->v(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    sget v0, Ltya;->c:I
+
+    sget v1, Lvya;->R:I
+
+    const-string v2, ", title="
+
+    const-string v3, ", type="
+
+    const-string v4, "AddAdminsTabState(id="
+
+    invoke-static {v4, v0, v2, v1, v3}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "CHAT_MEMBERS"
+
+    const-string v2, ")"
+
+    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

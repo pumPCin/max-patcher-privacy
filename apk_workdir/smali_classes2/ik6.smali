@@ -1,98 +1,199 @@
 .class public final Lik6;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lb18;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:Lhk6;
 
-.field public final synthetic Y:Ljava/lang/Long;
+.field public final b:Landroid/net/Uri;
+
+.field public final c:Z
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljava/lang/Long;)V
+.method public constructor <init>(Lhk6;Landroid/net/Uri;Z)V
     .locals 0
 
-    iput-object p1, p0, Lik6;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lik6;->Y:Ljava/lang/Long;
+    iput-object p1, p0, Lik6;->a:Lhk6;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lik6;->b:Landroid/net/Uri;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lik6;->c:Z
+
+    iget-object p1, p1, Lhk6;->a:Lgk6;
+
+    invoke-virtual {p1}, Lgk6;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result p1
+
+    int-to-long p1, p1
+
+    iput-wide p1, p0, Lik6;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ln24;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lik6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lik6;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lik6;
 
-    sget-object p2, Laxf;->a:Laxf;
+    iget-object v1, p0, Lik6;->a:Lhk6;
 
-    invoke-virtual {p1, p2}, Lik6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lik6;->a:Lhk6;
 
-    move-result-object p1
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lik6;->b:Landroid/net/Uri;
+
+    iget-object v3, p1, Lik6;->b:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lik6;->c:Z
+
+    iget-boolean p1, p1, Lik6;->c:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final getItemId()J
     .locals 2
 
-    new-instance p1, Lik6;
+    iget-wide v0, p0, Lik6;->o:J
 
-    iget-object v0, p0, Lik6;->X:Ljava/lang/Object;
-
-    iget-object v1, p0, Lik6;->Y:Ljava/lang/Long;
-
-    invoke-direct {p1, v0, p2, v1}, Lik6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljava/lang/Long;)V
-
-    return-object p1
+    return-wide v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final hashCode()I
+    .locals 2
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lik6;->a:Lhk6;
 
-    iget-object p1, p0, Lik6;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Lhk6;->hashCode()I
 
-    check-cast p1, Lp19;
+    move-result v0
 
-    iget-object p1, p1, Lp19;->a:Le39;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v1, p1, Le39;->r0:J
+    iget-object v1, p0, Lik6;->b:Landroid/net/Uri;
 
-    iget-wide v3, p1, Lqi0;->a:J
+    if-nez v1, :cond_0
 
-    iget-object p1, p0, Lik6;->Y:Ljava/lang/Long;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    goto :goto_0
 
-    move-result-wide v5
+    :cond_0
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
-    new-instance v0, Lmsd;
+    move-result v1
 
-    invoke-direct/range {v0 .. v6}, Lmsd;-><init>(JJJ)V
+    :goto_0
+    add-int/2addr v0, v1
 
-    new-instance p1, Lnsd;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {p1, v0}, Lnsd;-><init>(Lmsd;)V
+    iget-boolean v1, p0, Lik6;->c:Z
 
-    return-object p1
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "GalleryAlbumUiItem(album="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lik6;->a:Lhk6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cover="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lik6;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelected="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lik6;->c:Z
+
+    invoke-static {v0, v2, v1}, Lwx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

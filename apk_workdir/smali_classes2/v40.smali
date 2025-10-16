@@ -1,65 +1,75 @@
 .class public final Lv40;
-.super Lti0;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lgi6;
 
 
 # instance fields
-.field public final b:J
+.field public synthetic X:Le50;
 
-.field public final c:I
-
-.field public final o:J
-
-
-# direct methods
-.method public constructor <init>(IJJ)V
-    .locals 0
-
-    invoke-direct {p0}, Lti0;-><init>()V
-
-    iput p1, p0, Lv40;->c:I
-
-    iput-wide p2, p0, Lv40;->b:J
-
-    iput-wide p4, p0, Lv40;->o:J
-
-    return-void
-.end method
+.field public synthetic Y:F
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Le50;
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
+
+    move-result p2
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Lv40;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lv40;->X:Le50;
+
+    iput p2, v0, Lv40;->Y:F
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lv40;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "AudioPlaybackEvent{type="
+    iget-object p1, p0, Lv40;->X:Le50;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v0, p0, Lv40;->Y:F
 
-    iget v1, p0, Lv40;->c:I
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v1, p1, Le50;->a:Ljava/lang/Long;
 
-    const-string v1, ", messageId="
+    iget-object v2, p1, Le50;->b:Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Le50;->d:Lw20;
 
-    iget-wide v1, p0, Lv40;->b:J
+    new-instance v3, Le50;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-direct {v3, v1, v2, v0, p1}, Le50;-><init>(Ljava/lang/Long;Ljava/lang/Long;FLw20;)V
 
-    const-string v1, ", chatId="
+    return-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-wide v1, p0, Lv40;->o:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Lsab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

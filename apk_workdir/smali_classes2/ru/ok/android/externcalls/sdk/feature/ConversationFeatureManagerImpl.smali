@@ -22,31 +22,31 @@
         "featureListeners",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;)V",
-        "Ly61;",
+        "Lz71;",
         "feature",
         "Lkotlin/Function0;",
-        "Laxf;",
+        "Lzag;",
         "onComplete",
         "Lkotlin/Function1;",
         "",
         "onError",
         "enableFeatureForAll",
-        "(Ly61;Ltd6;Lvd6;)V",
+        "(Lz71;Loh6;Lqh6;)V",
         "",
-        "Lbh1;",
+        "Lci1;",
         "roles",
         "enableFeatureForRoles",
-        "(Ly61;Ljava/util/Set;Ltd6;Lvd6;)V",
+        "(Lz71;Ljava/util/Set;Loh6;Lqh6;)V",
         "Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;",
         "listener",
         "addFeatureListener",
-        "(Ly61;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V",
+        "(Lz71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V",
         "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
         "getFeatureRoles",
-        "(Ly61;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
+        "(Lz71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
         "",
         "isFeatureEnabled",
-        "(Ly61;)Z",
+        "(Lz71;)Z",
         "removeFeatureListener",
         "Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;",
         "Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;",
@@ -83,88 +83,88 @@
 
 
 # virtual methods
-.method public addFeatureListener(Ly61;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+.method public addFeatureListener(Lz71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManagerImpl;->featureListeners:Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;
 
-    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->addFeatureListener(Ly61;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->addFeatureListener(Lz71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
 
     return-void
 .end method
 
-.method public enableFeatureForAll(Ly61;Ltd6;Lvd6;)V
+.method public enableFeatureForAll(Lz71;Loh6;Lqh6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ly61;",
-            "Ltd6;",
-            "Lvd6;",
+            "Lz71;",
+            "Loh6;",
+            "Lqh6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;
 
-    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;->enableFeatureForAll(Ly61;Ltd6;Lvd6;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;->enableFeatureForAll(Lz71;Loh6;Lqh6;)V
 
     return-void
 .end method
 
-.method public enableFeatureForRoles(Ly61;Ljava/util/Set;Ltd6;Lvd6;)V
+.method public enableFeatureForRoles(Lz71;Ljava/util/Set;Loh6;Lqh6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ly61;",
+            "Lz71;",
             "Ljava/util/Set<",
             "+",
-            "Lbh1;",
+            "Lci1;",
             ">;",
-            "Ltd6;",
-            "Lvd6;",
+            "Loh6;",
+            "Lqh6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;->enableFeatureForRoles(Ly61;Ljava/util/Set;Ltd6;Lvd6;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutor;->enableFeatureForRoles(Lz71;Ljava/util/Set;Loh6;Lqh6;)V
 
     return-void
 .end method
 
-.method public getFeatureRoles(Ly61;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
+.method public getFeatureRoles(Lz71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManagerImpl;->featureListeners:Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;
 
-    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->getFeatureRoles(Ly61;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->getFeatureRoles(Lz71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public isFeatureEnabled(Ly61;)Z
+.method public isFeatureEnabled(Lz71;)Z
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManagerImpl;->featureListeners:Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;
 
-    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->isFeatureEnabled(Ly61;)Z
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->isFeatureEnabled(Lz71;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public removeFeatureListener(Ly61;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+.method public removeFeatureListener(Lz71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManagerImpl;->featureListeners:Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;
 
-    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->removeFeatureListener(Ly61;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+    invoke-interface {v0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;->removeFeatureListener(Lz71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
 
     return-void
 .end method

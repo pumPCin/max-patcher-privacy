@@ -1,55 +1,116 @@
-.class public final Li2a;
-.super Lwy3;
+.class public final synthetic Li2a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:Lq19;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lj2a;
-
-.field public o:Lj2a;
-
-.field public r0:I
+.field public final synthetic b:Lk2a;
 
 
 # direct methods
-.method public constructor <init>(Lj2a;Lwy3;)V
+.method public synthetic constructor <init>(Lk2a;I)V
     .locals 0
 
-    iput-object p1, p0, Li2a;->Z:Lj2a;
+    iput p2, p0, Li2a;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li2a;->b:Lk2a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    iput-object p1, p0, Li2a;->Y:Ljava/lang/Object;
+    iget p1, p0, Li2a;->a:I
 
-    iget p1, p0, Li2a;->r0:I
+    packed-switch p1, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Li2a;->b:Lk2a;
 
-    or-int/2addr p1, v0
+    iget-object p1, p1, Lf3;->a:Ljava/lang/Object;
 
-    iput p1, p0, Li2a;->r0:I
+    check-cast p1, Ljava/util/Set;
 
-    const-wide/16 v0, 0x0
-
-    const/4 p1, 0x0
-
-    iget-object v2, p0, Li2a;->Z:Lj2a;
-
-    invoke-static {v2, v0, v1, p1, p0}, Lj2a;->a(Lj2a;JLq19;Lwy3;)Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    return-object p1
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh2a;
+
+    new-instance v1, Lxj0;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2}, Lxj0;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lf3;->m(Lhr3;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Li2a;->b:Lk2a;
+
+    iget-object p1, p1, Lf3;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh2a;
+
+    new-instance v1, Lxj0;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2}, Lxj0;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lf3;->m(Lhr3;)V
+
+    goto :goto_1
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

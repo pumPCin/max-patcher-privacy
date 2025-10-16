@@ -1,97 +1,102 @@
-.class public final Leeb;
-.super Lc2f;
-.source "SourceFile"
-
-# interfaces
-.implements Lje6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.class public abstract Leeb;
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
-    .locals 0
-
-    iput-object p2, p0, Leeb;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Leeb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Leeb;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Leeb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Leeb;
-
-    iget-object v1, p0, Leeb;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    invoke-direct {v0, p2, v1}, Leeb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
-
-    iput-object p1, v0, Leeb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a(Ljava/lang/String;Z)Ljava/lang/Class;
     .locals 3
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Leeb;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Leeb;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    invoke-static {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0(Lone/me/chats/picker/chats/PickerChatsListWidget;)Z
-
-    move-result v1
-
-    iget-object v2, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->w0:Lidb;
-
-    invoke-virtual {v2, p1}, Lhv7;->E(Ljava/util/List;)V
-
-    invoke-virtual {v0}, Ljz3;->getView()Landroid/view/View;
-
-    move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "An exception occurred while finding class for name "
+
+    const-string v2, ". "
+
+    invoke-static {v1, p0, v2}, Lwx1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static b(Ljava/nio/file/Path;)Ljava/lang/String;
+    .locals 2
+
+    invoke-interface {p0}, Ljava/nio/file/Path;->getFileName()Ljava/nio/file/Path;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    const-string v0, "."
+
+    const/4 v1, 0x6
+
+    invoke-static {v0, p0, v1}, Ls9f;->G(Ljava/lang/String;Ljava/lang/CharSequence;I)I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Laxf;->a:Laxf;
+    const/4 v1, 0x0
 
-    return-object p1
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_0
+    return-object p0
+
+    :cond_1
+    const-string p0, ""
+
+    return-object p0
 .end method

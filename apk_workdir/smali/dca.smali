@@ -1,47 +1,35 @@
-.class public final Ldca;
-.super Lw15;
+.class public abstract Ldca;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final w0:Lka8;
-
-.field public final x0:F
-
-
 # direct methods
-.method public constructor <init>(Lka8;F)V
+.method public static a(Landroid/app/Notification$MessagingStyle;Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->addMessage(Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
 
-    iput-object p1, p0, Ldca;->w0:Lka8;
+    move-result-object p0
 
-    iput p2, p0, Ldca;->x0:F
-
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final p()Z
+.method public static b(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance v0, Landroid/app/Notification$MessagingStyle;
 
-    return v0
+    invoke-direct {v0, p0}, Landroid/app/Notification$MessagingStyle;-><init>(Ljava/lang/CharSequence;)V
+
+    return-object v0
 .end method
 
-.method public final t(FFFLt4e;)V
-    .locals 1
+.method public static c(Landroid/app/Notification$MessagingStyle;Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
+    .locals 0
 
-    iget v0, p0, Ldca;->x0:F
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->setConversationTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle;
 
-    sub-float/2addr p2, v0
+    move-result-object p0
 
-    iget-object v0, p0, Ldca;->w0:Lka8;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lka8;->t(FFFLt4e;)V
-
-    return-void
+    return-object p0
 .end method

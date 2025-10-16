@@ -1,145 +1,98 @@
 .class public final Lo86;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final synthetic X:Lr86;
+
+.field public final synthetic Y:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lr86;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo86;->X:Lr86;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput-object p2, p0, Lo86;->Y:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    const/4 p1, 0x2
 
-    iput-object v0, p0, Lo86;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lqya;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lo86;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    check-cast p1, Lb54;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lo86;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Lo86;
 
-    if-eqz v1, :cond_0
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lo86;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
-
-    check-cast v1, Lo86;
-
-    invoke-virtual {v1, p1}, Lo86;->a(Lqya;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p2
 .end method
 
-.method public final b(Lqya;Lcya;Lmya;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lo86;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance p1, Lo86;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lo86;->X:Lr86;
 
-    move-result-object v0
+    iget-object v1, p0, Lo86;->Y:Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {p1, v0, v1, p2}, Lo86;-><init>(Lr86;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lo86;
-
-    invoke-virtual {v1, p1, p2, p3}, Lo86;->b(Lqya;Lcya;Lmya;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final c(Lqya;Lcya;Lmya;Ljava/io/IOException;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lo86;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Lo86;->X:Lr86;
 
-    move-result-object v0
+    iget-object p1, p1, Lr86;->Z:Llt7;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    if-eqz v1, :cond_0
+    check-cast p1, La2b;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Lo86;->Y:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, La2b;->h(Ljava/lang/CharSequence;)V
 
-    check-cast v1, Lo86;
+    new-instance v0, Lo2b;
 
-    invoke-virtual {v1, p1, p2, p3, p4}, Lo86;->c(Lqya;Lcya;Lmya;Ljava/io/IOException;)V
+    sget v1, Liid;->j:I
 
-    goto :goto_0
+    invoke-direct {v0, v1}, Lo2b;-><init>(I)V
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p1, v0}, La2b;->e(Ls2b;)V
 
-.method public final d(Lqya;Lcya;Lmya;)V
-    .locals 2
+    invoke-virtual {p1}, La2b;->i()Lz1b;
 
-    iget-object v0, p0, Lo86;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lo86;
-
-    invoke-virtual {v1, p1, p2, p3}, Lo86;->d(Lqya;Lcya;Lmya;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

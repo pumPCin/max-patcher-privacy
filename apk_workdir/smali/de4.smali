@@ -1,321 +1,325 @@
-.class public final Lde4;
-.super Landroid/media/AudioTrack$StreamEventCallback;
+.class public abstract Lde4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:[I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public static final b:[J
+
+.field public static final c:[Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lde4;->a:I
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lde4;->b:Ljava/lang/Object;
+    new-array v1, v0, [I
 
-    invoke-direct {p0}, Landroid/media/AudioTrack$StreamEventCallback;-><init>()V
+    sput-object v1, Lde4;->a:[I
+
+    new-array v1, v0, [J
+
+    sput-object v1, Lde4;->b:[J
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    sput-object v0, Lde4;->c:[Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static final a(II[I)I
+    .locals 3
 
-# virtual methods
-.method public final onDataRequest(Landroid/media/AudioTrack;I)V
-    .locals 0
+    add-int/lit8 p0, p0, -0x1
 
-    iget p2, p0, Lde4;->a:I
+    const/4 v0, 0x0
 
-    packed-switch p2, :pswitch_data_0
+    :goto_0
+    if-gt v0, p0, :cond_2
 
-    iget-object p2, p0, Lde4;->b:Ljava/lang/Object;
+    add-int v1, v0, p0
 
-    check-cast p2, Lsr8;
+    ushr-int/lit8 v1, v1, 0x1
 
-    iget-object p2, p2, Lsr8;->c:Ljava/lang/Object;
+    aget v2, p2, v1
 
-    check-cast p2, Lfe4;
+    if-ge v2, p1, :cond_0
 
-    iget-object p2, p2, Lfe4;->v:Landroid/media/AudioTrack;
-
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
+    add-int/lit8 v0, v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lde4;->b:Ljava/lang/Object;
+    if-le v2, p1, :cond_1
 
-    check-cast p1, Lsr8;
+    add-int/lit8 p0, v1, -0x1
 
-    iget-object p1, p1, Lsr8;->c:Ljava/lang/Object;
-
-    check-cast p1, Lfe4;
-
-    iget-object p2, p1, Lfe4;->r:Lvm6;
-
-    if-eqz p2, :cond_1
-
-    iget-boolean p1, p1, Lfe4;->V:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p2, Lvm6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lsh8;
-
-    iget-object p1, p1, Lzh8;->Q0:Lze5;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lze5;->a()V
+    goto :goto_0
 
     :cond_1
+    return v1
+
+    :cond_2
+    not-int p0, v0
+
+    return p0
+.end method
+
+.method public static final b(IJ[J)I
+    .locals 4
+
+    add-int/lit8 p0, p0, -0x1
+
+    const/4 v0, 0x0
+
     :goto_0
-    return-void
+    if-gt v0, p0, :cond_2
 
-    :pswitch_0
-    iget-object p2, p0, Lde4;->b:Ljava/lang/Object;
+    add-int v1, v0, p0
 
-    check-cast p2, Lx08;
+    ushr-int/lit8 v1, v1, 0x1
 
-    iget-object p2, p2, Lx08;->c:Ljava/lang/Object;
+    aget-wide v2, p3, v1
 
-    check-cast p2, Lee4;
+    cmp-long v2, v2, p1
 
-    iget-object p2, p2, Lee4;->u:Landroid/media/AudioTrack;
+    if-gez v2, :cond_0
 
-    if-ne p1, p2, :cond_2
+    add-int/lit8 v0, v1, 0x1
 
-    const/4 p1, 0x1
+    goto :goto_0
+
+    :cond_0
+    if-lez v2, :cond_1
+
+    add-int/lit8 p0, v1, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
+
+    :cond_2
+    not-int p0, v0
+
+    return p0
+.end method
+
+.method public static final c(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final d(Lkotlin/coroutines/Continuation;)Ljava/lang/String;
+    .locals 3
+
+    instance-of v0, p0, Lkotlinx/coroutines/internal/DispatchedContinuation;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lkotlinx/coroutines/internal/DispatchedContinuation;
+
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/DispatchedContinuation;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/16 v0, 0x40
+
+    :try_start_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-static {p0}, Lde4;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    new-instance v2, Lvcd;
+
+    invoke-direct {v2, v1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v1, v2
+
+    :goto_0
+    invoke-static {v1}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_1
-    invoke-static {p1}, Lnjg;->m(Z)V
-
-    iget-object p1, p0, Lde4;->b:Ljava/lang/Object;
-
-    check-cast p1, Lx08;
-
-    iget-object p1, p1, Lx08;->c:Ljava/lang/Object;
-
-    check-cast p1, Lee4;
-
-    iget-object p2, p1, Lee4;->r:Lt55;
-
-    if-eqz p2, :cond_3
-
-    iget-boolean p1, p1, Lee4;->U:Z
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, p2, Lt55;->b:Ljava/lang/Object;
-
-    check-cast p1, Lrh8;
-
-    iget-object p1, p1, Lrh8;->Y1:Lye5;
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, p1, Lye5;->a:Lif5;
-
-    iget-object p1, p1, Lif5;->r0:Lu4f;
-
-    const/4 p2, 0x2
-
-    invoke-virtual {p1, p2}, Lu4f;->c(I)Z
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onPresentationEnded(Landroid/media/AudioTrack;)V
-    .locals 1
-
-    iget v0, p0, Lde4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/media/AudioTrack$StreamEventCallback;->onPresentationEnded(Landroid/media/AudioTrack;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lde4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsr8;
-
-    iget-object v0, v0, Lsr8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lfe4;
-
-    iget-object v0, v0, Lfe4;->v:Landroid/media/AudioTrack;
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lde4;->b:Ljava/lang/Object;
-
-    check-cast p1, Lsr8;
-
-    iget-object p1, p1, Lsr8;->c:Ljava/lang/Object;
-
-    check-cast p1, Lfe4;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lfe4;->U:Z
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onTearDown(Landroid/media/AudioTrack;)V
-    .locals 1
-
-    iget v0, p0, Lde4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lde4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsr8;
-
-    iget-object v0, v0, Lsr8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lfe4;
-
-    iget-object v0, v0, Lfe4;->v:Landroid/media/AudioTrack;
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lde4;->b:Ljava/lang/Object;
-
-    check-cast p1, Lsr8;
-
-    iget-object p1, p1, Lsr8;->c:Ljava/lang/Object;
-
-    check-cast p1, Lfe4;
-
-    iget-object v0, p1, Lfe4;->r:Lvm6;
-
-    if-eqz v0, :cond_1
-
-    iget-boolean p1, p1, Lfe4;->V:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, v0, Lvm6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lsh8;
-
-    iget-object p1, p1, Lzh8;->Q0:Lze5;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lze5;->a()V
-
     :cond_1
-    :goto_0
-    return-void
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object v0, p0, Lde4;->b:Ljava/lang/Object;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    check-cast v0, Lx08;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v0, Lx08;->c:Ljava/lang/Object;
+    move-result-object v2
 
-    check-cast v0, Lee4;
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object v0, v0, Lee4;->u:Landroid/media/AudioTrack;
+    move-result-object v2
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    invoke-static {p0}, Lde4;->c(Ljava/lang/Object;)Ljava/lang/String;
 
-    :cond_2
-    const/4 p1, 0x0
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     :goto_1
-    invoke-static {p1}, Lnjg;->m(Z)V
+    check-cast v1, Ljava/lang/String;
 
-    iget-object p1, p0, Lde4;->b:Ljava/lang/Object;
+    return-object v1
+.end method
 
-    check-cast p1, Lx08;
+.method public static final e(Lwbg;)V
+    .locals 3
 
-    iget-object p1, p1, Lx08;->c:Ljava/lang/Object;
+    new-instance v0, Lsj3;
 
-    check-cast p1, Lee4;
+    const/16 v1, 0x11
 
-    iget-object v0, p1, Lee4;->r:Lt55;
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
 
-    if-eqz v0, :cond_3
+    const-class v1, Lkub;
 
-    iget-boolean p1, p1, Lee4;->U:Z
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
 
-    if-eqz p1, :cond_3
+    new-instance v0, Lsj3;
 
-    iget-object p1, v0, Lt55;->b:Ljava/lang/Object;
+    const/16 v1, 0x12
 
-    check-cast p1, Lrh8;
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
 
-    iget-object p1, p1, Lrh8;->Y1:Lye5;
+    const-class v1, Lhp0;
 
-    if-eqz p1, :cond_3
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
 
-    iget-object p1, p1, Lye5;->a:Lif5;
+    new-instance v0, Lsj3;
 
-    iget-object p1, p1, Lif5;->r0:Lu4f;
+    const/16 v1, 0x13
 
-    const/4 v0, 0x2
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
 
-    invoke-virtual {p1, v0}, Lu4f;->c(I)Z
+    const-class v1, Lr97;
 
-    :cond_3
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+
+    new-instance v0, Lsj3;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
+
+    const-class v1, Lq97;
+
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    new-instance v1, Ljg6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2, v0}, Ljg6;-><init>(ILjava/lang/Object;)V
+
+    const-class v2, Lpg6;
+
+    invoke-virtual {p0, v2, v1}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+
+    new-instance v1, Lig6;
+
+    invoke-direct {v1, v0}, Lig6;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
+
+    const-class v0, Lvr4;
+
+    invoke-virtual {p0, v0, v1}, Lwbg;->c(Ljava/lang/Class;Lnh7;)V
+
+    new-instance v0, Lsj3;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
+
+    const-class v1, Ls97;
+
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+
+    new-instance v0, Lsj3;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
+
+    const-class v1, Lp97;
+
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+
+    new-instance v0, Lsj3;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
+
+    const-class v1, Lirb;
+
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+
+    new-instance v0, Lsj3;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Lsj3;-><init>(I)V
+
+    const-class v1, Lhrb;
+
+    invoke-virtual {p0, v1, v0}, Lwbg;->e(Ljava/lang/Class;Lnh7;)V
+
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

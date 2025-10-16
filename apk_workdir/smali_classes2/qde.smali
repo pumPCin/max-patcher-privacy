@@ -1,135 +1,204 @@
 .class public final Lqde;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lgkb;
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public X:I
 
-.field public final b:Ltb5;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Ltd5;
-
-.field public final d:Lyn7;
-
-.field public final e:Lnkb;
-
-.field public final f:Lyn7;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Lq0d;
+.field public final synthetic Z:Lhee;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Ltb5;Ltd5;Lyn7;Lnkb;Lyn7;)V
+.method public constructor <init>(Lhee;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqde;->Z:Lhee;
 
-    iput-object p1, p0, Lqde;->a:Landroid/app/Application;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lqde;->b:Ltb5;
-
-    iput-object p3, p0, Lqde;->c:Ltd5;
-
-    iput-object p4, p0, Lqde;->d:Lyn7;
-
-    iput-object p5, p0, Lqde;->e:Lnkb;
-
-    iput-object p6, p0, Lqde;->f:Lyn7;
-
-    const-class p1, Lqde;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqde;->g:Ljava/lang/String;
-
-    new-instance p1, Lr4d;
-
-    const/16 p2, 0x10
-
-    invoke-direct {p1, p2, p0}, Lr4d;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lq0d;
-
-    invoke-direct {p2, p1}, Lq0d;-><init>(Ltd6;)V
-
-    iput-object p2, p0, Lqde;->h:Lq0d;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lagg;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lqde;->g:Ljava/lang/String;
+    check-cast p1, Lml3;
 
-    const-string v1, "Single player handler. Free player"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lqde;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1}, Lagg;->stop()V
+    move-result-object p1
 
-    const/4 v0, 0x0
+    check-cast p1, Lqde;
 
-    invoke-interface {p1, v0}, Lagg;->Z(Landroid/view/Surface;)V
+    sget-object p2, Lzag;->a:Lzag;
 
-    return-void
+    invoke-virtual {p1, p2}, Lqde;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final get()Lagg;
-    .locals 5
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lqde;->g:Ljava/lang/String;
+    new-instance v0, Lqde;
 
-    sget-object v1, Lyt3;->n:Lhoa;
+    iget-object v1, p0, Lqde;->Z:Lhee;
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, v1, p2}, Lqde;-><init>(Lhee;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lqde;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lqde;->X:I
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lqde;->Z:Lhee;
+
+    if-eqz v0, :cond_3
+
+    if-eq v0, v3, :cond_2
+
+    if-eq v0, v2, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    sget-object v2, Lr28;->o:Lr28;
+    :cond_2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+    goto :goto_3
 
-    move-result v3
+    :cond_3
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    if-eqz v3, :cond_1
+    iget-object p1, p0, Lqde;->Y:Ljava/lang/Object;
 
-    iget-object v3, p0, Lqde;->h:Lq0d;
+    check-cast p1, Lml3;
 
-    invoke-virtual {v3}, Lq0d;->a()Z
+    sget-object v0, Lkl3;->a:Lkl3;
 
-    move-result v3
+    invoke-static {p1, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v4, "Single player handler. Player exist: "
+    move-result v0
 
-    invoke-static {v4, v3}, Ln29;->h(Ljava/lang/String;Z)Ljava/lang/String;
+    sget-object v5, Lc54;->a:Lc54;
 
-    move-result-object v3
+    if-eqz v0, :cond_4
 
-    const/4 v4, 0x0
+    iput v3, p0, Lqde;->X:I
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v4, p0}, Lhee;->s(Lhee;Llff;)Ljava/lang/Object;
 
-    :cond_1
+    move-result-object p1
+
+    if-ne p1, v5, :cond_8
+
+    goto :goto_1
+
+    :cond_4
+    sget-object v0, Lil3;->a:Lil3;
+
+    invoke-static {p1, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iput v2, p0, Lqde;->X:I
+
+    invoke-static {v4, p0}, Lhee;->s(Lhee;Llff;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v5, :cond_5
+
+    goto :goto_1
+
+    :cond_5
     :goto_0
-    iget-object v0, p0, Lqde;->h:Lq0d;
+    sget-object p1, Lp9e;->o:Lr9e;
 
-    invoke-virtual {v0}, Lq0d;->getValue()Ljava/lang/Object;
+    invoke-virtual {v4, p1}, Lhee;->y(Lb4a;)V
 
-    move-result-object v0
+    goto :goto_3
 
-    check-cast v0, Lagg;
+    :cond_6
+    sget-object v0, Ljl3;->a:Ljl3;
 
-    return-object v0
+    invoke-static {p1, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    iput v1, p0, Lqde;->X:I
+
+    invoke-static {v4, p0}, Lhee;->s(Lhee;Llff;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v5, :cond_7
+
+    :goto_1
+    return-object v5
+
+    :cond_7
+    :goto_2
+    sget-object p1, Lp9e;->n:Lr9e;
+
+    invoke-virtual {v4, p1}, Lhee;->y(Lb4a;)V
+
+    :cond_8
+    :goto_3
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :cond_9
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

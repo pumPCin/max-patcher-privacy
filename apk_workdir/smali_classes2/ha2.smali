@@ -1,185 +1,195 @@
-.class public final Lha2;
-.super Lc2f;
+.class public abstract synthetic Lha2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lsa2;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lsa2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lha2;->Y:Lsa2;
+    invoke-static {}, Lfa2;->values()[Lfa2;
 
-    const/4 p1, 0x2
+    move-result-object v0
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v2, 0x2
+
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x3
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v2, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v1, 0x5
+
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    const/4 v2, 0x6
+
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    const/4 v1, 0x7
+
+    :try_start_6
+    aput v1, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    const/16 v2, 0x8
+
+    :try_start_7
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    const/16 v1, 0x9
+
+    :try_start_8
+    aput v1, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    const/16 v1, 0xa
+
+    :try_start_9
+    aput v1, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    const/16 v1, 0xb
+
+    :try_start_a
+    aput v1, v0, v2
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+
+    :catch_a
+    const/16 v2, 0xc
+
+    :try_start_b
+    aput v2, v0, v2
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+
+    :catch_b
+    const/16 v2, 0xd
+
+    :try_start_c
+    aput v2, v0, v2
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
+
+    :catch_c
+    const/16 v2, 0xe
+
+    :try_start_d
+    aput v2, v0, v1
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
+
+    :catch_d
+    const/16 v1, 0xf
+
+    :try_start_e
+    aput v1, v0, v2
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
+
+    :catch_e
+    const/16 v2, 0x10
+
+    :try_start_f
+    aput v2, v0, v1
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
+
+    :catch_f
+    const/16 v1, 0x11
+
+    :try_start_10
+    aput v1, v0, v2
+    :try_end_10
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
+
+    :catch_10
+    const/16 v2, 0x12
+
+    :try_start_11
+    aput v2, v0, v1
+    :try_end_11
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
+
+    :catch_11
+    const/16 v1, 0x13
+
+    :try_start_12
+    aput v1, v0, v2
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
+
+    :catch_12
+    const/16 v2, 0x14
+
+    :try_start_13
+    aput v2, v0, v1
+    :try_end_13
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
+
+    :catch_13
+    const/16 v1, 0x15
+
+    :try_start_14
+    aput v1, v0, v2
+    :try_end_14
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
+
+    :catch_14
+    sput-object v0, Lha2;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lha2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lha2;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lha2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lha2;
-
-    iget-object v0, p0, Lha2;->Y:Lsa2;
-
-    invoke-direct {p1, v0, p2}, Lha2;-><init>(Lsa2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Lha2;->Y:Lsa2;
-
-    iget-wide v1, v0, Ln52;->a:J
-
-    iget v3, p0, Lha2;->X:I
-
-    sget-object v4, Laxf;->a:Laxf;
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x1
-
-    sget-object v7, Lo24;->a:Lo24;
-
-    if-eqz v3, :cond_2
-
-    if-eq v3, v6, :cond_1
-
-    if-ne v3, v5, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    return-object v4
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, v0, Lsa2;->p:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkl6;
-
-    new-instance v3, Lj6c;
-
-    iget-object v8, v0, Lsa2;->k:Lyn7;
-
-    invoke-interface {v8}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Landroid/content/Context;
-
-    sget-object v9, Lrw4;->t0:Lss6;
-
-    invoke-virtual {v9, v8}, Lss6;->u(Landroid/content/Context;)Lrw4;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lrw4;->l()Llwa;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Llwa;->getName()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct {v3, v1, v2, v8}, Ll6c;-><init>(JLjava/lang/String;)V
-
-    iput v6, p0, Lha2;->X:I
-
-    invoke-virtual {p1, v3, v6, p0}, Lkl6;->a(Ll6c;ZLc2f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    check-cast p1, Lf6c;
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p1, Lf6c;->b:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result p1
-
-    iget-object v0, v0, Ln52;->f:Lt6e;
-
-    new-instance v3, Lmsb;
-
-    invoke-direct {v3, v1, v2, p1}, Lmsb;-><init>(JI)V
-
-    iput v5, p0, Lha2;->X:I
-
-    invoke-virtual {v0, v3, p0}, Lt6e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_4
-
-    :goto_1
-    return-object v7
-
-    :cond_4
-    return-object v4
 .end method

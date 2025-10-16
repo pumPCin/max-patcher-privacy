@@ -3,97 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lh0f;
-
-
-# static fields
-.field public static final b:J
+.implements Ltyb;
 
 
 # instance fields
-.field public final a:Landroid/app/ActivityManager;
+.field public final a:Lpm6;
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Lv87;
+
+.field public final d:Lj7;
+
+.field public final e:Ldz4;
+
+.field public final f:Z
+
+.field public final g:Ltyb;
+
+.field public final h:I
+
+.field public final i:Lx85;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x5
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lne4;->b:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/app/ActivityManager;)V
+.method public constructor <init>(Lpm6;Ljava/util/concurrent/Executor;Lv87;Lj7;Ldz4;ZLtyb;ILx85;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lne4;->a:Landroid/app/ActivityManager;
+    iput-object p1, p0, Lne4;->a:Lpm6;
+
+    iput-object p2, p0, Lne4;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Lne4;->c:Lv87;
+
+    iput-object p4, p0, Lne4;->d:Lj7;
+
+    iput-object p5, p0, Lne4;->e:Ldz4;
+
+    iput-boolean p6, p0, Lne4;->f:Z
+
+    iput-object p7, p0, Lne4;->g:Ltyb;
+
+    iput p8, p0, Lne4;->h:I
+
+    iput-object p9, p0, Lne4;->i:Lx85;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 7
+.method public final a(Laj0;Luyb;)V
+    .locals 9
 
-    new-instance v0, Lvz8;
+    invoke-static {}, Ltg6;->p()Lsg6;
 
-    iget-object v1, p0, Lne4;->a:Landroid/app/ActivityManager;
+    move-object v0, p2
 
-    invoke-virtual {v1}, Landroid/app/ActivityManager;->getMemoryClass()I
+    check-cast v0, Lhk0;
 
-    move-result v1
+    iget-object v0, v0, Lhk0;->a:Lda7;
 
-    const/high16 v2, 0x100000
+    iget-object v1, v0, Lda7;->b:Landroid/net/Uri;
 
-    mul-int/2addr v1, v2
-
-    const v2, 0x7fffffff
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+    invoke-static {v1}, Lxfg;->d(Landroid/net/Uri;)Z
 
     move-result v1
 
-    const/high16 v2, 0x2000000
+    if-nez v1, :cond_0
 
-    if-ge v1, v2, :cond_0
+    iget-object v0, v0, Lda7;->b:Landroid/net/Uri;
 
-    const/high16 v1, 0x400000
+    invoke-static {v0}, Lea7;->c(Landroid/net/Uri;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lje4;
+
+    iget v1, p0, Lne4;->h:I
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lme4;-><init>(Lne4;Laj0;Luyb;I)V
+
+    move-object v3, p0
+
+    move-object v5, p2
 
     goto :goto_0
 
     :cond_0
-    const/high16 v2, 0x4000000
+    new-instance v6, Lzbc;
 
-    if-ge v1, v2, :cond_1
+    iget-object v0, p0, Lne4;->a:Lpm6;
 
-    const/high16 v1, 0x600000
+    invoke-direct {v6, v0}, Lzbc;-><init>(Lpm6;)V
 
-    goto :goto_0
+    new-instance v2, Lke4;
 
-    :cond_1
-    div-int/lit8 v1, v1, 0x4
+    iget-object v7, p0, Lne4;->d:Lj7;
+
+    iget v8, p0, Lne4;->h:I
+
+    move-object v3, p0
+
+    move-object v4, p1
+
+    move-object v5, p2
+
+    invoke-direct/range {v2 .. v8}, Lke4;-><init>(Lne4;Laj0;Luyb;Lzbc;Lj7;I)V
+
+    move-object v0, v2
 
     :goto_0
-    const v6, 0x7fffffff
+    iget-object p1, v3, Lne4;->g:Ltyb;
 
-    sget-wide v4, Lne4;->b:J
+    invoke-interface {p1, v0, v5}, Ltyb;->a(Laj0;Luyb;)V
 
-    const/16 v2, 0x100
-
-    const v3, 0x7fffffff
-
-    invoke-direct/range {v0 .. v6}, Lvz8;-><init>(IIIJI)V
-
-    return-object v0
+    return-void
 .end method

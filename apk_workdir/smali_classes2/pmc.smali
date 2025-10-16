@@ -1,85 +1,50 @@
-.class public final enum Lpmc;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Lpmc;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum a:Lpmc;
+.field public static oneme_folders_chats_picker_toolbar:I = 0x7f0a0692
 
-.field public static final enum b:Lpmc;
+.field public static oneme_folders_delete_folder_bottom_sheet_cancel_button:I = 0x7f0a0693
 
-.field public static final enum c:Lpmc;
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f0a0694
 
-.field public static final synthetic o:[Lpmc;
+.field public static oneme_folders_edit_bottom_sheet_cancel_button:I = 0x7f0a0695
 
+.field public static oneme_folders_edit_bottom_sheet_delete_button:I = 0x7f0a0696
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.field public static oneme_folders_edit_create_button:I = 0x7f0a0697
 
-    new-instance v0, Lpmc;
+.field public static oneme_folders_edit_delete_button:I = 0x7f0a0698
 
-    const-string v1, "NONE"
+.field public static oneme_folders_edit_folder_name_field:I = 0x7f0a0699
 
-    const/4 v2, 0x0
+.field public static oneme_folders_edit_members_add_button:I = 0x7f0a069a
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static oneme_folders_edit_members_list:I = 0x7f0a069b
 
-    sput-object v0, Lpmc;->a:Lpmc;
+.field public static oneme_folders_edit_save_button:I = 0x7f0a069c
 
-    new-instance v1, Lpmc;
+.field public static oneme_folders_edit_screen:I = 0x7f0a069d
 
-    const-string v2, "READ"
+.field public static oneme_folders_edit_title_input:I = 0x7f0a069e
 
-    const/4 v3, 0x1
+.field public static oneme_folders_edit_toolbar:I = 0x7f0a069f
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static oneme_folders_list_all_folder_view_type:I = 0x7f0a06a0
 
-    sput-object v1, Lpmc;->b:Lpmc;
+.field public static oneme_folders_list_create_folder_view_type:I = 0x7f0a06a1
 
-    new-instance v2, Lpmc;
+.field public static oneme_folders_list_menu_action_change:I = 0x7f0a06a2
 
-    const-string v3, "WRITE"
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f0a06a3
 
-    const/4 v4, 0x2
+.field public static oneme_folders_list_recommended_folder_view_type:I = 0x7f0a06a4
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static oneme_folders_list_recycler_view:I = 0x7f0a06a5
 
-    sput-object v2, Lpmc;->c:Lpmc;
+.field public static oneme_folders_list_screen:I = 0x7f0a06a6
 
-    filled-new-array {v0, v1, v2}, [Lpmc;
+.field public static oneme_folders_list_toolbar:I = 0x7f0a06a7
 
-    move-result-object v0
-
-    sput-object v0, Lpmc;->o:[Lpmc;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lpmc;
-    .locals 1
-
-    const-class v0, Lpmc;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lpmc;
-
-    return-object p0
-.end method
-
-.method public static values()[Lpmc;
-    .locals 1
-
-    sget-object v0, Lpmc;->o:[Lpmc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lpmc;
-
-    return-object v0
-.end method
+.field public static oneme_folders_list_user_folder_view_type:I = 0x7f0a06a8

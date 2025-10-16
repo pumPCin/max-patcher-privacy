@@ -1,29 +1,148 @@
-.class public abstract Lx3a;
-.super Ljava/lang/Object;
+.class public final Lx3a;
+.super Lt8b;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final b:Lx3a;
+
+.field public static final c:Lx3a;
+
+
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method public static a(Landroid/graphics/drawable/Icon;)Landroid/os/Parcelable;
-    .locals 0
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
-    return-object p0
-.end method
+    new-instance v0, Lx3a;
 
-.method public static b(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
-    .locals 1
+    const/4 v1, 0x0
 
-    new-instance v0, Landroid/app/Notification$Action$Builder;
+    invoke-direct {v0, v1}, Lx3a;-><init>(I)V
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    sput-object v0, Lx3a;->b:Lx3a;
 
-    return-object v0
-.end method
+    new-instance v0, Lx3a;
 
-.method public static c(Landroid/app/Notification$Builder;Landroid/graphics/drawable/Icon;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$Builder;
+    invoke-direct {v0, v1}, Lx3a;-><init>(I)V
+
+    sput-object v0, Lx3a;->c:Lx3a;
 
     return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lx3a;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lt8b;
+    .locals 1
+
+    iget v0, p0, Lx3a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lx3a;->b:Lx3a;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lx3a;->c:Lx3a;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lx3a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Comparable;
+
+    check-cast p2, Ljava/lang/Comparable;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-ne p1, p2, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p2, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Comparable;
+
+    check-cast p2, Ljava/lang/Comparable;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lx3a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "Ordering.natural().reverse()"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "Ordering.natural()"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

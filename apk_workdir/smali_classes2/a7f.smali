@@ -1,19 +1,52 @@
-.class public final La7f;
-.super Li7f;
+.class public final synthetic La7f;
+.super Lb9;
 .source "SourceFile"
+
+# interfaces
+.implements Lgi6;
+
+
+# static fields
+.field public static final r0:La7f;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 5
 
-    const-string v0, "io connection error"
+    new-instance v0, La7f;
 
-    const/4 v1, 0x0
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    const-string v2, "io.exception"
+    const/4 v2, 0x4
 
-    invoke-direct {p0, v2, v0, v1}, Li7f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v3, 0x3
+
+    const-class v4, Lqbb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, La7f;->r0:La7f;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lq2f;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    sget-object p3, Lh7f;->B0:[Lwq7;
+
+    new-instance p3, Lqbb;
+
+    invoke-direct {p3, p1, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p3
 .end method

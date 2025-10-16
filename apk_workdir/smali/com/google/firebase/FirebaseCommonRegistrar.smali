@@ -38,173 +38,113 @@
 
 # virtual methods
 .method public final getComponents()Ljava/util/List;
-    .locals 15
+    .locals 8
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v1, 0x0
+    const-class v1, Lco4;
 
-    new-array v2, v1, [Ljava/lang/Class;
+    invoke-static {v1}, Lgh3;->b(Ljava/lang/Class;)Lfh3;
 
-    new-instance v3, Ljava/util/HashSet;
+    move-result-object v2
 
-    invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
+    new-instance v3, Lsq4;
 
-    new-instance v4, Ljava/util/HashSet;
+    const/4 v4, 0x2
 
-    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+    const/4 v5, 0x0
 
-    new-instance v12, Ljava/util/HashSet;
+    const-class v6, Lla0;
 
-    invoke-direct {v12}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v3, v4, v5, v6}, Lsq4;-><init>(IILjava/lang/Class;)V
 
-    const-class v13, Lfl4;
+    invoke-virtual {v2, v3}, Lfh3;->a(Lsq4;)V
 
-    invoke-static {v13}, Lo6c;->a(Ljava/lang/Class;)Lo6c;
+    new-instance v3, Lkg4;
 
-    move-result-object v5
+    const/16 v6, 0x15
 
-    invoke-virtual {v3, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-direct {v3, v6}, Lkg4;-><init>(I)V
 
-    array-length v5, v2
+    iput-object v3, v2, Lfh3;->g:Ljava/lang/Object;
 
-    const/4 v9, 0x0
+    invoke-virtual {v2}, Lfh3;->b()Lgh3;
 
-    move v6, v9
+    move-result-object v2
 
-    :goto_0
-    if-ge v6, v5, :cond_0
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    aget-object v7, v2, v6
+    new-instance v2, Ldgc;
 
-    const-string v8, "Null interface"
+    const-class v3, Lue0;
 
-    invoke-static {v7, v8}, Lxff;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    const-class v6, Ljava/util/concurrent/Executor;
 
-    invoke-static {v7}, Lo6c;->a(Ljava/lang/Class;)Lo6c;
+    invoke-direct {v2, v3, v6}, Ldgc;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
 
-    move-result-object v7
+    const-class v3, Lbx6;
 
-    invoke-virtual {v3, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    const-class v6, Lcx6;
 
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Ltn4;
-
-    const/4 v14, 0x2
-
-    const-class v5, Lz90;
-
-    invoke-direct {v2, v14, v1, v5}, Ltn4;-><init>(IILjava/lang/Class;)V
-
-    iget-object v5, v2, Ltn4;->a:Lo6c;
-
-    invoke-virtual {v3, v5}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    invoke-virtual {v4, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    new-instance v11, Lnd4;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v11, v2}, Lnd4;-><init>(I)V
-
-    new-instance v5, Lze3;
-
-    new-instance v7, Ljava/util/HashSet;
-
-    invoke-direct {v7, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v8, Ljava/util/HashSet;
-
-    invoke-direct {v8, v4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    const/4 v6, 0x0
-
-    move v10, v9
-
-    invoke-direct/range {v5 .. v12}, Lze3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILof3;Ljava/util/Set;)V
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lo6c;
-
-    const-class v3, Lke0;
-
-    const-class v4, Ljava/util/concurrent/Executor;
-
-    invoke-direct {v2, v3, v4}, Lo6c;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
-
-    const-class v3, Lts6;
-
-    const-class v4, Lus6;
-
-    filled-new-array {v3, v4}, [Ljava/lang/Class;
+    filled-new-array {v3, v6}, [Ljava/lang/Class;
 
     move-result-object v3
 
-    new-instance v4, Lye3;
+    new-instance v6, Lfh3;
 
-    const-class v5, Lbh4;
+    const-class v7, Lxj4;
 
-    invoke-direct {v4, v5, v3}, Lye3;-><init>(Ljava/lang/Class;[Ljava/lang/Class;)V
+    invoke-direct {v6, v7, v3}, Lfh3;-><init>(Ljava/lang/Class;[Ljava/lang/Class;)V
 
     const-class v3, Landroid/content/Context;
 
-    invoke-static {v3}, Ltn4;->a(Ljava/lang/Class;)Ltn4;
+    invoke-static {v3}, Lsq4;->a(Ljava/lang/Class;)Lsq4;
 
     move-result-object v3
 
-    invoke-virtual {v4, v3}, Lye3;->a(Ltn4;)V
+    invoke-virtual {v6, v3}, Lfh3;->a(Lsq4;)V
 
-    const-class v3, Lwr5;
+    const-class v3, Lnv5;
 
-    invoke-static {v3}, Ltn4;->a(Ljava/lang/Class;)Ltn4;
+    invoke-static {v3}, Lsq4;->a(Ljava/lang/Class;)Lsq4;
 
     move-result-object v3
 
-    invoke-virtual {v4, v3}, Lye3;->a(Ltn4;)V
+    invoke-virtual {v6, v3}, Lfh3;->a(Lsq4;)V
 
-    new-instance v3, Ltn4;
+    new-instance v3, Lsq4;
 
-    const-class v5, Lss6;
+    const-class v7, Lax6;
 
-    invoke-direct {v3, v14, v1, v5}, Ltn4;-><init>(IILjava/lang/Class;)V
+    invoke-direct {v3, v4, v5, v7}, Lsq4;-><init>(IILjava/lang/Class;)V
 
-    invoke-virtual {v4, v3}, Lye3;->a(Ltn4;)V
+    invoke-virtual {v6, v3}, Lfh3;->a(Lsq4;)V
 
-    new-instance v3, Ltn4;
+    new-instance v3, Lsq4;
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    invoke-direct {v3, v5, v5, v13}, Ltn4;-><init>(IILjava/lang/Class;)V
+    invoke-direct {v3, v4, v4, v1}, Lsq4;-><init>(IILjava/lang/Class;)V
 
-    invoke-virtual {v4, v3}, Lye3;->a(Ltn4;)V
+    invoke-virtual {v6, v3}, Lfh3;->a(Lsq4;)V
 
-    new-instance v3, Ltn4;
+    new-instance v1, Lsq4;
 
-    invoke-direct {v3, v2, v5, v1}, Ltn4;-><init>(Lo6c;II)V
+    invoke-direct {v1, v2, v4, v5}, Lsq4;-><init>(Ldgc;II)V
 
-    invoke-virtual {v4, v3}, Lye3;->a(Ltn4;)V
+    invoke-virtual {v6, v1}, Lfh3;->a(Lsq4;)V
 
-    new-instance v1, Lzg4;
+    new-instance v1, Lvj4;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v2, v3}, Lzg4;-><init>(Lo6c;I)V
+    invoke-direct {v1, v2, v3}, Lvj4;-><init>(Ldgc;I)V
 
-    iput-object v1, v4, Lye3;->g:Ljava/lang/Object;
+    iput-object v1, v6, Lfh3;->g:Ljava/lang/Object;
 
-    invoke-virtual {v4}, Lye3;->b()Lze3;
+    invoke-virtual {v6}, Lfh3;->b()Lgh3;
 
     move-result-object v1
 
@@ -218,7 +158,7 @@
 
     const-string v2, "fire-android"
 
-    invoke-static {v2, v1}, Lq5h;->p(Ljava/lang/String;Ljava/lang/String;)Lze3;
+    invoke-static {v2, v1}, Lubi;->a(Ljava/lang/String;Ljava/lang/String;)Lgh3;
 
     move-result-object v1
 
@@ -228,7 +168,7 @@
 
     const-string v2, "21.0.0"
 
-    invoke-static {v1, v2}, Lq5h;->p(Ljava/lang/String;Ljava/lang/String;)Lze3;
+    invoke-static {v1, v2}, Lubi;->a(Ljava/lang/String;Ljava/lang/String;)Lgh3;
 
     move-result-object v1
 
@@ -242,7 +182,7 @@
 
     const-string v2, "device-name"
 
-    invoke-static {v2, v1}, Lq5h;->p(Ljava/lang/String;Ljava/lang/String;)Lze3;
+    invoke-static {v2, v1}, Lubi;->a(Ljava/lang/String;Ljava/lang/String;)Lgh3;
 
     move-result-object v1
 
@@ -256,7 +196,7 @@
 
     const-string v2, "device-model"
 
-    invoke-static {v2, v1}, Lq5h;->p(Ljava/lang/String;Ljava/lang/String;)Lze3;
+    invoke-static {v2, v1}, Lubi;->a(Ljava/lang/String;Ljava/lang/String;)Lgh3;
 
     move-result-object v1
 
@@ -270,70 +210,70 @@
 
     const-string v2, "device-brand"
 
-    invoke-static {v2, v1}, Lq5h;->p(Ljava/lang/String;Ljava/lang/String;)Lze3;
+    invoke-static {v2, v1}, Lubi;->a(Ljava/lang/String;Ljava/lang/String;)Lgh3;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v1, Lgk5;
+    new-instance v1, Lrn5;
 
     const/16 v2, 0x10
 
-    invoke-direct {v1, v2}, Lgk5;-><init>(I)V
+    invoke-direct {v1, v2}, Lrn5;-><init>(I)V
 
     const-string v2, "android-target-sdk"
 
-    invoke-static {v2, v1}, Lq5h;->s(Ljava/lang/String;Lgk5;)Lze3;
+    invoke-static {v2, v1}, Lubi;->c(Ljava/lang/String;Lrn5;)Lgh3;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v1, Lgk5;
+    new-instance v1, Lrn5;
 
     const/16 v2, 0x11
 
-    invoke-direct {v1, v2}, Lgk5;-><init>(I)V
+    invoke-direct {v1, v2}, Lrn5;-><init>(I)V
 
     const-string v2, "android-min-sdk"
 
-    invoke-static {v2, v1}, Lq5h;->s(Ljava/lang/String;Lgk5;)Lze3;
+    invoke-static {v2, v1}, Lubi;->c(Ljava/lang/String;Lrn5;)Lgh3;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v1, Lgk5;
+    new-instance v1, Lrn5;
 
     const/16 v2, 0x12
 
-    invoke-direct {v1, v2}, Lgk5;-><init>(I)V
+    invoke-direct {v1, v2}, Lrn5;-><init>(I)V
 
     const-string v2, "android-platform"
 
-    invoke-static {v2, v1}, Lq5h;->s(Ljava/lang/String;Lgk5;)Lze3;
+    invoke-static {v2, v1}, Lubi;->c(Ljava/lang/String;Lrn5;)Lgh3;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v1, Lgk5;
+    new-instance v1, Lrn5;
 
     const/16 v2, 0x13
 
-    invoke-direct {v1, v2}, Lgk5;-><init>(I)V
+    invoke-direct {v1, v2}, Lrn5;-><init>(I)V
 
     const-string v2, "android-installer"
 
-    invoke-static {v2, v1}, Lq5h;->s(Ljava/lang/String;Lgk5;)Lze3;
+    invoke-static {v2, v1}, Lubi;->c(Ljava/lang/String;Lrn5;)Lgh3;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :try_start_0
-    sget-object v1, Ldn7;->b:Ldn7;
+    sget-object v1, Lps7;->b:Lps7;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -341,31 +281,22 @@
     :try_end_0
     .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     const/4 v1, 0x0
 
-    :goto_1
-    if-eqz v1, :cond_1
+    :goto_0
+    if-eqz v1, :cond_0
 
     const-string v2, "kotlin"
 
-    invoke-static {v2, v1}, Lq5h;->p(Ljava/lang/String;Ljava/lang/String;)Lze3;
+    invoke-static {v2, v1}, Lubi;->a(Ljava/lang/String;Ljava/lang/String;)Lgh3;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_1
+    :cond_0
     return-object v0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Components are not allowed to depend on interfaces they themselves provide."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

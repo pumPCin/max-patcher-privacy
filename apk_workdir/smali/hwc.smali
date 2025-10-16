@@ -3,157 +3,432 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lhwc;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/regex/Pattern;
+.field public final a:I
+
+.field public final b:F
+
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 5
-    invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    new-instance v0, Lv2b;
 
-    move-result-object p1
+    const/16 v1, 0x15
 
-    invoke-direct {p0, p1}, Lhwc;-><init>(Ljava/util/regex/Pattern;)V
+    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
+
+    sput-object v0, Lhwc;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+.method public constructor <init>(IF)V
+    .locals 0
 
-    const/4 p2, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p2, :pswitch_data_0
+    iput p1, p0, Lhwc;->a:I
 
-    const/4 p1, 0x0
+    iput p2, p0, Lhwc;->b:F
 
-    .line 1
-    throw p1
+    return-void
+.end method
+
+.method public static a(Landroid/os/Parcelable;)Lhwc;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_3
+
+    move-object v1, p0
+
+    check-cast v1, Landroid/media/Rating;
+
+    invoke-virtual {v1}, Landroid/media/Rating;->getRatingStyle()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Landroid/media/Rating;->isRated()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const/4 v3, 0x0
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    packed-switch v2, :pswitch_data_0
+
+    goto :goto_2
 
     :pswitch_0
-    const/16 p2, 0x80
+    invoke-virtual {v1}, Landroid/media/Rating;->getPercentRating()F
 
-    goto :goto_0
+    move-result v0
+
+    invoke-static {v0}, Lhwc;->d(F)Lhwc;
+
+    move-result-object v0
+
+    goto :goto_1
 
     :pswitch_1
-    const/16 p2, 0x20
+    invoke-virtual {v1}, Landroid/media/Rating;->getStarRating()F
 
-    goto :goto_0
+    move-result v0
+
+    invoke-static {v2, v0}, Lhwc;->e(IF)Lhwc;
+
+    move-result-object v0
+
+    goto :goto_1
 
     :pswitch_2
-    const/4 p2, 0x4
+    invoke-virtual {v1}, Landroid/media/Rating;->isThumbUp()Z
 
-    goto :goto_0
+    move-result v0
 
-    :pswitch_3
-    const/4 p2, 0x1
-
-    goto :goto_0
-
-    :pswitch_4
-    const/16 p2, 0x10
-
-    goto :goto_0
-
-    :pswitch_5
-    const/16 p2, 0x8
-
-    goto :goto_0
-
-    :pswitch_6
-    const/4 p2, 0x2
-
-    :goto_0
-    and-int/lit8 v0, p2, 0x2
+    new-instance v1, Lhwc;
 
     if-eqz v0, :cond_0
 
-    or-int/lit8 p2, p2, 0x40
+    move v3, v4
 
-    .line 2
     :cond_0
-    invoke-static {p1, p2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+    const/4 v0, 0x2
 
-    move-result-object p1
+    invoke-direct {v1, v0, v3}, Lhwc;-><init>(IF)V
 
-    invoke-direct {p0, p1}, Lhwc;-><init>(Ljava/util/regex/Pattern;)V
+    :goto_0
+    move-object v0, v1
 
-    return-void
+    goto :goto_1
+
+    :pswitch_3
+    invoke-virtual {v1}, Landroid/media/Rating;->hasHeart()Z
+
+    move-result v0
+
+    new-instance v1, Lhwc;
+
+    if-eqz v0, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    const/4 v0, 0x1
+
+    invoke-direct {v1, v0, v3}, Lhwc;-><init>(IF)V
+
+    goto :goto_0
+
+    :cond_2
+    packed-switch v2, :pswitch_data_1
+
+    goto :goto_1
+
+    :pswitch_4
+    new-instance v0, Lhwc;
+
+    const/high16 v1, -0x40800000    # -1.0f
+
+    invoke-direct {v0, v2, v1}, Lhwc;-><init>(IF)V
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p0, v0, Lhwc;->c:Ljava/lang/Object;
+
+    :cond_3
+    :goto_2
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1
+        :pswitch_1
+        :pswitch_1
         :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x1
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
     .end packed-switch
 .end method
 
-.method public constructor <init>(Ljava/util/regex/Pattern;)V
-    .locals 0
+.method public static d(F)Lhwc;
+    .locals 2
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    .line 4
-    iput-object p1, p0, Lhwc;->a:Ljava/util/regex/Pattern;
+    cmpg-float v0, p0, v0
 
-    return-void
+    if-ltz v0, :cond_1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    cmpl-float v0, p0, v0
+
+    if-lez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lhwc;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, p0}, Lhwc;-><init>(IF)V
+
+    return-object v0
+
+    :cond_1
+    :goto_0
+    const-string p0, "Rating"
+
+    const-string v0, "Invalid percentage-based rating value"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static e(IF)Lhwc;
+    .locals 4
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    const-string v2, "Rating"
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Invalid rating style ("
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ") for a star rating"
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :cond_0
+    const/high16 v0, 0x40a00000    # 5.0f
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 v0, 0x40800000    # 4.0f
+
+    goto :goto_0
+
+    :cond_2
+    const/high16 v0, 0x40400000    # 3.0f
+
+    :goto_0
+    const/4 v3, 0x0
+
+    cmpg-float v3, p1, v3
+
+    if-ltz v3, :cond_4
+
+    cmpl-float v0, p1, v0
+
+    if-lez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Lhwc;
+
+    invoke-direct {v0, p0, p1}, Lhwc;-><init>(IF)V
+
+    return-object v0
+
+    :cond_4
+    :goto_1
+    const-string p0, "Trying to set out of range star-based rating"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;)Z
-    .locals 1
+.method public final b()F
+    .locals 2
 
-    iget-object v0, p0, Lhwc;->a:Ljava/util/regex/Pattern;
+    const/4 v0, 0x3
 
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    iget v1, p0, Lhwc;->a:I
 
-    move-result-object p1
+    if-eq v1, v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
+    const/4 v0, 0x4
 
-    move-result p1
+    if-eq v1, v0, :cond_0
 
-    return p1
+    const/4 v0, 0x5
+
+    if-eq v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lhwc;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Lhwc;->b:F
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/high16 v0, -0x40800000    # -1.0f
+
+    return v0
 .end method
 
-.method public final b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public final c()Z
+    .locals 2
+
+    iget v0, p0, Lhwc;->b:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lhwc;->a:Ljava/util/regex/Pattern;
+    iget v0, p0, Lhwc;->a:I
 
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    iget-object v0, p0, Lhwc;->a:Ljava/util/regex/Pattern;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/regex/Pattern;->toString()Ljava/lang/String;
+    const-string v1, "Rating:style="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lhwc;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " rating="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lhwc;->b:F
+
+    cmpg-float v1, v2, v1
+
+    if-gez v1, :cond_0
+
+    const-string v1, "unrated"
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lhwc;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lhwc;->b:F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    return-void
 .end method

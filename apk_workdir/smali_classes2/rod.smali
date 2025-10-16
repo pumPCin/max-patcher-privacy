@@ -1,23 +1,56 @@
-.class public interface abstract Lrod;
+.class public final synthetic Lrod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lorg/webrtc/ScreenCapturerAndroid;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
+    .locals 0
+
+    iput p2, p0, Lrod;->a:I
+
+    iput-object p1, p0, Lrod;->b:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a(Lynd;)V
-.end method
+.method public final run()V
+    .locals 1
 
-.method public abstract b(Laod;)V
-.end method
+    iget v0, p0, Lrod;->a:I
 
-.method public abstract c()Lbpc;
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract d(Lyx9;)V
-.end method
+    iget-object v0, p0, Lrod;->b:Lorg/webrtc/ScreenCapturerAndroid;
 
-.method public abstract e()Lapc;
-.end method
+    invoke-static {v0}, Lorg/webrtc/ScreenCapturerAndroid;->b(Lorg/webrtc/ScreenCapturerAndroid;)V
 
-.method public abstract f()Lzdf;
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lrod;->b:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-static {v0}, Lorg/webrtc/ScreenCapturerAndroid;->a(Lorg/webrtc/ScreenCapturerAndroid;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

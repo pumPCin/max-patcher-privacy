@@ -1,145 +1,48 @@
 .class public final Legf;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Legf;",
-            ">;"
-        }
-    .end annotation
-.end field
+.super Lk14;
 
 
 # instance fields
-.field public final a:I
+.field public X:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Ldgf;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ldgf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lpzd;
+    iput-object p1, p0, Legf;->Y:Ldgf;
 
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
-
-    sput-object v0, Legf;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Legf;->a:I
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "%02d"
-
-    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Legf;->b:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+
+    iput-object p1, p0, Legf;->o:Ljava/lang/Object;
+
+    iget p1, p0, Legf;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Legf;->X:I
+
+    iget-object p1, p0, Legf;->Y:Ldgf;
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Ldgf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    move-result-object p1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Legf;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Legf;
-
-    iget v1, p0, Legf;->a:I
-
-    iget p1, p1, Legf;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Legf;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Legf;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Legf;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p1
 .end method

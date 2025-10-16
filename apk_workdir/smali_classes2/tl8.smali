@@ -1,61 +1,120 @@
 .class public final Ltl8;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lul8;
+.field public X:I
 
-.field public final b:Lu49;
+.field public final synthetic Y:Lam8;
 
 
 # direct methods
-.method public constructor <init>(Lul8;Lu49;)V
+.method public constructor <init>(Lam8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltl8;->Y:Lam8;
 
-    iput-object p1, p0, Ltl8;->a:Lul8;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Ltl8;->b:Lu49;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lgq7;)V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ltl8;->a:Lul8;
+    check-cast p1, Lb54;
 
-    iget-object v0, v0, Lul8;->X:Lya5;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Lpq0;
+    invoke-virtual {p0, p1, p2}, Ltl8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v7, 0x4
+    move-result-object p1
 
-    const/16 v8, 0x15
+    check-cast p1, Ltl8;
 
-    const/4 v2, 0x2
+    sget-object p2, Lzag;->a:Lzag;
 
-    const-class v4, Ltl8;
+    invoke-virtual {p1, p2}, Ltl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v5, "handleMediaKeyboardEvents"
+    move-result-object p1
 
-    const-string v6, "handleMediaKeyboardEvents(Lone/me/sdk/arch/event/Event;)V"
+    return-object p1
+.end method
 
-    move-object v3, p0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-direct/range {v1 .. v8}, Lpq0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    new-instance p1, Ltl8;
 
-    new-instance v2, Lnw5;
+    iget-object v0, p0, Ltl8;->Y:Lam8;
 
-    const/4 v3, 0x1
+    invoke-direct {p1, v0, p2}, Ltl8;-><init>(Lam8;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v2, v0, v1, v3}, Lnw5;-><init>(Liu5;Lje6;I)V
+    return-object p1
+.end method
 
-    invoke-static {v2, p1}, Luce;->N(Liu5;Ln24;)Loke;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    return-void
+    iget v0, p0, Ltl8;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ltl8;->Y:Lam8;
+
+    iget-object v0, p1, Lam8;->s0:Lsze;
+
+    new-instance v2, Lbx;
+
+    const/4 v3, 0x7
+
+    invoke-direct {v2, v3, p1}, Lbx;-><init>(ILjava/lang/Object;)V
+
+    iput v1, p0, Ltl8;->X:I
+
+    new-instance p1, Lp6d;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ls3;
+
+    const/16 v3, 0x17
+
+    invoke-direct {v1, p1, v2, v3}, Ls3;-><init>(Ljava/io/Serializable;Lby5;I)V
+
+    invoke-interface {v0, v1, p0}, Lzx5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    sget-object p1, Lc54;->a:Lc54;
+
+    return-object p1
 .end method

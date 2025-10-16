@@ -1,95 +1,33 @@
-.class public final Lpb9;
-.super Lm68;
+.class public abstract Lpb9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic g:Lyn7;
+# static fields
+.field public static final a:J
+
+.field public static final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lyn7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lpb9;->g:Lyn7;
+    const/4 v0, -0x1
 
-    const/4 p1, 0x6
+    int-to-long v0, v0
 
-    invoke-direct {p0, p1}, Lm68;-><init>(I)V
+    const/16 v2, 0x20
+
+    shl-long v2, v0, v2
+
+    const-wide v4, 0xffffffffL
+
+    and-long/2addr v0, v4
+
+    or-long/2addr v0, v2
+
+    sput-wide v0, Lpb9;->a:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    check-cast p1, Ldqf;
-
-    iget-object v0, p1, Ldqf;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    iget-object p1, p1, Ldqf;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
-
-    move-result p1
-
-    new-instance v1, Landroid/text/TextPaint;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2}, Landroid/text/TextPaint;-><init>(I)V
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setTextSize(F)V
-
-    iget-object p1, p0, Lpb9;->g:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvs0;
-
-    check-cast p1, Lyga;
-
-    sget-object v0, Lrw4;->t0:Lss6;
-
-    iget-object p1, p1, Lyga;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, p1}, Lss6;->u(Landroid/content/Context;)Lrw4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lrw4;->l()Llwa;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Llwa;->a()Lcu2;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcu2;->g()Lps0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lps0;->d:Lss0;
-
-    iget p1, p1, Lss0;->b:I
-
-    iput p1, v1, Landroid/text/TextPaint;->linkColor:I
-
-    return-object v1
 .end method

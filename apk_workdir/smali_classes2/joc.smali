@@ -1,118 +1,34 @@
-.class public final Ljoc;
-.super Lc2f;
-.source "SourceFile"
-
-# interfaces
-.implements Lje6;
+.class public abstract Ljoc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d3c
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d3d
 
-.field public final synthetic Z:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d3e
 
+.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d3f
 
-# direct methods
-.method public constructor <init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static webapp_root_content_container:I = 0x7f0a0d40
 
-    iput-object p1, p0, Ljoc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static webapp_root_error_container:I = 0x7f0a0d41
 
-    const/4 p1, 0x2
+.field public static webapp_root_frame:I = 0x7f0a0d42
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static webapp_root_progressbar:I = 0x7f0a0d43
 
-    return-void
-.end method
+.field public static webapp_root_settings_header:I = 0x7f0a0d44
 
+.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d45
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static webapp_root_settings_switcher:I = 0x7f0a0d46
 
-    check-cast p1, Lkoc;
+.field public static webapp_root_settings_toolbar:I = 0x7f0a0d47
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static webapp_root_settings_transition:I = 0x7f0a0d48
 
-    invoke-virtual {p0, p1, p2}, Ljoc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static webapp_root_toolbar:I = 0x7f0a0d49
 
-    move-result-object p1
-
-    check-cast p1, Ljoc;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Ljoc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ljoc;
-
-    iget-object v1, p0, Ljoc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    invoke-direct {v0, v1, p2}, Ljoc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ljoc;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ljoc;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ljoc;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lkoc;
-
-    iput v1, p0, Ljoc;->X:I
-
-    iget-object v0, p0, Ljoc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    invoke-static {v0, p1, p0}, Lru/ok/onechat/reactions/ReactionsViewModel;->e(Lru/ok/onechat/reactions/ReactionsViewModel;Lkoc;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-.end method
+.field public static webapp_root_webview:I = 0x7f0a0d4a

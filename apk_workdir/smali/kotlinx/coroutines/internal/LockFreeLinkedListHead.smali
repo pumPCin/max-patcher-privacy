@@ -15,10 +15,10 @@
         "()V",
         "Lkotlin/Function1;",
         "Lkotlinx/coroutines/internal/Node;",
-        "Laxf;",
+        "Lzag;",
         "block",
         "forEach",
-        "(Lvd6;)V",
+        "(Lqh6;)V",
         "",
         "remove",
         "()Ljava/lang/Void;",
@@ -48,12 +48,12 @@
 
 
 # virtual methods
-.method public final forEach(Lvd6;)V
+.method public final forEach(Lqh6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvd6;",
+            "Lqh6;",
             ")V"
         }
     .end annotation
@@ -65,13 +65,13 @@
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 
     :goto_0
-    invoke-static {v0, p0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-interface {p1, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;->getNextNode()Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 

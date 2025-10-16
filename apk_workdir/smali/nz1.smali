@@ -1,98 +1,109 @@
-.class public final synthetic Lnz1;
-.super Ljava/lang/Object;
+.class public final enum Lnz1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lue6;
 
+# static fields
+.field public static final enum X:Lnz1;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final synthetic Y:[Lnz1;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public static final enum a:Lnz1;
+
+.field public static final enum b:Lnz1;
+
+.field public static final enum c:Lnz1;
+
+.field public static final enum o:Lnz1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p1, p0, Lnz1;->a:I
+    new-instance v0, Lnz1;
 
-    iput-object p2, p0, Lnz1;->b:Ljava/lang/Object;
+    const-string v1, "UNKNOWN"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lnz1;->a:Lnz1;
+
+    new-instance v1, Lnz1;
+
+    const-string v2, "INACTIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lnz1;->b:Lnz1;
+
+    new-instance v2, Lnz1;
+
+    const-string v3, "METERING"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lnz1;->c:Lnz1;
+
+    new-instance v3, Lnz1;
+
+    const-string v4, "CONVERGED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lnz1;->o:Lnz1;
+
+    new-instance v4, Lnz1;
+
+    const-string v5, "LOCKED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lnz1;->X:Lnz1;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lnz1;
+
+    move-result-object v0
+
+    sput-object v0, Lnz1;->Y:[Lnz1;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lnz1;
     .locals 1
 
-    iget v0, p0, Lnz1;->a:I
+    const-class v0, Lnz1;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lnz1;->b:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Li0;
+    check-cast p0, Lnz1;
 
-    invoke-virtual {v0, p1}, Li0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p0
+.end method
 
-    move-result-object p1
+.method public static values()[Lnz1;
+    .locals 1
 
-    check-cast p1, Lipb;
+    sget-object v0, Lnz1;->Y:[Lnz1;
 
-    return-object p1
+    invoke-virtual {v0}, [Lnz1;->clone()Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lnz1;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Ljob;
+    check-cast v0, [Lnz1;
 
-    check-cast p1, Ljava/lang/Void;
-
-    sget-object p1, Loob;->b:Loob;
-
-    invoke-virtual {v0, p1}, Ljob;->b(Loob;)V
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lnz1;->b:Ljava/lang/Object;
-
-    check-cast v0, Lp6c;
-
-    check-cast p1, Lp08;
-
-    iput-object v0, p1, Lp08;->i:Lp6c;
-
-    return-object p1
-
-    :pswitch_2
-    iget-object v0, p0, Lnz1;->b:Ljava/lang/Object;
-
-    check-cast v0, Lzp7;
-
-    check-cast p1, Ljpb;
-
-    iput-object p1, v0, Lqz1;->n:Ljpb;
-
-    invoke-virtual {v0}, Lqz1;->q()V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Lqz1;->p(Ljava/lang/Runnable;)V
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -4,28 +4,16 @@
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Z
-
-.field public final d:Z
+.field public final a:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(IIZZ)V
+.method public constructor <init>(Ljava/lang/Integer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lbb0;->a:I
-
-    iput p2, p0, Lbb0;->b:I
-
-    iput-boolean p3, p0, Lbb0;->c:Z
-
-    iput-boolean p4, p0, Lbb0;->d:Z
+    iput-object p1, p0, Lbb0;->a:Ljava/lang/Integer;
 
     return-void
 .end method
@@ -33,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -46,127 +34,78 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
     check-cast p1, Lbb0;
 
-    iget v1, p0, Lbb0;->a:I
+    iget-object v1, p0, Lbb0;->a:Ljava/lang/Integer;
 
-    iget v3, p1, Lbb0;->a:I
+    if-nez v1, :cond_2
 
-    if-ne v1, v3, :cond_1
+    iget-object p1, p1, Lbb0;->a:Ljava/lang/Integer;
 
-    iget v1, p0, Lbb0;->b:I
-
-    iget v3, p1, Lbb0;->b:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-boolean v1, p0, Lbb0;->c:Z
-
-    iget-boolean v3, p1, Lbb0;->c:Z
-
-    if-ne v1, v3, :cond_1
-
-    iget-boolean v1, p0, Lbb0;->d:Z
-
-    iget-boolean p1, p1, Lbb0;->d:Z
-
-    if-ne v1, p1, :cond_1
+    if-nez p1, :cond_1
 
     return v0
 
     :cond_1
     return v2
+
+    :cond_2
+    iget-object p1, p1, Lbb0;->a:Ljava/lang/Integer;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 5
+    .locals 2
 
-    iget v0, p0, Lbb0;->a:I
+    iget-object v0, p0, Lbb0;->a:Ljava/lang/Integer;
 
-    const v1, 0xf4243
+    if-nez v0, :cond_0
 
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lbb0;->b:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lbb0;->c:Z
-
-    const/16 v3, 0x4d5
-
-    const/16 v4, 0x4cf
-
-    if-eqz v2, :cond_0
-
-    move v2, v4
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    move v2, v3
+    invoke-virtual {v0}, Ljava/lang/Integer;->hashCode()I
+
+    move-result v0
 
     :goto_0
-    xor-int/2addr v0, v2
+    const v1, 0xf4243
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lbb0;->d:Z
-
-    if-eqz v1, :cond_1
-
-    move v3, v4
-
-    :cond_1
-    xor-int/2addr v0, v3
+    xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "FeatureSettings{cameraMode="
+    const-string v1, "ProductData{productId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lbb0;->a:I
+    iget-object v1, p0, Lbb0;->a:Ljava/lang/Integer;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", requiredMaxBitDepth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lbb0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", previewStabilizationOn="
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lbb0;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", ultraHdrOn="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lbb0;->d:Z
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

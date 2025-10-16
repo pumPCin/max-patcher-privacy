@@ -1,22 +1,14 @@
-.class public abstract Lg45;
+.class public interface abstract Lg45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a()Ljava/util/Set;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "[I>;"
-        }
-    .end annotation
+# virtual methods
+.method public abstract a()Ljava/util/Set;
+.end method
 
-    invoke-static {}, Labh;->A()Ljava/util/Set;
+.method public abstract b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
+.end method
 
-    move-result-object v0
-
-    return-object v0
+.method public abstract c(Lc45;)Ljava/util/Set;
 .end method

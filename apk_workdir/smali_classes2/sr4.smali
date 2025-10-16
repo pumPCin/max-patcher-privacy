@@ -2,185 +2,60 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static j:Ljava/util/ArrayList;
-
-.field public static k:Lsr4;
-
-.field public static final l:Ljava/util/ArrayList;
-
-.field public static final m:Lbeh;
+# interfaces
+.implements Lzx5;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:Lzx5;
 
-.field public final b:Landroid/util/SparseIntArray;
+.field public final synthetic b:Lone/me/devmenu/DevMenuScreen;
 
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:I
-
-.field public e:I
-
-.field public final f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public final i:Lne;
+.field public final synthetic c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    sput-object v0, Lsr4;->l:Ljava/util/ArrayList;
-
-    new-instance v0, Lbeh;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lbeh;-><init>(I)V
-
-    sput-object v0, Lsr4;->m:Lbeh;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Llze;Lone/me/devmenu/DevMenuScreen;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Lsr4;->a:Lzx5;
 
-    const/16 v1, 0xa
+    iput-object p2, p0, Lsr4;->b:Lone/me/devmenu/DevMenuScreen;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lsr4;->a:Ljava/util/ArrayList;
-
-    new-instance v0, Landroid/util/SparseIntArray;
-
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    iput-object v0, p0, Lsr4;->b:Landroid/util/SparseIntArray;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lsr4;->c:Ljava/util/ArrayList;
-
-    new-instance v0, Lne;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p0}, Lne;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lsr4;->i:Lne;
-
-    iput p1, p0, Lsr4;->d:I
-
-    sget-object p1, Lrr4;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {p1}, Ljava/util/Random;->nextInt()I
-
-    move-result p1
-
-    iput p1, p0, Lsr4;->f:I
+    iput p3, p0, Lsr4;->c:I
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Runnable;Z)V
+
+# virtual methods
+.method public final d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 3
 
-    invoke-static {}, Lde;->b()Z
+    new-instance v0, Lwb2;
 
-    move-result v0
+    iget-object v1, p0, Lsr4;->b:Lone/me/devmenu/DevMenuScreen;
 
-    if-nez v0, :cond_0
+    iget v2, p0, Lsr4;->c:I
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lsv9;
+    invoke-direct {v0, p1, v1, v2}, Lwb2;-><init>(Lby5;Lone/me/devmenu/DevMenuScreen;I)V
 
-    move-result-object p0
+    iget-object p1, p0, Lsr4;->a:Lzx5;
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    invoke-interface {p1, v0, p2}, Lzx5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v0, "wrong thread"
+    move-result-object p1
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    sget-object p2, Lc54;->a:Lc54;
 
-    invoke-interface {p0, p1}, Lsv9;->p(Ljava/lang/Throwable;)V
+    if-ne p1, p2, :cond_0
 
-    return-void
+    return-object p1
 
     :cond_0
-    sget-object v0, Lsr4;->j:Ljava/util/ArrayList;
+    sget-object p1, Lzag;->a:Lzag;
 
-    sget-object v1, Lsr4;->m:Lbeh;
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Lsr4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    sput-object v0, Lsr4;->j:Ljava/util/ArrayList;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v2, 0x64
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    sput-object v0, Lsr4;->j:Ljava/util/ArrayList;
-
-    :goto_0
-    if-nez p1, :cond_2
-
-    invoke-static {v1}, Lde;->d(Ljava/lang/Runnable;)V
-
-    :cond_2
-    sget-object v0, Lsr4;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    if-eqz p1, :cond_3
-
-    sget-object p0, Lde;->a:Landroid/os/Handler;
-
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v1}, Lbeh;->run()V
-
-    :cond_3
-    return-void
+    return-object p1
 .end method

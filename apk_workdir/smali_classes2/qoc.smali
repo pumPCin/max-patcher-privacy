@@ -1,88 +1,60 @@
-.class public final Lqoc;
-.super Lc2f;
-.source "SourceFile"
-
-# interfaces
-.implements Lje6;
+.class public abstract Lqoc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static back:I = 0x7f0a00ec
 
-.field public final synthetic Y:Lroc;
+.field public static copy:I = 0x7f0a02db
 
+.field public static cut:I = 0x7f0a02e5
 
-# direct methods
-.method public constructor <init>(Lroc;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static edit_menu_item:I = 0x7f0a0322
 
-    iput-object p1, p0, Lqoc;->Y:Lroc;
+.field public static extendedMenu:I = 0x7f0a0369
 
-    const/4 p1, 0x2
+.field public static markdown_badge_count_view:I = 0x7f0a0467
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static markdown_bold:I = 0x7f0a0468
 
-    return-void
-.end method
+.field public static markdown_group:I = 0x7f0a0469
 
+.field public static markdown_heading:I = 0x7f0a046a
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static markdown_italic:I = 0x7f0a046b
 
-    check-cast p1, Lr82;
+.field public static markdown_link:I = 0x7f0a046c
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static markdown_menu_container:I = 0x7f0a046d
 
-    invoke-virtual {p0, p1, p2}, Lqoc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static markdown_message_bubble_view:I = 0x7f0a046e
 
-    move-result-object p1
+.field public static markdown_mono:I = 0x7f0a046f
 
-    check-cast p1, Lqoc;
+.field public static markdown_original:I = 0x7f0a0470
 
-    sget-object p2, Laxf;->a:Laxf;
+.field public static markdown_preview_send_as_scheduled_button:I = 0x7f0a0471
 
-    invoke-virtual {p1, p2}, Lqoc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static markdown_preview_send_button:I = 0x7f0a0472
 
-    return-object p2
-.end method
+.field public static markdown_preview_send_button_guideline:I = 0x7f0a0473
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.field public static markdown_quote:I = 0x7f0a0474
 
-    new-instance v0, Lqoc;
+.field public static markdown_regular:I = 0x7f0a0475
 
-    iget-object v1, p0, Lqoc;->Y:Lroc;
+.field public static markdown_strikethrough:I = 0x7f0a0476
 
-    invoke-direct {v0, v1, p2}, Lqoc;-><init>(Lroc;Lkotlin/coroutines/Continuation;)V
+.field public static markdown_underline:I = 0x7f0a0477
 
-    iput-object p1, v0, Lqoc;->X:Ljava/lang/Object;
+.field public static menu:I = 0x7f0a04d2
 
-    return-object v0
-.end method
+.field public static menu_list:I = 0x7f0a0500
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.field public static paste:I = 0x7f0a08d9
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+.field public static rect:I = 0x7f0a09f8
 
-    iget-object p1, p0, Lqoc;->X:Ljava/lang/Object;
+.field public static root:I = 0x7f0a0a0b
 
-    check-cast p1, Lr82;
-
-    iget-object v0, p0, Lqoc;->Y:Lroc;
-
-    invoke-virtual {v0}, Lroc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lr82;->b:Luc2;
-
-    iget-wide v1, p1, Luc2;->h0:J
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-.end method
+.field public static select_all:I = 0x7f0a0b2a

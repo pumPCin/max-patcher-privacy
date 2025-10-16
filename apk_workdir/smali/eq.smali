@@ -1,55 +1,56 @@
-.class public abstract Leq;
+.class public final Leq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyp9;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+.method public constructor <init>(ILjava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/content/Context;",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput p1, p0, Leq;->a:I
 
-    return-object p0
+    iput-object p2, p0, Leq;->b:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public static b(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
-    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOp(Ljava/lang/String;Ljava/lang/String;)I
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result p0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    const-string v1, "Ait(controlCode="
 
-.method public static c(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOpNoThrow(Ljava/lang/String;Ljava/lang/String;)I
+    iget v1, p0, Leq;->a:I
 
-    move-result p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    const-string v1, ",url="
 
-.method public static d(Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Landroid/app/AppOpsManager;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Leq;->b:Ljava/lang/String;
 
-    move-result-object p0
+    const-string v2, ")"
 
-    return-object p0
+    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 6424
-  versionName: 25.13.0
+  versionCode: 6429
+  versionName: 25.13.1
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
@@ -43,15 +43,20 @@ unknownFiles:
   play-services-auth-api-phone.properties: 8
   review.properties: 8
   net/jpountz/util/darwin/x86_64/liblz4-java.dylib: 8
+  tech/kwik/qpack/impl/statictable.txt: 8
+  tech/kwik/qpack/impl/huffmancode.txt: 8
   okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
 doNotCompress:
 - resources.arsc
 - META-INF/services/ru.ok.android.onelog.OneLogAppender
-- META-INF/services/i24
-- META-INF/services/ck7
-- META-INF/services/ulf
+- META-INF/services/w44
+- META-INF/services/uzf
+- META-INF/services/jp7
 - webp
 - png
 - mp3
+- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
+- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
+- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

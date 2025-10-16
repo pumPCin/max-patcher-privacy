@@ -1,96 +1,72 @@
 .class public final Lhvb;
-.super Luc0;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final synthetic X:Lvqa;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public constructor <init>(Lvqa;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0xd
+    iput-object p1, p0, Lhvb;->X:Lvqa;
 
-    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lhvb;->b:Landroid/content/Intent;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lb54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lhvb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lhvb;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lhvb;
 
-    iget-object v1, p0, Lhvb;->b:Landroid/content/Intent;
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object p1, p1, Lhvb;->b:Landroid/content/Intent;
+    invoke-virtual {p1, p2}, Lhvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lhvb;->b:Landroid/content/Intent;
+    new-instance p1, Lhvb;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lhvb;->X:Lvqa;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lhvb;-><init>(Lvqa;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "CropAvatarOld(intent="
+    iget-object p1, p0, Lhvb;->X:Lvqa;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lvqa;->invoke()Ljava/lang/Object;
 
-    iget-object v1, p0, Lhvb;->b:Landroid/content/Intent;
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

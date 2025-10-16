@@ -1,137 +1,74 @@
-.class public final synthetic Lt88;
+.class public interface abstract Lt88;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lno3;
-
-
-# instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Lw88;
-
-.field public final synthetic c:J
-
-
-# direct methods
-.method public synthetic constructor <init>(ZLw88;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lt88;->a:Z
-
-    iput-object p2, p0, Lt88;->b:Lw88;
-
-    iput-wide p3, p0, Lt88;->c:J
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 8
+.method public abstract cc(Ljava/lang/String;)V
+.end method
 
-    check-cast p1, Ljava/util/Map;
+.method public abstract debug(Ljava/lang/String;)V
+.end method
 
-    iget-boolean v0, p0, Lt88;->a:Z
+.method public abstract debug(Ljava/lang/String;Ljava/lang/Exception;)V
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract debug(Ljava/lang/String;[B)V
+.end method
 
-    sget-object v1, La98;->a:La98;
+.method public abstract decrypted(Ljava/lang/String;)V
+.end method
 
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract decrypted(Ljava/lang/String;[B)V
+.end method
 
-    move-result-object v1
+.method public abstract encrypted(Ljava/lang/String;[B)V
+.end method
 
-    check-cast v1, Lwn0;
+.method public abstract error(Ljava/lang/String;)V
+.end method
 
-    goto :goto_0
+.method public abstract error(Ljava/lang/String;Ljava/lang/Throwable;)V
+.end method
 
-    :cond_0
-    sget-object v1, La98;->c:La98;
+.method public abstract getQLog()Lxec;
+.end method
 
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract info(Ljava/lang/String;)V
+.end method
 
-    move-result-object v1
+.method public abstract logRecovery()Z
+.end method
 
-    check-cast v1, Lwn0;
+.method public abstract raw(Ljava/lang/String;Ljava/nio/ByteBuffer;II)V
+.end method
 
-    :goto_0
-    iget-object v2, p0, Lt88;->b:Lw88;
+.method public abstract raw(Ljava/lang/String;[B)V
+.end method
 
-    iget-object v2, v2, Lw88;->e:Ljava/util/LinkedHashMap;
+.method public abstract received(Ljava/time/Instant;ILygc;)V
+.end method
 
-    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+.method public abstract receivedPacketInfo(Ljava/lang/String;)V
+.end method
 
-    move-result-object v2
+.method public abstract recovery(Ljava/lang/String;)V
+.end method
 
-    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+.method public abstract recovery(Ljava/lang/String;Ljava/time/Instant;)V
+.end method
 
-    move-result-object v2
+.method public abstract secret(Ljava/lang/String;[B)V
+.end method
 
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+.method public abstract sent(Ljava/time/Instant;Ljava/util/List;)V
+.end method
 
-    move-result v3
+.method public abstract sentPacketInfo(Ljava/lang/String;)V
+.end method
 
-    if-eqz v3, :cond_3
+.method public abstract stream(Ljava/lang/String;)V
+.end method
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lv88;
-
-    iget-object v4, v3, Lv88;->a:Lja8;
-
-    iget-object v3, v3, Lv88;->b:Lga8;
-
-    iget-wide v4, v4, Lja8;->j:J
-
-    iget-wide v6, p0, Lt88;->c:J
-
-    cmp-long v4, v4, v6
-
-    if-nez v4, :cond_2
-
-    if-eqz v0, :cond_1
-
-    sget-object v4, La98;->b:La98;
-
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lwn0;
-
-    invoke-virtual {v3, v4}, Lga8;->b(Lwn0;)V
-
-    goto :goto_2
-
-    :cond_1
-    sget-object v4, La98;->o:La98;
-
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lwn0;
-
-    invoke-virtual {v3, v4}, Lga8;->b(Lwn0;)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3, v1}, Lga8;->b(Lwn0;)V
-
-    :goto_2
-    invoke-virtual {v3}, Lga8;->d()V
-
-    goto :goto_1
-
-    :cond_3
-    return-void
+.method public abstract warn(Ljava/lang/String;)V
 .end method

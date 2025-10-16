@@ -1,103 +1,84 @@
-.class public abstract synthetic Lim8;
-.super Ljava/lang/Object;
+.class public final Lim8;
+.super Llff;
 .source "SourceFile"
 
+# interfaces
+.implements Lei6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+    .locals 0
 
-    invoke-static {}, Lij2;->values()[Lij2;
+    iput-object p2, p0, Lim8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    move-result-object v0
+    const/4 p2, 0x2
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v3, 0x2
-
-    :try_start_1
-    aput v3, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v4, 0x3
-
-    :try_start_2
-    aput v4, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v5, 0x4
-
-    :try_start_3
-    aput v5, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Lim8;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lj10;->values()[Lj10;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    aput v3, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    aput v4, v0, v4
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    aput v5, v0, v3
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    const/4 v1, 0x5
-
-    :try_start_8
-    aput v1, v0, v5
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    sput-object v0, Lim8;->$EnumSwitchMapping$1:[I
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lim8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lim8;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lim8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lim8;
+
+    iget-object v0, p0, Lim8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    invoke-direct {p1, p2, v0}, Lim8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lwq7;
+
+    iget-object p1, p0, Lim8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    invoke-virtual {p1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->H0()Landroid/widget/LinearLayout;
+
+    move-result-object p1
+
+    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->d1:Lkh7;
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, v0, v1}, Lqzh;->b(Landroid/view/View;Lkh7;Lqh6;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

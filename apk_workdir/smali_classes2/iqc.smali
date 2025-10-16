@@ -1,19 +1,8 @@
-.class public final Liqc;
+.class public abstract Liqc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static google_map_night_style:I = 0x7f12002f
 
-.field public b:Lxqc;
-
-.field public c:J
-
-.field public d:J
-
-.field public e:Lk7;
-
-.field public f:Lood;
-
-.field public g:Lh33;
+.field public static google_universal_map_style:I = 0x7f120030

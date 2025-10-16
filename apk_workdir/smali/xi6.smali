@@ -2,146 +2,49 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final q:Lfbd;
-
-.field public static final r:Lfbd;
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+.implements Lpdf;
+.implements Lfi6;
 
 
 # instance fields
-.field public final a:Landroid/content/res/Resources;
-
-.field public b:I
-
-.field public c:F
-
-.field public d:Landroid/graphics/drawable/Drawable;
-
-.field public e:Lebd;
-
-.field public f:Landroid/graphics/drawable/Drawable;
-
-.field public g:Lebd;
-
-.field public h:Landroid/graphics/drawable/Drawable;
-
-.field public i:Lebd;
-
-.field public j:Landroid/graphics/drawable/Drawable;
-
-.field public k:Lebd;
-
-.field public l:Lebd;
-
-.field public m:Landroid/graphics/drawable/Drawable;
-
-.field public n:Ljava/util/List;
-
-.field public o:Landroid/graphics/drawable/StateListDrawable;
-
-.field public p:Lk6d;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lfbd;->w:Lfbd;
-
-    sput-object v0, Lxi6;->q:Lfbd;
-
-    sget-object v0, Lfbd;->v:Lfbd;
-
-    sput-object v0, Lxi6;->r:Lfbd;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/res/Resources;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxi6;->a:Landroid/content/res/Resources;
-
-    const/16 p1, 0x12c
-
-    iput p1, p0, Lxi6;->b:I
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lxi6;->c:F
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lxi6;->d:Landroid/graphics/drawable/Drawable;
-
-    sget-object v0, Lxi6;->q:Lfbd;
-
-    iput-object v0, p0, Lxi6;->e:Lebd;
-
-    iput-object p1, p0, Lxi6;->f:Landroid/graphics/drawable/Drawable;
-
-    iput-object v0, p0, Lxi6;->g:Lebd;
-
-    iput-object p1, p0, Lxi6;->h:Landroid/graphics/drawable/Drawable;
-
-    iput-object v0, p0, Lxi6;->i:Lebd;
-
-    iput-object p1, p0, Lxi6;->j:Landroid/graphics/drawable/Drawable;
-
-    iput-object v0, p0, Lxi6;->k:Lebd;
-
-    sget-object v0, Lxi6;->r:Lfbd;
-
-    iput-object v0, p0, Lxi6;->l:Lebd;
-
-    iput-object p1, p0, Lxi6;->m:Landroid/graphics/drawable/Drawable;
-
-    iput-object p1, p0, Lxi6;->n:Ljava/util/List;
-
-    iput-object p1, p0, Lxi6;->o:Landroid/graphics/drawable/StateListDrawable;
-
-    iput-object p1, p0, Lxi6;->p:Lk6d;
+    iput-object p1, p0, Lxi6;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lwi6;
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lxi6;->n:Ljava/util/List;
+    iget-object p1, p0, Lxi6;->a:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    return-object p1
+.end method
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+.method public final call()Ljava/lang/Object;
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lxi6;->a:Ljava/lang/Object;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object v0
+.end method
 
-    move-result v1
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lwi6;
-
-    invoke-direct {v0, p0}, Lwi6;-><init>(Lxi6;)V
+    iget-object v0, p0, Lxi6;->a:Ljava/lang/Object;
 
     return-object v0
 .end method

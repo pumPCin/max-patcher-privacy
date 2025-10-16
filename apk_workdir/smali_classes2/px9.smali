@@ -1,32 +1,30 @@
 .class public final Lpx9;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public X:Ll0a;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public Y:Lsx9;
 
-.field public final synthetic Z:Lux9;
+.field public Z:I
 
-.field public final synthetic r0:Landroid/net/Uri;
+.field public final synthetic r0:Lsx9;
 
 
 # direct methods
-.method public constructor <init>(Lux9;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lsx9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lpx9;->Z:Lux9;
-
-    iput-object p2, p0, Lpx9;->r0:Landroid/net/Uri;
+    iput-object p1, p0, Lpx9;->r0:Lsx9;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ln24;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -46,7 +44,7 @@
 
     check-cast p1, Lpx9;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lpx9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -56,41 +54,49 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lpx9;
+    new-instance p1, Lpx9;
 
-    iget-object v1, p0, Lpx9;->Z:Lux9;
+    iget-object v0, p0, Lpx9;->r0:Lsx9;
 
-    iget-object v2, p0, Lpx9;->r0:Landroid/net/Uri;
+    invoke-direct {p1, v0, p2}, Lpx9;-><init>(Lsx9;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1, v2, p2}, Lpx9;-><init>(Lux9;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lpx9;->Y:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
-    sget-object v0, Laxf;->a:Laxf;
+    iget v0, p0, Lpx9;->Z:I
 
-    sget-object v1, Lo24;->a:Lo24;
+    const/4 v1, 0x2
 
-    iget v2, p0, Lpx9;->X:I
+    const/4 v2, 0x1
 
-    const/4 v3, 0x2
+    const/4 v3, 0x0
 
-    const/4 v4, 0x1
+    sget-object v4, Lc54;->a:Lc54;
 
-    if-eqz v2, :cond_2
+    if-eqz v0, :cond_2
 
-    if-eq v2, v4, :cond_1
+    if-eq v0, v2, :cond_1
 
-    if-ne v2, v3, :cond_0
+    if-ne v0, v1, :cond_0
 
-    goto :goto_0
+    iget-object v0, p0, Lpx9;->X:Ll0a;
+
+    :try_start_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -102,244 +108,96 @@
     throw p1
 
     :cond_1
-    :goto_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lpx9;->Y:Lsx9;
 
-    goto/16 :goto_5
+    iget-object v2, p0, Lpx9;->X:Ll0a;
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    move-object p1, v2
+
+    goto :goto_0
 
     :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lpx9;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lpx9;->r0:Lsx9;
 
-    check-cast p1, Ln24;
+    iget-object p1, v0, Lsx9;->i:Lo0a;
 
-    iget-object p1, p0, Lpx9;->Z:Lux9;
+    iput-object p1, p0, Lpx9;->X:Ll0a;
 
-    invoke-virtual {p1}, Lux9;->a()Lyq5;
+    iput-object v0, p0, Lpx9;->Y:Lsx9;
 
-    move-result-object p1
+    iput v2, p0, Lpx9;->Z:I
 
-    iget-object v2, p0, Lpx9;->Z:Lux9;
-
-    iget-object v2, v2, Lux9;->m:Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Lyq5;->p(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p1
-
-    iget-object v2, p0, Lpx9;->r0:Landroid/net/Uri;
-
-    iget-object v5, p0, Lpx9;->Z:Lux9;
-
-    :try_start_0
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
-
-    if-eqz v2, :cond_3
-
-    iget-object v5, v5, Lux9;->c:Lyn7;
-
-    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/content/Context;
-
-    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v2}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+    invoke-virtual {p1, p0}, Lo0a;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-static {p1, v2}, Lzc6;->s(Ljava/io/File;Ljava/io/InputStream;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ne v2, v4, :cond_3
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v2
-
-    goto :goto_2
-
     :cond_3
+    :goto_0
+    :try_start_1
+    iget-object v2, v0, Lsx9;->c:Llze;
+
+    invoke-interface {v2}, Llze;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ldj9;
+
+    new-instance v5, Lmr7;
+
+    const/16 v6, 0x14
+
+    invoke-direct {v5, v6, v2}, Lmr7;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lpx9;->X:Ll0a;
+
+    iput-object v3, p0, Lpx9;->Y:Lsx9;
+
+    iput v1, p0, Lpx9;->Z:I
+
+    invoke-static {v0, v5, p0}, Lsx9;->a(Lsx9;Lqh6;Lk14;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-ne v0, v4, :cond_4
+
     :goto_1
-    move-object v5, v0
-
-    goto :goto_3
-
-    :goto_2
-    new-instance v5, Lb2d;
-
-    invoke-direct {v5, v2}, Lb2d;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_3
-    iget-object v2, p0, Lpx9;->Z:Lux9;
-
-    invoke-static {v5}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_4
-
-    iget-object v6, v2, Lux9;->g:Ljava/lang/String;
-
-    const-string v7, "failed to copy picked image, e:"
-
-    invoke-static {v6, v7, v5}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v2}, Lux9;->c()V
+    return-object v4
 
     :cond_4
-    iget-object v2, p0, Lpx9;->Z:Lux9;
+    move-object v0, p1
 
-    iget-object v2, v2, Lux9;->d:Lyn7;
+    :goto_2
+    check-cast v0, Lo0a;
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lo0a;->f(Ljava/lang/Object;)V
 
-    move-result-object v2
+    sget-object p1, Lzag;->a:Lzag;
 
-    check-cast v2, Lsrd;
+    return-object p1
 
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    :catchall_1
+    move-exception v0
 
-    move-result-object v5
+    move-object v7, v0
 
-    invoke-static {v2, v5, v5}, Ld40;->M(Lsrd;Ljava/lang/String;Ljava/lang/String;)Z
+    move-object v0, p1
 
-    iget-object v2, p0, Lpx9;->Z:Lux9;
+    move-object p1, v7
 
-    iget-object v2, v2, Lux9;->d:Lyn7;
+    :goto_3
+    check-cast v0, Lo0a;
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lo0a;->f(Ljava/lang/Object;)V
 
-    move-result-object v2
-
-    check-cast v2, Lsrd;
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v2, v5}, Ld40;->L(Lsrd;Ljava/lang/String;)V
-
-    iget-object v2, p0, Lpx9;->Z:Lux9;
-
-    iget-object v2, v2, Lux9;->e:Lyn7;
-
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lzl5;
-
-    check-cast v2, Lbm5;
-
-    invoke-virtual {v2}, Lbm5;->m()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    iget-object v2, p0, Lpx9;->Z:Lux9;
-
-    iget-object v2, v2, Lux9;->i:Lt6e;
-
-    new-instance v3, Lhc0;
-
-    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v3, v5, p1}, Lhc0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v4, p0, Lpx9;->X:I
-
-    invoke-virtual {v2, v3, p0}, Lt6e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v1, :cond_6
-
-    goto :goto_4
-
-    :cond_5
-    new-instance v2, Landroid/content/Intent;
-
-    iget-object v5, p0, Lpx9;->Z:Lux9;
-
-    iget-object v5, v5, Lux9;->c:Lyn7;
-
-    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/content/Context;
-
-    const-class v6, Lru/ok/messages/views/ActAvatarCrop;
-
-    invoke-direct {v2, v5, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v5, "ru.ok.tamtam.extra.URI"
-
-    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v6
-
-    invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string v5, "ru.ok.tamtam.extra.FILE_PATH"
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v2, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p1, "ru.ok.tamtam.extra.SHOW_RECAPTURE"
-
-    invoke-virtual {v2, p1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const-string p1, "ru.ok.tamtam.extra.FOR_CHAT_BACKGROUND"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, p1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    iget-object p1, p0, Lpx9;->Z:Lux9;
-
-    iget-object p1, p1, Lux9;->i:Lt6e;
-
-    new-instance v4, Lic0;
-
-    invoke-direct {v4, v2}, Lic0;-><init>(Landroid/content/Intent;)V
-
-    iput v3, p0, Lpx9;->X:I
-
-    invoke-virtual {p1, v4, p0}, Lt6e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v1, :cond_6
-
-    :goto_4
-    return-object v1
-
-    :cond_6
-    :goto_5
-    return-object v0
+    throw p1
 .end method

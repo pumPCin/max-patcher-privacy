@@ -1,97 +1,61 @@
-.class public final Lxmd;
+.class public final synthetic Lxmd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzmd;
+.implements Landroid/content/DialogInterface$OnKeyListener;
 
 
 # instance fields
-.field public final a:Lmg6;
+.field public final synthetic a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lmg6;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxmd;->a:Lmg6;
+    iput-object p1, p0, Lxmd;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p1, 0x4
 
-    if-ne p0, p1, :cond_0
+    if-ne p2, p1, :cond_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxmd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxmd;
-
-    iget-object v1, p0, Lxmd;->a:Lmg6;
-
-    iget-object p1, p1, Lxmd;->a:Lmg6;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
 
-    if-nez p1, :cond_2
+    const/4 p2, 0x1
 
-    return v2
+    if-ne p1, p2, :cond_0
 
-    :cond_2
-    return v0
-.end method
+    new-instance p1, Lzmd;
 
-.method public final hashCode()I
-    .locals 1
+    iget-object p2, p0, Lxmd;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iget-object v0, p0, Lxmd;->a:Lmg6;
+    iget-object p3, p2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C1:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lmg6;->hashCode()I
+    invoke-interface {p3}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object p3
 
-    return v0
-.end method
+    check-cast p3, Landroid/os/Parcelable;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-direct {p1, p3}, Lzmd;-><init>(Landroid/os/Parcelable;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->K0(Lbnd;)V
 
-    const-string v1, "OnAlbumSelected(album="
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lxmd;->a:Lmg6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method

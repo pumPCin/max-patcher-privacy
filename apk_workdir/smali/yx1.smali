@@ -1,115 +1,256 @@
 .class public final Lyx1;
-.super Lood;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final X:Le90;
+# instance fields
+.field public a:J
 
-.field public static final Y:Le90;
+.field public b:J
 
-.field public static final Z:Le90;
-
-.field public static final b:Le90;
-
-.field public static final c:Le90;
-
-.field public static final o:Le90;
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Le90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "camera2.captureRequest.templateType"
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    iput-wide v0, p0, Lyx1;->a:J
 
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyx1;->b:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camera2.cameraCaptureSession.streamUseCase"
-
-    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyx1;->c:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camera2.cameraDevice.stateCallback"
-
-    const-class v2, Landroid/hardware/camera2/CameraDevice$StateCallback;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyx1;->o:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camera2.cameraCaptureSession.stateCallback"
-
-    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyx1;->X:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camera2.cameraCaptureSession.captureCallback"
-
-    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyx1;->Y:Le90;
-
-    new-instance v0, Le90;
-
-    const-string v1, "camera2.cameraCaptureSession.physicalCameraId"
-
-    const-class v2, Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2, v3}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyx1;->Z:Le90;
+    iput-wide v0, p0, Lyx1;->b:J
 
     return-void
 .end method
 
-.method public static Y(Landroid/hardware/camera2/CaptureRequest$Key;)Le90;
-    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+# virtual methods
+.method public a()I
+    .locals 6
 
-    const-string v1, "camera2.captureRequest.option."
+    iget-object v0, p0, Lyx1;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lay1;
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/CaptureRequest$Key;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lay1;->c()Z
 
-    move-result-object v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v0, 0x2bc
 
-    move-result-object v0
+    return v0
 
-    new-instance v1, Le90;
+    :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    const-class v2, Ljava/lang/Object;
+    move-result-wide v0
 
-    invoke-direct {v1, v0, v2, p0}, Le90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    iget-wide v2, p0, Lyx1;->b:J
 
-    return-object v1
+    const-wide/16 v4, -0x1
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_1
+
+    iput-wide v0, p0, Lyx1;->b:J
+
+    :cond_1
+    iget-wide v2, p0, Lyx1;->b:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/32 v2, 0x1d4c0
+
+    cmp-long v2, v0, v2
+
+    if-gtz v2, :cond_2
+
+    const/16 v0, 0x3e8
+
+    return v0
+
+    :cond_2
+    const-wide/32 v2, 0x493e0
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_3
+
+    const/16 v0, 0x7d0
+
+    return v0
+
+    :cond_3
+    const/16 v0, 0xfa0
+
+    return v0
+.end method
+
+.method public b()I
+    .locals 5
+
+    iget-wide v0, p0, Lyx1;->a:J
+
+    iget-object v2, p0, Lyx1;->c:Ljava/lang/Object;
+
+    check-cast v2, Lay1;
+
+    invoke-virtual {v2}, Lay1;->c()Z
+
+    move-result v2
+
+    const-wide/16 v3, 0x0
+
+    if-nez v2, :cond_1
+
+    cmp-long v2, v0, v3
+
+    const/16 v3, 0x2710
+
+    if-lez v2, :cond_0
+
+    long-to-int v0, v0
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    return v3
+
+    :cond_1
+    cmp-long v2, v0, v3
+
+    const v3, 0x1b7740
+
+    if-lez v2, :cond_2
+
+    long-to-int v0, v0
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    return v0
+
+    :cond_2
+    return v3
+.end method
+
+.method public c(Ljava/lang/Exception;)V
+    .locals 7
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lyx1;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Exception;
+
+    if-nez v2, :cond_0
+
+    iput-object p1, p0, Lyx1;->c:Ljava/lang/Object;
+
+    :cond_0
+    iget-wide v2, p0, Lyx1;->a:J
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    sget-object v2, Lbh4;->l0:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    sget v3, Lbh4;->n0:I
+
+    if-lez v3, :cond_1
+
+    const/4 v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x0
+
+    :goto_0
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v3, :cond_2
+
+    const-wide/16 v2, 0xc8
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lyx1;->a:J
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :cond_2
+    :goto_1
+    iget-wide v2, p0, Lyx1;->a:J
+
+    cmp-long v6, v2, v4
+
+    if-eqz v6, :cond_4
+
+    cmp-long v2, v0, v2
+
+    if-ltz v2, :cond_4
+
+    iget-object v0, p0, Lyx1;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Exception;
+
+    if-eq v0, p1, :cond_3
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_3
+    iget-object p1, p0, Lyx1;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Exception;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lyx1;->c:Ljava/lang/Object;
+
+    iput-wide v4, p0, Lyx1;->a:J
+
+    iput-wide v4, p0, Lyx1;->b:J
+
+    throw p1
+
+    :cond_4
+    const-wide/16 v2, 0x32
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lyx1;->b:J
+
+    return-void
 .end method

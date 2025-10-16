@@ -1,3 +1,3 @@
-.class public interface abstract Luvb;
-.super Ljava/lang/Object;
+.class public abstract Luvb;
+.super Lpj5;
 .source "SourceFile"

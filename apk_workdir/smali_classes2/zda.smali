@@ -1,64 +1,105 @@
-.class public final synthetic Lzda;
-.super Ljava/lang/Object;
+.class public final enum Lzda;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lzda;",
+        ">;"
+    }
+.end annotation
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final Companion:Lyda;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public static final a:Ljava/lang/Object;
+
+.field public static final synthetic b:[Lzda;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lzda;->a:I
+    new-instance v0, Lzda;
 
-    iput-object p1, p0, Lzda;->b:Ljava/lang/String;
+    const-string v1, "ERROR"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v1, Lzda;
+
+    const-string v2, "SUCCESS"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Lzda;
+
+    const-string v3, "WARNING"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Lzda;
+
+    move-result-object v0
+
+    sput-object v0, Lzda;->b:[Lzda;
+
+    new-instance v0, Lyda;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lzda;->Companion:Lyda;
+
+    new-instance v0, Lem8;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Lem8;-><init>(I)V
+
+    invoke-static {v4, v0}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object v0
+
+    sput-object v0, Lzda;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public static valueOf(Ljava/lang/String;)Lzda;
     .locals 1
 
-    iget v0, p0, Lzda;->a:I
+    const-class v0, Lzda;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lzda;->b:Ljava/lang/String;
+    move-result-object p0
 
-    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->b(Ljava/lang/String;)V
+    check-cast p0, Lzda;
 
-    return-void
+    return-object p0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lzda;->b:Ljava/lang/String;
+.method public static values()[Lzda;
+    .locals 1
 
-    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->a(Ljava/lang/String;)V
+    sget-object v0, Lzda;->b:[Lzda;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lzda;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v0}, Lru/ok/android/onelog/OneLogImpl;->a(Ljava/lang/String;)V
+    check-cast v0, [Lzda;
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

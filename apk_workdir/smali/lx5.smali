@@ -2,129 +2,264 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liu5;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:[Liu5;
+.field public b:I
 
-.field public final synthetic c:Lc2f;
+.field public c:I
+
+.field public d:I
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public final synthetic h:Lcom/google/android/flexbox/FlexboxLayoutManager;
 
 
 # direct methods
-.method public constructor <init>([Liu5;Lpe6;)V
-    .locals 1
+.method public constructor <init>(Lcom/google/android/flexbox/FlexboxLayoutManager;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Llx5;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Llx5;->b:[Liu5;
+    iput-object p1, p0, Llx5;->h:Lcom/google/android/flexbox/FlexboxLayoutManager;
 
-    check-cast p2, Lc2f;
+    const/4 p1, 0x0
 
-    iput-object p2, p0, Llx5;->c:Lc2f;
+    iput p1, p0, Llx5;->d:I
 
     return-void
 .end method
 
-.method public constructor <init>([Liu5;Lqe6;)V
-    .locals 1
+.method public static a(Llx5;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Llx5;->h:Lcom/google/android/flexbox/FlexboxLayoutManager;
+
+    invoke-virtual {v0}, Lcom/google/android/flexbox/FlexboxLayoutManager;->c1()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-boolean v1, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->t:Z
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, p0, Llx5;->e:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lwo7;
+
+    invoke-virtual {v0}, Lwo7;->h()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, v0, Landroidx/recyclerview/widget/a;->n:I
+
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lwo7;
+
+    invoke-virtual {v0}, Lwo7;->m()I
+
+    move-result v0
+
+    sub-int v0, v1, v0
+
+    :goto_0
+    iput v0, p0, Llx5;->c:I
+
+    return-void
+
+    :cond_1
+    iget-boolean v1, p0, Llx5;->e:Z
+
+    if-eqz v1, :cond_2
+
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lwo7;
+
+    invoke-virtual {v0}, Lwo7;->h()I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lwo7;
+
+    invoke-virtual {v0}, Lwo7;->m()I
+
+    move-result v0
+
+    :goto_1
+    iput v0, p0, Llx5;->c:I
+
+    return-void
+.end method
+
+.method public static b(Llx5;)V
+    .locals 5
+
+    const/4 v0, -0x1
 
     iput v0, p0, Llx5;->a:I
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Llx5;->b:I
 
-    .line 4
-    iput-object p1, p0, Llx5;->b:[Liu5;
+    const/high16 v0, -0x80000000
 
-    check-cast p2, Lc2f;
+    iput v0, p0, Llx5;->c:I
 
-    iput-object p2, p0, Llx5;->c:Lc2f;
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Llx5;->f:Z
+
+    iput-boolean v0, p0, Llx5;->g:Z
+
+    iget-object v1, p0, Llx5;->h:Lcom/google/android/flexbox/FlexboxLayoutManager;
+
+    invoke-virtual {v1}, Lcom/google/android/flexbox/FlexboxLayoutManager;->c1()Z
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_3
+
+    iget v2, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->q:I
+
+    if-nez v2, :cond_1
+
+    iget v1, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->p:I
+
+    if-ne v1, v4, :cond_0
+
+    move v0, v4
+
+    :cond_0
+    iput-boolean v0, p0, Llx5;->e:Z
+
+    return-void
+
+    :cond_1
+    if-ne v2, v3, :cond_2
+
+    move v0, v4
+
+    :cond_2
+    iput-boolean v0, p0, Llx5;->e:Z
+
+    return-void
+
+    :cond_3
+    iget v2, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->q:I
+
+    if-nez v2, :cond_5
+
+    iget v1, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->p:I
+
+    const/4 v2, 0x3
+
+    if-ne v1, v2, :cond_4
+
+    move v0, v4
+
+    :cond_4
+    iput-boolean v0, p0, Llx5;->e:Z
+
+    return-void
+
+    :cond_5
+    if-ne v2, v3, :cond_6
+
+    move v0, v4
+
+    :cond_6
+    iput-boolean v0, p0, Llx5;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Llx5;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "AnchorInfo{mPosition="
 
-    sget-object v0, Lqz3;->Z:Lqz3;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lkx5;
+    iget v1, p0, Llx5;->a:I
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Llx5;->c:Lc2f;
+    const-string v1, ", mFlexLinePosition="
 
-    invoke-direct {v1, v2, v3}, Lkx5;-><init>(Lkotlin/coroutines/Continuation;Lqe6;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Llx5;->b:[Liu5;
+    iget v1, p0, Llx5;->b:I
 
-    invoke-static {p1, v0, v1, p2, v2}, Lxff;->m(Lku5;Ltd6;Lle6;Lkotlin/coroutines/Continuation;[Liu5;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", mCoordinate="
 
-    sget-object p2, Lo24;->a:Lo24;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne p1, p2, :cond_0
+    iget v1, p0, Llx5;->c:I
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    sget-object p1, Laxf;->a:Laxf;
+    const-string v1, ", mPerpendicularCoordinate="
 
-    :goto_0
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    sget-object v0, Lqz3;->Z:Lqz3;
+    iget v1, p0, Llx5;->d:I
 
-    new-instance v1, Lkx5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    const-string v1, ", mLayoutFromEnd="
 
-    iget-object v3, p0, Llx5;->c:Lc2f;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2, v3}, Lkx5;-><init>(Lkotlin/coroutines/Continuation;Lpe6;)V
+    iget-boolean v1, p0, Llx5;->e:Z
 
-    iget-object v2, p0, Llx5;->b:[Liu5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0, v1, p2, v2}, Lxff;->m(Lku5;Ltd6;Lle6;Lkotlin/coroutines/Continuation;[Liu5;)Ljava/lang/Object;
+    const-string v1, ", mValid="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lo24;->a:Lo24;
+    iget-boolean v1, p0, Llx5;->f:Z
 
-    if-ne p1, p2, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, ", mAssignedFromSavedState="
 
-    :cond_1
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    return-object p1
+    iget-boolean v1, p0, Llx5;->g:Z
 
-    nop
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

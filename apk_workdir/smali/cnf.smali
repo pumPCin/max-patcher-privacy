@@ -6,160 +6,222 @@
 # static fields
 .field public static final d:Lcnf;
 
-.field public static final e:Ljava/lang/String;
+.field public static final e:Lcnf;
 
-.field public static final f:Ljava/lang/String;
+.field public static final f:Lcnf;
 
-.field public static final g:Ljava/lang/String;
+.field public static final g:Lcnf;
+
+.field public static final h:Lcnf;
+
+.field public static final i:Lcnf;
 
 
 # instance fields
-.field public final a:I
+.field public final a:[F
 
-.field public final b:Z
+.field public final b:[F
 
-.field public final c:Z
+.field public final c:[F
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 14
 
-    new-instance v0, Lvt9;
+    new-instance v0, Lcnf;
 
-    invoke-direct {v0}, Lvt9;-><init>()V
+    invoke-direct {v0}, Lcnf;-><init>()V
 
-    new-instance v1, Lcnf;
+    sput-object v0, Lcnf;->d:Lcnf;
 
-    invoke-direct {v1, v0}, Lcnf;-><init>(Lvt9;)V
+    iget-object v1, v0, Lcnf;->b:[F
 
-    sput-object v1, Lcnf;->d:Lcnf;
+    const/4 v2, 0x0
 
-    sget v0, Lg3g;->a:I
+    const v3, 0x3f0ccccd    # 0.55f
 
-    const/4 v0, 0x1
+    aput v3, v1, v2
 
-    const/16 v1, 0x24
+    const/4 v4, 0x1
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    const v5, 0x3f3d70a4    # 0.74f
 
-    move-result-object v0
+    aput v5, v1, v4
 
-    sput-object v0, Lcnf;->e:Ljava/lang/String;
+    iget-object v0, v0, Lcnf;->a:[F
 
-    const/4 v0, 0x2
+    const v1, 0x3eb33333    # 0.35f
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    aput v1, v0, v2
 
-    move-result-object v0
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    sput-object v0, Lcnf;->f:Ljava/lang/String;
+    aput v6, v0, v4
 
-    const/4 v0, 0x3
+    new-instance v0, Lcnf;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-direct {v0}, Lcnf;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lcnf;->e:Lcnf;
 
-    sput-object v0, Lcnf;->g:Ljava/lang/String;
+    iget-object v7, v0, Lcnf;->b:[F
+
+    const v8, 0x3e99999a    # 0.3f
+
+    aput v8, v7, v2
+
+    const/high16 v9, 0x3f000000    # 0.5f
+
+    aput v9, v7, v4
+
+    const/4 v10, 0x2
+
+    const v11, 0x3f333333    # 0.7f
+
+    aput v11, v7, v10
+
+    iget-object v0, v0, Lcnf;->a:[F
+
+    aput v1, v0, v2
+
+    aput v6, v0, v4
+
+    new-instance v0, Lcnf;
+
+    invoke-direct {v0}, Lcnf;-><init>()V
+
+    sput-object v0, Lcnf;->f:Lcnf;
+
+    iget-object v7, v0, Lcnf;->b:[F
+
+    const v12, 0x3e851eb8    # 0.26f
+
+    aput v12, v7, v4
+
+    const v13, 0x3ee66666    # 0.45f
+
+    aput v13, v7, v10
+
+    iget-object v0, v0, Lcnf;->a:[F
+
+    aput v1, v0, v2
+
+    aput v6, v0, v4
+
+    new-instance v0, Lcnf;
+
+    invoke-direct {v0}, Lcnf;-><init>()V
+
+    sput-object v0, Lcnf;->g:Lcnf;
+
+    iget-object v1, v0, Lcnf;->b:[F
+
+    aput v3, v1, v2
+
+    aput v5, v1, v4
+
+    iget-object v0, v0, Lcnf;->a:[F
+
+    aput v8, v0, v4
+
+    const v1, 0x3ecccccd    # 0.4f
+
+    aput v1, v0, v10
+
+    new-instance v0, Lcnf;
+
+    invoke-direct {v0}, Lcnf;-><init>()V
+
+    sput-object v0, Lcnf;->h:Lcnf;
+
+    iget-object v3, v0, Lcnf;->b:[F
+
+    aput v8, v3, v2
+
+    aput v9, v3, v4
+
+    aput v11, v3, v10
+
+    iget-object v0, v0, Lcnf;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
+
+    new-instance v0, Lcnf;
+
+    invoke-direct {v0}, Lcnf;-><init>()V
+
+    sput-object v0, Lcnf;->i:Lcnf;
+
+    iget-object v2, v0, Lcnf;->b:[F
+
+    aput v12, v2, v4
+
+    aput v13, v2, v10
+
+    iget-object v0, v0, Lcnf;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
 
     return-void
 .end method
 
-.method public constructor <init>(Lvt9;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, Lvt9;->a:I
+    const/4 v0, 0x3
 
-    iput v0, p0, Lcnf;->a:I
+    new-array v1, v0, [F
 
-    iget-boolean v0, p1, Lvt9;->b:Z
+    iput-object v1, p0, Lcnf;->a:[F
 
-    iput-boolean v0, p0, Lcnf;->b:Z
+    new-array v2, v0, [F
 
-    iget-boolean p1, p1, Lvt9;->c:Z
+    iput-object v2, p0, Lcnf;->b:[F
 
-    iput-boolean p1, p0, Lcnf;->c:Z
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Lcnf;->c:[F
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    aput v4, v1, v3
+
+    const/4 v5, 0x1
+
+    const/high16 v6, 0x3f000000    # 0.5f
+
+    aput v6, v1, v5
+
+    const/4 v7, 0x2
+
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    aput v8, v1, v7
+
+    aput v4, v2, v3
+
+    aput v6, v2, v5
+
+    aput v8, v2, v7
+
+    const v1, 0x3e75c28f    # 0.24f
+
+    aput v1, v0, v3
+
+    const v2, 0x3f051eb8    # 0.52f
+
+    aput v2, v0, v5
+
+    aput v1, v0, v7
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lcnf;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lcnf;
-
-    iget v2, p0, Lcnf;->a:I
-
-    iget v3, p1, Lcnf;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Lcnf;->b:Z
-
-    iget-boolean v3, p1, Lcnf;->b:Z
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Lcnf;->c:Z
-
-    iget-boolean p1, p1, Lcnf;->c:Z
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lcnf;->a:I
-
-    const/16 v1, 0x1f
-
-    add-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lcnf;->b:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lcnf;->c:Z
-
-    add-int/2addr v0, v1
-
-    return v0
 .end method

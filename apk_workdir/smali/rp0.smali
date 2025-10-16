@@ -1,121 +1,301 @@
-.class public final Lrp0;
-.super Ljava/util/concurrent/CountDownLatch;
+.class public abstract Lrp0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llde;
-.implements Lme3;
-.implements Ldd8;
+
+# static fields
+.field public static final a:Lrhf;
 
 
-# instance fields
-.field public a:Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public b:Ljava/lang/Throwable;
+    new-instance v0, Lm;
 
-.field public c:Lfs4;
+    const/16 v1, 0x15
 
-.field public volatile o:Z
+    invoke-direct {v0, v1}, Lm;-><init>(I)V
 
+    new-instance v1, Lrhf;
 
-# virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 0
+    invoke-direct {v1, v0}, Lrhf;-><init>(Loh6;)V
 
-    iput-object p1, p0, Lrp0;->a:Ljava/lang/Object;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    sput-object v1, Lrp0;->a:Lrhf;
 
     return-void
 .end method
 
-.method public final b()V
-    .locals 0
+.method public static final a(Ljava/io/InputStream;)Luq4;
+    .locals 5
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    if-eqz p0, :cond_1
 
-    return-void
-.end method
+    sget-object v0, Lrp0;->a:Lrhf;
 
-.method public final c(Lfs4;)V
-    .locals 1
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
 
-    iput-object p1, p0, Lrp0;->c:Lfs4;
+    move-result-object v1
 
-    iget-boolean v0, p0, Lrp0;->o:Z
+    check-cast v1, Ltub;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Ltub;->a()Ljava/lang/Object;
 
-    invoke-interface {p1}, Lfs4;->f()V
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Lie4;->a:Lew0;
+
+    const/16 v1, 0x4000
+
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
 
     :cond_0
-    return-void
-.end method
+    new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
-.method public final d()Ljava/lang/Object;
-    .locals 4
+    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    const/4 v3, 0x1
 
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
+    iput-boolean v3, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     :try_start_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v3
+
+    iput-object v3, v2, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
+
+    const/4 v3, 0x0
+
+    invoke-static {p0, v3, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    iget-object p0, v2, Landroid/graphics/BitmapFactory$Options;->outColorSpace:Landroid/graphics/ColorSpace;
+
+    new-instance v3, Luq4;
+
+    iget v4, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v2, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    invoke-direct {v3, v4, v2, p0}, Luq4;-><init>(IILandroid/graphics/ColorSpace;)V
     :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ltub;
+
+    invoke-virtual {p0, v1}, Ltub;->d(Ljava/lang/Object;)Z
+
+    return-object v3
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ltub;
+
+    invoke-virtual {v0, v1}, Ltub;->d(Ljava/lang/Object;)Z
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final b(Landroid/graphics/Bitmap$Config;)I
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    const/4 p0, -0x1
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lrp0;->o:Z
-
-    iget-object v1, p0, Lrp0;->c:Lfs4;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Lfs4;->f()V
-
     :cond_0
-    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    sget-object v0, Lqp0;->$EnumSwitchMapping$0:[I
 
-    move-result-object v0
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    throw v0
+    move-result p0
 
-    :cond_1
+    aget p0, v0, p0
+
     :goto_0
-    iget-object v0, p0, Lrp0;->b:Ljava/lang/Throwable;
+    const/4 v0, 0x2
 
-    if-nez v0, :cond_2
+    const/4 v1, 0x4
 
-    iget-object v0, p0, Lrp0;->a:Ljava/lang/Object;
+    packed-switch p0, :pswitch_data_0
 
-    return-object v0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    :cond_2
-    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    const-string v0, "The provided Bitmap.Config is not supported"
 
-    move-result-object v0
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p0
+
+    :pswitch_0
+    return v1
+
+    :pswitch_1
+    const/16 p0, 0x8
+
+    return p0
+
+    :pswitch_2
+    return v0
+
+    :pswitch_3
+    const/4 p0, 0x1
+
+    return p0
+
+    :pswitch_4
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
+.method public static final c(IILandroid/graphics/Bitmap$Config;)I
+    .locals 4
+
+    if-lez p0, :cond_2
+
+    if-lez p1, :cond_1
+
+    invoke-static {p2}, Lrp0;->b(Landroid/graphics/Bitmap$Config;)I
+
+    move-result p2
+
+    mul-int v0, p0, p1
+
+    mul-int/2addr v0, p2
+
+    if-lez v0, :cond_0
+
+    return v0
+
+    :cond_0
+    const-string v1, ", width: "
+
+    const-string v2, ", height: "
+
+    const-string v3, "size must be > 0: size: "
+
+    invoke-static {v3, v0, v1, p0, v2}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", pixelSize: "
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    const-string p0, "height must be > 0, height is: "
+
+    invoke-static {p1, p0}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    const-string p1, "width must be > 0, width is: "
+
+    invoke-static {p0, p1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static final d(Landroid/graphics/Bitmap;)I
     .locals 0
 
-    iput-object p1, p0, Lrp0;->b:Ljava/lang/Throwable;
+    if-nez p0, :cond_0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    const/4 p0, 0x0
 
-    return-void
+    return p0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getByteCount()I
+
+    move-result p0
+
+    return p0
 .end method

@@ -1,109 +1,129 @@
-.class public final enum Ltta;
-.super Ljava/lang/Enum;
+.class public final Ltta;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Ltta;
+# instance fields
+.field public final a:Lgzc;
 
-.field public static final synthetic Y:[Ltta;
-
-.field public static final enum a:Ltta;
-
-.field public static final enum b:Ltta;
-
-.field public static final enum c:Ltta;
-
-.field public static final enum o:Ltta;
+.field public final b:Ljava/util/WeakHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lgzc;)V
+    .locals 0
 
-    new-instance v0, Ltta;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "TIMEOUT"
+    iput-object p1, p0, Ltta;->a:Lgzc;
 
-    const/4 v2, 0x0
+    new-instance p1, Ljava/util/WeakHashMap;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p1}, Ljava/util/WeakHashMap;-><init>()V
 
-    sput-object v0, Ltta;->a:Ltta;
-
-    new-instance v1, Ltta;
-
-    const-string v2, "SWIPE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ltta;->b:Ltta;
-
-    new-instance v2, Ltta;
-
-    const-string v3, "MANUAL"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ltta;->c:Ltta;
-
-    new-instance v3, Ltta;
-
-    const-string v4, "ROOT_VIEW_DETACHED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ltta;->o:Ltta;
-
-    new-instance v4, Ltta;
-
-    const-string v5, "RIGHT_ELEMENT_CLICK"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ltta;->X:Ltta;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Ltta;
-
-    move-result-object v0
-
-    sput-object v0, Ltta;->Y:[Ltta;
+    iput-object p1, p0, Ltta;->b:Ljava/util/WeakHashMap;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ltta;
-    .locals 1
 
-    const-class v0, Ltta;
+# virtual methods
+.method public final a(Landroid/content/Context;Lng9;Lk14;)V
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    instance-of v0, p3, Lrta;
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    check-cast p0, Ltta;
+    move-object v0, p3
 
-    return-object p0
-.end method
+    check-cast v0, Lrta;
 
-.method public static values()[Ltta;
-    .locals 1
+    iget v1, v0, Lrta;->Y:I
 
-    sget-object v0, Ltta;->Y:[Ltta;
+    const/high16 v2, -0x80000000
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    and-int v3, v1, v2
 
-    move-result-object v0
+    if-eqz v3, :cond_0
 
-    check-cast v0, [Ltta;
+    sub-int/2addr v1, v2
 
-    return-object v0
+    iput v1, v0, Lrta;->Y:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lrta;
+
+    invoke-direct {v0, p0, p3}, Lrta;-><init>(Ltta;Lk14;)V
+
+    :goto_0
+    iget-object p3, v0, Lrta;->o:Ljava/lang/Object;
+
+    iget v1, v0, Lrta;->Y:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-eq v1, v2, :cond_1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p3}, Lswi;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p3}, Lswi;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Application;
+
+    new-instance p3, Lsta;
+
+    invoke-direct {p3, p2, p0}, Lsta;-><init>(Lqh6;Ltta;)V
+
+    invoke-virtual {p1, p3}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    new-instance p1, Lbx;
+
+    const/16 p2, 0x8
+
+    invoke-direct {p1, p2, p0}, Lbx;-><init>(ILjava/lang/Object;)V
+
+    iput v2, v0, Lrta;->Y:I
+
+    iget-object p2, p0, Ltta;->a:Lgzc;
+
+    iget-object p2, p2, Lgzc;->a:Llze;
+
+    invoke-interface {p2, p1, v0}, Lzx5;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lc54;->a:Lc54;
+
+    if-ne p1, p2, :cond_3
+
+    return-void
+
+    :cond_3
+    :goto_1
+    new-instance p1, Lkotlin/KotlinNothingValueException;
+
+    invoke-direct {p1}, Lkotlin/KotlinNothingValueException;-><init>()V
+
+    throw p1
 .end method

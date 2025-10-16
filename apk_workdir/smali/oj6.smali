@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lyn7;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Loj6;->a:I
 
-    iput-object p1, p0, Loj6;->a:Lyn7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

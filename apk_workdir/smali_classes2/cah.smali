@@ -2,297 +2,214 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll7f;
+
+# static fields
+.field public static final Companion:Lbah;
+
+.field public static final d:[Lxq7;
 
 
 # instance fields
-.field public final a:Le7f;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lzda;
 
-.field public final c:Lyn7;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Le7f;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbah;
 
-    iput-object p2, p0, Lcah;->a:Le7f;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lcah;->b:Ljava/lang/String;
+    sput-object v0, Lcah;->Companion:Lbah;
 
-    iput-object p1, p0, Lcah;->c:Lyn7;
+    sget-object v0, Lzda;->Companion:Lyda;
+
+    invoke-virtual {v0}, Lyda;->serializer()Lxq7;
+
+    move-result-object v0
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Lxq7;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    aput-object v0, v1, v2
+
+    const/4 v0, 0x2
+
+    aput-object v3, v1, v0
+
+    sput-object v1, Lcah;->d:[Lxq7;
 
     return-void
 .end method
 
-.method public static final d(Lcah;DDLwy3;)Ljava/lang/Object;
-    .locals 4
+.method public synthetic constructor <init>(ILjava/lang/String;Lzda;Z)V
+    .locals 2
 
-    instance-of v0, p5, Laah;
+    and-int/lit8 v0, p1, 0x7
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x7
 
-    move-object v0, p5
+    if-ne v1, v0, :cond_0
 
-    check-cast v0, Laah;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v1, v0, Laah;->Y:I
+    iput-object p2, p0, Lcah;->a:Ljava/lang/String;
 
-    const/high16 v2, -0x80000000
+    iput-object p3, p0, Lcah;->b:Lzda;
 
-    and-int v3, v1, v2
+    iput-boolean p4, p0, Lcah;->c:Z
 
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Laah;->Y:I
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    new-instance v0, Laah;
+    sget-object p2, Laah;->a:Laah;
 
-    invoke-direct {v0, p0, p5}, Laah;-><init>(Lcah;Lwy3;)V
-
-    :goto_0
-    iget-object p5, v0, Laah;->o:Ljava/lang/Object;
-
-    iget v1, v0, Laah;->Y:I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    invoke-static {p5}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p5}, Lcea;->z(Ljava/lang/Object;)V
-
-    new-instance p5, Ljava/lang/StringBuilder;
-
-    const-string v1, "https://geocode-maps.yandex.ru/v1?lang=ru_RU&results=1&format=json&geocode="
-
-    invoke-direct {p5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p5, p3, p4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const/16 p3, 0x2c
-
-    invoke-virtual {p5, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string p1, "&apikey="
-
-    invoke-virtual {p5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lcah;->b:Ljava/lang/String;
-
-    invoke-virtual {p5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Lm26;
-
-    const/4 p3, 0x4
-
-    invoke-direct {p2, p3}, Lm26;-><init>(I)V
-
-    const-string p3, "GET"
-
-    invoke-virtual {p2, p3, v3}, Lm26;->k(Ljava/lang/String;Lkv9;)V
-
-    invoke-virtual {p2, p1}, Lm26;->w(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Lm26;->c()Lwzc;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lcah;->a:Le7f;
-
-    check-cast p2, Lmka;
-
-    invoke-virtual {p2}, Lmka;->d()Lh24;
+    invoke-virtual {p2}, Laah;->d()Lu1e;
 
     move-result-object p2
 
-    new-instance p3, Lbah;
-
-    invoke-direct {p3, p0, p1, v3}, Lbah;-><init>(Lcah;Lwzc;Lkotlin/coroutines/Continuation;)V
-
-    iput v2, v0, Laah;->Y:I
-
-    invoke-static {p2, p3, v0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p5
-
-    sget-object p0, Lo24;->a:Lo24;
-
-    if-ne p5, p0, :cond_3
-
-    return-object p0
-
-    :cond_3
-    :goto_1
-    check-cast p5, Lj1d;
-
-    if-nez p5, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    iget-object p0, p5, Lj1d;->Z:Ll1d;
-
-    if-eqz p0, :cond_5
-
-    invoke-virtual {p0}, Ll1d;->O()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lorg/json/JSONObject;
-
-    invoke-direct {p1, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string p0, "response"
-
-    invoke-virtual {p1, p0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_5
-
-    const-string p1, "GeoObjectCollection"
-
-    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_5
-
-    const-string p1, "featureMember"
-
-    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_5
+    invoke-static {p1, v1, p2}, Luti;->b(IILu1e;)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_5
-
-    const-string p1, "GeoObject"
-
-    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_5
-
-    const-string p1, "name"
-
-    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_5
-    :goto_2
-    return-object v3
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(DDDD)F
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-static/range {p1 .. p8}, Li8e;->o(DDDD)D
+    const/4 v0, 0x1
 
-    move-result-wide p1
+    if-ne p0, p1, :cond_0
 
-    double-to-float p1, p1
-
-    return p1
-.end method
-
-.method public final b(DDDDLwy3;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object p5, p0, Lcah;->a:Le7f;
-
-    check-cast p5, Lmka;
-
-    invoke-virtual {p5}, Lmka;->a()Lh24;
-
-    move-result-object p5
-
-    new-instance v0, Lz9h;
-
-    const/4 v6, 0x0
-
-    move-object v1, p0
-
-    move-wide v2, p1
-
-    move-wide v4, p3
-
-    invoke-direct/range {v0 .. v6}, Lz9h;-><init>(Lcah;DDLkotlin/coroutines/Continuation;)V
-
-    move-object/from16 p1, p9
-
-    invoke-static {p5, v0, p1}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final c(DDDD)Z
-    .locals 0
-
-    invoke-static/range {p1 .. p8}, Li8e;->o(DDDD)D
-
-    move-result-wide p1
-
-    const-wide/high16 p3, 0x4024000000000000L    # 10.0
-
-    cmpg-double p1, p1, p3
-
-    if-gez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Lcah;
 
-    return p1
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lcah;
+
+    iget-object v1, p0, Lcah;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lcah;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lcah;->b:Lzda;
+
+    iget-object v3, p1, Lcah;->b:Lzda;
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lcah;->c:Z
+
+    iget-boolean p1, p1, Lcah;->c:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lcah;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcah;->b:Lzda;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lcah;->c:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppHapticFeedbackNotification(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcah;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", notificationType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcah;->b:Lzda;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", disableVibrationFallback="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lcah;->c:Z
+
+    invoke-static {v0, v2, v1}, Lwx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

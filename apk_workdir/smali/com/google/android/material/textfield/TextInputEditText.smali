@@ -13,11 +13,11 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 7
 
-    sget v3, Lb9c;->editTextStyle:I
+    sget v3, Lzic;->editTextStyle:I
 
     const/4 v6, 0x0
 
-    invoke-static {p1, p2, v3, v6}, Lcc8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    invoke-static {p1, p2, v3, v6}, Lji8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object v0
 
@@ -29,25 +29,25 @@
 
     iput-object v0, p0, Lcom/google/android/material/textfield/TextInputEditText;->t0:Landroid/graphics/Rect;
 
-    sget-object v2, Lxjc;->TextInputEditText:[I
+    sget-object v2, Lytc;->TextInputEditText:[I
 
-    sget v4, Lkjc;->Widget_Design_TextInputEditText:I
+    sget v4, Lltc;->Widget_Design_TextInputEditText:I
 
     new-array v5, v6, [I
 
-    invoke-static {p1, p2, v3, v4}, Lpef;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-static {p1, p2, v3, v4}, Lbsf;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     move-object v0, p1
 
     move-object v1, p2
 
-    invoke-static/range {v0 .. v5}, Lpef;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+    invoke-static/range {v0 .. v5}, Lbsf;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lxjc;->TextInputEditText_textInputLayoutFocusedRectEnabled:I
+    sget p2, Lytc;->TextInputEditText_textInputLayoutFocusedRectEnabled:I
 
     invoke-virtual {p1, p2, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 

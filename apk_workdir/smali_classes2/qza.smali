@@ -1,119 +1,100 @@
-.class public final Lqza;
-.super Ldw9;
+.class public final synthetic Lqza;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
 
-.field public final c:Z
+.field public final synthetic b:Lrza;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
-    .locals 1
+.method public synthetic constructor <init>(Lrza;I)V
+    .locals 0
 
-    sget-object v0, Laxf;->a:Laxf;
+    iput p2, p0, Lqza;->a:I
 
-    invoke-direct {p0, v0}, Ldw9;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Lqza;->b:Lrza;
 
-    iput-wide p1, p0, Lqza;->b:J
-
-    iput-boolean p3, p0, Lqza;->c:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final run()V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lqza;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lqza;->b:Lrza;
 
-    :cond_0
-    instance-of v1, p1, Lqza;
+    iget-object v1, v0, Lrza;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lqza;
-
-    iget-wide v3, p0, Lqza;->b:J
-
-    iget-wide v5, p1, Lqza;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lqza;->c:Z
-
-    iget-boolean p1, p1, Lqza;->c:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lqza;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lqza;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_0
 
-    return v1
-.end method
+    goto :goto_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    :cond_0
+    iget-object v1, v0, Lrza;->b:Ljava/util/concurrent/ExecutorService;
 
-    const-string v0, "OpenOneToOneCall(opponentId="
+    new-instance v2, Lyi;
 
-    const-string v1, ", isVideo="
+    const/16 v3, 0x9
 
-    iget-wide v2, p0, Lqza;->b:J
+    const/4 v4, 0x0
 
-    iget-boolean v4, p0, Lqza;->c:Z
+    invoke-direct {v2, v3, v0, v4}, Lyi;-><init>(ILjava/lang/Object;Z)V
 
-    invoke-static {v2, v3, v0, v1, v4}, Lnd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    move-result-object v0
+    :goto_0
+    return-void
 
-    const-string v1, ")"
+    :pswitch_0
+    iget-object v0, p0, Lqza;->b:Lrza;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lrza;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    move-result-object v0
+    move-result v1
 
-    return-object v0
+    if-eqz v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, v0, Lrza;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v2, Lyi;
+
+    const/16 v3, 0x9
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v3, v0, v4}, Lyi;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

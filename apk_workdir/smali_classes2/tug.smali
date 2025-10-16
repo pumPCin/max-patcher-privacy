@@ -1,224 +1,101 @@
-.class public final synthetic Ltug;
-.super Ljava/lang/Object;
+.class public final Ltug;
+.super Lldi;
 .source "SourceFile"
 
-# interfaces
-.implements Lri6;
 
+# instance fields
+.field public final synthetic a:I
 
-# static fields
-.field public static final a:Ltug;
-
-.field private static final descriptor:Lmqd;
+.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+    .locals 0
 
-    new-instance v0, Ltug;
+    iput p2, p0, Ltug;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltug;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    sput-object v0, Ltug;->a:Ltug;
-
-    new-instance v1, Lflb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.haptic.WebAppHapticFeedbackNotification"
-
-    const/4 v3, 0x3
-
-    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "notificationType"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "disableVibrationFallback"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Ltug;->descriptor:Lmqd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx8;)Ljava/lang/Object;
-    .locals 11
+.method public final d()V
+    .locals 3
 
-    sget-object v0, Ltug;->descriptor:Lmqd;
+    iget v0, p0, Ltug;->a:I
 
-    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Ltug;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    sget-object v1, Lvug;->d:[Lql7;
+    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    const/4 v2, 0x1
+    const/4 v2, 0x4
 
-    const/4 v3, 0x0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const/4 v4, 0x0
+    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    move v6, v2
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    move v7, v3
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    move v8, v7
+    const/4 v1, 0x0
 
-    move-object v5, v4
-
-    :goto_0
-    if-eqz v6, :cond_4
-
-    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
-
-    move-result v9
-
-    const/4 v10, -0x1
-
-    if-eq v9, v10, :cond_3
-
-    if-eqz v9, :cond_2
-
-    if-eq v9, v2, :cond_1
-
-    const/4 v8, 0x2
-
-    if-ne v9, v8, :cond_0
-
-    invoke-virtual {p1, v0, v8}, Lx8;->p(Lmqd;I)Z
-
-    move-result v8
-
-    or-int/lit8 v7, v7, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v9}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    aget-object v9, v1, v2
-
-    invoke-virtual {p1, v0, v2, v9, v5}, Lx8;->t(Lmqd;ILql7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ly5a;
-
-    or-int/lit8 v7, v7, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0, v3}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    move v6, v3
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
-
-    new-instance p1, Lvug;
-
-    invoke-direct {p1, v7, v4, v5, v8}, Lvug;-><init>(ILjava/lang/String;Ly5a;Z)V
-
-    return-object p1
-.end method
-
-.method public final b(Lmz3;Ljava/lang/Object;)V
-    .locals 4
-
-    check-cast p2, Lvug;
-
-    sget-object v0, Ltug;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
-
-    move-result-object p1
-
-    sget-object v1, Lvug;->d:[Lql7;
-
-    iget-object v2, p2, Lvug;->a:Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v0, v3, v2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    const/4 v2, 0x1
-
-    aget-object v1, v1, v2
-
-    iget-object v3, p2, Lvug;->b:Ly5a;
-
-    invoke-virtual {p1, v0, v2, v1, v3}, Lmz3;->i(Lmqd;ILql7;Ljava/lang/Object;)V
-
-    const/4 v1, 0x2
-
-    iget-boolean p2, p2, Lvug;->c:Z
-
-    invoke-virtual {p1, v0, v1, p2}, Lmz3;->e(Lmqd;IZ)V
-
-    invoke-virtual {p1}, Lmz3;->m()V
+    iput-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Luq4;
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ltug;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Luq4;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final c()[Lql7;
-    .locals 5
+.method public e()V
+    .locals 3
 
-    sget-object v0, Lvug;->d:[Lql7;
+    iget v0, p0, Ltug;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    aget-object v0, v0, v1
+    return-void
 
-    const/4 v2, 0x3
+    :pswitch_0
+    iget-object v0, p0, Ltug;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    new-array v2, v2, [Lql7;
+    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    sget-object v3, Llwe;->a:Llwe;
+    const/4 v2, 0x0
 
-    const/4 v4, 0x0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    aput-object v3, v2, v4
+    iget-object v0, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    aput-object v0, v2, v1
+    const/4 v1, 0x0
 
-    sget-object v0, Lcq0;->a:Lcq0;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    const/4 v1, 0x2
+    return-void
 
-    aput-object v0, v2, v1
+    nop
 
-    return-object v2
-.end method
-
-.method public final d()Lmqd;
-    .locals 1
-
-    sget-object v0, Ltug;->descriptor:Lmqd;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

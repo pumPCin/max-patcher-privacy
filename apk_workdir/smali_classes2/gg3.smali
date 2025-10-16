@@ -1,189 +1,53 @@
-.class public final synthetic Lgg3;
-.super Ljava/lang/Object;
+.class public final Lgg3;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public X:I
 
-.field public final synthetic Y:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic Z:Landroid/view/View;
+.field public final synthetic Z:Lig3;
 
-.field public final synthetic a:I
+.field public o:Lig3;
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:I
-
-.field public final synthetic o:I
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;IIIILandroid/view/View;I)V
+.method public constructor <init>(Lig3;Lk14;)V
     .locals 0
 
-    iput p7, p0, Lgg3;->a:I
+    iput-object p1, p0, Lgg3;->Z:Lig3;
 
-    iput-object p1, p0, Lgg3;->b:Landroid/view/View;
-
-    iput p2, p0, Lgg3;->c:I
-
-    iput p3, p0, Lgg3;->o:I
-
-    iput p4, p0, Lgg3;->X:I
-
-    iput p5, p0, Lgg3;->Y:I
-
-    iput-object p6, p0, Lgg3;->Z:Landroid/view/View;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lgg3;->a:I
+    iput-object p1, p0, Lgg3;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lgg3;->r0:I
 
-    new-instance v0, Landroid/graphics/Rect;
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    or-int/2addr p1, v0
 
-    iget-object v1, p0, Lgg3;->b:Landroid/view/View;
+    iput p1, p0, Lgg3;->r0:I
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
+    iget-object p1, p0, Lgg3;->Z:Lig3;
 
-    iget v2, v0, Landroid/graphics/Rect;->left:I
+    const/4 v0, 0x0
 
-    iget v3, p0, Lgg3;->c:I
+    invoke-static {p1, v0, p0}, Lig3;->s(Lig3;ILk14;)Ljava/lang/Object;
 
-    sub-int/2addr v2, v3
+    move-result-object p1
 
-    iput v2, v0, Landroid/graphics/Rect;->left:I
-
-    iget v2, v0, Landroid/graphics/Rect;->top:I
-
-    iget v3, p0, Lgg3;->o:I
-
-    sub-int/2addr v2, v3
-
-    iput v2, v0, Landroid/graphics/Rect;->top:I
-
-    iget v2, v0, Landroid/graphics/Rect;->right:I
-
-    iget v3, p0, Lgg3;->X:I
-
-    add-int/2addr v2, v3
-
-    iput v2, v0, Landroid/graphics/Rect;->right:I
-
-    iget v2, v0, Landroid/graphics/Rect;->bottom:I
-
-    iget v3, p0, Lgg3;->Y:I
-
-    add-int/2addr v2, v3
-
-    iput v2, v0, Landroid/graphics/Rect;->bottom:I
-
-    new-instance v2, Landroid/view/TouchDelegate;
-
-    invoke-direct {v2, v0, v1}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    iget-object v0, p0, Lgg3;->Z:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lgg3;->Z:Landroid/view/View;
-
-    check-cast v0, Lu49;
-
-    new-instance v1, Landroid/graphics/Rect;
-
-    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
-
-    iget-object v2, p0, Lgg3;->b:Landroid/view/View;
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
-
-    iget v3, v1, Landroid/graphics/Rect;->left:I
-
-    iget v4, p0, Lgg3;->c:I
-
-    sub-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->left:I
-
-    iget v3, v1, Landroid/graphics/Rect;->top:I
-
-    iget v4, p0, Lgg3;->o:I
-
-    sub-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->top:I
-
-    iget v3, v1, Landroid/graphics/Rect;->right:I
-
-    iget v4, p0, Lgg3;->X:I
-
-    add-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->right:I
-
-    iget v3, v1, Landroid/graphics/Rect;->bottom:I
-
-    iget v4, p0, Lgg3;->Y:I
-
-    add-int/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object v3
-
-    instance-of v3, v3, Lfg3;
-
-    if-nez v3, :cond_0
-
-    new-instance v3, Lfg3;
-
-    invoke-direct {v3, v0}, Lfg3;-><init>(Lu49;)V
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object v0
-
-    check-cast v0, Lfg3;
-
-    new-instance v3, Landroid/view/TouchDelegate;
-
-    invoke-direct {v3, v1, v2}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    iget-object v0, v0, Lfg3;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,133 +1,55 @@
-.class public final synthetic Ld30;
-.super Ljava/lang/Object;
+.class public final Ld30;
+.super Landroid/database/ContentObserver;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/ContentResolver;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Landroid/net/Uri;
+
+.field public final synthetic c:Le30;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Le30;Landroid/os/Handler;Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
-    iput p1, p0, Ld30;->a:I
+    iput-object p1, p0, Ld30;->c:Le30;
 
-    iput-object p2, p0, Ld30;->b:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Ld30;->a:Landroid/content/ContentResolver;
+
+    iput-object p4, p0, Ld30;->b:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAudioFocusChange(I)V
-    .locals 4
+.method public final onChange(Z)V
+    .locals 3
 
-    iget v0, p0, Ld30;->a:I
+    iget-object p1, p0, Ld30;->c:Le30;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p1, Le30;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ld30;->b:Ljava/lang/Object;
+    check-cast v0, Landroid/content/Context;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+    iget-object v1, p1, Le30;->j:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->a(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
+    check-cast v1, Lr20;
+
+    iget-object v2, p1, Le30;->i:Ljava/lang/Object;
+
+    check-cast v2, Li5;
+
+    invoke-static {v0, v1, v2}, Lb30;->b(Landroid/content/Context;Lr20;Li5;)Lb30;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Le30;->a(Lb30;)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ld30;->b:Ljava/lang/Object;
-
-    check-cast v0, Li30;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, -0x3
-
-    const/4 v2, -0x2
-
-    const/4 v3, 0x1
-
-    if-eq p1, v1, :cond_2
-
-    if-eq p1, v2, :cond_2
-
-    const/4 v1, -0x1
-
-    if-eq p1, v1, :cond_1
-
-    if-eq p1, v3, :cond_0
-
-    const-string v0, "AudioFocusManager"
-
-    const-string v1, "Unknown focus change type: "
-
-    invoke-static {p1, v1, v0}, Lxw1;->m(ILjava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p1, 0x2
-
-    invoke-virtual {v0, p1}, Li30;->c(I)V
-
-    invoke-virtual {v0, v3}, Li30;->b(I)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, v1}, Li30;->b(I)V
-
-    invoke-virtual {v0}, Li30;->a()V
-
-    invoke-virtual {v0, v3}, Li30;->c(I)V
-
-    goto :goto_1
-
-    :cond_2
-    if-eq p1, v2, :cond_4
-
-    iget-object p1, v0, Li30;->d:Le20;
-
-    if-eqz p1, :cond_3
-
-    iget p1, p1, Le20;->a:I
-
-    if-ne p1, v3, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p1, 0x4
-
-    invoke-virtual {v0, p1}, Li30;->c(I)V
-
-    goto :goto_1
-
-    :cond_4
-    :goto_0
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Li30;->b(I)V
-
-    const/4 p1, 0x3
-
-    invoke-virtual {v0, p1}, Li30;->c(I)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

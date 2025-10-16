@@ -1,80 +1,32 @@
 .class public final Log3;
-.super Ljava/lang/Object;
+.super Lon7;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:[Lpg3;
-
-.field public c:J
+# interfaces
+.implements Lng3;
 
 
 # direct methods
-.method public constructor <init>(ILjava/util/concurrent/ThreadFactory;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput p1, p0, Log3;->a:I
-
-    new-array v0, p1, [Lpg3;
-
-    iput-object v0, p0, Log3;->b:[Lpg3;
+    invoke-direct {p0, v0}, Lon7;-><init>(Z)V
 
     const/4 v0, 0x0
 
-    :goto_0
-    if-ge v0, p1, :cond_0
+    invoke-virtual {p0, v0}, Lon7;->initParentJob(Lmm7;)V
 
-    iget-object v1, p0, Log3;->b:[Lpg3;
-
-    new-instance v2, Lpg3;
-
-    invoke-direct {v2, p2}, Lsz9;-><init>(Ljava/util/concurrent/ThreadFactory;)V
-
-    aput-object v2, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lpg3;
-    .locals 5
+.method public final getOnCancelComplete$kotlinx_coroutines_core()Z
+    .locals 1
 
-    iget v0, p0, Log3;->a:I
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
-
-    sget-object v0, Lqg3;->g:Lpg3;
-
-    return-object v0
-
-    :cond_0
-    iget-wide v1, p0, Log3;->c:J
-
-    const-wide/16 v3, 0x1
-
-    add-long/2addr v3, v1
-
-    iput-wide v3, p0, Log3;->c:J
-
-    int-to-long v3, v0
-
-    rem-long/2addr v1, v3
-
-    long-to-int v0, v1
-
-    iget-object v1, p0, Log3;->b:[Lpg3;
-
-    aget-object v0, v1, v0
-
-    return-object v0
+    return v0
 .end method

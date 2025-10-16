@@ -3,182 +3,263 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lpr8;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lxr8;
 
 
 # instance fields
-.field public final a:Lbk8;
+.field public final X:Z
+
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:J
+
+.field public final a:J
 
 .field public final b:J
 
-.field public c:Landroid/media/session/MediaSession$QueueItem;
+.field public final c:Ls00;
+
+.field public final o:Lj87;
+
+.field public final r0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JJLs00;Lj87;Ljava/lang/String;I)V
+    .locals 1
 
-    new-instance v0, Lqg8;
+    iget-boolean v0, p6, Lj87;->e:Z
 
-    const/4 v1, 0x3
+    and-int/lit8 p8, p8, 0x20
 
-    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
+    if-eqz p8, :cond_0
 
-    sput-object v0, Lpr8;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget-object p7, p6, Lj87;->k:Ljava/lang/String;
 
-    return-void
-.end method
+    if-nez p7, :cond_0
 
-.method public constructor <init>(Landroid/media/session/MediaSession$QueueItem;Lbk8;J)V
-    .locals 2
+    const-string p7, ""
 
-    .line 1
+    :cond_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p2, :cond_1
+    iput-wide p1, p0, Lpr8;->a:J
 
-    const-wide/16 v0, -0x1
-
-    cmp-long v0, p3, v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iput-object p2, p0, Lpr8;->a:Lbk8;
-
-    .line 3
     iput-wide p3, p0, Lpr8;->b:J
 
-    .line 4
-    iput-object p1, p0, Lpr8;->c:Landroid/media/session/MediaSession$QueueItem;
+    iput-object p5, p0, Lpr8;->c:Ls00;
 
-    return-void
+    iput-object p6, p0, Lpr8;->o:Lj87;
 
-    .line 5
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iput-boolean v0, p0, Lpr8;->X:Z
 
-    const-string p2, "Id cannot be QueueItem.UNKNOWN_ID"
+    iput-object p7, p0, Lpr8;->Y:Ljava/lang/String;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p6, Lj87;->k:Ljava/lang/String;
 
-    throw p1
+    if-eqz p1, :cond_1
 
-    .line 6
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    const-string p2, "Description cannot be null"
+    move-result p1
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    sget-object v0, Lbk8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbk8;
-
-    iput-object v0, p0, Lpr8;->a:Lbk8;
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lpr8;->b:J
-
-    return-void
-.end method
-
-.method public static a(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 6
-
-    if-eqz p0, :cond_1
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/media/session/MediaSession$QueueItem;
-
-    invoke-virtual {v1}, Landroid/media/session/MediaSession$QueueItem;->getDescription()Landroid/media/MediaDescription;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lbk8;->a(Ljava/lang/Object;)Lbk8;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Landroid/media/session/MediaSession$QueueItem;->getQueueId()J
-
-    move-result-wide v3
-
-    new-instance v5, Lpr8;
-
-    invoke-direct {v5, v1, v2, v3, v4}, Lpr8;-><init>(Landroid/media/session/MediaSession$QueueItem;Lbk8;J)V
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    int-to-long p1, p1
 
     goto :goto_0
 
-    :cond_0
-    return-object v0
-
     :cond_1
-    const/4 p0, 0x0
+    const-wide/16 p1, 0x0
 
-    return-object p0
+    :goto_0
+    iput-wide p1, p0, Lpr8;->Z:J
+
+    sget p1, Lcra;->i:I
+
+    iput p1, p0, Lpr8;->r0:I
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpr8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpr8;
+
+    iget-wide v3, p0, Lpr8;->a:J
+
+    iget-wide v5, p1, Lpr8;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lpr8;->b:J
+
+    iget-wide v5, p1, Lpr8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lpr8;->c:Ls00;
+
+    iget-object v3, p1, Lpr8;->c:Ls00;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lpr8;->o:Lj87;
+
+    iget-object v3, p1, Lpr8;->o:Lj87;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lpr8;->X:Z
+
+    iget-boolean v3, p1, Lpr8;->X:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lpr8;->Y:Ljava/lang/String;
+
+    iget-object p1, p1, Lpr8;->Y:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lpr8;->Z:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lpr8;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lpr8;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lpr8;->c:Ls00;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lpr8;->o:Lj87;
+
+    invoke-virtual {v0}, Lj87;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lpr8;->X:Z
+
+    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lpr8;->Y:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Lpr8;->b:J
+
+    return-wide v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lpr8;->a:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lpr8;->r0:I
 
     return v0
 .end method
@@ -186,41 +267,69 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Photo(messageId="
 
-    const-string v1, "MediaSession.QueueItem { Description="
+    const-string v1, ", attachId="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lpr8;->a:J
 
-    iget-object v1, p0, Lpr8;->a:Lbk8;
+    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", Id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     iget-wide v1, p0, Lpr8;->b:J
 
-    const-string v3, " }"
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v2, v3}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    const-string v1, ", attachModel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpr8;->c:Ls00;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", imageAttachConfig="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpr8;->o:Lj87;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isGif="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lpr8;->X:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", localId="
+
+    const-string v2, ")"
+
+    iget-object v3, p0, Lpr8;->Y:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Lfef;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final v()Ls00;
+    .locals 1
 
-    iget-object v0, p0, Lpr8;->a:Lbk8;
+    iget-object v0, p0, Lpr8;->c:Ls00;
 
-    invoke-virtual {v0, p1, p2}, Lbk8;->writeToParcel(Landroid/os/Parcel;I)V
+    return-object v0
+.end method
 
-    iget-wide v0, p0, Lpr8;->b:J
+.method public final w()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    iget-object v0, p0, Lpr8;->Y:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method

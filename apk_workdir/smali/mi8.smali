@@ -4,42 +4,141 @@
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public A:I
 
-.field public b:Z
+.field public B:I
 
-.field public c:Lbi8;
+.field public C:I
 
-.field public d:Loh8;
+.field public D:I
 
-.field public e:J
+.field public E:I
 
-.field public f:Z
+.field public F:F
 
-.field public g:Landroid/os/Handler;
+.field public G:F
 
-.field public h:Lqe5;
+.field public H:F
 
-.field public i:I
+.field public I:F
+
+.field public J:F
+
+.field public K:F
+
+.field public L:F
+
+.field public M:F
+
+.field public N:F
+
+.field public O:F
+
+.field public P:[B
+
+.field public Q:I
+
+.field public R:I
+
+.field public S:I
+
+.field public T:J
+
+.field public U:J
+
+.field public V:Le4g;
+
+.field public W:Z
+
+.field public X:Z
+
+.field public Y:Ljava/lang/String;
+
+.field public Z:Lt0g;
+
+.field public a:Z
+
+.field public a0:I
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:Z
+
+.field public j:[B
+
+.field public k:Lr0g;
+
+.field public l:[B
+
+.field public m:Lh15;
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:I
+
+.field public s:I
+
+.field public t:I
+
+.field public u:F
+
+.field public v:F
+
+.field public w:F
+
+.field public x:[B
+
+.field public y:I
+
+.field public z:Z
 
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+# virtual methods
+.method public final a(Ljava/lang/String;)[B
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lmi8;->l:[B
 
-    iput-object p1, p0, Lmi8;->a:Landroid/content/Context;
+    if-eqz v0, :cond_0
 
-    sget-object v0, Lbi8;->M:Lai8;
+    return-object v0
 
-    iput-object v0, p0, Lmi8;->c:Lbi8;
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v0, Lc0;
+    const-string v1, "Missing CodecPrivate for codec "
 
-    invoke-direct {v0, p1}, Lc0;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lmi8;->d:Loh8;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, p1}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p1
+
+    throw p1
 .end method

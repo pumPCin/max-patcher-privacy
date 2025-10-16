@@ -809,1603 +809,1603 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lubc;->BOTTOM_END:I
+    sget v0, Lslc;->BOTTOM_END:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->BOTTOM_END:I
 
-    sget v0, Lubc;->BOTTOM_START:I
+    sget v0, Lslc;->BOTTOM_START:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->BOTTOM_START:I
 
-    sget v0, Lubc;->NO_DEBUG:I
+    sget v0, Lslc;->NO_DEBUG:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->NO_DEBUG:I
 
-    sget v0, Lubc;->SHOW_ALL:I
+    sget v0, Lslc;->SHOW_ALL:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->SHOW_ALL:I
 
-    sget v0, Lubc;->SHOW_PATH:I
+    sget v0, Lslc;->SHOW_PATH:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->SHOW_PATH:I
 
-    sget v0, Lubc;->SHOW_PROGRESS:I
+    sget v0, Lslc;->SHOW_PROGRESS:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->SHOW_PROGRESS:I
 
-    sget v0, Lubc;->TOP_END:I
+    sget v0, Lslc;->TOP_END:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->TOP_END:I
 
-    sget v0, Lubc;->TOP_START:I
+    sget v0, Lslc;->TOP_START:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->TOP_START:I
 
-    sget v0, Lubc;->accelerate:I
+    sget v0, Lslc;->accelerate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accelerate:I
 
-    sget v0, Lubc;->accessibility_action_clickable_span:I
+    sget v0, Lslc;->accessibility_action_clickable_span:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_action_clickable_span:I
 
-    sget v0, Lubc;->accessibility_custom_action_0:I
+    sget v0, Lslc;->accessibility_custom_action_0:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_0:I
 
-    sget v0, Lubc;->accessibility_custom_action_1:I
+    sget v0, Lslc;->accessibility_custom_action_1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_1:I
 
-    sget v0, Lubc;->accessibility_custom_action_10:I
+    sget v0, Lslc;->accessibility_custom_action_10:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_10:I
 
-    sget v0, Lubc;->accessibility_custom_action_11:I
+    sget v0, Lslc;->accessibility_custom_action_11:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_11:I
 
-    sget v0, Lubc;->accessibility_custom_action_12:I
+    sget v0, Lslc;->accessibility_custom_action_12:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_12:I
 
-    sget v0, Lubc;->accessibility_custom_action_13:I
+    sget v0, Lslc;->accessibility_custom_action_13:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_13:I
 
-    sget v0, Lubc;->accessibility_custom_action_14:I
+    sget v0, Lslc;->accessibility_custom_action_14:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_14:I
 
-    sget v0, Lubc;->accessibility_custom_action_15:I
+    sget v0, Lslc;->accessibility_custom_action_15:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_15:I
 
-    sget v0, Lubc;->accessibility_custom_action_16:I
+    sget v0, Lslc;->accessibility_custom_action_16:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_16:I
 
-    sget v0, Lubc;->accessibility_custom_action_17:I
+    sget v0, Lslc;->accessibility_custom_action_17:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_17:I
 
-    sget v0, Lubc;->accessibility_custom_action_18:I
+    sget v0, Lslc;->accessibility_custom_action_18:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_18:I
 
-    sget v0, Lubc;->accessibility_custom_action_19:I
+    sget v0, Lslc;->accessibility_custom_action_19:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_19:I
 
-    sget v0, Lubc;->accessibility_custom_action_2:I
+    sget v0, Lslc;->accessibility_custom_action_2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_2:I
 
-    sget v0, Lubc;->accessibility_custom_action_20:I
+    sget v0, Lslc;->accessibility_custom_action_20:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_20:I
 
-    sget v0, Lubc;->accessibility_custom_action_21:I
+    sget v0, Lslc;->accessibility_custom_action_21:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_21:I
 
-    sget v0, Lubc;->accessibility_custom_action_22:I
+    sget v0, Lslc;->accessibility_custom_action_22:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_22:I
 
-    sget v0, Lubc;->accessibility_custom_action_23:I
+    sget v0, Lslc;->accessibility_custom_action_23:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_23:I
 
-    sget v0, Lubc;->accessibility_custom_action_24:I
+    sget v0, Lslc;->accessibility_custom_action_24:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_24:I
 
-    sget v0, Lubc;->accessibility_custom_action_25:I
+    sget v0, Lslc;->accessibility_custom_action_25:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_25:I
 
-    sget v0, Lubc;->accessibility_custom_action_26:I
+    sget v0, Lslc;->accessibility_custom_action_26:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_26:I
 
-    sget v0, Lubc;->accessibility_custom_action_27:I
+    sget v0, Lslc;->accessibility_custom_action_27:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_27:I
 
-    sget v0, Lubc;->accessibility_custom_action_28:I
+    sget v0, Lslc;->accessibility_custom_action_28:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_28:I
 
-    sget v0, Lubc;->accessibility_custom_action_29:I
+    sget v0, Lslc;->accessibility_custom_action_29:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_29:I
 
-    sget v0, Lubc;->accessibility_custom_action_3:I
+    sget v0, Lslc;->accessibility_custom_action_3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_3:I
 
-    sget v0, Lubc;->accessibility_custom_action_30:I
+    sget v0, Lslc;->accessibility_custom_action_30:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_30:I
 
-    sget v0, Lubc;->accessibility_custom_action_31:I
+    sget v0, Lslc;->accessibility_custom_action_31:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_31:I
 
-    sget v0, Lubc;->accessibility_custom_action_4:I
+    sget v0, Lslc;->accessibility_custom_action_4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_4:I
 
-    sget v0, Lubc;->accessibility_custom_action_5:I
+    sget v0, Lslc;->accessibility_custom_action_5:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_5:I
 
-    sget v0, Lubc;->accessibility_custom_action_6:I
+    sget v0, Lslc;->accessibility_custom_action_6:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_6:I
 
-    sget v0, Lubc;->accessibility_custom_action_7:I
+    sget v0, Lslc;->accessibility_custom_action_7:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_7:I
 
-    sget v0, Lubc;->accessibility_custom_action_8:I
+    sget v0, Lslc;->accessibility_custom_action_8:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_8:I
 
-    sget v0, Lubc;->accessibility_custom_action_9:I
+    sget v0, Lslc;->accessibility_custom_action_9:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->accessibility_custom_action_9:I
 
-    sget v0, Lubc;->action_bar:I
+    sget v0, Lslc;->action_bar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_bar:I
 
-    sget v0, Lubc;->action_bar_activity_content:I
+    sget v0, Lslc;->action_bar_activity_content:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_bar_activity_content:I
 
-    sget v0, Lubc;->action_bar_container:I
+    sget v0, Lslc;->action_bar_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_bar_container:I
 
-    sget v0, Lubc;->action_bar_root:I
+    sget v0, Lslc;->action_bar_root:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_bar_root:I
 
-    sget v0, Lubc;->action_bar_spinner:I
+    sget v0, Lslc;->action_bar_spinner:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_bar_spinner:I
 
-    sget v0, Lubc;->action_bar_subtitle:I
+    sget v0, Lslc;->action_bar_subtitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_bar_subtitle:I
 
-    sget v0, Lubc;->action_bar_title:I
+    sget v0, Lslc;->action_bar_title:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_bar_title:I
 
-    sget v0, Lubc;->action_container:I
+    sget v0, Lslc;->action_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_container:I
 
-    sget v0, Lubc;->action_context_bar:I
+    sget v0, Lslc;->action_context_bar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_context_bar:I
 
-    sget v0, Lubc;->action_divider:I
+    sget v0, Lslc;->action_divider:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_divider:I
 
-    sget v0, Lubc;->action_image:I
+    sget v0, Lslc;->action_image:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_image:I
 
-    sget v0, Lubc;->action_menu_divider:I
+    sget v0, Lslc;->action_menu_divider:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_menu_divider:I
 
-    sget v0, Lubc;->action_menu_presenter:I
+    sget v0, Lslc;->action_menu_presenter:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_menu_presenter:I
 
-    sget v0, Lubc;->action_mode_bar:I
+    sget v0, Lslc;->action_mode_bar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_mode_bar:I
 
-    sget v0, Lubc;->action_mode_bar_stub:I
+    sget v0, Lslc;->action_mode_bar_stub:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_mode_bar_stub:I
 
-    sget v0, Lubc;->action_mode_close_button:I
+    sget v0, Lslc;->action_mode_close_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_mode_close_button:I
 
-    sget v0, Lubc;->action_text:I
+    sget v0, Lslc;->action_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->action_text:I
 
-    sget v0, Lubc;->actions:I
+    sget v0, Lslc;->actions:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->actions:I
 
-    sget v0, Lubc;->activity_chooser_view_content:I
+    sget v0, Lslc;->activity_chooser_view_content:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->activity_chooser_view_content:I
 
-    sget v0, Lubc;->add:I
+    sget v0, Lslc;->add:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->add:I
 
-    sget v0, Lubc;->alertTitle:I
+    sget v0, Lslc;->alertTitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->alertTitle:I
 
-    sget v0, Lubc;->aligned:I
+    sget v0, Lslc;->aligned:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->aligned:I
 
-    sget v0, Lubc;->animateToEnd:I
+    sget v0, Lslc;->animateToEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->animateToEnd:I
 
-    sget v0, Lubc;->animateToStart:I
+    sget v0, Lslc;->animateToStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->animateToStart:I
 
-    sget v0, Lubc;->arc:I
+    sget v0, Lslc;->arc:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->arc:I
 
-    sget v0, Lubc;->asConfigured:I
+    sget v0, Lslc;->asConfigured:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->asConfigured:I
 
-    sget v0, Lubc;->async:I
+    sget v0, Lslc;->async:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->async:I
 
-    sget v0, Lubc;->auto:I
+    sget v0, Lslc;->auto:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->auto:I
 
-    sget v0, Lubc;->autoComplete:I
+    sget v0, Lslc;->autoComplete:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->autoComplete:I
 
-    sget v0, Lubc;->autoCompleteToEnd:I
+    sget v0, Lslc;->autoCompleteToEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->autoCompleteToEnd:I
 
-    sget v0, Lubc;->autoCompleteToStart:I
+    sget v0, Lslc;->autoCompleteToStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->autoCompleteToStart:I
 
-    sget v0, Lubc;->baseline:I
+    sget v0, Lslc;->baseline:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->baseline:I
 
-    sget v0, Lubc;->blocking:I
+    sget v0, Lslc;->blocking:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->blocking:I
 
-    sget v0, Lubc;->bottom:I
+    sget v0, Lslc;->bottom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->bottom:I
 
-    sget v0, Lubc;->bounce:I
+    sget v0, Lslc;->bounce:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->bounce:I
 
-    sget v0, Lubc;->buttonPanel:I
+    sget v0, Lslc;->buttonPanel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->buttonPanel:I
 
-    sget v0, Lubc;->cancel_button:I
+    sget v0, Lslc;->cancel_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->cancel_button:I
 
-    sget v0, Lubc;->center:I
+    sget v0, Lslc;->center:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->center:I
 
-    sget v0, Lubc;->centerCrop:I
+    sget v0, Lslc;->centerCrop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->centerCrop:I
 
-    sget v0, Lubc;->centerInside:I
+    sget v0, Lslc;->centerInside:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->centerInside:I
 
-    sget v0, Lubc;->chain:I
+    sget v0, Lslc;->chain:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->chain:I
 
-    sget v0, Lubc;->checkbox:I
+    sget v0, Lslc;->checkbox:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->checkbox:I
 
-    sget v0, Lubc;->checked:I
+    sget v0, Lslc;->checked:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->checked:I
 
-    sget v0, Lubc;->chronometer:I
+    sget v0, Lslc;->chronometer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->chronometer:I
 
-    sget v0, Lubc;->circle_center:I
+    sget v0, Lslc;->circle_center:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->circle_center:I
 
-    sget v0, Lubc;->clear_text:I
+    sget v0, Lslc;->clear_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->clear_text:I
 
-    sget v0, Lubc;->clockwise:I
+    sget v0, Lslc;->clockwise:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->clockwise:I
 
-    sget v0, Lubc;->compress:I
+    sget v0, Lslc;->compress:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->compress:I
 
-    sget v0, Lubc;->confirm_button:I
+    sget v0, Lslc;->confirm_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->confirm_button:I
 
-    sget v0, Lubc;->container:I
+    sget v0, Lslc;->container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->container:I
 
-    sget v0, Lubc;->content:I
+    sget v0, Lslc;->content:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->content:I
 
-    sget v0, Lubc;->contentPanel:I
+    sget v0, Lslc;->contentPanel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->contentPanel:I
 
-    sget v0, Lubc;->contiguous:I
+    sget v0, Lslc;->contiguous:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->contiguous:I
 
-    sget v0, Lubc;->coordinator:I
+    sget v0, Lslc;->coordinator:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->coordinator:I
 
-    sget v0, Lubc;->cos:I
+    sget v0, Lslc;->cos:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->cos:I
 
-    sget v0, Lubc;->counterclockwise:I
+    sget v0, Lslc;->counterclockwise:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->counterclockwise:I
 
-    sget v0, Lubc;->cradle:I
+    sget v0, Lslc;->cradle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->cradle:I
 
-    sget v0, Lubc;->custom:I
+    sget v0, Lslc;->custom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->custom:I
 
-    sget v0, Lubc;->customPanel:I
+    sget v0, Lslc;->customPanel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->customPanel:I
 
-    sget v0, Lubc;->cut:I
+    sget v0, Lslc;->cut:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->cut:I
 
-    sget v0, Lubc;->date_picker_actions:I
+    sget v0, Lslc;->date_picker_actions:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->date_picker_actions:I
 
-    sget v0, Lubc;->decelerate:I
+    sget v0, Lslc;->decelerate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->decelerate:I
 
-    sget v0, Lubc;->decelerateAndComplete:I
+    sget v0, Lslc;->decelerateAndComplete:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->decelerateAndComplete:I
 
-    sget v0, Lubc;->decor_content_parent:I
+    sget v0, Lslc;->decor_content_parent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->decor_content_parent:I
 
-    sget v0, Lubc;->default_activity_button:I
+    sget v0, Lslc;->default_activity_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->default_activity_button:I
 
-    sget v0, Lubc;->deltaRelative:I
+    sget v0, Lslc;->deltaRelative:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->deltaRelative:I
 
-    sget v0, Lubc;->design_bottom_sheet:I
+    sget v0, Lslc;->design_bottom_sheet:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->design_bottom_sheet:I
 
-    sget v0, Lubc;->design_menu_item_action_area:I
+    sget v0, Lslc;->design_menu_item_action_area:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->design_menu_item_action_area:I
 
-    sget v0, Lubc;->design_menu_item_action_area_stub:I
+    sget v0, Lslc;->design_menu_item_action_area_stub:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->design_menu_item_action_area_stub:I
 
-    sget v0, Lubc;->design_menu_item_text:I
+    sget v0, Lslc;->design_menu_item_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->design_menu_item_text:I
 
-    sget v0, Lubc;->design_navigation_view:I
+    sget v0, Lslc;->design_navigation_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->design_navigation_view:I
 
-    sget v0, Lubc;->dialog_button:I
+    sget v0, Lslc;->dialog_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dialog_button:I
 
-    sget v0, Lubc;->disjoint:I
+    sget v0, Lslc;->disjoint:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->disjoint:I
 
-    sget v0, Lubc;->dragDown:I
+    sget v0, Lslc;->dragDown:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dragDown:I
 
-    sget v0, Lubc;->dragEnd:I
+    sget v0, Lslc;->dragEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dragEnd:I
 
-    sget v0, Lubc;->dragLeft:I
+    sget v0, Lslc;->dragLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dragLeft:I
 
-    sget v0, Lubc;->dragRight:I
+    sget v0, Lslc;->dragRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dragRight:I
 
-    sget v0, Lubc;->dragStart:I
+    sget v0, Lslc;->dragStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dragStart:I
 
-    sget v0, Lubc;->dragUp:I
+    sget v0, Lslc;->dragUp:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dragUp:I
 
-    sget v0, Lubc;->dropdown_menu:I
+    sget v0, Lslc;->dropdown_menu:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->dropdown_menu:I
 
-    sget v0, Lubc;->easeIn:I
+    sget v0, Lslc;->easeIn:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->easeIn:I
 
-    sget v0, Lubc;->easeInOut:I
+    sget v0, Lslc;->easeInOut:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->easeInOut:I
 
-    sget v0, Lubc;->easeOut:I
+    sget v0, Lslc;->easeOut:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->easeOut:I
 
-    sget v0, Lubc;->edge:I
+    sget v0, Lslc;->edge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->edge:I
 
-    sget v0, Lubc;->edit_query:I
+    sget v0, Lslc;->edit_query:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->edit_query:I
 
-    sget v0, Lubc;->edit_text_id:I
+    sget v0, Lslc;->edit_text_id:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->edit_text_id:I
 
-    sget v0, Lubc;->elastic:I
+    sget v0, Lslc;->elastic:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->elastic:I
 
-    sget v0, Lubc;->embed:I
+    sget v0, Lslc;->embed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->embed:I
 
-    sget v0, Lubc;->end:I
+    sget v0, Lslc;->end:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->end:I
 
-    sget v0, Lubc;->endToStart:I
+    sget v0, Lslc;->endToStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->endToStart:I
 
-    sget v0, Lubc;->escape:I
+    sget v0, Lslc;->escape:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->escape:I
 
-    sget v0, Lubc;->expand_activities_button:I
+    sget v0, Lslc;->expand_activities_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->expand_activities_button:I
 
-    sget v0, Lubc;->expanded_menu:I
+    sget v0, Lslc;->expanded_menu:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->expanded_menu:I
 
-    sget v0, Lubc;->fade:I
+    sget v0, Lslc;->fade:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fade:I
 
-    sget v0, Lubc;->fill:I
+    sget v0, Lslc;->fill:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fill:I
 
-    sget v0, Lubc;->filled:I
+    sget v0, Lslc;->filled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->filled:I
 
-    sget v0, Lubc;->fitCenter:I
+    sget v0, Lslc;->fitCenter:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fitCenter:I
 
-    sget v0, Lubc;->fitEnd:I
+    sget v0, Lslc;->fitEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fitEnd:I
 
-    sget v0, Lubc;->fitStart:I
+    sget v0, Lslc;->fitStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fitStart:I
 
-    sget v0, Lubc;->fitXY:I
+    sget v0, Lslc;->fitXY:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fitXY:I
 
-    sget v0, Lubc;->fixed:I
+    sget v0, Lslc;->fixed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fixed:I
 
-    sget v0, Lubc;->flip:I
+    sget v0, Lslc;->flip:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->flip:I
 
-    sget v0, Lubc;->floating:I
+    sget v0, Lslc;->floating:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->floating:I
 
-    sget v0, Lubc;->forever:I
+    sget v0, Lslc;->forever:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->forever:I
 
-    sget v0, Lubc;->fragment_container_view_tag:I
+    sget v0, Lslc;->fragment_container_view_tag:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fragment_container_view_tag:I
 
-    sget v0, Lubc;->fullscreen_header:I
+    sget v0, Lslc;->fullscreen_header:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->fullscreen_header:I
 
-    sget v0, Lubc;->ghost_view:I
+    sget v0, Lslc;->ghost_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->ghost_view:I
 
-    sget v0, Lubc;->ghost_view_holder:I
+    sget v0, Lslc;->ghost_view_holder:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->ghost_view_holder:I
 
-    sget v0, Lubc;->gone:I
+    sget v0, Lslc;->gone:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->gone:I
 
-    sget v0, Lubc;->group_divider:I
+    sget v0, Lslc;->group_divider:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->group_divider:I
 
-    sget v0, Lubc;->header_title:I
+    sget v0, Lslc;->header_title:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->header_title:I
 
-    sget v0, Lubc;->hide_ime_id:I
+    sget v0, Lslc;->hide_ime_id:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->hide_ime_id:I
 
-    sget v0, Lubc;->home:I
+    sget v0, Lslc;->home:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->home:I
 
-    sget v0, Lubc;->honorRequest:I
+    sget v0, Lslc;->honorRequest:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->honorRequest:I
 
-    sget v0, Lubc;->icon:I
+    sget v0, Lslc;->icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->icon:I
 
-    sget v0, Lubc;->icon_group:I
+    sget v0, Lslc;->icon_group:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->icon_group:I
 
-    sget v0, Lubc;->ignore:I
+    sget v0, Lslc;->ignore:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->ignore:I
 
-    sget v0, Lubc;->ignoreRequest:I
+    sget v0, Lslc;->ignoreRequest:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->ignoreRequest:I
 
-    sget v0, Lubc;->image:I
+    sget v0, Lslc;->image:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->image:I
 
-    sget v0, Lubc;->indeterminate:I
+    sget v0, Lslc;->indeterminate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->indeterminate:I
 
-    sget v0, Lubc;->info:I
+    sget v0, Lslc;->info:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->info:I
 
-    sget v0, Lubc;->invisible:I
+    sget v0, Lslc;->invisible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->invisible:I
 
-    sget v0, Lubc;->inward:I
+    sget v0, Lslc;->inward:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->inward:I
 
-    sget v0, Lubc;->italic:I
+    sget v0, Lslc;->italic:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->italic:I
 
-    sget v0, Lubc;->item_touch_helper_previous_elevation:I
+    sget v0, Lslc;->item_touch_helper_previous_elevation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->item_touch_helper_previous_elevation:I
 
-    sget v0, Lubc;->jumpToEnd:I
+    sget v0, Lslc;->jumpToEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->jumpToEnd:I
 
-    sget v0, Lubc;->jumpToStart:I
+    sget v0, Lslc;->jumpToStart:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->jumpToStart:I
 
-    sget v0, Lubc;->labeled:I
+    sget v0, Lslc;->labeled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->labeled:I
 
-    sget v0, Lubc;->layout:I
+    sget v0, Lslc;->layout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->layout:I
 
-    sget v0, Lubc;->left:I
+    sget v0, Lslc;->left:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->left:I
 
-    sget v0, Lubc;->leftToRight:I
+    sget v0, Lslc;->leftToRight:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->leftToRight:I
 
-    sget v0, Lubc;->legacy:I
+    sget v0, Lslc;->legacy:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->legacy:I
 
-    sget v0, Lubc;->line1:I
+    sget v0, Lslc;->line1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->line1:I
 
-    sget v0, Lubc;->line3:I
+    sget v0, Lslc;->line3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->line3:I
 
-    sget v0, Lubc;->linear:I
+    sget v0, Lslc;->linear:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->linear:I
 
-    sget v0, Lubc;->listMode:I
+    sget v0, Lslc;->listMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->listMode:I
 
-    sget v0, Lubc;->list_item:I
+    sget v0, Lslc;->list_item:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->list_item:I
 
-    sget v0, Lubc;->m3_side_sheet:I
+    sget v0, Lslc;->m3_side_sheet:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->m3_side_sheet:I
 
-    sget v0, Lubc;->marquee:I
+    sget v0, Lslc;->marquee:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->marquee:I
 
-    sget v0, Lubc;->masked:I
+    sget v0, Lslc;->masked:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->masked:I
 
-    sget v0, Lubc;->match_parent:I
+    sget v0, Lslc;->match_parent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->match_parent:I
 
-    sget v0, Lubc;->material_clock_display:I
+    sget v0, Lslc;->material_clock_display:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_display:I
 
-    sget v0, Lubc;->material_clock_display_and_toggle:I
+    sget v0, Lslc;->material_clock_display_and_toggle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_display_and_toggle:I
 
-    sget v0, Lubc;->material_clock_face:I
+    sget v0, Lslc;->material_clock_face:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_face:I
 
-    sget v0, Lubc;->material_clock_hand:I
+    sget v0, Lslc;->material_clock_hand:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_hand:I
 
-    sget v0, Lubc;->material_clock_level:I
+    sget v0, Lslc;->material_clock_level:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_level:I
 
-    sget v0, Lubc;->material_clock_period_am_button:I
+    sget v0, Lslc;->material_clock_period_am_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_period_am_button:I
 
-    sget v0, Lubc;->material_clock_period_pm_button:I
+    sget v0, Lslc;->material_clock_period_pm_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_period_pm_button:I
 
-    sget v0, Lubc;->material_clock_period_toggle:I
+    sget v0, Lslc;->material_clock_period_toggle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_clock_period_toggle:I
 
-    sget v0, Lubc;->material_hour_text_input:I
+    sget v0, Lslc;->material_hour_text_input:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_hour_text_input:I
 
-    sget v0, Lubc;->material_hour_tv:I
+    sget v0, Lslc;->material_hour_tv:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_hour_tv:I
 
-    sget v0, Lubc;->material_label:I
+    sget v0, Lslc;->material_label:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_label:I
 
-    sget v0, Lubc;->material_minute_text_input:I
+    sget v0, Lslc;->material_minute_text_input:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_minute_text_input:I
 
-    sget v0, Lubc;->material_minute_tv:I
+    sget v0, Lslc;->material_minute_tv:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_minute_tv:I
 
-    sget v0, Lubc;->material_textinput_timepicker:I
+    sget v0, Lslc;->material_textinput_timepicker:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_textinput_timepicker:I
 
-    sget v0, Lubc;->material_timepicker_cancel_button:I
+    sget v0, Lslc;->material_timepicker_cancel_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_timepicker_cancel_button:I
 
-    sget v0, Lubc;->material_timepicker_container:I
+    sget v0, Lslc;->material_timepicker_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_timepicker_container:I
 
-    sget v0, Lubc;->material_timepicker_mode_button:I
+    sget v0, Lslc;->material_timepicker_mode_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_timepicker_mode_button:I
 
-    sget v0, Lubc;->material_timepicker_ok_button:I
+    sget v0, Lslc;->material_timepicker_ok_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_timepicker_ok_button:I
 
-    sget v0, Lubc;->material_timepicker_view:I
+    sget v0, Lslc;->material_timepicker_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_timepicker_view:I
 
-    sget v0, Lubc;->material_value_index:I
+    sget v0, Lslc;->material_value_index:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->material_value_index:I
 
-    sget v0, Lubc;->matrix:I
+    sget v0, Lslc;->matrix:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->matrix:I
 
-    sget v0, Lubc;->message:I
+    sget v0, Lslc;->message:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->message:I
 
-    sget v0, Lubc;->middle:I
+    sget v0, Lslc;->middle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->middle:I
 
-    sget v0, Lubc;->mini:I
+    sget v0, Lslc;->mini:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mini:I
 
-    sget v0, Lubc;->month_grid:I
+    sget v0, Lslc;->month_grid:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->month_grid:I
 
-    sget v0, Lubc;->month_navigation_bar:I
+    sget v0, Lslc;->month_navigation_bar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->month_navigation_bar:I
 
-    sget v0, Lubc;->month_navigation_fragment_toggle:I
+    sget v0, Lslc;->month_navigation_fragment_toggle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->month_navigation_fragment_toggle:I
 
-    sget v0, Lubc;->month_navigation_next:I
+    sget v0, Lslc;->month_navigation_next:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->month_navigation_next:I
 
-    sget v0, Lubc;->month_navigation_previous:I
+    sget v0, Lslc;->month_navigation_previous:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->month_navigation_previous:I
 
-    sget v0, Lubc;->month_title:I
+    sget v0, Lslc;->month_title:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->month_title:I
 
-    sget v0, Lubc;->motion_base:I
+    sget v0, Lslc;->motion_base:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->motion_base:I
 
-    sget v0, Lubc;->mtrl_anchor_parent:I
+    sget v0, Lslc;->mtrl_anchor_parent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_anchor_parent:I
 
-    sget v0, Lubc;->mtrl_calendar_day_selector_frame:I
+    sget v0, Lslc;->mtrl_calendar_day_selector_frame:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_day_selector_frame:I
 
-    sget v0, Lubc;->mtrl_calendar_days_of_week:I
+    sget v0, Lslc;->mtrl_calendar_days_of_week:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_days_of_week:I
 
-    sget v0, Lubc;->mtrl_calendar_frame:I
+    sget v0, Lslc;->mtrl_calendar_frame:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_frame:I
 
-    sget v0, Lubc;->mtrl_calendar_main_pane:I
+    sget v0, Lslc;->mtrl_calendar_main_pane:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_main_pane:I
 
-    sget v0, Lubc;->mtrl_calendar_months:I
+    sget v0, Lslc;->mtrl_calendar_months:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_months:I
 
-    sget v0, Lubc;->mtrl_calendar_selection_frame:I
+    sget v0, Lslc;->mtrl_calendar_selection_frame:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_selection_frame:I
 
-    sget v0, Lubc;->mtrl_calendar_text_input_frame:I
+    sget v0, Lslc;->mtrl_calendar_text_input_frame:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_text_input_frame:I
 
-    sget v0, Lubc;->mtrl_calendar_year_selector_frame:I
+    sget v0, Lslc;->mtrl_calendar_year_selector_frame:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_calendar_year_selector_frame:I
 
-    sget v0, Lubc;->mtrl_card_checked_layer_id:I
+    sget v0, Lslc;->mtrl_card_checked_layer_id:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_card_checked_layer_id:I
 
-    sget v0, Lubc;->mtrl_child_content_container:I
+    sget v0, Lslc;->mtrl_child_content_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_child_content_container:I
 
-    sget v0, Lubc;->mtrl_internal_children_alpha_tag:I
+    sget v0, Lslc;->mtrl_internal_children_alpha_tag:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_internal_children_alpha_tag:I
 
-    sget v0, Lubc;->mtrl_motion_snapshot_view:I
+    sget v0, Lslc;->mtrl_motion_snapshot_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_motion_snapshot_view:I
 
-    sget v0, Lubc;->mtrl_picker_fullscreen:I
+    sget v0, Lslc;->mtrl_picker_fullscreen:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_fullscreen:I
 
-    sget v0, Lubc;->mtrl_picker_header:I
+    sget v0, Lslc;->mtrl_picker_header:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_header:I
 
-    sget v0, Lubc;->mtrl_picker_header_selection_text:I
+    sget v0, Lslc;->mtrl_picker_header_selection_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_header_selection_text:I
 
-    sget v0, Lubc;->mtrl_picker_header_title_and_selection:I
+    sget v0, Lslc;->mtrl_picker_header_title_and_selection:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_header_title_and_selection:I
 
-    sget v0, Lubc;->mtrl_picker_header_toggle:I
+    sget v0, Lslc;->mtrl_picker_header_toggle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_header_toggle:I
 
-    sget v0, Lubc;->mtrl_picker_text_input_date:I
+    sget v0, Lslc;->mtrl_picker_text_input_date:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_text_input_date:I
 
-    sget v0, Lubc;->mtrl_picker_text_input_range_end:I
+    sget v0, Lslc;->mtrl_picker_text_input_range_end:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_text_input_range_end:I
 
-    sget v0, Lubc;->mtrl_picker_text_input_range_start:I
+    sget v0, Lslc;->mtrl_picker_text_input_range_start:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_text_input_range_start:I
 
-    sget v0, Lubc;->mtrl_picker_title_text:I
+    sget v0, Lslc;->mtrl_picker_title_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_picker_title_text:I
 
-    sget v0, Lubc;->mtrl_view_tag_bottom_padding:I
+    sget v0, Lslc;->mtrl_view_tag_bottom_padding:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->mtrl_view_tag_bottom_padding:I
 
-    sget v0, Lubc;->multiply:I
+    sget v0, Lslc;->multiply:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->multiply:I
 
-    sget v0, Lubc;->navigation_bar_item_active_indicator_view:I
+    sget v0, Lslc;->navigation_bar_item_active_indicator_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->navigation_bar_item_active_indicator_view:I
 
-    sget v0, Lubc;->navigation_bar_item_icon_container:I
+    sget v0, Lslc;->navigation_bar_item_icon_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->navigation_bar_item_icon_container:I
 
-    sget v0, Lubc;->navigation_bar_item_icon_view:I
+    sget v0, Lslc;->navigation_bar_item_icon_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->navigation_bar_item_icon_view:I
 
-    sget v0, Lubc;->navigation_bar_item_labels_group:I
+    sget v0, Lslc;->navigation_bar_item_labels_group:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->navigation_bar_item_labels_group:I
 
-    sget v0, Lubc;->navigation_bar_item_large_label_view:I
+    sget v0, Lslc;->navigation_bar_item_large_label_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->navigation_bar_item_large_label_view:I
 
-    sget v0, Lubc;->navigation_bar_item_small_label_view:I
+    sget v0, Lslc;->navigation_bar_item_small_label_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->navigation_bar_item_small_label_view:I
 
-    sget v0, Lubc;->navigation_header_container:I
+    sget v0, Lslc;->navigation_header_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->navigation_header_container:I
 
-    sget v0, Lubc;->none:I
+    sget v0, Lslc;->none:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->none:I
 
-    sget v0, Lubc;->normal:I
+    sget v0, Lslc;->normal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->normal:I
 
-    sget v0, Lubc;->notification_background:I
+    sget v0, Lslc;->notification_background:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->notification_background:I
 
-    sget v0, Lubc;->notification_main_column:I
+    sget v0, Lslc;->notification_main_column:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->notification_main_column:I
 
-    sget v0, Lubc;->notification_main_column_container:I
+    sget v0, Lslc;->notification_main_column_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->notification_main_column_container:I
 
-    sget v0, Lubc;->off:I
+    sget v0, Lslc;->off:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->off:I
 
-    sget v0, Lubc;->on:I
+    sget v0, Lslc;->on:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->on:I
 
-    sget v0, Lubc;->open_search_bar_text_view:I
+    sget v0, Lslc;->open_search_bar_text_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_bar_text_view:I
 
-    sget v0, Lubc;->open_search_view_background:I
+    sget v0, Lslc;->open_search_view_background:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_background:I
 
-    sget v0, Lubc;->open_search_view_clear_button:I
+    sget v0, Lslc;->open_search_view_clear_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_clear_button:I
 
-    sget v0, Lubc;->open_search_view_content_container:I
+    sget v0, Lslc;->open_search_view_content_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_content_container:I
 
-    sget v0, Lubc;->open_search_view_divider:I
+    sget v0, Lslc;->open_search_view_divider:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_divider:I
 
-    sget v0, Lubc;->open_search_view_dummy_toolbar:I
+    sget v0, Lslc;->open_search_view_dummy_toolbar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_dummy_toolbar:I
 
-    sget v0, Lubc;->open_search_view_edit_text:I
+    sget v0, Lslc;->open_search_view_edit_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_edit_text:I
 
-    sget v0, Lubc;->open_search_view_header_container:I
+    sget v0, Lslc;->open_search_view_header_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_header_container:I
 
-    sget v0, Lubc;->open_search_view_root:I
+    sget v0, Lslc;->open_search_view_root:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_root:I
 
-    sget v0, Lubc;->open_search_view_scrim:I
+    sget v0, Lslc;->open_search_view_scrim:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_scrim:I
 
-    sget v0, Lubc;->open_search_view_search_prefix:I
+    sget v0, Lslc;->open_search_view_search_prefix:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_search_prefix:I
 
-    sget v0, Lubc;->open_search_view_status_bar_spacer:I
+    sget v0, Lslc;->open_search_view_status_bar_spacer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_status_bar_spacer:I
 
-    sget v0, Lubc;->open_search_view_toolbar:I
+    sget v0, Lslc;->open_search_view_toolbar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_toolbar:I
 
-    sget v0, Lubc;->open_search_view_toolbar_container:I
+    sget v0, Lslc;->open_search_view_toolbar_container:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->open_search_view_toolbar_container:I
 
-    sget v0, Lubc;->outline:I
+    sget v0, Lslc;->outline:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->outline:I
 
-    sget v0, Lubc;->outward:I
+    sget v0, Lslc;->outward:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->outward:I
 
-    sget v0, Lubc;->packed:I
+    sget v0, Lslc;->packed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->packed:I
 
-    sget v0, Lubc;->parallax:I
+    sget v0, Lslc;->parallax:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->parallax:I
 
-    sget v0, Lubc;->parent:I
+    sget v0, Lslc;->parent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->parent:I
 
-    sget v0, Lubc;->parentPanel:I
+    sget v0, Lslc;->parentPanel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->parentPanel:I
 
-    sget v0, Lubc;->parentRelative:I
+    sget v0, Lslc;->parentRelative:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->parentRelative:I
 
-    sget v0, Lubc;->parent_matrix:I
+    sget v0, Lslc;->parent_matrix:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->parent_matrix:I
 
-    sget v0, Lubc;->password_toggle:I
+    sget v0, Lslc;->password_toggle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->password_toggle:I
 
-    sget v0, Lubc;->path:I
+    sget v0, Lslc;->path:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->path:I
 
-    sget v0, Lubc;->pathRelative:I
+    sget v0, Lslc;->pathRelative:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->pathRelative:I
 
-    sget v0, Lubc;->percent:I
+    sget v0, Lslc;->percent:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->percent:I
 
-    sget v0, Lubc;->pin:I
+    sget v0, Lslc;->pin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->pin:I
 
-    sget v0, Lubc;->position:I
+    sget v0, Lslc;->position:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->position:I
 
-    sget v0, Lubc;->postLayout:I
+    sget v0, Lslc;->postLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->postLayout:I
 
-    sget v0, Lubc;->pressed:I
+    sget v0, Lslc;->pressed:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->pressed:I
 
-    sget v0, Lubc;->progress_circular:I
+    sget v0, Lslc;->progress_circular:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->progress_circular:I
 
-    sget v0, Lubc;->progress_horizontal:I
+    sget v0, Lslc;->progress_horizontal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->progress_horizontal:I
 
-    sget v0, Lubc;->radio:I
+    sget v0, Lslc;->radio:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->radio:I
 
-    sget v0, Lubc;->rectangles:I
+    sget v0, Lslc;->rectangles:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->rectangles:I
 
-    sget v0, Lubc;->report_drawn:I
+    sget v0, Lslc;->report_drawn:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->report_drawn:I
 
-    sget v0, Lubc;->reverseSawtooth:I
+    sget v0, Lslc;->reverseSawtooth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->reverseSawtooth:I
 
-    sget v0, Lubc;->right:I
+    sget v0, Lslc;->right:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->right:I
 
-    sget v0, Lubc;->rightToLeft:I
+    sget v0, Lslc;->rightToLeft:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->rightToLeft:I
 
-    sget v0, Lubc;->right_icon:I
+    sget v0, Lslc;->right_icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->right_icon:I
 
-    sget v0, Lubc;->right_side:I
+    sget v0, Lslc;->right_side:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->right_side:I
 
-    sget v0, Lubc;->rounded:I
+    sget v0, Lslc;->rounded:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->rounded:I
 
-    sget v0, Lubc;->row_index_key:I
+    sget v0, Lslc;->row_index_key:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->row_index_key:I
 
-    sget v0, Lubc;->save_non_transition_alpha:I
+    sget v0, Lslc;->save_non_transition_alpha:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->save_non_transition_alpha:I
 
-    sget v0, Lubc;->save_overlay_view:I
+    sget v0, Lslc;->save_overlay_view:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->save_overlay_view:I
 
-    sget v0, Lubc;->sawtooth:I
+    sget v0, Lslc;->sawtooth:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->sawtooth:I
 
-    sget v0, Lubc;->scale:I
+    sget v0, Lslc;->scale:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->scale:I
 
-    sget v0, Lubc;->screen:I
+    sget v0, Lslc;->screen:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->screen:I
 
-    sget v0, Lubc;->scrollIndicatorDown:I
+    sget v0, Lslc;->scrollIndicatorDown:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->scrollIndicatorDown:I
 
-    sget v0, Lubc;->scrollIndicatorUp:I
+    sget v0, Lslc;->scrollIndicatorUp:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->scrollIndicatorUp:I
 
-    sget v0, Lubc;->scrollView:I
+    sget v0, Lslc;->scrollView:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->scrollView:I
 
-    sget v0, Lubc;->scrollable:I
+    sget v0, Lslc;->scrollable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->scrollable:I
 
-    sget v0, Lubc;->search_badge:I
+    sget v0, Lslc;->search_badge:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_badge:I
 
-    sget v0, Lubc;->search_bar:I
+    sget v0, Lslc;->search_bar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_bar:I
 
-    sget v0, Lubc;->search_button:I
+    sget v0, Lslc;->search_button:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_button:I
 
-    sget v0, Lubc;->search_close_btn:I
+    sget v0, Lslc;->search_close_btn:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_close_btn:I
 
-    sget v0, Lubc;->search_edit_frame:I
+    sget v0, Lslc;->search_edit_frame:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_edit_frame:I
 
-    sget v0, Lubc;->search_go_btn:I
+    sget v0, Lslc;->search_go_btn:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_go_btn:I
 
-    sget v0, Lubc;->search_mag_icon:I
+    sget v0, Lslc;->search_mag_icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_mag_icon:I
 
-    sget v0, Lubc;->search_plate:I
+    sget v0, Lslc;->search_plate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_plate:I
 
-    sget v0, Lubc;->search_src_text:I
+    sget v0, Lslc;->search_src_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_src_text:I
 
-    sget v0, Lubc;->search_voice_btn:I
+    sget v0, Lslc;->search_voice_btn:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->search_voice_btn:I
 
-    sget v0, Lubc;->select_dialog_listview:I
+    sget v0, Lslc;->select_dialog_listview:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->select_dialog_listview:I
 
-    sget v0, Lubc;->selected:I
+    sget v0, Lslc;->selected:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->selected:I
 
-    sget v0, Lubc;->selection_type:I
+    sget v0, Lslc;->selection_type:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->selection_type:I
 
-    sget v0, Lubc;->shortcut:I
+    sget v0, Lslc;->shortcut:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->shortcut:I
 
-    sget v0, Lubc;->sin:I
+    sget v0, Lslc;->sin:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->sin:I
 
-    sget v0, Lubc;->slide:I
+    sget v0, Lslc;->slide:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->slide:I
 
-    sget v0, Lubc;->snackbar_action:I
+    sget v0, Lslc;->snackbar_action:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->snackbar_action:I
 
-    sget v0, Lubc;->snackbar_text:I
+    sget v0, Lslc;->snackbar_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->snackbar_text:I
 
-    sget v0, Lubc;->spacer:I
+    sget v0, Lslc;->spacer:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->spacer:I
 
-    sget v0, Lubc;->special_effects_controller_view_tag:I
+    sget v0, Lslc;->special_effects_controller_view_tag:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->special_effects_controller_view_tag:I
 
-    sget v0, Lubc;->spline:I
+    sget v0, Lslc;->spline:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->spline:I
 
-    sget v0, Lubc;->split_action_bar:I
+    sget v0, Lslc;->split_action_bar:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->split_action_bar:I
 
-    sget v0, Lubc;->spread:I
+    sget v0, Lslc;->spread:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->spread:I
 
-    sget v0, Lubc;->spread_inside:I
+    sget v0, Lslc;->spread_inside:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->spread_inside:I
 
-    sget v0, Lubc;->square:I
+    sget v0, Lslc;->square:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->square:I
 
-    sget v0, Lubc;->src_atop:I
+    sget v0, Lslc;->src_atop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->src_atop:I
 
-    sget v0, Lubc;->src_in:I
+    sget v0, Lslc;->src_in:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->src_in:I
 
-    sget v0, Lubc;->src_over:I
+    sget v0, Lslc;->src_over:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->src_over:I
 
-    sget v0, Lubc;->standard:I
+    sget v0, Lslc;->standard:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->standard:I
 
-    sget v0, Lubc;->start:I
+    sget v0, Lslc;->start:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->start:I
 
-    sget v0, Lubc;->startHorizontal:I
+    sget v0, Lslc;->startHorizontal:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->startHorizontal:I
 
-    sget v0, Lubc;->startToEnd:I
+    sget v0, Lslc;->startToEnd:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->startToEnd:I
 
-    sget v0, Lubc;->startVertical:I
+    sget v0, Lslc;->startVertical:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->startVertical:I
 
-    sget v0, Lubc;->staticLayout:I
+    sget v0, Lslc;->staticLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->staticLayout:I
 
-    sget v0, Lubc;->staticPostLayout:I
+    sget v0, Lslc;->staticPostLayout:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->staticPostLayout:I
 
-    sget v0, Lubc;->stop:I
+    sget v0, Lslc;->stop:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->stop:I
 
-    sget v0, Lubc;->stretch:I
+    sget v0, Lslc;->stretch:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->stretch:I
 
-    sget v0, Lubc;->submenuarrow:I
+    sget v0, Lslc;->submenuarrow:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->submenuarrow:I
 
-    sget v0, Lubc;->submit_area:I
+    sget v0, Lslc;->submit_area:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->submit_area:I
 
-    sget v0, Lubc;->tabMode:I
+    sget v0, Lslc;->tabMode:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tabMode:I
 
-    sget v0, Lubc;->tag_accessibility_actions:I
+    sget v0, Lslc;->tag_accessibility_actions:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_accessibility_actions:I
 
-    sget v0, Lubc;->tag_accessibility_clickable_spans:I
+    sget v0, Lslc;->tag_accessibility_clickable_spans:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_accessibility_clickable_spans:I
 
-    sget v0, Lubc;->tag_accessibility_heading:I
+    sget v0, Lslc;->tag_accessibility_heading:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_accessibility_heading:I
 
-    sget v0, Lubc;->tag_accessibility_pane_title:I
+    sget v0, Lslc;->tag_accessibility_pane_title:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_accessibility_pane_title:I
 
-    sget v0, Lubc;->tag_on_apply_window_listener:I
+    sget v0, Lslc;->tag_on_apply_window_listener:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_on_apply_window_listener:I
 
-    sget v0, Lubc;->tag_on_receive_content_listener:I
+    sget v0, Lslc;->tag_on_receive_content_listener:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_on_receive_content_listener:I
 
-    sget v0, Lubc;->tag_on_receive_content_mime_types:I
+    sget v0, Lslc;->tag_on_receive_content_mime_types:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_on_receive_content_mime_types:I
 
-    sget v0, Lubc;->tag_screen_reader_focusable:I
+    sget v0, Lslc;->tag_screen_reader_focusable:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_screen_reader_focusable:I
 
-    sget v0, Lubc;->tag_state_description:I
+    sget v0, Lslc;->tag_state_description:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_state_description:I
 
-    sget v0, Lubc;->tag_transition_group:I
+    sget v0, Lslc;->tag_transition_group:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_transition_group:I
 
-    sget v0, Lubc;->tag_unhandled_key_event_manager:I
+    sget v0, Lslc;->tag_unhandled_key_event_manager:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_unhandled_key_event_manager:I
 
-    sget v0, Lubc;->tag_unhandled_key_listeners:I
+    sget v0, Lslc;->tag_unhandled_key_listeners:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_unhandled_key_listeners:I
 
-    sget v0, Lubc;->tag_window_insets_animation_callback:I
+    sget v0, Lslc;->tag_window_insets_animation_callback:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->tag_window_insets_animation_callback:I
 
-    sget v0, Lubc;->text:I
+    sget v0, Lslc;->text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->text:I
 
-    sget v0, Lubc;->text2:I
+    sget v0, Lslc;->text2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->text2:I
 
-    sget v0, Lubc;->textSpacerNoButtons:I
+    sget v0, Lslc;->textSpacerNoButtons:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textSpacerNoButtons:I
 
-    sget v0, Lubc;->textSpacerNoTitle:I
+    sget v0, Lslc;->textSpacerNoTitle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textSpacerNoTitle:I
 
-    sget v0, Lubc;->text_input_end_icon:I
+    sget v0, Lslc;->text_input_end_icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->text_input_end_icon:I
 
-    sget v0, Lubc;->text_input_error_icon:I
+    sget v0, Lslc;->text_input_error_icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->text_input_error_icon:I
 
-    sget v0, Lubc;->text_input_start_icon:I
+    sget v0, Lslc;->text_input_start_icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->text_input_start_icon:I
 
-    sget v0, Lubc;->textinput_counter:I
+    sget v0, Lslc;->textinput_counter:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textinput_counter:I
 
-    sget v0, Lubc;->textinput_error:I
+    sget v0, Lslc;->textinput_error:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textinput_error:I
 
-    sget v0, Lubc;->textinput_helper_text:I
+    sget v0, Lslc;->textinput_helper_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textinput_helper_text:I
 
-    sget v0, Lubc;->textinput_placeholder:I
+    sget v0, Lslc;->textinput_placeholder:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textinput_placeholder:I
 
-    sget v0, Lubc;->textinput_prefix_text:I
+    sget v0, Lslc;->textinput_prefix_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textinput_prefix_text:I
 
-    sget v0, Lubc;->textinput_suffix_text:I
+    sget v0, Lslc;->textinput_suffix_text:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->textinput_suffix_text:I
 
-    sget v0, Lubc;->time:I
+    sget v0, Lslc;->time:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->time:I
 
-    sget v0, Lubc;->title:I
+    sget v0, Lslc;->title:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->title:I
 
-    sget v0, Lubc;->titleDividerNoCustom:I
+    sget v0, Lslc;->titleDividerNoCustom:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->titleDividerNoCustom:I
 
-    sget v0, Lubc;->title_template:I
+    sget v0, Lslc;->title_template:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->title_template:I
 
-    sget v0, Lubc;->top:I
+    sget v0, Lslc;->top:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->top:I
 
-    sget v0, Lubc;->topPanel:I
+    sget v0, Lslc;->topPanel:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->topPanel:I
 
-    sget v0, Lubc;->touch_outside:I
+    sget v0, Lslc;->touch_outside:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->touch_outside:I
 
-    sget v0, Lubc;->transition_clip:I
+    sget v0, Lslc;->transition_clip:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_clip:I
 
-    sget v0, Lubc;->transition_current_scene:I
+    sget v0, Lslc;->transition_current_scene:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_current_scene:I
 
-    sget v0, Lubc;->transition_image_transform:I
+    sget v0, Lslc;->transition_image_transform:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_image_transform:I
 
-    sget v0, Lubc;->transition_layout_save:I
+    sget v0, Lslc;->transition_layout_save:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_layout_save:I
 
-    sget v0, Lubc;->transition_pause_alpha:I
+    sget v0, Lslc;->transition_pause_alpha:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_pause_alpha:I
 
-    sget v0, Lubc;->transition_position:I
+    sget v0, Lslc;->transition_position:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_position:I
 
-    sget v0, Lubc;->transition_scene_layoutid_cache:I
+    sget v0, Lslc;->transition_scene_layoutid_cache:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_scene_layoutid_cache:I
 
-    sget v0, Lubc;->transition_transform:I
+    sget v0, Lslc;->transition_transform:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->transition_transform:I
 
-    sget v0, Lubc;->triangle:I
+    sget v0, Lslc;->triangle:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->triangle:I
 
-    sget v0, Lubc;->unchecked:I
+    sget v0, Lslc;->unchecked:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->unchecked:I
 
-    sget v0, Lubc;->uniform:I
+    sget v0, Lslc;->uniform:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->uniform:I
 
-    sget v0, Lubc;->unlabeled:I
+    sget v0, Lslc;->unlabeled:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->unlabeled:I
 
-    sget v0, Lubc;->up:I
+    sget v0, Lslc;->up:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->up:I
 
-    sget v0, Lubc;->view_offset_helper:I
+    sget v0, Lslc;->view_offset_helper:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->view_offset_helper:I
 
-    sget v0, Lubc;->view_tree_lifecycle_owner:I
+    sget v0, Lslc;->view_tree_lifecycle_owner:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->view_tree_lifecycle_owner:I
 
-    sget v0, Lubc;->view_tree_on_back_pressed_dispatcher_owner:I
+    sget v0, Lslc;->view_tree_on_back_pressed_dispatcher_owner:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->view_tree_on_back_pressed_dispatcher_owner:I
 
-    sget v0, Lubc;->view_tree_saved_state_registry_owner:I
+    sget v0, Lslc;->view_tree_saved_state_registry_owner:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->view_tree_saved_state_registry_owner:I
 
-    sget v0, Lubc;->view_tree_view_model_store_owner:I
+    sget v0, Lslc;->view_tree_view_model_store_owner:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->view_tree_view_model_store_owner:I
 
-    sget v0, Lubc;->visible:I
+    sget v0, Lslc;->visible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->visible:I
 
-    sget v0, Lubc;->visible_removing_fragment_view_tag:I
+    sget v0, Lslc;->visible_removing_fragment_view_tag:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->visible_removing_fragment_view_tag:I
 
-    sget v0, Lubc;->with_icon:I
+    sget v0, Lslc;->with_icon:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->with_icon:I
 
-    sget v0, Lubc;->withinBounds:I
+    sget v0, Lslc;->withinBounds:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->withinBounds:I
 
-    sget v0, Lubc;->wrap:I
+    sget v0, Lslc;->wrap:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->wrap:I
 
-    sget v0, Lubc;->wrap_content:I
+    sget v0, Lslc;->wrap_content:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$id;->wrap_content:I
 

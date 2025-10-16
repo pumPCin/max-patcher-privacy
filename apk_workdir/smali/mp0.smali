@@ -1,196 +1,98 @@
-.class public abstract Lmp0;
+.class public final synthetic Lmp0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ling;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lop0;
+
 
 # direct methods
-.method public static a(Llp0;)Ljava/lang/Object;
+.method public synthetic constructor <init>(Lop0;I)V
     .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    iput p2, p0, Lmp0;->a:I
 
-    move-result p0
+    iput-object p1, p0, Lmp0;->b:Lop0;
 
-    packed-switch p0, :pswitch_data_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p0, 0x0
+    return-void
+.end method
 
-    return-object p0
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Lmp0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmp0;->b:Lop0;
+
+    iget-object v1, v0, Lop0;->r0:Ldq6;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ldq6;->a()V
+
+    :cond_0
+    iget-object v0, v0, Lop0;->o:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->clear()V
+
+    return-void
 
     :pswitch_0
-    sget-object p0, Landroid/graphics/BlendMode;->LUMINOSITY:Landroid/graphics/BlendMode;
+    iget-object v0, p0, Lmp0;->b:Lop0;
 
-    return-object p0
+    iget v1, v0, Lop0;->s0:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Lop0;->s0:I
+
+    invoke-virtual {v0}, Lop0;->B()V
+
+    return-void
 
     :pswitch_1
-    sget-object p0, Landroid/graphics/BlendMode;->COLOR:Landroid/graphics/BlendMode;
+    iget-object v0, p0, Lmp0;->b:Lop0;
 
-    return-object p0
+    iget-object v1, v0, Lop0;->o:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    :pswitch_2
-    sget-object p0, Landroid/graphics/BlendMode;->SATURATION:Landroid/graphics/BlendMode;
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
-    return-object p0
+    move-result v1
 
-    :pswitch_3
-    sget-object p0, Landroid/graphics/BlendMode;->HUE:Landroid/graphics/BlendMode;
+    if-eqz v1, :cond_1
 
-    return-object p0
+    iget-object v0, v0, Lop0;->Z:Ljm4;
 
-    :pswitch_4
-    sget-object p0, Landroid/graphics/BlendMode;->MULTIPLY:Landroid/graphics/BlendMode;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p0
+    invoke-virtual {v0}, Lmj0;->c()V
 
-    :pswitch_5
-    sget-object p0, Landroid/graphics/BlendMode;->EXCLUSION:Landroid/graphics/BlendMode;
+    invoke-static {}, Lee4;->a()V
 
-    return-object p0
+    goto :goto_0
 
-    :pswitch_6
-    sget-object p0, Landroid/graphics/BlendMode;->DIFFERENCE:Landroid/graphics/BlendMode;
+    :cond_1
+    const/4 v1, 0x1
 
-    return-object p0
+    iput-boolean v1, v0, Lop0;->t0:Z
 
-    :pswitch_7
-    sget-object p0, Landroid/graphics/BlendMode;->SOFT_LIGHT:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_8
-    sget-object p0, Landroid/graphics/BlendMode;->HARD_LIGHT:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_9
-    sget-object p0, Landroid/graphics/BlendMode;->COLOR_BURN:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_a
-    sget-object p0, Landroid/graphics/BlendMode;->COLOR_DODGE:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_b
-    sget-object p0, Landroid/graphics/BlendMode;->LIGHTEN:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_c
-    sget-object p0, Landroid/graphics/BlendMode;->DARKEN:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_d
-    sget-object p0, Landroid/graphics/BlendMode;->OVERLAY:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_e
-    sget-object p0, Landroid/graphics/BlendMode;->SCREEN:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_f
-    sget-object p0, Landroid/graphics/BlendMode;->MODULATE:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_10
-    sget-object p0, Landroid/graphics/BlendMode;->PLUS:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_11
-    sget-object p0, Landroid/graphics/BlendMode;->XOR:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_12
-    sget-object p0, Landroid/graphics/BlendMode;->DST_ATOP:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_13
-    sget-object p0, Landroid/graphics/BlendMode;->SRC_ATOP:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_14
-    sget-object p0, Landroid/graphics/BlendMode;->DST_OUT:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_15
-    sget-object p0, Landroid/graphics/BlendMode;->SRC_OUT:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_16
-    sget-object p0, Landroid/graphics/BlendMode;->DST_IN:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_17
-    sget-object p0, Landroid/graphics/BlendMode;->SRC_IN:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_18
-    sget-object p0, Landroid/graphics/BlendMode;->DST_OVER:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_19
-    sget-object p0, Landroid/graphics/BlendMode;->SRC_OVER:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_1a
-    sget-object p0, Landroid/graphics/BlendMode;->DST:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_1b
-    sget-object p0, Landroid/graphics/BlendMode;->SRC:Landroid/graphics/BlendMode;
-
-    return-object p0
-
-    :pswitch_1c
-    sget-object p0, Landroid/graphics/BlendMode;->CLEAR:Landroid/graphics/BlendMode;
-
-    return-object p0
+    :goto_0
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

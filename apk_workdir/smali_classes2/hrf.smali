@@ -1,236 +1,183 @@
-.class public final Lhrf;
-.super Lc2f;
+.class public abstract Lhrf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lhrf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    const-string v0, "#(?i)([\\p{L}0-9_]+)"
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lhrf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhrf;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lhrf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static a(Lwib;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Lhrf;
+    const-string v0, "+"
 
-    iget-object v1, p0, Lhrf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-static {p2}, Lke8;->c(Ljava/lang/CharSequence;)Z
 
-    invoke-direct {v0, p2, v1}, Lhrf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    move-result v1
 
-    iput-object p1, v0, Lhrf;->X:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhrf;->X:Ljava/lang/Object;
-
-    check-cast p1, Lcrf;
-
-    iget-object v0, p0, Lhrf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    iget-object v1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->X:Ljava/lang/Object;
-
-    sget-object v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lpl7;
-
-    sget-object v2, Lzqf;->a:Lzqf;
-
-    invoke-static {p1, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    sget-object p1, Lxrf;->a:Lxrf;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object p1
-
-    const-class v1, Lu7b;
-
-    invoke-virtual {p1, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lu7b;
-
-    invoke-virtual {p1}, Lu7b;->c()V
-
-    invoke-virtual {v0}, Ljz3;->getActivity()Landroid/app/Activity;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lshd;->w(Landroid/app/Activity;)V
-
-    sget-object p1, Lntf;->c:Lntf;
-
-    invoke-virtual {p1}, Ld3;->o0()Loc4;
-
-    move-result-object p1
-
-    const-string v0, ":chat-list"
-
-    invoke-virtual {p1, v0, v3}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
+    move-object p2, p3
 
     :cond_0
-    instance-of v2, p1, Lbrf;
+    invoke-static {p2}, Lke8;->c(Ljava/lang/CharSequence;)Z
 
-    if-eqz v2, :cond_1
+    move-result p3
 
-    invoke-virtual {v0}, Ljz3;->getActivity()Landroid/app/Activity;
+    const-string v1, "RU"
 
-    move-result-object v0
-
-    invoke-static {v0}, Lshd;->w(Landroid/app/Activity;)V
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfd7;
-
-    check-cast p1, Lbrf;
-
-    iget-object p1, p1, Lbrf;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
-
-    invoke-direct {v1, p1}, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v3, v3}, Lomc;->e(Ljz3;Ldh;Ldh;)Lq6d;
-
-    move-result-object p1
-
-    const-string v1, "twofa_settings_screen"
-
-    invoke-virtual {v0, p1, v1}, Lfd7;->a(Lq6d;Ljava/lang/String;)V
+    if-eqz p3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    instance-of v2, p1, Larf;
+    invoke-virtual {p2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    if-eqz v2, :cond_2
+    move-result-object p2
 
-    invoke-virtual {v0}, Ljz3;->getActivity()Landroid/app/Activity;
+    iget-object p3, p0, Lwib;->f:Ljava/util/HashSet;
 
-    move-result-object v2
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    invoke-static {v2}, Lshd;->w(Landroid/app/Activity;)V
+    move-result-object p3
 
-    iget-object v2, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->r0:Lvoc;
+    invoke-interface {p3, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    sget-object v4, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lpl7;
+    move-result p3
 
-    const/4 v5, 0x2
+    if-nez p3, :cond_2
 
-    aget-object v4, v4, v5
+    goto :goto_0
 
-    invoke-interface {v2, v0, v4}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfd7;
-
-    check-cast p1, Larf;
-
-    iget-object v2, p1, Larf;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Larf;->b:Lhd7;
-
-    iget-object v0, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Led7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v4, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v4, v0, v2, p1}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lhd7;)V
-
-    invoke-static {v4, v3, v3}, Lomc;->e(Ljz3;Ldh;Ldh;)Lq6d;
-
-    move-result-object p1
-
-    const-string v0, "twofa_start_restore_screen"
-
-    invoke-virtual {v1, p1, v0}, Lfd7;->a(Lq6d;Ljava/lang/String;)V
+    :cond_2
+    move-object v1, p2
 
     :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    :try_start_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_1
+
+    :cond_3
+    move-object p2, p1
+
+    :goto_1
+    invoke-virtual {p0, p2, v1}, Lwib;->t(Ljava/lang/String;Ljava/lang/String;)Lnjb;
+
+    move-result-object p2
+    :try_end_0
+    .catch Lio/michaelrocks/libphonenumber/android/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    const/4 p2, 0x0
+
+    :goto_2
+    if-nez p2, :cond_4
 
     return-object p1
 
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    :cond_4
+    const/4 p1, 0x2
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {p0, p2, p1}, Lwib;->d(Lnjb;I)Ljava/lang/String;
 
-    throw p1
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
+    .locals 1
+
+    instance-of v0, p1, Lru/ok/messages/video/fetcher/FetcherException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lru/ok/messages/video/fetcher/FetcherException;
+
+    iget p1, p1, Lru/ok/messages/video/fetcher/FetcherException;->a:I
+
+    invoke-static {p1}, Lwx1;->v(I)I
+
+    move-result p1
+
+    packed-switch p1, :pswitch_data_0
+
+    sget p1, Lwid;->H:I
+
+    goto :goto_0
+
+    :pswitch_0
+    sget p1, Lwid;->Z2:I
+
+    goto :goto_0
+
+    :pswitch_1
+    sget p1, Lwid;->b3:I
+
+    goto :goto_0
+
+    :pswitch_2
+    sget p1, Lwid;->c3:I
+
+    goto :goto_0
+
+    :pswitch_3
+    sget p1, Lwid;->d3:I
+
+    goto :goto_0
+
+    :pswitch_4
+    sget p1, Lwid;->f3:I
+
+    goto :goto_0
+
+    :pswitch_5
+    sget p1, Lwid;->a3:I
+
+    goto :goto_0
+
+    :cond_0
+    sget p1, Lwid;->Z2:I
+
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

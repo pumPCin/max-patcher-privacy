@@ -1,124 +1,128 @@
-.class public final Lo19;
+.class public final synthetic Lo19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lel7;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/Iterator;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/Iterator;
+.field public final synthetic b:Lq19;
 
-.field public final synthetic c:Lqs4;
+.field public final synthetic c:Landroid/util/Pair;
 
 
 # direct methods
-.method public constructor <init>(Lqs4;)V
-    .locals 1
+.method public synthetic constructor <init>(Lq19;Landroid/util/Pair;I)V
+    .locals 0
+
+    iput p3, p0, Lo19;->a:I
+
+    iput-object p1, p0, Lo19;->b:Lq19;
+
+    iput-object p2, p0, Lo19;->c:Landroid/util/Pair;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lo19;->c:Lqs4;
-
-    iget-object v0, p1, Lqs4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lxs;
-
-    iget-object v0, v0, Lxs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lo19;->a:Ljava/util/Iterator;
-
-    iget-object p1, p1, Lqs4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lxs;
-
-    iget-object p1, p1, Lxs;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Iterable;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo19;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
-
-    iget-object v0, p0, Lo19;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lo19;->b:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
+.method public final run()V
     .locals 3
 
-    iget-object v0, p0, Lo19;->c:Lqs4;
+    iget v0, p0, Lo19;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lo19;->a:Ljava/util/Iterator;
+    iget-object v0, p0, Lo19;->b:Lq19;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, v0, Lq19;->b:La96;
 
-    move-result-object v0
+    iget-object v0, v0, La96;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lo19;->b:Ljava/util/Iterator;
+    check-cast v0, Lpg4;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, p0, Lo19;->c:Landroid/util/Pair;
 
-    move-result-object v1
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    new-instance v2, Ld3b;
+    check-cast v2, Ljava/lang/Integer;
 
-    invoke-direct {v2, v0, v1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    return-object v2
-.end method
+    move-result v2
 
-.method public final remove()V
-    .locals 2
+    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    check-cast v1, Ly09;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    invoke-virtual {v0, v2, v1}, Lpg4;->w(ILy09;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    return-void
 
-    throw v0
+    :pswitch_0
+    iget-object v0, p0, Lo19;->b:Lq19;
+
+    iget-object v0, v0, Lq19;->b:La96;
+
+    iget-object v0, v0, La96;->b:Ljava/lang/Object;
+
+    check-cast v0, Lpg4;
+
+    iget-object v1, p0, Lo19;->c:Landroid/util/Pair;
+
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v1, Ly09;
+
+    invoke-virtual {v0, v2, v1}, Lpg4;->B(ILy09;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lo19;->b:Lq19;
+
+    iget-object v0, v0, Lq19;->b:La96;
+
+    iget-object v0, v0, La96;->b:Ljava/lang/Object;
+
+    check-cast v0, Lpg4;
+
+    iget-object v1, p0, Lo19;->c:Landroid/util/Pair;
+
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v1, Ly09;
+
+    invoke-virtual {v0, v2, v1}, Lpg4;->A(ILy09;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

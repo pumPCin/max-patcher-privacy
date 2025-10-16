@@ -1,44 +1,23 @@
-.class public interface abstract Luh5;
+.class public abstract Luh5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln84;
 
+# direct methods
+.method public static a()Ldtb;
+    .locals 3
 
-# virtual methods
-.method public abstract R()I
-.end method
+    new-instance v0, Ldtb;
 
-.method public abstract f([BIIZ)Z
-.end method
+    invoke-static {}, Lot8;->f()Landroid/media/metrics/LogSessionId;
 
-.method public abstract getLength()J
-.end method
+    move-result-object v1
 
-.method public abstract getPosition()J
-.end method
+    new-instance v2, Lctb;
 
-.method public abstract i(I[BI)V
-.end method
+    invoke-direct {v2, v1}, Lctb;-><init>(Landroid/media/metrics/LogSessionId;)V
 
-.method public abstract n([BIIZ)Z
-.end method
+    invoke-direct {v0, v2}, Ldtb;-><init>(Lctb;)V
 
-.method public abstract o()J
-.end method
-
-.method public abstract p(I)V
-.end method
-
-.method public abstract readFully([BII)V
-.end method
-
-.method public abstract s(I[BI)I
-.end method
-
-.method public abstract x()V
-.end method
-
-.method public abstract y(I)V
+    return-object v0
 .end method

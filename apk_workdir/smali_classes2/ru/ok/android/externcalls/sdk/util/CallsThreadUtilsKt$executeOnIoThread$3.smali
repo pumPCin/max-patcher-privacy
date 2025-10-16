@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lno3;
+.implements Ler3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Ltd6;Loo3;Ljava/lang/Runnable;)Lfs4;
+    value = Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Loh6;Lfr3;Ljava/lang/Runnable;)Lev4;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lno3;"
+        "Ler3;"
     }
 .end annotation
 
@@ -35,7 +35,7 @@
         "T",
         "",
         "it",
-        "Laxf;",
+        "Lzag;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"

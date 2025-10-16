@@ -3,139 +3,182 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv6d;
+.implements Ler3;
+.implements Lp1j;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public final b:Z
+.field public a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Z)V
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    iput-object p1, p0, Lryf;->a:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lryf;->a:Ljava/util/ArrayList;
-
-    iput-boolean p2, p0, Lryf;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public a()V
+    .locals 7
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lryf;->a:Ljava/lang/Object;
 
-    return v0
-.end method
+    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    sget-object v1, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->u0:[Lwq7;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->E0()Ldxg;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    if-eqz p1, :cond_2
+    if-eqz v0, :cond_6
 
-    const-class v0, Lryf;
+    check-cast v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->S0()Lfo2;
 
     move-result-object v1
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->Q0()Lpug;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lpug;->d()Z
+
+    move-result v0
+
+    iget-object v1, v1, Lfo2;->a1:Lsze;
+
+    :cond_0
+    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Ls24;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    sget-object v4, Ls24;->b:Ls24;
+
+    if-eqz v3, :cond_5
+
+    const/4 v5, 0x1
+
+    sget-object v6, Ls24;->a:Ls24;
+
+    if-eq v3, v5, :cond_3
+
+    const/4 v5, 0x2
+
+    if-eq v3, v5, :cond_2
+
+    const/4 v5, 0x3
+
+    if-ne v3, v5, :cond_1
 
     goto :goto_1
 
     :cond_1
-    check-cast p1, Lryf;
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-boolean v0, p0, Lryf;->b:Z
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-boolean v1, p1, Lryf;->b:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lryf;->a:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lryf;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    throw v0
 
     :cond_2
+    :goto_0
+    move-object v4, v6
+
+    goto :goto_1
+
+    :cond_3
+    if-eqz v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    sget-object v4, Ls24;->o:Ls24;
+
+    :cond_5
     :goto_1
-    const/4 p1, 0x0
+    invoke-virtual {v1, v2, v4}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return p1
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    :cond_6
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-boolean v0, p0, Lryf;->b:Z
+    check-cast p1, Lte9;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v0, p0, Lryf;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    iget-object v1, p0, Lryf;->a:Ljava/util/ArrayList;
+    invoke-virtual {v0, p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->g(Lte9;)V
 
-    filled-new-array {v1, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public b()Lvf6;
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Ll66;
 
-    const-string v1, "UpdateDisplayLayoutV2Command{layouts="
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {}, Lwyh;->c()Z
 
-    iget-object v1, p0, Lryf;->a:Ljava/util/ArrayList;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    const-string v1, ", isSnapshot="
+    sget-object v1, Lyvi;->c:Lyvi;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    iget-boolean v1, p0, Lryf;->b:Z
+    :cond_0
+    sget-object v1, Lyvi;->b:Lyvi;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :goto_0
+    iget-object v2, p0, Lryf;->a:Ljava/lang/Object;
 
-    const/16 v1, 0x7d
+    check-cast v2, Lzvi;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iput-object v1, v0, Ll66;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v1, Ldte;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iput-object v2, v1, Ldte;->a:Ljava/lang/Object;
+
+    new-instance v2, Lnwi;
+
+    invoke-direct {v2, v1}, Lnwi;-><init>(Ldte;)V
+
+    iput-object v2, v0, Ll66;->e:Ljava/lang/Object;
+
+    new-instance v1, Lvf6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Lvf6;-><init>(Ll66;I)V
+
+    return-object v1
 .end method

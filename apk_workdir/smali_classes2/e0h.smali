@@ -1,61 +1,93 @@
 .class public final Le0h;
-.super Lg0h;
+.super Llff;
 .source "SourceFile"
 
+# interfaces
+.implements Lei6;
 
-# static fields
-.field public static final a:Le0h;
+
+# instance fields
+.field public final synthetic X:Landroid/widget/TextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Le0h;
+    iput-object p1, p0, Le0h;->X:Landroid/widget/TextView;
 
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Le0h;->a:Le0h;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lby5;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Le0h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Le0h;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Le0h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance p1, Le0h;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Le0h;->X:Landroid/widget/TextView;
 
-    return v0
+    invoke-direct {p1, v0, p2}, Le0h;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Le0h;->X:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v1, Lsz4;->t0:Lc82;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lc82;->c(Landroid/content/Context;)Lsz4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lsz4;->l()Lu4b;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Li3a;->a(Ljava/lang/CharSequence;Lu4b;)V
 
     :cond_0
-    instance-of p1, p1, Le0h;
+    sget-object p1, Lzag;->a:Lzag;
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x7af3fee5
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "TooLargeLink"
-
-    return-object v0
+    return-object p1
 .end method

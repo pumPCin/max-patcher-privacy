@@ -1,99 +1,51 @@
 .class public final Llfd;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic a:Lmfd;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lgfd;
+.field public final synthetic Y:Lmfd;
 
-.field public final synthetic c:Landroid/view/View;
+.field public Z:I
+
+.field public o:Lmfd;
 
 
 # direct methods
-.method public constructor <init>(Lmfd;Lgfd;Landroid/view/View;)V
+.method public constructor <init>(Lmfd;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llfd;->Y:Lmfd;
 
-    iput-object p1, p0, Llfd;->a:Lmfd;
-
-    iput-object p2, p0, Llfd;->b:Lgfd;
-
-    iput-object p3, p0, Llfd;->c:Landroid/view/View;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object p1, p0, Llfd;->a:Lmfd;
+    iput-object p1, p0, Llfd;->X:Ljava/lang/Object;
 
-    iget-object p1, p1, Lmfd;->t0:Ljava/util/EnumMap;
+    iget p1, p0, Llfd;->Z:I
 
-    iget-object v0, p0, Llfd;->b:Lgfd;
+    const/high16 v0, -0x80000000
 
-    const/4 v1, 0x0
+    or-int/2addr p1, v0
 
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput p1, p0, Llfd;->Z:I
 
-    return-void
-.end method
+    iget-object p1, p0, Llfd;->Y:Lmfd;
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    const-wide/16 v0, 0x0
 
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    const/4 p1, 0x0
-
-    iget-object v0, p0, Llfd;->c:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
-
-    move-result p1
-
-    const/4 v1, 0x0
-
-    cmpg-float p1, p1, v1
-
-    if-nez p1, :cond_0
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p1, v0, v1, p0}, Lmfd;->l(JLk14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x40800000    # 4.0f
-
-    mul-float/2addr p1, v1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

@@ -1,175 +1,168 @@
 .class public final Lq12;
-.super Ljava/lang/Object;
+.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Lr12;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lt1e;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lux1;
+
+.field public final c:Ljava/lang/Object;
+
+.field public d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lt1e;Lux1;)V
+    .locals 1
 
-    iput p1, p0, Lq12;->a:I
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
 
-    iput-object p2, p0, Lq12;->b:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lq12;->c:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lq12;->d:Z
+
+    iput-object p1, p0, Lq12;->a:Lt1e;
+
+    iput-object p2, p0, Lq12;->b:Lux1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Throwable;)V
-    .locals 1
+.method public final onCameraAccessPrioritiesChanged()V
+    .locals 4
 
-    iget v0, p0, Lq12;->a:I
+    iget-object v0, p0, Lq12;->c:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    iget-object p1, p0, Lq12;->b:Ljava/lang/Object;
+    :try_start_0
+    iget-boolean v1, p0, Lq12;->d:Z
 
-    check-cast p1, Lis4;
+    if-nez v1, :cond_0
 
-    invoke-interface {p1}, Lis4;->dispose()V
+    iget-object v1, p0, Lq12;->a:Lt1e;
 
-    return-void
+    new-instance v2, Lsx1;
 
-    :pswitch_0
-    iget-object v0, p0, Lq12;->b:Ljava/lang/Object;
+    const/4 v3, 0x5
 
-    check-cast v0, Lvd6;
+    invoke-direct {v2, v3, p0}, Lsx1;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {v0, p1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
 
-    return-void
+    goto :goto_0
 
-    :pswitch_1
-    if-eqz p1, :cond_0
+    :catchall_0
+    move-exception v1
 
-    iget-object p1, p0, Lq12;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/concurrent/ScheduledFuture;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    goto :goto_1
 
     :cond_0
+    :goto_0
+    monitor-exit v0
+
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final onCameraAvailable(Ljava/lang/String;)V
+    .locals 4
 
-    iget v0, p0, Lq12;->a:I
+    iget-object v0, p0, Lq12;->c:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :try_start_0
+    iget-boolean v1, p0, Lq12;->d:Z
 
-    const-string v1, "DisposeOnCancel["
+    if-nez v1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lq12;->a:Lt1e;
 
-    iget-object v1, p0, Lq12;->b:Ljava/lang/Object;
+    new-instance v2, Lp12;
 
-    check-cast v1, Lis4;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, p0, p1, v3}, Lp12;-><init>(Lq12;Ljava/lang/String;I)V
 
-    const/16 v1, 0x5d
+    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catchall_0
+    move-exception p1
 
-    move-result-object v0
+    goto :goto_1
 
-    return-object v0
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, "CancelHandler.UserSupplied["
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    throw p1
+.end method
 
-    iget-object v1, p0, Lq12;->b:Ljava/lang/Object;
+.method public final onCameraUnavailable(Ljava/lang/String;)V
+    .locals 4
 
-    check-cast v1, Lvd6;
+    iget-object v0, p0, Lq12;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    monitor-enter v0
 
-    move-result-object v1
+    :try_start_0
+    iget-boolean v1, p0, Lq12;->d:Z
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    if-nez v1, :cond_0
 
-    move-result-object v1
+    iget-object v1, p0, Lq12;->a:Lt1e;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v2, Lp12;
 
-    const/16 v1, 0x40
+    const/4 v3, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct {v2, p0, p1, v3}, Lp12;-><init>(Lq12;Ljava/lang/String;I)V
 
-    invoke-static {p0}, Lzvd;->v(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catchall_0
+    move-exception p1
 
-    const/16 v1, 0x5d
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-void
 
-    move-result-object v0
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CancelFutureOnCancel["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lq12;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/concurrent/ScheduledFuture;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

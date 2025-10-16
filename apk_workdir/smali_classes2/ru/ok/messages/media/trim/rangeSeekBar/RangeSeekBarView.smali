@@ -24,7 +24,7 @@
 
 .field public H0:Lru/ok/messages/media/trim/FrgTrimVideo;
 
-.field public I0:Lkn7;
+.field public I0:Lws7;
 
 .field public final J0:Landroid/graphics/Paint;
 
@@ -34,7 +34,7 @@
 
 .field public M0:J
 
-.field public final N0:Lgq4;
+.field public final N0:Lft4;
 
 .field public final O0:Z
 
@@ -44,7 +44,7 @@
 
 .field public final c:I
 
-.field public o:Lrda;
+.field public o:Lwla;
 
 .field public final r0:I
 
@@ -52,11 +52,11 @@
 
 .field public t0:I
 
-.field public u0:Lilb;
+.field public u0:Ldub;
 
-.field public v0:Ldq0;
+.field public v0:Lar0;
 
-.field public w0:Ldq0;
+.field public w0:Lar0;
 
 .field public x0:Z
 
@@ -81,17 +81,17 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lgq4;->a()Lgq4;
+    invoke-static {}, Lft4;->a()Lft4;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget p2, p1, Lgq4;->h:I
+    iget p2, p1, Lft4;->h:I
 
     iput p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->a:I
 
-    iget v1, p1, Lgq4;->e:I
+    iget v1, p1, Lft4;->e:I
 
     iput v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b:I
 
@@ -109,17 +109,17 @@
 
     move-result-object v1
 
-    sget-object v2, Lh9f;->a0:Lh4f;
+    sget-object v2, Ltmf;->a0:Lrhf;
 
-    invoke-static {v1}, Luce;->e0(Landroid/content/Context;)Lh9f;
+    invoke-static {v1}, Lnw3;->g(Landroid/content/Context;)Ltmf;
 
     move-result-object v1
 
-    iget v2, v1, Lh9f;->m:I
+    iget v2, v1, Ltmf;->m:I
 
     const v3, 0x3f4ccccd    # 0.8f
 
-    invoke-static {v2, v3}, Li8e;->N(IF)I
+    invoke-static {v2, v3}, Loti;->b(IF)I
 
     move-result v2
 
@@ -131,7 +131,7 @@
 
     iput-object p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->J0:Landroid/graphics/Paint;
 
-    iget v1, v1, Lh9f;->m:I
+    iget v1, v1, Ltmf;->m:I
 
     invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -147,7 +147,7 @@
 
     invoke-virtual {p2, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget p1, p1, Lgq4;->v:I
+    iget p1, p1, Lft4;->v:I
 
     iput p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->r0:I
 
@@ -192,15 +192,15 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -208,22 +208,22 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
@@ -233,21 +233,21 @@
 
     if-gez v0, :cond_1
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     :cond_1
     :goto_0
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -259,11 +259,11 @@
 
     if-lez v0, :cond_2
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -271,20 +271,20 @@
 
     sub-float/2addr v2, v3
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     goto/16 :goto_2
 
     :cond_2
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -296,11 +296,11 @@
 
     if-gez v0, :cond_7
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -308,22 +308,22 @@
 
     sub-float/2addr v2, v3
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     goto :goto_2
 
     :cond_3
     if-ne v0, v1, :cond_7
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -331,22 +331,22 @@
 
     if-gez v0, :cond_4
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     goto :goto_1
 
     :cond_4
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
@@ -356,21 +356,21 @@
 
     if-lez v0, :cond_5
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     :cond_5
     :goto_1
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -382,11 +382,11 @@
 
     if-lez v0, :cond_6
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -394,20 +394,20 @@
 
     add-float/2addr v2, v3
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     goto :goto_2
 
     :cond_6
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -419,11 +419,11 @@
 
     if-gez v0, :cond_7
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -431,19 +431,19 @@
 
     add-float/2addr v2, v3
 
-    invoke-virtual {v0, v2}, Ldq0;->e(F)V
+    invoke-virtual {v0, v2}, Lar0;->e(F)V
 
     :cond_7
     :goto_2
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v0}, Lilb;->a()F
+    invoke-virtual {v0}, Ldub;->a()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -451,30 +451,30 @@
 
     if-gez v0, :cond_8
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lilb;->c(F)V
+    invoke-virtual {v0, v2}, Ldub;->c(F)V
 
     iput-boolean v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->x0:Z
 
     goto :goto_3
 
     :cond_8
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v0}, Lilb;->a()F
+    invoke-virtual {v0}, Ldub;->a()F
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
@@ -482,15 +482,15 @@
 
     if-lez v0, :cond_9
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lilb;->c(F)V
+    invoke-virtual {v0, v2}, Ldub;->c(F)V
 
     iput-boolean v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->x0:Z
 
@@ -498,27 +498,27 @@
     :goto_3
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lgq4;->a()Lgq4;
+    invoke-static {}, Lft4;->a()Lft4;
 
     const/high16 v0, 0x42400000    # 48.0f
 
     float-to-int v0, v0
 
-    invoke-static {v0}, Lkq4;->b(I)I
+    invoke-static {v0}, Ljt4;->b(I)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    iget-object v1, v1, Ldq0;->j:Landroid/graphics/RectF;
+    iget-object v1, v1, Lar0;->j:Landroid/graphics/RectF;
 
     iget v1, v1, Landroid/graphics/RectF;->left:F
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget v2, v2, Lgq4;->j:I
+    iget v2, v2, Lft4;->j:I
 
     mul-int/lit8 v2, v2, 0x2
 
@@ -526,9 +526,9 @@
 
     sub-float/2addr v1, v2
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    iget-object v3, v2, Ldq0;->j:Landroid/graphics/RectF;
+    iget-object v3, v2, Lar0;->j:Landroid/graphics/RectF;
 
     iget v4, v3, Landroid/graphics/RectF;->right:F
 
@@ -538,20 +538,20 @@
 
     if-lez v0, :cond_a
 
-    invoke-virtual {v2}, Ldq0;->d()V
+    invoke-virtual {v2}, Lar0;->d()V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->d()V
+    invoke-virtual {v0}, Lar0;->d()V
 
     return-void
 
     :cond_a
-    iget-object v0, v2, Ldq0;->k:Landroid/graphics/RectF;
+    iget-object v0, v2, Lar0;->k:Landroid/graphics/RectF;
 
     iget v1, v3, Landroid/graphics/RectF;->left:F
 
-    iget v2, v2, Ldq0;->d:I
+    iget v2, v2, Lar0;->d:I
 
     int-to-float v2, v2
 
@@ -565,15 +565,15 @@
 
     invoke-virtual {v0, v1, v5, v4, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    iget-object v1, v0, Ldq0;->k:Landroid/graphics/RectF;
+    iget-object v1, v0, Lar0;->k:Landroid/graphics/RectF;
 
-    iget-object v2, v0, Ldq0;->j:Landroid/graphics/RectF;
+    iget-object v2, v0, Lar0;->j:Landroid/graphics/RectF;
 
     iget v3, v2, Landroid/graphics/RectF;->left:F
 
-    iget v0, v0, Ldq0;->d:I
+    iget v0, v0, Lar0;->d:I
 
     int-to-float v0, v0
 
@@ -609,9 +609,9 @@
 
     mul-float/2addr p1, v0
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget v0, v0, Lgq4;->j:I
+    iget v0, v0, Lft4;->j:I
 
     int-to-float v0, v0
 
@@ -629,9 +629,9 @@
 .method public final c(F)F
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget v0, v0, Lgq4;->j:I
+    iget v0, v0, Lft4;->j:I
 
     int-to-float v0, v0
 
@@ -689,9 +689,9 @@
 
     float-to-int p1, p1
 
-    iget-object p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iget-object p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget p2, p2, Lgq4;->j:I
+    iget p2, p2, Lft4;->j:I
 
     add-int/2addr p1, p2
 
@@ -707,9 +707,9 @@
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->I0:Lkn7;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->I0:Lws7;
 
-    invoke-static {v0}, Lo8d;->b(Lfs4;)V
+    invoke-static {v0}, Lkjd;->b(Lev4;)V
 
     return-void
 .end method
@@ -949,15 +949,15 @@
     invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_9
-    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2}, Ldq0;->b()F
+    invoke-virtual {v2}, Lar0;->b()F
 
     move-result v2
 
-    iget-object v8, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iget-object v8, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget v3, v8, Lgq4;->j:I
+    iget v3, v8, Lft4;->j:I
 
     div-int/lit8 v3, v3, 0x2
 
@@ -979,9 +979,9 @@
 
     int-to-float v3, v11
 
-    iget-object v4, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v4, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v4}, Ldq0;->b()F
+    invoke-virtual {v4}, Lar0;->b()F
 
     move-result v4
 
@@ -989,7 +989,7 @@
 
     move-result v4
 
-    iget v5, v8, Lgq4;->j:I
+    iget v5, v8, Lft4;->j:I
 
     div-int/lit8 v5, v5, 0x2
 
@@ -997,20 +997,20 @@
 
     sub-float/2addr v4, v5
 
-    iget v5, v8, Lgq4;->v:I
+    iget v5, v8, Lft4;->v:I
 
     int-to-float v5, v5
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
     :cond_a
-    iget-object v1, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v1, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v1}, Ldq0;->b()F
+    invoke-virtual {v1}, Lar0;->b()F
 
     move-result v1
 
-    iget v2, v8, Lgq4;->j:I
+    iget v2, v8, Lft4;->j:I
 
     div-int/lit8 v2, v2, 0x2
 
@@ -1028,9 +1028,9 @@
 
     if-gez v1, :cond_b
 
-    iget-object v1, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v1, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v1}, Ldq0;->b()F
+    invoke-virtual {v1}, Lar0;->b()F
 
     move-result v1
 
@@ -1038,7 +1038,7 @@
 
     move-result v1
 
-    iget v2, v8, Lgq4;->j:I
+    iget v2, v8, Lft4;->j:I
 
     div-int/lit8 v2, v2, 0x2
 
@@ -1052,7 +1052,7 @@
 
     move-result v4
 
-    iget v1, v8, Lgq4;->v:I
+    iget v1, v8, Lft4;->v:I
 
     int-to-float v5, v1
 
@@ -1066,19 +1066,19 @@
     move-object/from16 v1, p1
 
     :goto_2
-    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2, v1}, Ldq0;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v2, v1}, Lar0;->a(Landroid/graphics/Canvas;)V
 
-    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2, v1}, Ldq0;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {v2, v1}, Lar0;->a(Landroid/graphics/Canvas;)V
 
     invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
 
-    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v2, v0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    iget-object v3, v2, Lilb;->i:Landroid/graphics/RectF;
+    iget-object v3, v2, Ldub;->i:Landroid/graphics/RectF;
 
     invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
 
@@ -1094,35 +1094,35 @@
 
     div-float/2addr v6, v5
 
-    iget-object v5, v2, Lilb;->c:Landroid/graphics/Paint;
+    iget-object v5, v2, Ldub;->c:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3, v4, v6, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    iget-object v3, v2, Lilb;->j:Landroid/graphics/RectF;
+    iget-object v3, v2, Ldub;->j:Landroid/graphics/RectF;
 
-    iget-object v4, v2, Lilb;->e:Landroid/graphics/Paint;
-
-    invoke-virtual {v1, v3, v4}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
-
-    iget-object v3, v2, Lilb;->k:Landroid/graphics/RectF;
+    iget-object v4, v2, Ldub;->e:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    iget-object v3, v2, Lilb;->g:Landroid/graphics/RectF;
+    iget-object v3, v2, Ldub;->k:Landroid/graphics/RectF;
+
+    invoke-virtual {v1, v3, v4}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+
+    iget-object v3, v2, Ldub;->g:Landroid/graphics/RectF;
 
     invoke-virtual {v3}, Landroid/graphics/RectF;->centerX()F
 
     move-result v3
 
-    iget v4, v2, Lilb;->f:I
+    iget v4, v2, Ldub;->f:I
 
     int-to-float v4, v4
 
-    iget v5, v2, Lilb;->b:I
+    iget v5, v2, Ldub;->b:I
 
     int-to-float v5, v5
 
-    iget-object v2, v2, Lilb;->d:Landroid/graphics/Paint;
+    iget-object v2, v2, Ldub;->d:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3, v4, v5, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -1138,19 +1138,19 @@
 .method public final onMeasure(II)V
     .locals 2
 
-    iget-object p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iget-object p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget v0, p2, Lgq4;->v:I
+    iget v0, p2, Lft4;->v:I
 
     iget v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->c:I
 
     add-int/2addr v0, v1
 
-    iget v1, p2, Lgq4;->h:I
+    iget v1, p2, Lft4;->h:I
 
     add-int/2addr v0, v1
 
-    iget p2, p2, Lgq4;->i:I
+    iget p2, p2, Lft4;->i:I
 
     add-int/2addr v0, p2
 
@@ -1172,9 +1172,9 @@
 
     move-result p1
 
-    iget-object p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lgq4;
+    iget-object p2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->N0:Lft4;
 
-    iget p3, p2, Lgq4;->j:I
+    iget p3, p2, Lft4;->j:I
 
     mul-int/lit8 p3, p3, 0x2
 
@@ -1188,11 +1188,11 @@
 
     sput p1, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->P0:I
 
-    new-instance p1, Lilb;
+    new-instance p1, Ldub;
 
     iget p4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b:I
 
-    iget v0, p2, Lgq4;->v:I
+    iget v0, p2, Lft4;->v:I
 
     add-int/2addr p4, v0
 
@@ -1200,7 +1200,7 @@
 
     add-int/2addr p4, v0
 
-    iget v0, p2, Lgq4;->h:I
+    iget v0, p2, Lft4;->h:I
 
     add-int/2addr p4, v0
 
@@ -1208,11 +1208,11 @@
 
     move-result-object v0
 
-    invoke-direct {p1, p4, v0, p0}, Lilb;-><init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
+    invoke-direct {p1, p4, v0, p0}, Ldub;-><init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    new-instance p1, Ldq0;
+    new-instance p1, Lar0;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1220,11 +1220,11 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0, p4, p0}, Ldq0;-><init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
+    invoke-direct {p1, v0, p4, p0}, Lar0;-><init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    new-instance p1, Ldq0;
+    new-instance p1, Lar0;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1232,27 +1232,27 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p1, v1, p4, p0}, Ldq0;-><init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
+    invoke-direct {p1, v1, p4, p0}, Lar0;-><init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
     iget p4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->A0:F
 
-    invoke-virtual {p1, p4}, Ldq0;->e(F)V
+    invoke-virtual {p1, p4}, Lar0;->e(F)V
 
-    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
     iget p4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->B0:F
 
-    invoke-virtual {p1, p4}, Ldq0;->e(F)V
+    invoke-virtual {p1, p4}, Lar0;->e(F)V
 
-    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
     iget p4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->C0:F
 
-    invoke-virtual {p1, p4}, Lilb;->c(F)V
+    invoke-virtual {p1, p4}, Ldub;->c(F)V
 
     iput v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->t0:I
 
@@ -1264,7 +1264,7 @@
 
     new-instance p1, Landroid/graphics/Rect;
 
-    iget p4, p2, Lgq4;->j:I
+    iget p4, p2, Lft4;->j:I
 
     add-int/2addr p4, p3
 
@@ -1284,7 +1284,7 @@
 
     move-result p1
 
-    iget p2, p2, Lgq4;->j:I
+    iget p2, p2, Lft4;->j:I
 
     mul-int/lit8 p2, p2, 0x2
 
@@ -1316,9 +1316,9 @@
 
     iput-wide p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->M0:J
 
-    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->I0:Lkn7;
+    iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->I0:Lws7;
 
-    invoke-static {p1}, Lo8d;->b(Lfs4;)V
+    invoke-static {p1}, Lkjd;->b(Lev4;)V
 
     iget-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->F0:Landroid/util/LongSparseArray;
 
@@ -1398,55 +1398,55 @@
     goto :goto_0
 
     :cond_2
-    new-instance p1, Lcw1;
+    new-instance p1, Lkx1;
 
-    const/4 p2, 0x7
+    const/16 p2, 0x9
 
-    invoke-direct {p1, p0, v2, v3, p2}, Lcw1;-><init>(Ljava/lang/Object;JI)V
+    invoke-direct {p1, p0, v2, v3, p2}, Lkx1;-><init>(Ljava/lang/Object;JI)V
 
-    new-instance p2, Lse3;
+    new-instance p2, Lzg3;
 
     const/4 p3, 0x2
 
-    invoke-direct {p2, p3, p1}, Lse3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p1}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {}, Lcdd;->a()Lpcd;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ls8a;->p(Lpcd;)Li9a;
+    invoke-static {}, Ldod;->a()Lqnd;
 
     move-result-object p1
 
-    invoke-static {}, Lyd;->a()Lpcd;
+    invoke-virtual {p2, p1}, Lwga;->p(Lqnd;)Lmha;
+
+    move-result-object p1
+
+    invoke-static {}, Lie;->a()Lqnd;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Ls8a;->l(Lpcd;)Lpaa;
+    invoke-virtual {p1, p2}, Lwga;->l(Lqnd;)Ltia;
 
     move-result-object p1
 
-    new-instance p2, Ll79;
+    new-instance p2, Lm09;
 
-    const/16 p3, 0x18
+    const/16 p3, 0x1d
 
-    invoke-direct {p2, p3, p0}, Ll79;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p0}, Lm09;-><init>(ILjava/lang/Object;)V
 
-    new-instance p3, Ls0b;
+    new-instance p3, Lwjb;
 
-    const/16 p4, 0x8
+    const/4 p4, 0x6
 
-    invoke-direct {p3, p4}, Ls0b;-><init>(I)V
+    invoke-direct {p3, p4}, Lwjb;-><init>(I)V
 
-    sget-object p4, Lnjg;->c:Laf6;
+    new-instance p4, Lws7;
 
-    new-instance v0, Lkn7;
+    sget-object v0, Ljtf;->c:Lvi6;
 
-    invoke-direct {v0, p2, p3, p4}, Lkn7;-><init>(Lno3;Lno3;Ll6;)V
+    invoke-direct {p4, p2, p3, v0}, Lws7;-><init>(Ler3;Ler3;Lr6;)V
 
-    invoke-virtual {p1, v0}, Ls8a;->a(Lyba;)V
+    invoke-virtual {p1, p4}, Lwga;->a(Lcka;)V
 
-    iput-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->I0:Lkn7;
+    iput-object p4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->I0:Lws7;
 
     :cond_3
     return-void
@@ -1455,17 +1455,17 @@
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 11
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1d
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
     if-eqz v0, :cond_1d
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
     if-nez v0, :cond_0
 
@@ -1538,33 +1538,33 @@
 
     move-result-object v2
 
-    invoke-static {v6, v7, v2}, Lyt3;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v2}, Lndi;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v2, p1}, Lilb;->b(Landroid/view/MotionEvent;)V
+    invoke-virtual {v2, p1}, Ldub;->b(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
     :cond_4
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v2, p1}, Ldq0;->c(Landroid/view/MotionEvent;)V
+    invoke-virtual {v2, p1}, Lar0;->c(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
     :cond_5
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v2, p1}, Ldq0;->c(Landroid/view/MotionEvent;)V
+    invoke-virtual {v2, p1}, Lar0;->c(Landroid/view/MotionEvent;)V
 
     :goto_0
     invoke-virtual {p0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->a()V
 
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lrda;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lwla;
 
     if-nez v2, :cond_6
 
@@ -1591,14 +1591,14 @@
 
     move-result-object v2
 
-    invoke-static {v6, v7, v2}, Lyt3;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v2}, Lndi;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_3
 
     :cond_7
-    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v3}, Lilb;->a()F
+    invoke-virtual {v3}, Ldub;->a()F
 
     move-result v3
 
@@ -1610,9 +1610,9 @@
 
     float-to-long v3, v3
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Le3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lf3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Set;
 
@@ -1631,39 +1631,39 @@
 
     move-result-object v6
 
-    check-cast v6, Lqt9;
+    check-cast v6, Lp1a;
 
-    iput-wide v3, v6, Lqt9;->t0:J
+    iput-wide v3, v6, Lp1a;->t0:J
 
-    iget-object v7, v6, Lqt9;->Y:Lpo8;
+    iget-object v7, v6, Lp1a;->Y:Lmv8;
 
-    check-cast v7, Lb08;
+    check-cast v7, Lo58;
 
-    invoke-virtual {v7}, Lb08;->f()Z
+    invoke-virtual {v7}, Lo58;->f()Z
 
     move-result v7
 
     if-eqz v7, :cond_8
 
-    invoke-virtual {v6}, Lqt9;->C0()V
+    invoke-virtual {v6}, Lp1a;->E0()V
 
     :cond_8
-    invoke-virtual {v6}, Lqt9;->H0()V
+    invoke-virtual {v6}, Lp1a;->S0()V
 
-    iget-object v6, v6, Lqt9;->u0:Lv5c;
+    iget-object v6, v6, Lp1a;->u0:Lnec;
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lv5c;->e(Ljava/lang/Object;)V
+    invoke-virtual {v6, v7}, Lnec;->d(Ljava/lang/Object;)V
 
     goto :goto_1
 
     :cond_9
-    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v3}, Ldq0;->b()F
+    invoke-virtual {v3}, Lar0;->b()F
 
     move-result v3
 
@@ -1675,9 +1675,9 @@
 
     float-to-long v3, v3
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Le3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lf3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Set;
 
@@ -1696,26 +1696,26 @@
 
     move-result-object v6
 
-    check-cast v6, Lqt9;
+    check-cast v6, Lp1a;
 
-    iget-object v7, v6, Lqt9;->Y:Lpo8;
+    iget-object v7, v6, Lp1a;->Y:Lmv8;
 
-    check-cast v7, Lb08;
+    check-cast v7, Lo58;
 
-    invoke-virtual {v7}, Lb08;->f()Z
+    invoke-virtual {v7}, Lo58;->f()Z
 
     move-result v7
 
     if-eqz v7, :cond_a
 
-    invoke-virtual {v6}, Lqt9;->C0()V
+    invoke-virtual {v6}, Lp1a;->E0()V
 
     :cond_a
-    iget-object v7, v6, Ld3;->b:Ljava/lang/Object;
+    iget-object v7, v6, Lqci;->b:Ljava/lang/Object;
 
-    check-cast v7, Lrt9;
+    check-cast v7, Lq1a;
 
-    check-cast v7, Lpu9;
+    check-cast v7, Lo2a;
 
     sget-object v8, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -1723,30 +1723,30 @@
 
     move-result-wide v8
 
-    invoke-static {v8, v9}, Lcc7;->p(J)Ljava/lang/String;
+    invoke-static {v8, v9}, Ltg6;->h(J)Ljava/lang/String;
 
     move-result-object v8
 
-    iget-object v7, v7, Lpu9;->w0:Landroid/widget/TextView;
+    iget-object v7, v7, Lo2a;->w0:Landroid/widget/TextView;
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v6}, Lqt9;->H0()V
+    invoke-virtual {v6}, Lp1a;->S0()V
 
-    iget-object v6, v6, Lqt9;->u0:Lv5c;
+    iget-object v6, v6, Lp1a;->u0:Lnec;
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lv5c;->e(Ljava/lang/Object;)V
+    invoke-virtual {v6, v7}, Lnec;->d(Ljava/lang/Object;)V
 
     goto :goto_2
 
     :cond_b
-    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v3}, Ldq0;->b()F
+    invoke-virtual {v3}, Lar0;->b()F
 
     move-result v3
 
@@ -1758,13 +1758,13 @@
 
     float-to-long v3, v3
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    new-instance v6, Lmu9;
+    new-instance v6, Ll2a;
 
-    invoke-direct {v6, v3, v4}, Lmu9;-><init>(J)V
+    invoke-direct {v6, v3, v4}, Ll2a;-><init>(J)V
 
-    invoke-virtual {v2, v6}, Le3;->k(Lqo3;)V
+    invoke-virtual {v2, v6}, Lf3;->m(Lhr3;)V
 
     :cond_c
     :goto_3
@@ -1779,11 +1779,11 @@
     if-ne v2, v5, :cond_10
 
     :cond_d
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lrda;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lwla;
 
-    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v3, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v3}, Lilb;->a()F
+    invoke-virtual {v3}, Ldub;->a()F
 
     move-result v3
 
@@ -1795,9 +1795,9 @@
 
     float-to-long v3, v3
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Le3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lf3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Set;
 
@@ -1816,32 +1816,32 @@
 
     move-result-object v6
 
-    check-cast v6, Lqt9;
+    check-cast v6, Lp1a;
 
-    iput-wide v3, v6, Lqt9;->t0:J
+    iput-wide v3, v6, Lp1a;->t0:J
 
-    iget-object v7, v6, Lqt9;->Y:Lpo8;
+    iget-object v7, v6, Lp1a;->Y:Lmv8;
 
-    check-cast v7, Lb08;
+    check-cast v7, Lo58;
 
-    invoke-virtual {v7}, Lb08;->f()Z
+    invoke-virtual {v7}, Lo58;->f()Z
 
     move-result v7
 
     if-eqz v7, :cond_e
 
-    invoke-virtual {v6}, Lqt9;->C0()V
+    invoke-virtual {v6}, Lp1a;->E0()V
 
     :cond_e
-    invoke-virtual {v6}, Lqt9;->H0()V
+    invoke-virtual {v6}, Lp1a;->S0()V
 
-    iget-object v6, v6, Lqt9;->u0:Lv5c;
+    iget-object v6, v6, Lp1a;->u0:Lnec;
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lv5c;->e(Ljava/lang/Object;)V
+    invoke-virtual {v6, v7}, Lnec;->d(Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -1858,7 +1858,7 @@
     goto/16 :goto_c
 
     :cond_12
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lrda;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lwla;
 
     if-eqz v2, :cond_18
 
@@ -1880,14 +1880,14 @@
 
     move-result-object v2
 
-    invoke-static {v6, v7, v2}, Lyt3;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v2}, Lndi;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_9
 
     :cond_13
-    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v4}, Lilb;->a()F
+    invoke-virtual {v4}, Ldub;->a()F
 
     move-result v4
 
@@ -1899,9 +1899,9 @@
 
     float-to-long v6, v4
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Le3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lf3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Set;
 
@@ -1920,24 +1920,24 @@
 
     move-result-object v4
 
-    check-cast v4, Lqt9;
+    check-cast v4, Lp1a;
 
-    iput-wide v6, v4, Lqt9;->t0:J
+    iput-wide v6, v4, Lp1a;->t0:J
 
-    invoke-virtual {v4}, Lqt9;->J0()V
+    invoke-virtual {v4}, Lp1a;->U0()V
 
-    iget-object v4, v4, Lqt9;->Y:Lpo8;
+    iget-object v4, v4, Lp1a;->Y:Lmv8;
 
-    check-cast v4, Lb08;
+    check-cast v4, Lo58;
 
-    invoke-virtual {v4, v6, v7}, Lb08;->l(J)V
+    invoke-virtual {v4, v6, v7}, Lo58;->l(J)V
 
     goto :goto_6
 
     :cond_14
-    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v4}, Ldq0;->b()F
+    invoke-virtual {v4}, Lar0;->b()F
 
     move-result v4
 
@@ -1949,9 +1949,9 @@
 
     float-to-long v6, v4
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Le3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lf3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Set;
 
@@ -1970,32 +1970,32 @@
 
     move-result-object v4
 
-    check-cast v4, Lqt9;
+    check-cast v4, Lp1a;
 
-    iput-wide v6, v4, Lqt9;->s0:J
+    iput-wide v6, v4, Lp1a;->s0:J
 
-    invoke-virtual {v4}, Lqt9;->K0()V
+    invoke-virtual {v4}, Lp1a;->V0()V
 
-    invoke-virtual {v4}, Lqt9;->J0()V
+    invoke-virtual {v4}, Lp1a;->U0()V
 
-    iget-object v8, v4, Lqt9;->Y:Lpo8;
+    iget-object v8, v4, Lp1a;->Y:Lmv8;
 
-    iget-wide v9, v4, Lqt9;->t0:J
+    iget-wide v9, v4, Lp1a;->t0:J
 
-    check-cast v8, Lb08;
+    check-cast v8, Lo58;
 
-    invoke-virtual {v8, v9, v10}, Lb08;->l(J)V
+    invoke-virtual {v8, v9, v10}, Lo58;->l(J)V
 
     goto :goto_7
 
     :cond_15
-    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v4}, Ldq0;->b()F
+    invoke-virtual {v4}, Lar0;->b()F
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Le3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lf3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Set;
 
@@ -2014,19 +2014,19 @@
 
     move-result-object v4
 
-    check-cast v4, Lqt9;
+    check-cast v4, Lp1a;
 
-    invoke-virtual {v4}, Lqt9;->K0()V
+    invoke-virtual {v4}, Lp1a;->V0()V
 
-    invoke-virtual {v4}, Lqt9;->J0()V
+    invoke-virtual {v4}, Lp1a;->U0()V
 
-    iget-object v6, v4, Lqt9;->Y:Lpo8;
+    iget-object v6, v4, Lp1a;->Y:Lmv8;
 
-    iget-wide v7, v4, Lqt9;->t0:J
+    iget-wide v7, v4, Lp1a;->t0:J
 
-    check-cast v6, Lb08;
+    check-cast v6, Lo58;
 
-    invoke-virtual {v6, v7, v8}, Lb08;->l(J)V
+    invoke-virtual {v6, v7, v8}, Lo58;->l(J)V
 
     goto :goto_8
 
@@ -2043,11 +2043,11 @@
     if-ne v2, v5, :cond_18
 
     :cond_17
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lrda;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lwla;
 
-    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v4}, Lilb;->a()F
+    invoke-virtual {v4}, Ldub;->a()F
 
     move-result v4
 
@@ -2059,9 +2059,9 @@
 
     float-to-long v6, v4
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Le3;->a:Ljava/lang/Object;
+    iget-object v2, v2, Lf3;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/Set;
 
@@ -2080,17 +2080,17 @@
 
     move-result-object v4
 
-    check-cast v4, Lqt9;
+    check-cast v4, Lp1a;
 
-    iput-wide v6, v4, Lqt9;->t0:J
+    iput-wide v6, v4, Lp1a;->t0:J
 
-    invoke-virtual {v4}, Lqt9;->J0()V
+    invoke-virtual {v4}, Lp1a;->U0()V
 
-    iget-object v4, v4, Lqt9;->Y:Lpo8;
+    iget-object v4, v4, Lp1a;->Y:Lmv8;
 
-    check-cast v4, Lb08;
+    check-cast v4, Lo58;
 
-    invoke-virtual {v4, v6, v7}, Lb08;->l(J)V
+    invoke-virtual {v4, v6, v7}, Lo58;->l(J)V
 
     goto :goto_a
 
@@ -2102,7 +2102,7 @@
     goto/16 :goto_5
 
     :cond_19
-    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v2, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2112,7 +2112,7 @@
 
     move-result v7
 
-    iget-object v2, v2, Ldq0;->k:Landroid/graphics/RectF;
+    iget-object v2, v2, Lar0;->k:Landroid/graphics/RectF;
 
     invoke-virtual {v2, v6, v7}, Landroid/graphics/RectF;->contains(FF)Z
 
@@ -2122,14 +2122,14 @@
 
     iput v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->t0:I
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
-    invoke-virtual {v1, p1}, Ldq0;->c(Landroid/view/MotionEvent;)V
+    invoke-virtual {v1, p1}, Lar0;->c(Landroid/view/MotionEvent;)V
 
     goto :goto_b
 
     :cond_1a
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2139,7 +2139,7 @@
 
     move-result v6
 
-    iget-object v1, v1, Ldq0;->k:Landroid/graphics/RectF;
+    iget-object v1, v1, Lar0;->k:Landroid/graphics/RectF;
 
     invoke-virtual {v1, v2, v6}, Landroid/graphics/RectF;->contains(FF)Z
 
@@ -2149,14 +2149,14 @@
 
     iput v5, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->t0:I
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v1, p1}, Ldq0;->c(Landroid/view/MotionEvent;)V
+    invoke-virtual {v1, p1}, Lar0;->c(Landroid/view/MotionEvent;)V
 
     goto :goto_b
 
     :cond_1b
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2166,7 +2166,7 @@
 
     move-result v6
 
-    iget-object v1, v1, Lilb;->g:Landroid/graphics/RectF;
+    iget-object v1, v1, Ldub;->g:Landroid/graphics/RectF;
 
     invoke-virtual {v1, v2, v6}, Landroid/graphics/RectF;->contains(FF)Z
 
@@ -2176,9 +2176,9 @@
 
     iput v4, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->t0:I
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v1, p1}, Lilb;->b(Landroid/view/MotionEvent;)V
+    invoke-virtual {v1, p1}, Ldub;->b(Landroid/view/MotionEvent;)V
 
     goto :goto_b
 
@@ -2227,7 +2227,7 @@
 .method public setEndPosition(J)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
     long-to-float p1, p1
 
@@ -2237,7 +2237,7 @@
 
     div-float/2addr p1, p2
 
-    invoke-virtual {v0, p1}, Ldq0;->e(F)V
+    invoke-virtual {v0, p1}, Lar0;->e(F)V
 
     invoke-virtual {p0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->a()V
 
@@ -2246,30 +2246,30 @@
     return-void
 .end method
 
-.method public setOnChangeRangeSeekBarListener(Lrda;)V
+.method public setOnChangeRangeSeekBarListener(Lwla;)V
     .locals 7
 
-    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lrda;
+    iput-object p1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->o:Lwla;
 
     if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v1, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
-    check-cast p1, Lpu9;
+    check-cast p1, Lo2a;
 
-    iget-object p1, p1, Le3;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lf3;->a:Ljava/lang/Object;
 
     check-cast p1, Ljava/util/Set;
 
@@ -2288,26 +2288,26 @@
 
     move-result-object v1
 
-    check-cast v1, Lqt9;
+    check-cast v1, Lp1a;
 
-    invoke-virtual {v1}, Lqt9;->K0()V
+    invoke-virtual {v1}, Lp1a;->V0()V
 
-    invoke-virtual {v1}, Lqt9;->J0()V
+    invoke-virtual {v1}, Lp1a;->U0()V
 
-    iget-object v2, v1, Lqt9;->Y:Lpo8;
+    iget-object v2, v1, Lp1a;->Y:Lmv8;
 
-    iget-wide v3, v1, Lqt9;->t0:J
+    iget-wide v3, v1, Lp1a;->t0:J
 
-    check-cast v2, Lb08;
+    check-cast v2, Lo58;
 
-    invoke-virtual {v2, v3, v4}, Lb08;->l(J)V
+    invoke-virtual {v2, v3, v4}, Lo58;->l(J)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->w0:Lar0;
 
-    invoke-virtual {v0}, Ldq0;->b()F
+    invoke-virtual {v0}, Lar0;->b()F
 
     move-result v0
 
@@ -2334,28 +2334,28 @@
 
     move-result-object v3
 
-    check-cast v3, Lqt9;
+    check-cast v3, Lp1a;
 
-    iput-wide v0, v3, Lqt9;->s0:J
+    iput-wide v0, v3, Lp1a;->s0:J
 
-    invoke-virtual {v3}, Lqt9;->K0()V
+    invoke-virtual {v3}, Lp1a;->V0()V
 
-    invoke-virtual {v3}, Lqt9;->J0()V
+    invoke-virtual {v3}, Lp1a;->U0()V
 
-    iget-object v4, v3, Lqt9;->Y:Lpo8;
+    iget-object v4, v3, Lp1a;->Y:Lmv8;
 
-    iget-wide v5, v3, Lqt9;->t0:J
+    iget-wide v5, v3, Lp1a;->t0:J
 
-    check-cast v4, Lb08;
+    check-cast v4, Lo58;
 
-    invoke-virtual {v4, v5, v6}, Lb08;->l(J)V
+    invoke-virtual {v4, v5, v6}, Lo58;->l(J)V
 
     goto :goto_1
 
     :cond_1
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
-    invoke-virtual {v0}, Lilb;->a()F
+    invoke-virtual {v0}, Ldub;->a()F
 
     move-result v0
 
@@ -2382,17 +2382,17 @@
 
     move-result-object v2
 
-    check-cast v2, Lqt9;
+    check-cast v2, Lp1a;
 
-    iput-wide v0, v2, Lqt9;->t0:J
+    iput-wide v0, v2, Lp1a;->t0:J
 
-    invoke-virtual {v2}, Lqt9;->J0()V
+    invoke-virtual {v2}, Lp1a;->U0()V
 
-    iget-object v2, v2, Lqt9;->Y:Lpo8;
+    iget-object v2, v2, Lp1a;->Y:Lmv8;
 
-    check-cast v2, Lb08;
+    check-cast v2, Lo58;
 
-    invoke-virtual {v2, v0, v1}, Lb08;->l(J)V
+    invoke-virtual {v2, v0, v1}, Lo58;->l(J)V
 
     goto :goto_2
 
@@ -2403,7 +2403,7 @@
 .method public setPointerPosition(J)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Lilb;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->u0:Ldub;
 
     long-to-float p1, p1
 
@@ -2413,7 +2413,7 @@
 
     div-float/2addr p1, p2
 
-    invoke-virtual {v0, p1}, Lilb;->c(F)V
+    invoke-virtual {v0, p1}, Ldub;->c(F)V
 
     invoke-virtual {p0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->a()V
 
@@ -2425,7 +2425,7 @@
 .method public setStartPosition(J)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Ldq0;
+    iget-object v0, p0, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->v0:Lar0;
 
     long-to-float p1, p1
 
@@ -2435,7 +2435,7 @@
 
     div-float/2addr p1, p2
 
-    invoke-virtual {v0, p1}, Ldq0;->e(F)V
+    invoke-virtual {v0, p1}, Lar0;->e(F)V
 
     invoke-virtual {p0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->a()V
 

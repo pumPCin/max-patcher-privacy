@@ -1,379 +1,151 @@
-.class public final Ln1b;
+.class public abstract Ln1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public X:Laef;
+.field public static final b:I
 
-.field public a:Landroid/graphics/SurfaceTexture;
+.field public static final c:I
 
-.field public b:Landroid/view/Surface;
+.field public static final d:I
 
-.field public final c:Ljava/lang/Object;
+.field public static final e:I
 
-.field public o:Z
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 8
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Ln1b;->c:Ljava/lang/Object;
-
-    new-instance v0, Laef;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Laef;-><init>(FZ)V
-
-    iput-object v0, p0, Ln1b;->X:Laef;
-
-    const v1, 0x8b31
-
-    const-string v3, "uniform mat4 uMVPMatrix;\nuniform mat4 uSTMatrix;\nattribute vec4 aPosition;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n  gl_Position = uMVPMatrix * aPosition;\n  vTextureCoord = (uSTMatrix * aTextureCoord).xy;\n}\n"
-
-    invoke-static {v1, v3}, Laef;->b(ILjava/lang/String;)I
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_0
-
-    :goto_0
-    move v5, v3
-
-    goto :goto_1
-
-    :cond_0
-    const v4, 0x8b30
-
-    const-string v5, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n  gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
-
-    invoke-static {v4, v5}, Laef;->b(ILjava/lang/String;)I
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
-
-    move-result v5
-
-    const-string v6, "glCreateProgram"
-
-    invoke-static {v6}, Laef;->a(Ljava/lang/String;)V
-
-    const-string v6, "TextureRender"
-
-    if-nez v5, :cond_2
-
-    const-string v7, "Could not create program"
-
-    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    invoke-static {v5, v1}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    const-string v1, "glAttachShader"
-
-    invoke-static {v1}, Laef;->a(Ljava/lang/String;)V
-
-    invoke-static {v5, v4}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    invoke-static {v1}, Laef;->a(Ljava/lang/String;)V
-
-    invoke-static {v5}, Landroid/opengl/GLES20;->glLinkProgram(I)V
-
-    new-array v1, v2, [I
-
-    const v4, 0x8b82
-
-    invoke-static {v5, v4, v1, v3}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
-
-    aget v1, v1, v3
-
-    if-eq v1, v2, :cond_3
-
-    const-string v1, "Could not link program: "
-
-    invoke-static {v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {v5}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {v5}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    iput v5, v0, Laef;->d:I
-
-    if-eqz v5, :cond_8
-
-    const-string v1, "aPosition"
-
-    invoke-static {v5, v1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Laef;->h:I
-
-    const-string v1, "glGetAttribLocation aPosition"
-
-    invoke-static {v1}, Laef;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Laef;->h:I
-
-    const/4 v4, -0x1
-
-    if-eq v1, v4, :cond_7
-
-    iget v1, v0, Laef;->d:I
-
-    const-string v5, "aTextureCoord"
-
-    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Laef;->i:I
-
-    const-string v1, "glGetAttribLocation aTextureCoord"
-
-    invoke-static {v1}, Laef;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Laef;->i:I
-
-    if-eq v1, v4, :cond_6
-
-    iget v1, v0, Laef;->d:I
-
-    const-string v5, "uMVPMatrix"
-
-    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Laef;->f:I
-
-    const-string v1, "glGetUniformLocation uMVPMatrix"
-
-    invoke-static {v1}, Laef;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Laef;->f:I
-
-    if-eq v1, v4, :cond_5
-
-    iget v1, v0, Laef;->d:I
-
-    const-string v5, "uSTMatrix"
-
-    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Laef;->g:I
-
-    const-string v1, "glGetUniformLocation uSTMatrix"
-
-    invoke-static {v1}, Laef;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Laef;->g:I
-
-    if-eq v1, v4, :cond_4
-
-    new-array v1, v2, [I
-
-    invoke-static {v2, v1, v3}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
-
-    aget v1, v1, v3
-
-    iput v1, v0, Laef;->e:I
-
-    const v0, 0x8d65
-
-    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
-
-    const-string v1, "glBindTexture mTextureID"
-
-    invoke-static {v1}, Laef;->a(Ljava/lang/String;)V
-
-    const/16 v1, 0x2801
-
-    const/high16 v2, 0x46180000    # 9728.0f
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    const/16 v1, 0x2800
-
-    const v2, 0x46180400    # 9729.0f
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    const/16 v1, 0x2802
-
-    const v2, 0x812f
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    const/16 v1, 0x2803
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    const-string v0, "glTexParameter"
-
-    invoke-static {v0}, Laef;->a(Ljava/lang/String;)V
-
-    new-instance v0, Landroid/graphics/SurfaceTexture;
-
-    iget-object v1, p0, Ln1b;->X:Laef;
-
-    iget v1, v1, Laef;->e:I
-
-    invoke-direct {v0, v1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
-
-    iput-object v0, p0, Ln1b;->a:Landroid/graphics/SurfaceTexture;
-
-    invoke-virtual {v0, p0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    new-instance v0, Landroid/view/Surface;
-
-    iget-object v1, p0, Ln1b;->a:Landroid/graphics/SurfaceTexture;
-
-    invoke-direct {v0, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
-
-    iput-object v0, p0, Ln1b;->b:Landroid/view/Surface;
-
-    return-void
-
-    :cond_4
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for uSTMatrix"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for uMVPMatrix"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_6
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for aTextureCoord"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_7
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for aPosition"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_8
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "failed creating program"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-
-# virtual methods
-.method public final a()V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Ln1b;->b:Landroid/view/Surface;
+    sget v0, Llsc;->oneme_setting_item_about:I
 
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
+    sput v0, Ln1b;->a:I
 
-    const/4 v0, 0x0
+    sget v0, Llsc;->oneme_setting_item_appearance:I
 
-    iput-object v0, p0, Ln1b;->X:Laef;
+    sput v0, Ln1b;->b:I
 
-    iput-object v0, p0, Ln1b;->b:Landroid/view/Surface;
+    sget v0, Llsc;->oneme_setting_item_battery:I
 
-    iput-object v0, p0, Ln1b;->a:Landroid/graphics/SurfaceTexture;
+    sput v0, Ln1b;->c:I
+
+    sget v0, Llsc;->oneme_setting_item_esia_connected_title:I
+
+    sput v0, Ln1b;->d:I
+
+    sget v0, Llsc;->oneme_setting_item_esia_not_connected_subtitle:I
+
+    sput v0, Ln1b;->e:I
+
+    sget v0, Llsc;->oneme_setting_item_esia_not_connected_title:I
+
+    sput v0, Ln1b;->f:I
+
+    sget v0, Llsc;->oneme_setting_item_folders:I
+
+    sput v0, Ln1b;->g:I
+
+    sget v0, Llsc;->oneme_setting_item_invite_friends_title:I
+
+    sput v0, Ln1b;->h:I
+
+    sget v0, Llsc;->oneme_setting_item_messages:I
+
+    sput v0, Ln1b;->i:I
+
+    sget v0, Llsc;->oneme_setting_item_notification:I
+
+    sput v0, Ln1b;->j:I
+
+    sget v0, Llsc;->oneme_setting_item_notification_and_sound:I
+
+    sput v0, Ln1b;->k:I
+
+    sget v0, Llsc;->oneme_setting_item_privacy:I
+
+    sput v0, Ln1b;->l:I
+
+    sget v0, Llsc;->oneme_setting_item_storage:I
+
+    sput v0, Ln1b;->m:I
+
+    sget v0, Llsc;->oneme_setting_item_support:I
+
+    sput v0, Ln1b;->n:I
+
+    sget v0, Llsc;->oneme_settings_cant_open_camera:I
+
+    sput v0, Ln1b;->o:I
+
+    sget v0, Llsc;->oneme_settings_change_avatar_error:I
+
+    sput v0, Ln1b;->p:I
+
+    sget v0, Llsc;->oneme_settings_change_avatar_success:I
+
+    sput v0, Ln1b;->q:I
+
+    sget v0, Llsc;->oneme_settings_change_avatar_title:I
+
+    sput v0, Ln1b;->r:I
+
+    sget v0, Llsc;->oneme_settings_change_avatar_upload_from_camera:I
+
+    sput v0, Ln1b;->s:I
+
+    sget v0, Llsc;->oneme_settings_change_avatar_upload_from_gallery:I
+
+    sput v0, Ln1b;->t:I
+
+    sget v0, Llsc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+
+    sput v0, Ln1b;->u:I
+
+    sget v0, Llsc;->oneme_settings_link_copied_snackbar_title:I
+
+    sput v0, Ln1b;->v:I
+
+    sget v0, Llsc;->oneme_settings_phonenumber_copied_snackbar_title:I
+
+    sput v0, Ln1b;->w:I
 
     return-void
-.end method
-
-.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
-    .locals 2
-
-    iget-object p1, p0, Ln1b;->c:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-boolean v0, p0, Ln1b;->o:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ln1b;->o:Z
-
-    iget-object v0, p0, Ln1b;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
-
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "mFrameAvailable already set, frame could be dropped"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method

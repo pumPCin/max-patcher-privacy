@@ -1,26 +1,52 @@
-.class public interface abstract Ldz6;
-.super Ljava/lang/Object;
+.class public final synthetic Ldz6;
+.super Lti6;
 .source "SourceFile"
+
+# interfaces
+.implements Lqh6;
 
 
 # static fields
-.field public static final u:Lss6;
+.field public static final a:Ldz6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
-    new-instance v0, Lss6;
+    new-instance v0, Ldz6;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v4, "getId()J"
 
-    sput-object v0, Ldz6;->u:Lss6;
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lmy6;
+
+    const-string v3, "getId"
+
+    invoke-direct/range {v0 .. v5}, Lti6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ldz6;->a:Ldz6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract r(Ljava/lang/String;)Landroid/net/Uri;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Lmy6;
+
+    invoke-interface {p1}, Lmy6;->getId()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 .end method

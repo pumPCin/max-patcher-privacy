@@ -1,142 +1,137 @@
 .class public final Lyr0;
-.super Lbm;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lxr0;
+.field public final synthetic a:I
 
-.field public final c:Lzr0;
+.field public b:F
 
 
 # direct methods
-.method public constructor <init>(Lxr0;Lzr0;)V
+.method public constructor <init>(F)V
     .locals 1
 
-    iget-object v0, p1, Lxr0;->a:Ljava/lang/String;
+    const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lbm;-><init>(Ljava/lang/String;)V
+    iput v0, p0, Lyr0;->a:I
 
-    iput-object p1, p0, Lyr0;->b:Lxr0;
+    iput p1, p0, Lyr0;->b:F
 
-    iput-object p2, p0, Lyr0;->c:Lzr0;
+    .line 2
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IF)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lyr0;->a:I
+
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+
+    iput p2, p0, Lyr0;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 13
 
-    iget-object v0, p0, Lyr0;->b:Lxr0;
+    iget v0, p0, Lyr0;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lyr0;->c:Lzr0;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    invoke-virtual {v0}, Lzr0;->canRepeat()Z
+    move-result v4
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    if-eqz v0, :cond_0
+    move-result v5
 
-    const/4 v0, 0x1
+    iget v6, p0, Lyr0;->b:F
 
-    return v0
+    const/4 v2, 0x0
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 v3, 0x0
 
-    return v0
-.end method
+    move-object v1, p2
 
-.method public final b()Z
-    .locals 1
-
-    iget-object v0, p0, Lyr0;->c:Lzr0;
-
-    invoke-virtual {v0}, Lzr0;->isSupplied()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    iget-object v0, p0, Lyr0;->b:Lxr0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lyr0;->c:Lzr0;
-
-    invoke-virtual {v0}, Lzr0;->shouldPost()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d(Lyk7;)V
-    .locals 2
-
-    iget-object v0, p0, Lyr0;->c:Lzr0;
-
-    invoke-virtual {v0}, Lzr0;->shouldSkipParam()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
     return-void
 
-    :cond_0
-    iget-object v1, p0, Lyr0;->b:Lxr0;
+    :pswitch_0
+    move-object v7, p2
 
-    iget-object v1, v1, Lxr0;->a:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    invoke-interface {p1, v1}, Lyk7;->Z(Ljava/lang/String;)Lyk7;
+    move-result v10
 
-    invoke-virtual {v0, p1}, Lzr0;->write(Lyk7;)V
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p2
+
+    iget v12, p0, Lyr0;->b:F
+
+    float-to-int v0, v12
+
+    add-int v11, p2, v0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
 
     return-void
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    :pswitch_1
+    move-object v7, p2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p2, p0, Lyr0;->b:F
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {p2}, Lagi;->d(F)I
 
-    iget-object v1, p0, Lbm;->a:Ljava/lang/String;
+    move-result p2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    neg-int v9, p2
 
-    const-string v1, " = "
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v10
 
-    iget-object v1, p0, Lyr0;->c:Lzr0;
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v11
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v12, p0, Lyr0;->b:F
 
-    move-result-object v0
+    const/4 v8, 0x0
 
-    return-object v0
+    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

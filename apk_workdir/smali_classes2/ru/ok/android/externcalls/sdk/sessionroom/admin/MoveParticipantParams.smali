@@ -20,16 +20,16 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
-        "Lvud;",
+        "Ll6e;",
         "toRoomId",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getParticipantId",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-        "Lvud;",
+        "Ll6e;",
         "getToRoomId",
-        "()Lvud;",
+        "()Ll6e;",
         "Builder",
         "calls-sdk_release"
     }
@@ -46,11 +46,11 @@
 # instance fields
 .field private final participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private final toRoomId:Lvud;
+.field private final toRoomId:Ll6e;
 
 
 # direct methods
-.method private constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;)V
+.method private constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;)V
     .locals 0
 
     .line 2
@@ -60,16 +60,16 @@
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     .line 4
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->toRoomId:Lvud;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->toRoomId:Ll6e;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Laf4;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lvh4;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;)V
 
     return-void
 .end method
@@ -84,10 +84,10 @@
     return-object v0
 .end method
 
-.method public final getToRoomId()Lvud;
+.method public final getToRoomId()Ll6e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->toRoomId:Lvud;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->toRoomId:Ll6e;
 
     return-object v0
 .end method

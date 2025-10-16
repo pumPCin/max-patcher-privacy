@@ -1,62 +1,43 @@
-.class public final synthetic Llb2;
+.class public abstract synthetic Llb2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpo3;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Z
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(ZI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Llb2;->a:I
+    invoke-static {}, Ln72;->values()[Ln72;
 
-    iput-boolean p1, p0, Llb2;->b:Z
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
+    const/4 v1, 0x1
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+    const/4 v2, 0x0
 
-    iget v0, p0, Llb2;->a:I
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    packed-switch v0, :pswitch_data_0
+    :catch_0
+    const/4 v2, 0x2
 
-    check-cast p1, Lr82;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p1, Lr82;->b:Luc2;
-
-    iget-boolean v0, p0, Llb2;->b:Z
-
-    iput-boolean v0, p1, Luc2;->e0:Z
-
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Llb2;->b:Z
-
-    check-cast p1, Lec2;
-
-    iput-boolean v0, p1, Lec2;->h0:Z
+    :catch_1
+    sput-object v0, Llb2;->$EnumSwitchMapping$0:[I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

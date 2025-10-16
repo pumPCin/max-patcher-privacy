@@ -1,116 +1,323 @@
-.class public final enum Ltve;
-.super Ljava/lang/Enum;
+.class public final Ltve;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzg7;
-
-
-# static fields
-.field public static final synthetic b:[Ltve;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:Ljava/lang/Integer;
+
+.field public final d:F
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;FZZZZ)V
+    .locals 0
 
-    new-instance v0, Ltve;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "DUPLICATE_PROPERTIES"
+    iput-object p1, p0, Ltve;->a:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    iput p2, p0, Ltve;->b:I
 
-    invoke-direct {v0, v1, v2}, Ltve;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Ltve;->c:Ljava/lang/Integer;
 
-    new-instance v1, Ltve;
+    iput p4, p0, Ltve;->d:F
 
-    const-string v2, "SCALARS_AS_OBJECTS"
+    iput-boolean p5, p0, Ltve;->e:Z
 
-    const/4 v3, 0x1
+    iput-boolean p6, p0, Ltve;->f:Z
 
-    invoke-direct {v1, v2, v3}, Ltve;-><init>(Ljava/lang/String;I)V
+    iput-boolean p7, p0, Ltve;->g:Z
 
-    new-instance v2, Ltve;
+    iput-boolean p8, p0, Ltve;->h:Z
 
-    const-string v3, "UNTYPED_SCALARS"
+    return-void
+.end method
 
-    const/4 v4, 0x2
+.method public static a(Ljava/lang/String;)I
+    .locals 2
 
-    invoke-direct {v2, v3, v4}, Ltve;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2}, [Ltve;
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Ltve;->b:[Ltve;
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    return-void
-.end method
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v1, 0x0
 
-    const/4 p1, 0x1
+    goto :goto_0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    :pswitch_0
+    const/4 v1, 0x1
 
-    move-result p2
+    :goto_0
+    if-eqz v1, :cond_0
 
-    shl-int/2addr p1, p2
+    return v0
 
-    iput p1, p0, Ltve;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ltve;
-    .locals 1
-
-    const-class v0, Ltve;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    :catch_0
+    :cond_0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Ltve;
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    return-object p0
+    move-result v0
+
+    const-string v1, "Ignoring unknown alignment: "
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/String;
+
+    invoke-direct {p0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_1
+    const-string v0, "SsaStyle"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Ltve;
-    .locals 1
-
-    sget-object v0, Ltve;->b:[Ltve;
-
-    invoke-virtual {v0}, [Ltve;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ltve;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()Z
-    .locals 1
+.method public static b(Ljava/lang/String;)Z
+    .locals 4
 
     const/4 v0, 0x0
 
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x1
+
+    if-eq p0, v1, :cond_1
+
+    const/4 v2, -0x1
+
+    if-ne p0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+
+    :cond_1
+    :goto_0
+    return v1
+
+    :catch_0
+    move-exception v1
+
+    const/16 v2, 0x21
+
+    invoke-static {v2, p0}, Ld15;->e(ILjava/lang/String;)I
+
+    move-result v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "Failed to parse boolean value: \'"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v2, "SsaStyle"
+
+    invoke-static {v2, p0, v1}, Lldi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
     return v0
 .end method
 
-.method public final b()I
-    .locals 1
+.method public static c(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 8
 
-    iget v0, p0, Ltve;->a:I
+    :try_start_0
+    const-string v0, "&H"
 
-    return v0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/16 v1, 0x10
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
+
+    move-result-wide v2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    :goto_0
+    const-wide v4, 0xffffffffL
+
+    cmp-long v0, v2, v4
+
+    if-gtz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    invoke-static {v0}, Lefi;->d(Z)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/16 p0, 0x18
+
+    shr-long v4, v2, p0
+
+    const-wide/16 v6, 0xff
+
+    and-long/2addr v4, v6
+
+    xor-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Lg0i;->b(J)I
+
+    move-result p0
+
+    shr-long v0, v2, v1
+
+    and-long/2addr v0, v6
+
+    invoke-static {v0, v1}, Lg0i;->b(J)I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    shr-long v4, v2, v1
+
+    and-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Lg0i;->b(J)I
+
+    move-result v1
+
+    and-long/2addr v2, v6
+
+    invoke-static {v2, v3}, Lg0i;->b(J)I
+
+    move-result v2
+
+    invoke-static {p0, v2, v1, v0}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :goto_2
+    const/16 v1, 0x24
+
+    invoke-static {v1, p0}, Ld15;->e(ILjava/lang/String;)I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Failed to parse color expression: \'"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "SsaStyle"
+
+    invoke-static {v1, p0, v0}, Lldi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

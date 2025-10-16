@@ -1,243 +1,189 @@
-.class public final synthetic Lcs5;
+.class public final Lcs5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/Closeable;
+.implements Ls47;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+.method public constructor <init>(Ljava/io/File;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcs5;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+
+    iput-object v0, p0, Lcs5;->b:Ljava/lang/Object;
+
+    .line 4
+    :try_start_0
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/nio/channels/FileChannel;->lock()Ljava/nio/channels/FileLock;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez p1, :cond_0
+
+    .line 5
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+
+    .line 6
+    :cond_0
+    iput-object p1, p0, Lcs5;->c:Ljava/lang/Object;
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 7
+    iget-object v0, p0, Lcs5;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/io/FileOutputStream;
+
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+
+    .line 8
+    throw p1
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput p2, p0, Lcs5;->a:I
 
-    iput-object p1, p0, Lcs5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+    iput-object p1, p0, Lcs5;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lcs5;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method private final m()V
+    .locals 0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final close()V
+    .locals 2
 
     iget v0, p0, Lcs5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcs5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+    iget-object v0, p0, Lcs5;->c:Ljava/lang/Object;
 
-    iget-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
+    check-cast v0, Ljava/io/InputStream;
 
-    invoke-static {v1}, Lpu0;->l(Landroid/content/Context;)V
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    iget-object v2, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Lisg;
+    :pswitch_0
+    return-void
 
-    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->g()Z
+    :pswitch_1
+    iget-object v0, p0, Lcs5;->b:Ljava/lang/Object;
 
-    move-result v3
-
-    const-string v4, "proxy_retention"
-
-    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v6, 0x1d
-
-    if-lt v5, v6, :cond_2
-
-    invoke-static {v1}, Lvu0;->t(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v5
-
-    invoke-interface {v5, v4}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    const/4 v6, 0x0
-
-    invoke-interface {v5, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v5
-
-    if-ne v5, v3, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v2, v2, Lisg;->c:Ljava/lang/Object;
-
-    check-cast v2, Lu6d;
-
-    iget-object v5, v2, Lu6d;->c:Lgca;
-
-    invoke-virtual {v5}, Lgca;->h()I
-
-    move-result v5
-
-    const v6, 0xe5ee4e0
-
-    if-lt v5, v6, :cond_1
-
-    new-instance v5, Landroid/os/Bundle;
-
-    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
-
-    invoke-virtual {v5, v4, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    iget-object v2, v2, Lu6d;->b:Landroid/content/Context;
-
-    invoke-static {v2}, Lykh;->c(Landroid/content/Context;)Lykh;
-
-    move-result-object v2
-
-    new-instance v4, Llkh;
-
-    monitor-enter v2
+    check-cast v0, Ljava/io/FileOutputStream;
 
     :try_start_0
-    iget v6, v2, Lykh;->a:I
+    iget-object v1, p0, Lcs5;->c:Ljava/lang/Object;
 
-    add-int/lit8 v7, v6, 0x1
+    check-cast v1, Ljava/nio/channels/FileLock;
 
-    iput v7, v2, Lykh;->a:I
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/nio/channels/FileLock;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v2
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x4
-
-    invoke-direct {v4, v6, v8, v5, v7}, Llkh;-><init>(IILandroid/os/Bundle;I)V
-
-    invoke-virtual {v2, v4}, Lykh;->d(Llkh;)Lflh;
-
-    move-result-object v2
 
     goto :goto_0
 
     :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_1
-    new-instance v2, Ljava/io/IOException;
-
-    const-string v4, "SERVICE_NOT_AVAILABLE"
-
-    invoke-direct {v2, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2}, Lggh;->n(Ljava/lang/Exception;)Lflh;
-
-    move-result-object v2
-
-    :goto_0
-    new-instance v4, Las;
-
-    const/4 v5, 0x2
-
-    invoke-direct {v4, v5}, Las;-><init>(I)V
-
-    new-instance v5, Lk5c;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v6, v1, v3}, Lk5c;-><init>(ILandroid/content/Context;Z)V
-
-    invoke-virtual {v2, v4, v5}, Lflh;->d(Ljava/util/concurrent/Executor;Luda;)Lflh;
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->g()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->f()V
-
-    :cond_3
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcs5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
-
-    iget-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lrc6;
-
-    invoke-virtual {v1}, Lrc6;->i()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->e()Lnve;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/google/firebase/messaging/FirebaseMessaging;->i(Lnve;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    monitor-enter v0
-
-    :try_start_2
-    iget-boolean v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
-
-    if-nez v1, :cond_4
-
-    const-wide/16 v1, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcom/google/firebase/messaging/FirebaseMessaging;->h(J)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    goto :goto_2
-
-    :catchall_1
     move-exception v1
 
-    goto :goto_3
+    goto :goto_1
 
-    :cond_4
-    :goto_2
-    monitor-exit v0
+    :cond_0
+    :goto_0
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    goto :goto_4
+    return-void
 
-    :goto_3
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    :goto_1
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
     throw v1
 
-    :cond_5
-    :goto_4
-    return-void
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public getContentLength()J
+    .locals 2
+
+    iget-object v0, p0, Lcs5;->c:Ljava/lang/Object;
+
+    check-cast v0, [B
+
+    array-length v0, v0
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public getContentType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcs5;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public writeTo(Ljava/io/OutputStream;)V
+    .locals 1
+
+    iget-object v0, p0, Lcs5;->c:Ljava/lang/Object;
+
+    check-cast v0, [B
+
+    invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
 .end method

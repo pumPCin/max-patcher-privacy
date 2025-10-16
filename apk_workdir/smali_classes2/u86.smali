@@ -1,120 +1,78 @@
-.class public final synthetic Lu86;
-.super Ljava/lang/Object;
+.class public final Lu86;
+.super Lhlf;
 .source "SourceFile"
-
-# interfaces
-.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lf96;
-
-.field public final synthetic c:Lqya;
-
-.field public final synthetic o:I
+.field public final o:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lf96;Lqya;II)V
-    .locals 0
+.method public constructor <init>(Ljava/util/ArrayList;)V
+    .locals 1
 
-    iput p4, p0, Lu86;->a:I
+    sget-object v0, Lk7b;->O2:Lk7b;
 
-    iput-object p1, p0, Lu86;->b:Lf96;
+    invoke-direct {p0, v0}, Lhlf;-><init>(Lk7b;)V
 
-    iput-object p2, p0, Lu86;->c:Lqya;
+    iput-object p1, p0, Lu86;->o:Ljava/util/ArrayList;
 
-    iput p3, p0, Lu86;->o:I
+    const-string v0, "foldersOrder"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, v0, p1}, Lhlf;->o(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lu86;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lu86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Lu86;->c:Lqya;
-
-    iget v3, p0, Lu86;->o:I
-
-    invoke-interface {v1, v2, v3}, Loya;->o(Lqya;I)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lu86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Lu86;->c:Lqya;
-
-    iget v3, p0, Lu86;->o:I
-
-    invoke-interface {v1, v2, v3}, Loya;->z(Lqya;I)V
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    instance-of v0, p1, Lu86;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
     :cond_1
-    sget-object v0, Laxf;->a:Laxf;
+    check-cast p1, Lu86;
 
-    return-object v0
+    iget-object v0, p0, Lu86;->o:Ljava/util/ArrayList;
 
-    nop
+    iget-object p1, p1, Lu86;->o:Ljava/util/ArrayList;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lu86;->o:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

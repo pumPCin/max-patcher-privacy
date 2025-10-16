@@ -1,146 +1,50 @@
-.class public final Lal5;
-.super Lc2f;
+.class public abstract Lal5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lxmf;
 
 
 # instance fields
-.field public X:I
+.field public a:Landroid/view/View;
 
-.field public final synthetic Y:Ldl5;
+.field public final b:Ljava/util/LinkedList;
 
 
 # direct methods
-.method public constructor <init>(Ldl5;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lal5;->Y:Ldl5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lal5;->b:Ljava/util/LinkedList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lal5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lal5;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lal5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lal5;
-
-    iget-object v0, p0, Lal5;->Y:Ldl5;
-
-    invoke-direct {p1, v0, p2}, Lal5;-><init>(Ldl5;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(I)Lwed;
     .locals 3
 
-    iget v0, p0, Lal5;->X:I
+    new-instance v0, Lwed;
 
-    const/4 v1, 0x1
+    new-instance v1, Lyk5;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v1, p0, p1, v2}, Lyk5;-><init>(Ljava/lang/Object;II)V
 
-    :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_1
+    iput-object p0, v0, Lwed;->c:Ljava/lang/Object;
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lal5;->Y:Ldl5;
-
-    :try_start_1
-    iput v1, p0, Lal5;->X:I
-
-    iget-object v0, p1, Ldl5;->a:Lc4d;
-
-    new-instance v1, Lig4;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2, p1}, Lig4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1, p0}, Lcea;->j(Lc4d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
+    iput-object v1, v0, Lwed;->a:Ljava/lang/Object;
 
     return-object v0
-
-    :goto_0
-    const-string v0, "FcmAnalyticsDao"
-
-    const-string v1, "onLogout: clear failed"
-
-    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-
-    :goto_2
-    throw p1
 .end method

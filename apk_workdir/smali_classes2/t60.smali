@@ -1,86 +1,125 @@
 .class public final Lt60;
-.super Ly7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public final a:Ljava/util/ArrayList;
+
+.field public final b:Lsze;
+
+.field public final c:Lgzc;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lt60;->c:Ljava/lang/String;
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lt60;->a:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ltze;->a(Ljava/lang/Object;)Lsze;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lt60;->b:Lsze;
+
+    new-instance v1, Lgzc;
+
+    invoke-direct {v1, v0}, Lgzc;-><init>(Lh0a;)V
+
+    iput-object v1, p0, Lt60;->c:Lgzc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()V
+    .locals 7
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lt60;->a:Ljava/util/ArrayList;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lt60;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    const/4 v2, 0x0
+    move-result v2
 
-    if-nez v1, :cond_1
+    new-array v2, v2, [B
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lt60;
-
-    iget-object v1, p0, Lt60;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lt60;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lt60;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Response(trackId=\'"
-
-    const-string v1, "\')"
-
-    iget-object v2, p0, Lt60;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    return-object v0
+    const/4 v3, 0x0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    add-int/lit8 v5, v3, 0x1
+
+    if-ltz v3, :cond_1
+
+    check-cast v4, Ljava/lang/Number;
+
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
+
+    move-result v4
+
+    mul-int/lit8 v4, v4, 0x7f
+
+    const v6, 0x8000
+
+    div-int/2addr v4, v6
+
+    int-to-byte v4, v4
+
+    aput-byte v4, v2, v3
+
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Lbb3;->k()V
+
+    throw v1
+
+    :cond_2
+    move-object v1, v2
+
+    :cond_3
+    :goto_1
+    iget-object v0, p0, Lt60;->b:Lsze;
+
+    invoke-virtual {v0, v1}, Lsze;->setValue(Ljava/lang/Object;)V
+
+    return-void
 .end method

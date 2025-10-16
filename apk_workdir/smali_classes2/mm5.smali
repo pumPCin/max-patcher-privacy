@@ -1,35 +1,72 @@
 .class public final Lmm5;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+# interfaces
+.implements Lei6;
 
 
-# direct methods
-.method public constructor <init>(IIIILjava/lang/String;)V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lb54;
 
-    iput p1, p0, Lmm5;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object p5, p0, Lmm5;->b:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lmm5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput p2, p0, Lmm5;->c:I
+    move-result-object p1
 
-    iput p3, p0, Lmm5;->d:I
+    check-cast p1, Lmm5;
 
-    iput p4, p0, Lmm5;->e:I
+    sget-object p2, Lzag;->a:Lzag;
 
-    return-void
+    invoke-virtual {p1, p2}, Lmm5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lmm5;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lijh;->a:Lijh;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object p1
+
+    const-class v0, Lgna;
+
+    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgna;
+
+    invoke-virtual {p1}, Lgna;->d()Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

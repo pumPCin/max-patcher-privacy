@@ -1,123 +1,42 @@
 .class public final Lare;
-.super Ly7f;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public o:J
+.field public final synthetic b:Lru/ok/messages/views/widgets/SlideOutLayout;
 
 
 # direct methods
-.method public constructor <init>(Lc79;)V
+.method public constructor <init>(Lru/ok/messages/views/widgets/SlideOutLayout;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
+    iput-object p1, p0, Lare;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
+
+    iput p2, p0, Lare;->a:I
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lc79;Ljava/lang/String;)V
-    .locals 4
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Lare;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
 
-    const-string v0, "marker"
+    iget-object p1, p1, Lru/ok/messages/views/widgets/SlideOutLayout;->x0:Lbre;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz p1, :cond_0
 
-    move-result v0
+    iget v0, p0, Lare;->a:I
 
-    if-nez v0, :cond_2
-
-    const-string v0, "stickers"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lc79;->y()V
-
-    return-void
+    invoke-interface {p1, v0}, Lbre;->u(I)V
 
     :cond_0
-    invoke-static {p1}, Lg8;->A(Lc79;)I
-
-    move-result p2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lare;->c:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_1
-
-    iget-object v1, p0, Lare;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Lc79;->o0()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
-
-    :cond_2
-    invoke-virtual {p1}, Lc79;->o0()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lare;->o:J
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lare;->c:Ljava/util/ArrayList;
-
-    iget-wide v1, p0, Lare;->o:J
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "{stickerIds="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", marker="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -1,63 +1,84 @@
 .class public final Lj0d;
-.super Lwy3;
+.super Lpoe;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lv7f;
-
-.field public Y:Ljava/lang/String;
-
-.field public Z:Ltb5;
-
-.field public o:Lcl;
-
-.field public r0:Lfvd;
-
-.field public s0:Ly7f;
-
-.field public t0:J
-
-.field public u0:I
-
-.field public v0:I
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public x0:I
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final bridge synthetic A(Lb18;)V
+    .locals 0
 
-    iput-object p1, p0, Lj0d;->w0:Ljava/lang/Object;
+    check-cast p1, Lh0d;
 
-    iget p1, p0, Lj0d;->x0:I
+    invoke-virtual {p0, p1}, Lj0d;->G(Lh0d;)V
 
-    const/high16 v0, -0x80000000
+    return-void
+.end method
 
-    or-int/2addr p1, v0
+.method public final G(Lh0d;)V
+    .locals 5
 
-    iput p1, p0, Lj0d;->x0:I
+    iget-boolean v0, p1, Lh0d;->Z:Z
 
-    const-wide/16 v4, 0x0
+    iget-object v1, p0, Lj6d;->a:Landroid/view/View;
 
-    const/4 v6, 0x0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    move-object v0, v1
 
-    const/4 v1, 0x0
+    check-cast v0, Li0d;
 
-    const/4 v2, 0x0
+    sget-object v2, Lnna;->a:Lnna;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v2}, Li0d;->setAvatarShape(Lona;)V
 
-    move-object v7, p0
+    :cond_0
+    iget-object v0, p1, Lh0d;->c:Ljava/lang/String;
 
-    invoke-static/range {v0 .. v7}, Lwy8;->u(Lcl;Lv7f;Ljava/lang/String;Ltb5;JILwy3;)Ljava/lang/Object;
+    move-object v2, v1
 
-    move-result-object p1
+    check-cast v2, Li0d;
 
-    return-object p1
+    invoke-virtual {v2, v0}, Li0d;->setAvatar(Ljava/lang/String;)V
+
+    iget-object v0, p1, Lh0d;->o:Ljava/lang/CharSequence;
+
+    move-object v2, v1
+
+    check-cast v2, Li0d;
+
+    iget-wide v3, p0, Lj6d;->X:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lfhi;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lkc0;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Li0d;->setAbbreviation(Lkc0;)V
+
+    iget-object v0, p1, Lh0d;->b:Ljava/lang/CharSequence;
+
+    move-object v2, v1
+
+    check-cast v2, Li0d;
+
+    invoke-virtual {v2, v0}, Li0d;->setName(Ljava/lang/CharSequence;)V
+
+    iget-boolean v0, p1, Lh0d;->Y:Z
+
+    move-object v2, v1
+
+    check-cast v2, Li0d;
+
+    invoke-virtual {v2, v0}, Li0d;->setVerified(Z)V
+
+    iget-boolean p1, p1, Lh0d;->X:Z
+
+    check-cast v1, Li0d;
+
+    invoke-virtual {v1, p1}, Li0d;->setOnline(Z)V
+
+    return-void
 .end method

@@ -1,79 +1,65 @@
 .class public final Lq0c;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lro3;
-
-.field public Y:Lr82;
-
-.field public Z:Lqtb;
-
-.field public o:Lu0c;
-
-.field public r0:Lstb;
-
-.field public s0:Ljava/lang/Object;
-
-.field public t0:Ljava/util/List;
-
-.field public u0:Ljava/io/Serializable;
-
-.field public v0:Ljava/lang/Object;
-
-.field public w0:I
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public final synthetic y0:Lu0c;
-
-.field public z0:I
+.field public final synthetic a:Lr5;
 
 
 # direct methods
-.method public constructor <init>(Lu0c;Lwy3;)V
+.method public constructor <init>(Lr5;)V
     .locals 0
 
-    iput-object p1, p0, Lq0c;->y0:Lu0c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lq0c;->a:Lr5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final a(J)Lvs4;
+    .locals 6
 
-    iput-object p1, p0, Lq0c;->x0:Ljava/lang/Object;
+    new-instance v0, Lvs4;
 
-    iget p1, p0, Lq0c;->z0:I
+    const-class v1, Lgw0;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lq0c;->a:Lr5;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v2, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput p1, p0, Lq0c;->z0:I
+    move-result-object v1
 
-    const/4 v4, 0x0
+    move-object v3, v1
 
-    const/4 v5, 0x0
+    check-cast v3, Lgw0;
 
-    iget-object v0, p0, Lq0c;->y0:Lu0c;
+    const-class v1, Lqkf;
 
-    const/4 v1, 0x0
+    invoke-virtual {v2, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    const/4 v3, 0x0
+    move-object v4, v1
 
-    move-object v6, p0
+    check-cast v4, Lqkf;
 
-    invoke-virtual/range {v0 .. v6}, Lu0c;->f(Lro3;Lr82;Lqtb;Lstb;Ljava/lang/Long;Lwy3;)Ljava/io/Serializable;
+    const-class v1, Lt23;
 
-    move-result-object p1
+    invoke-virtual {v2, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v1
+
+    move-object v5, v1
+
+    check-cast v5, Lt23;
+
+    move-wide v1, p1
+
+    invoke-direct/range {v0 .. v5}, Lvs4;-><init>(JLgw0;Lqkf;Lt23;)V
+
+    return-object v0
 .end method

@@ -1,80 +1,93 @@
 .class public final Lnx5;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lxw7;
+.field public a:I
 
-.field public final synthetic Y:Lyw1;
+.field public b:Z
 
+.field public c:I
 
-# direct methods
-.method public constructor <init>(Lxw7;Lyw1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public d:I
 
-    iput-object p1, p0, Lnx5;->X:Lxw7;
+.field public e:I
 
-    iput-object p2, p0, Lnx5;->Y:Lyw1;
+.field public f:I
 
-    const/4 p1, 0x2
+.field public g:I
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public h:I
 
-    return-void
-.end method
+.field public i:Z
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Ln24;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "LayoutState{mAvailable="
 
-    invoke-virtual {p0, p1, p2}, Lnx5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget v1, p0, Lnx5;->a:I
 
-    check-cast p1, Lnx5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object p2, Laxf;->a:Laxf;
+    const-string v1, ", mFlexLinePosition="
 
-    invoke-virtual {p1, p2}, Lnx5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p2
-.end method
+    iget v1, p0, Lnx5;->c:I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance p1, Lnx5;
+    const-string v1, ", mPosition="
 
-    iget-object v0, p0, Lnx5;->X:Lxw7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lnx5;->Y:Lyw1;
+    iget v1, p0, Lnx5;->d:I
 
-    invoke-direct {p1, v0, v1, p2}, Lnx5;-><init>(Lxw7;Lyw1;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    const-string v1, ", mOffset="
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget v1, p0, Lnx5;->e:I
 
-    iget-object p1, p0, Lnx5;->X:Lxw7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lnx5;->Y:Lyw1;
+    const-string v1, ", mScrollingOffset="
 
-    invoke-virtual {p1, v0}, Lxw7;->f(Lzba;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Laxf;->a:Laxf;
+    iget v1, p0, Lnx5;->f:I
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mLastScrollDelta="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lnx5;->g:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mItemDirection=1, mLayoutDirection="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lnx5;->h:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

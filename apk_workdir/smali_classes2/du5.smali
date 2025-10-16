@@ -1,115 +1,95 @@
 .class public final Ldu5;
-.super Ljava/lang/Object;
+.super Lc0i;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
 
 
 # instance fields
-.field public final a:Lvd4;
-
-.field public final b:Lfr5;
-
-.field public final synthetic c:Leu5;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Leu5;)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Ldu5;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldu5;->c:Leu5;
+    return-void
+.end method
 
-    new-instance v0, Lvd4;
+.method private final i(Liv0;)V
+    .locals 0
 
-    const/16 v1, 0x1b
+    return-void
+.end method
 
-    invoke-direct {v0, v1, p1}, Lvd4;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Ldu5;->a:Lvd4;
-
-    new-instance v0, Lfr5;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p1, v1, p0}, Lfr5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object v0, p0, Ldu5;->b:Lfr5;
+.method private final j(Liv0;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+.method public final d()J
     .locals 2
 
-    iget-object p1, p0, Ldu5;->c:Leu5;
+    iget v0, p0, Ldu5;->a:I
 
-    iget-object v0, p1, Leu5;->s0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Ldu5;->b:Lfr5;
+    const-wide/16 v0, 0x0
 
-    if-eqz v0, :cond_0
+    return-wide v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    :pswitch_0
+    const-wide/16 v0, 0x0
 
-    :cond_0
-    iget-object p1, p1, Leu5;->s0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    return-wide v0
 
-    if-eqz p1, :cond_1
+    nop
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 3
+.method public final e()Lo29;
+    .locals 1
 
-    iget-object p1, p0, Ldu5;->c:Leu5;
+    iget v0, p0, Ldu5;->a:I
 
-    iget-object p2, p1, Leu5;->s0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ldu5;->b:Lfr5;
+    sget-object v0, Lo29;->d:Ljava/util/regex/Pattern;
 
-    if-eqz p2, :cond_0
+    const-string v0, "application/octet-stream"
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-static {v0}, Ltii;->a(Ljava/lang/String;)Lo29;
 
-    :cond_0
-    iget-object p1, p1, Leu5;->s0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    return-object v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    :pswitch_0
+    sget-object v0, Lhu5;->e:Lo29;
 
-    move-result-wide v1
+    return-object v0
 
-    sub-long/2addr p3, v1
+    nop
 
-    invoke-virtual {p1, v0, p3, p4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+.method public final h(Liv0;)V
     .locals 0
 
-    iget-object p1, p0, Ldu5;->c:Leu5;
+    iget p1, p0, Ldu5;->a:I
 
-    iget-object p1, p1, Leu5;->s0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    if-eqz p1, :cond_0
-
-    iget-object p2, p0, Ldu5;->b:Lfr5;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    :cond_0
     return-void
 .end method

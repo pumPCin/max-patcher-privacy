@@ -1,68 +1,91 @@
-.class public final synthetic Lgj8;
-.super Ljava/lang/Object;
+.class public final Lgj8;
+.super Ljava/util/concurrent/ConcurrentLinkedQueue;
 .source "SourceFile"
 
 # interfaces
-.implements Loj8;
+.implements Ljj8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Lqj8;
-
-.field public final synthetic c:F
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqj8;FI)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p3, p0, Lgj8;->a:I
+    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
-    iput-object p1, p0, Lgj8;->b:Lqj8;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput p2, p0, Lgj8;->c:F
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lgj8;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lw07;I)V
-    .locals 2
+.method public final e()I
+    .locals 1
+
+    iget-object v0, p0, Lgj8;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i()I
+    .locals 1
 
     iget v0, p0, Lgj8;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget v0, p0, Lgj8;->c:F
+.method public final k()V
+    .locals 0
 
-    iget-object v1, p0, Lgj8;->b:Lqj8;
-
-    iget-object v1, v1, Lqj8;->c:Lak8;
-
-    invoke-interface {p1, v1, p2, v0}, Lw07;->s(Lq07;IF)V
+    invoke-virtual {p0}, Lgj8;->poll()Ljava/lang/Object;
 
     return-void
+.end method
 
-    :pswitch_0
-    iget v0, p0, Lgj8;->c:F
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v1, p0, Lgj8;->b:Lqj8;
+    iget-object v0, p0, Lgj8;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-object v1, v1, Lqj8;->c:Lak8;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    invoke-interface {p1, v1, p2, v0}, Lw07;->t(Lq07;IF)V
+    invoke-super {p0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
 
-    return-void
+    move-result p1
 
-    nop
+    return p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final poll()Ljava/lang/Object;
+    .locals 2
+
+    invoke-super {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lgj8;->a:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lgj8;->a:I
+
+    :cond_0
+    return-object v0
 .end method

@@ -1,122 +1,145 @@
 .class public final Lvyd;
-.super Lc2f;
+.super Lpoe;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final synthetic I0:I
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final E0:Lx0d;
 
-.field public final synthetic Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+.field public final F0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+.field public final G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+.field public H0:Lik6;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+.method public constructor <init>(Lx0d;Lone/me/sdk/uikit/common/views/OneMeDraweeView;Landroidx/appcompat/widget/AppCompatTextView;Landroid/widget/LinearLayout;)V
     .locals 0
 
-    iput-object p2, p0, Lvyd;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+    invoke-direct {p0, p4}, Lj6d;-><init>(Landroid/view/View;)V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lvyd;->E0:Lx0d;
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lvyd;->F0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    iput-object p3, p0, Lvyd;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    new-instance p1, Lldb;
+
+    const/16 p2, 0xb
+
+    invoke-direct {p1, p2, p0}, Lldb;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p4, p1}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final bridge synthetic A(Lb18;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lik6;
 
-    invoke-virtual {p0, p1, p2}, Lvyd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, Lvyd;->G(Lik6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lvyd;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lvyd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final G(Lik6;)V
+    .locals 3
 
-    new-instance v0, Lvyd;
+    iput-object p1, p0, Lvyd;->H0:Lik6;
 
-    iget-object v1, p0, Lvyd;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+    iget-object v0, p1, Lik6;->a:Lhk6;
 
-    invoke-direct {v0, p2, v1}, Lvyd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+    iget-object v0, v0, Lhk6;->a:Lgk6;
 
-    iput-object p1, v0, Lvyd;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Lgk6;->c()Lf4;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    instance-of v1, v0, Lvj6;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v2, p0, Lvyd;->G0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object p1, p0, Lvyd;->X:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    check-cast p1, Ljava/util/Map;
-
-    iget-object v0, p0, Lvyd;->Y:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
-
-    iget-object v1, v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Lvoc;
-
-    sget-object v2, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Z:[Lpl7;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, v0, v2}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    check-cast v1, Lrla;
+    check-cast v0, Lvj6;
 
-    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+    iget v0, v0, Lvj6;->a:I
 
-    move-result-object v2
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x0
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    const/16 v2, 0x8
+    instance-of v1, v0, Lwj6;
+
+    if-eqz v1, :cond_2
+
+    check-cast v0, Lwj6;
+
+    iget-object v0, v0, Lwj6;->a:Ljava/lang/String;
 
     :goto_0
-    invoke-virtual {v1, v2}, Lrla;->setVisibility(I)V
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:Lu26;
+    new-instance v0, Lg4d;
 
-    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p0, v1}, Lg4d;-><init>(Lik6;Lvyd;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v2}, Lkci;->m(Lgi6;Landroid/view/View;)V
+
+    iget-object p1, p1, Lik6;->b:Landroid/net/Uri;
+
+    iget-object v0, p0, Lvyd;->F0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p1}, Lea7;->d(Landroid/net/Uri;)Lea7;
 
     move-result-object p1
 
-    invoke-static {p1}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+    const/4 v2, 0x1
+
+    iput-boolean v2, p1, Lea7;->h:Z
+
+    invoke-virtual {p1}, Lea7;->a()Lda7;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lhv7;->E(Ljava/util/List;)V
+    sget v2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, p1, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lda7;Lda7;)V
 
-    return-object p1
+    return-void
+
+    :cond_1
+    sget p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
+
+    invoke-virtual {v0, v1, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->h(Lda7;Lda7;)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

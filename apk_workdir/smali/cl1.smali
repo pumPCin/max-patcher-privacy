@@ -1,84 +1,48 @@
 .class public final Lcl1;
-.super Lhl1;
-.source "SourceFile"
+.super Lk14;
 
 
 # instance fields
-.field public final D:Z
+.field public X:I
+
+.field public final synthetic Y:Lhg0;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lhg0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Lhl1;-><init>()V
+    iput-object p1, p0, Lcl1;->Y:Lhg0;
 
-    iput-boolean p1, p0, Lcl1;->D:Z
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lcl1;->o:Ljava/lang/Object;
 
-    goto :goto_1
+    iget p1, p0, Lcl1;->X:I
 
-    :cond_0
-    instance-of v0, p1, Lcl1;
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_1
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lcl1;->X:I
 
-    :cond_1
-    check-cast p1, Lcl1;
+    iget-object p1, p0, Lcl1;->Y:Lhg0;
 
-    iget-boolean v0, p0, Lcl1;->D:Z
+    const/4 v0, 0x0
 
-    iget-boolean p1, p1, Lcl1;->D:Z
+    invoke-virtual {p1, v0, p0}, Lhg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-eq v0, p1, :cond_2
+    move-result-object p1
 
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lcl1;->D:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ShareScreen(isEnabled="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lcl1;->D:Z
-
-    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

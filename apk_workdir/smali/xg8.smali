@@ -1,65 +1,143 @@
 .class public final Lxg8;
-.super Lwg8;
+.super Lgd6;
 .source "SourceFile"
 
 
+# static fields
+.field public static final h:Ljava/lang/Object;
+
+
 # instance fields
-.field public final synthetic g:Lus8;
+.field public final f:Ljava/lang/Object;
+
+.field public final g:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lus8;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lxg8;->h:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Louf;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lxg8;->g:Lus8;
+    invoke-direct {p0, p1}, Lgd6;-><init>(Louf;)V
 
-    invoke-direct {p0, p1}, Lwg8;-><init>(Lus8;)V
+    iput-object p2, p0, Lxg8;->f:Ljava/lang/Object;
+
+    iput-object p3, p0, Lxg8;->g:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Los8;
-    .locals 2
+.method public final b(Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object v0, p0, Lxg8;->g:Lus8;
+    sget-object v0, Lxg8;->h:Ljava/lang/Object;
 
-    iget-object v1, v0, Lus8;->Y:Lug8;
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_1
+    move-result v0
 
-    iget-object v0, v0, Lus8;->c:Lug8;
+    if-eqz v0, :cond_0
 
-    if-ne v1, v0, :cond_0
+    iget-object v0, p0, Lxg8;->g:Ljava/lang/Object;
 
-    new-instance v0, Los8;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lem4;->b:Ljava/lang/Object;
-
-    check-cast v1, Lvg8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lt4;->g(Lvg8;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Los8;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
-
-    return-object v0
+    move-object p1, v0
 
     :cond_0
-    iget-object v0, v1, Lug8;->d:Los8;
+    iget-object v0, p0, Lgd6;->e:Louf;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Louf;->b(Ljava/lang/Object;)I
 
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    move-result p1
 
-    const-string v1, "This should be called inside of onGetRoot, onLoadChildren, onLoadItem, onSearch, or onCustomAction methods"
+    return p1
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public final f(ILjuf;Z)Ljuf;
+    .locals 1
 
-    throw v0
+    iget-object v0, p0, Lgd6;->e:Louf;
+
+    invoke-virtual {v0, p1, p2, p3}, Louf;->f(ILjuf;Z)Ljuf;
+
+    iget-object p1, p2, Ljuf;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lxg8;->g:Ljava/lang/Object;
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    if-eqz p3, :cond_0
+
+    sget-object p1, Lxg8;->h:Ljava/lang/Object;
+
+    iput-object p1, p2, Ljuf;->b:Ljava/lang/Object;
+
+    :cond_0
+    return-object p2
+.end method
+
+.method public final l(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lgd6;->e:Louf;
+
+    invoke-virtual {v0, p1}, Louf;->l(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lxg8;->g:Ljava/lang/Object;
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lxg8;->h:Ljava/lang/Object;
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final m(ILmuf;J)Lmuf;
+    .locals 1
+
+    iget-object v0, p0, Lgd6;->e:Louf;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Louf;->m(ILmuf;J)Lmuf;
+
+    iget-object p1, p2, Lmuf;->a:Ljava/lang/Object;
+
+    iget-object p3, p0, Lxg8;->f:Ljava/lang/Object;
+
+    invoke-static {p1, p3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lmuf;->q:Ljava/lang/Object;
+
+    iput-object p1, p2, Lmuf;->a:Ljava/lang/Object;
+
+    :cond_0
+    return-object p2
 .end method

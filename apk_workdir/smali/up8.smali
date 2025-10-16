@@ -1,224 +1,96 @@
-.class public final Lup8;
+.class public final synthetic Lup8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx18;
+
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final synthetic a:I
 
-.field public b:Loq8;
+.field public final synthetic b:Lhtb;
+
+.field public final synthetic c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Loq8;Z)V
-    .locals 2
+.method public synthetic constructor <init>(Lhtb;Ljava/lang/Integer;I)V
+    .locals 0
+
+    iput p3, p0, Lup8;->a:I
+
+    iput-object p1, p0, Lup8;->b:Lhtb;
+
+    iput-object p2, p0, Lup8;->c:Ljava/lang/Integer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    iput-object v0, p0, Lup8;->a:Landroid/os/Bundle;
-
-    iput-object p1, p0, Lup8;->b:Loq8;
-
-    const-string v1, "selector"
-
-    iget-object p1, p1, Loq8;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    const-string p1, "activeScan"
-
-    invoke-virtual {v0, p1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "selector must not be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final invoke(Ljava/lang/Object;)V
     .locals 3
 
-    iget-object v0, p0, Lup8;->b:Loq8;
+    iget v0, p0, Lup8;->a:I
 
-    if-nez v0, :cond_1
+    check-cast p1, Lisb;
 
-    iget-object v0, p0, Lup8;->a:Landroid/os/Bundle;
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "selector"
+    iget-object v0, p0, Lup8;->b:Lhtb;
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    iget-boolean v0, v0, Lhtb;->t:Z
 
-    move-result-object v0
+    iget-object v1, p0, Lup8;->c:Ljava/lang/Integer;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    new-instance v2, Loq8;
+    invoke-interface {p1, v1, v0}, Lisb;->i(IZ)V
 
-    invoke-direct {v2, v0, v1}, Loq8;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
-
-    move-object v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Loq8;->c:Loq8;
-
-    :goto_0
-    iput-object v1, p0, Lup8;->b:Loq8;
-
-    if-nez v1, :cond_1
-
-    sget-object v0, Loq8;->c:Loq8;
-
-    iput-object v0, p0, Lup8;->b:Loq8;
-
-    :cond_1
     return-void
-.end method
 
-.method public final b()Z
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lup8;->b:Lhtb;
 
-    iget-object v0, p0, Lup8;->a:Landroid/os/Bundle;
+    iget-object v1, v0, Lhtb;->d:Lksb;
 
-    const-string v1, "activeScan"
+    iget-object v0, v0, Lhtb;->e:Lksb;
 
-    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    iget-object v2, p0, Lup8;->c:Ljava/lang/Integer;
 
-    move-result v0
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    return v0
-.end method
+    move-result v2
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-interface {p1, v1, v0, v2}, Lisb;->t(Lksb;Lksb;I)V
 
-    instance-of v0, p1, Lup8;
+    return-void
 
-    const/4 v1, 0x0
+    :pswitch_1
+    iget-object v0, p0, Lup8;->b:Lhtb;
 
-    if-eqz v0, :cond_0
+    iget-object v0, v0, Lhtb;->j:Louf;
 
-    check-cast p1, Lup8;
+    iget-object v1, p0, Lup8;->c:Ljava/lang/Integer;
 
-    invoke-virtual {p0}, Lup8;->a()V
-
-    iget-object v0, p0, Lup8;->b:Loq8;
-
-    invoke-virtual {p1}, Lup8;->a()V
-
-    iget-object v2, p1, Lup8;->b:Loq8;
-
-    invoke-virtual {v0, v2}, Loq8;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lup8;->b()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lup8;->b()Z
-
-    move-result p1
-
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    invoke-virtual {p0}, Lup8;->a()V
-
-    iget-object v0, p0, Lup8;->b:Loq8;
-
-    invoke-virtual {v0}, Loq8;->hashCode()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lup8;->b()Z
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    xor-int/2addr v0, v1
+    invoke-interface {p1, v0, v1}, Lisb;->m0(Louf;I)V
 
-    return v0
-.end method
+    return-void
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    nop
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DiscoveryRequest{ selector="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lup8;->a()V
-
-    iget-object v1, p0, Lup8;->b:Loq8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", activeScan="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lup8;->b()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isValid="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lup8;->a()V
-
-    iget-object v1, p0, Lup8;->b:Loq8;
-
-    invoke-virtual {v1}, Loq8;->a()V
-
-    iget-object v1, v1, Loq8;->b:Ljava/util/List;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    const-string v2, " }"
-
-    invoke-static {v0, v1, v2}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

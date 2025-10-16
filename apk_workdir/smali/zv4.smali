@@ -3,263 +3,144 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsv4;
+.implements Ljavax/inject/Provider;
+
+
+# static fields
+.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public volatile a:Lnl5;
 
-.field public final b:Luv4;
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/Class;
-
-.field public e:Law4;
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Luv4;ZLjava/lang/Class;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lzv4;->a:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzv4;->b:Luv4;
-
-    iput-boolean p3, p0, Lzv4;->c:Z
-
-    iput-object p4, p0, Lzv4;->d:Ljava/lang/Class;
-
-    iget-object p1, p2, Luv4;->e:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    sput-object v0, Lzv4;->c:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public static a(Lnl5;)Ljavax/inject/Provider;
+    .locals 2
+
+    instance-of v0, p0, Lzv4;
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lzv4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Lzv4;->c:Ljava/lang/Object;
+
+    iput-object v1, v0, Lzv4;->b:Ljava/lang/Object;
+
+    iput-object p0, v0, Lzv4;->a:Lnl5;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Luv4;)V
-    .locals 1
-
-    iget-object v0, p0, Lzv4;->e:Law4;
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Luv4;->l:Ljava/util/List;
-
-    invoke-static {v0, p1}, Law4;->a(Law4;Ljava/util/List;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    iget-object v0, p0, Lzv4;->e:Law4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Law4;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Luv4;Z)V
-    .locals 1
-
-    if-nez p2, :cond_3
-
-    iget-boolean p2, p1, Luv4;->i:Z
-
-    if-nez p2, :cond_3
-
-    iget-object p2, p0, Lzv4;->e:Law4;
-
-    if-eqz p2, :cond_1
-
-    iget-boolean p2, p2, Law4;->X:Z
-
-    if-eqz p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    iget-object p1, p1, Luv4;->l:Ljava/util/List;
-
-    const/4 p2, 0x0
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge p2, v0, :cond_3
-
-    invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkt4;
-
-    iget v0, v0, Lkt4;->b:I
-
-    if-nez v0, :cond_2
-
-    invoke-virtual {p0}, Lzv4;->g()V
-
-    return-void
-
-    :cond_2
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    return-void
-.end method
-
-.method public final e(Lkt4;Ljava/lang/Exception;)V
-    .locals 0
-
-    iget-object p2, p0, Lzv4;->e:Law4;
-
-    if-eqz p2, :cond_1
-
-    iget-boolean p2, p2, Law4;->X:Z
-
-    if-eqz p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    iget p1, p1, Lkt4;->b:I
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x7
-
-    if-ne p1, p2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-
-    :cond_3
-    :goto_1
-    const-string p1, "DownloadService"
-
-    const-string p2, "DownloadService wasn\'t running. Restarting."
-
-    invoke-static {p1, p2}, Lhq;->K(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lzv4;->g()V
-
-    return-void
-.end method
-
-.method public final f(Luv4;Lkt4;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final g()V
+.method public final get()Ljava/lang/Object;
     .locals 5
 
-    iget-boolean v0, p0, Lzv4;->c:Z
+    iget-object v0, p0, Lzv4;->b:Ljava/lang/Object;
 
-    const-string v1, "DownloadService"
+    sget-object v1, Lzv4;->c:Ljava/lang/Object;
 
-    iget-object v2, p0, Lzv4;->d:Ljava/lang/Class;
+    if-ne v0, v1, :cond_3
 
-    iget-object v3, p0, Lzv4;->a:Landroid/content/Context;
-
-    if-eqz v0, :cond_1
+    monitor-enter p0
 
     :try_start_0
-    const-string v0, "androidx.media3.exoplayer.downloadService.action.RESTART"
+    iget-object v0, p0, Lzv4;->b:Ljava/lang/Object;
 
-    new-instance v4, Landroid/content/Intent;
+    if-ne v0, v1, :cond_2
 
-    invoke-direct {v4, v3, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    iget-object v0, p0, Lzv4;->a:Lnl5;
 
-    invoke-virtual {v4, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget v2, Lg3g;->a:I
+    iget-object v2, p0, Lzv4;->b:Ljava/lang/Object;
 
-    const/16 v4, 0x1a
+    if-eq v2, v1, :cond_1
 
-    if-lt v2, v4, :cond_0
-
-    invoke-virtual {v3, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v3, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    const-string v0, "Failed to restart (foreground launch restriction)"
-
-    invoke-static {v1, v0}, Lhq;->K(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne v2, v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    :try_start_1
-    const-string v0, "androidx.media3.exoplayer.downloadService.action.INIT"
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    new-instance v4, Landroid/content/Intent;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, v3, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    const-string v4, "Scoped provider was invoked recursively returning different results: "
 
-    invoke-virtual {v4, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " & "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw v1
 
-    :catch_1
-    const-string v0, "Failed to restart (process is idle)"
-
-    invoke-static {v1, v0}, Lhq;->K(Ljava/lang/String;Ljava/lang/String;)V
-
+    :cond_1
     :goto_0
-    return-void
+    iput-object v0, p0, Lzv4;->b:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lzv4;->a:Lnl5;
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    monitor-exit p0
+
+    return-object v0
+
+    :goto_2
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_3
+    return-object v0
 .end method

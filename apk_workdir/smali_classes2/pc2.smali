@@ -1,55 +1,210 @@
-.class public final Lpc2;
+.class public final synthetic Lpc2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ler3;
+.implements Lfi6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:J
 
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:I
-
-.field public final j:Llq6;
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(JZZZLjava/lang/String;Ljava/lang/String;ZZILlq6;)V
+.method public synthetic constructor <init>(IJJ)V
     .locals 0
+
+    iput p1, p0, Lpc2;->a:I
+
+    iput-wide p2, p0, Lpc2;->b:J
+
+    iput-wide p4, p0, Lpc2;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lpc2;->a:J
+    return-void
+.end method
 
-    iput-boolean p3, p0, Lpc2;->b:Z
 
-    iput-boolean p4, p0, Lpc2;->c:Z
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
+    .locals 7
 
-    iput-boolean p5, p0, Lpc2;->d:Z
+    check-cast p1, Lpd2;
 
-    iput-object p6, p0, Lpc2;->e:Ljava/lang/String;
+    iget-wide v0, p0, Lpc2;->b:J
 
-    iput-object p7, p0, Lpc2;->f:Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput-boolean p8, p0, Lpc2;->g:Z
+    move-result-object v0
 
-    iput-boolean p9, p0, Lpc2;->h:Z
+    iget-wide v1, p0, Lpc2;->c:J
 
-    iput p10, p0, Lpc2;->i:I
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput-object p11, p0, Lpc2;->j:Llq6;
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    filled-new-array {v0, v3, v4}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v3, "kd2"
+
+    const-string v5, "reactions, updateLastReaction chatId = %d, lastReactedMessageId = %d, lastREaction = %s"
+
+    invoke-static {v3, v5, v0}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v0, v1, v5
+
+    if-nez v0, :cond_0
+
+    iput-wide v5, p1, Lpd2;->k0:J
+
+    iput-object v4, p1, Lpd2;->l0:Ljava/lang/String;
 
     return-void
+
+    :cond_0
+    iget-wide v5, p1, Lpd2;->k0:J
+
+    cmp-long v0, v5, v1
+
+    if-eqz v0, :cond_1
+
+    iput-wide v1, p1, Lpd2;->k0:J
+
+    :cond_1
+    iget-object v0, p1, Lpd2;->l0:Ljava/lang/String;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+
+    :cond_3
+    :goto_0
+    iput-object v4, p1, Lpd2;->l0:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lpc2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    const-wide/16 v0, 0x0
+
+    iget-wide v2, p0, Lpc2;->b:J
+
+    cmp-long v0, v2, v0
+
+    if-lez v0, :cond_0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v4, p0, Lpc2;->c:J
+
+    sub-long/2addr v0, v4
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    new-instance v0, Lru/ok/tamtam/rx/TamTamObservables$TamObservableException;
+
+    const-string v1, "timeout reached"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Lwga;->f(Ljava/lang/Throwable;)Lzg3;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Lwga;->f(Ljava/lang/Throwable;)Lzg3;
+
+    move-result-object p1
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    move-object v6, p1
+
+    check-cast v6, Lao5;
+
+    new-instance v0, Lks3;
+
+    const/4 v1, 0x1
+
+    iget-wide v2, p0, Lpc2;->b:J
+
+    iget-wide v4, p0, Lpc2;->c:J
+
+    invoke-direct/range {v0 .. v6}, Lks3;-><init>(IJJLjava/lang/Object;)V
+
+    new-instance p1, Lmg3;
+
+    invoke-direct {p1, v1, v0}, Lmg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Lsn5;
+
+    invoke-virtual {p1}, Lsn5;->a()Lape;
+
+    move-result-object p1
+
+    new-instance v0, Lpc2;
+
+    const/4 v1, 0x2
+
+    iget-wide v2, p0, Lpc2;->b:J
+
+    iget-wide v4, p0, Lpc2;->c:J
+
+    invoke-direct/range {v0 .. v5}, Lpc2;-><init>(IJJ)V
+
+    new-instance v1, Lkg3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, v2, v0}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

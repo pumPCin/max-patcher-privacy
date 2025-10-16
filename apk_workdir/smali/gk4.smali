@@ -1,66 +1,69 @@
-.class public final synthetic Lgk4;
+.class public final Lgk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxk4;
+.implements Lnb4;
 
 
 # instance fields
-.field public final synthetic a:Lqk4;
+.field public final a:Lcz8;
+
+.field public b:Lz1g;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqk4;)V
-    .locals 0
-
-    iput-object p1, p0, Lgk4;->a:Lqk4;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcz8;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lcz8;-><init>(I)V
+
+    iput-object v0, p0, Lgk4;->a:Lcz8;
+
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Lgk4;->d:I
+
+    iput v0, p0, Lgk4;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public i(ILmmf;[I)Lexc;
-    .locals 8
+.method public final a()Lqb4;
+    .locals 5
 
-    invoke-static {}, La67;->i()Lx57;
+    new-instance v0, Lkk4;
 
-    move-result-object v0
+    iget-object v1, p0, Lgk4;->c:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iget v2, p0, Lgk4;->d:I
 
-    move v5, v1
+    iget v3, p0, Lgk4;->e:I
 
-    :goto_0
-    iget v1, p2, Lmmf;->a:I
+    iget-object v4, p0, Lgk4;->a:Lcz8;
 
-    if-ge v5, v1, :cond_0
+    invoke-direct {v0, v1, v2, v3, v4}, Lkk4;-><init>(Ljava/lang/String;IILcz8;)V
 
-    new-instance v2, Llk4;
+    iget-object v1, p0, Lgk4;->b:Lz1g;
 
-    aget v7, p3, v5
+    if-eqz v1, :cond_0
 
-    iget-object v6, p0, Lgk4;->a:Lqk4;
-
-    move v3, p1
-
-    move-object v4, p2
-
-    invoke-direct/range {v2 .. v7}, Llk4;-><init>(ILmmf;ILqk4;I)V
-
-    invoke-virtual {v0, v2}, Lq57;->a(Ljava/lang/Object;)V
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
+    invoke-virtual {v0, v1}, Lfj0;->I(Lz1g;)V
 
     :cond_0
-    invoke-virtual {v0}, Lx57;->h()Lexc;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

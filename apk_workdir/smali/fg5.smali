@@ -1,29 +1,60 @@
-.class public abstract Lfg5;
+.class public final Lfg5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Enumeration;
 
-# static fields
-.field public static final a:Ljava/lang/Object;
 
-.field public static final b:Ljava/util/HashMap;
+# instance fields
+.field public final a:Ljava/util/Enumeration;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lgg5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object p1, p1, Lgg5;->a:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Ljava/util/Collections;->enumeration(Ljava/util/Collection;)Ljava/util/Enumeration;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfg5;->a:Ljava/util/Enumeration;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final hasMoreElements()Z
     .locals 1
 
-    new-instance v0, Ljava/lang/Object;
+    iget-object v0, p0, Lfg5;->a:Ljava/util/Enumeration;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
 
-    sput-object v0, Lfg5;->a:Ljava/lang/Object;
+    move-result v0
+
+    return v0
+.end method
+
+.method public final nextElement()Ljava/lang/Object;
+    .locals 2
 
     new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iget-object v1, p0, Lfg5;->a:Ljava/util/Enumeration;
 
-    sput-object v0, Lfg5;->b:Ljava/util/HashMap;
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
-    return-void
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map;
+
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    return-object v0
 .end method

@@ -1,80 +1,92 @@
 .class public final Lox5;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lox5;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lxw7;
+.field public a:I
 
-.field public final synthetic Y:Lzba;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lxw7;Lzba;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lox5;->X:Lxw7;
+    new-instance v0, Lwc4;
 
-    iput-object p2, p0, Lox5;->Y:Lzba;
+    const/16 v1, 0xd
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1}, Lwc4;-><init>(I)V
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lox5;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lox5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lox5;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lox5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lox5;
-
-    iget-object v0, p0, Lox5;->X:Lxw7;
-
-    iget-object v1, p0, Lox5;->Y:Lzba;
-
-    invoke-direct {p1, v0, v1, p2}, Lox5;-><init>(Lxw7;Lzba;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lox5;->X:Lxw7;
+    return v0
+.end method
 
-    iget-object v0, p0, Lox5;->Y:Lzba;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {p1, v0}, Lxw7;->f(Lzba;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p1, Laxf;->a:Laxf;
+    const-string v1, "SavedState{mAnchorPosition="
 
-    return-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lox5;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mAnchorOffset="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lox5;->b:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lox5;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lox5;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

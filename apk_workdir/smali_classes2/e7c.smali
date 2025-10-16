@@ -1,32 +1,11 @@
 .class public final Le7c;
-.super Ljava/lang/Object;
+.super Ls7c;
 .source "SourceFile"
-
-# interfaces
-.implements Lf7c;
-
-
-# static fields
-.field public static final a:Le7c;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Le7c;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Le7c;->a:Le7c;
-
-    return-void
-.end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -35,22 +14,48 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Le7c;
+    instance-of v1, p1, Le7c;
 
-    if-nez p1, :cond_1
+    if-nez v1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
     :cond_1
+    check-cast p1, Le7c;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x100
+
+    int-to-long v0, v0
+
+    return-wide v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x47cfa8d4
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/16 v0, 0x100
 
     return v0
 .end method
@@ -58,7 +63,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "TakePhoto"
+    const-string v0, "Attaches(count=-1)"
 
     return-object v0
 .end method

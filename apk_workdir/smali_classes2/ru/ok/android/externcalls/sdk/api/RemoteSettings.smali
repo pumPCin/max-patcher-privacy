@@ -19,9 +19,9 @@
         "",
         "",
         "key",
-        "Lrce;",
+        "Lqoe;",
         "get",
-        "(Ljava/lang/String;)Lrce;",
+        "(Ljava/lang/String;)Lqoe;",
         "Companion",
         "calls-sdk_release"
     }
@@ -37,6 +37,8 @@
 
 # static fields
 .field public static final Companion:Lru/ok/android/externcalls/sdk/api/RemoteSettings$Companion;
+
+.field public static final KEY_ML_FEATURES:Ljava/lang/String; = "android.mlfeatures.%s"
 
 .field public static final KEY_PLATFORM:Ljava/lang/String; = "android"
 
@@ -58,13 +60,13 @@
 
 
 # virtual methods
-.method public abstract get(Ljava/lang/String;)Lrce;
+.method public abstract get(Ljava/lang/String;)Lqoe;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lrce;"
+            "Lqoe;"
         }
     .end annotation
 .end method

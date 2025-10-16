@@ -1,69 +1,110 @@
-.class public final synthetic Lb37;
-.super Ljava/lang/Object;
+.class public final Lb37;
+.super Lnnf;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic e:I
 
-.field public final synthetic b:Lc37;
+.field public final synthetic f:I
 
-.field public final synthetic c:Landroid/graphics/Bitmap;
+.field public final synthetic g:I
 
-.field public final synthetic o:Lw66;
+.field public final synthetic h:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc37;Landroid/graphics/Bitmap;Lw66;I)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Object;III)V
     .locals 0
 
-    iput p4, p0, Lb37;->a:I
+    iput p5, p0, Lb37;->e:I
 
-    iput-object p1, p0, Lb37;->b:Lc37;
+    iput-object p2, p0, Lb37;->h:Ljava/lang/Object;
 
-    iput-object p2, p0, Lb37;->c:Landroid/graphics/Bitmap;
+    iput p3, p0, Lb37;->f:I
 
-    iput-object p3, p0, Lb37;->o:Lw66;
+    iput p4, p0, Lb37;->g:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x1
+
+    invoke-direct {p0, p1, p2}, Lnnf;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a()J
+    .locals 5
 
-    iget v0, p0, Lb37;->a:I
+    iget v0, p0, Lb37;->e:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lb37;->c:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lb37;->h:Ljava/lang/Object;
 
-    iget-object v1, p0, Lb37;->o:Lw66;
+    check-cast v0, Lg37;
 
-    iget-object v2, p0, Lb37;->b:Lc37;
+    :try_start_0
+    iget v1, p0, Lb37;->f:I
 
-    invoke-virtual {v2, v0, v1}, Lc37;->b(Landroid/graphics/Bitmap;Lw66;)V
+    iget v2, p0, Lb37;->g:I
 
-    return-void
+    iget-object v3, v0, Lg37;->G0:Lo37;
+
+    invoke-virtual {v3, v1, v2}, Lo37;->P(II)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v2, v2, v1}, Lg37;->c(IILjava/io/IOException;)V
+
+    :goto_0
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 
     :pswitch_0
-    iget-object v0, p0, Lb37;->c:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lb37;->h:Ljava/lang/Object;
 
-    iget-object v1, p0, Lb37;->o:Lw66;
+    check-cast v0, Lpd1;
 
-    iget-object v2, p0, Lb37;->b:Lc37;
+    iget-object v0, v0, Lpd1;->c:Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, v1}, Lc37;->b(Landroid/graphics/Bitmap;Lw66;)V
+    check-cast v0, Lg37;
 
-    return-void
+    iget v1, p0, Lb37;->f:I
 
-    nop
+    iget v2, p0, Lb37;->g:I
+
+    :try_start_1
+    iget-object v3, v0, Lg37;->G0:Lo37;
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v1, v2, v4}, Lo37;->o(IIZ)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v2, v2, v1}, Lg37;->c(IILjava/io/IOException;)V
+
+    :goto_1
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 
     :pswitch_data_0
     .packed-switch 0x0

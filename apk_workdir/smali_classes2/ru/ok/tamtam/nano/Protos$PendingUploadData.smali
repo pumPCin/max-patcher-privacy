@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$PendingUploadData;
-.super Ls59;
+.super Ldd9;
 .source "SourceFile"
 
 
@@ -35,7 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ls59;-><init>()V
+    invoke-direct {p0}, Ldd9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->clear()Lru/ok/tamtam/nano/Protos$PendingUploadData;
 
@@ -49,7 +49,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lad7;->b:Ljava/lang/Object;
+    sget-object v0, Lmi7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -91,7 +91,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lx73;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+.method public static parseFrom(Lba3;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -104,7 +104,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Lx73;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
 
     move-result-object p0
 
@@ -124,7 +124,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;-><init>()V
 
-    invoke-static {v0, p0}, Ls59;->mergeFrom(Ls59;[B)Ls59;
+    invoke-static {v0, p0}, Ldd9;->mergeFrom(Ldd9;[B)Ldd9;
 
     move-result-object p0
 
@@ -144,7 +144,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Ls59;->cachedSize:I
+    iput v0, p0, Ldd9;->cachedSize:I
 
     return-object p0
 .end method
@@ -162,7 +162,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v0, v3, v1, v2}, Lad7;->a(Ljava/util/Map;III)I
+    invoke-static {v0, v3, v1, v2}, Lmi7;->a(Ljava/util/Map;III)I
 
     move-result v0
 
@@ -174,7 +174,23 @@
     return v0
 .end method
 
-.method public mergeFrom(Lx73;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+.method public bridge synthetic mergeFrom(Lba3;)Ldd9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 5
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -183,11 +199,11 @@
     .end annotation
 
     .line 1
-    sget-object v2, Loq0;->b:Lr88;
+    sget-object v2, Lfyh;->a:Lye8;
 
     .line 2
     :goto_0
-    invoke-virtual {p1}, Lx73;->s()I
+    invoke-virtual {p1}, Lba3;->s()I
 
     move-result v0
 
@@ -198,7 +214,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lx73;->u(I)Z
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
 
     move-result v0
 
@@ -227,7 +243,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v7}, Lad7;->b(Lx73;Ljava/util/Map;Lr88;IILs59;II)Ljava/util/Map;
+    invoke-static/range {v0 .. v7}, Lmi7;->b(Lba3;Ljava/util/Map;Lye8;IILdd9;II)Ljava/util/Map;
 
     move-result-object p1
 
@@ -243,23 +259,7 @@
     return-object p0
 .end method
 
-.method public bridge synthetic mergeFrom(Lx73;)Ls59;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 5
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Lx73;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public writeTo(Ly73;)V
+.method public writeTo(Lca3;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -277,7 +277,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {p1, v0, v3, v1, v2}, Lad7;->d(Ly73;Ljava/util/Map;III)V
+    invoke-static {p1, v0, v3, v1, v2}, Lmi7;->d(Lca3;Ljava/util/Map;III)V
 
     :cond_0
     return-void

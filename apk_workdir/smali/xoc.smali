@@ -1,11 +1,14 @@
-.class public interface abstract Lxoc;
+.class public abstract Lxoc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lvoc;
 
 
-# virtual methods
-.method public abstract P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
-.end method
+# static fields
+.field public static mr_cast_volume_slider_layout_animation_duration_ms:I = 0x7f0b0038
+
+.field public static mr_controller_volume_group_list_animation_duration_ms:I = 0x7f0b0039
+
+.field public static mr_controller_volume_group_list_fade_in_duration_ms:I = 0x7f0b003a
+
+.field public static mr_controller_volume_group_list_fade_out_duration_ms:I = 0x7f0b003b
+
+.field public static mr_update_routes_delay_ms:I = 0x7f0b003c

@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/api/OkApiService$getExternalIdsByOkIds$1;
-.super Ljn7;
+.super Lvs7;
 .source "SourceFile"
 
 # interfaces
-.implements Lvd6;
+.implements Lqh6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->getExternalIdsByOkIds(Ljava/util/Collection;)Lrce;
+    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->getExternalIdsByOkIds(Ljava/util/Collection;)Lqoe;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljn7;",
-        "Lvd6;"
+        "Lvs7;",
+        "Lqh6;"
     }
 .end annotation
 
@@ -30,7 +30,7 @@
     d2 = {
         "",
         "it",
-        "Laxf;",
+        "Lzag;",
         "invoke",
         "(J)V",
         "<anonymous>"
@@ -56,7 +56,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Ljn7;-><init>(I)V
+    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, v0, v1}, Lru/ok/android/externcalls/sdk/api/OkApiService$getExternalIdsByOkIds$1;->invoke(J)V
 
-    sget-object p1, Laxf;->a:Laxf;
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

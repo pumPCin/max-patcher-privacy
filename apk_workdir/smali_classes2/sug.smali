@@ -1,215 +1,101 @@
-.class public final Lsug;
+.class public final synthetic Lsug;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lrug;
-
-.field public static final d:[Lql7;
+# interfaces
+.implements Ler3;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lr67;
-
-.field public final c:Z
+.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+    .locals 0
 
-    new-instance v0, Lrug;
+    iput p2, p0, Lsug;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsug;->Companion:Lrug;
-
-    sget-object v0, Lr67;->Companion:Lq67;
-
-    invoke-virtual {v0}, Lq67;->serializer()Lql7;
-
-    move-result-object v0
-
-    const/4 v1, 0x3
-
-    new-array v1, v1, [Lql7;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    const/4 v0, 0x2
-
-    aput-object v3, v1, v0
-
-    sput-object v1, Lsug;->d:[Lql7;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Lr67;Z)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x7
-
-    const/4 v1, 0x7
-
-    if-ne v1, v0, :cond_0
+    iput-object p1, p0, Lsug;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lsug;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lsug;->b:Lr67;
-
-    iput-boolean p4, p0, Lsug;->c:Z
-
     return-void
-
-    :cond_0
-    sget-object p2, Lqug;->a:Lqug;
-
-    invoke-virtual {p2}, Lqug;->d()Lmqd;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lomc;->A(IILmqd;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
+
+    iget v0, p0, Lsug;->a:I
+
+    iget-object v1, p0, Lsug;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    sget v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
+
+    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lws7;
+
+    invoke-static {v0}, Lkjd;->b(Lev4;)V
+
+    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+
+    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    sget p1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iget-wide v4, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
+
+    sub-long/2addr v2, v4
+
+    const-wide/16 v4, 0x3e8
+
+    cmp-long p1, v2, v4
+
+    if-lez p1, :cond_0
+
+    iget-object p1, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
 
     :cond_0
-    instance-of v1, p1, Lsug;
+    return-void
 
-    const/4 v2, 0x0
+    nop
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsug;
-
-    iget-object v1, p0, Lsug;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lsug;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lsug;->b:Lr67;
-
-    iget-object v3, p1, Lsug;->b:Lr67;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lsug;->c:Z
-
-    iget-boolean p1, p1, Lsug;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lsug;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lsug;->b:Lr67;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lsug;->c:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppHapticFeedbackImpact(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lsug;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", impactStyle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsug;->b:Lr67;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disableVibrationFallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lsug;->c:Z
-
-    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

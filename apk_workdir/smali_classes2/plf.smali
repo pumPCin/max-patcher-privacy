@@ -1,35 +1,74 @@
-.class public final Lplf;
+.class public final synthetic Lplf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lice;
+.field public final synthetic a:I
 
-.field public b:Lice;
+.field public final synthetic b:Lmmf;
+
+.field public final synthetic c:Lukf;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Lmmf;Lukf;I)V
+    .locals 0
+
+    iput p3, p0, Lplf;->a:I
+
+    iput-object p1, p0, Lplf;->b:Lmmf;
+
+    iput-object p2, p0, Lplf;->c:Lukf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lice;
+    return-void
+.end method
 
-    const-string v1, "https://0.0.0.0"
 
-    invoke-direct {v0, v1}, Lice;-><init>(Ljava/lang/String;)V
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    iput-object v0, p0, Lplf;->a:Lice;
+    iget v0, p0, Lplf;->a:I
 
-    new-instance v0, Lice;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lplf;->b:Lmmf;
 
-    invoke-direct {v0, v1}, Lice;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lplf;->c:Lukf;
 
-    iput-object v0, p0, Lplf;->b:Lice;
+    invoke-interface {v0, v1}, Lmmf;->f(Lukf;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lplf;->b:Lmmf;
+
+    iget-object v1, p0, Lplf;->c:Lukf;
+
+    invoke-interface {v0, v1}, Lmmf;->f(Lukf;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lplf;->b:Lmmf;
+
+    iget-object v1, p0, Lplf;->c:Lukf;
+
+    invoke-interface {v0, v1}, Lmmf;->f(Lukf;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

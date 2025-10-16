@@ -1,172 +1,110 @@
-.class public final Lvmc;
-.super Ld3;
-.source "SourceFile"
+.class public abstract Lvmc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static oneme_login_conductor:I = 0x7f0a06cf
 
-.field public final synthetic o:Lwmc;
+.field public static oneme_login_confirm_description:I = 0x7f0a06d0
 
+.field public static oneme_login_confirm_resend_code:I = 0x7f0a06d1
 
-# direct methods
-.method public constructor <init>(Lrmc;Lwmc;)V
-    .locals 1
+.field public static oneme_login_confirm_sms_input:I = 0x7f0a06d2
 
-    const/4 v0, 0x1
+.field public static oneme_login_confirm_timer:I = 0x7f0a06d3
 
-    iput v0, p0, Lvmc;->c:I
+.field public static oneme_login_confirm_title:I = 0x7f0a06d4
 
-    iput-object p2, p0, Lvmc;->o:Lwmc;
+.field public static oneme_login_input_constraint_layout:I = 0x7f0a06d6
 
-    const/16 p2, 0x9
+.field public static oneme_login_input_continue_button:I = 0x7f0a06d7
 
-    .line 1
-    invoke-direct {p0, p2, p1}, Ld3;-><init>(ILjava/lang/Object;)V
+.field public static oneme_login_input_description:I = 0x7f0a06d8
 
-    return-void
-.end method
+.field public static oneme_login_input_gradient_bg:I = 0x7f0a06db
 
-.method public constructor <init>(Lwmc;I)V
-    .locals 0
+.field public static oneme_login_input_help_button:I = 0x7f0a06dc
 
-    iput p2, p0, Lvmc;->c:I
+.field public static oneme_login_input_logo:I = 0x7f0a06dd
 
-    packed-switch p2, :pswitch_data_0
+.field public static oneme_login_input_name:I = 0x7f0a06de
 
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+.field public static oneme_login_input_name_btn_container:I = 0x7f0a06df
 
-    iput-object p1, p0, Lvmc;->o:Lwmc;
+.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f0a06e0
 
-    const/16 p1, 0x9
+.field public static oneme_login_input_name_confirmation_return:I = 0x7f0a06e1
 
-    .line 2
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+.field public static oneme_login_input_name_continue_btn:I = 0x7f0a06e2
 
-    return-void
+.field public static oneme_login_input_name_description:I = 0x7f0a06e3
 
-    :pswitch_0
-    const/4 p2, 0x0
+.field public static oneme_login_input_name_title:I = 0x7f0a06e4
 
-    .line 3
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.field public static oneme_login_input_name_toolbar:I = 0x7f0a06e5
 
-    move-result-object p2
+.field public static oneme_login_input_phone_number_input:I = 0x7f0a06e6
 
-    iput-object p1, p0, Lvmc;->o:Lwmc;
+.field public static oneme_login_input_surname:I = 0x7f0a06e7
 
-    const/16 p1, 0x9
+.field public static oneme_login_input_title:I = 0x7f0a06e8
 
-    .line 4
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+.field public static oneme_login_input_toolbar:I = 0x7f0a06e9
 
-    return-void
+.field public static oneme_login_neuro_avatars_appbar:I = 0x7f0a06ea
 
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_login_neuro_avatars_avatar:I = 0x7f0a06eb
 
+.field public static oneme_login_neuro_avatars_button_background:I = 0x7f0a06ec
 
-# virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.field public static oneme_login_neuro_avatars_cancel_action:I = 0x7f0a06ed
 
-    iget v0, p0, Lvmc;->c:I
+.field public static oneme_login_neuro_avatars_collapsible:I = 0x7f0a06ee
 
-    packed-switch v0, :pswitch_data_0
+.field public static oneme_login_neuro_avatars_continue_btn:I = 0x7f0a06ef
 
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static oneme_login_neuro_avatars_continue_disabled_btn:I = 0x7f0a06f0
 
-    move-result v0
+.field public static oneme_login_neuro_avatars_continue_enabled_btn:I = 0x7f0a06f1
 
-    if-nez v0, :cond_0
+.field public static oneme_login_neuro_avatars_description:I = 0x7f0a06f2
 
-    check-cast p2, Ljava/lang/Number;
+.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f0a06f3
 
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+.field public static oneme_login_neuro_avatars_pick_image_text:I = 0x7f0a06f4
 
-    move-result p2
+.field public static oneme_login_neuro_avatars_pick_neuroavatar_button:I = 0x7f0a06f5
 
-    check-cast p1, Ljava/lang/Number;
+.field public static oneme_login_neuro_avatars_pick_neuroavatar_icon:I = 0x7f0a06f6
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+.field public static oneme_login_neuro_avatars_recycler_view:I = 0x7f0a06f7
 
-    iget-object p1, p0, Lvmc;->o:Lwmc;
+.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f0a06f8
 
-    iget-object p1, p1, Lwmc;->w0:Lska;
+.field public static oneme_login_neuro_avatars_root_container:I = 0x7f0a06f9
 
-    const/4 v0, 0x1
+.field public static oneme_login_neuro_avatars_tabs:I = 0x7f0a06fa
 
-    invoke-virtual {p1, p2, v0}, Lska;->g(IZ)V
+.field public static oneme_login_neuro_avatars_tabs_shimmer:I = 0x7f0a06fb
 
-    :cond_0
-    return-void
+.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f0a06fc
 
-    :pswitch_0
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static oneme_login_neuro_avatars_title:I = 0x7f0a06fd
 
-    move-result v0
+.field public static oneme_login_neuro_avatars_toolbar:I = 0x7f0a06fe
 
-    if-nez v0, :cond_1
+.field public static oneme_login_sms_code_exceeded_ok_btn:I = 0x7f0a0700
 
-    check-cast p2, Lrmc;
+.field public static oneme_login_welcome_continue_btn:I = 0x7f0a0701
 
-    check-cast p1, Lrmc;
+.field public static oneme_login_welcome_description:I = 0x7f0a0702
 
-    iget-object p1, p0, Lvmc;->o:Lwmc;
+.field public static oneme_login_welcome_placeholder:I = 0x7f0a0703
 
-    iget-object p1, p1, Lwmc;->v0:Landroid/widget/TextView;
+.field public static oneme_login_welcome_switch_language_btn:I = 0x7f0a0704
 
-    iget-object p2, p2, Lrmc;->a:Ljava/lang/CharSequence;
+.field public static oneme_login_welcome_terms:I = 0x7f0a0705
 
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+.field public static oneme_login_welcome_title:I = 0x7f0a0706
 
-    :cond_1
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iget-object v0, p0, Lvmc;->o:Lwmc;
-
-    if-nez p2, :cond_2
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Lwmc;->a(Z)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    :cond_3
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_login_welcome_toolbar:I = 0x7f0a0707

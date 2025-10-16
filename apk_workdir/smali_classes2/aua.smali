@@ -1,99 +1,90 @@
-.class public final Laua;
-.super Ldua;
+.class public final synthetic Laua;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loh6;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Laua;",
-            ">;"
-        }
-    .end annotation
-.end field
 
-.field public static final b:Laua;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcua;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcua;I)V
+    .locals 0
 
-    new-instance v0, Laua;
+    iput p2, p0, Laua;->a:I
 
-    const-wide v1, 0x7fffffffffffffffL
+    iput-object p1, p0, Laua;->b:Lcua;
 
-    invoke-direct {v0, v1, v2}, Ldua;-><init>(J)V
-
-    sput-object v0, Laua;->b:Laua;
-
-    new-instance v0, Lqg8;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
-
-    sput-object v0, Laua;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x0
+    iget v0, p0, Laua;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v0, p0, Laua;->b:Lcua;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lcua;->c()Ljava/util/concurrent/ExecutorService;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Laua;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x6f5f0da2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Indeterminate"
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Laua;->b:Lcua;
 
-    const/4 p2, 0x1
+    new-instance v1, Lq8c;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v2, v0, Lcua;->c:Lqj3;
 
-    return-void
+    new-instance v3, Laua;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v0, v4}, Laua;-><init>(Lcua;I)V
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v2, v1, Lq8c;->a:Ljava/lang/Object;
+
+    iput-object v3, v1, Lq8c;->b:Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, v1, Lq8c;->c:Ljava/lang/Object;
+
+    new-instance v0, Lyta;
+
+    invoke-direct {v0, v1}, Lyta;-><init>(Lq8c;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Laua;->b:Lcua;
+
+    iget-object v0, v0, Lcua;->b:Lle;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

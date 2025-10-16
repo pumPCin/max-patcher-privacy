@@ -1,47 +1,29 @@
-.class public final synthetic Li08;
-.super Ljava/lang/Object;
+.class public final Li08;
+.super Lq08;
 .source "SourceFile"
-
-# interfaces
-.implements Lo08;
 
 
 # instance fields
-.field public final synthetic a:Lm08;
+.field public final X:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm08;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 9
 
-    iput-object p1, p0, Li08;->a:Lm08;
+    const-wide/16 v5, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v7, 0x0
 
-    return-void
-.end method
+    const-wide/16 v1, 0x0
 
+    move-object v0, p0
 
-# virtual methods
-.method public a(II)V
-    .locals 1
+    move-wide v3, p1
 
-    iget-object v0, p0, Li08;->a:Lm08;
+    invoke-direct/range {v0 .. v8}, Lq08;-><init>(JJJJ)V
 
-    iget-object v0, v0, Lm08;->t:Lpdd;
+    iput-object p3, v0, Li08;->X:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2}, Lsk9;->a(II)Landroid/graphics/Point;
-
-    move-result-object p1
-
-    iget p2, p1, Landroid/graphics/Point;->x:I
-
-    iget p1, p1, Landroid/graphics/Point;->y:I
-
-    invoke-virtual {v0, p2, p1}, Lpdd;->a(II)V
-
-    :cond_0
     return-void
 .end method

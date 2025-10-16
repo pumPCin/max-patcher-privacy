@@ -14,11 +14,11 @@
     .locals 2
 
     .line 27
-    sget v0, Lz8c;->dialogPreferenceStyle:I
+    sget v0, Lxic;->dialogPreferenceStyle:I
 
     const v1, 0x1010091
 
-    invoke-static {v0, v1, p1}, Lggh;->q(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Lqzh;->d(IILandroid/content/Context;)I
 
     move-result v0
 
@@ -35,7 +35,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroidx/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 2
-    sget-object v0, Lrjc;->ListPreference:[I
+    sget-object v0, Lstc;->ListPreference:[I
 
     const/4 v1, 0x0
 
@@ -44,9 +44,9 @@
     move-result-object v0
 
     .line 3
-    sget v2, Lrjc;->ListPreference_entries:I
+    sget v2, Lstc;->ListPreference_entries:I
 
-    sget v3, Lrjc;->ListPreference_android_entries:I
+    sget v3, Lstc;->ListPreference_android_entries:I
 
     .line 4
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
@@ -65,9 +65,9 @@
     iput-object v2, p0, Landroidx/preference/ListPreference;->s0:[Ljava/lang/CharSequence;
 
     .line 7
-    sget v2, Lrjc;->ListPreference_entryValues:I
+    sget v2, Lstc;->ListPreference_entryValues:I
 
-    sget v3, Lrjc;->ListPreference_android_entryValues:I
+    sget v3, Lstc;->ListPreference_android_entryValues:I
 
     .line 8
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
@@ -81,7 +81,7 @@
 
     .line 10
     :cond_1
-    sget v2, Lrjc;->ListPreference_useSimpleSummaryProvider:I
+    sget v2, Lstc;->ListPreference_useSimpleSummaryProvider:I
 
     .line 11
     invoke-virtual {v0, v2, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -96,27 +96,25 @@
     if-eqz v2, :cond_3
 
     .line 13
-    sget-object v2, Lwgd;->u0:Lwgd;
+    sget-object v2, Llw3;->v0:Llw3;
 
     if-nez v2, :cond_2
 
     .line 14
-    new-instance v2, Lwgd;
-
-    const/16 v3, 0xd
+    new-instance v2, Llw3;
 
     .line 15
-    invoke-direct {v2, v3}, Lwgd;-><init>(I)V
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
     .line 16
-    sput-object v2, Lwgd;->u0:Lwgd;
+    sput-object v2, Llw3;->v0:Llw3;
 
     .line 17
     :cond_2
-    sget-object v2, Lwgd;->u0:Lwgd;
+    sget-object v2, Llw3;->v0:Llw3;
 
     .line 18
-    iput-object v2, p0, Landroidx/preference/Preference;->Z:Lhnb;
+    iput-object v2, p0, Landroidx/preference/Preference;->Z:Ldwb;
 
     .line 19
     invoke-virtual {p0}, Landroidx/preference/Preference;->b()V
@@ -126,16 +124,16 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 21
-    sget-object v0, Lrjc;->Preference:[I
+    sget-object v0, Lstc;->Preference:[I
 
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 22
-    sget p2, Lrjc;->Preference_summary:I
+    sget p2, Lstc;->Preference_summary:I
 
-    sget p3, Lrjc;->Preference_android_summary:I
+    sget p3, Lstc;->Preference_android_summary:I
 
     .line 23
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -164,11 +162,11 @@
 .method public final a()Ljava/lang/CharSequence;
     .locals 3
 
-    iget-object v0, p0, Landroidx/preference/Preference;->Z:Lhnb;
+    iget-object v0, p0, Landroidx/preference/Preference;->Z:Ldwb;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0}, Lhnb;->b(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
+    invoke-interface {v0, p0}, Ldwb;->g(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -215,7 +213,7 @@
     return-object v1
 .end method
 
-.method public final c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+.method public final d(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;

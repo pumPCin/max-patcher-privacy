@@ -1,118 +1,26 @@
-.class public final Llm1;
-.super Lc2f;
+.class public interface abstract Llm1;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lpe6;
-
-
-# instance fields
-.field public synthetic X:J
-
-.field public synthetic Y:Z
-
-.field public synthetic Z:Z
-
-.field public synthetic r0:Lna;
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lkx5;)Ljava/lang/Object;
-    .locals 3
+.method public d(Landroid/graphics/RectF;Z)V
+    .locals 0
 
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    check-cast p3, Ljava/lang/Boolean;
-
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p4, Lna;
-
-    new-instance p3, Llm1;
-
-    const/4 v2, 0x5
-
-    invoke-direct {p3, v2, p5}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-wide v0, p3, Llm1;->X:J
-
-    iput-boolean p1, p3, Llm1;->Y:Z
-
-    iput-boolean p2, p3, Llm1;->Z:Z
-
-    iput-object p4, p3, Llm1;->r0:Lna;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    invoke-virtual {p3, p1}, Llm1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public e(Z)V
+    .locals 0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    iget-wide v0, p0, Llm1;->X:J
+.method public abstract f(Lx08;ZJ)V
+.end method
 
-    iget-boolean p1, p0, Llm1;->Y:Z
+.method public abstract getShouldScaleMainOpponent()Z
+.end method
 
-    iget-boolean v2, p0, Llm1;->Z:Z
-
-    iget-object v3, p0, Llm1;->r0:Lna;
-
-    if-eqz p1, :cond_0
-
-    if-nez v2, :cond_0
-
-    iget-object p1, v3, Lna;->b:Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-wide v4, v3, Lna;->c:J
-
-    cmp-long p1, v0, v4
-
-    if-gez p1, :cond_0
-
-    iget-object p1, v3, Lna;->a:Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract o(Z)V
 .end method

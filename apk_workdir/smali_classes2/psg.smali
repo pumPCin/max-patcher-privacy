@@ -1,170 +1,131 @@
-.class public final Lpsg;
+.class public abstract Lpsg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lyn7;
+# static fields
+.field public static final a:Ljava/util/List;
 
-.field public final b:Lyn7;
+.field public static final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 13
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lpsg;->a:Lyn7;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iput-object p2, p0, Lpsg;->b:Lyn7;
+    invoke-static {v0, v1}, Lpx5;->a(FF)J
 
-    return-void
-.end method
+    move-result-wide v2
 
-.method public static a(Lpsg;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
-    .locals 3
+    new-instance v4, Lpx5;
 
-    and-int/lit8 v0, p9, 0x10
+    invoke-direct {v4, v2, v3}, Lpx5;-><init>(J)V
 
-    if-eqz v0, :cond_0
+    const/high16 v2, 0x44610000    # 900.0f
 
-    const/4 p6, 0x0
+    invoke-static {v2, v1}, Lpx5;->a(FF)J
 
-    :cond_0
-    and-int/lit8 v0, p9, 0x20
+    move-result-wide v5
 
-    const/4 v1, 0x0
+    new-instance v3, Lpx5;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v3, v5, v6}, Lpx5;-><init>(J)V
 
-    move-object p7, v1
+    const v5, 0x44c1c000    # 1550.0f
 
-    :cond_1
-    and-int/lit8 p9, p9, 0x40
+    invoke-static {v5, v0}, Lpx5;->a(FF)J
 
-    if-eqz p9, :cond_2
+    move-result-wide v6
 
-    move-object p8, v1
+    new-instance v8, Lpx5;
 
-    :cond_2
-    iget-object p9, p0, Lpsg;->a:Lyn7;
+    invoke-direct {v8, v6, v7}, Lpx5;-><init>(J)V
 
-    iget-object p0, p0, Lpsg;->b:Lyn7;
+    const v6, 0x44dac000    # 1750.0f
 
-    invoke-interface {p9}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-static {v6, v1}, Lpx5;->a(FF)J
 
-    move-result-object p9
+    move-result-wide v9
 
-    check-cast p9, Lxc;
+    new-instance v7, Lpx5;
 
-    new-instance v0, Ll88;
+    invoke-direct {v7, v9, v10}, Lpx5;-><init>(J)V
 
-    invoke-direct {v0}, Ll88;-><init>()V
+    const/high16 v9, 0x44fa0000    # 2000.0f
 
-    invoke-interface {p0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-static {v9, v1}, Lpx5;->a(FF)J
 
-    move-result-object v1
+    move-result-wide v10
 
-    check-cast v1, Lm63;
+    new-instance v12, Lpx5;
 
-    check-cast v1, Lt08;
+    invoke-direct {v12, v10, v11}, Lpx5;-><init>(J)V
 
-    invoke-virtual {v1}, Lt08;->K()J
+    filled-new-array {v4, v3, v8, v7, v12}, [Lpx5;
 
-    move-result-wide v1
+    move-result-object v3
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v3}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v3
 
-    const-string v2, "sessionId"
+    sput-object v3, Lpsg;->a:Ljava/util/List;
 
-    invoke-virtual {v0, v2, v1}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v3, Lms;
 
-    const-string v1, "botId"
+    const v4, 0x3ba3d70a    # 0.005f
 
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {v3, v0, v0, v4, v0}, Lms;-><init>(FFFF)V
 
-    move-result-object p2
+    new-instance v4, Lms;
 
-    invoke-virtual {v0, v1, p2}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const v7, 0x3f03d70a    # 0.515f
 
-    const-string p2, "webAppName"
+    const/high16 v8, 0x43370000    # 183.0f
 
-    invoke-virtual {v0, p2, p4}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v4, v2, v0, v7, v8}, Lms;-><init>(FFFF)V
 
-    const-string p2, "success"
+    new-instance v0, Lms;
 
-    invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const v2, 0x3f5be76d    # 0.859f
 
-    move-result-object p3
+    const/high16 v7, 0x43890000    # 274.0f
 
-    invoke-virtual {v0, p2, p3}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const v8, 0x3f05e354    # 0.523f
 
-    const-string p2, "type"
+    invoke-direct {v0, v5, v8, v2, v7}, Lms;-><init>(FFFF)V
 
-    invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v2, Lms;
 
-    move-result-object p3
+    const v5, 0x3f7020c5    # 0.938f
 
-    invoke-virtual {v0, p2, p3}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const v7, 0x43988000    # 305.0f
 
-    if-eqz p7, :cond_3
+    const v8, 0x3f445a1d    # 0.767f
 
-    const-string p2, "method"
+    invoke-direct {v2, v6, v8, v5, v7}, Lms;-><init>(FFFF)V
 
-    invoke-virtual {v0, p2, p7}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v5, Lms;
 
-    :cond_3
-    if-eqz p8, :cond_4
+    const v6, 0x3f7eb852    # 0.995f
 
-    const-string p2, "code"
+    const/high16 v7, 0x43b40000    # 360.0f
 
-    invoke-virtual {v0, p2, p8}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v5, v9, v6, v1, v7}, Lms;-><init>(FFFF)V
 
-    :cond_4
-    invoke-virtual {v0}, Ll88;->b()Ll88;
+    filled-new-array {v3, v4, v0, v2, v5}, [Lms;
 
-    move-result-object p2
+    move-result-object v0
 
-    new-instance p3, Lkd7;
+    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    const-string p4, "WEBAPP_BRIDGE"
-
-    iput-object p4, p3, Lkd7;->c:Ljava/lang/String;
-
-    invoke-interface {p0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lm63;
-
-    check-cast p0, Lfhd;
-
-    invoke-virtual {p0}, Lfhd;->s()J
-
-    move-result-wide p4
-
-    iput-wide p4, p3, Lkd7;->b:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p4
-
-    iput-wide p4, p3, Lkd7;->a:J
-
-    iput-object p1, p3, Lkd7;->o:Ljava/lang/String;
-
-    invoke-virtual {p3, p2}, Lkd7;->b(Ljava/util/Map;)V
-
-    invoke-virtual {p3}, Lkd7;->d()Lm28;
-
-    move-result-object p0
-
-    invoke-virtual {p9, p0}, Lxc;->i(Lm28;)Z
+    sput-object v0, Lpsg;->b:Ljava/util/List;
 
     return-void
 .end method

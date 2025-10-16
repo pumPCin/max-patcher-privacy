@@ -1,243 +1,92 @@
 .class public final Luf0;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
-
-# static fields
-.field public static final e:Luf0;
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lzx0;
+.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-.field public final b:Lnzc;
-
-.field public final c:Ltf0;
-
-.field public final d:Lsf0;
+.field public final synthetic Y:Ljava/util/HashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Luf0;
-
-    new-instance v1, Ltf0;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, v2}, Ltf0;-><init>(ZZ)V
-
-    new-instance v3, Lsf0;
-
-    invoke-direct {v3, v2, v2}, Lsf0;-><init>(ZZ)V
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v2, v1, v3}, Luf0;-><init>(Lzx0;Lnzc;Ltf0;Lsf0;)V
-
-    sput-object v0, Luf0;->e:Luf0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzx0;Lnzc;Ltf0;Lsf0;)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iput-object p1, p0, Luf0;->a:Lzx0;
+    iput-object p2, p0, Luf0;->Y:Ljava/util/HashSet;
 
-    iput-object p2, p0, Luf0;->b:Lnzc;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Luf0;->c:Ltf0;
-
-    iput-object p4, p0, Luf0;->d:Lsf0;
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lb54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Luf0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Luf0;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Luf0;
 
-    iget-object v1, p0, Luf0;->a:Lzx0;
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object v3, p1, Luf0;->a:Lzx0;
+    invoke-virtual {p1, p2}, Luf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Luf0;->b:Lnzc;
-
-    iget-object v3, p1, Luf0;->b:Lnzc;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Luf0;->c:Ltf0;
-
-    iget-object v3, p1, Luf0;->c:Ltf0;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Luf0;->d:Lsf0;
-
-    iget-object p1, p1, Luf0;->d:Lsf0;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Luf0;->a:Lzx0;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lzx0;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Luf0;->b:Lnzc;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Lnzc;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Luf0;->c:Ltf0;
-
-    invoke-virtual {v0}, Ltf0;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Luf0;->d:Lsf0;
-
-    invoke-virtual {v1}, Lsf0;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Luf0;
 
-    const-string v1, "BadNetworkIndicatorConfig(calcNetworkStatusConfig="
+    iget-object v0, p0, Luf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Luf0;->Y:Ljava/util/HashSet;
 
-    iget-object v1, p0, Luf0;->a:Lzx0;
+    invoke-direct {p1, v0, v1, p2}, Luf0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ", reportNetworkStatusConfig="
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Luf0;->b:Lnzc;
+    iget-object p1, p0, Luf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Lvnh;
 
-    const-string v1, ", signalingConfig="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lvnh;->g()Landroidx/work/impl/model/WorkersQueueDao;
 
-    iget-object v1, p0, Luf0;->c:Ltf0;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Luf0;->Y:Ljava/util/HashSet;
 
-    const-string v1, ", debugLoggingConfig="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Luf0;->d:Lsf0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lab3;->Y(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v0
 
-    return-object v0
+    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->delete(Ljava/util/List;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

@@ -1,78 +1,85 @@
-.class public final Liff;
-.super Lc2f;
+.class public final enum Liff;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
+
+# static fields
+.field public static final enum a:Liff;
+
+.field public static final enum b:Liff;
+
+.field public static final enum c:Liff;
+
+.field public static final synthetic o:[Liff;
 
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-    check-cast p1, Ln24;
+    new-instance v0, Liff;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "ALREADY_DOWNLOADING_BY_OTHER"
 
-    invoke-virtual {p0, p1, p2}, Liff;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p1, Liff;
+    sput-object v0, Liff;->a:Liff;
 
-    sget-object p2, Laxf;->a:Laxf;
+    new-instance v1, Liff;
 
-    invoke-virtual {p1, p2}, Liff;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "FINISH"
 
-    return-object p2
-.end method
+    const/4 v3, 0x1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Liff;
+    sput-object v1, Liff;->b:Liff;
 
-    const/4 v0, 0x2
+    new-instance v2, Liff;
 
-    invoke-direct {p1, v0, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v3, "ERROR"
 
-    return-object p1
-.end method
+    const/4 v4, 0x2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    sput-object v2, Liff;->c:Liff;
 
-    invoke-static {}, Ltf2;->z()Lt8b;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lt8b;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Map;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Threads count: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array {v0, v1, v2}, [Liff;
 
     move-result-object v0
 
-    iget-object p1, p1, Lt8b;->c:Ljava/lang/Object;
+    sput-object v0, Liff;->o:[Liff;
 
-    check-cast p1, Ljava/lang/Throwable;
+    return-void
+.end method
 
-    const-string v1, "ThreadsDeveloperTools"
+.method public static valueOf(Ljava/lang/String;)Liff;
+    .locals 1
 
-    invoke-static {v1, v0, p1}, Lyt3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-class v0, Liff;
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    return-object p1
+    move-result-object p0
+
+    check-cast p0, Liff;
+
+    return-object p0
+.end method
+
+.method public static values()[Liff;
+    .locals 1
+
+    sget-object v0, Liff;->o:[Liff;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Liff;
+
+    return-object v0
 .end method

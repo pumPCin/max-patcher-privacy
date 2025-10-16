@@ -2,47 +2,78 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/media/Spatializer$OnSpatializerStateChangedListener;
-
 
 # instance fields
-.field public final synthetic a:Ldl4;
+.field public a:Lj6d;
 
+.field public b:Lj6d;
 
-# direct methods
-.method public constructor <init>(Ldl4;)V
-    .locals 0
+.field public c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:I
 
-    iput-object p1, p0, Ltk4;->a:Ldl4;
+.field public e:I
 
-    return-void
-.end method
+.field public f:I
 
 
 # virtual methods
-.method public final onSpatializerAvailableChanged(Landroid/media/Spatializer;Z)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object p1, Ldl4;->i:Lj0b;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Ltk4;->a:Ldl4;
+    const-string v1, "ChangeInfo{oldHolder="
 
-    invoke-virtual {p1}, Ldl4;->e()V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    iget-object v1, p0, Ltk4;->a:Lj6d;
 
-.method public final onSpatializerEnabledChanged(Landroid/media/Spatializer;Z)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Ldl4;->i:Lj0b;
+    const-string v1, ", newHolder="
 
-    iget-object p1, p0, Ltk4;->a:Ldl4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ldl4;->e()V
+    iget-object v1, p0, Ltk4;->b:Lj6d;
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fromX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltk4;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fromY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltk4;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", toX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltk4;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", toY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltk4;->f:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lwc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

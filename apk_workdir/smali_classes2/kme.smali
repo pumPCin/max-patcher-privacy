@@ -1,267 +1,360 @@
-.class public final Lkme;
+.class public abstract Lkme;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Z
+.field public b:Ljava/lang/Runnable;
 
-.field public final synthetic c:Landroid/widget/TextView;
+.field public c:Lgne;
 
+.field public d:Ljava/util/concurrent/ExecutorService;
 
-# direct methods
-.method public synthetic constructor <init>(ZLandroid/widget/TextView;I)V
-    .locals 0
+.field public e:Lyuc;
 
-    iput p3, p0, Lkme;->a:I
+.field public f:Lzuc;
 
-    iput-boolean p1, p0, Lkme;->b:Z
+.field public g:J
 
-    iput-object p2, p0, Lkme;->c:Landroid/widget/TextView;
+.field public h:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public i:Lic5;
 
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
+.field public j:Z
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Lkme;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-boolean p1, p0, Lkme;->b:Z
-
-    iget-object v0, p0, Lkme;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract build()Lime;
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+.method public final getEndpointParameters()Lic5;
+    .locals 1
 
-    iget p1, p0, Lkme;->a:I
+    iget-object v0, p0, Lkme;->i:Lic5;
 
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-boolean p1, p0, Lkme;->b:Z
-
-    iget-object v0, p0, Lkme;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+.method public final getExecutor()Ljava/util/concurrent/ExecutorService;
+    .locals 1
+
+    iget-object v0, p0, Lkme;->d:Ljava/util/concurrent/ExecutorService;
+
+    return-object v0
+.end method
+
+.method public final getLog()Lyuc;
+    .locals 1
+
+    iget-object v0, p0, Lkme;->e:Lyuc;
+
+    return-object v0
+.end method
+
+.method public final getLogConfiguration()Lzuc;
+    .locals 1
+
+    iget-object v0, p0, Lkme;->f:Lzuc;
+
+    return-object v0
+.end method
+
+.method public final getReconnectTimeoutAction()Ljava/lang/Runnable;
+    .locals 1
+
+    iget-object v0, p0, Lkme;->b:Ljava/lang/Runnable;
+
+    return-object v0
+.end method
+
+.method public final getServerPingTimeoutMs()J
+    .locals 2
+
+    iget-wide v0, p0, Lkme;->g:J
+
+    return-wide v0
+.end method
+
+.method public final getSignalingStat()Lgne;
+    .locals 1
+
+    iget-object v0, p0, Lkme;->c:Lgne;
+
+    return-object v0
+.end method
+
+.method public final getTimeoutMS()J
+    .locals 2
+
+    iget-wide v0, p0, Lkme;->a:J
+
+    return-wide v0
+.end method
+
+.method public final isFastRecoverEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lkme;->h:Z
+
+    return v0
+.end method
+
+.method public final isReplaceParametersInEndpointEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lkme;->j:Z
+
+    return v0
+.end method
+
+.method public final setEndpointParameters(Lic5;)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lic5;",
+            ")",
+            "Lkme;"
+        }
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lkme;->i:Lic5;
+
+    return-object p0
+.end method
+
+.method public final setEndpointParameters(Lic5;)V
     .locals 0
 
-    iget p1, p0, Lkme;->a:I
+    .line 1
+    iput-object p1, p0, Lkme;->i:Lic5;
 
     return-void
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 3
+.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/ExecutorService;",
+            ")",
+            "Lkme;"
+        }
+    .end annotation
 
-    iget p1, p0, Lkme;->a:I
+    .line 2
+    iput-object p1, p0, Lkme;->d:Ljava/util/concurrent/ExecutorService;
 
-    packed-switch p1, :pswitch_data_0
+    return-object p0
+.end method
 
-    iget-boolean p1, p0, Lkme;->b:Z
+.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)V
+    .locals 0
 
-    iget-object v0, p0, Lkme;->c:Landroid/widget/TextView;
+    .line 1
+    iput-object p1, p0, Lkme;->d:Ljava/util/concurrent/ExecutorService;
 
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v1, 0x4
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Li8e;->I(F)I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_0
     return-void
+.end method
 
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+.method public final setFastRecoverEnabled(Z)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Lkme;"
+        }
+    .end annotation
 
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
+    .line 2
+    iput-boolean p1, p0, Lkme;->h:Z
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    return-object p0
+.end method
 
-    throw p1
+.method public final setFastRecoverEnabled(Z)V
+    .locals 0
 
-    :pswitch_0
+    .line 1
+    iput-boolean p1, p0, Lkme;->h:Z
+
     return-void
+.end method
 
-    nop
+.method public final setIsReplaceParametersInEndpointEnabled(Z)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Lkme;"
+        }
+    .end annotation
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput-boolean p1, p0, Lkme;->j:Z
+
+    return-object p0
+.end method
+
+.method public final setLog(Lyuc;)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lyuc;",
+            ")",
+            "Lkme;"
+        }
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lkme;->e:Lyuc;
+
+    return-object p0
+.end method
+
+.method public final setLog(Lyuc;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lkme;->e:Lyuc;
+
+    return-void
+.end method
+
+.method public final setLogConfiguration(Lzuc;)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lzuc;",
+            ")",
+            "Lkme;"
+        }
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lkme;->f:Lzuc;
+
+    return-object p0
+.end method
+
+.method public final setLogConfiguration(Lzuc;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lkme;->f:Lzuc;
+
+    return-void
+.end method
+
+.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Runnable;",
+            ")",
+            "Lkme;"
+        }
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lkme;->b:Ljava/lang/Runnable;
+
+    return-object p0
+.end method
+
+.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lkme;->b:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+.method public final setReplaceParametersInEndpointEnabled(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lkme;->j:Z
+
+    return-void
+.end method
+
+.method public final setServerPingTimeoutMs(J)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Lkme;"
+        }
+    .end annotation
+
+    .line 2
+    iput-wide p1, p0, Lkme;->g:J
+
+    return-object p0
+.end method
+
+.method public final setServerPingTimeoutMs(J)V
+    .locals 0
+
+    .line 1
+    iput-wide p1, p0, Lkme;->g:J
+
+    return-void
+.end method
+
+.method public final setSignalingStat(Lgne;)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgne;",
+            ")",
+            "Lkme;"
+        }
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lkme;->c:Lgne;
+
+    return-object p0
+.end method
+
+.method public final setSignalingStat(Lgne;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lkme;->c:Lgne;
+
+    return-void
+.end method
+
+.method public final setTimeoutMS(J)Lkme;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Lkme;"
+        }
+    .end annotation
+
+    .line 2
+    iput-wide p1, p0, Lkme;->a:J
+
+    return-object p0
+.end method
+
+.method public final setTimeoutMS(J)V
+    .locals 0
+
+    .line 1
+    iput-wide p1, p0, Lkme;->a:J
+
+    return-void
 .end method

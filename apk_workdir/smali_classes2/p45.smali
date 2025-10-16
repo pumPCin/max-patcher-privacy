@@ -1,11 +1,8 @@
-.class public interface abstract Lp45;
-.super Ljava/lang/Object;
+.class public abstract Lp45;
+.super Lzgc;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a()Liu5;
-.end method
-
-.method public abstract b(Landroid/app/Activity;)V
+.method public abstract g(Z)V
 .end method

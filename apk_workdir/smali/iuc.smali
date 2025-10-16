@@ -1,58 +1,65 @@
-.class public final synthetic Liuc;
+.class public abstract Liuc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic X:Ljava/lang/Throwable;
+# static fields
+.field public static CoordinatorLayout:[I = null
 
-.field public final synthetic a:Lquc;
+.field public static CoordinatorLayout_Layout:[I = null
 
-.field public final synthetic b:Lsa0;
+.field public static CoordinatorLayout_Layout_android_layout_gravity:I = 0x0
 
-.field public final synthetic c:J
+.field public static CoordinatorLayout_Layout_layout_anchor:I = 0x1
 
-.field public final synthetic o:I
+.field public static CoordinatorLayout_Layout_layout_anchorGravity:I = 0x2
+
+.field public static CoordinatorLayout_Layout_layout_behavior:I = 0x3
+
+.field public static CoordinatorLayout_Layout_layout_dodgeInsetEdges:I = 0x4
+
+.field public static CoordinatorLayout_Layout_layout_insetEdge:I = 0x5
+
+.field public static CoordinatorLayout_Layout_layout_keyline:I = 0x6
+
+.field public static CoordinatorLayout_keylines:I = 0x0
+
+.field public static CoordinatorLayout_statusBarBackground:I = 0x1
 
 
 # direct methods
-.method public synthetic constructor <init>(Lquc;Lsa0;JILjava/lang/Throwable;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v0, 0x7f040588
 
-    iput-object p1, p0, Liuc;->a:Lquc;
+    const v1, 0x7f0407e8
 
-    iput-object p2, p0, Liuc;->b:Lsa0;
+    filled-new-array {v0, v1}, [I
 
-    iput-wide p3, p0, Liuc;->c:J
+    move-result-object v0
 
-    iput p5, p0, Liuc;->o:I
+    sput-object v0, Liuc;->CoordinatorLayout:[I
 
-    iput-object p6, p0, Liuc;->X:Ljava/lang/Throwable;
+    const/4 v0, 0x7
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
+    fill-array-data v0, :array_0
 
-# virtual methods
-.method public final run()V
-    .locals 6
-
-    iget v4, p0, Liuc;->o:I
-
-    iget-object v5, p0, Liuc;->X:Ljava/lang/Throwable;
-
-    iget-object v0, p0, Liuc;->a:Lquc;
-
-    iget-object v1, p0, Liuc;->b:Lsa0;
-
-    iget-wide v2, p0, Liuc;->c:J
-
-    invoke-virtual/range {v0 .. v5}, Lquc;->I(Lsa0;JILjava/lang/Throwable;)V
+    sput-object v0, Liuc;->CoordinatorLayout_Layout:[I
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x10100b3
+        0x7f040599
+        0x7f04059a
+        0x7f04059b
+        0x7f0405cf
+        0x7f0405dd
+        0x7f0405de
+    .end array-data
 .end method

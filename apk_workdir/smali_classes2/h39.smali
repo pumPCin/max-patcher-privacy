@@ -1,57 +1,76 @@
 .class public final Lh39;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/util/List;
-
-.field public Y:Z
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Li39;
-
-.field public final synthetic r0:Li39;
-
-.field public s0:I
-
-
-# direct methods
-.method public constructor <init>(Li39;Lwy3;)V
-    .locals 0
-
-    iput-object p1, p0, Lh39;->r0:Li39;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lh39;->Z:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Lh39;->s0:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Lh39;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Lh39;->s0:I
+    goto :goto_0
 
+    :cond_1
+    check-cast p1, Lh39;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Ld39;->a:Ld39;
+
+    invoke-virtual {p1, p1}, Ld39;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
     const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    iget-object v1, p0, Lh39;->r0:Li39;
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-virtual {v1, p0, v0, p1}, Li39;->a(Lwy3;Ljava/util/List;Z)Ljava/lang/Object;
+    return p1
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, 0x72d9d95f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MediaTypePickerViewState(selectedButton="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Ld39;->a:Ld39;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

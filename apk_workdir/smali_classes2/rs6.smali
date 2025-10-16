@@ -3,48 +3,57 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lrs6;
-
-.field public static final b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public static c:Landroid/content/Context;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Lrs6;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    sput-object v0, Lrs6;->a:Lrs6;
+    return v0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    :cond_0
+    instance-of v1, p1, Lrs6;
 
-    const/4 v1, 0x1
+    if-nez v1, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    const/4 p1, 0x0
 
-    sput-object v0, Lrs6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    return p1
 
-    return-void
+    :cond_1
+    check-cast p1, Lrs6;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
 .end method
 
-.method public static a(Ljava/io/File;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/io/File;->exists()Z
+    const v0, -0xf2f2f3
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    add-int/2addr v0, v1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    return v0
+.end method
 
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :cond_0
-    return-void
+    const-string v0, "GradientsLoadingIconPrimaryStaticColors(filled=-15921907, transparent=-15921907)"
+
+    return-object v0
 .end method

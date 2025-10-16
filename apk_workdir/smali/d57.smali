@@ -1,26 +1,33 @@
-.class public final Ld57;
-.super Le57;
+.class public abstract Ld57;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ScheduledFuture;
+
+# static fields
+.field public static final a:Ljava/util/regex/Pattern;
+
+.field public static final b:Ljava/util/regex/Pattern;
 
 
-# virtual methods
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    check-cast p1, Ljava/util/concurrent/Delayed;
+    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
 
-    const/4 p1, -0x1
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    return p1
-.end method
+    move-result-object v0
 
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 2
+    sput-object v0, Ld57;->a:Ljava/util/regex/Pattern;
 
-    const-wide/16 v0, 0x0
+    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
 
-    return-wide v0
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ld57;->b:Ljava/util/regex/Pattern;
+
+    return-void
 .end method

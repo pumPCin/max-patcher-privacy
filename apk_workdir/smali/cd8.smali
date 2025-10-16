@@ -1,85 +1,82 @@
 .class public final Lcd8;
-.super Lw2;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final c:Lpcd;
+.field public final synthetic X:Lone/me/android/MainActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkc8;Lpcd;I)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lcd8;->b:I
+    iput-object p1, p0, Lcd8;->X:Lone/me/android/MainActivity;
 
-    invoke-direct {p0, p1}, Lw2;-><init>(Lkc8;)V
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lcd8;->c:Lpcd;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ldd8;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lcd8;->b:I
+    check-cast p1, Ljava/lang/Number;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    new-instance v0, Lss1;
+    move-result p1
 
-    invoke-direct {v0, p1}, Lss1;-><init>(Ldd8;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1, v0}, Ldd8;->c(Lfs4;)V
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p1, v0, Lss1;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p1, Le22;
+    invoke-virtual {p0, p1, p2}, Lcd8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Lrf6;
+    move-result-object p1
 
-    iget-object v2, p0, Lw2;->a:Lkc8;
+    check-cast p1, Lcd8;
 
-    const/16 v3, 0xc
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-direct {v1, v0, v3, v2}, Lrf6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcd8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcd8;->c:Lpcd;
+    return-object p2
+.end method
 
-    invoke-virtual {v0, v1}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    move-result-object v0
+    new-instance p1, Lcd8;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lcd8;->X:Lone/me/android/MainActivity;
 
-    invoke-static {p1, v0}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+    invoke-direct {p1, v0, p2}, Lcd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    return-void
+    return-object p1
+.end method
 
-    :pswitch_0
-    new-instance v0, Lbd8;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v1, p0, Lcd8;->c:Lpcd;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const/4 v2, 0x0
+    iget-object p1, p0, Lcd8;->X:Lone/me/android/MainActivity;
 
-    invoke-direct {v0, p1, v1, v2}, Lbd8;-><init>(Ljava/lang/Object;Lpcd;I)V
+    iget-object v0, p1, Lone/me/android/MainActivity;->X0:Lu75;
 
-    iget-object p1, p0, Lw2;->a:Lkc8;
+    invoke-interface {v0, p1}, Lu75;->b(Landroid/app/Activity;)V
 
-    invoke-virtual {p1, v0}, Lkc8;->a(Ldd8;)V
+    sget-object p1, Lzag;->a:Lzag;
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -3,4 +3,4 @@
 
 
 # static fields
-.field public static androidx_startup:I = 0x7f130063
+.field public static is_tablet:I = 0x7f050009

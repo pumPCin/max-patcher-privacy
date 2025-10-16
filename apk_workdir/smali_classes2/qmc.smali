@@ -1,76 +1,26 @@
-.class public interface abstract Lqmc;
+.class public abstract Lqmc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# direct methods
-.method public static a(Lnm;Li7f;)V
-    .locals 3
+# static fields
+.field public static fake_in_app_review_bottom_sheet_rate_view:I = 0x7f0a0370
 
-    iget-object v0, p0, Lnm;->c:Lom;
+.field public static fake_in_app_review_bottom_sheet_rate_view_icon:I = 0x7f0a0371
 
-    const/4 v1, 0x0
+.field public static fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I = 0x7f0a0372
 
-    if-eqz v0, :cond_0
+.field public static fake_in_app_review_bottom_sheet_rate_view_rating_bar:I = 0x7f0a0373
 
-    goto :goto_0
+.field public static fake_in_app_review_bottom_sheet_rate_view_send_btn:I = 0x7f0a0374
 
-    :cond_0
-    move-object v0, v1
+.field public static fake_in_app_review_bottom_sheet_rate_view_subtitle:I = 0x7f0a0375
 
-    :goto_0
-    iget-object v0, v0, Lom;->d:Lyn7;
+.field public static fake_in_app_review_bottom_sheet_rate_view_title:I = 0x7f0a0376
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+.field public static fake_in_app_review_bottom_sheet_thank_view:I = 0x7f0a0377
 
-    move-result-object v0
+.field public static fake_in_app_review_bottom_sheet_thank_view_close_btn:I = 0x7f0a0378
 
-    check-cast v0, Lsrd;
+.field public static fake_in_app_review_bottom_sheet_thank_view_icon:I = 0x7f0a0379
 
-    check-cast v0, Lohd;
-
-    iget-object v0, v0, Lohd;->l:Lq0d;
-
-    invoke-virtual {v0}, Lq0d;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    iget-object v2, p1, Li7f;->b:Ljava/lang/String;
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v2, 0x1
-
-    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v2, "detect common reaction error, call onMaxFailCount() for task"
-
-    invoke-static {v0, v1, v2, p1}, Lyt3;->K(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    check-cast p0, Lu8b;
-
-    invoke-interface {p0}, Lu8b;->e()V
-
-    :cond_1
-    return-void
-.end method
+.field public static fake_in_app_review_bottom_sheet_thank_view_title:I = 0x7f0a037a

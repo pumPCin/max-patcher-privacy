@@ -1,28 +1,72 @@
-.class public abstract Lwdc;
+.class public final synthetic Lwdc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loh6;
 
 
-# static fields
-.field public static oneme_stickers_sticker_first_frame:I = 0x7f0a0895
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_stickers_sticker_lottie:I = 0x7f0a0896
+.field public final synthetic b:Lydc;
 
-.field public static oneme_stickers_sticker_set_header_button:I = 0x7f0a0897
 
-.field public static oneme_stickers_sticker_set_header_subtitle:I = 0x7f0a0898
+# direct methods
+.method public synthetic constructor <init>(Lydc;I)V
+    .locals 0
 
-.field public static oneme_stickers_sticker_set_header_title:I = 0x7f0a0899
+    iput p2, p0, Lwdc;->a:I
 
-.field public static oneme_stickers_sticker_set_list:I = 0x7f0a089a
+    iput-object p1, p0, Lwdc;->b:Lydc;
 
-.field public static oneme_stickers_sticker_webm:I = 0x7f0a089b
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_stickers_view_type_sticker:I = 0x7f0a089c
+    return-void
+.end method
 
-.field public static oneme_stickers_view_type_sticker_lottie:I = 0x7f0a089d
 
-.field public static oneme_stickers_view_type_sticker_webm:I = 0x7f0a089e
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-.field public static oneme_stickers_view_type_stickers_set:I = 0x7f0a089f
+    iget v0, p0, Lwdc;->a:I
 
-.field public static oneme_stickers_view_type_stickers_set_showcase:I = 0x7f0a08a0
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lnw7;
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lwdc;->b:Lydc;
+
+    invoke-direct {v0, v1, v2}, Lnw7;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lwdc;->b:Lydc;
+
+    iget-object v0, v0, Lydc;->a:Lrhf;
+
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/SensorManager;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

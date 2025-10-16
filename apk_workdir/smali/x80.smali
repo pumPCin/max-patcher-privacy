@@ -1,364 +1,126 @@
 .class public final Lx80;
-.super Ljava/lang/Object;
+.super Lmc6;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
 
-.field public final b:Ljava/lang/Class;
+.field public Y:Z
 
-.field public final c:Lztd;
+.field public Z:F
 
-.field public final d:Lf2g;
-
-.field public final e:Landroid/util/Size;
-
-.field public final f:Lab0;
-
-.field public final g:Ljava/util/List;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Class;Lztd;Lf2g;Landroid/util/Size;Lab0;Ljava/util/ArrayList;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p1, :cond_2
-
-    iput-object p1, p0, Lx80;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lx80;->b:Ljava/lang/Class;
-
-    if-eqz p3, :cond_1
-
-    iput-object p3, p0, Lx80;->c:Lztd;
-
-    if-eqz p4, :cond_0
-
-    iput-object p4, p0, Lx80;->d:Lf2g;
-
-    iput-object p5, p0, Lx80;->e:Landroid/util/Size;
-
-    iput-object p6, p0, Lx80;->f:Lab0;
-
-    iput-object p7, p0, Lx80;->g:Ljava/util/List;
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null useCaseConfig"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null sessionConfig"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null useCaseId"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public r0:Z
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final draw(Landroid/graphics/Canvas;)V
     .locals 7
 
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lx80;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_4
-
-    check-cast p1, Lx80;
-
-    iget-object v1, p1, Lx80;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lx80;->g:Ljava/util/List;
-
-    iget-object v4, p1, Lx80;->f:Lab0;
-
-    iget-object v5, p1, Lx80;->e:Landroid/util/Size;
-
-    iget-object v6, p0, Lx80;->a:Ljava/lang/String;
-
-    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, p0, Lx80;->b:Ljava/lang/Class;
-
-    iget-object v6, p1, Lx80;->b:Ljava/lang/Class;
-
-    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, p0, Lx80;->c:Lztd;
-
-    iget-object v6, p1, Lx80;->c:Lztd;
-
-    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, p0, Lx80;->d:Lf2g;
-
-    iget-object p1, p1, Lx80;->d:Lf2g;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p0, Lx80;->e:Landroid/util/Size;
-
-    if-nez p1, :cond_1
-
-    if-nez v5, :cond_4
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1, v5}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    :goto_0
-    iget-object p1, p0, Lx80;->f:Lab0;
-
-    if-nez p1, :cond_2
-
-    if-nez v4, :cond_4
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1, v4}, Lab0;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    :goto_1
-    iget-object p1, p0, Lx80;->g:Ljava/util/List;
-
-    if-nez p1, :cond_3
-
-    if-nez v3, :cond_4
-
-    goto :goto_2
-
-    :cond_3
-    invoke-interface {p1, v3}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    :goto_2
-    return v0
-
-    :cond_4
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lx80;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    const v1, 0xf4243
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    xor-int/2addr v0, v1
+    move-result-object v1
 
-    mul-int/2addr v0, v1
+    iget v2, v1, Landroid/graphics/Rect;->right:I
 
-    iget-object v2, p0, Lx80;->b:Ljava/lang/Class;
+    iget v3, v1, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    sub-int/2addr v2, v3
 
-    move-result v2
+    iget v4, v1, Landroid/graphics/Rect;->bottom:I
 
-    xor-int/2addr v0, v2
+    iget v1, v1, Landroid/graphics/Rect;->top:I
 
-    mul-int/2addr v0, v1
+    sub-int/2addr v4, v1
 
-    iget-object v2, p0, Lx80;->c:Lztd;
+    iget v5, p0, Lx80;->Z:F
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    iget-boolean v6, p0, Lx80;->Y:Z
 
-    move-result v2
+    if-nez v6, :cond_0
 
-    xor-int/2addr v0, v2
+    const/high16 v6, 0x43b40000    # 360.0f
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lx80;->d:Lf2g;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lx80;->e:Landroid/util/Size;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
-
-    goto :goto_0
+    sub-float v5, v6, v5
 
     :cond_0
-    invoke-virtual {v3}, Landroid/util/Size;->hashCode()I
+    div-int/lit8 v2, v2, 0x2
 
-    move-result v3
+    add-int/2addr v2, v3
 
-    :goto_0
-    xor-int/2addr v0, v3
+    int-to-float v2, v2
 
-    mul-int/2addr v0, v1
+    div-int/lit8 v4, v4, 0x2
 
-    iget-object v3, p0, Lx80;->f:Lab0;
+    add-int/2addr v4, v1
 
-    if-nez v3, :cond_1
+    int-to-float v1, v4
 
-    move v3, v2
+    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    goto :goto_1
+    invoke-super {p0, p1}, Lmc6;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    iget-boolean p1, p0, Lx80;->r0:Z
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lx80;->r0:Z
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x14
+
+    add-long/2addr v0, v2
+
+    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
     :cond_1
-    invoke-virtual {v3}, Lab0;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lx80;->g:Ljava/util/List;
-
-    if-nez v1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    xor-int/2addr v0, v2
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, "UseCaseInfo{useCaseId="
+    iput-boolean v0, p0, Lx80;->r0:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v0, p0, Lx80;->Z:F
 
-    iget-object v1, p0, Lx80;->a:Ljava/lang/String;
+    iget v1, p0, Lx80;->X:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    int-to-float v1, v1
 
-    const-string v1, ", useCaseType="
+    const/high16 v2, 0x41a00000    # 20.0f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    div-float/2addr v2, v1
 
-    iget-object v1, p0, Lx80;->b:Ljava/lang/Class;
+    const/high16 v1, 0x43b40000    # 360.0f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    mul-float/2addr v2, v1
 
-    const-string v1, ", sessionConfig="
+    float-to-int v1, v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    int-to-float v1, v1
 
-    iget-object v1, p0, Lx80;->c:Lztd;
+    add-float/2addr v0, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput v0, p0, Lx80;->Z:F
 
-    const-string v1, ", useCaseConfig="
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx80;->d:Lf2g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", surfaceResolution="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx80;->e:Landroid/util/Size;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", streamSpec="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx80;->f:Lab0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", captureTypes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx80;->g:Ljava/util/List;
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lsw1;->i(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

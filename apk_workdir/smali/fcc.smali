@@ -1,46 +1,204 @@
-.class public abstract Lfcc;
+.class public final Lfcc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lpkd;
 
 
-# static fields
-.field public static oneme_chatmedia_viewer_bulk_saving_all:I = 0x7f0a0632
+# instance fields
+.field public final a:I
 
-.field public static oneme_chatmedia_viewer_bulk_saving_only_this:I = 0x7f0a0633
+.field public final synthetic b:Ljcc;
 
-.field public static oneme_chatmedia_viewer_content_level_item_view_type:I = 0x7f0a0634
 
-.field public static oneme_chatmedia_viewer_content_level_stub_view:I = 0x7f0a0635
+# direct methods
+.method public constructor <init>(Ljcc;I)V
+    .locals 0
 
-.field public static oneme_chatmedia_viewer_info_panel_author_view:I = 0x7f0a0636
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_chatmedia_viewer_info_panel_date_view:I = 0x7f0a0637
+    iput-object p1, p0, Lfcc;->b:Ljcc;
 
-.field public static oneme_chatmedia_viewer_info_panel_forward_message_view:I = 0x7f0a0638
+    iput p2, p0, Lfcc;->a:I
 
-.field public static oneme_chatmedia_viewer_info_panel_view:I = 0x7f0a0639
+    return-void
+.end method
 
-.field public static oneme_chatmedia_viewer_pager:I = 0x7f0a063a
 
-.field public static oneme_chatmedia_viewer_photo_gif_view:I = 0x7f0a063b
+# virtual methods
+.method public final b()V
+    .locals 3
 
-.field public static oneme_chatmedia_viewer_photo_item_view_type:I = 0x7f0a063c
+    iget v0, p0, Lfcc;->a:I
 
-.field public static oneme_chatmedia_viewer_photo_view:I = 0x7f0a063d
+    iget-object v1, p0, Lfcc;->b:Ljcc;
 
-.field public static oneme_chatmedia_viewer_toolbar:I = 0x7f0a063e
+    iget-object v2, v1, Ljcc;->B0:[Lnkd;
 
-.field public static oneme_chatmedia_viewer_toolbar_action_forward_attach:I = 0x7f0a063f
+    aget-object v0, v2, v0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f0a0640
+    invoke-virtual {v0}, Lnkd;->t()V
 
-.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f0a0641
+    iget-object v0, v1, Ljcc;->t0:Ly38;
 
-.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f0a0642
+    iget-object v2, v1, Ljcc;->o:Lc82;
 
-.field public static oneme_chatmedia_viewer_video_item_view_type:I = 0x7f0a0643
+    iget v1, v1, Ljcc;->K0:I
 
-.field public static oneme_chatmedia_viewer_video_preview_view:I = 0x7f0a0644
+    invoke-virtual {v2, v1}, Lc82;->u(I)I
 
-.field public static oneme_chatmedia_viewer_video_view:I = 0x7f0a0645
+    move-result v1
 
-.field public static oneme_chatmedia_viewer_video_zoom_view:I = 0x7f0a0646
+    iget-object v2, v0, Ly38;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/io/IOException;
+
+    if-nez v2, :cond_3
+
+    iget-object v0, v0, Ly38;->b:Ljava/lang/Object;
+
+    check-cast v0, Lt38;
+
+    if-eqz v0, :cond_2
+
+    const/high16 v2, -0x80000000
+
+    if-ne v1, v2, :cond_0
+
+    iget v1, v0, Lt38;->b:I
+
+    :cond_0
+    iget-object v2, v0, Lt38;->o:Ljava/io/IOException;
+
+    if-eqz v2, :cond_2
+
+    iget v0, v0, Lt38;->X:I
+
+    if-gt v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    throw v2
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :cond_3
+    throw v2
+.end method
+
+.method public final e()Z
+    .locals 3
+
+    iget-object v0, p0, Lfcc;->b:Ljcc;
+
+    invoke-virtual {v0}, Ljcc;->D()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Ljcc;->B0:[Lnkd;
+
+    iget v2, p0, Lfcc;->a:I
+
+    aget-object v1, v1, v2
+
+    iget-boolean v0, v0, Ljcc;->T0:Z
+
+    invoke-virtual {v1, v0}, Lnkd;->r(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final h(J)I
+    .locals 4
+
+    iget-object v0, p0, Lfcc;->b:Ljcc;
+
+    invoke-virtual {v0}, Ljcc;->D()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget v1, p0, Lfcc;->a:I
+
+    invoke-virtual {v0, v1}, Ljcc;->u(I)V
+
+    iget-object v2, v0, Ljcc;->B0:[Lnkd;
+
+    aget-object v2, v2, v1
+
+    iget-boolean v3, v0, Ljcc;->T0:Z
+
+    invoke-virtual {v2, p1, p2, v3}, Lnkd;->p(JZ)I
+
+    move-result p1
+
+    invoke-virtual {v2, p1}, Lnkd;->z(I)V
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v0, v1}, Ljcc;->y(I)V
+
+    :cond_1
+    return p1
+.end method
+
+.method public final n(Lfwb;Lre4;I)I
+    .locals 5
+
+    iget-object v0, p0, Lfcc;->b:Ljcc;
+
+    invoke-virtual {v0}, Ljcc;->D()Z
+
+    move-result v1
+
+    const/4 v2, -0x3
+
+    if-eqz v1, :cond_0
+
+    return v2
+
+    :cond_0
+    iget v1, p0, Lfcc;->a:I
+
+    invoke-virtual {v0, v1}, Ljcc;->u(I)V
+
+    iget-object v3, v0, Ljcc;->B0:[Lnkd;
+
+    aget-object v3, v3, v1
+
+    iget-boolean v4, v0, Ljcc;->T0:Z
+
+    invoke-virtual {v3, p1, p2, p3, v4}, Lnkd;->w(Lfwb;Lre4;IZ)I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_1
+
+    invoke-virtual {v0, v1}, Ljcc;->y(I)V
+
+    :cond_1
+    return p1
+.end method

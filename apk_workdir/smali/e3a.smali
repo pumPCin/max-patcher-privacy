@@ -1,43 +1,67 @@
-.class public abstract Le3a;
+.class public final Le3a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:F
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:Z
+
+
 # direct methods
-.method public static a(Landroid/app/NotificationChannel;)Ljava/lang/String;
+.method public constructor <init>(IIIIIIFZZIIIZ)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput p1, p0, Le3a;->a:I
 
-    return-object p0
-.end method
+    iput p2, p0, Le3a;->b:I
 
-.method public static b(Landroid/app/NotificationChannel;)Ljava/lang/String;
-    .locals 0
+    iput p3, p0, Le3a;->c:I
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getParentChannelId()Ljava/lang/String;
+    iput p4, p0, Le3a;->d:I
 
-    move-result-object p0
+    iput p5, p0, Le3a;->e:I
 
-    return-object p0
-.end method
+    iput p6, p0, Le3a;->f:I
 
-.method public static c(Landroid/app/NotificationChannel;)Z
-    .locals 0
+    iput p7, p0, Le3a;->g:F
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->isImportantConversation()Z
+    iput-boolean p8, p0, Le3a;->h:Z
 
-    move-result p0
+    iput-boolean p9, p0, Le3a;->i:Z
 
-    return p0
-.end method
+    iput p10, p0, Le3a;->j:I
 
-.method public static d(Landroid/app/NotificationChannel;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    iput p11, p0, Le3a;->k:I
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setConversationId(Ljava/lang/String;Ljava/lang/String;)V
+    iput p12, p0, Le3a;->l:I
+
+    iput-boolean p13, p0, Le3a;->m:Z
 
     return-void
 .end method

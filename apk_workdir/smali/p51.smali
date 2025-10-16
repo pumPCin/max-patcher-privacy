@@ -3,85 +3,174 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx51;
+.implements Lqf4;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Z
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(JZZI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p5, p0, Lp51;->a:I
 
-    iput-wide p1, p0, Lp51;->a:J
+    iput-wide p1, p0, Lp51;->b:J
+
+    iput-boolean p3, p0, Lp51;->c:Z
+
+    iput-boolean p4, p0, Lp51;->o:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Ljava/lang/Object;
     .locals 7
 
-    const/4 v0, 0x1
+    iget v0, p0, Lp51;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Ljfa;
 
-    :cond_0
-    instance-of v1, p1, Lp51;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
+    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
 
-    if-nez v1, :cond_1
+    new-instance v1, Lqbb;
 
-    return v2
+    const-string v2, "type"
 
-    :cond_1
-    check-cast p1, Lp51;
+    const-string v3, "CHAT"
 
-    iget-wide v3, p0, Lp51;->a:J
+    invoke-direct {v1, v2, v3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-wide v5, p1, Lp51;->a:J
+    iget-wide v2, p0, Lp51;->b:J
 
-    cmp-long p1, v3, v5
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eqz p1, :cond_2
+    move-result-object v2
 
-    return v2
+    new-instance v3, Lqbb;
 
-    :cond_2
-    return v0
-.end method
+    const-string v4, "chat_id"
 
-.method public final hashCode()I
-    .locals 2
+    invoke-direct {v3, v4, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-wide v0, p0, Lp51;->a:J
+    iget-boolean v2, p0, Lp51;->c:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result v0
+    move-result-object v2
 
-    return v0
-.end method
+    new-instance v4, Lqbb;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    const-string v5, "video_enabled"
 
-    const-string v0, "Error(requestId="
+    invoke-direct {v4, v5, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-boolean v2, p0, Lp51;->o:Z
 
-    iget-wide v2, p0, Lp51;->a:J
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v0
+    new-instance v5, Lqbb;
+
+    const-string v6, "microphone_enabled"
+
+    invoke-direct {v5, v6, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v3, v4, v5}, [Lqbb;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
 
     return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Ljfa;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+
+    new-instance v1, Lqbb;
+
+    const-string v2, "type"
+
+    const-string v3, "ONE_TO_ONE"
+
+    invoke-direct {v1, v2, v3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-wide v2, p0, Lp51;->b:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    new-instance v3, Lqbb;
+
+    const-string v4, "opponent_id"
+
+    invoke-direct {v3, v4, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v2, p0, Lp51;->c:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    new-instance v4, Lqbb;
+
+    const-string v5, "video_enabled"
+
+    invoke-direct {v4, v5, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v2, p0, Lp51;->o:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    new-instance v5, Lqbb;
+
+    const-string v6, "microphone_enabled"
+
+    invoke-direct {v5, v6, v2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v3, v4, v5}, [Lqbb;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

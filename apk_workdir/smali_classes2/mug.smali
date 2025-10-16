@@ -1,65 +1,77 @@
 .class public final Lmug;
-.super Lpug;
+.super Llj0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lmug;
+# instance fields
+.field public final X:Ljava/lang/String;
+
+.field public final b:Ljava/util/Map;
+
+.field public final c:J
+
+.field public final o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JJJLjava/lang/String;Ljava/util/Map;)V
+    .locals 0
 
-    new-instance v0, Lmug;
+    invoke-direct {p0, p1, p2}, Llj0;-><init>(J)V
 
-    const-string v1, "invalid_impact_style"
+    iput-object p8, p0, Lmug;->b:Ljava/util/Map;
 
-    const/4 v2, 0x2
+    iput-wide p3, p0, Lmug;->c:J
 
-    invoke-direct {v0, v1, v2}, Lpug;-><init>(Ljava/lang/String;I)V
+    iput-wide p5, p0, Lmug;->o:J
 
-    sput-object v0, Lmug;->c:Lmug;
+    iput-object p7, p0, Lmug;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lmug;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x277c48f0
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "InvalidImpactStyle"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VideoPlayEvent{urls="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lmug;->b:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmug;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmug;->o:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachLocalId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmug;->X:Ljava/lang/String;
+
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,133 +1,249 @@
 .class public final Lfwe;
-.super Landroid/text/style/CharacterStyle;
+.super Ldwe;
 .source "SourceFile"
-
-# interfaces
-.implements Lda8;
-.implements Landroid/text/style/UpdateAppearance;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final l:J
 
-.field public final b:I
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:J
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:J
+
+.field public final s:J
+
+.field public final t:Ljava/lang/Double;
+
+.field public final u:Ljava/lang/Double;
+
+.field public final v:J
+
+.field public final w:J
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JJJJJJJJLjava/lang/String;JLjava/lang/Double;Ljava/lang/Double;Lk68;JJ)V
+    .locals 12
 
-    iput p1, p0, Lfwe;->a:I
+    const/4 v1, 0x2
 
-    packed-switch p1, :pswitch_data_0
+    move-object v0, p0
 
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+    move-wide v2, p1
 
-    const/4 p1, 0x7
+    move-object v4, p3
 
-    iput p1, p0, Lfwe;->b:I
+    move-object/from16 v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-wide/from16 v8, p7
+
+    move-object/from16 v10, p23
+
+    move-object/from16 v11, p28
+
+    invoke-direct/range {v0 .. v11}, Ldwe;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Lk68;)V
+
+    move-wide/from16 p1, p9
+
+    iput-wide p1, p0, Lfwe;->l:J
+
+    move-wide/from16 p1, p11
+
+    iput-wide p1, p0, Lfwe;->m:J
+
+    move-wide/from16 p1, p13
+
+    iput-wide p1, p0, Lfwe;->n:J
+
+    move-wide/from16 p1, p15
+
+    iput-wide p1, p0, Lfwe;->o:J
+
+    move-wide/from16 p1, p17
+
+    iput-wide p1, p0, Lfwe;->p:J
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lfwe;->q:J
+
+    move-wide/from16 p1, p21
+
+    iput-wide p1, p0, Lfwe;->r:J
+
+    move-wide/from16 p1, p24
+
+    iput-wide p1, p0, Lfwe;->s:J
+
+    move-object/from16 p1, p26
+
+    iput-object p1, p0, Lfwe;->t:Ljava/lang/Double;
+
+    move-object/from16 p1, p27
+
+    iput-object p1, p0, Lfwe;->u:Ljava/lang/Double;
+
+    move-wide/from16 p1, p29
+
+    iput-wide p1, p0, Lfwe;->v:J
+
+    move-wide/from16 p1, p31
+
+    iput-wide p1, p0, Lfwe;->w:J
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
-
-    const/4 p1, 0x4
-
-    iput p1, p0, Lfwe;->b:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final copy()Lo14;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget v0, p0, Lfwe;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "VideoRecv{ssrc="
 
-    new-instance v0, Lfwe;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    iget-wide v1, p0, Lhwe;->c:J
 
-    invoke-direct {v0, v1}, Lfwe;-><init>(I)V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", transportId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhwe;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', trackId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhwe;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', packetsReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldwe;->h:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", packetsLost="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldwe;->i:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bytesReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldwe;->j:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", jitterBufferMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Ldwe;->k:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", nacksSent="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->l:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pliSent="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->m:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", firSent="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->n:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", framesDecoded="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->o:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", framesReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->p:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->q:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->r:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhwe;->g:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", framesDropped="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfwe;->s:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Llfb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lfwe;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lfwe;-><init>(I)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getType()I
-    .locals 1
-
-    iget v0, p0, Lfwe;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lfwe;->b:I
-
-    return v0
-
-    :pswitch_0
-    iget v0, p0, Lfwe;->b:I
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    iget v0, p0, Lfwe;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
-
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrikeThruText(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

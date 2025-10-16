@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManager;
-.implements Lc31;
+.implements Lb41;
 
 
 # annotations
@@ -15,21 +15,21 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;",
         "Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManager;",
-        "Lc31;",
+        "Lb41;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "participantStore",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
         "Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;",
         "listener",
-        "Laxf;",
+        "Lzag;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;)V",
         "removeListener",
-        "Li87;",
+        "Lpd7;",
         "message",
         "onNewMessage",
-        "(Li87;)V",
+        "(Lpd7;)V",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Ljava/util/concurrent/CopyOnWriteArraySet;",
         "listeners",
@@ -89,7 +89,7 @@
     return-void
 .end method
 
-.method public onNewMessage(Li87;)V
+.method public onNewMessage(Lpd7;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -115,7 +115,7 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v2, p1, v3}, Lru/ok/android/externcalls/sdk/chat/message/InboundMessageMapper;->fromInternal(Li87;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;
+    invoke-virtual {v2, p1, v3}, Lru/ok/android/externcalls/sdk/chat/message/InboundMessageMapper;->fromInternal(Lpd7;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;
 
     move-result-object v2
 

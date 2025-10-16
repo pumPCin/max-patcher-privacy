@@ -1,143 +1,108 @@
-.class public final Ll09;
-.super Lj7;
+.class public final synthetic Ll09;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ActionProvider$VisibilityListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public c:Lawd;
+.field public final synthetic X:I
 
-.field public final d:Landroid/view/ActionProvider;
+.field public final synthetic Y:Lt09;
+
+.field public final synthetic a:Lu09;
+
+.field public final synthetic b:Loy8;
+
+.field public final synthetic c:I
+
+.field public final synthetic o:Liz8;
 
 
 # direct methods
-.method public constructor <init>(Lo09;Landroid/content/Context;Landroid/view/ActionProvider;)V
+.method public synthetic constructor <init>(Lu09;Loy8;ILiz8;ILt09;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lj7;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ll09;->d:Landroid/view/ActionProvider;
+    iput-object p1, p0, Ll09;->a:Lu09;
+
+    iput-object p2, p0, Ll09;->b:Loy8;
+
+    iput p3, p0, Ll09;->c:I
+
+    iput-object p4, p0, Ll09;->o:Liz8;
+
+    iput p5, p0, Ll09;->X:I
+
+    iput-object p6, p0, Ll09;->Y:Lt09;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final run()V
+    .locals 7
 
-    iget-object v0, p0, Ll09;->d:Landroid/view/ActionProvider;
+    iget-object v0, p0, Ll09;->a:Lu09;
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->hasSubMenu()Z
+    iget-object v0, v0, Lu09;->d:Lj3e;
 
-    move-result v0
+    iget-object v1, p0, Ll09;->b:Loy8;
 
-    return v0
-.end method
+    iget v2, p0, Ll09;->c:I
 
-.method public final b()Z
-    .locals 1
+    invoke-virtual {v0, v1, v2}, Lj3e;->z(Loy8;I)Z
 
-    iget-object v0, p0, Ll09;->d:Landroid/view/ActionProvider;
+    move-result v3
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->isVisible()Z
+    iget-object v4, p0, Ll09;->o:Liz8;
 
-    move-result v0
+    iget v5, p0, Ll09;->X:I
 
-    return v0
-.end method
+    if-nez v3, :cond_0
 
-.method public final c()Landroid/view/View;
-    .locals 1
+    new-instance v0, Le6e;
 
-    iget-object v0, p0, Ll09;->d:Landroid/view/ActionProvider;
+    const/4 v2, -0x4
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
+    invoke-direct {v0, v2}, Le6e;-><init>(I)V
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final d(Lk09;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Ll09;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Ll09;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->onPerformDefaultAction()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final f(Llxe;)V
-    .locals 1
-
-    iget-object v0, p0, Ll09;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
+    invoke-static {v4, v1, v5, v0}, Lu09;->a0(Liz8;Loy8;ILe6e;)V
 
     return-void
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget-object v0, p0, Ll09;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->overridesItemVisibility()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final h(Lawd;)V
-    .locals 0
-
-    iput-object p1, p0, Ll09;->c:Lawd;
-
-    iget-object p1, p0, Ll09;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {p1, p0}, Landroid/view/ActionProvider;->setVisibilityListener(Landroid/view/ActionProvider$VisibilityListener;)V
-
-    return-void
-.end method
-
-.method public final onActionProviderVisibilityChanged(Z)V
-    .locals 1
-
-    iget-object p1, p0, Ll09;->c:Lawd;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p1, Lawd;->b:Ljava/lang/Object;
-
-    check-cast p1, Lk09;
-
-    iget-object p1, p1, Lk09;->x0:Lg09;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lg09;->r0:Z
-
-    invoke-virtual {p1, v0}, Lg09;->p(Z)V
 
     :cond_0
+    iget-object v3, v4, Liz8;->e:Lpzd;
+
+    invoke-virtual {v4, v1}, Liz8;->t(Loy8;)Loy8;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/16 v3, 0x1b
+
+    iget-object v6, p0, Ll09;->Y:Lt09;
+
+    if-ne v2, v3, :cond_1
+
+    invoke-interface {v6, v4, v1, v5}, Lt09;->m(Liz8;Loy8;I)Ljava/lang/Object;
+
+    new-instance v3, Lo09;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2, v3}, Lj3e;->f(Loy8;ILgo3;)V
+
+    return-void
+
+    :cond_1
+    new-instance v3, Lp09;
+
+    invoke-direct {v3, v6, v4, v1, v5}, Lp09;-><init>(Lt09;Liz8;Loy8;I)V
+
+    invoke-virtual {v0, v1, v2, v3}, Lj3e;->f(Loy8;ILgo3;)V
+
     return-void
 .end method

@@ -3,20 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln8a;
+.implements Lrga;
 
 
 # static fields
 .field public static final a:Lj80;
 
-.field public static final b:Ltm5;
+.field public static final b:Liq5;
 
-.field public static final c:Ltm5;
+.field public static final c:Liq5;
+
+.field public static final d:Liq5;
+
+.field public static final e:Liq5;
+
+.field public static final f:Liq5;
+
+.field public static final g:Liq5;
+
+.field public static final h:Liq5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
     new-instance v0, Lj80;
 
@@ -24,51 +34,61 @@
 
     sput-object v0, Lj80;->a:Lj80;
 
-    new-instance v0, Ley;
+    const-string v0, "requestTimeMs"
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ley;-><init>(I)V
-
-    const-class v1, Ln4c;
-
-    invoke-static {v1, v0}, Lsw1;->n(Ljava/lang/Class;Ley;)Ljava/util/HashMap;
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
 
     move-result-object v0
 
-    new-instance v2, Ltm5;
+    sput-object v0, Lj80;->b:Liq5;
 
-    invoke-static {v0}, Lsw1;->o(Ljava/util/HashMap;)Ljava/util/Map;
+    const-string v0, "requestUptimeMs"
 
-    move-result-object v0
-
-    const-string v3, "currentCacheSizeBytes"
-
-    invoke-direct {v2, v3, v0}, Ltm5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lj80;->b:Ltm5;
-
-    new-instance v0, Ley;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Ley;-><init>(I)V
-
-    invoke-static {v1, v0}, Lsw1;->n(Ljava/lang/Class;Ley;)Ljava/util/HashMap;
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
 
     move-result-object v0
 
-    new-instance v1, Ltm5;
+    sput-object v0, Lj80;->c:Liq5;
 
-    invoke-static {v0}, Lsw1;->o(Ljava/util/HashMap;)Ljava/util/Map;
+    const-string v0, "clientInfo"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
 
     move-result-object v0
 
-    const-string v2, "maxCacheSizeBytes"
+    sput-object v0, Lj80;->d:Liq5;
 
-    invoke-direct {v1, v2, v0}, Ltm5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    const-string v0, "logSource"
 
-    sput-object v1, Lj80;->c:Ltm5;
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Lj80;->e:Liq5;
+
+    const-string v0, "logSourceName"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Lj80;->f:Liq5;
+
+    const-string v0, "logEvent"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Lj80;->g:Liq5;
+
+    const-string v0, "qosTier"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Lj80;->h:Liq5;
 
     return-void
 .end method
@@ -78,21 +98,53 @@
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
-    check-cast p1, Llve;
+    check-cast p1, Lh88;
 
-    check-cast p2, Lo8a;
+    check-cast p2, Lsga;
 
-    sget-object v0, Lj80;->b:Ltm5;
+    check-cast p1, Loa0;
 
-    iget-wide v1, p1, Llve;->a:J
+    iget-wide v0, p1, Loa0;->a:J
 
-    invoke-interface {p2, v0, v1, v2}, Lo8a;->e(Ltm5;J)Lo8a;
+    sget-object v2, Lj80;->b:Liq5;
 
-    sget-object v0, Lj80;->c:Ltm5;
+    invoke-interface {p2, v2, v0, v1}, Lsga;->e(Liq5;J)Lsga;
 
-    iget-wide v1, p1, Llve;->b:J
+    sget-object v0, Lj80;->c:Liq5;
 
-    invoke-interface {p2, v0, v1, v2}, Lo8a;->e(Ltm5;J)Lo8a;
+    iget-wide v1, p1, Loa0;->b:J
+
+    invoke-interface {p2, v0, v1, v2}, Lsga;->e(Liq5;J)Lsga;
+
+    sget-object v0, Lj80;->d:Liq5;
+
+    iget-object v1, p1, Loa0;->c:Lp90;
+
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object v0, Lj80;->e:Liq5;
+
+    iget-object v1, p1, Loa0;->d:Ljava/lang/Integer;
+
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object v0, Lj80;->f:Liq5;
+
+    iget-object v1, p1, Loa0;->e:Ljava/lang/String;
+
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object v0, Lj80;->g:Liq5;
+
+    iget-object p1, p1, Loa0;->f:Ljava/util/ArrayList;
+
+    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object p1, Lj80;->h:Liq5;
+
+    sget-object v0, Lyec;->a:Lyec;
+
+    invoke-interface {p2, p1, v0}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
 
     return-void
 .end method

@@ -1,97 +1,40 @@
-.class public final Lprc;
+.class public abstract Lprc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lurc;
 
 
-# instance fields
-.field public final a:Lx2;
+# static fields
+.field public static oneme_media_keyboard_emoji_animals_and_plants:I = 0x7f13089a
 
+.field public static oneme_media_keyboard_emoji_classic:I = 0x7f13089b
 
-# direct methods
-.method public constructor <init>(Lx2;)V
-    .locals 0
+.field public static oneme_media_keyboard_emoji_flags:I = 0x7f13089c
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_media_keyboard_emoji_food_and_drink:I = 0x7f13089d
 
-    iput-object p1, p0, Lprc;->a:Lx2;
+.field public static oneme_media_keyboard_emoji_gestures_and_people:I = 0x7f13089e
 
-    return-void
-.end method
+.field public static oneme_media_keyboard_emoji_objects:I = 0x7f13089f
 
+.field public static oneme_media_keyboard_emoji_sport_and_activity:I = 0x7f1308a0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.field public static oneme_media_keyboard_emoji_symbols:I = 0x7f1308a1
 
-    const/4 v0, 0x1
+.field public static oneme_media_keyboard_emoji_travels_and_transport:I = 0x7f1308a2
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_media_keyboard_favorite:I = 0x7f1308a3
 
-    return v0
+.field public static oneme_media_keyboard_popular:I = 0x7f1308a4
 
-    :cond_0
-    instance-of v1, p1, Lprc;
+.field public static oneme_media_keyboard_recent:I = 0x7f1308a5
 
-    const/4 v2, 0x0
+.field public static oneme_media_keyboard_recent_clear_action:I = 0x7f1308a6
 
-    if-nez v1, :cond_1
+.field public static oneme_media_keyboard_recent_clear_cancel:I = 0x7f1308a7
 
-    return v2
+.field public static oneme_media_keyboard_recent_clear_title:I = 0x7f1308a8
 
-    :cond_1
-    check-cast p1, Lprc;
+.field public static oneme_media_keyboard_tab_emoji:I = 0x7f1308a9
 
-    iget-object v1, p0, Lprc;->a:Lx2;
+.field public static oneme_media_keyboard_tab_gifs:I = 0x7f1308aa
 
-    iget-object p1, p1, Lprc;->a:Lx2;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lprc;->a:Lx2;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OnMediaMessageSend(media="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lprc;->a:Lx2;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_media_keyboard_tab_stickers:I = 0x7f1308ab

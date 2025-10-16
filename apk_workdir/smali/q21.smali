@@ -1,205 +1,206 @@
 .class public final Lq21;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvr4;
 
 
 # instance fields
-.field public final F0:Lxq1;
+.field public final synthetic a:I
 
-.field public G0:Lp21;
-
-.field public final H0:Lh4f;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 5
+.method public constructor <init>(I)V
+    .locals 8
 
-    const/4 v0, 0x0
+    iput p1, p0, Lq21;->a:I
 
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    packed-switch p1, :pswitch_data_0
 
-    new-instance v0, Lt5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x7
+    new-instance v0, Lce4;
 
-    invoke-direct {v0, p1, v1}, Lt5;-><init>(Landroid/content/Context;I)V
+    sget-object p1, Lkr4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    new-instance v1, Lh4f;
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
+    move-result-wide v1
 
-    iput-object v1, p0, Lq21;->H0:Lh4f;
+    new-instance v3, Lnqf;
 
-    new-instance v0, Lrn3;
+    const-string p1, "125.1.0.70"
 
-    const/4 v1, -0x1
+    invoke-direct {v3, p1}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v0, v1, v1}, Lrn3;-><init>(II)V
+    sget v4, Ldlc;->ic_statusbar_call_24:I
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    new-instance v5, Lnqf;
 
-    sget-object v0, Lrw4;->t0:Lss6;
+    const-string p1, "\u0412\u0435\u0440\u0441\u0438\u044f SDK \u0417\u0432\u043e\u043d\u043a\u043e\u0432"
 
-    invoke-virtual {v0, p0}, Lss6;->x(Landroid/view/View;)Lzma;
+    invoke-direct {v5, p1}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
 
-    move-result-object v0
+    const/4 v6, 0x0
 
-    iget-object v0, v0, Lzma;->c:Llwa;
+    const/16 v7, 0x10
 
-    invoke-interface {v0}, Llwa;->b()Lme0;
+    invoke-direct/range {v0 .. v7}, Lce4;-><init>(JLoqf;ILoqf;Lhxi;I)V
 
-    move-result-object v0
-
-    iget v0, v0, Lme0;->l:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setFocusable(Z)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
-
-    new-instance v0, Lxq1;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v2}, Lxq1;-><init>(Landroid/content/Context;I)V
-
-    sget v3, Lecc;->call_user_full_avatar:I
-
-    invoke-virtual {v0, v3}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    sget-object v3, Ltq1;->b:Ltq1;
-
-    invoke-virtual {v0, v3}, Lxq1;->setMode(Ltq1;)V
-
-    iput-object v0, p0, Lq21;->F0:Lxq1;
-
-    new-instance v3, Landroid/view/ViewStub;
-
-    invoke-direct {v3, p1}, Landroid/view/ViewStub;-><init>(Landroid/content/Context;)V
-
-    sget v4, Lecc;->call_recall:I
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroid/view/ViewStub;
-
-    invoke-direct {v3, p1}, Landroid/view/ViewStub;-><init>(Landroid/content/Context;)V
-
-    sget p1, Lecc;->call_cancel:I
-
-    invoke-virtual {v3, p1}, Landroid/view/View;->setId(I)V
-
-    invoke-virtual {p0, v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
-
-    invoke-static {p0}, Loq0;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)Lbo3;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Landroid/view/View;->getId()I
+    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
 
-    move-result v0
+    move-result-object p1
 
-    const/4 v1, 0x7
+    iput-object p1, p0, Lq21;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v1, v2, v1}, Lbo3;->d(IIII)V
+    return-void
 
-    const/4 v1, 0x6
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, v0, v1, v2, v1}, Lbo3;->d(IIII)V
+    sget-object p1, Ls95;->a:Ls95;
 
-    const/4 v1, 0x3
+    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
 
-    invoke-virtual {p1, v0, v1, v2, v1}, Lbo3;->d(IIII)V
+    move-result-object p1
 
-    const/4 v1, 0x4
+    new-instance v0, Lgzc;
 
-    invoke-virtual {p1, v0, v1, v2, v1}, Lbo3;->d(IIII)V
+    invoke-direct {v0, p1}, Lgzc;-><init>(Lh0a;)V
 
-    invoke-virtual {p1, p0}, Lbo3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    iput-object v0, p0, Lq21;->b:Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object p1, Lkr4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v1
+
+    new-instance v3, Lnqf;
+
+    const-string p1, "Test crash"
+
+    invoke-direct {v3, p1}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v5, Lnqf;
+
+    const-string p1, "\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0439 \u043a\u0440\u0435\u0448 \u0434\u043b\u044f \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0432 tracer"
+
+    invoke-direct {v5, p1}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v4, Lsid;->w:I
+
+    new-instance v0, Lce4;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x10
+
+    invoke-direct/range {v0 .. v7}, Lce4;-><init>(JLoqf;ILoqf;Lhxi;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lq21;->b:Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final e(Lce4;)V
+    .locals 0
 
     return-void
 .end method
 
-.method private final getChatIcon()Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-    .locals 1
+.method private final f(Lce4;)V
+    .locals 0
 
-    iget-object v0, p0, Lq21;->H0:Lh4f;
-
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final setClickListener(Lp21;)V
+.method public final c()Llze;
+    .locals 1
+
+    iget v0, p0, Lq21;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lq21;->b:Ljava/lang/Object;
+
+    check-cast v0, Lgzc;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lq21;->b:Ljava/lang/Object;
+
+    check-cast v0, Lsze;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lq21;->b:Ljava/lang/Object;
+
+    check-cast v0, Lsze;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Lce4;)V
     .locals 0
 
-    iput-object p1, p0, Lq21;->G0:Lp21;
+    iget p1, p0, Lq21;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     return-void
-.end method
 
-.method public final setName(Ljava/lang/CharSequence;)V
-    .locals 1
+    :pswitch_0
+    new-instance p1, Lone/me/devmenu/TestCrash;
 
-    iget-object v0, p0, Lq21;->F0:Lxq1;
+    invoke-direct {p1}, Lone/me/devmenu/TestCrash;-><init>()V
 
-    invoke-virtual {v0, p1}, Lxq1;->setName(Ljava/lang/CharSequence;)V
+    throw p1
 
+    :pswitch_1
     return-void
-.end method
 
-.method public final setStatus(Ljava/lang/CharSequence;)V
-    .locals 1
+    nop
 
-    iget-object v0, p0, Lq21;->F0:Lxq1;
-
-    invoke-virtual {v0, p1}, Lxq1;->setStatus(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final v(Z)V
-    .locals 7
-
-    invoke-direct {p0}, Lq21;->getChatIcon()Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    move-result-object v0
-
-    sget v3, Lbhc;->call_write_message:I
-
-    new-instance v4, Lxcf;
-
-    invoke-direct {v4, v3}, Lxcf;-><init>(I)V
-
-    new-instance v5, Lo21;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v5, p0, v1}, Lo21;-><init>(Lq21;I)V
-
-    iget-object v1, p0, Lq21;->F0:Lxq1;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v6, Lk;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v6, v2, v0}, Lk;-><init>(ILjava/lang/Object;)V
-
-    move v2, p1
-
-    invoke-virtual/range {v1 .. v6}, Lxq1;->X(ZILcdf;Ltd6;Lvd6;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

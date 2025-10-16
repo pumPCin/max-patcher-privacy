@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$1;
-.super Lye6;
+.super Lti6;
 .source "SourceFile"
 
 # interfaces
-.implements Lvd6;
+.implements Lqh6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Loo3;)V
+    value = Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Lfr3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lye6;",
-        "Lvd6;"
+        "Lti6;",
+        "Lqh6;"
     }
 .end annotation
 
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x1
 
-    const-class v3, Loo3;
+    const-class v3, Lfr3;
 
     const-string v5, "accept"
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$1;->invoke(Ljava/lang/Throwable;)V
 
-    sget-object p1, Laxf;->a:Laxf;
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method
@@ -76,11 +76,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lps1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lst1;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Loo3;
+    check-cast v0, Lfr3;
 
-    invoke-interface {v0, p1}, Loo3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lfr3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

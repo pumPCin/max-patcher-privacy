@@ -380,7 +380,7 @@
 
     const-string v4, "Hop index "
 
-    invoke-static {v4, p1, v2, v0, v3}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, p1, v2, v0, v3}, Lxx1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -393,7 +393,7 @@
 
     const-string v1, "Hop index must not be negative: "
 
-    invoke-static {p1, v1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

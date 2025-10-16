@@ -1,242 +1,145 @@
 .class public final Lbme;
-.super Lc2f;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:Lcme;
+.field public final synthetic a:I
 
-.field public Y:Lya5;
-
-.field public Z:I
-
-.field public final synthetic r0:Lcme;
+.field public final synthetic b:Leme;
 
 
 # direct methods
-.method public constructor <init>(Lcme;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Leme;I)V
     .locals 0
 
-    iput-object p1, p0, Lbme;->r0:Lcme;
+    iput p2, p0, Lbme;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lbme;->b:Leme;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
-    check-cast p1, Ln24;
+    iget p1, p0, Lbme;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lbme;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Lbme;->b:Leme;
 
-    move-result-object p1
+    iget v0, p1, Leme;->d1:F
 
-    check-cast p1, Lbme;
+    iget v1, p1, Leme;->j1:F
 
-    sget-object p2, Laxf;->a:Laxf;
+    sub-float/2addr v0, v1
 
-    invoke-virtual {p1, p2}, Lbme;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, p1, Leme;->b1:F
 
-    move-result-object p1
+    mul-float/2addr v0, v1
 
-    return-object p1
+    iget v1, p1, Leme;->e1:F
+
+    div-float/2addr v0, v1
+
+    iget v1, p1, Leme;->b:F
+
+    add-float/2addr v0, v1
+
+    iput v0, p1, Leme;->o:F
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p1, Leme;->g1:Z
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Leme;->n1:Z
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    iget-object v0, p0, Lbme;->b:Leme;
+
+    iput-boolean p1, v0, Leme;->g1:Z
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    new-instance p1, Lbme;
+    iget p1, p0, Lbme;->a:I
 
-    iget-object v0, p0, Lbme;->r0:Lcme;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Lbme;-><init>(Lcme;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lbme;->b:Leme;
 
-    return-object p1
-.end method
+    iget v0, p1, Leme;->d1:F
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    iget v1, p1, Leme;->j1:F
 
-    iget v0, p0, Lbme;->Z:I
+    sub-float/2addr v0, v1
 
-    const/4 v1, 0x1
+    iget v1, p1, Leme;->b1:F
 
-    const/4 v2, 0x2
+    mul-float/2addr v0, v1
 
-    iget-object v3, p0, Lbme;->r0:Lcme;
+    iget v1, p1, Leme;->e1:F
 
-    sget-object v4, Lo24;->a:Lo24;
+    div-float/2addr v0, v1
 
-    if-eqz v0, :cond_2
+    iget v1, p1, Leme;->b:F
 
-    if-eq v0, v1, :cond_1
+    add-float/2addr v0, v1
 
-    if-ne v0, v2, :cond_0
+    iput v0, p1, Leme;->o:F
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    goto/16 :goto_3
+    iput-boolean v0, p1, Leme;->g1:Z
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iput-boolean v0, p1, Leme;->n1:Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    throw p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_1
-    iget-object v0, p0, Lbme;->Y:Lya5;
+    return-void
 
-    iget-object v1, p0, Lbme;->X:Lcme;
+    :pswitch_0
+    const/4 p1, 0x0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lbme;->b:Leme;
 
-    goto :goto_0
+    iput-boolean p1, v0, Leme;->g1:Z
 
-    :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    iget-object v0, v3, Lcme;->z0:Lya5;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, v3, Lcme;->r0:Lyn7;
+    return-void
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkl6;
-
-    new-instance v5, Lk6c;
-
-    iget-object v6, v3, Lcme;->o:Lyn7;
-
-    invoke-interface {v6}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lm63;
-
-    check-cast v6, Lfhd;
-
-    invoke-virtual {v6}, Lfhd;->s()J
-
-    move-result-wide v6
-
-    iget-object v8, v3, Lcme;->b:Lyn7;
-
-    invoke-interface {v8}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Landroid/content/Context;
-
-    sget-object v9, Lrw4;->t0:Lss6;
-
-    invoke-virtual {v9, v8}, Lss6;->u(Landroid/content/Context;)Lrw4;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lrw4;->l()Llwa;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Llwa;->getName()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct {v5, v6, v7, v8}, Ll6c;-><init>(JLjava/lang/String;)V
-
-    iput-object v3, p0, Lbme;->X:Lcme;
-
-    iput-object v0, p0, Lbme;->Y:Lya5;
-
-    iput v1, p0, Lbme;->Z:I
-
-    invoke-virtual {p1, v5, v1, p0}, Lkl6;->a(Ll6c;ZLc2f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move-object v1, v3
-
-    :goto_0
-    check-cast p1, Lf6c;
-
-    const/4 v5, 0x0
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p1, Lf6c;->a:Landroid/net/Uri;
-
-    goto :goto_1
-
-    :cond_4
-    move-object p1, v5
-
-    :goto_1
-    new-instance v6, Lkle;
-
-    invoke-direct {v6, p1}, Lkle;-><init>(Landroid/net/Uri;)V
-
-    sget-object p1, Lcme;->A0:[Lpl7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, v6}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
-
-    iget-object p1, v3, Lcme;->X:Lyn7;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Le7f;
-
-    check-cast p1, Lmka;
-
-    invoke-virtual {p1}, Lmka;->a()Lh24;
-
-    move-result-object p1
-
-    new-instance v0, Lame;
-
-    invoke-direct {v0, v2, v5}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object v5, p0, Lbme;->X:Lcme;
-
-    iput-object v5, p0, Lbme;->Y:Lya5;
-
-    iput v2, p0, Lbme;->Z:I
-
-    invoke-static {p1, v0, p0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_5
-
-    :goto_2
-    return-object v4
-
-    :cond_5
-    :goto_3
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

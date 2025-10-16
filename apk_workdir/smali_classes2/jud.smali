@@ -1,200 +1,83 @@
 .class public final Ljud;
-.super Ly7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llud;
 
 
 # instance fields
-.field public X:I
-
-.field public Y:Llz;
-
-.field public c:Ljava/lang/String;
-
-.field public o:Ljava/lang/String;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lc79;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Ljud;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lc79;Ljava/lang/String;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljud;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljud;
+
+    iget-boolean v1, p0, Ljud;->a:Z
+
+    iget-boolean p1, p1, Ljud;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Ljud;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "location"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "app-update-type"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "proxy"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "proxy-domains"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_0
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Lc79;->y()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg8;->K(Lc79;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljud;->o:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lg8;->F(Lc79;)I
-
-    move-result p1
-
-    iput p1, p0, Ljud;->X:I
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lg8;->K(Lc79;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljud;->c:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1}, Llz;->g(Lc79;)Llz;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljud;->Y:Llz;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x6386dc30 -> :sswitch_3
-        0x65fca6e -> :sswitch_2
-        0x6bc9f012 -> :sswitch_1
-        0x714f9fb5 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 7
+    .locals 3
 
-    iget-object v0, p0, Ljud;->c:Ljava/lang/String;
+    const-string v0, "Show(openWithAnimation="
 
-    iget-object v1, p0, Ljud;->o:Ljava/lang/String;
+    const-string v1, ")"
 
-    iget v2, p0, Ljud;->X:I
+    iget-boolean v2, p0, Ljud;->a:Z
 
-    iget-object v3, p0, Ljud;->Y:Llz;
-
-    const-string v4, "\', locationCountryCode=\'"
-
-    const-string v5, "\', appUpdateType="
-
-    const-string v6, "{  proxy=\'"
-
-    invoke-static {v6, v0, v4, v1, v5}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", proxyDomains="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

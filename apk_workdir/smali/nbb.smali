@@ -1,141 +1,200 @@
 .class public final Lnbb;
-.super Lc2f;
+.super Lcx7;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic q:I
 
-.field public final synthetic Y:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+.field public final synthetic r:Lfc4;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+.method public synthetic constructor <init>(Lfc4;Landroid/content/Context;I)V
     .locals 0
 
-    iput-object p2, p0, Lnbb;->Y:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+    iput p3, p0, Lnbb;->q:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lnbb;->r:Lfc4;
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lcx7;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final d(Landroid/util/DisplayMetrics;)F
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lnbb;->q:I
 
-    invoke-virtual {p0, p1, p2}, Lnbb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    check-cast p1, Lnbb;
+    :goto_0
+    int-to-float p1, p1
 
-    sget-object p2, Laxf;->a:Laxf;
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    invoke-virtual {p1, p2}, Lnbb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    div-float/2addr v0, p1
 
-    return-object p2
+    return v0
+
+    :pswitch_0
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public f(I)I
+    .locals 1
+
+    iget v0, p0, Lnbb;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lcx7;->f(I)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    const/16 v0, 0x64
+
+    invoke-super {p0, p1}, Lcx7;->f(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Landroid/view/View;Lf6d;Ld6d;)V
     .locals 2
 
-    new-instance v0, Lnbb;
+    iget p2, p0, Lnbb;->q:I
 
-    iget-object v1, p0, Lnbb;->Y:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+    packed-switch p2, :pswitch_data_0
 
-    invoke-direct {v0, p2, v1}, Lnbb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+    iget-object p2, p0, Lnbb;->r:Lfc4;
 
-    iput-object p1, v0, Lnbb;->X:Ljava/lang/Object;
+    iget-object v0, p2, Lfc4;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnbb;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljl2;
-
-    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Lpl7;
-
-    iget v0, p1, Ljl2;->a:I
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lnbb;->Y:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lrm2;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->C0()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v2, v3, v4}, Lrm2;->D(JLjava/lang/String;)Lkl8;
-
-    move-result-object v1
-
-    instance-of v2, v1, Lcl8;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Lcl8;
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    :goto_0
-    if-nez v1, :cond_1
+    move-result-object v0
 
-    goto :goto_1
+    invoke-virtual {p2, v0, p1}, Lfc4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcx7;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    iget-object v1, p0, Lcx7;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Ld6d;->b(IIILandroid/view/animation/BaseInterpolator;)V
 
     :cond_1
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lkbb;
+    :goto_0
+    return-void
 
-    move-result-object v2
+    :pswitch_0
+    iget-object p2, p0, Lnbb;->r:Lfc4;
 
-    iget p1, p1, Ljl2;->b:F
+    iget-object v0, p2, Lfc4;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v2, p1}, Lkbb;->setImageRotation(F)V
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lkbb;
+    move-result-object v0
 
-    move-result-object p1
-
-    iget-object v1, v1, Lcl8;->o:Ld37;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p1, v1, v2}, Lkbb;->k(Ld37;Z)V
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lkbb;
+    invoke-virtual {p2, v0, p1}, Lfc4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    const/4 p2, 0x0
+
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcx7;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    iget-object v1, p0, Lcx7;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Ld6d;->b(IIILandroid/view/animation/BaseInterpolator;)V
 
     :cond_2
-    :goto_1
-    sget-object p1, Laxf;->a:Laxf;
+    return-void
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

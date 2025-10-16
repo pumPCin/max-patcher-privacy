@@ -1,40 +1,51 @@
-.class public final synthetic Ltjg;
+.class public final Ltjg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmq7;
-
 
 # virtual methods
-.method public final d(Luq7;Lvp7;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "shared.ViewLifecycle/"
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    instance-of v1, p1, Ltjg;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return p1
 
-    const-string v1, "onStateChanged "
+    :cond_1
+    check-cast p1, Ltjg;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p2
+    const/high16 v0, 0x29000000
 
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    return-void
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "VfxButtonIconOverlayPlainElevation2Colors(color=687865856)"
+
+    return-object v0
 .end method

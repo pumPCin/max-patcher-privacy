@@ -1,66 +1,63 @@
-.class public final Lrj0;
-.super Lhe;
+.class public abstract Lrj0;
+.super Lqn8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final u0:J
 
-.field public final synthetic c:Lsj0;
+.field public final v0:J
+
+.field public w0:Lo0f;
+
+.field public x0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsj0;I)V
-    .locals 0
+.method public constructor <init>(Lqb4;Lxb4;Lsa6;ILjava/lang/Object;JJJJJ)V
+    .locals 12
 
-    iput p2, p0, Lrj0;->b:I
+    move-object v0, p0
 
-    iput-object p1, p0, Lrj0;->c:Lsj0;
+    move-object v1, p1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move/from16 v4, p4
+
+    move-object/from16 v5, p5
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    move-wide/from16 v10, p14
+
+    invoke-direct/range {v0 .. v11}, Lqn8;-><init>(Lqb4;Lxb4;Lsa6;ILjava/lang/Object;JJJ)V
+
+    move-wide/from16 p1, p10
+
+    iput-wide p1, p0, Lrj0;->u0:J
+
+    move-wide/from16 p1, p12
+
+    iput-wide p1, p0, Lrj0;->v0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/drawable/Drawable;)V
+.method public final d(I)I
     .locals 1
 
-    iget p1, p0, Lrj0;->b:I
+    iget-object v0, p0, Lrj0;->x0:[I
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {v0}, Lgfi;->h(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lrj0;->c:Lsj0;
+    aget p1, v0, p1
 
-    iget-boolean v0, p1, Lsj0;->s0:Z
-
-    if-nez v0, :cond_0
-
-    iget v0, p1, Lsj0;->t0:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    iget-object v0, p0, Lrj0;->c:Lsj0;
-
-    invoke-virtual {v0, p1}, Lsj0;->setIndeterminate(Z)V
-
-    iget p1, v0, Lsj0;->b:I
-
-    invoke-virtual {v0, p1}, Lsj0;->b(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

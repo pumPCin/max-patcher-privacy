@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve8;
-.implements Lyef;
+.implements Lfl8;
+.implements Lksf;
 
 
 # static fields
@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public final F0:Lgq4;
+.field public final F0:Lft4;
 
 .field public final G0:Landroid/view/View;
 
@@ -34,17 +34,17 @@
 
 .field public final P0:Lru/ok/messages/messages/widgets/MessageComposeEditText;
 
-.field public final Q0:Lwz7;
+.field public final Q0:Lj58;
 
-.field public final R0:Lue8;
+.field public final R0:Lel8;
 
-.field public S0:Lte8;
+.field public S0:Ldl8;
 
 .field public T0:Landroid/widget/Toast;
 
-.field public final U0:Lug;
+.field public final U0:Ldh;
 
-.field public final V0:Lpnb;
+.field public final V0:Llwb;
 
 .field public W0:Z
 
@@ -79,71 +79,71 @@
 
     iput v1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Z0:I
 
-    invoke-static {}, Lum;->b()Ljg3;
+    invoke-static {}, Len;->b()Lri3;
 
     move-result-object v1
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lgq4;->a()Lgq4;
+    invoke-static {}, Lft4;->a()Lft4;
 
     move-result-object v3
 
-    iput-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lgq4;
+    iput-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lft4;
 
-    check-cast v1, Lnja;
+    check-cast v1, Lqra;
 
-    invoke-virtual {v1}, Lnja;->b()Lug;
+    invoke-virtual {v1}, Lqra;->b()Ldh;
 
     move-result-object v4
 
-    iput-object v4, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->U0:Lug;
+    iput-object v4, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->U0:Ldh;
 
-    invoke-virtual {v1}, Lnja;->g()Lwz7;
+    invoke-virtual {v1}, Lqra;->g()Lj58;
 
     move-result-object v5
 
-    iput-object v5, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lwz7;
+    iput-object v5, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lj58;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object v6
-
-    const-class v8, Lt10;
-
-    invoke-virtual {v6, v8}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v6
 
-    check-cast v6, Lt10;
+    const-class v8, Lg20;
 
-    invoke-virtual {v1}, Lnja;->j()Lpnb;
+    invoke-virtual {v6, v8}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lg20;
+
+    invoke-virtual {v1}, Lqra;->j()Llwb;
 
     move-result-object v8
 
-    iput-object v8, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->V0:Lpnb;
+    iput-object v8, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->V0:Llwb;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object v1
-
-    const-class v8, Lc08;
-
-    invoke-virtual {v1, v8}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v1
 
-    check-cast v1, Lc08;
+    const-class v8, Lp58;
+
+    invoke-virtual {v1, v8}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp58;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
-    sget v9, Lmfc;->cl_media_bar_preview_layout:I
+    sget v9, Llpc;->cl_media_bar_preview_layout:I
 
     invoke-static {v8, v9, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    sget v8, Lpec;->cl_media_bar_preview_layout__top_panel:I
+    sget v8, Looc;->cl_media_bar_preview_layout__top_panel:I
 
     invoke-virtual {p0, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -151,7 +151,7 @@
 
     iput-object v8, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->H0:Landroid/view/View;
 
-    sget v8, Lpec;->cl_media_bar_preview_layout__bottom_panel:I
+    sget v8, Looc;->cl_media_bar_preview_layout__bottom_panel:I
 
     invoke-virtual {p0, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -159,7 +159,7 @@
 
     iput-object v8, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->G0:Landroid/view/View;
 
-    sget v8, Lpec;->media_bar_view__bottom_shadow:I
+    sget v8, Looc;->media_bar_view__bottom_shadow:I
 
     invoke-virtual {p0, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -167,7 +167,7 @@
 
     iput-object v8, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->I0:Landroid/view/View;
 
-    sget v8, Lpec;->cl_media_bar_preview_layout__separator_middle:I
+    sget v8, Looc;->cl_media_bar_preview_layout__separator_middle:I
 
     invoke-virtual {p0, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +175,7 @@
 
     iput-object v8, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->K0:Landroid/view/View;
 
-    sget v8, Lpec;->cl_media_bar_preview_layout__rv_selected:I
+    sget v8, Looc;->cl_media_bar_preview_layout__rv_selected:I
 
     invoke-virtual {p0, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     iput-object v8, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->J0:Landroidx/recyclerview/widget/RecyclerView;
 
-    sget v9, Lpec;->cl_media_bar_preview_layout__ib_send:I
+    sget v9, Looc;->cl_media_bar_preview_layout__ib_send:I
 
     invoke-virtual {p0, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
 
     iput-object v9, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->L0:Landroid/widget/ImageButton;
 
-    sget v10, Lpec;->cl_media_bar_preview_layout__ib_file:I
+    sget v10, Looc;->cl_media_bar_preview_layout__ib_file:I
 
     invoke-virtual {p0, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -205,7 +205,7 @@
 
     iput-object v10, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->M0:Landroid/widget/ImageButton;
 
-    sget v11, Lpec;->cl_media_bar_preview_layout__ib_collage:I
+    sget v11, Looc;->cl_media_bar_preview_layout__ib_collage:I
 
     invoke-virtual {p0, v11}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -215,7 +215,7 @@
 
     iput-object v11, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->N0:Landroid/widget/ImageButton;
 
-    sget v12, Lpec;->cl_media_bar_preview_layout__ib_cancel:I
+    sget v12, Looc;->cl_media_bar_preview_layout__ib_cancel:I
 
     invoke-virtual {p0, v12}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -225,7 +225,7 @@
 
     iput-object v12, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->O0:Landroid/widget/ImageButton;
 
-    sget v13, Lpec;->cl_media_bar_preview_layout__edit_message:I
+    sget v13, Looc;->cl_media_bar_preview_layout__edit_message:I
 
     invoke-virtual {p0, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -249,23 +249,23 @@
 
     invoke-virtual {v8, v14}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    new-instance v0, Lyh4;
+    new-instance v0, Lvk4;
 
-    invoke-direct {v0}, Lyh4;-><init>()V
+    invoke-direct {v0}, Lvk4;-><init>()V
 
-    invoke-virtual {v8, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lcvc;)V
+    invoke-virtual {v8, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lr5d;)V
 
-    new-instance v0, Lh71;
+    new-instance v0, Li81;
 
-    iget v3, v3, Lgq4;->b:I
+    iget v3, v3, Lft4;->b:I
 
     const/4 v14, 0x4
 
-    invoke-direct {v0, v3, v14}, Lh71;-><init>(II)V
+    invoke-direct {v0, v3, v14}, Li81;-><init>(II)V
 
-    invoke-virtual {v8, v0}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
+    invoke-virtual {v8, v0}, Landroidx/recyclerview/widget/RecyclerView;->j(Ls5d;)V
 
-    new-instance v0, Lue8;
+    new-instance v0, Lel8;
 
     move-object v3, v4
 
@@ -279,21 +279,21 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lue8;-><init>(Landroid/content/Context;Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;Lug;Lt10;Lwz7;Lc08;)V
+    invoke-direct/range {v0 .. v6}, Lel8;-><init>(Landroid/content/Context;Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;Ldh;Lg20;Lj58;Lp58;)V
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lue8;
+    iput-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lel8;
 
-    invoke-virtual {v0, v7}, Lxuc;->A(Z)V
+    invoke-virtual {v0, v7}, Lm5d;->A(Z)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lue8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lel8;
 
-    invoke-virtual {v8, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
+    invoke-virtual {v8, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
 
-    new-instance v0, Lk3;
+    new-instance v0, Ll3;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1, p0}, Lk3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ll3;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v13, v0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -301,61 +301,61 @@
 
     invoke-virtual {v13, v0}, Landroid/widget/TextView;->setInputType(I)V
 
-    new-instance v0, Lrdf;
+    new-instance v0, Ldrf;
 
     invoke-virtual {v13}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Ltvf;->a(Landroid/content/Context;)Lpwf;
+    invoke-static {v1}, Leai;->b(Landroid/content/Context;)Loag;
 
     move-result-object v1
 
-    invoke-direct {v0, v13, v1}, Lrdf;-><init>(Landroid/widget/TextView;Lpwf;)V
+    invoke-direct {v0, v13, v1}, Ldrf;-><init>(Landroid/widget/TextView;Loag;)V
 
-    invoke-virtual {v0}, Lrdf;->a()V
+    invoke-virtual {v0}, Ldrf;->a()V
 
-    new-instance v0, Lse8;
+    new-instance v0, Lcl8;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lse8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
+    invoke-direct {v0, p0, v1}, Lcl8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
 
-    invoke-static {v9, v0}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v9, v0}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v9, v7}, Landroid/view/View;->setLongClickable(Z)V
 
-    new-instance v0, Lcm0;
+    new-instance v0, Lwm0;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, v1, p0}, Lcm0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lwm0;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v9, v0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    new-instance v0, Lse8;
+    new-instance v0, Lcl8;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lse8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
+    invoke-direct {v0, p0, v1}, Lcl8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
 
-    invoke-static {v10, v0}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v10, v0}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    new-instance v0, Lse8;
+    new-instance v0, Lcl8;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, p0, v1}, Lse8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
+    invoke-direct {v0, p0, v1}, Lcl8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
 
-    invoke-static {v11, v0}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v11, v0}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    new-instance v0, Lse8;
+    new-instance v0, Lcl8;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, p0, v1}, Lse8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
+    invoke-direct {v0, p0, v1}, Lcl8;-><init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
 
-    invoke-static {v12, v0}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v12, v0}, Ldxi;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
@@ -369,9 +369,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lh9f;->a0:Lh4f;
+    sget-object v1, Ltmf;->a0:Lrhf;
 
-    invoke-static {v0}, Luce;->e0(Landroid/content/Context;)Lh9f;
+    invoke-static {v0}, Lnw3;->g(Landroid/content/Context;)Ltmf;
 
     move-result-object v0
 
@@ -381,11 +381,11 @@
 
     iget-object v2, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->J0:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget v3, v0, Lh9f;->m:I
+    iget v3, v0, Ltmf;->m:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget v2, v0, Lh9f;->m:I
+    iget v2, v0, Ltmf;->m:I
 
     iget-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->H0:Landroid/view/View;
 
@@ -397,11 +397,11 @@
 
     iget-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->K0:Landroid/view/View;
 
-    iget v4, v0, Lh9f;->K:I
+    iget v4, v0, Ltmf;->K:I
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget v3, v0, Lh9f;->k:I
+    iget v3, v0, Ltmf;->k:I
 
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
@@ -409,7 +409,7 @@
 
     invoke-virtual {v5, v3, v4}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    invoke-virtual {v0}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {v0}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object v6
 
@@ -419,7 +419,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lrn3;
+    check-cast v6, Liq3;
 
     const/4 v7, -0x2
 
@@ -427,7 +427,7 @@
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {v5, v1}, Lbbh;->G(Landroid/view/View;I)V
+    invoke-static {v5, v1}, Ltai;->i(Landroid/view/View;I)V
 
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -444,7 +444,7 @@
     invoke-virtual {v5, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_0
-    invoke-virtual {v0}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {v0}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object v1
 
@@ -452,7 +452,7 @@
 
     invoke-virtual {v5, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v0}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {v0}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object v1
 
@@ -460,7 +460,7 @@
 
     invoke-virtual {v6, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    iget v1, v0, Lh9f;->w:I
+    iget v1, v0, Ltmf;->w:I
 
     invoke-virtual {v5, v1, v4}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
@@ -470,13 +470,13 @@
 
     invoke-virtual {v5, v1, v4}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    invoke-virtual {v0}, Lh9f;->a()Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {v0}, Ltmf;->a()Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object v1
 
     invoke-virtual {v5, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    iget v1, v0, Lh9f;->i:I
+    iget v1, v0, Ltmf;->i:I
 
     new-instance v6, Landroid/graphics/drawable/RippleDrawable;
 
@@ -500,21 +500,21 @@
     :goto_0
     invoke-direct {v6, v1, v8, v7}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lgq4;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lft4;
 
-    iget v1, v1, Lgq4;->n:I
+    iget v1, v1, Lft4;->n:I
 
     invoke-virtual {v6, v1}, Landroid/graphics/drawable/RippleDrawable;->setRadius(I)V
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    iget v1, v0, Lh9f;->F:I
+    iget v1, v0, Ltmf;->F:I
 
     iget-object v2, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->P0:Lru/ok/messages/messages/widgets/MessageComposeEditText;
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget v0, v0, Lh9f;->M:I
+    iget v0, v0, Ltmf;->M:I
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setHintTextColor(I)V
 
@@ -563,7 +563,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, v1}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v5, v1}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -577,7 +577,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2, v1}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -651,7 +651,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lgq4;
+    iget-object v2, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lft4;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -659,7 +659,7 @@
 
     float-to-int v2, v2
 
-    invoke-static {v2}, Lkq4;->b(I)I
+    invoke-static {v2}, Ljt4;->b(I)I
 
     move-result v2
 
@@ -753,9 +753,9 @@
 
     move-result v0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lgq4;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lft4;
 
-    iget v1, v1, Lgq4;->i:I
+    iget v1, v1, Lft4;->i:I
 
     div-int/lit8 v1, v1, 0x2
 
@@ -790,18 +790,18 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lmi;->setAnimojiEnabled(Z)V
+    invoke-virtual {v0, p1}, Lvi;->setAnimojiEnabled(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public setChatMode(Lxn2;)V
+.method public setChatMode(Lkp2;)V
     .locals 2
 
-    iget-object v0, p1, Lxn2;->a:Lh4f;
+    iget-object v0, p1, Lkp2;->a:Lrhf;
 
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lrhf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -813,21 +813,21 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lv7d;->G0:I
+    sget v0, Lsid;->H0:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lv7d;->w0:I
+    sget v0, Lsid;->x0:I
 
     :goto_0
     iget-object v1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->L0:Landroid/widget/ImageButton;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    iget-object p1, p1, Lxn2;->a:Lh4f;
+    iget-object p1, p1, Lkp2;->a:Lrhf;
 
-    invoke-virtual {p1}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -854,10 +854,10 @@
     return-void
 .end method
 
-.method public setListener(Lte8;)V
+.method public setListener(Ldl8;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lte8;
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Ldl8;
 
     return-void
 .end method
@@ -877,9 +877,9 @@
 .method public setShouldApplyHighlight(Z)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lue8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lel8;
 
-    iput-boolean p1, v0, Lue8;->t0:Z
+    iput-boolean p1, v0, Lel8;->t0:Z
 
     return-void
 .end method
@@ -887,13 +887,13 @@
 .method public final v()V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lwz7;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lj58;
 
-    iget-object v0, v0, Lwz7;->f:Lgod;
+    iget-object v0, v0, Lj58;->f:Lgzd;
 
-    iget v0, v0, Lgod;->k:I
+    iget v0, v0, Lgzd;->k:I
 
-    invoke-static {v0}, Lsw1;->u(I)I
+    invoke-static {v0}, Lwx1;->v(I)I
 
     move-result v0
 
@@ -909,33 +909,33 @@
 
     if-eq v0, v1, :cond_0
 
-    sget v0, Lv7d;->M:I
+    sget v0, Lsid;->K:I
 
     invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    sget v0, Lv7d;->U:I
+    sget v0, Lsid;->T:I
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     return-void
 
     :cond_0
-    sget v0, Lv7d;->N:I
+    sget v0, Lsid;->L:I
 
     invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    sget v0, Lv7d;->U:I
+    sget v0, Lsid;->T:I
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     return-void
 
     :cond_1
-    sget v0, Lv7d;->M:I
+    sget v0, Lsid;->K:I
 
     invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    sget v0, Lv7d;->V:I
+    sget v0, Lsid;->U:I
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -988,15 +988,15 @@
 
     move-result-object v2
 
-    sget v3, Ls9c;->compose_view_item_height:I
+    sget v3, Lqjc;->compose_view_item_height:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v2
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lgq4;
+    iget-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->F0:Lft4;
 
-    iget v3, v3, Lgq4;->i:I
+    iget v3, v3, Lft4;->i:I
 
     sub-int/2addr v2, v3
 
@@ -1053,17 +1053,17 @@
 .method public final y()V
     .locals 10
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->V0:Lpnb;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->V0:Llwb;
 
-    iget-object v0, v0, Lpnb;->c:Lz2g;
+    iget-object v0, v0, Llwb;->c:Lchg;
 
     const-string v1, "app.messages.enable.animations"
 
-    iget-object v0, v0, Lv3;->h:Lbo7;
+    iget-object v0, v0, Lw3;->h:Lot7;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lbo7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v2}, Lot7;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -1085,13 +1085,13 @@
     :goto_0
     iput-boolean v1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->X0:Z
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lwz7;
+    iget-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lj58;
 
-    iget-object v4, v3, Lwz7;->f:Lgod;
+    iget-object v4, v3, Lj58;->f:Lgzd;
 
-    iget-object v3, v3, Lwz7;->f:Lgod;
+    iget-object v3, v3, Lj58;->f:Lgzd;
 
-    invoke-virtual {v4}, Lgod;->b()I
+    invoke-virtual {v4}, Lgzd;->b()I
 
     move-result v4
 
@@ -1138,7 +1138,7 @@
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v3}, Lgod;->b()I
+    invoke-virtual {v3}, Lgzd;->b()I
 
     move-result v0
 
@@ -1159,7 +1159,7 @@
 
     invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v3}, Lgod;->b()I
+    invoke-virtual {v3}, Lgzd;->b()I
 
     move-result v4
 
@@ -1173,18 +1173,18 @@
     move v8, v1
 
     :goto_3
-    iget-object v9, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->U0:Lug;
+    iget-object v9, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->U0:Ldh;
 
     if-eqz v0, :cond_7
 
     if-eqz v8, :cond_6
 
-    invoke-virtual {v9, v7}, Lug;->c(Landroid/view/View;)Lvn4;
+    invoke-virtual {v9, v7}, Ldh;->c(Landroid/view/View;)Luq4;
 
     goto :goto_4
 
     :cond_6
-    invoke-virtual {v9, v7}, Lug;->d(Landroid/view/View;)Lvn4;
+    invoke-virtual {v9, v7}, Ldh;->d(Landroid/view/View;)Luq4;
 
     goto :goto_4
 
@@ -1216,12 +1216,12 @@
 
     if-eqz v2, :cond_b
 
-    invoke-virtual {v9, v5}, Lug;->c(Landroid/view/View;)Lvn4;
+    invoke-virtual {v9, v5}, Ldh;->c(Landroid/view/View;)Luq4;
 
     goto :goto_6
 
     :cond_b
-    invoke-virtual {v9, v5}, Lug;->d(Landroid/view/View;)Lvn4;
+    invoke-virtual {v9, v5}, Ldh;->d(Landroid/view/View;)Luq4;
 
     goto :goto_6
 
@@ -1236,7 +1236,7 @@
     invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
 
     :goto_6
-    iget-object v0, v3, Lgod;->j:Ljava/lang/CharSequence;
+    iget-object v0, v3, Lgzd;->j:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_e
 
@@ -1247,9 +1247,9 @@
     :cond_e
     invoke-virtual {p0}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->v()V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lue8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lel8;
 
-    invoke-virtual {v0}, Lxuc;->m()V
+    invoke-virtual {v0}, Lm5d;->m()V
 
     return-void
 .end method

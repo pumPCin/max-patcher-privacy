@@ -1,135 +1,63 @@
 .class public final Lxc9;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lwe9;
-
-.field public final synthetic Z:J
+# static fields
+.field public static final a:Lxc9;
 
 
 # direct methods
-.method public constructor <init>(Lwe9;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lxc9;->Y:Lwe9;
+    new-instance v0, Lxc9;
 
-    iput-wide p2, p0, Lxc9;->Z:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lxc9;->a:Lxc9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Lr14;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "MessageLocation{messageId=0, contactId=0, location="
 
-    invoke-virtual {p0, p1, p2}, Lxc9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    sget-object v1, Lt68;->Z:Lt68;
 
-    check-cast p1, Lxc9;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Laxf;->a:Laxf;
+    const-string v1, ", time="
 
-    invoke-virtual {p1, p2}, Lxc9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p2
-.end method
+    const-wide/16 v1, 0x0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    new-instance v0, Lxc9;
+    move-result-object v1
 
-    iget-object v1, p0, Lxc9;->Y:Lwe9;
+    invoke-static {v1}, Lbxi;->e(Ljava/lang/Long;)Ljava/lang/String;
 
-    iget-wide v2, p0, Lxc9;->Z:J
+    move-result-object v1
 
-    invoke-direct {v0, v1, v2, v3, p2}, Lxc9;-><init>(Lwe9;JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Lxc9;->X:Ljava/lang/Object;
+    const-string v1, ", active=false, deviceId=\'\', livePeriod=0}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxc9;->X:Ljava/lang/Object;
-
-    check-cast p1, Lr14;
-
-    instance-of v0, p1, Lq14;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lu9e;
-
-    check-cast p1, Lq14;
-
-    iget-object p1, p1, Lq14;->a:Lcdf;
-
-    invoke-direct {v0, p1, v3, v2, v1}, Lu9e;-><init>(Lcdf;ILxcf;I)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lp14;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lu9e;
-
-    check-cast p1, Lp14;
-
-    iget-object p1, p1, Lp14;->a:Lcdf;
-
-    invoke-direct {v0, p1, v3, v2, v1}, Lu9e;-><init>(Lcdf;ILxcf;I)V
-
-    :goto_0
-    iget-object p1, p0, Lxc9;->Y:Lwe9;
-
-    iget-object v1, p1, Lwe9;->C1:Lya5;
-
-    invoke-static {v1, v0}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
-
-    iget-object p1, p1, Lwe9;->F1:Lrr9;
-
-    iget-wide v0, p0, Lxc9;->Z:J
-
-    invoke-virtual {p1, v0, v1}, Lrr9;->l(J)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

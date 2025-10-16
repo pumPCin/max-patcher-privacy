@@ -15,15 +15,15 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lbbc;->dragger_24:I
+    sget v0, Lkkc;->ic_in_app_review_thank_you:I
 
     sput v0, Lfva;->a:I
 
-    sget v0, Lbbc;->draw_sticker_24_gradient:I
+    sget v0, Lkkc;->ic_selected_star:I
 
     sput v0, Lfva;->b:I
 
-    sget v0, Lbbc;->recent_24:I
+    sget v0, Lkkc;->ic_unselected_star:I
 
     sput v0, Lfva;->c:I
 

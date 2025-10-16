@@ -1,26 +1,158 @@
-.class public abstract Lqec;
+.class public final Lqec;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static link_context_menu_action_copy_call:I = 0x7f0a0441
+# instance fields
+.field public volatile a:Z
 
-.field public static link_context_menu_action_copy_link:I = 0x7f0a0442
+.field public final b:Ljava/lang/Object;
 
-.field public static link_context_menu_action_copy_mail:I = 0x7f0a0443
 
-.field public static link_context_menu_action_copy_profile:I = 0x7f0a0444
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static link_context_menu_action_open_call:I = 0x7f0a0445
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static link_context_menu_action_open_link:I = 0x7f0a0446
+    const/4 v0, 0x0
 
-.field public static link_context_menu_action_open_mail:I = 0x7f0a0447
+    iput-boolean v0, p0, Lqec;->a:Z
 
-.field public static link_context_menu_action_open_profile:I = 0x7f0a0448
+    new-instance v0, Ljava/lang/Object;
 
-.field public static notification_cancel_request_id:I = 0x7f0a05e6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static notification_content_request_id:I = 0x7f0a05e7
+    iput-object v0, p0, Lqec;->b:Ljava/lang/Object;
 
-.field public static text_view_animation_pending_text_tag:I = 0x7f0a0bf6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 2
+
+    iget-object v0, p0, Lqec;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Lqec;->a:Z
+
+    iget-object v1, p0, Lqec;->b:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public final b(J)V
+    .locals 5
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr p1, v0
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x0
+
+    if-gez v2, :cond_1
+
+    iget-object p1, p0, Lqec;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :goto_0
+    :try_start_0
+    iget-boolean p2, p0, Lqec;->a:Z
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Lqec;->b:Ljava/lang/Object;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_1
+
+    :cond_0
+    iput-boolean v3, p0, Lqec;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    monitor-exit p1
+
+    throw p2
+
+    :cond_1
+    iget-object v2, p0, Lqec;->b:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :goto_2
+    :try_start_1
+    iget-boolean v4, p0, Lqec;->a:Z
+
+    if-nez v4, :cond_2
+
+    cmp-long v4, v0, p1
+
+    if-gez v4, :cond_2
+
+    iget-object v4, p0, Lqec;->b:Ljava/lang/Object;
+
+    sub-long v0, p1, v0
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_2
+    iput-boolean v3, p0, Lqec;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit v2
+
+    return-void
+
+    :goto_3
+    monitor-exit v2
+
+    throw p1
+.end method

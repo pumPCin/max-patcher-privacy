@@ -2,32 +2,101 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Comparable;
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
 
-.field public static final b:Ljava/util/regex/Pattern;
+# instance fields
+.field public final X:J
+
+.field public final Y:Lh15;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lf07;
+
+.field public final c:J
+
+.field public final o:I
+
+.field public final r0:Ljava/lang/String;
+
+.field public final s0:J
+
+.field public final t0:J
+
+.field public final u0:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lf07;JIJLh15;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    .locals 0
 
-    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lh07;->a:Ljava/lang/String;
 
-    move-result-object v0
+    iput-object p2, p0, Lh07;->b:Lf07;
 
-    sput-object v0, Lh07;->a:Ljava/util/regex/Pattern;
+    iput-wide p3, p0, Lh07;->c:J
 
-    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
+    iput p5, p0, Lh07;->o:I
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-wide p6, p0, Lh07;->X:J
 
-    move-result-object v0
+    iput-object p8, p0, Lh07;->Y:Lh15;
 
-    sput-object v0, Lh07;->b:Ljava/util/regex/Pattern;
+    iput-object p9, p0, Lh07;->Z:Ljava/lang/String;
+
+    iput-object p10, p0, Lh07;->r0:Ljava/lang/String;
+
+    iput-wide p11, p0, Lh07;->s0:J
+
+    iput-wide p13, p0, Lh07;->t0:J
+
+    iput-boolean p15, p0, Lh07;->u0:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
+
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lh07;->X:J
+
+    cmp-long v0, v2, v0
+
+    if-lez v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    cmp-long p1, v2, v0
+
+    if-gez p1, :cond_1
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

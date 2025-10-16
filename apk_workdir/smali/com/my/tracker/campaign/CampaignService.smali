@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/my/tracker/campaign/CampaignService;Ljava/lang/String;Low1;)V
+.method public static synthetic a(Lcom/my/tracker/campaign/CampaignService;Ljava/lang/String;Lsx1;)V
     .locals 0
 
     .line 1
@@ -67,11 +67,11 @@
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 3
 
-    new-instance v0, Low1;
+    new-instance v0, Lsx1;
 
     const/16 v1, 0x8
 
-    invoke-direct {v0, v1, p0}, Low1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lsx1;-><init>(ILjava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
@@ -87,11 +87,11 @@
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lxi;
+    new-instance v1, Lgj;
 
     const/16 v2, 0x10
 
-    invoke-direct {v1, p0, p1, v0, v2}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v1, p0, p1, v0, v2}, Lgj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-static {v1}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 

@@ -1,151 +1,209 @@
 .class public final Lgl1;
-.super Lhl1;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final D:Lzcf;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final E:Lor;
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method public constructor <init>(Lzcf;Lor;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Lhl1;-><init>()V
+    iput-object p2, p0, Lgl1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iput-object p1, p0, Lgl1;->D:Lzcf;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lgl1;->E:Lor;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_1
+    invoke-virtual {p0, p1, p2}, Lgl1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lgl1;
+    move-result-object p1
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lgl1;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object v0, p0, Lgl1;->D:Lzcf;
+    invoke-virtual {p1, p2}, Lgl1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p1, Lgl1;->D:Lzcf;
+    return-object p2
+.end method
 
-    invoke-virtual {v0, v1}, Lzcf;->equals(Ljava/lang/Object;)Z
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result v0
+    new-instance v0, Lgl1;
 
-    if-nez v0, :cond_2
+    iget-object v1, p0, Lgl1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    goto :goto_0
+    invoke-direct {v0, p2, v1}, Lgl1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
 
-    :cond_2
-    iget-object v0, p0, Lgl1;->E:Lor;
+    iput-object p1, v0, Lgl1;->X:Ljava/lang/Object;
 
-    iget-object p1, p1, Lgl1;->E:Lor;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgl1;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lgl1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+    if-ne p1, v0, :cond_0
+
+    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->C0(Lone/me/calls/ui/ui/call/CallScreen;)Lx43;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lx43;->b()Lx14;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->C0(Lone/me/calls/ui/ui/call/CallScreen;)Lx43;
+
+    move-result-object p1
+
+    iget-object v0, p1, Lx43;->a:Ljhd;
+
+    invoke-virtual {p1}, Lx43;->c()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v3, "call_vpn_panel_widget_tag"
+
+    invoke-static {p1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_3
 
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
+    invoke-virtual {v0, p1}, Ljhd;->Q(Z)V
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    new-instance v5, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
 
-    return p1
-.end method
+    iget-object p1, v2, Lone/me/calls/ui/ui/call/CallScreen;->s0:Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-direct {v5, p1, v1}, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;-><init>(Ljava/lang/String;Lvh4;)V
 
-    sget-object v0, Lnk1;->b:Lnk1;
+    new-instance p1, Lswe;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 v1, 0x4
 
-    move-result v0
+    invoke-direct {p1, v1, v2}, Lswe;-><init>(ILjava/lang/Object;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object p1, v5, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Lswe;
 
-    iget-object v1, p0, Lgl1;->D:Lzcf;
+    new-instance v4, Lmhd;
 
-    invoke-virtual {v1}, Lzcf;->hashCode()I
+    const/4 v9, 0x0
 
-    move-result v1
+    const/4 v10, -0x1
 
-    add-int/2addr v1, v0
+    const/4 v6, 0x0
 
-    mul-int/lit8 v1, v1, 0x1f
+    const/4 v7, 0x0
 
-    iget-object v0, p0, Lgl1;->E:Lor;
+    const/4 v8, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-direct/range {v4 .. v10}, Lmhd;-><init>(Lx14;Ljava/lang/String;Lc24;Lc24;ZI)V
 
-    move-result v0
+    invoke-virtual {v4, v3}, Lmhd;->d(Ljava/lang/String;)V
 
-    add-int/2addr v0, v1
+    invoke-virtual {v0, v4}, Ljhd;->R(Lmhd;)V
 
-    return v0
-.end method
+    goto :goto_1
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    :cond_0
+    if-nez p1, :cond_4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->C0(Lone/me/calls/ui/ui/call/CallScreen;)Lx43;
 
-    const-string v1, "ShowTimerSnackbar(priority="
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lx43;->b()Lx14;
 
-    sget-object v1, Lnk1;->b:Lnk1;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    instance-of v0, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
 
-    const-string v1, ", textSource="
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
 
-    iget-object v1, p0, Lgl1;->D:Lzcf;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_1
+    move-object p1, v1
 
-    const-string v1, ", action="
+    :goto_0
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgl1;->E:Lor;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lx14;->getRouter()Ljhd;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0, p1}, Ljhd;->B(Lx14;)Z
+
+    iget-object v0, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Lswe;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v0, Lswe;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/calls/ui/ui/call/CallScreen;
+
+    invoke-static {v0}, Lone/me/calls/ui/ui/call/CallScreen;->C0(Lone/me/calls/ui/ui/call/CallScreen;)Lx43;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lx43;->a()V
+
+    :cond_2
+    iput-object v1, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Lswe;
+
+    :cond_3
+    :goto_1
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :cond_4
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

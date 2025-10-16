@@ -1,25 +1,177 @@
-.class public abstract Ld5a;
-.super Ljava/lang/Object;
+.class public final Ld5a;
+.super Ltq3;
 .source "SourceFile"
 
 
+# instance fields
+.field public final f:Landroid/net/ConnectivityManager;
+
+.field public final g:Lzo3;
+
+
 # direct methods
-.method public static a(Landroid/app/NotificationManager;)Z
+.method public constructor <init>(Landroid/content/Context;Ln1c;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->areNotificationsEnabled()Z
+    invoke-direct {p0, p1, p2}, Ltq3;-><init>(Landroid/content/Context;Ln1c;)V
 
-    move-result p0
+    iget-object p1, p0, Ltq3;->b:Ljava/lang/Object;
 
-    return p0
+    check-cast p1, Landroid/content/Context;
+
+    const-string p2, "connectivity"
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/net/ConnectivityManager;
+
+    iput-object p1, p0, Ld5a;->f:Landroid/net/ConnectivityManager;
+
+    new-instance p1, Lzo3;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2, p0}, Lzo3;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Ld5a;->g:Lzo3;
+
+    return-void
 .end method
 
-.method public static b(Landroid/app/NotificationManager;)I
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getImportance()I
+# virtual methods
+.method public final i()Ljava/lang/Object;
+    .locals 1
 
-    move-result p0
+    iget-object v0, p0, Ld5a;->f:Landroid/net/ConnectivityManager;
 
-    return p0
+    invoke-static {v0}, Le5a;->a(Landroid/net/ConnectivityManager;)Lc5a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final r()V
+    .locals 4
+
+    const-string v0, "Received exception while registering network callback"
+
+    :try_start_0
+    invoke-static {}, Lwxh;->f()Lwxh;
+
+    move-result-object v1
+
+    sget-object v2, Le5a;->a:Ljava/lang/String;
+
+    const-string v3, "Registering network callback"
+
+    invoke-virtual {v1, v2, v3}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Ld5a;->f:Landroid/net/ConnectivityManager;
+
+    iget-object v2, p0, Ld5a;->g:Lzo3;
+
+    invoke-static {v1, v2}, Lv4a;->a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_1
+
+    :goto_0
+    invoke-static {}, Lwxh;->f()Lwxh;
+
+    move-result-object v2
+
+    sget-object v3, Le5a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lwxh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :goto_1
+    invoke-static {}, Lwxh;->f()Lwxh;
+
+    move-result-object v2
+
+    sget-object v3, Le5a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lwxh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
+.end method
+
+.method public final s()V
+    .locals 4
+
+    const-string v0, "Received exception while unregistering network callback"
+
+    :try_start_0
+    invoke-static {}, Lwxh;->f()Lwxh;
+
+    move-result-object v1
+
+    sget-object v2, Le5a;->a:Ljava/lang/String;
+
+    const-string v3, "Unregistering network callback"
+
+    invoke-virtual {v1, v2, v3}, Lwxh;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Ld5a;->f:Landroid/net/ConnectivityManager;
+
+    iget-object v2, p0, Ld5a;->g:Lzo3;
+
+    invoke-static {v1, v2}, Lt4a;->c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_1
+
+    :goto_0
+    invoke-static {}, Lwxh;->f()Lwxh;
+
+    move-result-object v2
+
+    sget-object v3, Le5a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lwxh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :goto_1
+    invoke-static {}, Lwxh;->f()Lwxh;
+
+    move-result-object v2
+
+    sget-object v3, Le5a;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lwxh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
 .end method

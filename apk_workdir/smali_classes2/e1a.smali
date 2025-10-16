@@ -1,85 +1,124 @@
-.class public final Le1a;
+.class public final synthetic Le1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpi6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Lm00;
+.field public final synthetic b:Lg1a;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLm00;)V
+.method public synthetic constructor <init>(Lg1a;Ljava/lang/Object;I)V
     .locals 0
 
+    iput p3, p0, Le1a;->a:I
+
+    iput-object p1, p0, Le1a;->b:Lg1a;
+
+    iput-object p2, p0, Le1a;->c:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Le1a;->a:J
-
-    iput-object p3, p0, Le1a;->b:Lm00;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Le1a;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Le1a;->c:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Le1a;
+    check-cast v0, Legc;
+
+    check-cast p1, Lc68;
+
+    iget-object v1, p0, Le1a;->b:Lg1a;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    iput-boolean v2, p1, Lc68;->a:Z
 
-    check-cast p1, Le1a;
+    const/4 v3, 0x1
 
-    iget-wide v3, p0, Le1a;->a:J
+    iput-boolean v3, p1, Lc68;->b:Z
 
-    iget-wide v5, p1, Le1a;->a:J
+    iput-boolean v2, p1, Lc68;->c:Z
 
-    cmp-long v1, v3, v5
+    iput-object v0, p1, Lc68;->i:Legc;
 
-    if-nez v1, :cond_1
+    iput-boolean v2, p1, Lc68;->g:Z
 
-    iget-object v1, p0, Le1a;->b:Lm00;
+    iput-boolean v2, p1, Lc68;->h:Z
 
-    iget-object p1, p1, Le1a;->b:Lm00;
+    iget-object v0, v1, Lg1a;->s0:Lwlg;
 
-    if-ne v1, p1, :cond_1
+    iget-boolean v0, v0, Lwlg;->d:Z
 
-    return v0
+    iput-boolean v0, p1, Lc68;->n:Z
 
-    :cond_1
-    return v2
-.end method
+    return-object p1
 
-.method public final hashCode()I
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Le1a;->c:Ljava/lang/Object;
 
-    iget-wide v0, p0, Le1a;->a:J
+    check-cast v0, Lf1a;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    check-cast p1, Lc68;
 
-    move-result v0
+    iget-object v1, p0, Le1a;->b:Lg1a;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Le1a;->b:Lm00;
+    iget-object v2, v0, Lf1a;->b:Lwlg;
 
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    iget-object v2, v2, Lwlg;->a:Legc;
 
-    move-result v1
+    iput-object v2, p1, Lc68;->i:Legc;
 
-    add-int/2addr v1, v0
+    const/4 v2, 0x1
 
-    return v1
+    iput-boolean v2, p1, Lc68;->a:Z
+
+    iput-boolean v2, p1, Lc68;->b:Z
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p1, Lc68;->g:Z
+
+    iput-boolean v2, p1, Lc68;->h:Z
+
+    iput-boolean v2, p1, Lc68;->c:Z
+
+    iget-object v1, v1, Lg1a;->s0:Lwlg;
+
+    iget-boolean v1, v1, Lwlg;->d:Z
+
+    iput-boolean v1, p1, Lc68;->n:Z
+
+    iget-boolean v0, v0, Lf1a;->e:Z
+
+    iput-boolean v0, p1, Lc68;->o:Z
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

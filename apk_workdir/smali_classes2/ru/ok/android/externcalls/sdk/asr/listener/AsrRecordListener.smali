@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/asr/AsrInfo;",
         "callAsrInfo",
-        "Laxf;",
+        "Lzag;",
         "onAsrRecordStarted",
         "(Lru/ok/android/externcalls/sdk/asr/AsrInfo;)V",
         "onAsrRecordStopped",

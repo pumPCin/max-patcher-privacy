@@ -1,6 +1,9 @@
-.class public interface abstract Ltlf;
+.class public final Ltlf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lck0;
+
+# instance fields
+.field public a:I
+
+.field public b:J

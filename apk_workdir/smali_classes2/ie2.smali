@@ -1,215 +1,183 @@
-.class public final Lie2;
-.super Lnm;
+.class public final enum Lie2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements La9f;
-.implements Lu8b;
+.implements Landroid/os/Parcelable;
+.implements Lwv0;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lie2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum b:Lie2;
+
+.field public static final synthetic c:[Lie2;
+
+.field public static final synthetic o:Lfd5;
 
 
 # instance fields
-.field public final X:J
-
-.field public final Y:Ljava/lang/String;
-
-.field public final o:J
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0, p1, p2}, Lnm;-><init>(J)V
+    new-instance v0, Lie2;
 
-    iput-wide p3, p0, Lie2;->o:J
+    const/4 v1, 0x0
 
-    iput-wide p5, p0, Lie2;->X:J
+    const-string v2, "local"
 
-    const-class p1, Lie2;
+    const-string v3, "LOCAL_ID"
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-direct {v0, v3, v1, v2}, Lie2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    move-result-object p1
+    sput-object v0, Lie2;->b:Lie2;
 
-    iput-object p1, p0, Lie2;->Y:Ljava/lang/String;
+    new-instance v1, Lie2;
+
+    const/4 v2, 0x1
+
+    const-string v3, "server"
+
+    const-string v4, "SERVER_ID"
+
+    invoke-direct {v1, v4, v2, v3}, Lie2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    filled-new-array {v0, v1}, [Lie2;
+
+    move-result-object v0
+
+    sput-object v0, Lie2;->c:[Lie2;
+
+    new-instance v1, Lfd5;
+
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lie2;->o:Lfd5;
+
+    new-instance v0, Lh8;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lh8;-><init>(I)V
+
+    sput-object v0, Lie2;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lie2;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lie2;
+    .locals 1
+
+    const-class v0, Lie2;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lie2;
+
+    return-object p0
+.end method
+
+.method public static values()[Lie2;
+    .locals 1
+
+    sget-object v0, Lie2;->c:[Lie2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lie2;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final c()I
+.method public final a(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    invoke-virtual {p0}, Lnm;->m()Lzb2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lie2;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lzb2;->C(J)Lr82;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x3
-
-    return v0
-.end method
-
-.method public final d(Ly7f;)V
-    .locals 7
-
-    invoke-virtual {p0}, Lnm;->l()Liv0;
-
-    move-result-object p1
-
-    new-instance v0, Lv23;
-
-    iget-wide v1, p0, Lie2;->o:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x7c
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lv23;-><init>(Ljava/util/Collection;ZZLrm4;Lfpb;I)V
-
-    invoke-virtual {p1, v0}, Liv0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 5
-
-    iget-wide v0, p0, Lnm;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lie2;->Y:Ljava/lang/String;
-
-    const-string v4, "onMaxFailCount: remove task, requestId = %d"
-
-    invoke-static {v3, v4, v2}, Lyt3;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lnm;->s()Ltaf;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0, v1}, Ltaf;->d(J)V
-
-    return-void
-.end method
-
-.method public final f()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatHide;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatHide;-><init>()V
-
-    iget-wide v1, p0, Lnm;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatHide;->requestId:J
-
-    iget-wide v1, p0, Lie2;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatHide;->chatId:J
-
-    iget-wide v1, p0, Lie2;->X:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatHide;->chatServerId:J
-
-    invoke-static {v0}, Ls59;->toByteArray(Ls59;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final g(Li7f;)V
-    .locals 0
-
-    iget-object p1, p1, Li7f;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lte0;->h(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lie2;->e()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lnm;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Lv8b;
-    .locals 1
-
-    sget-object v0, Lv8b;->U0:Lv8b;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Lv7f;
-    .locals 4
-
-    new-instance v0, Lje2;
+    new-instance v0, Lf2;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    sget-object v2, Lie2;->o:Lfd5;
 
-    invoke-direct {v0, v1, v2}, Lje2;-><init>(Lcza;I)V
+    invoke-direct {v0, v1, v2}, Lf2;-><init>(ILjava/lang/Object;)V
 
-    const-string v1, "chatId"
+    :cond_0
+    invoke-virtual {v0}, Lf2;->hasNext()Z
 
-    iget-wide v2, p0, Lie2;->X:J
+    move-result v1
 
-    invoke-virtual {v0, v2, v3, v1}, Lv7f;->j(JLjava/lang/String;)V
+    if-eqz v1, :cond_1
 
-    return-object v0
+    invoke-virtual {v0}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lie2;
+
+    iget-object v2, v1, Lie2;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    return-object v1
+
+    :cond_1
+    new-instance p1, Ljava/util/NoSuchElementException;
+
+    const-string v0, "Collection contains no element matching the predicate."
+
+    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

@@ -1,53 +1,63 @@
 .class public final Lce2;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lfe2;
+.field public final a:Ljava/lang/String;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic Z:Lfe2;
+.field public final c:Ljava/util/List;
 
-.field public o:Ljava/lang/String;
+.field public final d:J
 
-.field public r0:I
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lfe2;Lwy3;)V
-    .locals 0
+.method public constructor <init>(Lw7;)V
+    .locals 2
 
-    iput-object p1, p0, Lce2;->Z:Lfe2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p1, Lw7;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lce2;->a:Ljava/lang/String;
+
+    iget-object v0, p1, Lw7;->d:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lce2;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lw7;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :goto_0
+    iput-object v0, p0, Lce2;->c:Ljava/util/List;
+
+    iget-wide v0, p1, Lw7;->a:J
+
+    iput-wide v0, p0, Lce2;->d:J
+
+    iget-boolean p1, p1, Lw7;->b:Z
+
+    iput-boolean p1, p0, Lce2;->e:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lce2;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Lce2;->r0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lce2;->r0:I
-
-    iget-object p1, p0, Lce2;->Z:Lfe2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lfe2;->e(Ljava/lang/String;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

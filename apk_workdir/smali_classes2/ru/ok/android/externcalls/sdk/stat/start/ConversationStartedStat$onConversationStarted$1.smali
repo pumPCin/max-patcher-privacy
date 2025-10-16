@@ -1,9 +1,9 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$onConversationStarted$1;
-.super Lye6;
+.super Lti6;
 .source "SourceFile"
 
 # interfaces
-.implements Lvd6;
+.implements Lqh6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lye6;",
-        "Lvd6;"
+        "Lti6;",
+        "Lqh6;"
     }
 .end annotation
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -63,24 +63,24 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lp61;
+    check-cast p1, Lp71;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$onConversationStarted$1;->invoke(Lp61;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$onConversationStarted$1;->invoke(Lp71;)V
 
-    sget-object p1, Laxf;->a:Laxf;
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method
 
-.method public final invoke(Lp61;)V
+.method public final invoke(Lp71;)V
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lps1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lst1;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->access$report(Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;Lp61;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->access$report(Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;Lp71;)V
 
     return-void
 .end method

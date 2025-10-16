@@ -1,49 +1,25 @@
-.class public final Llid;
-.super Lwy3;
+.class public abstract Llid;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lmid;
+# static fields
+.field public static final a:I
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lmid;Lwy3;)V
-    .locals 0
-
-    iput-object p1, p0, Llid;->X:Lmid;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Llid;->o:Ljava/lang/Object;
+    sget v0, Lntc;->Theme_WebView_Dark:I
 
-    iget p1, p0, Llid;->Y:I
+    sput v0, Llid;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lntc;->Theme_WebView_Light:I
 
-    or-int/2addr p1, v0
+    sput v0, Llid;->b:I
 
-    iput p1, p0, Llid;->Y:I
-
-    iget-object p1, p0, Llid;->X:Lmid;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lmid;->b(Lmid;Ljava/lang/Throwable;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

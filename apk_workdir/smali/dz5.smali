@@ -1,79 +1,110 @@
 .class public final Ldz5;
-.super Lrx5;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final b:Lpcd;
+.field public X:I
 
-.field public final c:J
+.field public final synthetic Y:Lzx5;
 
 
 # direct methods
-.method public constructor <init>(JLpcd;)V
-    .locals 1
+.method public constructor <init>(Lzx5;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-object p1, p0, Ldz5;->Y:Lzx5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    iput-wide p1, p0, Ldz5;->c:J
-
-    iput-object p3, p0, Ldz5;->b:Lpcd;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lbz5;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lcz5;
+    check-cast p1, Lb54;
 
-    invoke-direct {v0, p1}, Lcz5;-><init>(Luxe;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1, v0}, Luxe;->d(Lwxe;)V
-
-    iget-wide v1, p0, Ldz5;->c:J
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v3, p0, Ldz5;->b:Lpcd;
-
-    invoke-virtual {v3, v0, v1, v2, p1}, Lpcd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
+    invoke-virtual {p0, p1, p2}, Ldz5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    :cond_0
-    const/4 v1, 0x0
+    check-cast p1, Ldz5;
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object p2, Lzag;->a:Lzag;
 
-    move-result v1
+    invoke-virtual {p1, p2}, Ldz5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Ldz5;
+
+    iget-object v0, p0, Ldz5;->Y:Lzx5;
+
+    invoke-direct {p1, v0, p2}, Ldz5;-><init>(Lzx5;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ldz5;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iput v1, p0, Ldz5;->X:I
 
-    if-eqz v1, :cond_0
+    iget-object p1, p0, Ldz5;->Y:Lzx5;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {p1, p0}, Ly1j;->f(Lzx5;Llff;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    sget-object v1, Ljs4;->a:Ljs4;
+    sget-object v0, Lc54;->a:Lc54;
 
-    if-ne v0, v1, :cond_2
+    if-ne p1, v0, :cond_2
 
-    invoke-interface {p1}, Lfs4;->f()V
+    return-object v0
 
     :cond_2
     :goto_0
-    return-void
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

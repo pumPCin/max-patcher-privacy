@@ -1,8 +1,15 @@
-.class public interface abstract Lhm6;
+.class public final Lhm6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract e(J)V
-.end method
+# instance fields
+.field public a:Z
+
+.field public b:I
+
+.field public c:I
+
+.field public d:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public e:I

@@ -3,105 +3,123 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic p:I
+
+
 # instance fields
-.field public a:J
+.field public final a:Lj10;
 
-.field public b:I
+.field public final b:J
 
-.field public c:I
+.field public final c:Ljava/util/ArrayList;
 
-.field public d:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
-.field public e:J
+.field public final e:Ljava/lang/String;
 
-.field public f:Ljava/lang/String;
+.field public final f:Ljava/lang/String;
 
-.field public g:Ljava/lang/String;
+.field public final g:Ljava/lang/String;
 
-.field public h:Ljava/lang/String;
+.field public final h:Lu10;
 
-.field public i:Ljava/util/List;
+.field public final i:Ljava/lang/String;
 
-.field public j:I
+.field public final j:Ljava/lang/String;
 
-.field public k:J
+.field public final k:Z
 
-.field public l:Ljava/lang/String;
+.field public final l:I
 
-.field public m:Z
+.field public final m:J
 
-.field public n:I
+.field public final n:J
 
-.field public o:Ljava/lang/String;
+.field public final o:Ljava/lang/String;
 
 
-# virtual methods
-.method public a()Ll10;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget-object v0, p0, Lk10;->i:Ljava/util/List;
+    new-instance v0, Li10;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-virtual {v0}, Li10;->a()Lk10;
 
-    iput-object v0, p0, Lk10;->i:Ljava/util/List;
-
-    :cond_0
-    iget v0, p0, Lk10;->j:I
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_1
-
-    iput v1, p0, Lk10;->j:I
-
-    :cond_1
-    iget v0, p0, Lk10;->n:I
-
-    if-nez v0, :cond_2
-
-    iput v1, p0, Lk10;->n:I
-
-    :cond_2
-    new-instance v0, Ll10;
-
-    invoke-direct {v0, p0}, Ll10;-><init>(Lk10;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public b()Lvoe;
+.method public constructor <init>(Li10;)V
     .locals 2
 
-    iget-object v0, p0, Lk10;->i:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    iget-object v0, p1, Li10;->a:Lj10;
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iput-object v0, p0, Lk10;->a:Lj10;
 
-    iput-object v0, p0, Lk10;->i:Ljava/util/List;
+    iget-wide v0, p1, Li10;->b:J
 
-    :cond_0
-    iget v0, p0, Lk10;->j:I
+    iput-wide v0, p0, Lk10;->b:J
 
-    const/4 v1, 0x1
+    new-instance v0, Ljava/util/ArrayList;
 
-    if-nez v0, :cond_1
+    iget-object v1, p1, Li10;->c:Ljava/util/Collection;
 
-    iput v1, p0, Lk10;->j:I
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    :cond_1
-    iget v0, p0, Lk10;->n:I
+    iput-object v0, p0, Lk10;->c:Ljava/util/ArrayList;
 
-    if-nez v0, :cond_2
+    iget-object v0, p1, Li10;->d:Ljava/lang/String;
 
-    iput v1, p0, Lk10;->n:I
+    iput-object v0, p0, Lk10;->d:Ljava/lang/String;
 
-    :cond_2
-    new-instance v0, Lvoe;
+    iget-object v0, p1, Li10;->e:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lvoe;-><init>(Lk10;)V
+    iput-object v0, p0, Lk10;->e:Ljava/lang/String;
 
-    return-object v0
+    iget-object v0, p1, Li10;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Lk10;->f:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Lk10;->g:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->h:Lu10;
+
+    iput-object v0, p0, Lk10;->h:Lu10;
+
+    iget-object v0, p1, Li10;->i:Ljava/lang/String;
+
+    iput-object v0, p0, Lk10;->i:Ljava/lang/String;
+
+    iget-object v0, p1, Li10;->j:Ljava/lang/String;
+
+    iput-object v0, p0, Lk10;->j:Ljava/lang/String;
+
+    iget-boolean v0, p1, Li10;->k:Z
+
+    iput-boolean v0, p0, Lk10;->k:Z
+
+    iget v0, p1, Li10;->l:I
+
+    iput v0, p0, Lk10;->l:I
+
+    iget-wide v0, p1, Li10;->m:J
+
+    iput-wide v0, p0, Lk10;->m:J
+
+    iget-wide v0, p1, Li10;->n:J
+
+    iput-wide v0, p0, Lk10;->n:J
+
+    iget-object p1, p1, Li10;->o:Ljava/lang/String;
+
+    iput-object p1, p0, Lk10;->o:Ljava/lang/String;
+
+    return-void
 .end method

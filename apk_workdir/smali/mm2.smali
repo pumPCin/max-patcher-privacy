@@ -1,26 +1,26 @@
 .class public final Lmm2;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public synthetic X:J
 
-.field public final synthetic Y:Lrm2;
+.field public final synthetic Y:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
 
 # direct methods
-.method public constructor <init>(Lrm2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/ChatMediaViewerScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lmm2;->Y:Lrm2;
+    iput-object p2, p0, Lmm2;->Y:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,11 +28,17 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 2
 
-    check-cast p1, Lrm8;
+    check-cast p1, Lb35;
+
+    iget-wide v0, p1, Lb35;->a:J
 
     check-cast p2, Lkotlin/coroutines/Continuation;
+
+    new-instance p1, Lb35;
+
+    invoke-direct {p1, v0, v1}, Lb35;-><init>(J)V
 
     invoke-virtual {p0, p1, p2}, Lmm2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
@@ -40,7 +46,7 @@
 
     check-cast p1, Lmm2;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lmm2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,37 +58,62 @@
 
     new-instance v0, Lmm2;
 
-    iget-object v1, p0, Lmm2;->Y:Lrm2;
+    iget-object v1, p0, Lmm2;->Y:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    invoke-direct {v0, v1, p2}, Lmm2;-><init>(Lrm2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lmm2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/ChatMediaViewerScreen;)V
 
-    iput-object p1, v0, Lmm2;->X:Ljava/lang/Object;
+    check-cast p1, Lb35;
+
+    iget-wide p1, p1, Lb35;->a:J
+
+    iput-wide p1, v0, Lmm2;->X:J
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 11
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lmm2;->X:Ljava/lang/Object;
+    iget-wide v0, p0, Lmm2;->X:J
 
-    check-cast p1, Lrm8;
+    iget-object p1, p0, Lmm2;->Y:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    iget-object v0, p0, Lmm2;->Y:Lrm2;
+    iget-boolean v2, p1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->J0:Z
 
-    iget-object v0, v0, Lrm2;->I0:Ljava/util/concurrent/atomic/AtomicReference;
+    sget-object v3, Lzag;->a:Lzag;
 
-    new-instance v1, Lsz0;
+    if-eqz v2, :cond_0
 
-    const/4 v2, 0x5
+    return-object v3
 
-    invoke-direct {v1, v2, p1}, Lsz0;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    invoke-virtual {p1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->P0()Lne7;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+    move-result-object v4
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-static {v0, v1}, Lb35;->g(J)J
 
-    return-object p1
+    move-result-wide v5
+
+    invoke-virtual {p1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->Q0()Lpug;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lpug;->N0()J
+
+    move-result-wide v7
+
+    invoke-virtual {p1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->Q0()Lpug;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lpug;->getDuration()J
+
+    move-result-wide v9
+
+    invoke-virtual/range {v4 .. v10}, Lne7;->c(JJJ)V
+
+    return-object v3
 .end method

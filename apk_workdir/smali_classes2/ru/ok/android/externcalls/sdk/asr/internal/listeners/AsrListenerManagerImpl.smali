@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManager;
-.implements Lb11;
-.implements Lln1;
+.implements La21;
+.implements Lno1;
 
 
 # annotations
@@ -16,15 +16,15 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;",
         "Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManager;",
-        "Lb11;",
-        "Lln1;",
+        "La21;",
+        "Lno1;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "store",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
         "Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;",
         "listener",
-        "Laxf;",
+        "Lzag;",
         "notifyOnNewListener",
         "(Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;)V",
         "Lru/ok/android/externcalls/sdk/asr/AsrInfo;",
@@ -35,29 +35,29 @@
         "()V",
         "addAsrRecordListener",
         "removeAsrRecordListener",
-        "Lz01;",
+        "Ly11;",
         "startInfo",
         "onAsrRecordStarted",
-        "(Lz01;)V",
-        "La11;",
+        "(Ly11;)V",
+        "Lz11;",
         "stopInfo",
         "onAsrRecordStopped",
-        "(La11;)V",
-        "Lhn1;",
+        "(Lz11;)V",
+        "Ljo1;",
         "params",
         "onCurrentParticipantActiveRoomChanged",
-        "(Lhn1;)V",
+        "(Ljo1;)V",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Ljava/util/concurrent/CopyOnWriteArraySet;",
         "listeners",
         "Ljava/util/concurrent/CopyOnWriteArraySet;",
         "Ljava/util/HashMap;",
-        "Lvud;",
+        "Ll6e;",
         "Lkotlin/collections/HashMap;",
         "sessionRoomToAsrInfo",
         "Ljava/util/HashMap;",
         "activeRoomId",
-        "Lvud;",
+        "Ll6e;",
         "getAsrInfo",
         "()Lru/ok/android/externcalls/sdk/asr/AsrInfo;",
         "calls-sdk_release"
@@ -73,7 +73,7 @@
 
 
 # instance fields
-.field private activeRoomId:Lvud;
+.field private activeRoomId:Ll6e;
 
 .field private final listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
     .annotation system Ldalvik/annotation/Signature;
@@ -89,7 +89,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
-            "Lvud;",
+            "Ll6e;",
             "Lru/ok/android/externcalls/sdk/asr/AsrInfo;",
             ">;"
         }
@@ -119,11 +119,11 @@
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->sessionRoomToAsrInfo:Ljava/util/HashMap;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Lvud;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Ll6e;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Lvud;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Ll6e;
 
     return-void
 .end method
@@ -224,7 +224,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->sessionRoomToAsrInfo:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Lvud;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Ll6e;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -235,18 +235,18 @@
     return-object v0
 .end method
 
-.method public onAsrRecordStarted(Lz01;)V
+.method public onAsrRecordStarted(Ly11;)V
     .locals 3
 
-    iget-object v0, p1, Lz01;->a:Lvud;
+    iget-object v0, p1, Ly11;->a:Ll6e;
 
-    iget-object p1, p1, Lz01;->b:Ly01;
+    iget-object p1, p1, Ly11;->b:Lx11;
 
-    iget-object v1, p1, Ly01;->a:Lyg1;
+    iget-object v1, p1, Lx11;->a:Lzh1;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v2, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lyg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v2, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lzh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v1
 
@@ -257,7 +257,7 @@
     :cond_0
     new-instance v2, Lru/ok/android/externcalls/sdk/asr/AsrInfo;
 
-    iget-object p1, p1, Ly01;->b:Ljava/lang/Long;
+    iget-object p1, p1, Lx11;->b:Ljava/lang/Long;
 
     invoke-direct {v2, v1, p1}, Lru/ok/android/externcalls/sdk/asr/AsrInfo;-><init>(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/lang/Long;)V
 
@@ -265,9 +265,9 @@
 
     invoke-interface {p1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Lvud;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Ll6e;
 
-    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -280,12 +280,12 @@
     return-void
 .end method
 
-.method public onAsrRecordStopped(La11;)V
+.method public onAsrRecordStopped(Lz11;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->sessionRoomToAsrInfo:Ljava/util/HashMap;
 
-    iget-object p1, p1, La11;->a:Lvud;
+    iget-object p1, p1, Lz11;->a:Ll6e;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -293,9 +293,9 @@
 
     check-cast v0, Lru/ok/android/externcalls/sdk/asr/AsrInfo;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Lvud;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Ll6e;
 
-    invoke-static {p1, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -309,14 +309,14 @@
     return-void
 .end method
 
-.method public onCurrentParticipantActiveRoomChanged(Lhn1;)V
+.method public onCurrentParticipantActiveRoomChanged(Ljo1;)V
     .locals 2
 
-    iget-object p1, p1, Lhn1;->a:Lvud;
+    iget-object p1, p1, Ljo1;->a:Ll6e;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Lvud;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Ll6e;
 
-    invoke-static {p1, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -325,9 +325,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Lvud;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Ll6e;
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Lvud;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->activeRoomId:Ll6e;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManagerImpl;->sessionRoomToAsrInfo:Ljava/util/HashMap;
 
@@ -357,19 +357,19 @@
     return-void
 .end method
 
-.method public bridge synthetic onCurrentParticipantInvitedToRoom(Lin1;)V
+.method public bridge synthetic onCurrentParticipantInvitedToRoom(Lko1;)V
     .locals 0
 
     return-void
 .end method
 
-.method public bridge synthetic onRoomRemoved(Ljn1;)V
+.method public bridge synthetic onRoomRemoved(Llo1;)V
     .locals 0
 
     return-void
 .end method
 
-.method public bridge synthetic onRoomUpdated(Lkn1;)V
+.method public bridge synthetic onRoomUpdated(Lmo1;)V
     .locals 0
 
     return-void

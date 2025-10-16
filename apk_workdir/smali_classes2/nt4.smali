@@ -1,47 +1,49 @@
 .class public final Lnt4;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public a:Lmie;
 
-.field public Y:I
+.field public b:Ljie;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Ltff;
 
+.field public d:Ljava/util/concurrent/ExecutorService;
 
-# direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lwy3;)V
-    .locals 0
+.field public e:Landroid/content/Context;
 
-    iput-object p1, p0, Lnt4;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public f:Lorg/webrtc/EglBase;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public g:Luz9;
 
-    return-void
-.end method
+.field public h:Lii1;
 
+.field public i:Ljme;
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.field public j:Lyh1;
 
-    iput-object p1, p0, Lnt4;->o:Ljava/lang/Object;
+.field public k:Lyuc;
 
-    iget p1, p0, Lnt4;->Y:I
+.field public l:Lbvc;
 
-    const/high16 v0, -0x80000000
+.field public m:Lxv5;
 
-    or-int/2addr p1, v0
+.field public n:Z
 
-    iput p1, p0, Lnt4;->Y:I
+.field public o:Lzsa;
 
-    iget-object p1, p0, Lnt4;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public p:Ldi;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.field public q:Lwe1;
 
-    move-result-object p1
+.field public r:Lgk8;
 
-    return-object p1
-.end method
+.field public s:Lzhd;
+
+.field public t:Lvtf;
+
+.field public u:Lyz0;
+
+.field public v:Lyz0;

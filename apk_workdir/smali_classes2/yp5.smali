@@ -1,24 +1,24 @@
-.class public final synthetic Lyp5;
+.class public final Lyp5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lqh6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/sdk/richvector/VectorPath;
+.field public final synthetic b:Lr0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/VectorPath;I)V
+.method public synthetic constructor <init>(Lr0;I)V
     .locals 0
 
     iput p2, p0, Lyp5;->a:I
 
-    iput-object p1, p0, Lyp5;->b:Lone/me/sdk/richvector/VectorPath;
+    iput-object p1, p0, Lyp5;->b:Lr0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,50 +27,53 @@
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     iget v0, p0, Lyp5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result-object p1
+    iget-object p1, p0, Lyp5;->b:Lr0;
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {p1}, Lr0;->a()Z
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    sget-object p1, Lzag;->a:Lzag;
 
-    move-result p1
-
-    iget-object v0, p0, Lyp5;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result-object p1
+    iget-object p1, p0, Lyp5;->b:Lr0;
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {p1}, Lr0;->a()Z
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    sget-object p1, Lzag;->a:Lzag;
 
-    move-result p1
+    return-object p1
 
-    iget-object v0, p0, Lyp5;->b:Lone/me/sdk/richvector/VectorPath;
+    :pswitch_1
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
+    if-eqz p1, :cond_0
 
-    return-void
+    iget-object p1, p0, Lyp5;->b:Lr0;
+
+    invoke-virtual {p1}, Lr0;->a()Z
+
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

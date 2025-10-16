@@ -1,100 +1,378 @@
 .class public final Lfs7;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Lat7;
+.implements Lrrf;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lfs7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final synthetic c:[Lwq7;
 
-.field public static final a:Lfs7;
+
+# instance fields
+.field public final a:Landroid/widget/TextView;
+
+.field public final b:Lsk;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lc0a;
+
+    const-string v1, "tabItem"
+
+    const-string v2, "getTabItem()Lone/me/common/tablayout/model/OneMeBaseTabItemModel;"
+
+    const-class v3, Lfs7;
+
+    invoke-direct {v0, v3, v1, v2}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Ls6d;->a:Lt6d;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lwq7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lfs7;->c:[Lwq7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v0, Landroid/widget/TextView;
+
+    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget p1, Ljid;->E0:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setId(I)V
+
+    sget-object p1, Ldag;->s:Lpqf;
+
+    invoke-static {p1, v0}, Lpqf;->d(Lpqf;Landroid/widget/TextView;)V
+
+    const/16 p1, 0x11
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setGravity(I)V
+
+    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLetterSpacing(F)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setSingleLine(Z)V
+
+    iput-object v0, p0, Lfs7;->a:Landroid/widget/TextView;
+
+    sget-object p1, Lboa;->g:Lrhf;
+
+    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lboa;
+
+    new-instance v1, Lsk;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v2, p0, p1}, Lsk;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
+
+    iput-object v1, p0, Lfs7;->b:Lsk;
+
+    invoke-virtual {p0}, Lfs7;->getTabItem()Lboa;
+
+    move-result-object p1
+
+    iget p1, p1, Lboa;->c:I
+
+    sget-object v1, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v1, p0}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lfs7;->b(ILu4b;)Les7;
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v1, 0x48
+
+    int-to-float v1, v1
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lagi;->d(F)I
+
+    move-result v1
+
+    const/4 v2, -0x2
+
+    invoke-direct {p1, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static final a(Lfs7;)V
     .locals 2
 
-    new-instance v0, Lfs7;
+    invoke-virtual {p0}, Lfs7;->getTabItem()Lboa;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lfs7;->a:Lfs7;
+    iget-object v0, v0, Lboa;->b:Ljava/lang/CharSequence;
 
-    new-instance v0, Llr7;
+    invoke-direct {p0, v0}, Lfs7;->setText(Ljava/lang/CharSequence;)V
 
-    const/4 v1, 0x2
+    invoke-virtual {p0}, Lfs7;->getTabItem()Lboa;
 
-    invoke-direct {v0, v1}, Llr7;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Lfs7;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget v0, v0, Lboa;->c:I
+
+    sget-object v1, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v1, p0}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lfs7;->b(ILu4b;)Les7;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lfs7;->a:Landroid/widget/TextView;
+
+    iget v0, v0, Les7;->a:I
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public static b(ILu4b;)Les7;
+    .locals 1
+
+    invoke-static {p0}, Lwx1;->v(I)I
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-ne p0, v0, :cond_0
+
+    new-instance p0, Les7;
+
+    invoke-interface {p1}, Lu4b;->c()Le0f;
+
+    move-result-object p1
+
+    iget-object p1, p1, Le0f;->c:Li0f;
+
+    iget-object p1, p1, Li0f;->b:Lj0f;
+
+    iget p1, p1, Lj0f;->e:I
+
+    invoke-direct {p0, p1}, Les7;-><init>(I)V
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Les7;
+
+    invoke-interface {p1}, Lu4b;->getText()Lapf;
+
+    move-result-object p1
+
+    iget p1, p1, Lapf;->g:I
+
+    invoke-direct {p0, p1}, Les7;-><init>(I)V
+
+    return-object p0
+
+    :cond_2
+    new-instance p0, Les7;
+
+    invoke-interface {p1}, Lu4b;->getText()Lapf;
+
+    move-result-object p1
+
+    iget p1, p1, Lapf;->e:I
+
+    invoke-direct {p0, p1}, Les7;-><init>(I)V
+
+    return-object p0
+.end method
+
+.method private final setText(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    iget-object v0, p0, Lfs7;->a:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final getTabItem()Lboa;
+    .locals 2
 
-    const/4 v0, 0x0
+    sget-object v0, Lfs7;->c:[Lwq7;
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    aget-object v0, v0, v1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lfs7;->b:Lsk;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, v0, Lqci;->b:Ljava/lang/Object;
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lfs7;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x501f9358
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ContentLevelError"
+    check-cast v0, Lboa;
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final onThemeChanged(Lu4b;)V
+    .locals 1
 
-    const/4 p2, 0x1
+    invoke-virtual {p0}, Lfs7;->getTabItem()Lboa;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v0
+
+    iget v0, v0, Lboa;->c:I
+
+    invoke-static {v0, p1}, Lfs7;->b(ILu4b;)Les7;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lfs7;->a:Landroid/widget/TextView;
+
+    iget p1, p1, Les7;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object p1, Lsz4;->t0:Lc82;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lc82;->c(Landroid/content/Context;)Lsz4;
+
+    move-result-object p1
+
+    invoke-static {p1, p0}, Lsz4;->e(Lsz4;Landroid/view/ViewGroup;)V
+
+    return-void
+.end method
+
+.method public setSelected(Z)V
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/view/View;->isSelected()Z
+
+    move-result v0
+
+    if-eq p1, v0, :cond_1
+
+    invoke-virtual {p0}, Lfs7;->getTabItem()Lboa;
+
+    move-result-object v0
+
+    if-eqz p1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x2
+
+    :goto_0
+    const/16 v2, 0x3b
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v3, v1, v3, v2}, Lboa;->a(Lboa;Ljava/lang/CharSequence;ILyna;I)Lboa;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lfs7;->setTabItem(Lboa;)V
+
+    :cond_1
+    invoke-super {p0, p1}, Landroid/view/View;->setSelected(Z)V
+
+    return-void
+.end method
+
+.method public final setTabItem(Lboa;)V
+    .locals 2
+
+    sget-object v0, Lfs7;->c:[Lwq7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lfs7;->b:Lsk;
+
+    invoke-virtual {v1, p0, v0, p1}, Lqci;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
 
     return-void
 .end method

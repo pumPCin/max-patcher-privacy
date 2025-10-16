@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/sdk/log/ExtLogger;
-.super Lzkc;
+.super Lbvc;
 .source "SourceFile"
 
 
@@ -21,7 +21,7 @@
 # instance fields
 .field private final place:Ljava/lang/String;
 
-.field private final timeProvider:Ljgf;
+.field private final timeProvider:Lvtf;
 
 
 # direct methods
@@ -32,10 +32,10 @@
 
     const-string v0, ""
 
-    iput-object v0, p0, Lzkc;->conversationId:Ljava/lang/String;
+    iput-object v0, p0, Lbvc;->conversationId:Ljava/lang/String;
 
     :try_start_0
-    sget-object v0, Lcea;->a:Lol;
+    sget-object v0, Lgma;->b:Lxl;
 
     if-eqz v0, :cond_0
 
@@ -44,7 +44,7 @@
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-class v1, Lcea;
+    const-class v1, Lgma;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -70,12 +70,12 @@
 
     invoke-direct {p1, p2}, Lru/ok/android/externcalls/sdk/log/TimeProviderAdapter;-><init>(Lru/ok/android/externcalls/sdk/log/ExtLogger$TimeProvider;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Ljgf;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Lvtf;
 
     return-void
 .end method
 
-.method public static simpleBuilder(Lvme;)Lru/ok/android/onelog/OneLogItem$Builder;
+.method public static simpleBuilder(Lgze;)Lru/ok/android/onelog/OneLogItem$Builder;
     .locals 2
 
     invoke-static {}, Lru/ok/android/onelog/OneLogItem;->builder()Lru/ok/android/onelog/OneLogItem$Builder;
@@ -137,6 +137,29 @@
 
 
 # virtual methods
+.method public log(Lgze;Ljava/util/Map;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgze;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 2
+    const-string v0, "ok.mobile.apps.video"
+
+    iget-object p1, p1, Lgze;->a:Ljava/lang/String;
+
+    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    return-void
+.end method
+
 .method public log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -315,9 +338,9 @@
 
     .line 23
     :cond_1
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Ljgf;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Lvtf;
 
-    invoke-interface {p2}, Ljgf;->utcTimeMs()J
+    invoke-interface {p2}, Lvtf;->utcTimeMs()J
 
     move-result-wide p4
 
@@ -383,33 +406,10 @@
     return-void
 .end method
 
-.method public log(Lvme;Ljava/util/Map;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lvme;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 2
-    const-string v0, "ok.mobile.apps.video"
-
-    iget-object p1, p1, Lvme;->a:Ljava/lang/String;
-
-    invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-
-    return-void
-.end method
-
-.method public logSimple(Lvme;Ljava/lang/String;Ljava/lang/String;)V
+.method public logSimple(Lgze;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->simpleBuilder(Lvme;)Lru/ok/android/onelog/OneLogItem$Builder;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->simpleBuilder(Lgze;)Lru/ok/android/onelog/OneLogItem$Builder;
 
     move-result-object p1
 
@@ -425,9 +425,9 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Ljgf;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Lvtf;
 
-    invoke-interface {p2}, Ljgf;->utcTimeMs()J
+    invoke-interface {p2}, Lvtf;->utcTimeMs()J
 
     move-result-wide p2
 
@@ -447,9 +447,9 @@
 .method public time()J
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Ljgf;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Lvtf;
 
-    invoke-interface {v0}, Ljgf;->utcTimeMs()J
+    invoke-interface {v0}, Lvtf;->utcTimeMs()J
 
     move-result-wide v0
 

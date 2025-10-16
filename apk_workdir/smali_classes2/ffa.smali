@@ -1,186 +1,149 @@
-.class public final synthetic Lffa;
-.super Ljava/lang/Object;
+.class public final Lffa;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lrfa;
+.field public final synthetic X:Lifa;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lrfa;I)V
+.method public constructor <init>(Lifa;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lffa;->a:I
+    iput-object p1, p0, Lffa;->X:Lifa;
 
-    iput-object p1, p0, Lffa;->b:Landroid/content/Context;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lffa;->c:Lrfa;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lffa;->a:I
+    check-cast p1, Lb54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    invoke-virtual {p0, p1, p2}, Lffa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget v1, Luac;->ic_delete_filled_apart_24:I
+    move-result-object p1
 
-    iget-object v2, p0, Lffa;->b:Landroid/content/Context;
+    check-cast p1, Lffa;
 
-    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    sget-object p2, Lzag;->a:Lzag;
 
-    sget-object v1, Lrw4;->t0:Lss6;
+    invoke-virtual {p1, p2}, Lffa;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Lss6;->u(Landroid/content/Context;)Lrw4;
+    return-object p2
+.end method
 
-    move-result-object v3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {v3}, Lrw4;->l()Llwa;
+    new-instance p1, Lffa;
 
-    move-result-object v3
+    iget-object v0, p0, Lffa;->X:Lifa;
 
-    invoke-interface {v3}, Llwa;->getIcon()Lg17;
+    invoke-direct {p1, v0, p2}, Lffa;-><init>(Lifa;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v3, -0x1
+    return-object p1
+.end method
 
-    const-string v4, "cross"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-static {v0, v4, v3}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v1, v2}, Ljjd;->g(Lss6;Landroid/content/Context;)Lg17;
+    sget-object p1, Lifa;->F0:[Lwq7;
 
-    move-result-object v1
+    iget-object p1, p0, Lffa;->X:Lifa;
 
-    iget v1, v1, Lg17;->j:I
+    invoke-virtual {p1}, Lifa;->r()Lrq;
 
-    const-string v2, "circle_background"
+    move-result-object v0
 
-    invoke-static {v0, v2, v1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+    check-cast v0, Lchg;
 
-    iget-object v1, p0, Lffa;->c:Lrfa;
+    iget-object v0, v0, Lw3;->h:Lot7;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    const-string v1, "app.notification.dontDisturbUntil"
 
-    return-object v0
+    const-wide/16 v2, 0x0
 
-    :pswitch_0
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    invoke-virtual {v0, v1, v2, v3}, Lot7;->getLong(Ljava/lang/String;J)J
 
-    sget v1, Luac;->ic_online_24:I
+    move-result-wide v4
 
-    iget-object v2, p0, Lffa;->b:Landroid/content/Context;
+    cmp-long v0, v4, v2
 
-    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    if-nez v0, :cond_0
 
-    sget-object v1, Lrw4;->t0:Lss6;
+    const-wide/16 v2, -0x1
 
-    invoke-static {v1, v2}, Ljjd;->g(Lss6;Landroid/content/Context;)Lg17;
+    :cond_0
+    invoke-virtual {p1}, Lifa;->r()Lrq;
 
-    move-result-object v3
+    move-result-object v0
 
-    iget v3, v3, Lg17;->e:I
+    check-cast v0, Lchg;
 
-    const-string v4, "online"
+    invoke-virtual {v0, v2, v3, v1}, Lw3;->h(JLjava/lang/String;)V
 
-    invoke-static {v0, v4, v3}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+    iget-object v0, p1, Lifa;->X:Llt7;
 
-    invoke-virtual {v1, v2}, Lss6;->u(Landroid/content/Context;)Lrw4;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lrw4;->l()Llwa;
+    check-cast v0, Lll;
 
-    move-result-object v1
+    new-instance v1, Lygg;
 
-    invoke-interface {v1}, Llwa;->b()Lme0;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    new-instance v4, Ljava/lang/Long;
 
-    iget v1, v1, Lme0;->l:I
+    invoke-direct {v4, v2, v3}, Ljava/lang/Long;-><init>(J)V
 
-    invoke-static {v0, v4, v1}, Lw7;->t(Lp4g;Ljava/lang/String;I)V
+    iput-object v4, v1, Lygg;->b:Ljava/lang/Long;
 
-    iget-object v1, p0, Lffa;->c:Lrfa;
+    new-instance v2, Lahg;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    invoke-direct {v2, v1}, Lahg;-><init>(Lygg;)V
 
-    return-object v0
+    invoke-interface {v0, v2}, Lll;->a(Lahg;)J
 
-    :pswitch_1
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iget-object p1, p1, Lifa;->y0:Lsze;
 
-    sget v1, Ldbc;->ic_add_button_28:I
+    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
 
-    iget-object v2, p0, Lffa;->b:Landroid/content/Context;
+    move-result-object v0
 
-    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    check-cast v0, Ljava/lang/Number;
 
-    sget-object v1, Lrw4;->t0:Lss6;
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    invoke-virtual {v1, v2}, Lss6;->u(Landroid/content/Context;)Lrw4;
+    move-result v0
 
-    move-result-object v3
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v3}, Lrw4;->l()Llwa;
+    new-instance v1, Ljava/lang/Integer;
 
-    move-result-object v3
+    invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
 
-    invoke-interface {v3}, Llwa;->b()Lme0;
+    const/4 v0, 0x0
 
-    move-result-object v3
+    invoke-virtual {p1, v0, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v3, v3, Lme0;->a:Lle0;
+    sget-object p1, Lzag;->a:Lzag;
 
-    iget v3, v3, Lle0;->g:I
-
-    const-string v4, "background"
-
-    invoke-static {v0, v4, v3}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Lss6;->u(Landroid/content/Context;)Lrw4;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lrw4;->l()Llwa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llwa;->getIcon()Lg17;
-
-    move-result-object v1
-
-    iget v1, v1, Lg17;->b:I
-
-    const-string v2, "plus"
-
-    invoke-static {v0, v2, v1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
-
-    iget-object v1, p0, Lffa;->c:Lrfa;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

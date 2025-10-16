@@ -2,197 +2,50 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/hardware/SensorEventListener;
-
-
-# static fields
-.field public static final synthetic d:I
-
 
 # instance fields
-.field public final a:Landroid/hardware/SensorManager;
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public final b:Landroid/hardware/Sensor;
+.field public final b:Lyuc;
 
-.field public final c:Ljava/util/Set;
+.field public final c:Lzsa;
+
+.field public d:Lab4;
+
+.field public final e:Lbfb;
+
+.field public volatile f:Z
+
+.field public g:Lhrh;
+
+.field public volatile h:Ljava/util/Set;
+
+.field public final i:Lvtf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(Lyuc;Lzsa;Ljava/util/concurrent/Future;Lbfb;Lvtf;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    new-instance p3, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-direct {p3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
+    iput-object p3, p0, Lwpd;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    move-result-object v0
+    const/4 p3, 0x0
 
-    iput-object v0, p0, Lwpd;->c:Ljava/util/Set;
+    iput-boolean p3, p0, Lwpd;->f:Z
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iput-object p1, p0, Lwpd;->b:Lyuc;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    iput-object p2, p0, Lwpd;->c:Lzsa;
 
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
+    iput-object p4, p0, Lwpd;->e:Lbfb;
 
-    const-string v0, "sensor"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/hardware/SensorManager;
-
-    iput-object p1, p0, Lwpd;->a:Landroid/hardware/SensorManager;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwpd;->b:Landroid/hardware/Sensor;
-
-    const/4 v0, 0x5
-
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    iput-object p5, p0, Lwpd;->i:Lvtf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 5
-
-    iget-object v0, p0, Lwpd;->c:Ljava/util/Set;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {v1}, Landroid/hardware/Sensor;->getType()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    if-ne v1, v2, :cond_5
-
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    const/4 v2, 0x0
-
-    aget v1, v1, v2
-
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
-
-    move-result p1
-
-    cmpg-float p1, v1, p1
-
-    if-gez p1, :cond_0
-
-    const/4 v2, 0x1
-
-    :cond_0
-    iget-object p1, p0, Lwpd;->c:Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_1
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ly20;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v3, "y20"
-
-    const-string v4, "onDeviceNextToEar"
-
-    invoke-static {v3, v4}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v3, v1, Ly20;->c:Lfr9;
-
-    iget-boolean v4, v3, Lfr9;->x:Z
-
-    if-nez v4, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1}, Ly20;->l()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    iget-object v1, v1, Ly20;->i:Lh4f;
-
-    invoke-virtual {v1}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    :cond_3
-    iget-boolean v1, v3, Lfr9;->x:Z
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v3}, Lfr9;->l()Lml8;
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1}, Ly20;->n()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_5
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
 .end method

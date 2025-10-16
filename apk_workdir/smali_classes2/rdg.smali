@@ -1,201 +1,261 @@
-.class public final Lrdg;
+.class public final synthetic Lrdg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final e:Lrdg;
+# interfaces
+.implements Ler3;
+.implements Lnpe;
+.implements Lfi6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
+.field public final synthetic b:Ltdg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lrdg;
-
-    const/16 v4, 0x1e
-
-    const/16 v5, 0x1e
-
-    const-wide/16 v1, 0x3c
-
-    const-string v3, "480"
-
-    invoke-direct/range {v0 .. v5}, Lrdg;-><init>(JLjava/lang/String;II)V
-
-    sput-object v0, Lrdg;->e:Lrdg;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;II)V
+.method public synthetic constructor <init>(Ltdg;I)V
     .locals 0
 
+    iput p2, p0, Lrdg;->a:I
+
+    iput-object p1, p0, Lrdg;->b:Ltdg;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lrdg;->a:J
-
-    iput-object p3, p0, Lrdg;->b:Ljava/lang/String;
-
-    iput p4, p0, Lrdg;->c:I
-
-    iput p5, p0, Lrdg;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Throwable;
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
+    const-string v1, "removeUploadFromRepository: failed, data="
 
-    :cond_0
-    instance-of v1, p1, Lrdg;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lrdg;->b:Ltdg;
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lrdg;
-
-    iget-wide v3, p0, Lrdg;->a:J
-
-    iget-wide v5, p1, Lrdg;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lrdg;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lrdg;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lrdg;->c:I
-
-    iget v3, p1, Lrdg;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lrdg;->d:I
-
-    iget p1, p1, Lrdg;->d:I
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lrdg;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lrdg;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget v2, p0, Lrdg;->c:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lrdg;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "VideoMessageServerConfig(maxDuration="
-
-    const-string v1, ", quality="
-
-    iget-wide v2, p0, Lrdg;->a:J
-
-    iget-object v4, p0, Lrdg;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", minFrameRate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lrdg;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxFrameRate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lrdg;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const-string v1, "sdg"
+
+    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lrdg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    move-object v2, p1
+
+    check-cast v2, Lqfg;
+
+    iget-object p1, p0, Lrdg;->b:Ltdg;
+
+    iget-object v3, p1, Ltdg;->a:Ljava/lang/String;
+
+    iget v4, p1, Ltdg;->c:I
+
+    iget-wide v5, p1, Ltdg;->b:J
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lpfg;
+
+    invoke-direct/range {v1 .. v6}, Lpfg;-><init>(Lqfg;Ljava/lang/String;IJ)V
+
+    new-instance p1, Lmg3;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lqfg;
+
+    iget-object v0, p0, Lrdg;->b:Ltdg;
+
+    iget-object v1, v0, Ltdg;->a:Ljava/lang/String;
+
+    iget v2, v0, Ltdg;->c:I
+
+    iget-wide v3, v0, Ltdg;->b:J
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x3
+
+    const-string v5, "SELECT * FROM uploads WHERE path=? AND upload_type=? AND last_modified=? LIMIT 1"
+
+    invoke-static {v0, v5}, Lpfd;->c(ILjava/lang/String;)Lpfd;
+
+    move-result-object v5
+
+    const/4 v6, 0x1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v5, v6}, Lpfd;->S(I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v5, v6, v1}, Lpfd;->f(ILjava/lang/String;)V
+
+    :goto_0
+    invoke-static {v2}, Lwx1;->v(I)I
+
+    move-result v1
+
+    int-to-long v1, v1
+
+    const/4 v6, 0x2
+
+    invoke-virtual {v5, v6, v1, v2}, Lpfd;->k(IJ)V
+
+    invoke-virtual {v5, v0, v3, v4}, Lpfd;->k(IJ)V
+
+    new-instance v0, Lofg;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v5, v1}, Lofg;-><init>(Lqfg;Lpfd;I)V
+
+    new-instance p1, Lej8;
+
+    invoke-direct {p1, v0}, Lej8;-><init>(Ljava/util/concurrent/Callable;)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j(Luoe;)V
+    .locals 7
+
+    const-string v0, "checkSourceFileChanged: started"
+
+    const-string v1, "sdg"
+
+    invoke-static {v1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lrdg;->b:Ltdg;
+
+    iget-object v2, v0, Ltdg;->a:Ljava/lang/String;
+
+    :try_start_0
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    new-instance v3, Lvcd;
+
+    invoke-direct {v3, v2}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v2, v3
+
+    :goto_0
+    const-wide/16 v3, 0x0
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    instance-of v6, v2, Lvcd;
+
+    if-eqz v6, :cond_0
+
+    move-object v2, v5
+
+    :cond_0
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v5
+
+    cmp-long v2, v5, v3
+
+    if-eqz v2, :cond_1
+
+    iget-wide v2, v0, Ltdg;->b:J
+
+    cmp-long v2, v5, v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v2, 0x0
+
+    :goto_1
+    invoke-virtual {p1}, Luoe;->h()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    if-eqz v2, :cond_2
+
+    new-instance v0, Lone/me/sdk/transfer/domain/UploadException;
+
+    const-string v1, "failed to upload, file changed"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Luoe;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :cond_2
+    const-string v2, "checkSourceFileChanged: finished"
+
+    invoke-static {v1, v2}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Luoe;->a(Ljava/lang/Object;)V
+
+    :cond_3
+    :goto_2
+    return-void
 .end method

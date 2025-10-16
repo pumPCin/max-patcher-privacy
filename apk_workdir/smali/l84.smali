@@ -1,198 +1,91 @@
 .class public final Ll84;
-.super Lkz7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lzw0;
+
+.field public static final d:Ll84;
+
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+
 # instance fields
-.field public final synthetic c:I
+.field public final a:Ls7d;
+
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lf8h;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p3, p0, Ll84;->c:I
+    sget-object v0, Lx3a;->b:Lx3a;
 
-    invoke-direct {p0, p1, p2}, Lkz7;-><init>(Ljava/util/concurrent/Executor;Lf8h;)V
+    new-instance v1, Lty1;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v1, v2}, Lty1;-><init>(I)V
+
+    new-instance v2, Lzw0;
+
+    invoke-direct {v2, v1, v0}, Lzw0;-><init>(Lai6;Lt8b;)V
+
+    sput-object v2, Ll84;->c:Lzw0;
+
+    new-instance v0, Ll84;
+
+    sget-object v1, Lhb7;->b:Lb36;
+
+    sget-object v1, Ls7d;->X:Ls7d;
+
+    const-wide/16 v2, 0x0
+
+    invoke-direct {v0, v2, v3, v1}, Ll84;-><init>(JLjava/util/List;)V
+
+    sput-object v0, Ll84;->d:Ll84;
+
+    sget-object v0, Ljhg;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll84;->e:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll84;->f:Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final d(Lx47;)Lj75;
-    .locals 4
-
-    iget v0, p0, Ll84;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/io/FileInputStream;
-
-    invoke-virtual {p1}, Lx47;->d()Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lx47;->d()Ljava/io/File;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/io/File;->length()J
-
-    move-result-wide v1
-
-    long-to-int p1, v1
-
-    invoke-virtual {p0, v0, p1}, Lkz7;->c(Ljava/io/InputStream;I)Lj75;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object p1, p1, Lx47;->b:Landroid/net/Uri;
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x5
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "data:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v0, 0x2c
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v0
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    invoke-virtual {p1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, ";"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p1
-
-    array-length v0, p1
-
-    add-int/lit8 v0, v0, -0x1
-
-    aget-object p1, p1, v0
-
-    const-string v0, "base64"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    invoke-static {v2, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v2}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object p1
-
-    :goto_1
-    new-instance v0, Ljava/io/ByteArrayInputStream;
-
-    invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
-
-    array-length p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lkz7;->c(Ljava/io/InputStream;I)Lj75;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e()Ljava/lang/String;
+.method public constructor <init>(JLjava/util/List;)V
     .locals 1
 
-    iget v0, p0, Ll84;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v0, Ll84;->c:Lzw0;
 
-    const-string v0, "LocalFileFetchProducer"
+    invoke-static {v0, p3}, Lhb7;->q(Ljava/util/Comparator;Ljava/util/List;)Ls7d;
 
-    return-object v0
+    move-result-object p3
 
-    :pswitch_0
-    const-string v0, "DataFetchProducer"
+    iput-object p3, p0, Ll84;->a:Ls7d;
 
-    return-object v0
+    iput-wide p1, p0, Ll84;->b:J
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,100 +1,126 @@
-.class public abstract Lwfc;
+.class public final synthetic Lwfc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loh6;
 
 
-# static fields
-.field public static channel_subscribers_count:I = 0x7f11000a
+# instance fields
+.field public final synthetic a:I
 
-.field public static tt_active_live_location_in_many_chats:I = 0x7f110044
+.field public final synthetic b:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static tt_chat_subtitle_count:I = 0x7f110045
 
-.field public static tt_control_message_add_error:I = 0x7f110046
+# direct methods
+.method public synthetic constructor <init>(Lone/me/qrscanner/QrScannerWidget;I)V
+    .locals 0
 
-.field public static tt_dates_days:I = 0x7f110047
+    iput p2, p0, Lwfc;->a:I
 
-.field public static tt_dates_days_last_seen_f:I = 0x7f110048
+    iput-object p1, p0, Lwfc;->b:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static tt_dates_days_last_seen_m:I = 0x7f110049
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static tt_dates_days_last_seen_u:I = 0x7f11004a
+    return-void
+.end method
 
-.field public static tt_dates_days_last_update:I = 0x7f11004b
 
-.field public static tt_dates_days_live_location_end:I = 0x7f11004c
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
 
-.field public static tt_dates_days_past:I = 0x7f11004d
+    iget v0, p0, Lwfc;->a:I
 
-.field public static tt_dates_hours:I = 0x7f11004e
+    iget-object v1, p0, Lwfc;->b:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static tt_dates_hours_after:I = 0x7f11004f
+    packed-switch v0, :pswitch_data_0
 
-.field public static tt_dates_hours_last_seen_f:I = 0x7f110050
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->z0:[Lwq7;
 
-.field public static tt_dates_hours_last_seen_m:I = 0x7f110051
+    sget v0, Liid;->M:I
 
-.field public static tt_dates_hours_last_seen_u:I = 0x7f110052
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static tt_dates_hours_last_update:I = 0x7f110053
+    move-result-object v1
 
-.field public static tt_dates_hours_left:I = 0x7f110054
+    invoke-static {v1, v0}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-.field public static tt_dates_hours_live_location_end:I = 0x7f110055
+    move-result-object v0
 
-.field public static tt_dates_hours_past:I = 0x7f110056
+    return-object v0
 
-.field public static tt_dates_minutes:I = 0x7f110057
+    :pswitch_0
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->z0:[Lwq7;
 
-.field public static tt_dates_minutes_after:I = 0x7f110058
+    sget v0, Liid;->N:I
 
-.field public static tt_dates_minutes_last_seen_f:I = 0x7f110059
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static tt_dates_minutes_last_seen_m:I = 0x7f11005a
+    move-result-object v1
 
-.field public static tt_dates_minutes_last_seen_u:I = 0x7f11005b
+    invoke-static {v1, v0}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-.field public static tt_dates_minutes_last_update:I = 0x7f11005c
+    move-result-object v0
 
-.field public static tt_dates_minutes_left:I = 0x7f11005d
+    return-object v0
 
-.field public static tt_dates_minutes_live_location_end:I = 0x7f11005e
+    :pswitch_1
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->z0:[Lwq7;
 
-.field public static tt_dates_minutes_past:I = 0x7f11005f
+    iget-object v0, v1, Lone/me/qrscanner/QrScannerWidget;->b:Lqs;
 
-.field public static tt_dates_months_last_seen_f:I = 0x7f110060
+    sget-object v2, Lone/me/qrscanner/QrScannerWidget;->z0:[Lwq7;
 
-.field public static tt_dates_months_last_seen_m:I = 0x7f110061
+    const/4 v3, 0x1
 
-.field public static tt_dates_months_last_seen_u:I = 0x7f110062
+    aget-object v4, v2, v3
 
-.field public static tt_dates_months_last_update:I = 0x7f110063
+    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-.field public static tt_dates_months_live_location_end:I = 0x7f110064
+    move-result-object v4
 
-.field public static tt_dates_months_past:I = 0x7f110065
+    check-cast v4, Ljava/lang/Long;
 
-.field public static tt_dates_weeks_last_seen_f:I = 0x7f110066
+    if-eqz v4, :cond_0
 
-.field public static tt_dates_weeks_last_seen_m:I = 0x7f110067
+    new-instance v5, Lxbb;
 
-.field public static tt_dates_weeks_last_seen_u:I = 0x7f110068
+    aget-object v2, v2, v3
 
-.field public static tt_dates_weeks_last_update:I = 0x7f110069
+    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-.field public static tt_dates_weeks_live_location_end:I = 0x7f11006a
+    move-result-object v0
 
-.field public static tt_dates_weeks_past:I = 0x7f11006b
+    move-object v9, v0
 
-.field public static tt_in_chat:I = 0x7f11006c
+    check-cast v9, Ljava/lang/Long;
 
-.field public static tt_live_location_members_with_me:I = 0x7f11006d
+    const/16 v12, 0x33
 
-.field public static tt_live_location_members_without_me:I = 0x7f11006e
+    const/4 v7, 0x0
 
-.field public static tt_new_messages:I = 0x7f11006f
+    const/4 v6, 0x0
 
-.field public static tt_notification_text_hidden_content:I = 0x7f110070
+    sget-object v8, Lyte;->Y:Lyte;
 
-.field public static tt_privacy_restricted_error:I = 0x7f110071
+    const/4 v10, 0x0
 
-.field public static tt_summary_messages:I = 0x7f110072
+    const/4 v11, 0x0
+
+    invoke-direct/range {v5 .. v12}, Lxbb;-><init>(Lpqb;ILyte;Ljava/lang/Long;Ljava/lang/Long;Let;I)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v5, Lxbb;->g:Lxbb;
+
+    :goto_0
+    return-object v5
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

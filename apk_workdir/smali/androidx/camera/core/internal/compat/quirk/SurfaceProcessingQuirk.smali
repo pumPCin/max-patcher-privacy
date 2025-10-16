@@ -3,16 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements La8c;
+.implements Lzhc;
 
 
 # direct methods
-.method public static c(Lxce;)Z
+.method public static b(Lx85;)Z
     .locals 1
 
     const-class v0, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;
 
-    invoke-virtual {p0, v0}, Lxce;->k(Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {p0, v0}, Lx85;->D(Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -33,7 +33,7 @@
 
     check-cast v0, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;
 
-    invoke-interface {v0}, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;->b()Z
+    invoke-interface {v0}, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;->c()Z
 
     move-result v0
 
@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public b()Z
+.method public c()Z
     .locals 1
 
     const/4 v0, 0x1

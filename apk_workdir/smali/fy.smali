@@ -1,181 +1,208 @@
-.class public final Lfy;
-.super Lhy;
+.class public final synthetic Lfy;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/media/MediaCodec$OnFrameRenderedListener;
 
 
 # instance fields
-.field public final X:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public final c:J
-
-.field public final o:Ljava/util/ArrayList;
+.field public final synthetic b:Lyo8;
 
 
 # direct methods
-.method public constructor <init>(IJ)V
-    .locals 1
+.method public synthetic constructor <init>(Lzn8;Lyo8;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p3, p0, Lfy;->a:I
 
-    invoke-direct {p0, p1, v0}, Lhy;-><init>(II)V
+    iput-object p2, p0, Lfy;->b:Lyo8;
 
-    iput-wide p2, p0, Lfy;->c:J
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lfy;->o:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lfy;->X:Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final onFrameRendered(Landroid/media/MediaCodec;JJ)V
+    .locals 2
 
-    iget v0, p0, Lhy;->b:I
+    iget p1, p0, Lfy;->a:I
 
-    invoke-static {v0}, Lhy;->e(I)Ljava/lang/String;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v0
+    iget-object p1, p0, Lfy;->b:Lyo8;
 
-    iget-object v1, p0, Lfy;->o:Ljava/util/ArrayList;
+    iget-object p4, p1, Lyo8;->b:Landroid/os/Handler;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
+    sget p5, Lhhg;->a:I
 
-    move-result-object v1
+    const/16 v0, 0x1e
 
-    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+    if-ge p5, v0, :cond_0
 
-    move-result-object v1
+    const/16 p1, 0x20
 
-    iget-object v2, p0, Lfy;->X:Ljava/util/ArrayList;
+    shr-long v0, p2, p1
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
+    long-to-int p1, v0
 
-    move-result-object v2
+    long-to-int p2, p2
 
-    invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+    const/4 p3, 0x0
 
-    move-result-object v2
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
 
-    const/16 v3, 0x16
+    move-result-object p1
 
-    invoke-static {v3, v0}, Lc85;->d(ILjava/lang/String;)I
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
-    move-result v3
-
-    invoke-static {v3, v1}, Lc85;->d(ILjava/lang/String;)I
-
-    move-result v3
-
-    invoke-static {v3, v2}, Lc85;->d(ILjava/lang/String;)I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " leaves: "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " containers: "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final u(I)Lfy;
-    .locals 5
-
-    iget-object v0, p0, Lfy;->X:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lfy;
-
-    iget v4, v3, Lhy;->b:I
-
-    if-ne v4, p1, :cond_0
-
-    return-object v3
+    goto :goto_0
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    iget-object p4, p1, Lyo8;->c:Ljava/lang/Object;
+
+    check-cast p4, Lzo8;
+
+    iget-object p5, p4, Lzo8;->v2:Lyo8;
+
+    if-eq p1, p5, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x0
+    const-wide v0, 0x7fffffffffffffffL
 
-    return-object p1
-.end method
+    cmp-long p1, p2, v0
 
-.method public final v(I)Lgy;
-    .locals 5
+    const/4 p5, 0x1
 
-    iget-object v0, p0, Lfy;->o:Ljava/util/ArrayList;
+    if-nez p1, :cond_2
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lgy;
-
-    iget v4, v3, Lhy;->b:I
-
-    if-ne v4, p1, :cond_0
-
-    return-object v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    iput-boolean p5, p4, Lio8;->H1:Z
 
     goto :goto_0
 
-    :cond_1
-    const/4 p1, 0x0
+    :cond_2
+    :try_start_0
+    invoke-virtual {p4, p2, p3}, Lio8;->n0(J)V
 
-    return-object p1
+    invoke-virtual {p4}, Lzo8;->v0()V
+
+    iget-object p1, p4, Lio8;->J1:Lqe4;
+
+    iget v0, p1, Lqe4;->f:I
+
+    add-int/2addr v0, p5
+
+    iput v0, p1, Lqe4;->f:I
+
+    invoke-virtual {p4}, Lzo8;->u0()V
+
+    invoke-virtual {p4, p2, p3}, Lzo8;->X(J)V
+    :try_end_0
+    .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    iput-object p1, p4, Lio8;->I1:Lcom/google/android/exoplayer2/ExoPlaybackException;
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lfy;->b:Lyo8;
+
+    iget-object p4, p1, Lyo8;->b:Landroid/os/Handler;
+
+    sget p5, Lhhg;->a:I
+
+    const/16 v0, 0x1e
+
+    if-ge p5, v0, :cond_3
+
+    const/16 p1, 0x20
+
+    shr-long v0, p2, p1
+
+    long-to-int p1, v0
+
+    long-to-int p2, p2
+
+    const/4 p3, 0x0
+
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
+
+    goto :goto_1
+
+    :cond_3
+    iget-object p4, p1, Lyo8;->c:Ljava/lang/Object;
+
+    check-cast p4, Lzo8;
+
+    iget-object p5, p4, Lzo8;->v2:Lyo8;
+
+    if-eq p1, p5, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const-wide v0, 0x7fffffffffffffffL
+
+    cmp-long p1, p2, v0
+
+    const/4 p5, 0x1
+
+    if-nez p1, :cond_5
+
+    iput-boolean p5, p4, Lio8;->H1:Z
+
+    goto :goto_1
+
+    :cond_5
+    :try_start_1
+    invoke-virtual {p4, p2, p3}, Lio8;->n0(J)V
+
+    invoke-virtual {p4}, Lzo8;->v0()V
+
+    iget-object p1, p4, Lio8;->J1:Lqe4;
+
+    iget v0, p1, Lqe4;->f:I
+
+    add-int/2addr v0, p5
+
+    iput v0, p1, Lqe4;->f:I
+
+    invoke-virtual {p4}, Lzo8;->u0()V
+
+    invoke-virtual {p4, p2, p3}, Lzo8;->X(J)V
+    :try_end_1
+    .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    iput-object p1, p4, Lio8;->I1:Lcom/google/android/exoplayer2/ExoPlaybackException;
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

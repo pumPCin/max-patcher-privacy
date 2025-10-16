@@ -1,154 +1,70 @@
-.class public final enum Le75;
-.super Ljava/lang/Enum;
+.class public final Le75;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lz6c;
+.implements Lwk4;
 
 
-# static fields
-.field public static final enum a:Le75;
-
-.field public static final synthetic b:[Le75;
+# instance fields
+.field public final synthetic a:Lkw7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroidx/emoji2/text/EmojiCompatInitializer;Lkw7;)V
+    .locals 0
 
-    new-instance v0, Le75;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INSTANCE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Le75;->a:Le75;
-
-    filled-new-array {v0}, [Le75;
-
-    move-result-object v0
-
-    sput-object v0, Le75;->b:[Le75;
+    iput-object p2, p0, Le75;->a:Lkw7;
 
     return-void
-.end method
-
-.method public static a(Luxe;)V
-    .locals 1
-
-    sget-object v0, Le75;->a:Le75;
-
-    invoke-interface {p0, v0}, Luxe;->d(Lwxe;)V
-
-    invoke-interface {p0}, Luxe;->b()V
-
-    return-void
-.end method
-
-.method public static b(Ljava/lang/Throwable;Luxe;)V
-    .locals 1
-
-    sget-object v0, Le75;->a:Le75;
-
-    invoke-interface {p1, v0}, Luxe;->d(Lwxe;)V
-
-    invoke-interface {p1, p0}, Luxe;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Le75;
-    .locals 1
-
-    const-class v0, Le75;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Le75;
-
-    return-object p0
-.end method
-
-.method public static values()[Le75;
-    .locals 1
-
-    sget-object v0, Le75;->b:[Le75;
-
-    invoke-virtual {v0}, [Le75;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Le75;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 0
+.method public final onResume(Liw7;)V
+    .locals 3
+
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1c
+
+    if-lt p1, v0, :cond_0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lpj3;->a(Landroid/os/Looper;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    :goto_0
+    new-instance v0, Lyth;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lyth;-><init>(I)V
+
+    const-wide/16 v1, 0x1f4
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    iget-object p1, p0, Le75;->a:Lkw7;
+
+    invoke-virtual {p1, p0}, Lkw7;->f(Lew7;)V
 
     return-void
-.end method
-
-.method public final clear()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(J)V
-    .locals 0
-
-    invoke-static {p1, p2}, Lyxe;->d(J)Z
-
-    return-void
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Should not be called!"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final t(I)I
-    .locals 0
-
-    const/4 p1, 0x2
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "EmptySubscription"
-
-    return-object v0
 .end method

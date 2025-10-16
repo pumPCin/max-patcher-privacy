@@ -20,26 +20,26 @@
         "workerParams",
         "<init>",
         "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
-        "Lfw7;",
+        "Ls18;",
         "doForegroundWork",
         "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
-        "Lg66;",
+        "Lba6;",
         "createForegroundInfo",
-        "Li45;",
+        "Ln75;",
         "emojiFontLoadingNotifications$delegate",
-        "Lyn7;",
+        "Llt7;",
         "getEmojiFontLoadingNotifications",
-        "()Li45;",
+        "()Ln75;",
         "emojiFontLoadingNotifications",
-        "Lvx7;",
+        "Li38;",
         "state",
-        "Lvx7;",
+        "Li38;",
         "",
         "getName",
         "()Ljava/lang/String;",
         "name",
         "Companion",
-        "rx7",
+        "e38",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -53,7 +53,7 @@
 
 
 # static fields
-.field public static final Companion:Lrx7;
+.field public static final Companion:Le38;
 
 .field public static final TAG:Ljava/lang/String; = "LoadEmojiFontWorker"
 
@@ -61,20 +61,20 @@
 
 
 # instance fields
-.field private final emojiFontLoadingNotifications$delegate:Lyn7;
+.field private final emojiFontLoadingNotifications$delegate:Llt7;
 
-.field private volatile state:Lvx7;
+.field private volatile state:Li38;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lrx7;
+    new-instance v0, Le38;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->Companion:Lrx7;
+    sput-object v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->Companion:Le38;
 
     return-void
 .end method
@@ -84,89 +84,89 @@
 
     invoke-direct {p0, p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    new-instance p1, Lpf7;
+    new-instance p1, Lsn7;
 
-    const/4 p2, 0x6
+    const/4 p2, 0x5
 
-    invoke-direct {p1, p2, p0}, Lpf7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lsn7;-><init>(ILjava/lang/Object;)V
 
-    new-instance p2, Lh4f;
+    new-instance p2, Lrhf;
 
-    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
+    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->emojiFontLoadingNotifications$delegate:Lyn7;
+    iput-object p2, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->emojiFontLoadingNotifications$delegate:Llt7;
 
-    new-instance p1, Ltx7;
+    new-instance p1, Lg38;
 
     const/4 p2, -0x1
 
-    invoke-direct {p1, p2}, Ltx7;-><init>(I)V
+    invoke-direct {p1, p2}, Lg38;-><init>(I)V
 
-    iput-object p1, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Lvx7;
-
-    return-void
-.end method
-
-.method public static final synthetic access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lvx7;)V
-    .locals 0
-
-    iput-object p1, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Lvx7;
+    iput-object p1, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Li38;
 
     return-void
 .end method
 
-.method public static synthetic b(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;)Li45;
+.method public static final synthetic access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Li38;)V
     .locals 0
 
-    invoke-static {p0}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->emojiFontLoadingNotifications_delegate$lambda$0(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;)Li45;
+    iput-object p1, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Li38;
+
+    return-void
+.end method
+
+.method public static synthetic b(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;)Ln75;
+    .locals 0
+
+    invoke-static {p0}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->emojiFontLoadingNotifications_delegate$lambda$0(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;)Ln75;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static final emojiFontLoadingNotifications_delegate$lambda$0(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;)Li45;
+.method private static final emojiFontLoadingNotifications_delegate$lambda$0(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;)Ln75;
     .locals 0
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lz6f;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Llkf;
 
     move-result-object p0
 
-    check-cast p0, Lhhd;
+    check-cast p0, Lisd;
 
-    invoke-virtual {p0}, Lhhd;->i()Lb8f;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lb8f;->j:Lh4f;
-
-    invoke-virtual {p0}, Lh4f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lisd;->i()Lnlf;
 
     move-result-object p0
 
-    check-cast p0, Li45;
+    iget-object p0, p0, Lnlf;->j:Lrhf;
+
+    invoke-virtual {p0}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ln75;
 
     return-object p0
 .end method
 
-.method private final getEmojiFontLoadingNotifications()Li45;
+.method private final getEmojiFontLoadingNotifications()Ln75;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->emojiFontLoadingNotifications$delegate:Lyn7;
+    iget-object v0, p0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->emojiFontLoadingNotifications$delegate:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Li45;
+    check-cast v0, Ln75;
 
     return-object v0
 .end method
 
-.method public static final start(Ld8h;)V
+.method public static final start(Lvnh;)V
     .locals 1
 
-    sget-object v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->Companion:Lrx7;
+    sget-object v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->Companion:Le38;
 
     .line 1
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -174,20 +174,20 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-static {p0, v0}, Lrx7;->a(Ld8h;Z)V
+    invoke-static {p0, v0}, Le38;->a(Lvnh;Z)V
 
     return-void
 .end method
 
-.method public static final start(Ld8h;Z)V
+.method public static final start(Lvnh;Z)V
     .locals 1
 
     .line 3
-    sget-object v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->Companion:Lrx7;
+    sget-object v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->Companion:Le38;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0, p1}, Lrx7;->a(Ld8h;Z)V
+    invoke-static {p0, p1}, Le38;->a(Lvnh;Z)V
 
     return-void
 .end method
@@ -201,7 +201,7 @@
             "(",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Lg66;",
+            "Lba6;",
             ">;)",
             "Ljava/lang/Object;"
         }
@@ -209,15 +209,15 @@
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Lvx7;
+    iget-object v1, v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Li38;
 
-    instance-of v2, v1, Ltx7;
+    instance-of v2, v1, Lg38;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_0
 
-    check-cast v1, Ltx7;
+    check-cast v1, Lg38;
 
     goto :goto_0
 
@@ -229,7 +229,7 @@
 
     if-eqz v1, :cond_1
 
-    iget v1, v1, Ltx7;->a:I
+    iget v1, v1, Lg38;->a:I
 
     goto :goto_1
 
@@ -237,39 +237,39 @@
     move v1, v2
 
     :goto_1
-    invoke-virtual {v0}, Lgw7;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lt18;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lz7h;->d(Landroid/content/Context;)Lz7h;
+    invoke-static {v4}, Lrnh;->d(Landroid/content/Context;)Lrnh;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lgw7;->getId()Ljava/util/UUID;
+    invoke-virtual {v0}, Lt18;->getId()Ljava/util/UUID;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lz7h;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
+    invoke-virtual {v4, v5}, Lrnh;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
 
     move-result-object v4
 
-    invoke-direct {v0}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->getEmojiFontLoadingNotifications()Li45;
+    invoke-direct {v0}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->getEmojiFontLoadingNotifications()Ln75;
 
     move-result-object v5
 
-    iget-object v6, v5, Li45;->f:Lh45;
+    iget-object v6, v5, Ln75;->f:Lm75;
 
-    iget-object v7, v5, Li45;->b:Landroid/content/Context;
+    iget-object v7, v5, Ln75;->b:Landroid/content/Context;
 
-    iget-object v8, v5, Li45;->c:Lrpa;
+    iget-object v8, v5, Ln75;->c:Lvxa;
 
-    iget-object v9, v5, Li45;->a:Lk7;
+    iget-object v9, v5, Ln75;->a:Lq7;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
-    iget-wide v12, v9, Lk7;->a:J
+    iget-wide v12, v9, Lq7;->a:J
 
     const-wide/16 v14, 0x0
 
@@ -286,7 +286,7 @@
     if-lez v12, :cond_3
 
     :cond_2
-    iput-wide v10, v9, Lk7;->a:J
+    iput-wide v10, v9, Lq7;->a:J
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -296,28 +296,28 @@
 
     move-result-object v9
 
-    const-string v10, "i45"
+    const-string v10, "n75"
 
     const-string v11, "getEmojiFontLoadingNotification: progress = %d"
 
-    invoke-static {v10, v11, v9}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v10, v11, v9}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_3
-    invoke-virtual {v8}, Lrpa;->c()V
+    invoke-virtual {v8}, Lvxa;->c()V
 
     const/4 v9, 0x0
 
-    invoke-virtual {v8, v9}, Lrpa;->e(Z)Landroid/content/Intent;
+    invoke-virtual {v8, v9}, Lvxa;->e(Z)Landroid/content/Intent;
 
     move-result-object v10
 
     const/16 v11, 0xb
 
-    invoke-static {v7, v11, v10}, Lb88;->h(Landroid/content/Context;ILandroid/content/Intent;)Landroid/app/PendingIntent;
+    invoke-static {v7, v11, v10}, Lqoi;->c(Landroid/content/Context;ILandroid/content/Intent;)Landroid/app/PendingIntent;
 
     move-result-object v10
 
-    iget-object v12, v5, Li45;->e:Lre4;
+    iget-object v12, v5, Ln75;->e:Lmh4;
 
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -325,31 +325,31 @@
 
     const/4 v13, 0x1
 
-    invoke-virtual {v8, v12, v13, v13}, Lrpa;->g(Ljava/lang/String;ZZ)Lv3a;
+    invoke-virtual {v8, v12, v13, v13}, Lvxa;->g(Ljava/lang/String;ZZ)Lwba;
 
     move-result-object v8
 
-    iget-object v12, v8, Lv3a;->F:Landroid/app/Notification;
+    iget-object v12, v8, Lwba;->F:Landroid/app/Notification;
 
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v6, Lz7d;->X:I
+    sget v6, Lwid;->Y:I
 
     invoke-virtual {v7, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lv3a;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v6}, Lwba;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
-    iput-object v6, v8, Lv3a;->e:Ljava/lang/CharSequence;
+    iput-object v6, v8, Lwba;->e:Ljava/lang/CharSequence;
 
-    iget-object v5, v5, Li45;->d:Llpa;
+    iget-object v5, v5, Ln75;->d:Lpxa;
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v5, Lv7d;->N0:I
+    sget v5, Lsid;->O0:I
 
     iput v5, v12, Landroid/app/Notification;->icon:I
 
@@ -365,63 +365,63 @@
     :goto_2
     const/16 v5, 0x64
 
-    iput v5, v8, Lv3a;->o:I
+    iput v5, v8, Lwba;->o:I
 
-    iput v1, v8, Lv3a;->p:I
+    iput v1, v8, Lwba;->p:I
 
-    iput-boolean v2, v8, Lv3a;->q:Z
+    iput-boolean v2, v8, Lwba;->q:Z
 
-    iput v9, v8, Lv3a;->k:I
+    iput v9, v8, Lwba;->k:I
 
-    invoke-virtual {v8, v9}, Lv3a;->d(I)V
+    invoke-virtual {v8, v9}, Lwba;->d(I)V
 
-    invoke-virtual {v8, v3}, Lv3a;->g(Landroid/net/Uri;)V
+    invoke-virtual {v8, v3}, Lwba;->g(Landroid/net/Uri;)V
 
     const/16 v1, 0x10
 
-    invoke-virtual {v8, v1, v9}, Lv3a;->e(IZ)V
+    invoke-virtual {v8, v1, v9}, Lwba;->e(IZ)V
 
     const-string v1, "progress"
 
-    iput-object v1, v8, Lv3a;->v:Ljava/lang/String;
+    iput-object v1, v8, Lwba;->v:Ljava/lang/String;
 
     iput-wide v14, v12, Landroid/app/Notification;->when:J
 
     const/4 v1, 0x2
 
-    invoke-virtual {v8, v1, v13}, Lv3a;->e(IZ)V
+    invoke-virtual {v8, v1, v13}, Lwba;->e(IZ)V
 
-    sget v1, Lz7d;->o:I
+    sget v1, Lwid;->p:I
 
     invoke-virtual {v7, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, v8, Lv3a;->b:Ljava/util/ArrayList;
+    iget-object v2, v8, Lwba;->b:Ljava/util/ArrayList;
 
-    new-instance v3, Lh3a;
+    new-instance v3, Liba;
 
-    invoke-direct {v3, v9, v1, v4}, Lh3a;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    invoke-direct {v3, v9, v1, v4}, Liba;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iput-object v10, v8, Lv3a;->g:Landroid/app/PendingIntent;
+    iput-object v10, v8, Lwba;->g:Landroid/app/PendingIntent;
 
-    invoke-virtual {v8}, Lv3a;->a()Landroid/app/Notification;
+    invoke-virtual {v8}, Lwba;->a()Landroid/app/Notification;
 
     move-result-object v1
 
-    new-instance v2, Lg66;
+    new-instance v2, Lba6;
 
-    invoke-direct {v0}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->getEmojiFontLoadingNotifications()Li45;
+    invoke-direct {v0}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->getEmojiFontLoadingNotifications()Ln75;
 
     move-result-object v3
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v3, Lyrd;->a:I
+    sget v3, Li3e;->a:I
 
-    invoke-direct {v2, v11, v1, v3}, Lg66;-><init>(ILandroid/app/Notification;I)V
+    invoke-direct {v2, v11, v1, v3}, Lba6;-><init>(ILandroid/app/Notification;I)V
 
     return-object v2
 .end method
@@ -433,21 +433,21 @@
             "(",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Lfw7;",
+            "Ls18;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    instance-of v0, p1, Lwx7;
+    instance-of v0, p1, Lj38;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Lwx7;
+    check-cast v0, Lj38;
 
-    iget v1, v0, Lwx7;->t0:I
+    iget v1, v0, Lj38;->t0:I
 
     const/high16 v2, -0x80000000
 
@@ -457,21 +457,21 @@
 
     sub-int/2addr v1, v2
 
-    iput v1, v0, Lwx7;->t0:I
+    iput v1, v0, Lj38;->t0:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lwx7;
+    new-instance v0, Lj38;
 
-    invoke-direct {v0, p0, p1}, Lwx7;-><init>(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, p1}, Lj38;-><init>(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    iget-object p1, v0, Lwx7;->r0:Ljava/lang/Object;
+    iget-object p1, v0, Lj38;->r0:Ljava/lang/Object;
 
-    sget-object v1, Lo24;->a:Lo24;
+    sget-object v1, Lc54;->a:Lc54;
 
-    iget v2, v0, Lwx7;->t0:I
+    iget v2, v0, Lj38;->t0:I
 
     const/4 v3, 0x0
 
@@ -493,14 +493,14 @@
 
     if-ne v2, v4, :cond_2
 
-    iget-object v2, v0, Lwx7;->Y:Lh7f;
+    iget-object v2, v0, Lj38;->Y:Ltkf;
 
-    iget-object v9, v0, Lwx7;->X:Lb55;
+    iget-object v9, v0, Lj38;->X:Lg85;
 
-    iget-object v10, v0, Lwx7;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iget-object v10, v0, Lj38;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
     :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -528,30 +528,30 @@
     throw p1
 
     :cond_3
-    iget-object v2, v0, Lwx7;->Y:Lh7f;
+    iget-object v2, v0, Lj38;->Y:Ltkf;
 
-    iget-object v9, v0, Lwx7;->X:Lb55;
+    iget-object v9, v0, Lj38;->X:Lg85;
 
-    iget-object v10, v0, Lwx7;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iget-object v10, v0, Lj38;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
     :try_start_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto/16 :goto_3
 
     :cond_4
-    iget-object v2, v0, Lwx7;->Z:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iget-object v2, v0, Lj38;->Z:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    iget-object v9, v0, Lwx7;->Y:Lh7f;
+    iget-object v9, v0, Lj38;->Y:Ltkf;
 
-    iget-object v10, v0, Lwx7;->X:Lb55;
+    iget-object v10, v0, Lj38;->X:Lg85;
 
-    iget-object v11, v0, Lwx7;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iget-object v11, v0, Lj38;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
     :try_start_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -565,46 +565,44 @@
     goto/16 :goto_5
 
     :cond_5
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lz6f;
-
-    move-result-object p1
-
-    check-cast p1, Lhhd;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Llkf;
 
     move-result-object p1
 
-    const-class v2, Lb55;
+    check-cast p1, Lisd;
 
-    invoke-virtual {p1, v2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
-    check-cast p1, Lb55;
+    const-class v2, Lg85;
 
-    iget-object v2, p1, Lb55;->a:Lyn7;
+    invoke-virtual {p1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    move-result-object p1
+
+    check-cast p1, Lg85;
+
+    iget-object v2, p1, Lg85;->a:Llt7;
+
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lh7f;
+    check-cast v2, Ltkf;
 
     :try_start_3
     const-string v9, "doWork"
 
-    invoke-static {v7, v9}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v9}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v9, Lw9h;
+    new-instance v9, Ltui;
 
-    const/16 v10, 0x12
+    invoke-direct {v9, p0}, Ltui;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v9, v10, p0}, Lw9h;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v9}, Lh7f;->c(Lw9h;)V
+    invoke-virtual {v2, v9}, Ltkf;->c(Ltui;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -614,39 +612,39 @@
 
     :goto_1
     :try_start_4
-    invoke-virtual {v2}, Lgw7;->isStopped()Z
+    invoke-virtual {v2}, Lt18;->isStopped()Z
 
     move-result v10
 
     if-eqz v10, :cond_6
 
-    iget-object v10, v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Lvx7;
+    iget-object v10, v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Li38;
 
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    instance-of v10, v10, Ltx7;
+    instance-of v10, v10, Lg38;
 
     if-eqz v10, :cond_d
 
     :cond_6
-    iget-object v10, v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Lvx7;
+    iget-object v10, v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->state:Li38;
 
-    instance-of v11, v10, Lsx7;
+    instance-of v11, v10, Lf38;
 
     if-eqz v11, :cond_7
 
-    check-cast v10, Lsx7;
+    check-cast v10, Lf38;
 
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lfw7;->a()Lcw7;
+    invoke-static {}, Ls18;->a()Lp18;
 
     move-result-object p1
 
     return-object p1
 
     :cond_7
-    instance-of v11, v10, Ltx7;
+    instance-of v11, v10, Lg38;
 
     if-eqz v11, :cond_b
 
@@ -654,41 +652,39 @@
 
     move-object v12, v10
 
-    check-cast v12, Ltx7;
+    check-cast v12, Lg38;
 
-    iget v12, v12, Ltx7;->a:I
+    iget v12, v12, Lg38;->a:I
 
-    new-instance v13, Ljava/lang/Integer;
+    new-instance v13, Lfa6;
 
-    invoke-direct {v13, v12}, Ljava/lang/Integer;-><init>(I)V
+    invoke-direct {v13, v12}, Lfa6;-><init>(I)V
 
     filled-new-array {v13}, [Ljava/lang/Object;
 
     move-result-object v12
 
-    invoke-static {v7, v11, v12}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v11, v12}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    check-cast v10, Ltx7;
+    check-cast v10, Lg38;
 
-    iget v10, v10, Ltx7;->a:I
+    iget v10, v10, Lg38;->a:I
 
-    int-to-float v10, v10
-
-    invoke-virtual {v2, v10}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needToShowNotification(F)Z
+    invoke-virtual {v2, v10}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->needToShowNotification-P3Ng7BI(I)Z
 
     move-result v10
 
     if-eqz v10, :cond_a
 
-    iput-object v2, v0, Lwx7;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iput-object v2, v0, Lj38;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    iput-object p1, v0, Lwx7;->X:Lb55;
+    iput-object p1, v0, Lj38;->X:Lg85;
 
-    iput-object v9, v0, Lwx7;->Y:Lh7f;
+    iput-object v9, v0, Lj38;->Y:Ltkf;
 
-    iput-object v2, v0, Lwx7;->Z:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iput-object v2, v0, Lj38;->Z:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    iput v6, v0, Lwx7;->t0:I
+    iput v6, v0, Lj38;->t0:I
 
     invoke-virtual {v2, v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
@@ -708,19 +704,19 @@
     move-object v11, v2
 
     :goto_2
-    check-cast p1, Lg66;
+    check-cast p1, Lba6;
 
-    iput-object v11, v0, Lwx7;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iput-object v11, v0, Lj38;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    iput-object v10, v0, Lwx7;->X:Lb55;
+    iput-object v10, v0, Lj38;->X:Lg85;
 
-    iput-object v9, v0, Lwx7;->Y:Lh7f;
+    iput-object v9, v0, Lj38;->Y:Ltkf;
 
-    iput-object v8, v0, Lwx7;->Z:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iput-object v8, v0, Lj38;->Z:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    iput v5, v0, Lwx7;->t0:I
+    iput v5, v0, Lj38;->t0:I
 
-    invoke-virtual {v2, p1, v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(Lg66;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v2, p1, v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(Lba6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
     :try_end_4
@@ -752,15 +748,15 @@
 
     move-result-wide v11
 
-    iput-object v10, v0, Lwx7;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    iput-object v10, v0, Lj38;->o:Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    iput-object v9, v0, Lwx7;->X:Lb55;
+    iput-object v9, v0, Lj38;->X:Lg85;
 
-    iput-object v2, v0, Lwx7;->Y:Lh7f;
+    iput-object v2, v0, Lj38;->Y:Ltkf;
 
-    iput v4, v0, Lwx7;->t0:I
+    iput v4, v0, Lj38;->t0:I
 
-    invoke-static {v11, v12, v0}, Lbv0;->k(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v11, v12, v0}, Lpxi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
     :try_end_5
@@ -773,45 +769,45 @@
 
     :cond_b
     :try_start_6
-    instance-of v0, v10, Lux7;
+    instance-of v0, v10, Lh38;
 
     if-eqz v0, :cond_f
 
-    check-cast v10, Lux7;
+    check-cast v10, Lh38;
 
-    iget-object v0, v10, Lux7;->a:Lt56;
+    iget-object v0, v10, Lh38;->a:Lo96;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-boolean v6, v0, Lt56;->b:Z
+    iput-boolean v6, v0, Lo96;->b:Z
 
-    iget-object v1, v0, Lt56;->d:Lus;
+    iget-object v1, v0, Lo96;->d:Lht;
 
     if-nez v1, :cond_c
 
-    new-instance v1, Lus;
+    new-instance v1, Lht;
 
-    invoke-direct {v1, v3}, Lus;-><init>(I)V
+    invoke-direct {v1, v3}, Lht;-><init>(I)V
 
-    iput-object v1, v0, Lt56;->d:Lus;
+    iput-object v1, v0, Lo96;->d:Lht;
 
     :cond_c
-    iget-object v1, v0, Lt56;->d:Lus;
+    iget-object v1, v0, Lo96;->d:Lht;
 
-    invoke-virtual {v1, p1}, Lus;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Lht;->add(Ljava/lang/Object;)Z
 
-    iput-object v8, v0, Lt56;->c:[I
+    iput-object v8, v0, Lo96;->c:[I
 
-    invoke-static {v0}, Ly35;->c(Lt56;)V
+    invoke-static {v0}, Lc75;->c(Lo96;)V
 
     :cond_d
-    invoke-virtual {v2}, Lgw7;->isStopped()Z
+    invoke-virtual {v2}, Lt18;->isStopped()Z
 
     move-result p1
 
     if-eqz p1, :cond_e
 
-    new-instance p1, Ldw7;
+    new-instance p1, Lq18;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
@@ -820,9 +816,9 @@
     :cond_e
     const-string p1, "success!"
 
-    invoke-static {v7, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, p1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lfw7;->b()Lew7;
+    invoke-static {}, Ls18;->b()Lr18;
 
     move-result-object p1
 
@@ -840,7 +836,7 @@
     :goto_5
     const-string v0, "cancelled!"
 
-    invoke-static {v7, v0, p1}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v7, v0, p1}, Lndi;->x(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -850,19 +846,19 @@
 
     move-result-object p1
 
-    const-string v0, "h7f"
+    const-string v0, "tkf"
 
     const-string v1, "cancelLoading"
 
-    invoke-static {v0, v8, v1, p1}, Lyt3;->K(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v8, v1, p1}, Lndi;->w(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, v2, Lh7f;->r0:Lss1;
+    iget-object p1, v2, Ltkf;->r0:Lvt1;
 
-    invoke-static {p1}, Lo8d;->b(Lfs4;)V
+    invoke-static {p1}, Lkjd;->b(Lev4;)V
 
-    iput-object v8, v2, Lh7f;->r0:Lss1;
+    iput-object v8, v2, Ltkf;->r0:Lvt1;
 
-    invoke-static {}, Lfw7;->a()Lcw7;
+    invoke-static {}, Ls18;->a()Lp18;
 
     move-result-object p1
 

@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/RectF;)F
+.method public abstract a(Lx14;Lx14;Z)V
+.end method
+
+.method public abstract b(Lx14;Lx14;Z)V
 .end method

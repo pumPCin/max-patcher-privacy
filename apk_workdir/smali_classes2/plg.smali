@@ -2,155 +2,275 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
 
 # instance fields
-.field public final synthetic X:Landroid/view/View;
+.field public final a:Lqlg;
 
-.field public final synthetic a:I
+.field public final b:Z
 
-.field public final synthetic b:Landroid/view/View;
+.field public final c:Ljava/lang/String;
 
-.field public final synthetic c:Lrlg;
-
-.field public final synthetic o:Landroid/view/ViewTreeObserver;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Lrlg;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
-    .locals 0
-
-    iput p5, p0, Lplg;->a:I
-
-    iput-object p1, p0, Lplg;->b:Landroid/view/View;
-
-    iput-object p2, p0, Lplg;->c:Lrlg;
-
-    iput-object p3, p0, Lplg;->o:Landroid/view/ViewTreeObserver;
-
-    iput-object p4, p0, Lplg;->X:Landroid/view/View;
+.method public constructor <init>(Llg6;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iget-object v0, p1, Llg6;->b:Ljava/lang/Object;
 
-.method private final a(Landroid/view/View;)V
-    .locals 0
+    check-cast v0, Lqlg;
 
-    return-void
-.end method
+    iput-object v0, p0, Lplg;->a:Lqlg;
 
-.method private final b(Landroid/view/View;)V
-    .locals 0
+    iget-boolean v0, p1, Llg6;->a:Z
 
-    return-void
-.end method
+    iput-boolean v0, p0, Lplg;->b:Z
 
-.method private final c(Landroid/view/View;)V
-    .locals 0
+    iget-object v0, p1, Llg6;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lplg;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Llg6;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lplg;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 7
+.method public final a()Llg6;
+    .locals 2
 
-    iget v0, p0, Lplg;->a:I
+    new-instance v0, Llg6;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    :pswitch_0
-    return-void
+    iget-object v1, p0, Lplg;->a:Lqlg;
 
-    :pswitch_1
-    iget-object v0, p0, Lplg;->b:Landroid/view/View;
+    iput-object v1, v0, Llg6;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-boolean v1, p0, Lplg;->b:Z
 
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+    iput-boolean v1, v0, Llg6;->a:Z
 
-    move-result v0
+    iget-object v1, p0, Lplg;->c:Ljava/lang/String;
 
-    iget-object v5, p0, Lplg;->X:Landroid/view/View;
+    iput-object v1, v0, Llg6;->c:Ljava/lang/Object;
 
-    iget-object v4, p0, Lplg;->o:Landroid/view/ViewTreeObserver;
+    iget-object v1, p0, Lplg;->d:Ljava/lang/String;
 
-    iget-object v3, p0, Lplg;->c:Lrlg;
+    iput-object v1, v0, Llg6;->o:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    invoke-static {v3, v4, v5}, Lslg;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_8
+
+    const-class v2, Lplg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    check-cast p1, Lplg;
+
+    iget-object v2, p1, Lplg;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lplg;->c:Ljava/lang/String;
+
+    iget-object v4, p1, Lplg;->a:Lqlg;
+
+    iget-boolean v5, p0, Lplg;->b:Z
+
+    iget-boolean p1, p1, Lplg;->b:Z
+
+    if-eq v5, p1, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object p1, p0, Lplg;->a:Lqlg;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1, v4}, Lqlg;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz v4, :cond_4
+
+    :goto_0
+    return v1
+
+    :cond_4
+    iget-object p1, p0, Lplg;->c:Ljava/lang/String;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    goto :goto_1
+
+    :cond_5
+    if-eqz v3, :cond_6
+
+    :goto_1
+    return v1
+
+    :cond_6
+    iget-object p1, p0, Lplg;->d:Ljava/lang/String;
+
+    if-eqz p1, :cond_7
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_7
+    if-nez v2, :cond_8
+
+    return v0
+
+    :cond_8
+    :goto_2
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lplg;->a:Lqlg;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lqlg;->hashCode()I
+
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Lplg;
-
-    const/4 v6, 0x2
-
-    move-object v2, p1
-
-    invoke-direct/range {v1 .. v6}, Lplg;-><init>(Landroid/view/View;Lrlg;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    move v1, v0
 
     :goto_0
-    return-void
+    mul-int/lit8 v1, v1, 0x1f
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-boolean v2, p0, Lplg;->b:Z
+
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lplg;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v0
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lplg;->d:Ljava/lang/String;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :cond_2
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget p1, p0, Lplg;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch p1, :pswitch_data_0
+    const-string v1, "VideoConversion{videoConversionData="
 
-    iget-object p1, p0, Lplg;->b:Landroid/view/View;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-object v1, p0, Lplg;->a:Lqlg;
 
-    iget-object p1, p0, Lplg;->o:Landroid/view/ViewTreeObserver;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lplg;->X:Landroid/view/View;
+    const-string v1, ", finished="
 
-    iget-object v1, p0, Lplg;->c:Lrlg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p1, v0}, Lslg;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    iget-boolean v1, p0, Lplg;->b:Z
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object p1, p0, Lplg;->b:Landroid/view/View;
+    const-string v1, ", preparedPath=\'"
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lplg;->o:Landroid/view/ViewTreeObserver;
+    iget-object v1, p0, Lplg;->c:Ljava/lang/String;
 
-    iget-object v0, p0, Lplg;->X:Landroid/view/View;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lplg;->c:Lrlg;
+    const-string v1, "\', resultPath=\'"
 
-    invoke-static {v1, p1, v0}, Lslg;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    return-void
+    iget-object v1, p0, Lplg;->d:Ljava/lang/String;
 
-    nop
+    const-string v2, "\'}"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0, v1, v2}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

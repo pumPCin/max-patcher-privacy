@@ -1,23 +1,22 @@
 .class public final Lar1;
-.super Lwy3;
-.source "SourceFile"
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic X:Lcr1;
+.field public X:I
 
-.field public Y:I
+.field public final synthetic Y:Lxn1;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcr1;Lwy3;)V
+.method public constructor <init>(Lxn1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lar1;->X:Lcr1;
+    iput-object p1, p0, Lar1;->Y:Lxn1;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -29,17 +28,19 @@
 
     iput-object p1, p0, Lar1;->o:Ljava/lang/Object;
 
-    iget p1, p0, Lar1;->Y:I
+    iget p1, p0, Lar1;->X:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lar1;->Y:I
+    iput p1, p0, Lar1;->X:I
 
-    iget-object p1, p0, Lar1;->X:Lcr1;
+    iget-object p1, p0, Lar1;->Y:Lxn1;
 
-    invoke-static {p1, p0}, Lcr1;->a(Lcr1;Lwy3;)Ljava/lang/Comparable;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lxn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

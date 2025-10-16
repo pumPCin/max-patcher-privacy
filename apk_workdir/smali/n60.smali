@@ -2,142 +2,130 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lal;
-
-
-# static fields
-.field public static final c:Ln60;
-
 
 # instance fields
-.field public final a:Z
+.field public final a:Lm60;
 
-.field public final b:Ljava/lang/String;
+.field public final b:I
+
+.field public final c:Ltui;
+
+.field public d:I
+
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
+
+.field public i:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lax0;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object v1, v0, Lax0;->a:Ljava/lang/Object;
-
-    new-instance v1, Ln60;
-
-    invoke-direct {v1, v0}, Ln60;-><init>(Lax0;)V
-
-    sput-object v1, Ln60;->c:Ln60;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lax0;)V
+.method public constructor <init>(Landroid/media/AudioTrack;Ltui;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lax0;->a:Ljava/lang/Object;
+    new-instance v0, Lm60;
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-direct {v0, p1}, Lm60;-><init>(Landroid/media/AudioTrack;)V
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iput-object v0, p0, Ln60;->a:Lm60;
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/media/AudioTrack;->getSampleRate()I
 
-    iput-boolean v0, p0, Ln60;->a:Z
+    move-result p1
 
-    iget-object p1, p1, Lax0;->b:Ljava/lang/Object;
+    iput p1, p0, Ln60;->b:I
 
-    check-cast p1, Ljava/lang/String;
+    iput-object p2, p0, Ln60;->c:Ltui;
 
-    iput-object p1, p0, Ln60;->b:Ljava/lang/String;
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Ln60;->a(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(I)V
+    .locals 6
 
-    if-ne p1, p0, :cond_0
+    iput p1, p0, Ln60;->d:I
 
-    goto :goto_0
+    const-wide/16 v0, 0x2710
+
+    if-eqz p1, :cond_3
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_0
+
+    const-wide/32 v0, 0x7a120
+
+    iput-wide v0, p0, Ln60;->f:J
+
+    return-void
 
     :cond_0
-    instance-of v0, p1, Ln60;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-nez v0, :cond_1
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    goto :goto_1
+    throw p1
 
     :cond_1
-    check-cast p1, Ln60;
+    const-wide/32 v0, 0x989680
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide v0, p0, Ln60;->f:J
 
-    const/4 v0, 0x0
-
-    invoke-static {v0, v0}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, p0, Ln60;->a:Z
-
-    iget-boolean v1, p1, Ln60;->a:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Ln60;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Ln60;->b:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x0
+    iput-wide v0, p0, Ln60;->f:J
 
-    return p1
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 3
+    :cond_3
+    const-wide/16 v2, 0x0
 
-    iget-boolean v0, p0, Ln60;->a:Z
+    iput-wide v2, p0, Ln60;->g:J
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-wide/16 v2, -0x1
 
-    move-result-object v0
+    iput-wide v2, p0, Ln60;->h:J
 
-    iget-object v1, p0, Ln60;->b:Ljava/lang/String;
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    const/4 v2, 0x0
+    iput-wide v2, p0, Ln60;->i:J
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/Object;
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    move-result-object v0
+    move-result-wide v2
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    const-wide/16 v4, 0x3e8
 
-    move-result v0
+    div-long/2addr v2, v4
 
-    return v0
+    iput-wide v2, p0, Ln60;->e:J
+
+    iput-wide v0, p0, Ln60;->f:J
+
+    return-void
 .end method

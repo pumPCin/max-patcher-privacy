@@ -1,23 +1,42 @@
-.class public final Ll19;
+.class public final synthetic Ll19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz09;
+
 
 # instance fields
-.field public final a:Lot8;
-
-.field public final b:Lqn8;
+.field public final synthetic a:La96;
 
 
 # direct methods
-.method public constructor <init>(Lot8;Lqn8;)V
+.method public synthetic constructor <init>(La96;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll19;->a:Lot8;
+    iput-object p1, p0, Ll19;->a:La96;
 
-    iput-object p2, p0, Ll19;->b:Lqn8;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lvj0;Lnuf;)V
+    .locals 0
+
+    iget-object p1, p0, Ll19;->a:La96;
+
+    iget-object p1, p1, La96;->Z:Ljava/lang/Object;
+
+    check-cast p1, Lqi5;
+
+    iget-object p1, p1, Lqi5;->r0:Lfif;
+
+    const/16 p2, 0x16
+
+    invoke-virtual {p1, p2}, Lfif;->c(I)Z
 
     return-void
 .end method

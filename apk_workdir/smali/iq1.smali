@@ -2,19 +2,27 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
+.implements Leq1;
+.implements Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener;
+
 
 # virtual methods
-.method public abstract c()Z
+.method public b(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract d()J
+.method public onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract getName()Ljava/lang/String;
-.end method
+.method public onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
+    .locals 0
 
-.method public abstract j()Ljava/lang/CharSequence;
-.end method
-
-.method public abstract q()Ljava/lang/String;
+    return-void
 .end method

@@ -3,58 +3,88 @@
 .source "SourceFile"
 
 # interfaces
-.implements Locd;
+.implements Lndf;
 
 
 # static fields
-.field public static final f:Ljava/util/logging/Logger;
-
-
-# instance fields
-.field public final a:Lgh7;
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Lri9;
-
-.field public final d:Lnb5;
-
-.field public final e:Lb4f;
+.field public static final a:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const-class v0, Lnpf;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const-wide/16 v1, 0x5
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    move-result-wide v0
 
-    move-result-object v0
-
-    sput-object v0, Lhj4;->f:Ljava/util/logging/Logger;
+    sput-wide v0, Lhj4;->a:J
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lri9;Lgh7;Lnb5;Lb4f;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 8
 
-    iput-object p1, p0, Lhj4;->b:Ljava/util/concurrent/Executor;
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    iput-object p2, p0, Lhj4;->c:Lri9;
+    move-result-object v0
 
-    iput-object p3, p0, Lhj4;->a:Lgh7;
+    invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
 
-    iput-object p4, p0, Lhj4;->d:Lnb5;
+    move-result-wide v0
 
-    iput-object p5, p0, Lhj4;->e:Lb4f;
+    const-wide/32 v2, 0x7fffffff
 
-    return-void
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    const/high16 v1, 0x1000000
+
+    if-ge v0, v1, :cond_0
+
+    const/high16 v0, 0x100000
+
+    :goto_0
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_0
+    const/high16 v1, 0x2000000
+
+    if-ge v0, v1, :cond_1
+
+    const/high16 v0, 0x200000
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 v0, 0x400000
+
+    goto :goto_0
+
+    :goto_1
+    div-int/lit8 v7, v2, 0x8
+
+    new-instance v1, Lf79;
+
+    const v3, 0x7fffffff
+
+    sget-wide v5, Lhj4;->a:J
+
+    move v4, v2
+
+    invoke-direct/range {v1 .. v7}, Lf79;-><init>(IIIJI)V
+
+    return-object v1
 .end method

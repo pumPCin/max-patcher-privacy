@@ -3,11 +3,25 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln8a;
+.implements Lrga;
 
 
 # static fields
 .field public static final a:Li80;
+
+.field public static final b:Liq5;
+
+.field public static final c:Liq5;
+
+.field public static final d:Liq5;
+
+.field public static final e:Liq5;
+
+.field public static final f:Liq5;
+
+.field public static final g:Liq5;
+
+.field public static final h:Liq5;
 
 
 # direct methods
@@ -20,9 +34,61 @@
 
     sput-object v0, Li80;->a:Li80;
 
-    const-string v0, "clientMetrics"
+    const-string v0, "eventTimeMs"
 
-    invoke-static {v0}, Ltm5;->a(Ljava/lang/String;)Ltm5;
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Li80;->b:Liq5;
+
+    const-string v0, "eventCode"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Li80;->c:Liq5;
+
+    const-string v0, "eventUptimeMs"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Li80;->d:Liq5;
+
+    const-string v0, "sourceExtension"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Li80;->e:Liq5;
+
+    const-string v0, "sourceExtensionJsonProto3"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Li80;->f:Liq5;
+
+    const-string v0, "timezoneOffsetSeconds"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Li80;->g:Liq5;
+
+    const-string v0, "networkConnectionInfo"
+
+    invoke-static {v0}, Liq5;->c(Ljava/lang/String;)Liq5;
+
+    move-result-object v0
+
+    sput-object v0, Li80;->h:Liq5;
 
     return-void
 .end method
@@ -30,13 +96,55 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    .locals 3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lb88;
 
-    new-instance p1, Ljava/lang/ClassCastException;
+    check-cast p2, Lsga;
 
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+    check-cast p1, Lna0;
 
-    throw p1
+    iget-wide v0, p1, Lna0;->a:J
+
+    sget-object v2, Li80;->b:Liq5;
+
+    invoke-interface {p2, v2, v0, v1}, Lsga;->e(Liq5;J)Lsga;
+
+    sget-object v0, Li80;->c:Liq5;
+
+    iget-object v1, p1, Lna0;->b:Ljava/lang/Integer;
+
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object v0, Li80;->d:Liq5;
+
+    iget-wide v1, p1, Lna0;->c:J
+
+    invoke-interface {p2, v0, v1, v2}, Lsga;->e(Liq5;J)Lsga;
+
+    sget-object v0, Li80;->e:Liq5;
+
+    iget-object v1, p1, Lna0;->d:[B
+
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object v0, Li80;->f:Liq5;
+
+    iget-object v1, p1, Lna0;->e:Ljava/lang/String;
+
+    invoke-interface {p2, v0, v1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    sget-object v0, Li80;->g:Liq5;
+
+    iget-wide v1, p1, Lna0;->f:J
+
+    invoke-interface {p2, v0, v1, v2}, Lsga;->e(Liq5;J)Lsga;
+
+    sget-object v0, Li80;->h:Liq5;
+
+    iget-object p1, p1, Lna0;->g:Ly4a;
+
+    invoke-interface {p2, v0, p1}, Lsga;->a(Liq5;Ljava/lang/Object;)Lsga;
+
+    return-void
 .end method

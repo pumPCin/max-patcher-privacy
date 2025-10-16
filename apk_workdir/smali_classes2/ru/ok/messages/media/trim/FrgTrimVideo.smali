@@ -6,7 +6,7 @@
 # instance fields
 .field public x1:Landroid/media/MediaMetadataRetriever;
 
-.field public y1:Lqt9;
+.field public y1:Lp1a;
 
 .field public z1:Landroid/net/Uri;
 
@@ -63,56 +63,56 @@
 
     const-string v3, "fail to release"
 
-    invoke-static {v2, v3, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v3, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     iput-object v1, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->x1:Landroid/media/MediaMetadataRetriever;
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lqt9;
+    iget-object v0, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lp1a;
 
     if-eqz v0, :cond_2
 
-    iget-object v2, v0, Ld3;->b:Ljava/lang/Object;
+    iget-object v2, v0, Lqci;->b:Ljava/lang/Object;
 
-    check-cast v2, Lrt9;
+    check-cast v2, Lq1a;
 
-    check-cast v2, Lpu9;
+    check-cast v2, Lo2a;
 
-    iget-object v2, v2, Lpu9;->s0:Lru/ok/messages/video/widgets/VideoView;
+    iget-object v2, v2, Lo2a;->s0:Lru/ok/messages/video/widgets/VideoView;
 
     invoke-virtual {v2}, Lru/ok/messages/video/widgets/VideoView;->b()V
 
-    iget-object v2, v0, Lqt9;->Y:Lpo8;
+    iget-object v2, v0, Lp1a;->Y:Lmv8;
 
-    check-cast v2, Lb08;
+    check-cast v2, Lo58;
 
-    iget-object v3, v2, Lb08;->g:Lno8;
+    iget-object v3, v2, Lo58;->g:Lkv8;
 
     if-ne v3, v0, :cond_1
 
-    invoke-virtual {v2}, Lb08;->p()V
+    invoke-virtual {v2}, Lo58;->p()V
 
-    iput-object v1, v2, Lb08;->e:Ld3;
+    iput-object v1, v2, Lo58;->e:Lqci;
 
-    invoke-virtual {v2, v1}, Lb08;->m(Landroid/view/Surface;)V
+    invoke-virtual {v2, v1}, Lo58;->m(Landroid/view/Surface;)V
 
-    iput-object v1, v2, Lb08;->g:Lno8;
+    iput-object v1, v2, Lo58;->g:Lkv8;
 
     :cond_1
-    iget-object v2, v0, Lqt9;->w0:Lkn7;
+    iget-object v2, v0, Lp1a;->w0:Lws7;
 
-    invoke-static {v2}, Lo8d;->b(Lfs4;)V
+    invoke-static {v2}, Lkjd;->b(Lev4;)V
 
-    iput-object v1, v0, Lqt9;->w0:Lkn7;
+    iput-object v1, v0, Lp1a;->w0:Lws7;
 
-    iget-object v2, v0, Lqt9;->v0:Lkn7;
+    iget-object v2, v0, Lp1a;->v0:Lws7;
 
-    invoke-static {v2}, Lo8d;->b(Lfs4;)V
+    invoke-static {v2}, Lkjd;->b(Lev4;)V
 
-    iput-object v1, v0, Lqt9;->v0:Lkn7;
+    iput-object v1, v0, Lp1a;->v0:Lws7;
 
-    iput-object v1, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lqt9;
+    iput-object v1, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lp1a;
 
     :cond_2
     return-void
@@ -145,41 +145,27 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lb6;->R(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+    invoke-virtual {v0, v1}, Lh6;->R(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
 
-    new-instance v0, Lpu9;
+    new-instance v0, Lo2a;
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    new-instance v4, Lax0;
+    new-instance v4, Lfwb;
 
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v4, v2}, Lfwb;-><init>(Lru/ok/messages/media/trim/FrgTrimVideo;)V
 
-    new-instance v3, Ljava/lang/ref/WeakReference;
+    iget-object v3, v2, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lsfd;
 
-    invoke-direct {v3, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iget-object v3, v3, Lsfd;->b:Ljava/lang/Object;
 
-    iput-object v3, v4, Lax0;->a:Ljava/lang/Object;
+    check-cast v3, Lri3;
 
-    new-instance v3, Ljava/lang/ref/WeakReference;
+    check-cast v3, Lqra;
 
-    const/4 v5, 0x0
-
-    invoke-direct {v3, v5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v3, v4, Lax0;->b:Ljava/lang/Object;
-
-    iget-object v3, v2, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lw4d;
-
-    iget-object v3, v3, Lw4d;->b:Ljava/lang/Object;
-
-    check-cast v3, Ljg3;
-
-    check-cast v3, Lnja;
-
-    invoke-virtual {v3}, Lnja;->b()Lug;
+    invoke-virtual {v3}, Lqra;->b()Ldh;
 
     move-result-object v6
 
@@ -189,25 +175,25 @@
 
     move-object/from16 v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lpu9;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lru/ok/messages/media/trim/FrgTrimVideo;Lax0;Lru/ok/messages/media/trim/FrgTrimVideo;Lug;)V
+    invoke-direct/range {v0 .. v6}, Lo2a;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lru/ok/messages/media/trim/FrgTrimVideo;Lfwb;Lru/ok/messages/media/trim/FrgTrimVideo;Ldh;)V
 
     move-object v2, v3
 
-    iget-object v1, v2, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lw4d;
+    iget-object v1, v2, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lsfd;
 
-    iget-object v1, v1, Lw4d;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lsfd;->b:Ljava/lang/Object;
 
-    check-cast v1, Ljg3;
+    check-cast v1, Lri3;
 
     move-object v3, v1
 
     move-object v1, v0
 
-    new-instance v0, Lqt9;
+    new-instance v0, Lp1a;
 
-    check-cast v3, Lnja;
+    check-cast v3, Lqra;
 
-    invoke-virtual {v3}, Lnja;->a()Lxc;
+    invoke-virtual {v3}, Lqra;->a()Lhd;
 
     move-result-object v3
 
@@ -221,9 +207,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lqo8;
+    check-cast v5, Lnv8;
 
-    invoke-interface {v5}, Lqo8;->a()Lpo8;
+    invoke-interface {v5}, Lnv8;->a()Lmv8;
 
     move-result-object v5
 
@@ -261,13 +247,13 @@
 
     move-wide v6, v15
 
-    invoke-direct/range {v0 .. v10}, Lqt9;-><init>(Lpu9;Lru/ok/messages/media/trim/FrgTrimVideo;Lxc;Ljava/lang/String;Lpo8;JJZ)V
+    invoke-direct/range {v0 .. v10}, Lp1a;-><init>(Lo2a;Lru/ok/messages/media/trim/FrgTrimVideo;Lhd;Ljava/lang/String;Lmv8;JJZ)V
 
     move-object v14, v0
 
     move-object v0, v2
 
-    iput-object v14, v0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lqt9;
+    iput-object v14, v0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lp1a;
 
     if-eqz v11, :cond_0
 
@@ -277,34 +263,34 @@
 
     move-result-wide v2
 
-    iput-wide v2, v14, Lqt9;->t0:J
+    iput-wide v2, v14, Lp1a;->t0:J
 
     invoke-virtual {v11, v12}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
-    iput-wide v2, v14, Lqt9;->r0:J
+    iput-wide v2, v14, Lp1a;->r0:J
 
     invoke-virtual {v11, v13}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v7
 
-    iput-wide v7, v14, Lqt9;->s0:J
+    iput-wide v7, v14, Lp1a;->s0:J
 
-    iget-wide v3, v14, Lqt9;->t0:J
+    iget-wide v3, v14, Lp1a;->t0:J
 
-    iget-wide v5, v14, Lqt9;->r0:J
+    iget-wide v5, v14, Lp1a;->r0:J
 
-    iget-wide v9, v14, Lqt9;->Z:J
+    iget-wide v9, v14, Lp1a;->Z:J
 
     move-object v2, v1
 
-    invoke-virtual/range {v2 .. v10}, Lpu9;->y(JJJJ)V
+    invoke-virtual/range {v2 .. v10}, Lo2a;->B(JJJJ)V
 
-    invoke-virtual {v14}, Lqt9;->K0()V
+    invoke-virtual {v14}, Lp1a;->V0()V
 
     :cond_0
-    iget-object v1, v1, Le3;->c:Ljava/lang/Object;
+    iget-object v1, v1, Lf3;->c:Ljava/lang/Object;
 
     check-cast v1, Landroid/view/View;
 
@@ -326,11 +312,11 @@
 
     invoke-super {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->g0()V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lqt9;
+    iget-object v0, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lp1a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lqt9;->C0()V
+    invoke-virtual {v0}, Lp1a;->E0()V
 
     :cond_0
     return-void
@@ -341,25 +327,25 @@
 
     invoke-super {p0, p1}, Lru/ok/messages/views/fragments/base/FrgBase;->k0(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lqt9;
+    iget-object v0, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lp1a;
 
     if-eqz v0, :cond_0
 
     const-string v1, "ru.ok.tamtam.extra.POINTER_POSITION"
 
-    iget-wide v2, v0, Lqt9;->t0:J
+    iget-wide v2, v0, Lp1a;->t0:J
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
     const-string v1, "ru.ok.tamtam.extra.START_POSITION"
 
-    iget-wide v2, v0, Lqt9;->r0:J
+    iget-wide v2, v0, Lp1a;->r0:J
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
     const-string v1, "ru.ok.tamtam.extra.END_POSITION"
 
-    iget-wide v2, v0, Lqt9;->s0:J
+    iget-wide v2, v0, Lp1a;->s0:J
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
@@ -374,25 +360,25 @@
 
     iput-boolean p1, p0, Landroidx/fragment/app/a;->Q0:Z
 
-    iget-object p1, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lqt9;
+    iget-object p1, p0, Lru/ok/messages/media/trim/FrgTrimVideo;->y1:Lp1a;
 
-    iget-object v0, p1, Ld3;->b:Ljava/lang/Object;
+    iget-object v0, p1, Lqci;->b:Ljava/lang/Object;
 
-    check-cast v0, Lrt9;
+    check-cast v0, Lq1a;
 
     move-object v1, v0
 
-    check-cast v1, Lpu9;
+    check-cast v1, Lo2a;
 
-    iget-wide v2, p1, Lqt9;->t0:J
+    iget-wide v2, p1, Lp1a;->t0:J
 
-    iget-wide v4, p1, Lqt9;->r0:J
+    iget-wide v4, p1, Lp1a;->r0:J
 
-    iget-wide v6, p1, Lqt9;->s0:J
+    iget-wide v6, p1, Lp1a;->s0:J
 
-    iget-wide v8, p1, Lqt9;->Z:J
+    iget-wide v8, p1, Lp1a;->Z:J
 
-    invoke-virtual/range {v1 .. v9}, Lpu9;->y(JJJJ)V
+    invoke-virtual/range {v1 .. v9}, Lo2a;->B(JJJJ)V
 
     return-void
 .end method

@@ -1,19 +1,35 @@
 .class public final Lqz5;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
+
+.field public Y:I
+
+.field public o:Lr6d;
 
 
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqz5;->X:Ljava/lang/Object;
 
-    iput-boolean p1, p0, Lqz5;->a:Z
+    iget p1, p0, Lqz5;->Y:I
 
-    return-void
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqz5;->Y:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p0, p1, p1}, Ly1j;->e(Lk14;Lzx5;Lby5;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

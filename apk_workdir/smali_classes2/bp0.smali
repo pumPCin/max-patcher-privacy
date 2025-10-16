@@ -1,220 +1,126 @@
 .class public final Lbp0;
-.super Ljava/lang/Object;
+.super Lhc8;
 .source "SourceFile"
-
-# interfaces
-.implements Lov7;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/CharSequence;
+.field public final synthetic g:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lbp0;->g:I
 
-    iput-wide p1, p0, Lbp0;->a:J
-
-    iput-object p3, p0, Lbp0;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lbp0;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lbp0;->o:Ljava/lang/CharSequence;
+    invoke-direct {p0, p1}, Lhc8;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lbp0;->g:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lbp0;
+    invoke-super {p0, p1}, Lhc8;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
+    return-object p1
 
-    :cond_1
-    check-cast p1, Lbp0;
+    :pswitch_0
+    check-cast p1, Lmve;
 
-    iget-wide v0, p0, Lbp0;->a:J
+    iget p1, p1, Lmve;->a:I
 
-    iget-wide v2, p1, Lbp0;->a:J
+    invoke-static {p1}, Lfge;->b(I)Landroid/graphics/Path;
 
-    cmp-long v0, v0, v2
+    move-result-object p1
 
-    if-eqz v0, :cond_2
+    return-object p1
 
-    goto :goto_0
+    nop
 
-    :cond_2
-    iget-object v0, p0, Lbp0;->b:Ljava/lang/String;
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-object v1, p1, Lbp0;->b:Ljava/lang/String;
+.method public b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget p1, p0, Lbp0;->g:I
 
-    move-result v0
+    packed-switch p1, :pswitch_data_0
 
-    if-nez v0, :cond_3
+    return-void
 
-    goto :goto_0
+    :pswitch_0
+    check-cast p2, Ljava/lang/String;
 
-    :cond_3
-    iget-object v0, p0, Lbp0;->c:Ljava/lang/String;
+    check-cast p3, Landroid/graphics/Bitmap;
 
-    iget-object v1, p1, Lbp0;->c:Ljava/lang/String;
+    check-cast p4, Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3}, Landroid/graphics/Bitmap;->recycle()V
 
-    move-result v0
+    return-void
 
-    if-nez v0, :cond_4
+    :pswitch_1
+    check-cast p3, Landroid/graphics/Bitmap;
 
-    goto :goto_0
+    check-cast p4, Landroid/graphics/Bitmap;
 
-    :cond_4
-    iget-object v0, p0, Lbp0;->o:Ljava/lang/CharSequence;
+    return-void
 
-    iget-object p1, p1, Lbp0;->o:Ljava/lang/CharSequence;
+    nop
 
-    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lbp0;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lhc8;->h(Ljava/lang/Object;)I
 
     move-result p1
 
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
     return p1
 
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
+    :pswitch_0
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    return p1
-.end method
+    invoke-static {p1}, Lrp0;->d(Landroid/graphics/Bitmap;)I
 
-.method public final getItemId()J
-    .locals 2
+    move-result p1
 
-    iget-wide v0, p0, Lbp0;->a:J
+    const/4 v0, 0x1
 
-    return-wide v0
-.end method
+    if-ge p1, v0, :cond_0
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lbp0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lbp0;->b:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
+    move p1, v0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    return p1
 
-    move-result v1
+    nop
 
-    :goto_0
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lbp0;->c:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lbp0;->o:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "BlackListItem(itemId="
-
-    const-string v1, ", avatar="
-
-    iget-wide v2, p0, Lbp0;->a:J
-
-    iget-object v4, p0, Lbp0;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lbp0;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lbp0;->o:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

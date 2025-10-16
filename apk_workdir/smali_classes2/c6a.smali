@@ -1,213 +1,133 @@
 .class public final Lc6a;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lru/ok/messages/NotificationsImagesProvider;
-
-.field public final synthetic r0:Landroid/net/Uri;
-
-.field public final synthetic s0:Lxbe;
+.field public final b:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Lxbe;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ILjava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Lc6a;->Z:Lru/ok/messages/NotificationsImagesProvider;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lc6a;->r0:Landroid/net/Uri;
+    iput p1, p0, Lc6a;->a:I
 
-    iput-object p3, p0, Lc6a;->s0:Lxbe;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lc6a;->b:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lc6a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lc6a;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lc6a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    new-instance v0, Lc6a;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lc6a;->r0:Landroid/net/Uri;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lc6a;->s0:Lxbe;
-
-    iget-object v3, p0, Lc6a;->Z:Lru/ok/messages/NotificationsImagesProvider;
-
-    invoke-direct {v0, v3, v1, v2, p2}, Lc6a;-><init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Lxbe;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lc6a;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lc6a;->X:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lo24;->a:Lo24;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lc6a;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    iget-object v0, p0, Lc6a;->Y:Ljava/lang/Object;
+    check-cast p1, Lc6a;
 
-    check-cast v0, Ln24;
+    iget v1, p0, Lc6a;->a:I
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget v3, p1, Lc6a;->a:I
 
-    goto :goto_1
+    if-eq v1, v3, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v1, p0, Lc6a;->b:Ljava/lang/Integer;
 
-    iget-object p1, p0, Lc6a;->Y:Ljava/lang/Object;
+    iget-object p1, p1, Lc6a;->b:Ljava/lang/Integer;
 
-    move-object v0, p1
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v0, Ln24;
+    move-result p1
 
-    iput-object v0, p0, Lc6a;->Y:Ljava/lang/Object;
+    if-nez p1, :cond_3
 
-    iput v2, p0, Lc6a;->X:I
+    return v2
 
-    sget-object p1, Lru/ok/messages/NotificationsImagesProvider;->a:Landroid/content/UriMatcher;
+    :cond_3
+    return v0
+.end method
 
-    new-instance p1, Lc22;
+.method public final hashCode()I
+    .locals 2
 
-    invoke-static {p0}, Lk84;->v(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lc6a;->a:I
 
-    move-result-object v4
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-direct {p1, v2, v4}, Lc22;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    invoke-virtual {p1}, Lc22;->o()V
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {}, Lnc6;->p()Lk47;
+    iget-object v1, p0, Lc6a;->b:Ljava/lang/Integer;
 
-    move-result-object v4
+    if-nez v1, :cond_0
 
-    iget-object v5, p0, Lc6a;->r0:Landroid/net/Uri;
-
-    invoke-static {v5}, Lx47;->a(Landroid/net/Uri;)Lx47;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Lk47;->f(Lx47;)Lo0;
-
-    move-result-object v4
-
-    new-instance v5, Ljm5;
-
-    invoke-direct {v5, v4, v2}, Ljm5;-><init>(Lo0;I)V
-
-    invoke-virtual {p1, v5}, Lc22;->e(Lvd6;)V
-
-    new-instance v2, Le6a;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p1, v5}, Le6a;-><init>(Lc22;I)V
-
-    sget-object v5, Lat1;->a:Lat1;
-
-    invoke-virtual {v4, v2, v5}, Lo0;->m(Ld94;Ljava/util/concurrent/Executor;)V
-
-    invoke-virtual {p1}, Lc22;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_3
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_3
-    sget-object p1, Laxf;->a:Laxf;
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    if-ne p1, v3, :cond_4
+    add-int/2addr v0, v1
 
-    goto :goto_2
+    return v0
+.end method
 
-    :cond_4
-    :goto_1
-    const/4 p1, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iput-object p1, p0, Lc6a;->Y:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput v1, p0, Lc6a;->X:I
+    const-string v1, "NeuroAvatarScrollEvent(tabIndex="
 
-    iget-object p1, p0, Lc6a;->Z:Lru/ok/messages/NotificationsImagesProvider;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lc6a;->s0:Lxbe;
+    iget v1, p0, Lc6a;->a:I
 
-    invoke-static {p1, v1, v0, p0}, Lru/ok/messages/NotificationsImagesProvider;->a(Lru/ok/messages/NotificationsImagesProvider;Lxbe;Ln24;Lwy3;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", firstIndex="
 
-    if-ne p1, v3, :cond_5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_2
-    return-object v3
+    iget-object v1, p0, Lc6a;->b:Ljava/lang/Integer;
 
-    :cond_5
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

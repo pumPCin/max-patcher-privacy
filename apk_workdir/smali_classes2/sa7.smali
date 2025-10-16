@@ -1,218 +1,361 @@
 .class public final Lsa7;
-.super Lc2f;
+.super La2;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Ldb7;
+
+
+# static fields
+.field public static final X:Ljava/math/BigInteger;
+
+.field public static final b:Ljava/math/BigInteger;
+
+.field public static final c:Ljava/math/BigInteger;
+
+.field public static final o:Ljava/math/BigInteger;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/login/inputname/InputNameScreen;
+.field public final a:Ljava/math/BigInteger;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-wide/16 v0, -0x80
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, 0x7f
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, -0x8000
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, 0x7fff
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/32 v0, -0x80000000
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lsa7;->b:Ljava/math/BigInteger;
+
+    const-wide/32 v0, 0x7fffffff
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lsa7;->c:Ljava/math/BigInteger;
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lsa7;->o:Ljava/math/BigInteger;
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lsa7;->X:Ljava/math/BigInteger;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/math/BigInteger;)V
     .locals 0
 
-    iput-object p2, p0, Lsa7;->Y:Lone/me/login/inputname/InputNameScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lsa7;->a:Ljava/math/BigInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lsa7;->a:Ljava/math/BigInteger;
 
-    invoke-virtual {p0, p1, p2}, Lsa7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
-    move-result-object p1
-
-    check-cast p1, Lsa7;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lsa7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lsa7;
-
-    iget-object v1, p0, Lsa7;->Y:Lone/me/login/inputname/InputNameScreen;
-
-    invoke-direct {v0, p2, v1}, Lsa7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
-
-    iput-object p1, v0, Lsa7;->X:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final b()I
+    .locals 1
 
-    iget-object v0, p0, Lsa7;->Y:Lone/me/login/inputname/InputNameScreen;
+    const/4 v0, 0x3
 
-    iget-object v1, v0, Lone/me/login/inputname/InputNameScreen;->Z:Lyn7;
+    return v0
+.end method
 
-    iget-object v2, v0, Lone/me/login/inputname/InputNameScreen;->Y:Lyn7;
+.method public final d()J
+    .locals 2
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lsa7;->a:Ljava/math/BigInteger;
 
-    iget-object p1, p0, Lsa7;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/math/BigInteger;->longValue()J
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result-wide v0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    return-wide v0
+.end method
 
-    move-result p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    if-eqz p1, :cond_1
+    if-ne p1, p0, :cond_0
 
-    sget-object p1, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
+    const/4 p1, 0x1
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr8b;
-
-    sget-object v3, Lr8b;->f:[Ljava/lang/String;
-
-    invoke-virtual {p1, v3}, Lr8b;->c([Ljava/lang/String;)Z
-
-    move-result p1
-
-    const/4 v3, 0x1
-
-    if-nez p1, :cond_0
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm63;
-
-    check-cast p1, Lfhd;
-
-    invoke-virtual {p1}, Lfhd;->G()V
-
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr8b;
-
-    new-instance v1, Lp5h;
-
-    invoke-direct {v1, v0, v3}, Lp5h;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-virtual {p1, v1}, Lr8b;->f(Lp5h;)V
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    instance-of v0, p1, Luhg;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
+    check-cast p1, Luhg;
+
+    check-cast p1, La2;
+
+    invoke-interface {p1}, Luhg;->b()I
+
+    move-result v0
+
+    const/4 v2, 0x3
+
+    if-ne v0, v2, :cond_2
+
+    invoke-interface {p1}, Luhg;->g()Ldb7;
 
     move-result-object p1
 
-    check-cast p1, Lr8b;
+    iget-object v0, p0, Lsa7;->a:Ljava/math/BigInteger;
 
-    sget-object v4, Lr8b;->g:[Ljava/lang/String;
+    invoke-interface {p1}, Ljga;->i()Ljava/math/BigInteger;
 
-    invoke-virtual {p1, v4}, Lr8b;->c([Ljava/lang/String;)Z
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    return p1
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    :cond_2
+    return v1
+.end method
 
-    move-result-object p1
+.method public final f()I
+    .locals 2
 
-    check-cast p1, Lm63;
+    sget-object v0, Lsa7;->b:Ljava/math/BigInteger;
 
-    check-cast p1, Lfhd;
+    iget-object v1, p0, Lsa7;->a:Ljava/math/BigInteger;
 
-    iget-object v4, p1, Lfhd;->M:Lzrd;
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    sget-object v5, Lfhd;->h0:[Lpl7;
+    move-result v0
 
-    const/16 v6, 0x1d
+    if-ltz v0, :cond_0
 
-    aget-object v5, v5, v6
+    sget-object v0, Lsa7;->c:Ljava/math/BigInteger;
 
-    invoke-virtual {v4, p1, v5}, Lzrd;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    move-result-object p1
+    move-result v0
 
-    check-cast p1, Ljava/lang/Boolean;
+    if-gtz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v1}, Ljava/math/BigInteger;->intValue()I
 
-    move-result p1
+    move-result v0
 
-    if-nez p1, :cond_2
+    return v0
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    :cond_0
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
 
-    check-cast p1, Lm63;
+    throw v0
+.end method
 
-    check-cast p1, Lfhd;
+.method public final g()Ldb7;
+    .locals 0
 
-    invoke-virtual {p1}, Lfhd;->G()V
+    return-object p0
+.end method
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 4
 
-    move-result-object p1
+    sget-object v0, Lsa7;->b:Ljava/math/BigInteger;
 
-    check-cast p1, Lr8b;
+    iget-object v1, p0, Lsa7;->a:Ljava/math/BigInteger;
 
-    new-instance v1, Lp5h;
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    invoke-direct {v1, v0, v3}, Lp5h;-><init>(Lone/me/sdk/arch/Widget;I)V
+    move-result v0
 
-    invoke-virtual {p1, v1}, Lr8b;->f(Lp5h;)V
+    if-gtz v0, :cond_0
+
+    sget-object v0, Lsa7;->c:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    :goto_0
+    long-to-int v0, v0
+
+    return v0
+
+    :cond_0
+    sget-object v0, Lsa7;->o:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    sget-object v0, Lsa7;->X:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    const/16 v2, 0x20
+
+    ushr-long v2, v0, v2
+
+    xor-long/2addr v0, v2
 
     goto :goto_0
 
     :cond_1
-    sget p1, Llm7;->a:I
+    invoke-virtual {v1}, Ljava/math/BigInteger;->hashCode()I
 
-    sget p1, Llm7;->c:I
+    move-result v0
 
-    invoke-static {p1}, Llm7;->b(I)Z
+    return v0
+.end method
 
-    move-result p1
+.method public final i()Ljava/math/BigInteger;
+    .locals 1
 
-    if-nez p1, :cond_2
+    iget-object v0, p0, Lsa7;->a:Ljava/math/BigInteger;
 
-    sget-object p1, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Lone/me/login/inputname/InputNameScreen;->C0()Liwa;
+.method public final j()J
+    .locals 2
 
-    move-result-object p1
+    invoke-virtual {p0}, Lsa7;->k()Z
 
-    iget-object p1, p1, Liwa;->a:Landroid/widget/EditText;
+    move-result v0
 
-    invoke-static {p1}, Lx2d;->J(Landroid/view/View;)V
+    iget-object v1, p0, Lsa7;->a:Ljava/math/BigInteger;
 
-    :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    if-eqz v0, :cond_0
 
-    return-object p1
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
+
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
+
+    throw v0
+.end method
+
+.method public final k()Z
+    .locals 2
+
+    sget-object v0, Lsa7;->o:Ljava/math/BigInteger;
+
+    iget-object v1, p0, Lsa7;->a:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    sget-object v0, Lsa7;->X:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final l()Ldb7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lsa7;->a:Ljava/math/BigInteger;
+
+    invoke-virtual {v0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

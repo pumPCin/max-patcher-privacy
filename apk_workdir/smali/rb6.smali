@@ -2,42 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsb6;
+
 
 # static fields
-.field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
-
-
-# instance fields
-.field public final a:Lnib;
-
-.field public final b:I
-
-.field public final c:I
+.field public static final a:Lrb6;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    new-instance v0, Lrb6;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lrb6;->d:Ljava/util/concurrent/ConcurrentHashMap;
+    sput-object v0, Lrb6;->a:Lrb6;
 
     return-void
 .end method
 
-.method public constructor <init>(Lnib;II)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lrb6;->a:Lnib;
+    const/4 v0, 0x1
 
-    iput p2, p0, Lrb6;->b:I
+    if-ne p0, p1, :cond_0
 
-    iput p3, p0, Lrb6;->c:I
+    return v0
 
-    return-void
+    :cond_0
+    instance-of p1, p1, Lrb6;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x64e35cdf
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShowAuthorVisibilityOnboarding"
+
+    return-object v0
 .end method

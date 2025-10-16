@@ -1,413 +1,371 @@
-.class public abstract Lp39;
-.super Ljava/lang/Object;
+.class public final Lp39;
+.super Ls39;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final X:Ljava/lang/String;
+
+.field public final Y:Ljava/lang/CharSequence;
+
+.field public final Z:Ljava/lang/CharSequence;
+
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:Ljava/lang/String;
+
+.field public final r0:Z
+
+.field public final s0:I
 
 
 # direct methods
-.method public static a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
-    .locals 13
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    array-length v2, p0
-
-    if-ge v1, v2, :cond_2
-
-    aget-object v2, p0, v1
-
-    iget v3, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    const/4 v4, 0x0
-
-    packed-switch v3, :pswitch_data_0
-
-    sget-object v5, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Unknown protoElement type = "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v5, "p39"
-
-    invoke-static {v5, v3, v4}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    move-object v9, v4
-
-    goto :goto_2
-
-    :pswitch_0
-    sget-object v3, Ln39;->v0:Ln39;
-
-    :goto_1
-    move-object v9, v3
-
-    goto :goto_2
-
-    :pswitch_1
-    sget-object v3, Ln39;->u0:Ln39;
-
-    goto :goto_1
-
-    :pswitch_2
-    sget-object v3, Ln39;->r0:Ln39;
-
-    goto :goto_1
-
-    :pswitch_3
-    sget-object v3, Ln39;->t0:Ln39;
-
-    goto :goto_1
-
-    :pswitch_4
-    sget-object v3, Ln39;->s0:Ln39;
-
-    goto :goto_1
-
-    :pswitch_5
-    sget-object v3, Ln39;->Z:Ln39;
-
-    goto :goto_1
-
-    :pswitch_6
-    sget-object v3, Ln39;->Y:Ln39;
-
-    goto :goto_1
-
-    :pswitch_7
-    sget-object v3, Ln39;->X:Ln39;
-
-    goto :goto_1
-
-    :pswitch_8
-    sget-object v3, Ln39;->c:Ln39;
-
-    goto :goto_1
-
-    :pswitch_9
-    sget-object v3, Ln39;->o:Ln39;
-
-    goto :goto_1
-
-    :pswitch_a
-    sget-object v3, Ln39;->b:Ln39;
-
-    goto :goto_1
-
-    :pswitch_b
-    sget-object v3, Ln39;->a:Ln39;
-
-    goto :goto_1
-
-    :goto_2
-    iget-wide v6, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->entityId:J
-
-    iget-object v3, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->entityName:Ljava/lang/String;
-
-    invoke-static {v3}, Ld40;->A(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    move-object v8, v4
-
-    goto :goto_3
-
-    :cond_0
-    iget-object v3, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->entityName:Ljava/lang/String;
-
-    move-object v8, v3
-
-    :goto_3
-    iget v10, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->from:I
-
-    iget v11, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->length:I
-
-    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->linkAttributes:Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;
-
-    if-eqz v2, :cond_1
-
-    const-string v3, "url"
-
-    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;->url:Ljava/lang/String;
-
-    invoke-static {v3, v2}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
-
-    move-result-object v4
-
-    :cond_1
-    move-object v12, v4
-
-    new-instance v5, Lo39;
-
-    invoke-direct/range {v5 .. v12}, Lo39;-><init>(JLjava/lang/String;Ln39;IILjava/util/Map;)V
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static b(Ljava/util/List;)[B
+.method public constructor <init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
     .locals 0
 
-    invoke-static {p0}, Lp39;->c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-wide p1, p0, Lp39;->a:J
 
-    invoke-static {p0}, Ls59;->toByteArray(Ls59;)[B
+    iput-wide p3, p0, Lp39;->b:J
 
-    move-result-object p0
+    iput-wide p5, p0, Lp39;->c:J
 
-    return-object p0
+    iput-object p7, p0, Lp39;->o:Ljava/lang/String;
+
+    iput-object p8, p0, Lp39;->X:Ljava/lang/String;
+
+    iput-object p9, p0, Lp39;->Y:Ljava/lang/CharSequence;
+
+    iput-object p10, p0, Lp39;->Z:Ljava/lang/CharSequence;
+
+    iput-boolean p11, p0, Lp39;->r0:Z
+
+    sget p1, Ldnc;->profile_media_view_type_link:I
+
+    iput p1, p0, Lp39;->s0:I
+
+    return-void
 .end method
 
-.method public static c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
-    .locals 8
 
-    new-instance v0, Lru/ok/tamtam/nano/Protos$MessageElements;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$MessageElements;-><init>()V
+    const/4 v0, 0x1
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lp39;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lp39;
+
+    iget-wide v3, p0, Lp39;->a:J
+
+    iget-wide v5, p1, Lp39;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lp39;->b:J
+
+    iget-wide v5, p1, Lp39;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lp39;->c:J
+
+    iget-wide v5, p1, Lp39;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lp39;->o:Ljava/lang/String;
+
+    iget-object v3, p1, Lp39;->o:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    new-array v1, v1, [Lru/ok/tamtam/nano/Protos$MessageElement;
+    if-nez v1, :cond_5
 
-    iput-object v1, v0, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+    return v2
 
-    const/4 v1, 0x0
+    :cond_5
+    iget-object v1, p0, Lp39;->X:Ljava/lang/String;
 
-    move v2, v1
+    iget-object v3, p1, Lp39;->X:Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v1
 
-    if-ge v2, v3, :cond_2
+    if-nez v1, :cond_6
 
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    return v2
 
-    move-result-object v3
+    :cond_6
+    iget-object v1, p0, Lp39;->Y:Ljava/lang/CharSequence;
 
-    check-cast v3, Lo39;
+    iget-object v3, p1, Lp39;->Y:Ljava/lang/CharSequence;
 
-    new-instance v4, Lru/ok/tamtam/nano/Protos$MessageElement;
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v4}, Lru/ok/tamtam/nano/Protos$MessageElement;-><init>()V
+    move-result v1
 
-    iget-wide v5, v3, Lo39;->a:J
+    if-nez v1, :cond_7
 
-    iget-object v7, v3, Lo39;->f:Ljava/util/Map;
+    return v2
 
-    iput-wide v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->entityId:J
+    :cond_7
+    iget-object v1, p0, Lp39;->Z:Ljava/lang/CharSequence;
 
-    iget-object v5, v3, Lo39;->b:Ljava/lang/String;
+    iget-object v3, p1, Lp39;->Z:Ljava/lang/CharSequence;
 
-    sget-object v6, Lru/ok/tamtam/nano/b;->a:[B
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez v5, :cond_0
+    move-result v1
 
-    const-string v5, ""
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-boolean v1, p0, Lp39;->r0:Z
+
+    iget-boolean p1, p1, Lp39;->r0:Z
+
+    if-eq v1, p1, :cond_9
+
+    return v2
+
+    :cond_9
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lp39;->a:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lp39;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lp39;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lp39;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lp39;->o:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
 
     :cond_0
-    iput-object v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->entityName:Ljava/lang/String;
-
-    iget v5, v3, Lo39;->d:I
-
-    iput v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->from:I
-
-    iget v5, v3, Lo39;->e:I
-
-    iput v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->length:I
-
-    iget-object v3, v3, Lo39;->c:Ln39;
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v3
 
-    packed-switch v3, :pswitch_data_0
+    :goto_0
+    add-int/2addr v0, v3
 
-    goto :goto_1
+    mul-int/2addr v0, v1
 
-    :pswitch_0
-    const/16 v3, 0xb
+    iget-object v3, p0, Lp39;->X:Ljava/lang/String;
 
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+    invoke-static {v0, v1, v3}, Ld15;->d(IILjava/lang/String;)I
 
-    goto :goto_1
+    move-result v0
 
-    :pswitch_1
-    const/16 v3, 0xa
+    iget-object v3, p0, Lp39;->Y:Ljava/lang/CharSequence;
 
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+    if-nez v3, :cond_1
 
-    goto :goto_1
-
-    :pswitch_2
-    const/16 v3, 0x8
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_3
-    const/4 v3, 0x7
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_4
-    const/16 v3, 0x9
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_5
-    const/4 v3, 0x6
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_6
-    const/4 v3, 0x5
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    const-string v3, "url"
-
-    invoke-interface {v7, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    new-instance v5, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;
-
-    invoke-direct {v5}, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;-><init>()V
-
-    iput-object v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->linkAttributes:Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;
-
-    invoke-interface {v7, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    iput-object v3, v5, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;->url:Ljava/lang/String;
+    move v3, v2
 
     goto :goto_1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    const-string v0, "There are not enough attributes for the type = LINK"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_7
-    const/4 v3, 0x4
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_8
-    const/4 v3, 0x2
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_9
-    const/4 v3, 0x3
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_a
-    const/4 v3, 0x1
-
-    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
-
-    goto :goto_1
-
-    :pswitch_b
-    iput v1, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+    move-result v3
 
     :goto_1
-    iget-object v3, v0, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+    add-int/2addr v0, v3
 
-    aput-object v4, v3, v2
+    mul-int/2addr v0, v1
 
-    add-int/lit8 v2, v2, 0x1
+    iget-object v3, p0, Lp39;->Z:Ljava/lang/CharSequence;
 
-    goto/16 :goto_0
+    if-nez v3, :cond_2
+
+    goto :goto_2
 
     :cond_2
-    return-object v0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v2
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Lp39;->r0:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Lp39;->c:J
+
+    return-wide v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lp39;->b:J
+
+    return-wide v0
+.end method
+
+.method public final l()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lp39;->r0:Z
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lp39;->s0:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "Link(itemId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Lp39;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lwx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lp39;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachId="
+
+    const-string v2, ", previewUrl="
+
+    iget-wide v3, p0, Lp39;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ", title="
+
+    const-string v2, ", subtitle="
+
+    iget-object v3, p0, Lp39;->o:Ljava/lang/String;
+
+    iget-object v4, p0, Lp39;->X:Ljava/lang/String;
+
+    invoke-static {v0, v3, v1, v4, v2}, Lf67;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lp39;->Y:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", link="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp39;->Z:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isContentLevel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lp39;->r0:Z
+
+    invoke-static {v0, v2, v1}, Lwx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

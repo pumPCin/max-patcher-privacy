@@ -1,81 +1,88 @@
-.class public final synthetic Lqk3;
-.super Ljava/lang/Object;
+.class public final Lqk3;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lfl3;
 
-.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+.field public final synthetic Y:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;I)V
+.method public constructor <init>(Lfl3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lqk3;->a:I
+    iput-object p1, p0, Lqk3;->X:Lfl3;
 
-    iput-object p1, p0, Lqk3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    iput-object p2, p0, Lqk3;->Y:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lqk3;->a:I
+    check-cast p1, Lb54;
 
-    iget-object v1, p0, Lqk3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lqk3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lpl7;
+    move-result-object p1
 
-    new-instance v0, Lxk3;
+    check-cast p1, Lqk3;
 
-    iget-object v2, v1, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->a:Lds;
+    sget-object p2, Lzag;->a:Lzag;
 
-    sget-object v3, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lpl7;
+    invoke-virtual {p1, p2}, Lqk3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    move-result-object p1
 
-    aget-object v3, v3, v4
+    return-object p1
+.end method
 
-    invoke-virtual {v2, v1}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v1
+    new-instance p1, Lqk3;
 
-    check-cast v1, Ljava/lang/String;
+    iget-object v0, p0, Lqk3;->X:Lfl3;
 
-    invoke-direct {v0, v1}, Lxk3;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lqk3;->Y:Ljava/lang/String;
 
-    return-object v0
+    invoke-direct {p1, v0, v1, p2}, Lqk3;-><init>(Lfl3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_0
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Lpl7;
+    return-object p1
+.end method
 
-    invoke-virtual {v1}, Ljz3;->getOnBackPressedDispatcher()Lida;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object v0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
+    sget-object p1, Lfl3;->K0:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lida;->d()V
+    iget-object p1, p0, Lqk3;->X:Lfl3;
 
-    :cond_0
-    sget-object v0, Laxf;->a:Laxf;
+    invoke-virtual {p1}, Lfl3;->w()Lred;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lqk3;->Y:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lred;->e(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    return-object p1
 .end method

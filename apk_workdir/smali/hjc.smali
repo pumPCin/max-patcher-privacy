@@ -3,10 +3,10 @@
 
 
 # static fields
-.field public static Base_CardView:I = 0x7f140014
+.field public static cardview_dark_background:I = 0x7f06005b
 
-.field public static CardView:I = 0x7f140132
+.field public static cardview_light_background:I = 0x7f06005c
 
-.field public static CardView_Dark:I = 0x7f140133
+.field public static cardview_shadow_end_color:I = 0x7f06005d
 
-.field public static CardView_Light:I = 0x7f140134
+.field public static cardview_shadow_start_color:I = 0x7f06005e

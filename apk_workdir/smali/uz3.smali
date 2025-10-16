@@ -1,44 +1,43 @@
-.class public final Luz3;
+.class public abstract Luz3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luq7;
-
-
-# instance fields
-.field public final a:Lwq7;
-
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/arch/Widget;)V
+.method public static a(Landroid/os/Bundle;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lx20;->c()Landroid/media/ApplicationMediaCapabilities$Builder;
 
-    new-instance v0, Lwq7;
+    move-result-object v0
 
-    invoke-direct {v0, p0}, Lwq7;-><init>(Luq7;)V
+    invoke-static {v0}, Lx20;->d(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
 
-    iput-object v0, p0, Luz3;->a:Lwq7;
+    move-result-object v0
 
-    new-instance v0, Ltz3;
+    invoke-static {v0}, Lx20;->z(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct {v0, v1, p0}, Ltz3;-><init>(ILjava/lang/Object;)V
+    invoke-static {v0}, Lx20;->B(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
 
-    invoke-virtual {p1, v0}, Ljz3;->addLifecycleListener(Lhz3;)V
+    move-result-object v0
+
+    invoke-static {v0}, Lx20;->C(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lx20;->D(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lx20;->e(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities;
+
+    move-result-object v0
+
+    const-string v1, "android.provider.extra.MEDIA_CAPABILITIES"
+
+    invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final x()Lwq7;
-    .locals 1
-
-    iget-object v0, p0, Luz3;->a:Lwq7;
-
-    return-object v0
 .end method

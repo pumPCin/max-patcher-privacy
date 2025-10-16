@@ -1,189 +1,77 @@
-.class public final synthetic Lb1h;
-.super Ljava/lang/Object;
+.class public final Lb1h;
+.super Lv14;
 .source "SourceFile"
 
-# interfaces
-.implements Lri6;
 
+# instance fields
+.field public final synthetic a:Ljy;
 
-# static fields
-.field public static final a:Lb1h;
+.field public final synthetic b:Landroid/view/ViewTreeObserver;
 
-.field private static final descriptor:Lmqd;
+.field public final synthetic c:Lc1h;
+
+.field public final synthetic d:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljy;Landroid/view/ViewTreeObserver;Lc1h;Landroid/view/View;)V
+    .locals 0
 
-    new-instance v0, Lb1h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb1h;->a:Ljy;
 
-    sput-object v0, Lb1h;->a:Lb1h;
+    iput-object p2, p0, Lb1h;->b:Landroid/view/ViewTreeObserver;
 
-    new-instance v1, Lflb;
+    iput-object p3, p0, Lb1h;->c:Lc1h;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.storage.WebAppStorageClearRequest"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
-
-    const-string v0, "queryId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "requestId"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lb1h;->descriptor:Lmqd;
+    iput-object p4, p0, Lb1h;->d:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx8;)Ljava/lang/Object;
-    .locals 9
+.method public final s(Lx14;Landroid/view/View;)V
+    .locals 1
 
-    sget-object v0, Lb1h;->descriptor:Lmqd;
+    iget-object p2, p0, Lb1h;->a:Ljy;
 
-    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
+    iget-object p2, p2, Ljy;->Y:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast p2, Ljava/util/ArrayList;
 
-    const/4 v1, 0x1
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v5, v1
-
-    move v6, v2
-
-    move-object v4, v3
+    move-result-object p2
 
     :goto_0
-    if-eqz v5, :cond_3
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
+    move-result v0
 
-    move-result v7
+    if-eqz v0, :cond_0
 
-    const/4 v8, -0x1
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-eq v7, v8, :cond_2
+    move-result-object v0
 
-    if-eqz v7, :cond_1
+    check-cast v0, Lz0h;
 
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x2
+    invoke-interface {v0}, Lz0h;->b()V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    invoke-virtual {p1, p0}, Lx14;->removeLifecycleListener(Lv14;)V
 
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    iget-object p1, p0, Lb1h;->c:Lc1h;
 
-    throw p1
+    iget-object p2, p0, Lb1h;->d:Landroid/view/View;
 
-    :cond_1
-    sget-object v7, Llwe;->a:Llwe;
+    iget-object v0, p0, Lb1h;->b:Landroid/view/ViewTreeObserver;
 
-    invoke-virtual {p1, v0, v2, v3}, Lx8;->s(Lmqd;ILjava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
-
-    new-instance p1, Ld1h;
-
-    invoke-direct {p1, v6, v3, v4}, Ld1h;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lmz3;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Ld1h;
-
-    sget-object v0, Lb1h;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
-
-    move-result-object p1
-
-    sget-object v1, Llwe;->a:Llwe;
-
-    iget-object v1, p2, Ld1h;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lmz3;->h(Lmqd;ILjava/lang/Object;)V
-
-    iget-object p2, p2, Ld1h;->b:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v0, v1, p2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lmz3;->m()V
+    invoke-static {p1, p2, v0}, Ljy;->n(Lc1h;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
 
     return-void
-.end method
-
-.method public final c()[Lql7;
-    .locals 3
-
-    invoke-static {}, Loza;->p()Lql7;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Lql7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sget-object v0, Llwe;->a:Llwe;
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    return-object v1
-.end method
-
-.method public final d()Lmqd;
-    .locals 1
-
-    sget-object v0, Lb1h;->descriptor:Lmqd;
-
-    return-object v0
 .end method

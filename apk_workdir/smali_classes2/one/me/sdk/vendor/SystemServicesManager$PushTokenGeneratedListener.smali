@@ -16,7 +16,7 @@
         "",
         "",
         "token",
-        "Laxf;",
+        "Lzag;",
         "onPushTokenGenerated",
         "(Ljava/lang/String;)V",
         "vendor_release"

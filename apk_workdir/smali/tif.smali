@@ -1,6 +1,3 @@
-.class public abstract Ltif;
+.class public interface abstract Ltif;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;

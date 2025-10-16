@@ -1,97 +1,53 @@
 .class public final Lh99;
-.super Lc2f;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:J
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lj99;
+
+.field public o:Lj99;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(Lj99;Lk14;)V
     .locals 0
 
-    iput-object p2, p0, Lh99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput-object p1, p0, Lh99;->Z:Lj99;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lh99;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lh99;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lh99;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lh99;
-
-    iget-object v1, p0, Lh99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, v1}, Lh99;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Lh99;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iput-object p1, p0, Lh99;->Y:Ljava/lang/Object;
 
-    iget-object p1, p0, Lh99;->X:Ljava/lang/Object;
+    iget p1, p0, Lh99;->r0:I
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    or-int/2addr p1, v0
 
-    move-result p1
+    iput p1, p0, Lh99;->r0:I
 
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:[Lpl7;
+    iget-object p1, p0, Lh99;->Z:Lj99;
 
-    iget-object v0, p0, Lh99;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0}, Ljz3;->getView()Landroid/view/View;
+    invoke-virtual {p1, v0, v1, p0}, Lj99;->d(JLk14;)Ljava/io/Serializable;
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lu49;
-
-    move-result-object v0
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {v0, p1}, Lu49;->setInputEnabled(Z)V
-
-    :cond_0
-    sget-object p1, Laxf;->a:Laxf;
+    move-result-object p1
 
     return-object p1
 .end method

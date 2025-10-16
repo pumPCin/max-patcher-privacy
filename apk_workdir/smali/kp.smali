@@ -1,33 +1,34 @@
-.class public Lkp;
-.super Lmp;
+.class public abstract Lkp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static a(Landroid/widget/TextView;)Landroid/view/textclassifier/TextClassifier;
+    .locals 1
 
-    invoke-direct {p0}, Lmp;-><init>()V
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-void
-.end method
+    move-result-object p0
 
+    const-class v0, Landroid/view/textclassifier/TextClassificationManager;
 
-# virtual methods
-.method public a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
-    .locals 2
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const-string v0, "getTextDirectionHeuristic"
+    move-result-object p0
 
-    sget-object v1, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
+    check-cast p0, Landroid/view/textclassifier/TextClassificationManager;
 
-    invoke-static {p2, v0, v1}, Lnp;->e(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p0, :cond_0
 
-    move-result-object p2
+    invoke-virtual {p0}, Landroid/view/textclassifier/TextClassificationManager;->getTextClassifier()Landroid/view/textclassifier/TextClassifier;
 
-    check-cast p2, Landroid/text/TextDirectionHeuristic;
+    move-result-object p0
 
-    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;
+    return-object p0
 
-    return-void
+    :cond_0
+    sget-object p0, Landroid/view/textclassifier/TextClassifier;->NO_OP:Landroid/view/textclassifier/TextClassifier;
+
+    return-object p0
 .end method

@@ -1,48 +1,28 @@
-.class public final Lvqc;
+.class public abstract Lvqc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lov7;
 
 
 # static fields
-.field public static final a:Lvqc;
+.field public static banner_big_permit_phone_book_contacts_action_button_text:I = 0x7f1300af
 
-.field public static final b:I
+.field public static banner_big_permit_phone_book_contacts_subtitle:I = 0x7f1300b0
 
+.field public static banner_big_permit_phone_book_contacts_title:I = 0x7f1300b1
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static banner_compact_permit_mic_subtitle:I = 0x7f1300b2
 
-    new-instance v0, Lvqc;
+.field public static banner_compact_permit_mic_title:I = 0x7f1300b3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static banner_compact_permit_notifications_title:I = 0x7f1300b4
 
-    sput-object v0, Lvqc;->a:Lvqc;
+.field public static banner_compact_permit_phone_book_contacts_subtitle:I = 0x7f1300b5
 
-    sget v0, Leja;->s:I
+.field public static banner_compact_permit_phone_book_contacts_title:I = 0x7f1300b6
 
-    sput v0, Lvqc;->b:I
+.field public static banner_middle_permit_notifications_title:I = 0x7f1300b7
 
-    return-void
-.end method
+.field public static banner_middle_permit_phone_book_contacts_subtitle:I = 0x7f1300b8
 
+.field public static banner_middle_permit_phone_book_contacts_title:I = 0x7f1300b9
 
-# virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Lvqc;->b:I
-
-    return v0
-.end method
+.field public static banner_permit_notifications_subtitle:I = 0x7f1300ba

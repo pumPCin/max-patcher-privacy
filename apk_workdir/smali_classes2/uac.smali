@@ -1,92 +1,105 @@
 .class public abstract Luac;
-.super Ljava/lang/Object;
+.super Lpoe;
+.source "SourceFile"
 
 
-# static fields
-.field public static add_24:I = 0x7f0802cf
+# virtual methods
+.method public final G()V
+    .locals 5
 
-.field public static call_24:I = 0x7f0802fe
+    const/16 v0, 0xc
 
-.field public static call_fill_16:I = 0x7f080300
+    int-to-float v0, v0
 
-.field public static cancel_10:I = 0x7f080305
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-.field public static cancel_outline_28:I = 0x7f080306
+    move-result-object v1
 
-.field public static chat_24:I = 0x7f08030b
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static check_24:I = 0x7f080311
+    move-result-object v1
 
-.field public static contact_24:I = 0x7f08033a
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-.field public static copy_24:I = 0x7f08033e
+    mul-float/2addr v1, v0
 
-.field public static download_24:I = 0x7f08035c
+    invoke-static {v1}, Lagi;->d(F)I
 
-.field public static edit_outline_24:I = 0x7f080365
+    move-result v1
 
-.field public static file_24:I = 0x7f0803da
+    const/16 v2, 0xe
 
-.field public static forward_24:I = 0x7f0804dd
+    int-to-float v2, v2
 
-.field public static ic_add_16:I = 0x7f0804f6
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-.field public static ic_arrow_left_outline_28:I = 0x7f080525
+    move-result-object v3
 
-.field public static ic_cancel_filled_24:I = 0x7f08056f
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static ic_cancel_outline_24:I = 0x7f080570
+    move-result-object v3
 
-.field public static ic_cancel_outline_28:I = 0x7f080571
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-.field public static ic_channel_outline_28:I = 0x7f080576
+    mul-float/2addr v3, v2
 
-.field public static ic_check_filled_24:I = 0x7f08057e
+    invoke-static {v3}, Lagi;->d(F)I
 
-.field public static ic_delete_filled_apart_24:I = 0x7f0805b7
+    move-result v3
 
-.field public static ic_delete_filled_cut_out_24:I = 0x7f0805b8
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-.field public static ic_done_28:I = 0x7f0805c1
+    move-result-object v4
 
-.field public static ic_heart_fill_24:I = 0x7f080631
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static ic_heart_outline_24:I = 0x7f080632
+    move-result-object v4
 
-.field public static ic_mention_24:I = 0x7f08066f
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-.field public static ic_message_filled_28:I = 0x7f080677
+    mul-float/2addr v0, v4
 
-.field public static ic_more_vertical_filled_16:I = 0x7f080694
+    invoke-static {v0}, Lagi;->d(F)I
 
-.field public static ic_next_16:I = 0x7f080722
+    move-result v0
 
-.field public static ic_online_24:I = 0x7f08072e
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
-.field public static ic_phone_28:I = 0x7f08073e
+    move-result-object v4
 
-.field public static ic_search_outline_16:I = 0x7f08077e
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static ic_settings_filled_28:I = 0x7f08078e
+    move-result-object v4
 
-.field public static ic_stub_outline_24:I = 0x7f0807b5
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-.field public static ic_swap_24:I = 0x7f0807ba
+    mul-float/2addr v2, v4
 
-.field public static ic_users_28:I = 0x7f0807d9
+    invoke-static {v2}, Lagi;->d(F)I
 
-.field public static ic_users_outline_28:I = 0x7f0807da
+    move-result v2
 
-.field public static link_24:I = 0x7f080821
+    iget-object v4, p0, Lj6d;->a:Landroid/view/View;
 
-.field public static media_24:I = 0x7f08088f
+    invoke-virtual {v4, v1, v3, v0, v2}, Landroid/view/View;->setPaddingRelative(IIII)V
 
-.field public static microphone_on_24:I = 0x7f08089c
+    return-void
+.end method
 
-.field public static setting_24:I = 0x7f080952
+.method public H(Lswe;)V
+    .locals 0
 
-.field public static settings_outline_24:I = 0x7f080954
+    return-void
+.end method
 
-.field public static share_24_android:I = 0x7f080956
+.method public I(Landroid/view/View$OnClickListener;)V
+    .locals 0
 
-.field public static support_24:I = 0x7f08096c
+    return-void
+.end method
+
+.method public J(Landroid/view/View$OnLongClickListener;)V
+    .locals 0
+
+    return-void
+.end method

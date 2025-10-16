@@ -1,114 +1,221 @@
-.class public final synthetic Ljc1;
+.class public final Ljc1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv5d;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final a:Llt7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
+.method public constructor <init>(Llt7;)V
     .locals 0
 
-    iput p2, p0, Ljc1;->a:I
-
-    iput-object p1, p0, Ljc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljc1;->a:Llt7;
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Intent;Lz31;Z)V
+    .locals 3
+
+    const-string v0, "action-open-incoming"
+
+    invoke-virtual {p0, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v0, p1, Lz31;->c:Ljava/lang/CharSequence;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const-string v0, ""
+
+    :cond_1
+    const-string v2, "incoming_param_name"
+
+    invoke-virtual {p0, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v0, p1, Lz31;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_2
+
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_2
+    const-string v0, "incoming_param_avatar"
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object p1, p1, Lz31;->a:Ljava/lang/Long;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    goto :goto_1
+
+    :cond_3
+    const-wide/16 v0, 0x0
+
+    :goto_1
+    const-string p1, "incoming_param_chat_id"
+
+    invoke-virtual {p0, p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    const-string p1, "incoming_param_is_video"
+
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    const/high16 p1, 0x10000000
+
+    invoke-virtual {p0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final b()Landroid/app/Application;
+    .locals 1
 
-    iget v0, p0, Ljc1;->a:I
+    iget-object v0, p0, Ljc1;->a:Llt7;
 
-    const/4 v1, 0x0
-
-    sget-object v2, Lod8;->b:Lod8;
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Ljc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lpl7;
-
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0()Lhc1;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0()Lhc1;
+    check-cast v0, Landroid/app/Application;
 
-    move-result-object v4
+    return-object v0
+.end method
 
-    iget-object v4, v4, Lhc1;->w0:Lhne;
+.method public final c()Landroid/app/PendingIntent;
+    .locals 7
 
-    invoke-virtual {v4}, Lhne;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljc1;->b()Landroid/app/Application;
 
-    move-result-object v4
+    move-result-object v0
 
-    check-cast v4, Lac1;
+    const/16 v1, 0x1f
 
-    iget-object v4, v4, Lac1;->c:Lod8;
+    sget v2, Lhjg;->a:I
 
-    if-ne v4, v2, :cond_0
+    const/high16 v3, 0x10000000
 
-    move v1, v3
+    const-string v4, "action-open-call"
+
+    const/high16 v5, 0xc000000
+
+    const/4 v6, 0x0
+
+    if-lt v2, v1, :cond_0
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lone/me/android/calls/CallNotifierFixActivity;
+
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v1, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-static {v0, v6, v1, v5}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_0
-    xor-int/2addr v1, v3
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Lhc1;->t(Z)V
+    const-class v2, Lone/me/android/calls/CallNotifierBroadcastReceiver;
 
-    return-void
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lpl7;
+    invoke-virtual {v1, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0()Lhc1;
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-static {v0, v6, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0()Lhc1;
+    return-object v0
+.end method
 
-    move-result-object v4
+.method public final d()Landroid/app/PendingIntent;
+    .locals 6
 
-    iget-object v4, v4, Lhc1;->w0:Lhne;
+    invoke-virtual {p0}, Ljc1;->b()Landroid/app/Application;
 
-    invoke-virtual {v4}, Lhne;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v4
+    const/16 v1, 0x1f
 
-    check-cast v4, Lac1;
+    sget v2, Lhjg;->a:I
 
-    iget-object v4, v4, Lac1;->b:Lod8;
+    const-string v3, "action-microphone-state"
 
-    if-ne v4, v2, :cond_1
+    const/high16 v4, 0xc000000
 
-    move v1, v3
+    const/4 v5, 0x0
 
-    :cond_1
-    xor-int/2addr v1, v3
+    if-lt v2, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lhc1;->s(Z)V
+    new-instance v1, Landroid/content/Intent;
 
-    return-void
+    const-class v2, Lone/me/android/calls/CallNotifierFixActivity;
 
-    nop
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {v0, v5, v1, v4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lone/me/android/calls/CallNotifierBroadcastReceiver;
+
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {v0, v5, v1, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    return-object v0
 .end method

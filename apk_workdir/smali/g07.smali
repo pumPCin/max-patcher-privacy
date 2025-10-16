@@ -1,389 +1,102 @@
-.class public final Lg07;
-.super Lug5;
+.class public abstract Lg07;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final d:I
+.field public final X:J
 
-.field public final e:Ljava/util/concurrent/ExecutorService;
+.field public final Y:Lg15;
 
-.field public final f:Lcom/facebook/common/time/RealtimeSinceBootClock;
+.field public final Z:Ljava/lang/String;
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Le07;
+
+.field public final c:J
+
+.field public final o:I
+
+.field public final r0:Ljava/lang/String;
+
+.field public final s0:J
+
+.field public final t0:J
+
+.field public final u0:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-static {}, Lcom/facebook/common/time/RealtimeSinceBootClock;->get()Lcom/facebook/common/time/RealtimeSinceBootClock;
-
-    move-result-object v0
+.method public constructor <init>(Ljava/lang/String;Le07;JIJLg15;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x3
+    iput-object p1, p0, Lg07;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
+    iput-object p2, p0, Lg07;->b:Le07;
 
-    move-result-object v1
+    iput-wide p3, p0, Lg07;->c:J
 
-    iput-object v1, p0, Lg07;->e:Ljava/util/concurrent/ExecutorService;
+    iput p5, p0, Lg07;->o:I
 
-    iput-object v0, p0, Lg07;->f:Lcom/facebook/common/time/RealtimeSinceBootClock;
+    iput-wide p6, p0, Lg07;->X:J
 
-    const/16 v0, 0x7530
+    iput-object p8, p0, Lg07;->Y:Lg15;
 
-    iput v0, p0, Lg07;->d:I
+    iput-object p9, p0, Lg07;->Z:Ljava/lang/String;
+
+    iput-object p10, p0, Lg07;->r0:Ljava/lang/String;
+
+    iput-wide p11, p0, Lg07;->s0:J
+
+    iput-wide p13, p0, Lg07;->t0:J
+
+    iput-boolean p15, p0, Lg07;->u0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Landroid/net/Uri;I)Ljava/net/HttpURLConnection;
+.method public final compareTo(Ljava/lang/Object;)I
     .locals 4
 
-    sget-object v0, Lt1g;->a:Landroid/net/Uri;
+    check-cast p1, Ljava/lang/Long;
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    if-nez p1, :cond_0
+    move-result-wide v0
 
-    move-object v1, v0
+    iget-wide v2, p0, Lg07;->X:J
 
-    goto :goto_0
+    cmp-long v0, v2, v0
+
+    if-lez v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    :try_start_0
-    new-instance v1, Ljava/net/URL;
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v2
+    cmp-long p1, v2, v0
 
-    invoke-direct {v1, v2}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
+    if-gez p1, :cond_1
 
-    :goto_0
-    invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+    const/4 p1, -0x1
 
-    move-result-object v1
-
-    check-cast v1, Ljava/net/HttpURLConnection;
-
-    iget v2, p0, Lg07;->d:I
-
-    invoke-virtual {v1, v2}, Ljava/net/URLConnection;->setConnectTimeout(I)V
-
-    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
-
-    move-result v2
-
-    const/16 v3, 0xc8
-
-    if-lt v2, v3, :cond_1
-
-    const/16 v3, 0x12c
-
-    if-ge v2, v3, :cond_1
-
-    return-object v1
+    return p1
 
     :cond_1
-    const/16 v3, 0x133
+    const/4 p1, 0x0
 
-    if-eq v2, v3, :cond_2
-
-    const/16 v3, 0x134
-
-    if-eq v2, v3, :cond_2
-
-    packed-switch v2, :pswitch_data_0
-
-    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    new-instance p2, Ljava/io/IOException;
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    filled-new-array {p1, v0}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "Image URL %s returned HTTP code %d"
-
-    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_2
-    :pswitch_0
-    const-string v3, "Location"
-
-    invoke-virtual {v1, v3}, Ljava/net/URLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    if-nez v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-lez p2, :cond_4
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3, v1}, Lggh;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    add-int/lit8 p2, p2, -0x1
-
-    invoke-virtual {p0, v0, p2}, Lg07;->A(Landroid/net/Uri;I)Ljava/net/HttpURLConnection;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_4
-    if-nez p2, :cond_5
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v0, "URL "
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " follows too many redirects"
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_5
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object p2
-
-    const-string v0, "URL %s returned %d without a valid redirect"
-
-    invoke-static {p2, v0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    :goto_2
-    new-instance p2, Ljava/io/IOException;
-
-    invoke-direct {p2, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Ljava/lang/RuntimeException;
-
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x12c
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h(Lii0;Laqb;)Lqm5;
-    .locals 1
-
-    new-instance v0, Lf07;
-
-    invoke-direct {v0, p1, p2}, Lqm5;-><init>(Lii0;Laqb;)V
-
-    return-object v0
-.end method
-
-.method public final j(Lqm5;Lvn4;)V
-    .locals 6
-
-    move-object v3, p1
-
-    check-cast v3, Lf07;
-
-    iget-object p1, p0, Lg07;->f:Lcom/facebook/common/time/RealtimeSinceBootClock;
-
-    invoke-interface {p1}, Lql9;->now()J
-
-    move-result-wide v0
-
-    iput-wide v0, v3, Lf07;->d:J
-
-    new-instance v0, Lun3;
-
-    const/4 v1, 0x3
-
-    const/4 v5, 0x0
-
-    move-object v2, p0
-
-    move-object v4, p2
-
-    invoke-direct/range {v0 .. v5}, Lun3;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    iget-object p1, v2, Lg07;->e:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    iget-object p2, v3, Lqm5;->b:Laqb;
-
-    new-instance v0, Le07;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1, v4}, Le07;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    check-cast p2, Loj0;
-
-    invoke-virtual {p2, v0}, Loj0;->a(Lpj0;)V
-
-    return-void
-.end method
-
-.method public final l(Lqm5;I)Ljava/util/HashMap;
-    .locals 5
-
-    check-cast p1, Lf07;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
-
-    iget-wide v1, p1, Lf07;->e:J
-
-    iget-wide v3, p1, Lf07;->d:J
-
-    sub-long/2addr v1, v3
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "queue_time"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-wide v1, p1, Lf07;->f:J
-
-    iget-wide v3, p1, Lf07;->e:J
-
-    sub-long/2addr v1, v3
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "fetch_time"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-wide v1, p1, Lf07;->f:J
-
-    iget-wide v3, p1, Lf07;->d:J
-
-    sub-long/2addr v1, v3
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "total_time"
-
-    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p1, "image_size"
-
-    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final q(Lqm5;)V
-    .locals 2
-
-    check-cast p1, Lf07;
-
-    iget-object v0, p0, Lg07;->f:Lcom/facebook/common/time/RealtimeSinceBootClock;
-
-    invoke-interface {v0}, Lql9;->now()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Lf07;->f:J
-
-    return-void
+    return p1
 .end method

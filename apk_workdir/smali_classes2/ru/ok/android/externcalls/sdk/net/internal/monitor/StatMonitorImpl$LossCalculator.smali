@@ -22,13 +22,13 @@
         "",
         "<init>",
         "()V",
-        "Lzje;",
+        "Lewe;",
         "T",
         "",
-        "Lcke;",
+        "Lhwe;",
         "ssrcs",
         "findSender",
-        "(Ljava/util/List;)Lzje;",
+        "(Ljava/util/List;)Lewe;",
         "Ljava/math/BigInteger;",
         "packetLost",
         "packetSent",
@@ -39,9 +39,9 @@
         "(F)F",
         "getLoss",
         "(Ljava/util/List;)Ljava/lang/Float;",
-        "Ly58;",
+        "Lpb8;",
         "lossCalc",
-        "Ly58;",
+        "Lpb8;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -55,7 +55,7 @@
 
 
 # instance fields
-.field private final lossCalc:Ly58;
+.field private final lossCalc:Lpb8;
 
 
 # direct methods
@@ -64,11 +64,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ly58;
+    new-instance v0, Lpb8;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;->lossCalc:Ly58;
+    iput-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;->lossCalc:Lpb8;
 
     return-void
 .end method
@@ -93,7 +93,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;->lossCalc:Ly58;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitorImpl$LossCalculator;->lossCalc:Lpb8;
 
     invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
 
@@ -103,7 +103,7 @@
 
     move-result-wide p1
 
-    invoke-virtual {v0, v1, v2, p1, p2}, Ly58;->a(JJ)D
+    invoke-virtual {v0, v1, v2, p1, p2}, Lpb8;->a(JJ)D
 
     move-result-wide p1
 
@@ -113,7 +113,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-static {p1, p2, v0}, Lk84;->e(FFF)F
+    invoke-static {p1, p2, v0}, Ljvi;->b(FFF)F
 
     move-result p1
 
@@ -134,16 +134,16 @@
     return-object p1
 .end method
 
-.method private final synthetic findSender(Ljava/util/List;)Lzje;
+.method private final synthetic findSender(Ljava/util/List;)Lewe;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
-            "Lzje;",
+            "Lewe;",
             ">(",
             "Ljava/util/List<",
             "+",
-            "Lcke;",
+            "Lhwe;",
             ">;)TT;"
         }
     .end annotation
@@ -164,14 +164,14 @@
 
     move-result-object p1
 
-    check-cast p1, Lcke;
+    check-cast p1, Lhwe;
 
-    invoke-static {}, Lg8;->y()V
+    invoke-static {}, Lc0i;->f()V
 
     throw v1
 
     :cond_0
-    invoke-static {}, Lg8;->y()V
+    invoke-static {}, Lc0i;->f()V
 
     throw v1
 .end method
@@ -183,7 +183,7 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Li8e;->I(F)I
+    invoke-static {p1}, Lagi;->d(F)I
 
     move-result p1
 
@@ -201,11 +201,11 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
-            "Lzje;",
+            "Lewe;",
             ">(",
             "Ljava/util/List<",
             "+",
-            "Lcke;",
+            "Lhwe;",
             ">;)",
             "Ljava/lang/Float;"
         }
@@ -227,14 +227,14 @@
 
     move-result-object p1
 
-    check-cast p1, Lcke;
+    check-cast p1, Lhwe;
 
-    invoke-static {}, Lg8;->y()V
+    invoke-static {}, Lc0i;->f()V
 
     throw v1
 
     :cond_0
-    invoke-static {}, Lg8;->y()V
+    invoke-static {}, Lc0i;->f()V
 
     throw v1
 .end method

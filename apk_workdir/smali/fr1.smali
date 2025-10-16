@@ -1,83 +1,88 @@
-.class public final synthetic Lfr1;
-.super Ljava/lang/Object;
+.class public final Lfr1;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lkr1;
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkr1;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
     .locals 0
 
-    iput p2, p0, Lfr1;->a:I
+    iput-object p2, p0, Lfr1;->Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    iput-object p1, p0, Lfr1;->b:Lkr1;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfr1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfr1;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lfr1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lfr1;
+
+    iget-object v1, p0, Lfr1;->Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+
+    invoke-direct {v0, p2, v1}, Lfr1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
+
+    iput-object p1, v0, Lfr1;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget p1, p0, Lfr1;->a:I
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    packed-switch p1, :pswitch_data_0
+    iget-object p1, p0, Lfr1;->X:Ljava/lang/Object;
 
-    iget-object p1, p0, Lfr1;->b:Lkr1;
+    check-cast p1, Ljava/lang/Number;
 
-    iget-object v0, p1, Lkr1;->b1:Lhr1;
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    if-eqz v0, :cond_0
+    move-result p1
 
-    iget-object p1, p1, Lkr1;->h1:Ldh1;
+    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lwq7;
 
-    invoke-interface {v0, p1}, Lhr1;->q(Ldh1;)V
+    iget-object v0, p0, Lfr1;->Y:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    :cond_0
-    return-void
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->C0()Lyq1;
 
-    :pswitch_0
-    iget-object p1, p0, Lfr1;->b:Lkr1;
+    move-result-object v0
 
-    iget-object p1, p1, Lkr1;->b1:Lhr1;
+    invoke-virtual {v0, p1}, Lyq1;->setChatUnreadMessageCount(I)V
 
-    if-eqz p1, :cond_1
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-interface {p1}, Lhr1;->I()V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lfr1;->b:Lkr1;
-
-    iget-object v0, p1, Lkr1;->b1:Lhr1;
-
-    if-eqz v0, :cond_2
-
-    iget-object p1, p1, Lkr1;->h1:Ldh1;
-
-    invoke-interface {v0, p1}, Lhr1;->w(Ldh1;)V
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

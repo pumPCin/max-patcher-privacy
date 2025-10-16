@@ -1,105 +1,153 @@
 .class public final Lqr3;
-.super Ly7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lor3;
+.field public final a:Llt7;
+
+.field public final b:Llt7;
+
+.field public final c:Llt7;
+
+.field public final d:Llt7;
+
+.field public final e:Llt7;
 
 
 # direct methods
-.method public constructor <init>(Lor3;)V
+.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;Llt7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqr3;->c:Lor3;
+    iput-object p1, p0, Lqr3;->a:Llt7;
+
+    iput-object p2, p0, Lqr3;->b:Llt7;
+
+    iput-object p3, p0, Lqr3;->c:Llt7;
+
+    iput-object p4, p0, Lqr3;->d:Llt7;
+
+    iput-object p5, p0, Lqr3;->e:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(J)V
+    .locals 11
 
-    const/4 v0, 0x1
+    const-class v0, Lqr3;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lqr3;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lqr3;
-
-    iget-object v1, p0, Lqr3;->c:Lor3;
-
-    iget-object p1, p1, Lqr3;->c:Lor3;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lqr3;->c:Lor3;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CONTACT_INFO_BY_PHONE.Response(contact="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lqr3;->c:Lor3;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const-string v1, "block, id = "
+
+    invoke-static {p1, p2, v1, v0}, Lxx1;->r(JLjava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lqr3;->a:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lms3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lb42;
+
+    const/16 v2, 0x12
+
+    sget-object v3, Lts3;->a:Lts3;
+
+    invoke-direct {v1, v2, v3}, Lb42;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1, p2, v1}, Lms3;->c(JLer3;)Lir3;
+
+    iget-object v0, p0, Lqr3;->d:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lll;
+
+    check-cast v0, Lkma;
+
+    new-instance v1, Lvx3;
+
+    invoke-virtual {v0}, Lkma;->x()Ljwb;
+
+    move-result-object v2
+
+    check-cast v2, Llwb;
+
+    iget-object v2, v2, Llwb;->a:Lg68;
+
+    invoke-virtual {v2}, Lgsd;->k()J
+
+    move-result-wide v3
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    move-wide v5, p1
+
+    invoke-direct/range {v1 .. v10}, Lvx3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v0, v1}, Lkma;->v(Lkma;Lxm;)J
+
+    iget-object p1, p0, Lqr3;->b:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkd2;
+
+    sget-object p2, Lde2;->X:Lde2;
+
+    invoke-virtual {p1, v5, v6, p2}, Lkd2;->j(JLde2;)V
+
+    iget-object p1, p0, Lqr3;->c:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lokf;
+
+    invoke-static {v5, v6}, Lmb3;->e(J)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lokf;->f(Ljava/util/Collection;)V
+
+    iget-object p1, p0, Lqr3;->e:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgw0;
+
+    new-instance p2, Lqz3;
+
+    invoke-direct {p2, v5, v6}, Lqz3;-><init>(J)V
+
+    invoke-virtual {p1, p2}, Lgw0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

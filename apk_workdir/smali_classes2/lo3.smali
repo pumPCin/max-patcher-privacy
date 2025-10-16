@@ -1,171 +1,116 @@
-.class public final synthetic Llo3;
+.class public final Llo3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loo3;
+.implements Lko3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(IIJIJJJJ)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Llo3;->a:I
 
-    iput-object p2, p0, Llo3;->b:Ljava/lang/Object;
+    iput p2, p0, Llo3;->b:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p3, p0, Llo3;->c:J
+
+    iput p5, p0, Llo3;->d:I
+
+    iput-wide p6, p0, Llo3;->e:J
+
+    iput-wide p8, p0, Llo3;->f:J
+
+    iput-wide p10, p0, Llo3;->g:J
+
+    iput-wide p12, p0, Llo3;->h:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Llo3;->h:J
+
+    return-wide v0
+.end method
+
+.method public final b()J
+    .locals 2
+
+    iget-wide v0, p0, Llo3;->c:J
+
+    return-wide v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-wide v0, p0, Llo3;->g:J
+
+    return-wide v0
+.end method
+
+.method public final d()J
+    .locals 2
+
+    iget-wide v0, p0, Llo3;->e:J
+
+    return-wide v0
+.end method
+
+.method public final e()I
+    .locals 1
 
     iget v0, p0, Llo3;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Llo3;->b:Ljava/lang/Object;
+.method public final f()I
+    .locals 1
 
-    check-cast v0, Lzce;
+    iget v0, p0, Llo3;->d:I
 
-    check-cast p1, Lyg1;
+    return v0
+.end method
 
-    check-cast v0, Lvce;
+.method public final g()J
+    .locals 2
 
-    invoke-virtual {v0, p1}, Lvce;->a(Ljava/lang/Object;)V
+    iget-wide v0, p0, Llo3;->f:J
 
-    return-void
+    return-wide v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Llo3;->b:Ljava/lang/Object;
+.method public final h()I
+    .locals 1
 
-    check-cast v0, Lvd6;
+    iget v0, p0, Llo3;->b:I
 
-    check-cast p1, Lyg1;
-
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->f(Lvd6;Lyg1;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Llo3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lhoe;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    new-instance v1, Ll79;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2, v0}, Ll79;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v1}, Lorg/webrtc/PeerConnection;->getStats(Lorg/webrtc/RTCStatsCollectorCallback;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Llo3;->b:Ljava/lang/Object;
-
-    check-cast v0, [Lorg/webrtc/IceCandidate;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    invoke-virtual {p1, v0}, Lorg/webrtc/PeerConnection;->removeIceCandidates([Lorg/webrtc/IceCandidate;)Z
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Llo3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcj4;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    iget-object p1, v0, Lcj4;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v1, v0, Lcj4;->h:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    iget-object v3, v0, Lcj4;->h:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lpr1;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v2, v3, v4}, Lcj4;->u(Ljava/lang/String;Lpr1;Ljava/util/List;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    monitor-exit p1
-
-    return-void
-
-    :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :pswitch_4
-    iget-object p1, p0, Llo3;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

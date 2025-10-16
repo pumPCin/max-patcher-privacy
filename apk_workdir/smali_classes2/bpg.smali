@@ -1,102 +1,112 @@
 .class public final Lbpg;
-.super La82;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic X:Lcpg;
+
+.field public final synthetic Y:J
+
+.field public final synthetic Z:Loa9;
+
+.field public final synthetic r0:Ljava/lang/String;
+
+.field public final synthetic s0:Lllg;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(Lcpg;JLoa9;Ljava/lang/String;Lllg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lbpg;->X:Lcpg;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-wide p2, p0, Lbpg;->Y:J
 
-    move-result-object v1
+    iput-object p4, p0, Lbpg;->Z:Loa9;
 
-    invoke-direct {p0, v1, v0}, La82;-><init>(Ljava/lang/Long;I)V
+    iput-object p5, p0, Lbpg;->r0:Ljava/lang/String;
 
-    iput-wide p1, p0, Lbpg;->c:J
+    iput-object p6, p0, Lbpg;->s0:Lllg;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p7}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-wide v0, p0, Lbpg;->c:J
+    check-cast p1, Lb54;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lbpg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lbpg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lbpg;
 
-    iget-wide v3, p0, Lbpg;->c:J
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-wide v5, p1, Lbpg;->c:J
+    invoke-virtual {p1, p2}, Lbpg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 8
 
-    iget-wide v0, p0, Lbpg;->c:J
+    new-instance v0, Lbpg;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v5, p0, Lbpg;->r0:Ljava/lang/String;
 
-    move-result v0
+    iget-object v6, p0, Lbpg;->s0:Lllg;
 
-    return v0
+    iget-object v1, p0, Lbpg;->X:Lcpg;
+
+    iget-wide v2, p0, Lbpg;->Y:J
+
+    iget-object v4, p0, Lbpg;->Z:Loa9;
+
+    move-object v7, p2
+
+    invoke-direct/range {v0 .. v7}, Lbpg;-><init>(Lcpg;JLoa9;Ljava/lang/String;Lllg;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const-string v0, "DialogUserId(sourceId="
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-object p1, p0, Lbpg;->X:Lcpg;
 
-    iget-wide v2, p0, Lbpg;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcpg;->a(Lcpg;)Lcrg;
 
     move-result-object v0
 
-    return-object v0
+    iget-object p1, p0, Lbpg;->Z:Loa9;
+
+    iget-wide v3, p1, Lij0;->a:J
+
+    iget-object v5, p0, Lbpg;->r0:Ljava/lang/String;
+
+    iget-object v6, p0, Lbpg;->s0:Lllg;
+
+    iget-wide v1, p0, Lbpg;->Y:J
+
+    invoke-virtual/range {v0 .. v6}, Lcrg;->f(JJLjava/lang/String;Lllg;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

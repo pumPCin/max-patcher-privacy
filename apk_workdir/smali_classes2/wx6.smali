@@ -2,63 +2,161 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxx6;
-
 
 # static fields
-.field public static final a:Lwx6;
+.field public static final b:Landroid/graphics/Rect;
+
+
+# instance fields
+.field public final a:Ljy;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lwx6;
+    new-instance v0, Landroid/graphics/Rect;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const v1, 0x7fffffff
 
-    sput-object v0, Lwx6;->a:Lwx6;
+    invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    sput-object v0, Lwx6;->b:Landroid/graphics/Rect;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljy;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwx6;->a:Ljy;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Landroid/view/View;Landroid/graphics/Rect;Ljava/lang/Float;Ljava/lang/Integer;)V
+    .locals 13
 
-    const/4 v0, 0x1
+    new-instance v3, Landroid/graphics/Path;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v3}, Landroid/graphics/Path;-><init>()V
 
-    return v0
+    new-instance v2, Landroid/graphics/Path;
+
+    invoke-direct {v2}, Landroid/graphics/Path;-><init>()V
+
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    new-instance v8, Landroid/graphics/RectF;
+
+    invoke-direct {v8}, Landroid/graphics/RectF;-><init>()V
+
+    new-instance v7, Landroid/graphics/Rect;
+
+    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
+
+    new-instance v11, Landroid/graphics/RectF;
+
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
+
+    new-instance v1, Lo6d;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    if-nez p2, :cond_0
+
+    return-void
 
     :cond_0
-    instance-of p1, p1, Lwx6;
+    sget-object v0, Lsz4;->t0:Lc82;
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    invoke-interface {v0}, Lu4b;->b()Lwe0;
+
+    move-result-object v0
+
+    iget v0, v0, Lwe0;->f:I
+
+    new-instance v5, Lux6;
+
+    invoke-direct {v5, v1, v2, v0}, Lux6;-><init>(Lo6d;Landroid/graphics/Path;I)V
+
+    invoke-virtual {p1, v5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    const/16 v0, 0x8
+
+    new-array v10, v0, [F
+
+    new-array v5, v0, [F
+
+    new-array v6, v0, [F
+
+    if-eqz p3, :cond_2
+
+    const/4 v9, 0x0
+
+    :goto_0
+    if-ge v9, v0, :cond_2
+
+    invoke-virtual/range {p3 .. p3}, Ljava/lang/Float;->floatValue()F
+
+    move-result v12
+
+    aput v12, v10, v9
+
+    const/4 v12, 0x4
+
+    if-ge v9, v12, :cond_1
+
+    invoke-virtual/range {p3 .. p3}, Ljava/lang/Float;->floatValue()F
+
+    move-result v12
+
+    aput v12, v5, v9
+
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    invoke-virtual/range {p3 .. p3}, Ljava/lang/Float;->floatValue()F
 
-.method public final hashCode()I
-    .locals 1
+    move-result v12
 
-    const v0, 0x711c112b
+    aput v12, v6, v9
 
-    return v0
-.end method
+    :goto_1
+    add-int/lit8 v9, v9, 0x1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    goto :goto_0
 
-    const-string v0, "Loading"
+    :cond_2
+    new-instance v0, Lvx6;
 
-    return-object v0
+    move-object v12, p1
+
+    move-object v5, p2
+
+    move-object/from16 v9, p3
+
+    move-object/from16 v6, p4
+
+    invoke-direct/range {v0 .. v12}, Lvx6;-><init>(Lo6d;Landroid/graphics/Path;Landroid/graphics/Path;Landroid/graphics/Rect;Landroid/graphics/Rect;Ljava/lang/Integer;Landroid/graphics/Rect;Landroid/graphics/RectF;Ljava/lang/Float;[FLandroid/graphics/RectF;Landroid/view/View;)V
+
+    iget-object p1, p0, Lwx6;->a:Ljy;
+
+    iget-object p1, p1, Ljy;->Y:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

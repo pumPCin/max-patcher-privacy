@@ -1,230 +1,72 @@
-.class public final synthetic Lkj8;
-.super Ljava/lang/Object;
+.class public final Lkj8;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lkw7;
+.implements Lmj8;
+.implements Lev4;
+.implements Ljava/lang/Runnable;
+.implements Lkpe;
 
 
 # instance fields
+.field public final X:Ljava/lang/Object;
+
 .field public final synthetic a:I
 
-.field public final synthetic b:Lmkb;
+.field public final b:Lqnd;
+
+.field public c:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmkb;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lqnd;I)V
     .locals 0
 
-    iput p2, p0, Lkj8;->a:I
+    iput p3, p0, Lkj8;->a:I
 
-    iput-object p1, p0, Lkj8;->b:Lmkb;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkj8;->X:Ljava/lang/Object;
+
+    iput-object p2, p0, Lkj8;->b:Lqnd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
 
     iget v0, p0, Lkj8;->a:I
 
-    check-cast p1, Lmjb;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lkj8;->b:Lmkb;
+    iput-object p1, p0, Lkj8;->c:Ljava/lang/Object;
 
-    iget v0, v0, Lmkb;->y:I
+    iget-object p1, p0, Lkj8;->b:Lqnd;
 
-    invoke-interface {p1, v0}, Lmjb;->k(I)V
+    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lkj8;->b:Lmkb;
+    iput-object p1, p0, Lkj8;->c:Ljava/lang/Object;
 
-    iget-boolean v0, v0, Lmkb;->w:Z
+    iget-object p1, p0, Lkj8;->b:Lqnd;
 
-    invoke-interface {p1, v0}, Lmjb;->h(Z)V
+    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_1
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->z:Lym8;
-
-    invoke-interface {p1, v0}, Lmjb;->h0(Lym8;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->D:Lmnf;
-
-    invoke-interface {p1, v0}, Lmjb;->d0(Lmnf;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->E:Lgnf;
-
-    invoke-interface {p1, v0}, Lmjb;->A(Lgnf;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-wide v0, v0, Lmkb;->C:J
-
-    invoke-interface {p1, v0, v1}, Lmjb;->E0(J)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-wide v0, v0, Lmkb;->B:J
-
-    invoke-interface {p1, v0, v1}, Lmjb;->j0(J)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-wide v0, v0, Lmkb;->A:J
-
-    invoke-interface {p1, v0, v1}, Lmjb;->g0(J)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->l:Lkhg;
-
-    invoke-interface {p1, v0}, Lmjb;->g(Lkhg;)V
-
-    return-void
-
-    :pswitch_8
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget v1, v0, Lmkb;->r:I
-
-    iget-boolean v0, v0, Lmkb;->s:Z
-
-    invoke-interface {p1, v1, v0}, Lmjb;->l(IZ)V
-
-    return-void
-
-    :pswitch_9
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->q:Lbp4;
-
-    invoke-interface {p1, v0}, Lmjb;->D0(Lbp4;)V
-
-    return-void
-
-    :pswitch_a
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->p:Lv54;
-
-    invoke-interface {p1, v0}, Lmjb;->V(Lv54;)V
-
-    return-void
-
-    :pswitch_b
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->p:Lv54;
-
-    iget-object v0, v0, Lv54;->a:La67;
-
-    invoke-interface {p1, v0}, Lmjb;->n(Ljava/util/List;)V
-
-    return-void
-
-    :pswitch_c
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->o:Le20;
-
-    invoke-interface {p1, v0}, Lmjb;->y(Le20;)V
-
-    return-void
-
-    :pswitch_d
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget v0, v0, Lmkb;->n:F
-
-    invoke-interface {p1, v0}, Lmjb;->j(F)V
-
-    return-void
-
-    :pswitch_e
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->m:Lym8;
-
-    invoke-interface {p1, v0}, Lmjb;->i0(Lym8;)V
-
-    return-void
-
-    :pswitch_f
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-boolean v0, v0, Lmkb;->i:Z
-
-    invoke-interface {p1, v0}, Lmjb;->T(Z)V
-
-    return-void
-
-    :pswitch_10
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget v0, v0, Lmkb;->h:I
-
-    invoke-interface {p1, v0}, Lmjb;->onRepeatModeChanged(I)V
-
-    return-void
-
-    :pswitch_11
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-object v0, v0, Lmkb;->g:Lxib;
-
-    invoke-interface {p1, v0}, Lmjb;->z0(Lxib;)V
-
-    return-void
-
-    :pswitch_12
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget-boolean v0, v0, Lmkb;->v:Z
-
-    invoke-interface {p1, v0}, Lmjb;->q(Z)V
-
-    return-void
-
-    :pswitch_13
-    iget-object v0, p0, Lkj8;->b:Lmkb;
-
-    iget v0, v0, Lmkb;->x:I
-
-    invoke-interface {p1, v0}, Lmjb;->f(I)V
+    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
 
     return-void
 
@@ -232,25 +74,237 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b()V
+    .locals 1
+
+    iget-object v0, p0, Lkj8;->b:Lqnd;
+
+    invoke-virtual {v0, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+
+    return-void
+.end method
+
+.method public final c(Lev4;)V
+    .locals 1
+
+    iget v0, p0, Lkj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0, p1}, Liv4;->i(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lkj8;->X:Ljava/lang/Object;
+
+    check-cast p1, Lkpe;
+
+    invoke-interface {p1, p0}, Lkpe;->c(Lev4;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p0, p1}, Liv4;->i(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lkj8;->X:Ljava/lang/Object;
+
+    check-cast p1, Lmj8;
+
+    invoke-interface {p1, p0}, Lmj8;->c(Lev4;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Lkj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Liv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Lkj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lev4;
+
+    invoke-static {v0}, Liv4;->b(Lev4;)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lev4;
+
+    invoke-static {v0}, Liv4;->b(Lev4;)Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lkj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iput-object p1, p0, Lkj8;->o:Ljava/lang/Throwable;
+
+    iget-object p1, p0, Lkj8;->b:Lqnd;
+
+    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+
+    return-void
+
+    :pswitch_0
+    iput-object p1, p0, Lkj8;->o:Ljava/lang/Throwable;
+
+    iget-object p1, p0, Lkj8;->b:Lqnd;
+
+    invoke-virtual {p1, p0}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 3
+
+    iget v0, p0, Lkj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lkj8;->X:Ljava/lang/Object;
+
+    check-cast v0, Lkpe;
+
+    iget-object v1, p0, Lkj8;->o:Ljava/lang/Throwable;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0, v1}, Lkpe;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lkj8;->c:Ljava/lang/Object;
+
+    invoke-interface {v0, v1}, Lkpe;->a(Ljava/lang/Object;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lkj8;->X:Ljava/lang/Object;
+
+    check-cast v0, Lmj8;
+
+    iget-object v1, p0, Lkj8;->o:Ljava/lang/Throwable;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    iput-object v2, p0, Lkj8;->o:Ljava/lang/Throwable;
+
+    invoke-interface {v0, v1}, Lmj8;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, p0, Lkj8;->c:Ljava/lang/Object;
+
+    if-eqz v1, :cond_2
+
+    iput-object v2, p0, Lkj8;->c:Ljava/lang/Object;
+
+    invoke-interface {v0, v1}, Lmj8;->a(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-interface {v0}, Lmj8;->b()V
+
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

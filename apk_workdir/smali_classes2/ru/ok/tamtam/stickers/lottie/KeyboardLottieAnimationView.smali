@@ -15,9 +15,9 @@
 # instance fields
 .field public w0:Z
 
-.field public x0:Lhm7;
+.field public x0:Ltr7;
 
-.field public y0:Lgm7;
+.field public y0:Lsr7;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 .method public final onError(Ljava/lang/Throwable;)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->y0:Lgm7;
+    iget-object v0, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->y0:Lsr7;
 
     if-eqz v0, :cond_0
 
@@ -44,7 +44,7 @@
 
     const-string v1, "lottie set animation failed: "
 
-    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
@@ -61,7 +61,7 @@
 
     const-string v1, "ru.ok.tamtam.stickers.lottie.KeyboardLottieAnimationView"
 
-    invoke-static {v1, v0, p1}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, p1}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -73,13 +73,13 @@
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->x0:Lhm7;
+    iget-object p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->x0:Ltr7;
 
     if-eqz p1, :cond_1
 
-    check-cast p1, Ll8d;
+    check-cast p1, Lx0d;
 
-    iget-object p1, p1, Ll8d;->b:Ljava/lang/Object;
+    iget-object p1, p1, Lx0d;->b:Ljava/lang/Object;
 
     check-cast p1, Lru/ok/messages/stickers/widgets/StickerView;
 
@@ -87,21 +87,21 @@
 
     sget v0, Lru/ok/messages/stickers/widgets/StickerView;->v0:I
 
-    iget-object v0, p1, Lru/ok/messages/stickers/widgets/StickerView;->u0:Lum7;
+    iget-object v0, p1, Lru/ok/messages/stickers/widgets/StickerView;->u0:Lgs7;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {p2}, Lwx4;->getHierarchy()Ltx4;
+    invoke-virtual {p2}, Lx05;->getHierarchy()Lu05;
 
     move-result-object p1
 
-    check-cast p1, Lwi6;
+    check-cast p1, Lsm6;
 
-    iget-object p1, p1, Lwi6;->e:Lgi5;
+    iget-object p1, p1, Lsm6;->e:Lrl5;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lgi5;->c(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v0}, Lrl5;->c(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -109,16 +109,16 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p2}, Lwx4;->getHierarchy()Ltx4;
+    invoke-virtual {p2}, Lx05;->getHierarchy()Lu05;
 
     move-result-object p1
 
-    check-cast p1, Lwi6;
+    check-cast p1, Lsm6;
 
-    invoke-virtual {p1, v1, v0}, Lwi6;->i(Landroid/graphics/drawable/Drawable;I)V
+    invoke-virtual {p1, v1, v0}, Lsm6;->i(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_0
-    invoke-virtual {p2, v1}, Lwx4;->setController(Lqx4;)V
+    invoke-virtual {p2, v1}, Lx05;->setController(Lr05;)V
 
     :cond_1
     const/4 p1, 0x0
@@ -129,18 +129,18 @@
     return-void
 .end method
 
-.method public setFailureListener(Lgm7;)V
+.method public setFailureListener(Lsr7;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->y0:Lgm7;
+    iput-object p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->y0:Lsr7;
 
     return-void
 .end method
 
-.method public setOnFirstFrameListener(Lhm7;)V
+.method public setOnFirstFrameListener(Ltr7;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->x0:Lhm7;
+    iput-object p1, p0, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->x0:Ltr7;
 
     const/4 p1, 0x1
 

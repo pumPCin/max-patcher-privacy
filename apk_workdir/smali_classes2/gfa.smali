@@ -1,154 +1,236 @@
-.class public final synthetic Lgfa;
-.super Ljava/lang/Object;
+.class public final Lgfa;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrfa;
+.field public final synthetic X:Lifa;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrfa;I)V
+.method public constructor <init>(Lifa;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lgfa;->a:I
+    iput-object p1, p0, Lgfa;->X:Lifa;
 
-    iput-object p1, p0, Lgfa;->b:Lrfa;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lgfa;->a:I
+    check-cast p1, Lb54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lgfa;->b:Lrfa;
+    invoke-virtual {p0, p1, p2}, Lgfa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0}, Lrfa;->a(Lrfa;)Landroid/graphics/drawable/LayerDrawable;
+    move-result-object p1
+
+    check-cast p1, Lgfa;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lgfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lgfa;
+
+    iget-object v0, p0, Lgfa;->X:Lifa;
+
+    invoke-direct {p1, v0, p2}, Lgfa;-><init>(Lifa;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lifa;->F0:[Lwq7;
+
+    iget-object p1, p0, Lgfa;->X:Lifa;
+
+    invoke-virtual {p1}, Lifa;->r()Lrq;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lchg;
 
-    :pswitch_0
-    sget v0, Luac;->call_fill_16:I
+    const-wide/16 v1, 0x0
 
-    sget-object v1, Lrw4;->t0:Lss6;
+    const-string v3, "app.notification.dontDisturbUntil"
 
-    iget-object v2, p0, Lgfa;->b:Lrfa;
+    invoke-virtual {v0, v1, v2, v3}, Lw3;->h(JLjava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lss6;->v(Landroid/view/View;)Llwa;
+    const-string v1, "app.notification.show.text"
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    invoke-interface {v1}, Llwa;->getIcon()Lg17;
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-string v1, "app.notification.ringtone"
 
-    move-result-object v1
+    const/4 v3, 0x0
 
-    invoke-static {v1, v0}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1, v3}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string v1, "app.notification.vibrate"
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
 
-    move-result-object v0
-
-    const/4 v1, -0x1
-
-    invoke-static {v0, v1}, Lbv0;->M(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    const/4 v1, 0x2
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Li8e;->I(F)I
+    invoke-virtual {v0}, Lchg;->q()I
 
     move-result v1
 
-    sget-object v2, Lrw4;->t0:Lss6;
+    const-string v4, "app.notification.led.color"
 
-    iget-object v3, p0, Lgfa;->b:Lrfa;
+    invoke-virtual {v0, v1, v4}, Lw3;->g(ILjava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Lss6;->v(Landroid/view/View;)Llwa;
+    const-string v1, "app.notification.dialogs.show"
 
-    move-result-object v4
+    const/4 v4, 0x0
 
-    invoke-interface {v4}, Llwa;->b()Lme0;
+    invoke-virtual {v0, v4, v1}, Lw3;->g(ILjava/lang/String;)V
 
-    move-result-object v4
+    iget-object v1, v0, Lird;->k:Lim0;
 
-    iget v4, v4, Lme0;->l:I
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0, v1, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+    move-result-object v5
 
-    invoke-virtual {v2, v3}, Lss6;->v(Landroid/view/View;)Llwa;
+    invoke-virtual {v1, v5}, Lim0;->d(Ljava/lang/Object;)V
+
+    const-string v1, "app.notification.dialogs.ringtone"
+
+    invoke-virtual {v0, v1, v3}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "app.notification.dialogs.vibrate"
+
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+
+    invoke-virtual {v0}, Lchg;->q()I
+
+    move-result v1
+
+    const-string v5, "app.notification.dialogs.led.color"
+
+    invoke-virtual {v0, v1, v5}, Lw3;->g(ILjava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Lird;->o(I)V
+
+    const-string v1, "app.notification.chats.ringtone"
+
+    invoke-virtual {v0, v1, v3}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "app.notification.chats.vibrate"
+
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+
+    invoke-virtual {v0}, Lchg;->q()I
+
+    move-result v1
+
+    const-string v4, "app.notification.chats.led.color"
+
+    invoke-virtual {v0, v1, v4}, Lw3;->g(ILjava/lang/String;)V
+
+    const-string v1, "app.group.chat.call.notification.status"
+
+    const-string v4, "ON"
+
+    invoke-virtual {v0, v1, v4}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "app.notification.in.app.sound"
+
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+
+    const-string v1, "app.notification.in.app.vibrate"
+
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+
+    const-string v1, "app.notification.show.new.users"
+
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+
+    const-string v1, "app.notification.show.drafts"
+
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+
+    const-string v1, "app.calls.incoming.vibration"
+
+    invoke-virtual {v0, v1, v2}, Lw3;->f(Ljava/lang/String;Z)V
+
+    const-string v1, "app.calls.incoming.ringtone"
+
+    const-string v4, "default_"
+
+    invoke-virtual {v0, v1, v4}, Lw3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p1, Lifa;->X:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lll;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v0, Lkma;
+
+    invoke-virtual {v0, v3, v2}, Lkma;->s(Lahg;Z)J
+
+    iget-object v0, p1, Lifa;->x0:Lsze;
+
+    invoke-virtual {p1}, Lifa;->r()Lrq;
 
     move-result-object v1
 
-    invoke-interface {v1}, Llwa;->getIcon()Lg17;
+    check-cast v1, Lchg;
+
+    invoke-virtual {v1}, Lchg;->r()Lxdd;
 
     move-result-object v1
 
-    iget v1, v1, Lg17;->k:I
+    invoke-virtual {v0, v3, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    iget-object p1, p1, Lifa;->y0:Lsze;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Lsze;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v0, Ljava/lang/Number;
 
-    move-result-object v1
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    move-result v0
 
-    const/high16 v2, 0x42000000    # 32.0f
+    add-int/2addr v0, v2
 
-    mul-float/2addr v1, v2
+    new-instance v1, Ljava/lang/Integer;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+    invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
 
-    return-object v0
+    invoke-virtual {p1, v3, v1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    nop
+    sget-object p1, Lzag;->a:Lzag;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

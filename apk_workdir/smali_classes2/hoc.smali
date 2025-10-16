@@ -1,63 +1,52 @@
-.class public final synthetic Lhoc;
+.class public abstract Lhoc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lpo3;
 
 
-# instance fields
-.field public final synthetic a:Lyn7;
+# static fields
+.field public static oneme_stickers_settings_confirm_cancel:I = 0x7f0a087b
 
-.field public final synthetic b:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static oneme_stickers_settings_confirm_delete_set_action:I = 0x7f0a087c
 
+.field public static oneme_stickers_settings_confirm_delete_stickers_action:I = 0x7f0a087d
 
-# direct methods
-.method public synthetic constructor <init>(Lyn7;Lru/ok/onechat/reactions/ReactionsViewModel;)V
-    .locals 0
+.field public static oneme_stickers_settings_confirm_favorite_clear_action:I = 0x7f0a087e
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_stickers_settings_confirm_recent_clear_action:I = 0x7f0a087f
 
-    iput-object p1, p0, Lhoc;->a:Lyn7;
+.field public static oneme_stickers_settings_content_recycler:I = 0x7f0a0880
 
-    iput-object p2, p0, Lhoc;->b:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static oneme_stickers_settings_emoji_suggest_view_type:I = 0x7f0a0881
 
-    return-void
-.end method
+.field public static oneme_stickers_settings_favorite_view_type:I = 0x7f0a0882
 
+.field public static oneme_stickers_settings_menu_copy_link:I = 0x7f0a0883
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.field public static oneme_stickers_settings_menu_delete_set:I = 0x7f0a0884
 
-    check-cast p1, Ljava/util/Collection;
+.field public static oneme_stickers_settings_menu_forward:I = 0x7f0a0885
 
-    iget-object v0, p0, Lhoc;->a:Lyn7;
+.field public static oneme_stickers_settings_menu_share:I = 0x7f0a0886
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+.field public static oneme_stickers_settings_recent_view_type:I = 0x7f0a0887
 
-    move-result-object v0
+.field public static oneme_stickers_settings_set_item_drag:I = 0x7f0a0888
 
-    check-cast v0, Lvk6;
+.field public static oneme_stickers_settings_set_item_icon:I = 0x7f0a0889
 
-    iget-object v1, p0, Lhoc;->b:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static oneme_stickers_settings_set_item_subtitle:I = 0x7f0a088a
 
-    invoke-virtual {v1}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Lr82;
+.field public static oneme_stickers_settings_set_item_title:I = 0x7f0a088b
 
-    move-result-object v1
+.field public static oneme_stickers_settings_set_view_type:I = 0x7f0a088c
 
-    if-eqz v1, :cond_0
+.field public static oneme_stickers_settings_sets_title_view_type:I = 0x7f0a088d
 
-    invoke-virtual {v0, v1, p1}, Lvk6;->a(Lr82;Ljava/util/Collection;)V
+.field public static oneme_stickers_settings_stickers_favorite_menu_clear:I = 0x7f0a088e
 
-    return-void
+.field public static oneme_stickers_settings_stickers_menu_change:I = 0x7f0a088f
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.field public static oneme_stickers_settings_stickers_multiselect_delete:I = 0x7f0a0890
 
-    const-string v0, "Required value was null."
+.field public static oneme_stickers_settings_stickers_recent_menu_clear:I = 0x7f0a0891
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public static oneme_stickers_settings_toolbar:I = 0x7f0a0892

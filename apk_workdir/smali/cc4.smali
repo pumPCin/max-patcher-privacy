@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract setWindowCallback(Landroid/view/Window$Callback;)V
+.method public abstract getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 .end method
 
-.method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
+.method public abstract getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 .end method

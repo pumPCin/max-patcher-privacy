@@ -1,276 +1,452 @@
 .class public final Le4g;
-.super Lh4g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public d:Lbc6;
+.field public final a:[B
 
-.field public e:F
+.field public b:Z
 
-.field public f:Lbc6;
+.field public c:I
 
-.field public g:F
+.field public d:J
 
-.field public h:F
+.field public e:I
 
-.field public i:F
+.field public f:I
 
-.field public j:F
+.field public g:I
 
-.field public k:F
 
-.field public l:Landroid/graphics/Paint$Cap;
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
 
-.field public m:Landroid/graphics/Paint$Join;
+    packed-switch p1, :pswitch_data_0
 
-.field public n:F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0xa
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Le4g;->a:[B
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0xa
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Le4g;->a:[B
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public a(Ls0g;Lq0g;)V
+    .locals 8
 
-    iget-object v0, p0, Le4g;->f:Lbc6;
+    iget v0, p0, Le4g;->c:I
 
-    invoke-virtual {v0}, Lbc6;->M()Z
+    if-lez v0, :cond_0
 
-    move-result v0
+    iget-wide v2, p0, Le4g;->d:J
 
-    if-nez v0, :cond_1
+    iget v4, p0, Le4g;->e:I
 
-    iget-object v0, p0, Le4g;->d:Lbc6;
+    iget v5, p0, Le4g;->f:I
 
-    invoke-virtual {v0}, Lbc6;->M()Z
+    iget v6, p0, Le4g;->g:I
 
-    move-result v0
+    move-object v1, p1
 
-    if-eqz v0, :cond_0
+    move-object v7, p2
 
-    goto :goto_0
+    invoke-interface/range {v1 .. v7}, Ls0g;->b(JIIILq0g;)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Le4g;->c:I
 
     :cond_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method
 
-.method public final b([I)Z
-    .locals 6
+.method public b(Lt0g;Lr0g;)V
+    .locals 8
 
-    iget-object v0, p0, Le4g;->f:Lbc6;
+    iget v0, p0, Le4g;->c:I
 
-    invoke-virtual {v0}, Lbc6;->M()Z
+    if-lez v0, :cond_0
 
-    move-result v1
+    iget-wide v2, p0, Le4g;->d:J
 
-    const/4 v2, 0x1
+    iget v4, p0, Le4g;->e:I
 
-    const/4 v3, 0x0
+    iget v5, p0, Le4g;->f:I
 
-    if-eqz v1, :cond_0
+    iget v6, p0, Le4g;->g:I
 
-    iget-object v1, v0, Lbc6;->o:Ljava/lang/Object;
+    move-object v1, p1
 
-    check-cast v1, Landroid/content/res/ColorStateList;
+    move-object v7, p2
 
-    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+    invoke-interface/range {v1 .. v7}, Lt0g;->a(JIIILr0g;)V
 
-    move-result v4
+    const/4 p1, 0x0
 
-    invoke-virtual {v1, p1, v4}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+    iput p1, p0, Le4g;->c:I
 
-    move-result v1
+    :cond_0
+    return-void
+.end method
 
-    iget v4, v0, Lbc6;->b:I
+.method public c(Ls0g;JIIILq0g;)V
+    .locals 3
 
-    if-eq v1, v4, :cond_0
+    iget v0, p0, Le4g;->g:I
 
-    iput v1, v0, Lbc6;->b:I
+    add-int v1, p5, p6
 
-    move v0, v2
+    const/4 v2, 0x0
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v0, v3
+    move v0, v2
 
     :goto_0
-    iget-object v1, p0, Le4g;->d:Lbc6;
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v1}, Lbc6;->M()Z
+    iget-boolean v0, p0, Le4g;->b:Z
 
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, v1, Lbc6;->o:Ljava/lang/Object;
-
-    check-cast v4, Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v4}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result v5
-
-    invoke-virtual {v4, p1, v5}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result p1
-
-    iget v4, v1, Lbc6;->b:I
-
-    if-eq p1, v4, :cond_1
-
-    iput p1, v1, Lbc6;->b:I
+    if-nez v0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v2, v3
+    iget v0, p0, Le4g;->c:I
 
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Le4g;->c:I
+
+    if-nez v0, :cond_2
+
+    iput-wide p2, p0, Le4g;->d:J
+
+    iput p4, p0, Le4g;->e:I
+
+    iput v2, p0, Le4g;->f:I
+
+    :cond_2
+    iget p2, p0, Le4g;->f:I
+
+    add-int/2addr p2, p5
+
+    iput p2, p0, Le4g;->f:I
+
+    iput p6, p0, Le4g;->g:I
+
+    const/16 p2, 0x10
+
+    if-lt v1, p2, :cond_3
+
+    invoke-virtual {p0, p1, p7}, Le4g;->a(Ls0g;Lq0g;)V
+
+    :cond_3
     :goto_1
-    or-int p1, v0, v2
+    return-void
 
-    return p1
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "TrueHD chunk samples must be contiguous in the sample queue."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public getFillAlpha()F
-    .locals 1
+.method public d(Lt0g;JIIILr0g;)V
+    .locals 3
 
-    iget v0, p0, Le4g;->h:F
+    iget v0, p0, Le4g;->g:I
 
-    return v0
+    add-int v1, p5, p6
+
+    const/4 v2, 0x0
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const-string v1, "TrueHD chunk samples must be contiguous in the sample queue."
+
+    invoke-static {v1, v0}, Lgfi;->f(Ljava/lang/Object;Z)V
+
+    iget-boolean v0, p0, Le4g;->b:Z
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget v0, p0, Le4g;->c:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Le4g;->c:I
+
+    if-nez v0, :cond_2
+
+    iput-wide p2, p0, Le4g;->d:J
+
+    iput p4, p0, Le4g;->e:I
+
+    iput v2, p0, Le4g;->f:I
+
+    :cond_2
+    iget p2, p0, Le4g;->f:I
+
+    add-int/2addr p2, p5
+
+    iput p2, p0, Le4g;->f:I
+
+    iput p6, p0, Le4g;->g:I
+
+    const/16 p2, 0x10
+
+    if-lt v1, p2, :cond_3
+
+    invoke-virtual {p0, p1, p7}, Le4g;->b(Lt0g;Lr0g;)V
+
+    :cond_3
+    :goto_1
+    return-void
 .end method
 
-.method public getFillColor()I
-    .locals 1
+.method public e(Lel5;)V
+    .locals 7
 
-    iget-object v0, p0, Le4g;->f:Lbc6;
+    iget-boolean v0, p0, Le4g;->b:Z
 
-    iget v0, v0, Lbc6;->b:I
+    if-eqz v0, :cond_0
 
-    return v0
-.end method
+    goto :goto_2
 
-.method public getStrokeAlpha()F
-    .locals 1
+    :cond_0
+    const/16 v0, 0xa
 
-    iget v0, p0, Le4g;->g:F
+    const/4 v1, 0x0
 
-    return v0
-.end method
+    iget-object v2, p0, Le4g;->a:[B
 
-.method public getStrokeColor()I
-    .locals 1
+    invoke-interface {p1, v1, v2, v0}, Lel5;->i(I[BI)V
 
-    iget-object v0, p0, Le4g;->d:Lbc6;
+    invoke-interface {p1}, Lel5;->y()V
 
-    iget v0, v0, Lbc6;->b:I
+    const/4 p1, 0x4
 
-    return v0
-.end method
+    aget-byte v0, v2, p1
 
-.method public getStrokeWidth()F
-    .locals 1
+    const/4 v3, -0x8
 
-    iget v0, p0, Le4g;->e:F
+    const/4 v4, 0x1
 
-    return v0
-.end method
+    if-ne v0, v3, :cond_4
 
-.method public getTrimPathEnd()F
-    .locals 1
+    const/4 v0, 0x5
 
-    iget v0, p0, Le4g;->j:F
+    aget-byte v0, v2, v0
 
-    return v0
-.end method
+    const/16 v3, 0x72
 
-.method public getTrimPathOffset()F
-    .locals 1
+    if-ne v0, v3, :cond_4
 
-    iget v0, p0, Le4g;->k:F
+    const/4 v0, 0x6
 
-    return v0
-.end method
+    aget-byte v0, v2, v0
 
-.method public getTrimPathStart()F
-    .locals 1
+    const/16 v3, 0x6f
 
-    iget v0, p0, Le4g;->i:F
+    if-ne v0, v3, :cond_4
 
-    return v0
-.end method
+    const/4 v0, 0x7
 
-.method public setFillAlpha(F)V
-    .locals 0
+    aget-byte v3, v2, v0
 
-    iput p1, p0, Le4g;->h:F
+    and-int/lit16 v5, v3, 0xfe
+
+    const/16 v6, 0xba
+
+    if-eq v5, v6, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    and-int/lit16 v3, v3, 0xff
+
+    const/16 v5, 0xbb
+
+    if-ne v3, v5, :cond_2
+
+    move v1, v4
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    const/16 v1, 0x9
+
+    goto :goto_0
+
+    :cond_3
+    const/16 v1, 0x8
+
+    :goto_0
+    aget-byte v1, v2, v1
+
+    shr-int/lit8 p1, v1, 0x4
+
+    and-int/2addr p1, v0
+
+    const/16 v0, 0x28
+
+    shl-int v1, v0, p1
+
+    :cond_4
+    :goto_1
+    if-nez v1, :cond_5
+
+    :goto_2
+    return-void
+
+    :cond_5
+    iput-boolean v4, p0, Le4g;->b:Z
 
     return-void
 .end method
 
-.method public setFillColor(I)V
-    .locals 1
+.method public f(Lfl5;)V
+    .locals 7
 
-    iget-object v0, p0, Le4g;->f:Lbc6;
+    iget-boolean v0, p0, Le4g;->b:Z
 
-    iput p1, v0, Lbc6;->b:I
+    if-eqz v0, :cond_0
 
+    goto :goto_2
+
+    :cond_0
+    const/16 v0, 0xa
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Le4g;->a:[B
+
+    invoke-interface {p1, v1, v2, v0}, Lfl5;->i(I[BI)V
+
+    invoke-interface {p1}, Lfl5;->y()V
+
+    const/4 p1, 0x4
+
+    aget-byte v0, v2, p1
+
+    const/4 v3, -0x8
+
+    const/4 v4, 0x1
+
+    if-ne v0, v3, :cond_4
+
+    const/4 v0, 0x5
+
+    aget-byte v0, v2, v0
+
+    const/16 v3, 0x72
+
+    if-ne v0, v3, :cond_4
+
+    const/4 v0, 0x6
+
+    aget-byte v0, v2, v0
+
+    const/16 v3, 0x6f
+
+    if-ne v0, v3, :cond_4
+
+    const/4 v0, 0x7
+
+    aget-byte v3, v2, v0
+
+    and-int/lit16 v5, v3, 0xfe
+
+    const/16 v6, 0xba
+
+    if-eq v5, v6, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    and-int/lit16 v3, v3, 0xff
+
+    const/16 v5, 0xbb
+
+    if-ne v3, v5, :cond_2
+
+    move v1, v4
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    const/16 v1, 0x9
+
+    goto :goto_0
+
+    :cond_3
+    const/16 v1, 0x8
+
+    :goto_0
+    aget-byte v1, v2, v1
+
+    shr-int/lit8 p1, v1, 0x4
+
+    and-int/2addr p1, v0
+
+    const/16 v0, 0x28
+
+    shl-int v1, v0, p1
+
+    :cond_4
+    :goto_1
+    if-nez v1, :cond_5
+
+    :goto_2
     return-void
-.end method
 
-.method public setStrokeAlpha(F)V
-    .locals 0
-
-    iput p1, p0, Le4g;->g:F
-
-    return-void
-.end method
-
-.method public setStrokeColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Le4g;->d:Lbc6;
-
-    iput p1, v0, Lbc6;->b:I
-
-    return-void
-.end method
-
-.method public setStrokeWidth(F)V
-    .locals 0
-
-    iput p1, p0, Le4g;->e:F
-
-    return-void
-.end method
-
-.method public setTrimPathEnd(F)V
-    .locals 0
-
-    iput p1, p0, Le4g;->j:F
-
-    return-void
-.end method
-
-.method public setTrimPathOffset(F)V
-    .locals 0
-
-    iput p1, p0, Le4g;->k:F
-
-    return-void
-.end method
-
-.method public setTrimPathStart(F)V
-    .locals 0
-
-    iput p1, p0, Le4g;->i:F
+    :cond_5
+    iput-boolean v4, p0, Le4g;->b:Z
 
     return-void
 .end method

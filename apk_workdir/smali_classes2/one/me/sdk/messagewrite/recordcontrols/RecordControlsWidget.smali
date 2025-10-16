@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lll3;
+.implements Ltn3;
 
 
 # annotations
@@ -20,17 +20,17 @@
     d2 = {
         "Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lll3;",
+        "Ltn3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lidd;",
+        "Ljod;",
         "scopeId",
-        "Ljrc;",
+        "Lr1d;",
         "type",
-        "(Ljava/lang/String;Ljrc;Laf4;)V",
-        "vsc",
+        "(Ljava/lang/String;Lr1d;Lvh4;)V",
+        "d3d",
         "message-write-widget_release"
     }
     k = 0x1
@@ -44,23 +44,23 @@
 
 
 # static fields
-.field public static final synthetic e1:[Lpl7;
+.field public static final synthetic e1:[Lwq7;
 
-.field public static final f1:Llc7;
+.field public static final f1:Lxh7;
 
-.field public static final g1:Llc7;
+.field public static final g1:Lxh7;
 
 
 # instance fields
-.field public final A0:Lvoc;
+.field public final A0:Lazc;
 
-.field public final B0:Lvoc;
+.field public final B0:Lazc;
 
-.field public final C0:Lvoc;
+.field public final C0:Lazc;
 
-.field public D0:Luog;
+.field public D0:Lo3h;
 
-.field public final E0:Lvsc;
+.field public final E0:Ld3d;
 
 .field public final F0:Ljava/lang/Object;
 
@@ -80,9 +80,9 @@
 
 .field public N0:Ljava/lang/Float;
 
-.field public O0:Ld3b;
+.field public O0:Lqbb;
 
-.field public P0:Ld3b;
+.field public P0:Lqbb;
 
 .field public Q0:F
 
@@ -96,60 +96,60 @@
 
 .field public V0:Z
 
-.field public W0:Lcje;
+.field public W0:Lgve;
 
-.field public final X:Lvoc;
+.field public final X:Lazc;
 
-.field public X0:Loke;
+.field public X0:Lwwe;
 
-.field public final Y:Lvoc;
+.field public final Y:Lazc;
 
-.field public final Y0:Lk5d;
+.field public final Y0:Lpzd;
 
-.field public final Z:Lvoc;
+.field public final Z:Lazc;
 
 .field public Z0:Landroid/animation/AnimatorSet;
 
-.field public final a:Lds;
+.field public final a:Lqs;
 
 .field public a1:Landroid/animation/AnimatorSet;
 
-.field public final b:Lyn7;
+.field public final b:Llt7;
 
 .field public b1:Landroid/animation/AnimatorSet;
 
-.field public final c:Lyn7;
+.field public final c:Llt7;
 
 .field public c1:Landroid/animation/AnimatorSet;
 
 .field public d1:F
 
-.field public final o:Lyn7;
+.field public final o:Llt7;
 
-.field public final r0:Lvoc;
+.field public final r0:Lazc;
 
-.field public final s0:Lvoc;
+.field public final s0:Lazc;
 
-.field public final t0:Lvoc;
+.field public final t0:Lazc;
 
-.field public final u0:Lvoc;
+.field public final u0:Lazc;
 
-.field public final v0:Lvoc;
+.field public final v0:Lazc;
 
-.field public final w0:Lvoc;
+.field public final w0:Lazc;
 
-.field public final x0:Lvoc;
+.field public final x0:Lazc;
 
-.field public final y0:Lvoc;
+.field public final y0:Lazc;
 
-.field public final z0:Lvoc;
+.field public final z0:Lazc;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 22
 
-    new-instance v0, Lds9;
+    new-instance v0, Lc0a;
 
     const-class v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
@@ -157,9 +157,9 @@
 
     const-string v3, "getParentScopeId-IluPPks()Ljava/lang/String;"
 
-    invoke-direct {v0, v1, v2, v3}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Lewc;->a:Lfwc;
+    sget-object v2, Ls6d;->a:Lt6d;
 
     const-string v3, "type"
 
@@ -167,91 +167,91 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v2, v1, v3, v4, v5}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
+    invoke-static {v2, v1, v3, v4, v5}, Lf67;->d(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lxcc;
 
     move-result-object v2
 
-    new-instance v3, Lf4c;
+    new-instance v3, Lxcc;
 
     const-string v4, "rootView"
 
     const-string v6, "getRootView()Landroid/view/View;"
 
-    invoke-direct {v3, v1, v4, v6, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v4, v6, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v4, Lf4c;
+    new-instance v4, Lxcc;
 
     const-string v6, "recordingPanel"
 
     const-string v7, "getRecordingPanel()Landroid/view/View;"
 
-    invoke-direct {v4, v1, v6, v7, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v4, v1, v6, v7, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Lf4c;
+    new-instance v6, Lxcc;
 
     const-string v7, "dotView"
 
     const-string v8, "getDotView()Landroid/view/View;"
 
-    invoke-direct {v6, v1, v7, v8, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Lf4c;
+    new-instance v7, Lxcc;
 
     const-string v8, "durationView"
 
     const-string v9, "getDurationView()Landroid/widget/TextView;"
 
-    invoke-direct {v7, v1, v8, v9, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Lf4c;
+    new-instance v8, Lxcc;
 
     const-string v9, "trashView"
 
     const-string v10, "getTrashView()Landroid/widget/ImageView;"
 
-    invoke-direct {v8, v1, v9, v10, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Lf4c;
+    new-instance v9, Lxcc;
 
     const-string v10, "cancelView"
 
     const-string v11, "getCancelView()Landroid/widget/TextView;"
 
-    invoke-direct {v9, v1, v10, v11, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v10, Lf4c;
+    new-instance v10, Lxcc;
 
     const-string v11, "audioHandFreeRecordView"
 
     const-string v12, "getAudioHandFreeRecordView()Landroid/view/View;"
 
-    invoke-direct {v10, v1, v11, v12, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v10, v1, v11, v12, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v11, Lf4c;
+    new-instance v11, Lxcc;
 
     const-string v12, "removeButton"
 
     const-string v13, "getRemoveButton()Landroid/widget/ImageView;"
 
-    invoke-direct {v11, v1, v12, v13, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v11, v1, v12, v13, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v12, Lf4c;
+    new-instance v12, Lxcc;
 
     const-string v13, "pauseRecordingButton"
 
     const-string v14, "getPauseRecordingButton()Landroid/widget/ImageView;"
 
-    invoke-direct {v12, v1, v13, v14, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v12, v1, v13, v14, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v13, Lf4c;
+    new-instance v13, Lxcc;
 
     const-string v14, "playRecordingButton"
 
     const-string v15, "getPlayRecordingButton()Landroid/widget/ImageView;"
 
-    invoke-direct {v13, v1, v14, v15, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v13, v1, v14, v15, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v14, Lf4c;
+    new-instance v14, Lxcc;
 
     const-string v15, "actionViewContainer"
 
@@ -259,9 +259,9 @@
 
     const-string v0, "getActionViewContainer()Landroid/view/View;"
 
-    invoke-direct {v14, v1, v15, v0, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v14, v1, v15, v0, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v0, Lf4c;
+    new-instance v0, Lxcc;
 
     const-string v15, "actionViewBgContainer"
 
@@ -269,9 +269,9 @@
 
     const-string v2, "getActionViewBgContainer()Landroid/view/View;"
 
-    invoke-direct {v0, v1, v15, v2, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v15, v2, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v2, Lf4c;
+    new-instance v2, Lxcc;
 
     const-string v15, "actionViewBackground"
 
@@ -279,9 +279,9 @@
 
     const-string v0, "getActionViewBackground()Landroid/view/View;"
 
-    invoke-direct {v2, v1, v15, v0, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v2, v1, v15, v0, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v0, Lf4c;
+    new-instance v0, Lxcc;
 
     const-string v15, "actionView"
 
@@ -289,9 +289,9 @@
 
     const-string v2, "getActionView()Landroid/widget/ImageView;"
 
-    invoke-direct {v0, v1, v15, v2, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v15, v2, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v2, Lf4c;
+    new-instance v2, Lxcc;
 
     const-string v15, "lockView"
 
@@ -299,9 +299,9 @@
 
     const-string v0, "getLockView()Landroid/view/View;"
 
-    invoke-direct {v2, v1, v15, v0, v5}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v2, v1, v15, v0, v5}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v0, Lds9;
+    new-instance v0, Lc0a;
 
     const-string v15, "animateDotViewJob"
 
@@ -309,11 +309,11 @@
 
     const-string v5, "getAnimateDotViewJob()Lkotlinx/coroutines/Job;"
 
-    invoke-direct {v0, v1, v15, v5}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v15, v5}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v1, 0x12
 
-    new-array v1, v1, [Lpl7;
+    new-array v1, v1, [Lwq7;
 
     aput-object v16, v1, v21
 
@@ -385,25 +385,25 @@
 
     aput-object v0, v1, v2
 
-    sput-object v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sput-object v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
-    new-instance v0, Llc7;
+    new-instance v0, Lxh7;
 
     const/16 v1, 0x87
 
     move/from16 v2, v21
 
-    invoke-direct {v0, v2, v1, v5}, Ljc7;-><init>(III)V
+    invoke-direct {v0, v2, v1, v5}, Lvh7;-><init>(III)V
 
-    sput-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:Llc7;
+    sput-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:Lxh7;
 
-    new-instance v0, Llc7;
+    new-instance v0, Lxh7;
 
     const/16 v2, 0x113
 
-    invoke-direct {v0, v1, v2, v5}, Ljc7;-><init>(III)V
+    invoke-direct {v0, v1, v2, v5}, Lvh7;-><init>(III)V
 
-    sput-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:Llc7;
+    sput-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:Lxh7;
 
     return-void
 .end method
@@ -418,223 +418,223 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
 
     .line 5
-    new-instance p1, Lds;
+    new-instance p1, Lqs;
 
-    const-class v1, Lidd;
+    const-class v1, Ljod;
 
     const-string v3, "arg_key_scope_id"
 
-    invoke-direct {p1, v1, v3}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v3}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 6
-    new-instance v1, Lds;
+    new-instance v1, Lqs;
 
-    const-class v3, Ljrc;
+    const-class v3, Lr1d;
 
     const-string v4, "arg_key_type"
 
-    invoke-direct {v1, v3, v4}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v4}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 7
-    iput-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a:Lds;
+    iput-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a:Lqs;
 
     .line 8
-    sget-object v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     aget-object v0, v1, v0
 
-    invoke-virtual {p1, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lidd;
+    check-cast p1, Ljod;
 
     .line 9
-    iget-object p1, p1, Lidd;->a:Ljava/lang/String;
+    iget-object p1, p1, Ljod;->a:Ljava/lang/String;
 
     .line 10
-    const-class v0, Lvrc;
+    const-class v0, Ld2d;
 
     .line 11
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object p1
 
     .line 12
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Lyn7;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Llt7;
 
     .line 13
-    new-instance p1, Ltsc;
+    new-instance p1, Lb3d;
 
     const/4 v0, 0x3
 
-    invoke-direct {p1, p0, v0}, Ltsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lb3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     .line 14
-    new-instance v0, Ldwb;
+    new-instance v0, Ld3c;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1, p1}, Ldwb;-><init>(ILtd6;)V
+    invoke-direct {v0, v1, p1}, Ld3c;-><init>(ILoh6;)V
 
-    const-class p1, Lqsc;
+    const-class p1, Ly2d;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object p1
 
     .line 15
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c:Lyn7;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c:Llt7;
 
     .line 16
-    sget-object p1, Ls8b;->a:Ls8b;
+    sget-object p1, Lohb;->a:Lohb;
 
-    invoke-virtual {p1}, Ls8b;->a()Lyn7;
+    invoke-virtual {p1}, Lohb;->a()Llt7;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->o:Lyn7;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->o:Llt7;
 
     .line 17
-    sget p1, Lcsa;->f:I
+    sget p1, Lk0b;->f:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X:Lazc;
 
     .line 18
-    sget p1, Lcsa;->p:I
+    sget p1, Lk0b;->p:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y:Lazc;
 
     .line 19
-    sget p1, Lcsa;->h:I
+    sget p1, Lk0b;->h:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z:Lazc;
 
     .line 20
-    sget p1, Lcsa;->i:I
+    sget p1, Lk0b;->i:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->r0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->r0:Lazc;
 
     .line 21
-    sget p1, Lcsa;->r:I
+    sget p1, Lk0b;->r:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->s0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->s0:Lazc;
 
     .line 22
-    sget p1, Lcsa;->g:I
+    sget p1, Lk0b;->g:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->t0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->t0:Lazc;
 
     .line 23
-    sget p1, Lcsa;->e:I
+    sget p1, Lk0b;->e:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->u0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->u0:Lazc;
 
     .line 24
-    sget p1, Lcsa;->q:I
+    sget p1, Lk0b;->q:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->v0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->v0:Lazc;
 
     .line 25
-    sget p1, Lcsa;->m:I
+    sget p1, Lk0b;->m:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->w0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->w0:Lazc;
 
     .line 26
-    sget p1, Lcsa;->o:I
+    sget p1, Lk0b;->o:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->x0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->x0:Lazc;
 
     .line 27
-    sget p1, Lcsa;->d:I
+    sget p1, Lk0b;->d:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->y0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->y0:Lazc;
 
     .line 28
-    sget p1, Lcsa;->c:I
+    sget p1, Lk0b;->c:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lazc;
 
     .line 29
-    sget p1, Lcsa;->b:I
+    sget p1, Lk0b;->b:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->A0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->A0:Lazc;
 
     .line 30
-    sget p1, Lcsa;->a:I
+    sget p1, Lk0b;->a:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0:Lazc;
 
     .line 31
-    sget p1, Lcsa;->l:I
+    sget p1, Lk0b;->l:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Lvoc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Lazc;
 
     .line 32
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->V0()Ljrc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lr1d;
 
     move-result-object p1
 
@@ -649,16 +649,16 @@
     if-ne p1, v0, :cond_0
 
     .line 33
-    new-instance p1, Lvsc;
+    new-instance p1, Ld3d;
 
     .line 34
-    sget v0, Ll7d;->U0:I
+    sget v0, Liid;->U0:I
 
     .line 35
-    sget v1, Ll7d;->G0:I
+    sget v1, Liid;->G0:I
 
     .line 36
-    invoke-direct {p1, v0, v1, v0}, Lvsc;-><init>(III)V
+    invoke-direct {p1, v0, v1, v0}, Ld3d;-><init>(III)V
 
     goto :goto_0
 
@@ -672,32 +672,32 @@
 
     .line 38
     :cond_1
-    new-instance p1, Lvsc;
+    new-instance p1, Ld3d;
 
     .line 39
-    sget v0, Ll7d;->X0:I
+    sget v0, Liid;->X0:I
 
     .line 40
-    sget v1, Ll7d;->e2:I
+    sget v1, Liid;->e2:I
 
     .line 41
-    invoke-direct {p1, v0, v1, v0}, Lvsc;-><init>(III)V
+    invoke-direct {p1, v0, v1, v0}, Ld3d;-><init>(III)V
 
     .line 42
     :goto_0
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0:Lvsc;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0:Ld3d;
 
     .line 43
-    new-instance p1, Ltsc;
+    new-instance p1, Lb3d;
 
     const/4 v0, 0x4
 
-    invoke-direct {p1, p0, v0}, Ltsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lb3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     const/4 v0, 0x3
 
     .line 44
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -705,14 +705,14 @@
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0:Ljava/lang/Object;
 
     .line 46
-    new-instance p1, Ltsc;
+    new-instance p1, Lb3d;
 
     const/4 v1, 0x5
 
-    invoke-direct {p1, p0, v1}, Ltsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {p1, p0, v1}, Lb3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     .line 47
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -720,14 +720,14 @@
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0:Ljava/lang/Object;
 
     .line 49
-    new-instance p1, Ltsc;
+    new-instance p1, Lb3d;
 
     const/4 v1, 0x6
 
-    invoke-direct {p1, p0, v1}, Ltsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {p1, p0, v1}, Lb3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     .line 50
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -735,14 +735,14 @@
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0:Ljava/lang/Object;
 
     .line 52
-    new-instance p1, Lb1c;
+    new-instance p1, Lxac;
 
-    const/16 v1, 0xb
+    const/16 v1, 0xe
 
-    invoke-direct {p1, v1}, Lb1c;-><init>(I)V
+    invoke-direct {p1, v1}, Lxac;-><init>(I)V
 
     .line 53
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -750,14 +750,14 @@
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Ljava/lang/Object;
 
     .line 55
-    new-instance p1, Lb1c;
+    new-instance p1, Lxac;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xf
 
-    invoke-direct {p1, v1}, Lb1c;-><init>(I)V
+    invoke-direct {p1, v1}, Lxac;-><init>(I)V
 
     .line 56
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -765,14 +765,14 @@
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0:Ljava/lang/Object;
 
     .line 58
-    new-instance p1, Lb1c;
+    new-instance p1, Lxac;
 
-    const/16 v1, 0xd
+    const/16 v1, 0x10
 
-    invoke-direct {p1, v1}, Lb1c;-><init>(I)V
+    invoke-direct {p1, v1}, Lxac;-><init>(I)V
 
     .line 59
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -780,14 +780,14 @@
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0:Ljava/lang/Object;
 
     .line 61
-    new-instance p1, Lb1c;
+    new-instance p1, Lxac;
 
-    const/16 v1, 0x8
+    const/16 v1, 0xb
 
-    invoke-direct {p1, v1}, Lb1c;-><init>(I)V
+    invoke-direct {p1, v1}, Lxac;-><init>(I)V
 
     .line 62
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -795,14 +795,14 @@
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0:Ljava/lang/Object;
 
     .line 64
-    new-instance p1, Lb1c;
+    new-instance p1, Lxac;
 
-    const/16 v1, 0x9
+    const/16 v1, 0xc
 
-    invoke-direct {p1, v1}, Lb1c;-><init>(I)V
+    invoke-direct {p1, v1}, Lxac;-><init>(I)V
 
     .line 65
-    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object p1
 
@@ -815,42 +815,42 @@
     iput p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0:F
 
     .line 68
-    invoke-static {}, Lkv9;->G()Lk5d;
+    invoke-static {}, Lnvi;->a()Lpzd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y0:Lk5d;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y0:Lpzd;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljrc;Laf4;)V
+.method public constructor <init>(Ljava/lang/String;Lr1d;Lvh4;)V
     .locals 1
 
     .line 1
-    new-instance p3, Lidd;
+    new-instance p3, Ljod;
 
-    invoke-direct {p3, p1}, Lidd;-><init>(Ljava/lang/String;)V
+    invoke-direct {p3, p1}, Ljod;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Ld3b;
+    new-instance p1, Lqbb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p3}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance p3, Ld3b;
+    new-instance p3, Lqbb;
 
     const-string v0, "arg_key_type"
 
-    invoke-direct {p3, v0, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, v0, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {p1, p3}, [Ld3b;
+    filled-new-array {p1, p3}, [Lqbb;
 
     move-result-object p1
 
-    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
+    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -859,18 +859,18 @@
     return-void
 .end method
 
-.method public static final B0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
+.method public static final C0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y:Lvoc;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y:Lazc;
 
-    sget-object v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0, p0, v1}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, v1}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -879,18 +879,18 @@
     return-object p0
 .end method
 
-.method public static final C0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZZ)V
+.method public static final D0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZZ)V
     .locals 9
 
-    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lx14;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lsr6;->Y:Lsr6;
+    sget-object v1, Lvv6;->Y:Lvv6;
 
-    invoke-static {v0, v1}, Lwy8;->t(Landroid/view/View;Lur6;)Z
+    invoke-static {v0, v1}, Ltsd;->f(Landroid/view/View;Lxv6;)Z
 
     :cond_0
     const/4 v0, 0x0
@@ -901,7 +901,7 @@
 
     if-eqz p2, :cond_3
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0(Z)V
+    invoke-virtual {p0, v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1(Z)V
 
     iget-object p2, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
@@ -910,7 +910,7 @@
     invoke-virtual {p2}, Landroid/animation/AnimatorSet;->end()V
 
     :cond_1
-    invoke-virtual {p0, p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0(Z)V
+    invoke-virtual {p0, p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y0(Z)V
 
     iget-object p2, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
@@ -919,7 +919,7 @@
     invoke-virtual {p2}, Landroid/animation/AnimatorSet;->end()V
 
     :cond_2
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y0()V
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0()V
 
     iget-object p2, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
@@ -958,11 +958,11 @@
 
     iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
-    invoke-static {}, Lshd;->l()Lkv7;
+    invoke-static {}, Lbb3;->c()Lx08;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
 
     move-result-object p2
 
@@ -972,7 +972,7 @@
 
     if-nez p2, :cond_6
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -984,13 +984,13 @@
 
     const/high16 v2, 0x3f000000    # 0.5f
 
-    invoke-static/range {v0 .. v6}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v0 .. v6}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {p1, p2}, Lx08;->addAll(Ljava/util/Collection;)Z
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -1006,16 +1006,16 @@
 
     const-wide/16 v4, 0x96
 
-    invoke-static/range {v0 .. v8}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v0 .. v8}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lx08;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_6
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
 
     move-result-object p2
 
@@ -1025,7 +1025,7 @@
 
     if-nez p2, :cond_7
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -1037,13 +1037,13 @@
 
     const/high16 v2, 0x3f000000    # 0.5f
 
-    invoke-static/range {v0 .. v6}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v0 .. v6}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {p1, p2}, Lx08;->addAll(Ljava/util/Collection;)Z
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -1059,26 +1059,26 @@
 
     const-wide/16 v4, 0x96
 
-    invoke-static/range {v0 .. v8}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v0 .. v8}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lx08;->add(Ljava/lang/Object;)Z
 
     :cond_7
     :goto_0
-    iget-object p2, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Luog;
+    iget-object p2, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lo3h;
 
     if-eqz p2, :cond_8
 
-    invoke-virtual {p2}, Luog;->getResumeAnimations()Ljava/util/List;
+    invoke-virtual {p2}, Lo3h;->getResumeAnimations()Ljava/util/List;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {p1, p2}, Lx08;->addAll(Ljava/util/Collection;)Z
 
     :cond_8
-    invoke-static {p1}, Lshd;->e(Ljava/util/List;)Lkv7;
+    invoke-static {p1}, Lbb3;->a(Ljava/util/List;)Lx08;
 
     move-result-object p1
 
@@ -1086,11 +1086,11 @@
 
     if-eqz p2, :cond_9
 
-    new-instance v0, Lxsc;
+    new-instance v0, Lf3d;
 
     const/4 v1, 0x5
 
-    invoke-direct {v0, p0, v1}, Lxsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v0, p0, v1}, Lf3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     invoke-virtual {p2, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -1099,11 +1099,11 @@
 
     if-eqz p2, :cond_a
 
-    new-instance v0, Lxsc;
+    new-instance v0, Lf3d;
 
     const/4 v1, 0x4
 
-    invoke-direct {v0, p0, v1}, Lxsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v0, p0, v1}, Lf3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     invoke-virtual {p2, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -1112,7 +1112,7 @@
 
     if-eqz p2, :cond_b
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/view/animation/PathInterpolator;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/animation/PathInterpolator;
 
     move-result-object v0
 
@@ -1136,23 +1136,23 @@
     return-void
 
     :cond_e
-    invoke-virtual {p0, v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0(Z)V
+    invoke-virtual {p0, v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y0(Z)V
 
     return-void
 .end method
 
-.method public static final D0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.method public static final E0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
     .locals 3
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Ld3b;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Lqbb;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v1
 
-    iget-object v2, v0, Ld3b;->a:Ljava/lang/Object;
+    iget-object v2, v0, Lqbb;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Number;
 
@@ -1162,11 +1162,11 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v1
 
-    iget-object v0, v0, Ld3b;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lqbb;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Number;
 
@@ -1177,15 +1177,15 @@
     invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
 
     :cond_0
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0:Ld3b;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0:Lqbb;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
 
     move-result-object v1
 
-    iget-object v2, v0, Ld3b;->a:Ljava/lang/Object;
+    iget-object v2, v0, Lqbb;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Number;
 
@@ -1195,11 +1195,11 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setX(F)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
 
     move-result-object v1
 
-    iget-object v0, v0, Ld3b;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lqbb;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Number;
 
@@ -1222,16 +1222,16 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0:Ld3b;
+    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0:Lqbb;
 
-    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Ld3b;
+    iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Lqbb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E0()V
+.method public final F0()V
     .locals 1
 
     iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1:Landroid/animation/AnimatorSet;
@@ -1248,11 +1248,11 @@
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Luog;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lo3h;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Luog;->d()V
+    invoke-virtual {v0}, Lo3h;->d()V
 
     :cond_2
     iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:Landroid/animation/AnimatorSet;
@@ -1269,25 +1269,25 @@
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_4
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1()V
-
     invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1()V
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1()V
 
     return-void
 .end method
 
-.method public final F0()Landroid/widget/ImageView;
+.method public final G0()Landroid/widget/ImageView;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/16 v1, 0xf
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1296,38 +1296,18 @@
     return-object v0
 .end method
 
-.method public final G0()Landroid/view/View;
+.method public final H0()Landroid/view/View;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/16 v1, 0xe
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->A0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->A0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method public final H0()Landroid/view/View;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    const/16 v1, 0xd
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lvoc;
-
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1339,15 +1319,15 @@
 .method public final I0()Landroid/view/View;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xd
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->y0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1359,15 +1339,35 @@
 .method public final J0()Landroid/view/View;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
+
+    const/16 v1, 0xc
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->y0:Lazc;
+
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public final K0()Landroid/view/View;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/16 v1, 0x8
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->u0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->u0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1376,42 +1376,22 @@
     return-object v0
 .end method
 
-.method public final K0()Landroid/widget/TextView;
+.method public final L0()Landroid/widget/TextView;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/4 v1, 0x7
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->t0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->t0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method public final L0()Landroid/view/View;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    const/4 v1, 0x4
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z:Lvoc;
-
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
 
     return-object v0
 .end method
@@ -1419,27 +1399,47 @@
 .method public final M()V
     .locals 1
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqsc;->H()V
+    invoke-virtual {v0}, Ly2d;->H()V
 
     return-void
 .end method
 
-.method public final M0()Landroid/widget/TextView;
+.method public final M0()Landroid/view/View;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
+
+    const/4 v1, 0x4
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z:Lazc;
+
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public final N0()Landroid/widget/TextView;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/4 v1, 0x5
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->r0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->r0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1448,12 +1448,12 @@
     return-object v0
 .end method
 
-.method public final N0()Landroid/view/animation/PathInterpolator;
+.method public final O0()Landroid/view/animation/PathInterpolator;
     .locals 1
 
     iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1462,18 +1462,18 @@
     return-object v0
 .end method
 
-.method public final O0()Landroid/view/View;
+.method public final P0()Landroid/view/View;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/16 v1, 0x10
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1482,12 +1482,12 @@
     return-object v0
 .end method
 
-.method public final P0()Landroid/graphics/drawable/Drawable;
+.method public final Q0()Landroid/graphics/drawable/Drawable;
     .locals 1
 
     iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1496,38 +1496,18 @@
     return-object v0
 .end method
 
-.method public final Q0()Landroid/widget/ImageView;
+.method public final R0()Landroid/widget/ImageView;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/16 v1, 0xa
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->w0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->w0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method public final R0()Landroid/widget/ImageView;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    const/16 v1, 0xb
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->x0:Lvoc;
-
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1539,15 +1519,15 @@
 .method public final S0()Landroid/widget/ImageView;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
-    const/16 v1, 0x9
+    const/16 v1, 0xb
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->v0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->x0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1556,18 +1536,38 @@
     return-object v0
 .end method
 
-.method public final T0()Landroid/view/View;
+.method public final T0()Landroid/widget/ImageView;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
+
+    const/16 v1, 0x9
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->v0:Lazc;
+
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    return-object v0
+.end method
+
+.method public final U0()Landroid/view/View;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/4 v1, 0x2
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1576,18 +1576,18 @@
     return-object v0
 .end method
 
-.method public final U0()Landroid/widget/ImageView;
+.method public final V0()Landroid/widget/ImageView;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/4 v1, 0x6
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->s0:Lvoc;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->s0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1596,41 +1596,41 @@
     return-object v0
 .end method
 
-.method public final V0()Ljrc;
+.method public final W0()Lr1d;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a:Lds;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a:Lqs;
 
-    invoke-virtual {v0, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljrc;
+    check-cast v0, Lr1d;
 
     return-object v0
 .end method
 
-.method public final W0()Lqsc;
+.method public final X0()Ly2d;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c:Lyn7;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lqsc;
+    check-cast v0, Ly2d;
 
     return-object v0
 .end method
 
-.method public final X0(Z)V
+.method public final Y0(Z)V
     .locals 19
 
     move-object/from16 v0, p0
@@ -1663,7 +1663,7 @@
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b1()V
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1()V
 
     new-instance v2, Landroid/animation/AnimatorSet;
 
@@ -1671,15 +1671,15 @@
 
     iput-object v2, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
-    invoke-static {}, Lshd;->l()Lkv7;
+    invoke-static {}, Lbb3;->c()Lx08;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->V0()Ljrc;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lr1d;
 
     move-result-object v3
 
-    sget-object v4, Ljrc;->b:Ljrc;
+    sget-object v4, Lr1d;->b:Lr1d;
 
     if-ne v3, v4, :cond_2
 
@@ -1687,7 +1687,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1699,7 +1699,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v3}, Lagi;->d(F)I
 
     move-result v3
 
@@ -1707,7 +1707,7 @@
 
     int-to-float v4, v4
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1719,7 +1719,7 @@
 
     mul-float/2addr v4, v5
 
-    invoke-static {v4}, Li8e;->I(F)I
+    invoke-static {v4}, Lagi;->d(F)I
 
     move-result v4
 
@@ -1737,18 +1737,18 @@
 
     move-result-object v3
 
-    new-instance v4, Lrsc;
+    new-instance v4, Lz2d;
 
     const/4 v5, 0x2
 
-    invoke-direct {v4, v0, v5}, Lrsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v4, v0, v5}, Lz2d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     invoke-virtual {v3, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
 
     move-result-object v6
 
@@ -1766,21 +1766,21 @@
 
     const-wide/16 v10, 0x12c
 
-    invoke-static/range {v6 .. v14}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v6 .. v14}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     move-object v8, v7
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/widget/ImageView;
 
     move-result-object v9
 
     sget-object v11, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1806,15 +1806,15 @@
 
     move v11, v3
 
-    invoke-static/range {v9 .. v17}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v9 .. v17}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     move-object v5, v10
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/widget/ImageView;
 
     move-result-object v7
 
@@ -1828,19 +1828,19 @@
 
     const-wide/16 v11, 0x96
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
 
     move-result-object v10
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1862,13 +1862,13 @@
 
     move-object v11, v5
 
-    invoke-static/range {v10 .. v18}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v10 .. v18}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
 
     move-result-object v7
 
@@ -1882,18 +1882,18 @@
 
     const-wide/16 v11, 0x96
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
     :cond_3
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
 
     move-result-object v7
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
 
     move-result-object v3
 
@@ -1909,17 +1909,17 @@
 
     const-wide/16 v11, 0x96
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
 
     move-result-object v10
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1941,13 +1941,13 @@
 
     move-object v11, v5
 
-    invoke-static/range {v10 .. v18}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v10 .. v18}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -1961,17 +1961,17 @@
 
     const-wide/16 v11, 0x96
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
 
     move-result-object v10
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1989,17 +1989,17 @@
 
     move-object v11, v5
 
-    invoke-static/range {v10 .. v18}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v10 .. v18}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
 
     move-result-object v7
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -2015,17 +2015,17 @@
 
     const-wide/16 v11, 0x96
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
 
     move-result-object v10
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -2033,7 +2033,7 @@
 
     move-result v12
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -2049,17 +2049,17 @@
 
     move-object v11, v5
 
-    invoke-static/range {v10 .. v18}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v10 .. v18}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    iget-object v3, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Ld3b;
+    iget-object v3, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Lqbb;
 
     if-eqz v3, :cond_4
 
-    iget-object v3, v3, Ld3b;->b:Ljava/lang/Object;
+    iget-object v3, v3, Lqbb;->b:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Number;
 
@@ -2078,11 +2078,11 @@
     goto :goto_0
 
     :goto_1
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v10
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v3
 
@@ -2096,15 +2096,15 @@
 
     const-wide/16 v14, 0x12c
 
-    invoke-static/range {v10 .. v18}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v10 .. v18}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     move-object v5, v11
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v7
 
@@ -2118,17 +2118,17 @@
 
     const-wide/16 v11, 0x12c
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
 
     move-result-object v10
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
 
     move-result-object v3
 
@@ -2142,17 +2142,17 @@
 
     move-object v11, v5
 
-    invoke-static/range {v10 .. v18}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v10 .. v18}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
     const/16 v3, 0x24
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -2164,13 +2164,13 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v3}, Lagi;->d(F)I
 
     move-result v3
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -2186,7 +2186,7 @@
 
     div-float v7, v3, v4
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
 
     move-result-object v5
 
@@ -2196,13 +2196,13 @@
 
     const/high16 v6, 0x3f800000    # 1.0f
 
-    invoke-static/range {v5 .. v11}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v5 .. v11}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v2, v3}, Lx08;->addAll(Ljava/util/Collection;)Z
 
-    invoke-static {v2}, Lshd;->e(Ljava/util/List;)Lkv7;
+    invoke-static {v2}, Lbb3;->a(Ljava/util/List;)Lx08;
 
     move-result-object v2
 
@@ -2210,11 +2210,11 @@
 
     if-eqz v3, :cond_5
 
-    new-instance v4, Lysc;
+    new-instance v4, Lg3d;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, v1, v5}, Lysc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZI)V
+    invoke-direct {v4, v0, v1, v5}, Lg3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZI)V
 
     invoke-virtual {v3, v4}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -2223,11 +2223,11 @@
 
     if-eqz v3, :cond_6
 
-    new-instance v4, Lysc;
+    new-instance v4, Lg3d;
 
     const/4 v5, 0x0
 
-    invoke-direct {v4, v0, v1, v5}, Lysc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZI)V
+    invoke-direct {v4, v0, v1, v5}, Lg3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZI)V
 
     invoke-virtual {v3, v4}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -2236,7 +2236,7 @@
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/view/animation/PathInterpolator;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/animation/PathInterpolator;
 
     move-result-object v3
 
@@ -2260,7 +2260,7 @@
     return-void
 .end method
 
-.method public final Y0()V
+.method public final Z0()V
     .locals 12
 
     iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
@@ -2295,11 +2295,11 @@
 
     iput-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
-    invoke-static {}, Lshd;->l()Lkv7;
+    invoke-static {}, Lbb3;->c()Lx08;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
 
     move-result-object v1
 
@@ -2311,13 +2311,13 @@
 
     const/high16 v3, 0x3f000000    # 0.5f
 
-    invoke-static/range {v1 .. v7}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v1 .. v7}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v1}, Lx08;->addAll(Ljava/util/Collection;)Z
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
 
     move-result-object v2
 
@@ -2333,13 +2333,13 @@
 
     const-wide/16 v6, 0x96
 
-    invoke-static/range {v2 .. v10}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v2 .. v10}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
 
     move-result-object v4
 
@@ -2351,15 +2351,15 @@
 
     const/high16 v6, 0x3f800000    # 1.0f
 
-    invoke-static/range {v4 .. v10}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v4 .. v10}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v1}, Lx08;->addAll(Ljava/util/Collection;)Z
 
     move-object v4, v3
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
 
     move-result-object v3
 
@@ -2367,24 +2367,24 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v3 .. v11}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lx08;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Luog;
+    iget-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lo3h;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Luog;->getPauseAnimations()Ljava/util/List;
+    invoke-virtual {v1}, Lo3h;->getPauseAnimations()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v1}, Lx08;->addAll(Ljava/util/Collection;)Z
 
     :cond_2
-    invoke-static {v0}, Lshd;->e(Ljava/util/List;)Lkv7;
+    invoke-static {v0}, Lbb3;->a(Ljava/util/List;)Lx08;
 
     move-result-object v0
 
@@ -2392,11 +2392,11 @@
 
     if-eqz v1, :cond_3
 
-    new-instance v2, Lxsc;
+    new-instance v2, Lf3d;
 
     const/4 v3, 0x7
 
-    invoke-direct {v2, p0, v3}, Lxsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v2, p0, v3}, Lf3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     invoke-virtual {v1, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -2405,11 +2405,11 @@
 
     if-eqz v1, :cond_4
 
-    new-instance v2, Lxsc;
+    new-instance v2, Lf3d;
 
     const/4 v3, 0x6
 
-    invoke-direct {v2, p0, v3}, Lxsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v2, p0, v3}, Lf3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     invoke-virtual {v1, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -2418,7 +2418,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/view/animation/PathInterpolator;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/animation/PathInterpolator;
 
     move-result-object v2
 
@@ -2442,7 +2442,7 @@
     return-void
 .end method
 
-.method public final Z0(Z)V
+.method public final a1(Z)V
     .locals 23
 
     move-object/from16 v0, p0
@@ -2479,11 +2479,11 @@
 
     iput-object v1, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
-    invoke-static {}, Lshd;->l()Lkv7;
+    invoke-static {}, Lbb3;->c()Lx08;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
 
     move-result-object v3
 
@@ -2501,21 +2501,21 @@
 
     const-wide/16 v7, 0x12c
 
-    invoke-static/range {v3 .. v11}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v3 .. v11}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     move-object v5, v4
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
 
     move-result-object v6
 
     sget-object v8, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -2541,15 +2541,15 @@
 
     move v8, v3
 
-    invoke-static/range {v6 .. v14}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v6 .. v14}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     move-object v13, v7
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
 
     move-result-object v4
 
@@ -2563,17 +2563,17 @@
 
     const-wide/16 v8, 0x12c
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
 
     move-result-object v7
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -2595,15 +2595,15 @@
 
     const-wide/16 v11, 0x12c
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     move-object v13, v8
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
 
     move-result-object v4
 
@@ -2615,17 +2615,17 @@
 
     const-wide/16 v8, 0xfa
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
 
     move-result-object v7
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -2647,15 +2647,15 @@
 
     const-wide/16 v11, 0x12c
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     move-object v13, v8
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v4
 
@@ -2667,17 +2667,17 @@
 
     const-wide/16 v8, 0x96
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    iget-object v3, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Ld3b;
+    iget-object v3, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Lqbb;
 
     if-eqz v3, :cond_2
 
-    iget-object v3, v3, Ld3b;->b:Ljava/lang/Object;
+    iget-object v3, v3, Lqbb;->b:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Number;
 
@@ -2700,7 +2700,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -2716,7 +2716,7 @@
 
     sub-float v16, v3, v4
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v14
 
@@ -2728,45 +2728,45 @@
 
     const-wide/16 v18, 0xc8
 
-    invoke-static/range {v14 .. v22}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v14 .. v22}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/widget/ImageView;
-
-    move-result-object v3
-
-    sget-object v4, Lrw4;->t0:Lss6;
-
-    invoke-virtual {v4, v3}, Lss6;->v(Landroid/view/View;)Llwa;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/widget/ImageView;
 
     move-result-object v3
 
-    invoke-interface {v3}, Llwa;->a()Lcu2;
+    sget-object v4, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v4, v3}, Lc82;->g(Landroid/view/View;)Lu4b;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcu2;->s()Ltb3;
+    invoke-interface {v3}, Lu4b;->a()Lpv2;
 
     move-result-object v3
 
-    iget-object v3, v3, Ltb3;->a:Lha3;
+    invoke-interface {v3}, Lpv2;->t()Lyd3;
 
-    iget-object v3, v3, Lha3;->b:Lia3;
+    move-result-object v3
 
-    iget v3, v3, Lia3;->b:I
+    iget-object v3, v3, Lyd3;->a:Lmc3;
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/widget/ImageView;
+    iget-object v3, v3, Lmc3;->b:Lnc3;
+
+    iget v3, v3, Lnc3;->b:I
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/widget/ImageView;
 
     move-result-object v6
 
-    invoke-virtual {v4, v6}, Lss6;->v(Landroid/view/View;)Llwa;
+    invoke-virtual {v4, v6}, Lc82;->g(Landroid/view/View;)Lu4b;
 
     move-result-object v4
 
-    invoke-interface {v4}, Llwa;->a()Lcu2;
+    invoke-interface {v4}, Lu4b;->a()Lpv2;
 
     const/4 v4, -0x1
 
@@ -2786,15 +2786,15 @@
 
     invoke-virtual {v3, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    new-instance v4, Lrsc;
+    new-instance v4, Lz2d;
 
-    invoke-direct {v4, v0, v2}, Lrsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v4, v0, v2}, Lz2d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     invoke-virtual {v3, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
 
     move-result-object v6
 
@@ -2806,13 +2806,13 @@
 
     const/high16 v8, 0x3f800000    # 1.0f
 
-    invoke-static/range {v6 .. v12}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v6 .. v12}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v1, v3}, Lx08;->addAll(Ljava/util/Collection;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
 
     move-result-object v4
 
@@ -2826,13 +2826,13 @@
 
     const-wide/16 v8, 0x12c
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v1}, Lshd;->e(Ljava/util/List;)Lkv7;
+    invoke-static {v1}, Lbb3;->a(Ljava/util/List;)Lx08;
 
     move-result-object v1
 
@@ -2840,7 +2840,7 @@
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/view/animation/PathInterpolator;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/animation/PathInterpolator;
 
     move-result-object v4
 
@@ -2858,11 +2858,11 @@
 
     if-eqz v1, :cond_5
 
-    new-instance v3, Lxsc;
+    new-instance v3, Lf3d;
 
     const/16 v4, 0xa
 
-    invoke-direct {v3, v0, v4}, Lxsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v3, v0, v4}, Lf3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     invoke-virtual {v1, v3}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -2871,28 +2871,28 @@
 
     if-eqz v1, :cond_6
 
-    new-instance v3, Lysc;
+    new-instance v3, Lg3d;
 
     const/4 v4, 0x2
 
     move/from16 v6, p1
 
-    invoke-direct {v3, v0, v6, v4}, Lysc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZI)V
+    invoke-direct {v3, v0, v6, v4}, Lg3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZI)V
 
     invoke-virtual {v1, v3}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     :cond_6
-    invoke-virtual {v0}, Ljz3;->getParentController()Ljz3;
+    invoke-virtual {v0}, Lx14;->getParentController()Lx14;
 
     move-result-object v1
 
-    instance-of v3, v1, Lg49;
+    instance-of v3, v1, Lqb9;
 
     const/4 v4, 0x0
 
     if-eqz v3, :cond_7
 
-    check-cast v1, Lg49;
+    check-cast v1, Lqb9;
 
     goto :goto_2
 
@@ -2904,13 +2904,13 @@
 
     check-cast v1, Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-virtual {v1}, Ljz3;->getView()Landroid/view/View;
+    invoke-virtual {v1}, Lx14;->getView()Landroid/view/View;
 
     move-result-object v3
 
     if-eqz v3, :cond_b
 
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lu49;
+    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lfc9;
 
     move-result-object v1
 
@@ -2920,13 +2920,13 @@
 
     invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-static {}, Lshd;->l()Lkv7;
+    invoke-static {}, Lbb3;->c()Lx08;
 
     move-result-object v4
 
-    iget-object v7, v1, Lu49;->c:Lr49;
+    iget-object v7, v1, Lfc9;->o:Lcc9;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -2950,17 +2950,17 @@
 
     const-wide/16 v11, 0x12c
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v6
 
     move-object v13, v8
 
-    invoke-virtual {v4, v6}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v6}, Lx08;->add(Ljava/lang/Object;)Z
 
     move-object v6, v4
 
-    iget-object v4, v1, Lu49;->c:Lr49;
+    iget-object v4, v1, Lfc9;->o:Lcc9;
 
     const-wide/16 v10, 0x0
 
@@ -2978,15 +2978,15 @@
 
     const-wide/16 v8, 0x12c
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    invoke-virtual {v14, v4}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v4}, Lx08;->add(Ljava/lang/Object;)Z
 
-    iget-object v4, v1, Lu49;->b:Landroid/widget/ImageView;
+    iget-object v4, v1, Lfc9;->b:Landroid/widget/ImageView;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -3012,13 +3012,13 @@
 
     move-object v4, v6
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v6
 
     move-object v13, v8
 
-    invoke-virtual {v4, v6}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v6}, Lx08;->add(Ljava/lang/Object;)Z
 
     const-wide/16 v10, 0x0
 
@@ -3034,21 +3034,21 @@
 
     const-wide/16 v8, 0x12c
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    invoke-virtual {v14, v4}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v4}, Lx08;->add(Ljava/lang/Object;)Z
 
-    iget-object v4, v1, Lu49;->s0:Ljava/lang/Object;
+    iget-object v4, v1, Lfc9;->t0:Ljava/lang/Object;
 
-    invoke-interface {v4}, Lyn7;->a()Z
+    invoke-interface {v4}, Llt7;->e()Z
 
     move-result v6
 
     if-eqz v6, :cond_8
 
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
@@ -3056,7 +3056,7 @@
 
     check-cast v7, Landroid/view/View;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -3080,13 +3080,13 @@
 
     const-wide/16 v11, 0x12c
 
-    invoke-static/range {v7 .. v15}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v7 .. v15}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -3104,22 +3104,22 @@
 
     const-wide/16 v8, 0x12c
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    invoke-virtual {v14, v4}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v4}, Lx08;->add(Ljava/lang/Object;)Z
 
     :cond_8
-    iget-object v13, v1, Lu49;->r0:Ljava/lang/Object;
+    iget-object v13, v1, Lfc9;->s0:Ljava/lang/Object;
 
-    invoke-interface {v13}, Lyn7;->a()Z
+    invoke-interface {v13}, Llt7;->e()Z
 
     move-result v4
 
     if-eqz v4, :cond_9
 
-    invoke-interface {v13}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v13}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -3135,13 +3135,13 @@
 
     const-wide/16 v8, 0xc8
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    invoke-virtual {v14, v4}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v4}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v13}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v13}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -3157,22 +3157,22 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v6 .. v12}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v6 .. v12}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object v4
 
-    invoke-virtual {v14, v4}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v14, v4}, Lx08;->addAll(Ljava/util/Collection;)Z
 
     :cond_9
-    iget-object v13, v1, Lu49;->v0:Ljava/lang/Object;
+    iget-object v13, v1, Lfc9;->w0:Ljava/lang/Object;
 
-    invoke-interface {v13}, Lyn7;->a()Z
+    invoke-interface {v13}, Llt7;->e()Z
 
     move-result v4
 
     if-eqz v4, :cond_a
 
-    invoke-interface {v13}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v13}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -3188,13 +3188,13 @@
 
     const-wide/16 v8, 0xc8
 
-    invoke-static/range {v4 .. v12}, Lcc7;->d(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v4 .. v12}, Lgdi;->b(Landroid/view/View;Landroid/util/Property;FFJJI)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    invoke-virtual {v14, v4}, Lkv7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v4}, Lx08;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v13}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v13}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -3204,22 +3204,22 @@
 
     const-wide/16 v8, 0x12c
 
-    invoke-static/range {v5 .. v11}, Lcc7;->B(Landroid/view/View;FFJJ)Lkv7;
+    invoke-static/range {v5 .. v11}, Lgdi;->i(Landroid/view/View;FFJJ)Lx08;
 
     move-result-object v4
 
-    invoke-virtual {v14, v4}, Lkv7;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v14, v4}, Lx08;->addAll(Ljava/util/Collection;)Z
 
     :cond_a
-    invoke-static {v14}, Lshd;->e(Ljava/util/List;)Lkv7;
+    invoke-static {v14}, Lbb3;->a(Ljava/util/List;)Lx08;
 
     move-result-object v4
 
-    new-instance v5, Ls49;
+    new-instance v5, Ldc9;
 
     const/4 v6, 0x4
 
-    invoke-direct {v5, v1, v6}, Ls49;-><init>(Lu49;I)V
+    invoke-direct {v5, v1, v6}, Ldc9;-><init>(Lfc9;I)V
 
     invoke-virtual {v3, v5}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -3251,19 +3251,19 @@
     return-void
 .end method
 
-.method public final a1()V
+.method public final b1()V
     .locals 2
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0:Loke;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0:Lwwe;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lgi7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-virtual {v0, v1}, Lon7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    iput-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0:Loke;
+    iput-object v1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0:Lwwe;
 
     iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:Landroid/animation/AnimatorSet;
 
@@ -3272,7 +3272,7 @@
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
 
     move-result-object v0
 
@@ -3280,7 +3280,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
 
     move-result-object v0
 
@@ -3289,38 +3289,38 @@
     return-void
 .end method
 
-.method public final b1()V
+.method public final c1()V
     .locals 5
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lwq7;
 
     const/16 v1, 0x11
 
     aget-object v2, v0, v1
 
-    iget-object v3, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y0:Lk5d;
+    iget-object v3, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Y0:Lpzd;
 
-    invoke-virtual {v3, p0, v2}, Lk5d;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-virtual {v3, p0, v2}, Lpzd;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Leh7;
+    check-cast v2, Lmm7;
 
     const/4 v4, 0x0
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v2, v4}, Leh7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-interface {v2, v4}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
     aget-object v0, v0, v1
 
-    invoke-virtual {v3, p0, v0, v4}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+    invoke-virtual {v3, p0, v0, v4}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final i(ILandroid/os/Bundle;)V
+.method public final f(ILandroid/os/Bundle;)V
     .locals 0
 
     const/4 p2, 0x1
@@ -3334,28 +3334,28 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lqsc;->H()V
+    invoke-virtual {p1}, Ly2d;->H()V
 
     return-void
 
     :cond_1
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Lyn7;
+    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Llt7;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lvrc;
+    check-cast p1, Ld2d;
 
-    iget-object p1, p1, Lvrc;->c:Lya5;
+    iget-object p1, p1, Ld2d;->c:Lde5;
 
-    sget-object p2, Lrrc;->a:Lrrc;
+    sget-object p2, Lz1d;->a:Lz1d;
 
-    invoke-static {p1, p2}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -3365,11 +3365,11 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onActivityPaused(Landroid/app/Activity;)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lqsc;->u()V
+    invoke-virtual {p1}, Ly2d;->u()V
 
     return-void
 .end method
@@ -3385,7 +3385,7 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p2, Lcsa;->f:I
+    sget p2, Lk0b;->f:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -3395,7 +3395,7 @@
 
     int-to-float v0, p3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3407,7 +3407,7 @@
 
     mul-float/2addr v1, v0
 
-    invoke-static {v1}, Li8e;->I(F)I
+    invoke-static {v1}, Lagi;->d(F)I
 
     move-result v1
 
@@ -3425,11 +3425,11 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v3, Lssc;
+    new-instance v3, La3d;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lssc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {v3, p0, v4}, La3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     new-instance v4, Landroid/widget/FrameLayout;
 
@@ -3439,13 +3439,13 @@
 
     invoke-direct {v4, v5}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v5, Lcsa;->p:I
+    sget v5, Lk0b;->p:I
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setId(I)V
 
     new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -3457,7 +3457,7 @@
 
     mul-float/2addr v6, v0
 
-    invoke-static {v6}, Li8e;->I(F)I
+    invoke-static {v6}, Lagi;->d(F)I
 
     move-result v6
 
@@ -3481,15 +3481,15 @@
 
     invoke-virtual {v4, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    invoke-virtual {v3, v4}, Lssc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, La3d;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p1, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p3, Lssc;
+    new-instance p3, La3d;
 
     const/4 v3, 0x1
 
-    invoke-direct {p3, p0, v3}, Lssc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {p3, p0, v3}, La3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     new-instance v3, Landroid/widget/FrameLayout;
 
@@ -3499,15 +3499,15 @@
 
     invoke-direct {v3, v4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v4, Lcsa;->e:I
+    sget v4, Lk0b;->e:I
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->V0()Ljrc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lr1d;
 
     move-result-object v4
 
-    sget-object v7, Ljrc;->b:Ljrc;
+    sget-object v7, Lr1d;->b:Lr1d;
 
     if-ne v4, v7, :cond_0
 
@@ -3515,7 +3515,7 @@
 
     int-to-float v4, v4
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -3528,14 +3528,14 @@
     mul-float/2addr v4, v7
 
     :goto_0
-    invoke-static {v4}, Li8e;->I(F)I
+    invoke-static {v4}, Lagi;->d(F)I
 
     move-result v4
 
     goto :goto_1
 
     :cond_0
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3564,7 +3564,7 @@
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setFocusable(Z)V
 
-    new-instance v2, Ldm8;
+    new-instance v2, Lqs8;
 
     const/4 v4, 0x2
 
@@ -3572,19 +3572,19 @@
 
     const/4 v6, 0x0
 
-    invoke-direct {v2, v5, v6, v4}, Ldm8;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v2, v5, v6, v4}, Lqs8;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v2, v3}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v2, v3}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
-    invoke-virtual {p3, v3}, Lssc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p3, v3}, La3d;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p3, Lssc;
+    new-instance p3, La3d;
 
     const/4 v2, 0x2
 
-    invoke-direct {p3, p0, v2}, Lssc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
+    invoke-direct {p3, p0, v2}, La3d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
 
     new-instance v2, Landroid/widget/FrameLayout;
 
@@ -3594,7 +3594,7 @@
 
     invoke-direct {v2, v3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v3, Lcsa;->d:I
+    sget v3, Lk0b;->d:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
 
@@ -3604,7 +3604,7 @@
 
     int-to-float v4, v4
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -3616,7 +3616,7 @@
 
     mul-float/2addr v7, v4
 
-    invoke-static {v7}, Li8e;->I(F)I
+    invoke-static {v7}, Lagi;->d(F)I
 
     move-result v7
 
@@ -3628,7 +3628,7 @@
 
     float-to-int v7, v7
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -3640,7 +3640,7 @@
 
     mul-float/2addr v4, v9
 
-    invoke-static {v4}, Li8e;->I(F)I
+    invoke-static {v4}, Lagi;->d(F)I
 
     move-result v4
 
@@ -3660,7 +3660,7 @@
 
     int-to-float v4, v4
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -3672,11 +3672,11 @@
 
     mul-float/2addr v7, v4
 
-    invoke-static {v7}, Li8e;->I(F)I
+    invoke-static {v7}, Lagi;->d(F)I
 
     move-result v7
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -3688,7 +3688,7 @@
 
     mul-float/2addr v4, v8
 
-    invoke-static {v4}, Li8e;->I(F)I
+    invoke-static {v4}, Lagi;->d(F)I
 
     move-result v4
 
@@ -3698,7 +3698,7 @@
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p3, v2}, Lssc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p3, v2}, La3d;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -3710,7 +3710,7 @@
 
     invoke-direct {p3, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget v1, Lcsa;->l:I
+    sget v1, Lk0b;->l:I
 
     invoke-virtual {p3, v1}, Landroid/view/View;->setId(I)V
 
@@ -3720,7 +3720,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3732,7 +3732,7 @@
 
     mul-float/2addr v2, v3
 
-    invoke-static {v2}, Li8e;->I(F)I
+    invoke-static {v2}, Lagi;->d(F)I
 
     move-result v2
 
@@ -3740,7 +3740,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3752,7 +3752,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v3}, Lagi;->d(F)I
 
     move-result v3
 
@@ -3764,7 +3764,7 @@
 
     invoke-virtual {p3, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3776,7 +3776,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Li8e;->I(F)I
+    invoke-static {v0}, Lagi;->d(F)I
 
     move-result v0
 
@@ -3784,7 +3784,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3806,7 +3806,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3818,7 +3818,7 @@
 
     mul-float/2addr v1, v0
 
-    invoke-static {v1}, Li8e;->I(F)I
+    invoke-static {v1}, Lagi;->d(F)I
 
     move-result v1
 
@@ -3826,7 +3826,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3838,11 +3838,11 @@
 
     mul-float/2addr v3, v2
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v3}, Lagi;->d(F)I
 
     move-result v3
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3854,11 +3854,11 @@
 
     mul-float/2addr v0, v4
 
-    invoke-static {v0}, Li8e;->I(F)I
+    invoke-static {v0}, Lagi;->d(F)I
 
     move-result v0
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3870,13 +3870,13 @@
 
     mul-float/2addr v2, v4
 
-    invoke-static {v2}, Li8e;->I(F)I
+    invoke-static {v2}, Lagi;->d(F)I
 
     move-result v2
 
     invoke-virtual {p3, v1, v3, v0, v2}, Landroid/view/View;->setPadding(IIII)V
 
-    sget v0, Ll7d;->N0:I
+    sget v0, Liid;->N0:I
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -3884,7 +3884,7 @@
 
     invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3906,13 +3906,13 @@
 
     invoke-virtual {p3, v0}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v0, Lyc0;
+    new-instance v0, Lkd0;
 
     const/16 v1, 0x9
 
-    invoke-direct {v0, v5, v6, v1}, Lyc0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, v5, v6, v1}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v0, p3}, Luce;->T(Lle6;Landroid/view/View;)V
+    invoke-static {v0, p3}, Lkci;->m(Lgi6;Landroid/view/View;)V
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -3942,16 +3942,16 @@
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0:Lcje;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0:Lgve;
 
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Luog;
+    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lo3h;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Luog;->setCallback(Lrog;)V
+    invoke-virtual {v0, p1}, Lo3h;->setCallback(Ll3h;)V
 
     :cond_0
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Luog;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lo3h;
 
     return-void
 .end method
@@ -3959,7 +3959,7 @@
 .method public final onDetach(Landroid/view/View;)V
     .locals 0
 
-    invoke-super {p0, p1}, Ljz3;->onDetach(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lx14;->onDetach(Landroid/view/View;)V
 
     iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:Landroid/animation/AnimatorSet;
 
@@ -3968,13 +3968,13 @@
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->end()V
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()V
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lqsc;->u()V
+    invoke-virtual {p1}, Ly2d;->u()V
 
     return-void
 .end method
@@ -3982,294 +3982,294 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 6
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
     move-result-object v0
 
-    iget-object v0, v0, Lqsc;->x0:Lbpc;
+    iget-object v0, v0, Ly2d;->x0:Lgzc;
 
-    new-instance v1, La13;
+    new-instance v1, Ln23;
 
     const/16 v2, 0x9
 
-    invoke-direct {v1, v0, v2}, La13;-><init>(Liu5;I)V
+    invoke-direct {v1, v0, v2}, Ln23;-><init>(Lzx5;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Luq7;->x()Lwq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v0
 
-    sget-object v2, Lwp7;->o:Lwp7;
-
-    invoke-static {v1, v0, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-interface {v0}, Liw7;->x()Lkw7;
 
     move-result-object v0
 
-    new-instance v1, Lzsc;
+    sget-object v2, Lkv7;->o:Lkv7;
+
+    invoke-static {v1, v0, v2}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+
+    move-result-object v0
+
+    new-instance v1, Lh3d;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v3, p0}, Lzsc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    invoke-direct {v1, v3, p0}, Lh3d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
 
-    new-instance v4, Lnw5;
+    new-instance v4, Lh06;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, v1, v5}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v4, v0, v1, v5}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lqsc;->y0:Lbpc;
+    invoke-static {v4, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    new-instance v1, La13;
-
-    const/16 v4, 0x1d
-
-    invoke-direct {v1, v0, v4}, La13;-><init>(Liu5;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
     move-result-object v0
 
-    invoke-interface {v0}, Luq7;->x()Lwq7;
+    iget-object v0, v0, Ly2d;->y0:Lgzc;
+
+    new-instance v1, Ln3d;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v0, v4}, Ln3d;-><init>(Lzx5;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v0
 
-    invoke-static {v1, v0, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-interface {v0}, Liw7;->x()Lkw7;
 
     move-result-object v0
 
-    new-instance v1, Latc;
-
-    invoke-direct {v1, v3, p0}, Latc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-
-    new-instance v4, Lnw5;
-
-    invoke-direct {v4, v0, v1, v5}, Lnw5;-><init>(Liu5;Lje6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-static {v1, v0, v2}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Luce;->N(Liu5;Ln24;)Loke;
+    new-instance v1, Li3d;
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-direct {v1, v3, p0}, Li3d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+
+    new-instance v4, Lh06;
+
+    invoke-direct {v4, v0, v1, v5}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lqsc;->B0:Lya5;
+    invoke-static {v4, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ly2d;->B0:Lde5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v1
 
-    invoke-interface {v1}, Luq7;->x()Lwq7;
+    invoke-interface {v1}, Liw7;->x()Lkw7;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v0, v1, v2}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v0
 
-    new-instance v1, Lbtc;
+    new-instance v1, Lj3d;
 
-    invoke-direct {v1, v3, p0, p1}, Lbtc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Landroid/view/View;)V
+    invoke-direct {v1, v3, p0, p1}, Lj3d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Landroid/view/View;)V
 
-    new-instance p1, Lnw5;
+    new-instance p1, Lh06;
 
     const/4 v4, 0x1
 
-    invoke-direct {p1, v0, v1, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {p1, v0, v1, v4}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lqsc;->C0:Lya5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Luq7;->x()Lwq7;
+    invoke-static {p1, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ly2d;->C0:Lde5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-interface {v0}, Liw7;->x()Lkw7;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v2}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object p1
 
-    new-instance v0, Lctc;
+    new-instance v0, Lk3d;
 
-    invoke-direct {v0, v3, p0}, Lctc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    invoke-direct {v0, v3, p0}, Lk3d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
 
-    new-instance v1, Lnw5;
+    new-instance v1, Lh06;
 
-    invoke-direct {v1, p1, v0, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v1, p1, v0, v4}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v1, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Luog;
+    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lo3h;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
 
     move-result-object v0
 
-    iget-object v0, v0, Lqsc;->A0:Liu5;
+    iget-object v0, v0, Ly2d;->A0:Lzx5;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luq7;->x()Lwq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-interface {v1}, Liw7;->x()Lkw7;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, v2}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v0
 
-    new-instance v1, Lftc;
+    new-instance v1, Lo3d;
 
-    invoke-direct {v1, v3, p1, p0}, Lftc;-><init>(Lkotlin/coroutines/Continuation;Luog;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    invoke-direct {v1, v3, p1, p0}, Lo3d;-><init>(Lkotlin/coroutines/Continuation;Lo3h;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
 
-    new-instance v4, Lnw5;
+    new-instance v4, Lh06;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, v1, v5}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v4, v0, v1, v5}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lqsc;->z0:Lbpc;
+    invoke-static {v4, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->X0()Ly2d;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ly2d;->z0:Lgzc;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v1
 
-    invoke-interface {v1}, Luq7;->x()Lwq7;
+    invoke-interface {v1}, Liw7;->x()Lkw7;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v0, v1, v2}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v0
 
-    new-instance v1, Lgtc;
+    new-instance v1, Lp3d;
 
-    invoke-direct {v1, v3, p1, p0}, Lgtc;-><init>(Lkotlin/coroutines/Continuation;Luog;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    invoke-direct {v1, v3, p1, p0}, Lp3d;-><init>(Lkotlin/coroutines/Continuation;Lo3h;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
 
-    new-instance p1, Lnw5;
+    new-instance p1, Lh06;
 
     const/4 v4, 0x1
 
-    invoke-direct {p1, v0, v1, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {p1, v0, v1, v4}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {p1, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
     :cond_0
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Lyn7;
+    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Llt7;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvrc;
-
-    iget-object p1, p1, Lvrc;->o:Lya5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Luq7;->x()Lwq7;
-
-    move-result-object v0
-
-    invoke-static {p1, v0, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Ldtc;
+    check-cast p1, Ld2d;
 
-    invoke-direct {v0, v3, p0}, Ldtc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    iget-object p1, p1, Ld2d;->o:Lde5;
 
-    new-instance v1, Lnw5;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Liw7;->x()Lkw7;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v2}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+
+    move-result-object p1
+
+    new-instance v0, Ll3d;
+
+    invoke-direct {v0, v3, p0}, Ll3d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+
+    new-instance v1, Lh06;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v1, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    new-instance p1, Lcje;
+    new-instance p1, Lgve;
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
 
     move-result-object v0
 
-    sget-object v1, Lcje;->p:Lu05;
+    sget-object v1, Lgve;->p:Lw35;
 
-    invoke-direct {p1, v0, v1}, Lcje;-><init>(Ljava/lang/Object;Lx2d;)V
+    invoke-direct {p1, v0, v1}, Lgve;-><init>(Ljava/lang/Object;Lz0j;)V
 
-    new-instance v0, Ldje;
+    new-instance v0, Lhve;
 
-    invoke-direct {v0}, Ldje;-><init>()V
+    invoke-direct {v0}, Lhve;-><init>()V
 
-    iput-object v0, p1, Lcje;->m:Ldje;
+    iput-object v0, p1, Lgve;->m:Lhve;
 
     const/high16 v1, 0x43480000    # 200.0f
 
-    invoke-virtual {v0, v1}, Ldje;->b(F)V
+    invoke-virtual {v0, v1}, Lhve;->b(F)V
 
-    iget-object v0, p1, Lcje;->m:Ldje;
+    iget-object v0, p1, Lgve;->m:Lhve;
 
     const/high16 v1, 0x3f400000    # 0.75f
 
-    invoke-virtual {v0, v1}, Ldje;->a(F)V
+    invoke-virtual {v0, v1}, Lhve;->a(F)V
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0:Lcje;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0:Lgve;
 
     return-void
 .end method

@@ -1,33 +1,8 @@
-.class public final Lq5d;
+.class public abstract Lq5d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lm6d;
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-
-# direct methods
-.method public constructor <init>(Lm6d;Lgr6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lq5d;->a:Lm6d;
-
-    iput-object p2, p0, Lq5d;->b:Ljava/util/concurrent/Executor;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lq5d;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    return-void
+# virtual methods
+.method public abstract a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
 .end method

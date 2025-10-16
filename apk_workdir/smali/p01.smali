@@ -1,476 +1,293 @@
-.class public final Lp01;
+.class public final synthetic Lp01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ls01;
+.implements Loh6;
 
 
 # instance fields
-.field public final X:Lxzd;
+.field public final synthetic a:I
 
-.field public final Y:Lcdf;
+.field public final synthetic b:Li11;
 
-.field public final Z:Ltzd;
-
-.field public final a:I
-
-.field public final b:Lxcf;
-
-.field public final c:I
-
-.field public final o:J
-
-.field public final r0:Lgo7;
-
-.field public final s0:Z
-
-.field public final t0:I
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(ILxcf;IJLxcf;Ltzd;Ljava/lang/Integer;I)V
-    .locals 2
+.method public synthetic constructor <init>(Li11;ZI)V
+    .locals 0
 
-    and-int/lit8 p9, p9, 0x20
+    iput p3, p0, Lp01;->a:I
 
-    if-eqz p9, :cond_0
+    iput-object p1, p0, Lp01;->b:Li11;
 
-    const/4 p6, 0x0
-
-    :cond_0
-    invoke-virtual {p8}, Ljava/lang/Number;->intValue()I
-
-    move-result p8
-
-    new-instance p9, Lgo7;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x6
-
-    invoke-direct {p9, p8, v0, v1}, Lgo7;-><init>(III)V
+    iput-boolean p2, p0, Lp01;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lp01;->a:I
-
-    iput-object p2, p0, Lp01;->b:Lxcf;
-
-    iput p3, p0, Lp01;->c:I
-
-    iput-wide p4, p0, Lp01;->o:J
-
-    sget-object p1, Lxzd;->b:Lxzd;
-
-    iput-object p1, p0, Lp01;->X:Lxzd;
-
-    iput-object p6, p0, Lp01;->Y:Lcdf;
-
-    iput-object p7, p0, Lp01;->Z:Ltzd;
-
-    iput-object p9, p0, Lp01;->r0:Lgo7;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lp01;->s0:Z
-
-    sget p1, Leia;->g:I
-
-    iput p1, p0, Lp01;->t0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcdf;
-    .locals 1
-
-    iget-object v0, p0, Lp01;->Y:Lcdf;
-
-    return-object v0
-.end method
-
-.method public final d()Lvzd;
-    .locals 1
-
-    iget-object v0, p0, Lp01;->Z:Ltzd;
-
-    return-object v0
-.end method
-
-.method public final e()Lio7;
-    .locals 1
-
-    iget-object v0, p0, Lp01;->r0:Lgo7;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lp01;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lp01;
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
     iget v0, p0, Lp01;->a:I
 
-    iget v1, p1, Lp01;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    if-eq v0, v1, :cond_2
+    iget-object v0, p0, Lp01;->b:Li11;
 
-    goto :goto_0
+    iget-boolean v5, p0, Lp01;->c:Z
 
-    :cond_2
-    iget-object v0, p0, Lp01;->b:Lxcf;
+    sget-object v1, Lndi;->a:Lkwa;
 
-    iget-object v1, p1, Lp01;->b:Lxcf;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lp01;->c:I
-
-    iget v1, p1, Lp01;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-wide v0, p0, Lp01;->o:J
-
-    iget-wide v2, p1, Lp01;->o:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lp01;->X:Lxzd;
-
-    iget-object v1, p1, Lp01;->X:Lxzd;
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lp01;->Y:Lcdf;
-
-    iget-object v1, p1, Lp01;->Y:Lcdf;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-object v0, p0, Lp01;->Z:Ltzd;
-
-    iget-object v1, p1, Lp01;->Z:Ltzd;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget-object v0, p0, Lp01;->r0:Lgo7;
-
-    iget-object v1, p1, Lp01;->r0:Lgo7;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget-boolean v0, p0, Lp01;->s0:Z
-
-    iget-boolean p1, p1, Lp01;->s0:Z
-
-    if-eq v0, p1, :cond_a
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_a
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final f()I
-    .locals 1
-
-    iget v0, p0, Lp01;->a:I
-
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lp01;->o:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lcdf;
-    .locals 1
-
-    iget-object v0, p0, Lp01;->b:Lxcf;
-
-    return-object v0
-.end method
-
-.method public final getType()Lxzd;
-    .locals 1
-
-    iget-object v0, p0, Lp01;->X:Lxzd;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget v0, p0, Lp01;->a:I
-
-    invoke-static {v0}, Lsw1;->u(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lp01;->b:Lxcf;
-
-    iget v2, v2, Lxcf;->b:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lp01;->c:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lp01;->o:J
-
-    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lp01;->X:Lxzd;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    const/4 v0, 0x0
-
-    iget-object v3, p0, Lp01;->Y:Lcdf;
-
-    if-nez v3, :cond_0
-
-    move v3, v0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    sget-object v2, Lf88;->o:Lf88;
+
+    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
 
     move-result v3
 
-    :goto_0
-    add-int/2addr v2, v3
+    if-eqz v3, :cond_1
 
-    mul-int/2addr v2, v1
+    const-string v3, "Screen sharing in call was changed on "
 
-    iget-object v3, p0, Lp01;->Z:Ltzd;
+    const-string v4, " success"
 
-    if-nez v3, :cond_1
+    invoke-static {v3, v4, v5}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move v3, v0
+    move-result-object v3
 
-    goto :goto_1
+    const/4 v4, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v3, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    invoke-virtual {v3}, Ltzd;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v2, v3
-
-    mul-int/2addr v2, v1
-
-    iget-object v3, p0, Lp01;->r0:Lgo7;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
+    :goto_0
+    iget-object v9, v0, Li11;->E0:Lsze;
 
     :cond_2
-    invoke-virtual {v3}, Lgo7;->hashCode()I
+    invoke-virtual {v9}, Lsze;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v10
 
-    :goto_2
-    add-int/2addr v2, v0
+    move-object v1, v10
 
-    mul-int/2addr v2, v1
+    check-cast v1, Lfa;
 
-    iget-boolean v0, p0, Lp01;->s0:Z
+    const/4 v7, 0x0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    const/16 v8, 0x77
 
-    move-result v0
+    const/4 v2, 0x0
 
-    add-int/2addr v0, v2
+    const/4 v3, 0x0
 
-    return v0
-.end method
+    const/4 v4, 0x0
 
-.method public final m()I
-    .locals 1
+    const/4 v6, 0x0
 
-    iget v0, p0, Lp01;->t0:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    iget v0, p0, Lp01;->c:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CallAdminSettingsItem(sectionItemType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lp01;->a:I
-
-    invoke-static {v1}, Ljjd;->o(I)Ljava/lang/String;
+    invoke-static/range {v1 .. v8}, Lfa;->a(Lfa;ZZZZZZI)Lfa;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10, v1}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v1, ", title="
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lp01;->b:Lxcf;
+    iget-object v0, v0, Li11;->C0:Leie;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v1, Lib;
 
-    const-string v1, ", sectionId="
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2, v5}, Lib;-><init>(ZZ)V
 
-    iget v1, p0, Lp01;->c:I
+    invoke-virtual {v0, v1}, Leie;->h(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", itemId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lp01;->o:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lp01;->X:Lxzd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", descriptionRes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lp01;->Y:Lcdf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", endView="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lp01;->Z:Ltzd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", leadingElementProperties="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lp01;->r0:Lgo7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", clickable="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lp01;->s0:Z
-
-    invoke-static {v0, v1, v3, v2}, Lbk7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    :goto_1
+    sget-object v0, Lzag;->a:Lzag;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lp01;->b:Li11;
+
+    iget-boolean v3, p0, Lp01;->c:Z
+
+    sget-object v1, Lndi;->a:Lkwa;
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    sget-object v2, Lf88;->o:Lf88;
+
+    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "Cameras in call was changed on "
+
+    const-string v5, " success"
+
+    invoke-static {v4, v5, v3}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v4, v5}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_2
+    iget-object v9, v0, Li11;->E0:Lsze;
+
+    :cond_5
+    invoke-virtual {v9}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    move-object v1, v10
+
+    check-cast v1, Lfa;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x7d
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v8}, Lfa;->a(Lfa;ZZZZZZI)Lfa;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v10, v1}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-object v0, v0, Li11;->C0:Leie;
+
+    new-instance v1, Lcb;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v3}, Lcb;-><init>(ZZ)V
+
+    invoke-virtual {v0, v1}, Leie;->h(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :pswitch_1
+    iget-object v0, p0, Lp01;->b:Li11;
+
+    iget-boolean v4, p0, Lp01;->c:Z
+
+    sget-object v1, Lndi;->a:Lkwa;
+
+    if-nez v1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    sget-object v2, Lf88;->o:Lf88;
+
+    invoke-virtual {v1, v2}, Lkwa;->b(Lf88;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    const-string v3, "Microphone in call was changed on "
+
+    const-string v5, " success"
+
+    invoke-static {v3, v5, v4}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v5, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v3, v5}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    iget-object v9, v0, Li11;->E0:Lsze;
+
+    :cond_8
+    invoke-virtual {v9}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    move-object v1, v10
+
+    check-cast v1, Lfa;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x7b
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v8}, Lfa;->a(Lfa;ZZZZZZI)Lfa;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v10, v1}, Lsze;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    iget-object v0, v0, Li11;->C0:Leie;
+
+    new-instance v1, Leb;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v4}, Leb;-><init>(ZZ)V
+
+    invoke-virtual {v0, v1}, Leie;->h(Ljava/lang/Object;)Z
+
+    goto/16 :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

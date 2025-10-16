@@ -24,7 +24,7 @@
         "context",
         "Landroid/content/Intent;",
         "intent",
-        "Laxf;",
+        "Lzag;",
         "onReceive",
         "(Landroid/content/Context;Landroid/content/Intent;)V",
         "calls-audiomanager_release"

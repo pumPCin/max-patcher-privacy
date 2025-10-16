@@ -1,90 +1,88 @@
-.class public final Llg4;
+.class public final synthetic Llg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh0f;
+.implements Lx18;
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lm38;
+
+.field public final synthetic c:Lus8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lnd;Lm38;Lus8;)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    .line 1
+    const/4 p1, 0x1
 
-    const-wide/16 v1, 0x5
+    iput p1, p0, Llg4;->a:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-wide v0
+    iput-object p2, p0, Llg4;->b:Lm38;
 
-    sput-wide v0, Llg4;->a:J
+    iput-object p3, p0, Llg4;->c:Lus8;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lnd;Lm38;Lus8;I)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Llg4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Llg4;->b:Lm38;
+
+    iput-object p3, p0, Llg4;->c:Lus8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    iget v0, p0, Llg4;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
+    iget-object v0, p0, Llg4;->c:Lus8;
 
-    move-result-wide v0
+    check-cast p1, Lod;
 
-    const-wide/32 v2, 0x7fffffff
+    iget-object v1, p0, Llg4;->b:Lm38;
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+    invoke-interface {p1, v1, v0}, Lod;->H(Lm38;Lus8;)V
 
-    move-result-wide v0
+    return-void
 
-    long-to-int v0, v0
+    :pswitch_0
+    check-cast p1, Lod;
 
-    const/high16 v1, 0x1000000
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ge v0, v1, :cond_0
+    iget-object v0, p0, Llg4;->b:Lm38;
 
-    const/high16 v0, 0x100000
+    iget-object v1, p0, Llg4;->c:Lus8;
 
-    :goto_0
-    move v2, v0
+    invoke-interface {p1, v0, v1}, Lod;->R(Lm38;Lus8;)V
 
-    goto :goto_1
+    return-void
 
-    :cond_0
-    const/high16 v1, 0x2000000
-
-    if-ge v0, v1, :cond_1
-
-    const/high16 v0, 0x200000
-
-    goto :goto_0
-
-    :cond_1
-    const/high16 v0, 0x400000
-
-    goto :goto_0
-
-    :goto_1
-    div-int/lit8 v7, v2, 0x8
-
-    new-instance v1, Lvz8;
-
-    const v3, 0x7fffffff
-
-    sget-wide v5, Llg4;->a:J
-
-    move v4, v2
-
-    invoke-direct/range {v1 .. v7}, Lvz8;-><init>(IIIJI)V
-
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

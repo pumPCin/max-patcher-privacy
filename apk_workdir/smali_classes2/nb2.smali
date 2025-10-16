@@ -1,45 +1,49 @@
-.class public final synthetic Lnb2;
-.super Ljava/lang/Object;
+.class public final Lnb2;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lpo3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ldc2;
+
+.field public Z:I
+
+.field public o:Ldc2;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ldc2;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnb2;->Y:Ldc2;
 
-    iput p1, p0, Lnb2;->a:I
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, Lec2;
+    iput-object p1, p0, Lnb2;->X:Ljava/lang/Object;
 
-    iget v0, p0, Lnb2;->a:I
+    iget p1, p0, Lnb2;->Z:I
 
-    iput v0, p1, Lec2;->m:I
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_0
+    or-int/2addr p1, v0
 
-    const/4 v0, 0x0
+    iput p1, p0, Lnb2;->Z:I
 
-    iput-boolean v0, p1, Lec2;->M:Z
+    iget-object p1, p0, Lnb2;->Y:Ldc2;
 
-    iput-boolean v0, p1, Lec2;->N:Z
+    invoke-virtual {p1, p0}, Ldc2;->n(Lk14;)Ljava/lang/Object;
 
-    :cond_0
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

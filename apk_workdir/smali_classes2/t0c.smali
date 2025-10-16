@@ -1,55 +1,87 @@
-.class public final Lt0c;
-.super Lwy3;
+.class public final synthetic Lt0c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqh6;
 
 
 # instance fields
-.field public X:Lro3;
+.field public final synthetic a:I
 
-.field public Y:Lr82;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lu0c;
-
-.field public final synthetic r0:Lu0c;
-
-.field public s0:I
+.field public final synthetic b:Lqih;
 
 
 # direct methods
-.method public constructor <init>(Lu0c;Lwy3;)V
+.method public synthetic constructor <init>(Lqih;I)V
     .locals 0
 
-    iput-object p1, p0, Lt0c;->r0:Lu0c;
+    iput p2, p0, Lt0c;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lt0c;->b:Lqih;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lt0c;->Z:Ljava/lang/Object;
+    iget v0, p0, Lt0c;->a:I
 
-    iget p1, p0, Lt0c;->s0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Lt0c;->b:Lqih;
 
-    iput p1, p0, Lt0c;->s0:I
+    iget-object v0, v0, Lqih;->Y:Ljava/lang/Object;
 
-    iget-object p1, p0, Lt0c;->r0:Lu0c;
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Ll72;
 
-    invoke-virtual {p1, v0, v0, v0, p0}, Lu0c;->j(Ljava/lang/Long;Lro3;Lr82;Lwy3;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    iget-object v0, v0, Ll72;->b:Lz62;
+
+    invoke-virtual {v0, p1}, Lz62;->k(Ljava/lang/String;)V
+
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lt0c;->b:Lqih;
+
+    iget-object v0, v0, Lqih;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Ll72;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ll72;->b:Lz62;
+
+    invoke-virtual {v0, p1}, Lz62;->l(I)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,309 +1,71 @@
 .class public final Lvog;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Lfs4;
-.implements Lgs4;
 
 
 # instance fields
-.field public final a:Lsf3;
+.field public X:Lda2;
 
-.field public final b:Ljava/util/HashSet;
+.field public Y:Ljava/lang/String;
+
+.field public Z:Lesg;
+
+.field public o:Lcpg;
+
+.field public r0:J
+
+.field public s0:J
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lcpg;
+
+.field public v0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcpg;Lk14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvog;->u0:Lcpg;
 
-    new-instance v0, Lsf3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lvog;->a:Lsf3;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lvog;->b:Ljava/util/HashSet;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a(Lfs4;)Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    monitor-enter p0
+    iput-object p1, p0, Lvog;->t0:Ljava/lang/Object;
 
-    :try_start_0
-    new-instance v0, Lwog;
+    iget p1, p0, Lvog;->v0:I
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lvog;->a:Lsf3;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1, v0}, Lsf3;->a(Lfs4;)Z
+    iput p1, p0, Lvog;->v0:I
 
-    move-result p1
+    const/4 v5, 0x0
 
-    if-eqz p1, :cond_0
+    const/4 v6, 0x0
 
-    iget-object v1, p0, Lvog;->b:Ljava/util/HashSet;
+    iget-object v0, p0, Lvog;->u0:Lcpg;
 
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v1, 0x0
 
-    goto :goto_0
+    const-wide/16 v2, 0x0
 
-    :catchall_0
-    move-exception p1
+    const/4 v4, 0x0
 
-    goto :goto_1
+    move-object v7, p0
 
-    :cond_0
-    :goto_0
-    monitor-exit p0
+    invoke-virtual/range {v0 .. v7}, Lcpg;->b(Lda2;JLjava/lang/String;Lesg;Ljava/lang/Float;Lk14;)Ljava/lang/Object;
 
-    return p1
+    move-result-object p1
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized b(Lfs4;)Z
-    .locals 5
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v1, p0, Lvog;->a:Lsf3;
-
-    iget-object v2, p0, Lvog;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lwog;
-
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lfs4;
-
-    if-ne v4, p1, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
-
-    invoke-virtual {v1, v3}, Lsf3;->b(Lfs4;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_1
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    const-string v1, "vog"
-
-    const-string v2, "delete: failed"
-
-    invoke-static {v1, v2, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw p1
-.end method
-
-.method public final declared-synchronized c(Lfs4;)Z
-    .locals 5
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v1, p0, Lvog;->a:Lsf3;
-
-    iget-object v2, p0, Lvog;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lwog;
-
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lfs4;
-
-    if-ne v4, p1, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
-
-    invoke-virtual {v1, v3}, Lsf3;->c(Lfs4;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_1
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    const-string v1, "vog"
-
-    const-string v2, "delete: failed"
-
-    invoke-static {v1, v2, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw p1
-.end method
-
-.method public final declared-synchronized d()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lvog;->a:Lsf3;
-
-    invoke-virtual {v0}, Lsf3;->d()V
-
-    iget-object v0, p0, Lvog;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized f()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lvog;->a:Lsf3;
-
-    invoke-virtual {v0}, Lsf3;->f()V
-
-    iget-object v0, p0, Lvog;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget-object v0, p0, Lvog;->a:Lsf3;
-
-    iget-boolean v0, v0, Lsf3;->b:Z
-
-    return v0
+    return-object p1
 .end method

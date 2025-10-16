@@ -1,120 +1,59 @@
 .class public final Ls5f;
-.super Lc2f;
+.super Lqci;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lu5f;
+# static fields
+.field public static final c:Ls5f;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lu5f;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ls5f;->Y:Ljava/lang/Object;
+    new-instance v0, Ls5f;
 
-    iput-object p3, p0, Ls5f;->Z:Lu5f;
+    const/16 v1, 0xb
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1}, Lqci;-><init>(I)V
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ls5f;->c:Ls5f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final S0(Landroid/content/Intent;Ljava/lang/String;)V
+    .locals 3
 
-    check-cast p1, Ln24;
+    invoke-virtual {p0}, Lqci;->q0()Llf4;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Ls5f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v1, Lqbb;
 
-    move-result-object p1
+    const-string v2, "oneme:share:data"
 
-    check-cast p1, Ls5f;
+    invoke-direct {v1, v2, p1}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    sget-object p2, Laxf;->a:Laxf;
+    new-instance p1, Lqbb;
 
-    invoke-virtual {p1, p2}, Ls5f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "tag"
 
-    move-result-object p1
+    invoke-direct {p1, v2, p2}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ls5f;
-
-    iget-object v0, p0, Ls5f;->Y:Ljava/lang/Object;
-
-    iget-object v1, p0, Ls5f;->Z:Lu5f;
-
-    invoke-direct {p1, v0, p2, v1}, Ls5f;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lu5f;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ls5f;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls5f;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    iput v1, p0, Ls5f;->X:I
-
-    iget-object p1, p0, Ls5f;->Z:Lu5f;
-
-    invoke-virtual {p1, p0}, Lu5f;->p(Lwy3;)Ljava/lang/Object;
+    filled-new-array {v1, p1}, [Lqbb;
 
     move-result-object p1
 
-    sget-object v0, Lo24;->a:Lo24;
+    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
 
-    if-ne p1, v0, :cond_2
+    move-result-object p1
 
-    return-object v0
+    const-string p2, ":chats/share"
 
-    :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v0, p2, p1}, Llf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    return-object p1
+    return-void
 .end method

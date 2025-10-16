@@ -1,48 +1,79 @@
 .class public final Lzxb;
-.super Lwy3;
+.super Lkj0;
+.source "SourceFile"
+
+
+# static fields
+.field public static final X:Lukf;
 
 
 # instance fields
-.field public X:I
+.field public final c:J
 
-.field public final synthetic Y:Layb;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Layb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lzxb;->Y:Layb;
+    new-instance v0, Lukf;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "privacy.restricted"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lukf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v0, Lzxb;->X:Lukf;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 1
+
+    sget-object v0, Lzxb;->X:Lukf;
+
+    invoke-direct {p0, v0}, Lkj0;-><init>(Lukf;)V
+
+    iput-wide p1, p0, Lzxb;->c:J
+
+    iput-object p3, p0, Lzxb;->o:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lzxb;->o:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lzxb;->X:I
+    const-string v1, "PrivacyRestrictedError{chatId="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-wide v1, p0, Lzxb;->c:J
 
-    iput p1, p0, Lzxb;->X:I
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lzxb;->Y:Layb;
+    const-string v1, ", contactIds="
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Layb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lzxb;->o:Ljava/util/List;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,516 +1,1242 @@
-.class public final Ls71;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.class public final synthetic Ls71;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loh6;
 
 
 # instance fields
-.field public final F0:Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;
+.field public final synthetic X:Llt7;
 
-.field public final G0:Landroidx/recyclerview/widget/RecyclerView;
+.field public final synthetic Y:Llt7;
 
-.field public final H0:Lqf1;
+.field public final synthetic Z:Ljava/lang/Object;
 
-.field public I0:Lp71;
+.field public final synthetic a:I
 
-.field public final J0:Ljava/lang/Object;
+.field public final synthetic b:Llt7;
 
-.field public K0:Lc0b;
+.field public final synthetic c:Llt7;
 
-.field public L0:Ltd6;
+.field public final synthetic o:Llt7;
 
-.field public final M0:Landroid/view/GestureDetector;
+.field public final synthetic r0:Ljava/lang/Object;
 
-.field public final N0:Ljava/lang/Object;
+.field public final synthetic s0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 13
+.method public synthetic constructor <init>(Ljwb;Lyl2;Lyh2;Llt7;Llt7;Llt7;Llt7;Llt7;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    .line 2
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput v0, p0, Ls71;->a:I
 
-    new-instance v1, Lt5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v2, 0x9
+    iput-object p1, p0, Ls71;->Z:Ljava/lang/Object;
 
-    invoke-direct {v1, p1, v2}, Lt5;-><init>(Landroid/content/Context;I)V
+    iput-object p2, p0, Ls71;->r0:Ljava/lang/Object;
 
-    const/4 v2, 0x3
+    iput-object p3, p0, Ls71;->s0:Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lwee;->u(ILtd6;)Lyn7;
+    iput-object p4, p0, Ls71;->b:Llt7;
 
-    move-result-object v1
+    iput-object p5, p0, Ls71;->c:Llt7;
 
-    iput-object v1, p0, Ls71;->J0:Ljava/lang/Object;
+    iput-object p6, p0, Ls71;->o:Llt7;
 
-    sget-object v1, Lc0b;->o:Lc0b;
+    iput-object p7, p0, Ls71;->X:Llt7;
 
-    iput-object v1, p0, Ls71;->K0:Lc0b;
-
-    new-instance v1, Lm71;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, v3}, Lm71;-><init>(Ls71;I)V
-
-    invoke-static {v2, v1}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ls71;->N0:Ljava/lang/Object;
-
-    new-instance v1, Lrn3;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v1, v3, v3}, Lrn3;-><init>(II)V
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Landroid/view/GestureDetector;
-
-    new-instance v4, Lzv0;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v4, v5, p0}, Lzv0;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v1, p1, v4}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object v1, p0, Ls71;->M0:Landroid/view/GestureDetector;
-
-    new-instance v8, Lvm6;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v8, v1, p0}, Lvm6;-><init>(ILjava/lang/Object;)V
-
-    new-instance v6, Lqf1;
-
-    new-instance v9, Lm71;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v9, p0, v1}, Lm71;-><init>(Ls71;I)V
-
-    new-instance v11, Lm71;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v11, p0, v1}, Lm71;-><init>(Ls71;I)V
-
-    const/16 v12, 0x12
-
-    sget-object v7, Lwjg;->c:Lwjg;
-
-    const/4 v10, 0x0
-
-    invoke-direct/range {v6 .. v12}, Lqf1;-><init>(Lwjg;Lof1;Ltd6;Lto1;Lm71;I)V
-
-    iput-object v6, p0, Ls71;->H0:Lqf1;
-
-    invoke-direct {p0}, Ls71;->getScreenInfo()Laed;
-
-    move-result-object v1
-
-    iget-boolean v1, v1, Laed;->f:Z
-
-    const/4 v4, 0x2
-
-    if-nez v1, :cond_1
-
-    invoke-direct {p0}, Ls71;->getScreenInfo()Laed;
-
-    move-result-object v1
-
-    iget-boolean v1, v1, Laed;->e:Z
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v1, v4
-
-    :goto_1
-    int-to-float v4, v4
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v5, v4
-
-    invoke-static {v5}, Li8e;->I(F)I
-
-    move-result v5
-
-    new-instance v7, Lwi;
-
-    const/4 v8, 0x3
-
-    invoke-direct {v7, p0, v1, v8}, Lwi;-><init>(Ljava/lang/Object;II)V
-
-    new-instance v1, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;
-
-    invoke-direct {v1, p1, v5, v7}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;-><init>(Landroid/content/Context;ILwi;)V
-
-    new-instance v5, Ln71;
-
-    invoke-direct {v5, p0}, Ln71;-><init>(Ls71;)V
-
-    iput-object v5, v1, Landroidx/recyclerview/widget/GridLayoutManager;->K:Lpp6;
-
-    iput-object v1, p0, Ls71;->F0:Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;
-
-    new-instance v5, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-direct {v5, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget p1, Lecc;->call_grid_opponents_view:I
-
-    invoke-virtual {v5, p1}, Landroid/view/View;->setId(I)V
-
-    invoke-virtual {v5, v6}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
-
-    invoke-virtual {v5, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    invoke-direct {p0}, Ls71;->getGridItemAnimation()Lq71;
-
-    move-result-object p1
-
-    invoke-virtual {v5, p1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lcvc;)V
-
-    new-instance p1, Lh71;
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v0
-
-    invoke-static {v4}, Li8e;->I(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lh71;-><init>(II)V
-
-    invoke-virtual {v5, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
-
-    new-instance p1, Lo71;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0, p0}, Lo71;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v5, p1}, Landroidx/recyclerview/widget/RecyclerView;->l(Livc;)V
-
-    iput-object v5, p0, Ls71;->G0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p0, v5, v3, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
-
-    invoke-static {p0}, Loq0;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)Lbo3;
-
-    move-result-object p1
-
-    invoke-virtual {v5}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v0, v1, v3, v1}, Lbo3;->d(IIII)V
-
-    const/4 v1, 0x6
-
-    invoke-virtual {p1, v0, v1, v3, v1}, Lbo3;->d(IIII)V
-
-    const/4 v1, 0x7
-
-    invoke-virtual {p1, v0, v1, v3, v1}, Lbo3;->d(IIII)V
-
-    invoke-virtual {p1, v0, v2, v3, v2}, Lbo3;->d(IIII)V
-
-    invoke-virtual {p1, p0}, Lbo3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    iput-object p8, p0, Ls71;->Y:Llt7;
 
     return-void
 .end method
 
-.method private final getGridItemAnimation()Lq71;
+.method public synthetic constructor <init>(Lx71;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;Llt7;)V
     .locals 1
 
-    iget-object v0, p0, Ls71;->N0:Ljava/lang/Object;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    iput v0, p0, Ls71;->a:I
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Lq71;
+    iput-object p1, p0, Ls71;->Z:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    iput-object p2, p0, Ls71;->b:Llt7;
 
-.method private final getScreenInfo()Laed;
-    .locals 1
+    iput-object p3, p0, Ls71;->c:Llt7;
 
-    iget-object v0, p0, Ls71;->J0:Ljava/lang/Object;
+    iput-object p4, p0, Ls71;->o:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    iput-object p5, p0, Ls71;->X:Llt7;
 
-    move-result-object v0
+    iput-object p6, p0, Ls71;->Y:Llt7;
 
-    check-cast v0, Laed;
+    iput-object p7, p0, Ls71;->r0:Ljava/lang/Object;
 
-    return-object v0
+    iput-object p8, p0, Ls71;->s0:Ljava/lang/Object;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 70
 
-    iget-object v0, p0, Ls71;->M0:Landroid/view/GestureDetector;
+    move-object/from16 v1, p0
 
-    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    iget v0, v1, Ls71;->a:I
 
-    move-result p1
+    packed-switch v0, :pswitch_data_0
 
-    return p1
-.end method
+    iget-object v0, v1, Ls71;->Z:Ljava/lang/Object;
 
-.method public final setListener(Lp71;)V
-    .locals 0
+    check-cast v0, Ljwb;
 
-    iput-object p1, p0, Ls71;->I0:Lp71;
+    iget-object v2, v1, Ls71;->r0:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v2, Lyl2;
 
-.method public final setOpponents(Lc0b;)V
-    .locals 12
+    iget-object v3, v1, Ls71;->s0:Ljava/lang/Object;
 
-    iget-object v0, p1, Lc0b;->c:Ljava/util/List;
+    move-object v7, v3
 
-    iget v1, p1, Lc0b;->a:I
+    check-cast v7, Lyh2;
 
-    const/4 v2, 0x2
+    sget-object v3, Lk1c;->a:Lk1c;
 
-    const-string v3, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-object v6, p0, Ls71;->G0:Landroidx/recyclerview/widget/RecyclerView;
+    move-result-object v3
 
-    if-nez v1, :cond_1
+    const-class v4, Landroid/content/Context;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lrhf;
 
-    move-result v4
+    move-result-object v3
 
-    if-le v4, v2, :cond_1
+    invoke-virtual {v3}, Lrhf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    move-result-object v3
 
-    move-result v4
+    move-object v5, v3
 
-    const/4 v5, -0x2
+    check-cast v5, Landroid/content/Context;
 
-    if-eq v4, v5, :cond_1
+    check-cast v0, Llwb;
 
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object v6, v0, Llwb;->a:Lg68;
 
-    move-result-object v1
+    iget-object v8, v2, Lyl2;->o:Lt23;
 
-    if-eqz v1, :cond_0
+    iget-object v14, v0, Llwb;->e:Lqp5;
 
-    iput v5, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iget-object v15, v0, Llwb;->c:Lchg;
 
-    invoke-virtual {v6, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    new-instance v4, Ldt8;
 
-    goto :goto_0
+    iget-object v9, v1, Ls71;->b:Llt7;
 
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    iget-object v10, v1, Ls71;->c:Llt7;
 
-    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    iget-object v11, v1, Ls71;->o:Llt7;
 
-    throw p1
+    iget-object v12, v1, Ls71;->X:Llt7;
 
-    :cond_1
-    const/4 v4, -0x1
+    iget-object v13, v1, Ls71;->Y:Llt7;
 
-    if-nez v1, :cond_3
+    invoke-direct/range {v4 .. v15}, Ldt8;-><init>(Landroid/content/Context;Lg68;Lyh2;Lt23;Llt7;Llt7;Llt7;Llt7;Llt7;Lqp5;Lchg;)V
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    return-object v4
 
-    move-result v5
+    :pswitch_0
+    iget-object v0, v1, Ls71;->Z:Ljava/lang/Object;
 
-    if-gt v5, v2, :cond_3
+    check-cast v0, Lx71;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    iget-object v2, v1, Ls71;->r0:Ljava/lang/Object;
 
-    move-result v2
+    check-cast v2, Llt7;
 
-    if-eq v2, v4, :cond_3
+    iget-object v3, v1, Ls71;->s0:Ljava/lang/Object;
 
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast v3, Llt7;
 
-    move-result-object v1
+    new-instance v4, Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    if-eqz v1, :cond_2
+    iget-object v0, v0, Lx71;->a:Lpka;
 
-    iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iget-object v5, v1, Ls71;->b:Llt7;
 
-    invoke-virtual {v6, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v6
 
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
+    check-cast v6, Landroid/content/Context;
 
-    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    const-string v7, "ONE_ME"
 
-    throw p1
+    invoke-direct {v4, v0, v6, v7}, Lru/ok/android/externcalls/sdk/ConversationFactory;-><init>(Lpka;Landroid/content/Context;Ljava/lang/String;)V
 
-    :cond_3
-    if-lez v1, :cond_5
+    iget-object v6, v1, Ls71;->c:Llt7;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-interface {v6}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    if-eq v1, v4, :cond_5
+    check-cast v0, Lcpa;
 
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    iget-object v7, v1, Ls71;->o:Llt7;
 
-    if-eqz v1, :cond_4
+    invoke-interface {v7}, Llt7;->getValue()Ljava/lang/Object;
 
-    iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    move-result-object v0
 
-    invoke-virtual {v6, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    check-cast v0, Lc3e;
 
-    goto :goto_0
+    check-cast v0, Lpsd;
 
-    :cond_4
-    new-instance p1, Ljava/lang/NullPointerException;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    sget-object v8, Lru/ok/tamtam/android/prefs/PmsKey;->debug-mode:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    throw p1
+    const/4 v9, 0x0
 
-    :cond_5
+    int-to-long v10, v9
+
+    invoke-virtual {v0, v8, v10, v11}, Lpsd;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v10
+
+    long-to-int v0, v10
+
+    const/4 v8, 0x3
+
+    if-ne v0, v8, :cond_0
+
+    new-instance v0, Lv71;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
     :goto_0
-    iget-object v1, p0, Ls71;->H0:Lqf1;
-
-    invoke-virtual {v1}, Lhv7;->j()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    if-ne v2, v4, :cond_6
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-le v2, v4, :cond_6
-
-    new-instance v4, Lr71;
-
-    const/4 v10, 0x1
-
-    const/4 v11, 0x0
-
-    const/4 v5, 0x0
-
-    const-class v7, Lnjg;
-
-    const-string v8, "liteUpdateVisibleItems"
-
-    const-string v9, "liteUpdateVisibleItems(Landroidx/recyclerview/widget/RecyclerView;)V"
-
-    invoke-direct/range {v4 .. v11}, Lr71;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    move-object v8, v0
 
     goto :goto_1
 
-    :cond_6
-    move-object v4, v3
+    :cond_0
+    new-instance v0, Lxuc;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    goto :goto_0
 
     :goto_1
-    iput-object p1, p0, Ls71;->K0:Lc0b;
+    new-instance v10, Lw71;
 
-    if-eqz v4, :cond_7
+    invoke-direct {v10, v2}, Lw71;-><init>(Llt7;)V
 
-    new-instance v3, Lbi0;
+    iget-object v2, v1, Ls71;->X:Llt7;
 
-    const/4 p1, 0x1
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v3, p1, v4}, Lbi0;-><init>(ILtd6;)V
+    move-result-object v0
+
+    check-cast v0, Lkp5;
+
+    check-cast v0, Lqp5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v11, Lru/ok/tamtam/android/prefs/PmsKey;->bad-networ-indicator-config:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v12, "{ \n    \"rtt\":{ \n        \"step\":0.055, \n        \"baseline\":0.4, \n        \"stepWeight\":0.12, \n        \"weightUp\": 0.3, \n        \"weightDown\":0.8 \n    },\n     \"loss\":{ \n        \"step\":1.5, \n        \"baseline\":0.0, \n        \"stepWeight\":0.17, \n        \"weightUp\": 0.3, \n        \"weightDown\":0.6 \n    }\n}"
+
+    invoke-virtual {v0, v11, v12}, Lnsd;->l(Lru/ok/tamtam/android/prefs/PmsKey;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v12, 0x1
+
+    sget-object v13, Lfg0;->e:Lfg0;
+
+    if-eqz v0, :cond_26
+
+    :try_start_0
+    new-instance v14, Lorg/json/JSONObject;
+
+    invoke-direct {v14, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v0, "calcNetworkStatusConfig"
+
+    invoke-virtual {v14, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v13, "enabled"
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, v13, v12}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v15
+
+    goto :goto_2
+
+    :cond_1
+    move v15, v12
+
+    :goto_2
+    if-eqz v15, :cond_1c
+
+    new-instance v16, Lyy0;
+
+    move-object/from16 v67, v10
+
+    const-wide v9, 0x3fd3333333333333L    # 0.3
+
+    if-eqz v0, :cond_2
+
+    const-string v15, "redline"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_2
+    move-wide/from16 v17, v9
+
+    const-wide v9, 0x3fb999999999999aL    # 0.1
+
+    if-eqz v0, :cond_3
+
+    const-string v15, "redlineMargin"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_3
+    move-wide/from16 v19, v9
+
+    const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
+
+    if-eqz v0, :cond_4
+
+    const-string v15, "ratingWeightUp"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v21
+
+    goto :goto_3
+
+    :cond_4
+    move-wide/from16 v21, v9
+
+    :goto_3
+    if-eqz v0, :cond_5
+
+    const-string v15, "ratingWeightDown"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v23
+
+    goto :goto_4
+
+    :cond_5
+    move-wide/from16 v23, v9
+
+    :goto_4
+    const-wide v9, 0x3fd999999999999aL    # 0.4
+
+    if-eqz v0, :cond_6
+
+    const-string v15, "goodRtt"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_6
+    const-wide/high16 v11, 0x3fd0000000000000L    # 0.25
+
+    if-eqz v0, :cond_7
+
+    const-string v15, "rttWeightUp"
+
+    invoke-virtual {v0, v15, v11, v12}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v27
+
+    goto :goto_5
 
     :cond_7
-    invoke-virtual {v1, v0, v3}, Lhv7;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+    move-wide/from16 v27, v11
 
-    return-void
-.end method
+    :goto_5
+    if-eqz v0, :cond_8
 
-.method public final setOpponentsViewPool(Landroidx/recyclerview/widget/b;)V
-    .locals 1
+    const-string v15, "rttWeightDown"
 
-    iget-object v0, p0, Ls71;->G0:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v0, v15, v11, v12}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setRecycledViewPool(Landroidx/recyclerview/widget/b;)V
+    move-result-wide v29
 
-    return-void
-.end method
+    goto :goto_6
 
-.method public final setParentSizeProvider(Li71;)V
-    .locals 1
+    :cond_8
+    move-wide/from16 v29, v11
 
-    iget-object v0, p0, Ls71;->F0:Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;
+    :goto_6
+    const-wide v11, 0x3fac28f5c28f5c29L    # 0.055
 
-    iput-object p1, v0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->P:Li71;
+    if-eqz v0, :cond_9
 
-    return-void
-.end method
+    const-string v15, "rttStep"
 
-.method public final setVideoLayoutUpdatesControllerProvider(Ltd6;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ltd6;",
-            ")V"
-        }
-    .end annotation
+    invoke-virtual {v0, v15, v11, v12}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
 
-    iput-object p1, p0, Ls71;->L0:Ltd6;
+    move-result-wide v11
 
-    return-void
+    :cond_9
+    move-object/from16 v69, v2
+
+    move-object/from16 v68, v3
+
+    const-wide v2, 0x3fbeb851eb851eb8L    # 0.12
+
+    if-eqz v0, :cond_a
+
+    const-string v15, "rttStepWeight"
+
+    invoke-virtual {v0, v15, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v2
+
+    :cond_a
+    move-wide/from16 v33, v2
+
+    const-wide v2, 0x3fe3333333333333L    # 0.6
+
+    if-eqz v0, :cond_b
+
+    const-string v15, "fastLossWeight"
+
+    invoke-virtual {v0, v15, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v2
+
+    :cond_b
+    move-wide/from16 v35, v2
+
+    if-eqz v0, :cond_c
+
+    const-string v2, "slowLossWeight"
+
+    move-wide/from16 v37, v9
+
+    const-wide/high16 v9, 0x3fd0000000000000L    # 0.25
+
+    invoke-virtual {v0, v2, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v2
+
+    goto :goto_7
+
+    :cond_c
+    move-wide/from16 v37, v9
+
+    const-wide/high16 v9, 0x3fd0000000000000L    # 0.25
+
+    move-wide v2, v9
+
+    :goto_7
+    const-wide/high16 v9, 0x402a000000000000L    # 13.0
+
+    if-eqz v0, :cond_d
+
+    const-string v15, "fastLossValue"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_d
+    move-wide/from16 v39, v9
+
+    const-wide/high16 v9, 0x401c000000000000L    # 7.0
+
+    if-eqz v0, :cond_e
+
+    const-string v15, "slowLossValue"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_e
+    move-wide/from16 v41, v9
+
+    const-wide/high16 v9, -0x4010000000000000L    # -1.0
+
+    if-eqz v0, :cond_f
+
+    const-string v15, "criticalRtt"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v31
+
+    move-wide/from16 v43, v31
+
+    goto :goto_8
+
+    :cond_f
+    move-wide/from16 v43, v9
+
+    :goto_8
+    if-eqz v0, :cond_10
+
+    const-string v15, "criticalFastLoss"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v31
+
+    move-wide/from16 v45, v31
+
+    goto :goto_9
+
+    :cond_10
+    move-wide/from16 v45, v9
+
+    :goto_9
+    if-eqz v0, :cond_11
+
+    const-string v15, "criticalSlowLoss"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_11
+    move-wide/from16 v47, v9
+
+    if-eqz v0, :cond_12
+
+    const-string v9, "newNetworkRatingModelEnabled"
+
+    const/4 v10, 0x1
+
+    invoke-virtual {v0, v9, v10}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v9
+
+    move/from16 v49, v9
+
+    goto :goto_a
+
+    :cond_12
+    const/16 v49, 0x1
+
+    :goto_a
+    const-wide/16 v9, 0x0
+
+    if-eqz v0, :cond_13
+
+    const-string v15, "goodLoss"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_13
+    move-wide/from16 v50, v9
+
+    const-wide v9, 0x3f8eb851eb851eb8L    # 0.015
+
+    if-eqz v0, :cond_14
+
+    const-string v15, "lossStep"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_14
+    move-wide/from16 v52, v9
+
+    const-wide v9, 0x3fc5c28f5c28f5c3L    # 0.17
+
+    if-eqz v0, :cond_15
+
+    const-string v15, "lossStepWeight"
+
+    invoke-virtual {v0, v15, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_15
+    move-wide/from16 v54, v9
+
+    if-eqz v0, :cond_16
+
+    const-string v9, "bitrateRatingEnabled"
+
+    const/4 v10, 0x1
+
+    invoke-virtual {v0, v9, v10}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v9
+
+    move/from16 v56, v9
+
+    goto :goto_b
+
+    :cond_16
+    const/16 v56, 0x1
+
+    :goto_b
+    if-eqz v0, :cond_17
+
+    const-string v9, "bitrateRatingInfluenceFactor"
+
+    move-wide/from16 v31, v2
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    invoke-virtual {v0, v9, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    move-wide/from16 v57, v9
+
+    goto :goto_c
+
+    :cond_17
+    move-wide/from16 v31, v2
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    move-wide/from16 v57, v2
+
+    :goto_c
+    const-wide/high16 v2, 0x3fe8000000000000L    # 0.75
+
+    if-eqz v0, :cond_18
+
+    const-string v9, "estimatedBitrateWeightUp"
+
+    invoke-virtual {v0, v9, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    move-wide/from16 v59, v9
+
+    goto :goto_d
+
+    :cond_18
+    move-wide/from16 v59, v2
+
+    :goto_d
+    if-eqz v0, :cond_19
+
+    const-string v9, "estimatedBitrateWeightDown"
+
+    invoke-virtual {v0, v9, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    move-wide/from16 v61, v9
+
+    goto :goto_e
+
+    :cond_19
+    move-wide/from16 v61, v2
+
+    :goto_e
+    if-eqz v0, :cond_1a
+
+    const-string v9, "reportedBitrateWeightUp"
+
+    invoke-virtual {v0, v9, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    move-wide/from16 v63, v9
+
+    goto :goto_f
+
+    :cond_1a
+    move-wide/from16 v63, v2
+
+    :goto_f
+    if-eqz v0, :cond_1b
+
+    const-string v9, "reportedBitrateWeightDown"
+
+    invoke-virtual {v0, v9, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v2
+
+    :cond_1b
+    move-wide/from16 v65, v2
+
+    move-wide/from16 v25, v37
+
+    move-wide/from16 v37, v31
+
+    move-wide/from16 v31, v11
+
+    invoke-direct/range {v16 .. v66}, Lyy0;-><init>(DDDDDDDDDDDDDDDDZDDDZDDDDD)V
+
+    move-object/from16 v0, v16
+
+    goto :goto_10
+
+    :cond_1c
+    move-object/from16 v69, v2
+
+    move-object/from16 v68, v3
+
+    move-object/from16 v67, v10
+
+    const/4 v0, 0x0
+
+    :goto_10
+    const-string v2, "reportNetworkStatusConfig"
+
+    invoke-virtual {v14, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1d
+
+    const/4 v10, 0x1
+
+    invoke-virtual {v2, v13, v10}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    goto :goto_11
+
+    :cond_1d
+    const/4 v3, 0x1
+
+    :goto_11
+    if-eqz v3, :cond_21
+
+    new-instance v3, Lfad;
+
+    const-wide v9, 0x3fc3333333333333L    # 0.15
+
+    if-eqz v2, :cond_1e
+
+    const-string v11, "networkStatusReportThreshold"
+
+    invoke-virtual {v2, v11, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v9
+
+    :cond_1e
+    const/16 v11, 0x1388
+
+    if-eqz v2, :cond_1f
+
+    const-string v12, "networkStatusReportIntervalMs"
+
+    invoke-virtual {v2, v12, v11}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v11
+
+    :cond_1f
+    const/16 v12, 0x2710
+
+    if-eqz v2, :cond_20
+
+    const-string v13, "networkStatusReportForceIntervalMs"
+
+    invoke-virtual {v2, v13, v12}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v12
+
+    :cond_20
+    invoke-direct {v3, v11, v12, v9, v10}, Lfad;-><init>(IID)V
+
+    goto :goto_12
+
+    :cond_21
+    const/4 v3, 0x0
+
+    :goto_12
+    const-string v2, "signalingConfig"
+
+    invoke-virtual {v14, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    new-instance v9, Leg0;
+
+    if-eqz v2, :cond_22
+
+    const-string v10, "dcReportNetworkStatEnabled"
+
+    const/4 v11, 0x1
+
+    invoke-virtual {v2, v10, v11}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v10
+
+    goto :goto_13
+
+    :cond_22
+    const/4 v10, 0x1
+
+    :goto_13
+    if-eqz v2, :cond_23
+
+    const-string v11, "producerCommandV3"
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v2, v11, v15}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    goto :goto_14
+
+    :cond_23
+    const/4 v15, 0x0
+
+    move v2, v15
+
+    :goto_14
+    invoke-direct {v9, v10, v2}, Leg0;-><init>(ZZ)V
+
+    const-string v2, "debugLoggingConfig"
+
+    invoke-virtual {v14, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    new-instance v10, Ldg0;
+
+    if-eqz v2, :cond_24
+
+    const-string v11, "debugLogging"
+
+    invoke-virtual {v2, v11, v15}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v11
+
+    goto :goto_15
+
+    :cond_24
+    move v11, v15
+
+    :goto_15
+    if-eqz v2, :cond_25
+
+    const-string v12, "debugVerboseLogging"
+
+    invoke-virtual {v2, v12, v15}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    goto :goto_16
+
+    :cond_25
+    const/4 v2, 0x0
+
+    :goto_16
+    invoke-direct {v10, v11, v2}, Ldg0;-><init>(ZZ)V
+
+    new-instance v13, Lfg0;
+
+    invoke-direct {v13, v0, v3, v9, v10}, Lfg0;-><init>(Lyy0;Lfad;Leg0;Ldg0;)V
+
+    goto :goto_17
+
+    :catch_0
+    move-exception v0
+
+    move-object/from16 v69, v2
+
+    move-object/from16 v68, v3
+
+    move-object/from16 v67, v10
+
+    const-string v2, "BadNetworkIndicatorConfig"
+
+    const-string v3, "Can\'t parse BadNetworkIndicatorConfig"
+
+    invoke-interface {v8, v2, v3, v0}, Lyuc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_17
+
+    :cond_26
+    move-object/from16 v69, v2
+
+    move-object/from16 v68, v3
+
+    move-object/from16 v67, v10
+
+    :goto_17
+    invoke-virtual {v4, v13}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setBadNetworkIndicatorConfig(Lfg0;)V
+
+    const/4 v10, 0x1
+
+    invoke-virtual {v4, v10}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setEnableLossRttBadConnectionHandling(Z)V
+
+    move-object/from16 v2, v67
+
+    invoke-virtual {v4, v2}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setScreenCapturePermissionProvider(Lpod;)V
+
+    invoke-virtual {v4, v10}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setDeviceAudioShareEnabled(Z)V
+
+    invoke-virtual {v4, v10}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setAddParticipantsByExternalIdEnabled(Z)V
+
+    invoke-interface/range {v69 .. v69}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkp5;
+
+    check-cast v0, Lqp5;
+
+    iget-object v2, v0, Lqp5;->j:Ldg8;
+
+    sget-object v3, Lqp5;->p:[Lwq7;
+
+    const/4 v15, 0x0
+
+    aget-object v3, v3, v15
+
+    invoke-virtual {v2, v0, v3}, Ldg8;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setLoadKwsBySdkEnabled(Z)V
+
+    invoke-interface/range {v69 .. v69}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkp5;
+
+    check-cast v0, Lqp5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->cfs:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {v0, v2, v15}, Lnsd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_27
+
+    iget-object v0, v1, Ls71;->Y:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;
+
+    goto :goto_18
+
+    :cond_27
+    const/4 v0, 0x0
+
+    :goto_18
+    invoke-virtual {v4, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setP2pStartConversationDelegate(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;)V
+
+    new-instance v2, Lk3a;
+
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Lk3a;-><init>(Landroid/content/Context;)V
+
+    invoke-interface {v7}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc3e;
+
+    check-cast v0, Lpsd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-audio-dynamic-redundancy:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v0, v3, v9}, Lpsd;->t(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_28
+
+    :try_start_1
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "off"
+
+    invoke-static {v3, v0}, Lz8i;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sget-object v10, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0, v10}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_29
+
+    :cond_28
+    :goto_19
+    move-object v11, v9
+
+    goto :goto_1a
+
+    :cond_29
+    invoke-static {v3}, Lx71;->b(Lorg/json/JSONObject;)Luh1;
+
+    move-result-object v11
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1a
+
+    :catch_1
+    move-exception v0
+
+    const-string v3, "CallsSdk"
+
+    const-string v10, "Calls SDK audio redundancy parameters are expected to look like valid JSON string"
+
+    invoke-static {v3, v10, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_19
+
+    :goto_1a
+    invoke-virtual {v4, v11}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setAudioRedundancyParams(Luh1;)V
+
+    new-instance v0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    invoke-direct {v0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;-><init>()V
+
+    const/4 v10, 0x1
+
+    invoke-virtual {v0, v10}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setOpusDREDEnabledServer(Z)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v10}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setOpusDREDEnabledP2p(Z)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    move-result-object v0
+
+    invoke-interface {v7}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lc3e;
+
+    check-cast v3, Lpsd;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v9, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-net-disable-shared-socket:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v3, v9, v15}, Lpsd;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setSharedSocketDisabledForICE(Z)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    move-result-object v0
+
+    new-instance v3, Lo00;
+
+    const/4 v9, 0x4
+
+    invoke-direct {v3, v8, v9, v2}, Lo00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v3}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setNativeLibraryLoader(Lorg/webrtc/NativeLibraryLoader;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    move-result-object v0
+
+    invoke-interface/range {v68 .. v68}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ll83;
+
+    check-cast v2, Lg68;
+
+    iget-object v3, v2, Lg68;->G0:Lj3e;
+
+    sget-object v9, Lg68;->M0:[Lwq7;
+
+    const/16 v10, 0x19
+
+    aget-object v9, v9, v10
+
+    invoke-virtual {v3, v2, v9}, Lj3e;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2a
+
+    invoke-virtual {v0, v8}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->setLogger(Lyuc;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+
+    :cond_2a
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->build()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v8}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setLogger(Lyuc;)V
+
+    new-instance v2, Lu71;
+
+    invoke-direct {v2, v6}, Lu71;-><init>(Llt7;)V
+
+    invoke-virtual {v4, v2}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setLogConfiguration(Lzuc;)V
+
+    invoke-interface {v7}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lc3e;
+
+    check-cast v2, Lpsd;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-disable-init-tflite:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v10, 0x1
+
+    invoke-virtual {v2, v3, v10}, Lpsd;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2b
+
+    invoke-interface/range {v69 .. v69}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lkp5;
+
+    check-cast v2, Lqp5;
+
+    iget-object v3, v2, Lqp5;->j:Ldg8;
+
+    sget-object v6, Lqp5;->p:[Lwq7;
+
+    const/4 v15, 0x0
+
+    aget-object v6, v6, v15
+
+    invoke-virtual {v3, v2, v6}, Ldg8;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2c
+
+    :cond_2b
+    new-instance v2, Liwe;
+
+    invoke-direct {v2, v8}, Liwe;-><init>(Lyuc;)V
+
+    invoke-virtual {v4, v2}, Lru/ok/android/externcalls/sdk/ConversationFactory;->setAnimojiDataSupplier(Lpi;)V
+
+    :cond_2c
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationFactory;->getAnalyticsSender()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;->getConfiguration()Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;
+
+    move-result-object v2
+
+    new-instance v3, Ley0;
+
+    const/16 v6, 0x19
+
+    invoke-direct {v3, v6}, Ley0;-><init>(I)V
+
+    invoke-interface {v2, v3}, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfiguration;->setApplicationNameProvider(Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;)V
+
+    new-instance v2, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;
+
+    invoke-interface {v5}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/content/Context;
+
+    invoke-direct {v2, v3}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v2, v0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;->setPeerConnection(Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$Builder;->build()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->init(Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams;)V
+
+    return-object v4
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

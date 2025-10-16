@@ -1,168 +1,463 @@
-.class public final Lv1h;
-.super Lc2f;
+.class public final synthetic Lv1h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lm1h;
-
-.field public final synthetic r0:La2h;
-
-.field public final synthetic s0:Lq1h;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lm1h;Lq1h;La2h;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lv1h;->Z:Lm1h;
+    iput p1, p0, Lv1h;->a:I
 
-    iput-object p3, p0, Lv1h;->r0:La2h;
+    iput-object p2, p0, Lv1h;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Lv1h;->s0:Lq1h;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 10
 
-    check-cast p1, Ljava/lang/String;
+    iget v0, p0, Lv1h;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lv1h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lv1h;
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
 
-    sget-object p2, Laxf;->a:Laxf;
+    check-cast v0, Luwf;
 
-    invoke-virtual {p1, p2}, Lv1h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "x"
 
-    move-result-object p1
+    const-string v2, "OKRTCLmsAdapter"
 
-    return-object p1
-.end method
+    iget-object v0, v0, Luwf;->b:Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    check-cast v0, Lznh;
 
-    new-instance v0, Lv1h;
+    const-string v3, "Screen size did change"
 
-    iget-object v1, p0, Lv1h;->r0:La2h;
+    iget-object v4, v0, Lznh;->a:Ljava/lang/Object;
 
-    iget-object v2, p0, Lv1h;->s0:Lq1h;
+    check-cast v4, Lb68;
 
-    iget-object v3, p0, Lv1h;->Z:Lm1h;
+    iget-object v5, v0, Lznh;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, v3, v2, v1, p2}, Lv1h;-><init>(Lm1h;Lq1h;La2h;Lkotlin/coroutines/Continuation;)V
+    check-cast v5, Lz58;
 
-    iput-object p1, v0, Lv1h;->Y:Ljava/lang/Object;
+    iget-object v6, v5, Lz58;->n:Lyuc;
 
-    return-object v0
-.end method
+    if-nez v4, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    goto :goto_3
 
-    iget v0, p0, Lv1h;->X:I
+    :cond_0
+    :try_start_0
+    invoke-virtual {v5}, Lz58;->e()V
 
-    iget-object v1, p0, Lv1h;->s0:Lq1h;
+    iget-object v4, v5, Lz58;->B:Lorg/webrtc/Size;
 
-    iget-object v2, p0, Lv1h;->r0:La2h;
+    iget-object v7, v5, Lz58;->A:Landroid/util/DisplayMetrics;
 
-    const/4 v3, 0x1
+    iget v8, v7, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    if-eqz v0, :cond_1
+    iget v9, v4, Lorg/webrtc/Size;->width:I
 
-    if-ne v0, v3, :cond_0
+    if-ne v8, v9, :cond_1
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget v8, v7, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    iget v9, v4, Lorg/webrtc/Size;->height:I
+
+    if-eq v8, v9, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :catchall_0
+    move-exception v1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :goto_0
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lv1h;->Y:Ljava/lang/Object;
+    invoke-direct {v8, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Ljava/lang/String;
+    iget v3, v4, Lorg/webrtc/Size;->width:I
 
-    new-instance v0, Lp1h;
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lv1h;->Z:Lm1h;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, v4, Lm1h;->b:Ljava/lang/String;
+    iget v3, v4, Lorg/webrtc/Size;->height:I
 
-    iget-object v4, v4, Lm1h;->c:Ljava/lang/String;
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v5, v4, p1}, Lp1h;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v3, "->"
 
-    iget-object p1, v2, La2h;->e:Lfu0;
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v4, Lfj7;
+    iget v3, v7, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    iget-object v5, v1, Lq1h;->a:Ljava/lang/String;
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v6, v2, La2h;->a:Lsj7;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, v7, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    sget-object v7, Lp1h;->Companion:Lo1h;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Lo1h;->serializer()Lql7;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v1
 
-    invoke-virtual {v6, v7, v0}, Lsj7;->b(Lql7;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {v6, v2, v1}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    iget v1, v7, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    invoke-direct {v4, v5, v0}, Lfj7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    iput v1, v4, Lorg/webrtc/Size;->width:I
 
-    iput v3, p0, Lv1h;->X:I
+    iget v3, v7, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-interface {p1, v4, p0}, Lfpd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput v3, v4, Lorg/webrtc/Size;->height:I
 
-    move-result-object p1
+    iget-object v4, v0, Lznh;->a:Ljava/lang/Object;
 
-    sget-object v0, Lo24;->a:Lo24;
+    check-cast v4, Lb68;
 
-    if-ne p1, v0, :cond_2
+    invoke-interface {v4, v1, v3}, Lb68;->a(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object v0
+    goto :goto_2
+
+    :goto_1
+    const-string v3, "Error on screen share size update"
+
+    invoke-interface {v6, v2, v3, v1}, Lyuc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
-    :goto_0
-    iget-object p1, v1, Lq1h;->a:Ljava/lang/String;
+    :goto_2
+    iget-object v0, v0, Lznh;->a:Ljava/lang/Object;
 
-    invoke-static {v2, p1}, La2h;->e(La2h;Ljava/lang/String;)V
+    check-cast v0, Lb68;
 
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-virtual {v5, v0}, Lz58;->b(Lb68;)V
 
-    return-object p1
+    :goto_3
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcom/my/tracker/obfuscated/f0;
+
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/f0;->a()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lwrh;
+
+    iget-object v1, v0, Lwrh;->f:Ljme;
+
+    :try_start_1
+    iget-object v0, v0, Lwrh;->e:Lgme;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v3, "error"
+
+    const-string v4, "command-discarded"
+
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Lgme;->onResponse(Lorg/json/JSONObject;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_4
+
+    :catchall_1
+    move-exception v0
+
+    iget-object v1, v1, Ljme;->b:Lyuc;
+
+    const-string v2, "OKSignaling"
+
+    const-string v3, "Error discarding postponed command"
+
+    invoke-interface {v1, v2, v3, v0}, Lyuc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_4
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lrrh;
+
+    iget-object v3, v0, Lrrh;->g:Lxe4;
+
+    if-nez v3, :cond_3
+
+    goto :goto_5
+
+    :cond_3
+    invoke-virtual {v3}, Lxe4;->a()V
+
+    iput-object v2, v0, Lrrh;->g:Lxe4;
+
+    iput v1, v0, Lrrh;->D:I
+
+    :goto_5
+    iget-object v1, v0, Lrrh;->f:Llka;
+
+    if-eqz v1, :cond_4
+
+    :try_start_2
+    iget-object v1, v1, Llka;->e:Ljava/lang/Object;
+
+    check-cast v1, Ljava/io/ByteArrayOutputStream;
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    :cond_4
+    iput-object v2, v0, Lrrh;->f:Llka;
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/messages/media/mediabar/LocalPhotoView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/messages/views/widgets/AvatarCropView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnnh;
+
+    iget-object v1, v0, Lnnh;->d:Llhf;
+
+    new-instance v2, Ltjh;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3, v0}, Ltjh;-><init>(ILjava/lang/Object;)V
+
+    check-cast v1, Lojd;
+
+    invoke-virtual {v1, v2}, Lojd;->Z(Lkhf;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lbnh;
+
+    const-string v1, "FirebaseMessaging"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Service took too long to process intent: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v4, v0, Lbnh;->a:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, " finishing."
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, v0, Lbnh;->b:Lrnf;
+
+    invoke-virtual {v0, v2}, Lrnf;->d(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lobf;
+
+    iget-object v0, v0, Lobf;->b:Ljava/lang/Object;
+
+    check-cast v0, Lj2g;
+
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    iget-wide v3, v0, Lj2g;->e:J
+
+    sget-object v5, Lee4;->a:Ljava/util/LinkedHashMap;
+
+    const-class v5, Lee4;
+
+    monitor-enter v5
+
+    monitor-exit v5
+
+    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v5, "Abort: no output sample written in the last "
+
+    const-string v6, " milliseconds. DebugTrace: \"Tracing disabled\""
+
+    invoke-static {v3, v4, v5, v6}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    new-instance v3, Landroidx/media3/transformer/ExportException;
+
+    const-string v4, "Muxer error"
+
+    const/16 v5, 0x1b5a
+
+    invoke-direct {v3, v4, v2, v5, v1}, Landroidx/media3/transformer/ExportException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;II)V
+
+    iget-object v0, v0, Lj2g;->s:Ln2g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, v3}, Ln2g;->d(Landroidx/media3/transformer/ExportException;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Lv1h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lihd;
+
+    iget-object v0, v0, Lihd;->b:Ljava/lang/Object;
+
+    check-cast v0, Lgl4;
+
+    iget-object v1, v0, Lgl4;->c:Ljava/lang/Object;
+
+    check-cast v1, Loh6;
+
+    invoke-interface {v1}, Loh6;->invoke()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    goto :goto_6
+
+    :cond_5
+    iget-boolean v1, v0, Lgl4;->a:Z
+
+    if-nez v1, :cond_7
+
+    iget-object v1, v0, Lgl4;->b:Ljava/lang/Object;
+
+    check-cast v1, Lyuc;
+
+    const-string v2, "OwnTalkingReporter"
+
+    const-string v3, "on voice start detected and reported"
+
+    invoke-interface {v1, v2, v3}, Lyuc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, v0, Lgl4;->Y:Ljava/lang/Object;
+
+    check-cast v1, Lcz0;
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1, v2}, Lcz0;->a(Z)V
+
+    :cond_6
+    iput-boolean v2, v0, Lgl4;->a:Z
+
+    :cond_7
+    iget-object v0, v0, Lgl4;->o:Ljava/lang/Object;
+
+    check-cast v0, Lnec;
+
+    sget-object v1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, v1}, Lnec;->d(Ljava/lang/Object;)V
+
+    :goto_6
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

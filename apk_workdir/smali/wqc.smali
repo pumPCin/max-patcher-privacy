@@ -1,208 +1,104 @@
-.class public final Lwqc;
-.super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.class public abstract Lwqc;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lfef;
 
+# static fields
+.field public static call_history_call_contact_action:I = 0x7f130126
 
-# instance fields
-.field public final a:Landroid/widget/TextView;
+.field public static call_history_call_create_banner_permission_denied_subtitle:I = 0x7f130127
 
-.field public final b:Landroid/widget/TextView;
+.field public static call_history_call_create_banner_permission_denied_title:I = 0x7f130128
 
+.field public static call_history_call_create_banner_subtitle:I = 0x7f130129
 
-# direct methods
-.method public constructor <init>(Lpfa;Landroid/content/Context;)V
-    .locals 6
+.field public static call_history_call_create_banner_title:I = 0x7f13012a
 
-    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+.field public static call_history_call_create_group_call_by_link:I = 0x7f13012b
 
-    new-instance v0, Landroid/widget/TextView;
+.field public static call_history_call_create_link_error:I = 0x7f13012c
 
-    invoke-direct {v0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+.field public static call_history_call_history_empty_favorite_call:I = 0x7f13012d
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+.field public static call_history_call_history_empty_subtitle:I = 0x7f13012e
 
-    const/4 v2, -0x2
+.field public static call_history_call_history_empty_title:I = 0x7f13012f
 
-    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+.field public static call_history_call_tab_all:I = 0x7f130130
 
-    const v3, 0x800013
+.field public static call_history_call_tab_missing:I = 0x7f130131
 
-    iput v3, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+.field public static call_history_call_title:I = 0x7f130132
 
-    const/16 v3, 0xc
+.field public static call_history_empty_state_subtitle:I = 0x7f130142
 
-    int-to-float v3, v3
+.field public static call_history_empty_state_title:I = 0x7f130143
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+.field public static call_history_info_copy_link:I = 0x7f130147
 
-    move-result-object v4
+.field public static call_history_info_create_failed:I = 0x7f130148
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static call_history_info_creating:I = 0x7f130149
 
-    move-result-object v4
+.field public static call_history_info_join_call:I = 0x7f13014a
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static call_history_info_open_call_chat_title:I = 0x7f13014b
 
-    mul-float/2addr v4, v3
+.field public static call_history_info_recreate:I = 0x7f13014c
 
-    invoke-static {v4}, Li8e;->I(F)I
+.field public static call_history_info_share:I = 0x7f13014d
 
-    move-result v4
+.field public static call_history_info_start_call:I = 0x7f13014e
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+.field public static call_history_info_title:I = 0x7f13014f
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.field public static call_history_info_try_load_link_again:I = 0x7f130150
 
-    sget v1, Lehc;->chats_list_search_recent_header:I
+.field public static call_history_item_call_audio_button_accessibility:I = 0x7f130151
 
-    invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+.field public static call_history_item_call_call_title_with_count_calls:I = 0x7f130152
 
-    move-result-object v1
+.field public static call_history_item_call_context_action_remove:I = 0x7f130153
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+.field public static call_history_item_call_context_action_select:I = 0x7f130154
 
-    sget-object v1, Ldwf;->t:Lddf;
+.field public static call_history_item_call_count_no_users:I = 0x7f130155
 
-    invoke-static {v1, v0}, Lddf;->d(Lddf;Landroid/widget/TextView;)V
+.field public static call_history_item_call_group_call_title:I = 0x7f130156
 
-    sget-object v1, Lrw4;->t0:Lss6;
+.field public static call_history_item_call_incoming:I = 0x7f130157
 
-    invoke-virtual {v1, v0}, Lss6;->v(Landroid/view/View;)Llwa;
+.field public static call_history_item_call_link_call_description:I = 0x7f130158
 
-    move-result-object v4
+.field public static call_history_item_call_missed:I = 0x7f130159
 
-    invoke-interface {v4}, Llwa;->getText()Lobf;
+.field public static call_history_item_call_outgoing:I = 0x7f13015a
 
-    move-result-object v4
+.field public static call_history_item_call_reject:I = 0x7f13015b
 
-    iget v4, v4, Lobf;->i:I
+.field public static call_history_item_call_time_unit_min:I = 0x7f13015c
 
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setTextColor(I)V
+.field public static call_history_item_call_time_unit_sec:I = 0x7f13015d
 
-    iput-object v0, p0, Lwqc;->a:Landroid/widget/TextView;
+.field public static call_history_item_call_toolbar_action_remove:I = 0x7f13015e
 
-    new-instance v4, Landroid/widget/TextView;
+.field public static call_history_item_call_unknown_call_title:I = 0x7f13015f
 
-    invoke-direct {v4, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+.field public static call_history_item_call_video_button_accessibility:I = 0x7f130160
 
-    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+.field public static call_history_link_action_error:I = 0x7f130161
 
-    invoke-direct {v5, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+.field public static call_history_link_coped:I = 0x7f130162
 
-    const v2, 0x800015
+.field public static call_history_link_send_title:I = 0x7f130164
 
-    iput v2, v5, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+.field public static call_history_missed_calls_empty_state_title:I = 0x7f130166
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+.field public static call_history_open_last_message_error:I = 0x7f13016a
 
-    move-result-object v2
+.field public static call_presettings_call_permissions_item:I = 0x7f1301d1
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static call_presettings_call_save_changes:I = 0x7f1301d2
 
-    move-result-object v2
+.field public static call_presettings_change_call_name_empty_error:I = 0x7f1301d3
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Li8e;->I(F)I
-
-    move-result v2
-
-    invoke-virtual {v5, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v2, Lehc;->chats_list_search_recent_header_clear:I
-
-    invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p2, Ldwf;->p:Lddf;
-
-    invoke-static {p2, v4, v1, v4}, Lsw1;->f(Lddf;Landroid/widget/TextView;Lss6;Landroid/widget/TextView;)Lobf;
-
-    move-result-object p2
-
-    iget p2, p2, Lobf;->i:I
-
-    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    new-instance p2, La5b;
-
-    const/4 v1, 0x7
-
-    invoke-direct {p2, v1, p1}, La5b;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v4, p2}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    iput-object v4, p0, Lwqc;->b:Landroid/widget/TextView;
-
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 p2, 0x28
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v1
-
-    invoke-static {p2}, Li8e;->I(F)I
-
-    move-result p2
-
-    const/4 v1, -0x1
-
-    invoke-direct {p1, v1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onThemeChanged(Llwa;)V
-    .locals 2
-
-    invoke-interface {p1}, Llwa;->getText()Lobf;
-
-    move-result-object v0
-
-    iget v0, v0, Lobf;->i:I
-
-    iget-object v1, p0, Lwqc;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {p1}, Llwa;->getText()Lobf;
-
-    move-result-object p1
-
-    iget p1, p1, Lobf;->i:I
-
-    iget-object v0, p0, Lwqc;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-.end method
+.field public static call_presettings_change_call_name_title:I = 0x7f1301d4

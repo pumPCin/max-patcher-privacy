@@ -3,94 +3,89 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lqi6;
 
 
 # instance fields
-.field public final synthetic a:Lsz7;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
+.field public final synthetic a:Ltz7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsz7;JZ)V
+.method public constructor <init>(Ltz7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrz7;->a:Lsz7;
-
-    iput-wide p2, p0, Lrz7;->b:J
-
-    iput-boolean p4, p0, Lrz7;->c:Z
+    iput-object p1, p0, Lrz7;->a:Ltz7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lrz7;->a:Lsz7;
+    instance-of v0, p1, Lrz7;
 
-    iget-object v1, v0, Lsz7;->a:Lyn7;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    move-result-object v1
+    invoke-virtual {p0}, Lrz7;->getFunctionDelegate()Lji6;
 
-    check-cast v1, Lc39;
+    move-result-object v0
 
-    iget-wide v2, p0, Lrz7;->b:J
+    check-cast p1, Lqi6;
 
-    invoke-virtual {v1, v2, v3}, Lc39;->n(J)Le39;
+    invoke-interface {p1}, Lqi6;->getFunctionDelegate()Lji6;
 
-    move-result-object v1
+    move-result-object p1
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-boolean v2, p0, Lrz7;->c:Z
+    move-result p1
 
-    if-nez v2, :cond_0
-
-    iget-object v2, v1, Le39;->t0:Lr69;
-
-    sget-object v3, Lr69;->c:Lr69;
-
-    if-eq v2, v3, :cond_1
+    return p1
 
     :cond_0
-    iget-object v0, v0, Lsz7;->b:Lyn7;
+    const/4 p1, 0x0
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    return p1
+.end method
 
-    move-result-object v0
+.method public final getFunctionDelegate()Lji6;
+    .locals 7
 
-    check-cast v0, Lb49;
+    new-instance v0, Lti6;
 
-    invoke-static {v0, v1}, Lb49;->a(Lb49;Le39;)Lp19;
+    const-string v6, "onProfileTagClicked(Landroid/view/View;Ljava/lang/String;)V"
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    goto :goto_0
+    const/4 v1, 0x2
 
-    :cond_1
-    const/4 v0, 0x0
+    const-class v3, Ltz7;
 
-    :goto_0
-    if-eqz v0, :cond_2
+    iget-object v4, p0, Lrz7;->a:Ltz7;
+
+    const-string v5, "onProfileTagClicked"
+
+    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
+.end method
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
+.method public final hashCode()I
+    .locals 1
 
-    const-string v1, "message not found or deleted"
+    invoke-virtual {p0}, Lrz7;->getFunctionDelegate()Lji6;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw v0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

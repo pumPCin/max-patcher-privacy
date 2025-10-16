@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Laf4;)V
+.method public synthetic constructor <init>(Lvh4;)V
     .locals 0
 
     .line 1

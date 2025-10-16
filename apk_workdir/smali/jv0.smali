@@ -1,65 +1,57 @@
-.class public final Ljv0;
-.super Lo22;
+.class public interface abstract Ljv0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic o:I
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ljv0;->o:I
-
-    const/4 v1, 0x0
-
-    .line 2
-    invoke-direct {p0, v0, v1, v1}, Lo22;-><init>(ILwn0;Ljava/lang/Float;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILwn0;Ljava/lang/Float;I)V
-    .locals 0
-
-    .line 1
-    iput p4, p0, Ljv0;->o:I
-
-    invoke-direct {p0, p1, p2, p3}, Lo22;-><init>(ILwn0;Ljava/lang/Float;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lrte;
+.implements Ljava/nio/channels/ReadableByteChannel;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract H(Lay;)J
+.end method
 
-    iget v0, p0, Ljv0;->o:I
+.method public abstract M(Ljava/nio/charset/Charset;)Ljava/lang/String;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract O(Leu0;J)V
+.end method
 
-    const-string v0, "[SquareCap]"
+.method public abstract T()Ljava/lang/String;
+.end method
 
-    return-object v0
+.method public abstract Y(Lp8b;)I
+.end method
 
-    :pswitch_0
-    const-string v0, "[RoundCap]"
+.method public abstract d0(J)V
+.end method
 
-    return-object v0
+.method public abstract e(J)Lhx0;
+.end method
 
-    :pswitch_1
-    const-string v0, "[ButtCap]"
+.method public abstract f0()J
+.end method
 
-    return-object v0
+.method public abstract g0()Ljava/io/InputStream;
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public abstract j(J)Ljava/lang/String;
+.end method
+
+.method public abstract readByte()B
+.end method
+
+.method public abstract readFully([B)V
+.end method
+
+.method public abstract readInt()I
+.end method
+
+.method public abstract readLong()J
+.end method
+
+.method public abstract readShort()S
+.end method
+
+.method public abstract skip(J)V
 .end method

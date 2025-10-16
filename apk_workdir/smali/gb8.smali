@@ -1,80 +1,151 @@
-.class public final Lgb8;
-.super Lf0;
+.class public abstract synthetic Lgb8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lgb8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public c:Z
+.field public static final synthetic a:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Le0;
+    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
 
-    const/4 v1, 0x5
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Le0;-><init>(I)V
+    array-length v0, v0
 
-    sput-object v0, Lgb8;->CREATOR:Landroid/os/Parcelable$Creator;
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    sput-object v0, Lgb8;->a:[I
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 0
+    :try_start_0
+    sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
 
-    invoke-direct {p0, p1, p2}, Lf0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    if-nez p2, :cond_0
+    move-result v1
 
-    const-class p2, Lgb8;
+    const/4 v2, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    :catch_0
+    :try_start_1
+    sget-object v0, Lgb8;->a:[I
 
-    move-result p1
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
 
-    const/4 p2, 0x1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    if-ne p1, p2, :cond_1
+    move-result v1
 
-    goto :goto_0
+    const/4 v2, 0x2
 
-    :cond_1
-    const/4 p2, 0x0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    :goto_0
-    iput-boolean p2, p0, Lgb8;->c:Z
+    :catch_1
+    :try_start_2
+    sget-object v0, Lgb8;->a:[I
 
-    return-void
-.end method
+    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
 
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    move-result v1
 
-    invoke-super {p0, p1, p2}, Lf0;->writeToParcel(Landroid/os/Parcel;I)V
+    const/4 v2, 0x3
 
-    iget-boolean p2, p0, Lgb8;->c:Z
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    :catch_2
+    :try_start_3
+    sget-object v0, Lgb8;->a:[I
 
+    sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Lgb8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v0, Lgb8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v0, Lgb8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v0, Lgb8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
 .end method

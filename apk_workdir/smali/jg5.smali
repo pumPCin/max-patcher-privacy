@@ -1,170 +1,138 @@
 .class public final Ljg5;
-.super Ljava/lang/Object;
+.super Landroid/media/MediaDataSource;
 .source "SourceFile"
-
-# interfaces
-.implements Lqg5;
 
 
 # instance fields
-.field public final a:I
+.field public a:J
+
+.field public final synthetic b:Log5;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Log5;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljg5;->b:Log5;
 
-    iput p1, p0, Ljg5;->a:I
+    invoke-direct {p0}, Landroid/media/MediaDataSource;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final close()V
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    return-void
+.end method
 
-    goto :goto_1
+.method public final getSize()J
+    .locals 2
 
-    :cond_0
-    instance-of v0, p1, Ljg5;
+    const-wide/16 v0, -0x1
 
-    if-nez v0, :cond_1
+    return-wide v0
+.end method
 
-    goto :goto_0
+.method public final readAt(J[BII)I
+    .locals 7
 
-    :cond_1
-    check-cast p1, Ljg5;
+    if-nez p5, :cond_0
 
-    iget v0, p0, Ljg5;->a:I
-
-    iget p1, p1, Ljg5;->a:I
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    :cond_0
+    const-wide/16 v0, 0x0
 
-    return p1
-.end method
+    cmp-long v2, p1, v0
 
-.method public final hashCode()I
-    .locals 1
+    const/4 v3, -0x1
 
-    iget v0, p0, Ljg5;->a:I
+    if-gez v2, :cond_1
 
-    invoke-static {v0}, Lsw1;->u(I)I
+    return v3
+
+    :cond_1
+    :try_start_0
+    iget-wide v4, p0, Ljg5;->a:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    cmp-long v2, v4, p1
+
+    iget-object v6, p0, Ljg5;->b:Log5;
+
+    if-eqz v2, :cond_3
+
+    cmp-long v0, v4, v0
+
+    if-ltz v0, :cond_2
+
+    :try_start_1
+    iget-object v0, v6, Lkg5;->a:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
 
     move-result v0
 
-    return v0
-.end method
+    int-to-long v0, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    add-long/2addr v4, v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    cmp-long v0, p1, v4
 
-    const-string v1, "Failed(reason="
+    if-ltz v0, :cond_2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return v3
 
-    iget v1, p0, Ljg5;->a:I
+    :cond_2
+    invoke-virtual {v6, p1, p2}, Log5;->d(J)V
 
-    packed-switch v1, :pswitch_data_0
+    iput-wide p1, p0, Ljg5;->a:J
 
-    const-string v1, "null"
+    :cond_3
+    iget-object p1, v6, Lkg5;->a:Ljava/io/DataInputStream;
 
-    goto :goto_0
+    invoke-virtual {p1}, Ljava/io/InputStream;->available()I
 
-    :pswitch_0
-    const-string v1, "FAILED_JOIN"
+    move-result p1
 
-    goto :goto_0
+    if-le p5, p1, :cond_4
 
-    :pswitch_1
-    const-string v1, "REJECT_CALL"
+    iget-object p1, v6, Lkg5;->a:Ljava/io/DataInputStream;
 
-    goto :goto_0
+    invoke-virtual {p1}, Ljava/io/InputStream;->available()I
 
-    :pswitch_2
-    const-string v1, "CALL_WAIT_ADMIN"
+    move-result p5
 
-    goto :goto_0
+    :cond_4
+    invoke-virtual {v6, p3, p4, p5}, Lkg5;->read([BII)I
 
-    :pswitch_3
-    const-string v1, "TARGET_USER_NOT_IN_CHAT"
+    move-result p1
 
-    goto :goto_0
+    if-ltz p1, :cond_5
 
-    :pswitch_4
-    const-string v1, "REMOVE_FROM_WAITING_ROOM"
+    iget-wide p2, p0, Ljg5;->a:J
 
-    goto :goto_0
+    int-to-long p4, p1
 
-    :pswitch_5
-    const-string v1, "REMOVE_FROM_CALL"
+    add-long/2addr p2, p4
 
-    goto :goto_0
+    iput-wide p2, p0, Ljg5;->a:J
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    :pswitch_6
-    const-string v1, "CONNECTION_ERROR"
+    return p1
 
-    goto :goto_0
+    :catch_0
+    :cond_5
+    const-wide/16 p1, -0x1
 
-    :pswitch_7
-    const-string v1, "FAILED"
+    iput-wide p1, p0, Ljg5;->a:J
 
-    goto :goto_0
-
-    :pswitch_8
-    const-string v1, "PRIVACY"
-
-    goto :goto_0
-
-    :pswitch_9
-    const-string v1, "BUSY"
-
-    goto :goto_0
-
-    :pswitch_a
-    const-string v1, "UNAVAILABLE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v3
 .end method

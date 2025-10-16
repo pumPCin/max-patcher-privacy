@@ -1,49 +1,25 @@
-.class public final Lx44;
-.super Lwy3;
+.class public final synthetic Lx44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lk54;
-
-.field public Z:I
-
-.field public o:Lk54;
-
-
-# direct methods
-.method public constructor <init>(Lk54;Lwy3;)V
-    .locals 0
-
-    iput-object p1, p0, Lx44;->Y:Lk54;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/function/BinaryOperator;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lx44;->X:Ljava/lang/Object;
+    check-cast p1, Lmm7;
 
-    iget p1, p0, Lx44;->Z:I
+    check-cast p2, Lmm7;
 
-    const/high16 v0, -0x80000000
+    if-eqz p1, :cond_0
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x0
 
-    iput p1, p0, Lx44;->Z:I
+    invoke-interface {p1, v0}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    iget-object p1, p0, Lx44;->Y:Lk54;
-
-    invoke-virtual {p1, p0}, Lk54;->c(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-object p2
 .end method

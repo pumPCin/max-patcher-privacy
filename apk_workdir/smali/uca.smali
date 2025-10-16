@@ -1,54 +1,25 @@
-.class public final Luca;
+.class public abstract Luca;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
-
-
-# static fields
-.field public static final b:Ljava/util/regex/Pattern;
-
-
-# instance fields
-.field public final a:Lj1d;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-string v0, "attachment;\\s*filename\\s*=\\s*\"([^\"]*)\""
-
-    const/4 v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Luca;->b:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj1d;)V
+.method public static a(Landroid/app/Notification$Builder;Landroid/app/Person;)Landroid/app/Notification$Builder;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Landroid/app/Person;)Landroid/app/Notification$Builder;
 
-    iput-object p1, p0, Luca;->a:Lj1d;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Notification$Action$Builder;I)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-# virtual methods
-.method public final close()V
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setSemanticAction(I)Landroid/app/Notification$Action$Builder;
 
-    iget-object v0, p0, Luca;->a:Lj1d;
+    move-result-object p0
 
-    invoke-virtual {v0}, Lj1d;->close()V
-
-    return-void
+    return-object p0
 .end method

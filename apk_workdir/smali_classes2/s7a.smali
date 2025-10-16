@@ -1,192 +1,198 @@
 .class public final Ls7a;
-.super Ljava/lang/Object;
+.super Lnv6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic c:[Lpl7;
-
-.field public static final d:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Lys4;
+.field public a:J
 
-.field public final b:Lys4;
+.field public b:[B
+
+.field public c:[B
+
+.field public d:I
+
+.field public e:Lo45;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public static e(Ljava/lang/String;Ljava/nio/ByteBuffer;II)[B
+    .locals 3
 
-    new-instance v0, Lf4c;
+    if-lt p3, p2, :cond_2
 
-    const-class v1, Ls7a;
+    const/4 v0, 0x0
 
-    const-string v2, "exceptionHandler"
+    move v1, v0
 
-    const-string v3, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
+    :goto_0
+    if-ge v0, p2, :cond_0
 
-    const/4 v4, 0x0
+    shl-int/lit8 v1, v1, 0x8
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
-    sget-object v2, Lewc;->a:Lfwc;
+    move-result v2
 
-    const-string v3, "analytics"
+    and-int/lit16 v2, v2, 0xff
 
-    const-string v5, "getAnalytics()Lru/ok/tamtam/stats/Analytics;"
+    or-int/2addr v1, v2
 
-    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
+    add-int/lit8 v0, v0, 0x1
 
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Lpl7;
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v3, v0
-
-    sput-object v3, Ls7a;->c:[Lpl7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls7a;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lys4;Lys4;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Ls7a;->a:Lys4;
-
-    iput-object p1, p0, Ls7a;->b:Lys4;
-
-    return-void
-.end method
-
-.method public static a(Ljava/util/Map;Lel5;)V
-    .locals 5
-
-    iget-wide v0, p1, Lel5;->a:J
-
-    iget-object v2, p1, Lel5;->g:Ljava/lang/Long;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    const-string v1, "trid"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p1, Lel5;->h:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "eKey"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_0
 
     :cond_0
-    if-eqz v2, :cond_1
+    sub-int/2addr p3, p2
 
-    const-string v0, "ttime"
+    if-lt p3, v1, :cond_1
 
-    invoke-interface {p0, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-array p0, v1, [B
 
-    iget-wide v0, p1, Lel5;->j:J
+    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    sub-long/2addr v0, v3
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    const-string v1, "dtime"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-wide v0, p1, Lel5;->i:J
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    const-string v1, "fcmdtime"
-
-    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p0
 
     :cond_1
-    iget-object p1, p1, Lel5;->e:Ljava/lang/Long;
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
 
-    if-eqz p1, :cond_2
+    const-string p2, "Message too short for given length of "
 
-    const-string v0, "suid"
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_2
-    return-void
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string p2, "No length specified for "
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final b()Lxc;
-    .locals 2
+.method public final a()[B
+    .locals 5
 
-    sget-object v0, Ls7a;->c:[Lpl7;
+    iget-object v0, p0, Ls7a;->e:Lo45;
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Ls7a;->b:Lys4;
-
-    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Lo45;->a()[B
 
     move-result-object v0
 
-    check-cast v0, Lxc;
+    array-length v0, v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Ls7a;->c:[B
+
+    array-length v1, v1
+
+    add-int/lit8 v1, v1, 0xb
+
+    iget-object v2, p0, Ls7a;->b:[B
+
+    array-length v2, v2
+
+    add-int/2addr v1, v2
+
+    add-int/lit8 v1, v1, 0x2
+
+    add-int/2addr v1, v0
+
+    add-int/lit8 v2, v1, 0x4
+
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    sget-object v3, Liwf;->o:Liwf;
+
+    iget-byte v3, v3, Liwf;->a:B
+
+    shl-int/lit8 v3, v3, 0x18
+
+    or-int/2addr v1, v3
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    iget v1, p0, Ls7a;->d:I
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    iget-wide v3, p0, Ls7a;->a:J
+
+    long-to-int v1, v3
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Ls7a;->c:[B
+
+    array-length v1, v1
+
+    int-to-byte v1, v1
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Ls7a;->c:[B
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Ls7a;->b:[B
+
+    array-length v1, v1
+
+    int-to-short v1, v1
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v1, p0, Ls7a;->b:[B
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    int-to-short v0, v0
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v0, p0, Ls7a;->e:Lo45;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lo45;->a()[B
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final c()Ltb5;
-    .locals 2
+.method public final b()Liwf;
+    .locals 1
 
-    sget-object v0, Ls7a;->c:[Lpl7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Ls7a;->a:Lys4;
-
-    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltb5;
+    sget-object v0, Liwf;->o:Liwf;
 
     return-object v0
 .end method

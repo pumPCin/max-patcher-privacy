@@ -6,9 +6,7 @@
 # static fields
 .field public static final enum X:Lxzd;
 
-.field public static final enum Y:Lxzd;
-
-.field public static final synthetic Z:[Lxzd;
+.field public static final synthetic Y:[Lxzd;
 
 .field public static final enum a:Lxzd;
 
@@ -21,11 +19,11 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 7
 
     new-instance v0, Lxzd;
 
-    const-string v1, "ACTION"
+    const-string v1, "UNKNOWN"
 
     const/4 v2, 0x0
 
@@ -35,7 +33,7 @@
 
     new-instance v1, Lxzd;
 
-    const-string v2, "SIMPLE"
+    const-string v2, "INITIAL"
 
     const/4 v3, 0x1
 
@@ -45,7 +43,7 @@
 
     new-instance v2, Lxzd;
 
-    const-string v3, "NEGATIVE"
+    const-string v3, "MANUAL"
 
     const/4 v4, 0x2
 
@@ -55,7 +53,7 @@
 
     new-instance v3, Lxzd;
 
-    const-string v4, "DISABLE"
+    const-string v4, "ADAPTIVE"
 
     const/4 v5, 0x3
 
@@ -65,7 +63,7 @@
 
     new-instance v4, Lxzd;
 
-    const-string v5, "SIMPLE_TEXT_ONLY"
+    const-string v5, "TRICK_PLAY"
 
     const/4 v6, 0x4
 
@@ -73,21 +71,11 @@
 
     sput-object v4, Lxzd;->X:Lxzd;
 
-    new-instance v5, Lxzd;
-
-    const-string v6, "PROMO"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lxzd;->Y:Lxzd;
-
-    filled-new-array/range {v0 .. v5}, [Lxzd;
+    filled-new-array {v0, v1, v2, v3, v4}, [Lxzd;
 
     move-result-object v0
 
-    sput-object v0, Lxzd;->Z:[Lxzd;
+    sput-object v0, Lxzd;->Y:[Lxzd;
 
     return-void
 .end method
@@ -109,7 +97,7 @@
 .method public static values()[Lxzd;
     .locals 1
 
-    sget-object v0, Lxzd;->Z:[Lxzd;
+    sget-object v0, Lxzd;->Y:[Lxzd;
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 

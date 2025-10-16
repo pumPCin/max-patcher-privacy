@@ -1,84 +1,23 @@
-.class public final Lka5;
+.class public interface abstract Lka5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgy4;
-
-
-# instance fields
-.field public final a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lka5;->a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
-
-    return-void
-.end method
+.implements Ljava/lang/AutoCloseable;
 
 
 # virtual methods
-.method public final a()Ljava/util/UUID;
-    .locals 1
-
-    sget-object v0, Lmw0;->a:Ljava/util/UUID;
-
-    return-object v0
+.method public abstract A()Landroid/media/MediaCodec$BufferInfo;
 .end method
 
-.method public final b()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract C()Z
 .end method
 
-.method public final c(Lky4;)V
-    .locals 0
-
-    return-void
+.method public abstract U()J
 .end method
 
-.method public final d(Lky4;)V
-    .locals 0
-
-    return-void
+.method public abstract r()Ljava/nio/ByteBuffer;
 .end method
 
-.method public final e(Ljava/lang/String;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final f()Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
-    .locals 1
-
-    iget-object v0, p0, Lka5;->a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
-
-    return-object v0
-.end method
-
-.method public final g()Lm54;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getState()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+.method public abstract size()J
 .end method

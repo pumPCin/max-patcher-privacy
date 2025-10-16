@@ -1,361 +1,316 @@
 .class public final Ldw0;
-.super Ljava/io/FilterOutputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhl5;
+.implements Lx53;
+
+
+# static fields
+.field public static final t0:Lyj4;
+
+.field public static final u0:Lq7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Z
 
-.field public final b:Ljava/io/OutputStream;
+.field public Y:Lo0f;
 
-.field public c:Ljava/nio/ByteOrder;
+.field public Z:J
+
+.field public final a:Ldl5;
+
+.field public final b:I
+
+.field public final c:Lsa6;
+
+.field public final o:Landroid/util/SparseArray;
+
+.field public r0:Lnwd;
+
+.field public s0:[Lsa6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/OutputStream;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Lyj4;
 
-    iput v0, p0, Ldw0;->a:I
+    invoke-direct {v0}, Lyj4;-><init>()V
 
-    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    sput-object v0, Ldw0;->t0:Lyj4;
 
-    .line 1
-    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
+    new-instance v0, Lq7;
 
-    .line 2
-    iput-object p1, p0, Ldw0;->b:Ljava/io/OutputStream;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object v0, p0, Ldw0;->c:Ljava/nio/ByteOrder;
+    sput-object v0, Ldw0;->u0:Lq7;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/io/OutputStream;Ljava/nio/ByteOrder;)V
-    .locals 1
+.method public constructor <init>(Ldl5;ILsa6;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Ldw0;->a:I
+    iput-object p1, p0, Ldw0;->a:Ldl5;
 
-    .line 4
-    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
+    iput p2, p0, Ldw0;->b:I
 
-    .line 5
-    iput-object p1, p0, Ldw0;->b:Ljava/io/OutputStream;
+    iput-object p3, p0, Ldw0;->c:Lsa6;
 
-    .line 6
-    iput-object p2, p0, Ldw0;->c:Ljava/nio/ByteOrder;
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Ldw0;->o:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(I)V
-    .locals 1
+.method public final B(II)Lt0g;
+    .locals 5
 
-    iget-object v0, p0, Ldw0;->b:Ljava/io/OutputStream;
+    iget-object v0, p0, Ldw0;->o:Landroid/util/SparseArray;
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final d(I)V
-    .locals 3
+    check-cast v1, Lbw0;
 
-    iget v0, p0, Ldw0;->a:I
+    if-nez v1, :cond_4
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Ldw0;->s0:[Lsa6;
 
-    iget-object v0, p0, Ldw0;->c:Ljava/nio/ByteOrder;
+    if-nez v1, :cond_0
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    iget-object v2, p0, Ldw0;->b:Ljava/io/OutputStream;
-
-    if-ne v0, v1, :cond_0
-
-    and-int/lit16 v0, p1, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 p1, p1, 0x18
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    const/4 v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    const/4 v1, 0x0
 
-    if-ne v0, v1, :cond_1
-
-    ushr-int/lit8 v0, p1, 0x18
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_1
     :goto_0
-    return-void
+    invoke-static {v1}, Lgfi;->g(Z)V
 
-    :pswitch_0
-    iget-object v0, p0, Ldw0;->c:Ljava/nio/ByteOrder;
+    new-instance v1, Lbw0;
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    iget v2, p0, Ldw0;->b:I
 
-    iget-object v2, p0, Ldw0;->b:Ljava/io/OutputStream;
+    if-ne p2, v2, :cond_1
 
-    if-ne v0, v1, :cond_2
-
-    and-int/lit16 v0, p1, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 p1, p1, 0x18
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    iget-object v2, p0, Ldw0;->c:Lsa6;
 
     goto :goto_1
 
+    :cond_1
+    const/4 v2, 0x0
+
+    :goto_1
+    invoke-direct {v1, p1, p2, v2}, Lbw0;-><init>(IILsa6;)V
+
+    iget-object v2, p0, Ldw0;->Y:Lo0f;
+
+    iget-wide v3, p0, Ldw0;->Z:J
+
+    if-nez v2, :cond_2
+
+    iget-object p2, v1, Lbw0;->c:Lyt4;
+
+    iput-object p2, v1, Lbw0;->e:Lt0g;
+
+    goto :goto_2
+
     :cond_2
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    iput-wide v3, v1, Lbw0;->f:J
 
-    if-ne v0, v1, :cond_3
+    invoke-virtual {v2, p2}, Lo0f;->y(I)Lt0g;
 
-    ushr-int/lit8 v0, p1, 0x18
+    move-result-object p2
 
-    and-int/lit16 v0, v0, 0xff
+    iput-object p2, v1, Lbw0;->e:Lt0g;
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    iget-object v2, v1, Lbw0;->d:Lsa6;
 
-    ushr-int/lit8 v0, p1, 0x10
+    if-eqz v2, :cond_3
 
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-interface {p2, v2}, Lt0g;->d(Lsa6;)V
 
     :cond_3
-    :goto_1
-    return-void
+    :goto_2
+    invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_4
+    return-object v1
 .end method
 
-.method public final i(S)V
-    .locals 3
+.method public final Q(Lnwd;)V
+    .locals 0
 
-    iget v0, p0, Ldw0;->a:I
+    iput-object p1, p0, Ldw0;->r0:Lnwd;
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Ldw0;->c:Ljava/nio/ByteOrder;
+.method public final a()Lz53;
+    .locals 2
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    iget-object v0, p0, Ldw0;->r0:Lnwd;
 
-    iget-object v2, p0, Ldw0;->b:Ljava/io/OutputStream;
+    instance-of v1, v0, Lz53;
 
-    if-ne v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    and-int/lit16 v0, p1, 0xff
+    check-cast v0, Lz53;
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    return-object v0
 
-    ushr-int/lit8 p1, p1, 0x8
+    :cond_0
+    const/4 v0, 0x0
 
-    and-int/lit16 p1, p1, 0xff
+    return-object v0
+.end method
 
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+.method public final b(Lo0f;JJ)V
+    .locals 6
+
+    iput-object p1, p0, Ldw0;->Y:Lo0f;
+
+    iput-wide p4, p0, Ldw0;->Z:J
+
+    iget-boolean v0, p0, Ldw0;->X:Z
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v3, 0x0
+
+    iget-object v5, p0, Ldw0;->a:Ldl5;
+
+    if-nez v0, :cond_1
+
+    invoke-interface {v5, p0}, Ldl5;->n(Lhl5;)V
+
+    cmp-long p1, p2, v1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {v5, v3, v4, p2, p3}, Ldl5;->d(JJ)V
+
+    :cond_0
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ldw0;->X:Z
+
+    return-void
+
+    :cond_1
+    cmp-long v0, p2, v1
+
+    if-nez v0, :cond_2
+
+    move-wide p2, v3
+
+    :cond_2
+    invoke-interface {v5, v3, v4, p2, p3}, Ldl5;->d(JJ)V
+
+    const/4 p2, 0x0
+
+    :goto_0
+    iget-object p3, p0, Ldw0;->o:Landroid/util/SparseArray;
+
+    invoke-virtual {p3}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_5
+
+    invoke-virtual {p3, p2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lbw0;
+
+    if-nez p1, :cond_3
+
+    iget-object v0, p3, Lbw0;->c:Lyt4;
+
+    iput-object v0, p3, Lbw0;->e:Lt0g;
+
+    goto :goto_1
+
+    :cond_3
+    iput-wide p4, p3, Lbw0;->f:J
+
+    iget v0, p3, Lbw0;->a:I
+
+    invoke-virtual {p1, v0}, Lo0f;->y(I)Lt0g;
+
+    move-result-object v0
+
+    iput-object v0, p3, Lbw0;->e:Lt0g;
+
+    iget-object p3, p3, Lbw0;->d:Lsa6;
+
+    if-eqz p3, :cond_4
+
+    invoke-interface {v0, p3}, Lt0g;->d(Lsa6;)V
+
+    :cond_4
+    :goto_1
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_5
+    return-void
+.end method
+
+.method public final w()V
+    .locals 4
+
+    iget-object v0, p0, Ldw0;->o:Landroid/util/SparseArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v1
+
+    new-array v1, v1, [Lsa6;
+
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_0
+
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lbw0;
+
+    iget-object v3, v3, Lbw0;->d:Lsa6;
+
+    invoke-static {v3}, Lgfi;->h(Ljava/lang/Object;)V
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_1
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldw0;->c:Ljava/nio/ByteOrder;
-
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    iget-object v2, p0, Ldw0;->b:Ljava/io/OutputStream;
-
-    if-ne v0, v1, :cond_2
-
-    and-int/lit16 v0, p1, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 p1, p1, 0x8
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_3
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([B)V
-    .locals 1
-
-    iget v0, p0, Ldw0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 1
-    iget-object v0, p0, Ldw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+    iput-object v1, p0, Ldw0;->s0:[Lsa6;
 
     return-void
-
-    .line 2
-    :pswitch_0
-    iget-object v0, p0, Ldw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    iget v0, p0, Ldw0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 3
-    iget-object v0, p0, Ldw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
-
-    return-void
-
-    .line 4
-    :pswitch_0
-    iget-object v0, p0, Ldw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

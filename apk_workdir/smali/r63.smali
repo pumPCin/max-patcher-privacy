@@ -1,239 +1,237 @@
-.class public final Lr63;
-.super Ljava/lang/Object;
+.class public abstract Lr63;
+.super Llk0;
 .source "SourceFile"
 
-# interfaces
-.implements Lu9d;
 
-
-# instance fields
-.field public final a:Lu9d;
-
-.field public b:Z
-
-.field public final synthetic c:Lt63;
+# static fields
+.field public static final z0:I
 
 
 # direct methods
-.method public constructor <init>(Lt63;Lu9d;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lltc;->Widget_MaterialComponents_CircularProgressIndicator:I
 
-    iput-object p1, p0, Lr63;->c:Lt63;
-
-    iput-object p2, p0, Lr63;->a:Lu9d;
+    sput v0, Lr63;->z0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final a(Landroid/content/Context;)Lmk0;
+    .locals 10
+
+    new-instance v0, Ls63;
+
+    sget v4, Lzic;->circularProgressIndicatorStyle:I
+
+    sget v5, Lr63;->z0:I
+
+    invoke-direct {v0, v4, v5, p1}, Lmk0;-><init>(IILandroid/content/Context;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lakc;->mtrl_progress_circular_size_medium:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v7
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lakc;->mtrl_progress_circular_inset_medium:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v8
+
+    sget-object v3, Lytc;->CircularProgressIndicator:[I
+
+    const/4 v9, 0x0
+
+    new-array v6, v9, [I
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2, v4, v5}, Lbsf;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    move-object v1, p1
+
+    invoke-static/range {v1 .. v6}, Lbsf;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+
+    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget v2, Lytc;->CircularProgressIndicator_indicatorSize:I
+
+    invoke-static {v1, p1, v2, v7}, Lwfi;->d(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v2
+
+    iget v3, v0, Lmk0;->a:I
+
+    mul-int/lit8 v3, v3, 0x2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    iput v2, v0, Ls63;->h:I
+
+    sget v2, Lytc;->CircularProgressIndicator_indicatorInset:I
+
+    invoke-static {v1, p1, v2, v8}, Lwfi;->d(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Ls63;->i:I
+
+    sget v1, Lytc;->CircularProgressIndicator_indicatorDirectionCircular:I
+
+    invoke-virtual {p1, v1, v9}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, v0, Ls63;->j:I
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-virtual {v0}, Lmk0;->a()V
+
+    return-object v0
+.end method
+
+.method public getIndicatorDirection()I
     .locals 1
 
-    iget-object v0, p0, Lr63;->a:Lu9d;
+    iget-object v0, p0, Llk0;->a:Lmk0;
 
-    invoke-interface {v0}, Lu9d;->b()V
+    check-cast v0, Ls63;
+
+    iget v0, v0, Ls63;->j:I
+
+    return v0
+.end method
+
+.method public getIndicatorInset()I
+    .locals 1
+
+    iget-object v0, p0, Llk0;->a:Lmk0;
+
+    check-cast v0, Ls63;
+
+    iget v0, v0, Ls63;->i:I
+
+    return v0
+.end method
+
+.method public getIndicatorSize()I
+    .locals 1
+
+    iget-object v0, p0, Llk0;->a:Lmk0;
+
+    check-cast v0, Ls63;
+
+    iget v0, v0, Ls63;->h:I
+
+    return v0
+.end method
+
+.method public setIndicatorDirection(I)V
+    .locals 1
+
+    iget-object v0, p0, Llk0;->a:Lmk0;
+
+    check-cast v0, Ls63;
+
+    iput p1, v0, Ls63;->j:I
+
+    invoke-virtual {p0}, Llk0;->invalidate()V
 
     return-void
 .end method
 
-.method public final d()Z
-    .locals 1
+.method public setIndicatorInset(I)V
+    .locals 2
 
-    iget-object v0, p0, Lr63;->c:Lt63;
+    iget-object v0, p0, Llk0;->a:Lmk0;
 
-    invoke-virtual {v0}, Lt63;->a()Z
+    move-object v1, v0
 
-    move-result v0
+    check-cast v1, Ls63;
 
-    if-nez v0, :cond_0
+    iget v1, v1, Ls63;->i:I
 
-    iget-object v0, p0, Lr63;->a:Lu9d;
+    if-eq v1, p1, :cond_0
 
-    invoke-interface {v0}, Lu9d;->d()Z
+    check-cast v0, Ls63;
 
-    move-result v0
+    iput p1, v0, Ls63;->i:I
 
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    invoke-virtual {p0}, Llk0;->invalidate()V
 
     :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method
 
-.method public final e(J)I
-    .locals 1
+.method public setIndicatorSize(I)V
+    .locals 2
 
-    iget-object v0, p0, Lr63;->c:Lt63;
-
-    invoke-virtual {v0}, Lt63;->a()Z
+    invoke-virtual {p0}, Llk0;->getTrackThickness()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    mul-int/lit8 v0, v0, 0x2
 
-    const/4 p1, -0x3
-
-    return p1
-
-    :cond_0
-    iget-object v0, p0, Lr63;->a:Lu9d;
-
-    invoke-interface {v0, p1, p2}, Lu9d;->e(J)I
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    return p1
-.end method
+    iget-object v0, p0, Llk0;->a:Lmk0;
 
-.method public final g(Lw98;Lub4;I)I
-    .locals 11
+    move-object v1, v0
 
-    iget-object v0, p0, Lr63;->c:Lt63;
+    check-cast v1, Ls63;
 
-    invoke-virtual {v0}, Lt63;->a()Z
+    iget v1, v1, Ls63;->h:I
 
-    move-result v1
+    if-eq v1, p1, :cond_0
 
-    const/4 v2, -0x3
+    move-object v1, v0
 
-    if-eqz v1, :cond_0
+    check-cast v1, Ls63;
 
-    return v2
+    iput p1, v1, Ls63;->h:I
+
+    check-cast v0, Ls63;
+
+    invoke-virtual {v0}, Lmk0;->a()V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Llk0;->invalidate()V
 
     :cond_0
-    iget-boolean v1, p0, Lr63;->b:Z
+    return-void
+.end method
 
-    const/4 v3, 0x4
+.method public setTrackThickness(I)V
+    .locals 0
 
-    const/4 v4, -0x4
+    invoke-super {p0, p1}, Llk0;->setTrackThickness(I)V
 
-    if-eqz v1, :cond_1
+    iget-object p1, p0, Llk0;->a:Lmk0;
 
-    iput v3, p2, Lhy;->b:I
+    check-cast p1, Ls63;
 
-    return v4
+    invoke-virtual {p1}, Lmk0;->a()V
 
-    :cond_1
-    iget-object v1, p0, Lr63;->a:Lu9d;
-
-    invoke-interface {v1, p1, p2, p3}, Lu9d;->g(Lw98;Lub4;I)I
-
-    move-result p3
-
-    const/4 v1, -0x5
-
-    const-wide/high16 v5, -0x8000000000000000L
-
-    if-ne p3, v1, :cond_6
-
-    iget-object p2, p1, Lw98;->c:Ljava/lang/Object;
-
-    check-cast p2, Lu66;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget p3, p2, Lu66;->M0:I
-
-    iget v2, p2, Lu66;->L0:I
-
-    if-nez v2, :cond_3
-
-    if-eqz p3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    return v1
-
-    :cond_3
-    :goto_0
-    iget-wide v3, v0, Lt63;->X:J
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v3, v3, v7
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_4
-
-    move v2, v4
-
-    :cond_4
-    iget-wide v7, v0, Lt63;->Y:J
-
-    cmp-long v0, v7, v5
-
-    if-eqz v0, :cond_5
-
-    move p3, v4
-
-    :cond_5
-    invoke-virtual {p2}, Lu66;->a()Ls66;
-
-    move-result-object p2
-
-    iput v2, p2, Ls66;->A:I
-
-    iput p3, p2, Ls66;->B:I
-
-    new-instance p3, Lu66;
-
-    invoke-direct {p3, p2}, Lu66;-><init>(Ls66;)V
-
-    iput-object p3, p1, Lw98;->c:Ljava/lang/Object;
-
-    return v1
-
-    :cond_6
-    iget-wide v7, v0, Lt63;->Y:J
-
-    cmp-long p1, v7, v5
-
-    if-eqz p1, :cond_9
-
-    if-ne p3, v4, :cond_7
-
-    iget-wide v9, p2, Lub4;->Y:J
-
-    cmp-long p1, v9, v7
-
-    if-gez p1, :cond_8
-
-    :cond_7
-    if-ne p3, v2, :cond_9
-
-    invoke-virtual {v0}, Lt63;->p()J
-
-    move-result-wide v0
-
-    cmp-long p1, v0, v5
-
-    if-nez p1, :cond_9
-
-    iget-boolean p1, p2, Lub4;->X:Z
-
-    if-nez p1, :cond_9
-
-    :cond_8
-    invoke-virtual {p2}, Lub4;->u()V
-
-    iput v3, p2, Lhy;->b:I
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lr63;->b:Z
-
-    return v4
-
-    :cond_9
-    return p3
+    return-void
 .end method

@@ -3,26 +3,24 @@
 
 
 # static fields
-.field public static MarkdownItemView:[I = null
+.field public static size_border_radius_new_banner:I = 0x7f0703fe
 
-.field public static MarkdownItemView_miv_highlight_title:I = 0x0
+.field public static size_border_radius_semantic_border_radius_card:I = 0x7f0703ff
 
-.field public static MarkdownItemView_miv_title:I = 0x1
+.field public static spacing_size_2xl:I = 0x7f070402
 
+.field public static spacing_size_2xs:I = 0x7f070403
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.field public static spacing_size_3xl:I = 0x7f070404
 
-    const v0, 0x7f04066f
+.field public static spacing_size_4xl:I = 0x7f070405
 
-    const v1, 0x7f040670
+.field public static spacing_size_l:I = 0x7f070406
 
-    filled-new-array {v0, v1}, [I
+.field public static spacing_size_m:I = 0x7f070407
 
-    move-result-object v0
+.field public static spacing_size_s:I = 0x7f070408
 
-    sput-object v0, Lckc;->MarkdownItemView:[I
+.field public static spacing_size_xl:I = 0x7f070409
 
-    return-void
-.end method
+.field public static spacing_size_xs:I = 0x7f07040a

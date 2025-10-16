@@ -2,137 +2,128 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnz3;
-
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final a:I
+
+.field public final b:Ljqf;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+.method public constructor <init>(ILjqf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    iput p1, p0, Luj1;->a:I
+
+    iput-object p2, p0, Luj1;->b:Ljqf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljz3;Ljz3;Z)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    return-void
-.end method
-
-.method public final b(Ljz3;Ljz3;Z)V
-    .locals 1
-
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lvc6;
-
-    iget-object p1, p0, Luj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lym1;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p1}, Ljz3;->getParentController()Ljz3;
-
-    move-result-object p3
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p1}, Ljz3;->getParentController()Ljz3;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p3, p1, Lt6d;
-
-    const/4 v0, 0x0
-
-    if-eqz p3, :cond_1
-
-    check-cast p1, Lt6d;
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    instance-of v0, p1, Luj1;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
     :cond_1
-    move-object p1, v0
+    check-cast p1, Luj1;
 
-    :goto_1
-    if-eqz p1, :cond_2
+    iget v0, p0, Luj1;->a:I
 
-    invoke-interface {p1}, Lt6d;->f0()Ln6d;
+    iget v1, p1, Luj1;->a:I
 
-    move-result-object p1
+    if-eq v0, v1, :cond_2
 
-    goto :goto_2
+    goto :goto_0
 
     :cond_2
-    move-object p1, v0
+    iget-object v0, p0, Luj1;->b:Ljqf;
 
-    :goto_2
-    if-eqz p1, :cond_3
+    iget-object p1, p1, Luj1;->b:Ljqf;
 
-    invoke-virtual {p1}, Ln6d;->e()Ljava/util/ArrayList;
+    invoke-virtual {v0, p1}, Ljqf;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_3
+    :goto_1
     const/4 p1, 0x1
 
-    if-eqz v0, :cond_5
+    return p1
+.end method
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+.method public final hashCode()I
+    .locals 2
 
-    move-result p3
+    iget v0, p0, Luj1;->a:I
 
-    if-eqz p3, :cond_4
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    goto :goto_3
+    move-result v0
 
-    :cond_4
-    const/4 p3, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    goto :goto_4
+    iget-object v1, p0, Luj1;->b:Ljqf;
 
-    :cond_5
-    :goto_3
-    move p3, p1
+    iget v1, v1, Ljqf;->c:I
 
-    :goto_4
-    xor-int/2addr p1, p3
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object p2, p2, Lym1;->H0:Lhne;
+    move-result v1
 
-    :cond_6
-    invoke-virtual {p2}, Lhne;->getValue()Ljava/lang/Object;
+    add-int/2addr v1, v0
 
-    move-result-object p3
+    return v1
+.end method
 
-    move-object v0, p3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast v0, Ljava/lang/Boolean;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "ChipData(id="
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Luj1;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luj1;->b:Ljqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p2, p3, v0}, Lhne;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_6
-
-    return-void
+    return-object v0
 .end method

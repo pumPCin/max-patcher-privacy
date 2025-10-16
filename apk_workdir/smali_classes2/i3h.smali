@@ -1,355 +1,82 @@
-.class public final Li3h;
+.class public final synthetic Li3h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ln3h;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:Landroid/content/Context;
-
-.field public final d:Lbug;
-
-.field public final e:I
-
-.field public final f:Ljava/lang/String;
+.field public final synthetic b:Landroid/graphics/drawable/GradientDrawable;
 
 
 # direct methods
-.method public constructor <init>(JJLandroid/content/Context;Lsrd;)V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/graphics/drawable/GradientDrawable;I)V
+    .locals 0
 
-    new-instance v0, Lbug;
+    iput p2, p0, Li3h;->a:I
 
-    const-string v1, "webapp_s_key_"
-
-    const-string v2, "_"
-
-    invoke-static {p3, p4, v1, v2}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lbug;-><init>(Ljava/lang/String;Z)V
+    iput-object p1, p0, Li3h;->b:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Li3h;->a:J
-
-    iput-wide p3, p0, Li3h;->b:J
-
-    iput-object p5, p0, Li3h;->c:Landroid/content/Context;
-
-    iput-object v0, p0, Li3h;->d:Lbug;
-
-    check-cast p6, Lohd;
-
-    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ss-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 p2, 0xa
-
-    int-to-long p2, p2
-
-    invoke-virtual {p6, p1, p2, p3}, Lohd;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide p1
-
-    long-to-int p1, p1
-
-    iput p1, p0, Li3h;->e:I
-
-    const-class p1, Li3h;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Li3h;->f:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 3
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    invoke-virtual {p0}, Li3h;->b()Landroid/content/SharedPreferences;
+    iget v0, p0, Li3h;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget-object v1, p0, Li3h;->d:Lbug;
+    iget-object v0, p0, Li3h;->b:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {v1, p2}, Lbug;->d(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p1
 
-    :catchall_0
-    move-exception p2
+    check-cast p1, Ljava/lang/Integer;
 
-    new-instance v1, Lb2d;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {v1, p2}, Lb2d;-><init>(Ljava/lang/Throwable;)V
+    move-result p1
 
-    move-object p2, v1
-
-    :goto_0
-    nop
-
-    instance-of v1, p2, Lb2d;
-
-    if-eqz v1, :cond_0
-
-    const-string p1, "Can\'t encrypt value"
-
-    invoke-static {p2}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p2
-
-    iget-object v0, p0, Li3h;->f:Ljava/lang/String;
-
-    invoke-static {v0, p1, p2}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
     :cond_0
-    invoke-static {p2}, Lcea;->z(Ljava/lang/Object;)V
+    return-void
 
-    check-cast p2, Ljava/lang/String;
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    iget v2, p0, Li3h;->e:I
-
-    if-ne v1, v2, :cond_2
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :cond_2
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    :goto_1
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p1
-.end method
-
-.method public final b()Landroid/content/SharedPreferences;
-    .locals 4
-
-    const-string v0, "webapp_ss_"
-
-    const-string v1, "_"
-
-    iget-wide v2, p0, Li3h;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Li3h;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Li3h;->c:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final clear()Ljava/lang/Boolean;
-    .locals 2
-
-    invoke-virtual {p0}, Li3h;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object v0
-
-    :cond_0
-    iget-object v1, p0, Li3h;->d:Lbug;
-
-    invoke-virtual {v1}, Lbug;->b()V
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object v0
-.end method
-
-.method public final get(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    invoke-virtual {p0}, Li3h;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return-object v1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Li3h;->d:Lbug;
-
-    invoke-static {v0, p1}, Lbug;->c(Lbug;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lb2d;
-
-    invoke-direct {v0, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
-
-    :goto_0
-    nop
-
-    instance-of v0, p1, Lb2d;
+    :pswitch_0
+    iget-object v0, p0, Li3h;->b:Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v0, :cond_1
 
-    goto :goto_1
-
-    :cond_1
-    move-object v1, p1
-
-    :goto_1
-    check-cast v1, Ljava/lang/String;
-
-    return-object v1
-.end method
-
-.method public final remove(Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 2
-
-    invoke-virtual {p0}, Li3h;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :cond_0
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    check-cast p1, Ljava/lang/Integer;
 
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    return-object p1
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

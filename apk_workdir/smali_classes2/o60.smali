@@ -1,27 +1,51 @@
 .class public final Lo60;
-.super Ljava/lang/Object;
+.super Lhlf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final o:Luq4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+.method public constructor <init>(Luq4;Ljava/lang/String;Lb40;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xb
 
-    iput-boolean p3, p0, Lo60;->a:Z
+    invoke-direct {p0, p2, v0, p3}, Lhlf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput-object p1, p0, Lo60;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Lo60;->c:Ljava/lang/String;
+    iput-object p1, p0, Lo60;->o:Luq4;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lhlf;->c:Ljava/lang/Object;
+
+    check-cast v0, Loq8;
+
+    check-cast v0, Lb40;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "AudioTrack(format: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

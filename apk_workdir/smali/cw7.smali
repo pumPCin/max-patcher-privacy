@@ -1,113 +1,75 @@
 .class public final Lcw7;
-.super Lfw7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lf84;
+.field public final a:Z
+
+.field public b:Landroid/app/Activity;
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Landroid/util/SparseArray;
+
+.field public h:Landroid/util/SparseArray;
+
+.field public i:Ljava/util/ArrayList;
+
+.field public final j:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lf84;)V
-    .locals 0
+.method public constructor <init>(Z)V
+    .locals 4
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    new-instance v1, Landroid/util/SparseArray;
+
+    invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v3, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcw7;->a:Lf84;
+    iput-boolean p1, p0, Lcw7;->a:Z
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Lcw7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lcw7;
-
-    iget-object v0, p0, Lcw7;->a:Lf84;
-
-    iget-object p1, p1, Lcw7;->a:Lf84;
-
-    invoke-virtual {v0, p1}, Lf84;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
-.end method
+    iput-object p1, p0, Lcw7;->b:Landroid/app/Activity;
 
-.method public final hashCode()I
-    .locals 2
+    const/4 p1, 0x0
 
-    const-class v0, Lcw7;
+    iput-boolean p1, p0, Lcw7;->c:Z
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-boolean p1, p0, Lcw7;->d:Z
 
-    move-result-object v0
+    iput-boolean p1, p0, Lcw7;->e:Z
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iput-boolean p1, p0, Lcw7;->f:Z
 
-    move-result v0
+    iput-object v0, p0, Lcw7;->g:Landroid/util/SparseArray;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object v1, p0, Lcw7;->h:Landroid/util/SparseArray;
 
-    iget-object v1, p0, Lcw7;->a:Lf84;
+    iput-object v2, p0, Lcw7;->i:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Lf84;->hashCode()I
+    iput-object v3, p0, Lcw7;->j:Ljava/util/LinkedHashMap;
 
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Failure {mOutputData="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcw7;->a:Lf84;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

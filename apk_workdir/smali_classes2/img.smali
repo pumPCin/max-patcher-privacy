@@ -1,51 +1,19 @@
 .class public final Limg;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/ViewTreeObserver;
-
-.field public final synthetic b:Lc6;
-
-
-# direct methods
-.method public constructor <init>(Landroid/view/ViewTreeObserver;Lc6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Limg;->a:Landroid/view/ViewTreeObserver;
-
-    iput-object p2, p0, Limg;->b:Lc6;
-
-    return-void
-.end method
+.field public a:Lhmg;
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 2
+.method public final setPlayer(Ly6b;)V
+    .locals 1
 
-    iget-object v0, p0, Limg;->a:Landroid/view/ViewTreeObserver;
+    iget-object v0, p0, Limg;->a:Lhmg;
 
-    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+    invoke-virtual {v0, p1}, Lhmg;->setPlayer(Ly6b;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    :cond_0
-    iget-object v0, p0, Limg;->b:Lc6;
-
-    invoke-virtual {v0}, Lc6;->run()V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

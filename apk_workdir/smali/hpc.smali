@@ -1,44 +1,58 @@
-.class public abstract synthetic Lhpc;
+.class public abstract Lhpc;
 .super Ljava/lang/Object;
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static custom_dialog:I = 0x7f0d0033
 
+.field public static exo_list_divider:I = 0x7f0d0050
 
-# direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 3
+.field public static exo_player_control_view:I = 0x7f0d0051
 
-    invoke-static {}, Ljava/net/Proxy$Type;->values()[Ljava/net/Proxy$Type;
+.field public static exo_player_view:I = 0x7f0d0052
 
-    move-result-object v0
+.field public static exo_styled_player_control_ffwd_button:I = 0x7f0d0053
 
-    array-length v0, v0
+.field public static exo_styled_player_control_rewind_button:I = 0x7f0d0054
 
-    new-array v0, v0, [I
+.field public static exo_styled_player_control_view:I = 0x7f0d0055
 
-    sput-object v0, Lhpc;->$EnumSwitchMapping$0:[I
+.field public static exo_styled_player_view:I = 0x7f0d0056
 
-    sget-object v1, Ljava/net/Proxy$Type;->DIRECT:Ljava/net/Proxy$Type;
+.field public static exo_styled_settings_list:I = 0x7f0d0057
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+.field public static exo_styled_settings_list_item:I = 0x7f0d0058
 
-    move-result v1
+.field public static exo_styled_sub_settings_list_item:I = 0x7f0d0059
 
-    const/4 v2, 0x1
+.field public static exo_track_selection_dialog:I = 0x7f0d005a
 
-    aput v2, v0, v1
+.field public static notification_action:I = 0x7f0d00e1
 
-    sget-object v1, Ljava/net/Proxy$Type;->HTTP:Ljava/net/Proxy$Type;
+.field public static notification_action_tombstone:I = 0x7f0d00e2
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+.field public static notification_media_action:I = 0x7f0d00e3
 
-    move-result v1
+.field public static notification_media_cancel_action:I = 0x7f0d00e4
 
-    const/4 v2, 0x2
+.field public static notification_template_big_media:I = 0x7f0d00e5
 
-    aput v2, v0, v1
+.field public static notification_template_big_media_custom:I = 0x7f0d00e6
 
-    return-void
-.end method
+.field public static notification_template_big_media_narrow:I = 0x7f0d00e7
+
+.field public static notification_template_big_media_narrow_custom:I = 0x7f0d00e8
+
+.field public static notification_template_custom_big:I = 0x7f0d00e9
+
+.field public static notification_template_icon_group:I = 0x7f0d00ea
+
+.field public static notification_template_lines_media:I = 0x7f0d00eb
+
+.field public static notification_template_media:I = 0x7f0d00ec
+
+.field public static notification_template_media_custom:I = 0x7f0d00ed
+
+.field public static notification_template_part_chronometer:I = 0x7f0d00ee
+
+.field public static notification_template_part_time:I = 0x7f0d00ef

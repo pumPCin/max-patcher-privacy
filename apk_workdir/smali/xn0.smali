@@ -1,55 +1,155 @@
 .class public final Lxn0;
-.super Lwb4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Landroid/graphics/Bitmap;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lyn0;
+.field public final b:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Lyn0;)V
+.method public constructor <init>(Landroidx/biometric/BiometricFragment;)V
     .locals 1
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lhy;-><init>(I)V
+    iput v0, p0, Lxn0;->a:I
 
-    iput-object p1, p0, Lxn0;->Y:Lyn0;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lxn0;->b:Ljava/lang/ref/WeakReference;
 
     return-void
+.end method
+
+.method public constructor <init>(Landroidx/biometric/BiometricViewModel;I)V
+    .locals 0
+
+    iput p2, p0, Lxn0;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance p2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Lxn0;->b:Ljava/lang/ref/WeakReference;
+
+    return-void
+
+    .line 5
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    new-instance p2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Lxn0;->b:Ljava/lang/ref/WeakReference;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final u()V
-    .locals 3
+.method public final run()V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget v0, p0, Lxn0;->a:I
 
-    iput-object v0, p0, Lxn0;->X:Landroid/graphics/Bitmap;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lxn0;->b:Ljava/lang/ref/WeakReference;
 
-    iput v0, p0, Lhy;->b:I
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    const-wide/16 v1, 0x0
+    move-result-object v1
 
-    iput-wide v1, p0, Lwb4;->c:J
+    if-eqz v1, :cond_0
 
-    iput-boolean v0, p0, Lwb4;->o:Z
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
+    move-result-object v0
+
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->n:Z
+
+    :cond_0
     return-void
-.end method
 
-.method public final v()V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lxn0;->b:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, p0, Lxn0;->Y:Lyn0;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Lyn0;->k(Lwb4;)V
+    move-result-object v1
 
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->m:Z
+
+    :cond_1
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lxn0;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/biometric/BiometricFragment;
+
+    invoke-virtual {v0}, Landroidx/biometric/BiometricFragment;->L0()V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,84 +3,315 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le15;
+.implements Ljava/util/Comparator;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final a:Lt55;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lg15;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:Ljava/util/Set;
+
+# instance fields
+.field public final a:[Le15;
+
+.field public b:I
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lt55;
+    new-instance v0, Lwc4;
 
-    new-instance v1, Lg15;
+    const/4 v1, 0x6
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lwc4;-><init>(I)V
 
-    const/16 v2, 0xe
+    sput-object v0, Lg15;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-direct {v0, v2, v1}, Lt55;-><init>(ILjava/lang/Object;)V
+    return-void
+.end method
 
-    sput-object v0, Lg15;->a:Lt55;
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-    sget-object v0, La15;->d:La15;
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lg15;->b:Ljava/util/Set;
+    iput-object v0, p0, Lg15;->c:Ljava/lang/String;
+
+    .line 10
+    sget-object v0, Le15;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Le15;
+
+    sget v0, Lhhg;->a:I
+
+    iput-object p1, p0, Lg15;->a:[Le15;
+
+    .line 11
+    array-length p1, p1
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 1
+    new-array v1, v0, [Le15;
+
+    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, [Le15;
+
+    invoke-direct {p0, p1, v0, p2}, Lg15;-><init>(Ljava/lang/String;Z[Le15;)V
+
+    return-void
+.end method
+
+.method public varargs constructor <init>(Ljava/lang/String;Z[Le15;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lg15;->c:Ljava/lang/String;
+
+    if-eqz p2, :cond_0
+
+    .line 4
+    invoke-virtual {p3}, [Le15;->clone()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object p3, p1
+
+    check-cast p3, [Le15;
+
+    .line 5
+    :cond_0
+    iput-object p3, p0, Lg15;->a:[Le15;
+
+    .line 6
+    array-length p1, p3
+
+    .line 7
+    invoke-static {p3, p0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/Set;
-    .locals 1
+.method public final a(Ljava/lang/String;)Lg15;
+    .locals 3
 
-    sget-object v0, Lg15;->b:Ljava/util/Set;
+    iget-object v0, p0, Lg15;->c:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lhhg;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lg15;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lg15;->a:[Le15;
+
+    invoke-direct {v0, p1, v1, v2}, Lg15;-><init>(Ljava/lang/String;Z[Le15;)V
 
     return-object v0
 .end method
 
-.method public final b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
+
+    check-cast p1, Le15;
+
+    check-cast p2, Le15;
+
+    sget-object v0, Lkx0;->a:Ljava/util/UUID;
+
+    iget-object v1, p1, Le15;->b:Ljava/util/UUID;
+
+    invoke-virtual {v0, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object p1, p2, Le15;->b:Ljava/util/UUID;
+
+    invoke-virtual {v0, p1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    iget-object p1, p1, Le15;->b:Ljava/util/UUID;
+
+    iget-object p2, p2, Le15;->b:Ljava/util/UUID;
+
+    invoke-virtual {p1, p2}, Ljava/util/UUID;->compareTo(Ljava/util/UUID;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
-    return-object v0
+    return v0
 .end method
 
-.method public final c(La15;)Ljava/util/Set;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, La15;->d:La15;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, La15;->equals(Ljava/lang/Object;)Z
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lg15;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lg15;
+
+    iget-object v2, p0, Lg15;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lg15;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lhhg;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lg15;->a:[Le15;
+
+    iget-object p1, p1, Lg15;->a:[Le15;
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lg15;->b:I
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lg15;->c:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string v2, "DynamicRange is not supported: "
+    iget-object v1, p0, Lg15;->a:[Le15;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    add-int/2addr v0, v1
 
-    move-result-object p1
+    iput v0, p0, Lg15;->b:I
 
-    invoke-static {p1, v0}, Lnjg;->f(Ljava/lang/String;Z)V
+    :cond_1
+    iget v0, p0, Lg15;->b:I
 
-    sget-object p1, Lg15;->b:Ljava/util/Set;
+    return v0
+.end method
 
-    return-object p1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object p2, p0, Lg15;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lg15;->a:[Le15;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

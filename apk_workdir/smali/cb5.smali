@@ -1,55 +1,80 @@
-.class public final Lcb5;
-.super Ldb5;
+.class public final synthetic Lcb5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzt1;
 
 
 # instance fields
-.field public final c:Ljava/lang/Runnable;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lfb5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;J)V
+.method public synthetic constructor <init>(Lfb5;I)V
     .locals 0
 
-    invoke-direct {p0, p2, p3}, Ldb5;-><init>(J)V
+    iput p2, p0, Lcb5;->a:I
 
-    iput-object p1, p0, Lcb5;->c:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcb5;->b:Lfb5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final k(Lyt1;)Ljava/lang/String;
+    .locals 4
 
-    iget-object v0, p0, Lcb5;->c:Ljava/lang/Runnable;
+    iget v0, p0, Lcb5;->a:I
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object v0, p0, Lcb5;->b:Lfb5;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object v1, v0, Lfb5;->o:Lkb5;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v1, v1, Lkb5;->h:Lt1e;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v2, Ldb5;
 
-    invoke-super {p0}, Ldb5;->toString()Ljava/lang/String;
+    const/4 v3, 0x1
 
-    move-result-object v1
+    invoke-direct {v2, v0, p1, v3}, Ldb5;-><init>(Lfb5;Lyt1;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
 
-    iget-object v1, p0, Lcb5;->c:Ljava/lang/Runnable;
+    const-string p1, "acquireBuffer"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, Lcb5;->b:Lfb5;
 
-    move-result-object v0
+    iget-object v1, v0, Lfb5;->o:Lkb5;
 
-    return-object v0
+    iget-object v1, v1, Lkb5;->h:Lt1e;
+
+    new-instance v2, Ldb5;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, p1, v3}, Ldb5;-><init>(Lfb5;Lyt1;I)V
+
+    invoke-virtual {v1, v2}, Lt1e;->execute(Ljava/lang/Runnable;)V
+
+    const-string p1, "fetchData"
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,51 +1,27 @@
 .class public final Ls64;
-.super Ltb8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final r:Landroid/graphics/RectF;
+.field public final a:Landroid/content/Context;
+
+.field public final b:Ld93;
+
+.field public final c:Ld93;
 
 
 # direct methods
-.method public constructor <init>(Lk4e;Landroid/graphics/RectF;)V
+.method public constructor <init>(Landroid/content/Context;Ld93;Ld93;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0, p1}, Ltb8;-><init>(Lk4e;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p2, p0, Ls64;->r:Landroid/graphics/RectF;
+    iput-object p1, p0, Ls64;->a:Landroid/content/Context;
 
-    return-void
-.end method
+    iput-object p2, p0, Ls64;->b:Ld93;
 
-.method public constructor <init>(Ls64;)V
-    .locals 0
-
-    .line 3
-    invoke-direct {p0, p1}, Ltb8;-><init>(Ltb8;)V
-
-    .line 4
-    iget-object p1, p1, Ls64;->r:Landroid/graphics/RectF;
-
-    iput-object p1, p0, Ls64;->r:Landroid/graphics/RectF;
+    iput-object p3, p0, Ls64;->c:Ld93;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    new-instance v0, Lt64;
-
-    invoke-direct {v0, p0}, Lub8;-><init>(Ltb8;)V
-
-    iput-object p0, v0, Lt64;->I0:Ls64;
-
-    invoke-virtual {v0}, Lub8;->invalidateSelf()V
-
-    return-object v0
 .end method

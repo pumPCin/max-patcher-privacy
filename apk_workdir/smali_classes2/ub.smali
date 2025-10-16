@@ -1,279 +1,232 @@
 .class public final Lub;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lgi6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:I
 
-.field public final synthetic Y:Lyb;
+.field public synthetic Y:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public final synthetic Z:Ljava/lang/String;
+.field public final synthetic Z:Lo7f;
 
 
 # direct methods
-.method public constructor <init>(Lyb;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p1, p0, Lub;->Y:Lyb;
+    iput p3, p0, Lub;->X:I
 
-    iput-object p2, p0, Lub;->Z:Ljava/lang/String;
+    iput-object p1, p0, Lub;->Z:Lo7f;
 
-    const/4 p1, 0x2
+    const/4 p1, 0x3
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lub;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lub;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lub;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-
-    new-instance p1, Lub;
-
-    iget-object v0, p0, Lub;->Y:Lyb;
-
-    iget-object v1, p0, Lub;->Z:Ljava/lang/String;
-
-    invoke-direct {p1, v0, v1, p2}, Lub;-><init>(Lyb;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
 
     iget v0, p0, Lub;->X:I
 
-    sget-object v1, Laxf;->a:Laxf;
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
-    const/4 v2, 0x1
+    check-cast p2, Lu4b;
 
-    if-eqz v0, :cond_1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    if-ne v0, v2, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    new-instance p2, Lub;
 
-    return-object v1
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v1, 0x4
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {p2, v0, p3, v1}, Lub;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p2, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    throw p1
+    sget-object p1, Lzag;->a:Lzag;
 
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-virtual {p2, p1}, Lub;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lub;->Y:Lyb;
+    return-object p1
 
-    iget-object p1, p1, Lyb;->c:Lnb;
+    :pswitch_0
+    new-instance p2, Lub;
 
-    iput v2, p0, Lub;->X:I
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    iget-object v0, p1, Lnb;->i:Lhne;
+    const/4 v1, 0x3
 
-    iget-object v3, p1, Lnb;->f:Lyn7;
+    invoke-direct {p2, v0, p3, v1}, Lub;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {v0}, Lhne;->getValue()Ljava/lang/Object;
+    iput-object p1, p2, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v0
+    sget-object p1, Lzag;->a:Lzag;
 
-    check-cast v0, Ljava/util/List;
+    invoke-virtual {p2, p1}, Lub;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v4, Ljava/util/ArrayList;
+    return-object p1
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    :pswitch_1
+    new-instance p2, Lub;
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    move-result-object v0
+    const/4 v1, 0x2
 
-    :cond_2
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {p2, v0, p3, v1}, Lub;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
 
-    move-result v5
+    iput-object p1, p2, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    if-eqz v5, :cond_4
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Lub;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v5
+    return-object p1
 
-    move-object v6, v5
+    :pswitch_2
+    new-instance p2, Lub;
 
-    check-cast v6, Lro3;
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    invoke-virtual {v6}, Lro3;->o()J
+    const/4 v1, 0x1
 
-    move-result-wide v7
+    invoke-direct {p2, v0, p3, v1}, Lub;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v7, v8}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    iput-object p1, p2, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v7
+    sget-object p1, Lzag;->a:Lzag;
 
-    const/4 v8, 0x0
+    invoke-virtual {p2, p1}, Lub;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v9, p0, Lub;->Z:Ljava/lang/String;
+    return-object p1
 
-    invoke-static {v7, v9, v8}, Lxwe;->o0(Ljava/lang/String;Ljava/lang/String;Z)Z
+    :pswitch_3
+    new-instance p2, Lub;
 
-    move-result v7
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    if-nez v7, :cond_3
+    const/4 v1, 0x0
 
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-direct {p2, v0, p3, v1}, Lub;-><init>(Lo7f;Lkotlin/coroutines/Continuation;I)V
 
-    move-result-object v7
+    iput-object p1, p2, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    check-cast v7, Lujd;
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-virtual {v6}, Lro3;->d()Ljava/lang/String;
+    invoke-virtual {p2, p1}, Lub;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v8
+    return-object p1
 
-    invoke-static {v8}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    nop
 
-    move-result-object v8
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v7, v8, v9}, Lujd;->i(Ljava/lang/String;Ljava/lang/String;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result v7
+    iget v0, p0, Lub;->X:I
 
-    if-nez v7, :cond_3
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v6}, Lro3;->g()Ljava/lang/String;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result-object v6
+    iget-object p1, p0, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v6}, Lxdf;->b(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    move-result-object v6
+    invoke-virtual {v0}, Lo7f;->j()V
 
-    if-eqz v6, :cond_2
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+    sget-object p1, Lzag;->a:Lzag;
 
-    move-result-object v7
+    return-object p1
 
-    check-cast v7, Lujd;
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v7, v6, v9}, Lujd;->i(Ljava/lang/String;Ljava/lang/String;)Z
+    iget-object p1, p0, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result v6
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    if-ne v6, v2, :cond_2
+    invoke-virtual {v0}, Lo7f;->j()V
 
-    :cond_3
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    goto :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    :cond_4
-    new-instance v0, Ljava/util/ArrayList;
+    return-object p1
 
-    const/16 v2, 0xa
+    :pswitch_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-static {v4, v2}, Ly83;->O(Ljava/lang/Iterable;I)I
+    iget-object p1, p0, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result v2
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-virtual {v0}, Lo7f;->j()V
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    move-result-object v2
+    sget-object p1, Lzag;->a:Lzag;
 
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    return-object p1
 
-    move-result v3
+    :pswitch_2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    if-eqz v3, :cond_5
+    iget-object p1, p0, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    move-result-object v3
+    invoke-virtual {v0}, Lo7f;->j()V
 
-    check-cast v3, Lro3;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    invoke-virtual {p1, v3}, Lnb;->b(Lro3;)Laa;
+    sget-object p1, Lzag;->a:Lzag;
 
-    move-result-object v3
+    return-object p1
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :pswitch_3
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    goto :goto_1
+    iget-object p1, p0, Lub;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    :cond_5
-    iget-object v2, p1, Lnb;->b:Lyn7;
+    iget-object v0, p0, Lub;->Z:Lo7f;
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lo7f;->j()V
 
-    move-result-object v2
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    check-cast v2, Ldv3;
+    sget-object p1, Lzag;->a:Lzag;
 
-    new-instance v3, Lk8;
+    return-object p1
 
-    const/4 v4, 0x6
+    nop
 
-    invoke-direct {v3, v4}, Lk8;-><init>(I)V
-
-    invoke-virtual {v2, v0, v3}, Ldv3;->c(Ljava/util/ArrayList;Lvd6;)V
-
-    iget-object p1, p1, Lnb;->l:Lt6e;
-
-    invoke-virtual {p1, v0, p0}, Lt6e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    move-object p1, v1
-
-    :goto_2
-    if-ne p1, v0, :cond_7
-
-    return-object v0
-
-    :cond_7
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

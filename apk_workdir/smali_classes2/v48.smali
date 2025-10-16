@@ -1,201 +1,172 @@
 .class public final Lv48;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lle6;
+.implements Lvr4;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:Loqf;
 
-.field public synthetic Y:Ljava/util/List;
+.field public final b:Lst1;
 
-.field public synthetic Z:Ljava/util/List;
+.field public final c:Lqh6;
+
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:Lsze;
+
+.field public final g:Lgzc;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Loqf;Loh6;Lqh6;II)V
     .locals 0
 
-    iput p3, p0, Lv48;->X:I
+    and-int/lit8 p5, p5, 0x8
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-eqz p5, :cond_0
+
+    const/4 p4, 0x0
+
+    :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lv48;->a:Loqf;
+
+    check-cast p2, Lst1;
+
+    iput-object p2, p0, Lv48;->b:Lst1;
+
+    iput-object p3, p0, Lv48;->c:Lqh6;
+
+    iput p4, p0, Lv48;->d:I
+
+    sget-object p1, Lkr4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lv48;->e:J
+
+    invoke-virtual {p0}, Lv48;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ltze;->a(Ljava/lang/Object;)Lsze;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lv48;->f:Lsze;
+
+    new-instance p2, Lgzc;
+
+    invoke-direct {p2, p1}, Lgzc;-><init>(Lh0a;)V
+
+    iput-object p2, p0, Lv48;->g:Lgzc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final c()Llze;
+    .locals 1
 
-    iget v0, p0, Lv48;->X:I
+    iget-object v0, p0, Lv48;->g:Lgzc;
 
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Ljava/util/List;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lv48;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, p3, v2}, Lv48;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lv48;->Y:Ljava/util/List;
-
-    iput-object p2, v0, Lv48;->Z:Ljava/util/List;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    invoke-virtual {v0, p1}, Lv48;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lv48;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, p3, v2}, Lv48;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lv48;->Y:Ljava/util/List;
-
-    iput-object p2, v0, Lv48;->Z:Ljava/util/List;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    invoke-virtual {v0, p1}, Lv48;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    new-instance v0, Lv48;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lv48;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lv48;->Y:Ljava/util/List;
-
-    iput-object p2, v0, Lv48;->Z:Ljava/util/List;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    invoke-virtual {v0, p1}, Lv48;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_2
-    new-instance v0, Lv48;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lv48;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lv48;->Y:Ljava/util/List;
-
-    iput-object p2, v0, Lv48;->Z:Ljava/util/List;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    invoke-virtual {v0, p1}, Lv48;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final d(Lce4;)V
+    .locals 4
 
-    iget v0, p0, Lv48;->X:I
+    iget-wide v0, p1, Lce4;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v2, p0, Lv48;->e:J
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lkr4;->a(JJ)Z
 
-    iget-object p1, p0, Lv48;->Y:Ljava/util/List;
+    move-result p1
 
-    iget-object v0, p0, Lv48;->Z:Ljava/util/List;
+    if-eqz p1, :cond_0
 
-    invoke-static {p1, v0}, Lw83;->r0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
+    iget-object p1, p0, Lv48;->b:Lst1;
+
+    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Ljava/lang/Boolean;
 
-    :pswitch_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object p1, p0, Lv48;->Y:Ljava/util/List;
+    move-result p1
 
-    iget-object v0, p0, Lv48;->Z:Ljava/util/List;
+    xor-int/lit8 p1, p1, 0x1
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lv48;->c:Lqh6;
+
+    invoke-interface {v0, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lv48;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lv48;->f:Lsze;
+
+    invoke-virtual {v1, v0, p1}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e()Ljava/util/List;
+    .locals 8
+
+    new-instance v0, Lce4;
+
+    new-instance v6, Lbe4;
+
+    iget-object v1, p0, Lv48;->b:Lst1;
+
+    invoke-interface {v1}, Loh6;->invoke()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    invoke-direct {v6, v1}, Lbe4;-><init>(Z)V
 
-    move-object p1, v0
+    const/16 v7, 0x8
 
-    :cond_0
-    return-object p1
+    iget-wide v1, p0, Lv48;->e:J
 
-    :pswitch_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object v3, p0, Lv48;->a:Loqf;
 
-    iget-object p1, p0, Lv48;->Y:Ljava/util/List;
+    iget v4, p0, Lv48;->d:I
 
-    iget-object v0, p0, Lv48;->Z:Ljava/util/List;
+    const/4 v5, 0x0
 
-    invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-direct/range {v0 .. v7}, Lce4;-><init>(JLoqf;ILoqf;Lhxi;I)V
 
-    return-object p1
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    :pswitch_2
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-result-object v0
 
-    iget-object p1, p0, Lv48;->Y:Ljava/util/List;
-
-    iget-object v0, p0, Lv48;->Z:Ljava/util/List;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

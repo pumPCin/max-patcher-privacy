@@ -1,23 +1,6 @@
 .class public abstract Llqc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lxqc;
-
-.field public final b:J
-
-
-# direct methods
-.method public constructor <init>(Lxqc;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llqc;->a:Lxqc;
-
-    iput-wide p2, p0, Llqc;->b:J
-
-    return-void
-.end method
+# static fields
+.field public static webview_share:I = 0x7f120036

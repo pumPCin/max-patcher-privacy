@@ -1,23 +1,29 @@
 .class public final Li76;
-.super Ljava/lang/Object;
+.super Lhlf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashSet;
-
-.field public final b:Lmdd;
+.field public final o:Lf0a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/LinkedHashSet;Lmdd;)V
-    .locals 0
+.method public constructor <init>(Lf0a;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lk7b;->P2:Lk7b;
 
-    iput-object p1, p0, Li76;->a:Ljava/util/LinkedHashSet;
+    invoke-direct {p0, v0}, Lhlf;-><init>(Lk7b;)V
 
-    iput-object p2, p0, Li76;->b:Lmdd;
+    iput-object p1, p0, Li76;->o:Lf0a;
+
+    iget-object v0, p0, Lhlf;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/HashMap;
+
+    const-string v1, "folderIds"
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -25,103 +31,50 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Li76;
+    instance-of v1, p1, Li76;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Li76;
 
-    iget-object v0, p0, Li76;->a:Ljava/util/LinkedHashSet;
+    iget-object v1, p0, Li76;->o:Lf0a;
 
-    iget-object v1, p1, Li76;->a:Ljava/util/LinkedHashSet;
+    iget-object p1, p1, Li76;->o:Lf0a;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
+    if-nez p1, :cond_2
 
-    goto :goto_0
+    return v2
 
     :cond_2
-    iget-object v0, p0, Li76;->b:Lmdd;
-
-    iget-object p1, p1, Li76;->b:Lmdd;
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Li76;->a:Ljava/util/LinkedHashSet;
+    iget-object v0, p0, Li76;->o:Lf0a;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Lf0a;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Li76;->b:Lmdd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ForwardInAppReviewData(triggeredConditions="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Li76;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", screen="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Li76;->b:Lmdd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

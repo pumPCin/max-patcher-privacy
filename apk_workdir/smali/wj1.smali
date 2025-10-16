@@ -1,152 +1,48 @@
 .class public final Lwj1;
-.super Lc2f;
-.source "SourceFile"
-
-# interfaces
-.implements Lje6;
+.super Lk14;
 
 
 # instance fields
 .field public X:I
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final synthetic Y:Lhg0;
 
-.field public final synthetic Z:I
-
-.field public final synthetic r0:Landroid/os/Bundle;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lhg0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lwj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+    iput-object p1, p0, Lwj1;->Y:Lhg0;
 
-    iput p2, p0, Lwj1;->Z:I
-
-    iput-object p3, p0, Lwj1;->r0:Landroid/os/Bundle;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwj1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwj1;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lwj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lwj1;
-
-    iget v0, p0, Lwj1;->Z:I
-
-    iget-object v1, p0, Lwj1;->r0:Landroid/os/Bundle;
-
-    iget-object v2, p0, Lwj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lwj1;-><init>(Lone/me/calls/ui/ui/call/CallScreen;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 1
 
-    iget v0, p0, Lwj1;->X:I
+    iput-object p1, p0, Lwj1;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    iget p1, p0, Lwj1;->X:I
 
-    if-eqz v0, :cond_1
+    const/high16 v0, -0x80000000
 
-    if-ne v0, v1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iput p1, p0, Lwj1;->X:I
 
-    goto :goto_0
+    iget-object p1, p0, Lwj1;->Y:Lhg0;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lvc6;
-
-    iget-object p1, p0, Lwj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lym1;
+    invoke-virtual {p1, v0, p0}, Lhg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-
-    iput v1, p0, Lwj1;->X:I
-
-    invoke-virtual {p1}, Lym1;->v()Le7f;
-
-    move-result-object v0
-
-    check-cast v0, Lmka;
-
-    invoke-virtual {v0}, Lmka;->b()Lh24;
-
-    move-result-object v0
-
-    new-instance v1, Lkm1;
-
-    const/4 v2, 0x0
-
-    iget v3, p0, Lwj1;->Z:I
-
-    iget-object v4, p0, Lwj1;->r0:Landroid/os/Bundle;
-
-    invoke-direct {v1, p1, v3, v4, v2}, Lkm1;-><init>(Lym1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1, p0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

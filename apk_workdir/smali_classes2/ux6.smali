@@ -1,64 +1,50 @@
 .class public final Lux6;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/ColorDrawable;
 .source "SourceFile"
 
-# interfaces
-.implements Lxx6;
 
+# instance fields
+.field public final synthetic a:Lo6d;
 
-# static fields
-.field public static final a:Lux6;
+.field public final synthetic b:Landroid/graphics/Path;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lo6d;Landroid/graphics/Path;I)V
+    .locals 0
 
-    new-instance v0, Lux6;
+    iput-object p1, p0, Lux6;->a:Lo6d;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lux6;->b:Landroid/graphics/Path;
 
-    sput-object v0, Lux6;->a:Lux6;
+    invoke-direct {p0, p3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    if-ne p0, p1, :cond_0
+    move-result v0
 
-    return v0
+    iget-object v1, p0, Lux6;->a:Lo6d;
+
+    iget-boolean v1, v1, Lo6d;->a:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lux6;->b:Landroid/graphics/Path;
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipOutPath(Landroid/graphics/Path;)Z
 
     :cond_0
-    instance-of p1, p1, Lux6;
+    invoke-super {p0, p1}, Landroid/graphics/drawable/ColorDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    if-nez p1, :cond_1
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x5b5c259
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Close"
-
-    return-object v0
+    return-void
 .end method

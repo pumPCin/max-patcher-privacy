@@ -1,49 +1,41 @@
-.class public abstract Lpie;
+.class public final Lpie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lni9;
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lrhf;
+
+.field public final c:Loie;
 
 
-# virtual methods
-.method public final describeContents()I
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Llt7;)V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return v0
-.end method
+    iput-object p1, p0, Lpie;->a:Landroid/content/Context;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    new-instance p1, Ly2e;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/16 v0, 0x17
 
-    move-result-object v0
+    invoke-direct {p1, v0}, Ly2e;-><init>(I)V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    new-instance v0, Lrhf;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Lrhf;-><init>(Loh6;)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    iput-object v0, p0, Lpie;->b:Lrhf;
 
-    move-result v1
+    new-instance p1, Loie;
 
-    const-string v2, "SCTE-35 splice command: type="
+    invoke-direct {p1, p2}, Loie;-><init>(Llt7;)V
 
-    if-eqz v1, :cond_0
+    iput-object p1, p0, Lpie;->c:Loie;
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/String;
-
-    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    return-object v0
+    return-void
 .end method

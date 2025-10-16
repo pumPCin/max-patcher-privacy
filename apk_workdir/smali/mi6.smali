@@ -1,15 +1,6 @@
-.class public final Lmi6;
+.class public interface abstract Lmi6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:Z
-
-.field public b:I
-
-.field public c:I
-
-.field public d:Landroidx/recyclerview/widget/RecyclerView;
-
-.field public e:I
+# interfaces
+.implements Lji6;

@@ -1,98 +1,105 @@
-.class public abstract Lwn9;
+.class public final Lwn9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Leie;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+
+
 # direct methods
-.method public static a([B)Lxn9;
-    .locals 14
+.method public constructor <init>(Lgw0;Lqkf;)V
+    .locals 2
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgDelete;-><init>()V
+    const/4 v0, 0x0
 
-    :try_start_0
-    invoke-static {v0, p0}, Ls59;->mergeFrom(Ls59;[B)Ls59;
+    const/4 v1, 0x7
 
-    move-result-object p0
-
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
-
-    invoke-static {v0}, Ld40;->A(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
-
-    invoke-static {v0}, Lmd3;->a(Ljava/lang/String;)Lmd3;
+    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
 
     move-result-object v0
 
-    :goto_0
-    move-object v10, v0
+    iput-object v0, p0, Lwn9;->a:Leie;
 
-    goto :goto_1
+    check-cast p2, Losa;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {p2}, Losa;->c()Lfd8;
 
-    goto :goto_0
+    move-result-object p2
 
-    :goto_1
-    new-instance v1, Lxn9;
+    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-wide v2, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->requestId:J
+    move-result-object p2
 
-    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatId:J
+    iput-object p2, p0, Lwn9;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatServerId:J
+    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesId:[J
+    return-void
+.end method
 
-    invoke-static {v0}, Lvs;->U([J)Ljava/util/List;
 
-    move-result-object v8
+# virtual methods
+.method public final onEvent(Lax4;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesServerId:[J
+    .line 1
+    new-instance v0, Lsn9;
 
-    invoke-static {v0}, Lvs;->U([J)Ljava/util/List;
+    iget-wide v1, p1, Lax4;->X:J
 
-    move-result-object v9
+    iget-object p1, p1, Lax4;->o:Ljava/lang/String;
 
-    iget-boolean v11, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->forMe:Z
+    invoke-direct {v0, v1, v2, p1}, Lsn9;-><init>(JLjava/lang/String;)V
 
-    sget-object v0, Lrm4;->o:Lu5a;
+    .line 2
+    new-instance p1, Lvn9;
 
-    iget v12, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->itemTypeId:I
+    const/4 v1, 0x0
 
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {p1, p0, v0, v1}, Lvn9;-><init>(Lwn9;Lun9;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v12
+    const/4 v0, 0x3
 
-    invoke-static {v0, v12}, Lu5a;->c(Lu5a;Ljava/lang/Integer;)Lrm4;
+    iget-object v2, p0, Lwn9;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object v12
+    invoke-static {v2, v1, v1, p1, v0}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    iget-boolean v13, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->notDeleteMessageFromDb:Z
+    return-void
+.end method
 
-    invoke-direct/range {v1 .. v13}, Lxn9;-><init>(JJJLjava/util/List;Ljava/util/List;Lmd3;ZLrm4;Z)V
+.method public final onEvent(Lcx4;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
 
-    return-object v1
+    .line 3
+    new-instance v0, Ltn9;
 
-    :catch_0
-    move-exception v0
+    iget-wide v1, p1, Lcx4;->o:J
 
-    move-object p0, v0
+    iget-object p1, p1, Lcx4;->c:Ljava/lang/String;
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    invoke-direct {v0, v1, v2, p1}, Ltn9;-><init>(JLjava/lang/String;)V
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    .line 4
+    new-instance p1, Lvn9;
 
-    throw v0
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v0, v1}, Lvn9;-><init>(Lwn9;Lun9;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x3
+
+    iget-object v2, p0, Lwn9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, p1, v0}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    return-void
 .end method

@@ -4,52 +4,22 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final synthetic f:I
+.field public static final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Laec;->oneme_settings_ringtone_section_bottom_vh:I
+    sget v0, Lomc;->oneme_file_download_warning_confirm:I
 
-    int-to-long v0, v0
+    sput v0, Lgta;->a:I
 
-    sput-wide v0, Lgta;->a:J
+    sget v0, Lomc;->oneme_file_download_warning_deny:I
 
-    sget v0, Laec;->oneme_settings_ringtone_section_custom_add:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lgta;->b:J
-
-    sget v0, Laec;->oneme_settings_ringtone_section_default:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lgta;->c:J
-
-    sget v0, Laec;->oneme_settings_ringtone_section_header_vh:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lgta;->d:J
-
-    sget v0, Laec;->oneme_settings_ringtone_section_system:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lgta;->e:J
+    sput v0, Lgta;->b:I
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyef;
+.implements Lksf;
 
 
 # instance fields
@@ -20,39 +20,39 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-static {}, Lum;->b()Ljg3;
+    invoke-static {}, Len;->b()Lri3;
 
     move-result-object p1
 
-    check-cast p1, Lnja;
+    check-cast p1, Lqra;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object p1
-
-    const-class p2, Lapa;
-
-    invoke-virtual {p1, p2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
-    check-cast p1, Lapa;
+    const-class p2, Lexa;
 
-    invoke-static {}, Lum;->b()Ljg3;
-
-    move-result-object p1
-
-    check-cast p1, Lnja;
-
-    invoke-virtual {p1}, Lnja;->j()Lpnb;
+    invoke-virtual {p1, p2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p1, p1, Lpnb;->a:Lt08;
+    check-cast p1, Lexa;
+
+    invoke-static {}, Len;->b()Lri3;
+
+    move-result-object p1
+
+    check-cast p1, Lqra;
+
+    invoke-virtual {p1}, Lqra;->j()Llwb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Llwb;->a:Lg68;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lgq4;->a()Lgq4;
+    invoke-static {}, Lft4;->a()Lft4;
 
     move-result-object p1
 
@@ -76,7 +76,7 @@
 
     iput-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget v0, Lpec;->view_not_started_live_video__title:I
+    sget v0, Looc;->view_not_started_live_video__title:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setId(I)V
 
@@ -88,7 +88,7 @@
 
     iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget v2, p1, Lgq4;->C:F
+    iget v2, p1, Lft4;->C:F
 
     const/4 v3, 0x0
 
@@ -100,7 +100,7 @@
 
     move-result-object v2
 
-    sget v4, Lz7d;->R2:I
+    sget v4, Lwid;->T2:I
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -108,27 +108,27 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    new-instance p2, Lrn3;
+    new-instance p2, Liq3;
 
     const/4 v2, -0x2
 
-    invoke-direct {p2, v3, v2}, Lrn3;-><init>(II)V
+    invoke-direct {p2, v3, v2}, Liq3;-><init>(II)V
 
-    iput v3, p2, Lrn3;->i:I
+    iput v3, p2, Liq3;->i:I
 
-    iput v3, p2, Lrn3;->t:I
+    iput v3, p2, Liq3;->t:I
 
-    iput v3, p2, Lrn3;->v:I
+    iput v3, p2, Liq3;->v:I
 
-    sget v4, Lpec;->view_not_started_live_video__subtitle:I
+    sget v4, Looc;->view_not_started_live_video__subtitle:I
 
-    iput v4, p2, Lrn3;->k:I
+    iput v4, p2, Liq3;->k:I
 
     const/4 v4, 0x2
 
-    iput v4, p2, Lrn3;->K:I
+    iput v4, p2, Liq3;->K:I
 
-    iget v4, p1, Lgq4;->e:I
+    iget v4, p1, Lft4;->e:I
 
     iput v4, p2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
@@ -148,7 +148,7 @@
 
     iput-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget v4, Lpec;->view_not_started_live_video__subtitle:I
+    sget v4, Looc;->view_not_started_live_video__subtitle:I
 
     invoke-virtual {p2, v4}, Landroid/view/View;->setId(I)V
 
@@ -158,7 +158,7 @@
 
     iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget v0, p1, Lgq4;->C:F
+    iget v0, p1, Lft4;->C:F
 
     invoke-virtual {p2, v3, v0}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
@@ -168,21 +168,21 @@
 
     invoke-virtual {p2, v1, v0}, Landroidx/appcompat/widget/AppCompatTextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    new-instance p2, Lrn3;
+    new-instance p2, Liq3;
 
-    invoke-direct {p2, v3, v2}, Lrn3;-><init>(II)V
+    invoke-direct {p2, v3, v2}, Liq3;-><init>(II)V
 
-    sget v0, Lpec;->view_not_started_live_video__title:I
+    sget v0, Looc;->view_not_started_live_video__title:I
 
-    iput v0, p2, Lrn3;->j:I
+    iput v0, p2, Liq3;->j:I
 
-    iput v3, p2, Lrn3;->t:I
+    iput v3, p2, Liq3;->t:I
 
-    iput v3, p2, Lrn3;->v:I
+    iput v3, p2, Liq3;->v:I
 
-    iput v3, p2, Lrn3;->l:I
+    iput v3, p2, Liq3;->l:I
 
-    iget p1, p1, Lgq4;->e:I
+    iget p1, p1, Lft4;->e:I
 
     iput p1, p2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
@@ -210,7 +210,7 @@
 
     move-result-object v0
 
-    sget v1, Lt7d;->b:I
+    sget v1, Lqid;->b:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 

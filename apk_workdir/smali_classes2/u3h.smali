@@ -1,89 +1,102 @@
 .class public final Lu3h;
-.super Ljava/lang/Object;
+.super Lm92;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lwyg;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lwyg;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lu3h;->a:Lwyg;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1, v0}, Lm92;-><init>(Ljava/lang/Long;I)V
+
+    iput-wide p1, p0, Lu3h;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final postEvent(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
+.method public final a()Ljava/lang/Long;
+    .locals 2
 
-    iget-object v0, p0, Lu3h;->a:Lwyg;
+    iget-wide v0, p0, Lu3h;->c:J
 
-    iget-object v0, v0, Lwyg;->H0:Lxm3;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v1, v0, Lxm3;->a:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v1, Ln24;
-
-    iget-object v2, v0, Lxm3;->c:Ljava/lang/Object;
-
-    check-cast v2, Le7f;
-
-    check-cast v2, Lmka;
-
-    invoke-virtual {v2}, Lmka;->a()Lh24;
-
-    move-result-object v2
-
-    new-instance v3, Lkj7;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, p2, v0, v4}, Lkj7;-><init>(Ljava/lang/String;Ljava/lang/String;Lxm3;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v1, v2, v4, v3, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    return-void
+    return-object v0
 .end method
 
-.method public final resolveShare(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
 
-    iget-object v1, p0, Lu3h;->a:Lwyg;
+    const/4 v0, 0x1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Loyg;
+    return v0
 
-    const/4 v6, 0x0
+    :cond_0
+    instance-of v1, p1, Lu3h;
 
-    move-object v2, p1
+    const/4 v2, 0x0
 
-    move-object v3, p2
+    if-nez v1, :cond_1
 
-    move-object v4, p3
+    return v2
 
-    move-object v5, p4
+    :cond_1
+    check-cast p1, Lu3h;
 
-    invoke-direct/range {v0 .. v6}, Loyg;-><init>(Lwyg;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    iget-wide v3, p0, Lu3h;->c:J
 
-    const/4 p1, 0x3
+    iget-wide v5, p1, Lu3h;->c:J
 
-    const/4 p2, 0x0
+    cmp-long p1, v3, v5
 
-    invoke-static {v1, p2, v0, p1}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
+    if-eqz p1, :cond_2
 
-    return-void
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lu3h;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "DialogBotId(sourceId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lu3h;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

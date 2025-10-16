@@ -4,5 +4,11 @@
 
 
 # virtual methods
-.method public abstract j(Lu16;)Lyz6;
+.method public abstract a()Z
+.end method
+
+.method public abstract b()J
+.end method
+
+.method public abstract c(J)Z
 .end method

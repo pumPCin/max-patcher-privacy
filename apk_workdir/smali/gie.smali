@@ -1,45 +1,69 @@
-.class public abstract Lgie;
-.super Ljava/lang/Object;
+.class public final Lgie;
+.super Li4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+# instance fields
+.field public a:J
+
+.field public b:Lg32;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final a(Lh4;)Z
+    .locals 4
 
-    const-string v0, "(&#13;)?&#10;"
+    check-cast p1, Leie;
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iget-wide v0, p0, Lgie;->a:J
 
-    move-result-object v0
+    const-wide/16 v2, 0x0
 
-    sput-object v0, Lgie;->a:Ljava/util/regex/Pattern;
+    cmp-long v0, v0, v2
 
-    return-void
+    if-ltz v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget-wide v0, p1, Leie;->s0:J
+
+    iget-wide v2, p1, Leie;->t0:J
+
+    cmp-long v2, v0, v2
+
+    if-gez v2, :cond_1
+
+    iput-wide v0, p1, Leie;->t0:J
+
+    :cond_1
+    iput-wide v0, p0, Lgie;->a:J
+
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static a(Ljava/lang/CharSequence;)Ljava/lang/String;
-    .locals 1
+.method public final b(Lh4;)[Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    invoke-static {p0}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
+    check-cast p1, Leie;
 
-    move-result-object p0
+    iget-wide v0, p0, Lgie;->a:J
 
-    sget-object v0, Lgie;->a:Ljava/util/regex/Pattern;
+    const-wide/16 v2, -0x1
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    iput-wide v2, p0, Lgie;->a:J
 
-    move-result-object p0
+    const/4 v2, 0x0
 
-    const-string v0, "<br>"
+    iput-object v2, p0, Lgie;->b:Lg32;
 
-    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0, v1}, Leie;->y(J)[Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

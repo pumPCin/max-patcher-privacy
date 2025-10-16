@@ -4,28 +4,20 @@
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Ljava/math/BigInteger;
+    const-string v0, "BatteryNotLowTracker"
 
-    const-string v1, "16a09e667f3bcc908b2fb1366ea957d3e3adec17512775099da2f590b0667322a"
+    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    const/16 v2, 0x10
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
-
-    const-wide/high16 v0, 0x4024000000000000L    # 10.0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
-
-    const-wide/high16 v0, 0x4000000000000000L    # 2.0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
+    sput-object v0, Lgm0;->a:Ljava/lang/String;
 
     return-void
 .end method

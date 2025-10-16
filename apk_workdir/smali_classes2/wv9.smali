@@ -1,265 +1,274 @@
-.class public abstract Lwv9;
-.super Ljava/lang/Object;
+.class public final Lwv9;
+.super Lxm;
 .source "SourceFile"
 
+# interfaces
+.implements Lmmf;
+.implements Lphb;
 
-# static fields
-.field public static final a:Ljava/lang/String; = "wv9"
 
-.field public static final b:Ljava/lang/ThreadLocal;
+# instance fields
+.field public final X:J
 
-.field public static final c:Ljava/lang/ThreadLocal;
+.field public final Y:J
+
+.field public final Z:Lpp4;
+
+.field public final o:J
+
+.field public r0:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v0, Lwv9;->b:Ljava/lang/ThreadLocal;
-
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v0, Lwv9;->c:Ljava/lang/ThreadLocal;
-
-    return-void
-.end method
-
-.method public static final a(Ljava/io/Closeable;)V
+.method public constructor <init>(JJJJLpp4;)V
     .locals 0
 
-    if-eqz p0, :cond_0
+    invoke-direct {p0, p1, p2}, Lxm;-><init>(J)V
 
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-wide p3, p0, Lwv9;->o:J
 
-    :catchall_0
-    :cond_0
+    iput-wide p5, p0, Lwv9;->X:J
+
+    iput-wide p7, p0, Lwv9;->Y:J
+
+    iput-object p9, p0, Lwv9;->Z:Lpp4;
+
     return-void
 .end method
 
-.method public static final b(Ljava/io/File;Ljava/io/File;)V
-    .locals 7
 
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
+# virtual methods
+.method public final c()I
+    .locals 3
 
-    move-result v0
+    iget-object v0, p0, Lxm;->c:Lym;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/io/File;->createNewFile()Z
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/io/FileInputStream;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :goto_0
+    invoke-virtual {v0}, Lym;->c()Lkd2;
 
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    move-result-object v0
+
+    iget-wide v1, p0, Lwv9;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lkd2;->C(J)Lda2;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x3
+
+    return v0
+
+    :cond_1
+    iget-object v0, v0, Lda2;->b:Lfe2;
+
+    iget-wide v0, v0, Lfe2;->a:J
+
+    iput-wide v0, p0, Lwv9;->r0:J
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final d()V
+    .locals 3
+
+    iget-object v0, p0, Lxm;->c:Lym;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v0}, Lym;->e()Lfof;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lxm;->a:J
+
+    invoke-virtual {v0, v1, v2}, Lfof;->d(J)V
+
+    return-void
+.end method
+
+.method public final e(Lklf;)V
+    .locals 9
+
+    check-cast p1, Lxv9;
+
+    iget-object v0, p0, Lxm;->c:Lym;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    invoke-virtual {v0}, Lym;->d()Lma9;
 
     move-result-object v2
 
-    :try_start_0
-    new-instance p0, Ljava/io/FileOutputStream;
+    iget-wide v5, p0, Lwv9;->X:J
 
-    invoke-direct {p0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    iget-wide v7, p0, Lwv9;->Y:J
 
-    invoke-virtual {p0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    iget-wide v3, p0, Lwv9;->o:J
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual/range {v2 .. v8}, Lma9;->b(JJJ)V
 
-    :try_start_1
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
+    iget-object v0, p0, Lxm;->c:Lym;
 
-    move-result-wide v5
+    if-eqz v0, :cond_1
 
-    const-wide/16 v3, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Ljava/nio/channels/FileChannel;->transferFrom(Ljava/nio/channels/ReadableByteChannel;JJ)J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-interface {v1}, Ljava/io/Closeable;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-interface {v2}, Ljava/io/Closeable;->close()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v0
-
-    move-object p0, v0
-
-    :try_start_3
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    :catchall_2
-    move-exception v0
-
-    move-object p1, v0
-
-    :try_start_4
-    invoke-static {v1, p0}, Lrkc;->g(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :goto_0
-    :try_start_5
-    throw p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :catchall_3
-    move-exception v0
-
-    move-object p1, v0
-
-    invoke-static {v2, p0}, Lrkc;->g(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
-.end method
-
-.method public static c(Ljava/io/InputStream;)Ljava/lang/String;
-    .locals 8
-
-    sget-object v0, Lwv9;->b:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [B
-
-    if-nez v1, :cond_0
-
-    const/high16 v1, 0x10000
-
-    new-array v1, v1, [B
-
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    :cond_0
-    :try_start_0
-    sget-object v2, Lwv9;->c:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v2}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, [B
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_1
-
-    const/16 v3, 0x1000
-
-    new-array v3, v3, [B
-
-    invoke-virtual {v2, v3}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    move-object v1, v0
 
     :cond_1
-    move v2, v4
+    invoke-virtual {v1}, Lym;->c()Lkd2;
 
-    goto :goto_0
+    move-result-object v0
 
-    :catchall_0
-    move-exception v0
+    iget-object p1, p1, Lxv9;->c:Lea2;
 
-    goto :goto_1
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    :cond_2
-    :goto_0
-    array-length v5, v3
+    move-result-object p1
 
-    invoke-virtual {p0, v3, v4, v5}, Ljava/io/InputStream;->read([BII)I
+    invoke-virtual {v0, p1}, Lkd2;->Z(Ljava/util/List;)Lqz9;
 
-    move-result v5
+    return-void
+.end method
 
-    if-ltz v5, :cond_4
+.method public final f(Lukf;)V
+    .locals 0
 
-    array-length v6, v1
+    iget-object p1, p1, Lukf;->b:Ljava/lang/String;
 
-    add-int v7, v2, v5
+    invoke-static {p1}, Lmzi;->a(Ljava/lang/String;)Z
 
-    if-ge v6, v7, :cond_3
+    move-result p1
 
-    array-length v6, v1
+    if-nez p1, :cond_0
 
-    mul-int/lit8 v6, v6, 0x2
+    invoke-virtual {p0}, Lwv9;->d()V
 
-    new-array v6, v6, [B
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {v1, v4, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+.method public final g()[B
+    .locals 3
 
-    invoke-virtual {v0, v6}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;
 
-    move-object v1, v6
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;-><init>()V
 
-    :cond_3
-    if-lez v5, :cond_2
+    iget-wide v1, p0, Lxm;->a:J
 
-    invoke-static {v3, v4, v1, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->requestId:J
 
-    move v2, v7
+    iget-wide v1, p0, Lwv9;->o:J
 
-    goto :goto_0
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->chatId:J
 
-    :cond_4
-    new-instance v0, Ljava/lang/String;
+    iget-wide v1, p0, Lwv9;->X:J
 
-    sget-object v3, Ln82;->a:Ljava/nio/charset/Charset;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->startTime:J
 
-    invoke-direct {v0, v1, v4, v2, v3}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-wide v1, p0, Lwv9;->Y:J
 
-    invoke-static {p0}, Lwv9;->a(Ljava/io/Closeable;)V
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->endTime:J
+
+    iget-object v1, p0, Lwv9;->Z:Lpp4;
+
+    iget-byte v1, v1, Lpp4;->a:B
+
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->itemTypeId:I
+
+    invoke-static {v0}, Ldd9;->toByteArray(Ldd9;)[B
+
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :goto_1
-    :try_start_1
-    sget-object v1, Lwv9;->a:Ljava/lang/String;
+.method public final getId()J
+    .locals 2
 
-    const-string v2, "Can\'t read native media from resources"
+    iget-wide v0, p0, Lxm;->a:J
 
-    invoke-static {v1, v2, v0}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    return-wide v0
+.end method
 
-    invoke-static {p0}, Lwv9;->a(Ljava/io/Closeable;)V
+.method public final getType()Lqhb;
+    .locals 1
 
-    const/4 p0, 0x0
+    sget-object v0, Lqhb;->H0:Lqhb;
 
-    return-object p0
+    return-object v0
+.end method
 
-    :catchall_1
-    move-exception v0
+.method public final h()I
+    .locals 1
 
-    invoke-static {p0}, Lwv9;->a(Ljava/io/Closeable;)V
+    const v0, 0xf4240
 
-    throw v0
+    return v0
+.end method
+
+.method public final i()Lhlf;
+    .locals 5
+
+    new-instance v0, Lqv9;
+
+    iget-wide v1, p0, Lwv9;->r0:J
+
+    sget-object v3, Lk7b;->r1:Lk7b;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v0, v3, v4}, Lqv9;-><init>(Lk7b;I)V
+
+    const-string v3, "chatId"
+
+    invoke-virtual {v0, v1, v2, v3}, Lhlf;->u(JLjava/lang/String;)V
+
+    const-string v1, "startTime"
+
+    iget-wide v2, p0, Lwv9;->X:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lhlf;->u(JLjava/lang/String;)V
+
+    const-string v1, "endTime"
+
+    iget-wide v2, p0, Lwv9;->Y:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lhlf;->u(JLjava/lang/String;)V
+
+    const-string v1, "itemType"
+
+    iget-object v2, p0, Lwv9;->Z:Lpp4;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method

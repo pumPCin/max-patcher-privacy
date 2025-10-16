@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lll3;
-.implements Lmy3;
+.implements Ltn3;
+.implements Lz04;
 
 
 # annotations
@@ -21,13 +21,13 @@
     d2 = {
         "Lone/me/messages/list/ui/MessagesListWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lll3;",
-        "Lmy3;",
+        "Ltn3;",
+        "Lz04;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lidd;",
+        "Ljod;",
         "parentScope",
         "",
         "chatId",
@@ -39,12 +39,12 @@
         "",
         "shouldHighlightMessage",
         "shouldSkipUnreadDecoration",
-        "(Ljava/lang/String;JJLjava/util/List;JZZLaf4;)V",
-        "cm8",
-        "ff9",
-        "ef9",
-        "df9",
-        "cf9",
+        "(Ljava/lang/String;JJLjava/util/List;JZZLvh4;)V",
+        "ps8",
+        "rm9",
+        "qm9",
+        "pm9",
+        "om9",
         "message-list_release"
     }
     k = 0x1
@@ -58,104 +58,108 @@
 
 
 # static fields
-.field public static final synthetic c1:[Lpl7;
+.field public static final synthetic e1:[Lwq7;
 
 
 # instance fields
-.field public A0:Ldg9;
+.field public A0:Lpn9;
 
-.field public B0:Lqta;
+.field public B0:Lz1b;
 
-.field public final C0:Lsb9;
+.field public final C0:Lej9;
 
 .field public final D0:Ljava/lang/Object;
 
-.field public E0:Lyfd;
+.field public E0:Lyqd;
 
-.field public final F0:Lvoc;
+.field public final F0:Lazc;
 
-.field public final G0:Lvoc;
+.field public final G0:Lazc;
 
-.field public H0:Loxf;
+.field public H0:Lpbg;
 
-.field public I0:Ljnb;
+.field public I0:Lcz8;
 
-.field public J0:Lbve;
+.field public J0:Lo7f;
 
-.field public K0:Ltnc;
+.field public K0:Lyxc;
 
-.field public L0:Le68;
+.field public L0:Lzb8;
 
-.field public final M0:Lk5d;
+.field public final M0:Lpzd;
 
-.field public final N0:Ltm0;
+.field public final N0:Lnn0;
 
-.field public final O0:Ltm0;
+.field public final O0:Lnn0;
 
-.field public final P0:Lcm8;
+.field public final P0:Lps8;
 
-.field public final Q0:Lff9;
+.field public final Q0:Lrm9;
 
-.field public final R0:Lef9;
+.field public final R0:Lqm9;
 
-.field public final S0:Lq0d;
+.field public final S0:Lkbd;
 
-.field public final T0:Lh4f;
+.field public final T0:Lrhf;
 
-.field public final U0:Lyn7;
+.field public final U0:Llt7;
 
 .field public final V0:Ljava/lang/Object;
 
-.field public final W0:Ltm0;
+.field public final W0:Lnn0;
 
-.field public final X:Lds;
+.field public final X:Lqs;
 
-.field public final X0:Ltm0;
+.field public final X0:Lnn0;
 
-.field public final Y:Lds;
+.field public final Y:Lqs;
 
-.field public final Y0:Ltm0;
+.field public final Y0:Lnn0;
 
-.field public final Z:Lyn7;
+.field public final Z:Llt7;
 
-.field public final Z0:Ltm0;
+.field public final Z0:Lnn0;
 
 .field public final a:Ljava/lang/String;
 
-.field public a1:Lf75;
+.field public a1:Lja5;
 
 .field public final b:Ljava/lang/String;
 
-.field public b1:Lync;
+.field public b1:Ldyc;
 
-.field public final c:Lds;
+.field public final c:Lqs;
 
-.field public final o:Lds;
+.field public final c1:Ljava/lang/Object;
 
-.field public final r0:Lakb;
+.field public final d1:Ljava/lang/Object;
+
+.field public final o:Lqs;
+
+.field public final r0:Lvsb;
 
 .field public s0:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-.field public final t0:Lyn7;
+.field public final t0:Llt7;
 
-.field public final u0:Lyn7;
+.field public final u0:Llt7;
 
-.field public final v0:Lyn7;
+.field public final v0:Llt7;
 
 .field public final w0:Ljava/lang/Object;
 
-.field public final x0:Lyn7;
+.field public final x0:Llt7;
 
-.field public final y0:Lvt6;
+.field public final y0:Ldy6;
 
-.field public z0:Ls3f;
+.field public z0:Lchf;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 18
 
-    new-instance v0, Lf4c;
+    new-instance v0, Lxcc;
 
     const-class v1, Lone/me/messages/list/ui/MessagesListWidget;
 
@@ -165,99 +169,99 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lewc;->a:Lfwc;
+    sget-object v2, Ls6d;->a:Lt6d;
 
     const-string v3, "selectedMessageIdsForAction"
 
     const-string v5, "getSelectedMessageIdsForAction()[J"
 
-    invoke-static {v2, v1, v3, v5}, Lc85;->g(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lds9;
+    invoke-static {v2, v1, v3, v5}, Ld15;->h(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lc0a;
 
     move-result-object v2
 
-    new-instance v3, Lds9;
+    new-instance v3, Lc0a;
 
     const-string v5, "currentReadMark"
 
     const-string v6, "getCurrentReadMark()J"
 
-    invoke-direct {v3, v1, v5, v6}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v1, v5, v6}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v5, Lds9;
+    new-instance v5, Lc0a;
 
     const-string v6, "isLastMsgCompletelyVisibleOnDetach"
 
     const-string v7, "isLastMsgCompletelyVisibleOnDetach()Z"
 
-    invoke-direct {v5, v1, v6, v7}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v5, v1, v6, v7}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v6, Lds9;
+    new-instance v6, Lc0a;
 
     const-string v7, "shouldSkipUnreadDecoration"
 
     const-string v8, "getShouldSkipUnreadDecoration()Z"
 
-    invoke-direct {v6, v1, v7, v8}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v6, v1, v7, v8}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v7, Lf4c;
+    new-instance v7, Lxcc;
 
     const-string v8, "recyclerView"
 
     const-string v9, "getRecyclerView()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;"
 
-    invoke-direct {v7, v1, v8, v9, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Lf4c;
+    new-instance v8, Lxcc;
 
     const-string v9, "scrollButtonsContainer"
 
     const-string v10, "getScrollButtonsContainer()Lone/me/messages/list/ui/view/scroll/ScrollButtonsContainer;"
 
-    invoke-direct {v8, v1, v9, v10, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Lds9;
+    new-instance v9, Lc0a;
 
     const-string v10, "contextMenuJob"
 
     const-string v11, "getContextMenuJob()Lkotlinx/coroutines/Job;"
 
-    invoke-direct {v9, v1, v10, v11}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v9, v1, v10, v11}, Lc0a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v10, Lf4c;
+    new-instance v10, Lxcc;
 
     const-string v11, "messagesListRecyclerViewAnalyticsListener"
 
     const-string v12, "getMessagesListRecyclerViewAnalyticsListener()Lone/me/messages/list/ui/recycler/MessagesListRecyclerViewAnalyticsListener;"
 
-    invoke-direct {v10, v1, v11, v12, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v10, v1, v11, v12, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v11, Lf4c;
+    new-instance v11, Lxcc;
 
     const-string v12, "prefetchReactionsScrollListener"
 
     const-string v13, "getPrefetchReactionsScrollListener()Lru/ok/onechat/reactions/PrefetchReactionsScrollListener;"
 
-    invoke-direct {v11, v1, v12, v13, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v11, v1, v12, v13, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v12, Lf4c;
+    new-instance v12, Lxcc;
 
     const-string v13, "messagesLayoutManager"
 
     const-string v14, "getMessagesLayoutManager()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;"
 
-    invoke-direct {v12, v1, v13, v14, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v12, v1, v13, v14, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v13, Lf4c;
+    new-instance v13, Lxcc;
 
     const-string v14, "messagesScroller"
 
     const-string v15, "getMessagesScroller()Lone/me/messages/list/ui/scroll/MessagesScroller;"
 
-    invoke-direct {v13, v1, v14, v15, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v13, v1, v14, v15, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v14, Lf4c;
+    new-instance v14, Lxcc;
 
     const-string v15, "emptyStateContainer"
 
@@ -265,9 +269,9 @@
 
     const-string v0, "getEmptyStateContainer()Landroid/widget/FrameLayout;"
 
-    invoke-direct {v14, v1, v15, v0, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v14, v1, v15, v0, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v0, Lf4c;
+    new-instance v0, Lxcc;
 
     const-string v15, "reactionEffectsView"
 
@@ -275,11 +279,11 @@
 
     const-string v2, "getReactionEffectsView()Lru/ok/onechat/reactions/ui/animation/ReactionEffectsView;"
 
-    invoke-direct {v0, v1, v15, v2, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v15, v2, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/16 v1, 0xe
 
-    new-array v1, v1, [Lpl7;
+    new-array v1, v1, [Lwq7;
 
     aput-object v16, v1, v4
 
@@ -335,7 +339,7 @@
 
     aput-object v0, v1, v2
 
-    sput-object v1, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sput-object v1, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     return-void
 .end method
@@ -354,7 +358,7 @@
     const/4 v4, 0x0
 
     .line 17
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILvh4;)V
 
     .line 18
     const-class v5, Lone/me/messages/list/ui/MessagesListWidget;
@@ -372,25 +376,25 @@
     iput-object v5, v0, Lone/me/messages/list/ui/MessagesListWidget;->b:Ljava/lang/String;
 
     .line 21
-    new-instance v5, Lds;
+    new-instance v5, Lqs;
 
-    const-class v6, Lidd;
+    const-class v6, Ljod;
 
     const-string v7, "arg_key_scope_id"
 
-    invoke-direct {v5, v6, v7}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v5, v6, v7}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 22
-    new-instance v6, Lds;
+    new-instance v6, Lqs;
 
     const-class v7, [J
 
     const-string v8, "selected.messageIds.Action"
 
-    invoke-direct {v6, v7, v4, v8}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v6, v7, v4, v8}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 23
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->c:Lds;
+    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->c:Lqs;
 
     const-wide/16 v6, 0x0
 
@@ -400,154 +404,152 @@
     move-result-object v6
 
     .line 25
-    new-instance v7, Lds;
+    new-instance v7, Lqs;
 
     const-class v8, Ljava/lang/Long;
 
     const-string v9, "messages:current.read.mark"
 
-    invoke-direct {v7, v8, v6, v9}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v7, v8, v6, v9}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 26
-    iput-object v7, v0, Lone/me/messages/list/ui/MessagesListWidget;->o:Lds;
+    iput-object v7, v0, Lone/me/messages/list/ui/MessagesListWidget;->o:Lqs;
 
     .line 27
     sget-object v6, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 28
-    new-instance v7, Lds;
+    new-instance v7, Lqs;
 
     const-class v8, Ljava/lang/Boolean;
 
     const-string v9, "is.last.message.completely.visible.on.detach"
 
-    invoke-direct {v7, v8, v6, v9}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v7, v8, v6, v9}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
-    iput-object v7, v0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lds;
+    iput-object v7, v0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lqs;
 
     .line 30
-    new-instance v7, Lds;
+    new-instance v7, Lqs;
 
     const-string v9, "ARG_SKIP_UNREAD_DECOR"
 
-    invoke-direct {v7, v8, v6, v9}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v7, v8, v6, v9}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 31
-    iput-object v7, v0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lds;
+    iput-object v7, v0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lqs;
 
     .line 32
-    sget-object v6, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v6, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     aget-object v6, v6, v2
 
-    invoke-virtual {v5, v0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v5, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lidd;
+    check-cast v5, Ljod;
 
     .line 33
-    iget-object v5, v5, Lidd;->a:Ljava/lang/String;
+    iget-object v5, v5, Ljod;->a:Ljava/lang/String;
 
     .line 34
-    const-class v6, Lnc9;
+    const-class v6, Lyj9;
 
     .line 35
-    invoke-virtual {v0, v5, v6, v4}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {v0, v5, v6, v4}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object v5
 
     .line 36
-    iput-object v5, v0, Lone/me/messages/list/ui/MessagesListWidget;->Z:Lyn7;
+    iput-object v5, v0, Lone/me/messages/list/ui/MessagesListWidget;->Z:Llt7;
 
     .line 37
-    sget-object v5, Lqa9;->a:Lqa9;
+    sget-object v5, Lci9;->a:Lci9;
 
     .line 38
-    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v6
 
     .line 39
-    const-class v7, Lakb;
+    const-class v7, Lvsb;
 
-    invoke-virtual {v6, v7}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v6, v7}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lakb;
+    check-cast v6, Lvsb;
 
     .line 40
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->r0:Lakb;
+    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->r0:Lvsb;
 
     .line 41
-    sget-object v6, Ls8b;->a:Ls8b;
+    sget-object v6, Lohb;->a:Lohb;
 
-    invoke-virtual {v6}, Ls8b;->a()Lyn7;
+    invoke-virtual {v6}, Lohb;->a()Llt7;
 
     move-result-object v6
 
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->t0:Lyn7;
+    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->t0:Llt7;
 
     .line 42
-    new-instance v6, Lze9;
+    new-instance v6, Llm9;
 
-    invoke-direct {v6, v1, v0, v2}, Lze9;-><init>(Landroid/os/Bundle;Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v6, v1, v0, v2}, Llm9;-><init>(Landroid/os/Bundle;Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     .line 43
-    new-instance v7, Lmg8;
+    new-instance v7, Lxm8;
 
-    const/16 v8, 0xb
+    const/16 v8, 0xc
 
-    invoke-direct {v7, v8, v6}, Lmg8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v7, v8, v6}, Lxm8;-><init>(ILjava/lang/Object;)V
 
-    const-class v6, Lwe9;
+    const-class v6, Lim9;
 
-    invoke-virtual {v0, v6, v7}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {v0, v6, v7}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object v6
 
     .line 44
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->u0:Lyn7;
+    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->u0:Llt7;
 
     .line 45
-    sget-object v6, Lpa9;->a:Lyn7;
+    sget-object v6, Lbi9;->a:Llt7;
 
     .line 46
-    new-instance v6, Lzh1;
+    new-instance v6, Laj1;
 
     const/4 v7, 0x7
 
-    invoke-direct {v6, v1, v7}, Lzh1;-><init>(Landroid/os/Bundle;I)V
+    invoke-direct {v6, v1, v7}, Laj1;-><init>(Landroid/os/Bundle;I)V
 
     .line 47
-    new-instance v7, Lmg8;
+    new-instance v7, Lxm8;
 
-    const/16 v9, 0xc
+    const/16 v9, 0xd
 
-    invoke-direct {v7, v9, v6}, Lmg8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v7, v9, v6}, Lxm8;-><init>(ILjava/lang/Object;)V
 
-    const-class v6, Lroc;
+    const-class v6, Lwyc;
 
-    invoke-virtual {v0, v6, v7}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
+    invoke-virtual {v0, v6, v7}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loh6;)Llt7;
 
     move-result-object v6
 
     .line 48
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->v0:Lyn7;
+    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->v0:Llt7;
 
     .line 49
-    new-instance v6, Lye9;
+    new-instance v6, Lkm9;
 
-    const/16 v7, 0xf
-
-    invoke-direct {v6, v0, v7}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v6, v0, v2}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     const/4 v7, 0x3
 
     .line 50
-    invoke-static {v7, v6}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v7, v6}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object v6
 
@@ -555,60 +557,60 @@
     iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->w0:Ljava/lang/Object;
 
     .line 52
-    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v6
 
-    const-class v10, Lo29;
+    const-class v10, Ly99;
 
-    invoke-virtual {v6, v10}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    invoke-virtual {v6, v10}, Lr5;->d(Ljava/lang/Class;)Lrhf;
 
     move-result-object v6
 
     .line 53
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->x0:Lyn7;
+    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->x0:Llt7;
 
     .line 54
-    new-instance v14, Lvt6;
+    new-instance v14, Ldy6;
 
     .line 55
-    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v6
 
-    const-class v10, Lujd;
+    const-class v10, Luud;
 
-    invoke-virtual {v6, v10}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    invoke-virtual {v6, v10}, Lr5;->d(Ljava/lang/Class;)Lrhf;
 
     move-result-object v6
 
     .line 56
-    invoke-direct {v14, v6}, Lvt6;-><init>(Lyn7;)V
+    invoke-direct {v14, v6}, Ldy6;-><init>(Llt7;)V
 
-    iput-object v14, v0, Lone/me/messages/list/ui/MessagesListWidget;->y0:Lvt6;
+    iput-object v14, v0, Lone/me/messages/list/ui/MessagesListWidget;->y0:Ldy6;
 
     .line 57
-    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v6
 
-    const-class v10, Lzla;
+    const-class v10, Lcua;
 
-    invoke-virtual {v6, v10}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v6, v10}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lzla;
+    check-cast v6, Lcua;
 
     .line 58
-    invoke-virtual {v6}, Lzla;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v6}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v11
 
     .line 59
-    new-instance v15, Ld99;
+    new-instance v15, Lng9;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v17
 
@@ -619,202 +621,204 @@
     const/16 v16, 0x1
 
     .line 60
-    const-class v18, Lwe9;
+    const-class v18, Lim9;
 
     const-string v19, "onAttachClickAction"
 
     const-string v20, "onAttachClickAction(Lone/me/messages/list/ui/view/MessagesAttachAction;)V"
 
-    invoke-direct/range {v15 .. v22}, Ld99;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v15 .. v22}, Lng9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 61
-    new-instance v6, Ld7;
+    new-instance v6, Lwoe;
 
-    const/16 v10, 0x15
+    const/16 v10, 0x13
 
-    invoke-direct {v6, v10, v0}, Ld7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v6, v10, v0}, Lwoe;-><init>(ILjava/lang/Object;)V
 
     .line 62
-    new-instance v12, Lw9h;
+    new-instance v10, Lswe;
 
-    invoke-direct {v12, v10, v0}, Lw9h;-><init>(ILjava/lang/Object;)V
+    const/16 v12, 0x14
 
-    move-object/from16 v16, v12
+    invoke-direct {v10, v12, v0}, Lswe;-><init>(ILjava/lang/Object;)V
 
     .line 63
-    new-instance v12, Lmf9;
+    new-instance v12, Lym9;
 
-    invoke-direct {v12, v0}, Lmf9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v12, v0}, Lym9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
 
     .line 64
-    new-instance v10, Ll79;
+    new-instance v13, Lm09;
 
-    const/4 v13, 0x1
+    const/4 v2, 0x5
 
-    invoke-direct {v10, v13, v0}, Ll79;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v13, v2, v0}, Lm09;-><init>(ILjava/lang/Object;)V
 
-    move-object/from16 v18, v10
+    move-object/from16 v16, v10
 
     .line 65
-    new-instance v10, Lsb9;
+    new-instance v10, Lej9;
 
     .line 66
-    new-instance v13, Lzq0;
+    new-instance v4, Lwr0;
 
-    invoke-direct {v13, v3, v0}, Lzq0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, v3, v0}, Lwr0;-><init>(ILjava/lang/Object;)V
 
     .line 67
-    new-instance v4, Lye9;
+    new-instance v9, Lkm9;
 
-    invoke-direct {v4, v0, v2}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    const/4 v8, 0x1
 
-    move-object/from16 v19, v4
+    invoke-direct {v9, v0, v8}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
-    move-object/from16 v17, v13
+    move-object/from16 v17, v4
+
+    move-object/from16 v19, v9
+
+    move-object/from16 v18, v13
 
     move-object v13, v15
-
-    const/4 v4, 0x1
 
     move-object v15, v6
 
     .line 68
-    invoke-direct/range {v10 .. v19}, Lsb9;-><init>(Ljava/util/concurrent/ExecutorService;Lmf9;Ld99;Lvt6;Ld7;Lw9h;Lzq0;Ll79;Lye9;)V
+    invoke-direct/range {v10 .. v19}, Lej9;-><init>(Ljava/util/concurrent/ExecutorService;Lym9;Lng9;Ldy6;Lwoe;Lswe;Lwr0;Lm09;Lkm9;)V
 
-    iput-object v10, v0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lsb9;
+    iput-object v10, v0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lej9;
 
     .line 69
-    new-instance v6, Lye9;
+    new-instance v4, Lkm9;
 
-    invoke-direct {v6, v0, v4}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v4, v0, v3}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     .line 70
-    invoke-static {v7, v6}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v7, v4}, Lmbi;->b(ILoh6;)Llt7;
 
-    move-result-object v6
+    move-result-object v3
 
     .line 71
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->D0:Ljava/lang/Object;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->D0:Ljava/lang/Object;
 
     .line 72
-    sget v6, Lbdc;->messages_list_recycler_view:I
+    sget v3, Lzmc;->messages_list_recycler_view:I
 
-    invoke-virtual {v0, v6}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {v0, v3}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
-    move-result-object v6
+    move-result-object v3
 
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->F0:Lvoc;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->F0:Lazc;
 
     .line 73
-    sget v6, Lbdc;->messages_list_scroll_btn:I
+    sget v3, Lzmc;->messages_list_scroll_btn:I
 
-    invoke-virtual {v0, v6}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+    invoke-virtual {v0, v3}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lazc;
 
-    move-result-object v6
+    move-result-object v3
 
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->G0:Lvoc;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->G0:Lazc;
 
     .line 74
-    invoke-static {}, Lkv9;->G()Lk5d;
+    invoke-static {}, Lnvi;->a()Lpzd;
 
-    move-result-object v6
+    move-result-object v3
 
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->M0:Lk5d;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->M0:Lpzd;
 
     .line 75
-    new-instance v6, Lye9;
+    new-instance v3, Lkm9;
 
-    invoke-direct {v6, v0, v3}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v3, v0, v7}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
-    invoke-virtual {v0, v6}, Lone/me/sdk/arch/Widget;->binding(Ltd6;)Ltm0;
+    invoke-virtual {v0, v3}, Lone/me/sdk/arch/Widget;->binding(Loh6;)Lnn0;
 
     move-result-object v3
 
-    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->N0:Ltm0;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->N0:Lnn0;
 
     .line 76
-    new-instance v3, Lye9;
+    new-instance v3, Lkm9;
 
-    invoke-direct {v3, v0, v7}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    const/4 v4, 0x4
 
-    invoke-virtual {v0, v3}, Lone/me/sdk/arch/Widget;->binding(Ltd6;)Ltm0;
+    invoke-direct {v3, v0, v4}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+
+    invoke-virtual {v0, v3}, Lone/me/sdk/arch/Widget;->binding(Loh6;)Lnn0;
 
     move-result-object v3
 
-    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->O0:Ltm0;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->O0:Lnn0;
 
     .line 77
-    new-instance v3, Lcm8;
+    new-instance v3, Lps8;
 
-    invoke-direct {v3, v0}, Lcm8;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v3, v0}, Lps8;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->P0:Lcm8;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->P0:Lps8;
 
     .line 78
-    new-instance v3, Lff9;
+    new-instance v3, Lrm9;
 
-    invoke-direct {v3, v0, v4}, Lff9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v3, v0, v8}, Lrm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
-    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->Q0:Lff9;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->Q0:Lrm9;
 
     .line 79
-    new-instance v3, Lef9;
+    new-instance v3, Lqm9;
 
-    invoke-direct {v3, v0}, Lef9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v3, v0}, Lqm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->R0:Lef9;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->R0:Lqm9;
 
     .line 80
-    new-instance v3, Lye9;
+    new-instance v3, Lkm9;
 
-    const/4 v6, 0x4
-
-    invoke-direct {v3, v0, v6}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v3, v0, v2}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     .line 81
-    new-instance v6, Lq0d;
+    new-instance v2, Lkbd;
 
-    invoke-direct {v6, v3}, Lq0d;-><init>(Ltd6;)V
+    invoke-direct {v2, v3}, Lkbd;-><init>(Loh6;)V
 
     .line 82
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Lq0d;
+    iput-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Lkbd;
 
     .line 83
-    new-instance v3, Lye9;
+    new-instance v2, Lkm9;
 
-    const/16 v6, 0x9
+    const/16 v3, 0x9
 
-    invoke-direct {v3, v0, v6}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v2, v0, v3}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     .line 84
-    new-instance v6, Lh4f;
+    new-instance v3, Lrhf;
 
-    invoke-direct {v6, v3}, Lh4f;-><init>(Ltd6;)V
+    invoke-direct {v3, v2}, Lrhf;-><init>(Loh6;)V
 
     .line 85
-    iput-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->T0:Lh4f;
+    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->T0:Lrhf;
 
     .line 86
-    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lr5;
 
-    move-result-object v3
+    move-result-object v2
 
-    const-class v6, Lto8;
+    const-class v3, Lcw8;
 
-    invoke-virtual {v3, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lrhf;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 87
-    iput-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lyn7;
+    iput-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Llt7;
 
     .line 88
-    new-instance v3, Lze9;
+    new-instance v2, Llm9;
 
-    invoke-direct {v3, v1, v0, v4}, Lze9;-><init>(Landroid/os/Bundle;Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v2, v1, v0, v8}, Llm9;-><init>(Landroid/os/Bundle;Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     .line 89
-    invoke-static {v7, v3}, Lwee;->u(ILtd6;)Lyn7;
+    invoke-static {v7, v2}, Lmbi;->b(ILoh6;)Llt7;
 
     move-result-object v1
 
@@ -822,191 +826,225 @@
     iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:Ljava/lang/Object;
 
     .line 91
-    new-instance v1, Lye9;
+    new-instance v1, Lkm9;
 
-    invoke-direct {v1, v0, v8}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    const/16 v2, 0xc
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Ltd6;)Ltm0;
+    invoke-direct {v1, v0, v2}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Loh6;)Lnn0;
 
     move-result-object v1
 
-    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->W0:Ltm0;
+    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->W0:Lnn0;
 
     .line 92
-    new-instance v1, Lye9;
+    new-instance v1, Lkm9;
 
-    invoke-direct {v1, v0, v9}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    const/16 v2, 0xd
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Ltd6;)Ltm0;
+    invoke-direct {v1, v0, v2}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Loh6;)Lnn0;
 
     move-result-object v1
 
-    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->X0:Ltm0;
+    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->X0:Lnn0;
 
     .line 93
-    new-instance v1, Lye9;
+    new-instance v1, Lkm9;
 
-    const/16 v3, 0xd
+    const/16 v2, 0xe
 
-    invoke-direct {v1, v0, v3}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v1, v0, v2}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Ltd6;)Ltm0;
+    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Loh6;)Lnn0;
 
     move-result-object v1
 
-    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->Y0:Ltm0;
+    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->Y0:Lnn0;
 
     .line 94
-    new-instance v1, Lye9;
+    new-instance v1, Lkm9;
 
-    const/16 v3, 0xe
+    const/16 v2, 0xf
 
-    invoke-direct {v1, v0, v3}, Lye9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v1, v0, v2}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Ltd6;)Ltm0;
+    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->binding(Loh6;)Lnn0;
 
     move-result-object v1
 
-    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:Ltm0;
+    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:Lnn0;
 
     .line 95
-    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lo5;
+    new-instance v1, Lem8;
 
-    move-result-object v1
+    const/16 v2, 0x10
 
-    const-class v3, Ln78;
-
-    invoke-virtual {v1, v3}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ln78;
+    invoke-direct {v1, v2}, Lem8;-><init>(I)V
 
     .line 96
-    invoke-virtual {v1}, Ln78;->c()Lp7b;
+    invoke-static {v7, v1}, Lmbi;->b(ILoh6;)Llt7;
 
-    move-result-object v3
+    move-result-object v1
 
     .line 97
-    iget-object v3, v3, Lp7b;->a:Lyn7;
+    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:Ljava/lang/Object;
 
     .line 98
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+    new-instance v1, Lkm9;
 
-    move-result-object v3
-
-    check-cast v3, Lm63;
+    invoke-direct {v1, v0, v2}, Lkm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     .line 99
-    check-cast v3, Lt08;
+    invoke-static {v7, v1}, Lmbi;->b(ILoh6;)Llt7;
 
-    invoke-virtual {v3}, Lt08;->K()J
-
-    move-result-wide v5
+    move-result-object v1
 
     .line 100
-    iget-wide v8, v1, Ln78;->g:J
+    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:Ljava/lang/Object;
 
-    cmp-long v3, v5, v8
+    .line 101
+    invoke-virtual {v5}, Lscout/Component;->getAccessor()Lr5;
 
-    if-nez v3, :cond_0
+    move-result-object v1
 
-    iget-boolean v3, v1, Ln78;->i:Z
+    const-class v2, Ltd8;
 
-    if-nez v3, :cond_0
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v6, 0x0
+    move-result-object v1
+
+    check-cast v1, Ltd8;
+
+    .line 102
+    invoke-virtual {v1}, Ltd8;->c()Legb;
+
+    move-result-object v2
+
+    .line 103
+    iget-object v2, v2, Legb;->a:Llt7;
+
+    .line 104
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ll83;
+
+    .line 105
+    check-cast v2, Lg68;
+
+    invoke-virtual {v2}, Lg68;->K()J
+
+    move-result-wide v2
+
+    .line 106
+    iget-wide v4, v1, Ltd8;->g:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_0
+
+    iget-boolean v2, v1, Ltd8;->i:Z
+
+    if-nez v2, :cond_0
+
+    const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 101
+    .line 107
     :cond_0
-    new-instance v3, Lk7b;
+    new-instance v2, Lyfb;
 
-    .line 102
-    invoke-virtual {v1}, Ln78;->c()Lp7b;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 103
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v5
-
-    .line 104
-    sget-object v8, Ll7b;->s0:Ll7b;
-
-    invoke-direct {v3, v8, v5, v6}, Lk7b;-><init>(Ll7b;J)V
-
-    .line 105
-    iget-object v5, v1, Ln78;->e:Lfs9;
-
-    invoke-virtual {v5, v8, v3}, Lfs9;->k(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 106
-    iget-object v3, v1, Ln78;->d:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v5, Lk78;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v1, v6}, Lk78;-><init>(Ln78;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v3, v6, v6, v5, v7}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    .line 108
+    invoke-virtual {v1}, Ltd8;->c()Legb;
 
     move-result-object v3
 
-    .line 107
-    iget-object v1, v1, Ln78;->f:Ljava/util/LinkedHashMap;
-
-    sget-object v5, Lx6b;->o:Lx6b;
-
-    invoke-interface {v1, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 108
-    :goto_0
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
-
-    move-result-object v1
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 109
-    iget-object v1, v1, Lwe9;->y1:Lbpc;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v3
 
     .line 110
-    new-instance v3, Lbf9;
+    sget-object v5, Lzfb;->s0:Lzfb;
 
-    invoke-direct {v3, v6, v0}, Lbf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v2, v5, v3, v4}, Lyfb;-><init>(Lzfb;J)V
 
     .line 111
-    new-instance v5, Lnw5;
+    iget-object v3, v1, Ltd8;->e:Le0a;
 
-    invoke-direct {v5, v1, v3, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-virtual {v3, v5, v2}, Le0a;->k(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 112
-    new-instance v1, Lxc0;
+    iget-object v2, v1, Ltd8;->d:Lkotlinx/coroutines/internal/ContextScope;
 
-    const/16 v3, 0x17
+    new-instance v3, Lqd8;
 
-    invoke-direct {v1, v0, v6, v3, v2}, Lxc0;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;IZ)V
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v1, v4}, Lqd8;-><init>(Ltd8;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v2, v4, v4, v3, v7}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    move-result-object v2
 
     .line 113
-    new-instance v2, Luu5;
+    iget-object v1, v1, Ltd8;->f:Ljava/util/LinkedHashMap;
 
-    invoke-direct {v2, v5, v1}, Luu5;-><init>(Liu5;Lle6;)V
+    sget-object v3, Lkfb;->o:Lkfb;
+
+    invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 114
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lgq7;
+    :goto_0
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Luce;->N(Liu5;Ln24;)Loke;
+    .line 115
+    iget-object v1, v1, Lim9;->z1:Lgzc;
+
+    .line 116
+    new-instance v2, Lnm9;
+
+    invoke-direct {v2, v4, v0}, Lnm9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+
+    .line 117
+    new-instance v3, Lh06;
+
+    invoke-direct {v3, v1, v2, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    .line 118
+    new-instance v1, Ljd0;
+
+    const/16 v2, 0x17
+
+    const/4 v5, 0x0
+
+    invoke-direct {v1, v0, v4, v2, v5}, Ljd0;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;IZ)V
+
+    .line 119
+    new-instance v2, Loy5;
+
+    invoke-direct {v2, v3, v1}, Loy5;-><init>(Lzx5;Lgi6;)V
+
+    .line 120
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Luv7;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;JJLjava/util/List;JZZILaf4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;JJLjava/util/List;JZZILvh4;)V
     .locals 15
 
     and-int/lit8 v0, p11, 0x4
@@ -1027,8 +1065,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 115
-    sget-object v0, Lo65;->a:Lo65;
+    .line 121
+    sget-object v0, Ls95;->a:Ls95;
 
     move-object v9, v0
 
@@ -1084,26 +1122,26 @@
 
     move-wide/from16 v5, p2
 
-    .line 116
-    invoke-direct/range {v3 .. v14}, Lone/me/messages/list/ui/MessagesListWidget;-><init>(Ljava/lang/String;JJLjava/util/List;JZZLaf4;)V
+    .line 122
+    invoke-direct/range {v3 .. v14}, Lone/me/messages/list/ui/MessagesListWidget;-><init>(Ljava/lang/String;JJLjava/util/List;JZZLvh4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;JJLjava/util/List;JZZLaf4;)V
+.method public constructor <init>(Ljava/lang/String;JJLjava/util/List;JZZLvh4;)V
     .locals 1
 
     .line 1
-    new-instance p11, Lidd;
+    new-instance p11, Ljod;
 
-    invoke-direct {p11, p1}, Lidd;-><init>(Ljava/lang/String;)V
+    invoke-direct {p11, p1}, Ljod;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Ld3b;
+    new-instance p1, Lqbb;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p11}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p11}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1113,11 +1151,11 @@
     move-object p3, p2
 
     .line 4
-    new-instance p2, Ld3b;
+    new-instance p2, Lqbb;
 
     const-string p11, "ARG_CHAT_ID"
 
-    invoke-direct {p2, p11, p3}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, p11, p3}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 5
     invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1127,11 +1165,11 @@
     move-object p4, p3
 
     .line 6
-    new-instance p3, Ld3b;
+    new-instance p3, Lqbb;
 
     const-string p5, "ARG_LOAD_MARK"
 
-    invoke-direct {p3, p5, p4}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p5, p4}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 7
     invoke-static {p7, p8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1141,18 +1179,18 @@
     move-object p5, p4
 
     .line 8
-    new-instance p4, Ld3b;
+    new-instance p4, Lqbb;
 
     const-string p7, "ARG_LOAD_MESSAGE_ID"
 
-    invoke-direct {p4, p7, p5}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p4, p7, p5}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 9
-    new-instance p5, Ld3b;
+    new-instance p5, Lqbb;
 
     const-string p7, "ARG_HIGHLIGHTS"
 
-    invoke-direct {p5, p7, p6}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p5, p7, p6}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 10
     invoke-static {p9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1162,11 +1200,11 @@
     move-object p7, p6
 
     .line 11
-    new-instance p6, Ld3b;
+    new-instance p6, Lqbb;
 
     const-string p8, "ARG_HIGHLIGHT_MESSAGE"
 
-    invoke-direct {p6, p8, p7}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p6, p8, p7}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 12
     invoke-static {p10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1176,19 +1214,19 @@
     move-object p8, p7
 
     .line 13
-    new-instance p7, Ld3b;
+    new-instance p7, Lqbb;
 
     const-string p9, "ARG_SKIP_UNREAD_DECOR"
 
-    invoke-direct {p7, p9, p8}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p7, p9, p8}, Lqbb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 14
-    filled-new-array/range {p1 .. p7}, [Ld3b;
+    filled-new-array/range {p1 .. p7}, [Lqbb;
 
     move-result-object p1
 
     .line 15
-    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
+    invoke-static {p1}, Lbki;->b([Lqbb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -1198,32 +1236,32 @@
     return-void
 .end method
 
-.method public static final B0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lhu7;J)V
+.method public static final C0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Luz7;J)V
     .locals 1
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lwe9;->B()Lup9;
+    invoke-virtual {v0}, Lim9;->B()Lsx9;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lup9;->f()Z
+    invoke-virtual {v0}, Lsx9;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lwe9;->B()Lup9;
+    invoke-virtual {p0}, Lim9;->B()Lsx9;
 
     move-result-object p0
 
-    invoke-virtual {p0, p3, p4}, Lup9;->g(J)V
+    invoke-virtual {p0, p3, p4}, Lsx9;->g(J)V
 
     return-void
 
@@ -1249,7 +1287,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p0
 
@@ -1260,17 +1298,17 @@
     return-void
 
     :cond_2
-    iget-object p2, p0, Lwe9;->V0:Lyn7;
+    iget-object p2, p0, Lim9;->V0:Llt7;
 
-    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lyl;
+    check-cast p2, Lim;
 
-    check-cast p2, Lfv7;
+    check-cast p2, Ls08;
 
-    invoke-virtual {p2, p1}, Lfv7;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, p1}, Ls08;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1280,70 +1318,70 @@
     return-void
 
     :cond_3
-    invoke-virtual {p0, p1}, Lwe9;->E(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lim9;->E(Ljava/lang/String;)V
 
     return-void
 
     :cond_4
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
 
     move-result-object p0
 
-    iget-object p0, p0, Lnc9;->s0:Lya5;
+    iget-object p0, p0, Lyj9;->s0:Lde5;
 
-    new-instance p2, Ljc9;
+    new-instance p2, Luj9;
 
-    invoke-direct {p2, p1}, Ljc9;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Luj9;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0, p2}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    invoke-static {p0, p2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     return-void
 
     :cond_5
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lwe9;->E(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lim9;->E(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static final C0(Lone/me/messages/list/ui/MessagesListWidget;Lo39;J)V
+.method public static final D0(Lone/me/messages/list/ui/MessagesListWidget;Lya9;J)V
     .locals 2
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lwe9;->B()Lup9;
+    invoke-virtual {v0}, Lim9;->B()Lsx9;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lup9;->f()Z
+    invoke-virtual {v0}, Lsx9;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lwe9;->B()Lup9;
+    invoke-virtual {p0}, Lim9;->B()Lsx9;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2, p3}, Lup9;->g(J)V
+    invoke-virtual {p0, p2, p3}, Lsx9;->g(J)V
 
     return-void
 
     :cond_0
-    iget-object p2, p1, Lo39;->c:Ln39;
+    iget-object p2, p1, Lya9;->c:Lxa9;
 
-    iget-wide v0, p1, Lo39;->a:J
+    iget-wide v0, p1, Lya9;->a:J
 
-    sget-object p3, Lgf9;->$EnumSwitchMapping$2:[I
+    sget-object p3, Lsm9;->$EnumSwitchMapping$2:[I
 
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
@@ -1361,11 +1399,11 @@
 
     if-gtz p2, :cond_3
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p0
 
-    iget-object p1, p1, Lo39;->b:Ljava/lang/String;
+    iget-object p1, p1, Lya9;->b:Ljava/lang/String;
 
     if-nez p1, :cond_1
 
@@ -1374,17 +1412,17 @@
     return-void
 
     :cond_1
-    iget-object p2, p0, Lwe9;->V0:Lyn7;
+    iget-object p2, p0, Lim9;->V0:Llt7;
 
-    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lyl;
+    check-cast p2, Lim;
 
-    check-cast p2, Lfv7;
+    check-cast p2, Ls08;
 
-    invoke-virtual {p2, p1}, Lfv7;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, p1}, Ls08;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1393,41 +1431,41 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p0, p1}, Lwe9;->E(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lim9;->E(Ljava/lang/String;)V
 
     return-void
 
     :cond_3
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0, v1}, Lwe9;->F(J)V
+    invoke-virtual {p0, v0, v1}, Lim9;->F(J)V
 
     :cond_4
     :goto_0
     return-void
 .end method
 
-.method public static final D0(Lone/me/messages/list/ui/MessagesListWidget;Lxfd;)V
+.method public static final E0(Lone/me/messages/list/ui/MessagesListWidget;Lxqd;)V
     .locals 7
 
-    sget-object v0, Lgfd;->c:Lgfd;
+    sget-object v0, Lgqd;->c:Lgqd;
 
-    sget-object v1, Lgfd;->b:Lgfd;
+    sget-object v1, Lgqd;->b:Lgqd;
 
     iget-object v2, p0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
 
-    sget-object v3, Lyt3;->n:Lhoa;
+    sget-object v3, Lndi;->a:Lkwa;
 
     if-nez v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v4, Lr28;->o:Lr28;
+    sget-object v4, Lf88;->o:Lf88;
 
-    invoke-virtual {v3, v4}, Lhoa;->b(Lr28;)Z
+    invoke-virtual {v3, v4}, Lkwa;->b(Lf88;)Z
 
     move-result v5
 
@@ -1447,17 +1485,17 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual {v3, v4, v2, v5, v6}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v3, v4, v2, v5, v6}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object v2, p0, Lone/me/messages/list/ui/MessagesListWidget;->R0:Lef9;
+    iget-object v2, p0, Lone/me/messages/list/ui/MessagesListWidget;->R0:Lqm9;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v3
 
-    iget-boolean v4, v2, Lef9;->c:Z
+    iget-boolean v4, v2, Lqm9;->c:Z
 
     const/4 v5, 0x0
 
@@ -1466,125 +1504,125 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {v2, v3, v5, v5}, Lef9;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    invoke-virtual {v2, v3, v5, v5}, Lqm9;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
 
     :goto_1
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lmfd;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lmqd;
 
     move-result-object v2
 
-    sget-object v3, Lgfd;->a:Lgfd;
+    sget-object v3, Lgqd;->a:Lgqd;
 
-    iget v4, p1, Lxfd;->a:I
+    iget v4, p1, Lxqd;->a:I
 
-    invoke-virtual {v2, v3}, Lmfd;->d(Lgfd;)Lcfd;
+    invoke-virtual {v2, v3}, Lmqd;->d(Lgqd;)Lcqd;
 
     move-result-object v2
 
-    invoke-virtual {v2, v4}, Lcfd;->setCounter(I)V
+    invoke-virtual {v2, v4}, Lcqd;->setCounter(I)V
 
-    iget-boolean v2, p1, Lxfd;->b:Z
+    iget-boolean v2, p1, Lxqd;->b:Z
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lmfd;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lmqd;
 
     move-result-object v2
 
-    invoke-virtual {v2, v3}, Lmfd;->c(Lgfd;)V
+    invoke-virtual {v2, v3}, Lmqd;->c(Lgqd;)V
 
     goto :goto_2
 
     :cond_3
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lmfd;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lmqd;
 
     move-result-object v2
 
-    invoke-virtual {v2, v3}, Lmfd;->b(Lgfd;)V
+    invoke-virtual {v2, v3}, Lmqd;->b(Lgqd;)V
 
     :goto_2
-    iget-boolean v2, p1, Lxfd;->c:Z
+    iget-boolean v2, p1, Lxqd;->c:Z
 
     if-eqz v2, :cond_4
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v2
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    invoke-static {v2, v3}, Lfn7;->n(Landroidx/recyclerview/widget/RecyclerView;F)I
+    invoke-static {v2, v3}, Lewi;->a(Landroidx/recyclerview/widget/RecyclerView;F)I
 
     move-result v3
 
-    invoke-static {v2, v3}, Lfn7;->D(Landroidx/recyclerview/widget/RecyclerView;I)Z
+    invoke-static {v2, v3}, Lewi;->f(Landroidx/recyclerview/widget/RecyclerView;I)Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lmfd;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lmqd;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lmfd;->c(Lgfd;)V
+    invoke-virtual {v2, v1}, Lmqd;->c(Lgqd;)V
 
     goto :goto_3
 
     :cond_4
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lmfd;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lmqd;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lmfd;->b(Lgfd;)V
+    invoke-virtual {v2, v1}, Lmqd;->b(Lgqd;)V
 
     :goto_3
-    iget-object v1, p1, Lxfd;->d:Lwfd;
+    iget-object v1, p1, Lxqd;->d:Lwqd;
 
     if-nez v1, :cond_5
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lmfd;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lmqd;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Lmfd;->b(Lgfd;)V
+    invoke-virtual {p0, v0}, Lmqd;->b(Lgqd;)V
 
     return-void
 
     :cond_5
-    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->Q0:Lff9;
+    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->Q0:Lrm9;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v2
 
     const/4 v3, -0x1
 
-    iput v3, v1, Lff9;->b:I
+    iput v3, v1, Lrm9;->b:I
 
-    iput v3, v1, Lff9;->c:I
+    iput v3, v1, Lrm9;->c:I
 
-    invoke-virtual {v1, v2, v5, v5}, Lff9;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    invoke-virtual {v1, v2, v5, v5}, Lrm9;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
 
-    iget-object p1, p1, Lxfd;->d:Lwfd;
+    iget-object p1, p1, Lxqd;->d:Lwqd;
 
-    iget-wide v1, p1, Lwfd;->b:J
+    iget-wide v1, p1, Lwqd;->b:J
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lwh9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lhp9;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1, v2}, Lwh9;->a(J)Z
+    invoke-virtual {p1, v1, v2}, Lhp9;->a(J)Z
 
     move-result p1
 
     if-nez p1, :cond_6
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lmfd;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lmqd;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Lmfd;->c(Lgfd;)V
+    invoke-virtual {p0, v0}, Lmqd;->c(Lgqd;)V
 
     :cond_6
     return-void
@@ -1592,20 +1630,6 @@
 
 
 # virtual methods
-.method public final E0()La6g;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->V0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, La6g;
-
-    return-object v0
-.end method
-
 .method public final F(ILandroid/os/Bundle;)V
     .locals 11
 
@@ -1644,7 +1668,7 @@
     goto/16 :goto_7
 
     :cond_1
-    sget v0, Lr7d;->b:I
+    sget v0, Loid;->b:I
 
     const/4 v3, 0x2
 
@@ -1656,7 +1680,7 @@
 
     move-result-object p1
 
-    invoke-static {p2}, Lyt3;->u(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1664,14 +1688,14 @@
 
     const-string v0, "mailto:"
 
-    invoke-static {p2, v0}, Lpwe;->K0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Ls9f;->L(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
     :cond_2
-    invoke-static {p2}, Lyt3;->v(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1679,7 +1703,7 @@
 
     const-string v0, "tel:"
 
-    invoke-static {p2, v0}, Lpwe;->K0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Ls9f;->L(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1689,15 +1713,15 @@
     move-object v0, p2
 
     :goto_1
-    invoke-static {p1, v0}, Lq63;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lt83;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-static {}, Lq63;->b()Z
+    invoke-static {}, Lt83;->b()Z
 
     move-result p1
 
     if-eqz p1, :cond_9
 
-    invoke-static {p2}, Lyt3;->u(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->a(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1708,7 +1732,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {p2}, Lyt3;->v(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->b(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1722,7 +1746,7 @@
     move p1, v2
 
     :goto_2
-    invoke-static {p1}, Lsw1;->u(I)I
+    invoke-static {p1}, Lwx1;->v(I)I
 
     move-result p1
 
@@ -1732,11 +1756,11 @@
 
     if-ne p1, v3, :cond_6
 
-    sget p1, Ls7d;->r:I
+    sget p1, Lpid;->r:I
 
-    new-instance v0, Lxcf;
+    new-instance v0, Ljqf;
 
-    invoke-direct {v0, p1}, Lxcf;-><init>(I)V
+    invoke-direct {v0, p1}, Ljqf;-><init>(I)V
 
     goto :goto_3
 
@@ -1748,56 +1772,56 @@
     throw p1
 
     :cond_7
-    sget p1, Ls7d;->t:I
+    sget p1, Lpid;->t:I
 
-    new-instance v0, Lxcf;
+    new-instance v0, Ljqf;
 
-    invoke-direct {v0, p1}, Lxcf;-><init>(I)V
+    invoke-direct {v0, p1}, Ljqf;-><init>(I)V
 
     goto :goto_3
 
     :cond_8
-    sget p1, Ls7d;->q:I
+    sget p1, Lpid;->q:I
 
-    new-instance v0, Lxcf;
+    new-instance v0, Ljqf;
 
-    invoke-direct {v0, p1}, Lxcf;-><init>(I)V
+    invoke-direct {v0, p1}, Ljqf;-><init>(I)V
 
     :goto_3
-    new-instance p1, Lrta;
+    new-instance p1, La2b;
 
-    invoke-direct {p1, p0}, Lrta;-><init>(Lone/me/sdk/arch/Widget;)V
+    invoke-direct {p1, p0}, La2b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    invoke-virtual {p1, v0}, Lrta;->g(Lcdf;)V
+    invoke-virtual {p1, v0}, La2b;->g(Loqf;)V
 
-    new-instance v0, Lfua;
+    new-instance v0, Lo2b;
 
-    sget v5, Ll7d;->n:I
+    sget v5, Liid;->n:I
 
-    invoke-direct {v0, v5}, Lfua;-><init>(I)V
+    invoke-direct {v0, v5}, Lo2b;-><init>(I)V
 
-    invoke-virtual {p1, v0}, Lrta;->e(Ljua;)V
+    invoke-virtual {p1, v0}, La2b;->e(Ls2b;)V
 
-    new-instance v0, Lzta;
+    new-instance v0, Li2b;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->F0()I
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->G0()I
 
     move-result v5
 
     const/4 v6, 0x0
 
-    invoke-direct {v0, v6, v6, v5, v4}, Lzta;-><init>(IIII)V
+    invoke-direct {v0, v6, v6, v5, v4}, Li2b;-><init>(IIII)V
 
-    invoke-virtual {p1, v0}, Lrta;->c(Lzta;)V
+    invoke-virtual {p1, v0}, La2b;->c(Li2b;)V
 
-    invoke-virtual {p1}, Lrta;->i()Lqta;
+    invoke-virtual {p1}, La2b;->i()Lz1b;
 
     :cond_9
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lwe9;->x()Lvhe;
+    invoke-virtual {p1}, Lim9;->x()Lzte;
 
     move-result-object v9
 
@@ -1810,11 +1834,11 @@
     goto/16 :goto_7
 
     :cond_a
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lo29;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Ly99;
 
     move-result-object v5
 
-    invoke-static {p2}, Lyt3;->u(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->a(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1825,7 +1849,7 @@
     goto :goto_4
 
     :cond_b
-    invoke-static {p2}, Lyt3;->v(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->b(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1839,7 +1863,7 @@
     move p1, v2
 
     :goto_4
-    invoke-static {p1}, Lsw1;->u(I)I
+    invoke-static {p1}, Lwx1;->v(I)I
 
     move-result p1
 
@@ -1871,26 +1895,26 @@
     :goto_5
     const/4 v10, 0x2
 
-    invoke-virtual/range {v5 .. v10}, Lo29;->a(JILvhe;I)V
+    invoke-virtual/range {v5 .. v10}, Ly99;->a(JILzte;I)V
 
     return-void
 
     :cond_10
-    sget v0, Lr7d;->f:I
+    sget v0, Loid;->f:I
 
     if-ne p1, v0, :cond_17
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lwe9;->E(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lim9;->E(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lwe9;->x()Lvhe;
+    invoke-virtual {p1}, Lim9;->x()Lzte;
 
     move-result-object v9
 
@@ -1903,7 +1927,7 @@
     goto/16 :goto_7
 
     :cond_11
-    invoke-static {p2}, Lyt3;->u(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->a(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1912,7 +1936,7 @@
     goto :goto_6
 
     :cond_12
-    invoke-static {p2}, Lyt3;->v(Ljava/lang/String;)Z
+    invoke-static {p2}, Lc9i;->b(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1926,7 +1950,7 @@
     move v4, v2
 
     :goto_6
-    invoke-static {v4}, Lsw1;->u(I)I
+    invoke-static {v4}, Lwx1;->v(I)I
 
     move-result p1
 
@@ -1936,7 +1960,7 @@
 
     if-ne p1, v3, :cond_14
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lo29;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Ly99;
 
     move-result-object v5
 
@@ -1944,7 +1968,7 @@
 
     const/4 v10, 0x4
 
-    invoke-virtual/range {v5 .. v10}, Lo29;->a(JILvhe;I)V
+    invoke-virtual/range {v5 .. v10}, Ly99;->a(JILzte;I)V
 
     return-void
 
@@ -1956,7 +1980,7 @@
     throw p1
 
     :cond_15
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lo29;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Ly99;
 
     move-result-object v5
 
@@ -1964,12 +1988,12 @@
 
     const/4 v10, 0x5
 
-    invoke-virtual/range {v5 .. v10}, Lo29;->a(JILvhe;I)V
+    invoke-virtual/range {v5 .. v10}, Ly99;->a(JILzte;I)V
 
     return-void
 
     :cond_16
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lo29;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Ly99;
 
     move-result-object v5
 
@@ -1977,30 +2001,30 @@
 
     const/4 v10, 0x3
 
-    invoke-virtual/range {v5 .. v10}, Lo29;->a(JILvhe;I)V
+    invoke-virtual/range {v5 .. v10}, Ly99;->a(JILzte;I)V
 
     return-void
 
     :cond_17
-    sget v0, Lr7d;->h:I
+    sget v0, Loid;->h:I
 
     if-ne p1, v0, :cond_1d
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    iget-object v0, p1, Lwe9;->V0:Lyn7;
+    iget-object v0, p1, Lim9;->V0:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lyl;
+    check-cast v0, Lim;
 
-    check-cast v0, Lfv7;
+    check-cast v0, Ls08;
 
-    invoke-virtual {v0, p2}, Lfv7;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p2}, Ls08;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -2009,18 +2033,18 @@
     goto :goto_7
 
     :cond_18
-    invoke-virtual {p1, p2}, Lwe9;->E(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lim9;->E(Ljava/lang/String;)V
 
     return-void
 
     :cond_19
-    sget-object p2, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object p2, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     aget-object v1, p2, v2
 
-    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->c:Lds;
+    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->c:Lqs;
 
-    invoke-virtual {v1, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -2030,50 +2054,50 @@
 
     aget-object p2, p2, v2
 
-    invoke-virtual {v1, p0, v0}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v1, p0, v0}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    sget p2, Lepa;->y:I
+    sget p2, Lixa;->y:I
 
     if-ne p1, p2, :cond_1a
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()V
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->Q0()V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
 
     move-result-object p1
 
-    invoke-static {v3}, Lvs;->M([J)J
+    invoke-static {v3}, Ljt;->t([J)J
 
     move-result-wide v0
 
-    iget-object p1, p1, Lnc9;->s0:Lya5;
+    iget-object p1, p1, Lyj9;->s0:Lde5;
 
-    new-instance p2, Llc9;
+    new-instance p2, Lwj9;
 
-    invoke-direct {p2, v0, v1}, Llc9;-><init>(J)V
+    invoke-direct {p2, v0, v1}, Lwj9;-><init>(J)V
 
-    invoke-static {p1, p2}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     return-void
 
     :cond_1a
-    sget p2, Lepa;->B:I
+    sget p2, Lixa;->B:I
 
     if-eq p1, p2, :cond_1b
 
-    sget p2, Lepa;->u:I
+    sget p2, Lixa;->u:I
 
     if-ne p1, p2, :cond_1c
 
     :cond_1b
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()V
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->Q0()V
 
     :cond_1c
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p2
 
-    invoke-static {v3}, Lvs;->M([J)J
+    invoke-static {v3}, Ljt;->t([J)J
 
     move-result-wide v0
 
@@ -2087,25 +2111,39 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, p1, v0}, Lwe9;->I(ILjava/util/List;)V
+    invoke-virtual {p2, p1, v0}, Lim9;->I(ILjava/util/List;)V
 
     :cond_1d
     :goto_7
     return-void
 .end method
 
-.method public final F0()I
-    .locals 2
+.method public final F0()Likg;
+    .locals 1
 
-    invoke-virtual {p0}, Ljz3;->getParentController()Ljz3;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->V0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v1, v0, Lcf9;
+    check-cast v0, Likg;
+
+    return-object v0
+.end method
+
+.method public final G0()I
+    .locals 2
+
+    invoke-virtual {p0}, Lx14;->getParentController()Lx14;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lom9;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lcf9;
+    check-cast v0, Lom9;
 
     goto :goto_0
 
@@ -2117,7 +2155,7 @@
 
     check-cast v0, Lone/me/chatscreen/ChatScreen;
 
-    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->P0()I
+    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->U0()I
 
     move-result v0
 
@@ -2129,18 +2167,18 @@
     return v0
 .end method
 
-.method public final G0()Landroid/widget/FrameLayout;
+.method public final H0()Landroid/widget/FrameLayout;
     .locals 2
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     const/16 v1, 0xc
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y0:Ltm0;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y0:Lnn0;
 
-    invoke-virtual {v0}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2149,32 +2187,32 @@
     return-object v0
 .end method
 
-.method public final H0()Lo29;
+.method public final I0()Ly99;
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->x0:Lyn7;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->x0:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lo29;
+    check-cast v0, Ly99;
 
     return-object v0
 .end method
 
-.method public final I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+.method public final J0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
     .locals 2
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     const/16 v1, 0xa
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->W0:Ltm0;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->W0:Lnn0;
 
-    invoke-virtual {v0}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2183,52 +2221,52 @@
     return-object v0
 .end method
 
-.method public final J0()Lwh9;
+.method public final K0()Lhp9;
     .locals 2
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     const/16 v1, 0xb
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->X0:Ltm0;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->X0:Lnn0;
 
-    invoke-virtual {v0}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lwh9;
+    check-cast v0, Lhp9;
 
     return-object v0
 .end method
 
-.method public final K0()Lroc;
+.method public final L0()Lwyc;
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->v0:Lyn7;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->v0:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lroc;
+    check-cast v0, Lwyc;
 
     return-object v0
 .end method
 
-.method public final L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.method public final M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
     .locals 2
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     const/4 v1, 0x5
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->F0:Lvoc;
+    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->F0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2237,66 +2275,66 @@
     return-object v0
 .end method
 
-.method public final M0()Lnc9;
+.method public final N0()Lyj9;
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->Z:Lyn7;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->Z:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lnc9;
+    check-cast v0, Lyj9;
 
     return-object v0
 .end method
 
-.method public final N0()Lmfd;
+.method public final O0()Lmqd;
     .locals 2
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     const/4 v1, 0x6
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->G0:Lvoc;
+    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->G0:Lazc;
 
-    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lmfd;
+    check-cast v0, Lmqd;
 
     return-object v0
 .end method
 
-.method public final O0()Lwe9;
+.method public final P0()Lim9;
     .locals 1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->u0:Lyn7;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->u0:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lwe9;
+    check-cast v0, Lim9;
 
     return-object v0
 .end method
 
-.method public final P0()V
+.method public final Q0()V
     .locals 2
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
 
     move-result-object v0
 
-    iget-object v0, v0, Lnc9;->c:Lbpc;
+    iget-object v0, v0, Lyj9;->c:Lgzc;
 
-    iget-object v0, v0, Lbpc;->a:Lane;
+    iget-object v0, v0, Lgzc;->a:Llze;
 
-    invoke-interface {v0}, Lane;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llze;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2308,61 +2346,61 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
 
     move-result-object v0
 
-    iget-object v0, v0, Lnc9;->s0:Lya5;
+    iget-object v0, v0, Lyj9;->s0:Lde5;
 
-    sget-object v1, Lic9;->a:Lic9;
+    sget-object v1, Ltj9;->a:Ltj9;
 
-    invoke-static {v0, v1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final Q0(J)V
+.method public final R0(J)V
     .locals 3
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v0
 
-    iget-object v1, v0, Lwe9;->w1:Lhne;
+    iget-object v1, v0, Lim9;->x1:Lsze;
 
-    invoke-virtual {v1}, Lhne;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrb9;
-
-    invoke-interface {v1, p1, p2}, Lwb9;->e(J)Lone/me/messages/list/loader/MessageModel;
+    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lwe9;->B()Lup9;
+    check-cast v1, Ldj9;
+
+    invoke-interface {v1, p1, p2}, Lij9;->e(J)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lim9;->B()Lsx9;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lup9;->f()Z
+    invoke-virtual {v2}, Lsx9;->f()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lwe9;->B()Lup9;
+    invoke-virtual {v0}, Lim9;->B()Lsx9;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lup9;->g(J)V
+    invoke-virtual {v0, p1, p2}, Lsx9;->g(J)V
 
     return-void
 
     :cond_0
     if-eqz v1, :cond_1
 
-    iget-object v1, v1, Lone/me/messages/list/loader/MessageModel;->Z:Lglg;
+    iget-object v1, v1, Lone/me/messages/list/loader/MessageModel;->Z:Lc0h;
 
     goto :goto_0
 
@@ -2370,54 +2408,46 @@
     const/4 v1, 0x0
 
     :goto_0
-    sget-object v2, Lglg;->Y:Lglg;
+    sget-object v2, Lc0h;->Y:Lc0h;
 
     if-ne v1, v2, :cond_2
 
-    invoke-virtual {v0, p1, p2}, Lwe9;->J(J)V
+    invoke-virtual {v0, p1, p2}, Lim9;->J(J)V
 
     return-void
 
     :cond_2
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v0
 
-    iget-object v1, v0, Lwe9;->H1:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v1, v0, Lim9;->I1:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v1, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    iget-object v0, v0, Lwe9;->C1:Lya5;
+    iget-object v0, v0, Lim9;->D1:Lde5;
 
-    new-instance v1, Lq9e;
+    new-instance v1, Lcle;
 
-    invoke-direct {v1, p1, p2}, Lq9e;-><init>(J)V
+    invoke-direct {v1, p1, p2}, Lcle;-><init>(J)V
 
-    invoke-static {v0, v1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final getScopeId-IluPPks()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final i(ILandroid/os/Bundle;)V
+.method public final f(ILandroid/os/Bundle;)V
     .locals 9
 
     iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->w0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lnh1;
+    check-cast v0, Loi1;
 
-    invoke-virtual {v0, p1}, Lnh1;->g(I)Z
+    invoke-virtual {v0, p1}, Loi1;->g(I)Z
 
     move-result v0
 
@@ -2439,7 +2469,7 @@
     goto/16 :goto_3
 
     :cond_1
-    sget v1, Lepa;->S:I
+    sget v1, Lixa;->S:I
 
     if-ne p1, v1, :cond_8
 
@@ -2477,11 +2507,11 @@
 
     const-string v2, "bot.shareContact.confirm.button"
 
-    const-class v3, Lnv0;
+    const-class v3, Llw0;
 
     if-lt p1, v0, :cond_3
 
-    invoke-static {p2, v2, v3}, Lwu0;->d(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
+    invoke-static {p2, v2, v3}, Luv0;->d(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
 
     move-result-object v2
 
@@ -2506,15 +2536,15 @@
     :goto_1
     move-object v7, v2
 
-    check-cast v7, Lnv0;
+    check-cast v7, Llw0;
 
     const-string v2, "bot.shareContact.confirm.buttonPosition"
 
-    const-class v3, Lsv0;
+    const-class v3, Lqw0;
 
     if-lt p1, v0, :cond_5
 
-    invoke-static {p2, v2, v3}, Lwu0;->d(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
+    invoke-static {p2, v2, v3}, Luv0;->d(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
 
     move-result-object v1
 
@@ -2537,9 +2567,9 @@
     :goto_2
     move-object v6, v1
 
-    check-cast v6, Lsv0;
+    check-cast v6, Lqw0;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v3
 
@@ -2556,90 +2586,98 @@
     goto :goto_3
 
     :cond_7
-    iget-object p1, v3, Lwe9;->Y:Le7f;
+    iget-object p1, v3, Lim9;->Y:Lqkf;
 
-    check-cast p1, Lmka;
+    check-cast p1, Losa;
 
-    invoke-virtual {p1}, Lmka;->b()Lh24;
+    invoke-virtual {p1}, Losa;->b()Lv44;
 
     move-result-object p1
 
-    new-instance v2, Lld9;
+    new-instance v2, Lxk9;
 
     const/4 v8, 0x0
 
-    invoke-direct/range {v2 .. v8}, Lld9;-><init>(Lwe9;Ljava/lang/Long;Ljava/lang/String;Lsv0;Lnv0;Lkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v2 .. v8}, Lxk9;-><init>(Lim9;Ljava/lang/Long;Ljava/lang/String;Lqw0;Llw0;Lkotlin/coroutines/Continuation;)V
 
-    iget-object p2, v3, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object p2, v3, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    sget-object v0, Lq24;->b:Lq24;
+    sget-object v0, Le54;->b:Le54;
 
-    invoke-static {p2, p1, v0, v2}, Lov9;->S(Ln24;Lf24;Lq24;Lje6;)Loke;
+    invoke-static {p2, p1, v0, v2}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
 
     move-result-object p1
 
-    iget-object p2, v3, Lwe9;->p1:Lk5d;
+    iget-object p2, v3, Lim9;->q1:Lpzd;
 
-    sget-object v0, Lwe9;->O1:[Lpl7;
+    sget-object v0, Lim9;->P1:[Lwq7;
 
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
 
-    invoke-virtual {p2, v3, v0, p1}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+    invoke-virtual {p2, v3, v0, p1}, Lpzd;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
 
     return-void
 
     :cond_8
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p2
 
-    invoke-static {v0}, Lvs;->U([J)Ljava/util/List;
+    invoke-static {v0}, Ljt;->B([J)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p2, p1, v0}, Lwe9;->I(ILjava/util/List;)V
+    invoke-virtual {p2, p1, v0}, Lim9;->I(ILjava/util/List;)V
 
     :cond_9
     :goto_3
     return-void
 .end method
 
+.method public final getScopeId-IluPPks()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public final onAttach(Landroid/view/View;)V
     .locals 7
 
-    invoke-static {p0}, Lg8;->s(Ljz3;)Ljava/lang/String;
+    invoke-static {p0}, Lsdi;->b(Lx14;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "lifecycle: onAttach"
 
-    invoke-static {p1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
-    new-instance v0, Lxe9;
+    new-instance v0, Ljm9;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lxe9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v0, p0, v1}, Ljm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
-    new-instance v1, Lyfd;
+    new-instance v1, Lyqd;
 
-    invoke-direct {v1, v0}, Lyfd;-><init>(Lxe9;)V
+    invoke-direct {v1, v0}, Lyqd;-><init>(Ljm9;)V
 
-    invoke-virtual {v1, p1}, Lig7;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v1, p1}, Lsl7;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    iput-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->E0:Lyfd;
+    iput-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->E0:Lyqd;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lroc;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lwyc;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lroc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-virtual {p1}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
 
     move-result-object p1
 
@@ -2649,55 +2687,55 @@
 
     const-string v1, "runChatSubscribeNotifObserving"
 
-    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lq5h;->w(Lzjg;)Li73;
+    invoke-static {p1}, Loai;->d(Ltyg;)Lm93;
 
     move-result-object v0
 
-    iget-object v1, p1, Lru/ok/onechat/reactions/ReactionsViewModel;->j:Lyn7;
+    iget-object v1, p1, Lru/ok/onechat/reactions/ReactionsViewModel;->j:Llt7;
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lqf4;
+    check-cast v1, Lmi4;
 
-    iget-object v1, v1, Lqf4;->a:Lh24;
+    iget-object v1, v1, Lmi4;->a:Lv44;
 
-    new-instance v2, Lmoc;
+    new-instance v2, Lryc;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p1, v3}, Lmoc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, p1, v3}, Lryc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x2
 
-    invoke-static {v0, v1, v3, v2, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-static {v0, v1, v3, v2, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
     const/16 p1, 0x9
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     aget-object p1, v0, p1
 
-    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->O0:Ltm0;
+    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->O0:Lnn0;
 
-    invoke-virtual {p1}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Llnb;
+    check-cast p1, Lhwb;
 
-    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lsb9;
+    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lej9;
 
-    iget-object v2, v1, Lsb9;->x0:Ljava/util/ArrayList;
+    iget-object v2, v1, Lej9;->x0:Ljava/util/ArrayList;
 
     new-instance v3, Ljava/util/ArrayList;
 
     const/16 v4, 0xa
 
-    invoke-static {v2, v4}, Ly83;->O(Ljava/lang/Iterable;I)I
+    invoke-static {v2, v4}, Lcb3;->l(Ljava/lang/Iterable;I)I
 
     move-result v4
 
@@ -2733,9 +2771,9 @@
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v2, p1, Llnb;->e:Lrr9;
+    iget-object v2, p1, Lhwb;->e:Lqz9;
 
-    sget-object v4, Llnb;->n:Ljava/lang/String;
+    sget-object v4, Lhwb;->n:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -2751,21 +2789,21 @@
 
     const-string v6, "setIdsForInvalidate %s"
 
-    invoke-static {v4, v6, v5}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v6, v5}, Lndi;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const-string v5, "clear"
 
-    invoke-static {v4, v5}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v4, p1, Llnb;->k:Ljava/util/HashSet;
+    iget-object v4, p1, Lhwb;->k:Ljava/util/HashSet;
 
     invoke-virtual {v4}, Ljava/util/HashSet;->clear()V
 
-    iget-object v4, p1, Llnb;->f:Lrr9;
+    iget-object v4, p1, Lhwb;->f:Lqz9;
 
-    invoke-virtual {v4}, Lrr9;->c()V
+    invoke-virtual {v4}, Lqz9;->c()V
 
-    invoke-virtual {v2}, Lrr9;->c()V
+    invoke-virtual {v2}, Lqz9;->c()V
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2788,24 +2826,24 @@
 
     move-result-wide v4
 
-    invoke-virtual {v2, v4, v5}, Lrr9;->a(J)Z
+    invoke-virtual {v2, v4, v5}, Lqz9;->a(J)Z
 
     goto :goto_1
 
     :cond_1
     const/4 v2, 0x1
 
-    iput-boolean v2, p1, Llnb;->g:Z
+    iput-boolean v2, p1, Lhwb;->g:Z
 
-    iget-object v3, p1, Llnb;->l:Ljk;
+    iget-object v3, p1, Lhwb;->l:Lsk;
 
-    sget-object v4, Llnb;->m:[Lpl7;
+    sget-object v4, Lhwb;->m:[Lwq7;
 
     const/4 v5, 0x0
 
     aget-object v4, v4, v5
 
-    iget-object v3, v3, Ld3;->b:Ljava/lang/Object;
+    iget-object v3, v3, Lqci;->b:Ljava/lang/Object;
 
     check-cast v3, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -2814,24 +2852,24 @@
     goto :goto_2
 
     :cond_2
-    new-instance v4, Lvr8;
+    new-instance v4, Lpt8;
 
-    const/16 v6, 0x1c
+    const/16 v6, 0x1d
 
-    invoke-direct {v4, p1, v6, v3}, Lvr8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v4, p1, v6, v3}, Lpt8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v3, v4}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     :goto_2
-    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->r0:Lakb;
+    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->r0:Lvsb;
 
-    iget-object p1, p1, Lakb;->b:Lp40;
+    iget-object p1, p1, Lvsb;->b:Lc50;
 
-    iput-boolean v2, p1, Lp40;->Y:Z
+    iput-boolean v2, p1, Lc50;->Y:Z
 
-    invoke-virtual {p1}, Lp40;->f()V
+    invoke-virtual {p1}, Lc50;->g()V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
@@ -2839,9 +2877,9 @@
 
     aget-object v3, v0, v3
 
-    iget-object v3, p0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lds;
+    iget-object v3, p0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lqs;
 
-    invoke-virtual {v3, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v3, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -2857,9 +2895,9 @@
 
     aget-object v0, v0, v3
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lds;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lqs;
 
-    invoke-virtual {v0, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2877,59 +2915,59 @@
     move v2, v5
 
     :goto_3
-    invoke-virtual {v1}, Lsb9;->L()Lone/me/messages/list/loader/MessageModel;
+    invoke-virtual {v1}, Lej9;->L()Lone/me/messages/list/loader/MessageModel;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lwe9;->D()Ltxf;
+    invoke-virtual {p1}, Lim9;->D()Lubg;
 
     move-result-object v1
 
-    new-instance v3, Lv86;
+    new-instance v3, Lsc6;
 
-    invoke-direct {v3, p1, v2, v0}, Lv86;-><init>(Lwe9;ZLone/me/messages/list/loader/MessageModel;)V
+    invoke-direct {v3, p1, v2, v0}, Lsc6;-><init>(Lim9;ZLone/me/messages/list/loader/MessageModel;)V
 
-    invoke-virtual {v1, v5, v3}, Ltxf;->b(ZLtd6;)V
+    invoke-virtual {v1, v5, v3}, Lubg;->b(ZLoh6;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->F0()I
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->G0()I
 
     move-result v0
 
-    iput v0, p1, Lwe9;->N1:I
+    iput v0, p1, Lim9;->O1:I
 
     return-void
 .end method
 
-.method public final onChangeStarted(Loz3;Lpz3;)V
+.method public final onChangeStarted(Lc24;Ld24;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Loz3;Lpz3;)V
+    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Lc24;Ld24;)V
 
-    iget-boolean p1, p2, Lpz3;->a:Z
-
-    if-nez p1, :cond_1
-
-    iget-boolean p1, p2, Lpz3;->b:Z
+    iget-boolean p1, p2, Ld24;->a:Z
 
     if-nez p1, :cond_1
 
-    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
+    iget-boolean p1, p2, Ld24;->b:Z
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {p0}, Lx14;->getView()Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
     const p2, 0x3e99999a    # 0.3f
 
-    invoke-static {p1, p2}, Lfn7;->n(Landroidx/recyclerview/widget/RecyclerView;F)I
+    invoke-static {p1, p2}, Lewi;->a(Landroidx/recyclerview/widget/RecyclerView;F)I
 
     move-result p1
 
@@ -2953,19 +2991,19 @@
 
     move-result p1
 
-    iget-object p2, p0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lsb9;
+    iget-object p2, p0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lej9;
 
-    invoke-virtual {p2, p1}, Lsb9;->M(I)Lone/me/messages/list/loader/MessageModel;
+    invoke-virtual {p2, p1}, Lej9;->M(I)Lone/me/messages/list/loader/MessageModel;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lwe9;->H(Lone/me/messages/list/loader/MessageModel;)Z
+    invoke-virtual {p2, p1}, Lim9;->H(Lone/me/messages/list/loader/MessageModel;)Z
 
     :cond_1
     return-void
@@ -2974,11 +3012,11 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    new-instance p1, Lxe9;
+    new-instance p1, Ljm9;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p0, p2}, Lxe9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {p1, p0, p2}, Ljm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
     new-instance p2, Landroid/widget/FrameLayout;
 
@@ -2996,7 +3034,7 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p1, p2}, Lxe9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ljm9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
 .end method
@@ -3004,23 +3042,23 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 4
 
-    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lyn7;
+    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Llt7;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lto8;
+    check-cast p1, Lcw8;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()La6g;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->F0()Likg;
 
     move-result-object v0
 
-    check-cast p1, Lbj0;
+    check-cast p1, Luj0;
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lbj0;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object p1, p1, Luj0;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
@@ -3030,154 +3068,154 @@
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :goto_0
-    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->b1:Lync;
+    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->b1:Ldyc;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p1, Lync;->f:Ljava/util/LinkedList;
+    iget-object v0, p1, Ldyc;->f:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    iget-object v0, p1, Lync;->e:Ljava/util/LinkedHashSet;
+    iget-object v0, p1, Ldyc;->e:Ljava/util/LinkedHashSet;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    iget-object p1, p1, Lync;->b:Lenc;
+    iget-object p1, p1, Ldyc;->b:Ljxc;
 
-    invoke-virtual {p1}, Lenc;->b()V
+    invoke-virtual {p1}, Ljxc;->b()V
 
     :cond_1
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->b1:Lync;
+    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->b1:Ldyc;
 
-    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->a1:Lf75;
+    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->a1:Lja5;
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Ltnc;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Lyxc;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Ltnc;->a()V
+    invoke-virtual {v0}, Lyxc;->a()V
 
     :cond_2
-    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Ltnc;
+    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Lyxc;
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->y0:Lvt6;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->y0:Ldy6;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lvt6;->c:Z
+    iput-boolean v1, v0, Ldy6;->c:Z
 
-    iput-object p1, v0, Lvt6;->d:Lst6;
+    iput-object p1, v0, Ldy6;->d:Lay6;
 
-    iget-object v0, v0, Lvt6;->b:Ljava/util/LinkedHashSet;
+    iget-object v0, v0, Ldy6;->b:Ljava/util/LinkedHashSet;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lroc;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lwyc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lroc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+    invoke-virtual {v0}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lru/ok/onechat/reactions/ReactionsViewModel;->f()V
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->z0:Ls3f;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->z0:Lchf;
 
     if-nez v0, :cond_3
 
     move-object v0, p1
 
     :cond_3
-    iget-object v2, v0, Ls3f;->A0:Ljava/lang/Object;
+    iget-object v2, v0, Lchf;->A0:Ljava/lang/Object;
 
-    invoke-interface {v2}, Lyn7;->a()Z
+    invoke-interface {v2}, Llt7;->e()Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    iget-object v0, v0, Ls3f;->t0:Lyn7;
+    iget-object v0, v0, Lchf;->t0:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lko0;
+    check-cast v0, Lhp0;
 
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lolb;->d(Ljava/lang/Object;)V
+    invoke-interface {v0, v2}, Ljub;->d(Ljava/lang/Object;)V
 
     :cond_4
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->A0:Ldg9;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->A0:Lpn9;
 
     if-nez v0, :cond_5
 
     move-object v0, p1
 
     :cond_5
-    invoke-virtual {v0, p1}, Lng7;->i(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, p1}, Lxl7;->i(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v0
 
-    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     const/16 v3, 0x8
 
     aget-object v2, v2, v3
 
-    iget-object v2, p0, Lone/me/messages/list/ui/MessagesListWidget;->N0:Ltm0;
+    iget-object v2, p0, Lone/me/messages/list/ui/MessagesListWidget;->N0:Lnn0;
 
-    invoke-virtual {v2}, Ltm0;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lbc9;
-
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->q0(Lgvc;)V
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    invoke-virtual {v2}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    iget-object v2, v2, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lgs9;
+    check-cast v2, Lmj9;
 
-    invoke-virtual {v2}, Lgs9;->b()V
+    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->q0(Lv5d;)V
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Lw85;)V
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setDelegate(Ly85;)V
+    move-result-object v2
+
+    iget-object v2, v2, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lf0a;
+
+    invoke-virtual {v2}, Lf0a;->b()V
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Lbc5;)V
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setDelegate(Ldc5;)V
 
     iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->D0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Leu5;
+    check-cast v0, Lvx5;
 
-    iput-boolean v1, v0, Leu5;->r0:Z
+    iput-boolean v1, v0, Lvx5;->r0:Z
 
-    iput-object p1, v0, Leu5;->s0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iput-object p1, v0, Lvx5;->s0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Lq0d;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Lkbd;
 
-    invoke-virtual {v0}, Lq0d;->reset()V
+    invoke-virtual {v0}, Lkbd;->reset()V
 
-    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->H0:Loxf;
+    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->H0:Lpbg;
 
-    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->J0:Lbve;
+    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->J0:Lo7f;
 
-    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->I0:Ljnb;
+    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->I0:Lcz8;
 
-    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->B0:Lqta;
+    iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->B0:Lz1b;
 
     iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->s0:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
@@ -3185,16 +3223,16 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+    invoke-virtual {v0, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
 
     :cond_6
     iput-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->s0:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    iget-object p1, p1, Lwe9;->H1:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object p1, p1, Lim9;->I1:Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v0, 0x0
 
@@ -3208,80 +3246,80 @@
 
     const/4 p1, 0x4
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     aget-object p1, v0, p1
 
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lds;
+    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lqs;
 
-    invoke-virtual {v1, p0, p1}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v1, p0, p1}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->E0:Lyfd;
+    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->E0:Lyqd;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lig7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p1, v1}, Lsl7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()La6g;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->F0()Likg;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    iput-object v1, p1, La6g;->f:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object v1, p1, Likg;->f:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object p1, p1, La6g;->t:Lnf2;
+    iget-object p1, p1, Likg;->u:Lzg2;
 
     const/4 v1, -0x1
 
-    invoke-virtual {p1, v1}, Lm68;->i(I)V
+    invoke-virtual {p1, v1}, Lhc8;->i(I)V
 
-    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->r0:Lakb;
+    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->r0:Lvsb;
 
-    iget-object p1, p1, Lakb;->b:Lp40;
+    iget-object p1, p1, Lvsb;->b:Lc50;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p1, Lp40;->Y:Z
+    iput-boolean v1, p1, Lc50;->Y:Z
 
-    iget-object v2, p1, Lp40;->b:Lg5c;
+    iget-object v2, p1, Lc50;->b:Lydc;
 
-    iget-boolean v3, p1, Lp40;->X:Z
+    iget-boolean v3, p1, Lc50;->X:Z
 
     if-nez v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iput-boolean v1, p1, Lp40;->X:Z
+    iput-boolean v1, p1, Lc50;->X:Z
 
-    invoke-virtual {v2}, Lg5c;->b()V
+    invoke-virtual {v2}, Lydc;->b()V
 
-    iget-object p1, p1, Lp40;->Z:Ln40;
+    iget-object p1, p1, Lc50;->Z:La50;
 
-    iget-object v1, v2, Lg5c;->h:Ljava/util/LinkedHashSet;
+    iget-object v1, v2, Lydc;->h:Ljava/util/LinkedHashSet;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     :goto_0
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v1}, Lfn7;->n(Landroidx/recyclerview/widget/RecyclerView;F)I
+    invoke-static {p1, v1}, Lewi;->a(Landroidx/recyclerview/widget/RecyclerView;F)I
 
     move-result v1
 
-    invoke-static {p1, v1}, Lfn7;->D(Landroidx/recyclerview/widget/RecyclerView;I)Z
+    invoke-static {p1, v1}, Lewi;->f(Landroidx/recyclerview/widget/RecyclerView;I)Z
 
     move-result p1
 
@@ -3293,52 +3331,52 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lds;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lqs;
 
-    invoke-virtual {v0, p0, p1}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0, p1}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    iget-object v0, p1, Lwe9;->v1:Lbpc;
+    iget-object v0, p1, Lim9;->w1:Lgzc;
 
-    iget-object v0, v0, Lbpc;->a:Lane;
+    iget-object v0, v0, Lgzc;->a:Llze;
 
-    invoke-interface {v0}, Lane;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llze;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lr82;
+    check-cast v0, Lda2;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, v0, Lr82;->b:Luc2;
+    iget-object v0, v0, Lda2;->b:Lfe2;
 
     if-eqz v0, :cond_2
 
-    iget v0, v0, Luc2;->m:I
+    iget v0, v0, Lfe2;->m:I
 
     if-lez v0, :cond_2
 
     return-void
 
     :cond_2
-    invoke-virtual {p1}, Lwe9;->D()Ltxf;
+    invoke-virtual {p1}, Lim9;->D()Lubg;
 
     move-result-object p1
 
-    sget-object v0, Ltxf;->j:[Lpl7;
+    sget-object v0, Lubg;->j:[Lwq7;
 
-    new-instance v0, Lqoe;
+    new-instance v0, Lwxe;
 
-    const/16 v1, 0x17
+    const/16 v1, 0x14
 
-    invoke-direct {v0, v1}, Lqoe;-><init>(I)V
+    invoke-direct {v0, v1}, Lwxe;-><init>(I)V
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1, v0}, Ltxf;->b(ZLtd6;)V
+    invoke-virtual {p1, v1, v0}, Lubg;->b(ZLoh6;)V
 
     return-void
 .end method
@@ -3348,32 +3386,32 @@
 
     const/4 v0, 0x7
 
-    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     aget-object v0, v1, v0
 
-    iget-object v2, p0, Lone/me/messages/list/ui/MessagesListWidget;->M0:Lk5d;
+    iget-object v2, p0, Lone/me/messages/list/ui/MessagesListWidget;->M0:Lpzd;
 
-    invoke-virtual {v2, p0, v0}, Lk5d;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+    invoke-virtual {v2, p0, v0}, Lpzd;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Leh7;
+    check-cast v0, Lmm7;
 
     const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, v2}, Leh7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-interface {v0, v2}, Lmm7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
     const/4 v0, 0x1
 
     aget-object v0, v1, v0
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->c:Lds;
+    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->c:Lqs;
 
-    invoke-virtual {v0, p0, v2}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0, v2}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -3383,13 +3421,13 @@
 
     iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->w0:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lnh1;
+    check-cast v0, Loi1;
 
-    invoke-virtual {v0, p1, p2, p3}, Lnh1;->b(I[Ljava/lang/String;[I)Z
+    invoke-virtual {v0, p1, p2, p3}, Loi1;->b(I[Ljava/lang/String;[I)Z
 
     move-result v0
 
@@ -3422,21 +3460,21 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    iget-object p2, p1, Lwe9;->z1:Ld3b;
+    iget-object p2, p1, Lim9;->A1:Lqbb;
 
-    iput-object v1, p1, Lwe9;->z1:Ld3b;
+    iput-object v1, p1, Lim9;->A1:Lqbb;
 
     if-eqz p2, :cond_3
 
-    iget-object p3, p2, Ld3b;->a:Ljava/lang/Object;
+    iget-object p3, p2, Lqbb;->a:Ljava/lang/Object;
 
-    check-cast p3, Len5;
+    check-cast p3, Ltq5;
 
-    iget-object p2, p2, Ld3b;->b:Ljava/lang/Object;
+    iget-object p2, p2, Lqbb;->b:Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/Number;
 
@@ -3444,38 +3482,38 @@
 
     move-result-wide v2
 
-    invoke-virtual {p1, p3, v2, v3, v1}, Lwe9;->G(Lf00;JLjava/lang/String;)Z
+    invoke-virtual {p1, p3, v2, v3, v1}, Lim9;->G(Ls00;JLjava/lang/String;)Z
 
     return-void
 
     :cond_2
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    iput-object v1, p1, Lwe9;->z1:Ld3b;
+    iput-object v1, p1, Lim9;->A1:Lqbb;
 
-    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->t0:Lyn7;
+    iget-object p1, p0, Lone/me/messages/list/ui/MessagesListWidget;->t0:Llt7;
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lr8b;
+    check-cast p1, Lnhb;
 
-    new-instance v0, Lp5h;
+    new-instance v0, Lilh;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lp5h;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v0, p0, v1}, Lilh;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    sget v1, Luhc;->messages_list_request_storage_permission_title:I
+    sget v1, Lurc;->messages_list_request_storage_permission_title:I
 
-    sget v2, Luhc;->messages_list_request_storage_permission_subtitle:I
+    sget v2, Lurc;->messages_list_request_storage_permission_subtitle:I
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, p2, p3, v1, v2}, Lr8b;->n(Lp5h;[Ljava/lang/String;[III)V
+    invoke-static {v0, p2, p3, v1, v2}, Lnhb;->o(Lilh;[Ljava/lang/String;[III)V
 
     :cond_3
     :goto_1
@@ -3497,7 +3535,7 @@
 
     const/4 v1, 0x4
 
-    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     aget-object v1, v2, v1
 
@@ -3505,9 +3543,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lds;
+    iget-object v1, p0, Lone/me/messages/list/ui/MessagesListWidget;->Y:Lqs;
 
-    invoke-virtual {v1, p0, v0}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v1, p0, v0}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     const-string v0, "ARG_LOAD_MESSAGE_ID"
 
@@ -3519,7 +3557,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lq24;->b:Lq24;
+    sget-object v4, Le54;->b:Le54;
 
     if-eqz v3, :cond_0
 
@@ -3533,7 +3571,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lwwe;->f0(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {p1}, Lz9f;->g(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object p1
 
@@ -3551,45 +3589,45 @@
 
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iget-object p2, p0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lds;
+    iget-object p2, p0, Lone/me/messages/list/ui/MessagesListWidget;->X:Lqs;
 
-    invoke-virtual {p2, p0, p1}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {p2, p0, p1}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lwe9;->C()Lvh9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    iget-object p2, p1, Lvh9;->c:Ln24;
+    invoke-virtual {p1}, Lim9;->C()Lgp9;
 
-    iget-object v0, p1, Lvh9;->b:Lh24;
+    move-result-object p1
 
-    new-instance v1, Lph9;
+    iget-object p2, p1, Lgp9;->c:Lb54;
+
+    iget-object v0, p1, Lgp9;->b:Lv44;
+
+    new-instance v1, Lap9;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v5, v6, v2}, Lph9;-><init>(Lvh9;JLkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p1, v5, v6, v2}, Lap9;-><init>(Lgp9;JLkotlin/coroutines/Continuation;)V
 
-    invoke-static {p2, v0, v4, v1}, Lov9;->S(Ln24;Lf24;Lq24;Lje6;)Loke;
+    invoke-static {p2, v0, v4, v1}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lvh9;->f(Loke;)V
+    invoke-virtual {p1, p2}, Lgp9;->f(Lwwe;)V
 
-    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lx14;->getView()Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    new-instance p2, Lq50;
+    new-instance p2, La60;
 
     const/4 v0, 0x6
 
-    invoke-direct {p2, p0, v5, v6, v0}, Lq50;-><init>(Ljava/lang/Object;JI)V
+    invoke-direct {p2, p0, v5, v6, v0}, La60;-><init>(Ljava/lang/Object;JI)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -3608,7 +3646,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {p1, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -3618,7 +3656,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lwwe;->f0(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {p1}, Lz9f;->g(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object p1
 
@@ -3630,33 +3668,33 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lwe9;->C()Lvh9;
+    invoke-virtual {p1}, Lim9;->C()Lgp9;
 
     move-result-object v6
 
-    sget-object p1, Lvh9;->q:[Lpl7;
+    sget-object p1, Lgp9;->q:[Lwq7;
 
-    iget-object p1, v6, Lvh9;->c:Ln24;
+    iget-object p1, v6, Lgp9;->c:Lb54;
 
-    iget-object p2, v6, Lvh9;->b:Lh24;
+    iget-object p2, v6, Lgp9;->b:Lv44;
 
-    new-instance v5, Lqh9;
+    new-instance v5, Lbp9;
 
     const/4 v10, 0x0
 
     const/4 v9, 0x4
 
-    invoke-direct/range {v5 .. v10}, Lqh9;-><init>(Lvh9;JILkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v5 .. v10}, Lbp9;-><init>(Lgp9;JILkotlin/coroutines/Continuation;)V
 
-    invoke-static {p1, p2, v4, v5}, Lov9;->S(Ln24;Lf24;Lq24;Lje6;)Loke;
+    invoke-static {p1, p2, v4, v5}, Lrji;->c(Lb54;Lt44;Le54;Lei6;)Lwwe;
 
     move-result-object p1
 
-    invoke-virtual {v6, p1}, Lvh9;->f(Loke;)V
+    invoke-virtual {v6, p1}, Lgp9;->f(Lwwe;)V
 
     :cond_1
     return-void
@@ -3667,92 +3705,92 @@
 
     move-object/from16 v0, p0
 
-    new-instance v1, Lync;
+    new-instance v1, Ldyc;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v2
 
     const/16 v3, 0xd
 
-    sget-object v4, Lone/me/messages/list/ui/MessagesListWidget;->c1:[Lpl7;
+    sget-object v4, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
 
     aget-object v3, v4, v3
 
-    iget-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:Ltm0;
+    iget-object v3, v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:Lnn0;
 
-    invoke-virtual {v3}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lenc;
+    check-cast v3, Ljxc;
 
-    new-instance v5, Lpf7;
+    new-instance v5, Lsn7;
 
-    const/16 v6, 0x10
+    const/16 v6, 0xf
 
     move-object/from16 v7, p1
 
-    invoke-direct {v5, v6, v7}, Lpf7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v5, v6, v7}, Lsn7;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v1, v2, v3, v5}, Lync;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lenc;Lpf7;)V
+    invoke-direct {v1, v2, v3, v5}, Ldyc;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Ljxc;Lsn7;)V
 
-    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->b1:Lync;
+    iput-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->b1:Ldyc;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lwe9;->L1:Lbpc;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Luq7;->x()Lwq7;
-
-    move-result-object v2
-
-    sget-object v3, Lwp7;->o:Lwp7;
-
-    invoke-static {v1, v2, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v1
 
-    new-instance v2, Lcg9;
+    iget-object v1, v1, Lim9;->M1:Lgzc;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Liw7;->x()Lkw7;
+
+    move-result-object v2
+
+    sget-object v3, Lkv7;->o:Lkv7;
+
+    invoke-static {v1, v2, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+
+    move-result-object v1
+
+    new-instance v2, Lon9;
 
     const/4 v5, 0x0
 
-    invoke-direct {v2, v5, v0}, Lcg9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v2, v5, v0}, Lon9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v6, Lnw5;
+    new-instance v6, Lh06;
 
     const/4 v7, 0x1
 
-    invoke-direct {v6, v1, v2, v7}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v6, v1, v2, v7}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v1
 
-    invoke-static {v6, v1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v6, v1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lsb9;
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lej9;
 
-    invoke-virtual {v1}, Lhv7;->j()I
+    invoke-virtual {v1}, Lu08;->j()I
 
     move-result v2
 
     if-lez v2, :cond_0
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lwh9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lhp9;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lwh9;->b()Z
+    invoke-virtual {v2}, Lhp9;->b()Z
 
     :cond_0
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v2
 
@@ -3760,483 +3798,483 @@
 
     aget-object v6, v4, v6
 
-    iget-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->N0:Ltm0;
+    iget-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->N0:Lnn0;
 
-    invoke-virtual {v6}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lbc9;
+    check-cast v6, Lmj9;
 
-    invoke-virtual {v2, v6}, Landroidx/recyclerview/widget/RecyclerView;->k(Lgvc;)V
+    invoke-virtual {v2, v6}, Landroidx/recyclerview/widget/RecyclerView;->k(Lv5d;)V
 
     const/16 v2, 0x9
 
     aget-object v6, v4, v2
 
-    iget-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->O0:Ltm0;
+    iget-object v6, v0, Lone/me/messages/list/ui/MessagesListWidget;->O0:Lnn0;
 
-    invoke-virtual {v6}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Llnb;
+    check-cast v7, Lhwb;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v8
 
-    iget-object v9, v7, Llnb;->l:Ljk;
+    iget-object v9, v7, Lhwb;->l:Lsk;
 
-    sget-object v10, Llnb;->m:[Lpl7;
+    sget-object v10, Lhwb;->m:[Lwq7;
 
     const/4 v11, 0x0
 
     aget-object v10, v10, v11
 
-    invoke-virtual {v9, v7, v10, v8}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+    invoke-virtual {v9, v7, v10, v8}, Lqci;->P(Ljava/lang/Object;Lwq7;Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v7
 
     aget-object v2, v4, v2
 
-    invoke-virtual {v6}, Ltm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6}, Lnn0;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Llnb;
+    check-cast v2, Lhwb;
 
-    invoke-virtual {v7, v2}, Landroidx/recyclerview/widget/RecyclerView;->m(Ljvc;)V
+    invoke-virtual {v7, v2}, Landroidx/recyclerview/widget/RecyclerView;->m(Ly5d;)V
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v2
-
-    new-instance v4, Lrf6;
-
-    const/16 v6, 0x10
-
-    invoke-direct {v4, v2, v6, v0}, Lrf6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v4}, Lwxa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lwxa;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()La6g;
+    new-instance v4, Lmj6;
+
+    const/16 v6, 0xf
+
+    invoke-direct {v4, v2, v6, v0}, Lmj6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v2, v4}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->F0()Likg;
 
     move-result-object v4
 
-    invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->m(Ljvc;)V
+    invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->m(Ly5d;)V
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v2
-
-    new-instance v4, Lag9;
-
-    invoke-direct {v4, v0}, Lag9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    invoke-virtual {v2, v4}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lhb9;)V
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
     move-result-object v2
 
-    iget-object v2, v2, Lwe9;->J1:Liu5;
+    new-instance v4, Lmn9;
 
-    new-instance v4, La13;
+    invoke-direct {v4, v0}, Lmn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    const/16 v6, 0x12
+    invoke-virtual {v2, v4}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lti9;)V
 
-    invoke-direct {v4, v2, v6}, La13;-><init>(Liu5;I)V
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
-    new-instance v2, Lbg9;
+    move-result-object v2
 
-    invoke-direct {v2, v5, v0}, Lbg9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    iget-object v2, v2, Lim9;->K1:Lzx5;
 
-    new-instance v6, Lnw5;
+    new-instance v4, Ln23;
+
+    const/16 v6, 0x13
+
+    invoke-direct {v4, v2, v6}, Ln23;-><init>(Lzx5;I)V
+
+    new-instance v2, Lnn9;
+
+    invoke-direct {v2, v5, v0}, Lnn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+
+    new-instance v6, Lh06;
 
     const/4 v7, 0x1
 
-    invoke-direct {v6, v4, v2, v7}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v6, v4, v2, v7}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    sget-object v2, Lqa9;->a:Lqa9;
+    sget-object v2, Lci9;->a:Lci9;
 
-    invoke-virtual {v2}, Lqa9;->getDispatchers()Le7f;
-
-    move-result-object v4
-
-    check-cast v4, Lmka;
-
-    invoke-virtual {v4}, Lmka;->c()Lz68;
+    invoke-virtual {v2}, Lci9;->getDispatchers()Lqkf;
 
     move-result-object v4
 
-    invoke-static {v6, v4}, Luce;->H(Liu5;Lf24;)Liu5;
+    check-cast v4, Losa;
+
+    invoke-virtual {v4}, Losa;->c()Lfd8;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-static {v6, v4}, Ly1j;->t(Lzx5;Lt44;)Lzx5;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v6
 
-    invoke-static {v4, v6}, Labh;->E(Liu5;Lgq7;)Loke;
+    invoke-static {v4, v6}, Lwbi;->g(Lzx5;Luv7;)Lwwe;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lwe9;->C()Lvh9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v4
 
-    iget-object v4, v4, Lvh9;->p:Lrfd;
+    invoke-virtual {v4}, Lim9;->C()Lgp9;
 
-    new-instance v6, La13;
+    move-result-object v4
+
+    iget-object v4, v4, Lgp9;->p:Lrqd;
+
+    new-instance v6, Ln23;
 
     const/16 v7, 0x9
 
-    invoke-direct {v6, v4, v7}, La13;-><init>(Liu5;I)V
+    invoke-direct {v6, v4, v7}, Ln23;-><init>(Lzx5;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Luq7;->x()Lwq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v4
 
-    invoke-static {v6, v4, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-interface {v4}, Liw7;->x()Lkw7;
 
     move-result-object v4
 
-    new-instance v6, Lof9;
+    invoke-static {v6, v4, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
-    invoke-direct {v6, v5, v0}, Lof9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    move-result-object v4
 
-    new-instance v7, Lnw5;
+    new-instance v6, Lan9;
+
+    invoke-direct {v6, v5, v0}, Lan9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+
+    new-instance v7, Lh06;
 
     const/4 v8, 0x1
 
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v4
-
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v4
 
-    iget-object v4, v4, Lwe9;->D1:Lya5;
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lim9;->E1:Lde5;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v6
 
-    invoke-interface {v6}, Luq7;->x()Lwq7;
+    invoke-interface {v6}, Liw7;->x()Lkw7;
 
     move-result-object v6
 
-    invoke-static {v4, v6, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v4, v6, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v4
 
-    new-instance v6, Lpf9;
+    new-instance v6, Lbn9;
 
-    invoke-direct {v6, v5, v0}, Lpf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v6, v5, v0}, Lbn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v7, Lnw5;
+    new-instance v7, Lh06;
 
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v4
-
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lwe9;->C()Lvh9;
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v4
 
-    iget-object v4, v4, Lvh9;->o:Liu5;
+    invoke-virtual {v4}, Lim9;->C()Lgp9;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    move-result-object v4
+
+    iget-object v4, v4, Lgp9;->o:Lzx5;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v6
 
-    invoke-interface {v6}, Luq7;->x()Lwq7;
+    invoke-interface {v6}, Liw7;->x()Lkw7;
 
     move-result-object v6
 
-    sget-object v7, Lwp7;->X:Lwp7;
+    sget-object v7, Lkv7;->X:Lkv7;
 
-    invoke-static {v4, v6, v7}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
-
-    move-result-object v4
-
-    new-instance v6, Lhf9;
-
-    invoke-direct {v6, v5, v0}, Lhf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    new-instance v7, Lnw5;
-
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-static {v4, v6, v7}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v4
 
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
+    new-instance v6, Ltm9;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-direct {v6, v5, v0}, Ltm9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+
+    new-instance v7, Lh06;
+
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v4
 
-    iget-object v4, v4, Lnc9;->c:Lbpc;
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lyj9;->c:Lgzc;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v6
 
-    invoke-interface {v6}, Luq7;->x()Lwq7;
+    invoke-interface {v6}, Liw7;->x()Lkw7;
 
     move-result-object v6
 
-    invoke-static {v4, v6, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v4, v6, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v4
 
-    new-instance v6, Lqf9;
+    new-instance v6, Lcn9;
 
-    invoke-direct {v6, v5, v0}, Lqf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v6, v5, v0}, Lcn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v7, Lnw5;
+    new-instance v7, Lh06;
 
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v4
-
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v4
 
-    iget-object v4, v4, Lnc9;->X:Lbpc;
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lyj9;->X:Lgzc;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v6
 
-    invoke-interface {v6}, Luq7;->x()Lwq7;
+    invoke-interface {v6}, Liw7;->x()Lkw7;
 
     move-result-object v6
 
-    invoke-static {v4, v6, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v4, v6, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v4
 
-    new-instance v6, Lrf9;
+    new-instance v6, Ldn9;
 
-    invoke-direct {v6, v5, v0}, Lrf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v6, v5, v0}, Ldn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v7, Lnw5;
+    new-instance v7, Lh06;
 
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v4
-
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v4
 
-    iget-object v4, v4, Lnc9;->r0:Lya5;
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    new-instance v6, Lzf9;
-
-    invoke-direct {v6, v5, v0}, Lzf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    new-instance v7, Lnw5;
-
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
 
     move-result-object v4
 
-    new-instance v6, Lcq7;
+    iget-object v4, v4, Lyj9;->r0:Lde5;
 
-    invoke-direct {v6, v7, v5}, Lcq7;-><init>(Lnw5;Lkotlin/coroutines/Continuation;)V
+    new-instance v6, Lln9;
 
-    new-instance v7, Leq7;
+    invoke-direct {v6, v5, v0}, Lln9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    invoke-direct {v7, v4, v6, v5}, Leq7;-><init>(Lgq7;Lcq7;Lkotlin/coroutines/Continuation;)V
+    new-instance v7, Lh06;
+
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
+
+    move-result-object v4
+
+    new-instance v6, Lqv7;
+
+    invoke-direct {v6, v7, v5}, Lqv7;-><init>(Lh06;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v7, Lsv7;
+
+    invoke-direct {v7, v4, v6, v5}, Lsv7;-><init>(Luv7;Lqv7;Lkotlin/coroutines/Continuation;)V
 
     const/4 v6, 0x3
 
-    invoke-static {v4, v5, v5, v7, v6}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-static {v4, v5, v5, v7, v6}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v4
 
-    iget-object v4, v4, Lwe9;->C1:Lya5;
+    iget-object v4, v4, Lim9;->D1:Lde5;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v6
 
-    invoke-interface {v6}, Luq7;->x()Lwq7;
+    invoke-interface {v6}, Liw7;->x()Lkw7;
 
     move-result-object v6
 
-    invoke-static {v4, v6, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v4, v6, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v4
 
-    new-instance v6, Lsf9;
+    new-instance v6, Len9;
 
-    invoke-direct {v6, v5, v0}, Lsf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v6, v5, v0}, Len9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v7, Lnw5;
+    new-instance v7, Lh06;
 
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v4
-
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lwe9;->D()Ltxf;
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v4
 
-    iget-object v4, v4, Ltxf;->f:Lya5;
+    invoke-virtual {v4}, Lim9;->D()Lubg;
 
-    new-instance v6, La13;
+    move-result-object v4
+
+    iget-object v4, v4, Lubg;->f:Lde5;
+
+    new-instance v6, Ln23;
 
     const/16 v7, 0x9
 
-    invoke-direct {v6, v4, v7}, La13;-><init>(Liu5;I)V
+    invoke-direct {v6, v4, v7}, Ln23;-><init>(Lzx5;I)V
 
-    new-instance v4, Ltq3;
+    new-instance v4, Lit3;
 
-    const/16 v7, 0xf
+    const/16 v7, 0x10
 
-    invoke-direct {v4, v6, v7, v0}, Ltq3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v4, v6, v7, v0}, Lit3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Luq7;->x()Lwq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v6
 
-    invoke-static {v4, v6, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
-
-    move-result-object v4
-
-    new-instance v6, Ltf9;
-
-    invoke-direct {v6, v5, v0}, Ltf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    new-instance v7, Lnw5;
-
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v4
-
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lroc;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lroc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lru/ok/onechat/reactions/ReactionsViewModel;->u:Lapc;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-interface {v6}, Liw7;->x()Lkw7;
 
     move-result-object v6
 
-    invoke-interface {v6}, Luq7;->x()Lwq7;
-
-    move-result-object v6
-
-    invoke-static {v4, v6, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v4, v6, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v4
 
-    new-instance v6, Luf9;
+    new-instance v6, Lfn9;
 
-    invoke-direct {v6, v5, v0}, Luf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v6, v5, v0}, Lfn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v7, Lnw5;
+    new-instance v7, Lh06;
 
-    invoke-direct {v7, v4, v6, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v4
-
-    invoke-static {v7, v4}, Luce;->N(Liu5;Ln24;)Loke;
-
-    new-instance v10, Laq9;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lwyc;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lwyc;->r()Lru/ok/onechat/reactions/ReactionsViewModel;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lru/ok/onechat/reactions/ReactionsViewModel;->u:Lfzc;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lwe9;->B()Lup9;
+    invoke-interface {v6}, Liw7;->x()Lkw7;
 
     move-result-object v6
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-static {v4, v6, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
+
+    move-result-object v4
+
+    new-instance v6, Lgn9;
+
+    invoke-direct {v6, v5, v0}, Lgn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+
+    new-instance v7, Lh06;
+
+    invoke-direct {v7, v4, v6, v8}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
+
+    move-result-object v4
+
+    invoke-static {v7, v4}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    new-instance v10, Lyx9;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lim9;->B()Lsx9;
+
+    move-result-object v6
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
 
     move-result-object v7
 
-    invoke-direct {v10, v4, v1, v6, v7}, Laq9;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lsb9;Lup9;Lnc9;)V
+    invoke-direct {v10, v4, v1, v6, v7}, Lyx9;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lej9;Lsx9;Lyj9;)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v1
 
-    iget-object v4, v6, Lup9;->g:Lbpc;
+    iget-object v4, v6, Lsx9;->g:Lgzc;
 
-    new-instance v8, Lpq0;
+    new-instance v8, Lmr0;
 
     const/4 v14, 0x4
 
@@ -4244,77 +4282,77 @@
 
     const/4 v9, 0x2
 
-    const-class v11, Laq9;
+    const-class v11, Lyx9;
 
     const-string v12, "handleNewSelectedMessages"
 
     const-string v13, "handleNewSelectedMessages(Lone/me/messages/list/ui/multiselection/MultiSelectionLogic$Data;)V"
 
-    invoke-direct/range {v8 .. v15}, Lpq0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v8 .. v15}, Lmr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    new-instance v6, Lnw5;
+    new-instance v6, Lh06;
 
     const/4 v7, 0x1
 
-    invoke-direct {v6, v4, v8, v7}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v6, v4, v8, v7}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-static {v6, v1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v6, v1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    new-instance v9, Ltnc;
+    new-instance v9, Lyxc;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v10
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lnc9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lyj9;
 
     move-result-object v11
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lroc;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lwyc;
 
     move-result-object v12
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v13
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lwe9;->B()Lup9;
+    invoke-virtual {v1}, Lim9;->B()Lsx9;
 
     move-result-object v14
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v1
 
-    const-class v4, Lzla;
+    const-class v4, Lcua;
 
-    invoke-virtual {v1, v4}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v4}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lzla;
+    check-cast v1, Lcua;
 
-    invoke-virtual {v1}, Lzla;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v1}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v15
 
-    invoke-direct/range {v9 .. v15}, Ltnc;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lnc9;Lroc;Lwe9;Lup9;Ljava/util/concurrent/ExecutorService;)V
+    invoke-direct/range {v9 .. v15}, Lyxc;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lyj9;Lwyc;Lim9;Lsx9;Ljava/util/concurrent/ExecutorService;)V
 
-    iput-object v9, v0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Ltnc;
+    iput-object v9, v0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Lyxc;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v1
 
-    iget-object v4, v14, Lup9;->g:Lbpc;
+    iget-object v4, v14, Lsx9;->g:Lgzc;
 
     move-object v11, v9
 
-    new-instance v9, Lqgb;
+    new-instance v9, Lkpb;
 
     const/4 v15, 0x4
 
@@ -4322,94 +4360,94 @@
 
     const/4 v10, 0x2
 
-    const-class v12, Ltnc;
+    const-class v12, Lyxc;
 
     const-string v13, "handleSelectedMessages"
 
     const-string v14, "handleSelectedMessages(Lone/me/messages/list/ui/multiselection/MultiSelectionLogic$Data;)V"
 
-    invoke-direct/range {v9 .. v16}, Lqgb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v9 .. v16}, Lkpb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    new-instance v6, Lnw5;
+    new-instance v6, Lh06;
 
-    invoke-direct {v6, v4, v9, v7}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v6, v4, v9, v7}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-static {v6, v1}, Lshd;->x(Liu5;Ln24;)V
+    invoke-static {v6, v1}, La1j;->d(Lzx5;Lb54;)V
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
     move-result-object v1
 
-    new-instance v4, Llf9;
+    new-instance v4, Lxm9;
 
     const/4 v6, 0x1
 
-    invoke-direct {v4, v0, v6}, Llf9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    invoke-direct {v4, v0, v6}, Lxm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
 
-    invoke-virtual {v1, v4}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lhb9;)V
+    invoke-virtual {v1, v4}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lti9;)V
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object v1
-
-    const-class v2, Lqla;
-
-    invoke-virtual {v1, v2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v1
 
-    check-cast v1, Lqla;
+    const-class v2, Ltta;
 
-    iget-object v1, v1, Lqla;->a:Lbpc;
+    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    move-result-object v1
+
+    check-cast v1, Ltta;
+
+    iget-object v1, v1, Ltta;->a:Lgzc;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v2
 
-    invoke-interface {v2}, Luq7;->x()Lwq7;
+    invoke-interface {v2}, Liw7;->x()Lkw7;
 
     move-result-object v2
 
-    invoke-static {v1, v2, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v1, v2, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v1
 
-    new-instance v2, Lvf9;
+    new-instance v2, Lhn9;
 
-    invoke-direct {v2, v5, v0}, Lvf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v2, v5, v0}, Lhn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v4, Lnw5;
+    new-instance v4, Lh06;
 
-    invoke-direct {v4, v1, v2, v6}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v4, v1, v2, v6}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Luce;->N(Liu5;Ln24;)Loke;
-
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v1
 
-    check-cast v1, Lto8;
+    invoke-static {v4, v1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()La6g;
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Llt7;
+
+    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcw8;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->F0()Likg;
 
     move-result-object v2
 
-    check-cast v1, Lqoa;
+    check-cast v1, Ltwa;
 
     if-eqz v2, :cond_1
 
-    iget-object v4, v1, Lbj0;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v4, v1, Luj0;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v4, v2}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    iget-object v4, v1, Lqoa;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v4, v1, Ltwa;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
@@ -4419,84 +4457,84 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v1, v1, Lbj0;->f:Landroid/os/Handler;
+    iget-object v1, v1, Luj0;->f:Landroid/os/Handler;
 
-    new-instance v4, Lj3;
+    new-instance v4, Lk3;
 
     const/16 v6, 0x11
 
-    invoke-direct {v4, v6, v2}, Lj3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, v6, v2}, Lk3;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_2
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
 
     move-result-object v1
 
-    iget-object v1, v1, Lwe9;->j1:Lya5;
+    iget-object v1, v1, Lim9;->k1:Lde5;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Luq7;->x()Lwq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v2
 
-    invoke-static {v1, v2, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-interface {v2}, Liw7;->x()Lkw7;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v1
 
-    new-instance v2, Lwf9;
+    new-instance v2, Lin9;
 
-    invoke-direct {v2, v5, v0}, Lwf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v2, v5, v0}, Lin9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v4, Lnw5;
+    new-instance v4, Lh06;
 
     const/4 v6, 0x1
 
-    invoke-direct {v4, v1, v2, v6}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v4, v1, v2, v6}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Luce;->N(Liu5;Ln24;)Loke;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lwe9;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v1
 
-    iget-object v1, v1, Lwe9;->M1:Ljava/lang/Object;
+    invoke-static {v4, v1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->P0()Lim9;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lim9;->N1:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Liw7;
 
     move-result-object v2
 
-    invoke-interface {v2}, Luq7;->x()Lwq7;
+    invoke-interface {v2}, Liw7;->x()Lkw7;
 
     move-result-object v2
 
-    invoke-static {v1, v2, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+    invoke-static {v1, v2, v3}, Lt9f;->b(Lzx5;Lkw7;Lkv7;)Lxt1;
 
     move-result-object v1
 
-    new-instance v2, Lnf9;
+    new-instance v2, Lzm9;
 
-    invoke-direct {v2, v5, v0}, Lnf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v2, v5, v0}, Lzm9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    new-instance v3, Lnw5;
+    new-instance v3, Lh06;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v1, v2, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
+    invoke-direct {v3, v1, v2, v4}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Luv7;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Luce;->N(Liu5;Ln24;)Loke;
+    invoke-static {v3, v1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
 
     return-void
 .end method

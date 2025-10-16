@@ -1,31 +1,64 @@
-.class public final Ls6d;
-.super Luvc;
+.class public abstract Ls6d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic J0:I
-
-
-# instance fields
-.field public final E0:Lk52;
-
-.field public F0:Ln6d;
-
-.field public G0:I
-
-.field public H0:J
-
-.field public I0:Z
+.field public static final a:Lt6d;
 
 
 # direct methods
-.method public constructor <init>(Lk52;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Luvc;-><init>(Landroid/view/View;)V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ls6d;->E0:Lk52;
+    :try_start_0
+    const-string v1, "kotlin.reflect.jvm.internal.ReflectionFactoryImpl"
+
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lt6d;
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v1
+
+    :catch_0
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lt6d;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    :goto_0
+    sput-object v0, Ls6d;->a:Lt6d;
 
     return-void
+.end method
+
+.method public static a(Ljava/lang/Class;)Lv63;
+    .locals 1
+
+    sget-object v0, Ls6d;->a:Lt6d;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lv63;
+
+    invoke-direct {v0, p0}, Lv63;-><init>(Ljava/lang/Class;)V
+
+    return-object v0
 .end method

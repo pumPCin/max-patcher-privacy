@@ -1,86 +1,125 @@
 .class public final Lrcf;
-.super Liwd;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/text/style/UpdateAppearance;
+.implements Lrrf;
+
+
+# static fields
+.field public static final synthetic X:I
 
 
 # instance fields
-.field public final O0:Landroid/widget/TextView;
+.field public final a:Lwcf;
+
+.field public final b:Lei6;
+
+.field public c:I
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;)V
-    .locals 2
+.method public constructor <init>(Loh6;Lwcf;Lei6;)V
+    .locals 0
 
-    invoke-direct {p0, p1, p3}, Liwd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    sget p3, Lmfc;->row_setting_text:I
+    iput-object p2, p0, Lrcf;->a:Lwcf;
 
-    const/4 v0, 0x0
+    iput-object p3, p0, Lrcf;->b:Lei6;
 
-    invoke-virtual {p2, p3, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Landroid/widget/TextView;
+    check-cast p2, Lu4b;
 
-    iput-object p2, p0, Lrcf;->O0:Landroid/widget/TextView;
+    invoke-interface {p2}, Lu4b;->f()Lq4;
 
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    move-result-object p2
 
-    move-result-object p3
+    iget p2, p2, Lq4;->c:I
 
-    sget-object v1, Lh9f;->a0:Lh4f;
+    iput p2, p0, Lrcf;->c:I
 
-    invoke-static {p3}, Luce;->e0(Landroid/content/Context;)Lh9f;
-
-    move-result-object p3
-
-    iget p3, p3, Lh9f;->F:I
-
-    invoke-virtual {p2, p3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget p3, Lpec;->row_setting__fl_value:I
-
-    invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-interface {p1}, Loh6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/FrameLayout;
+    check-cast p1, Lu4b;
 
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-interface {p1}, Lu4b;->f()Lq4;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    move-result-object p1
+
+    iget p1, p1, Lq4;->c:I
+
+    iput p1, p0, Lrcf;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Lfwd;Z)V
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    iget-object v0, p0, Lrcf;->b:Lei6;
+
+    iget-object v1, p0, Lrcf;->a:Lwcf;
+
+    invoke-interface {v0, p1, v1}, Lei6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Lu4b;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Liwd;->A(Lfwd;Z)V
+    invoke-interface {p1}, Lu4b;->f()Lq4;
 
-    iget-object p1, p1, Lfwd;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    iget-object p2, p0, Lrcf;->O0:Landroid/widget/TextView;
+    iget v0, v0, Lq4;->c:I
 
-    if-eqz p1, :cond_0
+    iput v0, p0, Lrcf;->c:I
+
+    invoke-interface {p1}, Lu4b;->f()Lq4;
+
+    move-result-object p1
+
+    iget p1, p1, Lq4;->c:I
+
+    iput p1, p0, Lrcf;->o:I
+
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+
+    iget v0, p0, Lrcf;->c:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget v0, p0, Lrcf;->o:I
+
+    const/16 v1, 0x50
+
+    invoke-static {v0, v1}, Lwb3;->i(II)I
+
+    move-result v0
+
+    iput v0, p1, Landroid/text/TextPaint;->bgColor:I
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :cond_0
-    const/16 p1, 0x8
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
     return-void
 .end method

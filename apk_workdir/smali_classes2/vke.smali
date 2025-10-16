@@ -3,105 +3,160 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic e:[Lpl7;
-
-.field public static final f:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Lys4;
+.field public final a:Lcom/google/android/gms/maps/model/LatLng;
 
-.field public final b:Lys4;
+.field public final b:F
 
-.field public final c:Lys4;
-
-.field public final d:Lys4;
+.field public final c:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lf4c;
-
-    const-class v1, Lvke;
-
-    const-string v2, "messageController"
-
-    const-string v3, "getMessageController()Lru/ok/tamtam/messages/MessageController;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Lewc;->a:Lfwc;
-
-    const-string v3, "workerService"
-
-    const-string v5, "getWorkerService()Lru/ok/tamtam/services/WorkerService;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
-
-    move-result-object v2
-
-    new-instance v3, Lf4c;
-
-    const-string v5, "fileAttachUploader"
-
-    const-string v6, "getFileAttachUploader()Lru/ok/tamtam/FileAttachUploader;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v5, Lf4c;
-
-    const-string v6, "clientPrefs"
-
-    const-string v7, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
-
-    invoke-direct {v5, v1, v6, v7, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v6, 0x4
-
-    new-array v6, v6, [Lpl7;
-
-    aput-object v0, v6, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v6, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v6, v0
-
-    const/4 v0, 0x3
-
-    aput-object v5, v6, v0
-
-    sput-object v6, Lvke;->e:[Lpl7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvke;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lys4;Lys4;Lys4;Lys4;)V
+.method public constructor <init>(Lcom/google/android/gms/maps/model/LatLng;FLandroid/graphics/Bitmap;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvke;->a:Lys4;
+    iput-object p1, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    iput-object p2, p0, Lvke;->b:Lys4;
+    iput p2, p0, Lvke;->b:F
 
-    iput-object p3, p0, Lvke;->c:Lys4;
-
-    iput-object p4, p0, Lvke;->d:Lys4;
+    iput-object p3, p0, Lvke;->c:Landroid/graphics/Bitmap;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvke;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvke;
+
+    iget-object v1, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v3, p1, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lvke;->b:F
+
+    iget v3, p1, Lvke;->b:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lvke;->c:Landroid/graphics/Bitmap;
+
+    iget-object p1, p1, Lvke;->c:Landroid/graphics/Bitmap;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/LatLng;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lvke;->b:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget-object v1, p0, Lvke;->c:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MarkerModel(latLng="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvke;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", zoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lvke;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvke;->c:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

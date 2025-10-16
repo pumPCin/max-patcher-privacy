@@ -1,161 +1,131 @@
-.class public final Lyg6;
+.class public final synthetic Lyg6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lch6;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lzz7;
+.field public final synthetic b:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Lzz7;)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/DialogFragment;I)V
     .locals 0
 
+    iput p2, p0, Lyg6;->a:I
+
+    iput-object p1, p0, Lyg6;->b:Landroidx/fragment/app/DialogFragment;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lyg6;->a:I
-
-    iput-object p2, p0, Lyg6;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lyg6;->c:Lzz7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 5
+
+    iget p1, p0, Lyg6;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lyg6;->b:Landroidx/fragment/app/DialogFragment;
+
+    check-cast p1, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
+
+    sget-object p2, Lbvg;->a:Lbvg;
+
+    invoke-virtual {p1, p2}, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;->H0(Ldvg;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lyg6;->b:Landroidx/fragment/app/DialogFragment;
+
+    check-cast p1, Lru/ok/messages/views/dialogs/LoadMediaDialog;
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1, v0}, Landroidx/fragment/app/a;->I(Z)Landroidx/fragment/app/a;
 
-    return v0
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {p1}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
+
+    move-result-object v3
+
+    const-string v4, "ru.ok.tamtam.extra.SETTING_ID"
+
+    invoke-virtual {v3, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const/4 v3, -0x1
+
+    const-string v4, "ru.ok.tamtam.extra.RESULT_ITEM"
+
+    if-eqz p2, :cond_2
+
+    if-eq p2, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p2, v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lyg6;
+    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lyg6;
+    invoke-virtual {v2, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    iget v1, p0, Lyg6;->a:I
-
-    iget v3, p1, Lyg6;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Lyg6;->b:Ljava/lang/String;
+    const/4 p2, 0x0
 
-    iget-object v3, p1, Lyg6;->b:Ljava/lang/String;
+    invoke-virtual {v2, v4, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lyg6;->c:Lzz7;
-
-    iget-object p1, p1, Lyg6;->c:Lzz7;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_0
+    invoke-virtual {p1}, Landroidx/fragment/app/a;->J()I
 
     move-result p1
 
-    if-nez p1, :cond_4
+    invoke-virtual {v1, p1, v3, v2}, Landroidx/fragment/app/a;->S(IILandroid/content/Intent;)V
 
-    return v2
+    :cond_3
+    return-void
 
-    :cond_4
-    return v0
-.end method
+    :pswitch_1
+    iget-object p1, p0, Lyg6;->b:Landroidx/fragment/app/DialogFragment;
 
-.method public final hashCode()I
-    .locals 3
+    check-cast p1, Lru/ok/messages/views/dialogs/FrgDlgStopLiveLocation;
 
-    iget v0, p0, Lyg6;->a:I
+    const/4 p2, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {p1, p2, p2}, Landroidx/fragment/app/DialogFragment;->B0(ZZ)V
 
-    move-result v0
+    return-void
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lyg6;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lyg6;->c:Lzz7;
-
-    invoke-virtual {v1}, Lzz7;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenFullScreenMedia(uiPosition="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lyg6;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", albumId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyg6;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", item="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyg6;->c:Lzz7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,70 +1,48 @@
-.class public final synthetic Lj71;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ltd6;
+.class public final Lj71;
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ll71;
+.field public final synthetic Y:Lhg0;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll71;I)V
+.method public constructor <init>(Lhg0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lj71;->a:I
+    iput-object p1, p0, Lj71;->Y:Lhg0;
 
-    iput-object p1, p0, Lj71;->b:Ll71;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lj71;->a:I
+    iput-object p1, p0, Lj71;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lj71;->X:I
 
-    iget-object v0, p0, Lj71;->b:Ll71;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, v0, Ll71;->M0:Landroidx/recyclerview/widget/b;
+    or-int/2addr p1, v0
 
-    return-object v0
+    iput p1, p0, Lj71;->X:I
 
-    :pswitch_0
-    iget-object v0, p0, Lj71;->b:Ll71;
+    iget-object p1, p0, Lj71;->Y:Lhg0;
 
-    iget-object v0, v0, Ll71;->O0:Lt9g;
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-virtual {p1, v0, p0}, Lhg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_1
-    new-instance v0, Lsp6;
+    move-result-object p1
 
-    iget-object v1, p0, Lj71;->b:Ll71;
-
-    iget-object v2, v1, Ll71;->I0:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object v1, v1, Ll71;->J0:Lwp6;
-
-    invoke-direct {v0, v2, v1}, Lsp6;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lwp6;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

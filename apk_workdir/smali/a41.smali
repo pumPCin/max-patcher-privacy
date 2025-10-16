@@ -1,121 +1,104 @@
-.class public final synthetic La41;
+.class public final La41;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvd6;
-
 
 # instance fields
-.field public final synthetic X:Lyv0;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic a:Lyk;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Lc41;
-
-.field public final synthetic o:Lvt1;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyk;JLc41;Lvt1;Lyv0;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La41;->a:Lyk;
+    iput-object p1, p0, La41;->a:Landroid/content/Context;
 
-    iput-wide p2, p0, La41;->b:J
+    new-instance p1, Ll6;
 
-    iput-object p4, p0, La41;->c:Lc41;
+    const/16 v0, 0x13
 
-    iput-object p5, p0, La41;->o:Lvt1;
+    invoke-direct {p1, v0, p0}, Ll6;-><init>(ILjava/lang/Object;)V
 
-    iput-object p6, p0, La41;->X:Lyv0;
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object p1
+
+    iput-object p1, p0, La41;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a(Lz31;)Lp41;
+    .locals 6
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    iget-object v1, p1, Lz31;->a:Ljava/lang/Long;
 
-    iget-object v0, p0, La41;->a:Lyk;
+    iget-object v0, p1, Lz31;->e:Ljava/lang/Long;
 
-    iget-wide v1, v0, Lyk;->a:J
+    iget-object v2, p1, Lz31;->f:Ljava/lang/CharSequence;
 
-    invoke-static {v1, v2}, Le4b;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    if-eqz v2, :cond_0
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    iget-object v1, v0, Lyk;->c:Ljava/lang/String;
+    move-result-wide v4
 
-    if-eqz v1, :cond_0
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationParams(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lfhi;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lkc0;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, v0, Lyk;->b:Ljava/lang/String;
+    move-object v0, v3
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationId(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    :goto_0
+    iget-object v2, p1, Lz31;->d:Ljava/lang/String;
 
-    move-result-object p1
+    move-object v4, v3
 
-    iget-wide v0, p0, La41;->b:J
+    new-instance v3, Ltd0;
 
-    invoke-static {v0, v1}, Le4b;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-direct {v3, v0, v2}, Ltd0;-><init>(Lkc0;Ljava/lang/String;)V
 
-    move-result-object v0
+    iget-object v2, p1, Lz31;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    iget-boolean v0, p1, Lz31;->g:Z
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    iget-object v0, p0, La41;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, La41;->c:Lc41;
-
-    iget-object v0, v0, Lc41;->b:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lbv1;
+    check-cast v0, Lvd0;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    move-object v4, v0
 
-    move-result-object p1
+    :cond_1
+    iget-boolean v5, p1, Lz31;->g:Z
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
+    new-instance v0, Lp41;
 
-    iget-object v0, p0, La41;->o:Lvt1;
+    invoke-direct/range {v0 .. v5}, Lp41;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Ltd0;Lvd0;Z)V
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lvd6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    iget-object v0, p0, La41;->X:Lyv0;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lvd6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

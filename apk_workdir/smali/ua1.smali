@@ -1,100 +1,74 @@
 .class public final Lua1;
-.super Luc0;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final b:Lxcf;
-
-
-# direct methods
-.method public constructor <init>(Lxcf;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    invoke-direct {p0, v0}, Luc0;-><init>(I)V
-
-    iput-object p1, p0, Lua1;->b:Lxcf;
-
-    return-void
-.end method
+.field public synthetic X:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lb54;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lua1;
+    invoke-virtual {p0, p1, p2}, Lua1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lua1;
 
-    iget-object v0, p0, Lua1;->b:Lxcf;
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object p1, p1, Lua1;->b:Lxcf;
+    invoke-virtual {p1, p2}, Lua1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lxcf;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lua1;->b:Lxcf;
-
-    iget v0, v0, Lxcf;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lua1;
 
-    const-string v1, "ShowSnackbar(message="
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lua1;->b:Lxcf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lua1;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lua1;->X:Ljava/lang/Object;
+
+    check-cast p1, Lb54;
+
+    new-instance v0, Lta1;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    invoke-static {p1, v2, v2, v0, v1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    move-result-object p1
+
+    return-object p1
 .end method

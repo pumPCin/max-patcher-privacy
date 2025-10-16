@@ -3,63 +3,54 @@
 
 
 # static fields
-.field public static CardView:[I = null
+.field public static ic_call_16:I = 0x7f080547
 
-.field public static CardView_android_minHeight:I = 0x1
+.field public static ic_call_22:I = 0x7f080548
 
-.field public static CardView_android_minWidth:I = 0x0
+.field public static ic_call_24:I = 0x7f080549
 
-.field public static CardView_cardBackgroundColor:I = 0x2
+.field public static ic_call_contact_20:I = 0x7f080550
 
-.field public static CardView_cardCornerRadius:I = 0x3
+.field public static ic_call_link_preview_36:I = 0x7f08055c
 
-.field public static CardView_cardElevation:I = 0x4
+.field public static ic_checked_22:I = 0x7f080586
 
-.field public static CardView_cardMaxElevation:I = 0x5
+.field public static ic_copy_20:I = 0x7f0805a4
 
-.field public static CardView_cardPreventCornerOverlap:I = 0x6
+.field public static ic_copy_28:I = 0x7f0805a7
 
-.field public static CardView_cardUseCompatPadding:I = 0x7
+.field public static ic_delete_22:I = 0x7f0805b6
 
-.field public static CardView_contentPadding:I = 0x8
+.field public static ic_edit_22:I = 0x7f0805d1
 
-.field public static CardView_contentPaddingBottom:I = 0x9
+.field public static ic_incoming_audio_call_13:I = 0x7f080637
 
-.field public static CardView_contentPaddingLeft:I = 0xa
+.field public static ic_incoming_video_call_15:I = 0x7f08063a
 
-.field public static CardView_contentPaddingRight:I = 0xb
+.field public static ic_link_16:I = 0x7f08064b
 
-.field public static CardView_contentPaddingTop:I = 0xc
+.field public static ic_link_22:I = 0x7f08064d
 
+.field public static ic_loading_16:I = 0x7f080651
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public static ic_more_14:I = 0x7f08068e
 
-    const/16 v0, 0xd
+.field public static ic_open_call_chat_24:I = 0x7f08072f
 
-    new-array v0, v0, [I
+.field public static ic_outgoing_audio_call_13:I = 0x7f080734
 
-    fill-array-data v0, :array_0
+.field public static ic_outgoing_video_call_15:I = 0x7f080736
 
-    sput-object v0, Lfkc;->CardView:[I
+.field public static ic_reject_audio_call_12:I = 0x7f080766
 
-    return-void
+.field public static ic_reject_video_call_15:I = 0x7f080767
 
-    :array_0
-    .array-data 4
-        0x101013f
-        0x1010140
-        0x7f0400bc
-        0x7f0400bd
-        0x7f0400be
-        0x7f0400c0
-        0x7f0400c1
-        0x7f0400c2
-        0x7f040302
-        0x7f040303
-        0x7f040305
-        0x7f040306
-        0x7f040308
-    .end array-data
-.end method
+.field public static ic_send_link_22:I = 0x7f080786
+
+.field public static ic_share_link_20:I = 0x7f080794
+
+.field public static ic_uncheced_22:I = 0x7f0807c4
+
+.field public static illustration_empty_58:I = 0x7f080813
+
+.field public static illustration_placeholder_casper:I = 0x7f080815

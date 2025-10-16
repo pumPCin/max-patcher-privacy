@@ -1,289 +1,262 @@
 .class public final Lhi8;
-.super Ljava/lang/Object;
+.super Lgh8;
 .source "SourceFile"
-
-# interfaces
-.implements Lfi8;
-.implements Lgi8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final g:F
 
-.field public final b:I
+.field public final h:F
 
-.field public c:[Landroid/media/MediaCodecInfo;
+.field public final i:F
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0, p1}, Lgh8;-><init>(Landroid/view/View;)V
 
-    iput v0, p0, Lhi8;->a:I
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    sget v0, Lakc;->m3_back_progress_side_container_max_scale_x_distance_shrink:I
 
-    if-eqz p2, :cond_0
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
-    goto :goto_0
+    move-result v0
 
-    :cond_0
-    const/4 p1, 0x0
+    iput v0, p0, Lhi8;->g:F
 
-    goto :goto_1
+    sget v0, Lakc;->m3_back_progress_side_container_max_scale_x_distance_grow:I
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
-    .line 4
-    :goto_1
-    iput p1, p0, Lhi8;->b:I
+    move-result v0
 
-    return-void
-.end method
+    iput v0, p0, Lhi8;->h:F
 
-.method public constructor <init>(ZZZ)V
-    .locals 1
+    sget v0, Lakc;->m3_back_progress_side_container_max_scale_y_distance:I
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
-    iput v0, p0, Lhi8;->a:I
+    move-result p1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-nez p1, :cond_1
-
-    if-nez p2, :cond_1
-
-    if-eqz p3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    .line 2
-    :goto_1
-    iput p1, p0, Lhi8;->b:I
+    iput p1, p0, Lhi8;->i:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Landroid/media/MediaCodecInfo;
-    .locals 2
+.method public final a(FZI)V
+    .locals 10
 
-    iget v0, p0, Lhi8;->a:I
+    iget-object v0, p0, Lgh8;->a:Landroid/animation/TimeInterpolator;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0, p1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    move-result p1
 
-    if-nez v0, :cond_0
+    sget-object v0, Lcyg;->a:Ljava/util/WeakHashMap;
 
-    new-instance v0, Landroid/media/MediaCodecList;
+    iget-object v0, p0, Lgh8;->b:Landroid/view/View;
 
-    iget v1, p0, Lhi8;->b:I
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
 
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+    move-result v1
 
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
+    invoke-static {p3, v1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
 
-    move-result-object v0
+    move-result p3
 
-    iput-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    const/4 v1, 0x3
+
+    and-int/2addr p3, v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne p3, v1, :cond_0
+
+    move p3, v3
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    move p3, v2
 
-    aget-object p1, v0, p1
+    :goto_0
+    if-ne p2, p3, :cond_1
 
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Landroid/media/MediaCodecList;
-
-    iget v1, p0, Lhi8;->b:I
-
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
-
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    goto :goto_1
 
     :cond_1
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    move v3, v2
 
-    aget-object p1, v0, p1
+    :goto_1
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    return-object p1
+    move-result p2
 
-    nop
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v1
 
-.method public final c(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-    .locals 0
+    int-to-float v4, p2
 
-    iget p2, p0, Lhi8;->a:I
+    const/4 v5, 0x0
 
-    packed-switch p2, :pswitch_data_0
+    cmpg-float v6, v4, v5
 
-    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
+    if-lez v6, :cond_8
+
+    int-to-float v1, v1
+
+    cmpg-float v6, v1, v5
+
+    if-gtz v6, :cond_2
+
+    goto/16 :goto_7
+
+    :cond_2
+    iget v6, p0, Lhi8;->g:F
+
+    div-float/2addr v6, v4
+
+    iget v7, p0, Lhi8;->h:F
+
+    div-float/2addr v7, v4
+
+    iget v8, p0, Lhi8;->i:F
+
+    div-float/2addr v8, v1
+
+    if-eqz p3, :cond_3
+
+    move v4, v5
+
+    :cond_3
+    invoke-virtual {v0, v4}, Landroid/view/View;->setPivotX(F)V
+
+    if-eqz v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    neg-float v7, v6
+
+    :goto_2
+    invoke-static {v5, v7, p1}, Lvg;->a(FFF)F
+
+    move-result v1
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    add-float v6, v1, v4
+
+    invoke-virtual {v0, v6}, Landroid/view/View;->setScaleX(F)V
+
+    invoke-static {v5, v8, p1}, Lvg;->a(FFF)F
 
     move-result p1
 
-    return p1
+    sub-float p1, v4, p1
 
-    :pswitch_0
-    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
+    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleY(F)V
 
-    move-result p1
+    instance-of v7, v0, Landroid/view/ViewGroup;
 
-    return p1
+    if-eqz v7, :cond_8
 
-    nop
+    check-cast v0, Landroid/view/ViewGroup;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :goto_3
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-.method public final d(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-    .locals 1
+    move-result v7
 
-    iget v0, p0, Lhi8;->a:I
+    if-ge v2, v7, :cond_8
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
+    move-result-object v7
 
-    move-result p1
+    if-eqz p3, :cond_5
 
-    return p1
+    invoke-virtual {v7}, Landroid/view/View;->getRight()I
 
-    :pswitch_0
-    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
+    move-result v8
 
-    move-result p1
+    sub-int v8, p2, v8
 
-    return p1
+    invoke-virtual {v7}, Landroid/view/View;->getWidth()I
 
-    nop
+    move-result v9
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    add-int/2addr v9, v8
 
-.method public final e()I
-    .locals 2
+    int-to-float v8, v9
 
-    iget v0, p0, Lhi8;->a:I
+    goto :goto_4
 
-    packed-switch v0, :pswitch_data_0
+    :cond_5
+    invoke-virtual {v7}, Landroid/view/View;->getLeft()I
 
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    move-result v8
 
-    if-nez v0, :cond_0
+    neg-int v8, v8
 
-    new-instance v0, Landroid/media/MediaCodecList;
+    int-to-float v8, v8
 
-    iget v1, p0, Lhi8;->b:I
+    :goto_4
+    invoke-virtual {v7, v8}, Landroid/view/View;->setPivotX(F)V
 
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+    invoke-virtual {v7}, Landroid/view/View;->getTop()I
 
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
+    move-result v8
 
-    move-result-object v0
+    neg-int v8, v8
 
-    iput-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    int-to-float v8, v8
 
-    :cond_0
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    invoke-virtual {v7, v8}, Landroid/view/View;->setPivotY(F)V
 
-    array-length v0, v0
+    if-eqz v3, :cond_6
 
-    return v0
+    sub-float v8, v4, v1
 
-    :pswitch_0
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    goto :goto_5
 
-    if-nez v0, :cond_1
+    :cond_6
+    move v8, v4
 
-    new-instance v0, Landroid/media/MediaCodecList;
+    :goto_5
+    cmpl-float v9, p1, v5
 
-    iget v1, p0, Lhi8;->b:I
+    if-eqz v9, :cond_7
 
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+    div-float v9, v6, p1
 
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
+    mul-float/2addr v9, v8
 
-    move-result-object v0
+    goto :goto_6
 
-    iput-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    :cond_7
+    move v9, v4
 
-    :cond_1
-    iget-object v0, p0, Lhi8;->c:[Landroid/media/MediaCodecInfo;
+    :goto_6
+    invoke-virtual {v7, v8}, Landroid/view/View;->setScaleX(F)V
 
-    array-length v0, v0
+    invoke-virtual {v7, v9}, Landroid/view/View;->setScaleY(F)V
 
-    return v0
+    add-int/lit8 v2, v2, 0x1
 
-    nop
+    goto :goto_3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    iget v0, p0, Lhi8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_8
+    :goto_7
+    return-void
 .end method

@@ -1,49 +1,21 @@
-.class public final Ltv1;
-.super Lwy3;
+.class public interface abstract Ltv1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lvv1;
-
-.field public Z:I
-
-.field public o:Lvv1;
-
-
 # direct methods
-.method public constructor <init>(Lvv1;Lwy3;)V
+.method public static a(Ltv1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
     .locals 0
 
-    iput-object p1, p0, Ltv1;->Y:Lvv1;
+    check-cast p0, Lx71;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iget-object p0, p0, Lx71;->b:Lrhf;
 
-    return-void
-.end method
+    invoke-virtual {p0}, Lrhf;->getValue()Ljava/lang/Object;
 
+    move-result-object p0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    iput-object p1, p0, Ltv1;->X:Ljava/lang/Object;
-
-    iget p1, p0, Ltv1;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ltv1;->Z:I
-
-    iget-object p1, p0, Ltv1;->Y:Lvv1;
-
-    invoke-virtual {p1, p0}, Lvv1;->a(Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

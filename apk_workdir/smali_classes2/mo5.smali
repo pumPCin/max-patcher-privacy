@@ -1,280 +1,214 @@
-.class public final Lmo5;
+.class public final synthetic Lmo5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqh6;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:Loo5;
 
-.field public final b:Lrpa;
+.field public final synthetic b:J
 
-.field public final c:Llpa;
-
-.field public final d:Lre4;
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lrpa;Llpa;Lre4;)V
+.method public synthetic constructor <init>(Loo5;JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmo5;->a:Landroid/content/Context;
+    iput-object p1, p0, Lmo5;->a:Loo5;
 
-    iput-object p2, p0, Lmo5;->b:Lrpa;
+    iput-wide p2, p0, Lmo5;->b:J
 
-    iput-object p3, p0, Lmo5;->c:Llpa;
-
-    iput-object p4, p0, Lmo5;->d:Lre4;
-
-    sget p1, Lajc;->tt_notification_file_downloading_title:I
-
-    iput p1, p0, Lmo5;->e:I
-
-    sget p1, Lajc;->tt_worker_draft_sync:I
-
-    iput p1, p0, Lmo5;->f:I
-
-    sget p1, Lajc;->tt_worker_gif_upload:I
-
-    iput p1, p0, Lmo5;->g:I
-
-    sget p1, Lajc;->tt_worker_attach_upload:I
-
-    iput p1, p0, Lmo5;->h:I
+    iput-wide p4, p0, Lmo5;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;ZILandroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 19
 
-    iget-object v0, p0, Lmo5;->b:Lrpa;
+    move-object/from16 v1, p0
 
-    invoke-virtual {v0}, Lrpa;->c()V
+    move-object/from16 v0, p1
 
-    iget-object v1, p0, Lmo5;->d:Lre4;
+    check-cast v0, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, v1, Lmo5;->a:Loo5;
 
-    const-string v1, "ru.oneme.app.fileUpload"
+    iget-object v2, v0, Loo5;->a:Lyed;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x3
 
-    invoke-virtual {v0, v1, v2, v2}, Lrpa;->g(Ljava/lang/String;ZZ)Lv3a;
+    const-string v4, "SELECT chat_id, msg_id FROM fcm_notifications_analytics WHERE analytics_status=? AND chat_id=? AND time<=?"
 
-    move-result-object v0
+    invoke-static {v3, v4}, Lpfd;->c(ILjava/lang/String;)Lpfd;
 
-    iget-object v1, v0, Lv3a;->F:Landroid/app/Notification;
+    move-result-object v4
 
-    invoke-static {p1}, Lv3a;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    const/4 v5, 0x2
 
-    move-result-object p1
+    int-to-long v6, v5
 
-    iput-object p1, v0, Lv3a;->e:Ljava/lang/CharSequence;
+    const/4 v8, 0x1
 
-    invoke-static {p2}, Lv3a;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v4, v8, v6, v7}, Lpfd;->k(IJ)V
 
-    move-result-object p1
+    iget-wide v9, v1, Lmo5;->b:J
 
-    iput-object p1, v0, Lv3a;->f:Ljava/lang/CharSequence;
+    invoke-virtual {v4, v5, v9, v10}, Lpfd;->k(IJ)V
 
-    if-eqz p3, :cond_0
+    iget-wide v11, v1, Lmo5;->c:J
 
-    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v4, v3, v11, v12}, Lpfd;->k(IJ)V
 
-    move-result-wide p1
+    invoke-virtual {v2}, Lyed;->b()V
 
-    goto :goto_0
+    invoke-virtual {v2, v4}, Lyed;->n(Ldef;)Landroid/database/Cursor;
 
-    :cond_0
-    const-wide/16 p1, 0x0
+    move-result-object v13
+
+    :try_start_0
+    new-instance v14, Ljava/util/ArrayList;
+
+    invoke-interface {v13}, Landroid/database/Cursor;->getCount()I
+
+    move-result v15
+
+    invoke-direct {v14, v15}, Ljava/util/ArrayList;-><init>(I)V
 
     :goto_0
-    iput-wide p1, v1, Landroid/app/Notification;->when:J
+    invoke-interface {v13}, Landroid/database/Cursor;->moveToNext()Z
 
-    iget-object p1, p0, Lmo5;->c:Llpa;
+    move-result v15
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v15, :cond_0
 
-    if-eqz p4, :cond_1
+    const/4 v15, 0x0
 
-    sget p1, Lv7d;->Q0:I
+    move-object/from16 v16, v4
 
-    goto :goto_1
+    :try_start_1
+    invoke-interface {v13, v15}, Landroid/database/Cursor;->getLong(I)J
 
-    :cond_1
-    sget p1, Lv7d;->N0:I
+    move-result-wide v3
 
-    :goto_1
-    iput p1, v1, Landroid/app/Notification;->icon:I
+    move-wide/from16 v17, v6
 
-    const/4 p1, -0x1
-
-    const/4 p2, 0x0
-
-    if-ne p5, p1, :cond_2
-
-    move p1, v2
-
-    goto :goto_2
-
-    :cond_2
-    move p1, p2
-
-    :goto_2
-    const/16 p3, 0x64
-
-    iput p3, v0, Lv3a;->o:I
-
-    iput p5, v0, Lv3a;->p:I
-
-    iput-boolean p1, v0, Lv3a;->q:Z
-
-    iput p2, v0, Lv3a;->k:I
-
-    invoke-virtual {v0, p2}, Lv3a;->d(I)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Lv3a;->g(Landroid/net/Uri;)V
-
-    const/4 p1, 0x2
-
-    invoke-virtual {v0, p1, v2}, Lv3a;->e(IZ)V
-
-    const/16 p1, 0x10
-
-    invoke-virtual {v0, p1, p2}, Lv3a;->e(IZ)V
-
-    iget-object p1, p0, Lmo5;->a:Landroid/content/Context;
-
-    sget p3, Lajc;->tt_worker_cancel:I
-
-    invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p3, v0, Lv3a;->b:Ljava/util/ArrayList;
-
-    new-instance p4, Lh3a;
-
-    invoke-direct {p4, p2, p1, p7}, Lh3a;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
-
-    invoke-virtual {p3, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string p1, "progress"
-
-    iput-object p1, v0, Lv3a;->v:Ljava/lang/String;
-
-    iput-object p6, v0, Lv3a;->g:Landroid/app/PendingIntent;
-
-    invoke-virtual {v0}, Lv3a;->a()Landroid/app/Notification;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final b(JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;IZLandroid/app/PendingIntent;)Landroid/app/Notification;
-    .locals 9
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const-wide/16 v1, 0x0
-
-    cmp-long v3, p1, v1
-
-    iget-object v4, p0, Lmo5;->b:Lrpa;
-
-    if-nez v3, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v4, p1}, Lrpa;->e(Z)Landroid/content/Intent;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz p3, :cond_1
-
-    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+    invoke-interface {v13, v8}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v5
 
+    new-instance v7, Lqo5;
+
+    invoke-direct {v7, v3, v4, v5, v6}, Lqo5;-><init>(JJ)V
+
+    invoke-virtual {v14, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-object/from16 v4, v16
+
+    move-wide/from16 v6, v17
+
+    const/4 v3, 0x3
+
+    const/4 v5, 0x2
+
     goto :goto_0
 
-    :cond_1
-    move-wide v5, v1
+    :catchall_0
+    move-exception v0
 
-    :goto_0
-    if-eqz p4, :cond_2
+    goto :goto_2
 
-    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+    :cond_0
+    move-object/from16 v16, v4
 
-    move-result-wide v1
+    move-wide/from16 v17, v6
 
-    :cond_2
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
-    sget-object p4, Lx68;->c:Lx68;
+    invoke-virtual/range {v16 .. v16}, Lpfd;->o()V
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v2}, Lyed;->b()V
 
-    move-result-object v3
+    iget-object v3, v0, Loo5;->o:Lfi;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v3}, Lf3;->a()Lfg6;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-wide/from16 v5, v17
 
-    invoke-static {p1, p2, v3, v1}, Lx68;->H0(JLjava/lang/Long;Ljava/lang/Long;)Lkc4;
+    invoke-interface {v4, v8, v5, v6}, Lcef;->k(IJ)V
 
-    move-result-object p1
+    const/4 v15, 0x2
 
-    invoke-virtual {v4, p1}, Lrpa;->j(Lkc4;)Landroid/content/Intent;
+    invoke-interface {v4, v15, v9, v10}, Lcef;->k(IJ)V
 
-    move-result-object p1
+    const/4 v0, 0x3
+
+    invoke-interface {v4, v0, v11, v12}, Lcef;->k(IJ)V
+
+    :try_start_2
+    invoke-virtual {v2}, Lyed;->c()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :try_start_3
+    invoke-virtual {v4}, Lfg6;->n()I
+
+    invoke-virtual {v2}, Lyed;->q()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    :try_start_4
+    invoke-virtual {v2}, Lyed;->k()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    invoke-virtual {v3, v4}, Lf3;->u(Lfg6;)V
+
+    return-object v14
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception v0
+
+    :try_start_5
+    invoke-virtual {v2}, Lyed;->k()V
+
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     :goto_1
-    iget-object p2, p0, Lmo5;->a:Landroid/content/Context;
+    invoke-virtual {v3, v4}, Lf3;->u(Lfg6;)V
 
-    invoke-static {p2, v0, p1}, Lb88;->h(Landroid/content/Context;ILandroid/content/Intent;)Landroid/app/PendingIntent;
+    throw v0
 
-    move-result-object v7
+    :catchall_3
+    move-exception v0
 
-    move-object v1, p0
+    move-object/from16 v16, v4
 
-    move-object v4, p3
+    :goto_2
+    invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
-    move-object v2, p5
+    invoke-virtual/range {v16 .. v16}, Lpfd;->o()V
 
-    move-object v3, p6
-
-    move/from16 v6, p7
-
-    move/from16 v5, p8
-
-    move-object/from16 v8, p9
-
-    invoke-virtual/range {v1 .. v8}, Lmo5;->a(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;ZILandroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification;
-
-    move-result-object p1
-
-    return-object p1
+    throw v0
 .end method

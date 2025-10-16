@@ -1,48 +1,43 @@
-.class public final Lvza;
-.super Lwy3;
+.class public abstract Lvza;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Lmz9;
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
-.method public constructor <init>(Lmz9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lvza;->Y:Lmz9;
-
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lvza;->o:Ljava/lang/Object;
+    sget v0, Lckc;->size_border_radius_new_banner:I
 
-    iget p1, p0, Lvza;->X:I
+    sput v0, Lvza;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lckc;->spacing_size_2xl:I
 
-    or-int/2addr p1, v0
+    sput v0, Lvza;->b:I
 
-    iput p1, p0, Lvza;->X:I
+    sget v0, Lckc;->spacing_size_2xs:I
 
-    iget-object p1, p0, Lvza;->Y:Lmz9;
+    sput v0, Lvza;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lckc;->spacing_size_m:I
 
-    invoke-virtual {p1, v0, p0}, Lmz9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sput v0, Lvza;->d:I
 
-    move-result-object p1
+    sget v0, Lckc;->spacing_size_xs:I
 
-    return-object p1
+    sput v0, Lvza;->e:I
+
+    return-void
 .end method

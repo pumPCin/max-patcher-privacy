@@ -1,3 +1,3 @@
-.class public final Lbz1;
-.super Lw9h;
+.class public final synthetic Lbz1;
+.super Ljava/lang/Object;
 .source "SourceFile"

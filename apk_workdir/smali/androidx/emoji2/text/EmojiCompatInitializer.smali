@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx97;
+.implements Lif7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lx97;"
+        "Lif7;"
     }
 .end annotation
 
@@ -41,21 +41,23 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Lt56;
+    new-instance v0, Lo96;
 
-    new-instance v1, Lawd;
+    new-instance v1, Lg75;
 
-    invoke-direct {v1, p1}, Lawd;-><init>(Landroid/content/Context;)V
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1}, Lt56;-><init>(Lx35;)V
+    invoke-direct {v1, p1, v2}, Lg75;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {v0, v1}, Lo96;-><init>(Lb75;)V
 
     const/4 v1, 0x1
 
-    iput v1, v0, Lt56;->e:I
+    iput v1, v0, Lo96;->e:I
 
-    invoke-static {v0}, Ly35;->c(Lt56;)V
+    invoke-static {v0}, Lc75;->c(Lo96;)V
 
-    invoke-static {p1}, Lly7;->w(Landroid/content/Context;)Lly7;
+    invoke-static {p1}, Ly38;->l(Landroid/content/Context;)Ly38;
 
     move-result-object p1
 
@@ -63,12 +65,12 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Lly7;->s0:Ljava/lang/Object;
+    sget-object v1, Ly38;->r0:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, p1, Lly7;->b:Ljava/lang/Object;
+    iget-object v2, p1, Ly38;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/HashMap;
 
@@ -82,7 +84,7 @@
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    invoke-virtual {p1, v0, v2}, Lly7;->u(Ljava/lang/Class;Ljava/util/HashSet;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v2}, Ly38;->k(Ljava/lang/Class;Ljava/util/HashSet;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -99,17 +101,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v2, Luq7;
+    check-cast v2, Liw7;
 
-    invoke-interface {v2}, Luq7;->x()Lwq7;
+    invoke-interface {v2}, Liw7;->x()Lkw7;
 
     move-result-object p1
 
-    new-instance v0, La45;
+    new-instance v0, Le75;
 
-    invoke-direct {v0, p0, p1}, La45;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Lwq7;)V
+    invoke-direct {v0, p0, p1}, Le75;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Lkw7;)V
 
-    invoke-virtual {p1, v0}, Lwq7;->a(Lqq7;)V
+    invoke-virtual {p1, v0}, Lkw7;->a(Lew7;)V
 
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 

@@ -1,152 +1,92 @@
-.class public interface abstract Lly1;
+.class public final Lly1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loz1;
+
+
+# instance fields
+.field public final a:Ljava/util/concurrent/Executor;
+
+.field public final b:Lpy1;
+
+.field public final c:I
+
+
+# direct methods
+.method public constructor <init>(Lpy1;Lt1e;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lly1;->b:Lpy1;
+
+    iput-object p2, p0, Lly1;->a:Ljava/util/concurrent/Executor;
+
+    iput p3, p0, Lly1;->c:I
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public b(Lzc5;)V
-    .locals 5
+.method public final a()Lo18;
+    .locals 4
 
-    iget-object v0, p1, Lzc5;->a:Ljava/util/ArrayList;
+    const-string v0, "Camera2CapturePipeline"
 
-    invoke-interface {p0}, Lly1;->g()I
+    const-string v1, "invokePreCapture"
 
-    move-result v1
+    invoke-static {v0, v1}, Lgth;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lly1;->b:Lpy1;
+
+    iget v1, p0, Lly1;->c:I
+
+    invoke-virtual {v0, v1}, Lpy1;->a(I)Lo18;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lfj6;->a(Lo18;)Lfj6;
+
+    move-result-object v0
+
+    new-instance v1, Liy1;
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_0
+    invoke-direct {v1, v2}, Liy1;-><init>(I)V
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_0
-    invoke-static {v1}, Lsw1;->u(I)I
+    new-instance v2, Ll8d;
 
-    move-result v3
+    const/16 v3, 0xe
 
-    if-eq v3, v2, :cond_7
+    invoke-direct {v2, v3, v1}, Ll8d;-><init>(ILjava/lang/Object;)V
 
-    const/4 v4, 0x2
+    iget-object v1, p0, Lly1;->a:Ljava/util/concurrent/Executor;
 
-    if-eq v3, v4, :cond_6
+    invoke-static {v0, v2, v1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
 
-    const/4 v4, 0x3
-
-    if-eq v3, v4, :cond_5
-
-    const/4 p1, 0x1
-
-    if-eq v1, p1, :cond_4
-
-    const/4 p1, 0x2
-
-    if-eq v1, p1, :cond_3
-
-    const/4 p1, 0x3
-
-    if-eq v1, p1, :cond_2
-
-    const/4 p1, 0x4
-
-    if-eq v1, p1, :cond_1
-
-    const-string p1, "null"
-
-    goto :goto_0
-
-    :cond_1
-    const-string p1, "FIRED"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p1, "READY"
-
-    goto :goto_0
-
-    :cond_3
-    const-string p1, "NONE"
-
-    goto :goto_0
-
-    :cond_4
-    const-string p1, "UNKNOWN"
-
-    :goto_0
-    const-string v0, "Unknown flash state: "
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "ExifData"
-
-    invoke-static {v0, p1}, Lnc6;->H(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_5
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_6
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_7
-    const/16 v1, 0x20
-
-    :goto_1
-    and-int/lit8 v3, v1, 0x1
-
-    if-ne v3, v2, :cond_8
-
-    const/4 v2, 0x4
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "LightSource"
-
-    invoke-virtual {p1, v3, v2, v0}, Lzc5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-
-    :cond_8
-    const-string v2, "Flash"
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v2, v1, v0}, Lzc5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public abstract d()Lk6f;
-.end method
-
-.method public abstract f()Ljy1;
-.end method
-
-.method public abstract g()I
-.end method
-
-.method public abstract getTimestamp()J
-.end method
-
-.method public abstract i()Lhy1;
-.end method
-
-.method public j()Landroid/hardware/camera2/CaptureResult;
-    .locals 1
-
-    const/4 v0, 0x0
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public abstract k()Liy1;
+.method public final b()Lo18;
+    .locals 2
+
+    new-instance v0, Lihd;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1, p0}, Lihd;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0}, Lmli;->a(Lzt1;)Lbu1;
+
+    move-result-object v0
+
+    return-object v0
 .end method

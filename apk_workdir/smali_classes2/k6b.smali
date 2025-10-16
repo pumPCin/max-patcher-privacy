@@ -1,185 +1,243 @@
 .class public final Lk6b;
-.super Loq0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic f:I
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic g:Lorg/webrtc/SessionDescription;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic h:Lo6b;
+.field public final c:Ljava/util/Map;
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo6b;Lorg/webrtc/SessionDescription;I)V
+.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;Ljava/util/Map;JJI)V
     .locals 0
 
-    iput p3, p0, Lk6b;->f:I
-
-    iput-object p1, p0, Lk6b;->h:Lo6b;
-
-    iput-object p2, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk6b;->a:Landroid/net/Uri;
+
+    iput-object p2, p0, Lk6b;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lk6b;->c:Ljava/util/Map;
+
+    iput-wide p4, p0, Lk6b;->d:J
+
+    iput-wide p6, p0, Lk6b;->e:J
+
+    iput p8, p0, Lk6b;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSetFailure(Ljava/lang/String;)V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lk6b;->f:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lk6b;->h:Lo6b;
+    return v0
 
-    iget-object v1, v0, Lo6b;->z:Lxg1;
-
-    iget-object v1, v1, Lxg1;->C:Lvg1;
-
-    iget-boolean v1, v1, Lvg1;->z:Z
+    :cond_0
+    instance-of v1, p1, Lk6b;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_1
 
-    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
-
-    iget-object v3, v0, Lo6b;->J:Lorg/webrtc/PeerConnection;
-
-    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getLocalDescription()Lorg/webrtc/SessionDescription;
-
-    move-result-object v3
-
-    iget-object v4, v1, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
-
-    invoke-static {v4, v2}, Lkw9;->a(Lorg/webrtc/SessionDescription$Type;Z)Lkw9;
-
-    move-result-object v4
-
-    new-instance v5, Llw9;
-
-    invoke-direct {v5, v4, p1, v3, v1}, Llw9;-><init>(Lkw9;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
-
-    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
-
-    new-instance p1, Lc6b;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v0, v5, v1}, Lc6b;-><init>(Lo6b;Llw9;I)V
-
-    const-string v1, "onSetFailure"
-
-    invoke-virtual {v0, v1, p1}, Lo6b;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
-
-    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lk6b;->h:Lo6b;
-
-    iget-object v1, v0, Lo6b;->z:Lxg1;
-
-    iget-object v1, v1, Lxg1;->C:Lvg1;
-
-    iget-boolean v1, v1, Lvg1;->z:Z
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
-
-    iget-object v3, v0, Lo6b;->J:Lorg/webrtc/PeerConnection;
-
-    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
-
-    move-result-object v3
-
-    iget-object v4, v1, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
-
-    invoke-static {v4, v2}, Lkw9;->a(Lorg/webrtc/SessionDescription$Type;Z)Lkw9;
-
-    move-result-object v4
-
-    new-instance v5, Llw9;
-
-    invoke-direct {v5, v4, p1, v1, v3}, Llw9;-><init>(Lkw9;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
-
-    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
-
-    new-instance p1, Lc6b;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v0, v5, v1}, Lc6b;-><init>(Lo6b;Llw9;I)V
-
-    const-string v1, "onSetFailure"
-
-    invoke-virtual {v0, v1, p1}, Lo6b;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
+    check-cast p1, Lk6b;
 
-    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
+    iget-object v1, p0, Lk6b;->a:Landroid/net/Uri;
 
-    :goto_1
-    return-void
+    iget-object v3, p1, Lk6b;->a:Landroid/net/Uri;
 
-    nop
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lk6b;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lk6b;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lk6b;->c:Ljava/util/Map;
+
+    iget-object v3, p1, Lk6b;->c:Ljava/util/Map;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lk6b;->d:J
+
+    iget-wide v5, p1, Lk6b;->d:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lk6b;->e:J
+
+    iget-wide v5, p1, Lk6b;->e:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lk6b;->f:I
+
+    iget p1, p1, Lk6b;->f:I
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
 .end method
 
-.method public final onSetSuccess()V
-    .locals 3
+.method public final hashCode()I
+    .locals 5
 
-    iget v0, p0, Lk6b;->f:I
+    iget-object v0, p0, Lk6b;->a:Landroid/net/Uri;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-    iget-object v0, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
+    move-result v0
 
-    const/4 v1, 0x0
+    const/16 v1, 0x1f
 
-    iget-object v2, p0, Lk6b;->h:Lo6b;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v2, v0, v1}, Lo6b;->o(Lorg/webrtc/SessionDescription;Z)V
+    iget-object v2, p0, Lk6b;->b:Ljava/lang/String;
 
-    return-void
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
 
-    :pswitch_0
-    iget-object v0, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
+    move-result v0
 
-    const/4 v1, 0x1
+    iget-object v2, p0, Lk6b;->c:Ljava/util/Map;
 
-    iget-object v2, p0, Lk6b;->h:Lo6b;
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v2, v0, v1}, Lo6b;->o(Lorg/webrtc/SessionDescription;Z)V
+    move-result v2
 
-    return-void
+    add-int/2addr v2, v0
 
-    nop
+    mul-int/2addr v2, v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v3, p0, Lk6b;->d:J
+
+    invoke-static {v2, v1, v3, v4}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lk6b;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget v1, p0, Lk6b;->f:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OneVideoDataSpec(uri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lk6b;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", httpMethod="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk6b;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", httpRequestHeaders="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk6b;->c:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", position="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lk6b;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", length="
+
+    const-string v2, ", flags="
+
+    iget-wide v3, p0, Lk6b;->e:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lwx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ")"
+
+    iget v2, p0, Lk6b;->f:I
+
+    invoke-static {v0, v2, v1}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -2,13 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lov7;
-
 
 # virtual methods
-.method public abstract getName()Lcdf;
-.end method
-
-.method public abstract s()Z
+.method public abstract getType()J
 .end method

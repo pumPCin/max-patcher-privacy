@@ -1,93 +1,130 @@
-.class public final Lev6;
+.class public abstract Lev6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:I
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/Comparable;
+# static fields
+.field private static volatile choreographer:Landroid/view/Choreographer;
 
 
 # direct methods
-.method public constructor <init>(Lvv6;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    new-instance v0, Ldv6;
 
-    .line 2
-    iput-object p1, p0, Lev6;->d:Ljava/lang/Comparable;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    .line 3
-    iput-wide p2, p0, Lev6;->a:J
+    move-result-object v1
 
-    .line 4
-    iput p4, p0, Lev6;->b:I
+    invoke-static {v1}, Lev6;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
-    .line 5
-    instance-of p2, p1, Lpv6;
+    move-result-object v1
 
-    if-eqz p2, :cond_0
+    const/4 v2, 0x0
 
-    check-cast p1, Lpv6;
-
-    iget-boolean p1, p1, Lpv6;->w0:Z
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
+    invoke-direct {v0, v1, v2}, Ldv6;-><init>(Landroid/os/Handler;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lvcd;
+
+    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
 
     :goto_0
-    iput-boolean p1, p0, Lev6;->c:Z
+    nop
+
+    instance-of v1, v0, Lvcd;
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    check-cast v0, Ldv6;
 
     return-void
 .end method
 
-.method public constructor <init>(Lwv6;JI)V
-    .locals 0
+.method public static final a(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 5
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 7
-    iput-object p1, p0, Lev6;->d:Ljava/lang/Comparable;
+    const/16 v1, 0x1c
 
-    .line 8
-    iput-wide p2, p0, Lev6;->a:J
+    const/4 v2, 0x0
 
-    .line 9
-    iput p4, p0, Lev6;->b:I
+    const-class v3, Landroid/os/Looper;
 
-    .line 10
-    instance-of p2, p1, Lqv6;
+    const-class v4, Landroid/os/Handler;
 
-    if-eqz p2, :cond_0
+    if-lt v0, v1, :cond_0
 
-    check-cast p1, Lqv6;
+    const-string v0, "createAsync"
 
-    iget-boolean p1, p1, Lqv6;->w0:Z
+    filled-new-array {v3}, [Ljava/lang/Class;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    const/4 p1, 0x1
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    goto :goto_0
+    move-result-object v0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-virtual {v0, v2, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Handler;
+
+    return-object p0
 
     :cond_0
-    const/4 p1, 0x0
+    :try_start_0
+    const-class v0, Landroid/os/Handler$Callback;
 
-    :goto_0
-    iput-boolean p1, p0, Lev6;->c:Z
+    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    return-void
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {p0, v2, v1}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Handler;
+
+    return-object p0
+
+    :catch_0
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    return-object v0
 .end method

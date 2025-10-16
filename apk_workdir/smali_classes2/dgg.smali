@@ -1,101 +1,127 @@
-.class public final synthetic Ldgg;
+.class public final Ldgg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lno3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    iput p2, p0, Ldgg;->a:I
-
-    iput-object p1, p0, Ldgg;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldgg;->a:Ljava/lang/String;
+
+    iput-boolean p2, p0, Ldgg;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Ldgg;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Ldgg;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroid/graphics/Bitmap;
-
-    sget v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
-
-    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lkn7;
-
-    invoke-static {v0}, Lo8d;->b(Lfs4;)V
-
-    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
-
-    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroidx/appcompat/widget/AppCompatImageView;
-
-    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Long;
-
-    sget p1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iget-wide v4, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
-
-    sub-long/2addr v2, v4
-
-    const-wide/16 v4, 0x3e8
-
-    cmp-long p1, v2, v4
-
-    if-lez p1, :cond_0
-
-    iget-object p1, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
+    goto :goto_1
 
     :cond_0
-    return-void
+    instance-of v0, p1, Ldgg;
 
-    nop
+    if-nez v0, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ldgg;
+
+    iget-object v0, p0, Ldgg;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Ldgg;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Ldgg;->b:Z
+
+    iget-boolean p1, p1, Ldgg;->b:Z
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ldgg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Ldgg;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UrlState(url="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ldgg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isRestored="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ldgg;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

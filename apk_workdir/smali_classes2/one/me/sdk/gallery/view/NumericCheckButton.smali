@@ -13,7 +13,7 @@
         "Landroidx/appcompat/widget/AppCompatButton;",
         "",
         "id",
-        "Laxf;",
+        "Lzag;",
         "setBackground",
         "(I)V",
         "number",
@@ -26,11 +26,11 @@
         "enabled",
         "setEnabled",
         "(Z)V",
-        "Lug;",
+        "Ldh;",
         "o",
-        "Lyn7;",
+        "Llt7;",
         "getAnimations",
-        "()Lug;",
+        "()Ldh;",
         "animations",
         "checked",
         "r0",
@@ -59,7 +59,7 @@
 
 
 # instance fields
-.field public final o:Lyn7;
+.field public final o:Llt7;
 
 .field public r0:Z
 
@@ -70,15 +70,15 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lv7d;->L:I
+    sget v0, Lsid;->J:I
 
     sput v0, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:I
 
-    sget v0, Lv7d;->K:I
+    sget v0, Lsid;->I:I
 
     sput v0, Lone/me/sdk/gallery/view/NumericCheckButton;->u0:I
 
-    sget v0, Lv7d;->I:I
+    sget v0, Lsid;->G:I
 
     sput v0, Lone/me/sdk/gallery/view/NumericCheckButton;->v0:I
 
@@ -92,21 +92,21 @@
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/AppCompatButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object p1, Lghd;->a:Lyn7;
+    sget-object p1, Lhsd;->a:Llt7;
 
-    sget-object p1, Lhhd;->a:Lhhd;
+    sget-object p1, Lisd;->a:Lisd;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
-
-    move-result-object p1
-
-    const-class p2, Lug;
-
-    invoke-virtual {p1, p2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->o:Lyn7;
+    const-class p2, Ldh;
+
+    invoke-virtual {p1, p2}, Lr5;->d(Ljava/lang/Class;)Lrhf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->o:Llt7;
 
     sget p1, Lone/me/sdk/gallery/view/NumericCheckButton;->t0:I
 
@@ -115,16 +115,16 @@
     return-void
 .end method
 
-.method private final getAnimations()Lug;
+.method private final getAnimations()Ldh;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->o:Lyn7;
+    iget-object v0, p0, Lone/me/sdk/gallery/view/NumericCheckButton;->o:Llt7;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lug;
+    check-cast v0, Ldh;
 
     return-object v0
 .end method
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lm04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -177,13 +177,13 @@
 
     invoke-direct/range {v1 .. v7}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Lug;
+    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Ldh;
 
     move-result-object p1
 
-    iget-object p1, p1, Lug;->a:Lgm4;
+    iget-object p1, p1, Ldh;->a:Lep4;
 
-    invoke-virtual {p1}, Lgm4;->o()Landroid/view/animation/Interpolator;
+    invoke-virtual {p1}, Lep4;->g()Landroid/view/animation/Interpolator;
 
     move-result-object p1
 
@@ -216,13 +216,13 @@
 
     invoke-virtual {v2, p1}, Landroid/view/animation/Animation;->setRepeatMode(I)V
 
-    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Lug;
+    invoke-direct {p0}, Lone/me/sdk/gallery/view/NumericCheckButton;->getAnimations()Ldh;
 
     move-result-object p1
 
-    iget-object p1, p1, Lug;->a:Lgm4;
+    iget-object p1, p1, Ldh;->a:Lep4;
 
-    invoke-virtual {p1}, Lgm4;->n()Landroid/view/animation/Interpolator;
+    invoke-virtual {p1}, Lep4;->f()Landroid/view/animation/Interpolator;
 
     move-result-object p1
 

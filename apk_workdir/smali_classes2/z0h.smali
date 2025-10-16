@@ -1,25 +1,17 @@
-.class public final Lz0h;
+.class public interface abstract Lz0h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lql7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lql7;"
-        }
-    .end annotation
+.method public abstract a()V
+.end method
 
-    sget-object v0, La1h;->a:Ljava/lang/Object;
+.method public b()V
+    .locals 0
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
-
-    check-cast v0, Lql7;
-
-    return-object v0
+.method public abstract c(Landroid/graphics/Rect;Landroid/view/View;)V
 .end method

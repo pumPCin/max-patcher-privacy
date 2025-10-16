@@ -1,42 +1,133 @@
 .class public final Lobd;
-.super Lp0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
 
 
-# virtual methods
-.method public final run()V
-    .locals 2
+# direct methods
+.method public constructor <init>(II)V
+    .locals 1
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput p1, p0, Lobd;->a:I
 
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
+    iput p2, p0, Lobd;->b:I
 
-    const/4 v0, 0x0
+    const-string v0, "Check failed."
 
-    :try_start_0
-    iget-object v1, p0, Lp0;->a:Ljava/lang/Runnable;
+    if-lez p1, :cond_1
 
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-lez p2, :cond_0
 
     return-void
 
-    :catchall_0
-    move-exception v1
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p0}, Lp0;->f()V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
+    throw p1
 
-    invoke-static {v1}, Lwee;->y(Ljava/lang/Throwable;)V
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    throw v1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lobd;
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lobd;
+
+    iget v1, p1, Lobd;->a:I
+
+    iget v2, p0, Lobd;->a:I
+
+    if-ne v2, v1, :cond_1
+
+    iget v1, p0, Lobd;->b:I
+
+    iget p1, p1, Lobd;->b:I
+
+    if-ne v1, p1, :cond_1
+
+    return v0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lobd;->a:I
+
+    add-int/lit8 v0, v0, 0x1f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lobd;->b:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Lobd;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget v1, p0, Lobd;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "%dx%d"
+
+    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

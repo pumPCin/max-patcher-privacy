@@ -3,139 +3,410 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lq02;
 
 
 # instance fields
-.field public X:J
+.field public final b:Lq02;
 
-.field public Y:J
+.field public final synthetic c:I
 
-.field public final synthetic Z:Lncd;
-
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Le22;
-
-.field public final c:J
-
-.field public o:J
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lncd;JLjava/lang/Runnable;JLe22;J)V
+.method public constructor <init>(Lq02;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lmcd;->c:I
+
+    .line 1
+    invoke-direct {p0, p1, v0}, Lmcd;-><init>(Lq02;B)V
+
+    .line 2
+    iput-object p1, p0, Lmcd;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lq02;B)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmcd;->Z:Lncd;
+    .line 4
+    iput-object p1, p0, Lmcd;->b:Lq02;
 
-    iput-object p4, p0, Lmcd;->a:Ljava/lang/Object;
+    return-void
+.end method
 
-    iput-object p7, p0, Lmcd;->b:Le22;
+.method public constructor <init>(Lq02;Lx0d;)V
+    .locals 1
 
-    iput-wide p8, p0, Lmcd;->c:J
+    const/4 v0, 0x1
 
-    iput-wide p5, p0, Lmcd;->X:J
+    iput v0, p0, Lmcd;->c:I
 
-    iput-wide p2, p0, Lmcd;->Y:J
+    const/4 v0, 0x0
+
+    .line 5
+    invoke-direct {p0, p1, v0}, Lmcd;-><init>(Lq02;B)V
+
+    .line 6
+    iput-object p2, p0, Lmcd;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 15
+.method public final a()V
+    .locals 1
 
-    iget-object v0, p0, Lmcd;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lmcd;->b:Lq02;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    invoke-interface {v0}, Lq02;->a()V
 
-    iget-object v0, p0, Lmcd;->b:Le22;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Le22;->g()Z
+.method public b(F)Lo18;
+    .locals 1
 
-    move-result v1
+    iget v0, p0, Lmcd;->c:I
 
-    if-nez v1, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-object v0, p0, Lmcd;->b:Lq02;
 
-    iget-object v2, p0, Lmcd;->Z:Lncd;
+    invoke-interface {v0, p1}, Lq02;->b(F)Lo18;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    invoke-static {v1}, Lncd;->a(Ljava/util/concurrent/TimeUnit;)J
+    return-object p1
 
-    move-result-wide v3
+    :pswitch_0
+    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
 
-    sget-wide v5, Lpcd;->b:J
+    check-cast v0, Lq02;
 
-    add-long v7, v3, v5
+    invoke-interface {v0, p1}, Lq02;->b(F)Lo18;
 
-    iget-wide v9, p0, Lmcd;->X:J
+    move-result-object p1
 
-    cmp-long v7, v7, v9
+    return-object p1
 
-    const-wide/16 v11, 0x1
+    nop
 
-    iget-wide v13, p0, Lmcd;->c:J
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-ltz v7, :cond_1
+.method public final c(Lck3;)V
+    .locals 1
 
-    add-long/2addr v9, v13
+    iget-object v0, p0, Lmcd;->b:Lq02;
 
-    add-long/2addr v9, v5
+    invoke-interface {v0, p1}, Lq02;->c(Lck3;)V
 
-    cmp-long v5, v3, v9
+    return-void
+.end method
 
-    if-ltz v5, :cond_0
+.method public d(F)Lo18;
+    .locals 1
+
+    iget v0, p0, Lmcd;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->d(F)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
+
+    check-cast v0, Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->d(F)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Landroid/graphics/Rect;
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0}, Lq02;->e()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final f(I)V
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->f(I)V
+
+    return-void
+.end method
+
+.method public final g(Lp87;)V
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->g(Lp87;)V
+
+    return-void
+.end method
+
+.method public h(Li65;)Lo18;
+    .locals 1
+
+    iget v0, p0, Lmcd;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->h(Li65;)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
+
+    check-cast v0, Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->h(Li65;)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public i(Ljava/util/ArrayList;II)Lo18;
+    .locals 2
+
+    iget v0, p0, Lmcd;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1, p2, p3}, Lq02;->i(Ljava/util/ArrayList;II)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-wide v5, p0, Lmcd;->Y:J
+    const/4 v1, 0x0
 
-    iget-wide v7, p0, Lmcd;->o:J
-
-    add-long/2addr v7, v11
-
-    iput-wide v7, p0, Lmcd;->o:J
-
-    mul-long/2addr v7, v13
-
-    add-long/2addr v7, v5
-
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    add-long v7, v3, v13
+    const-string v0, "Only support one capture config."
 
-    iget-wide v5, p0, Lmcd;->o:J
+    invoke-static {v0, v1}, Lbui;->a(Ljava/lang/String;Z)V
 
-    add-long/2addr v5, v11
+    iget-object v0, p0, Lmcd;->b:Lq02;
 
-    iput-wide v5, p0, Lmcd;->o:J
+    invoke-interface {v0, p2, p3}, Lq02;->l(II)Lo18;
 
-    mul-long/2addr v13, v5
+    move-result-object p2
 
-    sub-long v5, v7, v13
+    invoke-static {p2}, Lfj6;->a(Lo18;)Lfj6;
 
-    iput-wide v5, p0, Lmcd;->Y:J
+    move-result-object p3
 
-    :goto_1
-    iput-wide v3, p0, Lmcd;->X:J
+    new-instance v0, Ljj6;
 
-    sub-long/2addr v7, v3
+    const/4 v1, 0x2
 
-    invoke-virtual {v2, p0, v7, v8, v1}, Lncd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
+    invoke-direct {v0, p2, v1}, Ljj6;-><init>(Lo18;I)V
+
+    invoke-static {}, Ldmi;->a()Lst4;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_2
+    invoke-static {p3, v0, v1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
+
+    move-result-object p3
+
+    new-instance v0, Lohf;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, p0, v1, p1}, Lohf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {}, Ldmi;->a()Lst4;
+
+    move-result-object p1
+
+    invoke-static {p3, v0, p1}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
+
+    move-result-object p1
+
+    new-instance p3, Ljj6;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p3, p2, v0}, Ljj6;-><init>(Lo18;I)V
+
+    invoke-static {}, Ldmi;->a()Lst4;
+
+    move-result-object p2
+
+    invoke-static {p1, p3, p2}, Lt9g;->s(Lo18;Liv;Ljava/util/concurrent/Executor;)Lk62;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lt9g;->b(Ljava/util/List;)La18;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final j(Lg5e;)V
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->j(Lg5e;)V
+
+    return-void
+.end method
+
+.method public k(Z)Lo18;
+    .locals 1
+
+    iget v0, p0, Lmcd;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->k(Z)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lmcd;->d:Ljava/lang/Object;
+
+    check-cast v0, Lq02;
+
+    invoke-interface {v0, p1}, Lq02;->k(Z)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(II)Lo18;
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0, p1, p2}, Lq02;->l(II)Lo18;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m()Lck3;
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0}, Lq02;->m()Lck3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final n()V
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0}, Lq02;->n()V
+
+    return-void
+.end method
+
+.method public final o()V
+    .locals 1
+
+    iget-object v0, p0, Lmcd;->b:Lq02;
+
+    invoke-interface {v0}, Lq02;->o()V
+
     return-void
 .end method

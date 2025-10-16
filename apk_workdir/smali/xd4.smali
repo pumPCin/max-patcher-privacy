@@ -1,28 +1,35 @@
-.class public abstract Lxd4;
+.class public final synthetic Lxd4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+
+# instance fields
+.field private volatile synthetic installations$volatile:I
+
+.field private volatile synthetic sequenceNumber$volatile:J
+
+
 # direct methods
-.method public static a(Landroid/media/AudioTrack;Likb;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    iget-object p1, p1, Likb;->a:Lhkb;
+    const-string v0, "installations$volatile"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v1, Lxd4;
 
-    iget-object p1, p1, Lhkb;->a:Landroid/media/metrics/LogSessionId;
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    invoke-static {}, Lbn8;->f()Landroid/media/metrics/LogSessionId;
+    move-result-object v0
 
-    invoke-static {p1}, Lbn8;->y(Landroid/media/metrics/LogSessionId;)Z
+    sput-object v0, Lxd4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    move-result v0
+    const-string v0, "sequenceNumber$volatile"
 
-    if-nez v0, :cond_0
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
 
-    invoke-static {p0, p1}, Ljx3;->r(Landroid/media/AudioTrack;Landroid/media/metrics/LogSessionId;)V
-
-    :cond_0
     return-void
 .end method

@@ -1,61 +1,89 @@
 .class public final Loe1;
-.super Lqce;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lntc;
+.implements Lqe1;
 
 
 # instance fields
-.field public final E0:Lotc;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lotc;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lh0e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lh0e;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0, v0}, Luvc;-><init>(Landroid/view/View;)V
-
-    iput-object p2, p0, Loe1;->E0:Lotc;
-
-    sget-object p1, Ld0e;->b:Ld0e;
-
-    invoke-virtual {v0, p1}, Lh0e;->setThemeDepended(Ld0e;)V
+    iput-object p1, p0, Loe1;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Lov7;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Loe1;->E0:Lotc;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lotc;->a:Ljava/util/LinkedHashSet;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    instance-of v0, p1, Lcz0;
-
-    if-nez v0, :cond_0
-
-    return-void
+    return v0
 
     :cond_0
-    iget-object v0, p0, Luvc;->a:Landroid/view/View;
+    instance-of v1, p1, Loe1;
 
-    check-cast v0, Lh0e;
+    const/4 v2, 0x0
 
-    check-cast p1, Lyzd;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, p1}, Lh0e;->setModelItem(Lyzd;)V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Loe1;
+
+    iget-object v1, p0, Loe1;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Loe1;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Loe1;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Create(link="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Loe1;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lf67;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

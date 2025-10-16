@@ -3,213 +3,125 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final Companion:Luug;
-
-.field public static final d:[Lql7;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Z
 
-.field public final b:Ly5a;
+.field public final b:Z
 
 .field public final c:Z
 
+.field public final d:Z
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:Lklg;
+
+.field public final i:Z
+
+.field public final j:Z
+
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Luug;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-boolean v0, p1, Luug;->a:Z
+
+    iput-boolean v0, p0, Lvug;->a:Z
+
+    iget-boolean v0, p1, Luug;->b:Z
+
+    iput-boolean v0, p0, Lvug;->b:Z
+
+    iget-boolean v0, p1, Luug;->c:Z
+
+    iput-boolean v0, p0, Lvug;->c:Z
+
+    iget-boolean v0, p1, Luug;->d:Z
+
+    iput-boolean v0, p0, Lvug;->d:Z
+
+    iget-wide v0, p1, Luug;->e:J
+
+    iput-wide v0, p0, Lvug;->e:J
+
+    iget-wide v0, p1, Luug;->f:J
+
+    iput-wide v0, p0, Lvug;->f:J
+
+    iget-wide v0, p1, Luug;->g:J
+
+    iput-wide v0, p0, Lvug;->g:J
+
+    iget-object v0, p1, Luug;->h:Lklg;
+
+    iput-object v0, p0, Lvug;->h:Lklg;
+
+    iget-boolean v0, p1, Luug;->i:Z
+
+    iput-boolean v0, p0, Lvug;->i:Z
+
+    iget-boolean p1, p1, Luug;->j:Z
+
+    iput-boolean p1, p0, Lvug;->j:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Luug;
+    .locals 3
 
     new-instance v0, Luug;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lvug;->Companion:Luug;
+    iget-boolean v1, p0, Lvug;->a:Z
 
-    sget-object v0, Ly5a;->Companion:Lx5a;
+    iput-boolean v1, v0, Luug;->a:Z
 
-    invoke-virtual {v0}, Lx5a;->serializer()Lql7;
+    iget-boolean v1, p0, Lvug;->b:Z
 
-    move-result-object v0
+    iput-boolean v1, v0, Luug;->b:Z
 
-    const/4 v1, 0x3
-
-    new-array v1, v1, [Lql7;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    const/4 v0, 0x2
-
-    aput-object v3, v1, v0
-
-    sput-object v1, Lvug;->d:[Lql7;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Ly5a;Z)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x7
-
-    const/4 v1, 0x7
-
-    if-ne v1, v0, :cond_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lvug;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lvug;->b:Ly5a;
-
-    iput-boolean p4, p0, Lvug;->c:Z
-
-    return-void
-
-    :cond_0
-    sget-object p2, Ltug;->a:Ltug;
-
-    invoke-virtual {p2}, Ltug;->d()Lmqd;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lomc;->A(IILmqd;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvug;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvug;
-
-    iget-object v1, p0, Lvug;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lvug;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lvug;->b:Ly5a;
-
-    iget-object v3, p1, Lvug;->b:Ly5a;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
     iget-boolean v1, p0, Lvug;->c:Z
 
-    iget-boolean p1, p1, Lvug;->c:Z
+    iput-boolean v1, v0, Luug;->c:Z
 
-    if-eq v1, p1, :cond_4
+    iget-boolean v1, p0, Lvug;->d:Z
 
-    return v2
+    iput-boolean v1, v0, Luug;->d:Z
 
-    :cond_4
-    return v0
-.end method
+    iget-wide v1, p0, Lvug;->e:J
 
-.method public final hashCode()I
-    .locals 2
+    iput-wide v1, v0, Luug;->e:J
 
-    iget-object v0, p0, Lvug;->a:Ljava/lang/String;
+    iget-wide v1, p0, Lvug;->f:J
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iput-wide v1, v0, Luug;->f:J
 
-    move-result v0
+    iget-wide v1, p0, Lvug;->g:J
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-wide v1, v0, Luug;->g:J
 
-    iget-object v1, p0, Lvug;->b:Ly5a;
+    iget-object v1, p0, Lvug;->h:Lklg;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iput-object v1, v0, Luug;->h:Lklg;
 
-    move-result v1
+    iget-boolean v1, p0, Lvug;->i:Z
 
-    add-int/2addr v1, v0
+    iput-boolean v1, v0, Luug;->i:Z
 
-    mul-int/lit8 v1, v1, 0x1f
+    iget-boolean v1, p0, Lvug;->j:Z
 
-    iget-boolean v0, p0, Lvug;->c:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppHapticFeedbackNotification(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvug;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", notificationType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvug;->b:Ly5a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disableVibrationFallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lvug;->c:Z
-
-    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-boolean v1, v0, Luug;->j:Z
 
     return-object v0
 .end method

@@ -1,103 +1,316 @@
 .class public final Loaf;
-.super Lcaf;
+.super Lr79;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/SubMenu;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
+.field public final J0:Lr79;
+
+.field public final K0:Lv79;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;JLhaf;)V
+.method public constructor <init>(Landroid/content/Context;Lr79;Lv79;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3, p4}, Lcaf;-><init>(JLhaf;)V
+    invoke-direct {p0, p1}, Lr79;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Loaf;->a:Ljava/lang/Runnable;
+    iput-object p2, p0, Loaf;->J0:Lr79;
+
+    iput-object p3, p0, Loaf;->K0:Lv79;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final d(Lv79;)Z
+    .locals 1
 
-    :try_start_0
-    iget-object v0, p0, Loaf;->a:Ljava/lang/Runnable;
+    iget-object v0, p0, Loaf;->J0:Lr79;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, p1}, Lr79;->d(Lv79;)Z
 
-    iget-object v0, p0, Lcaf;->taskContext:Lhaf;
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Lcaf;->taskContext:Lhaf;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    throw v0
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final e(Lr79;Landroid/view/MenuItem;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0, p1, p2}, Lr79;->e(Lr79;Landroid/view/MenuItem;)Z
 
-    const-string v1, "Task["
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_1
 
-    iget-object v1, p0, Loaf;->a:Ljava/lang/Runnable;
+    iget-object v0, p0, Loaf;->J0:Lr79;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, p1, p2}, Lr79;->e(Lr79;Landroid/view/MenuItem;)Z
 
-    move-result-object v2
+    move-result p1
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    move-result-object v2
+    goto :goto_0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 p1, 0x0
 
-    const/16 v2, 0x40
+    return p1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    invoke-static {v1}, Lzvd;->v(Ljava/lang/Object;)Ljava/lang/String;
+    return p1
+.end method
 
-    move-result-object v1
+.method public final f(Lv79;)Z
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Loaf;->J0:Lr79;
 
-    const-string v1, ", "
+    invoke-virtual {v0, p1}, Lr79;->f(Lv79;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    iget-wide v2, p0, Lcaf;->submissionTime:J
+    return p1
+.end method
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.method public final getItem()Landroid/view/MenuItem;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Loaf;->K0:Lv79;
 
-    iget-object v1, p0, Lcaf;->taskContext:Lhaf;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final j()Ljava/lang/String;
+    .locals 2
 
-    const/16 v1, 0x5d
+    iget-object v0, p0, Loaf;->K0:Lv79;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v0, v0, Lv79;->a:I
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_1
+    const-string v1, "android:menu:actionviewstates:"
+
+    invoke-static {v0, v1}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final k()Lr79;
+    .locals 1
+
+    iget-object v0, p0, Loaf;->J0:Lr79;
+
+    invoke-virtual {v0}, Lr79;->k()Lr79;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final m()Z
+    .locals 1
+
+    iget-object v0, p0, Loaf;->J0:Lr79;
+
+    invoke-virtual {v0}, Lr79;->m()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final n()Z
+    .locals 1
+
+    iget-object v0, p0, Loaf;->J0:Lr79;
+
+    invoke-virtual {v0}, Lr79;->n()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final o()Z
+    .locals 1
+
+    iget-object v0, p0, Loaf;->J0:Lr79;
+
+    invoke-virtual {v0}, Lr79;->o()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final setGroupDividerEnabled(Z)V
+    .locals 1
+
+    iget-object v0, p0, Loaf;->J0:Lr79;
+
+    invoke-virtual {v0, p1}, Lr79;->setGroupDividerEnabled(Z)V
+
+    return-void
+.end method
+
+.method public final setHeaderIcon(I)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p0
+
+    move v3, p1
+
+    .line 2
+    invoke-virtual/range {v0 .. v5}, Lr79;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p0
+
+    move-object v4, p1
+
+    .line 1
+    invoke-virtual/range {v0 .. v5}, Lr79;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderTitle(I)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    .line 2
+    invoke-virtual/range {v0 .. v5}, Lr79;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    .line 1
+    invoke-virtual/range {v0 .. v5}, Lr79;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderView(Landroid/view/View;)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p0
+
+    move-object v5, p1
+
+    invoke-virtual/range {v0 .. v5}, Lr79;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setIcon(I)Landroid/view/SubMenu;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Loaf;->K0:Lv79;
+
+    invoke-virtual {v0, p1}, Lv79;->setIcon(I)Landroid/view/MenuItem;
+
+    return-object p0
+.end method
+
+.method public final setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Loaf;->K0:Lv79;
+
+    invoke-virtual {v0, p1}, Lv79;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
+
+    return-object p0
+.end method
+
+.method public final setQwertyMode(Z)V
+    .locals 1
+
+    iget-object v0, p0, Loaf;->J0:Lr79;
+
+    invoke-virtual {v0, p1}, Lr79;->setQwertyMode(Z)V
+
+    return-void
 .end method

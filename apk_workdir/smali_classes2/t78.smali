@@ -1,201 +1,178 @@
-.class public final synthetic Lt78;
-.super Ljava/lang/Object;
+.class public final enum Lt78;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lno3;
+
+# static fields
+.field public static final enum X:Lt78;
+
+.field public static final enum Y:Lt78;
+
+.field public static final enum Z:Lt78;
+
+.field public static final enum c:Lt78;
+
+.field public static final enum o:Lt78;
+
+.field public static final enum r0:Lt78;
+
+.field public static final enum s0:Lt78;
+
+.field public static final synthetic t0:[Lt78;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lf88;
 
-.field public final synthetic b:Lz78;
-
-.field public final synthetic c:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz78;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    iput p3, p0, Lt78;->a:I
+    new-instance v0, Lt78;
 
-    iput-object p1, p0, Lt78;->b:Lz78;
+    const-string v1, "SEND"
 
-    iput-object p2, p0, Lt78;->c:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Lt78;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lt78;->c:Lt78;
+
+    new-instance v1, Lt78;
+
+    const-string v2, "EXCEPTION"
+
+    const/4 v3, 0x1
+
+    sget-object v4, Lf88;->Z:Lf88;
+
+    invoke-direct {v1, v2, v3, v4}, Lt78;-><init>(Ljava/lang/String;ILf88;)V
+
+    sput-object v1, Lt78;->o:Lt78;
+
+    new-instance v2, Lt78;
+
+    const-string v3, "SEND_ACK"
+
+    const/4 v5, 0x2
+
+    invoke-direct {v2, v3, v5}, Lt78;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lt78;->X:Lt78;
+
+    new-instance v3, Lt78;
+
+    const-string v5, "QUEUE"
+
+    const/4 v6, 0x3
+
+    invoke-direct {v3, v5, v6}, Lt78;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lt78;->Y:Lt78;
+
+    move-object v5, v4
+
+    new-instance v4, Lt78;
+
+    const-string v6, "ERROR"
+
+    const/4 v7, 0x4
+
+    invoke-direct {v4, v6, v7, v5}, Lt78;-><init>(Ljava/lang/String;ILf88;)V
+
+    sput-object v4, Lt78;->Z:Lt78;
+
+    new-instance v5, Lt78;
+
+    const-string v6, "RECEIVE"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Lt78;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lt78;->r0:Lt78;
+
+    new-instance v6, Lt78;
+
+    const-string v7, "NOTIF"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Lt78;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lt78;->s0:Lt78;
+
+    filled-new-array/range {v0 .. v6}, [Lt78;
+
+    move-result-object v0
+
+    sput-object v0, Lt78;->t0:[Lt78;
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+    .line 1
+    sget-object v0, Lf88;->o:Lf88;
 
-    iget v0, p0, Lt78;->a:I
-
-    const-string v1, "z78"
-
-    iget-object v2, p0, Lt78;->c:Ljava/lang/String;
-
-    iget-object v3, p0, Lt78;->b:Lz78;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "searchChats: exception"
-
-    invoke-static {v1, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, v3, Lz78;->g:Ltb5;
-
-    new-instance v1, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;
-
-    invoke-direct {v1, v2, p1}, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-interface {v0, v1}, Ltb5;->a(Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2, v0}, Lt78;-><init>(Ljava/lang/String;ILf88;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
+.method public constructor <init>(Ljava/lang/String;ILf88;)V
+    .locals 0
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "searchChatsAndMessages: exception"
+    iput-object p3, p0, Lt78;->a:Lf88;
 
-    invoke-static {v1, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    iget-object v0, v3, Lz78;->g:Ltb5;
+    move-result-object p1
 
-    new-instance v1, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;
+    sget-object p2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    invoke-direct {v1, v2, p1}, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1, p2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Ltb5;->a(Ljava/lang/Throwable;)V
+    move-result-object p1
+
+    iput-object p1, p0, Lt78;->b:Ljava/lang/String;
 
     return-void
+.end method
 
-    :pswitch_1
-    check-cast p1, Lit2;
+.method public static valueOf(Ljava/lang/String;)Lt78;
+    .locals 1
 
-    iget-object v0, v3, Lz78;->q:Ljava/util/ArrayList;
+    const-class v0, Lt78;
 
-    iget-object v1, p1, Lit2;->c:Ljava/util/List;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    new-instance v4, Ljava/util/ArrayList;
+    move-result-object p0
 
-    invoke-interface {v1}, Ljava/util/Collection;->size()I
+    check-cast p0, Lt78;
 
-    move-result v5
+    return-object p0
+.end method
 
-    invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
+.method public static values()[Lt78;
+    .locals 1
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    sget-object v0, Lt78;->t0:[Lt78;
 
-    move-result-object v1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v0
 
-    move-result v5
+    check-cast v0, [Lt78;
 
-    if-eqz v5, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    :try_start_0
-    check-cast v5, Lo69;
-
-    iget-object v6, v5, Lo69;->b:Lq19;
-
-    iget-wide v7, v5, Lo69;->a:J
-
-    iget-object v9, v5, Lo69;->c:Ljava/lang/String;
-
-    iget-object v5, v5, Lo69;->o:Ljava/util/List;
-
-    invoke-static {v6, v7, v8, v9, v5}, Lzid;->b(Lq19;JLjava/lang/String;Ljava/util/List;)Lzid;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v1, v3, Lz78;->n:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v1, p1, Lit2;->X:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    const-string v4, "0"
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 p1, 0x0
-
-    iput-object p1, v3, Lz78;->s:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p1, p1, Lit2;->X:Ljava/lang/String;
-
-    iput-object p1, v3, Lz78;->s:Ljava/lang/String;
-
-    :goto_1
-    iget-object p1, v3, Lz78;->i:Lq78;
-
-    if-eqz p1, :cond_2
-
-    iget-object v1, v3, Lz78;->n:Ljava/util/ArrayList;
-
-    const/4 v4, 0x0
-
-    invoke-interface {p1, v2, v1, v4}, Lq78;->e(Ljava/lang/String;Ljava/util/List;Z)V
-
-    iget-object p1, v3, Lz78;->i:Lq78;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

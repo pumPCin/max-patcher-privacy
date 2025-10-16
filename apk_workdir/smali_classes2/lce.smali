@@ -1,38 +1,32 @@
-.class public final synthetic Llce;
-.super Ljava/lang/Object;
+.class public final Llce;
+.super Lpoe;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
 
+# virtual methods
+.method public final A(Lb18;)V
+    .locals 1
 
-# instance fields
-.field public final synthetic a:Lmce;
+    instance-of v0, p1, Lrvd;
 
+    if-nez v0, :cond_0
 
-# direct methods
-.method public synthetic constructor <init>(Lmce;)V
-    .locals 0
+    return-void
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
 
-    iput-object p1, p0, Llce;->a:Lmce;
+    check-cast v0, Ltbe;
+
+    check-cast p1, Lkbe;
+
+    invoke-virtual {v0, p1}, Ltbe;->setModelItem(Lkbe;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onCompletion(Landroid/media/MediaPlayer;)V
-    .locals 1
-
-    iget-object p1, p0, Llce;->a:Lmce;
-
-    iget-object v0, p1, Lmce;->X:Ll30;
-
-    invoke-virtual {v0}, Ll30;->h()V
-
-    invoke-virtual {p1}, Lmce;->f()V
+.method public final F()V
+    .locals 0
 
     return-void
 .end method

@@ -2,230 +2,141 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc59;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Leie;
 
-.field public final b:I
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final c:Landroid/text/Layout;
-
-.field public final d:Landroid/net/Uri;
-
-.field public final e:Z
+.field public final c:Lit3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILandroid/text/Layout;Landroid/net/Uri;Z)V
-    .locals 0
+.method public constructor <init>(Lgw0;Lqkf;)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz49;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iput p2, p0, Lz49;->b:I
+    const/4 v1, 0x7
 
-    iput-object p3, p0, Lz49;->c:Landroid/text/Layout;
+    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
 
-    iput-object p4, p0, Lz49;->d:Landroid/net/Uri;
+    move-result-object v0
 
-    iput-boolean p5, p0, Lz49;->e:Z
+    iput-object v0, p0, Lz49;->a:Leie;
+
+    check-cast p2, Losa;
+
+    invoke-virtual {p2}, Losa;->c()Lfd8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lz49;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    sget p2, Lb35;->o:I
+
+    const/16 p2, 0x3e8
+
+    sget-object v1, Lg35;->c:Lg35;
+
+    invoke-static {p2, v1}, Lsyi;->e(ILg35;)J
+
+    move-result-wide v1
+
+    new-instance p2, Lvi0;
+
+    const/16 v3, 0x12
+
+    invoke-direct {p2, v3}, Lvi0;-><init>(I)V
+
+    invoke-static {v0, v1, v2, p2}, La1j;->a(Lzx5;JLei6;)Lit3;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lz49;->c:Lit3;
+
+    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()V
     .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Lu49;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    invoke-direct {v0, p0, v1}, Lu49;-><init>(Lz49;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    instance-of v1, p1, Lz49;
+    const/4 v2, 0x3
 
-    const/4 v2, 0x0
+    iget-object v3, p0, Lz49;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    if-nez v1, :cond_1
+    invoke-static {v3, v1, v1, v0, v2}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lz49;
-
-    iget-object v1, p0, Lz49;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lz49;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lz49;->b:I
-
-    iget v3, p1, Lz49;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lz49;->c:Landroid/text/Layout;
-
-    iget-object v3, p1, Lz49;->c:Landroid/text/Layout;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lz49;->d:Landroid/net/Uri;
-
-    iget-object v3, p1, Lz49;->d:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lz49;->e:Z
-
-    iget-boolean p1, p1, Lz49;->e:Z
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final onEvent(Li43;)V
+    .locals 0
+    .annotation runtime Lsaf;
+    .end annotation
 
-    const/4 v0, 0x0
+    .line 5
+    invoke-virtual {p0}, Lz49;->a()V
 
-    iget-object v1, p0, Lz49;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget v3, p0, Lz49;->b:I
-
-    invoke-static {v3, v1, v2}, Ljjd;->e(III)I
-
-    move-result v1
-
-    iget-object v3, p0, Lz49;->c:Landroid/text/Layout;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    mul-int/2addr v3, v2
-
-    iget-object v1, p0, Lz49;->d:Landroid/net/Uri;
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v3, v0
-
-    mul-int/2addr v3, v2
-
-    iget-boolean v0, p0, Lz49;->e:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v3
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final onEvent(Li98;)V
+    .locals 0
+    .annotation runtime Lsaf;
+    .end annotation
 
-    const-string v0, ", attachCount="
+    .line 1
+    invoke-virtual {p0}, Lz49;->a()V
 
-    const-string v1, ", description="
+    return-void
+.end method
 
-    iget v2, p0, Lz49;->b:I
+.method public final onEvent(Lpcg;)V
+    .locals 0
+    .annotation runtime Lsaf;
+    .end annotation
 
-    const-string v3, "Media(url="
+    .line 4
+    invoke-virtual {p0}, Lz49;->a()V
 
-    iget-object v4, p0, Lz49;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    invoke-static {v2, v3, v4, v0, v1}, Lsab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final onEvent(Lpjb;)V
+    .locals 0
+    .annotation runtime Lsaf;
+    .end annotation
 
-    move-result-object v0
+    .line 2
+    invoke-virtual {p0}, Lz49;->a()V
 
-    iget-object v1, p0, Lz49;->c:Landroid/text/Layout;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final onEvent(Lqz3;)V
+    .locals 0
+    .annotation runtime Lsaf;
+    .end annotation
 
-    const-string v1, ", lowResPreviewUri="
+    .line 3
+    invoke-virtual {p0}, Lz49;->a()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lz49;->d:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isRoundPreview="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lz49;->e:Z
-
-    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

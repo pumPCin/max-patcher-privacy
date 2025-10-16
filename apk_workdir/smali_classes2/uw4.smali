@@ -1,49 +1,53 @@
 .class public final Luw4;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+.field public X:Ld20;
 
-.field public final b:Lvh;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Lwh;
+.field public final synthetic Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-.field public final d:Lwh;
+.field public o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;)V
-    .locals 2
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lk14;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luw4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    iput-object p1, p0, Luw4;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    new-instance v0, Lvh;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
-
-    iput-object v0, p0, Luw4;->b:Lvh;
-
-    new-instance v0, Lwh;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, p1, v1}, Lwh;-><init>(Lc4d;I)V
-
-    iput-object v0, p0, Luw4;->c:Lwh;
-
-    new-instance v0, Lwh;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, p1, v1}, Lwh;-><init>(Lc4d;I)V
-
-    iput-object v0, p0, Luw4;->d:Lwh;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Luw4;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Luw4;->r0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Luw4;->r0:I
+
+    iget-object p1, p0, Luw4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Ld20;Lk14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

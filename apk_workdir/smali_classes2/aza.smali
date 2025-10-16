@@ -1,44 +1,61 @@
 .class public final Laza;
-.super Ljava/lang/Object;
+.super Ldza;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lf4h;
+# static fields
+.field public static final a:Laza;
 
 
 # direct methods
-.method public constructor <init>(ILf4h;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Laza;
 
-    iput p1, p0, Laza;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Laza;->b:Lf4h;
+    sput-object v0, Laza;->a:Laza;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    check-cast p1, Laza;
+    const/4 v0, 0x1
 
-    iget v0, p0, Laza;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget p1, p1, Laza;->a:I
+    return v0
 
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+    :cond_0
+    instance-of p1, p1, Laza;
 
-    move-result p1
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
 
     return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x715c406f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "PrimaryStatic"
+
+    return-object v0
 .end method

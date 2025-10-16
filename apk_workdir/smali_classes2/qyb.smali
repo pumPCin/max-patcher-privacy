@@ -1,139 +1,39 @@
-.class public abstract Lqyb;
-.super Lyyb;
+.class public final Lqyb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final h(Lov7;)Z
-    .locals 4
+# instance fields
+.field public final a:J
 
-    sget-object v0, Lnyb;->a:Lnyb;
+.field public final b:J
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+.field public final c:J
 
-    move-result v0
+.field public final d:J
 
-    if-eqz v0, :cond_0
+.field public final e:J
 
-    instance-of p1, p1, Lnyb;
+.field public final f:J
 
-    return p1
 
-    :cond_0
-    instance-of v0, p0, Loyb;
+# direct methods
+.method public constructor <init>(JJJJJJ)V
+    .locals 0
 
-    if-eqz v0, :cond_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    instance-of p1, p1, Loyb;
+    iput-wide p1, p0, Lqyb;->a:J
 
-    return p1
+    iput-wide p3, p0, Lqyb;->b:J
 
-    :cond_1
-    instance-of v0, p0, Lpyb;
+    iput-wide p5, p0, Lqyb;->c:J
 
-    if-eqz v0, :cond_3
+    iput-wide p7, p0, Lqyb;->d:J
 
-    instance-of v0, p1, Lpyb;
+    iput-wide p9, p0, Lqyb;->e:J
 
-    if-eqz v0, :cond_2
+    iput-wide p11, p0, Lqyb;->f:J
 
-    move-object v0, p0
-
-    check-cast v0, Lpyb;
-
-    iget-object v0, v0, Lpyb;->a:Lrsb;
-
-    iget-wide v0, v0, Lrsb;->a:J
-
-    check-cast p1, Lpyb;
-
-    iget-object p1, p1, Lpyb;->a:Lrsb;
-
-    iget-wide v2, p1, Lrsb;->a:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final q(Lov7;)Z
-    .locals 1
-
-    sget-object v0, Lnyb;->a:Lnyb;
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    instance-of p1, p1, Lnyb;
-
-    return p1
-
-    :cond_0
-    instance-of v0, p0, Loyb;
-
-    if-eqz v0, :cond_1
-
-    instance-of p1, p1, Loyb;
-
-    return p1
-
-    :cond_1
-    instance-of v0, p0, Lpyb;
-
-    if-eqz v0, :cond_3
-
-    instance-of v0, p1, Lpyb;
-
-    if-eqz v0, :cond_2
-
-    move-object v0, p0
-
-    check-cast v0, Lpyb;
-
-    check-cast p1, Lpyb;
-
-    iget-object p1, p1, Lpyb;->a:Lrsb;
-
-    iget-object v0, v0, Lpyb;->a:Lrsb;
-
-    invoke-virtual {v0, p1}, Lrsb;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-void
 .end method

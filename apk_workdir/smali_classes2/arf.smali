@@ -3,130 +3,167 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcrf;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lhd7;
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:Ldrf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lhd7;)V
+.method public synthetic constructor <init>(Landroid/view/View;Ldrf;I)V
     .locals 0
+
+    iput p3, p0, Larf;->a:I
+
+    iput-object p1, p0, Larf;->b:Landroid/view/View;
+
+    iput-object p2, p0, Larf;->c:Ldrf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Larf;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p2, p0, Larf;->b:Lhd7;
+.method private final a(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/view/View;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 4
 
-    const/4 v0, 0x1
+    iget p1, p0, Larf;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    return-void
 
-    :cond_0
-    instance-of v1, p1, Larf;
+    :pswitch_0
+    iget-object p1, p0, Larf;->b:Landroid/view/View;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object p1, p0, Larf;->c:Ldrf;
+
+    iget-object v0, p1, Ldrf;->c:Loag;
+
+    iget-object v0, v0, Loag;->a:Lsze;
+
+    new-instance v1, Lu2c;
+
+    const/16 v2, 0x12
+
+    invoke-direct {v1, v0, p1, v2}, Lu2c;-><init>(Lzx5;Ljava/lang/Object;I)V
+
+    new-instance v0, Lbrf;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, p1, v2}, Lbrf;-><init>(Ldrf;Lkotlin/coroutines/Continuation;)V
 
-    return v2
+    new-instance v2, Lh06;
 
-    :cond_1
-    check-cast p1, Larf;
+    const/4 v3, 0x1
 
-    iget-object v1, p0, Larf;->a:Ljava/lang/String;
+    invoke-direct {v2, v1, v0, v3}, Lh06;-><init>(Lzx5;Lei6;I)V
 
-    iget-object v3, p1, Larf;->a:Ljava/lang/String;
+    :try_start_0
+    iget-object v0, p1, Ldrf;->b:Landroid/widget/TextView;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Larf;->b:Lhd7;
-
-    iget-object p1, p1, Larf;->b:Lhd7;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Larf;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Larf;->b:Lhd7;
-
-    invoke-virtual {v1}, Lhd7;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "GoToRestore(trackId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Larf;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", navData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Larf;->b:Lhd7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Loyg;->b(Landroid/view/View;)Lwv7;
 
     move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object v0
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lvcd;
+
+    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_0
+    nop
+
+    instance-of v1, v0, Lvcd;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    move-object p1, v0
+
+    :goto_1
+    check-cast p1, Lb54;
+
+    invoke-static {v2, p1}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 2
+
+    iget p1, p0, Larf;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Larf;->b:Landroid/view/View;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object p1, p0, Larf;->c:Ldrf;
+
+    :try_start_0
+    const-string v0, "onDetach"
+
+    new-instance v1, Ljava/util/concurrent/CancellationException;
+
+    invoke-direct {v1, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    invoke-static {p1, v1}, Lcwi;->b(Lb54;Ljava/util/concurrent/CancellationException;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :pswitch_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

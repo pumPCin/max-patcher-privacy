@@ -1,193 +1,241 @@
-.class public final Lpkh;
-.super Lzjh;
+.class public abstract Lpkh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
-
-.field public final synthetic c:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lpkh;->b:I
+    const-string v0, "^NOTE([ \t].*)?$"
 
-    iput-object p2, p0, Lpkh;->c:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-direct {p0}, Lzjh;-><init>()V
+    move-result-object v0
+
+    sput-object v0, Lpkh;->a:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
+.method public static a(Lbcb;)Z
+    .locals 1
 
-# virtual methods
-.method public final a()V
-    .locals 5
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v0, p0, Lpkh;->b:I
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, v0}, Lbcb;->k(Ljava/nio/charset/Charset;)Ljava/lang/String;
 
-    iget-object v0, p0, Lpkh;->c:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Lqkh;
+    if-eqz p0, :cond_0
 
-    iget-object v0, v0, Lqkh;->b:Ljava/lang/Object;
+    const-string v0, "WEBVTT"
 
-    check-cast v0, Lklh;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    iget-object v1, v0, Lklh;->b:Lxs4;
+    move-result p0
 
-    const-string v2, "unlinkToDeath"
+    if-eqz p0, :cond_0
 
-    const/4 v3, 0x0
+    const/4 p0, 0x1
 
-    new-array v4, v3, [Ljava/lang/Object;
+    return p0
 
-    invoke-virtual {v1, v2, v4}, Lxs4;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_0
+    const/4 p0, 0x0
 
-    iget-object v1, v0, Lklh;->m:Lfih;
+    return p0
+.end method
 
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+.method public static b(Ljava/lang/String;)F
+    .locals 2
 
-    move-result-object v1
+    const-string v0, "%"
 
-    iget-object v2, v0, Lklh;->j:Lfjh;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lklh;->m:Lfih;
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    iput-boolean v3, v0, Lklh;->g:Z
+    move-result-object p0
 
-    return-void
+    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    :pswitch_0
-    iget-object v0, p0, Lpkh;->c:Ljava/lang/Object;
+    move-result p0
 
-    check-cast v0, Lklh;
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    iget-object v0, v0, Lklh;->f:Ljava/lang/Object;
+    div-float/2addr p0, v0
 
-    monitor-enter v0
+    return p0
 
-    :try_start_0
-    iget-object v1, p0, Lpkh;->c:Ljava/lang/Object;
+    :cond_0
+    new-instance p0, Ljava/lang/NumberFormatException;
 
-    check-cast v1, Lklh;
+    const-string v0, "Percentages must end with %"
 
-    iget-object v1, v1, Lklh;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {p0, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    throw p0
+.end method
 
-    move-result v1
+.method public static c(Ljava/lang/String;)J
+    .locals 9
 
-    const/4 v2, 0x0
+    sget-object v0, Ljhg;->a:Ljava/lang/String;
 
-    if-lez v1, :cond_1
+    const-string v0, "\\."
 
-    iget-object v1, p0, Lpkh;->c:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    check-cast v1, Lklh;
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
-    iget-object v1, v1, Lklh;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    const/4 v0, 0x0
 
-    move-result v1
+    aget-object v2, p0, v0
 
-    if-gtz v1, :cond_0
+    const-string v3, ":"
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    array-length v3, v2
+
+    const-wide/16 v4, 0x0
+
+    :goto_0
+    if-ge v0, v3, :cond_0
+
+    aget-object v6, v2, v0
+
+    const-wide/16 v7, 0x3c
+
+    mul-long/2addr v4, v7
+
+    invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v6
+
+    add-long/2addr v4, v6
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lpkh;->c:Ljava/lang/Object;
+    const-wide/16 v2, 0x3e8
 
-    check-cast v1, Lklh;
+    mul-long/2addr v4, v2
 
-    iget-object v1, v1, Lklh;->b:Lxs4;
+    array-length v0, p0
 
-    const-string v3, "Leaving the connection open for other ongoing calls."
+    if-ne v0, v1, :cond_2
 
-    new-array v2, v2, [Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    invoke-virtual {v1, v3, v2}, Lxs4;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+    aget-object p0, p0, v0
 
-    monitor-exit v0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1
+
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    add-long/2addr v4, v0
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v1
-
-    goto :goto_2
-
     :cond_1
-    :goto_0
-    iget-object v1, p0, Lpkh;->c:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    check-cast v1, Lklh;
+    const-string v1, "Expected 3 decimal places, got: "
 
-    iget-object v3, v1, Lklh;->m:Lfih;
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v3, :cond_2
+    move-result-object p0
 
-    iget-object v1, v1, Lklh;->b:Lxs4;
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "Unbind from service."
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v4}, Lxs4;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lpkh;->c:Ljava/lang/Object;
-
-    check-cast v1, Lklh;
-
-    iget-object v3, v1, Lklh;->a:Landroid/content/Context;
-
-    iget-object v1, v1, Lklh;->l:Lqkh;
-
-    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    iget-object v1, p0, Lpkh;->c:Ljava/lang/Object;
-
-    check-cast v1, Lklh;
-
-    iput-boolean v2, v1, Lklh;->g:Z
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lklh;->m:Lfih;
-
-    iput-object v2, v1, Lklh;->l:Lqkh;
+    throw v0
 
     :cond_2
-    iget-object v1, p0, Lpkh;->c:Ljava/lang/Object;
-
-    check-cast v1, Lklh;
-
-    invoke-virtual {v1}, Lklh;->d()V
-
-    monitor-exit v0
-
     :goto_1
+    mul-long/2addr v4, v2
+
+    return-wide v4
+.end method
+
+.method public static d(Lbcb;)V
+    .locals 2
+
+    iget v0, p0, Lbcb;->b:I
+
+    invoke-static {p0}, Lpkh;->a(Lbcb;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
     return-void
 
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_0
+    invoke-virtual {p0, v0}, Lbcb;->J(I)V
 
-    throw v1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v1, "Expected WEBVTT. Got "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v1}, Lbcb;->k(Ljava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, p0}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p0
+
+    throw p0
 .end method

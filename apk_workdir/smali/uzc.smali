@@ -1,84 +1,115 @@
-.class public abstract Luzc;
-.super Ljava/lang/Object;
+.class public final Luzc;
+.super Lnnf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lklc;
+.field public final synthetic e:I
 
-.field public final a:Lu66;
-
-.field public final b:La67;
-
-.field public final c:J
-
-.field public final o:Ljava/util/List;
+.field public final synthetic f:Lwzc;
 
 
 # direct methods
-.method public constructor <init>(Lu66;Ljava/util/List;Lmmd;Ljava/util/List;)V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Lwzc;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+    iput v0, p0, Luzc;->e:I
 
-    move-result v0
+    iput-object p2, p0, Luzc;->f:Lwzc;
 
-    xor-int/lit8 v0, v0, 0x1
+    const/4 p2, 0x1
 
-    invoke-static {v0}, Lnjg;->e(Z)V
+    .line 1
+    invoke-direct {p0, p1, p2}, Lnnf;-><init>(Ljava/lang/String;Z)V
 
-    iput-object p1, p0, Luzc;->a:Lu66;
+    return-void
+.end method
 
-    invoke-static {p2}, La67;->j(Ljava/util/Collection;)La67;
+.method public constructor <init>(Lwzc;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Luzc;->e:I
+
+    .line 2
+    iput-object p1, p0, Luzc;->f:Lwzc;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 3
+    iget-object p1, p1, Lwzc;->g:Ljava/lang/String;
+
+    .line 4
+    const-string v1, " writer"
+
+    .line 5
+    invoke-static {v0, p1, v1}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Luzc;->b:La67;
+    const/4 v0, 0x1
 
-    if-nez p4, :cond_0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    :goto_0
-    iput-object p1, p0, Luzc;->o:Ljava/util/List;
-
-    invoke-virtual {p3, p0}, Lmmd;->a(Luzc;)Lklc;
-
-    move-result-object p1
-
-    iput-object p1, p0, Luzc;->X:Lklc;
-
-    iget-wide v0, p3, Lmmd;->b:J
-
-    const-wide/32 v2, 0xf4240
-
-    iget-wide v4, p3, Lmmd;->a:J
-
-    invoke-static/range {v0 .. v5}, Le3g;->H(JJJ)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Luzc;->c:J
+    .line 6
+    invoke-direct {p0, p1, v0}, Lnnf;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract b()Ljava/lang/String;
-.end method
+.method public final a()J
+    .locals 2
 
-.method public abstract c()La84;
-.end method
+    iget v0, p0, Luzc;->e:I
 
-.method public abstract d()Lklc;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Luzc;->f:Lwzc;
+
+    iget-object v0, v0, Lwzc;->b:Llzc;
+
+    invoke-virtual {v0}, Llzc;->d()V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :pswitch_0
+    iget-object v0, p0, Luzc;->f:Lwzc;
+
+    :try_start_0
+    invoke-virtual {v0}, Lwzc;->g()Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v0, :cond_0
+
+    const-wide/16 v0, 0x0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v0, v1}, Lwzc;->c(Ljava/lang/Exception;)V
+
+    :cond_0
+    const-wide/16 v0, -0x1
+
+    :goto_0
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,14 +1,22 @@
-.class public interface abstract Lo8a;
-.super Ljava/lang/Object;
+.class public final Lo8a;
+.super Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd7;
 
 
 # virtual methods
-.method public abstract a(Ltm5;Ljava/lang/Object;)Lo8a;
+.method public final b()Lo8a;
+    .locals 0
+
+    return-object p0
 .end method
 
-.method public abstract d(Ltm5;I)Lo8a;
-.end method
+.method public final isActive()Z
+    .locals 1
 
-.method public abstract e(Ltm5;J)Lo8a;
+    const/4 v0, 0x1
+
+    return v0
 .end method

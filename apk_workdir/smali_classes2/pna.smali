@@ -1,73 +1,70 @@
-.class public abstract Lpna;
+.class public final Lpna;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final synthetic b:Lvna;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lvna;I)V
+    .locals 0
 
-    sget v0, Lnac;->add_8:I
+    iput p2, p0, Lpna;->a:I
 
-    sput v0, Lpna;->a:I
+    iput-object p1, p0, Lpna;->b:Lvna;
 
-    sget v0, Lnac;->apple_outline_24:I
-
-    sput v0, Lpna;->b:I
-
-    sget v0, Lnac;->ball_outline_24:I
-
-    sput v0, Lpna;->c:I
-
-    sget v0, Lnac;->car_outline_24:I
-
-    sput v0, Lpna;->d:I
-
-    sget v0, Lnac;->fire_24:I
-
-    sput v0, Lpna;->e:I
-
-    sget v0, Lnac;->flags_outline_24:I
-
-    sput v0, Lpna;->f:I
-
-    sget v0, Lnac;->lamp_outline_24:I
-
-    sput v0, Lpna;->g:I
-
-    sget v0, Lnac;->paw_outline_24:I
-
-    sput v0, Lpna;->h:I
-
-    sget v0, Lnac;->remove_outline_24:I
-
-    sput v0, Lpna;->i:I
-
-    sget v0, Lnac;->symbols_outline_24:I
-
-    sput v0, Lpna;->j:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Lpna;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpna;->b:Lvna;
+
+    iget-object v1, v0, Lvna;->C0:Loh6;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Loh6;->invoke()Ljava/lang/Object;
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpna;->b:Lvna;
+
+    iget-object v1, v0, Lvna;->C0:Loh6;
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Loh6;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

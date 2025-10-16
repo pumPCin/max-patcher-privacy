@@ -29,7 +29,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    sget v0, Lg3g;->a:I
+    sget-object v0, Ljhg;->a:Ljava/lang/String;
 
     const/4 v0, 0x0
 

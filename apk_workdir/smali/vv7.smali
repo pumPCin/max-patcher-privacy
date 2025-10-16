@@ -1,72 +1,102 @@
 .class public final Lvv7;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AbsListView$OnScrollListener;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:Lwv7;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lwv7;
 
 
 # direct methods
-.method public constructor <init>(Lwv7;)V
+.method public constructor <init>(Lwv7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvv7;->Y:Lwv7;
 
-    iput-object p1, p0, Lvv7;->a:Lwv7;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onScroll(Landroid/widget/AbsListView;III)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lb54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvv7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvv7;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lvv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final onScrollStateChanged(Landroid/widget/AbsListView;I)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object p1, p0, Lvv7;->a:Lwv7;
+    new-instance v0, Lvv7;
 
-    iget-object v0, p1, Lwv7;->B0:Luv7;
+    iget-object v1, p0, Lvv7;->Y:Lwv7;
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v1, p2}, Lvv7;-><init>(Lwv7;Lkotlin/coroutines/Continuation;)V
 
-    if-ne p2, v1, :cond_1
+    iput-object p1, v0, Lvv7;->X:Ljava/lang/Object;
 
-    iget-object p2, p1, Lwv7;->J0:Lio;
+    return-object v0
+.end method
 
-    invoke-virtual {p2}, Landroid/widget/PopupWindow;->getInputMethodMode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    move-result p2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x2
+    iget-object p1, p0, Lvv7;->X:Ljava/lang/Object;
 
-    if-ne p2, v1, :cond_0
+    check-cast p1, Lb54;
 
-    return-void
+    iget-object v0, p0, Lvv7;->Y:Lwv7;
+
+    iget-object v1, v0, Lwv7;->a:Lkw7;
+
+    iget-object v2, v1, Lkw7;->d:Lkv7;
+
+    sget-object v3, Lkv7;->b:Lkv7;
+
+    invoke-virtual {v2, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+
+    move-result v2
+
+    if-ltz v2, :cond_0
+
+    invoke-virtual {v1, v0}, Lkw7;->a(Lew7;)V
+
+    goto :goto_0
 
     :cond_0
-    iget-object p2, p1, Lwv7;->J0:Lio;
+    invoke-interface {p1}, Lb54;->getCoroutineContext()Lt44;
 
-    invoke-virtual {p2}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
+    move-result-object p1
 
-    move-result-object p2
+    invoke-static {p1}, Lx9i;->b(Lt44;)V
 
-    if-eqz p2, :cond_1
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
-    iget-object p1, p1, Lwv7;->F0:Landroid/os/Handler;
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Luv7;->run()V
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

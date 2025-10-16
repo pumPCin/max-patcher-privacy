@@ -1,59 +1,58 @@
-.class public final Llsc;
-.super Lwy3;
-.source "SourceFile"
+.class public abstract Llsc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public X:Ljrc;
+# static fields
+.field public static oneme_setting_item_about:I = 0x7f13095e
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static oneme_setting_item_appearance:I = 0x7f13095f
 
-.field public final synthetic Z:Lqsc;
+.field public static oneme_setting_item_battery:I = 0x7f130960
 
-.field public o:Lqsc;
+.field public static oneme_setting_item_esia_connected_title:I = 0x7f130961
 
-.field public r0:I
+.field public static oneme_setting_item_esia_not_connected_subtitle:I = 0x7f130962
 
+.field public static oneme_setting_item_esia_not_connected_title:I = 0x7f130963
 
-# direct methods
-.method public constructor <init>(Lqsc;Lwy3;)V
-    .locals 0
+.field public static oneme_setting_item_folders:I = 0x7f130964
 
-    iput-object p1, p0, Llsc;->Z:Lqsc;
+.field public static oneme_setting_item_invite_friends_title:I = 0x7f130965
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public static oneme_setting_item_messages:I = 0x7f130966
 
-    return-void
-.end method
+.field public static oneme_setting_item_notification:I = 0x7f130967
 
+.field public static oneme_setting_item_notification_and_sound:I = 0x7f130968
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.field public static oneme_setting_item_privacy:I = 0x7f130969
 
-    iput-object p1, p0, Llsc;->Y:Ljava/lang/Object;
+.field public static oneme_setting_item_storage:I = 0x7f13096a
 
-    iget p1, p0, Llsc;->r0:I
+.field public static oneme_setting_item_support:I = 0x7f13096b
 
-    const/high16 v0, -0x80000000
+.field public static oneme_settings_avatars_modal_title:I = 0x7f13096d
 
-    or-int/2addr p1, v0
+.field public static oneme_settings_cant_open_camera:I = 0x7f13096e
 
-    iput p1, p0, Llsc;->r0:I
+.field public static oneme_settings_change_avatar_delete_current:I = 0x7f13096f
 
-    const-wide/16 v2, 0x0
+.field public static oneme_settings_change_avatar_error:I = 0x7f130970
 
-    const/4 v4, 0x0
+.field public static oneme_settings_change_avatar_success:I = 0x7f130971
 
-    iget-object v0, p0, Llsc;->Z:Lqsc;
+.field public static oneme_settings_change_avatar_title:I = 0x7f130972
 
-    const/4 v1, 0x0
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f130973
 
-    move-object v5, p0
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f130974
 
-    invoke-static/range {v0 .. v5}, Lqsc;->r(Lqsc;Ljrc;J[BLwy3;)Ljava/lang/Object;
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f130975
 
-    move-result-object p1
+.field public static oneme_settings_delete_avatar_success:I = 0x7f130977
 
-    return-object p1
-.end method
+.field public static oneme_settings_language_modal_title:I = 0x7f13097c
+
+.field public static oneme_settings_link_copied_snackbar_title:I = 0x7f13097d
+
+.field public static oneme_settings_phonenumber_copied_snackbar_title:I = 0x7f13099b

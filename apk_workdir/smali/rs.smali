@@ -1,295 +1,248 @@
 .class public final Lrs;
-.super Lube;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Map;
+.implements Ljava/util/Collection;
+.implements Llq7;
 
 
 # instance fields
-.field public X:Los;
+.field public final a:[Ljava/lang/Object;
 
-.field public Y:Lqs;
-
-.field public o:Lms;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lube;)V
-    .locals 4
+.method public constructor <init>([Ljava/lang/Object;Z)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lube;-><init>(I)V
+    iput-object p1, p0, Lrs;->a:[Ljava/lang/Object;
 
-    iget v1, p1, Lube;->c:I
+    iput-boolean p2, p0, Lrs;->b:Z
 
-    iget v2, p0, Lube;->c:I
-
-    add-int/2addr v2, v1
-
-    invoke-virtual {p0, v2}, Lube;->b(I)V
-
-    iget v2, p0, Lube;->c:I
-
-    if-nez v2, :cond_0
-
-    if-lez v1, :cond_1
-
-    iget-object v2, p1, Lube;->a:[I
-
-    iget-object v3, p0, Lube;->a:[I
-
-    invoke-static {v0, v0, v1, v2, v3}, Lvs;->D(III[I[I)V
-
-    iget-object p1, p1, Lube;->b:[Ljava/lang/Object;
-
-    iget-object v2, p0, Lube;->b:[Ljava/lang/Object;
-
-    shl-int/lit8 v3, v1, 0x1
-
-    invoke-static {v0, v0, v3, p1, v2}, Lvs;->E(III[Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    iput v1, p0, Lube;->c:I
-
-    return-void
-
-    :cond_0
-    :goto_0
-    if-ge v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lube;->f(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v0}, Lube;->i(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {p0, v2, v3}, Lube;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final entrySet()Ljava/util/Set;
+.method public final add(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lrs;->o:Lms;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    if-nez v0, :cond_0
+    const-string v0, "Operation is not supported for read-only collection"
 
-    new-instance v0, Lms;
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, p0}, Lms;-><init>(Lrs;)V
-
-    iput-object v0, p0, Lrs;->o:Lms;
-
-    :cond_0
-    return-object v0
+    throw p1
 .end method
 
-.method public final j(Ljava/util/Collection;)Z
+.method public final addAll(Ljava/util/Collection;)Z
     .locals 1
 
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final clear()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lrs;->a:[Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Ljt;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 3
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    :cond_0
+    :cond_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Lube;->containsKey(Ljava/lang/Object;)Z
+    iget-object v2, p0, Lrs;->a:[Ljava/lang/Object;
+
+    invoke-static {v2, v0}, Ljt;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
+    :cond_2
+    return v1
 .end method
 
-.method public final k(Ljava/util/Collection;)Z
-    .locals 2
+.method public final isEmpty()Z
+    .locals 1
 
-    iget v0, p0, Lube;->c:I
+    iget-object v0, p0, Lrs;->a:[Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    array-length v0, v0
 
-    move-result-object p1
+    if-nez v0, :cond_0
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    new-instance v0, Lf2;
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lrs;->a:[Ljava/lang/Object;
+
+    invoke-direct {v0, v1, v2}, Lf2;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lrs;->a:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 3
+
+    .line 2
+    iget-object v0, p0, Lrs;->a:[Ljava/lang/Object;
+
+    iget-boolean v1, p0, Lrs;->b:Z
+
+    const-class v2, [Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    .line 3
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-super {p0, v1}, Lube;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    iget p1, p0, Lube;->c:I
-
-    if-eq v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final keySet()Ljava/util/Set;
-    .locals 1
-
-    iget-object v0, p0, Lrs;->X:Los;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Los;
-
-    invoke-direct {v0, p0}, Los;-><init>(Lrs;)V
-
-    iput-object v0, p0, Lrs;->X:Los;
-
-    :cond_0
     return-object v0
-.end method
 
-.method public final l(Ljava/util/Collection;)Z
-    .locals 3
-
-    iget v0, p0, Lube;->c:I
-
-    add-int/lit8 v1, v0, -0x1
-
-    :goto_0
-    if-ltz v1, :cond_1
-
-    invoke-virtual {p0, v1}, Lube;->f(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p0, v1}, Lube;->g(I)Ljava/lang/Object;
-
+    .line 4
     :cond_0
-    add-int/lit8 v1, v1, -0x1
+    array-length v1, v0
 
-    goto :goto_0
-
-    :cond_1
-    iget p1, p0, Lube;->c:I
-
-    if-eq v0, p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final putAll(Ljava/util/Map;)V
-    .locals 2
-
-    iget v0, p0, Lube;->c:I
-
-    invoke-interface {p1}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    invoke-virtual {p0, v1}, Lube;->b(I)V
-
-    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v1, v0}, Lube;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final values()Ljava/util/Collection;
-    .locals 1
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lrs;->Y:Lqs;
+    .line 1
+    invoke-static {p0, p1}, Lm94;->d(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    new-instance v0, Lqs;
-
-    invoke-direct {v0, p0}, Lqs;-><init>(Lrs;)V
-
-    iput-object v0, p0, Lrs;->Y:Lqs;
-
-    :cond_0
-    return-object v0
+    return-object p1
 .end method

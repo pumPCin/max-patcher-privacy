@@ -22,13 +22,13 @@
         "",
         "<init>",
         "()V",
-        "Llk7;",
+        "Lsp7;",
         "Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;",
         "kotlin.jvm.PlatformType",
         "PARSER",
-        "Llk7;",
+        "Lsp7;",
         "getPARSER",
-        "()Llk7;",
+        "()Lsp7;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Laf4;)V
+.method public synthetic constructor <init>(Lvh4;)V
     .locals 0
 
     .line 1
@@ -62,16 +62,16 @@
 
 
 # virtual methods
-.method public final getPARSER()Llk7;
+.method public final getPARSER()Lsp7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Llk7;"
+            "Lsp7;"
         }
     .end annotation
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->access$getPARSER$cp()Llk7;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->access$getPARSER$cp()Lsp7;
 
     move-result-object v0
 

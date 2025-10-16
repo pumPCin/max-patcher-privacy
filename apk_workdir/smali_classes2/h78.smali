@@ -1,160 +1,64 @@
-.class public final Lh78;
-.super Lc2f;
+.class public final synthetic Lh78;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lrdf;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/main/MainScreen;
+.field public final synthetic b:Llt7;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/main/MainScreen;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Llt7;I)V
     .locals 0
 
-    iput-object p1, p0, Lh78;->Y:Lone/me/main/MainScreen;
+    iput p2, p0, Lh78;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lh78;->b:Llt7;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lc34;
+    iget v0, p0, Lh78;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lh78;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lh78;->b:Llt7;
 
-    move-result-object p1
-
-    check-cast p1, Lh78;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lh78;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lh78;
-
-    iget-object v1, p0, Lh78;->Y:Lone/me/main/MainScreen;
-
-    invoke-direct {v0, v1, p2}, Lh78;-><init>(Lone/me/main/MainScreen;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lh78;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lh78;->X:Ljava/lang/Object;
-
-    check-cast p1, Lc34;
-
-    sget-object v0, Lone/me/main/MainScreen;->Z:Lfk6;
-
-    iget-object v0, p0, Lh78;->Y:Lone/me/main/MainScreen;
-
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->C0()Lvga;
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget v1, Ljoa;->e:I
+    check-cast v0, Lpr6;
 
-    iget p1, p1, Lc34;->a:I
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_0
+    iget-object v0, p0, Lh78;->b:Llt7;
 
-    const/4 v2, 0x0
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    move v3, v2
+    move-result-object v0
 
-    :goto_0
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+    check-cast v0, Lnr6;
 
-    move-result v4
+    return-object v0
 
-    if-ge v3, v4, :cond_0
+    nop
 
-    const/4 v4, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    move v4, v2
-
-    :goto_1
-    if-eqz v4, :cond_4
-
-    add-int/lit8 v4, v3, 0x1
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_3
-
-    sget v5, Lmec;->tag_tab_item:I
-
-    invoke-static {v3, v5}, Li8e;->x(Landroid/view/View;I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    instance-of v6, v5, Luga;
-
-    if-eqz v6, :cond_1
-
-    check-cast v5, Luga;
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v5, 0x0
-
-    :goto_2
-    if-eqz v5, :cond_2
-
-    iget v5, v5, Luga;->c:I
-
-    if-ne v5, v1, :cond_2
-
-    check-cast v3, Lar0;
-
-    invoke-virtual {v3, p1}, Lar0;->setCounter(I)V
-
-    :cond_2
-    move v3, v4
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    :cond_4
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

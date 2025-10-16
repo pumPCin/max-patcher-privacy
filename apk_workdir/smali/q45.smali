@@ -3,146 +3,157 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/method/KeyListener;
+.implements Lhr3;
 
 
 # instance fields
-.field public final a:Landroid/text/method/KeyListener;
+.field public final synthetic a:I
 
-.field public final b:Lwt3;
+.field public b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/KeyListener;)V
-    .locals 2
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lwt3;
+    .line 1
+    const/4 v0, 0x0
 
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lwt3;-><init>(I)V
+    iput v0, p0, Lq45;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq45;->a:Landroid/text/method/KeyListener;
+    return-void
+.end method
 
-    iput-object v0, p0, Lq45;->b:Lwt3;
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    .line 2
+    iput p1, p0, Lq45;->a:I
+
+    iput-object p2, p0, Lq45;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clearMetaKeyState(Landroid/view/View;Landroid/text/Editable;I)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Lq45;->a:Landroid/text/method/KeyListener;
+    iget v0, p0, Lq45;->a:I
 
-    invoke-interface {v0, p1, p2, p3}, Landroid/text/method/KeyListener;->clearMetaKeyState(Landroid/view/View;Landroid/text/Editable;I)V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    check-cast p1, Lq96;
 
-.method public final getInputType()I
-    .locals 1
+    sget-object v0, Lr96;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lq45;->a:Landroid/text/method/KeyListener;
+    monitor-enter v0
 
-    invoke-interface {v0}, Landroid/text/method/KeyListener;->getInputType()I
+    :try_start_0
+    sget-object v1, Lr96;->d:Lsne;
 
-    move-result v0
+    iget-object v2, p0, Lq45;->b:Ljava/lang/Object;
 
-    return v0
-.end method
+    check-cast v2, Ljava/lang/String;
 
-.method public final onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 3
+    invoke-virtual {v1, v2}, Lsne;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lq45;->b:Lwt3;
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v2, Ljava/util/ArrayList;
 
-    const/16 v0, 0x43
+    if-nez v2, :cond_0
 
-    const/4 v1, 0x1
+    monitor-exit v0
 
-    const/4 v2, 0x0
+    goto :goto_1
 
-    if-eq p3, v0, :cond_1
+    :catchall_0
+    move-exception p1
 
-    const/16 v0, 0x70
-
-    if-eq p3, v0, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_0
-    invoke-static {p2, p4, v1}, Lhpd;->e(Landroid/text/Editable;Landroid/view/KeyEvent;Z)Z
+    iget-object v3, p0, Lq45;->b:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Lsne;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lhr3;
+
+    invoke-interface {v1, p1}, Lhr3;->accept(Ljava/lang/Object;)V
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p2, p4, v2}, Lhpd;->e(Landroid/text/Editable;Landroid/view/KeyEvent;Z)Z
+    :goto_1
+    return-void
 
-    move-result v0
+    :goto_2
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :goto_0
-    if-eqz v0, :cond_2
+    throw p1
 
-    invoke-static {p2}, Landroid/text/method/MetaKeyKeyListener;->adjustMetaAfterKeypress(Landroid/text/Spannable;)V
+    :pswitch_0
+    check-cast p1, Lq96;
 
-    move v0, v1
+    if-nez p1, :cond_2
 
-    goto :goto_1
+    new-instance p1, Lq96;
+
+    const/4 v0, -0x3
+
+    invoke-direct {p1, v0}, Lq96;-><init>(I)V
 
     :cond_2
-    move v0, v2
+    iget-object v0, p0, Lq45;->b:Ljava/lang/Object;
 
-    :goto_1
-    if-nez v0, :cond_4
+    check-cast v0, Lsfd;
 
-    iget-object v0, p0, Lq45;->a:Landroid/text/method/KeyListener;
+    invoke-virtual {v0, p1}, Lsfd;->u(Lq96;)V
 
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/method/KeyListener;->onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
+    return-void
 
-    move-result p1
+    :pswitch_1
+    iget-object v0, p0, Lq45;->b:Ljava/lang/Object;
 
-    if-eqz p1, :cond_3
+    check-cast v0, Lhr3;
 
-    goto :goto_2
+    invoke-interface {v0, p1}, Lhr3;->accept(Ljava/lang/Object;)V
 
-    :cond_3
-    return v2
+    return-void
 
-    :cond_4
-    :goto_2
-    return v1
-.end method
-
-.method public final onKeyOther(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Lq45;->a:Landroid/text/method/KeyListener;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/text/method/KeyListener;->onKeyOther(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final onKeyUp(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Lq45;->a:Landroid/text/method/KeyListener;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/method/KeyListener;->onKeyUp(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

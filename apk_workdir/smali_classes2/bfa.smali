@@ -1,288 +1,149 @@
 .class public final Lbfa;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lyn7;
-
-.field public final c:Lyn7;
-
-.field public final d:Lyn7;
+.field public final synthetic Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lbfa;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    iput-object p1, p0, Lbfa;->a:Lyn7;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lbfa;->b:Lyn7;
-
-    iput-object p3, p0, Lbfa;->c:Lyn7;
-
-    iput-object p4, p0, Lbfa;->d:Lyn7;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lm63;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lbfa;->b:Lyn7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lbfa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lm63;
+    check-cast p1, Lbfa;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lbfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lbfa;
+
+    iget-object v1, p0, Lbfa;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+
+    invoke-direct {v0, p2, v1}, Lbfa;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
+
+    iput-object p1, v0, Lbfa;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;Lg48;)Ljava/lang/Object;
-    .locals 20
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    move-object/from16 v0, p0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lbfa;->a()Lm63;
+    iget-object p1, p0, Lbfa;->X:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast p1, Lb4a;
 
-    check-cast v1, Lfhd;
+    instance-of v0, p1, Lhf4;
 
-    invoke-virtual {v1}, Lfhd;->v()J
+    sget-object v1, Lzag;->a:Lzag;
 
-    move-result-wide v1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lbfa;->a()Lm63;
+    sget-object v0, Lpda;->c:Lpda;
 
-    move-result-object v3
+    check-cast p1, Lhf4;
 
-    check-cast v3, Lfhd;
+    invoke-virtual {v0, p1}, Lqci;->t0(Lhf4;)V
 
-    invoke-virtual {v3}, Lfhd;->m()J
-
-    move-result-wide v9
-
-    invoke-virtual {v0}, Lbfa;->a()Lm63;
-
-    move-result-object v3
-
-    check-cast v3, Lfhd;
-
-    invoke-virtual {v3}, Lfhd;->w()J
-
-    move-result-wide v11
-
-    const-class v3, Lbfa;
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v4, Ljava/lang/Long;
-
-    invoke-direct {v4, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v4}, Lbbh;->R(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/Long;
-
-    invoke-direct {v5, v9, v10}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v5}, Lbbh;->R(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v5
-
-    new-instance v6, Ljava/lang/Long;
-
-    invoke-direct {v6, v11, v12}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-static {v6}, Lbbh;->R(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, ", contactLastSync = "
-
-    const-string v8, ", presenceLastSync = "
-
-    const-string v13, "LoginTamTask: chatsLastSync = "
-
-    invoke-static {v13, v4, v7, v5, v8}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v3, v0, Lbfa;->c:Lyn7;
-
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lsrd;
-
-    check-cast v4, Lohd;
-
-    const-string v5, "hash"
-
-    iget-object v4, v4, Lv3;->h:Lbo7;
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v4, v5, v6}, Lbo7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lsrd;
-
-    check-cast v5, Lohd;
-
-    const/4 v7, 0x1
-
-    iget-object v5, v5, Lv3;->h:Lbo7;
-
-    const-string v8, "version"
-
-    invoke-virtual {v5, v8, v7}, Lbo7;->getInt(Ljava/lang/String;I)I
-
-    move-result v5
-
-    const/4 v7, 0x6
-
-    if-ge v5, v7, :cond_0
-
-    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsrd;
-
-    check-cast v1, Lohd;
-
-    invoke-virtual {v1, v7, v8}, Lv3;->g(ILjava/lang/String;)V
-
-    const-wide/16 v1, 0x0
-
-    move-object v13, v6
-
-    :goto_0
-    move-wide v7, v1
-
-    goto :goto_1
+    return-object v1
 
     :cond_0
-    move-object v13, v4
+    instance-of p1, p1, Lwea;
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lci7;->a:Ljava/lang/String;
+
+    iget-object p1, p0, Lbfa;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    :try_start_0
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const/high16 v2, 0x10000000
+
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    const-string v2, "android.settings.APP_NOTIFICATION_SETTINGS"
+
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v2, "android.provider.extra.APP_PACKAGE"
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v0, v1
 
     goto :goto_0
 
-    :goto_1
-    new-instance v4, Lg38;
+    :catchall_0
+    move-exception p1
 
-    iget-object v1, v0, Lbfa;->d:Lyn7;
+    new-instance v0, Lvcd;
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-direct {v0, p1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
 
-    move-result-object v1
+    :goto_0
+    invoke-static {v0}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    check-cast v1, Lxo4;
+    move-result-object p1
 
-    invoke-virtual {v1}, Lxo4;->d()Z
+    if-eqz p1, :cond_1
 
-    move-result v6
+    sget-object v0, Lci7;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lbfa;->a()Lm63;
+    const-string v2, "openNotificationsSettings: failed"
 
-    move-result-object v1
+    invoke-static {v0, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v1, Lfhd;
-
-    invoke-virtual {v1}, Lfhd;->l()J
-
-    move-result-wide v14
-
-    invoke-virtual {v0}, Lbfa;->a()Lm63;
-
-    move-result-object v1
-
-    check-cast v1, Lfhd;
-
-    iget-object v2, v1, Lfhd;->S:Lzrd;
-
-    sget-object v3, Lfhd;->h0:[Lpl7;
-
-    const/16 v5, 0x23
-
-    aget-object v5, v3, v5
-
-    invoke-virtual {v2, v1, v5}, Lzrd;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v16
-
-    invoke-virtual {v0}, Lbfa;->a()Lm63;
-
-    move-result-object v1
-
-    check-cast v1, Lfhd;
-
-    iget-object v2, v1, Lfhd;->s:Lzrd;
-
-    const/4 v5, 0x7
-
-    aget-object v3, v3, v5
-
-    invoke-virtual {v2, v1, v3}, Lzrd;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v18
-
-    move-object/from16 v5, p1
-
-    invoke-direct/range {v4 .. v19}, Lg38;-><init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
-
-    iget-object v1, v0, Lbfa;->a:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ld9f;
-
-    move-object/from16 v2, p2
-
-    invoke-virtual {v1, v4, v2}, Ld9f;->e(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
+    :cond_1
     return-object v1
 .end method

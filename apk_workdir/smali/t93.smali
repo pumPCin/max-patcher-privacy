@@ -1,49 +1,67 @@
 .class public final Lt93;
-.super Lwy3;
+.super Lf4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lt93;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final synthetic X:Lu93;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Lu93;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lavg;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Lavg;-><init>(I)V
+
+    sput-object v0, Lt93;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Intent;)V
     .locals 0
 
-    iput-object p1, p0, Lt93;->X:Lu93;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lt93;->a:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    iput-object p1, p0, Lt93;->o:Ljava/lang/Object;
+    const/16 v0, 0x4f45
 
-    iget p1, p0, Lt93;->Y:I
+    invoke-static {p1, v0}, Ljxi;->k(Landroid/os/Parcel;I)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    const/4 v1, 0x1
 
-    iput p1, p0, Lt93;->Y:I
+    iget-object v2, p0, Lt93;->a:Landroid/content/Intent;
 
-    iget-object p1, p0, Lt93;->X:Lu93;
+    invoke-static {p1, v1, v2, p2}, Ljxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    const/4 v0, 0x0
+    invoke-static {p1, v0}, Ljxi;->l(Landroid/os/Parcel;I)V
 
-    invoke-virtual {p1, v0, p0}, Lu93;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

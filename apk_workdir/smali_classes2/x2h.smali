@@ -1,38 +1,284 @@
 .class public final Lx2h;
-.super Lqce;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public E0:Lv2h;
+.field public final a:Ljava/lang/String;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Ljava/lang/Thread;
+
+.field public final e:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lx2h;->a:Ljava/lang/String;
+
+    iput-wide p2, p0, Lx2h;->b:J
+
+    iput-wide p4, p0, Lx2h;->c:J
+
+    iput-object p6, p0, Lx2h;->d:Ljava/lang/Thread;
+
+    iput-object p7, p0, Lx2h;->e:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public static a(Lx2h;JLjava/lang/Thread;I)Lx2h;
+    .locals 8
+
+    iget-object v1, p0, Lx2h;->a:Ljava/lang/String;
+
+    iget-wide v2, p0, Lx2h;->b:J
+
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_0
+
+    iget-wide p1, p0, Lx2h;->c:J
+
+    :cond_0
+    move-wide v4, p1
+
+    iget-object v7, p0, Lx2h;->e:Ljava/util/List;
+
+    new-instance v0, Lx2h;
+
+    move-object v6, p3
+
+    invoke-direct/range {v0 .. v7}, Lx2h;-><init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public final A(Lov7;)V
-    .locals 1
+.method public final b(J)J
+    .locals 4
 
-    instance-of v0, p1, Lt2h;
+    iget-wide v0, p0, Lx2h;->b:J
 
-    if-nez v0, :cond_0
+    iget-wide v2, p0, Lx2h;->c:J
 
-    return-void
+    invoke-static {v2, v3, v0, v1}, Lb35;->e(JJ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move-wide v2, p1
 
     :cond_0
-    move-object v0, p1
+    invoke-static {p1, p2, v2, v3}, Lb35;->i(JJ)J
 
-    check-cast v0, Lv2h;
+    move-result-wide p1
 
-    iput-object v0, p0, Lx2h;->E0:Lv2h;
+    return-wide p1
+.end method
 
-    iget-object v0, p0, Luvc;->a:Landroid/view/View;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast v0, Lh0e;
+    const/4 v0, 0x1
 
-    check-cast p1, Lt2h;
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p1, Lt2h;->a:Li0e;
+    return v0
 
-    invoke-virtual {v0, p1}, Lh0e;->setModelItem(Lyzd;)V
+    :cond_0
+    instance-of v1, p1, Lx2h;
 
-    return-void
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lx2h;
+
+    iget-object v1, p0, Lx2h;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lx2h;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lx2h;->b:J
+
+    iget-wide v5, p1, Lx2h;->b:J
+
+    invoke-static {v3, v4, v5, v6}, Lb35;->e(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lx2h;->c:J
+
+    iget-wide v5, p1, Lx2h;->c:J
+
+    invoke-static {v3, v4, v5, v6}, Lb35;->e(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lx2h;->d:Ljava/lang/Thread;
+
+    iget-object v3, p1, Lx2h;->d:Ljava/lang/Thread;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lx2h;->e:Ljava/util/List;
+
+    iget-object p1, p1, Lx2h;->e:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lx2h;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    sget v2, Lb35;->o:I
+
+    iget-wide v2, p0, Lx2h;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lx2h;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lhug;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lx2h;->d:Ljava/lang/Thread;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lx2h;->e:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-wide v0, p0, Lx2h;->b:J
+
+    invoke-static {v0, v1}, Lb35;->l(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lx2h;->c:J
+
+    invoke-static {v1, v2}, Lb35;->l(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ", submitTime="
+
+    const-string v3, ", startTime="
+
+    const-string v4, "WatchdogTask(submitThread="
+
+    iget-object v5, p0, Lx2h;->a:Ljava/lang/String;
+
+    invoke-static {v4, v5, v2, v0, v3}, Lxx1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", runningThread="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx2h;->d:Ljava/lang/Thread;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stacktrace="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lx2h;->e:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Lwx1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

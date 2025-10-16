@@ -1,86 +1,78 @@
-.class public final Lhz7;
+.class public final synthetic Lhz7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwff;
+.implements Loh6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final synthetic a:I
 
-.field public final b:Lf8h;
-
-.field public final c:Landroid/content/ContentResolver;
+.field public final synthetic b:Lone/me/android/deeplink/LinkInterceptorWidget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lf8h;Landroid/content/ContentResolver;)V
+.method public synthetic constructor <init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
     .locals 0
 
+    iput p2, p0, Lhz7;->a:I
+
+    iput-object p1, p0, Lhz7;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhz7;->a:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lhz7;->b:Lf8h;
-
-    iput-object p3, p0, Lhz7;->c:Landroid/content/ContentResolver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lii0;Laqb;)V
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    move-object v0, p2
+    iget v0, p0, Lhz7;->a:I
 
-    check-cast v0, Loj0;
+    iget-object v1, p0, Lhz7;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
 
-    iget-object v4, v0, Loj0;->c:Ldqb;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v6, v0, Loj0;->a:Lx47;
+    sget v0, Lone/me/android/deeplink/LinkInterceptorWidget;->o:I
 
-    const-string v1, "local"
+    invoke-virtual {v1}, Lx14;->getRouter()Ljhd;
 
-    const-string v2, "exif"
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Loj0;->h(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v0
 
-    new-instance v1, Lgz7;
+    :pswitch_0
+    sget v0, Lone/me/android/deeplink/LinkInterceptorWidget;->o:I
 
-    move-object v2, p0
+    new-instance v0, Loi1;
 
-    move-object v3, p1
+    new-instance v2, Lhz7;
 
-    move-object v5, p2
+    const/4 v3, 0x1
 
-    invoke-direct/range {v1 .. v6}, Lgz7;-><init>(Lhz7;Lii0;Ldqb;Laqb;Lx47;)V
+    invoke-direct {v2, v1, v3}, Lhz7;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
 
-    new-instance p1, Lob4;
+    new-instance v3, Lrhf;
 
-    const/4 p2, 0x2
+    invoke-direct {v3, v2}, Lrhf;-><init>(Loh6;)V
 
-    invoke-direct {p1, p2, v1}, Lob4;-><init>(ILjava/lang/Object;)V
+    new-instance v2, Lilh;
 
-    invoke-virtual {v0, p1}, Loj0;->a(Lpj0;)V
+    const/4 v4, 0x0
 
-    iget-object p1, v2, Lhz7;->a:Ljava/util/concurrent/Executor;
+    invoke-direct {v2, v1, v4}, Lilh;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-interface {p1, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {v0, v3, v2}, Loi1;-><init>(Lrhf;Lilh;)V
 
-    return-void
-.end method
+    return-object v0
 
-.method public final b(Lu0d;)Z
-    .locals 1
+    nop
 
-    const/16 v0, 0x200
-
-    invoke-static {v0, v0, p1}, Lnc6;->w(IILu0d;)Z
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

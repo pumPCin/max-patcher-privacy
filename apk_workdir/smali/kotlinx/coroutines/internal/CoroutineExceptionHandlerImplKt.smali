@@ -9,11 +9,11 @@
         "\u0000\u001e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0003\n\u0002\u0008\u0003\n\u0002\u0010\u001e\n\u0002\u0008\u0005\u001a\u0017\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\u0000\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u001a\u0017\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\u0008\" \u0010\n\u001a\u0008\u0012\u0004\u0012\u00020\u00000\t8\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008\n\u0010\u000b\u001a\u0004\u0008\u000c\u0010\r\u00a8\u0006\u000e"
     }
     d2 = {
-        "Li24;",
+        "Lw44;",
         "callback",
-        "Laxf;",
+        "Lzag;",
         "ensurePlatformExceptionHandlerLoaded",
-        "(Li24;)V",
+        "(Lw44;)V",
         "",
         "exception",
         "propagateExceptionFinalResort",
@@ -40,7 +40,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection<",
-            "Li24;",
+            "Lw44;",
             ">;"
         }
     .end annotation
@@ -56,13 +56,13 @@
 
     invoke-direct {v0}, Lkotlinx/coroutines/android/AndroidExceptionPreHandler;-><init>()V
 
-    new-instance v1, Lsb5;
+    new-instance v1, Lxe5;
 
-    invoke-direct {v1}, Lsb5;-><init>()V
+    invoke-direct {v1}, Lxe5;-><init>()V
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Li24;
+    new-array v2, v2, [Lw44;
 
     const/4 v3, 0x0
 
@@ -82,17 +82,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v1, Lxs;
+    new-instance v1, Llt;
 
     const/4 v2, 0x6
 
-    invoke-direct {v1, v2, v0}, Lxs;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Llt;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Lln3;
+    new-instance v0, Lcq3;
 
-    invoke-direct {v0, v1}, Lln3;-><init>(Lxpd;)V
+    invoke-direct {v0, v1}, Lcq3;-><init>(Ld1e;)V
 
-    invoke-static {v0}, Lgqd;->f0(Lxpd;)Ljava/util/List;
+    invoke-static {v0}, Lo1e;->l(Ld1e;)Ljava/util/List;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
     throw v1
 .end method
 
-.method public static final ensurePlatformExceptionHandlerLoaded(Li24;)V
+.method public static final ensurePlatformExceptionHandlerLoaded(Lw44;)V
     .locals 1
 
     sget-object v0, Lkotlinx/coroutines/internal/CoroutineExceptionHandlerImplKt;->platformExceptionHandlers:Ljava/util/Collection;
@@ -143,7 +143,7 @@
         value = {
             "()",
             "Ljava/util/Collection<",
-            "Li24;",
+            "Lw44;",
             ">;"
         }
     .end annotation

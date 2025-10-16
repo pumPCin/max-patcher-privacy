@@ -1,54 +1,237 @@
-.class public abstract Lvac;
+.class public final synthetic Lvac;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lqh6;
 
 
-# static fields
-.field public static emoji_sprite_0:I = 0x7f080369
+# instance fields
+.field public final synthetic a:I
 
-.field public static emoji_sprite_1:I = 0x7f08036a
+.field public final synthetic b:J
 
-.field public static emoji_sprite_10:I = 0x7f08036b
+.field public final synthetic c:Z
 
-.field public static emoji_sprite_11:I = 0x7f08036c
+.field public final synthetic o:Lsyg;
 
-.field public static emoji_sprite_12:I = 0x7f08036d
 
-.field public static emoji_sprite_13:I = 0x7f08036e
+# direct methods
+.method public synthetic constructor <init>(JLi7f;Z)V
+    .locals 1
 
-.field public static emoji_sprite_14:I = 0x7f08036f
+    .line 1
+    const/4 v0, 0x1
 
-.field public static emoji_sprite_15:I = 0x7f080370
+    iput v0, p0, Lvac;->a:I
 
-.field public static emoji_sprite_16:I = 0x7f080371
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static emoji_sprite_17:I = 0x7f080372
+    iput-wide p1, p0, Lvac;->b:J
 
-.field public static emoji_sprite_18:I = 0x7f080373
+    iput-object p3, p0, Lvac;->o:Lsyg;
 
-.field public static emoji_sprite_19:I = 0x7f080374
+    iput-boolean p4, p0, Lvac;->c:Z
 
-.field public static emoji_sprite_2:I = 0x7f080375
+    return-void
+.end method
 
-.field public static emoji_sprite_20:I = 0x7f080376
+.method public synthetic constructor <init>(Ltbc;JZ)V
+    .locals 1
 
-.field public static emoji_sprite_21:I = 0x7f080377
+    .line 2
+    const/4 v0, 0x0
 
-.field public static emoji_sprite_22:I = 0x7f080378
+    iput v0, p0, Lvac;->a:I
 
-.field public static emoji_sprite_23:I = 0x7f080379
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static emoji_sprite_24:I = 0x7f08037a
+    iput-object p1, p0, Lvac;->o:Lsyg;
 
-.field public static emoji_sprite_3:I = 0x7f08037b
+    iput-wide p2, p0, Lvac;->b:J
 
-.field public static emoji_sprite_4:I = 0x7f08037c
+    iput-boolean p4, p0, Lvac;->c:Z
 
-.field public static emoji_sprite_5:I = 0x7f08037d
+    return-void
+.end method
 
-.field public static emoji_sprite_6:I = 0x7f08037e
 
-.field public static emoji_sprite_7:I = 0x7f08037f
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 23
 
-.field public static emoji_sprite_8:I = 0x7f080380
+    move-object/from16 v0, p0
 
-.field public static emoji_sprite_9:I = 0x7f080381
+    iget v1, v0, Lvac;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    iget-object v1, v0, Lvac;->o:Lsyg;
+
+    check-cast v1, Li7f;
+
+    move-object/from16 v2, p1
+
+    check-cast v2, Li1f;
+
+    iget-wide v3, v2, Li1f;->a:J
+
+    iget-object v5, v2, Li1f;->r0:Ljava/lang/String;
+
+    if-nez v5, :cond_0
+
+    const-string v5, ""
+
+    :cond_0
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    iget-object v5, v2, Li1f;->o:Ljava/lang/String;
+
+    :cond_1
+    move-object v13, v5
+
+    new-instance v6, Ld2f;
+
+    iget-wide v7, v2, Li1f;->a:J
+
+    iget-wide v11, v2, Li1f;->u0:J
+
+    iget-object v14, v2, Li1f;->v0:Ljava/lang/String;
+
+    iget-object v1, v1, Li7f;->r0:Llt7;
+
+    invoke-interface {v1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lkp5;
+
+    check-cast v1, Lqp5;
+
+    invoke-virtual {v1}, Lqp5;->v()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v2, Li1f;->y0:Ljava/lang/String;
+
+    :goto_0
+    move-object v15, v1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    iget-wide v9, v0, Lvac;->b:J
+
+    iget-boolean v1, v0, Lvac;->c:Z
+
+    if-eqz v1, :cond_3
+
+    invoke-static {v9, v10}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v1
+
+    sub-long v3, v1, v3
+
+    :cond_3
+    move-wide/from16 v20, v3
+
+    const/16 v22, 0xfc0
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    invoke-direct/range {v6 .. v22}, Ld2f;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZZJI)V
+
+    return-object v6
+
+    :pswitch_0
+    iget-object v1, v0, Lvac;->o:Lsyg;
+
+    move-object v3, v1
+
+    check-cast v3, Ltbc;
+
+    move-object/from16 v1, p1
+
+    check-cast v1, Lc2b;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v8, 0x2
+
+    if-eqz v1, :cond_5
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_5
+
+    if-eq v1, v8, :cond_5
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_5
+
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
+
+    :cond_5
+    iget-object v1, v3, Lsyg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {v3}, Ltbc;->u()Lw44;
+
+    move-result-object v9
+
+    new-instance v2, Lobc;
+
+    const/4 v7, 0x0
+
+    iget-wide v4, v0, Lvac;->b:J
+
+    iget-boolean v6, v0, Lvac;->c:Z
+
+    invoke-direct/range {v2 .. v7}, Lobc;-><init>(Ltbc;JZLkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v9, v3, v2, v8}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    :goto_2
+    sget-object v1, Lzag;->a:Lzag;
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

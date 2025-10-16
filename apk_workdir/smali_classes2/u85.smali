@@ -1,192 +1,288 @@
 .class public final Lu85;
-.super Ljvc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:I
+.field public b:Z
 
 .field public final c:Ljava/lang/Object;
 
-.field public final d:Ljava/lang/Object;
-
 
 # direct methods
-.method public constructor <init>(Lc95;Lw85;)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lu85;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lu85;->d:Ljava/lang/Object;
+    iput p1, p0, Lu85;->a:I
 
     iput-object p2, p0, Lu85;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x1
-
-    .line 3
-    iput p1, p0, Lu85;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/futuremind/recyclerviewfastscroll/FastScroller;)V
-    .locals 1
+.method private final a(IIILjava/lang/CharSequence;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    iput v0, p0, Lu85;->a:I
+.method private final b(IIILjava/lang/CharSequence;)V
+    .locals 0
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    .line 5
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lu85;->d:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    .line 6
-    iput v0, p0, Lu85;->b:I
-
-    .line 7
-    iput-object p1, p0, Lu85;->c:Ljava/lang/Object;
+.method private final c(IIILjava/lang/CharSequence;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 1
-
-    iget p1, p0, Lu85;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lu85;->c:Ljava/lang/Object;
-
-    check-cast p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
-
-    if-nez p2, :cond_0
-
-    iget v0, p0, Lu85;->b:I
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->getViewProvider()Ldgd;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Ldgd;->a()Lku3;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Ldgd;->a()Lku3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    iget v0, p0, Lu85;->b:I
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->getViewProvider()Ldgd;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Ldgd;->a()Lku3;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Ldgd;->a()Lku3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_1
-    :goto_0
-    iput p2, p0, Lu85;->b:I
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 1
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 6
 
     iget v0, p0, Lu85;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p2, p0, Lu85;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lu85;->c:Ljava/lang/Object;
 
-    check-cast p2, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    check-cast v0, Lfc9;
 
-    iget-object p3, p2, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
+    if-eqz p1, :cond_0
 
-    if-eqz p3, :cond_0
-
-    iget-boolean p3, p2, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:Z
-
-    if-nez p3, :cond_0
-
-    iget-object p2, p2, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result p2
-
-    if-lez p2, :cond_0
-
-    invoke-virtual {p0, p1}, Lu85;->c(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {p1}, Lkji;->d(Landroid/text/Editable;)V
 
     :cond_0
+    iget-object v1, v0, Lfc9;->L0:Lsze;
+
+    iget-object v2, v0, Lfc9;->o:Lcc9;
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getSelectionEnd()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v2}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    iget-object v1, v0, Lfc9;->J0:Lsze;
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p1}, Lrni;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_1
+    move-object v2, v3
+
+    :goto_0
+    invoke-virtual {v1, v2}, Lsze;->setValue(Ljava/lang/Object;)V
+
+    sget-object v1, Lsz4;->t0:Lc82;
+
+    if-eqz p1, :cond_3
+
+    invoke-static {p1}, Ls9f;->E(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v2, p0, Lu85;->b:Z
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {v1, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lfc9;->k(Lu4b;)V
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    invoke-virtual {v1, v0}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lfc9;->k(Lu4b;)V
+
+    :cond_4
+    :goto_2
+    if-eqz p1, :cond_6
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    const-class v2, Lse;
+
+    invoke-interface {p1, v1, v0, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    if-nez v3, :cond_5
+
+    new-array v3, v1, [Lse;
+
+    :cond_5
+    check-cast v3, [Lse;
+
+    array-length p1, v3
+
+    :goto_3
+    if-ge v1, p1, :cond_6
+
+    aget-object v0, v3, v1
+
+    check-cast v0, Luk;
+
+    iget-object v0, v0, Luk;->b:Ltk;
+
+    invoke-virtual {v0}, Ltk;->start()V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :cond_6
     return-void
 
     :pswitch_0
-    iget-object p1, p0, Lu85;->d:Ljava/lang/Object;
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    check-cast p1, Lc95;
+    move-result v0
 
-    new-instance v0, Lt85;
+    if-eqz v0, :cond_7
 
-    invoke-direct {v0, p2, p3, p0, p1}, Lt85;-><init>(IILu85;Lc95;)V
+    goto :goto_5
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    :cond_7
+    iget-boolean v0, p0, Lu85;->b:Z
 
+    if-eqz v0, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lu85;->b:Z
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_b
+
+    iget-object v1, p0, Lu85;->c:Ljava/lang/Object;
+
+    check-cast v1, Lg85;
+
+    invoke-virtual {v1, v0}, Lg85;->c(Ljava/lang/CharSequence;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_b
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v3
+
+    if-gez v3, :cond_9
+
+    goto :goto_4
+
+    :cond_9
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    const-class v5, Lz9g;
+
+    invoke-interface {p1, v3, v4, v5}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, [Lz9g;
+
+    if-eqz v4, :cond_a
+
+    array-length v4, v4
+
+    if-lez v4, :cond_a
+
+    goto :goto_4
+
+    :cond_a
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    invoke-interface {p1, v3, v4, v2}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+
+    goto :goto_4
+
+    :cond_b
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lu85;->b:Z
+
+    :goto_5
     return-void
 
     :pswitch_data_0
@@ -195,80 +291,52 @@
     .end packed-switch
 .end method
 
-.method public c(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 3
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    iget-object v0, p0, Lu85;->c:Ljava/lang/Object;
+    iget p2, p0, Lu85;->a:I
 
-    check-cast v0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    packed-switch p2, :pswitch_data_0
 
-    invoke-virtual {v0}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
+    const/4 p2, 0x1
 
-    move-result v1
+    if-eqz p1, :cond_1
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
+    invoke-static {p1}, Ls9f;->E(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    :goto_0
-    int-to-float v1, v1
-
-    sub-int/2addr p1, v2
-
-    int-to-float p1, p1
-
-    div-float/2addr v1, p1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeHorizontalScrollOffset()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeHorizontalScrollExtent()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->computeHorizontalScrollRange()I
-
-    move-result p1
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    :goto_1
-    invoke-virtual {v0, v1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->setScrollerPosition(F)V
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Lu85;->d:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return-void
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lc85;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
+    :goto_0
+    move p1, p2
 
-    move-result-object p1
+    :goto_1
+    xor-int/2addr p1, p2
 
-    throw p1
+    iput-boolean p1, p0, Lu85;->b:Z
+
+    :pswitch_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    iget p1, p0, Lu85;->a:I
+
+    return-void
 .end method

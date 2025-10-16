@@ -1,115 +1,185 @@
-.class public final synthetic Lwe;
-.super Ljava/lang/Object;
+.class public final Lwe;
+.super Loc5;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+.field public final Y:Ljava/lang/Object;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput p2, p0, Lwe;->a:I
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    iput-object p1, p0, Lwe;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+    sget v1, Liid;->Y:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Loc5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+
+    new-instance p1, Lve;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Lve;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, p1}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwe;->o:Ljava/lang/Object;
+
+    new-instance p1, Lve;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v0, v2}, Lve;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {v1, p1}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwe;->X:Ljava/lang/Object;
+
+    new-instance p1, Lve;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v0, v2}, Lve;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {v1, p1}, Lmbi;->b(ILoh6;)Llt7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwe;->Y:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final c(I)V
+    .locals 1
 
-    iget v0, p0, Lwe;->a:I
+    iget-object v0, p0, Lwe;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lwe;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
+    move-result-object v0
 
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->p1:Lzo0;
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
 
-    return-void
+    if-eqz v0, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lwe;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    iget-object v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->k1:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_0
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->invalidate()V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
     :cond_0
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+    iget-object v0, p0, Lwe;->X:Ljava/lang/Object;
 
-    move-result v1
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object v0
 
-    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->H0:Z
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
 
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
     :cond_1
-    iget-object v0, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->j1:Landroid/view/View;
+    iget-object v0, p0, Lwe;->Y:Ljava/lang/Object;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
     :cond_2
-    return-void
+    iget-object p1, p0, Loc5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    :pswitch_1
-    iget-object v0, p0, Lwe;->b:Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;
-
-    iget-boolean v1, v0, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->W0:Z
-
-    if-nez v1, :cond_3
-
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->start()V
-
-    :cond_3
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->invalidateInternal()V
+    invoke-virtual {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
 
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final d(II)V
+    .locals 2
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-static {p1, v0}, Lpti;->d(IF)I
+
+    move-result v0
+
+    shr-int/lit8 p1, p1, 0x18
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-float p1, p1
+
+    const/high16 v1, 0x437f0000    # 255.0f
+
+    div-float/2addr p1, v1
+
+    invoke-static {p2, p1, v0}, Lwb3;->c(IFI)I
+
+    move-result p1
+
+    iget-object p2, p0, Lwe;->o:Ljava/lang/Object;
+
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_0
+    iget-object p2, p0, Lwe;->X:Ljava/lang/Object;
+
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz p2, :cond_1
+
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_1
+    iget-object p2, p0, Lwe;->Y:Ljava/lang/Object;
+
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz p2, :cond_2
+
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_2
+    iget-object p1, p0, Loc5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
+
+    return-void
 .end method

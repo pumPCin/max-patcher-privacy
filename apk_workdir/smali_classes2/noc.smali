@@ -1,48 +1,32 @@
-.class public final Lnoc;
-.super Lwy3;
+.class public abstract Lnoc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static one_chat_react_default_react_anim_view:I = 0x7f0a05ef
 
-.field public final synthetic Y:Lmz9;
+.field public static one_chat_react_lottie_debug_big_view:I = 0x7f0a05f0
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static one_chat_react_lottie_debug_centered_view:I = 0x7f0a05f1
 
+.field public static one_chat_react_lottie_react_anim_view:I = 0x7f0a05f2
 
-# direct methods
-.method public constructor <init>(Lmz9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static one_chat_react_panel_layout:I = 0x7f0a05f3
 
-    iput-object p1, p0, Lnoc;->Y:Lmz9;
+.field public static one_chat_reactions_expand_view_type:I = 0x7f0a05f4
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public static one_chat_reactions_selection_animoji_view_type:I = 0x7f0a05f5
 
-    return-void
-.end method
+.field public static one_chat_reactions_selection_emoji_view_type:I = 0x7f0a05f6
 
+.field public static onechat_react_badge_container:I = 0x7f0a05f8
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.field public static onechat_react_bubble:I = 0x7f0a05f9
 
-    iput-object p1, p0, Lnoc;->o:Ljava/lang/Object;
+.field public static onechat_react_bubble_counter:I = 0x7f0a05fa
 
-    iget p1, p0, Lnoc;->X:I
+.field public static onechat_react_bubble_counter_container:I = 0x7f0a05fb
 
-    const/high16 v0, -0x80000000
+.field public static onechat_react_message_reaction_bubble:I = 0x7f0a05fc
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lnoc;->X:I
-
-    iget-object p1, p0, Lnoc;->Y:Lmz9;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lmz9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
+.field public static tag_reaction_effects_view:I = 0x7f0a0be9

@@ -1,72 +1,33 @@
-.class public Lha7;
+.class public final Lha7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/hardware/camera2/params/InputConfiguration;
+# static fields
+.field public static final a:Lfwb;
+
+.field public static final b:Lha7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfwb;
 
-    check-cast p1, Landroid/hardware/camera2/params/InputConfiguration;
+    const-string v1, "MLKitImageUtils"
 
-    iput-object p1, p0, Lha7;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    const-string v2, ""
+
+    invoke-direct {v0, v1, v2}, Lfwb;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v0, Lha7;->a:Lfwb;
+
+    new-instance v0, Lha7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lha7;->b:Lha7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lha7;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    check-cast p1, Lha7;
-
-    iget-object p1, p1, Lha7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    iget-object v0, p0, Lha7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lha7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/InputConfiguration;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lha7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/InputConfiguration;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

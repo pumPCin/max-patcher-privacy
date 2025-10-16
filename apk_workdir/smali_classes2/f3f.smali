@@ -1,27 +1,50 @@
-.class public final Lf3f;
-.super Lo37;
+.class public final synthetic Lf3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final d:I
-
-.field public final e:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Le3f;)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lo37;-><init>(Lw4d;)V
+    iput p1, p0, Lf3f;->a:I
 
-    iget v0, p1, Le3f;->X:I
-
-    iput v0, p0, Lf3f;->d:I
-
-    iget p1, p1, Le3f;->Y:I
-
-    iput p1, p0, Lf3f;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lf3f;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

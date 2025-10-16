@@ -1,93 +1,294 @@
 .class public final Lfig;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:F
 
-.field public final synthetic o:Lgig;
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:F
+
+.field public final e:F
+
+.field public final f:[I
+
+.field public final g:[F
 
 
 # direct methods
-.method public constructor <init>(Lgig;I)V
+.method public constructor <init>(FFFFF[F[I)V
     .locals 0
 
-    iput p2, p0, Lfig;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfig;->o:Lgig;
+    iput p1, p0, Lfig;->a:F
 
-    const/16 p1, 0x9
+    iput p2, p0, Lfig;->b:F
 
-    packed-switch p2, :pswitch_data_0
+    iput p3, p0, Lfig;->c:F
 
-    const/4 p2, 0x0
+    iput p4, p0, Lfig;->d:F
 
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+    iput p5, p0, Lfig;->e:F
 
-    return-void
+    iput-object p7, p0, Lfig;->f:[I
 
-    :pswitch_0
-    sget-object p2, Laig;->a:Laig;
-
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+    iput-object p6, p0, Lfig;->g:[F
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lfig;->c:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    check-cast p2, Laig;
-
-    check-cast p1, Laig;
-
-    iget-object p1, p0, Lfig;->o:Lgig;
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lfig;
 
-    :pswitch_0
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfig;
+
+    iget v1, p0, Lfig;->a:F
+
+    iget v3, p1, Lfig;->a:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lfig;->b:F
+
+    iget v3, p1, Lfig;->b:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lfig;->c:F
+
+    iget v3, p1, Lfig;->c:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lfig;->d:F
+
+    iget v3, p1, Lfig;->d:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lfig;->e:F
+
+    iget v3, p1, Lfig;->e:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lfig;->f:[I
+
+    iget-object v3, p1, Lfig;->f:[I
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lfig;->g:[F
+
+    iget-object p1, p1, Lfig;->g:[F
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lfig;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    const/16 v1, 0x1f
 
-    check-cast p2, Ldig;
+    mul-int/2addr v0, v1
 
-    check-cast p1, Ldig;
+    iget v2, p0, Lfig;->b:F
 
-    iget-object p1, p0, Lfig;->o:Lgig;
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    move-result v0
 
-    :cond_1
-    return-void
+    iget v2, p0, Lfig;->c:F
 
-    nop
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    iget v2, p0, Lfig;->d:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lfig;->e:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget-object v2, p0, Lfig;->f:[I
+
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lfig;->g:[F
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lfig;->f:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lfig;->g:[F
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "GradientEllipse(x="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v3, p0, Lfig;->a:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", y="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lfig;->b:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", radiusX="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lfig;->c:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", radiusY="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lfig;->d:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", angle="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lfig;->e:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", color="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", stops="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-static {v2, v1, v0}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

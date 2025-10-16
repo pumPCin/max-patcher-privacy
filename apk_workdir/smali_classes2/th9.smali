@@ -1,55 +1,114 @@
 .class public final Lth9;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lai9;
 
 
 # instance fields
-.field public X:Lr82;
-
-.field public Y:Lrb9;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lvh9;
-
-.field public final synthetic r0:Lvh9;
-
-.field public s0:I
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lvh9;Lwy3;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Lth9;->r0:Lvh9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lth9;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Z
     .locals 1
 
-    iput-object p1, p0, Lth9;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lth9;->s0:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x1
 
-    iput p1, p0, Lth9;->s0:I
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lth9;->r0:Lvh9;
+    return v0
 
-    const/4 v0, 0x0
+    :cond_0
+    instance-of v1, p1, Lth9;
 
-    invoke-virtual {p1, v0, v0, p0}, Lvh9;->e(Lr82;Lrb9;Lwy3;)Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    move-result-object p1
+    goto :goto_0
 
-    return-object p1
+    :cond_1
+    check-cast p1, Lth9;
+
+    iget-wide v1, p0, Lth9;->a:J
+
+    iget-wide v3, p1, Lth9;->a:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lth9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lth9;->a:J
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "OnUnsupportedAttachButtonCLick(messageId="
+
+    const-string v1, ", isSkippableForMultiSelect=true)"
+
+    iget-wide v2, p0, Lth9;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

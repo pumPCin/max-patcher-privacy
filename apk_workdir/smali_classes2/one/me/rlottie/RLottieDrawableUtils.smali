@@ -12,19 +12,19 @@
         "Lone/me/rlottie/RLottieDrawable;",
         "",
         "networkFetchEnabled",
-        "Laxf;",
+        "Lzag;",
         "restartDownloadFromUrl",
         "(Lone/me/rlottie/RLottieDrawable;Z)V",
         "",
         "getFrameRate",
         "(Lone/me/rlottie/RLottieDrawable;)I",
         "frame",
-        "Lskc;",
+        "Luuc;",
         "getLottieFrameAt",
-        "(Lone/me/rlottie/RLottieDrawable;I)Lskc;",
+        "(Lone/me/rlottie/RLottieDrawable;I)Luuc;",
         "width",
         "height",
-        "(Lone/me/rlottie/RLottieDrawable;III)Lskc;",
+        "(Lone/me/rlottie/RLottieDrawable;III)Luuc;",
         "rlottie_release"
     }
     k = 0x2
@@ -50,7 +50,7 @@
     return p0
 .end method
 
-.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;I)Lskc;
+.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;I)Luuc;
     .locals 2
 
     .line 1
@@ -58,18 +58,18 @@
 
     iget v1, p0, Lone/me/rlottie/RLottieDrawable;->b:I
 
-    invoke-static {p0, p1, v0, v1}, Lone/me/rlottie/RLottieDrawableUtils;->getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Lskc;
+    invoke-static {p0, p1, v0, v1}, Lone/me/rlottie/RLottieDrawableUtils;->getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Luuc;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Lskc;
+.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Luuc;
     .locals 10
 
     .line 2
-    new-instance v0, Lskc;
+    new-instance v0, Luuc;
 
     .line 3
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -130,11 +130,11 @@
     :cond_0
     const/4 v1, 0x1
 
-    invoke-static {v0, v1, p1}, Lvv9;->a(Ljava/lang/String;IZ)Ltv9;
+    invoke-static {v0, v1, p1}, Lt3a;->a(Ljava/lang/String;IZ)Lr3a;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Ltv9;->e(Luv9;)V
+    invoke-virtual {p1, p0}, Lr3a;->e(Ls3a;)V
 
     return-void
 .end method

@@ -1,45 +1,14 @@
-.class public final Lft5;
-.super Lrm0;
+.class public interface abstract Lft5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static f(I[B)I
-    .locals 2
+# virtual methods
+.method public abstract e(Ljava/io/File;)V
+.end method
 
-    aget-byte v0, p1, p0
+.method public abstract i(Ljava/io/File;)V
+.end method
 
-    and-int/lit16 v0, v0, 0xff
-
-    shl-int/lit8 v0, v0, 0x18
-
-    add-int/lit8 v1, p0, 0x1
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x10
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 v1, p0, 0x2
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 p0, p0, 0x3
-
-    aget-byte p0, p1, p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    or-int/2addr p0, v0
-
-    return p0
+.method public abstract m(Ljava/io/File;)V
 .end method

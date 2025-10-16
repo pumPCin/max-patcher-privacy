@@ -1,15 +1,14 @@
-.class public final synthetic Luwg;
-.super Ljava/lang/Object;
+.class public final enum Luwg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lri6;
 
 
 # static fields
-.field public static final a:Luwg;
+.field public static final enum a:Luwg;
 
-.field private static final descriptor:Lmqd;
+.field public static final enum b:Luwg;
+
+.field public static final synthetic c:[Luwg;
 
 
 # direct methods
@@ -18,162 +17,57 @@
 
     new-instance v0, Luwg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "ASPECT_RATIO"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Luwg;->a:Luwg;
 
-    new-instance v1, Lflb;
+    new-instance v1, Luwg;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneResponse"
+    const-string v2, "FILL"
 
-    const/4 v3, 0x2
+    const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "requestId"
+    sput-object v1, Luwg;->b:Luwg;
 
-    const/4 v2, 0x0
+    filled-new-array {v0, v1}, [Luwg;
 
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+    move-result-object v0
 
-    const-string v0, "phone"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Luwg;->descriptor:Lmqd;
+    sput-object v0, Luwg;->c:[Luwg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lx8;)Ljava/lang/Object;
-    .locals 9
-
-    sget-object v0, Luwg;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v5, v1
-
-    move v6, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
-
-    new-instance p1, Lwwg;
-
-    invoke-direct {p1, v6, v3, v4}, Lwwg;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lmz3;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Lwwg;
-
-    sget-object v0, Luwg;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
-
-    move-result-object p1
-
-    iget-object v1, p2, Lwwg;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget-object p2, p2, Lwwg;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lmz3;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lql7;
-    .locals 3
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Lql7;
-
-    sget-object v1, Llwe;->a:Llwe;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
-.method public final d()Lmqd;
+.method public static valueOf(Ljava/lang/String;)Luwg;
     .locals 1
 
-    sget-object v0, Luwg;->descriptor:Lmqd;
+    const-class v0, Luwg;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Luwg;
+
+    return-object p0
+.end method
+
+.method public static values()[Luwg;
+    .locals 1
+
+    sget-object v0, Luwg;->c:[Luwg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Luwg;
 
     return-object v0
 .end method

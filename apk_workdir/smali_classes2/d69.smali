@@ -1,128 +1,175 @@
 .class public final Ld69;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lc69;
+.field public final synthetic X:Lone/me/members/list/MembersListWidget;
 
-.field public final b:I
+.field public final synthetic Y:J
+
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lc69;I)V
+.method public constructor <init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld69;->X:Lone/me/members/list/MembersListWidget;
 
-    iput-object p1, p0, Ld69;->a:Lc69;
+    iput-wide p2, p0, Ld69;->Y:J
 
-    iput p2, p0, Ld69;->b:I
+    iput-object p4, p0, Ld69;->Z:Landroid/view/View;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lb54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ld69;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ld69;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ld69;
 
-    iget-object v1, p0, Ld69;->a:Lc69;
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-object v3, p1, Ld69;->a:Lc69;
+    invoke-virtual {p1, p2}, Ld69;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Ld69;->b:I
-
-    iget p1, p1, Ld69;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    iget-object v0, p0, Ld69;->a:Lc69;
+    new-instance v0, Ld69;
 
-    invoke-virtual {v0}, Lc69;->hashCode()I
+    iget-wide v2, p0, Ld69;->Y:J
 
-    move-result v0
+    iget-object v4, p0, Ld69;->Z:Landroid/view/View;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v1, p0, Ld69;->X:Lone/me/members/list/MembersListWidget;
 
-    iget v1, p0, Ld69;->b:I
+    move-object v5, p2
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-direct/range {v0 .. v5}, Ld69;-><init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "MessageReactionCounter(reaction="
+    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Lwq7;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Ld69;->X:Lone/me/members/list/MembersListWidget;
 
-    iget-object v1, p0, Ld69;->a:Lc69;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", count="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ld69;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->E0()Ln59;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v0, v0, Ln59;->b:Lqh6;
+
+    iget-wide v1, p0, Ld69;->Y:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->C0()Lb59;
+
+    move-result-object v3
+
+    iget-boolean v3, v3, Lb59;->c:Z
+
+    sget-object v4, Lzag;->a:Lzag;
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v3, Ljava/lang/Long;
+
+    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
+
+    iget-object v1, p1, Lone/me/members/list/MembersListWidget;->Z:Lqs;
+
+    sget-object v2, Lone/me/members/list/MembersListWidget;->C0:[Lwq7;
+
+    const/4 v5, 0x2
+
+    aget-object v2, v2, v5
+
+    invoke-virtual {v1, p1, v3}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    invoke-static {v5}, Lcvi;->a(I)Ls04;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Ls04;->i(Ljava/util/Collection;)Ls04;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ld69;->Z:Landroid/view/View;
+
+    invoke-interface {v0, v1}, Ls04;->t(Landroid/view/View;)Ls04;
+
+    move-result-object v0
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x41400000    # 12.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-interface {v0, v1}, Ls04;->m(F)Ls04;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ls04;->build()Lt04;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lt04;->v(Lone/me/sdk/arch/Widget;)V
+
+    :cond_1
+    :goto_0
+    return-object v4
 .end method

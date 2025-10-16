@@ -1,55 +1,45 @@
-.class public abstract Lyig;
+.class public final Lyig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:[F
+
+.field public final b:[J
+
+.field public c:F
+
+.field public d:I
+
+.field public e:I
+
+
 # direct methods
-.method public static a(Landroid/view/View;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/view/View;->cancelDragAndDrop()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/16 v0, 0x14
 
-.method public static b(Landroid/view/View;)V
-    .locals 0
+    new-array v1, v0, [F
 
-    invoke-virtual {p0}, Landroid/view/View;->dispatchFinishTemporaryDetach()V
+    iput-object v1, p0, Lyig;->a:[F
 
-    return-void
-.end method
+    new-array v0, v0, [J
 
-.method public static c(Landroid/view/View;)V
-    .locals 0
+    iput-object v0, p0, Lyig;->b:[J
 
-    invoke-virtual {p0}, Landroid/view/View;->dispatchStartTemporaryDetach()V
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    iput v0, p0, Lyig;->c:F
 
-.method public static d(Landroid/view/View;Landroid/view/PointerIcon;)V
-    .locals 0
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setPointerIcon(Landroid/view/PointerIcon;)V
+    iput v0, p0, Lyig;->d:I
 
-    return-void
-.end method
-
-.method public static e(Landroid/view/View;Landroid/content/ClipData;Landroid/view/View$DragShadowBuilder;Ljava/lang/Object;I)Z
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->startDragAndDrop(Landroid/content/ClipData;Landroid/view/View$DragShadowBuilder;Ljava/lang/Object;I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static f(Landroid/view/View;Landroid/view/View$DragShadowBuilder;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->updateDragShadow(Landroid/view/View$DragShadowBuilder;)V
+    iput v0, p0, Lyig;->e:I
 
     return-void
 .end method

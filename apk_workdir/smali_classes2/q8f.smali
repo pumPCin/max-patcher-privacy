@@ -1,125 +1,110 @@
-.class public final Lq8f;
+.class public final synthetic Lq8f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltp0;
+.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final synthetic b:Lr8f;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(Lr8f;I)V
+    .locals 0
+
+    iput p2, p0, Lq8f;->a:I
+
+    iput-object p1, p0, Lq8f;->b:Lr8f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Landroid/graphics/Paint;
-
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    iput-object v0, p0, Lq8f;->a:Landroid/graphics/Paint;
-
-    new-instance v0, Lede;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, p1, v1}, Lede;-><init>(Landroid/content/Context;I)V
-
-    const/4 p1, 0x2
-
-    invoke-static {p1, v0}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lq8f;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 7
 
-    iget-object v0, p0, Lq8f;->b:Ljava/lang/Object;
+    iget v0, p0, Lq8f;->a:I
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    check-cast p1, Lxgc;
 
-    check-cast v0, Lh37;
+    iget-object v0, p0, Lq8f;->b:Lr8f;
 
-    iget-object v0, v0, Lh37;->a:Lh4f;
+    iget-object v1, v0, Lr8f;->a:Lzgc;
 
-    invoke-virtual {v0}, Lh4f;->a()Z
+    iget-object v1, v1, Lzgc;->b:Lvgc;
 
-    move-result v1
+    new-instance v2, Lq8f;
 
-    if-eqz v1, :cond_0
+    const/4 v3, 0x2
 
-    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/renderscript/RenderScript;
-
-    invoke-virtual {v0}, Landroid/renderscript/RenderScript;->destroy()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(I)V
-    .locals 1
-
-    iget-object v0, p0, Lq8f;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    return-void
-.end method
-
-.method public final d(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;)V
-    .locals 2
+    invoke-direct {v2, v0, v3}, Lq8f;-><init>(Lr8f;I)V
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lq8f;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p2, v0, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, p1, v2, v0}, Lvgc;->k(Lxgc;Ljava/util/function/Consumer;Z)V
 
     return-void
-.end method
 
-.method public final e(Landroid/graphics/Bitmap;F)V
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lq8f;->b:Lr8f;
 
-    iget-object v0, p0, Lq8f;->b:Ljava/lang/Object;
+    check-cast p1, Lxgc;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lh37;
-
-    invoke-static {p2}, Li8e;->I(F)I
-
-    move-result p2
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, p2, v1}, Lh37;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {v0, p1}, Lr8f;->o(Lr8f;Lxgc;)V
 
     return-void
+
+    :pswitch_1
+    check-cast p1, Lxgc;
+
+    iget-object p1, p0, Lq8f;->b:Lr8f;
+
+    iget-object v0, p1, Lr8f;->a:Lzgc;
+
+    iget-object v1, v0, Lzgc;->b:Lvgc;
+
+    new-instance v2, Lp8f;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, v3}, Lp8f;-><init>(Lr8f;I)V
+
+    iget v0, v0, Lzgc;->a:I
+
+    int-to-long v3, v0
+
+    invoke-static {v3, v4}, Loai;->a(J)I
+
+    move-result v0
+
+    add-int/lit8 v3, v0, 0x9
+
+    new-instance v5, Lq8f;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v5, p1, v0}, Lq8f;-><init>(Lr8f;I)V
+
+    const/4 v6, 0x1
+
+    sget-object v4, Lqb5;->o:Lqb5;
+
+    invoke-virtual/range {v1 .. v6}, Lvgc;->l(Ljava/util/function/Function;ILqb5;Ljava/util/function/Consumer;Z)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

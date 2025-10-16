@@ -3,78 +3,151 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lus9;
-
-
-# static fields
-.field public static final b:Ljava/lang/String;
+.implements Le05;
 
 
 # instance fields
-.field public final a:Lcc6;
+.field public final a:Landroid/content/res/Resources;
+
+.field public final b:Le05;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lcc6;->f:Ljava/lang/String;
-
-    sput-object v0, Loi4;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcc6;)V
+.method public constructor <init>(Landroid/content/res/Resources;Le05;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loi4;->a:Lcc6;
+    iput-object p1, p0, Loi4;->a:Landroid/content/res/Resources;
+
+    iput-object p2, p0, Loi4;->b:Le05;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Loi9;)V
-    .locals 1
+.method public final a(Ln93;)Landroid/graphics/drawable/Drawable;
+    .locals 3
 
-    iget-object v0, p0, Loi4;->a:Lcc6;
+    :try_start_0
+    invoke-static {}, Ltg6;->p()Lsg6;
 
-    invoke-virtual {v0, p1}, Lcc6;->a(Loi9;)V
+    instance-of v0, p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    return-void
-.end method
+    if-eqz v0, :cond_2
 
-.method public final b(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
-    .locals 1
+    check-cast p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    iget-object v0, p0, Loi4;->a:Lcc6;
+    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcc6;->b(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+    iget-object v1, p0, Loi4;->a:Landroid/content/res/Resources;
 
-    return-void
-.end method
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
 
-.method public final c(Lw66;)I
-    .locals 1
+    move-result-object v2
 
-    iget-object v0, p0, Loi4;->a:Lcc6;
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v0, p1}, Lcc6;->c(Lw66;)I
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :goto_0
+    new-instance v1, La9b;
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+
+    move-result v2
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
 
     move-result p1
 
-    return p1
+    invoke-direct {v1, v0, v2, p1}, La9b;-><init>(Landroid/graphics/drawable/BitmapDrawable;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Ltg6;->p()Lsg6;
+
+    return-object v1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {}, Ltg6;->p()Lsg6;
+
+    return-object v0
+
+    :cond_2
+    iget-object v0, p0, Loi4;->b:Le05;
+
+    if-eqz v0, :cond_3
+
+    :try_start_1
+    invoke-interface {v0, p1}, Le05;->b(Ln93;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0, p1}, Le05;->a(Ln93;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Ltg6;->p()Lsg6;
+
+    return-object p1
+
+    :cond_3
+    invoke-static {}, Ltg6;->p()Lsg6;
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :goto_1
+    invoke-static {}, Ltg6;->p()Lsg6;
+
+    throw p1
 .end method
 
-.method public final close()V
-    .locals 1
+.method public final b(Ln93;)Z
+    .locals 0
 
-    iget-object v0, p0, Loi4;->a:Lcc6;
+    const/4 p1, 0x1
 
-    invoke-virtual {v0}, Lcc6;->close()V
-
-    return-void
+    return p1
 .end method

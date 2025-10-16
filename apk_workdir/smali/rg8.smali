@@ -1,120 +1,119 @@
 .class public final Lrg8;
-.super Ljava/lang/Object;
+.super Ly45;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lrg8;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Lbk8;
+.field public final w0:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqg8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
-
-    sput-object v0, Lrg8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(F)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    const v0, 0x3a83126f    # 0.001f
 
-    move-result v0
+    sub-float/2addr p1, v0
 
-    iput v0, p0, Lrg8;->a:I
-
-    sget-object v0, Lbk8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbk8;
-
-    iput-object p1, p0, Lrg8;->b:Lbk8;
+    iput p1, p0, Lrg8;->w0:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final g(FFFLege;)V
+    .locals 8
 
-    const/4 v0, 0x0
+    iget p1, p0, Lrg8;->w0:F
 
-    return v0
-.end method
+    float-to-double v0, p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
-    const-string v1, "MediaItem{mFlags="
+    move-result-wide v4
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    mul-double/2addr v4, v0
 
-    iget v1, p0, Lrg8;->a:I
+    div-double/2addr v4, v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    double-to-float p1, v4
 
-    const-string v1, ", mDescription="
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v4
 
-    iget-object v1, p0, Lrg8;->b:Lbk8;
+    float-to-double v6, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v7, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    const/16 v1, 0x7d
+    move-result-wide v6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    sub-double/2addr v4, v6
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
-    move-result-object v0
+    move-result-wide v4
 
-    return-object v0
-.end method
+    double-to-float p3, v4
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    sub-float v4, p2, p1
 
-    iget v0, p0, Lrg8;->a:I
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-wide v5
 
-    iget-object v0, p0, Lrg8;->b:Lbk8;
+    mul-double/2addr v5, v0
 
-    invoke-virtual {v0, p1, p2}, Lbk8;->writeToParcel(Landroid/os/Parcel;I)V
+    sub-double/2addr v5, v0
+
+    neg-double v5, v5
+
+    double-to-float v5, v5
+
+    add-float/2addr v5, p3
+
+    const/high16 v6, 0x43870000    # 270.0f
+
+    const/4 v7, 0x0
+
+    invoke-virtual {p4, v4, v5, v6, v7}, Lege;->d(FFFF)V
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v0
+
+    sub-double/2addr v4, v0
+
+    neg-double v4, v4
+
+    double-to-float v4, v4
+
+    invoke-virtual {p4, p2, v4}, Lege;->c(FF)V
+
+    add-float/2addr p2, p1
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v0
+
+    sub-double/2addr v2, v0
+
+    neg-double v0, v2
+
+    double-to-float p1, v0
+
+    add-float/2addr p1, p3
+
+    invoke-virtual {p4, p2, p1}, Lege;->c(FF)V
 
     return-void
 .end method

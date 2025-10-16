@@ -1,64 +1,181 @@
 .class public final Lf83;
-.super Ljava/lang/Object;
+.super Luvb;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/util/List;
 
-.field public final synthetic b:Li83;
+.field public b:Ljava/util/ArrayList;
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-
-# direct methods
-.method public synthetic constructor <init>(Li83;Landroid/graphics/drawable/Drawable;I)V
-    .locals 0
-
-    iput p3, p0, Lf83;->a:I
-
-    iput-object p1, p0, Lf83;->b:Li83;
-
-    iput-object p2, p0, Lf83;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public c:I
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a()[B
+    .locals 6
 
-    iget v0, p0, Lf83;->a:I
+    iget-object v0, p0, Lf83;->a:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    iget-object v0, p0, Lf83;->b:Li83;
+    move-result-object v0
 
-    iget-object v1, p0, Lf83;->c:Landroid/graphics/drawable/Drawable;
+    new-instance v1, Ln0;
 
-    invoke-static {v0, v1}, Li83;->z(Li83;Landroid/graphics/drawable/Drawable;)V
+    const/4 v2, 0x7
 
-    return-void
+    invoke-direct {v1, v2}, Ln0;-><init>(I)V
 
-    :pswitch_0
-    iget-object v0, p0, Lf83;->b:Li83;
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
 
-    iget-object v1, p0, Lf83;->c:Landroid/graphics/drawable/Drawable;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Li83;->x(Li83;Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {v0}, Ljava/util/stream/IntStream;->sum()I
 
-    return-void
+    move-result v0
 
-    nop
+    iget-object v1, p0, Lf83;->b:Ljava/util/ArrayList;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    new-instance v2, Ln0;
+
+    const/16 v3, 0x8
+
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+
+    move-result v1
+
+    add-int/lit8 v2, v0, 0x4
+
+    add-int/2addr v2, v1
+
+    add-int/lit8 v3, v2, 0x4
+
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    sget-object v4, Lhwf;->Y:Lhwf;
+
+    iget-short v4, v4, Lhwf;->a:S
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v2, v2
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v0, v0
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v0, p0, Lf83;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Le83;
+
+    iget-object v4, v2, Le83;->a:[B
+
+    array-length v4, v4
+
+    int-to-short v4, v4
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v4, v2, Le83;->a:[B
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    iget-wide v4, v2, Le83;->b:J
+
+    long-to-int v2, v4
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
+
+    move-result v0
+
+    iput v0, p0, Lf83;->c:I
+
+    int-to-short v0, v1
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v0, p0, Lf83;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ld83;
+
+    iget-object v2, v1, Ld83;->a:[B
+
+    array-length v2, v2
+
+    int-to-byte v2, v2
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, v1, Ld83;->a:[B
+
+    invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
+
+    move-result v0
+
+    new-array v0, v0, [B
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    return-object v0
 .end method

@@ -1,135 +1,85 @@
-.class public final synthetic Lte;
+.class public final Lte;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq37;
 
-
-# instance fields
-.field public final synthetic a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
+# static fields
+.field public static final a:Landroid/view/ViewGroup$MarginLayoutParams;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iput-object p1, p0, Lte;->a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    sput-object v0, Lte;->a:Landroid/view/ViewGroup$MarginLayoutParams;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v1, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     return-void
 .end method
 
+.method public static a(Landroid/view/View;)Z
+    .locals 5
 
-# virtual methods
-.method public final a(Lj75;ILt6c;Lo37;)Lj73;
-    .locals 3
+    instance-of v0, p0, Landroid/view/ViewGroup;
 
-    iget-object p2, p0, Lte;->a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
+    const/4 v1, 0x0
 
-    iget-object p3, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Laf;
+    if-eqz v0, :cond_2
 
-    if-nez p3, :cond_0
+    check-cast p0, Landroid/view/ViewGroup;
 
-    new-instance p3, Lood;
-
-    invoke-direct {p3, p2}, Lood;-><init>(Ljava/lang/Object;)V
-
-    new-instance v0, Laf;
-
-    iget-object v1, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Lnib;
-
-    iget-boolean v2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->k:Z
-
-    invoke-direct {v0, p3, v1, v2}, Laf;-><init>(Lood;Lnib;Z)V
-
-    iput-object v0, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Laf;
-
-    :cond_0
-    iget-object p2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Laf;
-
-    iget-object p3, p4, Lo37;->b:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p2, Laf;->b:Lcom/facebook/animated/gif/GifImage;
-
-    if-eqz p2, :cond_2
-
-    iget-object p2, p1, Lj75;->a:Lm73;
-
-    invoke-static {p2}, Lm73;->o(Lm73;)Lm73;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    invoke-virtual {p2}, Lm73;->X()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lyz8;
-
-    invoke-virtual {p3}, Lyz8;->r()Ljava/nio/ByteBuffer;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutTransition()Landroid/animation/LayoutTransition;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x1
 
-    invoke-virtual {p3}, Lyz8;->r()Ljava/nio/ByteBuffer;
+    if-eqz v0, :cond_0
 
-    move-result-object p3
+    invoke-virtual {v0}, Landroid/animation/LayoutTransition;->isChangingLayout()Z
 
-    invoke-static {p3, p4}, Lcom/facebook/animated/gif/GifImage;->a(Ljava/nio/ByteBuffer;Lo37;)Lcom/facebook/animated/gif/GifImage;
+    move-result v0
 
-    move-result-object p3
+    if-eqz v0, :cond_0
+
+    return v2
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    move v3, v1
+
+    :goto_0
+    if-ge v3, v0, :cond_2
+
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lte;->a(Landroid/view/View;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    return v2
+
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p3}, Lyz8;->n()J
-
-    move-result-wide v0
-
-    invoke-virtual {p3}, Lyz8;->O()I
-
-    move-result p3
-
-    invoke-static {v0, v1, p3, p4}, Lcom/facebook/animated/gif/GifImage;->b(JILo37;)Lcom/facebook/animated/gif/GifImage;
-
-    move-result-object p3
-
-    :goto_0
-    iget-object p1, p1, Lj75;->t0:Ljava/lang/String;
-
-    invoke-static {p1, p4, p3}, Laf;->a(Ljava/lang/String;Lo37;Lcom/facebook/animated/gif/GifImage;)Lh73;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p2}, Lm73;->close()V
-
-    return-object p1
-
-    :goto_1
-    invoke-virtual {p2}, Lm73;->close()V
-
-    throw p1
-
     :cond_2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "To encode animated webp please add the dependency to the animated-webp module"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v1
 .end method

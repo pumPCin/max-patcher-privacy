@@ -1,75 +1,80 @@
-.class public final Li9d;
-.super Lyjg;
+.class public final synthetic Li9d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic Y:[Lpl7;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:Lya5;
+.field public final synthetic a:I
 
-.field public final b:Lyn7;
-
-.field public final c:Lyn7;
-
-.field public final o:Lk5d;
+.field public final synthetic b:Lo0f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lo0f;)V
+    .locals 1
 
-    new-instance v0, Lds9;
+    .line 1
+    const/4 v0, 0x1
 
-    const-string v1, "enableSafeModeJob"
+    iput v0, p0, Li9d;->a:I
 
-    const-string v2, "getEnableSafeModeJob()Lkotlinx/coroutines/Job;"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v3, Li9d;
-
-    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lewc;->a:Lfwc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lpl7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Li9d;->Y:[Lpl7;
+    iput-object p1, p0, Li9d;->b:Lo0f;
 
     return-void
 .end method
 
-.method public constructor <init>(Lyn7;Lyn7;)V
+.method public synthetic constructor <init>(Lo0f;J)V
     .locals 0
 
-    invoke-direct {p0}, Lyjg;-><init>()V
-
-    iput-object p1, p0, Li9d;->b:Lyn7;
-
-    iput-object p2, p0, Li9d;->c:Lyn7;
-
-    invoke-static {}, Lkv9;->G()Lk5d;
-
-    move-result-object p1
-
-    iput-object p1, p0, Li9d;->o:Lk5d;
-
-    new-instance p1, Lya5;
-
+    .line 2
     const/4 p2, 0x0
 
-    invoke-direct {p1, p2}, Lya5;-><init>(I)V
+    iput p2, p0, Li9d;->a:I
 
-    iput-object p1, p0, Li9d;->X:Lya5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Li9d;->b:Lo0f;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Li9d;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li9d;->b:Lo0f;
+
+    iget-object v0, v0, Lo0f;->c:Ljava/lang/Object;
+
+    check-cast v0, Lo6b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v0, Lll0;->i:Lyc6;
+
+    invoke-virtual {v1, v0}, Lyc6;->r(Ly6b;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Li9d;->b:Lo0f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

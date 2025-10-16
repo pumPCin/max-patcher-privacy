@@ -1,53 +1,87 @@
-.class public final Lc05;
+.class public abstract Lc05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ltt1;
-
-.field public final b:Lyn7;
-
-.field public c:Loke;
-
-.field public final d:Lh4f;
-
-.field public final e:Lhne;
-
-.field public final f:Lhne;
-
-
 # direct methods
-.method public constructor <init>(Ltt1;Lyn7;)V
+.method public static a(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources$Theme;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
-    iput-object p1, p0, Lc05;->a:Ltt1;
+    return-void
+.end method
 
-    iput-object p2, p0, Lc05;->b:Lyn7;
+.method public static b(Landroid/graphics/drawable/Drawable;)Z
+    .locals 0
 
-    new-instance p1, Lwm3;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
 
-    const/16 p2, 0x17
+    move-result p0
 
-    invoke-direct {p1, p2}, Lwm3;-><init>(I)V
+    return p0
+.end method
 
-    new-instance p2, Lh4f;
+.method public static c(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
+    .locals 0
 
-    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
 
-    iput-object p2, p0, Lc05;->d:Lh4f;
+    move-result-object p0
 
-    const/4 p1, 0x0
+    return-object p0
+.end method
 
-    invoke-static {p1}, Line;->a(Ljava/lang/Object;)Lhne;
+.method public static d(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/xmlpull/v1/XmlPullParserException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
 
-    move-result-object p1
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    iput-object p1, p0, Lc05;->e:Lhne;
+    return-void
+.end method
 
-    iput-object p1, p0, Lc05;->f:Lhne;
+.method public static e(Landroid/graphics/drawable/Drawable;FF)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
+
+    return-void
+.end method
+
+.method public static f(Landroid/graphics/drawable/Drawable;IIII)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
+
+    return-void
+.end method
+
+.method public static g(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    return-void
+.end method
+
+.method public static h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public static i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     return-void
 .end method

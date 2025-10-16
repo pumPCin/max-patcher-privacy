@@ -1,86 +1,108 @@
 .class public final Ltw7;
-.super Ljava/util/AbstractSequentialList;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final b:Lfe6;
+.field public final synthetic b:Luw7;
 
 
 # direct methods
-.method public constructor <init>(Lfe6;Ljava/util/List;)V
+.method public synthetic constructor <init>(Luw7;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractSequentialList;-><init>()V
+    iput p2, p0, Ltw7;->a:I
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Ltw7;->b:Luw7;
 
-    iput-object p2, p0, Ltw7;->a:Ljava/util/List;
-
-    iput-object p1, p0, Ltw7;->b:Lfe6;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final isEmpty()Z
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object v0, p0, Ltw7;->a:Ljava/util/List;
+    iget v0, p0, Ltw7;->a:I
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    return v0
+    return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Ltw7;->b:Luw7;
+
+    invoke-virtual {p1}, Luw7;->A()V
+
+    iget-object v0, p1, Luw7;->u0:Lre;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lhlf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lzd7;
+
+    invoke-virtual {v0, p1}, Lre;->a(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 2
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 3
 
-    new-instance v0, Lrw7;
+    iget v0, p0, Ltw7;->a:I
 
-    iget-object v1, p0, Ltw7;->a:Ljava/util/List;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
 
-    move-result-object p1
+    return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Ltw7;->b:Luw7;
+
+    iget v0, p1, Luw7;->r0:I
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, p1, v1}, Lrw7;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
+    add-int/2addr v0, v1
 
-    return-object v0
-.end method
+    iget-object v2, p1, Luw7;->Z:Lbx7;
 
-.method public final removeRange(II)V
-    .locals 1
+    iget-object v2, v2, Lmk0;->c:[I
 
-    iget-object v0, p0, Ltw7;->a:Ljava/util/List;
+    array-length v2, v2
 
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
+    rem-int/2addr v0, v2
 
-    move-result-object p1
+    iput v0, p1, Luw7;->r0:I
 
-    invoke-interface {p1}, Ljava/util/List;->clear()V
+    iput-boolean v1, p1, Luw7;->s0:Z
 
     return-void
-.end method
 
-.method public final size()I
-    .locals 1
+    nop
 
-    iget-object v0, p0, Ltw7;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,189 +1,121 @@
-.class public final synthetic Ldsg;
-.super Ljava/lang/Object;
+.class public final enum Ldsg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lri6;
 
 
 # static fields
-.field public static final a:Ldsg;
+.field public static final enum X:Ldsg;
 
-.field private static final descriptor:Lmqd;
+.field public static final enum Y:Ldsg;
+
+.field public static final synthetic Z:[Ldsg;
+
+.field public static final enum a:Ldsg;
+
+.field public static final enum b:Ldsg;
+
+.field public static final enum c:Ldsg;
+
+.field public static final enum o:Ldsg;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 8
 
     new-instance v0, Ldsg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "PREPARE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Ldsg;->a:Ldsg;
 
-    new-instance v1, Lflb;
+    new-instance v1, Ldsg;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryOpenSettingsRequest"
+    const-string v2, "PLAY"
 
-    const/4 v3, 0x2
+    const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "queryId"
+    sput-object v1, Ldsg;->b:Ldsg;
 
-    const/4 v2, 0x0
+    new-instance v2, Ldsg;
 
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+    const-string v3, "IN_PROGRESS"
 
-    const-string v0, "requestId"
+    const/4 v4, 0x2
 
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Ldsg;->descriptor:Lmqd;
+    sput-object v2, Ldsg;->c:Ldsg;
 
-    return-void
-.end method
+    new-instance v3, Ldsg;
 
+    const-string v4, "PAUSE"
 
-# virtual methods
-.method public final a(Lx8;)Ljava/lang/Object;
-    .locals 9
+    const/4 v5, 0x3
 
-    sget-object v0, Ldsg;->descriptor:Lmqd;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
+    sput-object v3, Ldsg;->o:Ldsg;
 
-    move-result-object p1
+    new-instance v4, Ldsg;
 
-    const/4 v1, 0x1
+    const-string v5, "STOP"
 
-    const/4 v2, 0x0
+    const/4 v6, 0x4
 
-    const/4 v3, 0x0
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move v5, v1
+    sput-object v4, Ldsg;->X:Ldsg;
 
-    move v6, v2
+    new-instance v5, Ldsg;
 
-    move-object v4, v3
+    const-string v6, "END"
 
-    :goto_0
-    if-eqz v5, :cond_3
+    const/4 v7, 0x5
 
-    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v7
+    sput-object v5, Ldsg;->Y:Ldsg;
 
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    sget-object v7, Llwe;->a:Llwe;
-
-    invoke-virtual {p1, v0, v2, v3}, Lx8;->s(Lmqd;ILjava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
-
-    new-instance p1, Lfsg;
-
-    invoke-direct {p1, v6, v3, v4}, Lfsg;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lmz3;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Lfsg;
-
-    sget-object v0, Ldsg;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
-
-    move-result-object p1
-
-    sget-object v1, Llwe;->a:Llwe;
-
-    iget-object v1, p2, Lfsg;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lmz3;->h(Lmqd;ILjava/lang/Object;)V
-
-    iget-object p2, p2, Lfsg;->b:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v0, v1, p2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lmz3;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lql7;
-    .locals 3
-
-    invoke-static {}, Loza;->p()Lql7;
+    filled-new-array/range {v0 .. v5}, [Ldsg;
 
     move-result-object v0
 
-    const/4 v1, 0x2
+    sput-object v0, Ldsg;->Z:[Ldsg;
 
-    new-array v1, v1, [Lql7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sget-object v0, Llwe;->a:Llwe;
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    return-object v1
+    return-void
 .end method
 
-.method public final d()Lmqd;
+.method public static valueOf(Ljava/lang/String;)Ldsg;
     .locals 1
 
-    sget-object v0, Ldsg;->descriptor:Lmqd;
+    const-class v0, Ldsg;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ldsg;
+
+    return-object p0
+.end method
+
+.method public static values()[Ldsg;
+    .locals 1
+
+    sget-object v0, Ldsg;->Z:[Ldsg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ldsg;
 
     return-object v0
 .end method

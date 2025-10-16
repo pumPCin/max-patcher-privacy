@@ -1,168 +1,153 @@
 .class public final Lyo2;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Lwkc;
+.field public final synthetic X:Ljava/util/Set;
+
+.field public final synthetic Y:Lbp2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwkc;)V
+.method public constructor <init>(Ljava/util/Set;Lbp2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lyo2;->a:Lwkc;
+    iput-object p1, p0, Lyo2;->X:Ljava/util/Set;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lyo2;->Y:Lbp2;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lc79;)Lpgg;
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p1}, Lc79;->k0()I
+    check-cast p1, Lb54;
 
-    move-result v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    move v4, v3
-
-    move v5, v4
-
-    :goto_0
-    if-ge v2, v0, :cond_7
-
-    const/4 v6, 0x0
-
-    if-eqz v2, :cond_5
-
-    const/4 v7, 0x1
-
-    if-eq v2, v7, :cond_4
-
-    const/4 v8, 0x2
-
-    if-eq v2, v8, :cond_0
-
-    :try_start_0
-    invoke-virtual {p1}, Lc79;->y()V
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_0
-    invoke-virtual {p1}, Lc79;->s0()Lx1;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Lo3g;->e()I
-
-    move-result v9
-
-    const/4 v10, 0x3
-
-    if-ne v9, v10, :cond_1
-
-    move v9, v7
-
-    goto :goto_1
-
-    :cond_1
-    move v9, v1
-
-    :goto_1
-    if-eqz v9, :cond_6
-
-    invoke-interface {v8}, Lo3g;->e()I
-
-    move-result v9
-
-    if-eqz v9, :cond_3
-
-    if-ne v9, v7, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move v7, v1
-
-    :goto_2
-    if-nez v7, :cond_6
-
-    invoke-interface {v8}, Lp67;->k()Lw57;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Lw57;->d()I
-
-    move-result v5
-
-    goto :goto_3
-
-    :cond_3
-    throw v6
-
-    :cond_4
-    invoke-virtual {p1}, Lc79;->n0()I
-
-    move-result v4
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {p1}, Lc79;->n0()I
-
-    move-result v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_6
-    :goto_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :goto_4
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Can\'t parse VideoQualityUpdate "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lyo2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const-string v0, "VideoQualityUpdateNotificationParser"
+    check-cast p1, Lyo2;
 
-    iget-object v1, p0, Lyo2;->a:Lwkc;
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-interface {v1, v0, p1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lyo2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v6
+    return-object p2
+.end method
 
-    :cond_7
-    new-instance p1, Lpgg;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v0, Logg;
+    new-instance p1, Lyo2;
 
-    invoke-direct {v0, v3, v4, v5}, Logg;-><init>(III)V
+    iget-object v0, p0, Lyo2;->X:Ljava/util/Set;
 
-    invoke-direct {p1, v0}, Lpgg;-><init>(Logg;)V
+    iget-object v1, p0, Lyo2;->Y:Lbp2;
+
+    invoke-direct {p1, v0, v1, p2}, Lyo2;-><init>(Ljava/util/Set;Lbp2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lyo2;->Y:Lbp2;
+
+    iget-object v0, p1, Lbp2;->w0:Lde5;
+
+    new-instance v5, Lma2;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v5, v1, p1}, Lma2;-><init>(ILjava/lang/Object;)V
+
+    const/16 v6, 0x1e
+
+    iget-object v1, p0, Lyo2;->X:Ljava/util/Set;
+
+    const-string v2, ", "
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v1 .. v6}, Lab3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqh6;I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget p1, p1, Lbp2;->v0:I
+
+    invoke-static {p1}, Lwx1;->v(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 v3, 0x1
+
+    if-ne p1, v3, :cond_0
+
+    sget p1, Lvya;->h2:I
+
+    new-instance v3, Ljqf;
+
+    invoke-direct {v3, p1}, Ljqf;-><init>(I)V
+
+    new-instance p1, Lnqf;
+
+    invoke-direct {p1, v2}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-static {v1, v3, p1}, Llui;->d(Ljava/util/Collection;Loqf;Lnqf;)Lv7c;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    sget p1, Lvya;->g2:I
+
+    new-instance v3, Ljqf;
+
+    invoke-direct {v3, p1}, Ljqf;-><init>(I)V
+
+    new-instance p1, Lnqf;
+
+    invoke-direct {p1, v2}, Lnqf;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-static {v1, v3, p1}, Llui;->c(Ljava/util/Collection;Loqf;Lnqf;)Lv7c;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
+
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

@@ -1,46 +1,72 @@
 .class public final Lwc8;
-.super Lkc8;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Labd;
+.implements Lei6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic X:Lone/me/android/MainActivity;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwc8;->X:Lone/me/android/MainActivity;
 
-    iput-object p1, p0, Lwc8;->a:Ljava/lang/Object;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ldd8;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lj65;->a:Lj65;
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-interface {p1, v0}, Ldd8;->c(Lfs4;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lwc8;->a:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lwc8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1, v0}, Ldd8;->a(Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lwc8;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lwc8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final get()Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lwc8;->a:Ljava/lang/Object;
+    new-instance p1, Lwc8;
 
-    return-object v0
+    iget-object v0, p0, Lwc8;->X:Lone/me/android/MainActivity;
+
+    invoke-direct {p1, v0, p2}, Lwc8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwc8;->X:Lone/me/android/MainActivity;
+
+    invoke-virtual {p1}, Lh6;->T()V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

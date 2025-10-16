@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final LOG_CONFIGURATION:Lxkc;
+.field static final LOG_CONFIGURATION:Lzuc;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/CallUtil$1;-><init>()V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG_CONFIGURATION:Lxkc;
+    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG_CONFIGURATION:Lzuc;
 
     return-void
 .end method
@@ -28,74 +28,74 @@
     return-void
 .end method
 
-.method public static createBitrates()Lug1;
+.method public static createBitrates()Lvh1;
     .locals 1
 
-    new-instance v0, Lug1;
+    new-instance v0, Lvh1;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-object v0
 .end method
 
-.method public static createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lxg1;
+.method public static createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lyh1;
     .locals 29
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lug1;
+    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lvh1;
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/CallUtil;->createBitrates()Lug1;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/CallUtil;->createBitrates()Lvh1;
 
     move-result-object v1
 
     :cond_0
     move-object v3, v1
 
-    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lvg1;
+    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lwh1;
 
-    iget-object v2, v1, Lvg1;->f:Lwg1;
+    iget-object v2, v1, Lwh1;->f:Lxh1;
 
     if-nez v2, :cond_1
 
-    new-instance v2, Lwg1;
+    new-instance v2, Lxh1;
 
     iget-wide v4, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->mediaReceivingTimeoutMs:J
 
-    invoke-direct {v2, v4, v5}, Lwg1;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Lxh1;-><init>(J)V
 
     :cond_1
     move-object v4, v2
 
-    new-instance v2, Lw98;
+    new-instance v2, Lo0f;
 
-    new-instance v5, Ler0;
+    new-instance v5, Lbs0;
 
     iget-boolean v6, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isMediaAdaptationFeatureEnabledForP2PCall:Z
 
-    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lud8;
+    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lek8;
 
-    invoke-direct {v5, v6, v7}, Ler0;-><init>(ZLud8;)V
+    invoke-direct {v5, v6, v7}, Lbs0;-><init>(ZLek8;)V
 
-    new-instance v6, Ler0;
+    new-instance v6, Lbs0;
 
     iget-boolean v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isMediaAdaptationFeatureEnabledForGroupCall:Z
 
-    iget-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lud8;
+    iget-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lek8;
 
-    invoke-direct {v6, v7, v8}, Ler0;-><init>(ZLud8;)V
+    invoke-direct {v6, v7, v8}, Lbs0;-><init>(ZLek8;)V
 
-    const/4 v7, 0x7
+    const/4 v7, 0x5
 
     const/4 v8, 0x0
 
-    invoke-direct {v2, v5, v6, v8, v7}, Lw98;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    invoke-direct {v2, v5, v6, v8, v7}, Lo0f;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
     move-object/from16 v21, v2
 
-    new-instance v2, Lxg1;
+    new-instance v2, Lyh1;
 
     iget-boolean v5, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->dnsResolverEnabled:Z
 
@@ -159,17 +159,13 @@
 
     iget-boolean v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isDeviceAudioShareEnabled:Z
 
-    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Luf0;
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Lfg0;
 
     move-object/from16 v28, v0
 
     move/from16 v27, v1
 
-    invoke-direct/range {v2 .. v28}, Lxg1;-><init>(Lug1;Lwg1;ZZZZLjava/util/List;ZZIZZZZ[Ljava/lang/String;[Ljava/lang/String;ZZLw98;ZLvg1;ZZZZLuf0;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, v2, Lxg1;->e:Z
+    invoke-direct/range {v2 .. v28}, Lyh1;-><init>(Lvh1;Lxh1;ZZZZLjava/util/List;ZZIZZZZ[Ljava/lang/String;[Ljava/lang/String;ZZLo0f;ZLwh1;ZZZZLfg0;)V
 
     return-object v2
 .end method

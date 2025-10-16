@@ -1,268 +1,144 @@
-.class public final Lzta;
+.class public final synthetic Lzta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lzta;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Loh6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lcua;
 
-.field public final c:I
+.field public final synthetic c:Lif5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqg8;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
-
-    sput-object v0, Lzta;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
+.method public synthetic constructor <init>(Lcua;Lif5;I)V
     .locals 0
 
-    .line 1
+    iput p3, p0, Lzta;->a:I
+
+    iput-object p1, p0, Lzta;->b:Lcua;
+
+    iput-object p2, p0, Lzta;->c:Lif5;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lzta;->a:I
-
-    .line 3
-    iput p2, p0, Lzta;->b:I
-
-    .line 4
-    iput p3, p0, Lzta;->c:I
-
     return-void
-.end method
-
-.method public synthetic constructor <init>(IIII)V
-    .locals 2
-
-    and-int/lit8 v0, p4, 0x1
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x2
-
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    move p2, v1
-
-    :cond_1
-    and-int/lit8 p4, p4, 0x4
-
-    if-eqz p4, :cond_2
-
-    move p3, v1
-
-    .line 5
-    :cond_2
-    invoke-direct {p0, p1, p2, p3}, Lzta;-><init>(III)V
-
-    return-void
-.end method
-
-.method public static a(Lzta;IIII)Lzta;
-    .locals 1
-
-    and-int/lit8 v0, p4, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget p1, p0, Lzta;->a:I
-
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
-
-    if-eqz v0, :cond_1
-
-    iget p2, p0, Lzta;->b:I
-
-    :cond_1
-    and-int/lit8 p4, p4, 0x4
-
-    if-eqz p4, :cond_2
-
-    iget p3, p0, Lzta;->c:I
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lzta;
-
-    invoke-direct {p0, p1, p2, p3}, Lzta;-><init>(III)V
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzta;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzta;
-
-    iget v1, p0, Lzta;->a:I
-
-    iget v3, p1, Lzta;->a:I
-
-    if-ne v1, v3, :cond_4
-
-    iget v1, p0, Lzta;->b:I
-
-    iget v3, p1, Lzta;->b:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lzta;->c:I
-
-    iget p1, p1, Lzta;->c:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-
-    :cond_4
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lzta;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lzta;->b:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lzta;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final invoke()Ljava/lang/Object;
     .locals 6
 
     iget v0, p0, Lzta;->a:I
 
-    const-string v1, "ContainerGravity(value="
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, ")"
+    iget-object v0, p0, Lzta;->b:Lcua;
 
-    invoke-static {v0, v1, v2}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lcua;->d()Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, ", topMargin="
+    iget-object v2, p0, Lzta;->c:Lif5;
 
-    const-string v3, ", bottomMargin="
+    iget-object v2, v2, Lif5;->a:Ljava/lang/String;
 
-    iget v4, p0, Lzta;->b:I
-
-    const-string v5, "ContainerParams(gravity="
-
-    invoke-static {v4, v5, v0, v1, v3}, Lsab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lzta;->c:I
-
-    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcua;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v0
 
     return-object v0
-.end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lzta;->b:Lcua;
 
-    iget p2, p0, Lzta;->a:I
+    invoke-virtual {v0}, Lcua;->a()Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v1
 
-    iget p2, p0, Lzta;->b:I
+    iget-object v2, p0, Lzta;->c:Lif5;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v2, v2, Lif5;->a:Ljava/lang/String;
 
-    iget p2, p0, Lzta;->c:I
+    invoke-virtual {v0, v1, v2}, Lcua;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v0
 
-    return-void
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lzta;->b:Lcua;
+
+    invoke-virtual {v0}, Lcua;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lzta;->c:Lif5;
+
+    iget-object v2, v2, Lif5;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lcua;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lzta;->b:Lcua;
+
+    invoke-virtual {v0}, Lcua;->b()Lyta;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lzta;->c:Lif5;
+
+    iget v3, v2, Lif5;->b:I
+
+    iget v2, v2, Lif5;->g:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v4, Lyu5;
+
+    iget-object v1, v1, Lyta;->a:Lq8c;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v5, "OneMeScheduler"
+
+    invoke-virtual {v1, v5, v2}, Lq8c;->p(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
+
+    move-result-object v1
+
+    invoke-direct {v4, v3, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+
+    const-class v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-virtual {v1, v4}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-virtual {v0, v1, v5}, Lcua;->j(Ljava/util/concurrent/ScheduledExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

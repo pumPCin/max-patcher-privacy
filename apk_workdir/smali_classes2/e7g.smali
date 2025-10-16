@@ -1,65 +1,100 @@
-.class public final Le7g;
+.class public final synthetic Le7g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqf4;
 
-# static fields
-.field public static final a:Landroid/util/LruCache;
+
+# instance fields
+.field public final synthetic X:I
+
+.field public final synthetic Y:I
+
+.field public final synthetic Z:I
+
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+    .locals 0
 
-    new-instance v0, Landroid/util/LruCache;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x3e8
+    iput-object p1, p0, Le7g;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+    iput-object p2, p0, Le7g;->b:Ljava/lang/String;
 
-    sput-object v0, Le7g;->a:Landroid/util/LruCache;
+    iput-object p3, p0, Le7g;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Le7g;->o:Ljava/lang/String;
+
+    iput p5, p0, Le7g;->X:I
+
+    iput p6, p0, Le7g;->Y:I
+
+    iput p7, p0, Le7g;->Z:I
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Lc7g;
-    .locals 7
 
-    sget-object v0, Le7g;->a:Landroid/util/LruCache;
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    move-result-object v1
+    new-instance v1, Lti7;
 
-    check-cast v1, Ld7g;
+    new-instance v2, Lsi7;
+
+    const-wide/16 v5, 0x0
+
+    const/16 v4, 0xe
+
+    const/4 v3, 0x0
+
+    iget-object v7, p0, Le7g;->c:Ljava/lang/String;
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v2 .. v8}, Lsi7;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
+
+    new-instance v6, Lz5g;
+
+    iget v3, p0, Le7g;->X:I
+
+    iget v4, p0, Le7g;->Y:I
+
+    iget v5, p0, Le7g;->Z:I
+
+    invoke-direct {v6, v3, v4, v5}, Lz5g;-><init>(III)V
+
+    const/4 v7, 0x1
+
+    move-object v4, v2
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_0
+    iget-object v3, p0, Le7g;->b:Ljava/lang/String;
 
-    return-object v2
+    iget-object v5, p0, Le7g;->o:Ljava/lang/String;
 
-    :cond_0
-    iget-wide v3, v1, Ld7g;->b:J
+    invoke-direct/range {v1 .. v7}, Lti7;-><init>(Ljava/lang/String;Ljava/lang/String;Lsi7;Ljava/lang/String;Lz5g;I)V
 
-    const-wide/32 v5, 0x36ee80
+    const-string v2, "AUTH"
 
-    add-long/2addr v3, v5
+    iget-object v3, p0, Le7g;->a:Ljava/lang/String;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-direct {v0, v2, v3, v1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lti7;)V
 
-    move-result-wide v5
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_1
-
-    iget-object p0, v1, Ld7g;->a:Lc7g;
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v2
+    return-object v0
 .end method

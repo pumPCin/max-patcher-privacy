@@ -2,102 +2,128 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxgb;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lwgb;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Lt6e;
-
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Liv0;Le7f;)V
+.method static constructor <clinit>()V
     .locals 2
+
+    new-instance v0, Lv2b;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
+
+    sput-object v0, Lwgb;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lu6e;->b(III)Lt6e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwgb;->a:Lt6e;
-
-    check-cast p2, Lmka;
-
-    invoke-virtual {p2}, Lmka;->c()Lz68;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lwgb;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Liv0;->d(Ljava/lang/Object;)V
+    iput p1, p0, Lwgb;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lv23;)V
-    .locals 4
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v0, Lrr9;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Lrr9;-><init>(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object p1, p1, Lv23;->b:Ljava/util/Collection;
+    const/4 v0, 0x1
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Number;
-
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lrr9;->a(J)Z
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Lwgd;
+    instance-of v1, p1, Lwgb;
 
-    const/16 v0, 0xf
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Lwgd;-><init>(I)V
+    if-nez v1, :cond_1
 
-    new-instance v0, Lvgb;
+    return v2
 
-    invoke-direct {v0, p0, p1, v1}, Lvgb;-><init>(Lwgb;Lwgd;Lkotlin/coroutines/Continuation;)V
+    :cond_1
+    check-cast p1, Lwgb;
 
-    const/4 p1, 0x3
+    iget v1, p0, Lwgb;->a:I
 
-    iget-object v2, p0, Lwgb;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iget p1, p1, Lwgb;->a:I
 
-    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lwgb;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Lottie(rawResId="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lwgb;->a:I
+
+    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lwgb;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

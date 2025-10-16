@@ -1,48 +1,37 @@
-.class public final Lcs4;
-.super Lwy3;
+.class public abstract Lcs4;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Ly03;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static volatile a:Lx85;
 
 
 # direct methods
-.method public constructor <init>(Ly03;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lcs4;->Y:Ly03;
+    sget-object v0, Lcic;->c:Lcic;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {}, Ldmi;->a()Lst4;
+
+    move-result-object v1
+
+    new-instance v2, Lxj0;
+
+    const/16 v3, 0xa
+
+    invoke-direct {v2, v3}, Lxj0;-><init>(I)V
+
+    iget-object v0, v0, Lcic;->a:Ljy;
+
+    new-instance v3, Lbic;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v4, v2}, Lbic;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1, v3}, Ljy;->g(Ljava/util/concurrent/Executor;Lvga;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lcs4;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lcs4;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcs4;->X:I
-
-    iget-object p1, p0, Lcs4;->Y:Ly03;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ly03;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

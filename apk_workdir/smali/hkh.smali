@@ -1,58 +1,44 @@
-.class public abstract Lhkh;
-.super Lodh;
+.class public final Lhkh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnkh;
+.implements Ljava/lang/Comparable;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Lzjh;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(ILzjh;)V
+    .locals 0
 
-    const-string v0, "com.google.android.gms.location.internal.IFusedLocationProviderCallback"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x5
+    iput p1, p0, Lhkh;->a:I
 
-    invoke-direct {p0, v0, v1}, Lodh;-><init>(Ljava/lang/String;I)V
+    iput-object p2, p0, Lhkh;->b:Lzjh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b0(Landroid/os/Parcel;I)Z
+.method public final compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    const/4 v0, 0x1
+    check-cast p1, Lhkh;
 
-    if-eq p2, v0, :cond_1
+    iget v0, p0, Lhkh;->a:I
 
-    const/4 p1, 0x2
+    iget p1, p1, Lhkh;->a:I
 
-    if-eq p2, p1, :cond_0
+    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
 
-    const/4 p1, 0x0
+    move-result p1
 
     return p1
-
-    :cond_0
-    invoke-interface {p0}, Lnkh;->G()V
-
-    return v0
-
-    :cond_1
-    sget-object p2, Lnjh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p1, p2}, Lngh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p2
-
-    check-cast p2, Lnjh;
-
-    invoke-static {p1}, Lngh;->c(Landroid/os/Parcel;)V
-
-    invoke-interface {p0, p2}, Lnkh;->h(Lnjh;)V
-
-    return v0
 .end method

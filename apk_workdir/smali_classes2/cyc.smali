@@ -1,84 +1,75 @@
 .class public final Lcyc;
-.super Ly7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic a:Ldyc;
+
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ldyc;Landroid/view/View;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lcyc;->c:J
+    iput-object p1, p0, Lcyc;->a:Ldyc;
+
+    iput-object p2, p0, Lcyc;->b:Landroid/view/View;
+
+    iput-wide p3, p0, Lcyc;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lcyc;->a:Ldyc;
 
-    return v0
+    iget-object p2, p1, Ldyc;->c:Lsn7;
+
+    iget-object p2, p2, Lsn7;->b:Ljava/lang/Object;
+
+    check-cast p2, Landroid/view/View;
+
+    sget-object p3, Lone/me/messages/list/ui/MessagesListWidget;->e1:[Lwq7;
+
+    iget-object p3, p0, Lcyc;->b:Landroid/view/View;
+
+    if-nez p3, :cond_0
+
+    const/4 p2, 0x0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lcyc;
+    invoke-static {p3, p2}, Lo0h;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
 
-    const/4 v2, 0x0
+    move-result-object p2
 
-    if-nez v1, :cond_1
+    :goto_0
+    if-nez p2, :cond_1
 
-    return v2
+    return-void
 
     :cond_1
-    check-cast p1, Lcyc;
+    iget-object p1, p1, Ldyc;->b:Ljxc;
 
-    iget-wide v3, p0, Lcyc;->c:J
+    iget-wide p3, p0, Lcyc;->c:J
 
-    iget-wide v5, p1, Lcyc;->c:J
+    invoke-virtual {p1, p3, p4, p2}, Ljxc;->d(JLandroid/graphics/Rect;)V
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lcyc;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Response(timestampRemoveProfile="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lcyc;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -4,5 +4,20 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public r()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public x()V
+    .locals 0
+
+    return-void
 .end method

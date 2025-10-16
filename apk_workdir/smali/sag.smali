@@ -1,97 +1,80 @@
 .class public final Lsag;
-.super Ljava/lang/Object;
+.super Lv44;
 .source "SourceFile"
 
-# interfaces
-.implements Luag;
 
-
-# instance fields
-.field public final a:F
+# static fields
+.field public static final a:Lsag;
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsag;
 
-    iput p1, p0, Lsag;->a:F
+    invoke-direct {v0}, Lv44;-><init>()V
+
+    sput-object v0, Lsag;->a:Lsag;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final dispatch(Lt44;Ljava/lang/Runnable;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    sget-object p2, Lxph;->b:Ljfa;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {p1, p2}, Lt44;->get(Ls44;)Lr44;
 
-    return v0
+    move-result-object p1
+
+    check-cast p1, Lxph;
+
+    if-eqz p1, :cond_0
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p1, Lxph;->a:Z
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lsag;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v2, 0x0
+    const-string p2, "Dispatchers.Unconfined.dispatch function can only be used by the yield function. If you wrap Unconfined dispatcher in your code, make sure you properly delegate isDispatchNeeded and dispatch calls."
 
-    if-nez v1, :cond_1
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lsag;
-
-    iget v1, p0, Lsag;->a:F
-
-    iget p1, p1, Lsag;->a:F
-
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    throw p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final isDispatchNeeded(Lt44;)Z
+    .locals 0
 
-    iget v0, p0, Lsag;->a:F
+    const/4 p1, 0x0
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+    return p1
+.end method
 
-    move-result v0
+.method public final limitedParallelism(ILjava/lang/String;)Lv44;
+    .locals 0
 
-    return v0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "limitedParallelism is not supported for Dispatchers.Unconfined"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SeekProgress(progress="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lsag;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Dispatchers.Unconfined"
 
     return-object v0
 .end method

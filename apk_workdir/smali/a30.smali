@@ -1,147 +1,211 @@
-.class public final synthetic La30;
+.class public final La30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final c:La30;
+
+.field public static final d:La30;
+
+.field public static final e:[I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:[I
 
-.field public final synthetic b:Ljava/lang/Runnable;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, La30;->a:I
+    new-instance v0, La30;
 
-    iput-object p1, p0, La30;->b:Ljava/lang/Runnable;
+    const/4 v1, 0x2
+
+    filled-new-array {v1}, [I
+
+    move-result-object v2
+
+    const/16 v3, 0x8
+
+    invoke-direct {v0, v3, v2}, La30;-><init>(I[I)V
+
+    sput-object v0, La30;->c:La30;
+
+    new-instance v0, La30;
+
+    const/4 v2, 0x5
+
+    const/4 v4, 0x6
+
+    filled-new-array {v1, v2, v4}, [I
+
+    move-result-object v1
+
+    invoke-direct {v0, v3, v1}, La30;-><init>(I[I)V
+
+    sput-object v0, La30;->d:La30;
+
+    const/4 v0, 0x7
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, La30;->e:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x5
+        0x6
+        0x12
+        0x11
+        0xe
+        0x7
+        0x8
+    .end array-data
+.end method
+
+.method public constructor <init>(I[I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p2, :cond_0
+
+    array-length v0, p2
+
+    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object p2
+
+    iput-object p2, p0, La30;->a:[I
+
+    invoke-static {p2}, Ljava/util/Arrays;->sort([I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    new-array p2, p2, [I
+
+    iput-object p2, p0, La30;->a:[I
+
+    :goto_0
+    iput p1, p0, La30;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, La30;->a:I
+    const/4 v0, 0x1
 
-    const-string v1, "failed to execute fresco task"
+    if-ne p0, p1, :cond_0
 
-    const-string v2, "Fresco"
+    return v0
 
-    iget-object v3, p0, La30;->b:Ljava/lang/Runnable;
+    :cond_0
+    instance-of v1, p1, La30;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v2, 0x0
 
-    invoke-static {v3}, Lcmf;->a(Ljava/lang/Runnable;)V
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
 
-    :pswitch_0
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
+    :cond_1
+    check-cast p1, La30;
 
-    invoke-static {v3}, Lde;->d(Ljava/lang/Runnable;)V
+    iget-object v1, p0, La30;->a:[I
 
-    return-void
+    iget-object v3, p1, La30;->a:[I
 
-    :pswitch_1
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
+    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([I[I)Z
 
-    invoke-static {v3}, Lde;->d(Ljava/lang/Runnable;)V
+    move-result v1
 
-    return-void
+    if-eqz v1, :cond_2
 
-    :pswitch_2
-    :try_start_0
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+    iget v1, p0, La30;->b:I
 
-    goto :goto_0
+    iget p1, p1, La30;->b:I
 
-    :catch_0
-    move-exception v0
+    if-ne v1, p1, :cond_2
 
-    invoke-static {v2, v1, v0}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v0
 
-    :goto_0
-    return-void
+    :cond_2
+    return v2
+.end method
 
-    :catch_1
-    move-exception v0
+.method public final hashCode()I
+    .locals 2
 
-    throw v0
+    iget-object v0, p0, La30;->a:[I
 
-    :pswitch_3
-    :try_start_1
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
-    goto :goto_1
+    move-result v0
 
-    :catch_2
-    move-exception v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v2, v1, v0}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v1, p0, La30;->b:I
 
-    :goto_1
-    return-void
+    add-int/2addr v0, v1
 
-    :catch_3
-    move-exception v0
+    return v0
+.end method
 
-    throw v0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :pswitch_4
-    :try_start_2
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_5
-    .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_4
+    iget-object v0, p0, La30;->a:[I
 
-    goto :goto_2
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    :catch_4
-    move-exception v0
+    move-result-object v0
 
-    invoke-static {v2, v1, v0}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/16 v1, 0x43
 
-    :goto_2
-    return-void
+    invoke-static {v1, v0}, Ld15;->e(ILjava/lang/String;)I
 
-    :catch_5
-    move-exception v0
+    move-result v1
 
-    throw v0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    :pswitch_5
-    const/16 v0, -0x10
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+    const-string v1, "AudioCapabilities[maxChannelCount="
 
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget v1, p0, La30;->b:I
 
-    nop
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v1, ", supportedEncodings="
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

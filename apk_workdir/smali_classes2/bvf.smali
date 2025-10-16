@@ -1,48 +1,100 @@
-.class public final Lbvf;
-.super Lwy3;
+.class public final synthetic Lbvf;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loh6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lmz9;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lvvf;
 
 
 # direct methods
-.method public constructor <init>(Lmz9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lvvf;I)V
     .locals 0
 
-    iput-object p1, p0, Lbvf;->Y:Lmz9;
+    iput p2, p0, Lbvf;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbvf;->b:Lvvf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lbvf;->o:Ljava/lang/Object;
+    iget v0, p0, Lbvf;->a:I
 
-    iget p1, p0, Lbvf;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lbvf;->b:Lvvf;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lvvf;->a:Ljavax/net/ssl/SSLEngine;
 
-    iput p1, p0, Lbvf;->X:I
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
 
-    iget-object p1, p0, Lbvf;->Y:Lmz9;
+    move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    sget-object v0, Lzag;->a:Lzag;
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lmz9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    return-object v0
 
-    move-result-object p1
+    :pswitch_0
+    iget-object v0, p0, Lbvf;->b:Lvvf;
 
-    return-object p1
+    iget-object v0, v0, Lvvf;->a:Ljavax/net/ssl/SSLEngine;
+
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->beginHandshake()V
+
+    sget-object v0, Lzag;->a:Lzag;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lbvf;->b:Lvvf;
+
+    iget-object v0, v0, Lvvf;->a:Ljavax/net/ssl/SSLEngine;
+
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    sget-object v0, Lzag;->a:Lzag;
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

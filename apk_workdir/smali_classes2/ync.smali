@@ -1,408 +1,146 @@
-.class public final Lync;
-.super Ljvc;
-.source "SourceFile"
+.class public abstract Lync;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
+# static fields
+.field public static oneme_settings_privacy_black_list_empty_state:I = 0x7f0a07b6
 
-.field public final b:Lenc;
+.field public static oneme_settings_privacy_black_list_rv:I = 0x7f0a07b7
 
-.field public final c:Lpf7;
+.field public static oneme_settings_privacy_black_list_toolbar:I = 0x7f0a07b8
 
-.field public final d:Ljava/lang/String;
+.field public static oneme_settings_privacy_black_list_unblock_action:I = 0x7f0a07b9
 
-.field public final e:Ljava/util/LinkedHashSet;
+.field public static oneme_settings_privacy_black_list_unblock_cancel_action:I = 0x7f0a07ba
 
-.field public final f:Ljava/util/LinkedList;
+.field public static oneme_settings_privacy_content_level_access:I = 0x7f0a07bb
 
-.field public g:Z
+.field public static oneme_settings_privacy_enter_pin_code_root:I = 0x7f0a07bc
 
+.field public static oneme_settings_privacy_info_header:I = 0x7f0a07bd
 
-# direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lenc;Lpf7;)V
-    .locals 0
+.field public static oneme_settings_privacy_onboarding_content:I = 0x7f0a07be
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f0a07bf
 
-    iput-object p1, p0, Lync;->a:Landroidx/recyclerview/widget/RecyclerView;
+.field public static oneme_settings_privacy_onboarding_content_title:I = 0x7f0a07c0
 
-    iput-object p2, p0, Lync;->b:Lenc;
+.field public static oneme_settings_privacy_onboarding_item_1:I = 0x7f0a07c1
 
-    iput-object p3, p0, Lync;->c:Lpf7;
+.field public static oneme_settings_privacy_onboarding_item_2:I = 0x7f0a07c2
 
-    const-class p1, Lync;
+.field public static oneme_settings_privacy_onboarding_item_3:I = 0x7f0a07c3
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+.field public static oneme_settings_privacy_onboarding_item_4:I = 0x7f0a07c4
 
-    move-result-object p1
+.field public static oneme_settings_privacy_onboarding_lock:I = 0x7f0a07c5
 
-    iput-object p1, p0, Lync;->d:Ljava/lang/String;
+.field public static oneme_settings_privacy_onboarding_lock_background:I = 0x7f0a07c6
 
-    new-instance p1, Ljava/util/LinkedHashSet;
+.field public static oneme_settings_privacy_onboarding_root:I = 0x7f0a07c7
 
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+.field public static oneme_settings_privacy_onboarding_scroll_view:I = 0x7f0a07c8
 
-    iput-object p1, p0, Lync;->e:Ljava/util/LinkedHashSet;
+.field public static oneme_settings_privacy_onboarding_set_password_button:I = 0x7f0a07c9
 
-    new-instance p1, Ljava/util/LinkedList;
+.field public static oneme_settings_privacy_onboarding_set_pin_code_button:I = 0x7f0a07ca
 
-    invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
+.field public static oneme_settings_privacy_onboarding_toolbar:I = 0x7f0a07cb
 
-    iput-object p1, p0, Lync;->f:Ljava/util/LinkedList;
+.field public static oneme_settings_privacy_onboarding_top_guideline:I = 0x7f0a07cc
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_onboarding_without_code_button:I = 0x7f0a07cd
 
-.method public static final c(Lync;Ljava/lang/String;JLandroid/graphics/Rect;)V
-    .locals 14
+.field public static oneme_settings_privacy_pin_code_toolbar:I = 0x7f0a07ce
 
-    move-wide/from16 v0, p2
+.field public static oneme_settings_privacy_safe_files:I = 0x7f0a07cf
 
-    iget-object v2, p0, Lync;->d:Ljava/lang/String;
+.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f0a07d0
 
-    sget-object v3, Lyt3;->n:Lhoa;
+.field public static oneme_settings_privacy_screen_black_list:I = 0x7f0a07d1
 
-    if-nez v3, :cond_0
+.field public static oneme_settings_privacy_screen_blacklist:I = 0x7f0a07d2
 
-    goto :goto_0
+.field public static oneme_settings_privacy_screen_call_me:I = 0x7f0a07d3
 
-    :cond_0
-    sget-object v4, Lr28;->o:Lr28;
+.field public static oneme_settings_privacy_screen_dialog_add_chat_button_all:I = 0x7f0a07d4
 
-    invoke-virtual {v3, v4}, Lhoa;->b(Lr28;)Z
+.field public static oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I = 0x7f0a07d5
 
-    move-result v5
+.field public static oneme_settings_privacy_screen_dialog_call_button_all:I = 0x7f0a07d6
 
-    if-eqz v5, :cond_1
+.field public static oneme_settings_privacy_screen_dialog_call_button_contacts:I = 0x7f0a07d7
 
-    const-string v5, "Play message "
+.field public static oneme_settings_privacy_screen_dialog_content_level_access_all:I = 0x7f0a07d8
 
-    invoke-static {v0, v1, v5}, Ln29;->g(JLjava/lang/String;)Ljava/lang/String;
+.field public static oneme_settings_privacy_screen_dialog_content_level_access_safe:I = 0x7f0a07d9
 
-    move-result-object v5
+.field public static oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I = 0x7f0a07da
 
-    const/4 v6, 0x0
+.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f0a07db
 
-    invoke-virtual {v3, v4, v2, v5, v6}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.field public static oneme_settings_privacy_screen_dialog_online_button_contacts:I = 0x7f0a07dc
 
-    :cond_1
-    :goto_0
-    sget-object v2, Lone/me/rlottie/RLottieFactory;->INSTANCE:Lone/me/rlottie/RLottieFactory;
+.field public static oneme_settings_privacy_screen_dialog_online_button_nobody:I = 0x7f0a07dd
 
-    sget-object v2, Lnnc;->b:Landroid/util/Size;
+.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f0a07de
 
-    invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
+.field public static oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I = 0x7f0a07df
 
-    move-result v2
+.field public static oneme_settings_privacy_screen_dialog_safe_file_no_btn:I = 0x7f0a07e0
 
-    int-to-float v2, v2
+.field public static oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I = 0x7f0a07e1
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+.field public static oneme_settings_privacy_screen_dialog_search_by_phone_all:I = 0x7f0a07e2
 
-    move-result-object v3
+.field public static oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I = 0x7f0a07e3
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static oneme_settings_privacy_screen_finished_sessions:I = 0x7f0a07e4
 
-    move-result-object v3
+.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f0a07e5
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+.field public static oneme_settings_privacy_screen_how_session:I = 0x7f0a07e6
 
-    mul-float/2addr v2, v3
+.field public static oneme_settings_privacy_screen_list:I = 0x7f0a07e7
 
-    invoke-static {v2}, Li8e;->I(F)I
+.field public static oneme_settings_privacy_screen_online_state_all:I = 0x7f0a07e8
 
-    move-result v4
+.field public static oneme_settings_privacy_screen_online_state_nobody:I = 0x7f0a07e9
 
-    sget-object v2, Lnnc;->b:Landroid/util/Size;
+.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f0a07ea
 
-    invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
+.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f0a07eb
 
-    move-result v2
+.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f0a07ec
 
-    int-to-float v2, v2
+.field public static oneme_settings_privacy_screen_settings_header_vh:I = 0x7f0a07ed
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+.field public static oneme_settings_privacy_screen_settings_item_vh:I = 0x7f0a07ee
 
-    move-result-object v3
+.field public static oneme_settings_privacy_screen_settings_warning_vh:I = 0x7f0a07ef
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static oneme_settings_privacy_screen_toolbar:I = 0x7f0a07f0
 
-    move-result-object v3
+.field public static oneme_settings_privacy_screen_twofa:I = 0x7f0a07f1
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+.field public static oneme_settings_privacy_screen_twofa_profile_delete:I = 0x7f0a07f2
 
-    mul-float/2addr v2, v3
+.field public static oneme_settings_privacy_screen_twofa_warning_item:I = 0x7f0a07f3
 
-    invoke-static {v2}, Li8e;->I(F)I
+.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f0a07f4
 
-    move-result v5
+.field public static oneme_settings_privacy_setup_pin_code_description:I = 0x7f0a07f5
 
-    const/16 v12, 0x48
+.field public static oneme_settings_privacy_setup_pin_code_error:I = 0x7f0a07f6
 
-    const/4 v13, 0x0
+.field public static oneme_settings_privacy_setup_pin_code_forgot:I = 0x7f0a07f7
 
-    const/4 v6, 0x0
+.field public static oneme_settings_privacy_setup_pin_code_input:I = 0x7f0a07f8
 
-    const/4 v7, 0x0
+.field public static oneme_settings_privacy_setup_pin_code_lock:I = 0x7f0a07f9
 
-    const/4 v8, 0x1
+.field public static oneme_settings_privacy_setup_pin_code_root_view:I = 0x7f0a07fa
 
-    const/4 v9, 0x0
+.field public static oneme_settings_privacy_setup_pin_code_title:I = 0x7f0a07fb
 
-    const/4 v10, 0x1
-
-    const/4 v11, 0x0
-
-    move-object v3, p1
-
-    invoke-static/range {v3 .. v13}, Lone/me/rlottie/RLottieFactory;->createByUrl$default(Ljava/lang/String;IIZZZZZZILjava/lang/Object;)Lone/me/rlottie/RLottieDrawable;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Lone/me/rlottie/RLottieDrawable;->setAutoRepeat(I)V
-
-    iget-object p0, p0, Lync;->b:Lenc;
-
-    move-object/from16 v3, p4
-
-    invoke-virtual {p0, v0, v1, v2, v3}, Lenc;->a(JLone/me/rlottie/RLottieDrawable;Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 0
-
-    iget-object p2, p0, Lync;->b:Lenc;
-
-    neg-int p3, p3
-
-    invoke-virtual {p2, p3}, Lenc;->setScrollOffset(I)V
-
-    iget-boolean p2, p0, Lync;->g:Z
-
-    const/4 p3, 0x0
-
-    if-eqz p2, :cond_0
-
-    iput-boolean p3, p0, Lync;->g:Z
-
-    new-instance p2, Lum7;
-
-    const/16 p3, 0x11
-
-    invoke-direct {p2, p3, p1, p0}, Lum7;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
-
-    invoke-static {p1, p2}, Lwxa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lwxa;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p3}, Lync;->f(Z)V
-
-    return-void
-.end method
-
-.method public final d(JLrmc;Ljava/lang/String;)V
-    .locals 5
-
-    iget-object v0, p0, Lync;->d:Ljava/lang/String;
-
-    sget-object v1, Lyt3;->n:Lhoa;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v2, Lr28;->o:Lr28;
-
-    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Add reaction effect, reaction:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lync;->e:Ljava/util/LinkedHashSet;
-
-    new-instance v1, Lunc;
-
-    invoke-direct {v1, p1, p2, p3, p4}, Lunc;-><init>(JLrmc;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final e(I)Z
-    .locals 3
-
-    iget-object v0, p0, Lync;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-static {v0}, Lfn7;->x(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object v1
-
-    const/4 v2, -0x1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    invoke-static {v0}, Lfn7;->x(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v2
-
-    :goto_1
-    if-eq p1, v2, :cond_2
-
-    if-gt v1, p1, :cond_2
-
-    if-gt p1, v0, :cond_2
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final f(Z)V
-    .locals 10
-
-    iget-object v0, p0, Lync;->f:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->peek()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Long;
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v6
-
-    iget-object v2, p0, Lync;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v6, v7}, Landroidx/recyclerview/widget/RecyclerView;->N(J)Luvc;
-
-    move-result-object v5
-
-    if-nez v5, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v2, p0, Lync;->e:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v4, v3
-
-    check-cast v4, Lunc;
-
-    iget-wide v8, v4, Lunc;->a:J
-
-    cmp-long v4, v8, v6
-
-    if-nez v4, :cond_1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v3, 0x0
-
-    :goto_0
-    move-object v8, v3
-
-    check-cast v8, Lunc;
-
-    if-nez v8, :cond_3
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_3
-    new-instance v2, Lwnc;
-
-    iget-object v3, p0, Lync;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    move-object v4, p0
-
-    move v9, p1
-
-    invoke-direct/range {v2 .. v9}, Lwnc;-><init>(Landroid/view/View;Lync;Luvc;JLunc;Z)V
-
-    invoke-static {v3, v2}, Lwxa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lwxa;
-
-    :cond_4
-    :goto_1
-    return-void
-.end method
+.field public static top_barrier:I = 0x7f0a0c2a

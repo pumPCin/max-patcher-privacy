@@ -1,121 +1,84 @@
-.class public abstract Lzia;
-.super Ljava/lang/Object;
+.class public final Lzia;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+.implements Ler3;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lbja;
 
-.field public static final c:I
+.field public b:J
 
-.field public static final d:I
+.field public c:Z
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lbja;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lzia;->a:Lbja;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_content_level_item_view_type:I
+    check-cast p1, Lev4;
 
-    sput v0, Lzia;->a:I
+    invoke-static {p0, p1}, Liv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lev4;)Z
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_content_level_stub_view:I
+    iget-object p1, p0, Lzia;->a:Lbja;
 
-    sput v0, Lzia;->b:I
+    monitor-enter p1
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_info_panel_author_view:I
+    :try_start_0
+    iget-boolean v0, p0, Lzia;->o:Z
 
-    sput v0, Lzia;->c:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_info_panel_date_view:I
+    iget-object v0, p0, Lzia;->a:Lbja;
 
-    sput v0, Lzia;->d:I
+    iget-object v0, v0, Lbja;->a:Ldo3;
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_info_panel_forward_message_view:I
+    invoke-virtual {v0}, Ldo3;->v()V
 
-    sput v0, Lzia;->e:I
+    goto :goto_0
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_info_panel_view:I
+    :catchall_0
+    move-exception v0
 
-    sput v0, Lzia;->f:I
+    goto :goto_1
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_pager:I
+    :cond_0
+    :goto_0
+    monitor-exit p1
 
-    sput v0, Lzia;->g:I
+    return-void
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_photo_gif_view:I
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Lzia;->h:I
+    throw v0
+.end method
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_photo_item_view_type:I
+.method public final run()V
+    .locals 1
 
-    sput v0, Lzia;->i:I
+    iget-object v0, p0, Lzia;->a:Lbja;
 
-    sget v0, Lfcc;->oneme_chatmedia_viewer_photo_view:I
-
-    sput v0, Lzia;->j:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_toolbar:I
-
-    sput v0, Lzia;->k:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_toolbar_action_forward_attach:I
-
-    sput v0, Lzia;->l:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_toolbar_action_goto_message:I
-
-    sput v0, Lzia;->m:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_toolbar_action_share:I
-
-    sput v0, Lzia;->n:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_video_item_view_type:I
-
-    sput v0, Lzia;->o:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_video_preview_view:I
-
-    sput v0, Lzia;->p:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_video_view:I
-
-    sput v0, Lzia;->q:I
-
-    sget v0, Lfcc;->oneme_chatmedia_viewer_video_zoom_view:I
-
-    sput v0, Lzia;->r:I
+    invoke-virtual {v0, p0}, Lbja;->v(Lzia;)V
 
     return-void
 .end method

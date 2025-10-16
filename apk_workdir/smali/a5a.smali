@@ -1,48 +1,65 @@
 .class public final La5a;
-.super Ljava/lang/Object;
+.super Lfq3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# instance fields
-.field public final a:Lwxe;
 
 
 # direct methods
-.method public constructor <init>(Lwxe;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "NetworkMeteredCtrlr"
 
-    iput-object p1, p0, La5a;->a:Lwxe;
+    invoke-static {v0}, Lwxh;->k(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final a(Lgoh;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lgoh;->j:Lzq3;
 
-    const-string v1, "NotificationLite.Subscription["
+    iget p1, p1, Lzq3;->a:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x5
 
-    iget-object v1, p0, La5a;->a:Lwxe;
+    if-ne p1, v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x1
 
-    const-string v1, "]"
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return p1
+.end method
 
-    move-result-object v0
+.method public final b(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-object v0
+    check-cast p1, Lc5a;
+
+    iget-boolean v0, p1, Lc5a;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p1, p1, Lc5a;->c:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

@@ -1,231 +1,232 @@
 .class public final Lxtf;
-.super Lc2f;
+.super Landroid/os/Handler;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Lvve;
 
-.field public final synthetic Z:Lytf;
+.field public volatile c:J
+
+.field public volatile d:J
 
 
 # direct methods
-.method public constructor <init>(Lytf;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLvve;Landroid/os/Looper;)V
     .locals 0
 
-    iput-object p1, p0, Lxtf;->Z:Lytf;
+    if-nez p4, :cond_0
 
-    const/4 p1, 0x2
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object p4
+
+    if-nez p4, :cond_0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p4
+
+    :cond_0
+    invoke-direct {p0, p4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-wide p1, p0, Lxtf;->a:J
+
+    iput-object p3, p0, Lxtf;->b:Lvve;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lxtf;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()J
+    .locals 6
 
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxtf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxtf;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lxtf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lxtf;
-
-    iget-object v1, p0, Lxtf;->Z:Lytf;
-
-    invoke-direct {v0, v1, p2}, Lxtf;-><init>(Lytf;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lxtf;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    iget v1, p0, Lxtf;->X:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
+    monitor-enter p0
 
     :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-wide v0, p0, Lxtf;->c:J
+
+    iget-wide v2, p0, Lxtf;->d:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-lez v2, :cond_0
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lxtf;->d:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sub-long v4, v2, v4
 
     goto :goto_0
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
     goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :goto_0
+    add-long/2addr v0, v4
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    monitor-exit p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return-wide v0
 
-    throw p1
+    :goto_1
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final b()V
+    .locals 8
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-wide v0, p0, Lxtf;->d:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    monitor-exit p0
+
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxtf;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    iget-object p1, p0, Lxtf;->Z:Lytf;
-
     :try_start_1
-    iget-object p1, p1, Lytf;->c:Lyn7;
+    iget-wide v0, p0, Lxtf;->c:J
 
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-object p1
+    move-result-wide v4
 
-    check-cast p1, Lcl;
+    iget-wide v6, p0, Lxtf;->d:J
 
-    new-instance v1, Lzt;
+    sub-long/2addr v4, v6
 
-    invoke-direct {v1}, Lzt;-><init>()V
+    add-long/2addr v4, v0
 
-    iput v2, p0, Lxtf;->X:I
+    iput-wide v4, p0, Lxtf;->c:J
 
-    check-cast p1, Lgea;
+    iput-wide v2, p0, Lxtf;->d:J
 
-    invoke-virtual {p1, v1, p0}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Lz60;
+    invoke-virtual {p0, p0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_2
+    monitor-exit p0
 
-    :goto_1
-    new-instance v0, Lb2d;
+    return-void
 
-    invoke-direct {v0, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
+    :catchall_0
+    move-exception v0
 
-    move-object p1, v0
+    monitor-exit p0
 
-    :goto_2
-    iget-object v0, p0, Lxtf;->Z:Lytf;
+    throw v0
+.end method
 
-    instance-of v1, p1, Lb2d;
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 5
 
-    if-nez v1, :cond_3
+    iget-wide v0, p0, Lxtf;->d:J
 
-    move-object v1, p1
+    const-wide/16 v2, -0x1
 
-    check-cast v1, Lz60;
+    cmp-long v0, v0, v2
 
-    iget-object v0, v0, Lytf;->Y:Lya5;
+    if-eqz v0, :cond_1
 
-    sget-object v2, Lntf;->c:Lntf;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    iget-object v1, v1, Lz60;->c:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne v0, v1, :cond_1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    const-string v3, ":settings/privacy/creation-twofa?track_id="
+    if-ne p1, p0, :cond_1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lxtf;->b:Lvve;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lxtf;->a()J
 
-    const-string v1, "&src=settings"
+    move-result-wide v2
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lvve;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast p1, Ljava/util/LinkedHashSet;
 
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lnd0;->m(Ljava/lang/String;Lya5;)V
-
-    :cond_3
-    iget-object v0, p0, Lxtf;->Z:Lytf;
-
-    invoke-static {p1}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    if-eqz p1, :cond_4
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    instance-of v1, p1, Lru/ok/tamtam/errors/TamErrorException;
+    move-result v0
 
-    if-eqz v1, :cond_4
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lytf;->X:Lya5;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance v1, Lktf;
+    move-result-object v0
 
-    check-cast p1, Lru/ok/tamtam/errors/TamErrorException;
+    check-cast v0, Lil0;
 
-    iget-object p1, p1, Lru/ok/tamtam/errors/TamErrorException;->a:Li7f;
+    iget-object v0, v0, Lil0;->a:Lo6b;
 
-    invoke-static {p1}, Lbbh;->k(Li7f;)Lcdf;
+    iget-object v4, v0, Lll0;->c:Lvve;
+
+    iget-object v4, v4, Lvve;->c:Ljava/lang/Object;
+
+    check-cast v4, Lxtf;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, v2, v3}, Lll0;->b(J)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, v1, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    const/4 v2, 0x0
+    iget-wide v0, p0, Lxtf;->a:J
 
-    const/4 v3, 0x6
+    invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    invoke-direct {v1, v2, v3, p1}, Lktf;-><init>(IILcdf;)V
-
-    invoke-static {v0, v1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
-
-    :cond_4
-    iget-object p1, p0, Lxtf;->Z:Lytf;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lytf;->Z:Loke;
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    :cond_1
+    return-void
 .end method

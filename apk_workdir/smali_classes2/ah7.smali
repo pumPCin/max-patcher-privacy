@@ -1,56 +1,54 @@
-.class public final synthetic Lah7;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.class public final Lah7;
+.super Lk14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ljava/nio/ByteBuffer;
+.field public Y:Lby5;
+
+.field public final synthetic Z:Lbh7;
+
+.field public synthetic o:Ljava/lang/Object;
+
+.field public r0:Ljava/lang/Object;
+
+.field public s0:Landroid/os/Parcelable;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/nio/ByteBuffer;)V
+.method public constructor <init>(Lbh7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lah7;->a:I
+    iput-object p1, p0, Lah7;->Z:Lbh7;
 
-    iput-object p2, p0, Lah7;->b:Ljava/nio/ByteBuffer;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lah7;->a:I
+    iput-object p1, p0, Lah7;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lah7;->X:I
 
-    iget-object v0, p0, Lah7;->b:Ljava/nio/ByteBuffer;
+    const/high16 v0, -0x80000000
 
-    invoke-static {v0}, Lorg/webrtc/YuvConverter;->a(Ljava/nio/ByteBuffer;)V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lah7;->X:I
 
-    :pswitch_0
-    iget-object v0, p0, Lah7;->b:Ljava/nio/ByteBuffer;
+    iget-object p1, p0, Lah7;->Z:Lbh7;
 
-    invoke-static {v0}, Lorg/webrtc/JavaI420Buffer;->a(Ljava/nio/ByteBuffer;)V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Lbh7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    nop
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

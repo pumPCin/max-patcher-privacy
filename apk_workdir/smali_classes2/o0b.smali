@@ -1,47 +1,109 @@
-.class public abstract synthetic Lo0b;
+.class public abstract Lo0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    const/4 v0, 0x4
+    sget v0, Ltnc;->oneme_section_description:I
 
-    invoke-static {v0}, Lsw1;->y(I)[I
+    sput v0, Lo0b;->a:I
 
-    move-result-object v0
+    sget v0, Ltnc;->oneme_section_end_arrow:I
 
-    array-length v0, v0
+    sput v0, Lo0b;->b:I
 
-    new-array v0, v0, [I
+    sget v0, Ltnc;->oneme_section_end_container:I
 
-    const/4 v1, 0x1
+    sput v0, Lo0b;->c:I
 
-    const/4 v2, 0x0
+    sget v0, Ltnc;->oneme_section_end_custom_icon:I
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sput v0, Lo0b;->d:I
 
-    :catch_0
-    const/4 v1, 0x3
+    sget v0, Ltnc;->oneme_section_end_text:I
 
-    const/4 v2, 0x2
+    sput v0, Lo0b;->e:I
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sget v0, Ltnc;->oneme_section_start_icon:I
 
-    :catch_1
-    sput-object v0, Lo0b;->$EnumSwitchMapping$0:[I
+    sput v0, Lo0b;->f:I
+
+    sget v0, Ltnc;->oneme_section_title:I
+
+    sput v0, Lo0b;->g:I
+
+    sget v0, Ltnc;->oneme_section_upper_text:I
+
+    sput v0, Lo0b;->h:I
+
+    sget v0, Ltnc;->oneme_settings_itemcontent_container:I
+
+    sput v0, Lo0b;->i:I
+
+    sget v0, Ltnc;->oneme_settings_itemcontent_counter:I
+
+    sput v0, Lo0b;->j:I
+
+    sget v0, Ltnc;->oneme_settings_itemcontent_end_custom_icon:I
+
+    sput v0, Lo0b;->k:I
+
+    sget v0, Ltnc;->oneme_settings_itemcontent_end_icon:I
+
+    sput v0, Lo0b;->l:I
+
+    sget v0, Ltnc;->oneme_settings_itemcontent_end_radio:I
+
+    sput v0, Lo0b;->m:I
+
+    sget v0, Ltnc;->oneme_settings_itemcontent_end_switch:I
+
+    sput v0, Lo0b;->n:I
+
+    sget v0, Ltnc;->oneme_settings_itemcontent_end_text:I
+
+    sput v0, Lo0b;->o:I
+
+    sget v0, Ltnc;->oneme_settingslist_rv:I
+
+    sput v0, Lo0b;->p:I
 
     return-void
 .end method

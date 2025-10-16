@@ -1,8 +1,9 @@
-.class public abstract Lqcc;
+.class public final Lqcc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_file_download_warning_confirm:I = 0x7f0a0688
+# instance fields
+.field public volatile a:I
 
-.field public static oneme_file_download_warning_deny:I = 0x7f0a0689
+.field public volatile b:I

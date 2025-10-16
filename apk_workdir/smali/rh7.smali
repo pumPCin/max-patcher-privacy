@@ -1,111 +1,69 @@
 .class public abstract Lrh7;
-.super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lis4;
-.implements Ln87;
+
+# static fields
+.field public static final synthetic a:I
 
 
-# instance fields
-.field public a:Lgi7;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
+    new-instance v0, Liz9;
 
-# virtual methods
-.method public final b()Lm0a;
-    .locals 1
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract c()Z
-.end method
-
-.method public abstract d(Ljava/lang/Throwable;)V
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    iget-object v0, p0, Lrh7;->a:Lgi7;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v0, p0}, Lgi7;->removeNode$kotlinx_coroutines_core(Lrh7;)V
+    invoke-direct {v0, v1}, Liz9;-><init>(I)V
 
     return-void
 .end method
 
-.method public final isActive()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public static final a(III)Liz9;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Liz9;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Liz9;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/16 v1, 0x2000
 
-    move-result-object v1
+    invoke-virtual {v0, v1, p0}, Liz9;->e(II)V
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const/4 p0, 0x4
 
-    move-result-object v1
+    invoke-virtual {v0, p0, p1}, Liz9;->e(II)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 p0, 0x4000
 
-    const/16 v1, 0x40
+    invoke-virtual {v0, p0, p2}, Liz9;->e(II)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    invoke-static {p0}, Lzvd;->v(Ljava/lang/Object;)Ljava/lang/String;
+.method public static final b(IIIIIII)Liz9;
+    .locals 2
 
-    move-result-object v1
+    new-instance v0, Liz9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Liz9;-><init>()V
 
-    const-string v1, "[job@"
+    const/16 v1, 0x400
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, p0}, Liz9;->e(II)V
 
-    iget-object v1, p0, Lrh7;->a:Lgi7;
+    const/16 p0, 0x800
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, p0, p1}, Liz9;->e(II)V
 
-    goto :goto_0
+    invoke-virtual {v0, p2, p3}, Liz9;->e(II)V
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v0, p4, p5}, Liz9;->e(II)V
 
-    :goto_0
-    invoke-static {v1}, Lzvd;->v(Ljava/lang/Object;)Ljava/lang/String;
+    const/16 p0, 0x80
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v0, p0, p6}, Liz9;->e(II)V
 
     return-object v0
 .end method

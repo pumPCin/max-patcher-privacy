@@ -1,43 +1,25 @@
-.class public final Lk55;
+.class public abstract synthetic Lk55;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw45;
+
+# static fields
+.field public static final synthetic a:Lfd5;
 
 
-# virtual methods
-.method public final a(ILjava/lang/CharSequence;)Z
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 p1, 0x0
+    invoke-static {}, Lzgg;->values()[Lzgg;
 
-    return p1
-.end method
+    move-result-object v0
 
-.method public final c(Ljava/lang/CharSequence;)Ljava/util/List;
-    .locals 0
+    new-instance v1, Lfd5;
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
 
-    return-object p1
-.end method
+    sput-object v1, Lk55;->a:Lfd5;
 
-.method public final e(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-    .locals 0
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final g(Ljava/lang/CharSequence;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

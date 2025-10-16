@@ -1,313 +1,86 @@
-.class public final Ld19;
-.super Ljava/io/InputStream;
+.class public final synthetic Ld19;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldr3;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:I
 
-.field public final a:Lc17;
+.field public final synthetic b:Lvf6;
 
-.field public final b:Ljava/io/BufferedInputStream;
+.field public final synthetic c:Lm38;
 
-.field public c:[B
-
-.field public o:I
+.field public final synthetic o:Lus8;
 
 
 # direct methods
-.method public constructor <init>(Lc17;Ljava/io/BufferedInputStream;[BII)V
+.method public synthetic constructor <init>(Lvf6;Lm38;Lus8;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    iput p4, p0, Ld19;->a:I
 
-    iput-object p1, p0, Ld19;->a:Lc17;
+    iput-object p1, p0, Ld19;->b:Lvf6;
 
-    iput-object p2, p0, Ld19;->b:Ljava/io/BufferedInputStream;
+    iput-object p2, p0, Ld19;->c:Lm38;
 
-    iput-object p3, p0, Ld19;->c:[B
+    iput-object p3, p0, Ld19;->o:Lus8;
 
-    iput p4, p0, Ld19;->o:I
-
-    iput p5, p0, Ld19;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final available()I
-    .locals 2
-
-    iget-object v0, p0, Ld19;->c:[B
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ld19;->X:I
-
-    iget v1, p0, Ld19;->o:I
-
-    sub-int/2addr v0, v1
-
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final close()V
-    .locals 1
-
-    invoke-virtual {p0}, Ld19;->m()V
-
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    return-void
-.end method
-
-.method public final m()V
-    .locals 2
-
-    iget-object v0, p0, Ld19;->c:[B
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Ld19;->c:[B
-
-    iget-object v1, p0, Ld19;->a:Lc17;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v0}, Lc17;->a([B)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final mark(I)V
-    .locals 1
-
-    iget-object v0, p0, Ld19;->c:[B
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final markSupported()Z
-    .locals 1
-
-    iget-object v0, p0, Ld19;->c:[B
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final read()I
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Ld19;->c:[B
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    iget v1, p0, Ld19;->o:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Ld19;->o:I
-
-    aget-byte v0, v0, v1
-
-    and-int/lit16 v0, v0, 0xff
-
-    .line 3
-    iget v1, p0, Ld19;->X:I
-
-    if-lt v2, v1, :cond_0
-
-    .line 4
-    invoke-virtual {p0}, Ld19;->m()V
-
-    :cond_0
-    return v0
-
-    .line 5
-    :cond_1
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final read([B)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    .line 6
-    array-length v1, p1
-
-    invoke-virtual {p0, p1, v0, v1}, Ld19;->read([BII)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final read([BII)I
+.method public final accept(Ljava/lang/Object;)V
     .locals 4
 
-    .line 7
-    iget-object v0, p0, Ld19;->c:[B
+    iget v0, p0, Ld19;->a:I
 
-    if-eqz v0, :cond_2
+    check-cast p1, Li19;
 
-    .line 8
-    iget v1, p0, Ld19;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    iget v2, p0, Ld19;->X:I
+    iget-object v0, p0, Ld19;->b:Lvf6;
 
-    sub-int v3, v2, v1
+    iget v1, v0, Lvf6;->b:I
 
-    if-le p3, v3, :cond_0
+    iget-object v0, v0, Lvf6;->c:Ljava/lang/Object;
 
-    move p3, v3
+    check-cast v0, Ly09;
 
-    .line 9
-    :cond_0
-    invoke-static {v0, v1, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    iget-object v2, p0, Ld19;->c:Lm38;
 
-    .line 10
-    iget p1, p0, Ld19;->o:I
+    iget-object v3, p0, Ld19;->o:Lus8;
 
-    add-int/2addr p1, p3
+    invoke-interface {p1, v1, v0, v2, v3}, Li19;->d(ILy09;Lm38;Lus8;)V
 
-    iput p1, p0, Ld19;->o:I
-
-    if-lt p1, v2, :cond_1
-
-    .line 11
-    invoke-virtual {p0}, Ld19;->m()V
-
-    :cond_1
-    return p3
-
-    .line 12
-    :cond_2
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final reset()V
-    .locals 1
-
-    iget-object v0, p0, Ld19;->c:[B
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
-
-    :cond_0
     return-void
-.end method
 
-.method public final skip(J)J
-    .locals 6
+    :pswitch_0
+    iget-object v0, p0, Ld19;->b:Lvf6;
 
-    iget-object v0, p0, Ld19;->c:[B
+    iget v1, v0, Lvf6;->b:I
 
-    const-wide/16 v1, 0x0
+    iget-object v0, v0, Lvf6;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast v0, Ly09;
 
-    iget v0, p0, Ld19;->o:I
+    iget-object v2, p0, Ld19;->c:Lm38;
 
-    iget v3, p0, Ld19;->X:I
+    iget-object v3, p0, Ld19;->o:Lus8;
 
-    sub-int/2addr v3, v0
+    invoke-interface {p1, v1, v0, v2, v3}, Li19;->u(ILy09;Lm38;Lus8;)V
 
-    int-to-long v3, v3
+    return-void
 
-    cmp-long v5, v3, p1
+    nop
 
-    if-lez v5, :cond_0
-
-    long-to-int v1, p1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Ld19;->o:I
-
-    return-wide p1
-
-    :cond_0
-    invoke-virtual {p0}, Ld19;->m()V
-
-    sub-long/2addr p1, v3
-
-    goto :goto_0
-
-    :cond_1
-    move-wide v3, v1
-
-    :goto_0
-    cmp-long v0, p1, v1
-
-    if-lez v0, :cond_2
-
-    iget-object v0, p0, Ld19;->b:Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
-
-    move-result-wide p1
-
-    add-long/2addr p1, v3
-
-    return-wide p1
-
-    :cond_2
-    return-wide v3
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

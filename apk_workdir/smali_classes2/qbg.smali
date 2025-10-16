@@ -3,126 +3,93 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lsbg;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrbg;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrbg;I)V
+.method public constructor <init>(J)V
     .locals 0
-
-    iput p2, p0, Lqbg;->a:I
-
-    iput-object p1, p0, Lqbg;->b:Lrbg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+    iput-wide p1, p0, Lqbg;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+.method public final a()J
+    .locals 2
 
-    iget p1, p0, Lqbg;->a:I
+    iget-wide v0, p0, Lqbg;->a:J
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lqbg;->b:Lrbg;
-
-    invoke-static {p1}, Lrbg;->f(Lrbg;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lqbg;->b:Lrbg;
-
-    iget-object p1, p1, Lrbg;->r0:Ly7g;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ly7g;->b(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget p1, p0, Lqbg;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lqbg;->b:Lrbg;
+    return v0
 
-    invoke-static {p1}, Lrbg;->f(Lrbg;)V
+    :cond_0
+    instance-of v1, p1, Lqbg;
 
-    return-void
+    const/4 v2, 0x0
 
-    :pswitch_0
-    iget-object p1, p0, Lqbg;->b:Lrbg;
+    if-nez v1, :cond_1
 
-    iget-object p1, p1, Lrbg;->r0:Ly7g;
+    return v2
 
-    const/4 v0, 0x0
+    :cond_1
+    check-cast p1, Lqbg;
 
-    invoke-virtual {p1, v0}, Ly7g;->b(Z)V
+    iget-wide v3, p0, Lqbg;->a:J
 
-    return-void
+    iget-wide v5, p1, Lqbg;->a:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    iget p1, p0, Lqbg;->a:I
+    iget-wide v0, p0, Lqbg;->a:J
 
-    return-void
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget p1, p0, Lqbg;->a:I
+    const-string v0, "InitialEvent(mark="
 
-    return-void
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lqbg;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

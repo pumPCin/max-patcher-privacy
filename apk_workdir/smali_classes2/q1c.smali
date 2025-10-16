@@ -1,61 +1,68 @@
-.class public final Lq1c;
-.super Lz1c;
+.class public final synthetic Lq1c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqf4;
 
-# static fields
-.field public static final a:Lq1c;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(IJZ)V
+    .locals 0
 
-    new-instance v0, Lq1c;
+    iput p1, p0, Lq1c;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p2, p0, Lq1c;->b:J
 
-    sput-object v0, Lq1c;->a:Lq1c;
+    iput-boolean p4, p0, Lq1c;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lq1c;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
 
-    :cond_0
-    instance-of p1, p1, Lq1c;
+    iget-wide v1, p0, Lq1c;->b:J
 
-    if-nez p1, :cond_1
+    iget-boolean v3, p0, Lq1c;->c:Z
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x399cc60
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OpenCameraPermission"
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;-><init>(JZ)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+
+    iget-wide v1, p0, Lq1c;->b:J
+
+    iget-boolean v3, p0, Lq1c;->c:Z
+
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/addmembers/AddChatMembersScreen;-><init>(JZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

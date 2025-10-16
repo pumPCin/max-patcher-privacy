@@ -1,135 +1,355 @@
 .class public final Las7;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lv5d;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lbs7;
-
-.field public final synthetic Z:Lsi0;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbs7;Lsi0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Las7;->Y:Lbs7;
+    iput p1, p0, Las7;->a:I
 
-    iput-object p2, p0, Las7;->Z:Lsi0;
+    iput-object p2, p0, Las7;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method private final a(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/view/View;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Landroid/view/View;)V
     .locals 0
 
-    check-cast p1, Ln24;
+    iget p1, p0, Las7;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Las7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Las7;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Las7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final d(Landroid/view/View;)V
+    .locals 4
 
-    new-instance p1, Las7;
+    iget v0, p0, Las7;->a:I
 
-    iget-object v0, p0, Las7;->Y:Lbs7;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Las7;->Z:Lsi0;
+    iget-object v0, p0, Las7;->b:Ljava/lang/Object;
 
-    invoke-direct {p1, v0, v1, p2}, Las7;-><init>(Lbs7;Lsi0;Lkotlin/coroutines/Continuation;)V
+    check-cast v0, Lzb8;
 
-    return-object p1
-.end method
+    instance-of v1, p1, Lbc8;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const/4 v2, 0x0
 
-    iget v0, p0, Las7;->X:I
+    if-eqz v1, :cond_0
 
-    const/4 v1, 0x1
+    move-object v1, p1
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    check-cast v1, Lbc8;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object v1, v2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    if-eqz v1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    invoke-virtual {v1, v0}, Lbc8;->b(Lzb8;)V
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    instance-of v1, p1, Lujh;
 
-    iget-object p1, p0, Las7;->Y:Lbs7;
+    if-eqz v1, :cond_2
 
-    iget-object p1, p1, Lbs7;->a:Lt6e;
+    move-object v2, p1
 
-    new-instance v0, Lsr7;
-
-    iget-object v2, p0, Las7;->Z:Lsi0;
-
-    iget-wide v3, v2, Lti0;->a:J
-
-    iget-object v2, v2, Lsi0;->b:Li7f;
-
-    iget-object v5, v2, Li7f;->o:Ljava/lang/String;
-
-    if-nez v5, :cond_2
-
-    iget-object v5, v2, Li7f;->c:Ljava/lang/String;
+    check-cast v2, Lujh;
 
     :cond_2
-    invoke-direct {v0, v3, v4, v5}, Lsr7;-><init>(JLjava/lang/String;)V
+    if-eqz v2, :cond_3
 
-    iput v1, p0, Las7;->X:I
-
-    invoke-virtual {p1, v0, p0}, Lt6e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
+    invoke-virtual {v2, v0}, Lujh;->b(Lzb8;)V
 
     :cond_3
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    return-void
 
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Las7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/stickerssearch/StickersSearchScreen;
+
+    instance-of v1, p1, Lbc8;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_4
+
+    move-object v1, p1
+
+    check-cast v1, Lbc8;
+
+    goto :goto_1
+
+    :cond_4
+    move-object v1, v2
+
+    :goto_1
+    if-eqz v1, :cond_5
+
+    iget-object v3, v0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lzb8;
+
+    invoke-virtual {v1, v3}, Lbc8;->b(Lzb8;)V
+
+    :cond_5
+    instance-of v1, p1, Lujh;
+
+    if-eqz v1, :cond_6
+
+    move-object v2, p1
+
+    check-cast v2, Lujh;
+
+    :cond_6
+    if-eqz v2, :cond_7
+
+    iget-object p1, v0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lzb8;
+
+    invoke-virtual {v2, p1}, Lujh;->b(Lzb8;)V
+
+    :cond_7
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Las7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+
+    instance-of v1, p1, Lbc8;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_8
+
+    move-object v1, p1
+
+    check-cast v1, Lbc8;
+
+    goto :goto_2
+
+    :cond_8
+    move-object v1, v2
+
+    :goto_2
+    if-eqz v1, :cond_9
+
+    iget-object v3, v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;->s0:Lzb8;
+
+    invoke-virtual {v1, v3}, Lbc8;->b(Lzb8;)V
+
+    :cond_9
+    instance-of v1, p1, Lujh;
+
+    if-eqz v1, :cond_a
+
+    move-object v2, p1
+
+    check-cast v2, Lujh;
+
+    :cond_a
+    if-eqz v2, :cond_b
+
+    iget-object p1, v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;->s0:Lzb8;
+
+    invoke-virtual {v2, p1}, Lujh;->b(Lzb8;)V
+
+    :cond_b
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Las7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;
+
+    iget-object v0, v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->x0:Lzb8;
+
+    if-eqz v0, :cond_f
+
+    instance-of v1, p1, Lbc8;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_c
+
+    move-object v1, p1
+
+    check-cast v1, Lbc8;
+
+    goto :goto_3
+
+    :cond_c
+    move-object v1, v2
+
+    :goto_3
+    if-eqz v1, :cond_d
+
+    invoke-virtual {v1, v0}, Lbc8;->b(Lzb8;)V
+
+    :cond_d
+    instance-of v1, p1, Lujh;
+
+    if-eqz v1, :cond_e
+
+    move-object v2, p1
+
+    check-cast v2, Lujh;
+
+    :cond_e
+    if-eqz v2, :cond_f
+
+    invoke-virtual {v2, v0}, Lujh;->b(Lzb8;)V
+
+    :cond_f
+    return-void
+
+    :pswitch_3
+    instance-of v0, p1, Lq99;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_10
+
+    check-cast p1, Lq99;
+
+    goto :goto_4
+
+    :cond_10
+    move-object p1, v1
+
+    :goto_4
+    if-eqz p1, :cond_11
+
+    invoke-virtual {p1}, Lq99;->getContentView$message_list_release()Landroid/view/View;
+
+    move-result-object v1
+
+    :cond_11
+    instance-of p1, v1, Lb2f;
+
+    if-eqz p1, :cond_12
+
+    iget-object p1, p0, Las7;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p1, p1, Lone/me/messages/list/ui/MessagesListWidget;->L0:Lzb8;
+
+    if-eqz p1, :cond_12
+
+    check-cast v1, Lb2f;
+
+    invoke-virtual {v1, p1}, Lb2f;->b(Lzb8;)V
+
+    :cond_12
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Las7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+
+    iget-object v0, v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->c:Lzb8;
+
+    if-eqz v0, :cond_16
+
+    instance-of v1, p1, Lbc8;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_13
+
+    move-object v1, p1
+
+    check-cast v1, Lbc8;
+
+    goto :goto_5
+
+    :cond_13
+    move-object v1, v2
+
+    :goto_5
+    if-eqz v1, :cond_14
+
+    invoke-virtual {v1, v0}, Lbc8;->b(Lzb8;)V
+
+    :cond_14
+    instance-of v1, p1, Lujh;
+
+    if-eqz v1, :cond_15
+
+    move-object v2, p1
+
+    check-cast v2, Lujh;
+
+    :cond_15
+    if-eqz v2, :cond_16
+
+    invoke-virtual {v2, v0}, Lujh;->b(Lzb8;)V
+
+    :cond_16
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

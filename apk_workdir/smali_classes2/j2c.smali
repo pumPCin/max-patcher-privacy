@@ -1,129 +1,123 @@
 .class public final Lj2c;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Z
 
-.field public final synthetic Y:Lc3c;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lc3c;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lj2c;->Y:Lc3c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-boolean p1, p0, Lj2c;->a:Z
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lj2c;->b:Z
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ln24;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lj2c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lj2c;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lj2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static a(Lj2c;Z)Lj2c;
     .locals 1
 
-    new-instance p1, Lj2c;
+    iget-boolean v0, p0, Lj2c;->b:Z
 
-    iget-object v0, p0, Lj2c;->Y:Lc3c;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p1, v0, p2}, Lj2c;-><init>(Lc3c;Lkotlin/coroutines/Continuation;)V
+    new-instance p0, Lj2c;
 
-    return-object p1
+    invoke-direct {p0, p1, v0}, Lj2c;-><init>(ZZ)V
+
+    return-object p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
 
-    iget v0, p0, Lj2c;->X:I
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v1, p0, Lj2c;->Y:Lc3c;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x1
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lj2c;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    check-cast p1, Lj2c;
 
-    iget-object p1, v1, Lc3c;->Q0:Lkqb;
+    iget-boolean v1, p0, Lj2c;->a:Z
 
-    iput v2, p0, Lj2c;->X:I
+    iget-boolean v3, p1, Lj2c;->a:Z
 
-    invoke-virtual {p1, p0}, Lkqb;->n(Lc2f;)Ljava/lang/Object;
+    if-eq v1, v3, :cond_2
 
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    check-cast p1, Lr82;
+    iget-boolean v1, p0, Lj2c;->b:Z
 
-    sget-object v0, Laxf;->a:Laxf;
+    iget-boolean p1, p1, Lj2c;->b:Z
 
-    if-nez p1, :cond_3
+    if-eq v1, p1, :cond_3
 
-    return-object v0
+    return v2
 
     :cond_3
-    iget-object v1, v1, Lc3c;->C0:Lya5;
+    return v0
+.end method
 
-    new-instance v2, Le0c;
+.method public final hashCode()I
+    .locals 2
 
-    iget-wide v3, p1, Lr82;->a:J
+    iget-boolean v0, p0, Lj2c;->a:Z
 
-    invoke-direct {v2, v3, v4}, Le0c;-><init>(J)V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-static {v1, v2}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lj2c;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", isEnabled="
+
+    const-string v1, ")"
+
+    const-string v2, "State(isChecked="
+
+    iget-boolean v3, p0, Lj2c;->a:Z
+
+    iget-boolean v4, p0, Lj2c;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

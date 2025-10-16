@@ -1,136 +1,188 @@
 .class public final Lva4;
-.super Ljava/lang/Object;
+.super Lgl0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic f:I
-
-
 # instance fields
-.field public final a:Lk7;
+.field public final j:Ljava/lang/String;
 
-.field public final b:Low1;
+.field public final k:I
 
-.field public final c:Lpcd;
-
-.field public final d:Lv5c;
-
-.field public e:Lkn7;
+.field public final l:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJJZLxy;ZIIII)V
+    .locals 13
 
-    sget v0, Lyz4;->o:I
+    move-object v0, p0
 
-    const/16 v0, 0x64
+    move-object v10, p1
 
-    sget-object v1, Ld05;->c:Ld05;
+    move-wide/from16 v5, p3
 
-    invoke-static {v0, v1}, Lx2d;->M(ILd05;)J
+    move-wide/from16 v3, p5
 
-    return-void
-.end method
+    move-wide/from16 v7, p7
 
-.method public constructor <init>(Lk7;Low1;)V
-    .locals 1
+    move/from16 v11, p9
 
-    invoke-static {}, Lcdd;->a()Lpcd;
+    move-object/from16 v9, p10
 
-    move-result-object v0
+    move/from16 v12, p11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move/from16 v1, p12
 
-    iput-object p1, p0, Lva4;->a:Lk7;
+    move/from16 v2, p13
 
-    iput-object p2, p0, Lva4;->b:Low1;
+    invoke-direct/range {v0 .. v12}, Lgl0;-><init>(IIJJJLxy;Ljava/lang/String;ZZ)V
 
-    iput-object v0, p0, Lva4;->c:Lpcd;
+    iput-object p2, p0, Lva4;->j:Ljava/lang/String;
 
-    new-instance p1, Lv5c;
+    move/from16 p1, p14
 
-    invoke-direct {p1}, Lv5c;-><init>()V
+    iput p1, p0, Lva4;->k:I
 
-    iput-object p1, p0, Lva4;->d:Lv5c;
+    move/from16 p1, p15
 
-    invoke-virtual {p0}, Lva4;->a()V
+    iput p1, p0, Lva4;->l:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 8
+.method public final d()I
+    .locals 1
 
-    iget-object v0, p0, Lva4;->a:Lk7;
+    const/4 v0, 0x2
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    iget-wide v0, v0, Lk7;->a:J
+.method public final e()Landroid/net/Uri;
+    .locals 1
 
-    invoke-static {v0, v1}, Lyz4;->e(J)J
+    iget-object v0, p0, Lva4;->j:Ljava/lang/String;
 
-    move-result-wide v4
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v3, p0, Lva4;->d:Lv5c;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lcdd;->a()Lpcd;
-
-    move-result-object v6
-
-    const-string v1, "unit is null"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "scheduler is null"
-
-    invoke-static {v6, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    new-instance v2, Lrba;
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v2 .. v7}, Lrba;-><init>(Ls8a;JLpcd;I)V
-
-    iget-object v0, p0, Lva4;->c:Lpcd;
-
-    invoke-virtual {v2, v0}, Ls8a;->l(Lpcd;)Lpaa;
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    new-instance v1, Lhjb;
+    return-object v0
+.end method
 
-    const/16 v2, 0xb
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-direct {v1, v2, p0}, Lhjb;-><init>(ILjava/lang/Object;)V
+    if-ne p0, p1, :cond_0
 
-    new-instance v2, Lq62;
+    const/4 p1, 0x1
 
-    invoke-direct {v2, p0}, Lq62;-><init>(Lva4;)V
-
-    sget-object v3, Lnjg;->c:Laf6;
-
-    new-instance v4, Lkn7;
-
-    invoke-direct {v4, v1, v2, v3}, Lkn7;-><init>(Lno3;Lno3;Ll6;)V
-
-    invoke-virtual {v0, v4}, Ls8a;->a(Lyba;)V
-
-    iput-object v4, p0, Lva4;->e:Lkn7;
-
-    return-void
+    return p1
 
     :cond_0
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    if-eqz p1, :cond_5
 
-    throw v0
+    const-class v1, Lva4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1}, Lgl0;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    check-cast p1, Lva4;
+
+    iget v1, p0, Lva4;->k:I
+
+    iget v2, p1, Lva4;->k:I
+
+    if-eq v1, v2, :cond_3
+
+    return v0
+
+    :cond_3
+    iget v1, p0, Lva4;->l:I
+
+    iget v2, p1, Lva4;->l:I
+
+    if-eq v1, v2, :cond_4
+
+    return v0
+
+    :cond_4
+    iget-object v0, p0, Lva4;->j:Ljava/lang/String;
+
+    iget-object p1, p1, Lva4;->j:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_5
+    :goto_0
+    return v0
+.end method
+
+.method public final getHeight()I
+    .locals 1
+
+    iget v0, p0, Lva4;->l:I
+
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Lva4;->k:I
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    invoke-super {p0}, Lgl0;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lva4;->j:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lva4;->k:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lva4;->l:I
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

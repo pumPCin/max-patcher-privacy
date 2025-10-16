@@ -1,120 +1,110 @@
-.class public final synthetic Lbn4;
-.super Ljava/lang/Object;
+.class public final Lbn4;
+.super Lde4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final d:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/Runnable;
+.field public final e:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic c:Lhjb;
+.field public volatile f:Landroid/os/Handler;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Lhjb;I)V
-    .locals 0
-
-    iput p3, p0, Lbn4;->a:I
-
-    iput-object p1, p0, Lbn4;->b:Ljava/lang/Runnable;
-
-    iput-object p2, p0, Lbn4;->c:Lhjb;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lbn4;->d:Ljava/lang/Object;
+
+    new-instance v0, Lo30;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lo30;-><init>(I)V
+
+    const/4 v1, 0x4
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lbn4;->e:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
 
+.method public static f(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 4
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget v0, p0, Lbn4;->a:I
+    const/16 v1, 0x1c
 
-    packed-switch v0, :pswitch_data_0
+    if-lt v0, v1, :cond_0
 
-    iget-object v0, p0, Lbn4;->b:Ljava/lang/Runnable;
+    invoke-static {p0}, Lan4;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
-    iget-object v1, p0, Lbn4;->c:Lhjb;
+    move-result-object p0
 
-    iget-object v1, v1, Lhjb;->b:Ljava/lang/Object;
+    return-object p0
 
-    check-cast v1, Lhn4;
-
+    :cond_0
     :try_start_0
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    const-class v0, Landroid/os/Handler;
 
-    const/4 v0, 0x0
+    const-class v1, Landroid/os/Looper;
 
-    invoke-virtual {v1, v0}, Ld4;->j(Ljava/lang/Object;)Z
+    const-class v2, Landroid/os/Handler$Callback;
+
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    const/4 v2, 0x0
+
+    filled-new-array {p0, v2, v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Handler;
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    return-object v0
 
     :catch_0
-    move-exception v0
+    new-instance v0, Landroid/os/Handler;
 
-    invoke-virtual {v1, v0}, Ld4;->k(Ljava/lang/Throwable;)Z
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lbn4;->b:Ljava/lang/Runnable;
-
-    :try_start_1
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
+    return-object v0
 
     :catch_1
-    move-exception v0
+    new-instance v0, Landroid/os/Handler;
 
-    iget-object v1, p0, Lbn4;->c:Lhjb;
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iget-object v1, v1, Lhjb;->b:Ljava/lang/Object;
-
-    check-cast v1, Lhn4;
-
-    invoke-virtual {v1, v0}, Ld4;->k(Ljava/lang/Throwable;)Z
-
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lbn4;->b:Ljava/lang/Runnable;
-
-    :try_start_2
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    return-void
-
-    :catch_2
-    move-exception v0
-
-    iget-object v1, p0, Lbn4;->c:Lhjb;
-
-    iget-object v1, v1, Lhjb;->b:Ljava/lang/Object;
-
-    check-cast v1, Lhn4;
-
-    invoke-virtual {v1, v0}, Ld4;->k(Ljava/lang/Throwable;)Z
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

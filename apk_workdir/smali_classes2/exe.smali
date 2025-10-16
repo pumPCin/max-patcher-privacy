@@ -1,84 +1,55 @@
 .class public final Lexe;
-.super Ljava/lang/Object;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Ljava/lang/String;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lfxe;
+
+.field public o:Lfxe;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lfxe;Lk14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lexe;->Z:Lfxe;
 
-    iput p1, p0, Lexe;->a:I
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lexe;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lexe;
-
-    iget v0, p0, Lexe;->a:I
-
-    iget p1, p1, Lexe;->a:I
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lexe;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    const-string v0, "StrokeLocalTopBarColors(primary="
+    iput-object p1, p0, Lexe;->Y:Ljava/lang/Object;
 
-    const-string v1, ")"
+    iget p1, p0, Lexe;->r0:I
 
-    iget v2, p0, Lexe;->a:I
+    const/high16 v0, -0x80000000
 
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lexe;->r0:I
 
-    return-object v0
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    iget-object v2, p0, Lexe;->Z:Lfxe;
+
+    invoke-virtual {v2, v0, v1, p0, p1}, Lfxe;->a(JLk14;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

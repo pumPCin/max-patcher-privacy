@@ -1,81 +1,43 @@
 .class public final Lip7;
-.super Ljava/io/OutputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public final a:Li65;
+
+.field public b:Z
 
 
-# virtual methods
-.method public final write(I)V
-    .locals 4
+# direct methods
+.method public constructor <init>(Lu1e;)V
+    .locals 9
 
-    .line 1
-    iget-wide v0, p0, Lip7;->a:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v2, 0x1
+    new-instance v0, Li65;
 
-    add-long/2addr v0, v2
+    new-instance v1, Lzw;
 
-    iput-wide v0, p0, Lip7;->a:J
+    const/4 v7, 0x0
 
-    return-void
-.end method
+    const/16 v8, 0x18
 
-.method public final write([B)V
-    .locals 4
+    const/4 v2, 0x2
 
-    .line 2
-    iget-wide v0, p0, Lip7;->a:J
+    const-class v4, Lip7;
 
-    array-length p1, p1
+    const-string v5, "readIfAbsent"
 
-    int-to-long v2, p1
+    const-string v6, "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z"
 
-    add-long/2addr v0, v2
+    move-object v3, p0
 
-    iput-wide v0, p0, Lip7;->a:J
+    invoke-direct/range {v1 .. v8}, Lzw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    return-void
-.end method
+    invoke-direct {v0, p1, v1}, Li65;-><init>(Lu1e;Lzw;)V
 
-.method public final write([BII)V
-    .locals 2
-
-    if-ltz p2, :cond_0
-
-    .line 3
-    array-length v0, p1
-
-    if-gt p2, v0, :cond_0
-
-    if-ltz p3, :cond_0
-
-    add-int/2addr p2, p3
-
-    array-length p1, p1
-
-    if-gt p2, p1, :cond_0
-
-    if-ltz p2, :cond_0
-
-    .line 4
-    iget-wide p1, p0, Lip7;->a:J
-
-    int-to-long v0, p3
-
-    add-long/2addr p1, v0
-
-    iput-wide p1, p0, Lip7;->a:J
+    iput-object v0, v3, Lip7;->a:Li65;
 
     return-void
-
-    .line 5
-    :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
 .end method

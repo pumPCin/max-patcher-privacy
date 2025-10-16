@@ -1,55 +1,23 @@
 .class public final Lnp9;
-.super Lwy3;
+.super Lqci;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lkv7;
-
-.field public Y:Lkv7;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lup9;
-
-.field public final synthetic r0:Lup9;
-
-.field public s0:I
+# static fields
+.field public static final c:Lnp9;
 
 
 # direct methods
-.method public constructor <init>(Lup9;Lwy3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lnp9;->r0:Lup9;
+    new-instance v0, Lnp9;
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lqci;-><init>(I)V
+
+    sput-object v0, Lnp9;->c:Lnp9;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lnp9;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lnp9;->s0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lnp9;->s0:I
-
-    iget-object p1, p0, Lnp9;->r0:Lup9;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lup9;->e(Lone/me/messages/list/loader/MessageModel;Lwy3;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
 .end method

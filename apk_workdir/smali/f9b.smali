@@ -1,81 +1,73 @@
-.class public final Lf9b;
-.super Lj0;
+.class public final enum Lf9b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lw8b;
+# static fields
+.field public static final enum a:Lf9b;
+
+.field public static final enum b:Lf9b;
+
+.field public static final synthetic c:[Lf9b;
 
 
 # direct methods
-.method public constructor <init>(Lw8b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf9b;
 
-    iput-object p1, p0, Lf9b;->a:Lw8b;
+    const-string v1, "RUN_AS_NON_EXPEDITED_WORK_REQUEST"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lf9b;->a:Lf9b;
+
+    new-instance v1, Lf9b;
+
+    const-string v2, "DROP_WORK_REQUEST"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lf9b;->b:Lf9b;
+
+    filled-new-array {v0, v1}, [Lf9b;
+
+    move-result-object v0
+
+    sput-object v0, Lf9b;->c:[Lf9b;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final contains(Ljava/lang/Object;)Z
+.method public static valueOf(Ljava/lang/String;)Lf9b;
     .locals 1
 
-    iget-object v0, p0, Lf9b;->a:Lw8b;
+    const-class v0, Lf9b;
 
-    invoke-virtual {v0, p1}, Li2;->containsValue(Ljava/lang/Object;)Z
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result p1
+    move-result-object p0
 
-    return p1
+    check-cast p0, Lf9b;
+
+    return-object p0
 .end method
 
-.method public final getSize()I
+.method public static values()[Lf9b;
     .locals 1
 
-    iget-object v0, p0, Lf9b;->a:Lw8b;
+    sget-object v0, Lf9b;->c:[Lf9b;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget v0, v0, Lw8b;->b:I
+    move-result-object v0
 
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 7
-
-    new-instance v0, Le9b;
-
-    iget-object v1, p0, Lf9b;->a:Lw8b;
-
-    iget-object v1, v1, Lw8b;->a:Lvpf;
-
-    const/16 v2, 0x8
-
-    new-array v3, v2, [Lwpf;
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v2, :cond_0
-
-    new-instance v5, Lxpf;
-
-    const/4 v6, 0x2
-
-    invoke-direct {v5, v6}, Lxpf;-><init>(I)V
-
-    aput-object v5, v3, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-direct {v0, v1, v3}, Lx8b;-><init>(Lvpf;[Lwpf;)V
+    check-cast v0, [Lf9b;
 
     return-object v0
 .end method

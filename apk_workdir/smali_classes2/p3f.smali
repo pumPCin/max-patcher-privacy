@@ -1,71 +1,123 @@
-.class public final synthetic Lp3f;
-.super Ljava/lang/Object;
+.class public final Lp3f;
+.super Loc5;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lrrf;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lr3f;
+.field public o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr3f;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput p2, p0, Lp3f;->a:I
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    iput-object p1, p0, Lp3f;->b:Lr3f;
+    sget v1, Lblc;->sticker_typing:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Loc5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 1
 
-    iget v0, p0, Lp3f;->a:I
+    iget-boolean v0, p0, Lp3f;->o:Z
 
-    check-cast p1, Ljava/lang/Float;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {p0}, Lp3f;->start()V
 
-    move-result p1
+    :cond_0
+    return-void
+.end method
 
-    check-cast p2, Ljava/lang/Float;
+.method public final onThemeChanged(Lu4b;)V
+    .locals 2
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p1}, Lu4b;->getIcon()Lh67;
 
-    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+    move-result-object p1
 
-    move-result p2
+    iget p1, p1, Lh67;->j:I
 
-    iget-object v0, p0, Lp3f;->b:Lr3f;
+    const-string v0, "_R_G_L_4_G_D_0_P_0"
 
-    invoke-static {v0, p1, p2}, Lr3f;->b(Lr3f;FF)V
+    iget-object v1, p0, Loc5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
 
-    return-object p1
+    const-string v0, "_R_G_L_4_G_D_1_P_0"
 
-    :pswitch_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
 
-    iget-object p2, p0, Lp3f;->b:Lr3f;
+    const-string v0, "_R_G_L_4_G_D_2_P_0"
 
-    invoke-static {p2, p1}, Lr3f;->a(Lr3f;F)V
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
 
-    goto :goto_0
+    const-string v0, "_R_G_L_3_G_D_0_P_0"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_1_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lkzi;->a(Lvig;Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final start()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lp3f;->o:Z
+
+    invoke-super {p0}, Loc5;->start()V
+
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lp3f;->o:Z
+
+    invoke-super {p0}, Loc5;->stop()V
+
+    return-void
 .end method

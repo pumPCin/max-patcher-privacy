@@ -1,60 +1,34 @@
-.class public interface abstract Lw7f;
-.super Ljava/lang/Object;
+.class public final Lw7f;
+.super Lmo7;
 .source "SourceFile"
 
+# interfaces
+.implements Lx7f;
 
-# static fields
-.field public static final a0:Ljava/util/List;
 
-.field public static final b0:Lss6;
+# instance fields
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    const-string v9, "login.flood"
+    invoke-direct {p0}, Lmo7;-><init>()V
 
-    const-string v10, "login.blocked"
+    iput-object p1, p0, Lw7f;->c:Ljava/lang/String;
 
-    const-string v0, "session.state"
+    iput-object p2, p0, Lw7f;->d:Ljava/lang/String;
 
-    const-string v1, "proto.state"
+    iput-object p3, p0, Lw7f;->e:Ljava/lang/String;
 
-    const-string v2, "proto.payload"
-
-    const-string v3, "internal"
-
-    const-string v4, "service.unavailable"
-
-    const-string v5, "service.timeout"
-
-    const-string v6, "proto.ver"
-
-    const-string v7, "error.call.history.inconsistency"
-
-    const-string v8, "errors.event.unavailable"
-
-    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lw7f;->a0:Ljava/util/List;
-
-    new-instance v0, Lss6;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lw7f;->b0:Lss6;
+    iput-boolean p4, p0, Lw7f;->f:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract c(IJF)J
 .end method

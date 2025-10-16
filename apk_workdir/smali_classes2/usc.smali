@@ -1,92 +1,16 @@
-.class public final synthetic Lusc;
+.class public abstract Lusc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static oneme_stickers_preview_action_favorite_title:I = 0x7f130a55
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_stickers_preview_action_forward_title:I = 0x7f130a56
 
+.field public static oneme_stickers_preview_action_in_favorite_title:I = 0x7f130a57
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.field public static oneme_stickers_preview_action_send_title:I = 0x7f130a58
 
-    iput p2, p0, Lusc;->a:I
+.field public static oneme_stickers_preview_snackbar_favorite_added:I = 0x7f130a59
 
-    iput-object p1, p0, Lusc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
-
-    iget p1, p0, Lusc;->a:I
-
-    iget-object v0, p0, Lusc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
-
-    move-result-object p1
-
-    sget-object v0, Lqsc;->I0:[Lpl7;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lqsc;->I(Z)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lqsc;->G()V
-
-    return-void
-
-    :pswitch_1
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lqsc;->C()V
-
-    return-void
-
-    :pswitch_2
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lqsc;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lqsc;->H()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_stickers_preview_snackbar_favorite_removed:I = 0x7f130a5a

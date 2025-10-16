@@ -3,206 +3,190 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lri6;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Ln1h;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Lmqd;
+.field public final synthetic b:Lp1h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lp1h;I)V
+    .locals 0
 
-    new-instance v0, Ln1h;
+    iput p2, p0, Ln1h;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ln1h;->b:Lp1h;
 
-    sput-object v0, Ln1h;->a:Ln1h;
-
-    new-instance v1, Lflb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.storage.WebAppStorageGetKeyResponse"
-
-    const/4 v3, 0x3
-
-    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "key"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "value"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Ln1h;->descriptor:Lmqd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx8;)Ljava/lang/Object;
-    .locals 10
+.method public final run()V
+    .locals 7
 
-    sget-object v0, Ln1h;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
-
-    move-result-object p1
+    iget v0, p0, Ln1h;->a:I
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Ln1h;->b:Lp1h;
 
-    const/4 v3, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    move v6, v1
+    iget-object v0, v2, Lp1h;->a:Llt7;
 
-    move v7, v2
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-object v4, v3
+    move-result-object v0
 
-    move-object v5, v4
+    check-cast v0, Lq1h;
 
-    :goto_0
-    if-eqz v6, :cond_4
+    iget-object v2, v2, Lp1h;->e:Llt7;
 
-    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
 
-    move-result v8
+    move-result-object v2
 
-    const/4 v9, -0x1
+    check-cast v2, Lnhb;
 
-    if-eq v8, v9, :cond_3
+    sget-object v3, Lnhb;->d:[Ljava/lang/String;
 
-    if-eqz v8, :cond_2
+    const/4 v4, 0x0
 
-    if-eq v8, v1, :cond_1
+    aget-object v5, v3, v4
 
-    const/4 v5, 0x2
+    iget-object v6, v2, Lnhb;->c:Ldg8;
 
-    if-ne v8, v5, :cond_0
+    iget-object v6, v6, Ldg8;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v5}, Lx8;->w(Lmqd;I)Ljava/lang/String;
+    check-cast v6, Lrhf;
+
+    invoke-virtual {v6}, Lrhf;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/content/SharedPreferences;
+
+    invoke-interface {v6, v5, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    iget-object v6, v2, Lnhb;->a:Landroid/content/Context;
+
+    invoke-static {v6, v5}, Lc8;->b(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    const-string v5, "p1h"
+
+    const-string v6, "forceContactsSync"
+
+    invoke-static {v5, v6}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v5, v2, Lnhb;->c:Ldg8;
+
+    sget-object v6, Lnhb;->f:[Ljava/lang/String;
+
+    invoke-virtual {v2, v6}, Lnhb;->c([Ljava/lang/String;)Z
+
+    move-result v2
+
+    iget-object v5, v5, Ldg8;->c:Ljava/lang/Object;
+
+    check-cast v5, Lrhf;
+
+    invoke-virtual {v5}, Lrhf;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    or-int/lit8 v7, v7, 0x4
+    check-cast v5, Landroid/content/SharedPreferences;
+
+    invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v5
+
+    aget-object v3, v3, v4
+
+    invoke-interface {v5, v3, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    move v1, v4
 
-    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v1}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v7, v7, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0, v2}, Lx8;->w(Lmqd;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    move v6, v2
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
-
-    new-instance p1, Lp1h;
-
-    invoke-direct {p1, v3, v7, v4, v5}, Lp1h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lmz3;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Lp1h;
-
-    sget-object v0, Ln1h;->descriptor:Lmqd;
-
-    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
-
-    move-result-object p1
-
-    iget-object v1, p2, Lp1h;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget-object v2, p2, Lp1h;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, v2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    const/4 v1, 0x2
-
-    iget-object p2, p2, Lp1h;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lmz3;->m()V
+    :goto_0
+    invoke-virtual {v0, v1}, Lq1h;->b(Z)V
 
     return-void
-.end method
 
-.method public final c()[Lql7;
-    .locals 3
+    :pswitch_0
+    iget-object v0, v2, Lp1h;->a:Llt7;
 
-    const/4 v0, 0x3
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    new-array v0, v0, [Lql7;
+    move-result-object v0
 
-    sget-object v1, Llwe;->a:Llwe;
+    check-cast v0, Lq1h;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Lq1h;->a()V
 
-    aput-object v1, v0, v2
+    iget-object v0, v2, Lp1h;->c:Llt7;
 
-    const/4 v2, 0x1
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    aput-object v1, v0, v2
+    move-result-object v0
 
-    const/4 v2, 0x2
+    check-cast v0, Lokf;
 
-    aput-object v1, v0, v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v0
-.end method
+    const-string v2, "okf"
 
-.method public final d()Lmqd;
-    .locals 1
+    const-string v3, "syncAll"
 
-    sget-object v0, Ln1h;->descriptor:Lmqd;
+    invoke-static {v2, v3}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
+    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iget-object v3, v0, Lokf;->e:Lqnd;
+
+    new-instance v4, Lhj;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v0, v2, v1, v5}, Lhj;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v3, v4}, Lqnd;->b(Ljava/lang/Runnable;)Lev4;
+
+    return-void
+
+    :pswitch_1
+    sget-object v0, Lhyb;->s0:Lhyb;
+
+    iget-object v0, v0, Lhyb;->Y:Lkw7;
+
+    iget-object v1, v2, Lp1h;->m:Lo1h;
+
+    invoke-virtual {v0, v1}, Lkw7;->a(Lew7;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

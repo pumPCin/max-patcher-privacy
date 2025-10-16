@@ -2,100 +2,105 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgf4;
 
-# instance fields
-.field public final a:Ljava/lang/Boolean;
+
+# static fields
+.field public static final a:Lyq;
+
+.field public static final b:Lzq;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Boolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyq;
 
-    iput-object p1, p0, Lyq;->a:Ljava/lang/Boolean;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lyq;->a:Lyq;
+
+    sget-object v0, Lzq;->b:Lzq;
+
+    sput-object v0, Lyq;->b:Lzq;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyq;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyq;
-
-    iget-object v1, p0, Lyq;->a:Ljava/lang/Boolean;
-
-    iget-object p1, p1, Lyq;->a:Ljava/lang/Boolean;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a()Lof4;
     .locals 1
 
-    iget-object v0, p0, Lyq;->a:Ljava/lang/Boolean;
+    sget-object v0, Lyq;->b:Lzq;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    const/4 v0, 0x0
+.method public final b(Ljava/lang/String;Ljf4;Landroid/os/Bundle;)Lrf4;
+    .locals 9
 
-    return v0
+    sget-object v0, Lyq;->b:Lzq;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, v0, Lof4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const/4 p1, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-object p1
 
-    const-string v1, "Selection(isSelected="
+    :cond_0
+    sget-object v0, Lzq;->c:Ljf4;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Ljf4;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lyq;->a:Ljava/lang/Boolean;
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v1, ")"
+    new-instance v7, Lh;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v7, v0}, Lh;-><init>(I)V
 
-    move-result-object v0
+    new-instance v1, Lrf4;
 
-    return-object v0
+    const/4 v6, 0x0
+
+    const/16 v8, 0x10
+
+    const/4 v5, 0x1
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v8}, Lrf4;-><init>(Ljava/lang/String;Ljf4;Landroid/os/Bundle;ILpf4;Lqf4;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Unknown route="
+
+    invoke-static {p2, v3}, Lwx1;->h(Ljava/lang/String;Ljf4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

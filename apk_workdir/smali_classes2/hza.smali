@@ -1,21 +1,21 @@
 .class public final Lhza;
-.super Ldw9;
+.super Liza;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/lang/String;
+# static fields
+.field public static final a:Lhza;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Laxf;->a:Laxf;
+    new-instance v0, Lhza;
 
-    invoke-direct {p0, v0}, Ldw9;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhza;->b:Ljava/lang/String;
+    sput-object v0, Lhza;->a:Lhza;
 
     return-void
 .end method
@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -32,57 +32,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lhza;
+    instance-of p1, p1, Lhza;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lhza;
-
-    iget-object v1, p0, Lhza;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lhza;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lhza;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    const v0, -0x7e6ebce
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    const-string v0, "OpenExternalLink(url="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lhza;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Stub"
 
     return-object v0
 .end method

@@ -1,101 +1,94 @@
-.class public final synthetic Laf3;
-.super Ljava/lang/Object;
+.class public final Laf3;
+.super Lt8b;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroidx/fragment/app/b;
+.field public final a:Ljava/util/Comparator;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+.method public constructor <init>(Ljava/util/Comparator;)V
     .locals 0
 
-    iput p2, p0, Laf3;->a:I
-
-    iput-object p1, p0, Laf3;->b:Landroidx/fragment/app/b;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Laf3;->a:Ljava/util/Comparator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    iget v0, p0, Laf3;->a:I
+    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
-    iget-object v0, p0, Laf3;->b:Landroidx/fragment/app/b;
+    move-result p1
 
-    :try_start_0
-    invoke-static {v0}, Lkf3;->q(Landroidx/fragment/app/b;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    return p1
+.end method
 
-    goto :goto_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    :catch_0
-    move-exception v0
+    if-ne p1, p0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    const/4 p1, 0x1
 
-    move-result-object v1
-
-    const-string v2, "Attempt to invoke virtual method \'android.os.Handler android.app.FragmentHostCallback.getHandler()\' on a null object reference"
-
-    invoke-static {v1, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    throw v0
+    instance-of v0, p1, Laf3;
 
-    :catch_1
-    move-exception v0
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    check-cast p1, Laf3;
 
-    move-result-object v1
+    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
 
-    const-string v2, "Can not perform this action after onSaveInstanceState"
+    iget-object p1, p1, Laf3;->a:Ljava/util/Comparator;
 
-    invoke-static {v1, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Comparator;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-eqz v1, :cond_1
-
-    :goto_0
-    return-void
+    return p1
 
     :cond_1
-    throw v0
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Laf3;->b:Landroidx/fragment/app/b;
+    return p1
+.end method
 
-    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
 
-    nop
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -2,111 +2,85 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lb09;
-
 
 # instance fields
-.field public final a:[Landroid/graphics/Bitmap;
+.field public final a:Llt7;
 
-.field public final b:Leo0;
+.field public final b:Llt7;
 
-.field public final c:Lm68;
+.field public final c:Llt7;
+
+.field public final d:Llt7;
 
 
 # direct methods
-.method public constructor <init>(Lcp4;)V
-    .locals 4
+.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x19
+    iput-object p1, p0, Lg55;->a:Llt7;
 
-    new-array v1, v0, [Landroid/graphics/Bitmap;
+    iput-object p2, p0, Lg55;->b:Llt7;
 
-    const/4 v2, 0x0
+    iput-object p3, p0, Lg55;->c:Llt7;
 
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    const/4 v3, 0x0
-
-    aput-object v3, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iput-object v1, p0, Lg55;->a:[Landroid/graphics/Bitmap;
-
-    new-instance v1, Leo0;
-
-    sget-object v2, Lf55;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v2, p1
-
-    const/4 v2, 0x1
-
-    if-eq p1, v2, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_1
-
-    const/16 v0, 0x32
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    const/16 v0, 0x28
-
-    :cond_3
-    :goto_1
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Leo0;-><init>(Ljava/lang/Integer;)V
-
-    iput-object v1, p0, Lg55;->b:Leo0;
-
-    new-instance p1, Lm68;
-
-    const/16 v0, 0x64
-
-    invoke-direct {p1, v0}, Lm68;-><init>(I)V
-
-    iput-object p1, p0, Lg55;->c:Lm68;
+    iput-object p4, p0, Lg55;->d:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(La09;)V
-    .locals 1
+.method public final a(JJLjava/lang/CharSequence;Ljava/util/List;ZLlff;)Ljava/lang/Object;
+    .locals 11
 
-    iget-object p1, p0, Lg55;->b:Leo0;
+    iget-object v0, p0, Lg55;->c:Llt7;
 
-    const/4 v0, -0x1
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lm68;->i(I)V
+    move-result-object v0
 
-    return-void
+    check-cast v0, Lqkf;
+
+    check-cast v0, Losa;
+
+    invoke-virtual {v0}, Losa;->b()Lv44;
+
+    move-result-object v0
+
+    new-instance v1, Lf55;
+
+    const/4 v10, 0x0
+
+    move-object v2, p0
+
+    move-wide v3, p1
+
+    move-wide v5, p3
+
+    move-object/from16 v7, p5
+
+    move-object/from16 v9, p6
+
+    move/from16 v8, p7
+
+    invoke-direct/range {v1 .. v10}, Lf55;-><init>(Lg55;JJLjava/lang/CharSequence;ZLjava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    move-object/from16 p1, p8
+
+    invoke-static {v0, v1, p1}, Lrji;->h(Lt44;Lei6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lc54;->a:Lc54;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

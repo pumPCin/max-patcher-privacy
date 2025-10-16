@@ -1,224 +1,316 @@
-.class public final synthetic Lst1;
+.class public abstract Lst1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lhq7;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final NO_RECEIVER:Ljava/lang/Object;
 
 
 # instance fields
-.field public final synthetic a:I
+.field private final isTopLevel:Z
 
-.field public final synthetic b:Lyn7;
+.field private final name:Ljava/lang/String;
 
-.field public final synthetic c:Lyn7;
+.field private final owner:Ljava/lang/Class;
+
+.field protected final receiver:Ljava/lang/Object;
+
+.field private transient reflected:Lhq7;
+
+.field private final signature:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyn7;Lyn7;I)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lrt1;->a:Lrt1;
+
+    sput-object v0, Lst1;->NO_RECEIVER:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    iput p3, p0, Lst1;->a:I
-
-    iput-object p1, p0, Lst1;->b:Lyn7;
-
-    iput-object p2, p0, Lst1;->c:Lyn7;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lst1;->receiver:Ljava/lang/Object;
+
+    iput-object p2, p0, Lst1;->owner:Ljava/lang/Class;
+
+    iput-object p3, p0, Lst1;->name:Ljava/lang/String;
+
+    iput-object p4, p0, Lst1;->signature:Ljava/lang/String;
+
+    iput-boolean p5, p0, Lst1;->isTopLevel:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public varargs call([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lst1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {}, Lwy8;->c()Lg0f;
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
 
     move-result-object v0
 
-    iget-object v1, p0, Lst1;->b:Lyn7;
+    invoke-interface {v0, p1}, Lhq7;->call([Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    check-cast v1, Le7f;
+.method public callBy(Ljava/util/Map;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast v1, Lmka;
-
-    invoke-virtual {v1}, Lmka;->b()Lh24;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lf24;->plus(Lf24;)Lf24;
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
 
     move-result-object v0
 
-    iget-object v1, p0, Lst1;->c:Lyn7;
+    invoke-interface {v0, p1}, Lhq7;->callBy(Ljava/util/Map;)Ljava/lang/Object;
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    check-cast v1, Lf24;
+.method public compute()Lhq7;
+    .locals 1
 
-    invoke-interface {v0, v1}, Lf24;->plus(Lf24;)Lf24;
+    iget-object v0, p0, Lst1;->reflected:Lhq7;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lst1;->computeReflected()Lhq7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lst1;->reflected:Lhq7;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public abstract computeReflected()Lhq7;
+.end method
+
+.method public getAnnotations()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/annotation/Annotation;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lgq7;->getAnnotations()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Lwka;
+.method public getBoundReceiver()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v1, p0, Lst1;->b:Lyn7;
+    iget-object v0, p0, Lst1;->receiver:Ljava/lang/Object;
 
-    iget-object v2, p0, Lst1;->c:Lyn7;
+    return-object v0
+.end method
 
-    invoke-direct {v0, v1, v2}, Lwka;-><init>(Lyn7;Lyn7;)V
+.method public getName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lst1;->name:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOwner()Ljq7;
+    .locals 2
+
+    iget-object v0, p0, Lst1;->owner:Ljava/lang/Class;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     return-object v0
 
-    :pswitch_1
-    iget-object v0, p0, Lst1;->b:Lyn7;
+    :cond_0
+    iget-boolean v1, p0, Lst1;->isTopLevel:Z
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    move-result-object v0
+    sget-object v1, Ls6d;->a:Lt6d;
 
-    check-cast v0, Le7f;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Lmka;
+    new-instance v1, Lwab;
 
-    invoke-virtual {v0}, Lmka;->b()Lh24;
+    invoke-direct {v1, v0}, Lwab;-><init>(Ljava/lang/Class;)V
 
-    move-result-object v0
+    return-object v1
 
-    const/4 v1, 0x1
-
-    const-string v2, "shortcuts"
-
-    invoke-virtual {v0, v1, v2}, Lh24;->limitedParallelism(ILjava/lang/String;)Lh24;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lst1;->c:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lf24;
-
-    invoke-virtual {v0, v1}, Lm0;->plus(Lf24;)Lf24;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+    :cond_1
+    invoke-static {v0}, Ls6d;->a(Ljava/lang/Class;)Lv63;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_2
-    invoke-static {}, Le88;->a()Lfh7;
+.method public getParameters()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
 
-    move-result-object v0
-
-    iget-object v1, p0, Lst1;->b:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Le7f;
-
-    check-cast v1, Lmka;
-
-    invoke-virtual {v1}, Lmka;->a()Lh24;
-
-    move-result-object v1
-
-    const-string v2, "non-contacts"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Lh24;->limitedParallelism(ILjava/lang/String;)Lh24;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lgi7;->plus(Lf24;)Lf24;
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
 
     move-result-object v0
 
-    iget-object v1, p0, Lst1;->c:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lf24;
-
-    invoke-interface {v0, v1}, Lf24;->plus(Lf24;)Lf24;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-interface {v0}, Lhq7;->getParameters()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_3
-    invoke-static {}, Lwy8;->c()Lg0f;
+.method public abstract getReflected()Lhq7;
+.end method
 
-    move-result-object v0
+.method public getReturnType()Lzq7;
+    .locals 1
 
-    iget-object v1, p0, Lst1;->b:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Le7f;
-
-    check-cast v1, Lmka;
-
-    invoke-virtual {v1}, Lmka;->b()Lh24;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lf24;->plus(Lf24;)Lf24;
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
 
     move-result-object v0
 
-    iget-object v1, p0, Lst1;->c:Lyn7;
+    invoke-interface {v0}, Lhq7;->getReturnType()Lzq7;
 
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    check-cast v1, Lf24;
+.method public getSignature()Ljava/lang/String;
+    .locals 1
 
-    invoke-interface {v0, v1}, Lf24;->plus(Lf24;)Lf24;
+    iget-object v0, p0, Lst1;->signature:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTypeParameters()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lhq7;->getTypeParameters()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    nop
+.method public getVisibility()Lar7;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lhq7;->getVisibility()Lar7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public isAbstract()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lhq7;->isAbstract()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isFinal()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lhq7;->isFinal()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isOpen()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lhq7;->isOpen()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isSuspend()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lst1;->getReflected()Lhq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lhq7;->isSuspend()Z
+
+    move-result v0
+
+    return v0
 .end method

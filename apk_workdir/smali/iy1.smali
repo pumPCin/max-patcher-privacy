@@ -1,133 +1,314 @@
-.class public final enum Liy1;
-.super Ljava/lang/Enum;
+.class public final synthetic Liy1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpi6;
 
-# static fields
-.field public static final enum X:Liy1;
 
-.field public static final enum Y:Liy1;
-
-.field public static final enum Z:Liy1;
-
-.field public static final enum a:Liy1;
-
-.field public static final enum b:Liy1;
-
-.field public static final enum c:Liy1;
-
-.field public static final enum o:Liy1;
-
-.field public static final synthetic r0:[Liy1;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Liy1;
+    iput p1, p0, Liy1;->a:I
 
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Liy1;->a:Liy1;
-
-    new-instance v1, Liy1;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Liy1;->b:Liy1;
-
-    new-instance v2, Liy1;
-
-    const-string v3, "SCANNING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Liy1;->c:Liy1;
-
-    new-instance v3, Liy1;
-
-    const-string v4, "PASSIVE_FOCUSED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Liy1;->o:Liy1;
-
-    new-instance v4, Liy1;
-
-    const-string v5, "PASSIVE_NOT_FOCUSED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Liy1;->X:Liy1;
-
-    new-instance v5, Liy1;
-
-    const-string v6, "LOCKED_FOCUSED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Liy1;->Y:Liy1;
-
-    new-instance v6, Liy1;
-
-    const-string v7, "LOCKED_NOT_FOCUSED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Liy1;->Z:Liy1;
-
-    filled-new-array/range {v0 .. v6}, [Liy1;
-
-    move-result-object v0
-
-    sput-object v0, Liy1;->r0:[Liy1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Liy1;
-    .locals 1
 
-    const-class v0, Liy1;
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Liy1;->a:I
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    check-cast p0, Liy1;
+    const/4 v2, 0x0
 
-    return-object p0
-.end method
+    const/4 v3, 0x0
 
-.method public static values()[Liy1;
-    .locals 1
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Liy1;->r0:[Liy1;
+    check-cast p1, Ljava/util/List;
 
-    invoke-virtual {v0}, [Liy1;->clone()Ljava/lang/Object;
+    if-eqz p1, :cond_1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/16 v0, 0xa
+
+    invoke-static {p1, v0}, Lcb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v0
+
+    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Liy1;
+    check-cast v0, Lfoh;
+
+    iget-object v1, v0, Lfoh;->g:Ljava/util/ArrayList;
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lya4;
+
+    :goto_1
+    move-object v9, v1
+
+    goto :goto_2
+
+    :cond_0
+    sget-object v1, Lya4;->c:Lya4;
+
+    goto :goto_1
+
+    :goto_2
+    new-instance v4, Lmnh;
+
+    iget-object v1, v0, Lfoh;->a:Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
+
+    move-result-object v5
+
+    iget-object v6, v0, Lfoh;->b:Llnh;
+
+    iget-object v7, v0, Lfoh;->c:Lya4;
+
+    iget-object v8, v0, Lfoh;->f:Ljava/util/ArrayList;
+
+    iget v10, v0, Lfoh;->d:I
+
+    iget v11, v0, Lfoh;->e:I
+
+    invoke-direct/range {v4 .. v11}, Lmnh;-><init>(Ljava/util/UUID;Llnh;Lya4;Ljava/util/ArrayList;Lya4;II)V
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    return-object v2
+
+    :pswitch_0
+    check-cast p1, Lzb0;
+
+    :try_start_0
+    invoke-static {p1}, Lomg;->S0(Lzb0;)Lomg;
+
+    move-result-object p1
+
+    invoke-static {p1, v2}, Lpmg;->a(Lnmg;Landroid/util/Size;)Lnmg;
+
+    move-result-object v2
+    :try_end_0
+    .catch Landroidx/camera/video/internal/encoder/InvalidConfigException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    const-string v0, "VideoEncoderInfoImpl"
+
+    const-string v1, "Unable to find a VideoEncoderInfoImpl"
+
+    invoke-static {v0, v1, p1}, Lgth;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_3
+    return-object v2
+
+    :pswitch_1
+    check-cast p1, Ljava/util/List;
+
+    return-object v2
+
+    :pswitch_2
+    check-cast p1, Lc68;
+
+    iput-boolean v1, p1, Lc68;->a:Z
+
+    iput-boolean v1, p1, Lc68;->c:Z
+
+    iput-boolean v3, p1, Lc68;->b:Z
+
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Lc68;
+
+    iput-boolean v3, p1, Lc68;->e:Z
+
+    iput-boolean v3, p1, Lc68;->g:Z
+
+    iput-boolean v3, p1, Lc68;->h:Z
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Lc68;
+
+    iput-boolean v3, p1, Lc68;->g:Z
+
+    iput-boolean v3, p1, Lc68;->h:Z
+
+    iput-boolean v3, p1, Lc68;->e:Z
+
+    return-object p1
+
+    :pswitch_5
+    check-cast p1, Lc68;
+
+    iput-boolean v3, p1, Lc68;->e:Z
+
+    iput-boolean v3, p1, Lc68;->g:Z
+
+    iput-boolean v3, p1, Lc68;->h:Z
+
+    return-object p1
+
+    :pswitch_6
+    check-cast p1, Lc68;
+
+    iput-boolean v1, p1, Lc68;->e:Z
+
+    return-object p1
+
+    :pswitch_7
+    check-cast p1, Lc68;
+
+    iput-boolean v1, p1, Lc68;->g:Z
+
+    iput-boolean v1, p1, Lc68;->h:Z
+
+    return-object p1
+
+    :pswitch_8
+    check-cast p1, Lc68;
+
+    iput-boolean v3, p1, Lc68;->e:Z
+
+    return-object p1
+
+    :pswitch_9
+    check-cast p1, Lc68;
+
+    iput-boolean v3, p1, Lc68;->g:Z
+
+    iput-boolean v3, p1, Lc68;->h:Z
+
+    return-object p1
+
+    :pswitch_a
+    check-cast p1, Ljava/util/List;
+
+    sget-object p1, Lq87;->A:Lo87;
+
+    return-object v2
+
+    :pswitch_b
+    new-instance v0, Ldyb;
+
+    check-cast p1, Lcyb;
+
+    invoke-direct {v0, p1}, Ldyb;-><init>(Lcyb;)V
 
     return-object v0
+
+    :pswitch_c
+    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
+
+    sget p1, Lyy1;->h:I
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object p1
+
+    :pswitch_d
+    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
+
+    sget p1, Lwy1;->g:I
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object p1
+
+    :pswitch_e
+    check-cast p1, Ljava/util/List;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_f
+    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
+
+    return-object v2
+
+    :pswitch_10
+    check-cast p1, Ljava/lang/Void;
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

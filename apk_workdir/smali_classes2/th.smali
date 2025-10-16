@@ -1,85 +1,82 @@
 .class public final Lth;
-.super Ljava/lang/Object;
+.super Lwh;
 .source "SourceFile"
-
-# interfaces
-.implements Loi;
 
 
 # instance fields
-.field public final synthetic a:Luh;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Luh;)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lth;->a:Luh;
+    iput p1, p0, Lth;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([Ljava/lang/Double;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Lth;->a:Luh;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Luh;->a:Lzy0;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, v1, Lzy0;->i0:Lhh1;
-
-    iget-object v1, v1, Lhh1;->a:Lch1;
-
-    iget-object v1, v1, Lch1;->a:Lyg1;
-
-    if-eqz v1, :cond_1
-
-    array-length v2, p1
-
-    new-array v3, v2, [F
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v2, :cond_0
-
-    aget-object v5, p1, v4
-
-    invoke-virtual {v5}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v5
-
-    double-to-float v5, v5
-
-    aput v5, v3, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget-object p1, v0, Luh;->h:Lzi;
+    instance-of v1, p1, Lth;
 
-    iget-object v0, p1, Lzi;->g:Landroid/os/Handler;
+    const/4 v2, 0x0
 
-    new-instance v2, Lxi;
+    if-nez v1, :cond_1
 
-    const/4 v4, 0x0
-
-    invoke-direct {v2, p1, v1, v3, v4}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    return v2
 
     :cond_1
-    return-void
+    check-cast p1, Lth;
+
+    iget v1, p0, Lth;->a:I
+
+    iget p1, p1, Lth;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final b()V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    iget v0, p0, Lth;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "IntNumber(value="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lth;->a:I
+
+    invoke-static {v2, v0, v1}, Lxx1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

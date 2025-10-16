@@ -1,57 +1,731 @@
 .class public final Lkd0;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lgi6;
 
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field public final synthetic X:I
 
-.field public final b:Lic8;
+.field public synthetic Y:Landroid/widget/ImageView;
+
+.field public synthetic Z:Lu4b;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
+
+    iput p3, p0, Lkd0;->X:I
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p0, Lkd0;->X:I
 
-    new-instance v0, Landroid/text/TextPaint;
+    check-cast p1, Landroid/widget/ImageView;
 
-    const/4 v1, 0x1
+    check-cast p2, Lu4b;
 
-    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    iput-object v0, p0, Lkd0;->a:Landroid/text/TextPaint;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+    new-instance v0, Lkd0;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    const/4 v1, 0x3
 
-    const-string v1, "sans-serif-medium"
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_2
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_3
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_4
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_5
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_6
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_7
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_8
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_9
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_a
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_b
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_c
+    new-instance v0, Lkd0;
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+    invoke-direct {v0, v1, p3, v2}, Lkd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iput-object p2, v0, Lkd0;->Z:Lu4b;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lkd0;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    iget v1, v1, Lh67;->i:I
 
-    sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+    move-result-object v1
 
-    const/4 v1, -0x1
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    new-instance v0, Lic8;
+    move-result-object p1
 
-    const/16 v1, 0x64
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0, v1, v2}, Lic8;-><init>(II)V
+    invoke-interface {v0}, Lu4b;->b()Lwe0;
 
-    iput-object v0, p0, Lkd0;->b:Lic8;
+    move-result-object v0
 
-    return-void
+    iget-object v0, v0, Lwe0;->a:Lve0;
+
+    iget v0, v0, Lve0;->h:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    :cond_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-interface {v0}, Lu4b;->f()Lq4;
+
+    move-result-object v0
+
+    iget v0, v0, Lq4;->a:I
+
+    invoke-static {p1, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    move-result-object v0
+
+    iget v0, v0, Lh67;->k:I
+
+    invoke-static {p1, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    move-result-object v0
+
+    iget v0, v0, Lh67;->k:I
+
+    invoke-static {p1, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_3
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    instance-of v2, v1, Landroid/graphics/drawable/GradientDrawable;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Lu4b;->b()Lwe0;
+
+    move-result-object v2
+
+    iget v2, v2, Lwe0;->l:I
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    move-result-object v0
+
+    iget v0, v0, Lh67;->k:I
+
+    invoke-static {p1, v0}, Lgma;->j(Landroid/graphics/drawable/Drawable;I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_4
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    if-eqz v1, :cond_3
+
+    check-cast p1, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_1
+    if-eqz p1, :cond_4
+
+    invoke-interface {v0}, Lu4b;->i()Ldaf;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ldaf;->b:Liaf;
+
+    iget v0, v0, Liaf;->b:I
+
+    const-string v1, "stroke"
+
+    invoke-static {p1, v1, v0}, Lkzi;->b(Lvig;Ljava/lang/String;I)V
+
+    :cond_4
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_5
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_6
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_7
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->a()Lpv2;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lpv2;->j()Lhph;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lhph;->b:Liph;
+
+    iget v0, v0, Liph;->b:I
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_8
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    move-result-object v0
+
+    iget v0, v0, Lh67;->j:I
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_9
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_a
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_b
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_c
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkd0;->Y:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lkd0;->Z:Lu4b;
+
+    invoke-interface {v0}, Lu4b;->getIcon()Lh67;
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

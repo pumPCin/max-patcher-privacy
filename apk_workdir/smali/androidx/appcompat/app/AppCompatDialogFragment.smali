@@ -14,34 +14,34 @@
 
 
 # virtual methods
-.method public E0()Landroid/app/Dialog;
+.method public D0()Landroid/app/Dialog;
     .locals 3
 
-    new-instance v0, Lco;
+    new-instance v0, Loo;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->E()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->D0()I
+    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->C0()I
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lco;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Loo;-><init>(Landroid/content/Context;I)V
 
     return-object v0
 .end method
 
-.method public final F0(Landroid/app/Dialog;I)V
+.method public final E0(Landroid/app/Dialog;I)V
     .locals 3
 
-    instance-of v0, p1, Lco;
+    instance-of v0, p1, Loo;
 
     if-eqz v0, :cond_2
 
     move-object v0, p1
 
-    check-cast v0, Lco;
+    check-cast v0, Loo;
 
     const/4 v1, 0x1
 
@@ -67,16 +67,16 @@
     invoke-virtual {p1, p2}, Landroid/view/Window;->addFlags(I)V
 
     :cond_1
-    invoke-virtual {v0}, Lco;->c()Lon;
+    invoke-virtual {v0}, Loo;->c()Lzn;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lon;->h(I)Z
+    invoke-virtual {p1, v1}, Lzn;->g(I)Z
 
     return-void
 
     :cond_2
-    invoke-super {p0, p1, p2}, Landroidx/fragment/app/DialogFragment;->F0(Landroid/app/Dialog;I)V
+    invoke-super {p0, p1, p2}, Landroidx/fragment/app/DialogFragment;->E0(Landroid/app/Dialog;I)V
 
     return-void
 .end method

@@ -1,89 +1,53 @@
-.class public abstract synthetic Lv28;
-.super Ljava/lang/Object;
+.class public final Lv28;
+.super Lk14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public X:Ljava/lang/String;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+.field public final synthetic r0:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lru/ok/tamtam/location/live/LiveLocationWorker;Lk14;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput-object p1, p0, Lv28;->r0:Lru/ok/tamtam/location/live/LiveLocationWorker;
 
-    invoke-static {v0}, Lsw1;->y(I)[I
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v4, 0x2
-
-    :try_start_1
-    aput v4, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    aput v0, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v1, Lv28;->$EnumSwitchMapping$0:[I
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Lsw1;->y(I)[I
-
-    move-result-object v5
-
-    array-length v5, v5
-
-    new-array v5, v5, [I
-
-    :try_start_3
-    aput v2, v5, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    aput v4, v5, v4
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    aput v0, v5, v0
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    aput v1, v5, v3
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v5, Lv28;->$EnumSwitchMapping$1:[I
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lv28;->Z:Ljava/lang/Object;
+
+    iget p1, p0, Lv28;->s0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lv28;->s0:I
+
+    iget-object p1, p0, Lv28;->r0:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

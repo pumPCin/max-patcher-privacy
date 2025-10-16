@@ -1,116 +1,187 @@
 .class public final Las0;
-.super Lwm4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Laqb;
+.field public final a:Lyj8;
 
-.field public final synthetic d:Lbff;
+.field public final b:Lyj8;
+
+.field public final c:Lyj8;
+
+.field public final d:Ld61;
 
 
 # direct methods
-.method public constructor <init>(Lbff;Lii0;Laqb;)V
+.method public constructor <init>(Lyj8;Lyj8;Lyj8;Ld61;)V
     .locals 0
 
-    iput-object p1, p0, Las0;->d:Lbff;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwm4;-><init>(Lii0;)V
+    iput-object p1, p0, Las0;->a:Lyj8;
 
-    iput-object p3, p0, Las0;->c:Laqb;
+    iput-object p2, p0, Las0;->b:Lyj8;
+
+    iput-object p3, p0, Las0;->c:Lyj8;
+
+    iput-object p4, p0, Las0;->d:Ld61;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ljava/lang/Throwable;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p1, p0, Las0;->d:Lbff;
+    const/4 v0, 0x1
 
-    iget-object p1, p1, Lbff;->c:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lrff;
-
-    iget-object v0, p0, Lwm4;->b:Lii0;
-
-    iget-object v1, p0, Las0;->c:Laqb;
-
-    invoke-virtual {p1, v0, v1}, Lrff;->a(Lii0;Laqb;)V
-
-    return-void
-.end method
-
-.method public final h(ILjava/lang/Object;)V
-    .locals 6
-
-    check-cast p2, Lj75;
-
-    iget-object v0, p0, Las0;->c:Laqb;
-
-    move-object v1, v0
-
-    check-cast v1, Loj0;
-
-    iget-object v1, v1, Loj0;->a:Lx47;
-
-    invoke-static {p1}, Lii0;->a(I)Z
-
-    move-result v2
-
-    iget-object v3, v1, Lx47;->h:Lu0d;
-
-    invoke-static {p2, v3}, Lnc6;->x(Lj75;Lu0d;)Z
-
-    move-result v3
-
-    iget-object v4, p0, Lwm4;->b:Lii0;
-
-    if-eqz p2, :cond_2
-
-    if-nez v3, :cond_0
-
-    iget-boolean v5, v1, Lx47;->e:Z
-
-    if-eqz v5, :cond_2
+    return v0
 
     :cond_0
-    if-eqz v2, :cond_1
+    instance-of v1, p1, Las0;
 
-    if-eqz v3, :cond_1
+    const/4 v2, 0x0
 
-    invoke-virtual {v4, p1, p2}, Lii0;->g(ILjava/lang/Object;)V
+    if-nez v1, :cond_1
 
-    goto :goto_0
+    return v2
 
     :cond_1
-    and-int/lit8 p1, p1, -0x2
+    check-cast p1, Las0;
 
-    invoke-virtual {v4, p1, p2}, Lii0;->g(ILjava/lang/Object;)V
+    iget-object v1, p0, Las0;->a:Lyj8;
+
+    iget-object v3, p1, Las0;->a:Lyj8;
+
+    if-eq v1, v3, :cond_2
+
+    return v2
 
     :cond_2
-    :goto_0
-    if-eqz v2, :cond_3
+    iget-object v1, p0, Las0;->b:Lyj8;
 
-    if-nez v3, :cond_3
+    iget-object v3, p1, Las0;->b:Lyj8;
 
-    invoke-virtual {v1}, Lx47;->c()Z
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Las0;->c:Lyj8;
+
+    iget-object v3, p1, Las0;->c:Lyj8;
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Las0;->d:Ld61;
+
+    iget-object p1, p1, Las0;->d:Ld61;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_5
 
-    invoke-static {p2}, Lj75;->d(Lj75;)V
+    return v2
 
-    iget-object p1, p0, Las0;->d:Lbff;
+    :cond_5
+    return v0
+.end method
 
-    iget-object p1, p1, Lbff;->c:Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 2
 
-    check-cast p1, Lrff;
+    iget-object v0, p0, Las0;->a:Lyj8;
 
-    invoke-virtual {p1, v4, v0}, Lrff;->a(Lii0;Laqb;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :cond_3
-    return-void
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Las0;->b:Lyj8;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Las0;->c:Lyj8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Las0;->d:Ld61;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BottomPanelState(isMicrophoneEnabled="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Las0;->a:Lyj8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideoEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Las0;->b:Lyj8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isRaiseHandEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Las0;->c:Lyj8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", dynamicType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Las0;->d:Ld61;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

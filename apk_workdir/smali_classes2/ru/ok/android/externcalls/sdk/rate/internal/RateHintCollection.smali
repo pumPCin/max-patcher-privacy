@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/rate/RateHint;",
         "rateHint",
-        "Laxf;",
+        "Lzag;",
         "addRateHint",
         "(Lru/ok/android/externcalls/sdk/rate/RateHint;)V",
         "calls-sdk_release"

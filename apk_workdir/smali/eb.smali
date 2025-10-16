@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lib;
+.implements Lob;
 
 
 # instance fields
-.field public final a:Ldh1;
+.field public final a:Z
 
 .field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Ldh1;Z)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Leb;->a:Ldh1;
+    iput-boolean p1, p0, Leb;->a:Z
 
     iput-boolean p2, p0, Leb;->b:Z
 
@@ -44,15 +44,11 @@
     :cond_1
     check-cast p1, Leb;
 
-    iget-object v0, p0, Leb;->a:Ldh1;
+    iget-boolean v0, p0, Leb;->a:Z
 
-    iget-object v1, p1, Leb;->a:Ldh1;
+    iget-boolean v1, p1, Leb;->a:Z
 
-    invoke-virtual {v0, v1}, Ldh1;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
@@ -78,9 +74,9 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Leb;->a:Ldh1;
+    iget-boolean v0, p0, Leb;->a:Z
 
-    invoke-virtual {v0}, Ldh1;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -98,31 +94,19 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DisableMicForParticipant(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Leb;->a:Ldh1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isSuccess="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Leb;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string v0, ", isEnabled="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "DisableAllMicInCall(isSuccess="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-boolean v3, p0, Leb;->a:Z
+
+    iget-boolean v4, p0, Leb;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

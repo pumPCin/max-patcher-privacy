@@ -3,19 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lno3;
-.implements Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$GrantRolesRequest;
+.implements Ler3;
 
 
 # instance fields
 .field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
+.field public final synthetic b:Lfr3;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;)V
     .locals 0
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/o;->b:Lfr3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,34 +27,28 @@
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+.method public a(Lyz0;)V
+    .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/o;->b:Lfr3;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->O(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->g(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Lyz0;)V
 
     return-void
 .end method
 
-.method public grantRoles(Lyg1;Z[Lbh1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-    .locals 6
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->b:Lfr3;
 
-    move-object v1, p1
+    check-cast p1, Ljava/lang/Throwable;
 
-    move v2, p2
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->q(Lru/ok/android/externcalls/sdk/ConversationImpl;Lyg1;Z[Lbh1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-static {v1, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->p(Lru/ok/android/externcalls/sdk/ConversationImpl;Lfr3;Ljava/lang/Throwable;)V
 
     return-void
 .end method

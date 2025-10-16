@@ -1,119 +1,102 @@
-.class public final Llv;
-.super Lmv;
+.class public final synthetic Llv;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ler3;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Llj2;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public synthetic constructor <init>(Llj2;I)V
     .locals 0
 
+    iput p2, p0, Llv;->a:I
+
+    iput-object p1, p0, Llv;->b:Llj2;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Llv;->a:J
-
-    iput-boolean p3, p0, Llv;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Llv;->a:I
 
-    goto :goto_1
+    check-cast p1, Ljava/lang/Throwable;
 
-    :cond_0
-    instance-of v0, p1, Llv;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Llv;->b:Llj2;
 
-    goto :goto_0
+    iget-object v1, v0, Llj2;->a:Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Llv;
+    const-string v2, "load: exception"
 
-    iget-wide v0, p0, Llv;->a:J
+    invoke-static {v1, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-wide v2, p1, Llv;->a:J
+    iget-object v0, v0, Llj2;->Y:Lye5;
 
-    cmp-long v0, v0, v2
+    new-instance v1, Lru/ok/tamtam/util/HandledException;
 
-    if-eqz v0, :cond_2
+    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    goto :goto_0
+    invoke-interface {v0, v1}, Lye5;->a(Ljava/lang/Throwable;)V
 
-    :cond_2
-    iget-boolean v0, p0, Llv;->b:Z
+    return-void
 
-    iget-boolean p1, p1, Llv;->b:Z
+    :pswitch_0
+    iget-object p1, p0, Llv;->b:Llj2;
 
-    if-eq v0, p1, :cond_3
+    iget-object p1, p1, Llj2;->r0:Lov;
 
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Lov;->b()V
 
-    return p1
+    return-void
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    :pswitch_1
+    iget-object v0, p0, Llv;->b:Llj2;
 
-    return p1
-.end method
+    iget-object v1, v0, Llj2;->a:Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 2
+    const-string v2, "loadPrev: exception"
 
-    iget-wide v0, p0, Llv;->a:J
+    invoke-static {v1, v2, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, v0, Llj2;->Y:Lye5;
 
-    move-result v0
+    new-instance v1, Lru/ok/tamtam/util/HandledException;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    iget-boolean v1, p0, Llv;->b:Z
+    invoke-interface {v0, v1}, Lye5;->a(Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    return-void
 
-    move-result v1
+    :pswitch_2
+    iget-object p1, p0, Llv;->b:Llj2;
 
-    add-int/2addr v1, v0
+    iget-object p1, p1, Llj2;->s0:Lov;
 
-    return v1
-.end method
+    invoke-virtual {p1}, Lov;->b()V
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    return-void
 
-    const-string v0, "LoadingPrev(time="
+    nop
 
-    const-string v1, ", isRemoteCaused="
-
-    iget-wide v2, p0, Llv;->a:J
-
-    iget-boolean v4, p0, Llv;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lnd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

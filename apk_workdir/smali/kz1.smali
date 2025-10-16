@@ -1,24 +1,23 @@
 .class public final Lkz1;
-.super Ljava/lang/Object;
+.super Liz1;
 .source "SourceFile"
-
-# interfaces
-.implements Lky1;
 
 
 # virtual methods
-.method public final a()Lbw7;
-    .locals 1
+.method public final b(ILpz1;)V
+    .locals 0
 
-    sget-object v0, Le57;->c:Le57;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final b()Lbw7;
-    .locals 1
+.method public final c(ILnqi;)V
+    .locals 0
 
-    sget-object v0, Le57;->c:Le57;
+    return-void
+.end method
 
-    return-object v0
+.method public final d(I)V
+    .locals 0
+
+    return-void
 .end method

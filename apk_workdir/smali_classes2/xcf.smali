@@ -1,116 +1,31 @@
 .class public final Lxcf;
-.super Lcdf;
+.super Lpoe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Lwcf;
-
-
-# instance fields
-.field public final b:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lwcf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxcf;->CREATOR:Lwcf;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lxcf;->b:I
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final A(Lb18;)V
+    .locals 4
 
-    const/4 v0, 0x0
+    check-cast p1, Lwcf;
 
-    return v0
-.end method
+    iget-object v0, p0, Lj6d;->a:Landroid/view/View;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    check-cast v0, Ltqa;
 
-    const/4 v0, 0x1
+    iget-object v1, p1, Lwcf;->b:Ljava/lang/CharSequence;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0, v1}, Ltqa;->setTitle(Ljava/lang/CharSequence;)V
 
-    return v0
+    iget-object v2, p1, Lwcf;->o:Ljava/lang/CharSequence;
 
-    :cond_0
-    instance-of v1, p1, Lxcf;
+    invoke-virtual {v0, v2}, Ltqa;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    const/4 v2, 0x0
+    iget-wide v2, p1, Lwcf;->a:J
 
-    if-nez v1, :cond_1
+    iget-object p1, p1, Lwcf;->c:Ljava/lang/String;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lxcf;
-
-    iget v1, p0, Lxcf;->b:I
-
-    iget p1, p1, Lxcf;->b:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lxcf;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Resource(resId="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lxcf;->b:I
-
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lxcf;->b:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0, v2, v3, v1, p1}, Ltqa;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
     return-void
 .end method

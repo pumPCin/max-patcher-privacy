@@ -3,81 +3,75 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqrd;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic e:I
+.field public final synthetic a:Lxo4;
 
-.field public final synthetic f:Ljava/lang/Object;
+.field public final synthetic b:F
 
-.field public final synthetic g:Ljava/lang/Object;
+.field public final synthetic c:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lxo4;FF)V
     .locals 0
 
-    iput p2, p0, Lwo4;->e:I
-
-    iput-object p1, p0, Lwo4;->f:Ljava/lang/Object;
-
-    iput-object p3, p0, Lwo4;->g:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwo4;->a:Lxo4;
+
+    iput p2, p0, Lwo4;->b:F
+
+    iput p3, p0, Lwo4;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    iget v0, p0, Lwo4;->e:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Lwo4;->f:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Float;
 
-    check-cast v0, Landroid/content/Context;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    iget-object v1, p0, Lwo4;->g:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v1, Lnnb;
+    iget-object v0, p0, Lwo4;->a:Lxo4;
 
-    invoke-static {v0, v1}, Lug5;->g(Landroid/content/Context;Lnnb;)V
+    iget-object v1, v0, Lxo4;->k:Landroid/graphics/Matrix;
 
-    return-void
+    invoke-static {v1}, Ljyh;->a(Landroid/graphics/Matrix;)F
 
-    :pswitch_0
-    iget-object v0, p0, Lwo4;->f:Ljava/lang/Object;
+    move-result v2
 
-    check-cast v0, Lxo4;
+    div-float/2addr p1, v2
 
-    iget-object v1, p0, Lwo4;->g:Ljava/lang/Object;
+    iget v2, p0, Lwo4;->b:F
 
-    check-cast v1, Ljava/lang/ref/WeakReference;
+    iget v3, p0, Lwo4;->c:F
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v1, p1, p1, v2, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    move-result-object v1
+    iget-object p1, v0, Lxo4;->j:Landroid/graphics/Matrix;
 
-    check-cast v1, Lxo4;
+    invoke-virtual {p1, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Lxo4;->b()V
 
-    iget-object v0, v0, Lxo4;->e:Lq0d;
+    iget-object p1, v0, Lxo4;->b:Lqqh;
 
-    invoke-virtual {v0}, Lq0d;->reset()V
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, v1}, Lmqh;->a(Landroid/graphics/Matrix;)V
 
     :cond_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

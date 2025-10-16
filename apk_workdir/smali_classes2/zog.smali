@@ -1,102 +1,69 @@
 .class public final Lzog;
-.super La82;
+.super Lk14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public X:Ljava/lang/String;
+
+.field public Y:Loa9;
+
+.field public Z:J
+
+.field public o:Lcpg;
+
+.field public r0:J
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lcpg;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(Lcpg;Lk14;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput-object p1, p0, Lzog;->t0:Lcpg;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1, v0}, La82;-><init>(Ljava/lang/Long;I)V
-
-    iput-wide p1, p0, Lzog;->c:J
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    iget-wide v0, p0, Lzog;->c:J
+    iput-object p1, p0, Lzog;->s0:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget p1, p0, Lzog;->u0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    return-object v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iput p1, p0, Lzog;->u0:I
 
-    const/4 v0, 0x1
+    const/4 v7, 0x0
 
-    if-ne p0, p1, :cond_0
+    const/4 v8, 0x0
 
-    return v0
+    iget-object v0, p0, Lzog;->t0:Lcpg;
 
-    :cond_0
-    instance-of v1, p1, Lzog;
+    const-wide/16 v1, 0x0
 
-    const/4 v2, 0x0
+    const-wide/16 v3, 0x0
 
-    if-nez v1, :cond_1
+    const-wide/16 v5, 0x0
 
-    return v2
+    move-object v9, p0
 
-    :cond_1
-    check-cast p1, Lzog;
+    invoke-virtual/range {v0 .. v9}, Lcpg;->c(JJJLjava/lang/String;Lesg;Lk14;)Ljava/lang/Object;
 
-    iget-wide v3, p0, Lzog;->c:J
+    move-result-object p1
 
-    iget-wide v5, p1, Lzog;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lzog;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ChatId(sourceId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lzog;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

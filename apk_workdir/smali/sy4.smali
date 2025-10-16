@@ -1,13 +1,35 @@
-.class public abstract Lsy4;
+.class public interface abstract Lsy4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/View;FF)V
+# virtual methods
+.method public a(Luy4;)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->drawableHotspotChanged(FF)V
+    return-void
+.end method
+
+.method public b()V
+    .locals 0
 
     return-void
+.end method
+
+.method public c()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public d(Luy4;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract e(Lkw4;Ljava/lang/Exception;)V
+.end method
+
+.method public abstract f(Luy4;Lkw4;)V
 .end method

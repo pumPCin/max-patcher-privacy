@@ -1,366 +1,109 @@
 .class public final Lwq1;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Z
 
-.field public final synthetic o:Lxq1;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lxq1;I)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput p2, p0, Lwq1;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwq1;->o:Lxq1;
+    iput-boolean p1, p0, Lwq1;->a:Z
 
-    const/16 p1, 0x9
-
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p2, Ltq1;->b:Ltq1;
-
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+    iput-boolean p2, p0, Lwq1;->b:Z
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Luq1;->o:Luq1;
-
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lwq1;->c:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    check-cast p2, Luq1;
-
-    check-cast p1, Luq1;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    sget-object v1, Lrw4;->t0:Lss6;
-
-    iget-object v2, p0, Lwq1;->o:Lxq1;
-
-    if-eqz v0, :cond_6
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_6
-
-    const/4 p1, 0x2
-
-    if-eq v0, p1, :cond_2
-
-    const/4 p1, 0x3
-
-    if-ne v0, p1, :cond_1
-
-    invoke-virtual {v2}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lx7e;->stop()V
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Lwq1;
 
-    invoke-virtual {v2, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    const/4 v2, 0x0
 
-    goto/16 :goto_1
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    check-cast p1, Lwq1;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget-boolean v1, p0, Lwq1;->a:Z
 
-    throw p1
+    iget-boolean v3, p1, Lwq1;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
+    iget-boolean v1, p0, Lwq1;->b:Z
 
-    move-result-object p1
+    iget-boolean p1, p1, Lwq1;->b:Z
 
-    if-nez p1, :cond_3
+    if-eq v1, p1, :cond_3
 
-    invoke-static {v2}, Lxq1;->L(Lxq1;)Lx7e;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    return v2
 
     :cond_3
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 2
 
-    if-eqz p1, :cond_4
+    iget-boolean v0, p0, Lwq1;->a:Z
 
-    sget-object p2, Lt7e;->o:Lt7e;
-
-    iget-object p1, p1, Lx7e;->b:Lw7e;
-
-    invoke-virtual {p1, p2}, Lw7e;->c(Lt7e;)V
-
-    :cond_4
-    invoke-virtual {v2}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {p1}, Lx7e;->isRunning()Z
-
-    move-result p1
-
-    if-nez p1, :cond_c
-
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {v1, v2}, Lss6;->x(Landroid/view/View;)Lzma;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lzma;->c:Llwa;
-
-    invoke-virtual {p1, p2}, Lx7e;->onThemeChanged(Llwa;)V
-
-    :cond_5
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {p1}, Lx7e;->start()V
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object v0
-
-    if-nez v0, :cond_7
-
-    invoke-static {v2}, Lxq1;->L(Lxq1;)Lx7e;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_7
-    sget-object v0, Luq1;->b:Luq1;
-
-    sget-object v3, Luq1;->a:Luq1;
-
-    if-ne p1, v0, :cond_8
-
-    if-ne p2, v3, :cond_8
-
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_8
-
-    const/16 v0, 0x80
-
-    invoke-virtual {p1, v0}, Lx7e;->setAlpha(I)V
-
-    :cond_8
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_a
-
-    if-ne p2, v3, :cond_9
-
-    sget-object p2, Lt7e;->c:Lt7e;
-
-    goto :goto_0
-
-    :cond_9
-    sget-object p2, Lt7e;->b:Lt7e;
-
-    :goto_0
-    iget-object p1, p1, Lx7e;->b:Lw7e;
-
-    invoke-virtual {p1, p2}, Lw7e;->c(Lt7e;)V
-
-    :cond_a
-    invoke-virtual {v2}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {p1}, Lx7e;->isRunning()Z
-
-    move-result p1
-
-    if-nez p1, :cond_c
-
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {v1, v2}, Lss6;->x(Landroid/view/View;)Lzma;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lzma;->c:Llwa;
-
-    invoke-virtual {p1, p2}, Lx7e;->onThemeChanged(Llwa;)V
-
-    :cond_b
-    invoke-virtual {v2}, Lxq1;->getBackground()Lx7e;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {p1}, Lx7e;->start()V
-
-    :cond_c
-    :goto_1
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    if-nez v0, :cond_f
+    mul-int/lit8 v0, v0, 0x1f
 
-    check-cast p2, Ltq1;
+    iget-boolean v1, p0, Lwq1;->b:Z
 
-    check-cast p1, Ltq1;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    move-result v1
 
-    move-result p1
+    add-int/2addr v1, v0
 
-    sget-object p2, Lt5d;->b:Lt5d;
+    return v1
+.end method
 
-    iget-object v0, p0, Lwq1;->o:Lxq1;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    if-eqz p1, :cond_e
+    const-string v0, ", settingsButtonVisibility="
 
-    const/4 v1, 0x1
+    const-string v1, ")"
 
-    if-ne p1, v1, :cond_d
+    const-string v2, "ButtonsVisibility(moreButtonVisibility="
 
-    invoke-static {v0}, Lxq1;->M(Lxq1;)Ly5d;
+    iget-boolean v3, p0, Lwq1;->a:Z
 
-    move-result-object p1
+    iget-boolean v4, p0, Lwq1;->b:Z
 
-    sget-object v1, Lt5d;->a:Lt5d;
+    invoke-static {v2, v3, v0, v4, v1}, Lwc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, v1}, Ly5d;->setMode(Lt5d;)V
+    move-result-object v0
 
-    invoke-static {v0}, Lxq1;->P(Lxq1;)Ly5d;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Ly5d;->setMode(Lt5d;)V
-
-    invoke-static {v0}, Lxq1;->O(Lxq1;)Ly5d;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Ly5d;->setMode(Lt5d;)V
-
-    goto :goto_2
-
-    :cond_d
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_e
-    invoke-static {v0}, Lxq1;->M(Lxq1;)Ly5d;
-
-    move-result-object p1
-
-    sget-object v1, Lt5d;->c:Lt5d;
-
-    invoke-virtual {p1, v1}, Ly5d;->setMode(Lt5d;)V
-
-    invoke-static {v0}, Lxq1;->P(Lxq1;)Ly5d;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Ly5d;->setMode(Lt5d;)V
-
-    invoke-static {v0}, Lxq1;->O(Lxq1;)Ly5d;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Ly5d;->setMode(Lt5d;)V
-
-    :cond_f
-    :goto_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

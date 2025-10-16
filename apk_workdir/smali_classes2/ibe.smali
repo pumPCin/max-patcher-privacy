@@ -1,177 +1,105 @@
 .class public final Libe;
-.super Ljava/lang/Object;
+.super Lqci;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-
-# direct methods
-.method public constructor <init>(Lhbe;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-boolean v0, p1, Lhbe;->a:Z
-
-    iput-boolean v0, p0, Libe;->a:Z
-
-    iget-boolean v0, p1, Lhbe;->b:Z
-
-    iput-boolean v0, p0, Libe;->b:Z
-
-    iget-boolean v0, p1, Lhbe;->c:Z
-
-    iput-boolean v0, p0, Libe;->c:Z
-
-    iget-boolean v0, p1, Lhbe;->e:Z
-
-    iput-boolean v0, p0, Libe;->e:Z
-
-    iget-boolean v0, p1, Lhbe;->d:Z
-
-    iput-boolean v0, p0, Libe;->d:Z
-
-    iget-boolean p1, p1, Lhbe;->f:Z
-
-    iput-boolean p1, p0, Libe;->f:Z
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 11
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lqci;->b:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Ljava/util/BitSet;
 
-    :cond_0
-    if-eqz p1, :cond_7
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v0, v3}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v3
+
+    const/4 v4, 0x3
+
+    invoke-virtual {v0, v4}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v4
+
+    const/4 v5, 0x4
+
+    invoke-virtual {v0, v5}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v5
+
+    const/4 v6, 0x5
+
+    invoke-virtual {v0, v6}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v6
+
+    const/4 v7, 0x6
+
+    invoke-virtual {v0, v7}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v7
+
+    const/4 v8, 0x7
+
+    invoke-virtual {v0, v8}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    const-string v8, ",\n                isTitleChanged="
+
+    const-string v9, ",\n                isTypeChanged="
+
+    const-string v10, "\n            Payload(\n                isSectionChanged="
+
+    invoke-static {v10, v1, v8, v2, v9}, Lf67;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",\n                isDescriptionResChanged="
+
+    const-string v8, ",\n                isEndViewChanged="
+
+    invoke-static {v2, v8, v1, v3, v4}, Lwx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v2, ",\n                isCounterTypeChanged="
+
+    const-string v3, ",\n                isUpperTextChanged="
+
+    invoke-static {v2, v3, v1, v5, v6}, Lwx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ",\n                isStartIconChanged="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ",\n            )\n        "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-class v1, Libe;
+    invoke-static {v0}, Lt9f;->c(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eq v1, v0, :cond_1
+    move-result-object v0
 
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Libe;
-
-    iget-boolean v0, p0, Libe;->a:Z
-
-    iget-boolean v1, p1, Libe;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-boolean v0, p0, Libe;->b:Z
-
-    iget-boolean v1, p1, Libe;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-boolean v0, p0, Libe;->c:Z
-
-    iget-boolean v1, p1, Libe;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v0, p0, Libe;->d:Z
-
-    iget-boolean v1, p1, Libe;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    iget-boolean v0, p0, Libe;->f:Z
-
-    iget-boolean v1, p1, Libe;->f:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    iget-boolean v0, p0, Libe;->e:Z
-
-    iget-boolean p1, p1, Libe;->e:Z
-
-    if-ne v0, p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_7
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Libe;->a:Z
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Libe;->b:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Libe;->c:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Libe;->e:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Libe;->d:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Libe;->f:Z
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object v0
 .end method

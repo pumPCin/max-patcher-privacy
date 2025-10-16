@@ -1,103 +1,81 @@
 .class public final Lwva;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic o:Lyva;
+.field public final b:Llt7;
 
 
 # direct methods
-.method public constructor <init>(Lxfa;Lyva;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Llt7;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lwva;->c:I
+    iput-object p1, p0, Lwva;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lwva;->o:Lyva;
-
-    const/16 p2, 0x9
-
-    .line 1
-    invoke-direct {p0, p2, p1}, Ld3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lyva;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lwva;->c:I
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lwva;->o:Lyva;
-
-    const/16 p1, 0x9
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Ld3;-><init>(ILjava/lang/Object;)V
+    iput-object p2, p0, Lwva;->b:Llt7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final a(J)V
+    .locals 2
 
-    iget v0, p0, Lwva;->c:I
+    const-string v0, ":chats?id="
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "&type=local"
 
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2, v0, v1}, Lhug;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    iget-object p2, p0, Lwva;->b:Llt7;
 
-    check-cast p2, Ljava/lang/Boolean;
+    invoke-interface {p2}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lim;
+
+    check-cast p2, Ls08;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-static {p1}, Llxi;->a(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    iget-object p1, p0, Lwva;->o:Lyva;
+    sget p2, Lone/me/android/deeplink/NewWidgetActivity;->U0:I
 
-    invoke-static {p1}, Lyva;->a(Lyva;)V
+    new-instance p2, Landroid/content/Intent;
 
-    :cond_0
+    const-class v0, Lone/me/android/deeplink/NewWidgetActivity;
+
+    iget-object v1, p0, Lwva;->a:Landroid/content/Context;
+
+    invoke-direct {p2, v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v0, "deep_link"
+
+    invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string p1, "snackbar"
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const/high16 p1, 0x10000000
+
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
     return-void
-
-    :pswitch_0
-    check-cast p2, Lxfa;
-
-    check-cast p1, Lxfa;
-
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lwva;->o:Lyva;
-
-    invoke-static {p1}, Lyva;->a(Lyva;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

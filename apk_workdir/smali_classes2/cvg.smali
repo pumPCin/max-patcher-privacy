@@ -1,25 +1,69 @@
 .class public final Lcvg;
-.super Ljava/lang/Object;
+.super Ldvg;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lql7;
-    .locals 1
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Lql7;"
+            "Landroid/os/Parcelable$Creator<",
+            "Lcvg;",
+            ">;"
         }
     .end annotation
+.end field
 
-    sget-object v0, Ldvg;->a:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+# instance fields
+.field public final a:Legc;
 
-    move-result-object v0
 
-    check-cast v0, Lql7;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    return-object v0
+    new-instance v0, Lavg;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lavg;-><init>(I)V
+
+    sput-object v0, Lcvg;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Legc;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcvg;->a:Legc;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Lcvg;->a:Legc;
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

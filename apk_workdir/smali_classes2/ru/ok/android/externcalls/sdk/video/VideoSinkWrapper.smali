@@ -35,7 +35,7 @@
         "(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Ljava/util/Map;)V",
         "Lorg/webrtc/VideoFrame;",
         "frame",
-        "Laxf;",
+        "Lzag;",
         "onFrame",
         "(Lorg/webrtc/VideoFrame;)V",
         "",

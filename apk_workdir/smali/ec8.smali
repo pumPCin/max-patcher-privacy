@@ -1,152 +1,33 @@
-.class public final Lec8;
+.class public abstract synthetic Lec8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public A:I
+# direct methods
+.method public static bridge synthetic a(ILfc8;)Landroid/media/LoudnessCodecController;
+    .locals 1
 
-.field public B:I
+    sget-object v0, Lrt4;->a:Lrt4;
 
-.field public C:I
+    invoke-static {p0, v0, p1}, Landroid/media/LoudnessCodecController;->create(ILjava/util/concurrent/Executor;Landroid/media/LoudnessCodecController$OnLoudnessCodecUpdateListener;)Landroid/media/LoudnessCodecController;
 
-.field public D:F
+    move-result-object p0
 
-.field public E:F
+    return-object p0
+.end method
 
-.field public F:F
+.method public static bridge synthetic b(Landroid/media/LoudnessCodecController;)V
+    .locals 0
 
-.field public G:F
+    invoke-virtual {p0}, Landroid/media/LoudnessCodecController;->close()V
 
-.field public H:F
+    return-void
+.end method
 
-.field public I:F
+.method public static bridge synthetic c(Landroid/media/LoudnessCodecController;Landroid/media/MediaCodec;)V
+    .locals 0
 
-.field public J:F
+    invoke-virtual {p0, p1}, Landroid/media/LoudnessCodecController;->removeMediaCodec(Landroid/media/MediaCodec;)V
 
-.field public K:F
-
-.field public L:F
-
-.field public M:F
-
-.field public N:[B
-
-.field public O:I
-
-.field public P:I
-
-.field public Q:I
-
-.field public R:J
-
-.field public S:J
-
-.field public T:Leqf;
-
-.field public U:Z
-
-.field public V:Z
-
-.field public W:Ljava/lang/String;
-
-.field public X:Lsmf;
-
-.field public Y:I
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public i:[B
-
-.field public j:Lqmf;
-
-.field public k:[B
-
-.field public l:Ley4;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:F
-
-.field public t:F
-
-.field public u:F
-
-.field public v:[B
-
-.field public w:I
-
-.field public x:Z
-
-.field public y:I
-
-.field public z:I
-
-
-# virtual methods
-.method public final a(Ljava/lang/String;)[B
-    .locals 2
-
-    iget-object v0, p0, Lec8;->k:[B
-
-    if-nez v0, :cond_1
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    const-string v1, "Missing CodecPrivate for codec "
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/String;
-
-    invoke-direct {p1, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    const/4 v0, 0x0
-
-    invoke-static {v0, p1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_1
-    return-object v0
+    return-void
 .end method

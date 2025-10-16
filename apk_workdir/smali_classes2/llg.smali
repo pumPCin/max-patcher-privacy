@@ -1,128 +1,90 @@
-.class public final Lllg;
-.super Lc2f;
+.class public interface abstract Lllg;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
-
-
-# instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lc2f;
-
-.field public final synthetic r0:Landroid/view/View;
-
-
-# direct methods
-.method public constructor <init>(Lle6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    check-cast p1, Lc2f;
-
-    iput-object p1, p0, Lllg;->Z:Lc2f;
-
-    iput-object p2, p0, Lllg;->r0:Landroid/view/View;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Llwa;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lllg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lllg;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lllg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract a()J
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lllg;
-
-    iget-object v1, p0, Lllg;->Z:Lc2f;
-
-    iget-object v2, p0, Lllg;->r0:Landroid/view/View;
-
-    invoke-direct {v0, v1, v2, p2}, Lllg;-><init>(Lle6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lllg;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public b()Z
     .locals 2
 
-    iget v0, p0, Lllg;->X:I
+    invoke-interface {p0}, Lllg;->e()Landroid/net/Uri;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    sget-object v1, Ljhg;->a:Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "file"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v0
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :goto_0
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lllg;->Y:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast p1, Llwa;
+.method public c(J)Lllg;
+    .locals 0
 
-    iput v1, p0, Lllg;->X:I
+    return-object p0
+.end method
 
-    iget-object v0, p0, Lllg;->Z:Lc2f;
+.method public d()Lxy;
+    .locals 1
 
-    iget-object v1, p0, Lllg;->r0:Landroid/view/View;
-
-    invoke-interface {v0, v1, p1, p0}, Lle6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lo24;->a:Lo24;
-
-    if-ne p1, v0, :cond_2
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :cond_2
-    :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+.method public abstract e()Landroid/net/Uri;
+.end method
 
-    return-object p1
+.method public abstract f()J
+.end method
+
+.method public abstract g()Z
+.end method
+
+.method public abstract getContentType()Ljava/lang/String;
+.end method
+
+.method public abstract getDuration()J
+.end method
+
+.method public abstract getHeight()I
+.end method
+
+.method public abstract getWidth()I
+.end method
+
+.method public abstract h()J
+.end method
+
+.method public abstract i()J
 .end method

@@ -1,63 +1,145 @@
-.class public abstract Ljtd;
-.super Ljava/lang/Object;
+.class public final Ljtd;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lntd;
+
+.field public final synthetic Z:Ljava/lang/String;
+
+.field public final synthetic r0:I
+
+.field public final synthetic s0:Ljava/lang/String;
 
 
 # direct methods
-.method public static a([B)Lktd;
-    .locals 7
+.method public constructor <init>(ILntd;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    iput-object p2, p0, Ljtd;->Y:Lntd;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
+    iput-object p3, p0, Ljtd;->Z:Ljava/lang/String;
 
-    :try_start_0
-    invoke-static {v0, p0}, Ls59;->mergeFrom(Ls59;[B)Ls59;
+    iput p1, p0, Ljtd;->r0:I
 
-    move-result-object p0
+    iput-object p4, p0, Ljtd;->s0:Ljava/lang/String;
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 p1, 0x2
 
-    new-instance v0, Lktd;
+    invoke-direct {p0, p1, p5}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
+    return-void
+.end method
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
 
-    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v6, Lrm4;->o:Lu5a;
+    check-cast p1, Lb54;
 
-    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0, p1, p2}, Ljtd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v6, p0}, Lu5a;->c(Lu5a;Ljava/lang/Integer;)Lrm4;
+    check-cast p1, Ljtd;
 
-    move-result-object v6
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-direct/range {v0 .. v6}, Lktd;-><init>(JJILrm4;)V
+    invoke-virtual {p1, p2}, Ljtd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, v0, Lktd;->Y:Ljava/lang/String;
+    move-result-object p1
 
-    const-string v1, "parseFrom"
+    return-object p1
+.end method
 
-    invoke-static {p0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
+
+    new-instance v0, Ljtd;
+
+    iget v1, p0, Ljtd;->r0:I
+
+    iget-object v4, p0, Ljtd;->s0:Ljava/lang/String;
+
+    iget-object v2, p0, Ljtd;->Y:Lntd;
+
+    iget-object v3, p0, Ljtd;->Z:Ljava/lang/String;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Ljtd;-><init>(ILntd;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Ljtd;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ljtd;->Y:Lntd;
+
+    iget-object p1, p1, Lntd;->a:Llt7;
+
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpmf;
+
+    new-instance v0, Luf2;
+
+    iget v2, p0, Ljtd;->r0:I
+
+    iget-object v3, p0, Ljtd;->s0:Ljava/lang/String;
+
+    iget-object v4, p0, Ljtd;->Z:Ljava/lang/String;
+
+    invoke-direct {v0, v4, v2, v3}, Luf2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    iput v1, p0, Ljtd;->X:I
+
+    invoke-virtual {p1, v0, p0}, Lpmf;->e(Lhlf;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    :cond_2
+    return-object p1
 .end method

@@ -1,106 +1,74 @@
-.class public final Lhn3;
-.super Lfn3;
+.class public final synthetic Lhn3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvld;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final r0:J
+.field public final synthetic a:I
 
-.field public final s0:I
-
-.field public final t0:I
-
-.field public final u0:Z
-
-.field public final v0:J
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(JJIIZ)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;I)V
+    .locals 0
 
-    invoke-direct/range {p0 .. p7}, Lfn3;-><init>(JJIIZ)V
+    iput p2, p0, Lhn3;->a:I
 
-    move v0, p7
+    iput-object p1, p0, Lhn3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
-    move p7, p6
-
-    move p6, p5
-
-    move-wide p4, p3
-
-    move-wide p2, p1
-
-    move-object p1, p0
-
-    iput-wide p4, p1, Lhn3;->r0:J
-
-    iput p6, p1, Lhn3;->s0:I
-
-    iput p7, p1, Lhn3;->t0:I
-
-    iput-boolean v0, p1, Lhn3;->u0:Z
-
-    const-wide/16 p4, -0x1
-
-    cmp-long p6, p2, p4
-
-    if-eqz p6, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide p2, p4
-
-    :goto_0
-    iput-wide p2, p1, Lhn3;->v0:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)J
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    const-wide/16 v0, 0x0
+    iget p1, p0, Lhn3;->a:I
 
-    iget-wide v2, p0, Lfn3;->b:J
+    const/4 v0, 0x1
 
-    sub-long/2addr p1, v2
+    iget-object v1, p0, Lhn3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
-    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
+    packed-switch p1, :pswitch_data_0
 
-    move-result-wide p1
+    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->C0:I
 
-    const-wide/32 v0, 0x7a1200
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
 
-    mul-long/2addr p1, v0
+    return-void
 
-    iget v0, p0, Lfn3;->X:I
+    :pswitch_0
+    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->C0:I
 
-    int-to-long v0, v0
+    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->B0:Llt7;
 
-    div-long/2addr p1, v0
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
-    return-wide p1
-.end method
+    move-result-object p1
 
-.method public final b()J
-    .locals 2
+    check-cast p1, Lin3;
 
-    iget-wide v0, p0, Lhn3;->v0:J
+    iget-object v2, p1, Lin3;->o:Lor1;
 
-    return-wide v0
-.end method
+    iget-object p1, p1, Lin3;->b:Lei1;
 
-.method public final g()I
-    .locals 1
+    invoke-virtual {v2, p1}, Lor1;->g(Lei1;)V
 
-    iget v0, p0, Lhn3;->s0:I
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
 
-    return v0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

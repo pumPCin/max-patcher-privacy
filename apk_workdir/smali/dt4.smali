@@ -1,11 +1,39 @@
-.class public interface abstract Ldt4;
+.class public final Ldt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract c()V
-.end method
+# instance fields
+.field public a:I
 
-.method public abstract f(I)V
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:Z
+
+
+# virtual methods
+.method public final a()I
+    .locals 3
+
+    iget v0, p0, Ldt4;->c:I
+
+    iget v1, p0, Ldt4;->a:I
+
+    sub-int/2addr v0, v1
+
+    iget v1, p0, Ldt4;->d:I
+
+    iget v2, p0, Ldt4;->b:I
+
+    sub-int/2addr v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    return v0
 .end method

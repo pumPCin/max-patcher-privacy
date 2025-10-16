@@ -3,174 +3,147 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxv4;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lb19;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lz94;
+    iput-object p1, p0, Lxv4;->a:Ljava/lang/String;
 
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lz94;-><init>(I)V
-
-    sput-object v0, Lxv4;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 8
+.method public static b(Lbcb;)Lxv4;
+    .locals 6
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    const/4 v0, 0x2
 
-    move-result-wide v0
+    invoke-virtual {p0, v0}, Lbcb;->K(I)V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    invoke-virtual {p0}, Lbcb;->x()I
 
-    move-result-wide v2
+    move-result v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    shr-int/lit8 v1, v0, 0x1
 
-    const-wide/16 v4, 0x0
+    and-int/lit8 v0, v0, 0x1
 
-    cmp-long p1, v0, v4
+    const/4 v2, 0x5
 
-    const/4 v6, 0x0
+    shl-int/2addr v0, v2
 
-    const/4 v7, 0x1
+    invoke-virtual {p0}, Lbcb;->x()I
 
-    if-ltz p1, :cond_0
+    move-result p0
 
-    move p1, v7
+    shr-int/lit8 p0, p0, 0x3
+
+    and-int/lit8 p0, p0, 0x1f
+
+    or-int/2addr p0, v0
+
+    const/4 v0, 0x4
+
+    const/16 v3, 0xa
+
+    if-eq v1, v0, :cond_3
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v0, 0x7
+
+    if-eq v1, v0, :cond_3
+
+    const/16 v0, 0x8
+
+    if-ne v1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p1, v6
+    const/16 v0, 0x9
 
-    :goto_0
-    invoke-static {p1}, Lq5h;->f(Z)V
+    if-ne v1, v0, :cond_1
 
-    cmp-long p1, v2, v4
+    const-string v0, "dvav"
 
-    if-gez p1, :cond_1
-
-    const-wide/16 v4, -0x1
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
+    goto :goto_1
 
     :cond_1
-    move v6, v7
+    if-ne v1, v3, :cond_2
+
+    const-string v0, "dav1"
+
+    goto :goto_1
 
     :cond_2
-    invoke-static {v6}, Lq5h;->f(Z)V
+    const/4 p0, 0x0
 
-    iput-wide v0, p0, Lxv4;->a:J
+    return-object p0
 
-    iput-wide v2, p0, Lxv4;->b:J
+    :cond_3
+    :goto_0
+    const-string v0, "dvhe"
 
-    return-void
+    :goto_1
+    invoke-static {v0}, Lwx1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "."
+
+    const-string v4, ".0"
+
+    if-ge v1, v3, :cond_4
+
+    move-object v5, v4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v5, v2
+
+    :goto_2
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    if-ge p0, v3, :cond_5
+
+    move-object v2, v4
+
+    :cond_5
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Lxv4;
+
+    invoke-direct {v0, p0}, Lxv4;-><init>(Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public a(Landroid/media/MediaPlayer;Landroid/content/Context;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iget-object p2, p0, Lxv4;->a:Ljava/lang/String;
 
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    instance-of v0, p1, Lxv4;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    check-cast p1, Lxv4;
-
-    iget-wide v2, p0, Lxv4;->a:J
-
-    iget-wide v4, p1, Lxv4;->a:J
-
-    cmp-long v0, v2, v4
-
-    if-nez v0, :cond_1
-
-    iget-wide v2, p0, Lxv4;->b:J
-
-    iget-wide v4, p1, Lxv4;->b:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lxv4;->a:J
-
-    long-to-int v0, v0
-
-    mul-int/lit16 v0, v0, 0x3c1
-
-    iget-wide v1, p0, Lxv4;->b:J
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-wide v0, p0, Lxv4;->a:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    iget-wide v0, p0, Lxv4;->b:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
     return-void
 .end method

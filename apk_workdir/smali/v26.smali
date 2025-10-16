@@ -1,65 +1,51 @@
 .class public final Lv26;
-.super Lrla;
+.super La1;
 .source "SourceFile"
 
 
+# instance fields
+.field public final c:Lqnd;
+
+.field public final o:Z
+
+
+# direct methods
+.method public constructor <init>(Ln16;Lqnd;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, La1;-><init>(Ll16;)V
+
+    iput-object p2, p0, Lv26;->c:Lqnd;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lv26;->o:Z
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final g(Lw26;)V
+    .locals 4
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    iget-object v0, p0, Lv26;->c:Lqnd;
 
-    move-result p2
+    invoke-virtual {v0}, Lqnd;->a()Lond;
 
-    const/16 v0, 0x8
+    move-result-object v0
 
-    int-to-float v0, v0
+    new-instance v1, Lu26;
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    iget-object v2, p0, La1;->b:Ll16;
 
-    move-result-object v1
+    iget-boolean v3, p0, Lv26;->o:Z
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {v1, p1, v0, v2, v3}, Lu26;-><init>(Lxaf;Lond;Loec;Z)V
 
-    move-result-object v1
+    invoke-interface {p1, v1}, Lxaf;->f(Lzaf;)V
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v1, v2, p2}, Lxw1;->d(FFII)I
-
-    move-result p2
-
-    const/16 v0, 0x80
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Li8e;->I(F)I
-
-    move-result v0
-
-    sub-int/2addr p2, v0
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
+    invoke-virtual {v0, v1}, Lond;->b(Ljava/lang/Runnable;)Lev4;
 
     return-void
 .end method

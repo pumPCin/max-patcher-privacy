@@ -1,64 +1,112 @@
-.class public final Lrrc;
+.class public abstract Lrrc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lurc;
 
 
 # static fields
-.field public static final a:Lrrc;
+.field public static oneme_login_confirm_description:I = 0x7f130863
 
+.field public static oneme_login_confirm_info_loading_1:I = 0x7f130864
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_login_confirm_info_loading_2:I = 0x7f130865
 
-    new-instance v0, Lrrc;
+.field public static oneme_login_confirm_info_loading_3:I = 0x7f130866
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_login_confirm_resend:I = 0x7f130867
 
-    sput-object v0, Lrrc;->a:Lrrc;
+.field public static oneme_login_confirm_timer:I = 0x7f130868
 
-    return-void
-.end method
+.field public static oneme_login_confirm_title:I = 0x7f130869
 
+.field public static oneme_login_error_connection_description:I = 0x7f13086a
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_login_error_connection_title:I = 0x7f13086b
 
-    const/4 v0, 0x1
+.field public static oneme_login_input_continue:I = 0x7f13086c
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_login_input_default_phone_hint:I = 0x7f13086d
 
-    return v0
+.field public static oneme_login_input_description:I = 0x7f13086e
 
-    :cond_0
-    instance-of p1, p1, Lrrc;
+.field public static oneme_login_input_is_not_valid_phone_error:I = 0x7f13086f
 
-    if-nez p1, :cond_1
+.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f130870
 
-    const/4 p1, 0x0
+.field public static oneme_login_input_name_confirmation_description:I = 0x7f130871
 
-    return p1
+.field public static oneme_login_input_name_confirmation_return:I = 0x7f130872
 
-    :cond_1
-    return v0
-.end method
+.field public static oneme_login_input_name_confirmation_title:I = 0x7f130873
 
-.method public final hashCode()I
-    .locals 1
+.field public static oneme_login_input_name_contact_permission_description:I = 0x7f130874
 
-    const v0, -0x3c2612a4
+.field public static oneme_login_input_name_contact_permission_title:I = 0x7f130875
 
-    return v0
-.end method
+.field public static oneme_login_input_name_continue_button_active:I = 0x7f130876
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.field public static oneme_login_input_name_continue_button_disabled:I = 0x7f130877
 
-    const-string v0, "PopUp"
+.field public static oneme_login_input_name_description:I = 0x7f130878
 
-    return-object v0
-.end method
+.field public static oneme_login_input_name_hint_name:I = 0x7f130879
+
+.field public static oneme_login_input_name_hint_surname:I = 0x7f13087a
+
+.field public static oneme_login_input_name_hint_surname_short:I = 0x7f13087b
+
+.field public static oneme_login_input_name_surname_placeholder:I = 0x7f13087c
+
+.field public static oneme_login_input_name_title:I = 0x7f13087d
+
+.field public static oneme_login_input_need_help:I = 0x7f13087e
+
+.field public static oneme_login_input_need_help_email_title:I = 0x7f13087f
+
+.field public static oneme_login_input_title:I = 0x7f130880
+
+.field public static oneme_login_neuro_avatars_bottomsheet_title:I = 0x7f130881
+
+.field public static oneme_login_neuro_avatars_continue_button:I = 0x7f130882
+
+.field public static oneme_login_neuro_avatars_continue_without_avatar_button:I = 0x7f130883
+
+.field public static oneme_login_neuro_avatars_description:I = 0x7f130884
+
+.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f130885
+
+.field public static oneme_login_neuro_avatars_profile_description:I = 0x7f130886
+
+.field public static oneme_login_neuro_avatars_profile_title:I = 0x7f130887
+
+.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f130888
+
+.field public static oneme_login_neuro_avatars_save_button:I = 0x7f130889
+
+.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f13088a
+
+.field public static oneme_login_neuro_avatars_title:I = 0x7f13088b
+
+.field public static oneme_login_sms_count_exceeded_description:I = 0x7f13088c
+
+.field public static oneme_login_sms_count_exceeded_title:I = 0x7f13088d
+
+.field public static oneme_login_welcome_continue_btn:I = 0x7f13088e
+
+.field public static oneme_login_welcome_description:I = 0x7f13088f
+
+.field public static oneme_login_welcome_privacy_policy_clickable_part:I = 0x7f130890
+
+.field public static oneme_login_welcome_switch_btn:I = 0x7f130891
+
+.field public static oneme_login_welcome_terms:I = 0x7f130892
+
+.field public static oneme_login_welcome_title:I = 0x7f130893
+
+.field public static oneme_login_welcome_user_agreement_clickable_part:I = 0x7f130894
+
+.field public static oneme_registration_neuro_avatars_change_photo:I = 0x7f130958
+
+.field public static oneme_registration_neuro_avatars_choose_avatar:I = 0x7f130959
+
+.field public static oneme_registration_neuro_avatars_choose_photo:I = 0x7f13095a
+
+.field public static oneme_registration_neuro_avatars_or:I = 0x7f13095b

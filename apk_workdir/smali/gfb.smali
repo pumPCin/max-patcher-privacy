@@ -1,78 +1,84 @@
 .class public final Lgfb;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lgfb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/members/PickerMembersListWidget;
+.field public final a:Ljava/lang/String;
+
+.field public final b:[Ljava/lang/String;
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lv2b;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
+
+    sput-object v0, Lgfb;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;[Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lgfb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lgfb;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lgfb;->b:[Ljava/lang/String;
+
+    iput p3, p0, Lgfb;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lgfb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lgfb;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lgfb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final describeContents()I
     .locals 1
 
-    new-instance p1, Lgfb;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lgfb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-    invoke-direct {p1, v0, p2}, Lgfb;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object p2, p0, Lgfb;->a:Ljava/lang/String;
 
-    sget-object p1, Lone/me/chats/picker/members/PickerMembersListWidget;->y0:[Lpl7;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lgfb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    iget-object p2, p0, Lgfb;->b:[Ljava/lang/String;
 
-    invoke-virtual {p1}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    move-result-object p1
+    iget p2, p0, Lgfb;->c:I
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-void
 .end method

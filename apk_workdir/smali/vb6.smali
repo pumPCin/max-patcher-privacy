@@ -1,331 +1,216 @@
 .class public final Lvb6;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lzn0;
+.implements Lei6;
 
 
 # instance fields
-.field public a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Lm73;
+.field public final synthetic Y:Ljic;
+
+.field public final synthetic Z:Lone/me/chats/forward/ForwardPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(ILm73;)V
+.method public constructor <init>(Ljic;Lone/me/chats/forward/ForwardPickerScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvb6;->Y:Ljic;
 
-    iput-object p2, p0, Lvb6;->b:Lm73;
+    iput-object p2, p0, Lvb6;->Z:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iput p1, p0, Lvb6;->a:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public declared-synchronized a()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    monitor-enter p0
+    check-cast p1, Lfc6;
 
-    :try_start_0
-    iget-object v0, p0, Lvb6;->b:Lm73;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0}, Lm73;->N(Lm73;)V
+    invoke-virtual {p0, p1, p2}, Lvb6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    iput-object v0, p0, Lvb6;->b:Lm73;
+    check-cast p1, Lvb6;
 
-    const/4 v0, -0x1
+    sget-object p2, Lzag;->a:Lzag;
 
-    iput v0, p0, Lvb6;->a:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, p2}, Lvb6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return-object p2
 .end method
 
-.method public declared-synchronized clear()V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    monitor-enter p0
+    new-instance v0, Lvb6;
 
-    :try_start_0
-    invoke-virtual {p0}, Lvb6;->a()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v1, p0, Lvb6;->Y:Ljic;
 
-    monitor-exit p0
+    iget-object v2, p0, Lvb6;->Z:Lone/me/chats/forward/ForwardPickerScreen;
 
-    return-void
+    invoke-direct {v0, v1, v2, p2}, Lvb6;-><init>(Ljic;Lone/me/chats/forward/ForwardPickerScreen;Lkotlin/coroutines/Continuation;)V
 
-    :catchall_0
-    move-exception v0
+    iput-object p1, v0, Lvb6;->X:Ljava/lang/Object;
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return-object v0
 .end method
 
-.method public declared-synchronized d(I)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    monitor-enter p0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    :try_start_0
-    iget v0, p0, Lvb6;->a:I
+    iget-object p1, p0, Lvb6;->X:Ljava/lang/Object;
 
-    if-ne p1, v0, :cond_0
+    check-cast p1, Lfc6;
 
-    iget-object p1, p0, Lvb6;->b:Lm73;
+    sget-object v0, Lzag;->a:Lzag;
 
-    invoke-static {p1}, Lm73;->f0(Lm73;)Z
+    const/16 v1, 0x8
 
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v2, p0, Lvb6;->Y:Ljic;
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_0
 
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    monitor-exit p0
-
-    return p1
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public declared-synchronized k()Lm73;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lvb6;->b:Lm73;
-
-    invoke-static {v0}, Lm73;->o(Lm73;)Lm73;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-object v0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    sget-object v3, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lwq7;
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v3, p0, Lvb6;->Z:Lone/me/chats/forward/ForwardPickerScreen;
 
-    throw v0
-.end method
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lhmb;
 
-.method public declared-synchronized l(ILm73;)V
-    .locals 2
+    move-result-object v4
 
-    monitor-enter p0
+    iget-object v4, v4, Lhmb;->Z:Lgzc;
 
-    :try_start_0
-    iget-object v0, p0, Lvb6;->b:Lm73;
+    iget-object v4, v4, Lgzc;->a:Llze;
 
-    if-eqz v0, :cond_1
+    invoke-interface {v4}, Llze;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p2}, Lm73;->X()Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object v0
+    check-cast v4, Ljava/util/Collection;
 
-    iget-object v1, p0, Lvb6;->b:Lm73;
+    invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
 
-    if-eqz v1, :cond_0
+    move-result v4
 
-    invoke-virtual {v1}, Lm73;->X()Ljava/lang/Object;
+    if-nez v4, :cond_1
+
+    invoke-virtual {v3}, Lone/me/chats/forward/ForwardPickerScreen;->S0()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const/4 v1, 0x0
+
+    :cond_1
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v1, p1, Lfc6;->a:Loqf;
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Loqf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    check-cast v1, Landroid/graphics/Bitmap;
+    if-eqz v1, :cond_5
 
-    goto :goto_0
+    invoke-virtual {v2, v1}, Ljic;->setTitle(Ljava/lang/CharSequence;)V
 
-    :catchall_0
-    move-exception p1
+    iget-object v1, p1, Lfc6;->c:Lgz;
 
-    goto :goto_1
+    invoke-virtual {v2, v1}, Ljic;->setAttachDescription(Lgz;)V
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v3}, Lone/me/chats/forward/ForwardPickerScreen;->R0()Z
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result v1
 
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v1, :cond_2
 
-    if-eqz v0, :cond_1
+    const/4 p1, 0x0
 
-    monitor-exit p0
+    invoke-virtual {v2, p1}, Ljic;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    return-void
-
-    :cond_1
-    :try_start_1
-    iget-object v0, p0, Lvb6;->b:Lm73;
-
-    invoke-static {v0}, Lm73;->N(Lm73;)V
-
-    invoke-virtual {p2}, Lm73;->n()Lm73;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lvb6;->b:Lm73;
-
-    iput p1, p0, Lvb6;->a:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
-.end method
-
-.method public m(ILm73;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public declared-synchronized p()Lm73;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lvb6;->b:Lm73;
-
-    invoke-static {v0}, Lm73;->o(Lm73;)Lm73;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    invoke-virtual {p0}, Lvb6;->a()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
+    invoke-virtual {v2, p1}, Ljic;->setStartIconClickListener(Landroid/view/View$OnClickListener;)V
 
     return-object v0
 
-    :catchall_0
-    move-exception v0
+    :cond_2
+    iget-boolean p1, p1, Lfc6;->d:Z
 
-    goto :goto_0
+    if-nez p1, :cond_3
 
-    :catchall_1
-    move-exception v0
+    return-object v0
 
-    :try_start_2
-    invoke-virtual {p0}, Lvb6;->a()V
+    :cond_3
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
-    throw v0
+    move-result p1
 
-    :goto_0
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    if-nez p1, :cond_4
 
-    throw v0
-.end method
-
-.method public declared-synchronized q(I)Lm73;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lvb6;->a:I
-
-    if-ne v0, p1, :cond_0
-
-    iget-object p1, p0, Lvb6;->b:Lm73;
-
-    invoke-static {p1}, Lm73;->o(Lm73;)Lm73;
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lhmb;
 
     move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    iget-object p1, p1, Lhmb;->c:Lgob;
 
-    :catchall_0
-    move-exception p1
+    check-cast p1, Lnb6;
 
-    goto :goto_1
+    invoke-virtual {p1}, Lnb6;->f()V
 
-    :cond_0
-    const/4 p1, 0x0
+    :cond_4
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lhmb;
 
-    :goto_0
-    monitor-exit p0
+    move-result-object p1
 
-    return-object p1
+    iget-object p1, p1, Lhmb;->c:Lgob;
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    check-cast p1, Lnb6;
+
+    invoke-virtual {p1}, Lnb6;->g()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljic;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance p1, Lxb;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {p1, v3, v1, v2}, Lxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v2, p1}, Ljic;->setStartIconClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-object v0
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method

@@ -1,86 +1,226 @@
-.class public final synthetic Ly21;
-.super Ljava/lang/Object;
+.class public final Ly21;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lii6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
 
-.field public final synthetic b:Lz21;
+.field public synthetic Y:Z
+
+.field public synthetic Z:Z
+
+.field public synthetic r0:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz21;I)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput p2, p0, Ly21;->a:I
+    iput p3, p0, Ly21;->X:I
 
-    iput-object p1, p0, Ly21;->b:Lz21;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Ly21;->a:I
+    iget v0, p0, Ly21;->X:I
 
-    iget-object v1, p0, Ly21;->b:Lz21;
+    check-cast p1, Ljava/lang/Boolean;
 
-    const-wide/16 v2, 0xfa
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
 
     packed-switch v0, :pswitch_data_0
 
-    sget v0, Lz21;->C0:I
+    check-cast p2, Lof9;
 
-    new-instance v0, Lw41;
+    check-cast p3, Ljava/lang/Boolean;
 
-    invoke-virtual {v1}, Lz21;->d()Z
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v1
+    move-result p3
 
-    invoke-direct {v0, v2, v3, v1}, Lw41;-><init>(JZ)V
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    return-object v0
+    new-instance v0, Ly21;
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p4, v2}, Ly21;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-boolean p1, v0, Ly21;->Y:Z
+
+    iput-object p2, v0, Ly21;->r0:Ljava/lang/Object;
+
+    iput-boolean p3, v0, Ly21;->Z:Z
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Ly21;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 
     :pswitch_0
-    sget v0, Lz21;->C0:I
+    check-cast p2, Ljava/lang/Boolean;
 
-    new-instance v0, Llo1;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v1}, Lz21;->d()Z
+    move-result p2
 
-    move-result v1
+    check-cast p3, Lfa;
 
-    invoke-direct {v0, v2, v3, v1}, Llo1;-><init>(JZ)V
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    return-object v0
+    new-instance v0, Ly21;
 
-    :pswitch_1
-    sget v0, Lz21;->C0:I
+    const/4 v1, 0x4
 
-    new-instance v0, Llj1;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1}, Lz21;->d()Z
+    invoke-direct {v0, v1, p4, v2}, Ly21;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result v1
+    iput-boolean p1, v0, Ly21;->Y:Z
 
-    invoke-direct {v0, v2, v3, v1}, Llj1;-><init>(JZ)V
+    iput-boolean p2, v0, Ly21;->Z:Z
 
-    return-object v0
+    iput-object p3, v0, Ly21;->r0:Ljava/lang/Object;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {v0, p1}, Ly21;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Ly21;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Ly21;->Y:Z
+
+    iget-object v0, p0, Ly21;->r0:Ljava/lang/Object;
+
+    check-cast v0, Lof9;
+
+    iget-boolean v1, p0, Ly21;->Z:Z
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lof9;->b:Landroid/view/MotionEvent;
+
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v4
+
+    const/4 v5, 0x3
+
+    if-eq v4, v5, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-ne v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v3
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    if-nez v1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Ly21;->Y:Z
+
+    iget-boolean v0, p0, Ly21;->Z:Z
+
+    iget-object v1, p0, Ly21;->r0:Ljava/lang/Object;
+
+    check-cast v1, Lfa;
+
+    iget-boolean v2, v1, Lfa;->a:Z
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_3
+
+    iget-boolean v1, v1, Lfa;->c:Z
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    if-eqz v0, :cond_4
+
+    const/4 v3, 0x1
+
+    :cond_4
+    :goto_2
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

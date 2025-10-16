@@ -1,30 +1,30 @@
 .class public final Ls2e;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lv2e;
+.field public final synthetic Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-.field public final synthetic Z:I
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lv2e;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Ls2e;->Y:Lv2e;
+    iput-object p2, p0, Ls2e;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-    iput p2, p0, Ls2e;->Z:I
+    iput-object p3, p0, Ls2e;->Z:Landroid/view/View;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,8 +34,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ln24;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Ls2e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -44,130 +42,174 @@
 
     check-cast p1, Ls2e;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Ls2e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
-    new-instance p1, Ls2e;
+    new-instance v0, Ls2e;
 
-    iget-object v0, p0, Ls2e;->Y:Lv2e;
+    iget-object v1, p0, Ls2e;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-    iget v1, p0, Ls2e;->Z:I
+    iget-object v2, p0, Ls2e;->Z:Landroid/view/View;
 
-    invoke-direct {p1, v0, v1, p2}, Ls2e;-><init>(Lv2e;ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1, v2}, Ls2e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;Landroid/view/View;)V
 
-    return-object p1
+    iput-object p1, v0, Ls2e;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 10
 
-    iget v0, p0, Ls2e;->X:I
+    iget-object v0, p0, Ls2e;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-    sget-object v1, Laxf;->a:Laxf;
+    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->G0:Lazc;
 
-    const/4 v2, 0x1
+    iget-object v2, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->E0:Lazc;
 
-    if-eqz v0, :cond_1
+    iget-object v3, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->C0:Landroid/transition/AutoTransition;
 
-    if-ne v0, v2, :cond_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget-object p1, p0, Ls2e;->X:Ljava/lang/Object;
 
-    return-object v1
+    check-cast p1, Lj27;
+
+    instance-of v4, p1, Lg27;
+
+    const/4 v5, 0x1
+
+    if-eqz v4, :cond_0
+
+    invoke-static {v0}, Lbbi;->b(Lx14;)V
+
+    invoke-virtual {v0, v5}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v4, p1, Lh27;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v6, 0x2
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v7, 0x0
 
-    throw p1
+    iget-object v8, p0, Ls2e;->Z:Landroid/view/View;
+
+    const/16 v9, 0x8
+
+    if-eqz v4, :cond_2
+
+    check-cast v8, Landroid/view/ViewGroup;
+
+    invoke-static {v8, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    sget-object v3, Lone/me/devmenu/server/ServerHostBottomSheet;->J0:[Lwq7;
+
+    aget-object v4, v3, v7
+
+    invoke-interface {v2, v0, v4}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V
+
+    aget-object v2, v3, v6
+
+    invoke-interface {v1, v0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->H0:Lazc;
+
+    const/4 v2, 0x3
+
+    aget-object v2, v3, v2
+
+    invoke-interface {v1, v0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr4b;
+
+    check-cast p1, Lh27;
+
+    iget-object p1, p1, Lh27;->a:Ljava/lang/String;
+
+    if-nez p1, :cond_1
+
+    const-string p1, ""
 
     :cond_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    sget-object p1, Lv2e;->R0:[Lpl7;
-
-    iget-object p1, p0, Ls2e;->Y:Lv2e;
-
-    invoke-virtual {p1}, Lv2e;->u()Lhgd;
-
-    move-result-object v0
-
-    check-cast v0, Lz2g;
-
-    const-string v3, "ALL"
-
-    iget-object v0, v0, Lv3;->h:Lbo7;
-
-    const-string v4, "app.privacy.chats.invite"
-
-    invoke-virtual {v0, v4, v3}, Lbo7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lajf;->d(Ljava/lang/String;)I
-
-    move-result v0
-
-    iget v3, p0, Ls2e;->Z:I
-
-    if-ne v0, v3, :cond_2
+    invoke-virtual {v0, p1}, Lr4b;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p1}, Lv2e;->u()Lhgd;
+    instance-of p1, p1, Li27;
 
-    move-result-object v0
+    if-eqz p1, :cond_3
 
-    invoke-static {v3}, Lajf;->k(I)Ljava/lang/String;
+    check-cast v8, Landroid/view/ViewGroup;
 
-    move-result-object v5
+    invoke-static {v8, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    check-cast v0, Lz2g;
+    sget-object p1, Lone/me/devmenu/server/ServerHostBottomSheet;->J0:[Lwq7;
 
-    invoke-virtual {v0, v4, v5}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+    aget-object v3, p1, v7
 
-    invoke-virtual {p1}, Lv2e;->t()Lcl;
+    invoke-interface {v2, v0, v3}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    new-instance v4, Lv2g;
+    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V
 
-    iput v3, v4, Lv2g;->o:I
+    aget-object v2, p1, v6
 
-    new-instance v3, Lx2g;
+    invoke-interface {v1, v0, v2}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
-    invoke-direct {v3, v4}, Lx2g;-><init>(Lv2g;)V
+    move-result-object v1
 
-    invoke-interface {v0, v3}, Lcl;->a(Lx2g;)J
+    check-cast v1, Landroid/widget/LinearLayout;
 
-    iput v2, p0, Ls2e;->X:I
+    invoke-virtual {v1, v9}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-static {p1, p0}, Lv2e;->s(Lv2e;Lc2f;)Ljava/lang/Object;
+    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->F0:Lazc;
+
+    aget-object p1, p1, v5
+
+    invoke-interface {v1, v0, p1}, Lazc;->D(Ljava/lang/Object;Lwq7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lo24;->a:Lo24;
+    check-cast p1, Lkza;
 
-    if-ne p1, v0, :cond_3
+    invoke-virtual {p1, v7}, Landroid/view/View;->setVisibility(I)V
 
-    return-object v0
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 
     :cond_3
-    :goto_0
-    return-object v1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

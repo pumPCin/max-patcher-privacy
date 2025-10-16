@@ -3,75 +3,52 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lfr3;
 
 
 # instance fields
-.field public final synthetic a:Lzl4;
+.field public final synthetic a:Lam4;
 
-.field public final synthetic b:F
+.field public final synthetic b:Ljava/lang/String;
 
-.field public final synthetic c:F
+.field public final synthetic c:Lrs1;
+
+.field public final synthetic d:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzl4;FF)V
+.method public synthetic constructor <init>(Lam4;Ljava/lang/String;Lrs1;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyl4;->a:Lzl4;
+    iput-object p1, p0, Lyl4;->a:Lam4;
 
-    iput p2, p0, Lyl4;->b:F
+    iput-object p2, p0, Lyl4;->b:Ljava/lang/String;
 
-    iput p3, p0, Lyl4;->c:F
+    iput-object p3, p0, Lyl4;->c:Lrs1;
+
+    iput-object p4, p0, Lyl4;->d:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    move-result-object p1
+    iget-object p1, p0, Lyl4;->a:Lam4;
 
-    check-cast p1, Ljava/lang/Float;
+    iget-object v0, p0, Lyl4;->b:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    iget-object v1, p0, Lyl4;->c:Lrs1;
 
-    move-result p1
+    iget-object v2, p0, Lyl4;->d:Ljava/util/List;
 
-    iget-object v0, p0, Lyl4;->a:Lzl4;
+    invoke-virtual {p1, v0, v1, v2}, Lam4;->u(Ljava/lang/String;Lrs1;Ljava/util/List;)V
 
-    iget-object v1, v0, Lzl4;->k:Landroid/graphics/Matrix;
-
-    invoke-static {v1}, Lpr0;->p(Landroid/graphics/Matrix;)F
-
-    move-result v2
-
-    div-float/2addr p1, v2
-
-    iget v2, p0, Lyl4;->b:F
-
-    iget v3, p0, Lyl4;->c:F
-
-    invoke-virtual {v1, p1, p1, v2, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
-
-    iget-object p1, v0, Lzl4;->j:Landroid/graphics/Matrix;
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    invoke-virtual {v0}, Lzl4;->b()V
-
-    iget-object p1, v0, Lzl4;->b:Lxah;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1, v1}, Ltah;->a(Landroid/graphics/Matrix;)V
-
-    :cond_0
     return-void
 .end method

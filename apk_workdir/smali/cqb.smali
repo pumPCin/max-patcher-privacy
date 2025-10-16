@@ -3,141 +3,77 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/ContentResolver;
-
-.field public final b:Landroid/content/res/Resources;
-
-.field public final c:Landroid/content/res/AssetManager;
-
-.field public final d:Lui6;
-
-.field public final e:Lq37;
-
-.field public final f:Lcvd;
-
-.field public final g:Lcw4;
-
-.field public final h:Z
-
-.field public final i:Ltc5;
-
-.field public final j:Lf8h;
-
-.field public final k:Lh0f;
-
-.field public final l:Luz8;
-
-.field public final m:Luz8;
-
-.field public final n:Lpe4;
-
-.field public final o:Lnib;
-
-.field public final p:Lood;
-
-.field public final q:I
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lui6;Loh4;Lcvd;Lcw4;ZLtc5;Lf8h;Lec7;Lec7;Lh0f;Lpe4;Lnib;ILood;)V
-    .locals 1
+.method public static final a(Lcqb;Landroid/view/View;Lui1;Landroid/graphics/RectF;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget p0, p3, Landroid/graphics/RectF;->top:F
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotX(F)V
 
-    move-result-object v0
+    iget p0, p3, Landroid/graphics/RectF;->left:F
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotY(F)V
 
-    move-result-object v0
+    iget p0, p3, Landroid/graphics/RectF;->top:F
 
-    iput-object v0, p0, Lcqb;->a:Landroid/content/ContentResolver;
+    invoke-virtual {p1, p0}, Landroid/view/View;->setX(F)V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iget p0, p3, Landroid/graphics/RectF;->left:F
 
-    move-result-object v0
+    invoke-virtual {p1, p0}, Landroid/view/View;->setY(F)V
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/high16 p0, 0x3f800000    # 1.0f
 
-    move-result-object v0
+    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleX(F)V
 
-    iput-object v0, p0, Lcqb;->b:Landroid/content/res/Resources;
+    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleY(F)V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    const/4 p3, 0x0
 
-    move-result-object p1
+    invoke-static {p1, p3}, Lhyg;->y(Landroid/view/View;F)V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcqb;->c:Landroid/content/res/AssetManager;
-
-    iput-object p2, p0, Lcqb;->d:Lui6;
-
-    iput-object p3, p0, Lcqb;->e:Lq37;
-
-    iput-object p4, p0, Lcqb;->f:Lcvd;
-
-    iput-object p5, p0, Lcqb;->g:Lcw4;
-
-    iput-boolean p6, p0, Lcqb;->h:Z
-
-    iput-object p7, p0, Lcqb;->i:Ltc5;
-
-    iput-object p8, p0, Lcqb;->j:Lf8h;
-
-    iput-object p9, p0, Lcqb;->m:Luz8;
-
-    iput-object p10, p0, Lcqb;->l:Luz8;
-
-    iput-object p11, p0, Lcqb;->k:Lh0f;
-
-    iput-object p12, p0, Lcqb;->n:Lpe4;
-
-    iput-object p13, p0, Lcqb;->o:Lnib;
-
-    new-instance p1, Lhl9;
-
-    invoke-direct {p1}, Lhl9;-><init>()V
-
-    new-instance p1, Lhl9;
-
-    invoke-direct {p1}, Lhl9;-><init>()V
-
-    iput p14, p0, Lcqb;->q:I
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Lcqb;->p:Lood;
+    invoke-virtual {p2, p0}, Landroid/view/View;->setAlpha(F)V
 
     return-void
 .end method
 
+.method public static b()Z
+    .locals 3
 
-# virtual methods
-.method public final a(Lzpb;ZLa57;)Lt0d;
-    .locals 6
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    new-instance v0, Lt0d;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lcqb;->i:Ltc5;
+    if-eqz v0, :cond_1
 
-    invoke-interface {v1}, Ltc5;->g()Ljava/util/concurrent/ExecutorService;
+    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    move-result-object v1
+    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    iget-object v2, p0, Lcqb;->j:Lf8h;
+    move-result-object v0
 
-    move-object v3, p1
+    const-string v2, "huawei"
 
-    move v4, p2
+    invoke-static {v0, v2, v1}, Ls9f;->q(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
-    move-object v5, p3
+    move-result v2
 
-    invoke-direct/range {v0 .. v5}, Lt0d;-><init>(Ljava/util/concurrent/Executor;Lf8h;Lzpb;ZLa57;)V
+    if-nez v2, :cond_0
 
-    return-object v0
+    const-string v2, "honor"
+
+    invoke-static {v0, v2, v1}, Ls9f;->q(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    return v1
 .end method

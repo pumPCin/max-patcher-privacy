@@ -1,26 +1,30 @@
 .class public final Lz29;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+.field public final synthetic Y:Landroid/net/Uri;
+
+.field public final synthetic Z:La39;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+.method public constructor <init>(Landroid/net/Uri;La39;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lz29;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    iput-object p1, p0, Lz29;->Y:Landroid/net/Uri;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lz29;->Z:La39;
 
-    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +34,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lb54;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lz29;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +44,7 @@
 
     check-cast p1, Lz29;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Lz29;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,13 +52,15 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lz29;
 
-    iget-object v1, p0, Lz29;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    iget-object v1, p0, Lz29;->Y:Landroid/net/Uri;
 
-    invoke-direct {v0, p2, v1}, Lz29;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+    iget-object v2, p0, Lz29;->Z:La39;
+
+    invoke-direct {v0, v1, v2, p2}, Lz29;-><init>(Landroid/net/Uri;La39;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Lz29;->X:Ljava/lang/Object;
 
@@ -60,60 +68,61 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 4
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lz29;->X:Ljava/lang/Object;
 
-    check-cast p1, Ldw9;
+    check-cast p1, Lb54;
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lpl7;
+    iget-object v0, p0, Lz29;->Z:La39;
 
-    instance-of v0, p1, Lkc4;
+    iget-object v1, v0, La39;->b:Ly29;
 
-    if-eqz v0, :cond_1
+    iget-object v0, v0, La39;->o:Landroid/content/Context;
 
-    const/4 v0, 0x1
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lz29;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    iget-object v3, p0, Lz29;->Y:Landroid/net/Uri;
 
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+    invoke-static {v3, v0, v2}, Lcdi;->i(Landroid/net/Uri;Landroid/content/Context;Lye5;)Z
 
-    new-instance v0, Lx29;
+    move-result v0
 
-    invoke-direct {v0, v1, p1}, Lx29;-><init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Ldw9;)V
+    if-nez v0, :cond_0
 
-    new-instance p1, Lnr0;
+    iget-object p1, v1, Ly29;->c:Lde5;
 
-    invoke-direct {p1, v1, v0}, Lnr0;-><init>(Ljz3;Ltd6;)V
+    new-instance v0, Lt29;
 
-    invoke-virtual {v1}, Ljz3;->getRouter()Ln6d;
+    invoke-direct {v0, v3}, Lt29;-><init>(Landroid/net/Uri;)V
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
+    iget-object p1, v1, Ly29;->b:Lde5;
 
-    invoke-virtual {v1}, Ljz3;->getRouter()Ln6d;
+    sget-object v0, Lu29;->a:Lu29;
 
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ln6d;->a(Lnz3;)V
+    invoke-static {p1, v0}, Lsyg;->o(Lde5;Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ln9;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x7
+    move-result-object p1
 
-    invoke-direct {v0, v1, v2, p1}, Ln9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Ljz3;->addLifecycleListener(Lhz3;)V
+    move-result-object p1
 
-    :cond_1
+    const-string v0, "try to share internal file!"
+
+    invoke-static {p1, v0}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
+
     :goto_0
-    sget-object p1, Laxf;->a:Laxf;
+    sget-object p1, Lzag;->a:Lzag;
 
     return-object p1
 .end method

@@ -1,59 +1,100 @@
-.class public final Leka;
-.super Lwy3;
+.class public Leka;
+.super Landroid/widget/TextView;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Le39;
-
-.field public Y:Lez;
-
-.field public Z:Z
-
-.field public o:Lkka;
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Lkka;
-
-.field public t0:I
+.field public a:Lezg;
 
 
 # direct methods
-.method public constructor <init>(Lkka;Lwy3;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Leka;->s0:Lkka;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final getObserverSpanListener()Lezg;
+    .locals 1
 
-    iput-object p1, p0, Leka;->r0:Ljava/lang/Object;
+    iget-object v0, p0, Leka;->a:Lezg;
 
-    iget p1, p0, Leka;->t0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final onWindowVisibilityChanged(I)V
+    .locals 1
 
-    or-int/2addr p1, v0
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
 
-    iput p1, p0, Leka;->t0:I
+    if-eqz p1, :cond_1
 
+    const/16 v0, 0x8
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Leka;->a:Lezg;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p0}, Lezg;->onViewDetachedFromWindow(Landroid/view/View;)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Leka;->a:Lezg;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0}, Lezg;->a(Landroid/widget/TextView;)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final setObserverSpanListener(Lezg;)V
+    .locals 0
+
+    iput-object p1, p0, Leka;->a:Lezg;
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    iget-object v1, p0, Leka;->s0:Lkka;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    invoke-virtual {v1, p1, p1, v0, p0}, Lkka;->d(Le39;Lez;ZLwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

@@ -1,5 +1,5 @@
 .class public final Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
-.super Ltbh;
+.super Lorh;
 .source "SourceFile"
 
 
@@ -44,11 +44,11 @@
     :goto_1
     const-string v1, " sTexture;\nvoid main() {\n   gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
 
-    invoke-static {v0, p2, v1}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2, v1}, Lf67;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-direct {p0, p2, p1}, Ltbh;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0, p2, p1}, Lorh;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 .method public bridge synthetic getSource()Ljava/lang/String;
     .locals 1
 
-    invoke-super {p0}, Ltbh;->getSource()Ljava/lang/String;
+    invoke-super {p0}, Lorh;->getSource()Ljava/lang/String;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
 .method public bridge synthetic getTextureCoordLoc()I
     .locals 1
 
-    invoke-super {p0}, Lkch;->getTextureCoordLoc()I
+    invoke-super {p0}, Lgsh;->getTextureCoordLoc()I
 
     move-result v0
 
@@ -78,7 +78,7 @@
 .method public bridge synthetic getVertexCoordLoc()I
     .locals 1
 
-    invoke-super {p0}, Lkch;->getVertexCoordLoc()I
+    invoke-super {p0}, Lgsh;->getVertexCoordLoc()I
 
     move-result v0
 
@@ -100,7 +100,7 @@
 .method public bridge synthetic release()V
     .locals 0
 
-    invoke-super {p0}, Lkch;->release()V
+    invoke-super {p0}, Lgsh;->release()V
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 .method public bridge synthetic render()V
     .locals 0
 
-    invoke-super {p0}, Lkch;->render()V
+    invoke-super {p0}, Lgsh;->render()V
 
     return-void
 .end method
@@ -117,7 +117,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lkch;->setCustomParameter(Ljava/lang/String;F)V
+    invoke-super {p0, p1, p2}, Lgsh;->setCustomParameter(Ljava/lang/String;F)V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
     .locals 0
 
     .line 2
-    invoke-super {p0, p1, p2}, Lkch;->setCustomParameter(Ljava/lang/String;I)V
+    invoke-super {p0, p1, p2}, Lgsh;->setCustomParameter(Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
 .method public bridge synthetic setMVPMat([F)V
     .locals 0
 
-    invoke-super {p0, p1}, Lkch;->setMVPMat([F)V
+    invoke-super {p0, p1}, Lgsh;->setMVPMat([F)V
 
     return-void
 .end method
@@ -142,7 +142,7 @@
 .method public bridge synthetic setTexMat([F)V
     .locals 0
 
-    invoke-super {p0, p1}, Lkch;->setTexMat([F)V
+    invoke-super {p0, p1}, Lgsh;->setTexMat([F)V
 
     return-void
 .end method
@@ -150,7 +150,7 @@
 .method public bridge synthetic setTextureAlpha(F)V
     .locals 0
 
-    invoke-super {p0, p1}, Lkch;->setTextureAlpha(F)V
+    invoke-super {p0, p1}, Lgsh;->setTextureAlpha(F)V
 
     return-void
 .end method
@@ -158,7 +158,7 @@
 .method public bridge synthetic setTextureId(I)V
     .locals 0
 
-    invoke-super {p0, p1}, Lkch;->setTextureId(I)V
+    invoke-super {p0, p1}, Lgsh;->setTextureId(I)V
 
     return-void
 .end method
@@ -166,7 +166,7 @@
 .method public bridge synthetic unUse()V
     .locals 0
 
-    invoke-super {p0}, Lkch;->unUse()V
+    invoke-super {p0}, Lgsh;->unUse()V
 
     return-void
 .end method
@@ -174,7 +174,7 @@
 .method public bridge synthetic use()V
     .locals 0
 
-    invoke-super {p0}, Lkch;->use()V
+    invoke-super {p0}, Lgsh;->use()V
 
     return-void
 .end method

@@ -1,144 +1,92 @@
-.class public final Ldo5;
-.super Lcee;
+.class public final synthetic Ldo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ler3;
 
-# static fields
-.field public static final b:Ldo5;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lho5;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lho5;Ljava/util/List;I)V
+    .locals 0
 
-    new-instance v0, Ldo5;
+    iput p3, p0, Ldo5;->a:I
 
-    invoke-direct {v0}, Lcee;-><init>()V
+    iput-object p1, p0, Ldo5;->b:Lho5;
 
-    sput-object v0, Ldo5;->b:Ldo5;
+    iput-object p2, p0, Ldo5;->c:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lsc4;
-    .locals 4
-
-    new-instance v0, Lsc4;
-
-    new-instance v1, Lxi5;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2}, Lxi5;-><init>(I)V
-
-    new-instance v2, Lxi5;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v3}, Lxi5;-><init>(I)V
-
-    invoke-direct {v0, v1, v2}, Lsc4;-><init>(Ltd6;Ltd6;)V
-
-    return-object v0
-.end method
-
-.method public final d(Landroid/os/Bundle;)Ltc4;
-    .locals 13
-
-    const-string v0, "chat_id"
-
-    invoke-static {v0, p1}, Lte0;->w(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v3
-
-    const-string v0, "message_id"
-
-    invoke-static {v0, p1}, Lte0;->w(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v5
-
-    const-string v0, "attach_id"
-
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    const-string v0, "file_id"
-
-    invoke-static {v0, p1}, Lte0;->w(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v8
-
-    const-string v0, "file_name"
-
-    invoke-static {v0, p1}, Lte0;->y(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v10
-
-    const-string v0, "file_size"
-
-    invoke-static {v0, p1}, Lte0;->w(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v11
-
-    const-string v0, "file_url"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    move-object v2, p1
-
-    check-cast v2, Landroid/net/Uri;
-
-    new-instance v1, Lco5;
-
-    invoke-direct/range {v1 .. v12}, Lco5;-><init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final e(Lbee;)V
+.method public final accept(Ljava/lang/Object;)V
     .locals 5
 
-    const-string v0, "file_name"
+    iget v0, p0, Ldo5;->a:I
 
-    const-string v1, "file_size"
+    const-string v1, "ho5"
 
-    const-string v2, "chat_id"
+    iget-object v2, p0, Ldo5;->c:Ljava/util/List;
 
-    const-string v3, "message_id"
+    iget-object v3, p0, Ldo5;->b:Lho5;
 
-    const-string v4, "file_id"
+    check-cast p1, Ljava/lang/Throwable;
 
-    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onListUpdated: failed to store stickers %s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "file_url"
+    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v1
-
-    const/16 v2, 0xc
-
-    const-string v3, ":dialogs/file-download-warning"
-
-    invoke-static {p1, v3, v0, v1, v2}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+    invoke-virtual {v3}, Lho5;->I()V
 
     return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onNotifRemoved: failed to remove stickers %s from cache"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lho5;->I()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

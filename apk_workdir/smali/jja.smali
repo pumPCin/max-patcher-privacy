@@ -1,283 +1,147 @@
-.class public abstract Ljja;
-.super Ljava/lang/Object;
+.class public final Ljja;
+.super Ljava/util/ArrayList;
 .source "SourceFile"
 
-
-# static fields
-.field public static final A:I
-
-.field public static final B:I
-
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+# interfaces
+.implements Lfja;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# instance fields
+.field public volatile a:I
+
+
+# virtual methods
+.method public final a()V
     .locals 1
 
-    sget v0, Lfhc;->chat_screen__leave_chat_action:I
+    sget-object v0, Lcda;->a:Lcda;
 
-    sput v0, Ljja;->a:I
+    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    sget v0, Lfhc;->chat_screen__leave_chat_title:I
+    iget v0, p0, Ljja;->a:I
 
-    sput v0, Ljja;->b:I
+    add-int/lit8 v0, v0, 0x1
 
-    sget v0, Lfhc;->chat_screen__remove_chat_action:I
+    iput v0, p0, Ljja;->a:I
 
-    sput v0, Ljja;->c:I
+    return-void
+.end method
 
-    sget v0, Lfhc;->chat_screen__remove_chat_title:I
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
 
-    sput v0, Ljja;->d:I
+    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    sget v0, Lfhc;->chat_screen__search_result_down_button_accessibility:I
+    iget p1, p0, Ljja;->a:I
 
-    sput v0, Ljja;->e:I
+    add-int/lit8 p1, p1, 0x1
 
-    sget v0, Lfhc;->chat_screen__search_result_not_found:I
+    iput p1, p0, Ljja;->a:I
 
-    sput v0, Ljja;->f:I
+    return-void
+.end method
 
-    sget v0, Lfhc;->chat_screen__search_result_success:I
+.method public final d(Ldja;)V
+    .locals 5
 
-    sput v0, Ljja;->g:I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sget v0, Lfhc;->chat_screen__search_result_up_button_accessibility:I
+    move-result v0
 
-    sput v0, Ljja;->h:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lfhc;->chat_screen__start_chat_with_bot:I
+    goto :goto_1
 
-    sput v0, Ljja;->i:I
+    :cond_0
+    iget-object v0, p1, Ldja;->b:Lcka;
 
-    sget v0, Lfhc;->chat_screen_channel_search_hint:I
+    const/4 v1, 0x1
 
-    sput v0, Ljja;->j:I
+    :cond_1
+    iget-boolean v2, p1, Ldja;->o:Z
 
-    sget v0, Lfhc;->chat_screen_file_too_big_caption:I
+    if-eqz v2, :cond_2
 
-    sput v0, Ljja;->k:I
+    goto :goto_1
 
-    sget v0, Lfhc;->chat_screen_file_too_big_title:I
+    :cond_2
+    iget v2, p0, Ljja;->a:I
 
-    sput v0, Ljja;->l:I
+    iget-object v3, p1, Ldja;->c:Ljava/io/Serializable;
 
-    sget v0, Lfhc;->chat_screen_join_channel:I
+    check-cast v3, Ljava/lang/Integer;
 
-    sput v0, Ljja;->m:I
+    if-eqz v3, :cond_3
 
-    sget v0, Lfhc;->chat_screen_join_chat:I
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    sput v0, Ljja;->n:I
+    move-result v3
 
-    sget v0, Lfhc;->chat_screen_leave_chat:I
+    goto :goto_0
 
-    sput v0, Ljja;->o:I
+    :cond_3
+    const/4 v3, 0x0
 
-    sget v0, Lfhc;->chat_screen_remove_chat:I
+    :goto_0
+    if-ge v3, v2, :cond_6
 
-    sput v0, Ljja;->p:I
+    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
-    sget v0, Lfhc;->chat_screen_search_hint:I
+    move-result-object v4
 
-    sput v0, Ljja;->q:I
+    invoke-static {v0, v4}, Lcda;->a(Lcka;Ljava/lang/Object;)Z
 
-    sget v0, Lfhc;->chat_screen_status_mute_chat:I
+    move-result v4
 
-    sput v0, Ljja;->r:I
+    if-eqz v4, :cond_4
 
-    sget v0, Lfhc;->chat_screen_status_subscribe_chat:I
+    goto :goto_1
 
-    sput v0, Ljja;->s:I
+    :cond_4
+    iget-boolean v4, p1, Ldja;->o:Z
 
-    sget v0, Lfhc;->chat_screen_status_unmute_chat:I
+    if-eqz v4, :cond_5
 
-    sput v0, Ljja;->t:I
+    goto :goto_1
 
-    sget v0, Lfhc;->chat_screen_unblock_contact:I
+    :cond_5
+    add-int/lit8 v3, v3, 0x1
 
-    sput v0, Ljja;->u:I
+    goto :goto_0
 
-    sget v0, Lfhc;->media_bar_restricted_media_action:I
+    :cond_6
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput v0, Ljja;->v:I
+    move-result-object v2
 
-    sget v0, Lfhc;->media_bar_restricted_media_subtitle:I
+    iput-object v2, p1, Ldja;->c:Ljava/io/Serializable;
 
-    sput v0, Ljja;->w:I
+    neg-int v1, v1
 
-    sget v0, Lfhc;->media_bar_restricted_media_title:I
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
-    sput v0, Ljja;->x:I
+    move-result v1
 
-    sget v0, Lfhc;->media_type_picker__close_dialog__accept:I
+    if-nez v1, :cond_1
 
-    sput v0, Ljja;->y:I
+    :goto_1
+    return-void
+.end method
 
-    sget v0, Lfhc;->media_type_picker__close_dialog__title:I
+.method public final e(Ljava/lang/Throwable;)V
+    .locals 1
 
-    sput v0, Ljja;->z:I
+    new-instance v0, Lada;
 
-    sget v0, Lfhc;->media_type_picker__contact:I
+    invoke-direct {v0, p1}, Lada;-><init>(Ljava/lang/Throwable;)V
 
-    sput v0, Ljja;->A:I
+    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    sget v0, Lfhc;->media_type_picker__file:I
+    iget p1, p0, Ljja;->a:I
 
-    sput v0, Ljja;->B:I
+    add-int/lit8 p1, p1, 0x1
 
-    sget v0, Lfhc;->media_type_picker__file_dialog__from_file_manager:I
-
-    sput v0, Ljja;->C:I
-
-    sget v0, Lfhc;->media_type_picker__file_dialog__from_gallery:I
-
-    sput v0, Ljja;->D:I
-
-    sget v0, Lfhc;->media_type_picker__file_dialog__title:I
-
-    sput v0, Ljja;->E:I
-
-    sget v0, Lfhc;->media_type_picker__gallery:I
-
-    sput v0, Ljja;->F:I
-
-    sget v0, Lfhc;->media_type_picker__input_hint:I
-
-    sput v0, Ljja;->G:I
-
-    sget v0, Lfhc;->media_type_picker__money:I
-
-    sput v0, Ljja;->H:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__button:I
-
-    sput v0, Ljja;->I:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__camera_permission:I
-
-    sput v0, Ljja;->J:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
-
-    sput v0, Ljja;->K:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__gallery_camera_title:I
-
-    sput v0, Ljja;->L:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__gallery_subtitle:I
-
-    sput v0, Ljja;->M:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__gallery_title:I
-
-    sput v0, Ljja;->N:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__subtitle:I
-
-    sput v0, Ljja;->O:I
-
-    sget v0, Lfhc;->media_type_picker__permissions_dialog__title:I
-
-    sput v0, Ljja;->P:I
-
-    sget v0, Lfhc;->media_type_picker__place:I
-
-    sput v0, Ljja;->Q:I
-
-    sget v0, Lfhc;->media_type_picker__snack_file:I
-
-    sput v0, Ljja;->R:I
-
-    sget v0, Lfhc;->media_type_picker__snack_media:I
-
-    sput v0, Ljja;->S:I
+    iput p1, p0, Ljja;->a:I
 
     return-void
 .end method

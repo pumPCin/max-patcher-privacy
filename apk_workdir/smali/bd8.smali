@@ -1,310 +1,89 @@
 .class public final Lbd8;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ldd8;
-.implements Lfs4;
-.implements Ljava/lang/Runnable;
-.implements Llde;
+.implements Lei6;
 
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public synthetic X:Z
 
-.field public final synthetic a:I
-
-.field public final b:Lpcd;
-
-.field public c:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Throwable;
+.field public final synthetic Y:Lone/me/android/MainActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lpcd;I)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lbd8;->a:I
+    iput-object p1, p0, Lbd8;->Y:Lone/me/android/MainActivity;
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lbd8;->X:Ljava/lang/Object;
-
-    iput-object p2, p0, Lbd8;->b:Lpcd;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lbd8;->a:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput-object p1, p0, Lbd8;->c:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lbd8;->b:Lpcd;
-
-    invoke-virtual {p1, p0}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
+    invoke-virtual {p0, p1, p2}, Lbd8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+    check-cast p1, Lbd8;
 
-    return-void
+    sget-object p2, Lzag;->a:Lzag;
 
-    :pswitch_0
-    iput-object p1, p0, Lbd8;->c:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lbd8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lbd8;->b:Lpcd;
-
-    invoke-virtual {p1, p0}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method
 
-.method public b()V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lbd8;->b:Lpcd;
+    new-instance v0, Lbd8;
 
-    invoke-virtual {v0, p0}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
+    iget-object v1, p0, Lbd8;->Y:Lone/me/android/MainActivity;
 
-    move-result-object v0
+    invoke-direct {v0, v1, p2}, Lbd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {p0, v0}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+    check-cast p1, Ljava/lang/Boolean;
 
-    return-void
-.end method
-
-.method public final c(Lfs4;)V
-    .locals 1
-
-    iget v0, p0, Lbd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0, p1}, Ljs4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
+
+    iput-boolean p1, v0, Lbd8;->X:Z
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Lbd8;->X:Z
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lbd8;->X:Ljava/lang/Object;
+    iget-object p1, p0, Lbd8;->Y:Lone/me/android/MainActivity;
 
-    check-cast p1, Llde;
-
-    invoke-interface {p1, p0}, Llde;->c(Lfs4;)V
+    invoke-static {p1}, Lcom/jakewharton/processphoenix/ProcessPhoenix;->b(Landroid/content/Context;)V
 
     :cond_0
-    return-void
+    sget-object p1, Lzag;->a:Lzag;
 
-    :pswitch_0
-    invoke-static {p0, p1}, Ljs4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lbd8;->X:Ljava/lang/Object;
-
-    check-cast p1, Ldd8;
-
-    invoke-interface {p1, p0}, Ldd8;->c(Lfs4;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget v0, p0, Lbd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget v0, p0, Lbd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfs4;
-
-    invoke-static {v0}, Ljs4;->b(Lfs4;)Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfs4;
-
-    invoke-static {v0}, Ljs4;->b(Lfs4;)Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Lbd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-object p1, p0, Lbd8;->o:Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lbd8;->b:Lpcd;
-
-    invoke-virtual {p1, p0}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
-
-    return-void
-
-    :pswitch_0
-    iput-object p1, p0, Lbd8;->o:Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lbd8;->b:Lpcd;
-
-    invoke-virtual {p1, p0}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final run()V
-    .locals 3
-
-    iget v0, p0, Lbd8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lbd8;->X:Ljava/lang/Object;
-
-    check-cast v0, Llde;
-
-    iget-object v1, p0, Lbd8;->o:Ljava/lang/Throwable;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0, v1}, Llde;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p0, Lbd8;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Llde;->a(Ljava/lang/Object;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lbd8;->X:Ljava/lang/Object;
-
-    check-cast v0, Ldd8;
-
-    iget-object v1, p0, Lbd8;->o:Ljava/lang/Throwable;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    iput-object v2, p0, Lbd8;->o:Ljava/lang/Throwable;
-
-    invoke-interface {v0, v1}, Ldd8;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v1, p0, Lbd8;->c:Ljava/lang/Object;
-
-    if-eqz v1, :cond_2
-
-    iput-object v2, p0, Lbd8;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Ldd8;->a(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {v0}, Ldd8;->b()V
-
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

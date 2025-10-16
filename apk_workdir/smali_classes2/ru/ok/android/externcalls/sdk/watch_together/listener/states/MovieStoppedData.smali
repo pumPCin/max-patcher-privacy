@@ -14,24 +14,24 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participant",
-        "Lvud;",
+        "Ll6e;",
         "roomId",
-        "Llm9;",
+        "Lgu9;",
         "movieId",
-        "Lqm9;",
+        "Llu9;",
         "sourceType",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Llm9;Lqm9;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lgu9;Llu9;)V",
         "component1",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "component2",
-        "()Lvud;",
+        "()Ll6e;",
         "component3",
-        "()Llm9;",
+        "()Lgu9;",
         "component4",
-        "()Lqm9;",
+        "()Llu9;",
         "copy",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Llm9;Lqm9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lgu9;Llu9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;",
         "",
         "toString",
         "()Ljava/lang/String;",
@@ -44,11 +44,11 @@
         "(Ljava/lang/Object;)Z",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getParticipant",
-        "Lvud;",
+        "Ll6e;",
         "getRoomId",
-        "Llm9;",
+        "Lgu9;",
         "getMovieId",
-        "Lqm9;",
+        "Llu9;",
         "getSourceType",
         "calls-sdk_release"
     }
@@ -63,33 +63,33 @@
 
 
 # instance fields
-.field private final movieId:Llm9;
+.field private final movieId:Lgu9;
 
 .field private final participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private final roomId:Lvud;
+.field private final roomId:Ll6e;
 
-.field private final sourceType:Lqm9;
+.field private final sourceType:Llu9;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Llm9;Lqm9;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lgu9;Llu9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
     return-void
 .end method
 
-.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Llm9;Lqm9;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;
+.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lgu9;Llu9;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;
     .locals 0
 
     and-int/lit8 p6, p5, 0x1
@@ -103,24 +103,24 @@
 
     if-eqz p6, :cond_1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
     :cond_1
     and-int/lit8 p6, p5, 0x4
 
     if-eqz p6, :cond_2
 
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
     :cond_2
     and-int/lit8 p5, p5, 0x8
 
     if-eqz p5, :cond_3
 
-    iget-object p4, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iget-object p4, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
     :cond_3
-    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Llm9;Lqm9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lgu9;Llu9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;
 
     move-result-object p0
 
@@ -137,36 +137,36 @@
     return-object v0
 .end method
 
-.method public final component2()Lvud;
+.method public final component2()Ll6e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
     return-object v0
 .end method
 
-.method public final component3()Llm9;
+.method public final component3()Lgu9;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
     return-object v0
 .end method
 
-.method public final component4()Lqm9;
+.method public final component4()Llu9;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
     return-object v0
 .end method
 
-.method public final copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Llm9;Lqm9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;
+.method public final copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lgu9;Llu9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;
     .locals 1
 
     new-instance v0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Llm9;Lqm9;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ll6e;Lgu9;Llu9;)V
 
     return-object v0
 .end method
@@ -196,7 +196,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -205,11 +205,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
-    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -218,11 +218,11 @@
     return v2
 
     :cond_3
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
-    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -231,9 +231,9 @@
     return v2
 
     :cond_4
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
-    iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
     if-eq v1, p1, :cond_5
 
@@ -243,10 +243,10 @@
     return v0
 .end method
 
-.method public final getMovieId()Llm9;
+.method public final getMovieId()Lgu9;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
     return-object v0
 .end method
@@ -259,18 +259,18 @@
     return-object v0
 .end method
 
-.method public final getRoomId()Lvud;
+.method public final getRoomId()Ll6e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
     return-object v0
 .end method
 
-.method public final getSourceType()Lqm9;
+.method public final getSourceType()Llu9;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
     return-object v0
 .end method
@@ -288,7 +288,7 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -298,15 +298,15 @@
 
     mul-int/2addr v2, v1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
-    iget-wide v3, v0, Llm9;->a:J
+    iget-wide v3, v0, Lgu9;->a:J
 
-    invoke-static {v2, v1, v3, v4}, Lajf;->m(IIJ)I
+    invoke-static {v2, v1, v3, v4}, Lhug;->c(IIJ)I
 
     move-result v0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -322,11 +322,11 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Lvud;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->roomId:Ll6e;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Llm9;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->movieId:Lgu9;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Lqm9;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStoppedData;->sourceType:Llu9;
 
     new-instance v4, Ljava/lang/StringBuilder;
 

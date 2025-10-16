@@ -3,105 +3,33 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:[I
-
-.field public static final d:[I
-
-
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public a:Lut0;
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public b:I
 
+.field public c:Ljava/util/LinkedList;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const/16 v0, 0x1f40
-
-    const/16 v1, 0x7d0
-
-    filled-new-array {v0, v0, v1, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lut0;->c:[I
-
-    const/16 v0, 0xfa0
-
-    const/16 v1, 0xc8
-
-    filled-new-array {v0, v0, v1, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lut0;->d:[I
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
-
-    iput-object v0, p0, Lut0;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
-
-    iput-object v0, p0, Lut0;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    return-void
-.end method
+.field public d:Lut0;
 
 
 # virtual methods
-.method public final a(II)[C
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object v0, Lut0;->d:[I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    aget v0, v0, p1
+    const-string v1, "LinkedEntry(key: "
 
-    if-ge p2, v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move p2, v0
+    iget v1, p0, Lut0;->b:I
 
-    :cond_0
-    iget-object v0, p0, Lut0;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    const-string v2, ")"
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1, v2}, Lf67;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
-
-    check-cast p1, [C
-
-    if-eqz p1, :cond_2
-
-    array-length v0, p1
-
-    if-ge v0, p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    return-object p1
-
-    :cond_2
-    :goto_0
-    new-array p1, p2, [C
-
-    return-object p1
+    return-object v0
 .end method

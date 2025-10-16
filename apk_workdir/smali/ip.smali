@@ -1,31 +1,44 @@
-.class public final Lip;
-.super Lhp;
+.class public interface abstract Lip;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic o:Landroidx/appcompat/widget/AppCompatTextView;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-    .locals 0
-
-    iput-object p1, p0, Lip;->o:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-direct {p0, p1}, Lhp;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-
-    return-void
+# virtual methods
+.method public abstract a()Z
 .end method
 
+.method public abstract b()Landroid/graphics/drawable/Drawable;
+.end method
 
-# virtual methods
-.method public final l(IF)V
-    .locals 1
+.method public abstract c()I
+.end method
 
-    iget-object v0, p0, Lip;->o:Landroidx/appcompat/widget/AppCompatTextView;
+.method public abstract d(I)V
+.end method
 
-    invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
+.method public abstract dismiss()V
+.end method
 
-    return-void
+.method public abstract e()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract h(Ljava/lang/CharSequence;)V
+.end method
+
+.method public abstract j(Landroid/graphics/drawable/Drawable;)V
+.end method
+
+.method public abstract k(I)V
+.end method
+
+.method public abstract l(I)V
+.end method
+
+.method public abstract m(II)V
+.end method
+
+.method public abstract n()I
+.end method
+
+.method public abstract o(Landroid/widget/ListAdapter;)V
 .end method

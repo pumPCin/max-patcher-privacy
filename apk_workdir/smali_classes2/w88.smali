@@ -1,475 +1,180 @@
 .class public final Lw88;
-.super Ljava/lang/Object;
+.super Lxm;
 .source "SourceFile"
 
 # interfaces
-.implements Ls88;
-
-
-# static fields
-.field public static final m:Ljava/lang/String;
+.implements Lmmf;
 
 
 # instance fields
-.field public final a:Lsn6;
+.field public final X:J
 
-.field public final b:Lb98;
+.field public final Y:J
 
-.field public final c:Lpcd;
+.field public final Z:J
 
-.field public final d:Ljava/util/LinkedHashMap;
+.field public final o:Ljava/lang/String;
 
-.field public final e:Ljava/util/LinkedHashMap;
+.field public final r0:Ljava/lang/String;
 
-.field public final f:Ljava/util/HashMap;
+.field public final s0:J
 
-.field public g:Lss1;
+.field public final t0:J
 
-.field public h:Lklb;
+.field public final u0:J
 
-.field public i:Lss1;
+.field public final v0:Ljava/lang/String;
 
-.field public j:J
-
-.field public k:Lss1;
-
-.field public l:Lv43;
+.field public final w0:Llmf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Ls88;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lw88;->m:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lsn6;Lb98;Lpcd;)V
+.method public constructor <init>(JLjava/lang/String;JJJLjava/lang/String;JJJ)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p2}, Lxm;-><init>(J)V
 
-    iput-object p1, p0, Lw88;->a:Lsn6;
+    iput-object p3, p0, Lw88;->o:Ljava/lang/String;
 
-    iput-object p2, p0, Lw88;->b:Lb98;
+    iput-wide p4, p0, Lw88;->X:J
 
-    iput-object p3, p0, Lw88;->c:Lpcd;
+    iput-wide p6, p0, Lw88;->Y:J
 
-    new-instance p1, Ljava/util/LinkedHashMap;
+    iput-wide p8, p0, Lw88;->Z:J
 
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object p10, p0, Lw88;->r0:Ljava/lang/String;
 
-    iput-object p1, p0, Lw88;->d:Ljava/util/LinkedHashMap;
+    iput-wide p11, p0, Lw88;->s0:J
 
-    new-instance p1, Ljava/util/LinkedHashMap;
+    iput-wide p13, p0, Lw88;->t0:J
 
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+    move-wide p1, p15
 
-    iput-object p1, p0, Lw88;->e:Ljava/util/LinkedHashMap;
+    iput-wide p1, p0, Lw88;->u0:J
 
-    new-instance p1, Ljava/util/HashMap;
+    const-class p1, Lw88;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iput-object p1, p0, Lw88;->f:Ljava/util/HashMap;
+    move-result-object p1
+
+    iput-object p1, p0, Lw88;->v0:Ljava/lang/String;
+
+    new-instance p1, Llmf;
+
+    invoke-direct {p1}, Llmf;-><init>()V
+
+    iput-object p1, p0, Lw88;->w0:Llmf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final b()Llmf;
+    .locals 1
 
-    iget-object v0, p0, Lw88;->l:Lv43;
+    iget-object v0, p0, Lw88;->w0:Llmf;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public final e(Lklf;)V
+    .locals 2
 
-    :cond_0
-    if-eqz v0, :cond_1
+    check-cast p1, Ly88;
 
-    :try_start_0
-    iget-object v0, v0, Lv43;->a:Lyjh;
+    sget-object v0, Lu98;->i:Lu98;
 
-    check-cast v0, Lojh;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Lidh;->Z()Landroid/os/Parcel;
+    invoke-static {}, Lu98;->g()V
 
-    move-result-object v1
+    new-instance v0, Lv88;
 
-    const/4 v2, 0x1
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lidh;->a0(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, p0, p1, v1}, Lv88;-><init>(Lw88;Ly88;Lkotlin/coroutines/Continuation;)V
 
-    return-void
+    invoke-static {v0}, Lrji;->g(Lei6;)Ljava/lang/Object;
 
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
-.method public final b()V
-    .locals 3
+.method public final f(Lukf;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lw88;->c()V
+    iget-object v0, p0, Lxm;->c:Lym;
 
-    iget-object v0, p0, Lw88;->h:Lklb;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    iget-object v0, v0, Lklb;->a:Lwfh;
-
-    check-cast v0, Lufh;
-
-    invoke-virtual {v0}, Lidh;->Z()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lidh;->a0(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :cond_1
-    :goto_0
+    :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lw88;->h:Lklb;
+    :goto_0
+    iget-object v0, v0, Lym;->l:Llt7;
 
-    const-wide/16 v0, 0x0
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
 
-    iput-wide v0, p0, Lw88;->j:J
+    move-result-object v0
+
+    check-cast v0, Ll98;
+
+    invoke-virtual {v0, p1}, Ll98;->a(Lukf;)V
 
     return-void
 .end method
 
-.method public final c()V
-    .locals 3
+.method public final i()Lhlf;
+    .locals 17
 
-    iget-object v0, p0, Lw88;->i:Lss1;
+    move-object/from16 v0, p0
 
-    invoke-static {v0}, Lo8d;->b(Lfs4;)V
+    new-instance v1, Lx88;
 
-    iget-object v0, p0, Lw88;->k:Lss1;
-
-    invoke-static {v0}, Lo8d;->b(Lfs4;)V
-
-    iget-object v0, p0, Lw88;->e:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
+    iget-object v2, v0, Lxm;->c:Lym;
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lv88;
-
-    iget-object v2, v2, Lv88;->b:Lga8;
-
-    invoke-virtual {v2}, Lga8;->a()V
-
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    :goto_0
+    iget-object v2, v2, Lym;->b:Llt7;
 
-.method public final d(DDLjava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;)V
-    .locals 1
+    invoke-interface {v2}, Llt7;->getValue()Ljava/lang/Object;
 
-    new-instance v0, Lcom/google/android/gms/maps/model/LatLng;
+    move-result-object v2
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+    check-cast v2, Lxr4;
 
-    invoke-virtual {p5}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v2}, Lxr4;->d()Z
 
-    move-result p1
+    move-result v3
 
-    invoke-virtual {p6}, Ljava/lang/Float;->floatValue()F
+    iget-wide v13, v0, Lw88;->t0:J
 
-    move-result p2
+    iget-wide v4, v0, Lw88;->u0:J
 
-    invoke-virtual {p7}, Ljava/lang/Float;->floatValue()F
+    iget-object v2, v0, Lw88;->o:Ljava/lang/String;
 
-    move-result p3
+    move-wide v15, v4
 
-    new-instance p4, Lcom/google/android/gms/maps/model/CameraPosition;
+    iget-wide v4, v0, Lw88;->X:J
 
-    invoke-direct {p4, v0, p1, p2, p3}, Lcom/google/android/gms/maps/model/CameraPosition;-><init>(Lcom/google/android/gms/maps/model/LatLng;FFF)V
+    iget-wide v6, v0, Lw88;->Y:J
 
-    :try_start_0
-    new-instance p1, Lt55;
+    iget-wide v8, v0, Lw88;->Z:J
 
-    sget-object p2, Loq0;->c:Lfgh;
+    iget-object v10, v0, Lw88;->r0:Ljava/lang/String;
 
-    const-string p3, "CameraUpdateFactory is not initialized"
+    iget-wide v11, v0, Lw88;->s0:J
 
-    invoke-static {p2, p3}, Luce;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v16}, Lx88;-><init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
 
-    invoke-virtual {p2}, Lidh;->Z()Landroid/os/Parcel;
-
-    move-result-object p3
-
-    invoke-static {p3, p4}, Logh;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-
-    const/4 p4, 0x7
-
-    invoke-virtual {p2, p3, p4}, Lidh;->A(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p3
-
-    invoke-static {p3}, Lq8a;->d0(Landroid/os/IBinder;)Ld17;
-
-    move-result-object p3
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
-
-    invoke-direct {p1, p3}, Lt55;-><init>(Ld17;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2}, Lw88;->e(Lt55;Z)V
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p2
-.end method
-
-.method public final e(Lt55;Z)V
-    .locals 1
-
-    iget-object v0, p0, Lw88;->a:Lsn6;
-
-    if-eqz p2, :cond_0
-
-    :try_start_0
-    iget-object p2, v0, Lsn6;->a:Lqih;
-
-    iget-object p1, p1, Lt55;->b:Ljava/lang/Object;
-
-    check-cast p1, Ld17;
-
-    invoke-virtual {p2}, Lidh;->Z()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Logh;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 p1, 0x320
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    const/4 p1, 0x7
-
-    invoke-virtual {p2, v0, p1}, Lidh;->a0(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p2
-
-    :cond_0
-    invoke-virtual {v0, p1}, Lsn6;->g(Lt55;)V
-
-    return-void
-.end method
-
-.method public final f(Landroid/content/Context;I)V
-    .locals 3
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lw88;->f:Ljava/util/HashMap;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lc98;
-
-    if-eqz v0, :cond_1
-
-    iget-object p1, p0, Lw88;->a:Lsn6;
-
-    invoke-virtual {p1, v0}, Lsn6;->j(Lc98;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lw88;->g:Lss1;
-
-    invoke-static {v0}, Lo8d;->b(Lfs4;)V
-
-    new-instance v0, Lmc0;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, p1, p2, v1}, Lmc0;-><init>(Ljava/lang/Object;II)V
-
-    new-instance p1, Lnba;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, v0}, Lnba;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lw88;->c:Lpcd;
-
-    invoke-virtual {p1, v0}, Lrce;->m(Lpcd;)Lkde;
-
-    move-result-object p1
-
-    invoke-static {}, Lyd;->a()Lpcd;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lrce;->i(Lpcd;)Lkde;
-
-    move-result-object p1
-
-    new-instance v0, Lmc0;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, p0, p2, v1}, Lmc0;-><init>(Ljava/lang/Object;II)V
-
-    new-instance p2, Lws6;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {p2, v1}, Lws6;-><init>(I)V
-
-    new-instance v1, Lss1;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v0, v2, p2}, Lss1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v1}, Lrce;->k(Llde;)V
-
-    iput-object v1, p0, Lw88;->g:Lss1;
-
-    return-void
-.end method
-
-.method public final g(Landroid/content/Context;Z)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lw88;->a:Lsn6;
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {v1, v0}, Lsn6;->l(Z)V
-
-    return-void
-
-    :cond_0
-    const-string p2, "android.permission.ACCESS_FINE_LOCATION"
-
-    invoke-static {p1, p2}, Lw7;->e(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p2
-
-    const-string v2, "android.permission.ACCESS_COARSE_LOCATION"
-
-    invoke-static {p1, v2}, Lw7;->e(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p1
-
-    if-nez p2, :cond_1
-
-    if-nez p1, :cond_1
-
-    const/4 v0, 0x1
-
-    :cond_1
-    invoke-virtual {v1, v0}, Lsn6;->l(Z)V
-
-    return-void
+    return-object v1
 .end method

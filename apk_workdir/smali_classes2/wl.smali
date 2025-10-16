@@ -3,146 +3,289 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvl;
+.implements Lsl;
 
 
 # instance fields
-.field public final a:Ldm;
+.field public final a:Lyl;
 
-.field public final b:Llk7;
+.field public final b:Lcm;
+
+.field public final c:Lum;
 
 
 # direct methods
-.method public constructor <init>(Ldm;Llk7;)V
+.method public constructor <init>(Lyl;Lfwb;Lum;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwl;->a:Ldm;
+    iput-object p1, p0, Lwl;->a:Lyl;
 
-    iput-object p2, p0, Lwl;->b:Llk7;
+    iput-object p2, p0, Lwl;->b:Lcm;
+
+    iput-object p3, p0, Lwl;->c:Lum;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getFailParser()Llk7;
-    .locals 1
+.method public final a(Lem;)Ljava/lang/Object;
+    .locals 4
 
-    sget-object v0, Lwt3;->b:Lwt3;
-
-    return-object v0
-.end method
-
-.method public final getOkParser()Llk7;
-    .locals 1
-
-    iget-object v0, p0, Lwl;->b:Llk7;
-
-    return-object v0
-.end method
-
-.method public final getPriority()I
-    .locals 1
-
-    iget-object v0, p0, Lwl;->a:Ldm;
-
-    invoke-interface {v0}, Ldm;->getPriority()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getScope()Lim;
-    .locals 1
-
-    iget-object v0, p0, Lwl;->a:Ldm;
-
-    invoke-interface {v0}, Ldm;->getScope()Lim;
+    invoke-interface {p1}, Lem;->getScopeAfter()Ltm;
 
     move-result-object v0
 
-    return-object v0
+    sget-object v1, Ltm;->a:Ltm;
+
+    iget-object v2, p0, Lwl;->b:Lcm;
+
+    if-eq v0, v1, :cond_1
+
+    new-instance v0, Lr6d;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    new-instance v1, Lr6d;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    new-instance v3, Lul;
+
+    invoke-direct {v3, v0, p0, p1, v1}, Lul;-><init>(Lr6d;Lwl;Lem;Lr6d;)V
+
+    invoke-interface {v2, v3}, Lcm;->y(Lbm;)Lzl;
+
+    iget-object p1, v1, Lr6d;->a:Ljava/lang/Object;
+
+    check-cast p1, Lru/ok/android/api/core/ApiInvocationException;
+
+    if-nez p1, :cond_0
+
+    iget-object p1, v0, Lr6d;->a:Ljava/lang/Object;
+
+    return-object p1
+
+    :cond_0
+    throw p1
+
+    :cond_1
+    invoke-virtual {p0, p1, v2}, Lwl;->c(Lem;Lcm;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
+.method public final b(Lsm;Lcm;Ljava/lang/String;Lru/ok/android/api/core/ApiInvocationException;)Lzl;
+    .locals 9
 
-    iget-object v0, p0, Lwl;->a:Ldm;
-
-    invoke-interface {v0}, Ldm;->getUri()Landroid/net/Uri;
+    invoke-interface {p2}, Lcm;->d()Lzl;
 
     move-result-object v0
 
+    sget-object v1, Lsm;->o:Lsm;
+
+    if-eq p1, v1, :cond_3
+
+    sget-object v1, Lsm;->c:Lsm;
+
+    if-ne p1, v1, :cond_2
+
+    iget-object v1, v0, Lzl;->c:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v8, Lr6d;
+
+    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
+
+    new-instance v7, Lr6d;
+
+    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
+
+    new-instance v2, Lvl;
+
+    move-object v5, p0
+
+    move-object v4, p1
+
+    move-object v3, p3
+
+    move-object v6, p4
+
+    invoke-direct/range {v2 .. v8}, Lvl;-><init>(Ljava/lang/String;Lsm;Lwl;Lru/ok/android/api/core/ApiInvocationException;Lr6d;Lr6d;)V
+
+    invoke-interface {p2, v2}, Lcm;->y(Lbm;)Lzl;
+
+    iget-object p1, v7, Lr6d;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    if-nez p1, :cond_1
+
+    iget-object p1, v8, Lr6d;->a:Ljava/lang/Object;
+
+    check-cast p1, Lzl;
+
+    return-object p1
+
+    :cond_1
+    throw p1
+
+    :cond_2
+    :goto_0
     return-object v0
+
+    :cond_3
+    move-object v6, p4
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Lru/ok/android/api/core/ApiScopeException;
+
+    const-string p2, "No user for session"
+
+    invoke-direct {p1, p2, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
 .end method
 
-.method public final shouldGzip()Z
-    .locals 1
+.method public final c(Lem;Lcm;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Lwl;->a:Ldm;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Ldm;->shouldGzip()Z
+    invoke-interface {p1}, Lnm;->getScope()Lsm;
 
-    move-result v0
+    move-result-object v1
 
-    return v0
+    invoke-virtual {p0, v1, p2, v0, v0}, Lwl;->b(Lsm;Lcm;Ljava/lang/String;Lru/ok/android/api/core/ApiInvocationException;)Lzl;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-virtual {p0, p1, p2, v0}, Lwl;->d(Lem;Lcm;Lzl;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_0
+    .catch Lru/ok/android/api/core/ApiInvocationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception v1
+
+    instance-of v2, v1, Lru/ok/android/api/session/ApiSessionChangedException;
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, v0, Lzl;->c:Ljava/lang/String;
+
+    check-cast v1, Lru/ok/android/api/session/ApiSessionChangedException;
+
+    new-instance v2, Ltl;
+
+    const/4 v3, 0x0
+
+    iget-object v4, v1, Lru/ok/android/api/session/ApiSessionChangedException;->Z:Ljava/lang/String;
+
+    iget-object v1, v1, Lru/ok/android/api/session/ApiSessionChangedException;->r0:Ljava/lang/String;
+
+    invoke-direct {v2, v0, v4, v1, v3}, Ltl;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {p2, v2}, Lcm;->y(Lbm;)Lzl;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, p2, v0}, Lwl;->d(Lem;Lcm;Lzl;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/16 v2, 0x67
+
+    iget v3, v1, Lru/ok/android/api/core/ApiInvocationException;->a:I
+
+    if-eq v3, v2, :cond_2
+
+    const/16 v2, 0x66
+
+    if-eq v3, v2, :cond_2
+
+    const/16 p1, 0x191
+
+    if-ne v3, p1, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_1
+    throw v1
+
+    :cond_2
+    invoke-interface {p1}, Lnm;->getScope()Lsm;
+
+    move-result-object v2
+
+    iget-object v0, v0, Lzl;->c:Ljava/lang/String;
+
+    invoke-virtual {p0, v2, p2, v0, v1}, Lwl;->b(Lsm;Lcm;Ljava/lang/String;Lru/ok/android/api/core/ApiInvocationException;)Lzl;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, p2, v0}, Lwl;->d(Lem;Lcm;Lzl;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final shouldPost()Z
-    .locals 1
+.method public final d(Lem;Lcm;Lzl;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lwl;->a:Ldm;
+    iget-object v0, p0, Lwl;->a:Lyl;
 
-    invoke-interface {v0}, Ldm;->shouldPost()Z
+    check-cast v0, Lpdb;
 
-    move-result v0
+    invoke-virtual {v0, p1, p3}, Lpdb;->a(Lem;Lzl;)Ljava/lang/Object;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public final willWriteParams()Z
-    .locals 1
+    invoke-interface {p1}, Lem;->getScopeAfter()Ltm;
 
-    iget-object v0, p0, Lwl;->a:Ldm;
+    move-result-object v1
 
-    invoke-interface {v0}, Ldm;->willWriteParams()Z
+    sget-object v2, Ltm;->a:Ltm;
 
-    move-result v0
+    if-eq v1, v2, :cond_0
 
-    return v0
-.end method
+    invoke-interface {p1}, Lem;->getConfigExtractor()Lam;
 
-.method public final willWriteSupplyParams()Z
-    .locals 1
+    move-result-object p1
 
-    iget-object v0, p0, Lwl;->a:Ldm;
+    invoke-interface {p1, p3, v0}, Lam;->b(Lzl;Ljava/lang/Object;)Lzl;
 
-    invoke-interface {v0}, Ldm;->willWriteSupplyParams()Z
+    move-result-object p1
 
-    move-result v0
+    invoke-interface {p2, p1}, Lcm;->k(Lzl;)V
 
-    return v0
-.end method
-
-.method public final writeParams(Lyk7;)V
-    .locals 1
-
-    iget-object v0, p0, Lwl;->a:Ldm;
-
-    invoke-interface {v0, p1}, Ldm;->writeParams(Lyk7;)V
-
-    return-void
-.end method
-
-.method public final writeSupplyParams(Lyk7;)V
-    .locals 1
-
-    iget-object v0, p0, Lwl;->a:Ldm;
-
-    invoke-interface {v0, p1}, Ldm;->writeSupplyParams(Lyk7;)V
-
-    return-void
+    :cond_0
+    return-object v0
 .end method

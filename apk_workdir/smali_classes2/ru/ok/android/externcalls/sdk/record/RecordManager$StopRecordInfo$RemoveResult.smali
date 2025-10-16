@@ -46,7 +46,7 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lz95;
+.field private static final synthetic $ENTRIES:Led5;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;
 
@@ -127,11 +127,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;->$VALUES:[Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;
 
-    new-instance v1, Laa5;
+    new-instance v1, Lfd5;
 
-    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;->$ENTRIES:Lz95;
+    sput-object v1, Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;->$ENTRIES:Led5;
 
     return-void
 .end method
@@ -149,16 +149,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lz95;
+.method public static getEntries()Led5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lz95;"
+            "Led5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;->$ENTRIES:Lz95;
+    sget-object v0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopRecordInfo$RemoveResult;->$ENTRIES:Led5;
 
     return-object v0
 .end method

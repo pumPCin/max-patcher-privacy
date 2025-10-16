@@ -1,119 +1,93 @@
-.class public abstract Lncd;
-.super Ljava/lang/Object;
+.class public final Lncd;
+.super Lkc6;
 .source "SourceFile"
 
-# interfaces
-.implements Lfs4;
+
+# instance fields
+.field public final b:Lj12;
+
+.field public final c:Lj02;
 
 
 # direct methods
-.method public static a(Ljava/util/concurrent/TimeUnit;)J
-    .locals 3
+.method public constructor <init>(Lj12;Lj02;)V
+    .locals 1
 
-    sget-boolean v0, Lpcd;->a:Z
+    invoke-direct {p0, p1}, Lkc6;-><init>(Lj12;)V
 
-    if-nez v0, :cond_0
+    iput-object p1, p0, Lncd;->b:Lj12;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput-object p2, p0, Lncd;->c:Lj02;
 
-    move-result-wide v0
+    invoke-interface {p2}, Lh02;->B()V
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object p1, Lh02;->j:Lq90;
 
-    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-wide v0
+    invoke-interface {p2, p1, v0}, Ldzc;->e(Lq90;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-wide v0
+    move-result-object p1
 
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-wide v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object p1, Lh02;->k:Lq90;
 
-    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-interface {p2, p1, v0}, Ldzc;->e(Lq90;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide v0
+    move-result-object p1
 
-    return-wide v0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public b(Ljava/lang/Runnable;)Lfs4;
-    .locals 3
+.method public final e()Lk28;
+    .locals 1
 
-    const-wide/16 v0, 0x0
+    iget-object v0, p0, Lncd;->b:Lj12;
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Lncd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
-.end method
-
-.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lfs4;
-    .locals 15
-
-    move-wide/from16 v0, p2
-
-    move-object/from16 v2, p6
-
-    new-instance v3, Le22;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v4}, Le22;-><init>(I)V
-
-    new-instance v12, Le22;
-
-    invoke-direct {v12, v3}, Le22;-><init>(Le22;)V
-
-    move-wide/from16 v4, p4
-
-    invoke-virtual {v2, v4, v5}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v13
-
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {v4}, Lncd;->a(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v10
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v4
-
-    add-long v7, v4, v10
-
-    new-instance v5, Lmcd;
-
-    move-object v6, p0
-
-    move-object/from16 v9, p1
-
-    invoke-direct/range {v5 .. v14}, Lmcd;-><init>(Lncd;JLjava/lang/Runnable;JLe22;J)V
-
-    invoke-virtual {p0, v5, v0, v1, v2}, Lncd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
+    invoke-interface {v0}, Lj12;->e()Lk28;
 
     move-result-object v0
 
-    sget-object v1, Lj65;->a:Lj65;
+    return-object v0
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final g()Lj12;
+    .locals 1
+
+    iget-object v0, p0, Lncd;->b:Lj12;
 
     return-object v0
+.end method
 
-    :cond_0
-    invoke-static {v3, v0}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+.method public final m()Z
+    .locals 1
 
-    return-object v12
+    iget-object v0, p0, Lncd;->b:Lj12;
+
+    invoke-interface {v0}, Lj12;->m()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()Lk28;
+    .locals 1
+
+    iget-object v0, p0, Lncd;->b:Lj12;
+
+    invoke-interface {v0}, Lj12;->q()Lk28;
+
+    move-result-object v0
+
+    return-object v0
 .end method

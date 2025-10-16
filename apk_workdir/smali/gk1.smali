@@ -1,35 +1,16 @@
-.class public abstract synthetic Lgk1;
+.class public final synthetic Lgk1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
+# virtual methods
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    invoke-static {}, Ll2g;->values()[Ll2g;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lgk1;->$EnumSwitchMapping$0:[I
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
     return-void
 .end method

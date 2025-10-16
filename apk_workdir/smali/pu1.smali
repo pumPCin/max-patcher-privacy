@@ -2,161 +2,245 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxdc;
+
 
 # instance fields
-.field public final a:Lt6e;
-
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic a:Luu1;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;)V
-    .locals 2
+.method public constructor <init>(Luu1;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lu6e;->b(III)Lt6e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lpu1;->a:Lt6e;
-
-    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Le7f;
-
-    check-cast p2, Lmka;
-
-    invoke-virtual {p2}, Lmka;->c()Lz68;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lpu1;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Liv0;
-
-    invoke-virtual {p1, p0}, Liv0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lpu1;->a:Luu1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lbx3;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final a()V
+    .locals 10
 
-    .line 2
-    new-instance v0, Llu1;
+    iget-object v0, p0, Lpu1;->a:Luu1;
 
-    const/4 v1, 0x0
+    iget-object v1, v0, Luu1;->j:Lydc;
 
-    invoke-direct {v0, p0, p1, v1}, Llu1;-><init>(Lpu1;Lbx3;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, v0, Luu1;->d:Lscb;
 
-    const/4 p1, 0x3
+    move-object v3, v2
 
-    iget-object v2, p0, Lpu1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast v3, Lhdb;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    iget-object v3, v3, Lhdb;->z0:Lsze;
 
-    return-void
-.end method
+    invoke-virtual {v3}, Lsze;->getValue()Ljava/lang/Object;
 
-.method public final onEvent(Ln48;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
+    move-result-object v3
 
-    .line 1
-    new-instance p1, Lku1;
+    check-cast v3, Ltcb;
 
+    iget-object v3, v3, Ltcb;->a:Ljcb;
+
+    iget-object v4, v0, Luu1;->b:Li21;
+
+    check-cast v4, Lj21;
+
+    invoke-virtual {v4}, Lj21;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->getDeviceType()Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "speakerphone"
+
+    invoke-static {v4, v5}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    iget-object v5, v0, Luu1;->h:Lood;
+
+    invoke-virtual {v5}, Lood;->c()Z
+
+    move-result v5
+
+    iget-object v6, v0, Luu1;->a:Lxu1;
+
+    check-cast v6, Lmv1;
+
+    invoke-virtual {v6}, Lmv1;->m()Lp84;
+
+    move-result-object v6
+
+    iget-boolean v6, v6, Lp84;->i:Z
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    if-nez v6, :cond_1
+
+    check-cast v2, Lhdb;
+
+    iget-object v2, v2, Lhdb;->z0:Lsze;
+
+    invoke-virtual {v2}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltcb;
+
+    iget-boolean v2, v2, Ltcb;->h:Z
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v8
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v2, v7
+
+    :goto_1
+    invoke-virtual {v0}, Luu1;->f()Lsze;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lnpd;
+
+    iget-object v6, v6, Lnpd;->a:Lopd;
+
+    sget-object v9, Lopd;->a:Lopd;
+
+    if-ne v6, v9, :cond_3
+
+    invoke-virtual {v0}, Luu1;->f()Lsze;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lsze;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnpd;
+
+    iget-object v0, v0, Lnpd;->b:Lcpd;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v0, Lcpd;->c:Lei1;
+
+    goto :goto_2
+
+    :cond_2
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lku1;-><init>(Lpu1;Lkotlin/coroutines/Continuation;)V
+    :goto_2
+    iget-object v6, v3, Ljcb;->a:Lgi1;
 
-    const/4 v1, 0x3
+    invoke-interface {v6}, Lgi1;->getId()Lei1;
 
-    iget-object v2, p0, Lpu1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    move-result-object v6
 
-    invoke-static {v2, v0, v0, p1, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-static {v0, v6}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, v3, Ljcb;->a:Lgi1;
+
+    invoke-interface {v0}, Lgi1;->m()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    move v7, v8
+
+    :cond_4
+    :goto_3
+    if-nez v2, :cond_7
+
+    if-nez v4, :cond_7
+
+    if-nez v5, :cond_7
+
+    if-eqz v7, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    iget-object v0, v1, Lydc;->f:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_6
+    return-void
+
+    :goto_4
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-array v2, v8, [Ljava/lang/Object;
+
+    const-string v3, "ProximityHelperTag"
+
+    invoke-static {v3, v0, v1, v2}, Lndi;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_7
+    :goto_5
+    invoke-virtual {v1}, Lydc;->c()V
 
     return-void
 .end method
 
-.method public final onEvent(Lsi0;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
+.method public final b()V
+    .locals 1
 
-    .line 5
-    new-instance v0, Lou1;
+    iget-object v0, p0, Lpu1;->a:Luu1;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Luu1;->j:Lydc;
 
-    invoke-direct {v0, p0, p1, v1}, Lou1;-><init>(Lpu1;Lsi0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lpu1;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    return-void
-.end method
-
-.method public final onEvent(Lv23;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
-
-    .line 3
-    new-instance v0, Lmu1;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lmu1;-><init>(Lpu1;Lv23;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lpu1;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    return-void
-.end method
-
-.method public final onEvent(Lyr7;)V
-    .locals 3
-    .annotation runtime Lpxe;
-    .end annotation
-
-    .line 4
-    new-instance v0, Lnu1;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lnu1;-><init>(Lpu1;Lyr7;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lpu1;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    invoke-virtual {v0}, Lydc;->c()V
 
     return-void
 .end method

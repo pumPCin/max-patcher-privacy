@@ -1,23 +1,20 @@
-.class public final Liq9;
+.class public interface abstract Liq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lhm6;
+# virtual methods
+.method public abstract c()I
+.end method
 
-.field public final b:J
+.method public abstract d()J
+.end method
 
+.method public abstract getPosition()J
+.end method
 
-# direct methods
-.method public constructor <init>(Lhm6;J)V
-    .locals 0
+.method public abstract readUnsignedShort()I
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Liq9;->a:Lhm6;
-
-    iput-wide p2, p0, Liq9;->b:J
-
-    return-void
+.method public abstract v(I)V
 .end method

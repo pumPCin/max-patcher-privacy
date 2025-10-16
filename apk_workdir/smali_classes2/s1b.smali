@@ -1,158 +1,175 @@
-.class public final Ls1b;
-.super Lnj0;
+.class public abstract Ls1b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final A:I
 
-.field public d:Ljava/lang/Object;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x1
+    sget v0, Lpsc;->oneme_settings_storage_action_one_month:I
 
-    iput v0, p0, Ls1b;->c:I
+    sput v0, Ls1b;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lpsc;->oneme_settings_storage_action_one_week:I
+
+    sput v0, Ls1b;->b:I
+
+    sget v0, Lpsc;->oneme_settings_storage_action_six_month:I
+
+    sput v0, Ls1b;->c:I
+
+    sget v0, Lpsc;->oneme_settings_storage_action_unlimited:I
+
+    sput v0, Ls1b;->d:I
+
+    sget v0, Lpsc;->oneme_settings_storage_audio_messages:I
+
+    sput v0, Ls1b;->e:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache:I
+
+    sput v0, Ls1b;->f:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_action_clear:I
+
+    sput v0, Ls1b;->g:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_all_title:I
+
+    sput v0, Ls1b;->h:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_audio_title:I
+
+    sput v0, Ls1b;->i:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_desc:I
+
+    sput v0, Ls1b;->j:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_files_title:I
+
+    sput v0, Ls1b;->k:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_gif_title:I
+
+    sput v0, Ls1b;->l:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_images_title:I
+
+    sput v0, Ls1b;->m:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_music_title:I
+
+    sput v0, Ls1b;->n:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_stickers_title:I
+
+    sput v0, Ls1b;->o:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_dialog_video_title:I
+
+    sput v0, Ls1b;->p:I
+
+    sget v0, Lpsc;->oneme_settings_storage_clear_cache_success_snackbar:I
+
+    sput v0, Ls1b;->q:I
+
+    sget v0, Lpsc;->oneme_settings_storage_files:I
+
+    sput v0, Ls1b;->r:I
+
+    sget v0, Lpsc;->oneme_settings_storage_gif:I
+
+    sput v0, Ls1b;->s:I
+
+    sget v0, Lpsc;->oneme_settings_storage_images:I
+
+    sput v0, Ls1b;->t:I
+
+    sget v0, Lpsc;->oneme_settings_storage_music:I
+
+    sput v0, Ls1b;->u:I
+
+    sget v0, Lpsc;->oneme_settings_storage_screen_data_section:I
+
+    sput v0, Ls1b;->v:I
+
+    sget v0, Lpsc;->oneme_settings_storage_screen_preserve_media_cache_desc:I
+
+    sput v0, Ls1b;->w:I
+
+    sget v0, Lpsc;->oneme_settings_storage_screen_preserve_media_cache_title:I
+
+    sput v0, Ls1b;->x:I
+
+    sget v0, Lpsc;->oneme_settings_storage_screen_toolbar_title:I
+
+    sput v0, Ls1b;->y:I
+
+    sget v0, Lpsc;->oneme_settings_storage_stickers:I
+
+    sput v0, Ls1b;->z:I
+
+    sget v0, Lpsc;->oneme_settings_storage_video:I
+
+    sput v0, Ls1b;->A:I
 
     return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ls1b;->c:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Ls1b;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()Lex0;
-    .locals 2
-
-    iget v0, p0, Ls1b;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ls1b;->d:Ljava/lang/Object;
-
-    check-cast v0, Lxbe;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lxbe;
-
-    const-string v1, "RoundAsCirclePostprocessor#AntiAliased"
-
-    invoke-direct {v0, v1}, Lxbe;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Ls1b;->d:Ljava/lang/Object;
-
-    :cond_0
-    iget-object v0, p0, Ls1b;->d:Ljava/lang/Object;
-
-    check-cast v0, Lxbe;
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lxbe;
-
-    iget-object v1, p0, Ls1b;->d:Ljava/lang/Object;
-
-    check-cast v1, Landroid/net/Uri;
-
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lxbe;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Landroid/graphics/Bitmap;)V
-    .locals 3
-
-    iget v0, p0, Ls1b;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ls1b;->d:Ljava/lang/Object;
-
-    check-cast v0, Landroid/net/Uri;
-
-    invoke-static {v0}, Ldt;->s(Landroid/net/Uri;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Landroid/graphics/Canvas;
-
-    invoke-direct {v1, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p1, v2
-
-    invoke-virtual {v1, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    const/4 p1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2, v2, p1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

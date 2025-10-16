@@ -1,174 +1,97 @@
-.class public final synthetic Lgbb;
-.super Ljava/lang/Object;
+.class public final enum Lgbb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ltd6;
 
+# static fields
+.field public static final synthetic X:[Lgbb;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum a:Lgbb;
 
-.field public final synthetic b:Lyn7;
+.field public static final enum b:Lgbb;
 
-.field public final synthetic c:Landroid/content/Context;
+.field public static final enum c:Lgbb;
+
+.field public static final enum o:Lgbb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyn7;Landroid/content/Context;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p3, p0, Lgbb;->a:I
+    new-instance v0, Lgbb;
 
-    iput-object p1, p0, Lgbb;->b:Lyn7;
+    const-string v1, "Loading"
 
-    iput-object p2, p0, Lgbb;->c:Landroid/content/Context;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lgbb;->a:Lgbb;
+
+    new-instance v1, Lgbb;
+
+    const-string v2, "PartialSuccess"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lgbb;->b:Lgbb;
+
+    new-instance v2, Lgbb;
+
+    const-string v3, "Success"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lgbb;->c:Lgbb;
+
+    new-instance v3, Lgbb;
+
+    const-string v4, "Error"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lgbb;->o:Lgbb;
+
+    filled-new-array {v0, v1, v2, v3}, [Lgbb;
+
+    move-result-object v0
+
+    sput-object v0, Lgbb;->X:[Lgbb;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lgbb;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+    const-class v0, Lgbb;
 
-    iget v0, p0, Lgbb;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lgbb;->b:Lyn7;
+    check-cast p0, Lgbb;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    return-object p0
+.end method
 
-    move-result-object v0
+.method public static values()[Lgbb;
+    .locals 1
 
-    check-cast v0, Lap4;
+    sget-object v0, Lgbb;->X:[Lgbb;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lgbb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lap4;->i(Landroid/content/Context;)Landroid/util/Size;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
+    check-cast v0, [Lgbb;
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lgbb;->b:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lap4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lgbb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lap4;->i(Landroid/content/Context;)Landroid/util/Size;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    int-to-double v1, v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    int-to-double v3, v0
-
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide v0
-
-    const/high16 v2, 0x40400000    # 3.0f
-
-    float-to-double v2, v2
-
-    div-double/2addr v0, v2
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    float-to-double v2, v2
-
-    mul-double/2addr v0, v2
-
-    double-to-int v0, v0
-
-    const/16 v1, 0x190
-
-    if-ge v0, v1, :cond_0
-
-    move v0, v1
-
-    :cond_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lgbb;->b:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lap4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lgbb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lap4;->i(Landroid/content/Context;)Landroid/util/Size;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

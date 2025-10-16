@@ -1,64 +1,139 @@
-.class public final Lk7c;
-.super Ljava/lang/Object;
+.class public abstract Lk7c;
+.super Ls7c;
 .source "SourceFile"
-
-# interfaces
-.implements Ll7c;
-
-
-# static fields
-.field public static final a:Lk7c;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lk7c;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lk7c;->a:Lk7c;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final h(Lb18;)Z
+    .locals 4
 
-    const/4 v0, 0x1
+    sget-object v0, Lh7c;->a:Lh7c;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return v0
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    instance-of p1, p1, Lh7c;
+
+    return p1
 
     :cond_0
-    instance-of p1, p1, Lk7c;
+    instance-of v0, p0, Li7c;
 
-    if-nez p1, :cond_1
+    if-eqz v0, :cond_1
 
-    const/4 p1, 0x0
+    instance-of p1, p1, Li7c;
 
     return p1
 
     :cond_1
-    return v0
+    instance-of v0, p0, Lj7c;
+
+    if-eqz v0, :cond_3
+
+    instance-of v0, p1, Lj7c;
+
+    if-eqz v0, :cond_2
+
+    move-object v0, p0
+
+    check-cast v0, Lj7c;
+
+    iget-object v0, v0, Lj7c;->a:Ll1c;
+
+    iget-wide v0, v0, Ll1c;->a:J
+
+    check-cast p1, Lj7c;
+
+    iget-object p1, p1, Lj7c;->a:Ll1c;
+
+    iget-wide v2, p1, Ll1c;->a:J
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_2
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method
 
-.method public final hashCode()I
+.method public final q(Lb18;)Z
     .locals 1
 
-    const v0, -0x38597cf0    # -85254.125f
+    sget-object v0, Lh7c;->a:Lh7c;
 
-    return v0
-.end method
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result v0
 
-    const-string v0, "ModeVideo"
+    if-eqz v0, :cond_0
 
-    return-object v0
+    instance-of p1, p1, Lh7c;
+
+    return p1
+
+    :cond_0
+    instance-of v0, p0, Li7c;
+
+    if-eqz v0, :cond_1
+
+    instance-of p1, p1, Li7c;
+
+    return p1
+
+    :cond_1
+    instance-of v0, p0, Lj7c;
+
+    if-eqz v0, :cond_3
+
+    instance-of v0, p1, Lj7c;
+
+    if-eqz v0, :cond_2
+
+    move-object v0, p0
+
+    check-cast v0, Lj7c;
+
+    check-cast p1, Lj7c;
+
+    iget-object p1, p1, Lj7c;->a:Ll1c;
+
+    iget-object v0, v0, Lj7c;->a:Ll1c;
+
+    invoke-virtual {v0, p1}, Ll1c;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

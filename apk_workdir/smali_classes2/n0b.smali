@@ -1,59 +1,67 @@
-.class public abstract synthetic Ln0b;
+.class public abstract Ln0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    const/4 v0, 0x4
+    sget v0, Lisc;->permissions_allow_access:I
 
-    invoke-static {v0}, Lsw1;->y(I)[I
+    sput v0, Ln0b;->a:I
 
-    move-result-object v1
+    sget v0, Lisc;->permissions_audio_denied_title:I
 
-    array-length v1, v1
+    sput v0, Ln0b;->b:I
 
-    new-array v1, v1, [I
+    sget v0, Lisc;->permissions_audio_request_denied:I
 
-    const/4 v2, 0x1
+    sput v0, Ln0b;->c:I
 
-    const/4 v3, 0x0
+    sget v0, Lisc;->permissions_audio_title:I
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sput v0, Ln0b;->d:I
 
-    :catch_0
-    const/4 v3, 0x2
+    sget v0, Lisc;->permissions_dialog_open_setting:I
 
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sput v0, Ln0b;->e:I
 
-    :catch_1
-    const/4 v3, 0x3
+    sget v0, Lisc;->permissions_dialog_yes:I
 
-    :try_start_2
-    aput v3, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    sput v0, Ln0b;->f:I
 
-    :catch_2
-    :try_start_3
-    aput v0, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    sget v0, Lisc;->permissions_video_message_request:I
 
-    :catch_3
-    sput-object v1, Ln0b;->$EnumSwitchMapping$0:[I
+    sput v0, Ln0b;->g:I
+
+    sget v0, Lisc;->permissions_video_message_request_only_camera_title:I
+
+    sput v0, Ln0b;->h:I
+
+    sget v0, Lisc;->permissions_video_message_request_title:I
+
+    sput v0, Ln0b;->i:I
 
     return-void
 .end method

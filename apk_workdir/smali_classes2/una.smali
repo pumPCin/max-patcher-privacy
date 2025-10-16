@@ -1,51 +1,72 @@
 .class public final Luna;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Ljava/nio/file/Path;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Lvna;
 
-.field public final synthetic Z:Lkb4;
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
-.field public o:Lkb4;
-
-.field public r0:I
+.field public final synthetic o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Lkb4;Lwy3;)V
+.method public synthetic constructor <init>(Lvna;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
     .locals 0
 
-    iput-object p1, p0, Luna;->Z:Lkb4;
+    iput p4, p0, Luna;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Luna;->b:Lvna;
+
+    iput-object p2, p0, Luna;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Luna;->o:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iput-object p1, p0, Luna;->Y:Ljava/lang/Object;
+    iget v0, p0, Luna;->a:I
 
-    iget p1, p0, Luna;->r0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Luna;->c:Landroid/graphics/drawable/Drawable;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Luna;->o:Ljava/lang/Runnable;
 
-    iput p1, p0, Luna;->r0:I
+    iget-object v2, p0, Luna;->b:Lvna;
 
-    iget-object p1, p0, Luna;->Z:Lkb4;
+    invoke-static {v2, v0, v1}, Lvna;->e(Lvna;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    invoke-static {p1, p0}, Lkb4;->a(Lkb4;Lwy3;)V
+    return-void
 
-    sget-object p1, Lo24;->a:Lo24;
+    :pswitch_0
+    iget-object v0, p0, Luna;->c:Landroid/graphics/drawable/Drawable;
 
-    return-object p1
+    iget-object v1, p0, Luna;->o:Ljava/lang/Runnable;
+
+    iget-object v2, p0, Luna;->b:Lvna;
+
+    invoke-static {v2, v0, v1}, Lvna;->e(Lvna;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

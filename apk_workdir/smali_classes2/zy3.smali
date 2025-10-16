@@ -1,57 +1,199 @@
 .class public final Lzy3;
-.super Lsi0;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lgi6;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic X:I
 
-.field public final o:Ljava/util/List;
+.field public synthetic Y:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Li7f;JLjava/util/List;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lsi0;-><init>(Li7f;)V
+    iput p3, p0, Lzy3;->X:I
 
-    iput-wide p2, p0, Lzy3;->c:J
-
-    iput-object p4, p0, Lzy3;->o:Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lzy3;->X:I
 
-    const-string v1, "ControlMessageAddError{chatId="
+    check-cast p1, Landroid/view/View;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p2, Lu4b;
 
-    iget-wide v1, p0, Lzy3;->c:J
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, ", contactIds="
+    new-instance p2, Lzy3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x3
 
-    iget-object v1, p0, Lzy3;->o:Ljava/util/List;
+    const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {p2, v0, p3, v1}, Lzy3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    const/16 v1, 0x7d
+    iput-object p1, p2, Lzy3;->Y:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    sget-object p1, Lzag;->a:Lzag;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2, p1}, Lzy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p2, Lzy3;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lzy3;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lzy3;->Y:Landroid/view/View;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {p2, p1}, Lzy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance p2, Lzy3;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lzy3;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lzy3;->Y:Landroid/view/View;
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    invoke-virtual {p2, p1}, Lzy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lzy3;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lzy3;->Y:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    return-object v0
+    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    sget-object v1, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v1, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lu4b;->getText()Lapf;
+
+    move-result-object p1
+
+    iget p1, p1, Lapf;->b:I
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    :cond_1
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lzy3;->Y:Landroid/view/View;
+
+    sget-object v0, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v0, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lu4b;->i()Ldaf;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ldaf;->b:Liaf;
+
+    iget v0, v0, Liaf;->c:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lzy3;->Y:Landroid/view/View;
+
+    sget-object v0, Lsz4;->t0:Lc82;
+
+    invoke-virtual {v0, p1}, Lc82;->g(Landroid/view/View;)Lu4b;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lu4b;->b()Lwe0;
+
+    move-result-object v0
+
+    iget v0, v0, Lwe0;->l:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

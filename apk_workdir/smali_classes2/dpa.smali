@@ -1,91 +1,106 @@
-.class public abstract Ldpa;
+.class public final synthetic Ldpa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loh6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Landroid/content/Context;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public final synthetic c:Lone/me/sdk/uikit/common/button/OneMeButton;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/content/Context;Lone/me/sdk/uikit/common/button/OneMeButton;I)V
+    .locals 0
 
-    sget v0, Lsac;->contact_icon_corner:I
+    iput p3, p0, Ldpa;->a:I
 
-    sput v0, Ldpa;->a:I
+    iput-object p1, p0, Ldpa;->b:Landroid/content/Context;
 
-    sget v0, Lsac;->geo_icon_corner:I
+    iput-object p2, p0, Ldpa;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    sput v0, Ldpa;->b:I
-
-    sget v0, Lsac;->ic_call_incoming_audio_24:I
-
-    sput v0, Ldpa;->c:I
-
-    sget v0, Lsac;->ic_call_incoming_audio_missed_24:I
-
-    sput v0, Ldpa;->d:I
-
-    sget v0, Lsac;->ic_call_incoming_video_missed_24:I
-
-    sput v0, Ldpa;->e:I
-
-    sget v0, Lsac;->ic_call_incomnig_video_24:I
-
-    sput v0, Ldpa;->f:I
-
-    sget v0, Lsac;->ic_call_outgoing_audio_24:I
-
-    sput v0, Ldpa;->g:I
-
-    sget v0, Lsac;->ic_call_outgoing_video_24:I
-
-    sput v0, Ldpa;->h:I
-
-    sget v0, Lsac;->ic_chat_16:I
-
-    sput v0, Ldpa;->i:I
-
-    sget v0, Lsac;->ic_contact_16:I
-
-    sput v0, Ldpa;->j:I
-
-    sget v0, Lsac;->ic_geolocation_filled_28:I
-
-    sput v0, Ldpa;->k:I
-
-    sget v0, Lsac;->link_icon_corner:I
-
-    sput v0, Ldpa;->l:I
-
-    sget v0, Lsac;->miniapp_icon_corner:I
-
-    sput v0, Ldpa;->m:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Ldpa;->a:I
+
+    iget-object v1, p0, Ldpa;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    iget-object v2, p0, Ldpa;->b:Landroid/content/Context;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->A0:[Lwq7;
+
+    new-instance v0, Lvsa;
+
+    invoke-direct {v0, v2}, Lvsa;-><init>(Landroid/content/Context;)V
+
+    sget v2, Ljid;->f:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->b(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->A0:[Lwq7;
+
+    new-instance v0, Lkza;
+
+    invoke-direct {v0, v2}, Lkza;-><init>(Landroid/content/Context;)V
+
+    sget v2, Ljid;->h:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v3, -0x2
+
+    invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v2, Lgs7;
+
+    const/16 v3, 0xc
+
+    invoke-direct {v2, v3, v0, v1}, Lgs7;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
+
+    invoke-static {v0, v2}, Lf6b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lf6b;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lqbi;->a(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

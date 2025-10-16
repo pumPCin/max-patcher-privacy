@@ -1,95 +1,39 @@
 .class public final Lpxf;
-.super Ljava/lang/Object;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
-
-# interfaces
-.implements Lrxf;
 
 
 # instance fields
-.field public final a:J
+.field public a:I
 
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lpxf;->a:J
-
-    return-void
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Lpxf;->a:J
-
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lpxf;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lpxf;
-
-    iget-wide v3, p0, Lpxf;->a:J
-
-    iget-wide v5, p1, Lpxf;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lpxf;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 4
 
-    const-string v0, "InitialEvent(mark="
+    iget v0, p0, Lpxf;->a:I
 
-    const-string v1, ")"
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    iget-wide v2, p0, Lpxf;->a:J
+    move-result v1
 
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    move-result-object v0
+    move-result v2
 
-    return-object v0
+    iget v3, p0, Lpxf;->b:I
+
+    sub-int/2addr v2, v3
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p2, v3, v0, v1, v2}, Landroid/graphics/Outline;->setRect(IIII)V
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+
+    return-void
 .end method

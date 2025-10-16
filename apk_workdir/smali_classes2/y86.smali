@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Loh6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lf96;
+.field public final synthetic b:La96;
 
-.field public final synthetic c:Lqya;
+.field public final synthetic c:Lj4b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lf96;Lqya;I)V
+.method public synthetic constructor <init>(La96;Lj4b;I)V
     .locals 0
 
     iput p3, p0, Ly86;->a:I
 
-    iput-object p1, p0, Ly86;->b:Lf96;
+    iput-object p1, p0, Ly86;->b:La96;
 
-    iput-object p2, p0, Ly86;->c:Lqya;
+    iput-object p2, p0, Ly86;->c:Lj4b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,353 +32,76 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 3
+    .locals 4
 
     iget v0, p0, Ly86;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ly86;->b:Lf96;
+    iget-object v0, p0, Ly86;->b:La96;
 
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, v0, La96;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
+    check-cast v1, Lz86;
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v2, p0, Ly86;->c:Lj4b;
 
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->f(Lqya;)V
-
-    goto :goto_0
+    invoke-virtual {v2, v1}, Lcom/google/android/material/tabs/TabLayout;->k(Lkjf;)V
 
     :cond_0
-    sget-object v0, Laxf;->a:Laxf;
+    const/4 v1, 0x0
+
+    iput-object v1, v0, La96;->X:Ljava/lang/Object;
+
+    iput-object v1, v0, La96;->Y:Ljava/lang/Object;
+
+    iget-object v2, v0, La96;->v0:Ljava/lang/Object;
+
+    check-cast v2, Lsv;
+
+    iget-object v3, v2, Lsv;->f:Ljava/util/List;
+
+    iput-object v3, v0, La96;->b:Ljava/lang/Object;
+
+    invoke-virtual {v2, v1, v1}, Lsv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    :goto_0
+    sget-object v0, Lzag;->a:Lzag;
 
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Ly86;->b:Lf96;
+    iget-object v0, p0, Ly86;->b:La96;
 
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, v0, La96;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    check-cast v1, Ljava/util/List;
 
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
+    const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v3, p0, Ly86;->c:Lj4b;
 
-    move-result-object v1
+    invoke-virtual {v3}, Lcom/google/android/material/tabs/TabLayout;->j()V
 
-    check-cast v1, Loya;
+    iget-object v3, v0, La96;->v0:Ljava/lang/Object;
 
-    iget-object v2, p0, Ly86;->c:Lqya;
+    check-cast v3, Lsv;
 
-    invoke-interface {v1, v2}, Loya;->n(Lqya;)V
-
-    goto :goto_1
+    invoke-virtual {v3, v1, v2}, Lsv;->b(Ljava/util/List;Ljava/lang/Runnable;)V
 
     :cond_1
-    sget-object v0, Laxf;->a:Laxf;
+    iput-object v2, v0, La96;->b:Ljava/lang/Object;
 
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->j(Lqya;)V
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->t(Lqya;)V
-
-    goto :goto_3
-
-    :cond_3
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_4
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->b(Lqya;)V
-
-    goto :goto_4
-
-    :cond_4
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_5
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->w(Lqya;)V
-
-    goto :goto_5
-
-    :cond_5
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_6
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->a(Lqya;)V
-
-    goto :goto_6
-
-    :cond_6
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_7
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->x(Lqya;)V
-
-    goto :goto_7
-
-    :cond_7
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_8
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->r(Lqya;)V
-
-    goto :goto_8
-
-    :cond_8
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Ly86;->b:Lf96;
-
-    iget-object v0, v0, Lf96;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_9
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Loya;
-
-    iget-object v2, p0, Ly86;->c:Lqya;
-
-    invoke-interface {v1, v2}, Loya;->k(Lqya;)V
-
-    goto :goto_9
-
-    :cond_9
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
+    goto :goto_0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

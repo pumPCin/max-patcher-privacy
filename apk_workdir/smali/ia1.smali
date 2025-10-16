@@ -1,322 +1,397 @@
 .class public final Lia1;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lml1;
+.implements Lka1;
+
+
+# static fields
+.field public static final h:Lia1;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+.field public final a:Lp41;
+
+.field public final b:Z
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final d:Ljava/lang/CharSequence;
+
+.field public final e:Lha1;
+
+.field public final f:Lha1;
+
+.field public final g:Lha1;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Landroid/content/Context;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Lia1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    new-instance v0, Lp41;
 
-    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    const/4 v4, 0x0
 
-    sget p2, Leia;->N:I
+    const/16 v5, 0xf
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->setId(I)V
+    const/4 v1, 0x0
 
-    new-instance p2, Landroid/graphics/drawable/ColorDrawable;
+    const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {p2, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    invoke-direct/range {v0 .. v5}, Lp41;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Ltd0;ZI)V
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    sget-object v6, Lha1;->X:Lha1;
 
-    sget-object p2, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Z:[Lpl7;
+    sget-object v5, Lha1;->r0:Lha1;
 
-    iget-object p2, p1, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->X:Ltm0;
+    move-object v1, v0
 
-    sget-object v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Z:[Lpl7;
+    new-instance v0, Lia1;
 
-    const/4 v1, 0x1
+    const-string v4, ""
 
-    aget-object v0, v0, v1
+    const/4 v7, 0x0
 
-    invoke-virtual {p2}, Ltm0;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object p2
+    invoke-direct/range {v0 .. v7}, Lia1;-><init>(Lp41;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;Lha1;Lha1;Lha1;)V
 
-    check-cast p2, Landroid/view/View;
-
-    invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lz91;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    sput-object v0, Lia1;->h:Lia1;
 
     return-void
+.end method
+
+.method public constructor <init>(Lp41;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;Lha1;Lha1;Lha1;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lia1;->a:Lp41;
+
+    iput-boolean p2, p0, Lia1;->b:Z
+
+    iput-object p3, p0, Lia1;->c:Ljava/lang/CharSequence;
+
+    iput-object p4, p0, Lia1;->d:Ljava/lang/CharSequence;
+
+    iput-object p5, p0, Lia1;->e:Lha1;
+
+    iput-object p6, p0, Lia1;->f:Lha1;
+
+    iput-object p7, p0, Lia1;->g:Lha1;
+
+    return-void
+.end method
+
+.method public static a(Lia1;Lp41;ZLandroid/text/SpannableStringBuilder;Lha1;I)Lia1;
+    .locals 8
+
+    and-int/lit8 v0, p5, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lia1;->a:Lp41;
+
+    :cond_0
+    move-object v1, p1
+
+    and-int/lit8 p1, p5, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget-boolean p2, p0, Lia1;->b:Z
+
+    :cond_1
+    move v2, p2
+
+    and-int/lit8 p1, p5, 0x4
+
+    if-eqz p1, :cond_2
+
+    iget-object p3, p0, Lia1;->c:Ljava/lang/CharSequence;
+
+    :cond_2
+    move-object v3, p3
+
+    iget-object v4, p0, Lia1;->d:Ljava/lang/CharSequence;
+
+    iget-object v5, p0, Lia1;->e:Lha1;
+
+    and-int/lit8 p1, p5, 0x20
+
+    if-eqz p1, :cond_3
+
+    iget-object p4, p0, Lia1;->f:Lha1;
+
+    :cond_3
+    move-object v6, p4
+
+    iget-object v7, p0, Lia1;->g:Lha1;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lia1;
+
+    invoke-direct/range {v0 .. v7}, Lia1;-><init>(Lp41;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;Lha1;Lha1;Lha1;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 5
-
-    iget-object p1, p0, Lia1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->C0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lz91;
+    return v0
 
-    move-result-object v1
+    :cond_0
+    instance-of v1, p1, Lia1;
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lia1;
+
+    iget-object v1, p0, Lia1;->a:Lp41;
+
+    iget-object v3, p1, Lia1;->a:Lp41;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/16 v2, 0x64
+    if-nez v1, :cond_2
 
-    int-to-float v2, v2
+    return v2
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    :cond_2
+    iget-boolean v1, p0, Lia1;->b:Z
 
-    move-result-object v3
+    iget-boolean v3, p1, Lia1;->b:Z
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    if-eq v1, v3, :cond_3
 
-    move-result-object v3
+    return v2
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    :cond_3
+    iget-object v1, p0, Lia1;->c:Ljava/lang/CharSequence;
 
-    mul-float/2addr v3, v2
+    iget-object v3, p1, Lia1;->c:Ljava/lang/CharSequence;
 
-    invoke-static {v3}, Li8e;->I(F)I
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lia1;->d:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lia1;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lia1;->e:Lha1;
+
+    iget-object v3, p1, Lia1;->e:Lha1;
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lia1;->f:Lha1;
+
+    iget-object v3, p1, Lia1;->f:Lha1;
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lia1;->g:Lha1;
+
+    iget-object p1, p1, Lia1;->g:Lha1;
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lia1;->a:Lp41;
+
+    invoke-virtual {v0}, Lp41;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lia1;->b:Z
+
+    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lia1;->c:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
     move-result v3
 
-    if-eq v1, v3, :cond_1
+    :goto_0
+    add-int/2addr v0, v3
 
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lz91;
+    mul-int/2addr v0, v1
 
-    move-result-object v1
+    iget-object v3, p0, Lia1;->d:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-static {v3, v0, v1}, Ld15;->f(Ljava/lang/CharSequence;II)I
 
-    move-result-object v3
+    move-result v0
 
-    if-eqz v3, :cond_0
+    iget-object v3, p0, Lia1;->e:Lha1;
 
-    check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    move-result v3
 
-    move-result-object v4
+    add-int/2addr v3, v0
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    mul-int/2addr v3, v1
 
-    move-result-object v4
+    iget-object v0, p0, Lia1;->f:Lha1;
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    mul-float/2addr v2, v4
+    move-result v0
 
-    invoke-static {v2}, Li8e;->I(F)I
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lia1;->g:Lha1;
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
-    iput v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+    :goto_1
+    add-int/2addr v0, v2
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lz91;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Lz91;->a(Z)V
-
-    return-void
+    return v0
 .end method
 
-.method public final b(Z)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lia1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    const-string v1, "Calling(chatState="
 
-    invoke-static {v1, v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->C0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lz91;
+    iget-object v1, p0, Lia1;->a:Lp41;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", canShowVideoPreview="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lia1;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", enableCameraButtonText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lia1;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callTypeDescription="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lia1;->d:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", negativeActionButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lia1;->e:Lha1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", firstActionButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lia1;->f:Lha1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", secondActionButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lia1;->g:Lha1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lz91;->b(Z)V
-
-    return-void
-.end method
-
-.method public final g(Lkv7;ZJ)V
-    .locals 6
-
-    iget-object v0, p0, Lia1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    invoke-static {v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lz91;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, p2, p3, p4}, Lz91;->g(Lkv7;ZJ)V
-
-    iget-object v1, v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->b:Lyn7;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lma1;
-
-    check-cast v1, Lna1;
-
-    iget-object v1, v1, Lna1;->c:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Laed;
-
-    iget v1, v1, Laed;->a:I
-
-    const/16 v2, 0x64
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v2, v3, v1}, Lc85;->q(FFI)I
-
-    move-result v1
-
-    if-eqz p2, :cond_0
-
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Li8e;->I(F)I
-
-    move-result v3
-
-    :goto_0
-    if-eqz p2, :cond_1
-
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Li8e;->I(F)I
-
-    move-result v1
-
-    :cond_1
-    invoke-static {v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lz91;
-
-    move-result-object v2
-
-    new-instance v4, Lgg;
-
-    const-string v5, "height"
-
-    invoke-direct {v4, v5, v3}, Lgg;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v3, v1}, [I
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    invoke-static {v3, v4, v1}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3, p4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    new-instance p3, Log;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p3, v2, v4, p4}, Log;-><init>(Landroid/view/View;Lgg;I)V
-
-    invoke-virtual {v1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    invoke-virtual {p1, v1}, Lkv7;->add(Ljava/lang/Object;)Z
-
-    new-instance p3, Lgg;
-
-    const-string p4, "backgroundChange"
-
-    const/4 v1, 0x0
-
-    invoke-direct {p3, p4, v1}, Lgg;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v1}, [I
-
-    move-result-object p4
-
-    invoke-static {v3, p3, p4}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object p3
-
-    new-instance p4, Lha1;
-
-    invoke-direct {p4, v0, p2}, Lha1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
-
-    invoke-virtual {p3, p4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    invoke-virtual {p1, p3}, Lkv7;->add(Ljava/lang/Object;)Z
-
-    return-void
+    return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/views/widgets/RecyclerAutofitGridView;
-.super Lc95;
+.super Lhc5;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lc95;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lhc5;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -55,7 +55,7 @@
 
     invoke-direct {p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(I)V
 
-    invoke-virtual {p0, p1}, Lc95;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    invoke-virtual {p0, p1}, Lhc5;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
     return-void
 .end method

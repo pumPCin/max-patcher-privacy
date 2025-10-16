@@ -1,406 +1,163 @@
 .class public final Le55;
-.super Landroid/text/style/ReplacementSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Laie;
 
 
 # instance fields
-.field public final X:I
+.field public final a:Lma9;
 
-.field public final Y:Landroid/graphics/drawable/Drawable;
+.field public final b:Lkd2;
 
-.field public a:I
+.field public final c:Lqvb;
 
-.field public b:I
+.field public final d:Lgw0;
 
-.field public c:Landroid/graphics/Rect;
-
-.field public final o:Landroid/graphics/Paint$FontMetricsInt;
+.field public final e:Ll83;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+.method public constructor <init>(Lma9;Lkd2;Lqvb;Lgw0;Ll83;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/Paint$FontMetricsInt;
+    iput-object p1, p0, Le55;->a:Lma9;
 
-    invoke-direct {v0}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
+    iput-object p2, p0, Le55;->b:Lkd2;
 
-    iput-object v0, p0, Le55;->o:Landroid/graphics/Paint$FontMetricsInt;
+    iput-object p3, p0, Le55;->c:Lqvb;
 
-    iput-object p1, p0, Le55;->Y:Landroid/graphics/drawable/Drawable;
+    iput-object p4, p0, Le55;->d:Lgw0;
 
-    const/4 v0, 0x2
-
-    iput v0, p0, Le55;->X:I
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le55;->c:Landroid/graphics/Rect;
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
-
-    move-result p1
-
-    iput p1, p0, Le55;->a:I
-
-    iget-object p1, p0, Le55;->c:Landroid/graphics/Rect;
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
-
-    move-result p1
-
-    iput p1, p0, Le55;->b:I
+    iput-object p5, p0, Le55;->e:Ll83;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 2
+.method public final a(JJLjava/lang/String;Ljava/util/List;Lde9;Ljava/util/List;Z)V
+    .locals 13
 
-    iget-object p2, p0, Le55;->Y:Landroid/graphics/drawable/Drawable;
+    move-wide/from16 v11, p3
 
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget-object v0, p0, Le55;->c:Lqvb;
 
-    move-result-object p2
+    iget-object v0, v0, Lqvb;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iput-object p2, p0, Le55;->c:Landroid/graphics/Rect;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+    move-result-object v2
 
-    move-result p2
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput p2, p0, Le55;->a:I
+    iget-object v0, p0, Le55;->e:Ll83;
 
-    iget-object p2, p0, Le55;->c:Landroid/graphics/Rect;
+    check-cast v0, Lgsd;
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v0}, Lgsd;->j()J
 
-    move-result p2
+    move-result-wide v4
 
-    iput p2, p0, Le55;->b:I
+    new-instance v0, Ld55;
 
-    if-nez p5, :cond_0
+    move-object v1, p0
 
-    iget p1, p0, Le55;->a:I
+    move-wide v2, p1
 
-    return p1
+    move-object/from16 v8, p5
+
+    move-object/from16 v9, p6
+
+    move-object/from16 v10, p7
+
+    move-object/from16 v7, p8
+
+    move/from16 v6, p9
+
+    invoke-direct/range {v0 .. v10}, Ld55;-><init>(Le55;JJZLjava/util/List;Ljava/lang/String;Ljava/util/List;Lde9;)V
+
+    iget-object v1, p0, Le55;->a:Lma9;
+
+    iget-object v4, v1, Lma9;->a:Lac4;
+
+    check-cast v4, Lhb4;
+
+    iget-object v4, v4, Lhb4;->c:Lmfd;
+
+    iget-object v4, v4, Lmfd;->a:Lzed;
+
+    invoke-virtual {v4}, Lzed;->m()Lyed;
+
+    move-result-object v4
+
+    check-cast v4, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    new-instance v5, Lued;
+
+    const/4 v7, 0x1
+
+    invoke-direct {v5, v7, v0}, Lued;-><init>(ILoh6;)V
+
+    invoke-virtual {v4, v5}, Lyed;->o(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+
+    iget-object v0, p0, Le55;->b:Lkd2;
+
+    invoke-virtual {v0, v11, v12}, Lkd2;->C(J)Lda2;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    iget-object v5, v4, Lda2;->b:Lfe2;
+
+    iget-wide v7, v5, Lfe2;->j:J
+
+    cmp-long v5, v7, p1
+
+    if-nez v5, :cond_0
+
+    invoke-virtual {v1, p1, p2}, Lma9;->n(J)Loa9;
+
+    move-result-object v5
+
+    const/4 v7, 0x1
+
+    invoke-virtual {v0, v11, v12, v5, v7}, Lkd2;->g0(JLoa9;Z)Lda2;
 
     :cond_0
-    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    if-eqz v4, :cond_1
 
-    move-result-object p1
+    iget-object v4, v4, Lda2;->b:Lfe2;
 
-    iget p3, p1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    iget-wide v4, v4, Lfe2;->L:J
 
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    cmp-long v4, v4, p1
 
-    iget p4, p1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    if-nez v4, :cond_1
 
-    iput p4, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    invoke-virtual {v1, p1, p2}, Lma9;->n(J)Loa9;
 
-    iget v0, p1, Landroid/graphics/Paint$FontMetricsInt;->leading:I
+    move-result-object v1
 
-    iput v0, p5, Landroid/graphics/Paint$FontMetricsInt;->leading:I
+    if-eqz v1, :cond_1
 
-    iget v0, p0, Le55;->X:I
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_1
-
-    neg-int p2, p2
-
-    if-le p3, p2, :cond_3
-
-    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    goto :goto_0
+    invoke-virtual {v0, v11, v12}, Lkd2;->k0(J)V
 
     :cond_1
-    sub-int/2addr p4, p3
+    new-instance v0, Ladg;
 
-    if-ge p4, p2, :cond_3
+    const/4 v1, 0x0
 
-    sub-int p4, p2, p4
+    move-wide v4, p1
 
-    div-int/2addr p4, v1
+    move-wide v2, v11
 
-    sub-int/2addr p3, p4
+    invoke-direct/range {v0 .. v5}, Ladg;-><init>(IJJ)V
 
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    iget-object v1, p0, Le55;->d:Lgw0;
 
-    add-int/2addr p3, p2
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    goto :goto_0
-
-    :cond_2
-    sub-int/2addr p4, p2
-
-    if-le p3, p4, :cond_3
-
-    iput p4, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    :cond_3
-    :goto_0
-    iget p2, p1, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    iget p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    invoke-static {p2, p3}, Ljava/lang/Math;->min(II)I
-
-    move-result p2
-
-    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    iget p1, p1, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    iget p2, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    iget p1, p0, Le55;->a:I
-
-    return p1
-.end method
-
-.method public final b()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    iget-object v0, p0, Le55;->Y:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
-    .locals 0
-
-    iget-object p2, p0, Le55;->o:Landroid/graphics/Paint$FontMetricsInt;
-
-    invoke-virtual {p9, p2}, Landroid/graphics/Paint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
-
-    iget p3, p0, Le55;->b:I
-
-    iget p4, p0, Le55;->X:I
-
-    if-eqz p4, :cond_1
-
-    const/4 p6, 0x2
-
-    if-eq p4, p6, :cond_0
-
-    neg-int p2, p3
-
-    goto :goto_0
-
-    :cond_0
-    iget p4, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    sub-int/2addr p4, p2
-
-    sub-int/2addr p4, p3
-
-    div-int/2addr p4, p6
-
-    add-int/2addr p2, p4
-
-    goto :goto_0
-
-    :cond_1
-    iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    sub-int/2addr p2, p3
-
-    :goto_0
-    add-int/2addr p7, p2
-
-    int-to-float p2, p7
-
-    invoke-virtual {p1, p5, p2}, Landroid/graphics/Canvas;->translate(FF)V
-
-    iget-object p2, p0, Le55;->Y:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    neg-float p2, p5
-
-    neg-int p3, p7
-
-    int-to-float p3, p3
-
-    invoke-virtual {p1, p2, p3}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {v1, v0}, Lgw0;->c(Ljava/lang/Object;)V
 
     return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Le55;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Le55;
-
-    iget v0, p0, Le55;->X:I
-
-    iget v1, p1, Le55;->X:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Le55;->c:Landroid/graphics/Rect;
-
-    iget-object v1, p1, Le55;->c:Landroid/graphics/Rect;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Le55;->Y:Landroid/graphics/drawable/Drawable;
-
-    iget-object p1, p1, Le55;->Y:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 4
-
-    iget-object v0, p0, Le55;->Y:Landroid/graphics/drawable/Drawable;
-
-    instance-of v1, v0, Leje;
-
-    if-eqz v1, :cond_3
-
-    check-cast v0, Leje;
-
-    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    move-object v1, p5
-
-    :cond_0
-    sget-object v2, Leje;->d:Landroid/graphics/Paint;
-
-    iget-object v2, v0, Leje;->a:Lfje;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget v3, v1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
-
-    move-result v3
-
-    iget v1, v1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v3
-
-    if-lez v1, :cond_3
-
-    iget v3, v2, Lfje;->b:I
-
-    if-ne v3, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iput v1, v2, Lfje;->b:I
-
-    iget-object v1, v0, Leje;->a:Lfje;
-
-    iget v1, v1, Lfje;->b:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v2, v1, v1}, Leje;->setBounds(IIII)V
-
-    invoke-virtual {v0}, Leje;->a()V
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_3
-    :goto_0
-    invoke-virtual/range {p0 .. p5}, Le55;->a(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Le55;->c:Landroid/graphics/Rect;
-
-    iget v1, p0, Le55;->X:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget-object v2, p0, Le55;->Y:Landroid/graphics/drawable/Drawable;
-
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
 .end method

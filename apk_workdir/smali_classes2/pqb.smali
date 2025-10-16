@@ -1,117 +1,89 @@
-.class public final Lpqb;
-.super Lti0;
+.class public final enum Lpqb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final synthetic b:[Lpqb;
 
-.field public final c:J
+.field public static final synthetic c:Lfd5;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Lti0;-><init>()V
+    new-instance v0, Lpqb;
 
-    iput-wide p1, p0, Lpqb;->b:J
+    const-string v1, "CALL"
 
-    iput-wide p3, p0, Lpqb;->c:J
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lpqb;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lpqb;
+
+    const-string v2, "VIDEO"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Lpqb;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v0, v1}, [Lpqb;
+
+    move-result-object v0
+
+    sput-object v0, Lpqb;->b:[Lpqb;
+
+    new-instance v1, Lfd5;
+
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lpqb;->c:Lfd5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput p3, p0, Lpqb;->a:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lpqb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lpqb;
-
-    iget-wide v3, p0, Lpqb;->b:J
-
-    iget-wide v5, p1, Lpqb;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lpqb;->c:J
-
-    iget-wide v5, p1, Lpqb;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Lpqb;
+    .locals 1
 
-    iget-wide v0, p0, Lpqb;->b:J
+    const-class v0, Lpqb;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast p0, Lpqb;
 
-    iget-wide v1, p0, Lpqb;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public static values()[Lpqb;
+    .locals 1
 
-    const-string v0, "ProfileAvatarUpdatedEvent(requestId="
+    sget-object v0, Lpqb;->b:[Lpqb;
 
-    const-string v1, ", photoId="
-
-    iget-wide v2, p0, Lpqb;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lpqb;->c:J
-
-    invoke-static {v0, v2, v3, v1}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, [Lpqb;
 
     return-object v0
 .end method

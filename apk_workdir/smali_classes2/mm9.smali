@@ -1,115 +1,226 @@
-.class public final Lmm9;
-.super Lom9;
+.class public final synthetic Lmm9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/messages/list/ui/MessagesListWidget;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p3, p0, Lmm9;->a:I
+
+    iput-object p1, p0, Lmm9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iput-object p2, p0, Lmm9;->c:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lmm9;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lmm9;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lmm9;->b:Lone/me/messages/list/ui/MessagesListWidget;
 
-    :cond_0
-    instance-of v1, p1, Lmm9;
+    iget-object v1, p0, Lmm9;->c:Ljava/util/List;
 
-    if-nez v1, :cond_1
+    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    sget-object v2, Lndi;->a:Lkwa;
+
+    if-nez v2, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lmm9;
+    :cond_0
+    sget-object v3, Lf88;->o:Lf88;
 
-    iget-wide v1, p0, Lmm9;->a:J
+    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
 
-    iget-wide v3, p1, Lmm9;->a:J
+    move-result v4
 
-    cmp-long p1, v1, v3
+    if-eqz v4, :cond_1
 
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lmm9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    const-string v4, "New messages submitted, size="
 
-    return v1
-.end method
+    invoke-static {v1, v4}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result-object v1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v4, 0x0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3, v0, v1, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const-string v2, "Defined(position="
+    :cond_1
+    :goto_0
+    return-void
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    iget-object v0, p0, Lmm9;->b:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iget-wide v2, p0, Lmm9;->a:J
+    iget-object v1, p0, Lmm9;->c:Ljava/util/List;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
 
-    const-string v2, ", timeUnit="
+    sget-object v2, Lndi;->a:Lkwa;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v2, :cond_2
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    const-string v0, ")"
+    :cond_2
+    sget-object v3, Lf88;->o:Lf88;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v4
 
-    move-result-object v0
+    if-eqz v4, :cond_3
 
-    return-object v0
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const-string v4, "New messages submitted (lifecycle scope), size="
+
+    invoke-static {v1, v4}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v0, v1, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lmm9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, p0, Lmm9;->c:Ljava/util/List;
+
+    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    sget-object v2, Lndi;->a:Lkwa;
+
+    if-nez v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    sget-object v3, Lf88;->Y:Lf88;
+
+    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const-string v4, "WARNING! Can\'t set new messages, size="
+
+    invoke-static {v1, v4}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v0, v1, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_2
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lmm9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, p0, Lmm9;->c:Ljava/util/List;
+
+    iget-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->C0:Lej9;
+
+    new-instance v3, Lmm9;
+
+    const/4 v4, 0x4
+
+    invoke-direct {v3, v0, v1, v4}, Lmm9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
+
+    invoke-virtual {v2, v1, v3}, Lej9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lmm9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, p0, Lmm9;->c:Ljava/util/List;
+
+    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    sget-object v2, Lndi;->a:Lkwa;
+
+    if-nez v2, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    sget-object v3, Lf88;->o:Lf88;
+
+    invoke-virtual {v2, v3}, Lkwa;->b(Lf88;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_7
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const-string v4, "New messages submitted (rv null), size="
+
+    invoke-static {v1, v4}, Lf67;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v0, v1, v4}, Lkwa;->c(Lf88;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

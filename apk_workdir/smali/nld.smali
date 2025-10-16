@@ -1,14 +1,18 @@
-.class public interface abstract Lnld;
+.class public final Lnld;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyyg;
+
 
 # virtual methods
-.method public abstract c()Z
-.end method
+.method public final b(Ljava/lang/Class;Lgz9;)Ltyg;
+    .locals 0
 
-.method public abstract e(J)Llld;
-.end method
+    new-instance p1, Landroidx/lifecycle/SavedStateHandlesVM;
 
-.method public abstract f()J
+    invoke-direct {p1}, Landroidx/lifecycle/SavedStateHandlesVM;-><init>()V
+
+    return-object p1
 .end method

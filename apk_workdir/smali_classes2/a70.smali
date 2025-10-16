@@ -1,52 +1,27 @@
 .class public final La70;
-.super Lv7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Z
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p1, v0, :cond_1
+    iput-boolean p3, p0, La70;->a:Z
 
-    const/4 v0, 0x2
+    iput-object p1, p0, La70;->b:Ljava/lang/String;
 
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
-
-    move-result-object p1
-
-    new-instance v0, Ld3b;
-
-    const-string v1, "reason"
-
-    invoke-direct {v0, v1, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v0}, [Ld3b;
-
-    move-result-object p1
-
-    invoke-static {p1}, Llbd;->b([Ld3b;)Lfs9;
-
-    move-result-object p1
-
-    const/4 v0, 0x3
-
-    const-string v1, "registration_failed"
-
-    invoke-direct {p0, v1, v0, p1}, Lv7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-object p2, p0, La70;->c:Ljava/lang/String;
 
     return-void
 .end method

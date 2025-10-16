@@ -1,92 +1,165 @@
-.class public final synthetic Lzu;
-.super Ljava/lang/Object;
+.class public final Lzu;
+.super Loi0;
 .source "SourceFile"
-
-# interfaces
-.implements Ll6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lxh2;
+.field public final X:[J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxh2;I)V
+.method public constructor <init>(IJ[J)V
     .locals 0
 
-    iput p2, p0, Lzu;->a:I
+    invoke-direct {p0, p2, p3, p1}, Loi0;-><init>(JI)V
 
-    iput-object p1, p0, Lzu;->b:Lxh2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lzu;->X:[J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final g()[B
     .locals 3
 
-    iget v0, p0, Lzu;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;-><init>()V
 
-    iget-object v0, p0, Lzu;->b:Lxh2;
+    iget v1, p0, Loi0;->o:I
 
-    iget-object v1, v0, Lxh2;->r0:Lbv;
+    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
 
-    monitor-enter v1
+    move-result v1
 
-    monitor-exit v1
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->assetType:I
 
-    iget-object v1, v0, Lxh2;->t0:Lbv;
+    iget-object v1, p0, Lzu;->X:[J
 
-    monitor-enter v1
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->ids:[J
 
-    monitor-exit v1
+    iget-wide v1, p0, Lxm;->a:J
 
-    iget-object v1, v0, Lxh2;->s0:Lbv;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->requestId:J
 
-    monitor-enter v1
+    invoke-static {v0}, Ldd9;->toByteArray(Ldd9;)[B
 
-    monitor-exit v1
+    move-result-object v0
 
-    iget-object v1, v0, Lxh2;->o:Lpcd;
+    return-object v0
+.end method
 
-    new-instance v2, Lhc;
+.method public final getType()Lqhb;
+    .locals 1
 
-    invoke-direct {v2, v0}, Lhc;-><init>(Lxh2;)V
+    sget-object v0, Lqhb;->S0:Lqhb;
 
-    invoke-virtual {v1, v2}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
+    return-object v0
+.end method
+
+.method public final i()Lhlf;
+    .locals 4
+
+    new-instance v0, Lmu;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lmu;-><init>(Lk7b;I)V
+
+    iget v1, p0, Loi0;->o:I
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, p0, Lzu;->X:[J
+
+    if-eqz v2, :cond_0
+
+    array-length v3, v2
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "type"
+
+    invoke-static {v1}, Lwx1;->d(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v3, v1}, Lhlf;->x(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "ids"
+
+    invoke-virtual {v0, v1, v2}, Lhlf;->q(Ljava/lang/String;[J)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "ids must not be null or empty"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final t(Lklf;)V
+    .locals 4
+
+    check-cast p1, Lav;
+
+    iget-boolean v0, p1, Lav;->c:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p1, Lav;->o:J
+
+    invoke-virtual {p0, v2, v3}, Loi0;->u(J)V
+
+    iget-object p1, p0, Lxm;->c:Lym;
+
+    if-eqz p1, :cond_0
+
+    move-object v1, p1
+
+    :cond_0
+    invoke-virtual {v1}, Lym;->b()Lgw0;
+
+    move-result-object p1
+
+    new-instance v0, Lbv;
+
+    iget-wide v1, p0, Lxm;->a:J
+
+    invoke-direct {v0, v1, v2}, Llj0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Lgw0;->c(Ljava/lang/Object;)V
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lzu;->b:Lxh2;
+    :cond_1
+    new-instance p1, Lukf;
 
-    iget-object v1, v0, Lxh2;->s0:Lbv;
+    const-string v0, "asset.task.failed"
 
-    monitor-enter v1
+    const-string v2, "failed to remove asset"
 
-    monitor-exit v1
+    invoke-direct {p1, v0, v2, v1}, Lukf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, v0, Lxh2;->o:Lpcd;
-
-    new-instance v2, Lhc;
-
-    invoke-direct {v2, v0}, Lhc;-><init>(Lxh2;)V
-
-    invoke-virtual {v1, v2}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
+    invoke-virtual {p0, p1}, Loi0;->f(Lukf;)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

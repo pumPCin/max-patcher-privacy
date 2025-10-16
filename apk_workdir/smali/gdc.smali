@@ -1,152 +1,853 @@
-.class public abstract Lgdc;
+.class public final Lgdc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lsga;
 
 
 # static fields
-.field public static accessibility_action_clickable_span:I = 0x7f0a0054
+.field public static final f:Ljava/nio/charset/Charset;
 
-.field public static accessibility_custom_action_0:I = 0x7f0a0055
+.field public static final g:Liq5;
 
-.field public static accessibility_custom_action_1:I = 0x7f0a0056
+.field public static final h:Liq5;
 
-.field public static accessibility_custom_action_10:I = 0x7f0a0057
+.field public static final i:Lep7;
 
-.field public static accessibility_custom_action_11:I = 0x7f0a0058
 
-.field public static accessibility_custom_action_12:I = 0x7f0a0059
+# instance fields
+.field public a:Ljava/io/OutputStream;
 
-.field public static accessibility_custom_action_13:I = 0x7f0a005a
+.field public final b:Ljava/util/HashMap;
 
-.field public static accessibility_custom_action_14:I = 0x7f0a005b
+.field public final c:Ljava/util/HashMap;
 
-.field public static accessibility_custom_action_15:I = 0x7f0a005c
+.field public final d:Lrga;
 
-.field public static accessibility_custom_action_16:I = 0x7f0a005d
+.field public final e:Lhdc;
 
-.field public static accessibility_custom_action_17:I = 0x7f0a005e
 
-.field public static accessibility_custom_action_18:I = 0x7f0a005f
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.field public static accessibility_custom_action_19:I = 0x7f0a0060
+    const-string v0, "UTF-8"
 
-.field public static accessibility_custom_action_2:I = 0x7f0a0061
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-.field public static accessibility_custom_action_20:I = 0x7f0a0062
+    move-result-object v0
 
-.field public static accessibility_custom_action_21:I = 0x7f0a0063
+    sput-object v0, Lgdc;->f:Ljava/nio/charset/Charset;
 
-.field public static accessibility_custom_action_22:I = 0x7f0a0064
+    new-instance v0, Lry;
 
-.field public static accessibility_custom_action_23:I = 0x7f0a0065
+    const/4 v1, 0x1
 
-.field public static accessibility_custom_action_24:I = 0x7f0a0066
+    invoke-direct {v0, v1}, Lry;-><init>(I)V
 
-.field public static accessibility_custom_action_25:I = 0x7f0a0067
+    const-class v1, Lfdc;
 
-.field public static accessibility_custom_action_26:I = 0x7f0a0068
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
 
-.field public static accessibility_custom_action_27:I = 0x7f0a0069
+    move-result-object v0
 
-.field public static accessibility_custom_action_28:I = 0x7f0a006a
+    new-instance v2, Liq5;
 
-.field public static accessibility_custom_action_29:I = 0x7f0a006b
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-.field public static accessibility_custom_action_3:I = 0x7f0a006c
+    move-result-object v0
 
-.field public static accessibility_custom_action_30:I = 0x7f0a006d
+    const-string v3, "key"
 
-.field public static accessibility_custom_action_31:I = 0x7f0a006e
+    invoke-direct {v2, v3, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-.field public static accessibility_custom_action_4:I = 0x7f0a006f
+    sput-object v2, Lgdc;->g:Liq5;
 
-.field public static accessibility_custom_action_5:I = 0x7f0a0070
+    new-instance v0, Lry;
 
-.field public static accessibility_custom_action_6:I = 0x7f0a0071
+    const/4 v2, 0x2
 
-.field public static accessibility_custom_action_7:I = 0x7f0a0072
+    invoke-direct {v0, v2}, Lry;-><init>(I)V
 
-.field public static accessibility_custom_action_8:I = 0x7f0a0073
+    invoke-static {v1, v0}, Lwx1;->o(Ljava/lang/Class;Lry;)Ljava/util/HashMap;
 
-.field public static accessibility_custom_action_9:I = 0x7f0a0074
+    move-result-object v0
 
-.field public static action_container:I = 0x7f0a009d
+    new-instance v1, Liq5;
 
-.field public static action_divider:I = 0x7f0a009f
+    invoke-static {v0}, Lwx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-.field public static action_image:I = 0x7f0a00a0
+    move-result-object v0
 
-.field public static action_text:I = 0x7f0a00a6
+    const-string v2, "value"
 
-.field public static actions:I = 0x7f0a00a7
+    invoke-direct {v1, v2, v0}, Liq5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-.field public static async:I = 0x7f0a00d3
+    sput-object v1, Lgdc;->h:Liq5;
 
-.field public static blocking:I = 0x7f0a00f5
+    new-instance v0, Lep7;
 
-.field public static chronometer:I = 0x7f0a029f
+    const/4 v1, 0x1
 
-.field public static dialog_button:I = 0x7f0a02fd
+    invoke-direct {v0, v1}, Lep7;-><init>(I)V
 
-.field public static edit_text_id:I = 0x7f0a0324
+    sput-object v0, Lgdc;->i:Lep7;
 
-.field public static forever:I = 0x7f0a039d
+    return-void
+.end method
 
-.field public static hide_ime_id:I = 0x7f0a03ee
+.method public constructor <init>(Ljava/io/ByteArrayOutputStream;Ljava/util/HashMap;Ljava/util/HashMap;Lrga;)V
+    .locals 2
 
-.field public static icon:I = 0x7f0a03f8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static icon_group:I = 0x7f0a03fa
+    new-instance v0, Lhdc;
 
-.field public static info:I = 0x7f0a0407
+    const/4 v1, 0x0
 
-.field public static italic:I = 0x7f0a040e
+    invoke-direct {v0, p0, v1}, Lhdc;-><init>(Lsga;I)V
 
-.field public static line1:I = 0x7f0a043c
+    iput-object v0, p0, Lgdc;->e:Lhdc;
 
-.field public static line3:I = 0x7f0a043d
+    iput-object p1, p0, Lgdc;->a:Ljava/io/OutputStream;
 
-.field public static normal:I = 0x7f0a05e3
+    iput-object p2, p0, Lgdc;->b:Ljava/util/HashMap;
 
-.field public static notification_background:I = 0x7f0a05e5
+    iput-object p3, p0, Lgdc;->c:Ljava/util/HashMap;
 
-.field public static notification_main_column:I = 0x7f0a05e8
+    iput-object p4, p0, Lgdc;->d:Lrga;
 
-.field public static notification_main_column_container:I = 0x7f0a05e9
+    return-void
+.end method
 
-.field public static right_icon:I = 0x7f0a09f6
+.method public static g(Liq5;)I
+    .locals 1
 
-.field public static right_side:I = 0x7f0a09f7
+    const-class v0, Lfdc;
 
-.field public static tag_accessibility_actions:I = 0x7f0a0bd5
+    invoke-virtual {p0, v0}, Liq5;->b(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
 
-.field public static tag_accessibility_clickable_spans:I = 0x7f0a0bd6
+    move-result-object p0
 
-.field public static tag_accessibility_heading:I = 0x7f0a0bd7
+    check-cast p0, Lfdc;
 
-.field public static tag_accessibility_pane_title:I = 0x7f0a0bd8
+    if-eqz p0, :cond_0
 
-.field public static tag_on_apply_window_listener:I = 0x7f0a0bd9
+    check-cast p0, Lry;
 
-.field public static tag_on_receive_content_listener:I = 0x7f0a0bda
+    iget p0, p0, Lry;->a:I
 
-.field public static tag_on_receive_content_mime_types:I = 0x7f0a0bdb
+    return p0
 
-.field public static tag_screen_reader_focusable:I = 0x7f0a0bdd
+    :cond_0
+    new-instance p0, Lcom/google/firebase/encoders/EncodingException;
 
-.field public static tag_state_description:I = 0x7f0a0bde
+    const-string v0, "Field has no @Protobuf config"
 
-.field public static tag_transition_group:I = 0x7f0a0be0
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-.field public static tag_unhandled_key_event_manager:I = 0x7f0a0be1
+    throw p0
+.end method
 
-.field public static tag_unhandled_key_listeners:I = 0x7f0a0be2
 
-.field public static tag_window_insets_animation_callback:I = 0x7f0a0be3
+# virtual methods
+.method public final a(Liq5;Ljava/lang/Object;)Lsga;
+    .locals 1
 
-.field public static text:I = 0x7f0a0be5
+    const/4 v0, 0x1
 
-.field public static text2:I = 0x7f0a0be6
+    invoke-virtual {p0, p1, p2, v0}, Lgdc;->c(Liq5;Ljava/lang/Object;Z)V
 
-.field public static time:I = 0x7f0a0c04
+    return-object p0
+.end method
 
-.field public static title:I = 0x7f0a0c06
+.method public final b(Liq5;IZ)V
+    .locals 0
+
+    if-eqz p3, :cond_0
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    const-class p3, Lfdc;
+
+    invoke-virtual {p1, p3}, Liq5;->b(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+
+    move-result-object p1
+
+    check-cast p1, Lfdc;
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Lry;
+
+    iget p1, p1, Lry;->a:I
+
+    shl-int/lit8 p1, p1, 0x3
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    invoke-virtual {p0, p2}, Lgdc;->h(I)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string p2, "Field has no @Protobuf config"
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final c(Liq5;Ljava/lang/Object;Z)V
+    .locals 4
+
+    if-nez p2, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    instance-of v0, p2, Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_2
+
+    check-cast p2, Ljava/lang/CharSequence;
+
+    if-eqz p3, :cond_1
+
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+
+    move-result p3
+
+    if-nez p3, :cond_1
+
+    goto/16 :goto_2
+
+    :cond_1
+    invoke-static {p1}, Lgdc;->g(Liq5;)I
+
+    move-result p1
+
+    shl-int/lit8 p1, p1, 0x3
+
+    or-int/lit8 p1, p1, 0x2
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object p2, Lgdc;->f:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p1
+
+    array-length p2, p1
+
+    invoke-virtual {p0, p2}, Lgdc;->h(I)V
+
+    iget-object p2, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    invoke-virtual {p2, p1}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
+
+    :cond_2
+    instance-of v0, p2, Ljava/util/Collection;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    check-cast p2, Ljava/util/Collection;
+
+    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_d
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p3
+
+    invoke-virtual {p0, p1, p3, v1}, Lgdc;->c(Liq5;Ljava/lang/Object;Z)V
+
+    goto :goto_0
+
+    :cond_3
+    instance-of v0, p2, Ljava/util/Map;
+
+    if-eqz v0, :cond_4
+
+    check-cast p2, Ljava/util/Map;
+
+    invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_d
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ljava/util/Map$Entry;
+
+    sget-object v0, Lgdc;->i:Lep7;
+
+    invoke-virtual {p0, v0, p1, p3, v1}, Lgdc;->f(Lrga;Liq5;Ljava/lang/Object;Z)V
+
+    goto :goto_1
+
+    :cond_4
+    instance-of v0, p2, Ljava/lang/Double;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_6
+
+    check-cast p2, Ljava/lang/Double;
+
+    invoke-virtual {p2}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v0
+
+    if-eqz p3, :cond_5
+
+    const-wide/16 p2, 0x0
+
+    cmpl-double p2, v0, p2
+
+    if-nez p2, :cond_5
+
+    goto/16 :goto_2
+
+    :cond_5
+    invoke-static {p1}, Lgdc;->g(Liq5;)I
+
+    move-result p1
+
+    shl-int/lit8 p1, p1, 0x3
+
+    or-int/2addr p1, v2
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    iget-object p1, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    const/16 p2, 0x8
+
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    sget-object p3, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    invoke-virtual {p2, p3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v0, v1}, Ljava/nio/ByteBuffer;->putDouble(D)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
+
+    :cond_6
+    instance-of v0, p2, Ljava/lang/Float;
+
+    if-eqz v0, :cond_8
+
+    check-cast p2, Ljava/lang/Float;
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    if-eqz p3, :cond_7
+
+    const/4 p3, 0x0
+
+    cmpl-float p3, p2, p3
+
+    if-nez p3, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    invoke-static {p1}, Lgdc;->g(Liq5;)I
+
+    move-result p1
+
+    shl-int/lit8 p1, p1, 0x3
+
+    or-int/lit8 p1, p1, 0x5
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    iget-object p1, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    const/4 p3, 0x4
+
+    invoke-static {p3}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p3
+
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object p3
+
+    invoke-virtual {p3, p2}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
+
+    :cond_8
+    instance-of v0, p2, Ljava/lang/Number;
+
+    if-eqz v0, :cond_b
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    if-eqz p3, :cond_9
+
+    const-wide/16 p2, 0x0
+
+    cmp-long p2, v0, p2
+
+    if-nez p2, :cond_9
+
+    goto :goto_2
+
+    :cond_9
+    const-class p2, Lfdc;
+
+    invoke-virtual {p1, p2}, Liq5;->b(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+
+    move-result-object p1
+
+    check-cast p1, Lfdc;
+
+    if-eqz p1, :cond_a
+
+    check-cast p1, Lry;
+
+    iget p1, p1, Lry;->a:I
+
+    shl-int/lit8 p1, p1, 0x3
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    invoke-virtual {p0, v0, v1}, Lgdc;->i(J)V
+
+    return-void
+
+    :cond_a
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string p2, "Field has no @Protobuf config"
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_b
+    instance-of v0, p2, Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_c
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2, p3}, Lgdc;->b(Liq5;IZ)V
+
+    return-void
+
+    :cond_c
+    instance-of v0, p2, [B
+
+    if-eqz v0, :cond_f
+
+    check-cast p2, [B
+
+    if-eqz p3, :cond_e
+
+    array-length p3, p2
+
+    if-nez p3, :cond_e
+
+    :cond_d
+    :goto_2
+    return-void
+
+    :cond_e
+    invoke-static {p1}, Lgdc;->g(Liq5;)I
+
+    move-result p1
+
+    shl-int/lit8 p1, p1, 0x3
+
+    or-int/lit8 p1, p1, 0x2
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    array-length p1, p2
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    iget-object p1, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
+
+    :cond_f
+    iget-object v0, p0, Lgdc;->b:Ljava/util/HashMap;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lrga;
+
+    if-eqz v0, :cond_10
+
+    invoke-virtual {p0, v0, p1, p2, p3}, Lgdc;->f(Lrga;Liq5;Ljava/lang/Object;Z)V
+
+    return-void
+
+    :cond_10
+    iget-object v0, p0, Lgdc;->c:Ljava/util/HashMap;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxhg;
+
+    if-eqz v0, :cond_11
+
+    iget-object v2, p0, Lgdc;->e:Lhdc;
+
+    iput-boolean v1, v2, Lhdc;->b:Z
+
+    iput-object p1, v2, Lhdc;->d:Liq5;
+
+    iput-boolean p3, v2, Lhdc;->c:Z
+
+    invoke-interface {v0, p2, v2}, Lsa5;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_11
+    instance-of v0, p2, Lcdc;
+
+    if-eqz v0, :cond_12
+
+    check-cast p2, Lcdc;
+
+    invoke-interface {p2}, Lcdc;->a()I
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2, v2}, Lgdc;->b(Liq5;IZ)V
+
+    return-void
+
+    :cond_12
+    instance-of v0, p2, Ljava/lang/Enum;
+
+    if-eqz v0, :cond_13
+
+    check-cast p2, Ljava/lang/Enum;
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2, v2}, Lgdc;->b(Liq5;IZ)V
+
+    return-void
+
+    :cond_13
+    iget-object v0, p0, Lgdc;->d:Lrga;
+
+    invoke-virtual {p0, v0, p1, p2, p3}, Lgdc;->f(Lrga;Liq5;Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public final d(Liq5;I)Lsga;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, p2, v0}, Lgdc;->b(Liq5;IZ)V
+
+    return-object p0
+.end method
+
+.method public final e(Liq5;J)Lsga;
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p2, v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    const-class v0, Lfdc;
+
+    invoke-virtual {p1, v0}, Liq5;->b(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+
+    move-result-object p1
+
+    check-cast p1, Lfdc;
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Lry;
+
+    iget p1, p1, Lry;->a:I
+
+    shl-int/lit8 p1, p1, 0x3
+
+    invoke-virtual {p0, p1}, Lgdc;->h(I)V
+
+    invoke-virtual {p0, p2, p3}, Lgdc;->i(J)V
+
+    return-object p0
+
+    :cond_1
+    new-instance p1, Lcom/google/firebase/encoders/EncodingException;
+
+    const-string p2, "Field has no @Protobuf config"
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final f(Lrga;Liq5;Ljava/lang/Object;Z)V
+    .locals 5
+
+    new-instance v0, Lvu7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lvu7;-><init>(I)V
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v0, Lvu7;->b:J
+
+    :try_start_0
+    iget-object v3, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    iput-object v0, p0, Lgdc;->a:Ljava/io/OutputStream;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-interface {p1, p3, p0}, Lsa5;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    iput-object v3, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    iget-wide v3, v0, Lvu7;->b:J
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+
+    if-eqz p4, :cond_0
+
+    cmp-long p4, v3, v1
+
+    if-nez p4, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-static {p2}, Lgdc;->g(Liq5;)I
+
+    move-result p2
+
+    shl-int/lit8 p2, p2, 0x3
+
+    or-int/lit8 p2, p2, 0x2
+
+    invoke-virtual {p0, p2}, Lgdc;->h(I)V
+
+    invoke-virtual {p0, v3, v4}, Lgdc;->i(J)V
+
+    invoke-interface {p1, p3, p0}, Lsa5;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_3
+    iput-object v3, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    throw p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    :try_start_4
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_1
+    throw p1
+.end method
+
+.method public final h(I)V
+    .locals 4
+
+    :goto_0
+    and-int/lit8 v0, p1, -0x80
+
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    and-int/lit8 v1, p1, 0x7f
+
+    or-int/lit16 v1, v1, 0x80
+
+    invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
+
+    ushr-int/lit8 p1, p1, 0x7
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    and-int/lit8 p1, p1, 0x7f
+
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+
+    return-void
+.end method
+
+.method public final i(J)V
+    .locals 4
+
+    :goto_0
+    const-wide/16 v0, -0x80
+
+    and-long/2addr v0, p1
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    long-to-int v1, p1
+
+    and-int/lit8 v1, v1, 0x7f
+
+    or-int/lit16 v1, v1, 0x80
+
+    invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
+
+    const/4 v0, 0x7
+
+    ushr-long/2addr p1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lgdc;->a:Ljava/io/OutputStream;
+
+    long-to-int p1, p1
+
+    and-int/lit8 p1, p1, 0x7f
+
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+
+    return-void
+.end method

@@ -1,41 +1,91 @@
-.class public final Lsz7;
+.class public final synthetic Lsz7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqi6;
+
 
 # instance fields
-.field public final a:Lyn7;
-
-.field public final b:Lyn7;
+.field public final synthetic a:Ltz7;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;Lyn7;)V
+.method public constructor <init>(Ltz7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsz7;->a:Lyn7;
-
-    iput-object p2, p0, Lsz7;->b:Lyn7;
+    iput-object p1, p0, Lsz7;->a:Ltz7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JZ)Lnba;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance v0, Lrz7;
+    instance-of v0, p1, Lsz7;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lrz7;-><init>(Lsz7;JZ)V
+    if-eqz v0, :cond_0
 
-    new-instance p1, Lnba;
+    if-eqz p1, :cond_0
 
-    const/4 p2, 0x4
+    invoke-virtual {p0}, Lsz7;->getFunctionDelegate()Lji6;
 
-    invoke-direct {p1, p2, v0}, Lnba;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    return-object p1
+    check-cast p1, Lqi6;
+
+    invoke-interface {p1}, Lqi6;->getFunctionDelegate()Lji6;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lji6;
+    .locals 7
+
+    new-instance v0, Lti6;
+
+    const-string v6, "onMessageElementClick(Landroid/view/View;Lru/ok/tamtam/models/MessageElementData;)V"
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x2
+
+    const-class v3, Ltz7;
+
+    iget-object v4, p0, Lsz7;->a:Ltz7;
+
+    const-string v5, "onMessageElementClick"
+
+    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lsz7;->getFunctionDelegate()Lji6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

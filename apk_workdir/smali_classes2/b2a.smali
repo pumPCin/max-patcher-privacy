@@ -1,251 +1,201 @@
 .class public final Lb2a;
-.super Ly7f;
+.super Lf3;
 .source "SourceFile"
+
+# interfaces
+.implements Lksf;
+.implements Lq1a;
 
 
 # instance fields
-.field public final X:Lq19;
+.field public X:Landroid/widget/ProgressBar;
 
-.field public final Y:Z
+.field public Y:Landroid/widget/TextView;
 
-.field public final Z:J
+.field public Z:Lx28;
 
-.field public final c:J
-
-.field public final o:Ls82;
-
-.field public final r0:Z
+.field public o:Landroidx/recyclerview/widget/RecyclerView;
 
 
-# direct methods
-.method public constructor <init>(JLs82;Lq19;ZJZ)V
-    .locals 0
+# virtual methods
+.method public final B(Z)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_0
 
-    iput-wide p1, p0, Lb2a;->c:J
+    iget-object p1, p0, Lb2a;->X:Landroid/widget/ProgressBar;
 
-    iput-object p3, p0, Lb2a;->o:Ls82;
+    const/4 v0, 0x0
 
-    iput-object p4, p0, Lb2a;->X:Lq19;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iput-boolean p5, p0, Lb2a;->Y:Z
+    return-void
 
-    iput-wide p6, p0, Lb2a;->Z:J
+    :cond_0
+    iget-object p1, p0, Lb2a;->X:Landroid/widget/ProgressBar;
 
-    iput-boolean p8, p0, Lb2a;->r0:Z
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
 
+.method public final C(Ljava/util/List;)V
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    const/4 v0, 0x1
+    move-result v0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lb2a;
+    const/16 v1, 0x8
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz v0, :cond_0
 
-    return v2
+    iget-object p1, p0, Lb2a;->Y:Landroid/widget/TextView;
 
-    :cond_1
-    check-cast p1, Lb2a;
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    iget-wide v3, p0, Lb2a;->c:J
+    iget-object p1, p0, Lb2a;->o:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-wide v5, p1, Lb2a;->c:J
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lb2a;->o:Ls82;
-
-    iget-object v3, p1, Lb2a;->o:Ls82;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lb2a;->X:Lq19;
-
-    iget-object v3, p1, Lb2a;->X:Lq19;
-
-    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lb2a;->Y:Z
-
-    iget-boolean v3, p1, Lb2a;->Y:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-wide v3, p0, Lb2a;->Z:J
-
-    iget-wide v5, p1, Lb2a;->Z:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lb2a;->r0:Z
-
-    iget-boolean p1, p1, Lb2a;->r0:Z
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lb2a;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lb2a;->o:Ls82;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lb2a;->Z:Lx28;
 
-    move-result v2
+    iput-object p1, v0, Lx28;->X:Ljava/lang/Object;
 
-    :goto_0
-    add-int/2addr v0, v2
+    invoke-virtual {v0}, Lm5d;->m()V
 
-    mul-int/2addr v0, v1
+    iget-object p1, p0, Lb2a;->Y:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lb2a;->X:Lq19;
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v2}, Lq19;->hashCode()I
+    iget-object p1, p0, Lb2a;->o:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result v2
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-boolean v0, p0, Lb2a;->Y:Z
-
-    invoke-static {v2, v1, v0}, Ljl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lb2a;->Z:J
-
-    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lb2a;->r0:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final c()V
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
 
-    const-string v1, "Response(chatId="
+    check-cast v0, Landroid/view/View;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lb2a;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lb2a;->o:Ls82;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", message="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lb2a;->X:Lq19;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isInvisible="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lb2a;->Y:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", prevMessageId="
-
-    const-string v2, ", ttl="
-
-    iget-wide v3, p0, Lb2a;->Z:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lsw1;->q(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lb2a;->r0:Z
-
-    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    return-object v0
+    sget-object v1, Ltmf;->a0:Lrhf;
+
+    invoke-static {v0}, Lnw3;->g(Landroid/content/Context;)Ltmf;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lf3;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/View;
+
+    iget v2, v0, Ltmf;->m:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget-object v1, p0, Lb2a;->X:Landroid/widget/ProgressBar;
+
+    iget v2, v0, Ltmf;->k:I
+
+    invoke-static {v1, v2}, Lgma;->k(Landroid/widget/ProgressBar;I)V
+
+    iget-object v1, p0, Lb2a;->Y:Landroid/widget/TextView;
+
+    iget v0, v0, Ltmf;->F:I
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
+.end method
+
+.method public final l()V
+    .locals 4
+
+    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Looc;->frg_live_location_settings__rv_chats:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    iput-object v0, p0, Lb2a;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Looc;->frg_live_location_settings__pb_loading:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lb2a;->X:Landroid/widget/ProgressBar;
+
+    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Looc;->frg_live_location_settings__tv_empty:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lb2a;->Y:Landroid/widget/TextView;
+
+    new-instance v0, Lx28;
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-direct {v0}, Lx28;-><init>()V
+
+    iput-object v1, v0, Lx28;->X:Ljava/lang/Object;
+
+    iput-object v0, p0, Lb2a;->Z:Lx28;
+
+    iget-object v1, p0, Lb2a;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lm5d;)V
+
+    iget-object v0, p0, Lb2a;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v3, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    iget-object v0, p0, Lb2a;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
+
+    return-void
 .end method

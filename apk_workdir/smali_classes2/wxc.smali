@@ -1,19 +1,11 @@
-.class public final Lwxc;
-.super Lti0;
+.class public interface abstract Lwxc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# virtual methods
+.method public abstract R()V
+.end method
 
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
-
-    invoke-direct {p0}, Lti0;-><init>()V
-
-    iput-wide p1, p0, Lwxc;->b:J
-
-    return-void
+.method public abstract e0(Llxc;)V
 .end method

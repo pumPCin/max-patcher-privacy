@@ -4,93 +4,191 @@
 
 
 # instance fields
-.field public final a:Lc4d;
+.field public final a:Lgw0;
 
-.field public final b:Lvh;
+.field public final b:Lqkf;
 
-.field public final c:Lwh;
+.field public final c:Leie;
+
+.field public final d:Llt7;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+.method public constructor <init>(Lgw0;Lqkf;Llt7;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgd3;->a:Lc4d;
+    iput-object p1, p0, Lgd3;->a:Lgw0;
 
-    new-instance v0, Lvh;
+    iput-object p2, p0, Lgd3;->b:Lqkf;
 
-    const/4 v1, 0x3
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
+    const/4 v1, 0x7
 
-    iput-object v0, p0, Lgd3;->b:Lvh;
+    invoke-static {v0, v0, v1}, Lfie;->b(III)Leie;
 
-    new-instance v0, Lwh;
+    move-result-object v0
 
-    const/16 v1, 0x9
+    iput-object v0, p0, Lgd3;->c:Leie;
 
-    invoke-direct {v0, p1, v1}, Lwh;-><init>(Lc4d;I)V
+    iput-object p3, p0, Lgd3;->d:Llt7;
 
-    iput-object v0, p0, Lgd3;->c:Lwh;
+    check-cast p2, Losa;
+
+    invoke-virtual {p2}, Losa;->a()Lv44;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lgd3;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lgw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a(Lbd3;)V
+    .locals 3
 
-    iget-object v0, p0, Lgd3;->a:Lc4d;
+    new-instance v0, Lcd3;
 
-    invoke-virtual {v0}, Lc4d;->b()V
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lgd3;->c:Lwh;
+    invoke-direct {v0, p0, p1, v1}, Lcd3;-><init>(Lgd3;Lbd3;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1}, Le3;->a()Llc6;
+    const/4 p1, 0x3
 
-    move-result-object v2
+    iget-object v2, p0, Lgd3;->e:Lkotlinx/coroutines/internal/ContextScope;
 
-    :try_start_0
-    invoke-virtual {v0}, Lc4d;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
 
-    :try_start_1
-    invoke-virtual {v2}, Llc6;->n()I
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lc4d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+.method public final onAddChatEvent(Ln9;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
 
-    :try_start_2
-    invoke-virtual {v0}, Lc4d;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    new-instance v0, Lzc3;
 
-    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+    iget-wide v1, p1, Ln9;->b:J
+
+    invoke-direct {v0, v1, v2}, Lzc3;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lgd3;->a(Lbd3;)V
+
+    return-void
+.end method
+
+.method public final onChatMembersUpdateEvent(Luo2;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
+
+    iget-wide v0, p1, Luo2;->o:J
+
+    iget p1, p1, Luo2;->X:I
+
+    invoke-static {p1}, Lwx1;->v(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 v2, 0x1
+
+    if-ne p1, v2, :cond_0
+
+    new-instance p1, Lad3;
+
+    invoke-direct {p1, v0, v1}, Lad3;-><init>(J)V
+
+    invoke-virtual {p0, p1}, Lgd3;->a(Lbd3;)V
 
     return-void
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    goto :goto_0
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    :catchall_1
-    move-exception v3
+    throw p1
 
-    :try_start_3
-    invoke-virtual {v0}, Lc4d;->k()V
+    :cond_1
+    new-instance p1, Lzc3;
 
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-direct {p1, v0, v1}, Lzc3;-><init>(J)V
 
-    :goto_0
-    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+    invoke-virtual {p0, p1}, Lgd3;->a(Lbd3;)V
 
-    throw v0
+    return-void
+.end method
+
+.method public final onIncomingMessageEvent(Lqd7;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
+
+    iget-boolean v0, p1, Lqd7;->Y:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lfd3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lfd3;-><init>(Lgd3;Lqd7;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lgd3;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Lrji;->d(Lb54;Lt44;Le54;Lei6;I)Lwwe;
+
+    return-void
+.end method
+
+.method public final onLeaveChatEvent(Lpg2;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
+
+    new-instance v0, Lad3;
+
+    iget-wide v1, p1, Lpg2;->b:J
+
+    invoke-direct {v0, v1, v2}, Lad3;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lgd3;->a(Lbd3;)V
+
+    return-void
+.end method
+
+.method public final onRemoveChatEvent(Lm8d;)V
+    .locals 3
+    .annotation runtime Lsaf;
+    .end annotation
+
+    new-instance v0, Lad3;
+
+    iget-wide v1, p1, Lm8d;->b:J
+
+    invoke-direct {v0, v1, v2}, Lad3;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lgd3;->a(Lbd3;)V
+
+    return-void
 .end method

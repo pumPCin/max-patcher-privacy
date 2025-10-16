@@ -1,70 +1,90 @@
-.class public final synthetic Lj30;
-.super Ljava/lang/Object;
+.class public final Lj30;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lei6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ll30;
 
-.field public final synthetic b:Ll30;
+.field public final synthetic Y:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll30;I)V
+.method public constructor <init>(Ll30;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lj30;->a:I
+    iput-object p1, p0, Lj30;->X:Ll30;
 
-    iput-object p1, p0, Lj30;->b:Ll30;
+    iput-wide p2, p0, Lj30;->Y:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lb54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lj30;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lj30;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lj30;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    iget v0, p0, Lj30;->a:I
+    new-instance p1, Lj30;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lj30;->X:Ll30;
 
-    iget-object v0, p0, Lj30;->b:Ll30;
+    iget-wide v1, p0, Lj30;->Y:J
 
-    iget-object v0, v0, Ll30;->b:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, v2, p2}, Lj30;-><init>(Ll30;JLkotlin/coroutines/Continuation;)V
 
-    check-cast v0, Landroid/content/Context;
+    return-object p1
+.end method
 
-    const-string v1, "audio"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lj30;->X:Ll30;
 
-    check-cast v0, Landroid/media/AudioManager;
+    iget-object p1, p1, Ll30;->f:Llt7;
 
-    return-object v0
+    invoke-interface {p1}, Llt7;->getValue()Ljava/lang/Object;
 
-    :pswitch_0
-    new-instance v0, Lxn;
+    move-result-object p1
 
-    const/4 v1, 0x2
+    check-cast p1, Lma9;
 
-    iget-object v2, p0, Lj30;->b:Ll30;
+    iget-wide v0, p0, Lj30;->Y:J
 
-    invoke-direct {v0, v1, v2}, Lxn;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lma9;->n(J)Loa9;
 
-    return-object v0
+    move-result-object p1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

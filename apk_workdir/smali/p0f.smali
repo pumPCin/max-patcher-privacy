@@ -1,217 +1,211 @@
-.class public final Lp0f;
-.super Landroid/view/ActionMode;
+.class public abstract Lp0f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static a:Z
 
-.field public final b:Li7;
+.field public static final b:Ly87;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Li7;)V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/view/ActionMode;-><init>()V
-
-    iput-object p1, p0, Lp0f;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lp0f;->b:Li7;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final finish()V
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    invoke-virtual {v0}, Li7;->a()V
-
-    return-void
-.end method
-
-.method public final getCustomView()Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    invoke-virtual {v0}, Li7;->b()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getMenu()Landroid/view/Menu;
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, La19;
+    new-instance v0, Ly87;
 
-    iget-object v1, p0, Lp0f;->b:Li7;
+    const-string v1, "SVG"
 
-    invoke-virtual {v1}, Li7;->c()Lg09;
+    const-string v2, ".svg"
 
-    move-result-object v1
+    invoke-direct {v0, v1, v2}, Ly87;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lp0f;->a:Landroid/content/Context;
-
-    invoke-direct {v0, v2, v1}, La19;-><init>(Landroid/content/Context;Lg09;)V
-
-    return-object v0
-.end method
-
-.method public final getMenuInflater()Landroid/view/MenuInflater;
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    invoke-virtual {v0}, Li7;->d()Landroid/view/MenuInflater;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getSubtitle()Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    invoke-virtual {v0}, Li7;->f()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getTag()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    iget-object v0, v0, Li7;->a:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final getTitle()Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    invoke-virtual {v0}, Li7;->g()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getTitleOptionalHint()Z
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    iget-boolean v0, v0, Li7;->b:Z
-
-    return v0
-.end method
-
-.method public final invalidate()V
-    .locals 1
-
-    iget-object v0, p0, Lp0f;->b:Li7;
-
-    invoke-virtual {v0}, Li7;->h()V
+    sput-object v0, Lp0f;->b:Ly87;
 
     return-void
 .end method
 
-.method public final isTitleOptional()Z
-    .locals 1
+.method public static declared-synchronized a()V
+    .locals 2
 
-    iget-object v0, p0, Lp0f;->b:Li7;
+    const-class v0, Lp0f;
 
-    invoke-virtual {v0}, Li7;->i()Z
+    monitor-enter v0
+
+    :try_start_0
+    sget-boolean v1, Lp0f;->a:Z
+
+    if-nez v1, :cond_0
+
+    const-string v1, "static-webp"
+
+    invoke-static {v1}, Lm3a;->c(Ljava/lang/String;)Z
+
+    const/4 v1, 0x1
+
+    sput-boolean v1, Lp0f;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public static final b(Lvtf;J)V
+    .locals 2
+
+    instance-of v0, p0, Lwtf;
+
+    if-eqz v0, :cond_1
+
+    check-cast p0, Lwtf;
+
+    monitor-enter p0
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lwtf;->a:Ljava/lang/Long;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwtf;->a:Ljava/lang/Long;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwtf;->b:Ljava/lang/Long;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :cond_0
+    monitor-exit p0
+
+    :cond_1
+    return-void
+.end method
+
+.method public static final c(Ljava/lang/String;)I
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
-.end method
+    const/16 v1, 0x608
 
-.method public final setCustomView(Landroid/view/View;)V
-    .locals 1
+    if-eq v0, v1, :cond_4
 
-    iget-object v0, p0, Lp0f;->b:Li7;
+    const/16 v1, 0x61f
 
-    invoke-virtual {v0, p1}, Li7;->j(Landroid/view/View;)V
+    if-eq v0, v1, :cond_2
 
-    return-void
-.end method
+    const/16 v1, 0x621
 
-.method public final setSubtitle(I)V
-    .locals 1
+    if-eq v0, v1, :cond_0
 
-    .line 2
-    iget-object v0, p0, Lp0f;->b:Li7;
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Li7;->l(I)V
+    :cond_0
+    const-string v0, "12"
 
-    return-void
-.end method
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public final setSubtitle(Ljava/lang/CharSequence;)V
-    .locals 1
+    move-result p0
 
-    .line 1
-    iget-object v0, p0, Lp0f;->b:Li7;
+    if-nez p0, :cond_1
 
-    invoke-virtual {v0, p1}, Li7;->m(Ljava/lang/CharSequence;)V
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_1
+    const/4 p0, 0x3
 
-.method public final setTag(Ljava/lang/Object;)V
-    .locals 1
+    return p0
 
-    iget-object v0, p0, Lp0f;->b:Li7;
+    :cond_2
+    const-string v0, "10"
 
-    iput-object p1, v0, Li7;->a:Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-void
-.end method
+    move-result p0
 
-.method public final setTitle(I)V
-    .locals 1
+    if-nez p0, :cond_3
 
-    .line 2
-    iget-object v0, p0, Lp0f;->b:Li7;
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Li7;->n(I)V
+    :cond_3
+    const/4 p0, 0x2
 
-    return-void
-.end method
+    return p0
 
-.method public final setTitle(Ljava/lang/CharSequence;)V
-    .locals 1
+    :cond_4
+    const-string v0, "08"
 
-    .line 1
-    iget-object v0, p0, Lp0f;->b:Li7;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Li7;->o(Ljava/lang/CharSequence;)V
+    move-result p0
 
-    return-void
-.end method
+    if-nez p0, :cond_5
 
-.method public final setTitleOptionalHint(Z)V
-    .locals 1
+    :goto_0
+    const/4 p0, 0x4
 
-    iget-object v0, p0, Lp0f;->b:Li7;
+    return p0
 
-    invoke-virtual {v0, p1}, Li7;->p(Z)V
+    :cond_5
+    const/4 p0, 0x1
 
-    return-void
+    return p0
 .end method

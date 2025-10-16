@@ -3,49 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lko1;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lrt1;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lbhf;
 
 
 # direct methods
-.method public constructor <init>(Lrt1;)V
+.method public synthetic constructor <init>(Lbhf;Lbhf;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ljt1;->a:I
 
-    iput-object p1, p0, Ljt1;->a:Lrt1;
+    iput-object p2, p0, Ljt1;->b:Lbhf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k()V
-    .locals 3
+.method public final run()V
+    .locals 1
 
-    iget-object v0, p0, Ljt1;->a:Lrt1;
+    iget v0, p0, Ljt1;->a:I
 
-    iget-object v0, v0, Lrt1;->o:Lhne;
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    invoke-virtual {v0}, Lhne;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Ljt1;->b:Lbhf;
 
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ldr1;
-
-    sget-object v2, Ldr1;->i:Ldr1;
-
-    invoke-virtual {v0, v1, v2}, Lhne;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Lbhf;->d()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ljt1;->b:Lbhf;
+
+    invoke-virtual {v0}, Lbhf;->d()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ljt1;->b:Lbhf;
+
+    invoke-virtual {v0}, Lbhf;->d()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

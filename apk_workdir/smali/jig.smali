@@ -1,3 +1,3 @@
-.class public interface abstract Ljig;
-.super Ljava/lang/Object;
+.class public final Ljig;
+.super Lnig;
 .source "SourceFile"

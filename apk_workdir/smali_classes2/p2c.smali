@@ -1,98 +1,40 @@
 .class public final Lp2c;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lc3c;
+.field public final a:Ljava/util/List;
 
-.field public final synthetic Y:J
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lc3c;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lp2c;->X:Lc3c;
+    .line 4
+    sget-object v0, Ls95;->a:Ls95;
 
-    iput-wide p2, p0, Lp2c;->Y:J
+    const/4 v1, 0x0
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 5
+    invoke-direct {p0, v0, v1}, Lp2c;-><init>(Ljava/util/List;Z)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/util/List;Z)V
     .locals 0
 
-    check-cast p1, Ln24;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    .line 2
+    iput-object p1, p0, Lp2c;->a:Ljava/util/List;
 
-    invoke-virtual {p0, p1, p2}, Lp2c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .line 3
+    iput-boolean p2, p0, Lp2c;->b:Z
 
-    move-result-object p1
-
-    check-cast p1, Lp2c;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Lp2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lp2c;
-
-    iget-object v0, p0, Lp2c;->X:Lc3c;
-
-    iget-wide v1, p0, Lp2c;->Y:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lp2c;-><init>(Lc3c;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    sget-object p1, Lc3c;->U0:[Lpl7;
-
-    iget-object p1, p0, Lp2c;->X:Lc3c;
-
-    invoke-virtual {p1}, Lc3c;->t()Lg13;
-
-    move-result-object v0
-
-    check-cast v0, Lh23;
-
-    invoke-virtual {v0}, Lh23;->M()Lzb2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lp2c;->Y:J
-
-    invoke-virtual {v0, v1, v2}, Lzb2;->O(J)V
-
-    iget-object p1, p1, Lc3c;->C0:Lya5;
-
-    sget-object v0, Lo0c;->b:Lo0c;
-
-    invoke-static {p1, v0}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
-
-    sget-object p1, Laxf;->a:Laxf;
-
-    return-object p1
+    return-void
 .end method

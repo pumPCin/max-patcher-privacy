@@ -1,97 +1,85 @@
-.class public abstract Lada;
+.class public final Lada;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+
 
 # instance fields
-.field public a:Z
-
-.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-.field public c:Lye6;
+.field public final a:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lada;->a:Z
-
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object p1, p0, Lada;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput-object p1, p0, Lada;->a:Ljava/lang/Throwable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    instance-of v0, p1, Lada;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lada;
+
+    iget-object v0, p0, Lada;->a:Ljava/lang/Throwable;
+
+    iget-object p1, p1, Lada;->a:Ljava/lang/Throwable;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public abstract b()V
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lada;->a:Ljava/lang/Throwable;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public c(Lfe0;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lada;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const-string v1, "NotificationLite.Error["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lada;->a:Ljava/lang/Throwable;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, La22;
-
-    invoke-interface {v1}, La22;->cancel()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lada;->a:Z
-
-    iget-object p1, p0, Lada;->c:Lye6;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

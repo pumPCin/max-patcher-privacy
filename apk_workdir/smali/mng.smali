@@ -1,43 +1,25 @@
-.class public final Lmng;
+.class public interface abstract Lmng;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:[B
+# static fields
+.field public static final a:Ls7d;
 
 
 # direct methods
-.method public synthetic constructor <init>(IIIIII[B)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lmng;->a:I
+    new-instance v0, Ljng;
 
-    iput p2, p0, Lmng;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lmng;->c:I
+    invoke-static {v0}, Lhb7;->n(Ljava/lang/Object;)Ls7d;
 
-    iput p4, p0, Lmng;->d:I
+    move-result-object v0
 
-    iput p5, p0, Lmng;->e:I
-
-    iput p6, p0, Lmng;->f:I
-
-    iput-object p7, p0, Lmng;->g:[B
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lmng;->a:Ls7d;
 
     return-void
 .end method

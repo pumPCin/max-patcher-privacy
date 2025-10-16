@@ -1,176 +1,154 @@
-.class public abstract Lkq4;
+.class public final Lkq4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx3c;
 
-# static fields
-.field public static final a:Ljava/lang/Object;
 
-.field public static final b:Ljava/lang/Object;
-
-.field public static final c:Ljava/lang/Object;
+# instance fields
+.field public final a:Ljqf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljqf;)V
+    .locals 0
 
-    new-instance v0, Lwm3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lwm3;-><init>(I)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object v0
-
-    sput-object v0, Lkq4;->a:Ljava/lang/Object;
-
-    new-instance v0, Lwm3;
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, v2}, Lwm3;-><init>(I)V
-
-    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object v0
-
-    sput-object v0, Lkq4;->b:Ljava/lang/Object;
-
-    new-instance v0, Lwm3;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v2}, Lwm3;-><init>(I)V
-
-    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
-
-    move-result-object v0
-
-    sput-object v0, Lkq4;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lkq4;->a:Ljqf;
 
     return-void
 .end method
 
-.method public static final a(Landroidx/fragment/app/b;)I
-    .locals 4
 
-    new-instance v0, Landroid/util/TypedValue;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v1
-
-    const v2, 0x10102eb
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v0, v0, Landroid/util/TypedValue;->data:I
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Landroid/util/TypedValue;->complexToDimensionPixelSize(ILandroid/util/DisplayMetrics;)I
-
-    move-result p0
-
-    return p0
+    goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    instance-of v0, p1, Lkq4;
 
-    return p0
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lkq4;
+
+    iget-object v0, p0, Lkq4;->a:Ljqf;
+
+    iget-object p1, p1, Lkq4;->a:Ljqf;
+
+    invoke-virtual {v0, p1}, Ljqf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static final b(I)I
-    .locals 1
+.method public final getItemId()J
+    .locals 2
 
-    int-to-float p0, p0
+    const/16 v0, 0x80
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    int-to-long v0, v0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Li8e;->I(F)I
-
-    move-result p0
-
-    return p0
+    return-wide v0
 .end method
 
-.method public static final c()F
+.method public final h(Lb18;)Z
+    .locals 4
+
+    const/16 v0, 0x80
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lb18;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    sget-object v0, Lkq4;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lkq4;->a:Ljqf;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    iget v0, v0, Ljqf;->c:I
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static final d()Landroid/content/res/Resources;
+.method public final m()I
     .locals 1
 
-    sget-object v0, Lkq4;->a:Ljava/lang/Object;
+    const/16 v0, 0x80
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/res/Resources;
-
-    return-object v0
+    return v0
 .end method
 
-.method public static final e(F)F
+.method public final q(Lb18;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lkq4;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DeleteProfileItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lkq4;->a:Ljqf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, p0, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

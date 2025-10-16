@@ -1,3 +1,14 @@
-.class public final Lup0;
-.super Landroid/graphics/Canvas;
+.class public interface abstract Lup0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# virtual methods
+.method public abstract getNextFrame(Landroid/graphics/Bitmap;)I
+.end method
+
+.method public abstract prepareForGenerateCache()V
+.end method
+
+.method public abstract releaseForGenerateCache()V
+.end method

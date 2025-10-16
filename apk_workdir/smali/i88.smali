@@ -1,154 +1,39 @@
 .class public final Li88;
-.super Lk88;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Lel7;
+
+# static fields
+.field public static final synthetic c:I
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(ILl88;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Li88;->X:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p2, p0, Lk88;->o:Ljava/lang/Object;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lk88;->b:I
-
-    iget p1, p2, Ll88;->r0:I
-
-    iput p1, p0, Lk88;->c:I
-
-    invoke-virtual {p0}, Lk88;->e()V
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
 
-# virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Li88;->X:I
+    iput-object p1, p0, Li88;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p2, p0, Li88;->b:Ljava/util/List;
 
-    invoke-virtual {p0}, Lk88;->b()V
-
-    iget v0, p0, Lk88;->a:I
-
-    iget-object v1, p0, Lk88;->o:Ljava/lang/Object;
-
-    check-cast v1, Ll88;
-
-    iget v2, v1, Ll88;->Y:I
-
-    if-ge v0, v2, :cond_0
-
-    add-int/lit8 v2, v0, 0x1
-
-    iput v2, p0, Lk88;->a:I
-
-    iput v0, p0, Lk88;->b:I
-
-    iget-object v1, v1, Ll88;->b:[Ljava/lang/Object;
-
-    aget-object v0, v1, v0
-
-    invoke-virtual {p0}, Lk88;->e()V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lk88;->b()V
-
-    iget v0, p0, Lk88;->a:I
-
-    iget-object v1, p0, Lk88;->o:Ljava/lang/Object;
-
-    check-cast v1, Ll88;
-
-    iget v2, v1, Ll88;->Y:I
-
-    if-ge v0, v2, :cond_1
-
-    add-int/lit8 v2, v0, 0x1
-
-    iput v2, p0, Lk88;->a:I
-
-    iput v0, p0, Lk88;->b:I
-
-    iget-object v1, v1, Ll88;->a:[Ljava/lang/Object;
-
-    aget-object v0, v1, v0
-
-    invoke-virtual {p0}, Lk88;->e()V
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lk88;->b()V
-
-    iget v0, p0, Lk88;->a:I
-
-    iget-object v1, p0, Lk88;->o:Ljava/lang/Object;
-
-    check-cast v1, Ll88;
-
-    iget v2, v1, Ll88;->Y:I
-
-    if-ge v0, v2, :cond_2
-
-    add-int/lit8 v2, v0, 0x1
-
-    iput v2, p0, Lk88;->a:I
-
-    iput v0, p0, Lk88;->b:I
-
-    new-instance v2, Lj88;
-
-    invoke-direct {v2, v0, v1}, Lj88;-><init>(ILl88;)V
-
-    invoke-virtual {p0}, Lk88;->e()V
-
-    return-object v2
-
-    :cond_2
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

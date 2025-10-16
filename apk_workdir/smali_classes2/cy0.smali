@@ -1,295 +1,351 @@
-.class public final synthetic Lcy0;
-.super Ljava/lang/Object;
+.class public final enum Lcy0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final synthetic A0:Lfd5;
+
+.field public static final Y:Lex9;
+
+.field public static final Z:Ljava/util/ArrayList;
+
+.field public static final r0:Ljava/util/ArrayList;
+
+.field public static final enum s0:Lcy0;
+
+.field public static final enum t0:Lcy0;
+
+.field public static final enum u0:Lcy0;
+
+.field public static final enum v0:Lcy0;
+
+.field public static final enum w0:Lcy0;
+
+.field public static final enum x0:Lcy0;
+
+.field public static final enum y0:Lcy0;
+
+.field public static final synthetic z0:[Lcy0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:I
 
-.field public final synthetic b:Lzy0;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzy0;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 15
 
-    .line 1
-    iput p2, p0, Lcy0;->a:I
+    sget v3, Lr1b;->u:I
 
-    iput-object p1, p0, Lcy0;->b:Lzy0;
+    sget v7, Ls1b;->m:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v4, Lr1b;->j:I
 
-    return-void
-.end method
+    sget v5, Lr1b;->i:I
 
-.method public synthetic constructor <init>(Lzy0;Z)V
-    .locals 0
+    sget v6, Ls1b;->t:I
 
-    .line 2
-    const/4 p2, 0x0
+    new-instance v0, Lcy0;
 
-    iput p2, p0, Lcy0;->a:I
+    const-string v1, "IMAGES"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lcy0;->b:Lzy0;
+    invoke-direct/range {v0 .. v7}, Lcy0;-><init>(Ljava/lang/String;IIIIII)V
 
-    return-void
-.end method
+    sput-object v0, Lcy0;->s0:Lcy0;
 
+    sget v4, Lr1b;->q:I
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    sget v8, Ls1b;->i:I
 
-    iget v0, p0, Lcy0;->a:I
+    sget v5, Lr1b;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    sget v6, Lr1b;->c:I
 
-    iget-object v0, p0, Lcy0;->b:Lzy0;
+    sget v7, Ls1b;->e:I
 
-    iget-object v1, v0, Lzy0;->s0:Lvr9;
+    new-instance v1, Lcy0;
 
-    iget-boolean v2, v0, Lzy0;->s:Z
+    const-string v2, "AUDIO"
 
-    if-nez v2, :cond_4
+    const/4 v3, 0x1
 
-    iget-object v2, v0, Lzy0;->e0:Ly6e;
+    invoke-direct/range {v1 .. v8}, Lcy0;-><init>(Ljava/lang/String;IIIIII)V
 
-    invoke-virtual {v2}, Ly6e;->c()I
+    sput-object v1, Lcy0;->t0:Lcy0;
 
-    move-result v2
+    sget v5, Lr1b;->t:I
 
-    const/4 v3, 0x2
+    sget v9, Ls1b;->l:I
 
-    const/4 v4, 0x1
+    sget v6, Lr1b;->h:I
 
-    if-eq v2, v3, :cond_1
+    sget v7, Lr1b;->g:I
 
-    if-ne v2, v4, :cond_0
+    sget v8, Ls1b;->s:I
+
+    new-instance v2, Lcy0;
+
+    const-string v3, "GIF"
+
+    const/4 v4, 0x2
+
+    invoke-direct/range {v2 .. v9}, Lcy0;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v2, Lcy0;->u0:Lcy0;
+
+    sget v6, Lr1b;->z:I
+
+    sget v10, Ls1b;->o:I
+
+    sget v7, Lr1b;->n:I
+
+    sget v8, Lr1b;->m:I
+
+    sget v9, Ls1b;->z:I
+
+    new-instance v3, Lcy0;
+
+    const-string v4, "STICKERS"
+
+    const/4 v5, 0x3
+
+    invoke-direct/range {v3 .. v10}, Lcy0;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v3, Lcy0;->v0:Lcy0;
+
+    sget v7, Lr1b;->v:I
+
+    sget v11, Ls1b;->n:I
+
+    sget v8, Lr1b;->l:I
+
+    sget v9, Lr1b;->k:I
+
+    sget v10, Ls1b;->u:I
+
+    new-instance v4, Lcy0;
+
+    const-string v5, "MUSIC"
+
+    const/4 v6, 0x4
+
+    invoke-direct/range {v4 .. v11}, Lcy0;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v4, Lcy0;->w0:Lcy0;
+
+    sget v8, Lr1b;->B:I
+
+    sget v12, Ls1b;->p:I
+
+    sget v9, Lr1b;->p:I
+
+    sget v10, Lr1b;->o:I
+
+    sget v11, Ls1b;->A:I
+
+    new-instance v5, Lcy0;
+
+    const-string v6, "VIDEO"
+
+    const/4 v7, 0x5
+
+    invoke-direct/range {v5 .. v12}, Lcy0;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v5, Lcy0;->x0:Lcy0;
+
+    sget v9, Lr1b;->s:I
+
+    sget v13, Ls1b;->k:I
+
+    sget v10, Lr1b;->f:I
+
+    sget v11, Lr1b;->e:I
+
+    sget v12, Ls1b;->r:I
+
+    new-instance v6, Lcy0;
+
+    const-string v7, "OTHERS"
+
+    const/4 v8, 0x6
+
+    invoke-direct/range {v6 .. v13}, Lcy0;-><init>(Ljava/lang/String;IIIIII)V
+
+    sput-object v6, Lcy0;->y0:Lcy0;
+
+    move-object v8, v0
+
+    move-object v9, v1
+
+    move-object v10, v2
+
+    move-object v11, v3
+
+    move-object v12, v4
+
+    move-object v13, v5
+
+    move-object v14, v6
+
+    filled-new-array/range {v8 .. v14}, [Lcy0;
+
+    move-result-object v0
+
+    sput-object v0, Lcy0;->z0:[Lcy0;
+
+    new-instance v1, Lfd5;
+
+    invoke-direct {v1, v0}, Lfd5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lcy0;->A0:Lfd5;
+
+    new-instance v0, Lex9;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcy0;->Y:Lex9;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/16 v2, 0xa
+
+    invoke-static {v1, v2}, Lcb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v3
+
+    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    new-instance v3, Lf2;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v4, v1}, Lf2;-><init>(ILjava/lang/Object;)V
+
+    :goto_0
+    invoke-virtual {v3}, Lf2;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v3}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcy0;
+
+    iget v1, v1, Lcy0;->a:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    const/4 v4, 0x0
+    sput-object v0, Lcy0;->Z:Ljava/util/ArrayList;
+
+    sget-object v0, Lcy0;->A0:Lfd5;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-static {v0, v2}, Lcb3;->l(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    new-instance v2, Lf2;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3, v0}, Lf2;-><init>(ILjava/lang/Object;)V
+
+    :goto_1
+    invoke-virtual {v2}, Lf2;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcy0;
+
+    iget v0, v0, Lcy0;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    iget-boolean v2, v1, Lvr9;->f:Z
+    sput-object v1, Lcy0;->r0:Ljava/util/ArrayList;
 
-    if-ne v4, v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "onLocalMediaStreamChanged, media settings video enabled state ("
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, v1, Lvr9;->f:Z
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ") != camera video enabled state ("
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, "). Let us update media settings"
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, v0, Lzy0;->N:Lwkc;
-
-    const-string v3, "OKRTCCall"
-
-    invoke-interface {v2, v3, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lzy0;->j()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const-string v1, "rtc.video.switch"
-
-    invoke-virtual {v0, v1}, Lzy0;->x(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v4}, Lzy0;->n(Z)V
-
-    invoke-virtual {v0}, Lzy0;->J()V
-
-    :cond_4
-    :goto_1
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lcy0;->b:Lzy0;
+.method public constructor <init>(Ljava/lang/String;IIIIII)V
+    .locals 0
 
-    const-string v1, "OKRTCCall"
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v2, v0, Lzy0;->N:Lwkc;
+    iput p3, p0, Lcy0;->a:I
 
-    iget-object v0, v0, Lzy0;->p:Lorg/webrtc/EglBase;
+    iput p4, p0, Lcy0;->b:I
 
-    const-string v3, "Releasing "
+    iput p5, p0, Lcy0;->c:I
 
-    :try_start_0
-    new-instance v4, Ljava/lang/StringBuilder;
+    iput p6, p0, Lcy0;->o:I
 
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput p7, p0, Lcy0;->X:I
 
-    invoke-static {v0}, Lsk9;->c(Ljava/lang/Object;)Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v3
+.method public static valueOf(Ljava/lang/String;)Lcy0;
+    .locals 1
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v0, Lcy0;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object v3
+    move-result-object p0
 
-    invoke-interface {v2, v1, v3}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast p0, Lcy0;
 
-    invoke-interface {v0}, Lorg/webrtc/EglBase;->release()V
+    return-object p0
+.end method
 
-    new-instance v3, Ljava/lang/StringBuilder;
+.method public static values()[Lcy0;
+    .locals 1
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v0, Lcy0;->z0:[Lcy0;
 
-    invoke-static {v0}, Lsk9;->c(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, [Lcy0;
 
-    const-string v0, " was released"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v2, v1, v0}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    const-string v3, "release.egl"
-
-    invoke-interface {v2, v1, v3, v0}, Lwkc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lcy0;->b:Lzy0;
-
-    iget-object v1, v0, Lzy0;->k:Landroid/os/Handler;
-
-    new-instance v2, Lcy0;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v0, v3}, Lcy0;-><init>(Lzy0;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lcy0;->b:Lzy0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_1
-    iget-object v1, v0, Lzy0;->d0:Lb7e;
-
-    iget-object v1, v1, Lb7e;->d:Lorg/webrtc/PeerConnectionFactory;
-
-    if-nez v1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {v1}, Lorg/webrtc/PeerConnectionFactory;->clearDumpRequests()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception v1
-
-    iget-object v0, v0, Lzy0;->N:Lwkc;
-
-    const-string v2, "OKRTCCall"
-
-    const-string v3, "Error stopping local audio dump"
-
-    invoke-interface {v0, v2, v3, v1}, Lwkc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_3
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lcy0;->b:Lzy0;
-
-    iget-boolean v1, v0, Lzy0;->s:Z
-
-    if-nez v1, :cond_7
-
-    iget-object v0, v0, Lzy0;->j0:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    invoke-static {v0}, Lc85;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_7
-    :goto_4
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

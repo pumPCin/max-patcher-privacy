@@ -1,43 +1,54 @@
 .class public final Lzka;
-.super Lqc4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Closeable;
+
+
+# static fields
+.field public static final b:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final a:Lyn7;
-
-.field public final b:Ljava/util/List;
+.field public final a:Ldcd;
 
 
 # direct methods
-.method public constructor <init>(Lyn7;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "attachment;\\s*filename\\s*=\\s*\"([^\"]*)\""
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lzka;->b:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ldcd;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzka;->a:Lyn7;
+    iput-object p1, p0, Lzka;->a:Ldcd;
 
-    sget-object p1, Lk38;->b:Lk38;
+    return-void
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p1, Lk38;->c:Lmc4;
+# virtual methods
+.method public final close()V
+    .locals 1
 
-    sget-object v0, Lgtf;->b:Lgtf;
+    iget-object v0, p0, Lzka;->a:Ldcd;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lgtf;->g:Lmc4;
-
-    filled-new-array {p1, v0}, [Lmc4;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzka;->b:Ljava/util/List;
+    invoke-virtual {v0}, Ldcd;->close()V
 
     return-void
 .end method

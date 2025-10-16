@@ -3,109 +3,284 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/SurfaceHolder$Callback;
-.implements Landroid/view/TextureView$SurfaceTextureListener;
+.implements Lpkd;
 
 
 # instance fields
-.field public final synthetic a:Lwe5;
+.field public X:Lte5;
+
+.field public Y:Z
+
+.field public Z:I
+
+.field public final a:Lqa6;
+
+.field public final b:Lo0f;
+
+.field public c:[J
+
+.field public o:Z
+
+.field public r0:J
 
 
 # direct methods
-.method public constructor <init>(Lwe5;)V
-    .locals 0
+.method public constructor <init>(Lte5;Lqa6;Z)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqe5;->a:Lwe5;
+    iput-object p2, p0, Lqe5;->a:Lqa6;
+
+    iput-object p1, p0, Lqe5;->X:Lte5;
+
+    new-instance p2, Lo0f;
+
+    const/16 v0, 0xd
+
+    invoke-direct {p2, v0}, Lo0f;-><init>(I)V
+
+    iput-object p2, p0, Lqe5;->b:Lo0f;
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Lqe5;->r0:J
+
+    iget-object p2, p1, Lte5;->b:[J
+
+    iput-object p2, p0, Lqe5;->c:[J
+
+    invoke-virtual {p0, p1, p3}, Lqe5;->a(Lte5;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
-    .locals 1
+.method public final a(Lte5;Z)V
+    .locals 9
 
-    new-instance v0, Landroid/view/Surface;
+    iget v0, p0, Lqe5;->Z:I
 
-    invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lqe5;->a:Lwe5;
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-virtual {p1, v0}, Lwe5;->m1(Landroid/view/Surface;)V
+    if-nez v0, :cond_0
 
-    iput-object v0, p1, Lwe5;->b1:Landroid/view/Surface;
+    move-wide v5, v2
 
-    invoke-virtual {p1, p2, p3}, Lwe5;->a1(II)V
+    goto :goto_0
+
+    :cond_0
+    iget-object v4, p0, Lqe5;->c:[J
+
+    sub-int/2addr v0, v1
+
+    aget-wide v5, v4, v0
+
+    :goto_0
+    iput-boolean p2, p0, Lqe5;->o:Z
+
+    iput-object p1, p0, Lqe5;->X:Lte5;
+
+    iget-object p1, p1, Lte5;->b:[J
+
+    iput-object p1, p0, Lqe5;->c:[J
+
+    iget-wide v7, p0, Lqe5;->r0:J
+
+    cmp-long p2, v7, v2
+
+    if-eqz p2, :cond_2
+
+    invoke-static {p1, v7, v8, v1}, Lhhg;->b([JJZ)I
+
+    move-result p1
+
+    iput p1, p0, Lqe5;->Z:I
+
+    iget-boolean p2, p0, Lqe5;->o:Z
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lqe5;->c:[J
+
+    array-length p2, p2
+
+    if-ne p1, p2, :cond_1
+
+    move-wide v2, v7
+
+    :cond_1
+    iput-wide v2, p0, Lqe5;->r0:J
+
+    return-void
+
+    :cond_2
+    cmp-long p2, v5, v2
+
+    if-eqz p2, :cond_3
+
+    const/4 p2, 0x0
+
+    invoke-static {p1, v5, v6, p2}, Lhhg;->b([JJZ)I
+
+    move-result p1
+
+    iput p1, p0, Lqe5;->Z:I
+
+    :cond_3
+    return-void
+.end method
+
+.method public final b()V
+    .locals 0
 
     return-void
 .end method
 
-.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
+.method public final e()Z
     .locals 1
 
-    const/4 p1, 0x0
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lqe5;->a:Lwe5;
+    return v0
+.end method
 
-    invoke-virtual {v0, p1}, Lwe5;->m1(Landroid/view/Surface;)V
+.method public final h(J)I
+    .locals 3
 
-    const/4 p1, 0x0
+    iget v0, p0, Lqe5;->Z:I
 
-    invoke-virtual {v0, p1, p1}, Lwe5;->a1(II)V
+    iget-object v1, p0, Lqe5;->c:[J
 
-    const/4 p1, 0x1
+    const/4 v2, 0x1
+
+    invoke-static {v1, p1, p2, v2}, Lhhg;->b([JJZ)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iget p2, p0, Lqe5;->Z:I
+
+    sub-int p2, p1, p2
+
+    iput p1, p0, Lqe5;->Z:I
+
+    return p2
+.end method
+
+.method public final n(Lfwb;Lre4;I)I
+    .locals 6
+
+    iget v0, p0, Lqe5;->Z:I
+
+    iget-object v1, p0, Lqe5;->c:[J
+
+    array-length v1, v1
+
+    const/4 v2, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    const/4 v3, -0x4
+
+    const/4 v4, 0x4
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v5, p0, Lqe5;->o:Z
+
+    if-nez v5, :cond_1
+
+    iput v4, p2, Luy;->b:I
+
+    return v3
+
+    :cond_1
+    and-int/lit8 v5, p3, 0x2
+
+    if-nez v5, :cond_6
+
+    iget-boolean v5, p0, Lqe5;->Y:Z
+
+    if-nez v5, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    const/4 p1, -0x3
 
     return p1
-.end method
 
-.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
-    .locals 0
+    :cond_3
+    and-int/lit8 p1, p3, 0x1
 
-    iget-object p1, p0, Lqe5;->a:Lwe5;
+    if-nez p1, :cond_4
 
-    invoke-virtual {p1, p2, p3}, Lwe5;->a1(II)V
+    add-int/lit8 p1, v0, 0x1
 
-    return-void
-.end method
+    iput p1, p0, Lqe5;->Z:I
 
-.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
-    .locals 0
+    :cond_4
+    and-int/lit8 p1, p3, 0x4
 
-    return-void
-.end method
+    if-nez p1, :cond_5
 
-.method public final surfaceChanged(Landroid/view/SurfaceHolder;III)V
-    .locals 0
+    iget-object p1, p0, Lqe5;->X:Lte5;
 
-    iget-object p1, p0, Lqe5;->a:Lwe5;
+    iget-object p1, p1, Lte5;->a:[Lne5;
 
-    invoke-virtual {p1, p3, p4}, Lwe5;->a1(II)V
+    aget-object p1, p1, v0
 
-    return-void
-.end method
+    iget-object p3, p0, Lqe5;->b:Lo0f;
 
-.method public final surfaceCreated(Landroid/view/SurfaceHolder;)V
-    .locals 0
+    invoke-virtual {p3, p1}, Lo0f;->n(Lne5;)[B
 
-    iget-object p1, p0, Lqe5;->a:Lwe5;
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    array-length p3, p1
 
-    return-void
-.end method
+    invoke-virtual {p2, p3}, Lre4;->y(I)V
 
-.method public final surfaceDestroyed(Landroid/view/SurfaceHolder;)V
-    .locals 1
+    iget-object p3, p2, Lre4;->o:Ljava/nio/ByteBuffer;
 
-    iget-object p1, p0, Lqe5;->a:Lwe5;
+    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_5
+    iget-object p1, p0, Lqe5;->c:[J
 
-    const/4 v0, 0x0
+    aget-wide v0, p1, v0
 
-    invoke-virtual {p1, v0, v0}, Lwe5;->a1(II)V
+    iput-wide v0, p2, Lre4;->Y:J
 
-    return-void
+    iput v2, p2, Luy;->b:I
+
+    return v3
+
+    :cond_6
+    :goto_1
+    iget-object p2, p0, Lqe5;->a:Lqa6;
+
+    iput-object p2, p1, Lfwb;->c:Ljava/lang/Object;
+
+    iput-boolean v2, p0, Lqe5;->Y:Z
+
+    const/4 p1, -0x5
+
+    return p1
 .end method

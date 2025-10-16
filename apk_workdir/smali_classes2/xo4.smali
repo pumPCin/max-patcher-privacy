@@ -1,265 +1,328 @@
-.class public abstract Lxo4;
+.class public Lxo4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile f:Lcp4;
+# interfaces
+.implements Lnqh;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Lshf;
 
-.field public final b:Lnnb;
+.field public b:Lqqh;
 
-.field public final c:Lyn7;
+.field public c:Z
 
-.field public d:Landroid/os/PowerManager;
+.field public d:Z
 
-.field public final e:Lq0d;
+.field public e:F
+
+.field public f:F
+
+.field public final g:Landroid/graphics/RectF;
+
+.field public final h:Landroid/graphics/RectF;
+
+.field public final i:Landroid/graphics/RectF;
+
+.field public final j:Landroid/graphics/Matrix;
+
+.field public final k:Landroid/graphics/Matrix;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lnnb;Lyn7;)V
-    .locals 2
+.method public constructor <init>(Lshf;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxo4;->a:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lxo4;->b:Lnnb;
+    iput-object v0, p0, Lxo4;->b:Lqqh;
 
-    new-instance p1, Lky3;
+    const/4 v0, 0x0
 
-    const/16 v0, 0x9
+    iput-boolean v0, p0, Lxo4;->c:Z
 
-    invoke-direct {p1, v0, p0}, Lky3;-><init>(ILjava/lang/Object;)V
+    iput-boolean v0, p0, Lxo4;->d:Z
 
-    new-instance v0, Lq0d;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-direct {v0, p1}, Lq0d;-><init>(Ltd6;)V
+    iput v0, p0, Lxo4;->e:F
 
-    iput-object v0, p0, Lxo4;->e:Lq0d;
+    const/high16 v0, 0x40800000    # 4.0f
 
-    new-instance p1, Ljava/lang/ref/WeakReference;
+    iput v0, p0, Lxo4;->f:F
 
-    invoke-direct {p1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    new-instance v0, Landroid/graphics/RectF;
 
-    check-cast p2, Lpnb;
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iget-object p2, p2, Lpnb;->b:Lhlb;
+    iput-object v0, p0, Lxo4;->g:Landroid/graphics/RectF;
 
-    new-instance v0, Lwo4;
+    new-instance v0, Landroid/graphics/RectF;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    invoke-direct {v0, p0, v1, p1}, Lwo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-object v0, p0, Lxo4;->h:Landroid/graphics/RectF;
 
-    iget-object p1, p2, Lohd;->n:Ljava/util/concurrent/CopyOnWriteArraySet;
+    new-instance v0, Landroid/graphics/RectF;
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p3, p0, Lxo4;->c:Lyn7;
+    iput-object v0, p0, Lxo4;->i:Landroid/graphics/RectF;
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object v0, p0, Lxo4;->j:Landroid/graphics/Matrix;
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object v0, p0, Lxo4;->k:Landroid/graphics/Matrix;
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object p1, p0, Lxo4;->a:Lshf;
+
+    iput-object p0, p1, Lshf;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 6
+.method public a(FF)V
+    .locals 5
 
-    iget-object v0, p0, Lxo4;->b:Lnnb;
+    iget-object v0, p0, Lxo4;->k:Landroid/graphics/Matrix;
 
-    check-cast v0, Lpnb;
-
-    iget-object v1, v0, Lpnb;->a:Lt08;
-
-    iget-object v2, v1, Lfhd;->X:Lzrd;
-
-    sget-object v3, Lfhd;->h0:[Lpl7;
-
-    const/16 v4, 0x28
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v2, v1, v3}, Lzrd;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-static {v1}, Ld40;->A(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    const-string v1, "New device id generated"
-
-    const-string v2, "xo4"
-
-    invoke-static {v2, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    iget-object v3, p0, Lxo4;->a:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    const-string v5, "android_id"
-
-    invoke-static {v3, v5}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v3
-
-    const-string v5, "Can\'t get hardware device id"
-
-    invoke-static {v2, v5, v3}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    move-object v2, v1
-
-    :goto_0
-    invoke-static {v2}, Ld40;->A(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    move-object v2, p0
-
-    check-cast v2, Lap4;
-
-    iget-object v2, v2, Lap4;->i:Lyn7;
-
-    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lu5f;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_1
-    invoke-virtual {v2}, Lu5f;->J()Ljava/lang/String;
-
-    move-result-object v1
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v3
-
-    iget-object v2, v2, Lu5f;->b:Ljava/lang/String;
-
-    const-string v5, "error while get instance id"
-
-    invoke-static {v2, v5, v3}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
-    invoke-static {v1}, Ld40;->A(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    move-object v2, v1
-
-    goto :goto_2
-
-    :cond_1
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_2
-    iget-object v0, v0, Lpnb;->a:Lt08;
-
-    iget-object v1, v0, Lfhd;->X:Lzrd;
-
-    sget-object v3, Lfhd;->h0:[Lpl7;
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v1, v0, v3, v2}, Lzrd;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
-
-    return-object v2
-
-    :cond_2
-    return-object v1
-.end method
-
-.method public final b()Lcp4;
-    .locals 1
-
-    sget-object v0, Lxo4;->f:Lcp4;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lxo4;->a:Landroid/content/Context;
-
-    invoke-static {v0}, Lk84;->A(Landroid/content/Context;)Lcp4;
-
-    move-result-object v0
-
-    sput-object v0, Lxo4;->f:Lcp4;
-
-    :cond_0
-    sget-object v0, Lxo4;->f:Lcp4;
-
-    return-object v0
-.end method
-
-.method public abstract c()Z
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    iget-object v0, p0, Lxo4;->c:Lyn7;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwq;
-
-    check-cast v0, Lumg;
-
-    invoke-virtual {v0}, Lumg;->d()Z
+    invoke-static {v0}, Ljyh;->a(Landroid/graphics/Matrix;)F
 
     move-result v0
 
-    return v0
+    float-to-double v1, v0
+
+    const-wide v3, 0x3ff199999999999aL    # 1.1
+
+    cmpg-double v1, v1, v3
+
+    if-gtz v1, :cond_0
+
+    const/high16 v1, 0x40200000    # 2.5f
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    :goto_0
+    const/4 v2, 0x2
+
+    new-array v2, v2, [F
+
+    const/4 v3, 0x0
+
+    aput v0, v2, v3
+
+    const/4 v0, 0x1
+
+    aput v1, v2, v0
+
+    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0xfa
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v1, Lwo4;
+
+    invoke-direct {v1, p0, p1, p2}, Lwo4;-><init>(Lxo4;FF)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    invoke-virtual {v0, p0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+
+    return-void
 .end method
 
-.method public abstract e()V
+.method public b()V
+    .locals 8
+
+    iget-object v0, p0, Lxo4;->h:Landroid/graphics/RectF;
+
+    iget-object v1, p0, Lxo4;->i:Landroid/graphics/RectF;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+
+    iget-object v0, p0, Lxo4;->k:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    iget v2, v1, Landroid/graphics/RectF;->left:F
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+
+    move-result v3
+
+    iget-object v4, p0, Lxo4;->g:Landroid/graphics/RectF;
+
+    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
+
+    move-result v5
+
+    sub-float/2addr v5, v3
+
+    const/4 v3, 0x0
+
+    cmpl-float v6, v5, v3
+
+    const/high16 v7, 0x40000000    # 2.0f
+
+    if-lez v6, :cond_0
+
+    div-float/2addr v5, v7
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v5, v2}, Ljava/lang/Math;->max(FF)F
+
+    move-result v2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
+
+    move-result v5
+
+    :goto_0
+    iget v2, v1, Landroid/graphics/RectF;->top:F
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
+
+    move-result v6
+
+    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
+
+    move-result v4
+
+    sub-float/2addr v4, v6
+
+    cmpl-float v6, v4, v3
+
+    if-lez v6, :cond_1
+
+    div-float/2addr v4, v7
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(FF)F
+
+    move-result v2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
+
+    move-result v4
+
+    :goto_1
+    iget v2, v1, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v3, v5, v2
+
+    if-nez v3, :cond_3
+
+    iget v3, v1, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v3, v4, v3
+
+    if-eqz v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    return-void
+
+    :cond_3
+    :goto_2
+    sub-float/2addr v5, v2
+
+    iget v1, v1, Landroid/graphics/RectF;->top:F
+
+    sub-float/2addr v4, v1
+
+    invoke-virtual {v0, v5, v4}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    iget-object v0, p0, Lxo4;->a:Lshf;
+
+    invoke-virtual {v0}, Lshf;->o()V
+
+    return-void
 .end method
 
-.method public abstract f(Ljava/lang/String;)V
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lxo4;->d:Z
+
+    return-void
 .end method
 
-.method public abstract g(Ljava/lang/String;)V
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lxo4;->d:Z
+
+    return-void
 .end method
 
-.method public abstract h()Lk2g;
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lxo4;->d:Z
+
+    return-void
+.end method
+
+.method public reset()V
+    .locals 1
+
+    iget-object v0, p0, Lxo4;->a:Lshf;
+
+    iget-object v0, v0, Lshf;->b:Ljava/lang/Object;
+
+    check-cast v0, La6;
+
+    invoke-virtual {v0}, La6;->i()V
+
+    iget-object v0, p0, Lxo4;->j:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object v0, p0, Lxo4;->k:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
+
+    return-void
 .end method

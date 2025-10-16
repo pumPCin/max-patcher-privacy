@@ -1,181 +1,306 @@
-.class public final synthetic Ljsg;
+.class public final Ljsg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lri6;
+.implements Lid;
 
 
-# static fields
-.field public static final a:Ljsg;
+# instance fields
+.field public final a:Llt7;
 
-.field private static final descriptor:Lmqd;
+.field public final b:Llt7;
+
+.field public final c:Llt7;
+
+.field public final d:Llt7;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;Lqkf;)V
+    .locals 0
 
-    new-instance v0, Ljsg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljsg;->a:Llt7;
 
-    sput-object v0, Ljsg;->a:Ljsg;
+    iput-object p2, p0, Ljsg;->b:Llt7;
 
-    new-instance v1, Lflb;
+    iput-object p3, p0, Ljsg;->c:Llt7;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryUnavailableResponse"
+    iput-object p4, p0, Ljsg;->d:Llt7;
 
-    const/4 v3, 0x2
+    check-cast p5, Losa;
 
-    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
+    invoke-virtual {p5}, Losa;->b()Lv44;
 
-    const-string v0, "requestId"
+    move-result-object p1
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Lcwi;->a(Lt44;)Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+    move-result-object p1
 
-    const-string v0, "available"
-
-    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Ljsg;->descriptor:Lmqd;
+    iput-object p1, p0, Ljsg;->e:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
+.method public static a(Ljsg;ILjava/lang/Long;Lzte;Ljava/lang/Long;Lhsg;ILjava/lang/Long;I)V
+    .locals 3
 
-# virtual methods
-.method public final a(Lx8;)Ljava/lang/Object;
-    .locals 9
+    and-int/lit8 v0, p8, 0x8
 
-    sget-object v0, Ljsg;->descriptor:Lmqd;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    move v6, v5
-
-    :goto_0
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lx8;->p(Lmqd;I)Z
-
-    move-result v6
-
-    or-int/lit8 v5, v5, 0x2
-
-    goto :goto_0
+    move-object p4, v1
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    and-int/lit8 v0, p8, 0x10
 
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    if-eqz v0, :cond_1
 
-    throw p1
+    move-object p5, v1
 
     :cond_1
-    invoke-virtual {p1, v0, v2}, Lx8;->w(Lmqd;I)Ljava/lang/String;
+    and-int/lit8 v0, p8, 0x20
 
-    move-result-object v3
+    if-eqz v0, :cond_2
 
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
+    const/4 p6, 0x0
 
     :cond_2
-    move v4, v2
+    and-int/lit8 p8, p8, 0x40
+
+    if-eqz p8, :cond_3
+
+    move-object p7, v1
+
+    :cond_3
+    iget-object p8, p0, Ljsg;->a:Llt7;
+
+    iget-object p0, p0, Ljsg;->b:Llt7;
+
+    invoke-interface {p8}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p8
+
+    check-cast p8, Lhd;
+
+    new-instance v0, Lse8;
+
+    invoke-direct {v0}, Lse8;-><init>()V
+
+    if-eqz p2, :cond_4
+
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    const-string p2, "local_message_id"
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p2, v1}, Lse8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    if-eqz p4, :cond_5
+
+    invoke-virtual {p4}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    const-string p2, "message_id"
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p4
+
+    invoke-virtual {v0, p2, p4}, Lse8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_5
+    iget p2, p3, Lzte;->b:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    const-string p4, "source_type"
+
+    invoke-virtual {v0, p4, p2}, Lse8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-wide p2, p3, Lzte;->a:J
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    const-string p3, "source_id"
+
+    invoke-virtual {v0, p3, p2}, Lse8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    if-eqz p5, :cond_6
+
+    const-string p2, "reason"
+
+    invoke-interface {p5}, Lhsg;->getTitle()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {v0, p2, p3}, Lse8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_6
+    if-eqz p6, :cond_9
+
+    const/4 p2, 0x1
+
+    if-eq p6, p2, :cond_8
+
+    const/4 p2, 0x2
+
+    if-ne p6, p2, :cond_7
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
+    :cond_7
+    const/4 p0, 0x0
 
-    new-instance p1, Llsg;
+    throw p0
 
-    invoke-direct {p1, v3, v5, v6}, Llsg;-><init>(Ljava/lang/String;IZ)V
+    :cond_8
+    :goto_0
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-object p1
-.end method
+    move-result-object p2
 
-.method public final b(Lmz3;Ljava/lang/Object;)V
-    .locals 3
+    const-string p3, "startType"
 
-    check-cast p2, Llsg;
+    invoke-virtual {v0, p3, p2}, Lse8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Ljsg;->descriptor:Lmqd;
+    :cond_9
+    if-eqz p7, :cond_a
 
-    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
+    invoke-virtual {p7}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p2
+
+    const-string p4, "videoDuration"
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p4, p2}, Lse8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_a
+    invoke-virtual {v0}, Lse8;->b()Lse8;
+
+    move-result-object p2
+
+    new-instance p3, Lwi7;
+
+    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p4
+
+    iput-wide p4, p3, Lwi7;->a:J
+
+    const-string p4, "VIDEO_MESSAGE"
+
+    iput-object p4, p3, Lwi7;->c:Ljava/lang/String;
+
+    const/4 p4, 0x1
+
+    if-eq p1, p4, :cond_f
+
+    const/4 p4, 0x2
+
+    if-eq p1, p4, :cond_e
+
+    const/4 p4, 0x3
+
+    if-eq p1, p4, :cond_d
+
+    const/4 p4, 0x4
+
+    if-eq p1, p4, :cond_c
+
+    const/4 p4, 0x5
+
+    if-ne p1, p4, :cond_b
+
+    const-string p1, "video_message_error"
+
+    goto :goto_1
+
+    :cond_b
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_c
+    const-string p1, "video_message_send"
+
+    goto :goto_1
+
+    :cond_d
+    const-string p1, "video_message_hands_free_mode_on"
+
+    goto :goto_1
+
+    :cond_e
+    const-string p1, "video_message_delete"
+
+    goto :goto_1
+
+    :cond_f
+    const-string p1, "video_message_start_recording"
+
+    :goto_1
+    iput-object p1, p3, Lwi7;->o:Ljava/lang/String;
+
+    invoke-interface {p0}, Llt7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v1, p2, Llsg;->a:Ljava/lang/String;
+    check-cast p1, Ll83;
 
-    const/4 v2, 0x0
+    check-cast p1, Lgsd;
 
-    invoke-virtual {p1, v0, v2, v1}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
+    invoke-virtual {p1}, Lgsd;->s()J
 
-    const/4 v1, 0x1
+    move-result-wide p4
 
-    iget-boolean p2, p2, Llsg;->b:Z
+    iput-wide p4, p3, Lwi7;->b:J
 
-    invoke-virtual {p1, v0, v1, p2}, Lmz3;->e(Lmqd;IZ)V
+    invoke-virtual {p3, p2}, Lwi7;->c(Ljava/util/Map;)V
 
-    invoke-virtual {p1}, Lmz3;->m()V
+    invoke-interface {p0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ll83;
+
+    check-cast p0, Lg68;
+
+    invoke-virtual {p0}, Lg68;->K()J
+
+    move-result-wide p0
+
+    iput-wide p0, p3, Lwi7;->X:J
+
+    invoke-virtual {p3}, Lwi7;->d()La88;
+
+    move-result-object p0
+
+    invoke-virtual {p8, p0}, Lhd;->i(La88;)Z
 
     return-void
-.end method
-
-.method public final c()[Lql7;
-    .locals 3
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Lql7;
-
-    sget-object v1, Llwe;->a:Llwe;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcq0;->a:Lcq0;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
-.method public final d()Lmqd;
-    .locals 1
-
-    sget-object v0, Ljsg;->descriptor:Lmqd;
-
-    return-object v0
 .end method

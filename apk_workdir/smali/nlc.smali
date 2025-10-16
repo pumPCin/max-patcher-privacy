@@ -1,281 +1,112 @@
-.class public final Lnlc;
-.super Landroid/widget/FrameLayout;
-.source "SourceFile"
-
-# interfaces
-.implements Lfef;
+.class public abstract Lnlc;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final synthetic r0:[Lpl7;
+.field public static mr_art:I = 0x7f0a0583
 
+.field public static mr_cast_checkbox:I = 0x7f0a0584
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+.field public static mr_cast_close_button:I = 0x7f0a0585
 
-.field public final b:Landroid/graphics/ColorMatrixColorFilter;
+.field public static mr_cast_divider:I = 0x7f0a0586
 
-.field public final c:Lc24;
+.field public static mr_cast_group_icon:I = 0x7f0a0587
 
-.field public final o:Ljk;
+.field public static mr_cast_group_name:I = 0x7f0a0588
 
+.field public static mr_cast_group_progress_bar:I = 0x7f0a0589
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.field public static mr_cast_header_name:I = 0x7f0a058a
 
-    new-instance v0, Lds9;
+.field public static mr_cast_list:I = 0x7f0a058b
 
-    const-string v1, "size"
+.field public static mr_cast_meta_art:I = 0x7f0a058c
 
-    const-string v2, "getSize()Lone/me/calls/ui/bottomsheet/ratecall/view/RateCallButton$Size;"
+.field public static mr_cast_meta_background:I = 0x7f0a058d
 
-    const-class v3, Lnlc;
+.field public static mr_cast_meta_black_scrim:I = 0x7f0a058e
 
-    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+.field public static mr_cast_meta_subtitle:I = 0x7f0a058f
 
-    sget-object v1, Lewc;->a:Lfwc;
+.field public static mr_cast_meta_title:I = 0x7f0a0590
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static mr_cast_mute_button:I = 0x7f0a0591
 
-    const/4 v1, 0x1
+.field public static mr_cast_route_icon:I = 0x7f0a0592
 
-    new-array v1, v1, [Lpl7;
+.field public static mr_cast_route_name:I = 0x7f0a0593
 
-    const/4 v2, 0x0
+.field public static mr_cast_route_progress_bar:I = 0x7f0a0594
 
-    aput-object v0, v1, v2
+.field public static mr_cast_stop_button:I = 0x7f0a0595
 
-    sput-object v1, Lnlc;->r0:[Lpl7;
+.field public static mr_cast_volume_layout:I = 0x7f0a0596
 
-    return-void
-.end method
+.field public static mr_cast_volume_slider:I = 0x7f0a0597
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.field public static mr_chooser_list:I = 0x7f0a0598
 
-    const/4 v0, 0x0
+.field public static mr_chooser_route_desc:I = 0x7f0a0599
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.field public static mr_chooser_route_icon:I = 0x7f0a059a
 
-    new-instance v0, Llia;
+.field public static mr_chooser_route_name:I = 0x7f0a059b
 
-    const/16 v1, 0x17
+.field public static mr_chooser_route_progress_bar:I = 0x7f0a059c
 
-    invoke-direct {v0, p1, v1}, Llia;-><init>(Landroid/content/Context;I)V
+.field public static mr_chooser_title:I = 0x7f0a059d
 
-    const/4 p1, 0x3
+.field public static mr_close:I = 0x7f0a059e
 
-    invoke-static {p1, v0}, Lwee;->u(ILtd6;)Lyn7;
+.field public static mr_control_divider:I = 0x7f0a059f
 
-    move-result-object p1
+.field public static mr_control_playback_ctrl:I = 0x7f0a05a0
 
-    iput-object p1, p0, Lnlc;->a:Ljava/lang/Object;
+.field public static mr_control_subtitle:I = 0x7f0a05a1
 
-    new-instance p1, Landroid/graphics/ColorMatrix;
+.field public static mr_control_title:I = 0x7f0a05a2
 
-    invoke-direct {p1}, Landroid/graphics/ColorMatrix;-><init>()V
+.field public static mr_control_title_container:I = 0x7f0a05a3
 
-    const/4 v0, 0x0
+.field public static mr_custom_control:I = 0x7f0a05a4
 
-    invoke-virtual {p1, v0}, Landroid/graphics/ColorMatrix;->setSaturation(F)V
+.field public static mr_default_control:I = 0x7f0a05a5
 
-    new-instance v0, Landroid/graphics/ColorMatrixColorFilter;
+.field public static mr_dialog_area:I = 0x7f0a05a6
 
-    invoke-direct {v0, p1}, Landroid/graphics/ColorMatrixColorFilter;-><init>(Landroid/graphics/ColorMatrix;)V
+.field public static mr_expandable_area:I = 0x7f0a05a7
 
-    iput-object v0, p0, Lnlc;->b:Landroid/graphics/ColorMatrixColorFilter;
+.field public static mr_group_expand_collapse:I = 0x7f0a05a8
 
-    new-instance p1, Lc24;
+.field public static mr_group_volume_route_name:I = 0x7f0a05a9
 
-    const/16 v0, 0x20
+.field public static mr_media_main_control:I = 0x7f0a05aa
 
-    int-to-float v0, v0
+.field public static mr_name:I = 0x7f0a05ab
 
-    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+.field public static mr_picker_close_button:I = 0x7f0a05ac
 
-    move-result-object v1
+.field public static mr_picker_header_name:I = 0x7f0a05ad
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static mr_picker_list:I = 0x7f0a05ae
 
-    move-result-object v1
+.field public static mr_picker_route_icon:I = 0x7f0a05af
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+.field public static mr_picker_route_name:I = 0x7f0a05b0
 
-    mul-float/2addr v0, v1
+.field public static mr_picker_route_progress_bar:I = 0x7f0a05b1
 
-    invoke-static {v0}, Li8e;->I(F)I
+.field public static mr_playback_control:I = 0x7f0a05b2
 
-    move-result v0
+.field public static mr_title_bar:I = 0x7f0a05b3
 
-    int-to-float v0, v0
+.field public static mr_volume_control:I = 0x7f0a05b4
 
-    invoke-direct {p1, v0}, Lc24;-><init>(F)V
+.field public static mr_volume_group_list:I = 0x7f0a05b5
 
-    iput-object p1, p0, Lnlc;->c:Lc24;
+.field public static mr_volume_item_icon:I = 0x7f0a05b6
 
-    new-instance v0, Ljk;
+.field public static mr_volume_slider:I = 0x7f0a05b7
 
-    invoke-direct {v0, p0}, Ljk;-><init>(Lnlc;)V
-
-    iput-object v0, p0, Lnlc;->o:Ljk;
-
-    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v1, -0x2
-
-    invoke-direct {v0, v1, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClipToOutline(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    sget-object p1, Lrw4;->t0:Lss6;
-
-    invoke-virtual {p1, p0}, Lss6;->v(Landroid/view/View;)Llwa;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Llwa;->b()Lme0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lme0;->a:Lle0;
-
-    iget p1, p1, Lle0;->h:I
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
-
-    invoke-direct {p0}, Lnlc;->getImageView()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method private final getImageView()Landroid/widget/ImageView;
-    .locals 1
-
-    iget-object v0, p0, Lnlc;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    return-void
-.end method
-
-.method public final getSize()Lmlc;
-    .locals 2
-
-    sget-object v0, Lnlc;->r0:[Lpl7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lnlc;->o:Ljk;
-
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmlc;
-
-    return-object v0
-.end method
-
-.method public final onThemeChanged(Llwa;)V
-    .locals 0
-
-    invoke-interface {p1}, Llwa;->b()Lme0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lme0;->a:Lle0;
-
-    iget p1, p1, Lle0;->h:I
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    return-void
-.end method
-
-.method public setEnabled(Z)V
-    .locals 1
-
-    invoke-direct {p0}, Lnlc;->getImageView()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lnlc;->b:Landroid/graphics/ColorMatrixColorFilter;
-
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    return-void
-.end method
-
-.method public final setImage(Ljava/lang/Integer;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    invoke-direct {p0}, Lnlc;->getImageView()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    invoke-virtual {p0}, Lnlc;->a()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setSize(Lmlc;)V
-    .locals 2
-
-    sget-object v0, Lnlc;->r0:[Lpl7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lnlc;->o:Ljk;
-
-    invoke-virtual {v1, p0, v0, p1}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
-
-    return-void
-.end method
+.field public static volume_item_container:I = 0x7f0a0d3b

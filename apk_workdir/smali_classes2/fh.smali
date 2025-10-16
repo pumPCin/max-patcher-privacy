@@ -1,274 +1,231 @@
-.class public final Lfh;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public final enum Lfh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Lfh;
+
+.field public static final enum Y:Lfh;
+
+.field public static final enum Z:Lfh;
+
+.field public static final enum b:Lfh;
+
+.field public static final enum c:Lfh;
+
+.field public static final enum o:Lfh;
+
+.field public static final enum r0:Lfh;
+
+.field public static final enum s0:Lfh;
+
+.field public static final enum t0:Lfh;
+
+.field public static final enum u0:Lfh;
+
+.field public static final enum v0:Lfh;
+
+.field public static final enum w0:Lfh;
+
+.field public static final synthetic x0:[Lfh;
+
+
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method static constructor <clinit>()V
+    .locals 15
+
+    new-instance v0, Lfh;
+
+    const/4 v1, 0x0
+
+    const-string v2, "interpolator"
+
+    const-string v3, "INTERPOLATOR"
+
+    invoke-direct {v0, v3, v1, v2}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lfh;->b:Lfh;
+
+    new-instance v1, Lfh;
+
+    const/4 v2, 0x1
+
+    const-string v3, "duration"
+
+    const-string v4, "DURATION"
+
+    invoke-direct {v1, v4, v2, v3}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lfh;->c:Lfh;
+
+    new-instance v2, Lfh;
+
+    const/4 v3, 0x2
+
+    const-string v4, "valueFrom"
+
+    const-string v5, "VALUE_FROM"
+
+    invoke-direct {v2, v5, v3, v4}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lfh;->o:Lfh;
+
+    new-instance v3, Lfh;
+
+    const/4 v4, 0x3
+
+    const-string v5, "valueTo"
+
+    const-string v6, "VALUE_TO"
+
+    invoke-direct {v3, v6, v4, v5}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lfh;->X:Lfh;
+
+    new-instance v4, Lfh;
+
+    const/4 v5, 0x4
+
+    const-string v6, "valueType"
+
+    const-string v7, "VALUE_TYPE"
+
+    invoke-direct {v4, v7, v5, v6}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lfh;->Y:Lfh;
+
+    new-instance v5, Lfh;
+
+    const/4 v6, 0x5
+
+    const-string v7, "propertyName"
+
+    const-string v8, "PROPERTY_NAME"
+
+    invoke-direct {v5, v8, v6, v7}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lfh;->Z:Lfh;
+
+    new-instance v6, Lfh;
+
+    const/4 v7, 0x6
+
+    const-string v8, "propertyXName"
+
+    const-string v9, "PROPERTY_X_NAME"
+
+    invoke-direct {v6, v9, v7, v8}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lfh;->r0:Lfh;
+
+    new-instance v7, Lfh;
+
+    const/4 v8, 0x7
+
+    const-string v9, "propertyYName"
+
+    const-string v10, "PROPERTY_Y_NAME"
+
+    invoke-direct {v7, v10, v8, v9}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lfh;->s0:Lfh;
+
+    new-instance v8, Lfh;
+
+    const/16 v9, 0x8
+
+    const-string v10, "pathData"
+
+    const-string v11, "PATH_DATA"
+
+    invoke-direct {v8, v11, v9, v10}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v8, Lfh;->t0:Lfh;
+
+    new-instance v9, Lfh;
+
+    const/16 v10, 0x9
+
+    const-string v11, "startOffset"
+
+    const-string v12, "START_OFFSET"
+
+    invoke-direct {v9, v12, v10, v11}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v9, Lfh;->u0:Lfh;
+
+    new-instance v10, Lfh;
+
+    const/16 v11, 0xa
+
+    const-string v12, "repeatCount"
+
+    const-string v13, "REPEAT_COUNT"
+
+    invoke-direct {v10, v13, v11, v12}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v10, Lfh;->v0:Lfh;
+
+    new-instance v11, Lfh;
+
+    const/16 v12, 0xb
+
+    const-string v13, "repeatMode"
+
+    const-string v14, "REPEAT_MODE"
+
+    invoke-direct {v11, v14, v12, v13}, Lfh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v11, Lfh;->w0:Lfh;
+
+    filled-new-array/range {v0 .. v11}, [Lfh;
+
+    move-result-object v0
+
+    sput-object v0, Lfh;->x0:[Lfh;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Lfh;->a:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lfh;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p3, p0, Lfh;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-    .locals 0
-
-    .line 2
-    iput p4, p0, Lfh;->a:I
-
-    iput-object p1, p0, Lfh;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lfh;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
+.method public static valueOf(Ljava/lang/String;)Lfh;
     .locals 1
 
-    iget v0, p0, Lfh;->a:I
+    const-class v0, Lfh;
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
+    move-result-object p0
 
-    return-void
+    check-cast p0, Lfh;
 
-    :sswitch_0
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Lelg;
-
-    invoke-interface {p1}, Lelg;->a()V
-
-    return-void
-
-    :sswitch_1
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/transition/TransitionValues;
-
-    iget-object p1, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_1
-        0x5 -> :sswitch_0
-    .end sparse-switch
+    return-object p0
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget v0, p0, Lfh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Lp6h;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iget-object v1, p1, Lp6h;->a:Lo6h;
-
-    invoke-virtual {v1, v0}, Lo6h;->d(F)V
-
-    iget-object v0, p0, Lfh;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-static {v0, p1}, Ll6h;->e(Landroid/view/View;Lp6h;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Lelg;
-
-    invoke-interface {p1}, Lelg;->d()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast v0, Lrs;
-
-    invoke-virtual {v0, p1}, Lube;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lfh;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwof;
-
-    iget-object v0, v0, Lwof;->z0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lfh;->c:Ljava/lang/Object;
-
-    check-cast p1, Lx25;
-
-    iget-object v0, p1, Lx25;->o:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast v1, [F
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->setValues([F)V
-
-    iget-object v0, p1, Lx25;->o:Landroid/graphics/Matrix;
-
-    iget-object v1, p1, Lx25;->r0:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Lyi6;
-
-    invoke-virtual {p1}, Lwx4;->getHierarchy()Ltx4;
-
-    move-result-object p1
-
-    check-cast p1, Lwi6;
-
-    iget-object v0, p0, Lfh;->c:Ljava/lang/Object;
-
-    check-cast v0, Lvx4;
-
-    iget-object v0, v0, Lvx4;->b:Lggh;
-
-    invoke-virtual {p1, v0}, Lwi6;->h(Lebd;)V
-
-    return-void
-
-    :pswitch_4
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Lfh;->c:Ljava/lang/Object;
-
-    check-cast p1, Lp63;
-
-    iget-boolean p1, p1, Lp63;->b:Z
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/transition/TransitionValues;
-
-    iget-object p1, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_5
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object p1, p0, Lfh;->c:Ljava/lang/Object;
-
-    check-cast p1, Lpf7;
-
-    invoke-virtual {p1}, Lpf7;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
+.method public static values()[Lfh;
     .locals 1
 
-    iget v0, p0, Lfh;->a:I
+    sget-object v0, Lfh;->x0:[Lfh;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+    move-result-object v0
 
-    return-void
+    check-cast v0, [Lfh;
 
-    :pswitch_0
-    iget-object p1, p0, Lfh;->b:Ljava/lang/Object;
-
-    check-cast p1, Lelg;
-
-    invoke-interface {p1}, Lelg;->c()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lfh;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwof;
-
-    iget-object v0, v0, Lwof;->z0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,80 +1,242 @@
-.class public final synthetic Lij8;
-.super Ljava/lang/Object;
+.class public final Lij8;
+.super Ljava/util/concurrent/atomic/AtomicReferenceArray;
 .source "SourceFile"
 
 # interfaces
-.implements Loj8;
+.implements Ljj8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final synthetic b:Lqj8;
-
-.field public final synthetic c:Lll8;
+.field public b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqj8;Lll8;I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p3, p0, Lij8;->a:I
+    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
 
-    iput-object p1, p0, Lij8;->b:Lqj8;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p2, p0, Lij8;->c:Lll8;
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lij8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lw07;I)V
-    .locals 3
+.method public final clear()V
+    .locals 4
 
-    iget v0, p0, Lij8;->a:I
+    :goto_0
+    iget v0, p0, Lij8;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
 
-    iget-object v0, p0, Lij8;->b:Lqj8;
+    move-result v1
 
-    iget-object v0, v0, Lqj8;->c:Lak8;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lij8;->c:Lll8;
+    if-ne v0, v1, :cond_0
 
-    const/4 v2, 0x1
+    goto :goto_1
 
-    invoke-virtual {v1, v2}, Lll8;->d(Z)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-interface {p1, v0, p2, v1, v2}, Lw07;->O(Lq07;ILandroid/os/Bundle;Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lij8;->b:Lqj8;
-
-    iget-object v0, v0, Lqj8;->c:Lak8;
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lij8;->c:Lll8;
-
-    invoke-virtual {v2, v1}, Lll8;->d(Z)Landroid/os/Bundle;
+    :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {p1, v0, p2, v1}, Lw07;->H(Lq07;ILandroid/os/Bundle;)V
+    if-eqz v1, :cond_1
+
+    add-int/lit8 v3, v0, 0x1
+
+    iput v3, p0, Lij8;->b:I
+
+    invoke-virtual {p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    move-object v2, v1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, p0, Lij8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_0
+
+    :goto_1
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Lij8;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final e()I
+    .locals 1
+
+    iget-object v0, p0, Lij8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget v0, p0, Lij8;->b:I
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 2
+
+    iget v0, p0, Lij8;->b:I
+
+    iget-object v1, p0, Lij8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final k()V
+    .locals 2
+
+    iget v0, p0, Lij8;->b:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lij8;->b:I
 
     return-void
+.end method
 
-    nop
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "value is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lij8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final peek()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lij8;->b:I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lij8;->b:I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_0
+
+    return-object v2
+
+    :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    add-int/lit8 v3, v0, 0x1
+
+    iput v3, p0, Lij8;->b:I
+
+    invoke-virtual {p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    return-object v1
+
+    :cond_1
+    iget-object v1, p0, Lij8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_0
+
+    return-object v2
 .end method

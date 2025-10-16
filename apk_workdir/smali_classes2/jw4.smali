@@ -1,62 +1,33 @@
 .class public final Ljw4;
-.super Ly7f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:J
+.field public a:Liw4;
+
+.field public final b:Landroid/view/GestureDetector;
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Lc79;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    new-instance v0, Landroid/view/GestureDetector;
 
+    new-instance v1, Lxw0;
 
-# virtual methods
-.method public final c(Lc79;Ljava/lang/String;)V
-    .locals 2
+    const/4 v2, 0x7
 
-    const-string v0, "time"
+    invoke-direct {v1, v2, p0}, Lxw0;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lg8;->H(Lc79;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Ljw4;->c:J
+    iput-object v0, p0, Ljw4;->b:Landroid/view/GestureDetector;
 
     return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lc79;->y()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-wide v0, p0, Ljw4;->c:J
-
-    const-string v2, "Response{time="
-
-    const-string v3, "}"
-
-    invoke-static {v0, v1, v2, v3}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

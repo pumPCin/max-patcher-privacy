@@ -3,154 +3,295 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lebd;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldbd;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lebd;
-
-.field public final b:Lebd;
-
-.field public final c:Landroid/graphics/Rect;
-
-.field public final d:Landroid/graphics/Rect;
-
-.field public final e:[F
-
-.field public final f:[F
-
-.field public final g:[F
-
-.field public h:F
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lggh;Lggh;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+.method static constructor <clinit>()V
     .locals 2
+
+    new-instance v0, Lv2b;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Lv2b;-><init>(I)V
+
+    sput-object v0, Ldbd;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x9
+    and-int/lit8 v0, p1, 0x2
 
-    new-array v1, v0, [F
+    if-eqz v0, :cond_0
 
-    iput-object v1, p0, Ldbd;->e:[F
+    or-int/lit8 p1, p1, 0x1
 
-    new-array v1, v0, [F
-
-    iput-object v1, p0, Ldbd;->f:[F
-
-    new-array v0, v0, [F
-
-    iput-object v0, p0, Ldbd;->g:[F
-
-    iput-object p1, p0, Ldbd;->a:Lebd;
-
-    iput-object p2, p0, Ldbd;->b:Lebd;
-
-    iput-object p3, p0, Ldbd;->c:Landroid/graphics/Rect;
-
-    iput-object p4, p0, Ldbd;->d:Landroid/graphics/Rect;
+    :cond_0
+    iput p1, p0, Ldbd;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+.method public final a(Landroid/content/Context;)I
     .locals 8
 
-    iget-object v0, p0, Ldbd;->a:Lebd;
+    iget v0, p0, Ldbd;->a:I
 
-    iget-object v2, p0, Ldbd;->c:Landroid/graphics/Rect;
+    and-int/lit8 v1, v0, 0x1
 
-    move-object v1, p1
+    const/16 v2, 0x10
 
-    move v3, p3
+    const/4 v3, 0x2
 
-    move v4, p4
+    const/4 v4, 0x0
 
-    move v5, p5
+    if-eqz v1, :cond_2
 
-    move v6, p6
+    const-string v1, "connectivity"
 
-    invoke-interface/range {v0 .. v6}, Lebd;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v7, p0, Ldbd;->e:[F
+    move-result-object v1
 
-    invoke-virtual {p1, v7}, Landroid/graphics/Matrix;->getValues([F)V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Ldbd;->b:Lebd;
+    check-cast v1, Landroid/net/ConnectivityManager;
 
-    iget-object v2, p0, Ldbd;->d:Landroid/graphics/Rect;
+    invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
-    invoke-interface/range {v0 .. v6}, Lebd;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+    move-result-object v5
 
-    iget-object v0, p0, Ldbd;->f:[F
+    if-eqz v5, :cond_1
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->getValues([F)V
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->isConnected()Z
 
-    const/4 v2, 0x0
+    move-result v5
 
-    :goto_0
-    const/16 v3, 0x9
+    if-eqz v5, :cond_1
 
-    iget-object v4, p0, Ldbd;->g:[F
+    invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
 
-    if-ge v2, v3, :cond_0
+    move-result-object v5
 
-    aget v3, v7, v2
-
-    iget v5, p0, Ldbd;->h:F
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    sub-float/2addr v6, v5
-
-    mul-float/2addr v6, v3
-
-    aget v3, v0, v2
-
-    mul-float/2addr v3, v5
-
-    add-float/2addr v3, v6
-
-    aput v3, v4, v2
-
-    add-int/lit8 v2, v2, 0x1
+    if-nez v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v4}, Landroid/graphics/Matrix;->setValues([F)V
+    :try_start_0
+    invoke-virtual {v1, v5}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
 
-    return-object p1
-.end method
+    move-result-object v5
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    if-eqz v5, :cond_1
 
-    iget-object v0, p0, Ldbd;->a:Lebd;
+    invoke-virtual {v5, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-result v5
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    if-eqz v5, :cond_1
 
-    iget-object v1, p0, Ldbd;->b:Lebd;
+    :catch_0
+    and-int/lit8 v5, v0, 0x2
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v1}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    move v4, v3
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    and-int/lit8 v4, v0, 0x3
+
+    :cond_2
+    :goto_1
+    and-int/lit8 v1, v0, 0x8
+
+    const/4 v5, 0x0
+
+    if-eqz v1, :cond_5
+
+    new-instance v1, Landroid/content/IntentFilter;
+
+    const-string v6, "android.intent.action.BATTERY_CHANGED"
+
+    invoke-direct {v1, v6}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v5, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     move-result-object v1
 
-    const-string v2, " (null) -> "
+    if-nez v1, :cond_3
 
-    const-string v3, " (null))"
+    goto :goto_2
 
-    const-string v4, "InterpolatingScaleType("
+    :cond_3
+    const-string v6, "status"
 
-    invoke-static {v4, v0, v2, v1, v3}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v7, -0x1
 
-    move-result-object v0
+    invoke-virtual {v1, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    return-object v0
+    move-result v1
+
+    if-eq v1, v3, :cond_5
+
+    const/4 v3, 0x5
+
+    if-ne v1, v3, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    or-int/lit8 v4, v4, 0x8
+
+    :cond_5
+    :goto_3
+    and-int/lit8 v1, v0, 0x4
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "power"
+
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v1, Landroid/os/PowerManager;
+
+    invoke-virtual {v1}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    or-int/lit8 v4, v4, 0x4
+
+    :cond_6
+    and-int/2addr v0, v2
+
+    if-eqz v0, :cond_8
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
+
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v5, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    move-result-object p1
+
+    if-nez p1, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    or-int/lit8 v4, v4, 0x10
+
+    :cond_8
+    :goto_4
+    return v4
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Ldbd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ldbd;
+
+    iget p1, p1, Ldbd;->a:I
+
+    iget v2, p0, Ldbd;->a:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Ldbd;->a:I
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Ldbd;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

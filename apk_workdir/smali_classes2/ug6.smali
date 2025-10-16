@@ -1,97 +1,64 @@
-.class public final Lug6;
+.class public final synthetic Lug6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvg6;
+.implements Ler3;
+.implements Ldme;
 
 
 # instance fields
-.field public final a:Lhod;
+.field public final synthetic a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
 
 # direct methods
-.method public constructor <init>(Lhod;)V
+.method public synthetic constructor <init>(Lru/ok/messages/settings/caching/FrgCachingSettings;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lug6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
-    iput-object p1, p0, Lug6;->a:Lhod;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lug6;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lug6;
-
-    iget-object v1, p0, Lug6;->a:Lhod;
-
-    iget-object p1, p1, Lug6;->a:Lhod;
-
-    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public a(F)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lug6;->a:Lhod;
+    iget-object v0, p0, Lug6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
-    invoke-virtual {v0}, Lhod;->hashCode()I
+    iget-object v0, v0, Lru/ok/messages/settings/caching/FrgCachingSettings;->C1:[Ljava/lang/String;
 
-    move-result v0
+    float-to-int p1, p1
 
-    return v0
+    aget-object p1, v0, p1
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public accept(Ljava/lang/Object;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lev4;
 
-    const-string v1, "RemoveMediaItem(item="
+    iget-object v0, p0, Lug6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->u1:Lai3;
 
-    iget-object v1, p0, Lug6;->a:Lhod;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v1, Lai3;
 
-    const-string v1, ")"
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->u1:Lai3;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    iget-object v0, v0, Lru/ok/messages/views/fragments/base/FrgBase;->u1:Lai3;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Lai3;->a(Lev4;)Z
 
-    return-object v0
+    return-void
 .end method

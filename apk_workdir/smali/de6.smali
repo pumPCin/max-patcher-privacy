@@ -1,6 +1,3 @@
-.class public interface abstract Lde6;
-.super Ljava/lang/Object;
+.class public final Lde6;
+.super Landroidx/fragment/app/c;
 .source "SourceFile"
-
-# interfaces
-.implements Loe6;

@@ -1,77 +1,212 @@
-.class public final Ldq8;
-.super Luvc;
+.class public final synthetic Ldq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lx18;
 
 
 # instance fields
-.field public final E0:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public final F0:Landroid/widget/ImageView;
-
-.field public final G0:Landroid/widget/ProgressBar;
-
-.field public final H0:Landroid/widget/TextView;
-
-.field public final I0:F
-
-.field public J0:Lvq8;
-
-.field public final synthetic K0:Lgq8;
+.field public final synthetic b:Ll66;
 
 
 # direct methods
-.method public constructor <init>(Lgq8;Landroid/view/View;)V
-    .locals 2
+.method public synthetic constructor <init>(Ll66;I)V
+    .locals 0
 
-    iput-object p1, p0, Ldq8;->K0:Lgq8;
+    iput p2, p0, Ldq8;->a:I
 
-    invoke-direct {p0, p2}, Luvc;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Ldq8;->b:Ll66;
 
-    iput-object p2, p0, Ldq8;->E0:Landroid/view/View;
-
-    sget v0, Lpbc;->mr_cast_group_icon:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Ldq8;->F0:Landroid/widget/ImageView;
-
-    sget v0, Lpbc;->mr_cast_group_progress_bar:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Ldq8;->G0:Landroid/widget/ProgressBar;
-
-    sget v1, Lpbc;->mr_cast_group_name:I
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Ldq8;->H0:Landroid/widget/TextView;
-
-    iget-object p1, p1, Lgq8;->w0:Liq8;
-
-    iget-object p2, p1, Liq8;->x0:Landroid/content/Context;
-
-    invoke-static {p2}, Lcr8;->c(Landroid/content/Context;)F
-
-    move-result p2
-
-    iput p2, p0, Ldq8;->I0:F
-
-    iget-object p1, p1, Liq8;->x0:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lcr8;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
+
+    iget v0, p0, Ldq8;->a:I
+
+    check-cast p1, Lisb;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-boolean v0, v0, Lhtb;->i:Z
+
+    invoke-interface {p1, v0}, Lisb;->T(Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget v0, v0, Lhtb;->h:I
+
+    invoke-interface {p1, v0}, Lisb;->onRepeatModeChanged(I)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-object v0, v0, Lhtb;->g:Lrrb;
+
+    invoke-interface {p1, v0}, Lisb;->A0(Lrrb;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-boolean v0, v0, Lhtb;->v:Z
+
+    invoke-interface {p1, v0}, Lisb;->q(Z)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-boolean v0, v0, Lhtb;->t:Z
+
+    const/4 v1, 0x4
+
+    invoke-interface {p1, v1, v0}, Lisb;->i(IZ)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget v0, v0, Lhtb;->y:I
+
+    invoke-interface {p1, v0}, Lisb;->k(I)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-object v0, v0, Lhtb;->m:Llt8;
+
+    invoke-interface {p1, v0}, Lisb;->j0(Llt8;)V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-object v1, v0, Lhtb;->j:Louf;
+
+    iget v0, v0, Lhtb;->k:I
+
+    invoke-interface {p1, v1, v0}, Lisb;->m0(Louf;I)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->c:Ljava/lang/Object;
+
+    check-cast v0, Lfsb;
+
+    invoke-interface {p1, v0}, Lisb;->B0(Lfsb;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget v1, v0, Lhtb;->r:I
+
+    iget-boolean v0, v0, Lhtb;->s:Z
+
+    invoke-interface {p1, v1, v0}, Lisb;->l(IZ)V
+
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-object v0, v0, Lhtb;->q:Las4;
+
+    invoke-interface {p1, v0}, Lisb;->E0(Las4;)V
+
+    return-void
+
+    :pswitch_a
+    iget-object v0, p0, Ldq8;->b:Ll66;
+
+    iget-object v0, v0, Ll66;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhtb;
+
+    iget-object v0, v0, Lhtb;->o:Lr20;
+
+    invoke-interface {p1, v0}, Lisb;->x(Lr20;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

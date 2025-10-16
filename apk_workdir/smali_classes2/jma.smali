@@ -1,404 +1,77 @@
-.class public final Ljma;
-.super Lc2f;
+.class public final enum Ljma;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lje6;
 
+# static fields
+.field public static final enum a:Ljma;
 
-# instance fields
-.field public X:Ljava/lang/Object;
-
-.field public Y:Ljava/nio/file/Path;
-
-.field public Z:I
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Lpma;
+.field public static final synthetic b:[Ljma;
 
 
 # direct methods
-.method public constructor <init>(Lpma;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Ljma;->s0:Lpma;
+    new-instance v0, Ljma;
 
-    const/4 p1, 0x2
+    const-string v1, "DISABLED"
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ljma;->a:Ljma;
+
+    new-instance v1, Ljma;
+
+    const-string v2, "SOFT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Ljma;
+
+    const-string v3, "HARD"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Ljma;
+
+    move-result-object v0
+
+    sput-object v0, Ljma;->b:[Ljma;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ljma;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Ljma;
 
-    check-cast p1, Ln24;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Ljma;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Ljma;
 
-    move-result-object p1
-
-    check-cast p1, Ljma;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Ljma;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Ljma;
+    .locals 1
 
-    new-instance v0, Ljma;
+    sget-object v0, Ljma;->b:[Ljma;
 
-    iget-object v1, p0, Ljma;->s0:Lpma;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p2}, Ljma;-><init>(Lpma;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    iput-object p1, v0, Ljma;->r0:Ljava/lang/Object;
+    check-cast v0, [Ljma;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    iget v0, p0, Ljma;->Z:I
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    sget-object v4, Laxf;->a:Laxf;
-
-    const/4 v5, 0x0
-
-    iget-object v6, p0, Ljma;->s0:Lpma;
-
-    sget-object v7, Lo24;->a:Lo24;
-
-    if-eqz v0, :cond_3
-
-    if-eq v0, v3, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Ljma;->r0:Ljava/lang/Object;
-
-    check-cast v0, Ln24;
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    move-object v9, v0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v0, p0, Ljma;->X:Ljava/lang/Object;
-
-    iget-object v8, p0, Ljma;->r0:Ljava/lang/Object;
-
-    check-cast v8, Ln24;
-
-    :try_start_0
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto/16 :goto_4
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_5
-
-    :cond_2
-    iget-object v0, p0, Ljma;->Y:Ljava/nio/file/Path;
-
-    iget-object v8, p0, Ljma;->X:Ljava/lang/Object;
-
-    check-cast v8, Lpma;
-
-    iget-object v9, p0, Ljma;->r0:Ljava/lang/Object;
-
-    check-cast v9, Ln24;
-
-    :try_start_1
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_3
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ljma;->r0:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    invoke-virtual {v6}, Lpma;->f()Ljava/nio/file/Path;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
-
-    move-result-object v0
-
-    new-instance v8, Lbma;
-
-    const/4 v9, 0x3
-
-    invoke-direct {v8, v9}, Lbma;-><init>(I)V
-
-    invoke-virtual {v0, v8}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
-
-    move-result-object v0
-
-    new-instance v8, Lhma;
-
-    invoke-direct {v8, v0, v6, v5}, Lhma;-><init>([Ljava/io/File;Lpma;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v5, v5, v8, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
-
-    move-object v9, p1
-
-    :cond_4
-    :goto_0
-    iget-object p1, v6, Lpma;->h:Lfu0;
-
-    invoke-virtual {p1}, Lfu0;->v()Z
-
-    move-result p1
-
-    if-nez p1, :cond_9
-
-    :try_start_2
-    iget-object p1, v6, Lpma;->e:Ljava/text/SimpleDateFormat;
-
-    new-instance v0, Ljava/util/Date;
-
-    invoke-direct {v0}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {p1, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, ".log"
-
-    invoke-static {p1, v0}, Lsw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v6}, Lpma;->f()Ljava/nio/file/Path;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
-
-    invoke-virtual {v6}, Lpma;->f()Ljava/nio/file/Path;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/nio/file/Path;->resolve(Ljava/lang/String;)Ljava/nio/file/Path;
-
-    move-result-object v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_5
-
-    :try_start_3
-    iput-object v9, p0, Ljma;->r0:Ljava/lang/Object;
-
-    iput-object v6, p0, Ljma;->X:Ljava/lang/Object;
-
-    iput-object v0, p0, Ljma;->Y:Ljava/nio/file/Path;
-
-    iput v3, p0, Ljma;->Z:I
-
-    invoke-static {v6, v0, p0}, Lpma;->b(Lpma;Ljava/nio/file/Path;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    if-ne p1, v7, :cond_5
-
-    goto/16 :goto_8
-
-    :cond_5
-    move-object v8, v6
-
-    :goto_1
-    move-object p1, v0
-
-    move-object v0, v4
-
-    goto :goto_3
-
-    :catchall_2
-    move-exception p1
-
-    move-object v8, v6
-
-    :goto_2
-    :try_start_4
-    new-instance v10, Lb2d;
-
-    invoke-direct {v10, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_5
-
-    move-object p1, v0
-
-    move-object v0, v10
-
-    :goto_3
-    :try_start_5
-    sget-object v10, Lq0a;->a:Lq0a;
-
-    new-instance v11, Lima;
-
-    invoke-direct {v11, v8, p1, v5}, Lima;-><init>(Lpma;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
-
-    iput-object v9, p0, Ljma;->r0:Ljava/lang/Object;
-
-    iput-object v0, p0, Ljma;->X:Ljava/lang/Object;
-
-    iput-object v5, p0, Ljma;->Y:Ljava/nio/file/Path;
-
-    iput v2, p0, Ljma;->Z:I
-
-    invoke-static {v10, v11, p0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_4
-
-    if-ne p1, v7, :cond_6
-
-    goto :goto_8
-
-    :cond_6
-    move-object v8, v9
-
-    :goto_4
-    :try_start_6
-    invoke-static {v0}, Lcea;->z(Ljava/lang/Object;)V
-
-    move-object v0, v4
-
-    move-object v9, v8
-
-    goto :goto_7
-
-    :catchall_3
-    move-exception p1
-
-    move-object v9, v8
-
-    goto :goto_6
-
-    :catchall_4
-    move-exception p1
-
-    move-object v8, v9
-
-    :goto_5
-    invoke-static {v0}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_7
-
-    instance-of v9, v0, Ljava/util/concurrent/CancellationException;
-
-    if-nez v9, :cond_7
-
-    invoke-static {p1, v0}, Lpr0;->b(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    :cond_7
-    throw p1
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
-
-    :catchall_5
-    move-exception p1
-
-    :goto_6
-    new-instance v0, Lb2d;
-
-    invoke-direct {v0, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_7
-    invoke-static {v0}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    instance-of v8, p1, Ljava/nio/file/NoSuchFileException;
-
-    if-eqz v8, :cond_8
-
-    const-string v8, "OneMeFileLogger"
-
-    const-string v10, "Log file not found!"
-
-    invoke-static {v8, v10, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iput-object v9, p0, Ljma;->r0:Ljava/lang/Object;
-
-    iput-object v0, p0, Ljma;->X:Ljava/lang/Object;
-
-    iput-object v5, p0, Ljma;->Y:Ljava/nio/file/Path;
-
-    iput v1, p0, Ljma;->Z:I
-
-    const-wide/16 v10, 0x7d0
-
-    invoke-static {v10, v11, p0}, Lbv0;->k(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_4
-
-    :goto_8
-    return-object v7
-
-    :cond_8
-    throw p1
-
-    :cond_9
-    return-object v4
 .end method

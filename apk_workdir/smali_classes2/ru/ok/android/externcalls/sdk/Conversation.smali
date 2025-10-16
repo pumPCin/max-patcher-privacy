@@ -21,7 +21,7 @@
         "",
         "",
         "enabled",
-        "Laxf;",
+        "Lzag;",
         "setAudioCaptureEnabled",
         "(Z)V",
         "hasRegisteredParticipnats",
@@ -34,9 +34,9 @@
         "isParticipantCreatorOrAdmin",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "participant",
-        "Lmu8;",
+        "Lv19;",
         "getParticipantMediaStat",
-        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lmu8;",
+        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lv19;",
         "",
         "getAdjustedAudioLevel",
         "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)F",
@@ -44,11 +44,11 @@
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "unban",
         "isShowChatHistory",
-        "Loo3;",
+        "Lfr3;",
         "onError",
         "addParticipant",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLoo3;)V",
-        "(Ljava/lang/String;ZLoo3;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLfr3;)V",
+        "(Ljava/lang/String;ZLfr3;)V",
         "",
         "participantIds",
         "Lkotlin/Function1;",
@@ -56,11 +56,11 @@
         "onSuccess",
         "",
         "addParticipants",
-        "(Ljava/util/Collection;Ljava/lang/Boolean;ZLvd6;Lvd6;)V",
+        "(Ljava/util/Collection;Ljava/lang/Boolean;ZLqh6;Lqh6;)V",
         "link",
         "Ljava/lang/Runnable;",
         "addParticipantByLink",
-        "(Ljava/lang/String;Ljava/lang/Runnable;Loo3;)V",
+        "(Ljava/lang/String;Ljava/lang/Runnable;Lfr3;)V",
         "participantExternalId",
         "removeParticipant",
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V",
@@ -74,41 +74,41 @@
         "newState",
         "changeMyState",
         "(Ljava/util/Map;)V",
-        "Lvae;",
+        "Lgme;",
         "listener",
-        "(Ljava/util/Map;Lvae;)V",
-        "Lor6;",
+        "(Ljava/util/Map;Lgme;)V",
+        "Lrv6;",
         "parameters",
         "hangup",
-        "(Lor6;)V",
+        "(Lrv6;)V",
         "muteAll",
         "()V",
-        "Le50;",
+        "Lr50;",
         "getAudioLevel",
-        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Le50;",
+        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lr50;",
         "promote",
         "promoteParticipant",
         "revoke",
         "",
-        "Lbh1;",
+        "Lci1;",
         "roles",
         "grantRoles",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z[Lbh1;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z[Lci1;)V",
         "pin",
         "pinParticipant",
         "state",
         "setMuteState",
         "init",
         "connect",
-        "Lxy0;",
+        "Lwz0;",
         "option",
         "isEnabled",
         "onAnswer",
         "setCallOptionEnabled",
-        "(Lxy0;ZLoo3;)V",
+        "(Lwz0;ZLfr3;)V",
         "forbidden",
         "setAnonJoinForbidden",
-        "(ZLoo3;)V",
+        "(ZLfr3;)V",
         "setWaitingRoomEnabled",
         "setFeedbackEnabled",
         "Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
@@ -123,9 +123,9 @@
         "queryChatHistory",
         "(Ljava/lang/Integer;Ljava/lang/Integer;Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;)V",
         "createJoinLink",
-        "(Loo3;Loo3;)V",
+        "(Lfr3;Lfr3;)V",
         "removeJoinLink",
-        "(Ljava/lang/Runnable;Loo3;)V",
+        "(Ljava/lang/Runnable;Lfr3;)V",
         "release",
         "Lru/ok/android/externcalls/sdk/dev/DebugManager;",
         "getDebugManager",
@@ -134,9 +134,9 @@
         "debugManager",
         "isConditionAccepted",
         "isConditionAccepted$annotations",
-        "Lpr6;",
+        "Lsv6;",
         "getRejectReason",
-        "()Lpr6;",
+        "()Lsv6;",
         "getRejectReason$annotations",
         "rejectReason",
         "Lru/ok/android/externcalls/sdk/asr/AsrManager;",
@@ -151,9 +151,9 @@
         "getRecordManager",
         "()Lru/ok/android/externcalls/sdk/record/RecordManager;",
         "recordManager",
-        "Lsh;",
+        "Lbi;",
         "getAnimojiControl",
-        "()Lsh;",
+        "()Lbi;",
         "animojiControl",
         "Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;",
         "getFeatureManager",
@@ -183,9 +183,9 @@
         "getContactCallManager",
         "()Lru/ok/android/externcalls/sdk/contacts/ContactCallManager;",
         "contactCallManager",
-        "Lb12;",
+        "Lf22;",
         "getCameraStatProvider",
-        "()Lb12;",
+        "()Lf22;",
         "cameraStatProvider",
         "Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager;",
         "getSessionRoomManager",
@@ -291,9 +291,9 @@
         "isInitialVideoEnabled",
         "getPinnedParticipant",
         "pinnedParticipant",
-        "Lzy0;",
+        "Lyz0;",
         "getUnderlyingCall",
-        "()Lzy0;",
+        "()Lyz0;",
         "underlyingCall",
         "CallType",
         "ChatHistoryCallback",
@@ -311,7 +311,7 @@
 
 
 # direct methods
-.method public static synthetic addParticipant$default(Lru/ok/android/externcalls/sdk/Conversation;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLoo3;ILjava/lang/Object;)V
+.method public static synthetic addParticipant$default(Lru/ok/android/externcalls/sdk/Conversation;Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLfr3;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p6, :cond_2
@@ -330,7 +330,7 @@
     const/4 p4, 0x0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/Conversation;->addParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLoo3;)V
+    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/Conversation;->addParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLfr3;)V
 
     return-void
 
@@ -344,7 +344,7 @@
     throw p0
 .end method
 
-.method public static synthetic addParticipants$default(Lru/ok/android/externcalls/sdk/Conversation;Ljava/util/Collection;Ljava/lang/Boolean;ZLvd6;Lvd6;ILjava/lang/Object;)V
+.method public static synthetic addParticipants$default(Lru/ok/android/externcalls/sdk/Conversation;Ljava/util/Collection;Ljava/lang/Boolean;ZLqh6;Lqh6;ILjava/lang/Object;)V
     .locals 6
 
     if-nez p7, :cond_3
@@ -382,7 +382,7 @@
 
     move-object v5, p5
 
-    invoke-interface/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/Conversation;->addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLvd6;Lvd6;)V
+    invoke-interface/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/Conversation;->addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLqh6;Lqh6;)V
 
     return-void
 
@@ -414,7 +414,7 @@
     return-void
 .end method
 
-.method public static synthetic setAnonJoinForbidden$default(Lru/ok/android/externcalls/sdk/Conversation;ZLoo3;ILjava/lang/Object;)V
+.method public static synthetic setAnonJoinForbidden$default(Lru/ok/android/externcalls/sdk/Conversation;ZLfr3;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_1
@@ -426,7 +426,7 @@
     const/4 p2, 0x0
 
     :cond_0
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/Conversation;->setAnonJoinForbidden(ZLoo3;)V
+    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/Conversation;->setAnonJoinForbidden(ZLfr3;)V
 
     return-void
 
@@ -440,7 +440,7 @@
     throw p0
 .end method
 
-.method public static synthetic setFeedbackEnabled$default(Lru/ok/android/externcalls/sdk/Conversation;ZLoo3;ILjava/lang/Object;)V
+.method public static synthetic setFeedbackEnabled$default(Lru/ok/android/externcalls/sdk/Conversation;ZLfr3;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_1
@@ -452,7 +452,7 @@
     const/4 p2, 0x0
 
     :cond_0
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/Conversation;->setFeedbackEnabled(ZLoo3;)V
+    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/Conversation;->setFeedbackEnabled(ZLfr3;)V
 
     return-void
 
@@ -466,7 +466,7 @@
     throw p0
 .end method
 
-.method public static synthetic setWaitingRoomEnabled$default(Lru/ok/android/externcalls/sdk/Conversation;ZLoo3;ILjava/lang/Object;)V
+.method public static synthetic setWaitingRoomEnabled$default(Lru/ok/android/externcalls/sdk/Conversation;ZLfr3;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_1
@@ -478,7 +478,7 @@
     const/4 p2, 0x0
 
     :cond_0
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/Conversation;->setWaitingRoomEnabled(ZLoo3;)V
+    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/Conversation;->setWaitingRoomEnabled(ZLfr3;)V
 
     return-void
 
@@ -497,44 +497,44 @@
 .method public abstract addEventsListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)V
 .end method
 
-.method public abstract addParticipant(Ljava/lang/String;ZLoo3;)V
+.method public abstract addParticipant(Ljava/lang/String;ZLfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Z",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract addParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLoo3;)V
+.method public abstract addParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/Boolean;ZLfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             "Ljava/lang/Boolean;",
             "Z",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Loo3;)V
+.method public abstract addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Lfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/lang/Runnable;",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLvd6;Lvd6;)V
+.method public abstract addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLqh6;Lqh6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -543,8 +543,8 @@
             ">;",
             "Ljava/lang/Boolean;",
             "Z",
-            "Lvd6;",
-            "Lvd6;",
+            "Lqh6;",
+            "Lqh6;",
             ")V"
         }
     .end annotation
@@ -562,7 +562,7 @@
     .end annotation
 .end method
 
-.method public abstract changeMyState(Ljava/util/Map;Lvae;)V
+.method public abstract changeMyState(Ljava/util/Map;Lgme;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -570,7 +570,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Lvae;",
+            "Lgme;",
             ")V"
         }
     .end annotation
@@ -579,12 +579,12 @@
 .method public abstract connect()V
 .end method
 
-.method public abstract createJoinLink(Loo3;Loo3;)V
+.method public abstract createJoinLink(Lfr3;Lfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loo3;",
-            "Loo3;",
+            "Lfr3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
@@ -593,7 +593,7 @@
 .method public abstract getAdjustedAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)F
 .end method
 
-.method public abstract getAnimojiControl()Lsh;
+.method public abstract getAnimojiControl()Lbi;
 .end method
 
 .method public abstract getAsrManager()Lru/ok/android/externcalls/sdk/asr/AsrManager;
@@ -602,7 +602,7 @@
 .method public abstract getAsrOnlineManager()Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineManager;
 .end method
 
-.method public abstract getAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Le50;
+.method public abstract getAudioLevel(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lr50;
 .end method
 
 .method public abstract getAudioLevelFrequencyMs()I
@@ -617,7 +617,7 @@
 .method public abstract getCameraManager()Lru/ok/android/externcalls/sdk/video/CameraManager;
 .end method
 
-.method public abstract getCameraStatProvider()Lb12;
+.method public abstract getCameraStatProvider()Lf22;
 .end method
 
 .method public abstract getChatManager()Lru/ok/android/externcalls/sdk/chat/ChatManager;
@@ -671,7 +671,7 @@
 .method public abstract getOpponent()Lru/ok/android/externcalls/sdk/ConversationParticipant;
 .end method
 
-.method public abstract getParticipantMediaStat(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lmu8;
+.method public abstract getParticipantMediaStat(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lv19;
 .end method
 
 .method public abstract getParticipantStatesManager()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
@@ -689,7 +689,7 @@
 .method public abstract getRecordManager()Lru/ok/android/externcalls/sdk/record/RecordManager;
 .end method
 
-.method public abstract getRejectReason()Lpr6;
+.method public abstract getRejectReason()Lsv6;
 .end method
 
 .method public abstract getScreenCaptureManager()Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
@@ -704,7 +704,7 @@
 .method public abstract getStereoRoomManager()Lru/ok/android/externcalls/sdk/stereo/StereoRoomManager;
 .end method
 
-.method public abstract getUnderlyingCall()Lzy0;
+.method public abstract getUnderlyingCall()Lyz0;
 .end method
 
 .method public abstract getUrlSharingManager()Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;
@@ -716,10 +716,10 @@
 .method public abstract getWatchTogetherPlayer()Lru/ok/android/externcalls/sdk/watch_together/WatchTogetherPlayer;
 .end method
 
-.method public varargs abstract grantRoles(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z[Lbh1;)V
+.method public varargs abstract grantRoles(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z[Lci1;)V
 .end method
 
-.method public abstract hangup(Lor6;)V
+.method public abstract hangup(Lrv6;)V
 .end method
 
 .method public abstract hasRegisteredParticipnats()Z
@@ -818,12 +818,12 @@
 .method public abstract removeEventsListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)V
 .end method
 
-.method public abstract removeJoinLink(Ljava/lang/Runnable;Loo3;)V
+.method public abstract removeJoinLink(Ljava/lang/Runnable;Lfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Runnable;",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
@@ -841,11 +841,11 @@
 .method public abstract setAnonJoinForbidden(Z)V
 .end method
 
-.method public abstract setAnonJoinForbidden(ZLoo3;)V
+.method public abstract setAnonJoinForbidden(ZLfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
@@ -854,13 +854,13 @@
 .method public abstract setAudioCaptureEnabled(Z)V
 .end method
 
-.method public abstract setCallOptionEnabled(Lxy0;ZLoo3;)V
+.method public abstract setCallOptionEnabled(Lwz0;ZLfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxy0;",
+            "Lwz0;",
             "Z",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
@@ -869,11 +869,11 @@
 .method public abstract setFeedbackEnabled(Z)V
 .end method
 
-.method public abstract setFeedbackEnabled(ZLoo3;)V
+.method public abstract setFeedbackEnabled(ZLfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation
@@ -885,11 +885,11 @@
 .method public abstract setWaitingRoomEnabled(Z)V
 .end method
 
-.method public abstract setWaitingRoomEnabled(ZLoo3;)V
+.method public abstract setWaitingRoomEnabled(ZLfr3;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Loo3;",
+            "Lfr3;",
             ")V"
         }
     .end annotation

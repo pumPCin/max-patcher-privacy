@@ -1,126 +1,60 @@
-.class public final Lfi5;
-.super Ldh;
+.class public final synthetic Lfi5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfng;
+
+
+# instance fields
+.field public final synthetic a:Lri5;
+
+.field public final synthetic b:Lfng;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lri5;Lfng;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-direct {p0, v0}, Ldh;-><init>(I)V
+    iput-object p1, p0, Lfi5;->a:Lri5;
 
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    const-wide/16 v0, 0x96
-
-    const/4 p1, 0x2
-
-    .line 2
-    invoke-direct {p0, v0, v1, p1}, Ldh;-><init>(JI)V
+    iput-object p2, p0, Lfi5;->b:Lfng;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Loz3;
-    .locals 4
+.method public final b(JJLsa6;Landroid/media/MediaFormat;)V
+    .locals 8
 
-    new-instance v0, Lfi5;
+    iget-object v0, p0, Lfi5;->a:Lri5;
 
-    iget-wide v1, p0, Ldh;->o:J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v3, p0, Ldh;->t0:Z
+    iget-object v1, p0, Lfi5;->b:Lfng;
 
-    invoke-direct {v0, v1, v2, v3}, Ldh;-><init>(JZ)V
+    move-wide v2, p1
 
-    return-object v0
-.end method
+    move-wide v4, p3
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 5
+    move-object v6, p5
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    move-object v7, p6
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+    invoke-interface/range {v1 .. v7}, Lfng;->b(JJLsa6;Landroid/media/MediaFormat;)V
 
-    const/4 v0, 0x1
+    move-wide v1, v2
 
-    const/4 v1, 0x0
+    move-wide v3, v4
 
-    const/4 v2, 0x0
+    move-object v5, v6
 
-    if-eqz p3, :cond_1
+    move-object v6, v7
 
-    if-eqz p5, :cond_0
-
-    move p5, v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/View;->getAlpha()F
-
-    move-result p5
-
-    :goto_0
-    sget-object v3, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [F
-
-    aput p5, v4, v1
-
-    const/high16 p5, 0x3f800000    # 1.0f
-
-    aput p5, v4, v0
-
-    invoke-static {p3, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_1
-    if-eqz p2, :cond_3
-
-    if-eqz p4, :cond_2
-
-    iget-boolean p3, p0, Ldh;->t0:Z
-
-    if-eqz p3, :cond_3
-
-    :cond_2
-    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    new-array p4, v0, [F
-
-    aput v2, p4, v1
-
-    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_3
-    return-object p1
-.end method
-
-.method public final n(Landroid/view/View;)V
-    .locals 1
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual/range {v0 .. v6}, Lri5;->b(JJLsa6;Landroid/media/MediaFormat;)V
 
     return-void
 .end method

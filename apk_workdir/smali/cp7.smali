@@ -1,16 +1,17 @@
-.class public final Lcp7;
+.class public interface abstract annotation Lcp7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luad;
+.implements Ljava/lang/annotation/Annotation;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+# virtual methods
+.method public abstract discriminator()Ljava/lang/String;
 .end method

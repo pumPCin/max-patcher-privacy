@@ -1,85 +1,101 @@
-.class public final enum Lic2;
-.super Ljava/lang/Enum;
+.class public final Lic2;
+.super Llj0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lic2;
+# instance fields
+.field public final synthetic b:I
 
-.field public static final enum b:Lic2;
-
-.field public static final enum c:Lic2;
-
-.field public static final synthetic o:[Lic2;
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(J)V
+    .locals 1
 
-    new-instance v0, Lic2;
+    const/4 v0, 0x1
 
-    const-string v1, "SOUND"
+    iput v0, p0, Lic2;->b:I
 
-    const/4 v2, 0x0
+    .line 1
+    invoke-direct {p0}, Llj0;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lic2;->a:Lic2;
-
-    new-instance v1, Lic2;
-
-    const-string v2, "VIBRATION"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lic2;->b:Lic2;
-
-    new-instance v2, Lic2;
-
-    const-string v3, "LED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lic2;->c:Lic2;
-
-    filled-new-array {v0, v1, v2}, [Lic2;
-
-    move-result-object v0
-
-    sput-object v0, Lic2;->o:[Lic2;
+    .line 2
+    iput-wide p1, p0, Lic2;->c:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lic2;
+.method public constructor <init>(JJ)V
     .locals 1
 
-    const-class v0, Lic2;
+    const/4 v0, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput v0, p0, Lic2;->b:I
 
-    move-result-object p0
+    .line 3
+    invoke-direct {p0, p1, p2}, Llj0;-><init>(J)V
 
-    check-cast p0, Lic2;
+    .line 4
+    iput-wide p3, p0, Lic2;->c:J
 
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lic2;
-    .locals 1
 
-    sget-object v0, Lic2;->o:[Lic2;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {v0}, [Lic2;->clone()Ljava/lang/Object;
+    iget v0, p0, Lic2;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ReadMarkEvent{chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lic2;->c:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Llfb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lic2;
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatComplainEvent{chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lic2;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "} "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-super {p0}, Llj0;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,53 +1,160 @@
 .class public final Locg;
-.super Lwy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lsdg;
+.field public final a:J
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Lk68;
 
-.field public final synthetic Z:Lscg;
-
-.field public o:Ljava/lang/Object;
-
-.field public r0:I
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lscg;Lwy3;)V
+.method public constructor <init>(JLk68;I)V
     .locals 0
 
-    iput-object p1, p0, Locg;->Z:Lscg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Locg;->a:J
+
+    iput-object p3, p0, Locg;->b:Lk68;
+
+    iput p4, p0, Locg;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Locg;->Y:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Locg;->r0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Locg;
 
-    iput p1, p0, Locg;->r0:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Locg;->Z:Lscg;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-static {p1, v0, p0}, Lscg;->d(Lscg;Lsdg;Lwy3;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Locg;
 
-    move-result-object p1
+    iget-wide v3, p0, Locg;->a:J
 
-    return-object p1
+    iget-wide v5, p1, Locg;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Locg;->b:Lk68;
+
+    iget-object v3, p1, Locg;->b:Lk68;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Locg;->c:I
+
+    iget p1, p1, Locg;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Locg;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Locg;->b:Lk68;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Locg;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UpdateAttachesEntity(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Locg;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attaches="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Locg;->b:Lk68;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mediaType="
+
+    const-string v2, ")"
+
+    iget v3, p0, Locg;->c:I
+
+    invoke-static {v0, v1, v3, v2}, Lmb3;->c(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

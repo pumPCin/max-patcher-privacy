@@ -20,19 +20,19 @@
         "Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;",
         "Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;",
         "Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;",
-        "Ljgf;",
+        "Lvtf;",
         "timeProvider",
         "<init>",
-        "(Ljgf;)V",
+        "(Lvtf;)V",
         "",
         "timestamp",
         "getTime",
         "(J)J",
         "statItem",
-        "Laxf;",
+        "Lzag;",
         "log",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;)V",
-        "Ljgf;",
+        "Lvtf;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -46,16 +46,16 @@
 
 
 # instance fields
-.field private final timeProvider:Ljgf;
+.field private final timeProvider:Lvtf;
 
 
 # direct methods
-.method public constructor <init>(Ljgf;)V
+.method public constructor <init>(Lvtf;)V
     .locals 0
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Ljgf;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Lvtf;
 
     return-void
 .end method
@@ -71,9 +71,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Ljgf;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Lvtf;
 
-    invoke-interface {p1}, Ljgf;->utcTimeMs()J
+    invoke-interface {p1}, Lvtf;->utcTimeMs()J
 
     move-result-wide p1
 

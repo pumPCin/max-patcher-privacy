@@ -1,612 +1,244 @@
 .class public final Lbeg;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lldd;
+.implements Lei6;
 
 
 # instance fields
-.field public a:I
+.field public X:I
 
-.field public b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public e:Ljava/lang/Object;
+.field public final synthetic Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Landroid/graphics/Path;
-
-    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
-
-    iput-object v0, p0, Lbeg;->c:Ljava/lang/Object;
-
-    .line 3
-    new-instance v0, Landroid/graphics/Region;
-
-    invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
-
-    iput-object v0, p0, Lbeg;->d:Ljava/lang/Object;
-
-    .line 4
-    new-instance v0, Landroid/graphics/Region;
-
-    invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
-
-    iput-object v0, p0, Lbeg;->e:Ljava/lang/Object;
-
-    const/4 v0, -0x1
-
-    .line 5
-    iput v0, p0, Lbeg;->a:I
-
-    .line 6
-    iput v0, p0, Lbeg;->b:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .line 13
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 14
-    iput v0, p0, Lbeg;->b:I
-
-    .line 15
-    iput-object p1, p0, Lbeg;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lyz8;ILjava/lang/String;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbeg;->Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
-    .line 8
-    iput-object p1, p0, Lbeg;->c:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    .line 9
-    iput p2, p0, Lbeg;->a:I
-
-    .line 10
-    iput-object p3, p0, Lbeg;->d:Ljava/lang/Object;
-
-    .line 11
-    invoke-virtual {p1}, Lyz8;->O()I
-
-    move-result p1
-
-    iput p1, p0, Lbeg;->b:I
-
-    .line 12
-    const-string p1, "external_primary"
-
-    invoke-static {p1}, Landroid/provider/MediaStore$Images$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbeg;->e:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static h(Lwr5;)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p0}, Lwr5;->a()V
-
-    iget-object v0, p0, Lwr5;->c:Lfs5;
-
-    iget-object v1, v0, Lfs5;->e:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-virtual {p0}, Lwr5;->a()V
-
-    iget-object p0, v0, Lfs5;->b:Ljava/lang/String;
-
-    const-string v0, "1:"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return-object p0
-
-    :cond_1
-    const-string v0, ":"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    array-length v0, p0
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    if-ge v0, v1, :cond_2
-
-    return-object v2
-
-    :cond_2
-    const/4 v0, 0x1
-
-    aget-object p0, p0, v0
-
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    return-object v2
-
-    :cond_3
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lbeg;->a:I
+    check-cast p1, Lb54;
 
-    return v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public b(Landroid/content/ContentResolver;Landroid/net/Uri;)V
-    .locals 1
-
-    const-string v0, "w"
-
-    invoke-virtual {p1, p2, v0}, Landroid/content/ContentResolver;->openOutputStream(Landroid/net/Uri;Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-virtual {p0, p1, p2}, Lbeg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    check-cast p1, Lbeg;
 
-    :try_start_0
-    invoke-virtual {p0, p1}, Lbeg;->l(Ljava/io/OutputStream;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object p2, Lzag;->a:Lzag;
 
-    invoke-interface {p1}, Ljava/io/Closeable;->close()V
+    invoke-virtual {p1, p2}, Lbeg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
 
-    :catchall_0
-    move-exception p2
-
-    :try_start_1
-    throw p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {p1, p2}, Lrkc;->g(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public c()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lbeg;->e:Ljava/lang/Object;
-
-    check-cast v0, Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lbeg;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public e()Ljava/lang/Integer;
-    .locals 1
-
-    iget v0, p0, Lbeg;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public f(Ljava/io/File;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/io/FileOutputStream;
+    new-instance v0, Lbeg;
 
-    invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    iget-object v1, p0, Lbeg;->Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
-    :try_start_0
-    invoke-virtual {p0, v0}, Lbeg;->l(Ljava/io/OutputStream;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0, v1, p2}, Lbeg;-><init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    iput-object p1, v0, Lbeg;->Y:Ljava/lang/Object;
 
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v1
-
-    invoke-static {v0, p1}, Lrkc;->g(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object v0
 .end method
 
-.method public declared-synchronized g()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    monitor-enter p0
+    iget v0, p0, Lbeg;->X:I
+
+    iget-object v1, p0, Lbeg;->Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
 
     :try_start_0
-    iget-object v0, p0, Lbeg;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lbeg;->k()V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lbeg;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public getHeight()Ljava/lang/Integer;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public getWidth()Ljava/lang/Integer;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public i(Ljava/lang/String;)Landroid/content/pm/PackageInfo;
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Lbeg;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object p1
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
     move-exception p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Failed to find package "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "FirebaseMessaging"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public j()Z
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lbeg;->b:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-
     goto :goto_1
 
     :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbeg;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lb54;
+
     :try_start_1
-    iget-object v0, p0, Lbeg;->c:Ljava/lang/Object;
+    iget-object p1, v1, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->b:Lrhf;
 
-    check-cast v0, Landroid/content/Context;
+    invoke-virtual {p1}, Lrhf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    move-result-object p1
+
+    check-cast p1, Lwz4;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lnz4;
 
     move-result-object v0
 
-    const-string v2, "com.google.android.c2dm.permission.SEND"
+    invoke-virtual {p1}, Lwz4;->a()Lape;
 
-    const-string v3, "com.google.android.gms"
+    move-result-object p1
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v3, Lsl2;
 
-    move-result v2
+    const/4 v4, 0x7
 
-    const/4 v3, -0x1
+    invoke-direct {v3, v4, v0}, Lsl2;-><init>(ILjava/lang/Object;)V
 
-    if-ne v2, v3, :cond_1
+    new-instance v0, Lkg3;
 
-    const-string v0, "FirebaseMessaging"
+    const/4 v4, 0x2
 
-    const-string v2, "Google Play services missing or without correct permission."
+    invoke-direct {v0, p1, v4, v3}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    iput v2, p0, Lbeg;->X:I
+
+    invoke-static {v0, p0}, Lcxi;->a(Ljg3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    monitor-exit p0
+    sget-object v0, Lc54;->a:Lc54;
 
-    move v0, v1
+    if-ne p1, v0, :cond_2
 
-    goto :goto_1
+    return-object v0
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_1
+    :cond_2
+    :goto_0
     :try_start_2
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "com.google.iid.TOKEN_REQUEST"
-
-    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "com.google.android.gms"
-
-    invoke-virtual {v2, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
-
-    iput v2, p0, Lbeg;->b:I
+    sget-object p1, Lzag;->a:Lzag;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    monitor-exit p0
-
-    :goto_0
-    move v0, v2
-
-    goto :goto_1
-
-    :cond_2
-    :try_start_3
-    const-string v0, "FirebaseMessaging"
-
-    const-string v3, "Failed to resolve IID implementation package, falling back"
-
-    invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    iput v2, p0, Lbeg;->b:I
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    monitor-exit p0
-
-    goto :goto_0
+    goto :goto_2
 
     :goto_1
-    if-eqz v0, :cond_3
+    new-instance v0, Lvcd;
 
-    const/4 v0, 0x1
+    invoke-direct {v0, p1}, Lvcd;-><init>(Ljava/lang/Throwable;)V
 
-    return v0
-
-    :cond_3
-    return v1
+    move-object p1, v0
 
     :goto_2
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    nop
 
-    throw v0
-.end method
+    instance-of v0, p1, Lvcd;
 
-.method public declared-synchronized k()V
-    .locals 2
+    const-string v2, "UploadDraftMediaWorker"
 
-    monitor-enter p0
+    if-nez v0, :cond_3
 
-    :try_start_0
-    iget-object v0, p0, Lbeg;->c:Ljava/lang/Object;
+    move-object v0, p1
 
-    check-cast v0, Landroid/content/Context;
+    check-cast v0, Lzag;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v1}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lnz4;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lbeg;->i(Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "storeDraftUpload: finish store upload = "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-static {v2, v0}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v1, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+    :cond_3
+    invoke-static {p1}, Lxcd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    if-eqz v0, :cond_6
 
-    iput-object v1, p0, Lbeg;->d:Ljava/lang/Object;
+    instance-of v1, v0, Ljava/util/concurrent/CancellationException;
 
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    if-nez v1, :cond_5
 
-    iput-object v0, p0, Lbeg;->e:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    instance-of v1, v0, Ljava/lang/SecurityException;
 
-    goto :goto_0
+    if-nez v1, :cond_5
 
-    :catchall_0
-    move-exception v0
+    instance-of v1, v0, Ljava/lang/IllegalStateException;
 
-    goto :goto_1
+    if-nez v1, :cond_5
 
-    :cond_0
-    :goto_0
-    monitor-exit p0
+    instance-of v1, v0, Ljava/io/IOException;
 
-    return-void
+    if-eqz v1, :cond_4
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    goto :goto_3
 
-    throw v0
-.end method
+    :cond_4
+    const-string v1, "storeDraftUpload: failed (unexpected)"
 
-.method public l(Ljava/io/OutputStream;)V
-    .locals 7
+    invoke-static {v2, v1, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget v0, p0, Lbeg;->b:I
+    goto :goto_4
 
-    const/16 v1, 0x800
+    :cond_5
+    :goto_3
+    const-string v1, "storeDraftUpload: failed"
 
-    new-array v2, v1, [B
+    invoke-static {v2, v1, v0}, Lndi;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v3, 0x0
+    :cond_6
+    :goto_4
+    new-instance v0, Lxcd;
 
-    move v4, v3
+    invoke-direct {v0, p1}, Lxcd;-><init>(Ljava/lang/Object;)V
 
-    :cond_0
-    sub-int v5, v0, v4
-
-    invoke-static {v1, v5}, Ljava/lang/Math;->min(II)I
-
-    move-result v5
-
-    iget-object v6, p0, Lbeg;->c:Ljava/lang/Object;
-
-    check-cast v6, Lyz8;
-
-    invoke-virtual {v6, v4, v3, v5, v2}, Lyz8;->N(III[B)V
-
-    invoke-virtual {p1, v2, v3, v5}, Ljava/io/OutputStream;->write([BII)V
-
-    add-int/2addr v4, v5
-
-    if-lt v4, v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
-
-    return-void
+    return-object v0
 .end method

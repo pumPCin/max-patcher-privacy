@@ -1,147 +1,106 @@
-.class public abstract Lkq8;
-.super Llq8;
+.class public final synthetic Lkq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq8;
+.implements Lhz8;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public b:Ljava/util/concurrent/Executor;
-
-.field public c:Lk5d;
-
-.field public d:Lsp8;
-
-.field public e:Ljava/util/ArrayList;
+.field public final synthetic a:Landroid/app/PendingIntent;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(ILandroid/app/PendingIntent;)V
+    .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p2, p0, Lkq8;->a:Landroid/app/PendingIntent;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lkq8;->a:Ljava/lang/Object;
+.method public synthetic constructor <init>(Landroid/app/PendingIntent;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkq8;->a:Landroid/app/PendingIntent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public j()Ljava/lang/String;
+.method public a(Lny8;I)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lkq8;->a:Landroid/app/PendingIntent;
 
-    return-object v0
+    invoke-interface {p1, p2, v0}, Lny8;->c(ILandroid/app/PendingIntent;)V
+
+    return-void
 .end method
 
-.method public k()Ljava/lang/String;
-    .locals 1
+.method public c(Lcq8;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Lcq8;->isConnected()Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final l(Lsp8;Ljava/util/ArrayList;)V
-    .locals 8
+    if-eqz v0, :cond_2
 
-    if-eqz p1, :cond_1
+    iget-object v0, p1, Lcq8;->p:Landroid/app/PendingIntent;
 
-    iget-object v1, p0, Lkq8;->a:Ljava/lang/Object;
+    iget-object v1, p0, Lkq8;->a:Landroid/app/PendingIntent;
 
-    monitor-enter v1
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :try_start_0
-    iget-object v0, p0, Lkq8;->b:Ljava/util/concurrent/Executor;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v4, p0, Lkq8;->c:Lk5d;
-
-    new-instance v2, Lz8h;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    const/4 v7, 0x5
-
-    move-object v3, p0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    :try_start_1
-    invoke-direct/range {v2 .. v7}, Lz8h;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
     goto :goto_1
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    iput-object v1, p1, Lcq8;->p:Landroid/app/PendingIntent;
 
-    :goto_0
-    move-object p1, v0
+    iget-object p1, p1, Lcq8;->a:Lgp8;
 
-    goto :goto_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :catchall_1
-    move-exception v0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    move-object v3, p0
+    move-result-object v0
+
+    iget-object v1, p1, Lgp8;->X:Landroid/os/Handler;
+
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_0
-    move-object v3, p0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    iput-object v5, v3, Lkq8;->d:Lsp8;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object p1, v3, Lkq8;->e:Ljava/util/ArrayList;
-
-    :goto_1
-    monitor-exit v1
-
-    return-void
-
-    :goto_2
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
     :cond_1
-    move-object v3, p0
+    const/4 v0, 0x0
 
-    new-instance p1, Ljava/lang/NullPointerException;
+    :goto_0
+    invoke-static {v0}, Lgfi;->g(Z)V
 
-    const-string p2, "groupRoute must not be null"
+    iget-object p1, p1, Lgp8;->o:Lep8;
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    throw p1
-.end method
-
-.method public abstract m(Ljava/lang/String;)V
-.end method
-
-.method public abstract n(Ljava/lang/String;)V
-.end method
-
-.method public abstract o(Ljava/util/List;)V
+    :cond_2
+    :goto_1
+    return-void
 .end method

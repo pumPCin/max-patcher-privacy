@@ -1,171 +1,193 @@
-.class public abstract Lev8;
-.super Ljava/lang/Object;
+.class public final Lev8;
+.super Llff;
 .source "SourceFile"
 
+# interfaces
+.implements Lei6;
 
-# static fields
-.field public static final a:Ljava/util/HashSet;
 
-.field public static final b:Ljava/util/HashSet;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final c:Ljava/util/Set;
-
-.field public static final d:Ljava/util/HashSet;
-
-.field public static final e:Ljava/util/HashSet;
-
-.field public static final f:Ljava/util/HashSet;
-
-.field public static final g:Ljava/util/HashSet;
+.field public final synthetic Y:Lone/me/mediapicker/MediaPickerScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashSet;
+    iput-object p2, p0, Lev8;->Y:Lone/me/mediapicker/MediaPickerScreen;
 
-    const/4 v1, 0x1
+    const/4 p2, 0x2
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {p0, p2, p1}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lev8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lev8;
+
+    sget-object p2, Lzag;->a:Lzag;
+
+    invoke-virtual {p1, p2}, Lev8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lev8;
+
+    iget-object v1, p0, Lev8;->Y:Lone/me/mediapicker/MediaPickerScreen;
+
+    invoke-direct {v0, p2, v1}, Lev8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
+
+    iput-object p1, v0, Lev8;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget-object v0, p0, Lev8;->Y:Lone/me/mediapicker/MediaPickerScreen;
+
+    iget-object v1, v0, Lone/me/mediapicker/MediaPickerScreen;->v0:Lqs;
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lev8;->X:Ljava/lang/Object;
+
+    check-cast p1, Layd;
+
+    instance-of v2, p1, Lzxd;
+
+    const/4 v3, 0x5
+
+    if-eqz v2, :cond_0
+
+    sget-object p1, Lone/me/mediapicker/MediaPickerScreen;->B0:[Lwq7;
+
+    invoke-virtual {v0}, Lone/me/mediapicker/MediaPickerScreen;->E0()Ls5b;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2}, Ls5b;->setDropdownRotationProgress(F)V
+
+    sget-object p1, Lone/me/mediapicker/MediaPickerScreen;->B0:[Lwq7;
+
+    aget-object v2, p1, v3
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    const/4 v1, 0x3
+    invoke-virtual {v1, v0, v2}, Lqs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v1, v0, Lone/me/mediapicker/MediaPickerScreen;->u0:Lnn0;
 
-    move-result-object v3
+    const/4 v2, 0x4
 
-    const/4 v1, 0x4
+    aget-object v2, p1, v2
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1}, Lnn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lw62;
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, v0, Lone/me/mediapicker/MediaPickerScreen;->y0:Lnn0;
+
+    aget-object p1, p1, v2
+
+    invoke-virtual {v0}, Lnn0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v2, p1, Lxxd;
+
+    if-eqz v2, :cond_2
+
+    sget-object v2, Lone/me/mediapicker/MediaPickerScreen;->B0:[Lwq7;
+
+    aget-object v4, v2, v3
+
+    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v4
 
-    const/4 v1, 0x2
+    check-cast v4, Ljava/lang/Number;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
 
-    move-result-object v5
+    move-result v4
 
-    const/4 v1, 0x6
+    if-lez v4, :cond_1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast p1, Lxxd;
 
-    move-result-object v6
+    iget p1, p1, Lxxd;->a:I
 
-    const/4 v1, 0x5
+    int-to-float p1, p1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    aget-object v2, v2, v3
 
-    move-result-object v7
-
-    const/4 v1, 0x7
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    filled-new-array/range {v2 .. v8}, [Ljava/lang/Integer;
+    invoke-virtual {v1, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    check-cast v1, Ljava/lang/Number;
 
-    move-result-object v1
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    move-result v1
 
-    sput-object v0, Lev8;->a:Ljava/util/HashSet;
+    int-to-float v1, v1
 
-    new-instance v0, Ljava/util/HashSet;
+    div-float/2addr p1, v1
 
-    filled-new-array {v6, v8}, [Ljava/lang/Integer;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_1
+    const/high16 p1, 0x43340000    # 180.0f
 
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lev8;->b:Ljava/util/HashSet;
-
-    invoke-static {v5}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    :goto_0
+    invoke-virtual {v0}, Lone/me/mediapicker/MediaPickerScreen;->E0()Ls5b;
 
     move-result-object v0
 
-    sput-object v0, Lev8;->c:Ljava/util/Set;
+    invoke-virtual {v0, p1}, Ls5b;->setDropdownRotationProgress(F)V
 
-    new-instance v0, Ljava/util/HashSet;
+    :cond_2
+    :goto_1
+    sget-object p1, Lzag;->a:Lzag;
 
-    filled-new-array {v2, v3, v4}, [Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lev8;->d:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    const/16 v1, 0xb
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    filled-new-array {v2, v3, v4, v1}, [Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v7}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lev8;->e:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v8}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lev8;->f:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    const/16 v1, 0x9
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lev8;->g:Ljava/util/HashSet;
-
-    return-void
+    return-object p1
 .end method

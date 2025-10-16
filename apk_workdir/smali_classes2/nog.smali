@@ -1,100 +1,61 @@
-.class public final synthetic Lnog;
-.super Ljava/lang/Object;
+.class public final Lnog;
+.super Loog;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Luog;
+# static fields
+.field public static final a:Lnog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luog;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lnog;->a:I
+    new-instance v0, Lnog;
 
-    iput-object p1, p0, Lnog;->b:Luog;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lnog;->a:Lnog;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lnog;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lnog;->b:Luog;
+    return v0
 
-    iget-object v0, v0, Luog;->w0:Landroid/widget/TextView;
+    :cond_0
+    instance-of p1, p1, Lnog;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    check-cast p1, Ljava/lang/Integer;
+    return p1
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    :cond_1
+    return v0
+.end method
 
-    move-result p1
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    const v0, 0x7123af6
 
-    return-void
+    return v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lnog;->b:Luog;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, v0, Luog;->u0:Lj60;
+    const-string v0, "Recording"
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lj60;->setLinesColor(I)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lnog;->b:Luog;
-
-    iget-object v0, v0, Luog;->w0:Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

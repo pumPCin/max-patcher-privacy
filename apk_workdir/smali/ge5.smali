@@ -1,70 +1,61 @@
-.class public final synthetic Lge5;
-.super Ljava/lang/Object;
+.class public final Lge5;
+.super Lie5;
 .source "SourceFile"
-
-# interfaces
-.implements Ljw7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Lf32;
 
-.field public final synthetic b:Luib;
-
-.field public final synthetic c:I
+.field public final synthetic o:Lke5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luib;II)V
+.method public constructor <init>(Lke5;JLf32;)V
     .locals 0
 
-    iput p3, p0, Lge5;->a:I
+    iput-object p1, p0, Lge5;->o:Lke5;
 
-    iput-object p1, p0, Lge5;->b:Luib;
+    invoke-direct {p0, p2, p3}, Lie5;-><init>(J)V
 
-    iput p2, p0, Lge5;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lge5;->c:Lf32;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final run()V
     .locals 2
 
-    iget v0, p0, Lge5;->a:I
+    iget-object v0, p0, Lge5;->c:Lf32;
 
-    check-cast p1, Lljb;
+    iget-object v1, p0, Lge5;->o:Lke5;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lge5;->b:Luib;
-
-    iget-boolean v0, v0, Luib;->l:Z
-
-    iget v1, p0, Lge5;->c:I
-
-    invoke-interface {p1, v1, v0}, Lljb;->i(IZ)V
+    invoke-interface {v0, v1}, Lf32;->d(Lv44;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lge5;->b:Luib;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, v0, Luib;->a:Lahf;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lge5;->c:I
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-interface {p1, v0}, Lljb;->z(I)V
+    invoke-super {p0}, Lie5;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object v1
 
-    nop
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Lge5;->c:Lf32;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

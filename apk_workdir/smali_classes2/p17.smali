@@ -1,177 +1,188 @@
-.class public final enum Lp17;
-.super Ljava/lang/Enum;
+.class public final Lp17;
+.super Lgl0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lp17;
-
-.field public static final enum b:Lp17;
-
-.field public static final enum c:Lp17;
-
-.field public static final enum o:Lp17;
-
-
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final j:Ljava/lang/String;
+
+.field public final k:I
+
+.field public final l:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJJZLxy;ZIIII)V
+    .locals 13
 
-    new-instance v0, Lp17;
+    move-object v0, p0
 
-    const-wide v1, 0x4060e00000000000L    # 135.0
+    move-object v10, p1
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
+    move-wide/from16 v5, p3
 
-    move-result-wide v1
+    move-wide/from16 v3, p5
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    move-wide/from16 v7, p7
 
-    move-result-object v1
+    move/from16 v11, p9
 
-    const-wide v2, 0x4066800000000000L    # 180.0
+    move-object/from16 v9, p10
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
+    move/from16 v12, p11
 
-    move-result-wide v2
+    move/from16 v1, p12
 
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    move/from16 v2, p13
 
-    move-result-object v2
+    invoke-direct/range {v0 .. v12}, Lgl0;-><init>(IIJJJLxy;Ljava/lang/String;ZZ)V
 
-    const-wide v3, 0x406c200000000000L    # 225.0
+    iput-object p2, p0, Lp17;->j:Ljava/lang/String;
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
+    move/from16 p1, p14
 
-    move-result-wide v3
+    iput p1, p0, Lp17;->k:I
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    move/from16 p1, p15
 
-    move-result-object v3
-
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Double;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "LEFT"
-
-    invoke-direct {v0, v2, v3, v1}, Lp17;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v0, Lp17;->b:Lp17;
-
-    new-instance v1, Lp17;
-
-    const-wide v2, 0x4046800000000000L    # 45.0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x0
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    const-wide v4, 0x4073b00000000000L    # 315.0
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v4
-
-    filled-new-array {v2, v3, v4}, [Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    const-string v4, "RIGHT"
-
-    invoke-direct {v1, v3, v4, v2}, Lp17;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v1, Lp17;->c:Lp17;
-
-    new-instance v2, Lp17;
-
-    const/4 v3, 0x2
-
-    sget-object v4, Lo65;->a:Lo65;
-
-    const-string v5, "CENTER"
-
-    invoke-direct {v2, v3, v5, v4}, Lp17;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v2, Lp17;->o:Lp17;
-
-    filled-new-array {v0, v1, v2}, [Lp17;
-
-    move-result-object v0
-
-    sput-object v0, Lp17;->X:[Lp17;
+    iput p1, p0, Lp17;->l:I
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Ljava/util/List;)V
-    .locals 0
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lp17;->a:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lp17;
+# virtual methods
+.method public final d()I
     .locals 1
 
-    const-class v0, Lp17;
+    const/4 v0, 0x2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lp17;
-
-    return-object p0
+    return v0
 .end method
 
-.method public static values()[Lp17;
+.method public final e()Landroid/net/Uri;
     .locals 1
 
-    sget-object v0, Lp17;->X:[Lp17;
+    iget-object v0, p0, Lp17;->j:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
-
-    check-cast v0, [Lp17;
 
     return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_5
+
+    const-class v1, Lp17;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1}, Lgl0;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    check-cast p1, Lp17;
+
+    iget v1, p0, Lp17;->k:I
+
+    iget v2, p1, Lp17;->k:I
+
+    if-eq v1, v2, :cond_3
+
+    return v0
+
+    :cond_3
+    iget v1, p0, Lp17;->l:I
+
+    iget v2, p1, Lp17;->l:I
+
+    if-eq v1, v2, :cond_4
+
+    return v0
+
+    :cond_4
+    iget-object v0, p0, Lp17;->j:Ljava/lang/String;
+
+    iget-object p1, p1, Lp17;->j:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_5
+    :goto_0
+    return v0
+.end method
+
+.method public final getHeight()I
+    .locals 1
+
+    iget v0, p0, Lp17;->l:I
+
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Lp17;->k:I
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    invoke-super {p0}, Lgl0;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lp17;->j:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ld15;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lp17;->k:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lp17;->l:I
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

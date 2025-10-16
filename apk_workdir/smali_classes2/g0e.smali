@@ -1,173 +1,186 @@
 .class public final Lg0e;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Lrb9;
 
-.field public final synthetic o:Lh0e;
+.field public final b:Lkg9;
+
+.field public c:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lh0e;)V
-    .locals 1
+.method public constructor <init>(Lrb9;Lkg9;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lg0e;->c:I
+    iput-object p1, p0, Lg0e;->a:Lrb9;
 
-    iput-object p1, p0, Lg0e;->o:Lh0e;
-
-    const/16 p1, 0x9
-
-    .line 2
-    sget-object v0, Ld0e;->a:Ld0e;
-
-    invoke-direct {p0, p1, v0}, Ld3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljzd;Lh0e;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lg0e;->c:I
-
-    iput-object p2, p0, Lg0e;->o:Lh0e;
-
-    const/16 p2, 0x9
-
-    .line 1
-    invoke-direct {p0, p2, p1}, Ld3;-><init>(ILjava/lang/Object;)V
+    iput-object p2, p0, Lg0e;->b:Lkg9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 1
 
-    iget v0, p0, Lg0e;->c:I
+    iget-object p1, p0, Lg0e;->c:Ljava/lang/CharSequence;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p1, :cond_0
 
-    check-cast p2, Ld0e;
+    const/4 v0, 0x0
 
-    check-cast p1, Ld0e;
+    iput-object v0, p0, Lg0e;->c:Ljava/lang/CharSequence;
 
-    if-eq p1, p2, :cond_0
+    iget-object v0, p0, Lg0e;->b:Lkg9;
 
-    iget-object p1, p0, Lg0e;->o:Lh0e;
-
-    invoke-static {p1}, Lh0e;->A(Lh0e;)Llwa;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lh0e;->onThemeChanged(Llwa;)V
+    invoke-virtual {v0, p1}, Lkg9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
+.end method
 
-    :pswitch_0
-    check-cast p2, Lyzd;
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    check-cast p1, Lyzd;
+    return-void
+.end method
 
-    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 3
 
-    move-result p1
+    iget-object v0, p0, Lg0e;->a:Lrb9;
 
-    if-nez p1, :cond_2
+    invoke-virtual {v0}, Lrb9;->invoke()Ljava/lang/Object;
 
-    invoke-interface {p2}, Lyzd;->getTitle()Lcdf;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Ljava/lang/Boolean;
 
-    iget-object v0, p0, Lg0e;->o:Lh0e;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0, p1}, Lh0e;->setTitle(Lcdf;)V
+    move-result v0
 
-    invoke-interface {p2}, Lyzd;->e()Lio7;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    goto :goto_2
 
-    invoke-virtual {v0, p1}, Lh0e;->setStartIcon(Lio7;)V
+    :cond_0
+    instance-of v0, p1, Landroid/text/Spanned;
 
-    invoke-interface {p2}, Lyzd;->a()Lcdf;
+    if-eqz v0, :cond_1
 
-    move-result-object p1
+    move-object v0, p1
 
-    invoke-virtual {v0, p1}, Lh0e;->setDescription(Lcdf;)V
-
-    invoke-interface {p2}, Lyzd;->b()Lnzd;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lh0e;->setCounter(Lnzd;)V
-
-    invoke-interface {p2}, Lyzd;->c()Lcdf;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
+    check-cast v0, Landroid/text/Spanned;
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {v0, p1}, Lh0e;->setUpperText(Ljava/lang/CharSequence;)V
+    if-nez v0, :cond_2
 
-    invoke-interface {p2}, Lyzd;->d()Lvzd;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lh0e;->setEndView(Lvzd;)V
-
-    invoke-interface {p2}, Lov7;->getItemId()J
-
-    invoke-virtual {v0}, Lh0e;->getModelItem()Lyzd;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lyzd;->getType()Lxzd;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lh0e;->setType(Lxzd;)V
-
-    invoke-virtual {v0}, Landroidx/constraintlayout/widget/ConstraintLayout;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    sget-object p1, Lrw4;->t0:Lss6;
-
-    invoke-virtual {p1, v0}, Lss6;->v(Landroid/view/View;)Llwa;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lh0e;->onThemeChanged(Llwa;)V
+    goto :goto_2
 
     :cond_2
+    if-ltz p2, :cond_7
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-ge p2, v1, :cond_7
+
+    check-cast p1, Landroid/text/Spanned;
+
+    invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v1
+
+    const/16 v2, 0xa
+
+    if-eq v1, v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    if-nez p3, :cond_7
+
+    const/4 p3, 0x1
+
+    if-eq p4, p3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result p1
+
+    sub-int/2addr p1, p3
+
+    if-ne p2, p1, :cond_5
+
+    invoke-static {v0}, Lrni;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lg0e;->c:Ljava/lang/CharSequence;
+
     return-void
 
-    nop
+    :cond_5
+    const-class p1, Liic;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {v0, p2, p2, p1}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Liic;
+
+    array-length p3, p1
+
+    const/4 p4, 0x0
+
+    :goto_1
+    if-ge p4, p3, :cond_7
+
+    aget-object v1, p1, p4
+
+    invoke-interface {v0, v1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v1
+
+    if-ne v1, p2, :cond_6
+
+    new-instance p1, Landroid/text/SpannableStringBuilder;
+
+    invoke-direct {p1, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    add-int/lit8 p3, p2, 0x1
+
+    invoke-virtual {p1, p2, p3}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/Editable;
+
+    iput-object p1, p0, Lg0e;->c:Ljava/lang/CharSequence;
+
+    return-void
+
+    :cond_6
+    add-int/lit8 p4, p4, 0x1
+
+    goto :goto_1
+
+    :cond_7
+    :goto_2
+    return-void
 .end method

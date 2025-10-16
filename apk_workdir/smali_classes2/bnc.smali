@@ -1,74 +1,64 @@
-.class public final Lbnc;
+.class public abstract Lbnc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
-# instance fields
-.field public final synthetic X:Ldnc;
+# static fields
+.field public static oneme_notifications_settings_chat_enable_notifications_button:I = 0x7f0a0744
 
-.field public final synthetic a:Lone/me/rlottie/RLottieImageView;
+.field public static oneme_notifications_settings_chat_linearlayout:I = 0x7f0a0745
 
-.field public final synthetic b:Lenc;
+.field public static oneme_notifications_settings_chat_recycler_view:I = 0x7f0a0746
 
-.field public final synthetic c:Lone/me/rlottie/RLottieDrawable;
+.field public static oneme_notifications_settings_chat_settings_button:I = 0x7f0a0747
 
-.field public final synthetic o:Lcnc;
+.field public static oneme_notifications_settings_chat_toolbar:I = 0x7f0a0748
 
+.field public static oneme_notifications_settings_chat_type_all_button:I = 0x7f0a0749
 
-# direct methods
-.method public constructor <init>(Lone/me/rlottie/RLottieImageView;Lenc;Lone/me/rlottie/RLottieDrawable;Lcnc;Ldnc;)V
-    .locals 0
+.field public static oneme_notifications_settings_chat_type_pin_reply_button:I = 0x7f0a074a
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_notifications_settings_dialog_enable_notifications_button:I = 0x7f0a074b
 
-    iput-object p1, p0, Lbnc;->a:Lone/me/rlottie/RLottieImageView;
+.field public static oneme_notifications_settings_dialog_linearlayout:I = 0x7f0a074c
 
-    iput-object p2, p0, Lbnc;->b:Lenc;
+.field public static oneme_notifications_settings_dialog_recycler_view:I = 0x7f0a074d
 
-    iput-object p3, p0, Lbnc;->c:Lone/me/rlottie/RLottieDrawable;
+.field public static oneme_notifications_settings_dialog_settings_button:I = 0x7f0a074e
 
-    iput-object p4, p0, Lbnc;->o:Lcnc;
+.field public static oneme_notifications_settings_dialog_toolbar:I = 0x7f0a074f
 
-    iput-object p5, p0, Lbnc;->X:Ldnc;
+.field public static oneme_notifications_settings_enable_all_notifications_button:I = 0x7f0a0750
 
-    return-void
-.end method
+.field public static oneme_notifications_settings_header_vh:I = 0x7f0a0751
 
+.field public static oneme_notifications_settings_item_vh:I = 0x7f0a0752
 
-# virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
+.field public static oneme_notifications_settings_linearlayout:I = 0x7f0a0753
 
-    return-void
-.end method
+.field public static oneme_notifications_settings_open_settings_button:I = 0x7f0a0754
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
+.field public static oneme_notifications_settings_open_settings_call_ringtone_title:I = 0x7f0a0755
 
-    iget-object p1, p0, Lbnc;->a:Lone/me/rlottie/RLottieImageView;
+.field public static oneme_notifications_settings_open_settings_calls_ringtone:I = 0x7f0a0756
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+.field public static oneme_notifications_settings_open_settings_calls_vibration:I = 0x7f0a0757
 
-    iget-object p1, p0, Lbnc;->b:Lenc;
+.field public static oneme_notifications_settings_other_in_app_push_button:I = 0x7f0a0758
 
-    iget-object p1, p1, Lenc;->a:Ljava/lang/String;
+.field public static oneme_notifications_settings_other_linearlayout:I = 0x7f0a0759
 
-    const-string v0, "onDetach"
+.field public static oneme_notifications_settings_other_new_user_button:I = 0x7f0a075a
 
-    invoke-static {p1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+.field public static oneme_notifications_settings_other_recycler_view:I = 0x7f0a075b
 
-    iget-object p1, p0, Lbnc;->o:Lcnc;
+.field public static oneme_notifications_settings_other_settings_button:I = 0x7f0a075c
 
-    iget-object v0, p0, Lbnc;->c:Lone/me/rlottie/RLottieDrawable;
+.field public static oneme_notifications_settings_other_toolbar:I = 0x7f0a075d
 
-    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+.field public static oneme_notifications_settings_recycler_view:I = 0x7f0a075e
 
-    iget-object p1, p0, Lbnc;->X:Ldnc;
+.field public static oneme_notifications_settings_reset_default_button:I = 0x7f0a075f
 
-    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
+.field public static oneme_notifications_settings_show_content_button:I = 0x7f0a0760
 
-    return-void
-.end method
+.field public static oneme_notifications_settings_toolbar:I = 0x7f0a0761

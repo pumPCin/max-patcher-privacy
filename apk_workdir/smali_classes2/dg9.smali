@@ -1,41 +1,80 @@
 .class public final Ldg9;
-.super Lng7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfef;
+.implements Lzx5;
 
 
 # instance fields
-.field public final synthetic M0:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsze;
+
+.field public final synthetic c:Lig9;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Ls3f;)V
+.method public synthetic constructor <init>(Lsze;Lig9;I)V
     .locals 0
 
-    iput-object p1, p0, Ldg9;->M0:Lone/me/messages/list/ui/MessagesListWidget;
+    iput p3, p0, Ldg9;->a:I
 
-    invoke-direct {p0, p2}, Lng7;-><init>(Lmg7;)V
+    iput-object p1, p0, Ldg9;->b:Lsze;
+
+    iput-object p2, p0, Ldg9;->c:Lig9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Llwa;)V
-    .locals 1
+.method public final d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Ldg9;->M0:Lone/me/messages/list/ui/MessagesListWidget;
+    iget v0, p0, Ldg9;->a:I
 
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->z0:Ls3f;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    new-instance v0, Lcg9;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Ldg9;->c:Lig9;
 
-    :cond_0
-    invoke-virtual {v0, p1}, Ls3f;->onThemeChanged(Llwa;)V
+    const/4 v2, 0x1
 
-    return-void
+    invoke-direct {v0, p1, v1, v2}, Lcg9;-><init>(Lby5;Lig9;I)V
+
+    iget-object p1, p0, Ldg9;->b:Lsze;
+
+    invoke-virtual {p1, v0, p2}, Lsze;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    sget-object p1, Lc54;->a:Lc54;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lcg9;
+
+    iget-object v1, p0, Ldg9;->c:Lig9;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v1, v2}, Lcg9;-><init>(Lby5;Lig9;I)V
+
+    iget-object p1, p0, Ldg9;->b:Lsze;
+
+    invoke-virtual {p1, v0, p2}, Lsze;->d(Lby5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    sget-object p1, Lc54;->a:Lc54;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

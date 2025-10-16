@@ -1,75 +1,29 @@
-.class public final Lyh7;
-.super Lc22;
+.class public abstract Lyh7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final Y:Lgi7;
+# static fields
+.field public static final a:Llz9;
+
+.field public static final b:[I
 
 
 # direct methods
-.method public constructor <init>(Lgi7;Lkotlin/coroutines/Continuation;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0, p2}, Lc22;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, p0, Lyh7;->Y:Lgi7;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final m(Lgi7;)Ljava/lang/Throwable;
+.method static constructor <clinit>()V
     .locals 2
 
-    iget-object v0, p0, Lyh7;->Y:Lgi7;
+    new-instance v0, Llz9;
 
-    invoke-virtual {v0}, Lgi7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Llz9;-><init>(I)V
 
-    instance-of v1, v0, Lai7;
+    sput-object v0, Lyh7;->a:Llz9;
 
-    if-eqz v1, :cond_0
+    new-array v0, v1, [I
 
-    move-object v1, v0
+    sput-object v0, Lyh7;->b:[I
 
-    check-cast v1, Lai7;
-
-    invoke-virtual {v1}, Lai7;->c()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    return-object v1
-
-    :cond_0
-    instance-of v1, v0, Lwe3;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lwe3;
-
-    iget-object p1, v0, Lwe3;->a:Ljava/lang/Throwable;
-
-    return-object p1
-
-    :cond_1
-    invoke-interface {p1}, Leh7;->getCancellationException()Ljava/util/concurrent/CancellationException;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final u()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "AwaitContinuation"
-
-    return-object v0
+    return-void
 .end method

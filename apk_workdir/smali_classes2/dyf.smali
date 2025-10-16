@@ -1,110 +1,129 @@
 .class public final Ldyf;
-.super Lc2f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Leyf;
 
-.field public final synthetic Y:Lgyf;
-
-.field public final synthetic Z:J
-
-.field public final synthetic r0:Ljava/util/List;
+.field public final b:Lfyf;
 
 
 # direct methods
-.method public constructor <init>(Lgyf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Leyf;Lfyf;)V
     .locals 0
 
-    iput-object p1, p0, Ldyf;->Y:Lgyf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Ldyf;->Z:J
+    iput-object p1, p0, Ldyf;->a:Leyf;
 
-    iput-object p4, p0, Ldyf;->r0:Ljava/util/List;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ldyf;->b:Lfyf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ln24;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ldyf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
-
-    check-cast p1, Ldyf;
-
-    sget-object p2, Laxf;->a:Laxf;
-
-    invoke-virtual {p1, p2}, Ldyf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Ldyf;
-
-    iget-wide v2, p0, Ldyf;->Z:J
-
-    iget-object v4, p0, Ldyf;->r0:Ljava/util/List;
-
-    iget-object v1, p0, Ldyf;->Y:Lgyf;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Ldyf;-><init>(Lgyf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ldyf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldyf;->X:Ljava/lang/Object;
-
-    check-cast p1, Ln24;
-
-    new-instance v0, Lcyf;
-
-    iget-object v4, p0, Ldyf;->r0:Ljava/util/List;
-
-    const/4 v5, 0x0
-
-    iget-object v1, p0, Ldyf;->Y:Lgyf;
-
-    iget-wide v2, p0, Ldyf;->Z:J
-
-    invoke-direct/range {v0 .. v5}, Lcyf;-><init>(Lgyf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Ldyf;
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v2, v0, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+    if-nez v1, :cond_1
 
-    move-result-object p1
+    return v2
 
-    return-object p1
+    :cond_1
+    check-cast p1, Ldyf;
+
+    iget-object v1, p0, Ldyf;->a:Leyf;
+
+    iget-object v3, p1, Ldyf;->a:Leyf;
+
+    invoke-static {v1, v3}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ldyf;->b:Lfyf;
+
+    iget-object p1, p1, Ldyf;->b:Lfyf;
+
+    invoke-static {v1, p1}, Lc0i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ldyf;->a:Leyf;
+
+    invoke-virtual {v0}, Leyf;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ldyf;->b:Lfyf;
+
+    invoke-virtual {v1}, Lfyf;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TopbarTextColors(default="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ldyf;->a:Leyf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", disabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldyf;->b:Lfyf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

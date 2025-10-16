@@ -1,48 +1,21 @@
 .class public final Lnr4;
-.super Ljava/lang/Object;
+.super Lcq;
 .source "SourceFile"
 
-# interfaces
-.implements Lilf;
 
-
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final a:Lnr4;
 
 
 # direct methods
-.method public constructor <init>(Lwka;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object p1, p1, Lwka;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x1
-
-    :goto_0
-    iput-boolean p1, p0, Lnr4;->a:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()La2e;
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lomc;->a:La2e;
+    new-instance v0, Lnr4;
 
-    return-object v0
+    invoke-direct {v0}, Lcq;-><init>()V
+
+    sput-object v0, Lnr4;->a:Lnr4;
+
+    return-void
 .end method

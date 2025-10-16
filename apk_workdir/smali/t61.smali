@@ -1,49 +1,64 @@
 .class public final Lt61;
-.super Ljava/lang/RuntimeException;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu61;
 
-# instance fields
-.field public final synthetic a:I
+
+# static fields
+.field public static final a:Lt61;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lt61;->a:I
+    new-instance v0, Lt61;
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lt61;->a:Lt61;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lt61;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
+    return v0
 
-    move-result-object v0
+    :cond_0
+    instance-of p1, p1, Lt61;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x76f2ecaf
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Unmuted"
 
     return-object v0
-
-    :pswitch_0
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method

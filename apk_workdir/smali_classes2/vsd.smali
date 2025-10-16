@@ -1,23 +1,102 @@
 .class public final Lvsd;
-.super Lzsd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqud;
+
+
+# static fields
+.field public static final g:Ljava/lang/String;
 
 
 # instance fields
-.field public g:Lf18;
+.field public final a:Llt7;
 
-.field public h:F
+.field public final b:Llt7;
 
-.field public i:J
+.field public final c:Llt7;
+
+.field public final d:Llt7;
+
+.field public final e:Llt7;
+
+.field public final f:Lrhf;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-class v0, Ltsd;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lvsd;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Llt7;Llt7;Llt7;Llt7;Llt7;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lvsd;->a:Llt7;
+
+    iput-object p4, p0, Lvsd;->b:Llt7;
+
+    iput-object p1, p0, Lvsd;->c:Llt7;
+
+    iput-object p3, p0, Lvsd;->d:Llt7;
+
+    iput-object p5, p0, Lvsd;->e:Llt7;
+
+    new-instance p1, Lnfd;
+
+    const/16 p2, 0x8
+
+    invoke-direct {p1, p2, p0}, Lnfd;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lrhf;
+
+    invoke-direct {p2, p1}, Lrhf;-><init>(Loh6;)V
+
+    iput-object p2, p0, Lvsd;->f:Lrhf;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Latd;
-    .locals 1
+.method public final a(ILjava/lang/Object;Ljava/lang/String;)Loy5;
+    .locals 2
 
-    new-instance v0, Lwsd;
+    check-cast p2, Lzag;
 
-    invoke-direct {v0, p0}, Lwsd;-><init>(Lvsd;)V
+    new-instance p1, Lusd;
 
-    return-object v0
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p3, p0, p2}, Lusd;-><init>(Ljava/lang/String;Lvsd;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p3, Ltjd;
+
+    invoke-direct {p3, p1}, Ltjd;-><init>(Lei6;)V
+
+    new-instance p1, Lcn2;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x3
+
+    invoke-direct {p1, v0, p2, v1}, Lcn2;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    new-instance p2, Loy5;
+
+    invoke-direct {p2, p3, p1}, Loy5;-><init>(Lzx5;Lgi6;)V
+
+    return-object p2
 .end method

@@ -1,26 +1,34 @@
 .class public final Luyg;
-.super Lc2f;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lje6;
+.implements Lei6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lwyg;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvyg;
+
+.field public final synthetic r0:Llff;
 
 
 # direct methods
-.method public constructor <init>(Lwyg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lvyg;Lei6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Luyg;->Y:Lwyg;
+    iput-object p1, p0, Luyg;->Z:Lvyg;
+
+    check-cast p2, Llff;
+
+    iput-object p2, p0, Luyg;->r0:Llff;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +38,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lfug;
+    check-cast p1, Lb54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,129 +48,152 @@
 
     check-cast p1, Luyg;
 
-    sget-object p2, Laxf;->a:Laxf;
+    sget-object p2, Lzag;->a:Lzag;
 
     invoke-virtual {p1, p2}, Luyg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
     new-instance v0, Luyg;
 
-    iget-object v1, p0, Luyg;->Y:Lwyg;
+    iget-object v1, p0, Luyg;->Z:Lvyg;
 
-    invoke-direct {v0, v1, p2}, Luyg;-><init>(Lwyg;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Luyg;->r0:Llff;
 
-    iput-object p1, v0, Luyg;->X:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2, p2}, Luyg;-><init>(Lvyg;Lei6;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Luyg;->Y:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 7
 
-    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    iget v0, p0, Luyg;->X:I
 
-    iget-object p1, p0, Luyg;->X:Ljava/lang/Object;
+    iget-object v1, p0, Luyg;->Z:Lvyg;
 
-    check-cast p1, Lfug;
+    const/4 v2, 0x2
 
-    iget-object v0, p0, Luyg;->Y:Lwyg;
+    const/4 v3, 0x1
 
-    iget-object v0, v0, Lwyg;->e1:Ljava/util/concurrent/ConcurrentHashMap;
+    sget-object v4, Lc54;->a:Lc54;
 
-    invoke-virtual {p1}, Lfug;->a()J
+    if-eqz v0, :cond_2
 
-    move-result-wide v1
+    if-eq v0, v3, :cond_1
 
-    new-instance v3, Ljava/lang/Long;
+    if-ne v0, v2, :cond_0
 
-    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lej7;
-
-    sget-object v2, Laxf;->a:Laxf;
-
-    if-nez v1, :cond_0
-
-    return-object v2
+    goto :goto_2
 
     :cond_0
-    instance-of v3, p1, Ldug;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-eqz v3, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    sget-object v3, Ldtg;->b:Ldtg;
-
-    invoke-virtual {v1, v3}, Lej7;->a(Ljava/lang/Object;)V
-
-    check-cast p1, Ldug;
-
-    iget-wide v3, p1, Ldug;->a:J
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v3, v4}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v2
-
-    :cond_1
-    instance-of v3, p1, Lcug;
-
-    if-eqz v3, :cond_2
-
-    sget-object v3, Ldtg;->o:Ldtg;
-
-    invoke-virtual {v1, v3}, Lej7;->a(Ljava/lang/Object;)V
-
-    check-cast p1, Lcug;
-
-    iget-wide v3, p1, Lcug;->a:J
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v3, v4}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v2
-
-    :cond_2
-    instance-of v3, p1, Leug;
-
-    if-eqz v3, :cond_3
-
-    new-instance v3, Lhtg;
-
-    invoke-direct {v3}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-virtual {v1, v3}, Lej7;->b(Ljava/lang/Throwable;)V
-
-    check-cast p1, Leug;
-
-    iget-wide v3, p1, Leug;->a:J
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v3, v4}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v2
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    :cond_1
+    :try_start_0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Luyg;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lb54;
+
+    :try_start_1
+    iget-object v0, v1, Lvyg;->b:Llt7;
+
+    invoke-interface {v0}, Llt7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvo3;
+
+    invoke-interface {v0}, Lvo3;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Luyg;->r0:Llff;
+
+    iput v3, p0, Luyg;->X:I
+
+    invoke-interface {v0, p1, p0}, Lei6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_4
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Lru/ok/tamtam/errors/TamErrorException;
+
+    new-instance v0, Lmkf;
+
+    const-string v3, "io.exception"
+
+    const-string v5, "io connection error"
+
+    const/4 v6, 0x0
+
+    invoke-direct {v0, v3, v5, v6}, Lukf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {p1, v0}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lukf;)V
+
+    throw p1
+    :try_end_1
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_0
+    iget-object v0, v1, Lvyg;->c:Leie;
+
+    iget-object v1, v1, Lvyg;->a:Lqh6;
+
+    invoke-interface {v1, p1}, Lqh6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput v2, p0, Luyg;->X:I
+
+    invoke-virtual {v0, p1, p0}, Leie;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_4
+
+    :goto_1
+    return-object v4
+
+    :cond_4
+    :goto_2
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

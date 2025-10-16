@@ -1,120 +1,216 @@
-.class public final synthetic Ldrf;
+.class public final Ldrf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd6;
+.implements Lb54;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final synthetic b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public final b:Landroid/widget/TextView;
+
+.field public final c:Loag;
+
+.field public final o:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
-    .locals 0
-
-    iput p2, p0, Ldrf;->a:I
-
-    iput-object p1, p0, Ldrf;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.method public constructor <init>(Landroid/widget/TextView;Loag;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {}, Lc8;->a()Lmdf;
+
+    move-result-object v1
+
+    sget-object v2, Lvu4;->a:Lem4;
+
+    sget-object v2, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lfd8;
+
+    invoke-interface {v1, v2}, Lt44;->plus(Lt44;)Lt44;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/ContextScope;-><init>(Lt44;)V
+
+    iput-object v0, p0, Ldrf;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iput-object p1, p0, Ldrf;->b:Landroid/widget/TextView;
+
+    iput-object p2, p0, Ldrf;->c:Loag;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTextSize()F
+
+    move-result p2
+
+    iput p2, p0, Ldrf;->o:F
+
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    :try_start_0
+    const-string p1, "onDetach"
+
+    new-instance p2, Ljava/util/concurrent/CancellationException;
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    invoke-static {p0, p2}, Lcwi;->b(Lb54;Ljava/util/concurrent/CancellationException;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    return-void
+
+    :cond_0
+    new-instance p2, Larf;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p1, p0, v0}, Larf;-><init>(Landroid/view/View;Ldrf;I)V
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a()V
+    .locals 5
 
-    iget v0, p0, Ldrf;->a:I
+    iget-object v0, p0, Ldrf;->c:Loag;
 
-    iget-object v1, p0, Ldrf;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    iget-object v1, v0, Loag;->a:Lsze;
 
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lpl7;
-
-    iget-object v0, v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Led7;
-
-    sget-object v2, Led7;->b:Led7;
-
-    if-ne v0, v2, :cond_0
-
-    invoke-virtual {v1}, Ljz3;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lshd;->w(Landroid/app/Activity;)V
-
-    :cond_0
-    sget-object v0, Laxf;->a:Laxf;
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lpl7;
-
-    new-instance v0, Lfd7;
-
-    invoke-virtual {v1}, Ljz3;->getRouter()Ln6d;
+    invoke-virtual {v1}, Lsze;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lfd7;-><init>(Ln6d;)V
+    check-cast v1, Ljava/lang/Number;
 
-    return-object v0
+    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
 
-    :pswitch_1
-    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lpl7;
+    move-result v1
 
-    iget-object v0, v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
+    iget-object v2, p0, Ldrf;->b:Landroid/widget/TextView;
 
-    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    const/4 v4, 0x2
+
+    invoke-static {v4, v1, v3}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result v1
+
+    iget v3, p0, Ldrf;->o:F
+
+    add-float/2addr v1, v3
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3, v1}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    invoke-virtual {v2}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Loag;->a:Lsze;
+
+    new-instance v1, Lu2c;
+
+    const/16 v3, 0x12
+
+    invoke-direct {v1, v0, p0, v3}, Lu2c;-><init>(Lzx5;Ljava/lang/Object;I)V
+
+    new-instance v0, Lbrf;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, p0, v3}, Lbrf;-><init>(Ldrf;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v3, Lh06;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v1, v0, v4}, Lh06;-><init>(Lzx5;Lei6;I)V
+
+    :try_start_0
+    invoke-static {v2}, Loyg;->b(Landroid/view/View;)Lwv7;
 
     move-result-object v0
-
-    check-cast v0, Led7;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    sget-object v0, Lmdd;->M1:Lmdd;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_1
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    :catchall_0
+    move-exception v0
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    new-instance v1, Lvcd;
 
-    throw v0
+    invoke-direct {v1, v0}, Lvcd;-><init>(Ljava/lang/Throwable;)V
 
-    :cond_2
-    sget-object v0, Lmdd;->a2:Lmdd;
+    move-object v0, v1
 
     :goto_0
-    return-object v0
+    nop
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    instance-of v1, v0, Lvcd;
+
+    if-eqz v1, :cond_0
+
+    move-object v0, p0
+
+    :cond_0
+    check-cast v0, Lb54;
+
+    invoke-static {v3, v0}, Ly1j;->u(Lzx5;Lb54;)Lwwe;
+
+    return-void
+
+    :cond_1
+    new-instance v0, Larf;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v2, p0, v1}, Larf;-><init>(Landroid/view/View;Ldrf;I)V
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
+.end method
+
+.method public final getCoroutineContext()Lt44;
+    .locals 1
+
+    iget-object v0, p0, Ldrf;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {v0}, Lb54;->getCoroutineContext()Lt44;
+
+    move-result-object v0
+
+    return-object v0
 .end method

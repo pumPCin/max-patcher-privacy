@@ -1,50 +1,53 @@
-.class public final Lrbf;
-.super Ld3;
+.class public interface abstract Lrbf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lrbf;
+# virtual methods
+.method public i(I[BI)Lebf;
+    .locals 6
 
+    invoke-static {}, Lhb7;->j()Leb7;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    move-result-object p1
 
-    new-instance v0, Lrbf;
+    new-instance v5, Lobf;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    const/16 v2, 0xd
+    invoke-direct {v5, v0, p1}, Lobf;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v2, v1}, Ld3;-><init>(ILjava/lang/Object;)V
+    const/4 v2, 0x0
 
-    sput-object v0, Lrbf;->c:Lrbf;
+    sget-object v4, Lqbf;->c:Lqbf;
+
+    move-object v0, p0
+
+    move-object v1, p2
+
+    move v3, p3
+
+    invoke-interface/range {v0 .. v5}, Lrbf;->q([BIILqbf;Ldr3;)V
+
+    new-instance p2, Lo84;
+
+    invoke-virtual {p1}, Leb7;->i()Ls7d;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Lo84;-><init>(Ls7d;)V
+
+    return-object p2
+.end method
+
+.method public abstract q([BIILqbf;Ldr3;)V
+.end method
+
+.method public reset()V
+    .locals 0
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final i0()Z
-    .locals 2
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    return v1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract v()I
 .end method

@@ -1,27 +1,19 @@
-.class public interface abstract Lis3;
+.class public final synthetic Lis3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lhs3;
+# instance fields
+.field public final synthetic a:Lms3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lms3;)V
+    .locals 0
 
-    sget-object v0, Lhs3;->a:Lhs3;
+    iput-object p1, p0, Lis3;->a:Lms3;
 
-    sput-object v0, Lis3;->a:Lhs3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()Lane;
-.end method
-
-.method public abstract b()V
 .end method

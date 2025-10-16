@@ -1,106 +1,51 @@
-.class public final synthetic Lw69;
-.super Ljava/lang/Object;
+.class public final Lw69;
+.super Lk14;
 .source "SourceFile"
-
-# interfaces
-.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Landroid/text/Layout;
+.field public final synthetic Y:Lc79;
+
+.field public Z:I
+
+.field public o:Lc79;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/text/Layout;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lw69;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw69;->b:Landroid/text/Layout;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ly69;Landroid/text/Layout;)V
+.method public constructor <init>(Lc79;Lk14;)V
     .locals 0
 
-    .line 1
-    const/4 p1, 0x1
+    iput-object p1, p0, Lw69;->Y:Lc79;
 
-    iput p1, p0, Lw69;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lw69;->b:Landroid/text/Layout;
+    invoke-direct {p0, p2}, Lk14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lw69;->a:I
+    iput-object p1, p0, Lw69;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lw69;->Z:I
 
-    iget-object v0, p0, Lw69;->b:Landroid/text/Layout;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lw69;->Z:I
 
-    instance-of v1, v0, Landroid/text/Spanned;
+    iget-object p1, p0, Lw69;->Y:Lc79;
 
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/text/Spanned;
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    const/4 v1, 0x0
+    invoke-static {p1, v0, p0}, Lc79;->t(Lc79;Lda2;Lk14;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    move-result-object p1
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    const-class v3, Lk8c;
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    :cond_1
-    new-array v0, v1, [Lk8c;
-
-    :cond_2
-    check-cast v0, [Lk8c;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lw69;->b:Landroid/text/Layout;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,98 +1,65 @@
 .class public final Lp66;
-.super Ljava/util/concurrent/ForkJoinTask;
+.super Luta;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Loy1;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public volatile o:Ljava/lang/Throwable;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Loy1;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/util/concurrent/ForkJoinTask;-><init>()V
-
-    iput-object p2, p0, Lp66;->a:Loy1;
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p2, p0, Lp66;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lp66;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final exec()Z
+.method public final onMeasure(II)V
     .locals 3
 
-    iget-object v0, p0, Lp66;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    const/4 v1, 0x0
+    move-result p2
 
-    const/4 v2, 0x1
+    const/16 v0, 0x8
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    int-to-float v0, v0
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v1, v2, p2}, Lxx1;->d(FFII)I
+
+    move-result p2
+
+    const/16 v0, 0x80
+
+    int-to-float v0, v0
+
+    invoke-static {}, Ljt4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lagi;->d(F)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    sub-int/2addr p2, v0
 
-    :try_start_0
-    iget-object v0, p0, Lp66;->a:Loy1;
+    const/high16 v0, 0x40000000    # 2.0f
 
-    invoke-virtual {v0}, Loy1;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
-    return v2
+    move-result p2
 
-    :catchall_0
-    move-exception v0
-
-    iput-object v0, p0, Lp66;->o:Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final getRawResult()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lp66;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final setRawResult(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lp66;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
 
     return-void
 .end method

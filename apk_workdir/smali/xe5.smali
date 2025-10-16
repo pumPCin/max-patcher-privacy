@@ -1,118 +1,139 @@
-.class public final synthetic Lxe5;
+.class public final Lxe5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lw44;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:I
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lwe5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljf5;IZ)V
+.method public constructor <init>()V
     .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lxe5;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxe5;->o:Ljava/lang/Object;
+    sget-object v0, Lwe5;->a:Lwe5;
 
-    iput p2, p0, Lxe5;->c:I
-
-    iput-boolean p3, p0, Lxe5;->b:Z
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lys9;ZI)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lxe5;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxe5;->o:Ljava/lang/Object;
-
-    iput-boolean p2, p0, Lxe5;->b:Z
-
-    iput p3, p0, Lxe5;->c:I
+    iput-object v0, p0, Lxe5;->a:Lwe5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lxe5;->a:I
+    instance-of v0, p1, Lxe5;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lxe5;->o:Ljava/lang/Object;
+    instance-of p1, p1, Lwe5;
 
-    check-cast v0, Lys9;
+    if-eqz p1, :cond_0
 
-    iget-boolean v1, p0, Lxe5;->b:Z
+    goto :goto_0
 
-    iget v2, p0, Lxe5;->c:I
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lys9;->J0(IZ)V
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final fold(Ljava/lang/Object;Lei6;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lxe5;->a:Lwe5;
+
+    invoke-interface {v0, p1, p2}, Lt44;->fold(Ljava/lang/Object;Lei6;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final get(Ls44;)Lr44;
+    .locals 1
+
+    iget-object v0, p0, Lxe5;->a:Lwe5;
+
+    invoke-interface {v0, p1}, Lt44;->get(Ls44;)Lr44;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getKey()Ls44;
+    .locals 1
+
+    iget-object v0, p0, Lxe5;->a:Lwe5;
+
+    invoke-virtual {v0}, Lp0;->getKey()Ls44;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    sget-object v0, Lwe5;->a:Lwe5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i(Lt44;Ljava/lang/Throwable;)V
+    .locals 0
+
+    iget-object p1, p0, Lxe5;->a:Lwe5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lwe5;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    monitor-exit p1
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lxe5;->o:Ljava/lang/Object;
+.method public final minusKey(Ls44;)Lt44;
+    .locals 1
 
-    check-cast v0, Ljf5;
+    iget-object v0, p0, Lxe5;->a:Lwe5;
 
-    iget-object v1, v0, Ljf5;->H0:Lsd4;
+    invoke-interface {v0, p1}, Lt44;->minusKey(Ls44;)Lt44;
 
-    iget-object v0, v0, Ljf5;->a:[Lnyc;
+    move-result-object p1
 
-    iget v2, p0, Lxe5;->c:I
+    return-object p1
+.end method
 
-    aget-object v0, v0, v2
+.method public final plus(Lt44;)Lt44;
+    .locals 1
 
-    iget-object v0, v0, Lnyc;->e:Ljava/lang/Object;
+    iget-object v0, p0, Lxe5;->a:Lwe5;
 
-    check-cast v0, Lvj0;
+    invoke-interface {v0, p1}, Lt44;->plus(Lt44;)Lt44;
 
-    iget v0, v0, Lvj0;->b:I
+    move-result-object p1
 
-    invoke-virtual {v1}, Lsd4;->H()Ldd;
-
-    move-result-object v3
-
-    new-instance v4, Lcd4;
-
-    iget-boolean v5, p0, Lxe5;->b:Z
-
-    invoke-direct {v4, v3, v2, v0, v5}, Lcd4;-><init>(Ldd;IIZ)V
-
-    const/16 v0, 0x409
-
-    invoke-virtual {v1, v3, v0, v4}, Lsd4;->I(Ldd;ILkw7;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

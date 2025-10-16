@@ -1,143 +1,60 @@
-.class public abstract Lfia;
-.super Ljava/lang/Object;
+.class public final Lfia;
+.super Ljg3;
 .source "SourceFile"
 
+# interfaces
+.implements Lbj6;
 
-# static fields
-.field public static final a:J
 
-.field public static final b:J
+# instance fields
+.field public final a:Lwga;
 
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
-
-.field public static final g:J
-
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final p:J
-
-.field public static final synthetic q:I
+.field public final b:Lfi6;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lwga;Lfi6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfia;->a:Lwga;
+
+    iput-object p2, p0, Lfia;->b:Lfi6;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d()Lwga;
+    .locals 4
+
+    new-instance v0, Lpha;
+
+    iget-object v1, p0, Lfia;->b:Lfi6;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lfia;->a:Lwga;
+
+    invoke-direct {v0, v3, v1, v2}, Lpha;-><init>(Lwga;Lfi6;I)V
+
+    return-object v0
+.end method
+
+.method public final i(Ltg3;)V
     .locals 2
 
-    sget v0, Lecc;->call_admin_settings_media_bottom_header:I
+    new-instance v0, Leia;
 
-    int-to-long v0, v0
+    iget-object v1, p0, Lfia;->b:Lfi6;
 
-    sput-wide v0, Lfia;->a:J
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Ltg3;Lfi6;)V
 
-    sget v0, Lecc;->call_admin_settings_media_header:I
+    iget-object p1, p0, Lfia;->a:Lwga;
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->b:J
-
-    sget v0, Lecc;->call_context_action_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->c:J
-
-    sget v0, Lecc;->call_context_action_open_profile:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->d:J
-
-    sget v0, Lecc;->call_context_action_record_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->e:J
-
-    sget v0, Lecc;->call_context_action_record_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->f:J
-
-    sget v0, Lecc;->call_context_action_record_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->g:J
-
-    sget v0, Lecc;->call_context_action_record_screenin_progress:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->h:J
-
-    sget v0, Lecc;->call_context_action_settings:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->i:J
-
-    sget v0, Lecc;->call_context_action_share_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->j:J
-
-    sget v0, Lecc;->call_context_action_share_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->k:J
-
-    sget v0, Lecc;->call_context_action_share_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->l:J
-
-    sget v0, Lecc;->call_context_action_write_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->m:J
-
-    sget v0, Lecc;->call_context_dialog_invite_user_to_p2p:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->n:J
-
-    sget v0, Lecc;->call_screen_menu_grid_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->o:J
-
-    sget v0, Lecc;->call_screen_menu_speaker_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lfia;->p:J
+    invoke-virtual {p1, v0}, Lwga;->a(Lcka;)V
 
     return-void
 .end method

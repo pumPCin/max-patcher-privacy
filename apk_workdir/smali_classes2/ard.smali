@@ -1,101 +1,84 @@
 .class public final Lard;
-.super Ljava/lang/Object;
+.super Lyx2;
 .source "SourceFile"
 
 
 # instance fields
-.field public A:Lodd;
-
-.field public B:Lzy0;
-
-.field public C:Z
-
-.field public a:Lb7e;
-
-.field public b:Ly6e;
-
-.field public c:Lrmg;
-
-.field public d:Ljava/util/concurrent/ExecutorService;
-
-.field public e:Landroid/content/Context;
-
-.field public f:Lorg/webrtc/EglBase;
-
-.field public g:Lvr9;
-
-.field public h:Lhh1;
-
-.field public i:Lwae;
-
-.field public final j:Ljava/util/ArrayList;
-
-.field public final k:Ljava/util/ArrayList;
-
-.field public final l:Ljava/util/ArrayList;
-
-.field public m:Lxg1;
-
-.field public n:Lu73;
-
-.field public o:Lwkc;
-
-.field public p:Lzkc;
-
-.field public q:Lgs5;
-
-.field public r:Lknb;
-
-.field public s:Z
-
-.field public t:Lho4;
-
-.field public u:Luh;
-
-.field public v:Lvd1;
-
-.field public w:Lwd8;
-
-.field public x:Lued;
-
-.field public y:Z
-
-.field public z:Ljgf;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lard;->j:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lard;->k:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lard;->l:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lard;->s:Z
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lard;->y:Z
-
-    iput-boolean v0, p0, Lard;->C:Z
+    iput-boolean p1, p0, Lard;->a:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lard;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lard;
+
+    iget-boolean v0, p0, Lard;->a:Z
+
+    iget-boolean p1, p1, Lard;->a:Z
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lard;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ScrollToTop(afterPin="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lard;->a:Z
+
+    invoke-static {v0, v1, v2}, Lfef;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,62 +1,114 @@
 .class public final Ll49;
-.super Ljava/lang/Object;
+.super Llff;
 .source "SourceFile"
 
 # interfaces
-.implements Lp49;
+.implements Lei6;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lm49;
+
+
+# direct methods
+.method public constructor <init>(Lm49;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ll49;->Y:Lm49;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lb54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ll49;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ll49;
+    move-result-object p1
 
-    if-nez v1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
     check-cast p1, Ll49;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object p2, Lzag;->a:Lzag;
 
-    return v0
+    invoke-virtual {p1, p2}, Ll49;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance p1, Ll49;
 
-    invoke-static {v0}, Lsw1;->u(I)I
+    iget-object v0, p0, Ll49;->Y:Lm49;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Ll49;-><init>(Lm49;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v0, "MICROPHONE"
+    iget v0, p0, Ll49;->X:I
 
-    const-string v1, ")"
+    const/4 v1, 0x1
 
-    const-string v2, "Alternate(iconType="
+    if-eqz v0, :cond_1
 
-    invoke-static {v2, v0, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ll49;->Y:Lm49;
+
+    iget-object p1, p1, Lm49;->d:Leie;
+
+    iput v1, p0, Ll49;->X:I
+
+    sget-object v0, Li49;->a:Li49;
+
+    invoke-virtual {p1, v0, p0}, Leie;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lc54;->a:Lc54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

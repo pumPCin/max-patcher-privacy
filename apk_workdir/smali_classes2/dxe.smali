@@ -3,82 +3,105 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic e:[Lwq7;
+
+.field public static final f:Ljava/lang/String;
+
+
 # instance fields
-.field public final a:I
+.field public final a:Lyv4;
+
+.field public final b:Lyv4;
+
+.field public final c:Lyv4;
+
+.field public final d:Lyv4;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxcc;
 
-    iput p1, p0, Ldxe;->a:I
+    const-class v1, Ldxe;
+
+    const-string v2, "messageController"
+
+    const-string v3, "getMessageController()Lru/ok/tamtam/messages/MessageController;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Ls6d;->a:Lt6d;
+
+    const-string v3, "workerService"
+
+    const-string v5, "getWorkerService()Lru/ok/tamtam/services/WorkerService;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lf67;->d(Lt6d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lxcc;
+
+    move-result-object v2
+
+    new-instance v3, Lxcc;
+
+    const-string v5, "fileAttachUploader"
+
+    const-string v6, "getFileAttachUploader()Lru/ok/tamtam/FileAttachUploader;"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Lxcc;
+
+    const-string v6, "clientPrefs"
+
+    const-string v7, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Lxcc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v6, 0x4
+
+    new-array v6, v6, [Lwq7;
+
+    aput-object v0, v6, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v6, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v6, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v6, v0
+
+    sput-object v6, Ldxe;->e:[Lwq7;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ldxe;->f:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Lyv4;Lyv4;Lyv4;Lyv4;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Ldxe;->a:Lyv4;
 
-    goto :goto_1
+    iput-object p2, p0, Ldxe;->b:Lyv4;
 
-    :cond_0
-    instance-of v0, p1, Ldxe;
+    iput-object p3, p0, Ldxe;->c:Lyv4;
 
-    if-nez v0, :cond_1
+    iput-object p4, p0, Ldxe;->d:Lyv4;
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldxe;
-
-    iget v0, p0, Ldxe;->a:I
-
-    iget p1, p1, Ldxe;->a:I
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Ldxe;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "StrokeLocalTabBarColors(primary="
-
-    const-string v1, ")"
-
-    iget v2, p0, Ldxe;->a:I
-
-    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

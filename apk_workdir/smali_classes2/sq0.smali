@@ -1,176 +1,98 @@
-.class public final Lsq0;
+.class public final synthetic Lsq0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lsq0;
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lsq0;
+    iput p1, p0, Lsq0;->a:I
+
+    iput-object p2, p0, Lsq0;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onPreDraw()Z
+    .locals 4
+
+    iget v0, p0, Lsq0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lsq0;->b:Ljava/lang/Object;
+
+    check-cast v0, Lej5;
+
+    iget-boolean v1, v0, Lej5;->w0:Z
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lej5;->b(I)V
+
+    iput-boolean v2, v0, Lej5;->w0:Z
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    :cond_0
+    iget-boolean v1, v0, Lej5;->w0:Z
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v1
+
+    iget-object v3, v0, Lej5;->A0:Lsq0;
+
+    invoke-virtual {v1, v3}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v1}, Lsq0;-><init>(ZZ)V
-
-    sput-object v0, Lsq0;->c:Lsq0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lxce;I)V
-    .locals 1
-
-    packed-switch p2, :pswitch_data_0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailWithAutoFlashQuirk;
-
-    .line 4
-    invoke-virtual {p1, p2}, Lxce;->i(Ljava/lang/Class;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lsq0;->a:Z
-
-    .line 5
-    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/CrashWhenTakingPhotoWithAutoFlashAEModeQuirk;
-
-    .line 6
-    sget-object p2, Lgp4;->a:Lxce;
-
-    invoke-virtual {p2, p1}, Lxce;->j(Ljava/lang/Class;)La8c;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    .line 7
-    :goto_0
-    iput-boolean p1, p0, Lsq0;->b:Z
-
-    return-void
-
-    .line 8
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
-
-    invoke-virtual {p1, p2}, Lxce;->k(Ljava/lang/Class;)Ljava/util/ArrayList;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
+    iput-object v1, v0, Lej5;->A0:Lsq0;
 
     :cond_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    return v2
 
-    move-result v0
+    :pswitch_0
+    iget-object v0, p0, Lsq0;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_2
+    check-cast v0, Ltq0;
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Ltq0;->c()V
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
-
-    .line 10
-    invoke-interface {v0}, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p2, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p2, 0x0
-
-    .line 11
-    :goto_1
-    iput-boolean p2, p0, Lsq0;->a:Z
-
-    .line 12
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedForVideoSnapshotQuirk;
-
-    invoke-virtual {p1, p2}, Lxce;->i(Ljava/lang/Class;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lsq0;->b:Z
-
-    return-void
-
-    .line 13
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p2, 0x0
-
-    .line 14
-    iput-boolean p2, p0, Lsq0;->b:Z
-
-    .line 15
-    const-class v0, Landroidx/camera/camera2/internal/compat/quirk/AutoFlashUnderExposedQuirk;
-
-    invoke-virtual {p1, v0}, Lxce;->j(Ljava/lang/Class;)La8c;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    const/4 p2, 0x1
-
-    :cond_3
-    iput-boolean p2, p0, Lsq0;->a:Z
-
-    return-void
-
-    nop
+    return v0
 
     :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_1
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public synthetic constructor <init>(ZZ)V
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lsq0;->a:Z
-
-    iput-boolean p2, p0, Lsq0;->b:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
 .end method

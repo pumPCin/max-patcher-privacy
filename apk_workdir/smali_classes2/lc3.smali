@@ -12,11 +12,9 @@
 
 .field public final d:I
 
-.field public final e:I
-
 
 # direct methods
-.method public constructor <init>(IIIII)V
+.method public constructor <init>(IIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
     iput p3, p0, Llc3;->c:I
 
     iput p4, p0, Llc3;->d:I
-
-    iput p5, p0, Llc3;->e:I
 
     return-void
 .end method
@@ -82,25 +78,16 @@
     :cond_4
     iget v0, p0, Llc3;->d:I
 
-    iget v1, p1, Llc3;->d:I
+    iget p1, p1, Llc3;->d:I
 
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Llc3;->e:I
-
-    iget p1, p1, Llc3;->e:I
-
-    if-eq v0, p1, :cond_6
+    if-eq v0, p1, :cond_5
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_6
+    :cond_5
     :goto_1
     const/4 p1, 0x1
 
@@ -122,23 +109,17 @@
 
     iget v2, p0, Llc3;->b:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
     iget v2, p0, Llc3;->c:I
 
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+    invoke-static {v2, v0, v1}, Lfef;->m(III)I
 
     move-result v0
 
-    iget v2, p0, Llc3;->d:I
-
-    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Llc3;->e:I
+    iget v1, p0, Llc3;->d:I
 
     invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -152,35 +133,29 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", contrastStatic="
+    const-string v0, ", neutral="
 
-    const-string v1, ", negative="
+    const-string v1, ", themed="
 
-    const-string v2, "CommonStatesTextDisabledColors(contrast="
+    const-string v2, "CommonActionBackgroundColors(error="
 
     iget v3, p0, Llc3;->a:I
 
     iget v4, p0, Llc3;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v4, v1}, Lxx1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", primary="
+    const-string v1, ", themedFade="
 
-    const-string v2, ", themed="
+    const-string v2, ")"
 
     iget v3, p0, Llc3;->c:I
 
     iget v4, p0, Llc3;->d:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ")"
-
-    iget v2, p0, Llc3;->e:I
-
-    invoke-static {v0, v2, v1}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v1, v4, v2}, Lwc0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

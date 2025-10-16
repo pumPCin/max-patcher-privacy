@@ -2,71 +2,54 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Laf1;
-
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final a:Z
+
+.field public final b:Ljava/util/Set;
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    and-int/2addr p1, v0
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    if-eqz p1, :cond_0
 
-    iput-object v0, p0, Lix9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/4 v0, 0x0
+
+    .line 5
+    :cond_0
+    sget-object p1, Lca5;->a:Lca5;
+
+    .line 6
+    sget-object v1, Ls95;->a:Ls95;
+
+    .line 7
+    invoke-direct {p0, v0, p1, v1}, Lix9;-><init>(ZLjava/util/Set;Ljava/util/List;)V
 
     return-void
 .end method
 
+.method public constructor <init>(ZLjava/util/Set;Ljava/util/List;)V
+    .locals 0
 
-# virtual methods
-.method public final onCallParticipantNetworkStatusChanged(Ljava/util/List;)V
-    .locals 2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p1
+    .line 2
+    iput-boolean p1, p0, Lix9;->a:Z
 
-    check-cast v0, Ljava/util/ArrayList;
+    .line 3
+    iput-object p2, p0, Lix9;->b:Ljava/util/Set;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    .line 4
+    iput-object p3, p0, Lix9;->c:Ljava/util/List;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lix9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Laf1;
-
-    invoke-interface {v1, p1}, Laf1;->onCallParticipantNetworkStatusChanged(Ljava/util/List;)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
     return-void
 .end method

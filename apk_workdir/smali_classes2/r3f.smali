@@ -1,347 +1,79 @@
-.class public final Lr3f;
-.super Landroid/widget/FrameLayout;
+.class public final synthetic Lr3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic r0:I
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lmjg;
+.field public final synthetic a:I
 
-.field public b:Z
-
-.field public c:Landroid/animation/ValueAnimator;
-
-.field public o:Lq3f;
+.field public final synthetic b:Lru/ok/messages/stickers/widgets/StickerView;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    new-instance p1, Lfr0;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, p0}, Lfr0;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Lmjg;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p0, p1}, Lmjg;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lkv9;)V
-
-    iget p1, v0, Lmjg;->b:I
-
-    int-to-float p1, p1
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    mul-float/2addr v1, p1
-
-    float-to-int p1, v1
-
-    iput p1, v0, Lmjg;->b:I
-
-    iput-object v0, p0, Lr3f;->a:Lmjg;
-
-    return-void
-.end method
-
-.method public static a(Lr3f;F)V
+.method public synthetic constructor <init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lr3f;->setBackgroundAlpha(F)V
+    iput p2, p0, Lr3f;->a:I
 
-    return-void
-.end method
+    iput-object p1, p0, Lr3f;->b:Lru/ok/messages/stickers/widgets/StickerView;
 
-.method public static b(Lr3f;FF)V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    cmpg-float v0, p2, v0
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    int-to-float v0, v1
-
-    sub-float p2, v0, p2
-
-    :goto_0
-    cmpl-float p2, p1, p2
-
-    if-lez p2, :cond_1
-
-    int-to-float p2, v1
-
-    sub-float/2addr p2, p1
-
-    invoke-direct {p0, p2}, Lr3f;->setBackgroundAlpha(F)V
-
-    :cond_1
-    return-void
-.end method
-
-.method private final setBackgroundAlpha(F)V
-    .locals 4
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v1, 0xff
-
-    int-to-float v1, v1
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-static {p1, v2, v3}, Lk84;->e(FFF)F
-
-    move-result p1
-
-    mul-float/2addr p1, v1
-
-    float-to-int p1, p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(IILtd6;Ltd6;Lje6;)V
+.method public final run()V
     .locals 4
 
-    iget-object v0, p0, Lr3f;->o:Lq3f;
+    iget v0, p0, Lr3f;->a:I
 
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lr3f;->c:Landroid/animation/ValueAnimator;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_1
     const/4 v1, 0x0
 
-    :goto_0
-    iget-object v2, p0, Lr3f;->c:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lr3f;->b:Lru/ok/messages/stickers/widgets/StickerView;
 
-    if-eqz v2, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v2}, Le88;->f(Landroid/animation/Animator;)V
+    sget v0, Lru/ok/messages/stickers/widgets/StickerView;->v0:I
 
-    :cond_2
-    filled-new-array {p1, p2}, [I
+    const-string v0, "ru.ok.messages.stickers.widgets.StickerView"
 
-    move-result-object p1
+    const-string v3, "startAnimation"
 
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {p1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance p2, Lgf;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p2, v0, p5, v1, v2}, Lgf;-><init>(Ljava/lang/Object;Ljava/lang/Object;FI)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance p2, Lsg;
-
-    const/4 p5, 0x2
-
-    invoke-direct {p2, p4, p0, p3, p5}, Lsg;-><init>(Ltd6;Landroid/widget/FrameLayout;Ltd6;I)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    iput-object p1, p0, Lr3f;->c:Landroid/animation/ValueAnimator;
-
-    return-void
-.end method
-
-.method public final computeScroll()V
-    .locals 1
-
-    iget-object v0, p0, Lr3f;->a:Lmjg;
-
-    invoke-virtual {v0}, Lmjg;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 8
-
-    iget-object v0, p0, Lr3f;->o:Lq3f;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lq3f;->k()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    if-lez v1, :cond_1
-
-    invoke-interface {v0}, Lq3f;->p()I
-
-    move-result v3
-
-    invoke-interface {v0}, Lq3f;->f()I
-
-    move-result v4
-
-    new-instance v5, Lqoe;
-
-    const/16 v0, 0x9
-
-    invoke-direct {v5, v0}, Lqoe;-><init>(I)V
-
-    new-instance v6, Lqoe;
-
-    invoke-direct {v6, v0}, Lqoe;-><init>(I)V
-
-    new-instance v7, Lp3f;
+    invoke-static {v0, v3}, Lndi;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    invoke-direct {v7, p0, v0}, Lp3f;-><init>(Lr3f;I)V
+    iput-boolean v0, v2, Lru/ok/messages/stickers/widgets/StickerView;->r0:Z
 
-    move-object v2, p0
+    throw v1
 
-    invoke-virtual/range {v2 .. v7}, Lr3f;->c(IILtd6;Ltd6;Lje6;)V
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final getCallback()Lq3f;
-    .locals 1
-
-    iget-object v0, p0, Lr3f;->o:Lq3f;
-
-    return-object v0
-.end method
-
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Lr3f;->a:Lmjg;
-
-    invoke-virtual {v0, p1}, Lmjg;->p(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final onLayout(ZIIII)V
-    .locals 3
-
-    iget-object v0, p0, Lr3f;->o:Lq3f;
+    :pswitch_0
+    iget-boolean v0, v2, Lru/ok/messages/stickers/widgets/StickerView;->r0:Z
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    invoke-interface {v0}, Lq3f;->k()Landroid/view/View;
+    throw v1
 
-    move-result-object v1
+    :pswitch_1
+    iget-object v0, v2, Lru/ok/messages/stickers/widgets/StickerView;->o:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    const/4 v1, 0x1
 
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {v0}, Lq3f;->p()I
-
-    move-result v0
-
-    :goto_0
-    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->offsetTopAndBottom(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
     return-void
-.end method
 
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Lr3f;->a:Lmjg;
-
-    invoke-virtual {v0, p1}, Lmjg;->j(Landroid/view/MotionEvent;)V
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final setCallback(Lq3f;)V
-    .locals 0
-
-    iput-object p1, p0, Lr3f;->o:Lq3f;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

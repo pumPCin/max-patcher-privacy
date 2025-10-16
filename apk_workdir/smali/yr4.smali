@@ -1,85 +1,101 @@
-.class public abstract Lyr4;
+.class public final Lyr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyv0;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
 
 # direct methods
-.method public static a(Landroid/graphics/Rect;Ljava/util/List;)Landroid/view/DisplayCutout;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/graphics/Rect;",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;)",
-            "Landroid/view/DisplayCutout;"
-        }
-    .end annotation
-
-    new-instance v0, Landroid/view/DisplayCutout;
-
-    invoke-direct {v0, p0, p1}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/view/DisplayCutout;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/DisplayCutout;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/view/DisplayCutout;)I
+.method public constructor <init>(III)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p1, p0, Lyr4;->a:I
 
-    return p0
+    iput p2, p0, Lyr4;->b:I
+
+    iput p3, p0, Lyr4;->c:I
+
+    return-void
 .end method
 
-.method public static d(Landroid/view/DisplayCutout;)I
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result p0
+    const/4 v0, 0x1
 
-    return p0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lyr4;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lyr4;
+
+    iget v1, p0, Lyr4;->a:I
+
+    iget v3, p1, Lyr4;->a:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lyr4;->b:I
+
+    iget v3, p1, Lyr4;->b:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lyr4;->c:I
+
+    iget p1, p1, Lyr4;->c:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public static e(Landroid/view/DisplayCutout;)I
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
+    const/16 v0, 0x20f
 
-    move-result p0
+    iget v1, p0, Lyr4;->a:I
 
-    return p0
-.end method
+    add-int/2addr v0, v1
 
-.method public static f(Landroid/view/DisplayCutout;)I
-    .locals 0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
+    iget v1, p0, Lyr4;->b:I
 
-    move-result p0
+    add-int/2addr v0, v1
 
-    return p0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lyr4;->c:I
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

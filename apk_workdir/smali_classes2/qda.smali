@@ -2,152 +2,222 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
-
-# static fields
-.field public static final X:Landroid/os/Handler;
-
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field public final a:I
 
-.field public final b:Ltd6;
+.field public final b:Z
 
-.field public c:Landroid/view/ViewTreeObserver;
+.field public final c:Z
 
-.field public o:Z
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    sput-object v0, Lqda;->X:Landroid/os/Handler;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/View;Ltd6;)V
+.method public constructor <init>(IZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqda;->a:Landroid/view/View;
+    iput p1, p0, Lqda;->a:I
 
-    iput-object p2, p0, Lqda;->b:Ltd6;
+    iput-boolean p2, p0, Lqda;->b:Z
 
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    iput-boolean p3, p0, Lqda;->c:Z
 
-    move-result-object p1
-
-    iput-object p1, p0, Lqda;->c:Landroid/view/ViewTreeObserver;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onPreDraw()Z
-    .locals 4
-
-    iget-boolean v0, p0, Lqda;->o:Z
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lqda;->b:Ltd6;
-
-    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    iput-boolean v1, p0, Lqda;->o:Z
-
-    new-instance v1, Lq96;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v1, v2, p0}, Lq96;-><init>(ILjava/lang/Object;)V
-
-    sget-object v2, Lqda;->X:Landroid/os/Handler;
-
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    move v1, v0
-
-    :cond_0
-    if-nez v1, :cond_1
-
-    const-string v0, "skipping frame"
-
-    const/4 v2, 0x0
-
-    const-string v3, "OneShotOnPreDrawListener"
-
-    invoke-static {v3, v0, v2}, Lyt3;->r(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    return v1
-.end method
-
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqda;->c:Landroid/view/ViewTreeObserver;
-
-    return-void
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
-
-    iget-object p1, p0, Lqda;->c:Landroid/view/ViewTreeObserver;
-
-    invoke-virtual {p1}, Landroid/view/ViewTreeObserver;->isAlive()Z
-
-    move-result p1
-
-    iget-object v0, p0, Lqda;->a:Landroid/view/View;
+    iput-boolean p4, p0, Lqda;->d:Z
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lqda;->c:Landroid/view/ViewTreeObserver;
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iput-boolean p1, p0, Lqda;->e:Z
 
     return-void
+.end method
+
+.method public static a(Lqda;IZZZI)Lqda;
+    .locals 1
+
+    and-int/lit8 v0, p5, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Lqda;->a:I
+
+    :cond_0
+    and-int/lit8 v0, p5, 0x2
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p2, p0, Lqda;->b:Z
+
+    :cond_1
+    and-int/lit8 v0, p5, 0x4
+
+    if-eqz v0, :cond_2
+
+    iget-boolean p3, p0, Lqda;->c:Z
+
+    :cond_2
+    and-int/lit8 p5, p5, 0x8
+
+    if-eqz p5, :cond_3
+
+    iget-boolean p4, p0, Lqda;->d:Z
+
+    :cond_3
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Lqda;
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lqda;-><init>(IZZZ)V
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lqda;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqda;
+
+    iget v1, p0, Lqda;->a:I
+
+    iget v3, p1, Lqda;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lqda;->b:Z
+
+    iget-boolean v3, p1, Lqda;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lqda;->c:Z
+
+    iget-boolean v3, p1, Lqda;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lqda;->d:Z
+
+    iget-boolean p1, p1, Lqda;->d:Z
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lqda;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lqda;->b:Z
+
+    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lqda;->c:Z
+
+    invoke-static {v0, v1, v2}, Lhug;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lqda;->d:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NotificationStackModel(hasCounterValue="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lqda;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hasReaction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqda;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hasMention="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMuted="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lqda;->c:Z
+
+    iget-boolean v4, p0, Lqda;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lwc0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

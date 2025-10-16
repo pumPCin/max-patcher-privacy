@@ -3,31 +3,17 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/HashMap;
-
-.field public final b:Lorg/webrtc/SessionDescription;
-
-.field public c:Lorg/webrtc/SessionDescription;
-
-.field public d:Z
-
-.field public e:Z
-
-
-# direct methods
-.method public constructor <init>(Lorg/webrtc/SessionDescription;)V
+# virtual methods
+.method public final serializer()Lxq7;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lxq7;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lgbh;->a:Lgbh;
 
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lhbh;->a:Ljava/util/HashMap;
-
-    iput-object p1, p0, Lhbh;->b:Lorg/webrtc/SessionDescription;
-
-    return-void
+    return-object v0
 .end method

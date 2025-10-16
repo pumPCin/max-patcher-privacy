@@ -1,126 +1,91 @@
-.class public final Lyr;
-.super Lzge;
+.class public final synthetic Lyr;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltuc;
+.implements Lqi6;
 
 
 # instance fields
-.field public final a:I
-
-.field public b:Lxq4;
+.field public final synthetic a:Lgs;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 2
+.method public constructor <init>(Lgs;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lyr;->a:I
-
-    new-instance v0, Lxq4;
-
-    new-instance v1, Ljava/io/File;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p1
-
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
-
-    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v0, v1, p2}, Lxq4;-><init>(Ljava/io/File;I)V
-
-    iput-object v0, p0, Lyr;->b:Lxq4;
+    iput-object p1, p0, Lyr;->a:Lgs;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Lzge;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lxq4;
+    instance-of v0, p1, Lyr;
 
-    new-instance v1, Ljava/io/File;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lji6;
+
+    move-result-object v0
+
+    check-cast p1, Lqi6;
+
+    invoke-interface {p1}, Lqi6;->getFunctionDelegate()Lji6;
 
     move-result-object p1
 
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
-
-    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    iget p1, p0, Lyr;->a:I
-
-    or-int/lit8 p1, p1, 0x1
-
-    invoke-direct {v0, v1, p1}, Lxq4;-><init>(Ljava/io/File;I)V
-
-    iput-object v0, p0, Lyr;->b:Lxq4;
-
-    return-object p0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
-    .locals 1
-
-    iget-object v0, p0, Lyr;->b:Lxq4;
-
-    invoke-virtual {v0, p1, p2, p3}, Lxq4;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final d(I)V
-    .locals 0
+.method public final getFunctionDelegate()Lji6;
+    .locals 7
 
-    iget-object p1, p0, Lyr;->b:Lxq4;
+    new-instance v0, Lti6;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
 
-    return-void
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v3, Lgs;
+
+    iget-object v4, p0, Lyr;->a:Lgs;
+
+    const-string v5, "selectTheme"
+
+    invoke-direct/range {v0 .. v6}, Lsi6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ApplicationSoSource["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyr;->b:Lxq4;
-
-    invoke-virtual {v1}, Lxq4;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lji6;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

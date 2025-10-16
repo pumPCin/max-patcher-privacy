@@ -1,51 +1,60 @@
-.class public final Lzh2;
-.super Lwy3;
+.class public final synthetic Lzh2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqf4;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Z
 
-.field public final synthetic Y:Lei2;
+.field public final synthetic a:J
 
-.field public Z:I
+.field public final synthetic b:Ljava/lang/String;
 
-.field public o:Lei2;
+.field public final synthetic c:J
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(Lei2;Lwy3;)V
+.method public synthetic constructor <init>(JLjava/lang/String;JZZ)V
     .locals 0
 
-    iput-object p1, p0, Lzh2;->Y:Lei2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lzh2;->a:J
+
+    iput-object p3, p0, Lzh2;->b:Ljava/lang/String;
+
+    iput-wide p4, p0, Lzh2;->c:J
+
+    iput-boolean p6, p0, Lzh2;->o:Z
+
+    iput-boolean p7, p0, Lzh2;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-    iput-object p1, p0, Lzh2;->X:Ljava/lang/Object;
+    new-instance v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    iget p1, p0, Lzh2;->Z:I
+    iget-wide v1, p0, Lzh2;->a:J
 
-    const/high16 v0, -0x80000000
+    iget-object v3, p0, Lzh2;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    iget-wide v4, p0, Lzh2;->c:J
 
-    iput p1, p0, Lzh2;->Z:I
+    iget-boolean v6, p0, Lzh2;->o:Z
 
-    iget-object p1, p0, Lzh2;->Y:Lei2;
+    iget-boolean v7, p0, Lzh2;->X:Z
 
-    const/4 v0, 0x0
+    invoke-direct/range {v0 .. v7}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;-><init>(JLjava/lang/String;JZZ)V
 
-    invoke-virtual {p1, v0, p0}, Lei2;->d(Ljava/util/Collection;Lwy3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

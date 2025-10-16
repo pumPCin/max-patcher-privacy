@@ -1,187 +1,72 @@
 .class public final Lhla;
-.super Ljava/lang/Object;
+.super Lvs7;
 .source "SourceFile"
 
 # interfaces
-.implements Lsv4;
+.implements Loh6;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final synthetic b:Leqb;
+.field public final synthetic b:Lnla;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Leqb;)V
+.method public synthetic constructor <init>(Lnla;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lhla;->a:I
 
-    iput-object p1, p0, Lhla;->a:Ljava/lang/String;
+    iput-object p1, p0, Lhla;->b:Lnla;
 
-    iput-object p2, p0, Lhla;->b:Leqb;
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lvs7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lkt4;Ljava/lang/Exception;)V
-    .locals 5
-
-    iget-object v0, p1, Lkt4;->a:Lyv4;
-
-    iget-object v0, v0, Lyv4;->a:Ljava/lang/String;
-
-    iget-object v1, p0, Lhla;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p1, Lkt4;->a:Lyv4;
-
-    iget-object v0, v0, Lyv4;->a:Ljava/lang/String;
-
-    iget v1, p1, Lkt4;->b:I
-
-    iget-object v2, p1, Lkt4;->h:Lwv4;
-
-    iget v2, v2, Lwv4;->b:F
-
-    const-string v3, "onDownloadChanged, "
-
-    const-string v4, ", "
-
-    invoke-static {v1, v3, v0, v4, v4}, Lsab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, "%"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OneMeDownloadController"
-
-    invoke-static {v1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p2, :cond_0
-
-    iget-object p1, p0, Lhla;->b:Leqb;
-
-    check-cast p1, Lbqb;
-
-    invoke-virtual {p1, p2}, Lbqb;->D(Ljava/lang/Throwable;)Z
-
-    return-void
-
-    :cond_0
-    iget-object p2, p0, Lhla;->b:Leqb;
-
-    check-cast p2, Lbqb;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2, p1}, Lbqb;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget p1, p1, Lkt4;->b:I
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, p0, Lhla;->b:Leqb;
-
-    check-cast p1, Lbqb;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Lbqb;->a:Lfu0;
-
-    invoke-virtual {p1}, Lfu0;->w()Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    iget-object p1, p0, Lhla;->b:Leqb;
-
-    check-cast p1, Lbqb;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lbqb;->D(Ljava/lang/Throwable;)Z
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final f(Luv4;Lkt4;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object p2, p2, Lkt4;->a:Lyv4;
+    iget v0, p0, Lhla;->a:I
 
-    iget-object p2, p2, Lyv4;->a:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhla;->a:Ljava/lang/String;
+    iget-object v0, p0, Lhla;->b:Lnla;
 
-    invoke-static {p2, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lnla;->d()V
 
-    move-result p2
+    sget-object v0, Lzag;->a:Lzag;
 
-    if-eqz p2, :cond_0
+    return-object v0
 
-    iget-object p1, p1, Luv4;->e:Ljava/util/concurrent/CopyOnWriteArraySet;
+    :pswitch_0
+    iget-object v0, p0, Lhla;->b:Lnla;
 
-    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lnla;->c()V
 
-    iget-object p1, p0, Lhla;->b:Leqb;
+    sget-object v0, Lzag;->a:Lzag;
 
-    check-cast p1, Lbqb;
+    return-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_1
+    iget-object v0, p0, Lhla;->b:Lnla;
 
-    iget-object p2, p1, Lbqb;->a:Lfu0;
+    invoke-virtual {v0}, Lnla;->d()V
 
-    invoke-virtual {p2}, Lfu0;->w()Z
+    sget-object v0, Lzag;->a:Lzag;
 
-    move-result p2
+    return-object v0
 
-    if-nez p2, :cond_0
+    nop
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lbqb;->D(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

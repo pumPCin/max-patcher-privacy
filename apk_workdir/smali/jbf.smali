@@ -1,69 +1,44 @@
 .class public final Ljbf;
-.super Lov9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic g:Lahh;
+.field public final a:J
 
-.field public final synthetic h:Llbf;
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Llbf;Lahh;)V
+.method public constructor <init>(J[B)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljbf;->h:Llbf;
+    iput-wide p1, p0, Ljbf;->a:J
 
-    iput-object p2, p0, Ljbf;->g:Lahh;
+    iput-object p3, p0, Ljbf;->b:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final V(I)V
-    .locals 2
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    iget-object v0, p0, Ljbf;->h:Llbf;
+    check-cast p1, Ljbf;
 
-    const/4 v1, 0x1
+    iget-wide v0, p0, Ljbf;->a:J
 
-    iput-boolean v1, v0, Llbf;->m:Z
+    iget-wide v2, p1, Ljbf;->a:J
 
-    iget-object v0, p0, Ljbf;->g:Lahh;
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
 
-    invoke-virtual {v0, p1}, Lahh;->p(I)V
+    move-result p1
 
-    return-void
-.end method
-
-.method public final W(Landroid/graphics/Typeface;)V
-    .locals 2
-
-    iget-object v0, p0, Ljbf;->h:Llbf;
-
-    iget v1, v0, Llbf;->c:I
-
-    invoke-static {p1, v1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    iput-object p1, v0, Llbf;->n:Landroid/graphics/Typeface;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, v0, Llbf;->m:Z
-
-    iget-object p1, v0, Llbf;->n:Landroid/graphics/Typeface;
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Ljbf;->g:Lahh;
-
-    invoke-virtual {v1, p1, v0}, Lahh;->q(Landroid/graphics/Typeface;Z)V
-
-    return-void
+    return p1
 .end method

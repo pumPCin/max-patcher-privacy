@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements La8c;
+.implements Lzhc;

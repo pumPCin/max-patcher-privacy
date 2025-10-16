@@ -1,55 +1,94 @@
-.class public final Loo2;
-.super Lwy3;
+.class public final synthetic Loo2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqh6;
 
 
 # instance fields
-.field public X:Lgo2;
+.field public final synthetic a:I
 
-.field public Y:Ljava/util/Iterator;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lqo2;
-
-.field public final synthetic r0:Lqo2;
-
-.field public s0:I
+.field public final synthetic b:Lone/me/profile/screens/members/ChatMembersScreen;
 
 
 # direct methods
-.method public constructor <init>(Lqo2;Lwy3;)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Loo2;->r0:Lqo2;
+    iput p2, p0, Loo2;->a:I
 
-    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Loo2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Loo2;->Z:Ljava/lang/Object;
+    iget v0, p0, Loo2;->a:I
 
-    iget p1, p0, Loo2;->s0:I
+    sget-object v1, Lzag;->a:Lzag;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Loo2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    or-int/2addr p1, v0
+    packed-switch v0, :pswitch_data_0
 
-    iput p1, p0, Loo2;->s0:I
+    check-cast p1, Landroid/view/View;
 
-    iget-object p1, p0, Loo2;->r0:Lqo2;
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lwq7;
+
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->E0()Ln59;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ln59;->Z:Lsze;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lqo2;->g(Lgo2;Lwy3;)Ljava/lang/Object;
+    sget-object v2, Lca5;->a:Lca5;
+
+    invoke-virtual {p1, v0, v2}, Lsze;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-object v1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lwq7;
+
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->D0()Lbp2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lbp2;->s()Lx08;
 
     move-result-object p1
 
     return-object p1
+
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lwq7;
+
+    invoke-virtual {v2}, Lx14;->getRouter()Ljhd;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljhd;->C()Z
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

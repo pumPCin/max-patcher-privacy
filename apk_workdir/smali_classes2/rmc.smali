@@ -1,160 +1,40 @@
-.class public final Lrmc;
+.class public abstract Lrmc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-.implements Ljava/lang/CharSequence;
-.implements Ljava/io/Serializable;
 
+# static fields
+.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f0a0663
 
-# instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public static oneme_contact_not_found_bottom_sheet_positive_button:I = 0x7f0a0664
 
+.field public static oneme_invite_action_view_type:I = 0x7f0a06b3
 
-# direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
-    .locals 0
+.field public static oneme_invite_by_link_action_menu_item:I = 0x7f0a06b4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_invite_by_phone_action_menu_item:I = 0x7f0a06b5
 
-    iput-object p1, p0, Lrmc;->a:Ljava/lang/CharSequence;
+.field public static oneme_invite_by_phone_continue_button:I = 0x7f0a06b6
 
-    return-void
-.end method
+.field public static oneme_invite_by_phone_description:I = 0x7f0a06b7
 
+.field public static oneme_invite_by_phone_input:I = 0x7f0a06b8
 
-# virtual methods
-.method public final charAt(I)C
-    .locals 1
+.field public static oneme_invite_by_phone_title:I = 0x7f0a06b9
 
-    iget-object v0, p0, Lrmc;->a:Ljava/lang/CharSequence;
+.field public static oneme_invite_by_phone_toolbar:I = 0x7f0a06ba
 
-    invoke-interface {v0, p1}, Ljava/lang/CharSequence;->charAt(I)C
+.field public static oneme_invite_by_qr_action_menu_item:I = 0x7f0a06bb
 
-    move-result p1
+.field public static oneme_invite_by_qr_bottom_sheet_name:I = 0x7f0a06bc
 
-    return p1
-.end method
+.field public static oneme_invite_by_qr_bottom_sheet_qr_code:I = 0x7f0a06bd
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+.field public static oneme_invite_by_qr_bottom_sheet_qr_code_share:I = 0x7f0a06be
 
-    check-cast p1, Lrmc;
+.field public static oneme_invite_by_qr_bottom_sheet_short_name:I = 0x7f0a06bf
 
-    iget-object v0, p0, Lrmc;->a:Ljava/lang/CharSequence;
+.field public static oneme_invite_friends_to_max_bottom_sheet_image_stack:I = 0x7f0a06c0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+.field public static oneme_invite_friends_to_max_bottom_sheet_invite_button:I = 0x7f0a06c1
 
-    move-result-object v0
-
-    iget-object p1, p1, Lrmc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    instance-of v0, p1, Lrmc;
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    iget-object v0, p0, Lrmc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    check-cast p1, Lrmc;
-
-    iget-object p1, p1, Lrmc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const-class v0, Lrmc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    iget-object v1, p0, Lrmc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final length()I
-    .locals 1
-
-    iget-object v0, p0, Lrmc;->a:Ljava/lang/CharSequence;
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final subSequence(II)Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lrmc;->a:Ljava/lang/CharSequence;
-
-    invoke-interface {v0, p1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lrmc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f0a06c2

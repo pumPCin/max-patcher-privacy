@@ -1,119 +1,145 @@
 .class public final Lu1c;
-.super Lz1c;
+.super Lof4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lxcf;
+# static fields
+.field public static final b:Lu1c;
+
+.field public static final c:Ljf4;
+
+.field public static final d:Ljf4;
+
+.field public static final e:Ljf4;
+
+.field public static final f:Ljf4;
+
+.field public static final g:Ljf4;
+
+.field public static final h:Ljf4;
+
+.field public static final i:Ljf4;
+
+.field public static final j:Ljf4;
 
 
 # direct methods
-.method public constructor <init>(Lxcf;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    sget v0, Lv7d;->a:I
+    new-instance v0, Lu1c;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lof4;-><init>()V
 
-    iput-object p1, p0, Lu1c;->a:Lxcf;
+    sput-object v0, Lu1c;->b:Lu1c;
 
-    return-void
-.end method
+    const-string v1, "id"
 
+    const-string v2, "type"
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    const/4 v0, 0x1
+    move-result-object v3
 
-    if-ne p0, p1, :cond_0
+    const-string v4, ":profile/avatars"
 
-    return v0
+    const/4 v5, 0x0
 
-    :cond_0
-    instance-of v1, p1, Lu1c;
+    const/16 v6, 0xe
 
-    if-nez v1, :cond_1
+    invoke-static {v0, v4, v3, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    goto :goto_0
+    move-result-object v3
 
-    :cond_1
-    check-cast p1, Lu1c;
+    sput-object v3, Lu1c;->c:Ljf4;
 
-    iget-object v1, p0, Lu1c;->a:Lxcf;
+    const-string v3, ":profile"
 
-    iget-object p1, p1, Lu1c;->a:Lxcf;
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    invoke-virtual {v1, p1}, Lxcf;->equals(Ljava/lang/Object;)Z
+    move-result-object v4
 
-    move-result p1
+    invoke-static {v0, v3, v4, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    if-nez p1, :cond_2
+    move-result-object v3
 
-    :goto_0
-    const/4 p1, 0x0
+    sput-object v3, Lu1c;->d:Ljf4;
 
-    return p1
+    const-string v3, ":profile/attaches"
 
-    :cond_2
-    sget p1, Lv7d;->a:I
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    return v0
-.end method
+    move-result-object v4
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {v0, v3, v4, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    iget-object v0, p0, Lu1c;->a:Lxcf;
+    move-result-object v3
 
-    iget v0, v0, Lxcf;->b:I
+    sput-object v3, Lu1c;->e:Ljf4;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const-string v3, ":profile/members"
 
-    move-result v0
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object v2
 
-    sget v1, Lv7d;->b1:I
+    invoke-static {v0, v3, v2, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    move-result-object v2
 
-    move-result v1
+    sput-object v2, Lu1c;->f:Ljf4;
 
-    add-int/2addr v1, v0
+    const-string v2, ":profile/invite"
 
-    return v1
-.end method
+    filled-new-array {v1}, [Ljava/lang/String;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    move-result-object v1
 
-    sget v0, Lv7d;->b1:I
+    invoke-static {v0, v2, v1, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string v2, "ShowInfoSnackbar(title="
+    sput-object v1, Lu1c;->g:Ljf4;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "chat_id"
 
-    iget-object v2, p0, Lu1c;->a:Lxcf;
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    const-string v2, ", iconRes="
+    const-string v3, ":profile/add-admins"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v2, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    const-string v0, ")"
+    sput-object v2, Lu1c;->h:Ljf4;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "is_chat"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ":profile/add-members"
+
+    invoke-static {v0, v3, v2, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
+
+    move-result-object v2
+
+    sput-object v2, Lu1c;->i:Ljf4;
+
+    const-string v2, ":profile/change-owner"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, v1, v5, v6}, Lof4;->a(Lof4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Ljf4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lu1c;->j:Ljf4;
+
+    return-void
 .end method

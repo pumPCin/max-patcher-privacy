@@ -1,102 +1,158 @@
 .class public final Lyog;
-.super La82;
+.super Llff;
 .source "SourceFile"
+
+# interfaces
+.implements Lei6;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic X:Ljava/lang/Float;
+
+.field public final synthetic Y:Lcpg;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Float;Lcpg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput-object p1, p0, Lyog;->X:Ljava/lang/Float;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-object p2, p0, Lyog;->Y:Lcpg;
 
-    move-result-object v1
+    const/4 p1, 0x2
 
-    invoke-direct {p0, v1, v0}, La82;-><init>(Ljava/lang/Long;I)V
-
-    iput-wide p1, p0, Lyog;->c:J
+    invoke-direct {p0, p1, p3}, Llff;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-wide v0, p0, Lyog;->c:J
+    check-cast p1, Lb54;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lyog;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyog;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lyog;
 
-    iget-wide v3, p0, Lyog;->c:J
+    sget-object p2, Lzag;->a:Lzag;
 
-    iget-wide v5, p1, Lyog;->c:J
+    invoke-virtual {p1, p2}, Lyog;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lyog;->c:J
+    new-instance p1, Lyog;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Lyog;->X:Ljava/lang/Float;
+
+    iget-object v1, p0, Lyog;->Y:Lcpg;
+
+    invoke-direct {p1, v0, v1, p2}, Lyog;-><init>(Ljava/lang/Float;Lcpg;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lswi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lyog;->Y:Lcpg;
+
+    iget-object v0, p0, Lyog;->X:Ljava/lang/Float;
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lcpg;->a(Lcpg;)Lcrg;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcrg;->e:Lpug;
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Lpug;->play()V
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {p1}, Lcpg;->a(Lcpg;)Lcrg;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
-    return v0
-.end method
+    iget-object v1, p1, Lcrg;->g:Lfzc;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-object v1, v1, Lfzc;->a:Laie;
 
-    const-string v0, "ChannelId(sourceId="
+    invoke-interface {v1}, Laie;->b()Ljava/util/List;
 
-    const-string v1, ")"
+    move-result-object v1
 
-    iget-wide v2, p0, Lyog;->c:J
+    invoke-static {v1}, Lab3;->D(Ljava/util/List;)Ljava/lang/Object;
 
-    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Lesg;
 
-    return-object v0
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Lesg;->o:Lllg;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    if-nez v1, :cond_2
+
+    iget-object p1, p1, Lcrg;->a:Ljava/lang/String;
+
+    const-string v0, "We cannot seek a videoContent because is null"
+
+    invoke-static {p1, v0}, Lndi;->z(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_2
+    const/high16 v2, 0x42c80000    # 100.0f
+
+    div-float/2addr v0, v2
+
+    invoke-interface {v1}, Lllg;->getDuration()J
+
+    move-result-wide v1
+
+    long-to-float v1, v1
+
+    mul-float/2addr v0, v1
+
+    float-to-long v0, v0
+
+    iget-object p1, p1, Lcrg;->e:Lpug;
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1, v0, v1}, Lpug;->seekTo(J)V
+
+    :cond_3
+    :goto_1
+    sget-object p1, Lzag;->a:Lzag;
+
+    return-object p1
 .end method

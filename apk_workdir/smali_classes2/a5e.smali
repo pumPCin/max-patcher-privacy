@@ -1,51 +1,66 @@
 .class public final La5e;
-.super Lrc4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# static fields
-.field public static final b:La5e;
 
-.field public static final c:Lmc4;
+# instance fields
+.field public final X:Z
 
-.field public static final d:Lmc4;
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    new-instance v0, La5e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lrc4;-><init>()V
+    iput-wide p1, p0, La5e;->a:J
 
-    sput-object v0, La5e;->b:La5e;
+    iput-object p3, p0, La5e;->b:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iput-object p4, p0, La5e;->c:Ljava/lang/String;
 
-    new-array v2, v1, [Ljava/lang/String;
+    iput-object p5, p0, La5e;->o:Ljava/lang/String;
 
-    const-string v3, ":chats/share"
+    iput-boolean p6, p0, La5e;->X:Z
 
-    const/4 v4, 0x0
+    return-void
+.end method
 
-    const/16 v5, 0xe
 
-    invoke-static {v0, v3, v2, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    move-result-object v2
+    const-string v0, "Session{="
 
-    sput-object v2, La5e;->c:Lmc4;
+    const-string v1, ", current="
 
-    const-string v2, ":share"
+    iget-wide v2, p0, La5e;->a:J
 
-    new-array v1, v1, [Ljava/lang/String;
+    iget-boolean v4, p0, La5e;->X:Z
 
-    invoke-static {v0, v2, v1, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+    invoke-static {v2, v3, v0, v1, v4}, Lwc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sput-object v0, La5e;->d:Lmc4;
+    const-string v1, "}"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
