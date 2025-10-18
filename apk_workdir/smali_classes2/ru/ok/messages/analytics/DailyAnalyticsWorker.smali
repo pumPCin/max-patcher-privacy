@@ -121,7 +121,7 @@
 .method public final a()Lp28;
     .locals 2
 
-    invoke-virtual {v1}, Lq28;->getId()Ljava/util/UUID;
+    invoke-virtual {p1}, Lq28;->getId()Ljava/util/UUID;
 
     move-result-object v0
 
